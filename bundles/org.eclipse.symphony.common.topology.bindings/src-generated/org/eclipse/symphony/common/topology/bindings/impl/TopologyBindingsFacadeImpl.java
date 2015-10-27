@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,7 +51,7 @@ public class TopologyBindingsFacadeImpl extends MinimalEObjectImpl.Container imp
   @Override
   protected EClass eStaticClass()
   {
-		return TopologyBindingsPackage.Literals.TOPOLOGY_BINDINGS_FACADE;
+		return Symphony__CommonTopologyBindingsPackage.Literals.TOPOLOGY_BINDINGS_FACADE;
 	}
 
   /**
@@ -74,7 +74,7 @@ public class TopologyBindingsFacadeImpl extends MinimalEObjectImpl.Container imp
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case TopologyBindingsPackage.TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP:
+			case Symphony__CommonTopologyBindingsPackage.TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP:
 				return copy((AbstractTopologyBinding)arguments.get(0), (Map<Node, Node>)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

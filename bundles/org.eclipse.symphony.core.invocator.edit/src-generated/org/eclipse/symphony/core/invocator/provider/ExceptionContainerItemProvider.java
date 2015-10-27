@@ -23,8 +23,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ExceptionContainer;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.ExceptionContainer} object.
@@ -85,7 +85,7 @@ public class ExceptionContainerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ExceptionContainer_exception_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ExceptionContainer_exception_feature", "_UI_ExceptionContainer_type"),
-				 EMFEcoreInvocatorPackage.Literals.EXCEPTION_CONTAINER__EXCEPTION,
+				 Symphony__CoreInvocatorPackage.Literals.EXCEPTION_CONTAINER__EXCEPTION,
 				 false,
 				 false,
 				 false,
@@ -141,7 +141,7 @@ public class ExceptionContainerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ExceptionContainer.class)) {
-			case EMFEcoreInvocatorPackage.EXCEPTION_CONTAINER__EXCEPTION:
+			case Symphony__CoreInvocatorPackage.EXCEPTION_CONTAINER__EXCEPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

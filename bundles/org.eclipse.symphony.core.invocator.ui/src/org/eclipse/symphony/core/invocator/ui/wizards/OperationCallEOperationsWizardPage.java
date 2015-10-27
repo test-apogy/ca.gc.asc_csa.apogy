@@ -11,7 +11,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.emf.ui.composites.EOperationsComposite;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 
@@ -51,12 +51,12 @@ public class OperationCallEOperationsWizardPage extends WizardPage {
 				@Override
 				public void notifyChanged(Notification msg) {
 					switch (msg.getFeatureID(VariableFeatureReference.class)) {
-					case EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
+					case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
 						operationCall.setTypeMemberReferenceListElement(null);
 						operationCall.setFeatureRoot(null);
-					case EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
+					case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
 						operationCall.setFeatureRoot(null);
-					case EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:						
+					case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:						
 						EClass eClass = EMFEcoreInvocatorFacade.INSTANCE.getInstanceClass(operationCall);	
 						eOperationsComposite.setEClass(eClass);						
 						break;

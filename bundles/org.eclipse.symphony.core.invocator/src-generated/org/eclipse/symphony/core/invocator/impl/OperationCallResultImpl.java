@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ExceptionContainer;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.symphony.core.invocator.OperationCallContainer;
 import org.eclipse.symphony.core.invocator.OperationCallResult;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -74,7 +74,7 @@ public class OperationCallResultImpl extends AbstractResultImpl implements Opera
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.OPERATION_CALL_RESULT;
+		return Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_RESULT;
 	}
 
   /**
@@ -84,7 +84,7 @@ public class OperationCallResultImpl extends AbstractResultImpl implements Opera
 	 */
 	public EList<OperationCall> getOperationCalls() {
 		if (operationCalls == null) {
-			operationCalls = new EObjectContainmentWithInverseEList<OperationCall>(OperationCall.class, this, EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS, EMFEcoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER);
+			operationCalls = new EObjectContainmentWithInverseEList<OperationCall>(OperationCall.class, this, Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS, Symphony__CoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER);
 		}
 		return operationCalls;
 	}
@@ -128,7 +128,7 @@ public class OperationCallResultImpl extends AbstractResultImpl implements Opera
 		ExceptionContainer oldExceptionContainer = exceptionContainer;
 		exceptionContainer = newExceptionContainer;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER, oldExceptionContainer, newExceptionContainer);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER, oldExceptionContainer, newExceptionContainer);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -144,14 +144,14 @@ public class OperationCallResultImpl extends AbstractResultImpl implements Opera
 		if (newExceptionContainer != exceptionContainer) {
 			NotificationChain msgs = null;
 			if (exceptionContainer != null)
-				msgs = ((InternalEObject)exceptionContainer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER, null, msgs);
+				msgs = ((InternalEObject)exceptionContainer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER, null, msgs);
 			if (newExceptionContainer != null)
-				msgs = ((InternalEObject)newExceptionContainer).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER, null, msgs);
+				msgs = ((InternalEObject)newExceptionContainer).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER, null, msgs);
 			msgs = basicSetExceptionContainer(newExceptionContainer, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER, newExceptionContainer, newExceptionContainer));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER, newExceptionContainer, newExceptionContainer));
 	}
 
   /**
@@ -163,7 +163,7 @@ public class OperationCallResultImpl extends AbstractResultImpl implements Opera
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperationCalls()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -178,9 +178,9 @@ public class OperationCallResultImpl extends AbstractResultImpl implements Opera
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
 				return ((InternalEList<?>)getOperationCalls()).basicRemove(otherEnd, msgs);
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER:
 				return basicSetExceptionContainer(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -195,11 +195,11 @@ public class OperationCallResultImpl extends AbstractResultImpl implements Opera
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
 				return getOperationCalls();
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALL:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALL:
 				return getOperationCall();
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER:
 				return getExceptionContainer();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -215,11 +215,11 @@ public class OperationCallResultImpl extends AbstractResultImpl implements Opera
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
 				getOperationCalls().clear();
 				getOperationCalls().addAll((Collection<? extends OperationCall>)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER:
 				setExceptionContainer((ExceptionContainer)newValue);
 				return;
 		}
@@ -235,10 +235,10 @@ public class OperationCallResultImpl extends AbstractResultImpl implements Opera
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
 				getOperationCalls().clear();
 				return;
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER:
 				setExceptionContainer((ExceptionContainer)null);
 				return;
 		}
@@ -254,11 +254,11 @@ public class OperationCallResultImpl extends AbstractResultImpl implements Opera
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
 				return operationCalls != null && !operationCalls.isEmpty();
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALL:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALL:
 				return getOperationCall() != null;
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER:
 				return exceptionContainer != null;
 		}
 		return super.eIsSet(featureID);
@@ -273,7 +273,7 @@ public class OperationCallResultImpl extends AbstractResultImpl implements Opera
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == OperationCallContainer.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS: return EMFEcoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS;
+				case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS: return Symphony__CoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS;
 				default: return -1;
 			}
 		}
@@ -289,7 +289,7 @@ public class OperationCallResultImpl extends AbstractResultImpl implements Opera
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == OperationCallContainer.class) {
 			switch (baseFeatureID) {
-				case EMFEcoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS: return EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS;
+				case Symphony__CoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS: return Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS;
 				default: return -1;
 			}
 		}

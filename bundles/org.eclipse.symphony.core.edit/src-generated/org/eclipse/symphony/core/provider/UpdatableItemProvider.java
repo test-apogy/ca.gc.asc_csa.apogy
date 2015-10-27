@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.Updatable;
 
 /**
@@ -78,7 +78,7 @@ public class UpdatableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Updatable_updating_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Updatable_updating_feature", "_UI_Updatable_type"),
-				 SymphonyCorePackage.Literals.UPDATABLE__UPDATING,
+				 Symphony__CorePackage.Literals.UPDATABLE__UPDATING,
 				 false,
 				 false,
 				 false,
@@ -100,7 +100,7 @@ public class UpdatableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Updatable_autoUpdateEnabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Updatable_autoUpdateEnabled_feature", "_UI_Updatable_type"),
-				 SymphonyCorePackage.Literals.UPDATABLE__AUTO_UPDATE_ENABLED,
+				 Symphony__CorePackage.Literals.UPDATABLE__AUTO_UPDATE_ENABLED,
 				 true,
 				 false,
 				 false,
@@ -134,8 +134,8 @@ public class UpdatableItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Updatable.class)) {
-			case SymphonyCorePackage.UPDATABLE__UPDATING:
-			case SymphonyCorePackage.UPDATABLE__AUTO_UPDATE_ENABLED:
+			case Symphony__CorePackage.UPDATABLE__UPDATING:
+			case Symphony__CorePackage.UPDATABLE__AUTO_UPDATE_ENABLED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

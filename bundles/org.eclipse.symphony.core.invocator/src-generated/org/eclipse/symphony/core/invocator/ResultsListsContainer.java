@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getResultsListsContainer()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getResultsListsContainer()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface ResultsListsContainer extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Data Products List</em>' container reference.
    * @see #setDataProductsList(DataProductsList)
-   * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getResultsListsContainer_DataProductsList()
+   * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getResultsListsContainer_DataProductsList()
    * @see org.eclipse.symphony.core.invocator.DataProductsList#getResultsListsContainer
    * @model opposite="resultsListsContainer" transient="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -71,7 +71,7 @@ public interface ResultsListsContainer extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Results List</em>' containment reference list.
-   * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getResultsListsContainer_ResultsList()
+   * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getResultsListsContainer_ResultsList()
    * @see org.eclipse.symphony.core.invocator.ResultsList#getResultsListsContainer
    * @model opposite="resultsListsContainer" containment="true"
    * @generated

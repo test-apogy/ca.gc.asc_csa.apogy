@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.Positioned;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.POSITIONED;
+		return Symphony__CorePackage.Literals.POSITIONED;
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 		Matrix4x4 oldPose = pose;
 		pose = newPose;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.POSITIONED__POSE, oldPose, newPose);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.POSITIONED__POSE, oldPose, newPose);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -109,14 +109,14 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 		if (newPose != pose) {
 			NotificationChain msgs = null;
 			if (pose != null)
-				msgs = ((InternalEObject)pose).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.POSITIONED__POSE, null, msgs);
+				msgs = ((InternalEObject)pose).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.POSITIONED__POSE, null, msgs);
 			if (newPose != null)
-				msgs = ((InternalEObject)newPose).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.POSITIONED__POSE, null, msgs);
+				msgs = ((InternalEObject)newPose).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.POSITIONED__POSE, null, msgs);
 			msgs = basicSetPose(newPose, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.POSITIONED__POSE, newPose, newPose));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.POSITIONED__POSE, newPose, newPose));
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCorePackage.POSITIONED__POSE:
+			case Symphony__CorePackage.POSITIONED__POSE:
 				return basicSetPose(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -141,7 +141,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.POSITIONED__POSE:
+			case Symphony__CorePackage.POSITIONED__POSE:
 				return getPose();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -155,7 +155,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.POSITIONED__POSE:
+			case Symphony__CorePackage.POSITIONED__POSE:
 				setPose((Matrix4x4)newValue);
 				return;
 		}
@@ -170,7 +170,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.POSITIONED__POSE:
+			case Symphony__CorePackage.POSITIONED__POSE:
 				setPose((Matrix4x4)null);
 				return;
 		}
@@ -185,7 +185,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.POSITIONED__POSE:
+			case Symphony__CorePackage.POSITIONED__POSE:
 				return pose != null;
 		}
 		return super.eIsSet(featureID);

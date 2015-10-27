@@ -16,10 +16,10 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.provider.AbstractCameraItemProvider;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.SatelliteImager;
 
 /**
@@ -114,7 +114,7 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_SatelliteImager_satellite_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SatelliteImager_satellite_feature", "_UI_SatelliteImager_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.SATELLITE_IMAGER__SATELLITE,
+				 Symphony__ExamplesSatellitePackage.Literals.SATELLITE_IMAGER__SATELLITE,
 				 true,
 				 false,
 				 true,
@@ -135,7 +135,7 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_IMAGER__IMAGES_ACQUIRED);
+			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_IMAGER__IMAGES_ACQUIRED);
 		}
 		return childrenFeatures;
 	}
@@ -191,11 +191,11 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SatelliteImager.class)) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM:
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__IMAGES_ACQUIRED:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__IMAGES_ACQUIRED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -216,197 +216,197 @@ public class SatelliteImagerItemProvider extends AbstractCameraItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteImager()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSun()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarth()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createMoon()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createStarField()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createMapNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
+				 Symphony__CoreFactory.eINSTANCE.createResultNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
+				 Symphony__CoreFactory.eINSTANCE.createResultsListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteImager()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createSun()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSun()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEarth()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarth()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createMoon()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createMoon()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createStarField()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createStarField()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createWorksiteNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createMapsListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createMapNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createMapNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createSkyNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSkyNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
+				 Symphony__CoreFactory.eINSTANCE.createResultNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
+				 Symphony__CoreFactory.eINSTANCE.createResultsListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_IMAGER__IMAGES_ACQUIRED,
-				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createOrbitalImage()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_IMAGER__IMAGES_ACQUIRED,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createOrbitalImage()));
 	}
 
 	/**

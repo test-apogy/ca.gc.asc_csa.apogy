@@ -23,7 +23,7 @@ import org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.AttitudeProvider;
 import org.eclipse.symphony.core.environment.orbit.Orbit;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -171,7 +171,7 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyOrbitEnvironmentPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR;
+		return Symphony__CoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR;
 	}
 
 	/**
@@ -192,7 +192,7 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__NAME, oldName, name));
 	}
 
 	/**
@@ -213,7 +213,7 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -234,7 +234,7 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 		AbstractFrame oldReferenceFrame = referenceFrame;
 		referenceFrame = newReferenceFrame;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME, oldReferenceFrame, newReferenceFrame);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME, oldReferenceFrame, newReferenceFrame);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -249,14 +249,14 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 		if (newReferenceFrame != referenceFrame) {
 			NotificationChain msgs = null;
 			if (referenceFrame != null)
-				msgs = ((InternalEObject)referenceFrame).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME, null, msgs);
+				msgs = ((InternalEObject)referenceFrame).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME, null, msgs);
 			if (newReferenceFrame != null)
-				msgs = ((InternalEObject)newReferenceFrame).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME, null, msgs);
+				msgs = ((InternalEObject)newReferenceFrame).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME, null, msgs);
 			msgs = basicSetReferenceFrame(newReferenceFrame, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME, newReferenceFrame, newReferenceFrame));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME, newReferenceFrame, newReferenceFrame));
 	}
 
 	/**
@@ -266,7 +266,7 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 	 */
 	public EList<AttitudeProvider> getAttitudeProvider() {
 		if (attitudeProvider == null) {
-			attitudeProvider = new EObjectContainmentEList<AttitudeProvider>(AttitudeProvider.class, this, SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER);
+			attitudeProvider = new EObjectContainmentEList<AttitudeProvider>(AttitudeProvider.class, this, Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER);
 		}
 		return attitudeProvider;
 	}
@@ -282,7 +282,7 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 			initialOrbit = (Orbit)eResolveProxy(oldInitialOrbit);
 			if (initialOrbit != oldInitialOrbit) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT, oldInitialOrbit, initialOrbit));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT, oldInitialOrbit, initialOrbit));
 			}
 		}
 		return initialOrbit;
@@ -306,7 +306,7 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 		Orbit oldInitialOrbit = initialOrbit;
 		initialOrbit = newInitialOrbit;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT, oldInitialOrbit, initialOrbit));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT, oldInitialOrbit, initialOrbit));
 	}
 
 	/**
@@ -327,7 +327,7 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 		Date oldValidFromDate = validFromDate;
 		validFromDate = newValidFromDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE, oldValidFromDate, validFromDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE, oldValidFromDate, validFromDate));
 	}
 
 	/**
@@ -348,7 +348,7 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 		Date oldValidToDate = validToDate;
 		validToDate = newValidToDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE, oldValidToDate, validToDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE, oldValidToDate, validToDate));
 	}
 
 	/**
@@ -408,9 +408,9 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME:
 				return basicSetReferenceFrame(null, msgs);
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER:
 				return ((InternalEList<?>)getAttitudeProvider()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -424,20 +424,20 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__NAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__NAME:
 				return getName();
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION:
 				return getDescription();
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME:
 				return getReferenceFrame();
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER:
 				return getAttitudeProvider();
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT:
 				if (resolve) return getInitialOrbit();
 				return basicGetInitialOrbit();
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE:
 				return getValidFromDate();
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE:
 				return getValidToDate();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -452,26 +452,26 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__NAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME:
 				setReferenceFrame((AbstractFrame)newValue);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER:
 				getAttitudeProvider().clear();
 				getAttitudeProvider().addAll((Collection<? extends AttitudeProvider>)newValue);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT:
 				setInitialOrbit((Orbit)newValue);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE:
 				setValidFromDate((Date)newValue);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE:
 				setValidToDate((Date)newValue);
 				return;
 		}
@@ -486,25 +486,25 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__NAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME:
 				setReferenceFrame((AbstractFrame)null);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER:
 				getAttitudeProvider().clear();
 				return;
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT:
 				setInitialOrbit((Orbit)null);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE:
 				setValidFromDate(VALID_FROM_DATE_EDEFAULT);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE:
 				setValidToDate(VALID_TO_DATE_EDEFAULT);
 				return;
 		}
@@ -519,19 +519,19 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__NAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME:
 				return referenceFrame != null;
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER:
 				return attitudeProvider != null && !attitudeProvider.isEmpty();
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__INITIAL_ORBIT:
 				return initialOrbit != null;
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_FROM_DATE:
 				return VALID_FROM_DATE_EDEFAULT == null ? validFromDate != null : !VALID_FROM_DATE_EDEFAULT.equals(validFromDate);
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__VALID_TO_DATE:
 				return VALID_TO_DATE_EDEFAULT == null ? validToDate != null : !VALID_TO_DATE_EDEFAULT.equals(validToDate);
 		}
 		return super.eIsSet(featureID);
@@ -546,7 +546,7 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -562,7 +562,7 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -577,21 +577,21 @@ public abstract class AbstractOrbitPropagatorImpl extends MinimalEObjectImpl.Con
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR___PROPAGATE__DATE:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR___PROPAGATE__DATE:
 				try {
 					return propagate((Date)arguments.get(0));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR___GET_SPACECRAFT_STATES__DATE_DATE_DOUBLE:
 				try {
 					return getSpacecraftStates((Date)arguments.get(0), (Date)arguments.get(1), (Double)arguments.get(2));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_ORBIT_PROPAGATOR___IS_DATE_IN_VALID_RANGE__DATE:
 				return isDateInValidRange((Date)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

@@ -20,7 +20,7 @@ package org.eclipse.symphony.core.environment;
  *   <li>{@link org.eclipse.symphony.core.environment.URLMapLayer#getUrl <em>Url</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getURLMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getURLMapLayer()
  * @model abstract="true"
  * @generated
  */
@@ -36,7 +36,7 @@ public interface URLMapLayer extends AbstractMapLayer
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getURLMapLayer_Url()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getURLMapLayer_Url()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='URL'"
 	 * @generated

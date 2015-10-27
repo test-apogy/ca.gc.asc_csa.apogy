@@ -14,10 +14,10 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.provider.SpacecraftStateItemProvider;
 
 /**
@@ -66,7 +66,7 @@ public class OreKitBackedSpacecraftStateItemProvider extends SpacecraftStateItem
 				 getResourceLocator(),
 				 getString("_UI_OreKitBackedSpacecraftState_oreKitSpacecraftState_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OreKitBackedSpacecraftState_oreKitSpacecraftState_feature", "_UI_OreKitBackedSpacecraftState_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE,
 				 true,
 				 false,
 				 false,
@@ -114,7 +114,7 @@ public class OreKitBackedSpacecraftStateItemProvider extends SpacecraftStateItem
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OreKitBackedSpacecraftState.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -134,13 +134,13 @@ public class OreKitBackedSpacecraftStateItemProvider extends SpacecraftStateItem
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyOrbitEnvironmentPackage.Literals.SPACECRAFT_STATE__ORBIT,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createKeplerianEarthOrbit()));
+				(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createKeplerianEarthOrbit()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyOrbitEnvironmentPackage.Literals.SPACECRAFT_STATE__ORBIT,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createCartesianEarthOrbit()));
+				(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createCartesianEarthOrbit()));
 	}
 
 }

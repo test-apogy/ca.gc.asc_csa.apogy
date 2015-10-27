@@ -24,8 +24,8 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.EarthSky;
 import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite} object.
@@ -79,7 +79,7 @@ public class EarthSurfaceWorksiteItemProvider
          getResourceLocator(),
          getString("_UI_EarthSurfaceWorksite_xAxisAzimuth_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksite_xAxisAzimuth_feature", "_UI_EarthSurfaceWorksite_type"),
-         SymphonyEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH,
+         Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH,
          true,
          false,
          false,
@@ -102,7 +102,7 @@ public class EarthSurfaceWorksiteItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceWorksite_earthSky_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksite_earthSky_feature", "_UI_EarthSurfaceWorksite_type"),
-				 SymphonyEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__EARTH_SKY,
+				 Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__EARTH_SKY,
 				 true,
 				 false,
 				 true,
@@ -124,7 +124,7 @@ public class EarthSurfaceWorksiteItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES);
 		}
 		return childrenFeatures;
 	}
@@ -183,10 +183,10 @@ public class EarthSurfaceWorksiteItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EarthSurfaceWorksite.class)) {
-			case SymphonyEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH:
+			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
+			case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -207,8 +207,8 @@ public class EarthSurfaceWorksiteItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
-				 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+				(Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 	}
 
   @Override
@@ -218,7 +218,7 @@ public class EarthSurfaceWorksiteItemProvider
 	  CompoundCommand compoundCommand = new CompoundCommand();
 	  compoundCommand.append(super.createSetCommand(domain, owner, feature, value, index));
 	  
-	  if(feature.getFeatureID() == SymphonyEnvironmentPackage.EARTH_SURFACE_WORKSITE__SKY)
+	  if(feature.getFeatureID() == Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__SKY)
 	  {		  
 		  if(value instanceof EarthSky)
 		  {

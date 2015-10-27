@@ -11,7 +11,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.ui.composites.ContextsDefinitionComposite;
 
@@ -46,7 +46,7 @@ public class ContextsDefinitionView extends AbstractView implements	IEditingDoma
 			adapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(EMFEcoreInvocatorFacade.class) == EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION) {
+					if (msg.getFeatureID(EMFEcoreInvocatorFacade.class) == Symphony__CoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION) {
 						InvocatorSession activeSession = EMFEcoreInvocatorFacade.INSTANCE
 								.getActiveInvocatorSession();
 						contextsDefinitionComposite

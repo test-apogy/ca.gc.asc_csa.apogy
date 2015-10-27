@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint#getAngularStrength <em>Angular Strength</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getRPROConstraint()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getRPROConstraint()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface RPROConstraint extends AbstractConstraint {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Linear Strength</em>' reference.
 	 * @see #setLinearStrength(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getRPROConstraint_LinearStrength()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getRPROConstraint_LinearStrength()
 	 * @model
 	 * @generated
 	 */
@@ -65,7 +65,7 @@ public interface RPROConstraint extends AbstractConstraint {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Angular Strength</em>' reference.
 	 * @see #setAngularStrength(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getRPROConstraint_AngularStrength()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getRPROConstraint_AngularStrength()
 	 * @model
 	 * @generated
 	 */

@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.URLMapLayer;
 
 /**
@@ -67,7 +67,7 @@ public class URLMapLayerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_URLMapLayer_url_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLMapLayer_url_feature", "_UI_URLMapLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.URL_MAP_LAYER__URL,
+				 Symphony__CoreEnvironmentPackage.Literals.URL_MAP_LAYER__URL,
 				 true,
 				 false,
 				 false,
@@ -104,7 +104,7 @@ public class URLMapLayerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(URLMapLayer.class)) {
-			case SymphonyEnvironmentPackage.URL_MAP_LAYER__URL:
+			case Symphony__CoreEnvironmentPackage.URL_MAP_LAYER__URL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

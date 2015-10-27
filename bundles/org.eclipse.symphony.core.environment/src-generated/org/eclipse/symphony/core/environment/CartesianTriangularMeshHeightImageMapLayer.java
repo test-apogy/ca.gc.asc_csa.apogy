@@ -22,7 +22,7 @@ package org.eclipse.symphony.core.environment;
  *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer#getMaximumHeight <em>Maximum Height</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshHeightImageMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshHeightImageMapLayer()
  * @model
  * @generated
  */
@@ -37,11 +37,11 @@ public interface CartesianTriangularMeshHeightImageMapLayer extends CartesianTri
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Wether or not to use autoscalling to generate the color scale.
+	 * Whether or not to use autoscalling to generate the color scale.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Auto Scale</em>' attribute.
 	 * @see #setAutoScale(boolean)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshHeightImageMapLayer_AutoScale()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshHeightImageMapLayer_AutoScale()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS'"
 	 * @generated
@@ -72,7 +72,7 @@ public interface CartesianTriangularMeshHeightImageMapLayer extends CartesianTri
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Minimum Height</em>' attribute.
 	 * @see #setMinimumHeight(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshHeightImageMapLayer_MinimumHeight()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshHeightImageMapLayer_MinimumHeight()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS' csa_units='m'"
 	 * @generated
@@ -103,7 +103,7 @@ public interface CartesianTriangularMeshHeightImageMapLayer extends CartesianTri
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Maximum Height</em>' attribute.
 	 * @see #setMaximumHeight(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshHeightImageMapLayer_MaximumHeight()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshHeightImageMapLayer_MaximumHeight()
 	 * @model default="50.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS' csa_units='m'"
 	 * @generated

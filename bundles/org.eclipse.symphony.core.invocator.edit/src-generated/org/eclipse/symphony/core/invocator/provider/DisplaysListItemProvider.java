@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.DisplaysList;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.DisplaysList} object.
@@ -129,7 +129,7 @@ public class DisplaysListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.DISPLAYS_LIST__DISPLAYS);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.DISPLAYS_LIST__DISPLAYS);
 		}
 		return childrenFeatures;
 	}
@@ -202,11 +202,11 @@ public class DisplaysListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DisplaysList.class)) {
-			case EMFEcoreInvocatorPackage.DISPLAYS_LIST__NAME:
-			case EMFEcoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS:
+			case Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

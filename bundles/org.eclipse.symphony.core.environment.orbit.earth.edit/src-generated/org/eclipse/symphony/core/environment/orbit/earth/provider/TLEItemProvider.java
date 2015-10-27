@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.TLE;
 
 /**
@@ -96,7 +96,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_line1_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_line1_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__LINE1,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__LINE1,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_line2_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_line2_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__LINE2,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__LINE2,
 				 true,
 				 false,
 				 false,
@@ -140,7 +140,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_bStar_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_bStar_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__BSTAR,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__BSTAR,
 				 false,
 				 false,
 				 false,
@@ -162,7 +162,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_epoch_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_epoch_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__EPOCH,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__EPOCH,
 				 false,
 				 false,
 				 false,
@@ -184,7 +184,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_eccentricity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_eccentricity_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__ECCENTRICITY,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__ECCENTRICITY,
 				 false,
 				 false,
 				 false,
@@ -206,7 +206,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_elementNumber_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_elementNumber_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__ELEMENT_NUMBER,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__ELEMENT_NUMBER,
 				 false,
 				 false,
 				 false,
@@ -228,7 +228,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_ephemerisType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_ephemerisType_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__EPHEMERIS_TYPE,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__EPHEMERIS_TYPE,
 				 false,
 				 false,
 				 false,
@@ -250,7 +250,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_inclination_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_inclination_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__INCLINATION,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__INCLINATION,
 				 false,
 				 false,
 				 false,
@@ -272,7 +272,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_meanAnomaly_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_meanAnomaly_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__MEAN_ANOMALY,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__MEAN_ANOMALY,
 				 false,
 				 false,
 				 false,
@@ -294,7 +294,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_meanMotion_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_meanMotion_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__MEAN_MOTION,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__MEAN_MOTION,
 				 false,
 				 false,
 				 false,
@@ -316,7 +316,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_revolutionPerDay_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_revolutionPerDay_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__REVOLUTION_PER_DAY,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__REVOLUTION_PER_DAY,
 				 false,
 				 false,
 				 false,
@@ -338,7 +338,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_meanMotionFirstDerivative_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_meanMotionFirstDerivative_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__MEAN_MOTION_FIRST_DERIVATIVE,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__MEAN_MOTION_FIRST_DERIVATIVE,
 				 false,
 				 false,
 				 false,
@@ -360,7 +360,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_meanMotionSecondDerivative_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_meanMotionSecondDerivative_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__MEAN_MOTION_SECOND_DERIVATIVE,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__MEAN_MOTION_SECOND_DERIVATIVE,
 				 false,
 				 false,
 				 false,
@@ -382,7 +382,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_argumentOfPerigee_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_argumentOfPerigee_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__ARGUMENT_OF_PERIGEE,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__ARGUMENT_OF_PERIGEE,
 				 false,
 				 false,
 				 false,
@@ -404,7 +404,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_rightAscentionOfAscendingNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_rightAscentionOfAscendingNode_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE,
 				 false,
 				 false,
 				 false,
@@ -426,7 +426,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_revolutionNumberAtEpoch_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_revolutionNumberAtEpoch_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__REVOLUTION_NUMBER_AT_EPOCH,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__REVOLUTION_NUMBER_AT_EPOCH,
 				 false,
 				 false,
 				 false,
@@ -448,7 +448,7 @@ public class TLEItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TLE_satelliteNumber_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TLE_satelliteNumber_feature", "_UI_TLE_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.TLE__SATELLITE_NUMBER,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE__SATELLITE_NUMBER,
 				 false,
 				 false,
 				 false,
@@ -495,23 +495,23 @@ public class TLEItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TLE.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__LINE1:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__LINE2:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__BSTAR:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__EPOCH:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__ECCENTRICITY:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__ELEMENT_NUMBER:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__EPHEMERIS_TYPE:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__INCLINATION:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_ANOMALY:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__REVOLUTION_PER_DAY:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION_FIRST_DERIVATIVE:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION_SECOND_DERIVATIVE:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__ARGUMENT_OF_PERIGEE:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__REVOLUTION_NUMBER_AT_EPOCH:
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__SATELLITE_NUMBER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__LINE1:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__LINE2:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__BSTAR:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__EPOCH:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ECCENTRICITY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ELEMENT_NUMBER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__EPHEMERIS_TYPE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__INCLINATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_ANOMALY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__REVOLUTION_PER_DAY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION_FIRST_DERIVATIVE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION_SECOND_DERIVATIVE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ARGUMENT_OF_PERIGEE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__REVOLUTION_NUMBER_AT_EPOCH:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__SATELLITE_NUMBER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

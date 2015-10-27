@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 import org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates;
 
 /**
@@ -112,7 +112,7 @@ public class TimedStampedAngularCoordinatesItemProvider extends AngularCoordinat
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TimedStampedAngularCoordinates.class)) {
-			case SymphonyOrbitEnvironmentPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -143,8 +143,8 @@ public class TimedStampedAngularCoordinatesItemProvider extends AngularCoordinat
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyOrbitEnvironmentPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE ||
-			childFeature == SymphonyOrbitEnvironmentPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION;
+			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE ||
+			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION;
 
 		if (qualify) {
 			return getString

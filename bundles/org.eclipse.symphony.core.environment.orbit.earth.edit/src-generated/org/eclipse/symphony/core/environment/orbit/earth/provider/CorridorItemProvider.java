@@ -24,8 +24,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.Corridor} object.
@@ -126,7 +126,7 @@ public class CorridorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Corridor_points_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Corridor_points_feature", "_UI_Corridor_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.CORRIDOR__POINTS,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR__POINTS,
 				 false,
 				 false,
 				 false,
@@ -147,7 +147,7 @@ public class CorridorItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.CORRIDOR__POINTS);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR__POINTS);
 		}
 		return childrenFeatures;
 	}
@@ -203,11 +203,11 @@ public class CorridorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Corridor.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__NAME:
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__POINTS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__POINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -227,8 +227,8 @@ public class CorridorItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.CORRIDOR__POINTS,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createCorridorPoint()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR__POINTS,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createCorridorPoint()));
 	}
 
 	/**

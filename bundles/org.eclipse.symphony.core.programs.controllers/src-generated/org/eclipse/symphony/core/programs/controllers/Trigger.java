@@ -28,7 +28,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.Trigger#getOperationCallControllerBinding <em>Operation Call Controller Binding</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getTrigger()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getTrigger()
  * @model abstract="true"
  * @generated
  */
@@ -45,7 +45,7 @@ public interface Trigger extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operation Call Controller Binding</em>' container reference.
 	 * @see #setOperationCallControllerBinding(OperationCallControllerBinding)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getTrigger_OperationCallControllerBinding()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getTrigger_OperationCallControllerBinding()
 	 * @see org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding#getTrigger
 	 * @model opposite="trigger" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"

@@ -20,8 +20,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.AssemblyLinksList;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * This is the item provider adapter for a
@@ -70,7 +70,7 @@ public class AssemblyLinksListItemProvider extends ItemProviderAdapter
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS);
+			childrenFeatures.add(Symphony__CorePackage.Literals.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS);
 		}
 		return childrenFeatures;
 	}
@@ -121,7 +121,7 @@ public class AssemblyLinksListItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AssemblyLinksList.class)) {
-			case SymphonyCorePackage.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS:
+			case Symphony__CorePackage.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -142,8 +142,8 @@ public class AssemblyLinksListItemProvider extends ItemProviderAdapter
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS,
-				 SymphonyCoreFactory.eINSTANCE.createAssemblyLink()));
+				(Symphony__CorePackage.Literals.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS,
+				 Symphony__CoreFactory.eINSTANCE.createAssemblyLink()));
 	}
 
 	/**

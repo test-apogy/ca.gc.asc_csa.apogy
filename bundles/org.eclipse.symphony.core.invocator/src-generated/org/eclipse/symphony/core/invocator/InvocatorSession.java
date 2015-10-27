@@ -30,7 +30,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.InvocatorSession#getToolsList <em>Tools List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getInvocatorSession()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getInvocatorSession()
  * @model
  * @generated
  */
@@ -47,7 +47,7 @@ public interface InvocatorSession extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environment</em>' containment reference.
 	 * @see #setEnvironment(Environment)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getInvocatorSession_Environment()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getInvocatorSession_Environment()
 	 * @see org.eclipse.symphony.core.invocator.Environment#getInvocatorSession
 	 * @model opposite="invocatorSession" containment="true"
 	 * @generated
@@ -75,7 +75,7 @@ public interface InvocatorSession extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Programs List</em>' containment reference.
 	 * @see #setProgramsList(ProgramsList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getInvocatorSession_ProgramsList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getInvocatorSession_ProgramsList()
 	 * @see org.eclipse.symphony.core.invocator.ProgramsList#getInvocatorSession
 	 * @model opposite="invocatorSession" containment="true"
 	 * @generated
@@ -103,7 +103,7 @@ public interface InvocatorSession extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Products List Container</em>' containment reference.
 	 * @see #setDataProductsListContainer(DataProductsListsContainer)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getInvocatorSession_DataProductsListContainer()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getInvocatorSession_DataProductsListContainer()
 	 * @see org.eclipse.symphony.core.invocator.DataProductsListsContainer#getInvocatorSession
 	 * @model opposite="invocatorSession" containment="true"
 	 * @generated
@@ -131,7 +131,7 @@ public interface InvocatorSession extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tools List</em>' containment reference.
 	 * @see #setToolsList(ToolsList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getInvocatorSession_ToolsList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getInvocatorSession_ToolsList()
 	 * @see org.eclipse.symphony.core.invocator.ToolsList#getInvocatorSession
 	 * @model opposite="invocatorSession" containment="true"
 	 * @generated

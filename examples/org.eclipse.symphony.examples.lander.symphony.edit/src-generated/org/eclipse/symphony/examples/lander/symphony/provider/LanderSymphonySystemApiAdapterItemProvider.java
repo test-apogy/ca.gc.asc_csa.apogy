@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.provider.SymphonySystemApiAdapterItemProvider;
 
 /**
@@ -103,7 +103,7 @@ public class LanderSymphonySystemApiAdapterItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR,
+				(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR,
 				 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
 	}
 
@@ -116,7 +116,7 @@ public class LanderSymphonySystemApiAdapterItemProvider
   @Override
   public ResourceLocator getResourceLocator()
   {
-		return SymphonyExampleLanderEditPlugin.INSTANCE;
+		return Symphony__ExamplesLanderSymphonyEditPlugin.INSTANCE;
 	}
 
 }

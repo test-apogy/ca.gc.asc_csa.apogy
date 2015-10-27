@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 
@@ -64,7 +64,7 @@ public class VectorPresentationItemProvider extends NodePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VectorPresentation_lineWidth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VectorPresentation_lineWidth_feature", "_UI_VectorPresentation_type"),
-				 TopologyUIPrimitivesPackage.Literals.VECTOR_PRESENTATION__LINE_WIDTH,
+				 Symphony__CommonTopologyAddonsPrimitivesUIPackage.Literals.VECTOR_PRESENTATION__LINE_WIDTH,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class VectorPresentationItemProvider extends NodePresentationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VectorPresentation.class)) {
-			case TopologyUIPrimitivesPackage.VECTOR_PRESENTATION__LINE_WIDTH:
+			case Symphony__CommonTopologyAddonsPrimitivesUIPackage.VECTOR_PRESENTATION__LINE_WIDTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

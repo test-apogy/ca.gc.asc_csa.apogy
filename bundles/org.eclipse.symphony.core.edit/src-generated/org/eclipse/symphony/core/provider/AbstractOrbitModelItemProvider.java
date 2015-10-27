@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.AbstractOrbitModel;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.AbstractOrbitModel} object.
@@ -125,7 +125,7 @@ public class AbstractOrbitModelItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractOrbitModel_orbitModelsList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractOrbitModel_orbitModelsList_feature", "_UI_AbstractOrbitModel_type"),
-				 SymphonyCorePackage.Literals.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST,
+				 Symphony__CorePackage.Literals.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST,
 				 true,
 				 false,
 				 true,
@@ -147,7 +147,7 @@ public class AbstractOrbitModelItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractOrbitModel_variableFeatureReference_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractOrbitModel_variableFeatureReference_feature", "_UI_AbstractOrbitModel_type"),
-				 SymphonyCorePackage.Literals.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE,
+				 Symphony__CorePackage.Literals.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE,
 				 true,
 				 false,
 				 true,
@@ -183,8 +183,8 @@ public class AbstractOrbitModelItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractOrbitModel.class)) {
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__NAME:
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__NAME:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

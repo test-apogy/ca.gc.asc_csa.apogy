@@ -14,8 +14,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.provider.TransformNodeItemProvider;
 import org.eclipse.symphony.core.FeatureOfInterestNode;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.FeatureOfInterestNode} object.
@@ -64,7 +64,7 @@ public class FeatureOfInterestNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_FeatureOfInterestNode_featureOfInterest_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FeatureOfInterestNode_featureOfInterest_feature", "_UI_FeatureOfInterestNode_type"),
-				 SymphonyCorePackage.Literals.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST,
+				 Symphony__CorePackage.Literals.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST,
 				 true,
 				 false,
 				 true,
@@ -132,42 +132,42 @@ public class FeatureOfInterestNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
+				 Symphony__CoreFactory.eINSTANCE.createResultNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
+				 Symphony__CoreFactory.eINSTANCE.createResultsListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
+				 Symphony__CoreFactory.eINSTANCE.createResultNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
+				 Symphony__CoreFactory.eINSTANCE.createResultsListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 	}
 
 	/**

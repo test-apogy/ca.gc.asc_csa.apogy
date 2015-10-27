@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.DirectionalLight#getDirection <em>Direction</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getDirectionalLight()
+ * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getDirectionalLight()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface DirectionalLight extends Light {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Direction</em>' containment reference.
 	 * @see #setDirection(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getDirectionalLight_Direction()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getDirectionalLight_Direction()
 	 * @model containment="true"
 	 * @generated
 	 */

@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation} object.
@@ -69,7 +69,7 @@ public class PoseVariableAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PoseVariableAnnotation_vectorlength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PoseVariableAnnotation_vectorlength_feature", "_UI_PoseVariableAnnotation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.POSE_VARIABLE_ANNOTATION__VECTORLENGTH,
+				 Symphony__CoreEnvironmentUIPackage.Literals.POSE_VARIABLE_ANNOTATION__VECTORLENGTH,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class PoseVariableAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PoseVariableAnnotation_vectorColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PoseVariableAnnotation_vectorColor_feature", "_UI_PoseVariableAnnotation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR,
+				 Symphony__CoreEnvironmentUIPackage.Literals.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR,
 				 true,
 				 false,
 				 false,
@@ -115,7 +115,7 @@ public class PoseVariableAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PoseVariableAnnotation_showPose_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PoseVariableAnnotation_showPose_feature", "_UI_PoseVariableAnnotation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.POSE_VARIABLE_ANNOTATION__SHOW_POSE,
+				 Symphony__CoreEnvironmentUIPackage.Literals.POSE_VARIABLE_ANNOTATION__SHOW_POSE,
 				 true,
 				 false,
 				 false,
@@ -164,9 +164,9 @@ public class PoseVariableAnnotationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PoseVariableAnnotation.class)) {
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTORLENGTH:
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR:
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__SHOW_POSE:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTORLENGTH:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__SHOW_POSE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

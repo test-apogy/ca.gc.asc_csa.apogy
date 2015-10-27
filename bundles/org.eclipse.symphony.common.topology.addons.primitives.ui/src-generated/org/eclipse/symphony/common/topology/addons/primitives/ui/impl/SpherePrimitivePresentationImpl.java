@@ -5,7 +5,7 @@ package org.eclipse.symphony.common.topology.addons.primitives.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.SpherePrimitivePresentation;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage;
 import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 /**
@@ -32,7 +32,7 @@ public class SpherePrimitivePresentationImpl extends NodePresentationImpl implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyUIPrimitivesPackage.Literals.SPHERE_PRIMITIVE_PRESENTATION;
+		return Symphony__CommonTopologyAddonsPrimitivesUIPackage.Literals.SPHERE_PRIMITIVE_PRESENTATION;
 	}
 
 } //SpherePrimitivePresentationImpl

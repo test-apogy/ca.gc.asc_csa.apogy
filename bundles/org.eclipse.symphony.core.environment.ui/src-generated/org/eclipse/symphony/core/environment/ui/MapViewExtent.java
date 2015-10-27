@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewExtent()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewExtent()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface MapViewExtent extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>XMin</em>' attribute.
    * @see #setXMin(double)
-   * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewExtent_XMin()
+   * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewExtent_XMin()
    * @model default="0.0" unique="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES'"
    * @generated
@@ -65,7 +65,7 @@ public interface MapViewExtent extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>XMax</em>' attribute.
    * @see #setXMax(double)
-   * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewExtent_XMax()
+   * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewExtent_XMax()
    * @model default="0.0" unique="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES'"
    * @generated
@@ -92,7 +92,7 @@ public interface MapViewExtent extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>YMin</em>' attribute.
    * @see #setYMin(double)
-   * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewExtent_YMin()
+   * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewExtent_YMin()
    * @model default="0.0" unique="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES'"
    * @generated
@@ -119,7 +119,7 @@ public interface MapViewExtent extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>YMax</em>' attribute.
    * @see #setYMax(double)
-   * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewExtent_YMax()
+   * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewExtent_YMax()
    * @model default="0.0" unique="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES'"
    * @generated
@@ -144,7 +144,7 @@ public interface MapViewExtent extends EObject
    * * Dimension along the X axis.
    * <!-- end-model-doc -->
    * @return the value of the '<em>XDimension</em>' attribute.
-   * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewExtent_XDimension()
+   * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewExtent_XDimension()
    * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES'"
    * @generated
@@ -159,7 +159,7 @@ public interface MapViewExtent extends EObject
    * * Dimension along the Y axis.
    * <!-- end-model-doc -->
    * @return the value of the '<em>YDimension</em>' attribute.
-   * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewExtent_YDimension()
+   * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewExtent_YDimension()
    * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES'"
    * @generated

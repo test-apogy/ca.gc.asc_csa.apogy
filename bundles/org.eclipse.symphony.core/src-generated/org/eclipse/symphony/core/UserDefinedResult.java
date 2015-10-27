@@ -12,11 +12,11 @@ import org.eclipse.symphony.common.emf.Named;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- *  Class representing a result that is no related to an ops call.
+ * Class representing a result that is no related to an ops call.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getUserDefinedResult()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getUserDefinedResult()
  * @model
  * @generated
  */

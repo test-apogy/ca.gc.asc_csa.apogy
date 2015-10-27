@@ -13,8 +13,8 @@ import org.eclipse.symphony.common.emf.TreeRootNode;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
- * Defines Feature Roots Lists used to define all the feature used by the Bindings in a BindingSet.
+ * Defines Feature Roots Lists used to define all the
+ * feature used by the Bindings in a BindingSet.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.emf.TreeRootNode;
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.FeatureRootsList#getFeatureRoots <em>Feature Roots</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getFeatureRootsList()
+ * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getFeatureRootsList()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface FeatureRootsList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Feature Roots</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getFeatureRootsList_FeatureRoots()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getFeatureRootsList_FeatureRoots()
 	 * @model containment="true"
 	 * @generated
 	 */

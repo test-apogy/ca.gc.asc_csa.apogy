@@ -5,7 +5,7 @@ package org.eclipse.symphony.core.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.core.AbsolutePoseProvider;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class AbsolutePoseProviderImpl extends PoseProviderImpl implements Absolu
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.ABSOLUTE_POSE_PROVIDER;
+		return Symphony__CorePackage.Literals.ABSOLUTE_POSE_PROVIDER;
 	}
 
 } //AbsolutePoseProviderImpl

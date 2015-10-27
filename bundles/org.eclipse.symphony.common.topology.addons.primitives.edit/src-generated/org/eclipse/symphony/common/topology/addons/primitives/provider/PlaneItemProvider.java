@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.addons.primitives.Plane;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
 
 /**
@@ -70,7 +70,7 @@ public class PlaneItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Plane_width_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Plane_width_feature", "_UI_Plane_type"),
-				 PrimitivesPackage.Literals.PLANE__WIDTH,
+				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__WIDTH,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class PlaneItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Plane_height_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Plane_height_feature", "_UI_Plane_type"),
-				 PrimitivesPackage.Literals.PLANE__HEIGHT,
+				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -113,8 +113,8 @@ public class PlaneItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PrimitivesPackage.Literals.PLANE__V0);
-			childrenFeatures.add(PrimitivesPackage.Literals.PLANE__V1);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V0);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V1);
 		}
 		return childrenFeatures;
 	}
@@ -169,12 +169,12 @@ public class PlaneItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Plane.class)) {
-			case PrimitivesPackage.PLANE__WIDTH:
-			case PrimitivesPackage.PLANE__HEIGHT:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__WIDTH:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__HEIGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case PrimitivesPackage.PLANE__V0:
-			case PrimitivesPackage.PLANE__V1:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V0:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V1:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -194,12 +194,12 @@ public class PlaneItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PrimitivesPackage.Literals.PLANE__V0,
+				(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V0,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PrimitivesPackage.Literals.PLANE__V1,
+				(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V1,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
@@ -215,8 +215,8 @@ public class PlaneItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == PrimitivesPackage.Literals.PLANE__V0 ||
-			childFeature == PrimitivesPackage.Literals.PLANE__V1;
+			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V0 ||
+			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE__V1;
 
 		if (qualify) {
 			return getString

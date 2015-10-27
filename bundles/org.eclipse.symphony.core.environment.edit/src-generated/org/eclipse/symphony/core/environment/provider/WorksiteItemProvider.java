@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.Worksite;
 import org.eclipse.symphony.core.provider.AbstractWorksiteItemProvider;
 
@@ -70,7 +70,7 @@ public class WorksiteItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Worksite_worksiteNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Worksite_worksiteNode_feature", "_UI_Worksite_type"),
-				 SymphonyEnvironmentPackage.Literals.WORKSITE__WORKSITE_NODE,
+				 Symphony__CoreEnvironmentPackage.Literals.WORKSITE__WORKSITE_NODE,
 				 false,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class WorksiteItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Worksite_orbitsModels_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Worksite_orbitsModels_feature", "_UI_Worksite_type"),
-				 SymphonyEnvironmentPackage.Literals.WORKSITE__ORBITS_MODELS,
+				 Symphony__CoreEnvironmentPackage.Literals.WORKSITE__ORBITS_MODELS,
 				 true,
 				 false,
 				 true,
@@ -114,7 +114,7 @@ public class WorksiteItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT);
 		}
 		return childrenFeatures;
 	}
@@ -161,7 +161,7 @@ public class WorksiteItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Worksite.class)) {
-			case SymphonyEnvironmentPackage.WORKSITE__ENVIRONMENT:
+			case Symphony__CoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -182,18 +182,18 @@ public class WorksiteItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEnvironment()));
+				(Symphony__CoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEnvironment()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT,
-				 SymphonyEnvironmentFactory.eINSTANCE.createSurfaceEnvironment()));
+				(Symphony__CoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSurfaceEnvironment()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment()));
+				(Symphony__CoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment()));
 	}
 
 }

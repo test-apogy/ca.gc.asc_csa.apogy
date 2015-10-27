@@ -6,7 +6,7 @@ package org.eclipse.symphony.addons.sensors.pose.ui;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -75,7 +75,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION__TOPOLOGY_PRESENTATION_SET = TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int POSITION_SENSOR_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -84,7 +84,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION__NODE = TopologyUIPackage.NODE_PRESENTATION__NODE;
+	int POSITION_SENSOR_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -93,7 +93,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION__COLOR = TopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int POSITION_SENSOR_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -102,7 +102,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION__VISIBLE = TopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int POSITION_SENSOR_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -111,7 +111,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION__SHADOW_MODE = TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int POSITION_SENSOR_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -120,7 +120,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION__USE_IN_BOUNDING_CALCULATION = TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int POSITION_SENSOR_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -129,7 +129,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION__CENTROID = TopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int POSITION_SENSOR_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -138,7 +138,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION__MIN = TopologyUIPackage.NODE_PRESENTATION__MIN;
+	int POSITION_SENSOR_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -147,7 +147,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION__MAX = TopologyUIPackage.NODE_PRESENTATION__MAX;
+	int POSITION_SENSOR_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -156,7 +156,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION__XRANGE = TopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int POSITION_SENSOR_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -165,7 +165,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION__YRANGE = TopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int POSITION_SENSOR_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -174,7 +174,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION__ZRANGE = TopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int POSITION_SENSOR_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -183,7 +183,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION__SCENE_OBJECT = TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int POSITION_SENSOR_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Frame Visible</b></em>' attribute.
@@ -192,7 +192,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int POSITION_SENSOR_PRESENTATION__FRAME_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Position Sensor Presentation</em>' class.
@@ -201,7 +201,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION_FEATURE_COUNT = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int POSITION_SENSOR_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Position Sensor Presentation</em>' class.
@@ -210,7 +210,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_SENSOR_PRESENTATION_OPERATION_COUNT = TopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int POSITION_SENSOR_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.ui.impl.OrientationSensorPresentationImpl <em>Orientation Sensor Presentation</em>}' class.
@@ -229,7 +229,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION__TOPOLOGY_PRESENTATION_SET = TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int ORIENTATION_SENSOR_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -238,7 +238,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION__NODE = TopologyUIPackage.NODE_PRESENTATION__NODE;
+	int ORIENTATION_SENSOR_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -247,7 +247,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION__COLOR = TopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int ORIENTATION_SENSOR_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -256,7 +256,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION__VISIBLE = TopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int ORIENTATION_SENSOR_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -265,7 +265,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION__SHADOW_MODE = TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int ORIENTATION_SENSOR_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -274,7 +274,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION__USE_IN_BOUNDING_CALCULATION = TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int ORIENTATION_SENSOR_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -283,7 +283,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION__CENTROID = TopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int ORIENTATION_SENSOR_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -292,7 +292,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION__MIN = TopologyUIPackage.NODE_PRESENTATION__MIN;
+	int ORIENTATION_SENSOR_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -301,7 +301,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION__MAX = TopologyUIPackage.NODE_PRESENTATION__MAX;
+	int ORIENTATION_SENSOR_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -310,7 +310,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION__XRANGE = TopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int ORIENTATION_SENSOR_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -319,7 +319,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION__YRANGE = TopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int ORIENTATION_SENSOR_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -328,7 +328,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION__ZRANGE = TopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int ORIENTATION_SENSOR_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -337,7 +337,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION__SCENE_OBJECT = TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int ORIENTATION_SENSOR_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Frame Visible</b></em>' attribute.
@@ -346,7 +346,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION__FRAME_VISIBLE = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int ORIENTATION_SENSOR_PRESENTATION__FRAME_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Orientation Sensor Presentation</em>' class.
@@ -355,7 +355,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION_FEATURE_COUNT = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int ORIENTATION_SENSOR_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Orientation Sensor Presentation</em>' class.
@@ -364,7 +364,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORIENTATION_SENSOR_PRESENTATION_OPERATION_COUNT = TopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int ORIENTATION_SENSOR_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.ui.impl.PoseSensorPresentationImpl <em>Pose Sensor Presentation</em>}' class.
@@ -383,7 +383,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION__TOPOLOGY_PRESENTATION_SET = TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int POSE_SENSOR_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -392,7 +392,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION__NODE = TopologyUIPackage.NODE_PRESENTATION__NODE;
+	int POSE_SENSOR_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -401,7 +401,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION__COLOR = TopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int POSE_SENSOR_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -410,7 +410,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION__VISIBLE = TopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int POSE_SENSOR_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -419,7 +419,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION__SHADOW_MODE = TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int POSE_SENSOR_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -428,7 +428,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION__USE_IN_BOUNDING_CALCULATION = TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int POSE_SENSOR_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -437,7 +437,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION__CENTROID = TopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int POSE_SENSOR_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -446,7 +446,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION__MIN = TopologyUIPackage.NODE_PRESENTATION__MIN;
+	int POSE_SENSOR_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -455,7 +455,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION__MAX = TopologyUIPackage.NODE_PRESENTATION__MAX;
+	int POSE_SENSOR_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -464,7 +464,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION__XRANGE = TopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int POSE_SENSOR_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -473,7 +473,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION__YRANGE = TopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int POSE_SENSOR_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -482,7 +482,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION__ZRANGE = TopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int POSE_SENSOR_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -491,7 +491,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION__SCENE_OBJECT = TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int POSE_SENSOR_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Frame Visible</b></em>' attribute.
@@ -500,7 +500,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION__FRAME_VISIBLE = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int POSE_SENSOR_PRESENTATION__FRAME_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Pose Sensor Presentation</em>' class.
@@ -509,7 +509,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION_FEATURE_COUNT = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int POSE_SENSOR_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Pose Sensor Presentation</em>' class.
@@ -518,7 +518,7 @@ public interface Symphony__AddonsSensorsPoseUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_SENSOR_PRESENTATION_OPERATION_COUNT = TopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int POSE_SENSOR_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
 	/**

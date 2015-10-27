@@ -24,8 +24,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverFactory;
-import org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage;
+import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverFactory;
+import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
 import org.eclipse.symphony.examples.rover.Rover;
 
 /**
@@ -91,7 +91,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Rover_roboticArm_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Rover_roboticArm_feature", "_UI_Rover_type"),
-				 EMFEcoreExampleRoverPackage.Literals.ROVER__ROBOTIC_ARM,
+				 Symphony__ExamplesRoverPackage.Literals.ROVER__ROBOTIC_ARM,
 				 true,
 				 false,
 				 true,
@@ -114,7 +114,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Rover_mobilePlatform_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Rover_mobilePlatform_feature", "_UI_Rover_type"),
-				 EMFEcoreExampleRoverPackage.Literals.ROVER__MOBILE_PLATFORM,
+				 Symphony__ExamplesRoverPackage.Literals.ROVER__MOBILE_PLATFORM,
 				 true,
 				 false,
 				 true,
@@ -136,7 +136,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Rover_armCamera_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Rover_armCamera_feature", "_UI_Rover_type"),
-				 EMFEcoreExampleRoverPackage.Literals.ROVER__ARM_CAMERA,
+				 Symphony__ExamplesRoverPackage.Literals.ROVER__ARM_CAMERA,
 				 true,
 				 false,
 				 true,
@@ -158,7 +158,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Rover_centerCamera_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Rover_centerCamera_feature", "_UI_Rover_type"),
-				 EMFEcoreExampleRoverPackage.Literals.ROVER__CENTER_CAMERA,
+				 Symphony__ExamplesRoverPackage.Literals.ROVER__CENTER_CAMERA,
 				 true,
 				 false,
 				 true,
@@ -180,7 +180,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_Rover_linearVelocity_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_Rover_linearVelocity_feature", "_UI_Rover_type"),
-				EMFEcoreExampleRoverPackage.Literals.ROVER__LINEAR_VELOCITY,
+				Symphony__ExamplesRoverPackage.Literals.ROVER__LINEAR_VELOCITY,
 				false,
 				false,
 				false,
@@ -202,7 +202,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_Rover_angularVelocity_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_Rover_angularVelocity_feature", "_UI_Rover_type"),
-				EMFEcoreExampleRoverPackage.Literals.ROVER__ANGULAR_VELOCITY,
+				Symphony__ExamplesRoverPackage.Literals.ROVER__ANGULAR_VELOCITY,
 				false,
 				false,
 				false,
@@ -224,7 +224,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Rover_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Rover_initialized_feature", "_UI_Rover_type"),
-				 EMFEcoreExampleRoverPackage.Literals.ROVER__INITIALIZED,
+				 Symphony__ExamplesRoverPackage.Literals.ROVER__INITIALIZED,
 				 false,
 				 false,
 				 false,
@@ -246,7 +246,7 @@ public class RoverItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Rover_disposed_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Rover_disposed_feature", "_UI_Rover_type"),
-				 EMFEcoreExampleRoverPackage.Literals.ROVER__DISPOSED,
+				 Symphony__ExamplesRoverPackage.Literals.ROVER__DISPOSED,
 				 false,
 				 false,
 				 false,
@@ -267,11 +267,11 @@ public class RoverItemProvider extends ItemProviderAdapter
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreExampleRoverPackage.Literals.ROVER__ROBOTIC_ARM);
-			childrenFeatures.add(EMFEcoreExampleRoverPackage.Literals.ROVER__MOBILE_PLATFORM);
-			childrenFeatures.add(EMFEcoreExampleRoverPackage.Literals.ROVER__ARM_CAMERA);
-			childrenFeatures.add(EMFEcoreExampleRoverPackage.Literals.ROVER__CENTER_CAMERA);
-			childrenFeatures.add(EMFEcoreExampleRoverPackage.Literals.ROVER__POWER_SYSTEM);
+			childrenFeatures.add(Symphony__ExamplesRoverPackage.Literals.ROVER__ROBOTIC_ARM);
+			childrenFeatures.add(Symphony__ExamplesRoverPackage.Literals.ROVER__MOBILE_PLATFORM);
+			childrenFeatures.add(Symphony__ExamplesRoverPackage.Literals.ROVER__ARM_CAMERA);
+			childrenFeatures.add(Symphony__ExamplesRoverPackage.Literals.ROVER__CENTER_CAMERA);
+			childrenFeatures.add(Symphony__ExamplesRoverPackage.Literals.ROVER__POWER_SYSTEM);
 		}
 		return childrenFeatures;
 	}
@@ -334,17 +334,17 @@ public class RoverItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Rover.class)) {
-			case EMFEcoreExampleRoverPackage.ROVER__LINEAR_VELOCITY:
-			case EMFEcoreExampleRoverPackage.ROVER__ANGULAR_VELOCITY:
-			case EMFEcoreExampleRoverPackage.ROVER__INITIALIZED:
-			case EMFEcoreExampleRoverPackage.ROVER__DISPOSED:
+			case Symphony__ExamplesRoverPackage.ROVER__LINEAR_VELOCITY:
+			case Symphony__ExamplesRoverPackage.ROVER__ANGULAR_VELOCITY:
+			case Symphony__ExamplesRoverPackage.ROVER__INITIALIZED:
+			case Symphony__ExamplesRoverPackage.ROVER__DISPOSED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreExampleRoverPackage.ROVER__ROBOTIC_ARM:
-			case EMFEcoreExampleRoverPackage.ROVER__MOBILE_PLATFORM:
-			case EMFEcoreExampleRoverPackage.ROVER__ARM_CAMERA:
-			case EMFEcoreExampleRoverPackage.ROVER__CENTER_CAMERA:
-			case EMFEcoreExampleRoverPackage.ROVER__POWER_SYSTEM:
+			case Symphony__ExamplesRoverPackage.ROVER__ROBOTIC_ARM:
+			case Symphony__ExamplesRoverPackage.ROVER__MOBILE_PLATFORM:
+			case Symphony__ExamplesRoverPackage.ROVER__ARM_CAMERA:
+			case Symphony__ExamplesRoverPackage.ROVER__CENTER_CAMERA:
+			case Symphony__ExamplesRoverPackage.ROVER__POWER_SYSTEM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -365,8 +365,8 @@ public class RoverItemProvider extends ItemProviderAdapter
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleRoverPackage.Literals.ROVER__POWER_SYSTEM,
-				 EMFEcoreExampleRoverFactory.eINSTANCE.createPowerSystem()));
+				(Symphony__ExamplesRoverPackage.Literals.ROVER__POWER_SYSTEM,
+				 Symphony__ExamplesRoverFactory.eINSTANCE.createPowerSystem()));
 	}
 
 	/**

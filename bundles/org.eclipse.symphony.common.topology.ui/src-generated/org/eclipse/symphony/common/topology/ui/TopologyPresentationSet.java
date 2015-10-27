@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getNodePresentationList <em>Node Presentation List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getTopologyPresentationSet()
+ * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTopologyPresentationSet()
  * @model
  * @generated
  */
@@ -34,12 +34,11 @@ public interface TopologyPresentationSet extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The TopologyPresentationRegistry containing this TopologyPresentationSet.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Topology Presentation Registry</em>' container reference.
 	 * @see #setTopologyPresentationRegistry(TopologyPresentationRegistry)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getTopologyPresentationSet_TopologyPresentationRegistry()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTopologyPresentationSet_TopologyPresentationRegistry()
 	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#getTopologyPresentationSetList
 	 * @model opposite="topologyPresentationSetList" transient="false"
 	 * @generated
@@ -62,12 +61,11 @@ public interface TopologyPresentationSet extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The GraphicsContext containing this PresentationTopology.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Graphics Context</em>' reference.
 	 * @see #setGraphicsContext(GraphicsContext)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getTopologyPresentationSet_GraphicsContext()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTopologyPresentationSet_GraphicsContext()
 	 * @see org.eclipse.symphony.common.topology.ui.GraphicsContext#getTopologyPresentationSet
 	 * @model opposite="topologyPresentationSet"
 	 * @generated
@@ -91,11 +89,10 @@ public interface TopologyPresentationSet extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The list of NodePresentation managed by this PresentationTopology.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Node Presentation List</em>' reference list.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getTopologyPresentationSet_NodePresentationList()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTopologyPresentationSet_NodePresentationList()
 	 * @see org.eclipse.symphony.common.topology.ui.NodePresentation#getTopologyPresentationSet
 	 * @model opposite="topologyPresentationSet"
 	 * @generated
@@ -106,7 +103,6 @@ public interface TopologyPresentationSet extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the NodePresentation associated with a specified Node.
 	 * @param node The specified Node.
 	 * @return The NodePresentation associated with specified Node, null if none is found.
@@ -120,7 +116,6 @@ public interface TopologyPresentationSet extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the list of Nodes managed by this PresentationTopology.
 	 * @return The list of Nodes. Never null.
 	 * <!-- end-model-doc -->

@@ -12,12 +12,11 @@ import org.eclipse.symphony.common.emf.Timed;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Defines the triplet of Position, Velocity, Acceleration that is time stamped.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getTimedStampedPVACoordinates()
+ * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getTimedStampedPVACoordinates()
  * @model
  * @generated
  */

@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.symphony.core.invocator.WatchesListsContainer#getWatches <em>Watches</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatchesListsContainer()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchesListsContainer()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface WatchesListsContainer extends AbstractToolsListContainer
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Watches</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatchesListsContainer_Watches()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchesListsContainer_Watches()
 	 * @see org.eclipse.symphony.core.invocator.WatchesList#getWatchesListsContainer
 	 * @model opposite="watchesListsContainer" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"

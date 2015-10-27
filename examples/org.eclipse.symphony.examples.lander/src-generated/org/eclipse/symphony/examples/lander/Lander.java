@@ -42,7 +42,7 @@ import org.eclipse.symphony.common.emf.Disposable;
  *   <li>{@link org.eclipse.symphony.examples.lander.Lander#isDisposed <em>Disposed</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander()
+ * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander()
  * @model abstract="true"
  * @generated
  */
@@ -65,7 +65,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Position</em>' containment reference.
 	 * @see #setPosition(Position)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_Position()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_Position()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Position'"
 	 * @generated
@@ -96,7 +96,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Thruster</em>' containment reference.
 	 * @see #setThruster(Thruster)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_Thruster()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_Thruster()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Flight'"
 	 * @generated
@@ -124,7 +124,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Leg APosition</em>' attribute.
 	 * @see #setLegAPosition(double)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_LegAPosition()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_LegAPosition()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' csa_units='m' propertyCategory='Leg Positions'"
 	 * @generated
@@ -153,7 +153,7 @@ public interface Lander extends Disposable
 	 * @return the value of the '<em>Leg AExtension</em>' attribute.
 	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
 	 * @see #setLegAExtension(LanderLegExtension)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_LegAExtension()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_LegAExtension()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' propertyCategory='Leg Extension Levels'"
 	 * @generated
@@ -182,7 +182,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Leg BPosition</em>' attribute.
 	 * @see #setLegBPosition(double)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_LegBPosition()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_LegBPosition()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' csa_units='m' propertyCategory='Leg Positions'"
 	 * @generated
@@ -211,7 +211,7 @@ public interface Lander extends Disposable
 	 * @return the value of the '<em>Leg BExtension</em>' attribute.
 	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
 	 * @see #setLegBExtension(LanderLegExtension)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_LegBExtension()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_LegBExtension()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' propertyCategory='Leg Extension Levels'"
 	 * @generated
@@ -240,7 +240,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Leg CPosition</em>' attribute.
 	 * @see #setLegCPosition(double)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_LegCPosition()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_LegCPosition()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' csa_units='m' propertyCategory='Leg Positions'"
 	 * @generated
@@ -269,7 +269,7 @@ public interface Lander extends Disposable
 	 * @return the value of the '<em>Leg CExtension</em>' attribute.
 	 * @see org.eclipse.symphony.examples.lander.LanderLegExtension
 	 * @see #setLegCExtension(LanderLegExtension)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_LegCExtension()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_LegCExtension()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' propertyCategory='Leg Extension Levels'"
 	 * @generated
@@ -311,7 +311,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>XAngular Velocity</em>' attribute.
 	 * @see #setXAngularVelocity(double)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_XAngularVelocity()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_XAngularVelocity()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='rad/s' propertyCategory='Velocities'"
 	 * @generated
@@ -352,7 +352,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>YAngular Velocity</em>' attribute.
 	 * @see #setYAngularVelocity(double)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_YAngularVelocity()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_YAngularVelocity()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='rad/s' propertyCategory='Velocities'"
 	 * @generated
@@ -377,7 +377,7 @@ public interface Lander extends Disposable
 	 * This represents the mass of the lander (in kg).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mass</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_Mass()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_Mass()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' csa_units='kg' property='Readonly' propertyCategory='Flight'"
 	 * @generated
@@ -402,7 +402,7 @@ public interface Lander extends Disposable
 	 * @return The amount of gravitational force (in N) imposed upon the lander
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Gravitational Pull</em>' attribute.
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_GravitationalPull()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_GravitationalPull()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' csa_units='N' property='Readonly' propertyCategory='Flight'"
 	 * @generated
@@ -424,7 +424,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Flying Enabled</em>' attribute.
 	 * @see #setFlyingEnabled(boolean)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_FlyingEnabled()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_FlyingEnabled()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Flight'"
 	 * @generated
@@ -453,7 +453,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_Initialized()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -481,7 +481,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Disposed</em>' attribute.
 	 * @see #setDisposed(boolean)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_Disposed()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_Disposed()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -510,7 +510,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Changing Legs</em>' attribute.
 	 * @see #setChangingLegs(boolean)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_ChangingLegs()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_ChangingLegs()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -539,7 +539,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Changing Attitude</em>' attribute.
 	 * @see #setChangingAttitude(boolean)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_ChangingAttitude()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_ChangingAttitude()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -568,7 +568,7 @@ public interface Lander extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Changing Location</em>' attribute.
 	 * @see #setChangingLocation(boolean)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLander_ChangingLocation()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_ChangingLocation()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status' propertyDescription=''"
 	 * @generated

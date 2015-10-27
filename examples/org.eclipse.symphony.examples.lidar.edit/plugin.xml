@@ -8,10 +8,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated emf_ecore.examples_lidar -->
+      <!-- @generated symphony_examples_lidar -->
       <factory
             uri="org.eclipse.symphony.examples.lidar"
-            class="org.eclipse.symphony.examples.lidar.provider.EMFEcoreExampleLidarItemProviderAdapterFactory"
+            class="org.eclipse.symphony.examples.lidar.provider.Symphony__ExamplesLidarItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -24,14 +24,6 @@
       <!-- @generated symphony_examples_lidar -->
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.lidar.provider.EMFEcoreExampleLidarItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.lidar.provider.Symphony__ExamplesLidarItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated emf_ecore.examples_lidar -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.lidar.provider.EMFEcoreExampleLidarItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-   </extension>
-
 </plugin>

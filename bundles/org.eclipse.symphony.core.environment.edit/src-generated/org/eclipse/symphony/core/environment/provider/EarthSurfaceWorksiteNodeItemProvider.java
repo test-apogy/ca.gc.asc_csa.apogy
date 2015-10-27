@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode} object.
@@ -63,7 +63,7 @@ public class EarthSurfaceWorksiteNodeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceWorksiteNode_skyTransformNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksiteNode_skyTransformNode_feature", "_UI_EarthSurfaceWorksiteNode_type"),
-				 SymphonyEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE,
+				 Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE_NODE__SKY_TRANSFORM_NODE,
 				 true,
 				 false,
 				 true,

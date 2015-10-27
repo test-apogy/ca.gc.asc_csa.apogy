@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.FeatureOfInterest} object.
@@ -162,8 +162,8 @@ public class FeatureOfInterestItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FeatureOfInterest.class)) {
-			case SymphonyCorePackage.FEATURE_OF_INTEREST__NAME:
-			case SymphonyCorePackage.FEATURE_OF_INTEREST__DESCRIPTION:
+			case Symphony__CorePackage.FEATURE_OF_INTEREST__NAME:
+			case Symphony__CorePackage.FEATURE_OF_INTEREST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

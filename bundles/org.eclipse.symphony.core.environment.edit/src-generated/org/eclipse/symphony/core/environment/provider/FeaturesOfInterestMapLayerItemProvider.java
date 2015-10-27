@@ -12,9 +12,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
 import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer} object.
@@ -61,7 +61,7 @@ public class FeaturesOfInterestMapLayerItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES);
 		}
 		return childrenFeatures;
 	}
@@ -139,7 +139,7 @@ public class FeaturesOfInterestMapLayerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FeaturesOfInterestMapLayer.class)) {
-			case SymphonyEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES:
+			case Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -159,8 +159,8 @@ public class FeaturesOfInterestMapLayerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestList()));
+				(Symphony__CoreEnvironmentPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES,
+				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestList()));
 	}
 
 }

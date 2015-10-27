@@ -7,7 +7,7 @@
 package org.eclipse.symphony.common.topology.addons.primitives.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.WayPoint;
 import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 
@@ -35,7 +35,7 @@ public class WayPointImpl extends AggregateGroupNodeImpl implements WayPoint {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PrimitivesPackage.Literals.WAY_POINT;
+		return Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.WAY_POINT;
 	}
 
 } //WayPointImpl

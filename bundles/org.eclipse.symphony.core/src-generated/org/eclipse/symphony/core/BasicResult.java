@@ -11,7 +11,7 @@ import org.eclipse.symphony.core.invocator.AbstractResult;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getBasicResult()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getBasicResult()
  * @model
  * @generated
  */

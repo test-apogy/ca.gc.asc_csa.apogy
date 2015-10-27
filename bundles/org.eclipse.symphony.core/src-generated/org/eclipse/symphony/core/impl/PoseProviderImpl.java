@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -56,7 +56,7 @@ public class PoseProviderImpl extends MinimalEObjectImpl.Container implements Po
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyCorePackage.Literals.POSE_PROVIDER;
+		return Symphony__CorePackage.Literals.POSE_PROVIDER;
 	}
 
   /**
@@ -79,7 +79,7 @@ public class PoseProviderImpl extends MinimalEObjectImpl.Container implements Po
 		Matrix4x4 oldPoseTransform = poseTransform;
 		poseTransform = newPoseTransform;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM, oldPoseTransform, newPoseTransform);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM, oldPoseTransform, newPoseTransform);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -95,14 +95,14 @@ public class PoseProviderImpl extends MinimalEObjectImpl.Container implements Po
 		if (newPoseTransform != poseTransform) {
 			NotificationChain msgs = null;
 			if (poseTransform != null)
-				msgs = ((InternalEObject)poseTransform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)poseTransform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM, null, msgs);
 			if (newPoseTransform != null)
-				msgs = ((InternalEObject)newPoseTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)newPoseTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM, null, msgs);
 			msgs = basicSetPoseTransform(newPoseTransform, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM, newPoseTransform, newPoseTransform));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM, newPoseTransform, newPoseTransform));
 	}
 
   /**
@@ -114,7 +114,7 @@ public class PoseProviderImpl extends MinimalEObjectImpl.Container implements Po
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM:
+			case Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM:
 				return basicSetPoseTransform(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -129,7 +129,7 @@ public class PoseProviderImpl extends MinimalEObjectImpl.Container implements Po
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM:
+			case Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM:
 				return getPoseTransform();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -144,7 +144,7 @@ public class PoseProviderImpl extends MinimalEObjectImpl.Container implements Po
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM:
+			case Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM:
 				setPoseTransform((Matrix4x4)newValue);
 				return;
 		}
@@ -160,7 +160,7 @@ public class PoseProviderImpl extends MinimalEObjectImpl.Container implements Po
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM:
+			case Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM:
 				setPoseTransform((Matrix4x4)null);
 				return;
 		}
@@ -176,7 +176,7 @@ public class PoseProviderImpl extends MinimalEObjectImpl.Container implements Po
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM:
+			case Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM:
 				return poseTransform != null;
 		}
 		return super.eIsSet(featureID);

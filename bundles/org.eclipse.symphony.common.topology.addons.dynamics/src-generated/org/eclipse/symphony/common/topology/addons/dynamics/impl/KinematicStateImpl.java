@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.addons.dynamics.KinematicState;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -107,7 +107,7 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE;
+		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE;
 	}
 
 	/**
@@ -128,7 +128,7 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 		Tuple3d oldPosition = position;
 		position = newPosition;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__POSITION, oldPosition, newPosition);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__POSITION, oldPosition, newPosition);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -143,14 +143,14 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 		if (newPosition != position) {
 			NotificationChain msgs = null;
 			if (position != null)
-				msgs = ((InternalEObject)position).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__POSITION, null, msgs);
+				msgs = ((InternalEObject)position).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__POSITION, null, msgs);
 			if (newPosition != null)
-				msgs = ((InternalEObject)newPosition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__POSITION, null, msgs);
+				msgs = ((InternalEObject)newPosition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__POSITION, null, msgs);
 			msgs = basicSetPosition(newPosition, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__POSITION, newPosition, newPosition));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__POSITION, newPosition, newPosition));
 	}
 
 	/**
@@ -171,7 +171,7 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 		Tuple3d oldOrientation = orientation;
 		orientation = newOrientation;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ORIENTATION, oldOrientation, newOrientation);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ORIENTATION, oldOrientation, newOrientation);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -186,14 +186,14 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 		if (newOrientation != orientation) {
 			NotificationChain msgs = null;
 			if (orientation != null)
-				msgs = ((InternalEObject)orientation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ORIENTATION, null, msgs);
+				msgs = ((InternalEObject)orientation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ORIENTATION, null, msgs);
 			if (newOrientation != null)
-				msgs = ((InternalEObject)newOrientation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ORIENTATION, null, msgs);
+				msgs = ((InternalEObject)newOrientation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ORIENTATION, null, msgs);
 			msgs = basicSetOrientation(newOrientation, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ORIENTATION, newOrientation, newOrientation));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ORIENTATION, newOrientation, newOrientation));
 	}
 
 	/**
@@ -214,7 +214,7 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 		Tuple3d oldLinearVelocity = linearVelocity;
 		linearVelocity = newLinearVelocity;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY, oldLinearVelocity, newLinearVelocity);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY, oldLinearVelocity, newLinearVelocity);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -229,14 +229,14 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 		if (newLinearVelocity != linearVelocity) {
 			NotificationChain msgs = null;
 			if (linearVelocity != null)
-				msgs = ((InternalEObject)linearVelocity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY, null, msgs);
+				msgs = ((InternalEObject)linearVelocity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY, null, msgs);
 			if (newLinearVelocity != null)
-				msgs = ((InternalEObject)newLinearVelocity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY, null, msgs);
+				msgs = ((InternalEObject)newLinearVelocity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY, null, msgs);
 			msgs = basicSetLinearVelocity(newLinearVelocity, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY, newLinearVelocity, newLinearVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY, newLinearVelocity, newLinearVelocity));
 	}
 
 	/**
@@ -257,7 +257,7 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 		Tuple3d oldAngularVelocity = angularVelocity;
 		angularVelocity = newAngularVelocity;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY, oldAngularVelocity, newAngularVelocity);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY, oldAngularVelocity, newAngularVelocity);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -272,14 +272,14 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 		if (newAngularVelocity != angularVelocity) {
 			NotificationChain msgs = null;
 			if (angularVelocity != null)
-				msgs = ((InternalEObject)angularVelocity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY, null, msgs);
+				msgs = ((InternalEObject)angularVelocity).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY, null, msgs);
 			if (newAngularVelocity != null)
-				msgs = ((InternalEObject)newAngularVelocity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY, null, msgs);
+				msgs = ((InternalEObject)newAngularVelocity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY, null, msgs);
 			msgs = basicSetAngularVelocity(newAngularVelocity, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY, newAngularVelocity, newAngularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY, newAngularVelocity, newAngularVelocity));
 	}
 
 	/**
@@ -300,7 +300,7 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 		Tuple3d oldLinearAcceleration = linearAcceleration;
 		linearAcceleration = newLinearAcceleration;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION, oldLinearAcceleration, newLinearAcceleration);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION, oldLinearAcceleration, newLinearAcceleration);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -315,14 +315,14 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 		if (newLinearAcceleration != linearAcceleration) {
 			NotificationChain msgs = null;
 			if (linearAcceleration != null)
-				msgs = ((InternalEObject)linearAcceleration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION, null, msgs);
+				msgs = ((InternalEObject)linearAcceleration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION, null, msgs);
 			if (newLinearAcceleration != null)
-				msgs = ((InternalEObject)newLinearAcceleration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION, null, msgs);
+				msgs = ((InternalEObject)newLinearAcceleration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION, null, msgs);
 			msgs = basicSetLinearAcceleration(newLinearAcceleration, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION, newLinearAcceleration, newLinearAcceleration));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION, newLinearAcceleration, newLinearAcceleration));
 	}
 
 	/**
@@ -343,7 +343,7 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 		Tuple3d oldAngularAcceleration = angularAcceleration;
 		angularAcceleration = newAngularAcceleration;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION, oldAngularAcceleration, newAngularAcceleration);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION, oldAngularAcceleration, newAngularAcceleration);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -358,14 +358,14 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 		if (newAngularAcceleration != angularAcceleration) {
 			NotificationChain msgs = null;
 			if (angularAcceleration != null)
-				msgs = ((InternalEObject)angularAcceleration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION, null, msgs);
+				msgs = ((InternalEObject)angularAcceleration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION, null, msgs);
 			if (newAngularAcceleration != null)
-				msgs = ((InternalEObject)newAngularAcceleration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION, null, msgs);
+				msgs = ((InternalEObject)newAngularAcceleration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION, null, msgs);
 			msgs = basicSetAngularAcceleration(newAngularAcceleration, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION, newAngularAcceleration, newAngularAcceleration));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION, newAngularAcceleration, newAngularAcceleration));
 	}
 
 	/**
@@ -376,17 +376,17 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__POSITION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__POSITION:
 				return basicSetPosition(null, msgs);
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
 				return basicSetOrientation(null, msgs);
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
 				return basicSetLinearVelocity(null, msgs);
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
 				return basicSetAngularVelocity(null, msgs);
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
 				return basicSetLinearAcceleration(null, msgs);
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
 				return basicSetAngularAcceleration(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -400,17 +400,17 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__POSITION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__POSITION:
 				return getPosition();
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
 				return getOrientation();
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
 				return getLinearVelocity();
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
 				return getAngularVelocity();
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
 				return getLinearAcceleration();
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
 				return getAngularAcceleration();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -424,22 +424,22 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__POSITION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__POSITION:
 				setPosition((Tuple3d)newValue);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
 				setOrientation((Tuple3d)newValue);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
 				setLinearVelocity((Tuple3d)newValue);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
 				setAngularVelocity((Tuple3d)newValue);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
 				setLinearAcceleration((Tuple3d)newValue);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
 				setAngularAcceleration((Tuple3d)newValue);
 				return;
 		}
@@ -454,22 +454,22 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__POSITION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__POSITION:
 				setPosition((Tuple3d)null);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
 				setOrientation((Tuple3d)null);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
 				setLinearVelocity((Tuple3d)null);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
 				setAngularVelocity((Tuple3d)null);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
 				setLinearAcceleration((Tuple3d)null);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
 				setAngularAcceleration((Tuple3d)null);
 				return;
 		}
@@ -484,17 +484,17 @@ public class KinematicStateImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__POSITION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__POSITION:
 				return position != null;
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
 				return orientation != null;
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
 				return linearVelocity != null;
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
 				return angularVelocity != null;
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
 				return linearAcceleration != null;
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
 				return angularAcceleration != null;
 		}
 		return super.eIsSet(featureID);

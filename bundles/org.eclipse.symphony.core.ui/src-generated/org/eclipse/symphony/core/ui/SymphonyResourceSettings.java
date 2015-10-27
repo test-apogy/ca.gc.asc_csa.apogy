@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * * This class is used to support Symphony wizards.
+ * This class is used to support Symphony wizards.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.ui.SymphonyResourceSettings#getResourceContainer <em>Resource Container</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getSymphonyResourceSettings()
+ * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getSymphonyResourceSettings()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface SymphonyResourceSettings extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Resource Project</em>' attribute.
 	 * @see #setResourceProject(IProject)
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getSymphonyResourceSettings_ResourceProject()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getSymphonyResourceSettings_ResourceProject()
 	 * @model unique="false" dataType="org.eclipse.symphony.core.ui.IProject"
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface SymphonyResourceSettings extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Resource File</em>' attribute.
 	 * @see #setResourceFile(IFile)
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getSymphonyResourceSettings_ResourceFile()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getSymphonyResourceSettings_ResourceFile()
 	 * @model unique="false" dataType="org.eclipse.symphony.core.ui.IFile"
 	 * @generated
 	 */
@@ -93,7 +93,7 @@ public interface SymphonyResourceSettings extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Resource Container</em>' attribute.
 	 * @see #setResourceContainer(IContainer)
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getSymphonyResourceSettings_ResourceContainer()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getSymphonyResourceSettings_ResourceContainer()
 	 * @model unique="false" dataType="org.eclipse.symphony.core.ui.IContainer"
 	 * @generated
 	 */

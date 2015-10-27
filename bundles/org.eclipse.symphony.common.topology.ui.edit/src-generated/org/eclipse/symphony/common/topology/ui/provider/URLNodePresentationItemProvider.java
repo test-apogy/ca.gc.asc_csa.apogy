@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.URLNodePresentation;
 
 /**
@@ -65,7 +65,7 @@ public class URLNodePresentationItemProvider extends NodePresentationItemProvide
 				 getResourceLocator(),
 				 getString("_UI_URLNodePresentation_axisVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLNodePresentation_axisVisible_feature", "_UI_URLNodePresentation_type"),
-				 TopologyUIPackage.Literals.URL_NODE_PRESENTATION__AXIS_VISIBLE,
+				 Symphony__CommonTopologyUIPackage.Literals.URL_NODE_PRESENTATION__AXIS_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -87,7 +87,7 @@ public class URLNodePresentationItemProvider extends NodePresentationItemProvide
 				 getResourceLocator(),
 				 getString("_UI_URLNodePresentation_axisLenght_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLNodePresentation_axisLenght_feature", "_UI_URLNodePresentation_type"),
-				 TopologyUIPackage.Literals.URL_NODE_PRESENTATION__AXIS_LENGHT,
+				 Symphony__CommonTopologyUIPackage.Literals.URL_NODE_PRESENTATION__AXIS_LENGHT,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class URLNodePresentationItemProvider extends NodePresentationItemProvide
 				 getResourceLocator(),
 				 getString("_UI_URLNodePresentation_presentationMode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLNodePresentation_presentationMode_feature", "_UI_URLNodePresentation_type"),
-				 TopologyUIPackage.Literals.URL_NODE_PRESENTATION__PRESENTATION_MODE,
+				 Symphony__CommonTopologyUIPackage.Literals.URL_NODE_PRESENTATION__PRESENTATION_MODE,
 				 true,
 				 false,
 				 false,
@@ -157,9 +157,9 @@ public class URLNodePresentationItemProvider extends NodePresentationItemProvide
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(URLNodePresentation.class)) {
-			case TopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE:
-			case TopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT:
-			case TopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

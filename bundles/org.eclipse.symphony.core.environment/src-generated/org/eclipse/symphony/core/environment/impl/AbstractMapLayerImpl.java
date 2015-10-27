@@ -15,8 +15,8 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.AbstractMapLayer;
 import org.eclipse.symphony.core.environment.AbstractMapLayerNode;
 import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -99,7 +99,7 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.ABSTRACT_MAP_LAYER;
+		return Symphony__CoreEnvironmentPackage.Literals.ABSTRACT_MAP_LAYER;
 	}
 
   /**
@@ -122,7 +122,7 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__NAME, oldName, name));
 	}
 
   /**
@@ -145,7 +145,7 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -155,7 +155,7 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
 	 */
   public Map getMap()
   {
-		if (eContainerFeatureID() != SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP) return null;
+		if (eContainerFeatureID() != Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP) return null;
 		return (Map)eContainer();
 	}
 
@@ -166,7 +166,7 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
 	 */
   public Map basicGetMap()
   {
-		if (eContainerFeatureID() != SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP) return null;
+		if (eContainerFeatureID() != Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP) return null;
 		return (Map)eInternalContainer();
 	}
 
@@ -177,7 +177,7 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
 	 */
   public NotificationChain basicSetMap(Map newMap, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newMap, SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newMap, Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP, msgs);
 		return msgs;
 	}
 
@@ -188,19 +188,19 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
 	 */
   public void setMap(Map newMap)
   {
-		if (newMap != eInternalContainer() || (eContainerFeatureID() != SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP && newMap != null)) {
+		if (newMap != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP && newMap != null)) {
 			if (EcoreUtil.isAncestor(this, newMap))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newMap != null)
-				msgs = ((InternalEObject)newMap).eInverseAdd(this, SymphonyEnvironmentPackage.MAP__LAYERS, Map.class, msgs);
+				msgs = ((InternalEObject)newMap).eInverseAdd(this, Symphony__CoreEnvironmentPackage.MAP__LAYERS, Map.class, msgs);
 			msgs = basicSetMap(newMap, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP, newMap, newMap));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP, newMap, newMap));
 	}
 
   /**
@@ -212,7 +212,7 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
   {
 	  if(getAbstractMapLayerNodeGen() == null)
 	  {
-		  abstractMapLayerNode = SymphonyEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode();
+		  abstractMapLayerNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode();
 		  abstractMapLayerNode.setAbstractMapLayer(this);
 	  }
 	  
@@ -231,7 +231,7 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
 			abstractMapLayerNode = (AbstractMapLayerNode)eResolveProxy(oldAbstractMapLayerNode);
 			if (abstractMapLayerNode != oldAbstractMapLayerNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE, oldAbstractMapLayerNode, abstractMapLayerNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE, oldAbstractMapLayerNode, abstractMapLayerNode));
 			}
 		}
 		return abstractMapLayerNode;
@@ -256,7 +256,7 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetMap((Map)otherEnd, msgs);
@@ -273,7 +273,7 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP:
 				return basicSetMap(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -288,8 +288,8 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP:
-				return eInternalContainer().eInverseRemove(this, SymphonyEnvironmentPackage.MAP__LAYERS, Map.class, msgs);
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreEnvironmentPackage.MAP__LAYERS, Map.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -303,14 +303,14 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__NAME:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__NAME:
 				return getName();
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION:
 				return getDescription();
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP:
 				if (resolve) return getMap();
 				return basicGetMap();
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE:
 				if (resolve) return getAbstractMapLayerNode();
 				return basicGetAbstractMapLayerNode();
 		}
@@ -326,13 +326,13 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__NAME:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP:
 				setMap((Map)newValue);
 				return;
 		}
@@ -348,13 +348,13 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__NAME:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP:
 				setMap((Map)null);
 				return;
 		}
@@ -370,13 +370,13 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__NAME:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP:
 				return basicGetMap() != null;
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE:
 				return abstractMapLayerNode != null;
 		}
 		return super.eIsSet(featureID);
@@ -392,7 +392,7 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -409,7 +409,7 @@ public abstract class AbstractMapLayerImpl extends MinimalEObjectImpl.Container 
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION;
 				default: return -1;
 			}
 		}

@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.Corridor#getPoints <em>Points</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getCorridor()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getCorridor()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface Corridor extends Named, Described {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Points</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getCorridor_Points()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getCorridor_Points()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Readonly'"
 	 * @generated

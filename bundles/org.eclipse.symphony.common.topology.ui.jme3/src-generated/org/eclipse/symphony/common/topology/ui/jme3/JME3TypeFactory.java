@@ -15,13 +15,13 @@ import com.jme3.math.Vector3f;
  * <em><b>Type Factory</b></em>'. <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.ui.jme3.JME3Package#getJME3TypeFactory()
+ * @see org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package#getJME3TypeFactory()
  * @model
  * @generated
  */
 public interface JME3TypeFactory extends EObject {
 
-	public JME3TypeFactory INSTANCE = JME3Factory.eINSTANCE
+	public JME3TypeFactory INSTANCE = Symphony__CommonTopologyUIJME3Factory.eINSTANCE
 			.createJME3TypeFactory();
 
 	/**

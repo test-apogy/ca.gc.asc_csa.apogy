@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
 
 import com.google.common.base.Objects;
@@ -94,7 +94,7 @@ public class TypeMemberReferenceListElementImpl extends TypeMemberReferenceImpl 
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT;
+		return Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT;
 	}
 
   /**
@@ -117,7 +117,7 @@ public class TypeMemberReferenceListElementImpl extends TypeMemberReferenceImpl 
 		TypeMemberReferenceListElement oldChild = child;
 		child = newChild;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD, oldChild, newChild);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD, oldChild, newChild);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -133,14 +133,14 @@ public class TypeMemberReferenceListElementImpl extends TypeMemberReferenceImpl 
 		if (newChild != child) {
 			NotificationChain msgs = null;
 			if (child != null)
-				msgs = ((InternalEObject)child).eInverseRemove(this, EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT, TypeMemberReferenceListElement.class, msgs);
+				msgs = ((InternalEObject)child).eInverseRemove(this, Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT, TypeMemberReferenceListElement.class, msgs);
 			if (newChild != null)
-				msgs = ((InternalEObject)newChild).eInverseAdd(this, EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT, TypeMemberReferenceListElement.class, msgs);
+				msgs = ((InternalEObject)newChild).eInverseAdd(this, Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT, TypeMemberReferenceListElement.class, msgs);
 			msgs = basicSetChild(newChild, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD, newChild, newChild));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD, newChild, newChild));
 	}
 
   /**
@@ -150,7 +150,7 @@ public class TypeMemberReferenceListElementImpl extends TypeMemberReferenceImpl 
 	 */
   public TypeMemberReferenceListElement getParent()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT) return null;
 		return (TypeMemberReferenceListElement)eContainer();
 	}
 
@@ -161,7 +161,7 @@ public class TypeMemberReferenceListElementImpl extends TypeMemberReferenceImpl 
 	 */
   public TypeMemberReferenceListElement basicGetParent()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT) return null;
 		return (TypeMemberReferenceListElement)eInternalContainer();
 	}
 
@@ -172,7 +172,7 @@ public class TypeMemberReferenceListElementImpl extends TypeMemberReferenceImpl 
 	 */
   public NotificationChain basicSetParent(TypeMemberReferenceListElement newParent, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newParent, EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newParent, Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT, msgs);
 		return msgs;
 	}
 
@@ -183,19 +183,19 @@ public class TypeMemberReferenceListElementImpl extends TypeMemberReferenceImpl 
 	 */
   public void setParent(TypeMemberReferenceListElement newParent)
   {
-		if (newParent != eInternalContainer() || (eContainerFeatureID() != EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT && newParent != null)) {
+		if (newParent != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT && newParent != null)) {
 			if (EcoreUtil.isAncestor(this, newParent))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newParent != null)
-				msgs = ((InternalEObject)newParent).eInverseAdd(this, EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD, TypeMemberReferenceListElement.class, msgs);
+				msgs = ((InternalEObject)newParent).eInverseAdd(this, Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD, TypeMemberReferenceListElement.class, msgs);
 			msgs = basicSetParent(newParent, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT, newParent, newParent));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT, newParent, newParent));
 	}
 
   /**
@@ -305,11 +305,11 @@ public class TypeMemberReferenceListElementImpl extends TypeMemberReferenceImpl 
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
 				if (child != null)
-					msgs = ((InternalEObject)child).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD, null, msgs);
+					msgs = ((InternalEObject)child).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD, null, msgs);
 				return basicSetChild((TypeMemberReferenceListElement)otherEnd, msgs);
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetParent((TypeMemberReferenceListElement)otherEnd, msgs);
@@ -326,9 +326,9 @@ public class TypeMemberReferenceListElementImpl extends TypeMemberReferenceImpl 
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
 				return basicSetChild(null, msgs);
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT:
 				return basicSetParent(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -343,8 +343,8 @@ public class TypeMemberReferenceListElementImpl extends TypeMemberReferenceImpl 
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD, TypeMemberReferenceListElement.class, msgs);
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD, TypeMemberReferenceListElement.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -358,22 +358,22 @@ public class TypeMemberReferenceListElementImpl extends TypeMemberReferenceImpl 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
 				return getChild();
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT:
 				if (resolve) return getParent();
 				return basicGetParent();
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__ROOT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__ROOT:
 				return isRoot();
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__ROOT_ELEMENT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__ROOT_ELEMENT:
 				if (resolve) return getRootElement();
 				return basicGetRootElement();
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__LEAF_ELEMENT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__LEAF_ELEMENT:
 				if (resolve) return getLeafElement();
 				return basicGetLeafElement();
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__LEAF:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__LEAF:
 				return isLeaf();
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__SUB_SEGMENTS_COUNT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__SUB_SEGMENTS_COUNT:
 				return getSubSegmentsCount();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -388,10 +388,10 @@ public class TypeMemberReferenceListElementImpl extends TypeMemberReferenceImpl 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
 				setChild((TypeMemberReferenceListElement)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT:
 				setParent((TypeMemberReferenceListElement)newValue);
 				return;
 		}
@@ -407,10 +407,10 @@ public class TypeMemberReferenceListElementImpl extends TypeMemberReferenceImpl 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
 				setChild((TypeMemberReferenceListElement)null);
 				return;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT:
 				setParent((TypeMemberReferenceListElement)null);
 				return;
 		}
@@ -426,19 +426,19 @@ public class TypeMemberReferenceListElementImpl extends TypeMemberReferenceImpl 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
 				return child != null;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__PARENT:
 				return basicGetParent() != null;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__ROOT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__ROOT:
 				return isRoot() != ROOT_EDEFAULT;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__ROOT_ELEMENT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__ROOT_ELEMENT:
 				return basicGetRootElement() != null;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__LEAF_ELEMENT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__LEAF_ELEMENT:
 				return basicGetLeafElement() != null;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__LEAF:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__LEAF:
 				return isLeaf() != LEAF_EDEFAULT;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__SUB_SEGMENTS_COUNT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__SUB_SEGMENTS_COUNT:
 				return getSubSegmentsCount() != SUB_SEGMENTS_COUNT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

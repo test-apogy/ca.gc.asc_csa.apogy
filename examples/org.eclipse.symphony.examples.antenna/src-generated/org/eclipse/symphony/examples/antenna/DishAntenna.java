@@ -22,7 +22,7 @@ import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
  *   <li>{@link org.eclipse.symphony.examples.antenna.DishAntenna#getFov <em>Fov</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage#getDishAntenna()
+ * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getDishAntenna()
  * @model abstract="true"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface DishAntenna extends Antenna
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fov</em>' containment reference.
 	 * @see #setFov(ConicalFieldOfView)
-	 * @see org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage#getDishAntenna_Fov()
+	 * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getDishAntenna_Fov()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Readonly' propertyCategory='Field Of View'"
 	 * @generated

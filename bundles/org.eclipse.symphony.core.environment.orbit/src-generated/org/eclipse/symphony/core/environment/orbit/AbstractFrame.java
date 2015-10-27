@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.emf.Named;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getAbstractFrame()
+ * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAbstractFrame()
  * @model abstract="true"
  * @generated
  */

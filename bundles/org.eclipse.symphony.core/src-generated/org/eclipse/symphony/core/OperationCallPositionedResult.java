@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.invocator.OperationCallResult;
  *   <li>{@link org.eclipse.symphony.core.OperationCallPositionedResult#getRelativePose <em>Relative Pose</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getOperationCallPositionedResult()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getOperationCallPositionedResult()
  * @model
  * @generated
  */
@@ -28,11 +28,11 @@ public interface OperationCallPositionedResult extends OperationCallResult, Posi
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Pose relative to the system that produced the result.
+	 * Pose relative to the system that produced the result.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Relative Pose</em>' containment reference.
 	 * @see #setRelativePose(Matrix4x4)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getOperationCallPositionedResult_RelativePose()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getOperationCallPositionedResult_RelativePose()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Readonly' propertyCategory='POSITION_INFO'"
 	 * @generated

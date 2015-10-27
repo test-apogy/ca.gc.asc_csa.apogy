@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.GeographicCoordinates} object.
@@ -89,7 +89,7 @@ public class GeographicCoordinatesItemProvider
          getResourceLocator(),
          getString("_UI_GeographicCoordinates_longitude_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_longitude_feature", "_UI_GeographicCoordinates_type"),
-         SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE,
+         Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE,
          true,
          false,
          false,
@@ -112,7 +112,7 @@ public class GeographicCoordinatesItemProvider
          getResourceLocator(),
          getString("_UI_GeographicCoordinates_latitude_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_latitude_feature", "_UI_GeographicCoordinates_type"),
-         SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE,
+         Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE,
          true,
          false,
          false,
@@ -135,7 +135,7 @@ public class GeographicCoordinatesItemProvider
          getResourceLocator(),
          getString("_UI_GeographicCoordinates_elevation_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_GeographicCoordinates_elevation_feature", "_UI_GeographicCoordinates_type"),
-         SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION,
+         Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION,
          true,
          false,
          false,
@@ -185,9 +185,9 @@ public class GeographicCoordinatesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GeographicCoordinates.class)) {
-			case SymphonyEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE:
-			case SymphonyEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE:
-			case SymphonyEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION:
+			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE:
+			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE:
+			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

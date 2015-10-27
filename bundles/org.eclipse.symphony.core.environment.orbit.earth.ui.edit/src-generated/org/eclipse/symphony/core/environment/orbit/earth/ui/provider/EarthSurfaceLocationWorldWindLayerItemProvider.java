@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer} object.
@@ -64,7 +64,7 @@ public class EarthSurfaceLocationWorldWindLayerItemProvider extends AbstractWorl
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceLocationWorldWindLayer_earthSurfaceLocation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceLocationWorldWindLayer_earthSurfaceLocation_feature", "_UI_EarthSurfaceLocationWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION,
 				 true,
 				 false,
 				 true,
@@ -86,7 +86,7 @@ public class EarthSurfaceLocationWorldWindLayerItemProvider extends AbstractWorl
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceLocationWorldWindLayer_targetRadius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceLocationWorldWindLayer_targetRadius_feature", "_UI_EarthSurfaceLocationWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS,
 				 true,
 				 false,
 				 false,
@@ -150,7 +150,7 @@ public class EarthSurfaceLocationWorldWindLayerItemProvider extends AbstractWorl
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EarthSurfaceLocationWorldWindLayer.class)) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

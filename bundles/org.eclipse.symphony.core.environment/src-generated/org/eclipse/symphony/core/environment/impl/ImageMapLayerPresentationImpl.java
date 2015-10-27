@@ -16,8 +16,8 @@ import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
 import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.RectangularRegionImage;
 import org.eclipse.symphony.core.environment.RectangularRegionProvider;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER_PRESENTATION;
+		return Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER_PRESENTATION;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 		float oldAlpha = alpha;
 		alpha = newAlpha;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA, oldAlpha, alpha));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA, oldAlpha, alpha));
 	}
 
 	/**
@@ -178,7 +178,7 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 		  }
 		  else
 		  {
-			  RectangularRegion rectangularRegion = SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion();
+			  RectangularRegion rectangularRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
 			  return rectangularRegion;
 		  }
 	}
@@ -191,7 +191,7 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
+			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
 				return getAlpha();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -205,7 +205,7 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
+			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
 				setAlpha((Float)newValue);
 				return;
 		}
@@ -220,7 +220,7 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
+			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
 				setAlpha(ALPHA_EDEFAULT);
 				return;
 		}
@@ -235,7 +235,7 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
+			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
 				return alpha != ALPHA_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -250,14 +250,14 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == RectangularRegionProvider.class) {
 			switch (baseOperationID) {
-				case SymphonyEnvironmentPackage.RECTANGULAR_REGION_PROVIDER___GET_REGION: return SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION;
+				case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION_PROVIDER___GET_REGION: return Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION;
 				default: return -1;
 			}
 		}
 		if (baseClass == RectangularRegionImage.class) {
 			switch (baseOperationID) {
-				case SymphonyEnvironmentPackage.RECTANGULAR_REGION_IMAGE___GET_REGION_IMAGE: return SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION_IMAGE;
-				case SymphonyEnvironmentPackage.RECTANGULAR_REGION_IMAGE___GET_RESOLUTION: return SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_RESOLUTION;
+				case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION_IMAGE___GET_REGION_IMAGE: return Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION_IMAGE;
+				case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION_IMAGE___GET_RESOLUTION: return Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_RESOLUTION;
 				default: return -1;
 			}
 		}
@@ -272,13 +272,13 @@ public class ImageMapLayerPresentationImpl extends MapLayerPresentationImpl impl
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_IMAGE_MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_IMAGE_MAP_LAYER:
 				return getImageMapLayer();
-			case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION_IMAGE:
+			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION_IMAGE:
 				return getRegionImage();
-			case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_RESOLUTION:
+			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_RESOLUTION:
 				return getResolution();
-			case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION:
+			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION___GET_REGION:
 				return getRegion();
 		}
 		return super.eInvoke(operationID, arguments);

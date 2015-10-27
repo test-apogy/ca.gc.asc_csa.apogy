@@ -11,7 +11,6 @@ import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * A SpacecraftState that is backed by an OreKit SpacecraftState.
  * <!-- end-model-doc -->
  *
@@ -22,7 +21,7 @@ import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState#getOreKitSpacecraftState <em>Ore Kit Spacecraft State</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getOreKitBackedSpacecraftState()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getOreKitBackedSpacecraftState()
  * @model
  * @generated
  */
@@ -33,7 +32,7 @@ public interface OreKitBackedSpacecraftState extends SpacecraftState {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ore Kit Spacecraft State</em>' attribute.
 	 * @see #setOreKitSpacecraftState(org.orekit.propagation.SpacecraftState)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getOreKitBackedSpacecraftState_OreKitSpacecraftState()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getOreKitBackedSpacecraftState_OreKitSpacecraftState()
 	 * @model unique="false" dataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitSpacecraftState" transient="true"
 	 * @generated
 	 */

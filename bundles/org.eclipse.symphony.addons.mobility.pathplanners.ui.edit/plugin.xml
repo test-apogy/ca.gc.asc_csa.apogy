@@ -23,22 +23,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated mrt_path_planners_ui -->
+      <!-- @generated symphony_addons_mobility_pathplanners_ui -->
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.addons.mobility.pathplanners.ui.provider.Symphony__AddonsMobilityPathplannersUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.mobility.pathplanners.ui.provider.Symphony__AddonsMobilityPathplannersUIItemProviderAdapterFactory$Symphony__CommonTopologyUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.mobility.pathplanners.ui.provider.Symphony__AddonsMobilityPathplannersUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.mobility.pathplanners.ui.provider.Symphony__AddonsMobilityPathplannersUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.addons.mobility.pathplanners.ui.provider.Symphony__AddonsMobilityPathplannersUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.mobility.pathplanners.ui.provider.Symphony__AddonsMobilityPathplannersUIItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

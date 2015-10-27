@@ -31,8 +31,8 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.ListRootNode;
 import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 
 /**
@@ -105,7 +105,7 @@ public class VariableFeatureReferenceItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_VariableFeatureReference_variable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VariableFeatureReference_variable_feature", "_UI_VariableFeatureReference_type"),
-				 EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE,
+				 Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE,
 				 true,
 				 false,
 				 true,
@@ -126,8 +126,8 @@ public class VariableFeatureReferenceItemProvider extends ItemProviderAdapter
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT);
 		}
 		return childrenFeatures;
 	}
@@ -181,12 +181,12 @@ public class VariableFeatureReferenceItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VariableFeatureReference.class)) {
-			case EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME:
-			case EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
+			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME:
+			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
-			case EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:
+			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
+			case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -206,12 +206,12 @@ public class VariableFeatureReferenceItemProvider extends ItemProviderAdapter
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceListElement()));
+				(Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceListElement()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT,
+				(Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT,
 				 Symphony__CommonEMFFactory.eINSTANCE.createListRootNode()));
 	}
 
@@ -224,18 +224,18 @@ public class VariableFeatureReferenceItemProvider extends ItemProviderAdapter
 			EMFEcoreEditUtilsFacade.INSTANCE
 					.removeChildDescriptor(
 							newChildDescriptors,
-							EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT);
+							Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT);
 
 			EMFEcoreEditUtilsFacade.INSTANCE
 					.removeChildDescriptor(
 							newChildDescriptors,
-							EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT);
+							Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT);
 		} else {
 			// Remove default Root Node.
 			EMFEcoreEditUtilsFacade.INSTANCE
 					.removeChildDescriptor(
 							newChildDescriptors,
-							EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT);
+							Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT);
 
 			// Create a new Root Node with Source Class Defined.
 			ListRootNode rootNode = Symphony__CommonEMFFactory.eINSTANCE
@@ -244,7 +244,7 @@ public class VariableFeatureReferenceItemProvider extends ItemProviderAdapter
 					.getInstanceClass(variableFeatureReference));
 			newChildDescriptors
 					.add(createChildParameter(
-							EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT,
+							Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT,
 							rootNode));
 		}
 	}
@@ -275,14 +275,14 @@ public class VariableFeatureReferenceItemProvider extends ItemProviderAdapter
 		compoundCommand.append(super.createSetCommand(domain, owner, feature,
 				value, index));
 
-		if (feature == EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE) {
+		if (feature == Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE) {
 
 			// Clears the Type Member List.
 			compoundCommand
 					.append(new SetCommand(
 							domain,
 							owner,
-							EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT,
+							Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT,
 							null));
 
 			// Clears the Feature node
@@ -290,17 +290,17 @@ public class VariableFeatureReferenceItemProvider extends ItemProviderAdapter
 					.append(new SetCommand(
 							domain,
 							owner,
-							EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT,
+							Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT,
 							null));
 			
-		} else if (feature == EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT) {
+		} else if (feature == Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT) {
 
 			// Clears the feature root node.
 			compoundCommand
 					.append(new SetCommand(
 							domain,
 							owner,
-							EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT,
+							Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT,
 							null));
 		}
 		return compoundCommand;

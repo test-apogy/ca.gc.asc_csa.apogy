@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter;
 
 /**
@@ -84,7 +84,7 @@ public class WatchFeatureNodeAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WatchFeatureNodeAdapter_sourceObject_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WatchFeatureNodeAdapter_sourceObject_feature", "_UI_WatchFeatureNodeAdapter_type"),
-				 EMFEcoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT,
+				 Symphony__CoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT,
 				 true,
 				 false,
 				 true,
@@ -107,7 +107,7 @@ public class WatchFeatureNodeAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WatchFeatureNodeAdapter_featureNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WatchFeatureNodeAdapter_featureNode_feature", "_UI_WatchFeatureNodeAdapter_type"),
-				 EMFEcoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE,
+				 Symphony__CoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE,
 				 true,
 				 false,
 				 true,
@@ -130,7 +130,7 @@ public class WatchFeatureNodeAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WatchFeatureNodeAdapter_currentValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WatchFeatureNodeAdapter_currentValue_feature", "_UI_WatchFeatureNodeAdapter_type"),
-				 EMFEcoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE,
+				 Symphony__CoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE,
 				 true,
 				 false,
 				 false,
@@ -153,7 +153,7 @@ public class WatchFeatureNodeAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WatchFeatureNodeAdapter_resolved_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WatchFeatureNodeAdapter_resolved_feature", "_UI_WatchFeatureNodeAdapter_type"),
-				 EMFEcoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__RESOLVED,
+				 Symphony__CoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER__RESOLVED,
 				 true,
 				 false,
 				 false,
@@ -203,8 +203,8 @@ public class WatchFeatureNodeAdapterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WatchFeatureNodeAdapter.class)) {
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

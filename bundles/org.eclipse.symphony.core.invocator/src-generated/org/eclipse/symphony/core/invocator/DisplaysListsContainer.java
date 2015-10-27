@@ -12,7 +12,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <!-- begin-model-doc -->
  *  -------------------------------------------------------------------------
- * DsiplaysListsContainer
+ * DisplaysListsContainer
  * -------------------------------------------------------------------------
  * <!-- end-model-doc -->
  *
@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.symphony.core.invocator.DisplaysListsContainer#getDisplays <em>Displays</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getDisplaysListsContainer()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getDisplaysListsContainer()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface DisplaysListsContainer extends AbstractToolsListContainer
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Displays</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getDisplaysListsContainer_Displays()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getDisplaysListsContainer_Displays()
 	 * @see org.eclipse.symphony.core.invocator.DisplaysList#getDisplaysListsContainer
 	 * @model opposite="displaysListsContainer" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"

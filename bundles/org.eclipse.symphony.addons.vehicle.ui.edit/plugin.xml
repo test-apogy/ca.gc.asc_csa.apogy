@@ -21,13 +21,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_tools_vehicle_ui -->
+      <!-- @generated symphony_addons_vehicle_ui -->
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.addons.vehicle.ui.provider.Symphony__AddonsVehicleUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.vehicle.ui.provider.Symphony__AddonsVehicleUIItemProviderAdapterFactory$Symphony__CommonTopologyUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.vehicle.ui.provider.Symphony__AddonsVehicleUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.vehicle.ui.provider.Symphony__AddonsVehicleUIItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

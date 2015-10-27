@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties#getCenterOfMassLocation <em>Center Of Mass Location</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPhysicalProperties()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalProperties()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface PhysicalProperties extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mass</em>' attribute.
 	 * @see #setMass(double)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPhysicalProperties_Mass()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalProperties_Mass()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='kg'"
 	 * @generated
@@ -66,7 +66,7 @@ public interface PhysicalProperties extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Inertia Matrix</em>' containment reference.
 	 * @see #setInertiaMatrix(Matrix3x3)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPhysicalProperties_InertiaMatrix()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalProperties_InertiaMatrix()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -91,7 +91,7 @@ public interface PhysicalProperties extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Center Of Mass Location</em>' containment reference.
 	 * @see #setCenterOfMassLocation(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPhysicalProperties_CenterOfMassLocation()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalProperties_CenterOfMassLocation()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

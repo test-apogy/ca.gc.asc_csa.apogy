@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMoonPresentation()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMoonPresentation()
  * @model
  * @generated
  */

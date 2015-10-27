@@ -3,7 +3,7 @@ package org.eclipse.symphony.common.topology.addons.primitives.ui.adapters;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.addons.primitives.Label;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.LabelPresentation;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesFactory;
+import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIFactory;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
 
@@ -30,7 +30,7 @@ public class LabelPresentationAdapter implements NodePresentationAdapter
 
 		Label Label = (Label) obj;
 		
-		LabelPresentation presentationNode = TopologyUIPrimitivesFactory.eINSTANCE.createLabelPresentation();
+		LabelPresentation presentationNode = Symphony__CommonTopologyAddonsPrimitivesUIFactory.eINSTANCE.createLabelPresentation();
 		presentationNode.setNode(Label);			
 						
 		return presentationNode;

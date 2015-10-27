@@ -8,7 +8,7 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.TopologyFacade;
 import org.eclipse.symphony.core.PositionedResult;
 import org.eclipse.symphony.core.ResultNode;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.SymphonyTopology;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
@@ -55,7 +55,7 @@ public class PositionedResultToNodeConverter implements IConverter{
 					GroupNode groupNode = symphonyTopology.getRootNode();
 					
 					if (groupNode != null){
-						Iterator<Node> resultNodes = TopologyFacade.INSTANCE.findNodesByType(SymphonyCorePackage.Literals.RESULT_NODE, groupNode).iterator();
+						Iterator<Node> resultNodes = TopologyFacade.INSTANCE.findNodesByType(Symphony__CorePackage.Literals.RESULT_NODE, groupNode).iterator();
 						ResultNode resultNode = null;
 						
 						while (resultNodes.hasNext() && resultNode == null){

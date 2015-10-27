@@ -12,7 +12,6 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Defines a 2D rectangular region in the XY Plane.
  * <!-- end-model-doc -->
  *
@@ -32,7 +31,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.core.environment.RectangularRegion#getUpperRightCorner <em>Upper Right Corner</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularRegion()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion()
  * @model
  * @generated
  */
@@ -45,11 +44,11 @@ public interface RectangularRegion extends Region
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Minimum X coordinate on the X axis.
+	 * Minimum X coordinate on the X axis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>XMin</em>' attribute.
 	 * @see #setXMin(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularRegion_XMin()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_XMin()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' csa_units='m'"
 	 * @generated
@@ -72,11 +71,11 @@ public interface RectangularRegion extends Region
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Maximum X coordinate on the X axis.
+	 * Maximum X coordinate on the X axis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>XMax</em>' attribute.
 	 * @see #setXMax(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularRegion_XMax()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_XMax()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' csa_units='m'"
 	 * @generated
@@ -99,11 +98,11 @@ public interface RectangularRegion extends Region
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Minimum X coordinate on the Y axis.
+	 * Minimum X coordinate on the Y axis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>YMin</em>' attribute.
 	 * @see #setYMin(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularRegion_YMin()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_YMin()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' csa_units='m'"
 	 * @generated
@@ -126,11 +125,11 @@ public interface RectangularRegion extends Region
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Maximum X coordinate on the Y axis.
+	 * Maximum X coordinate on the Y axis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>YMax</em>' attribute.
 	 * @see #setYMax(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularRegion_YMax()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_YMax()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' csa_units='m'"
 	 * @generated
@@ -152,10 +151,10 @@ public interface RectangularRegion extends Region
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Dimension along the X axis.
+	 * Dimension along the X axis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>XDimension</em>' attribute.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularRegion_XDimension()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_XDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES' csa_units='m'"
 	 * @generated
@@ -167,10 +166,10 @@ public interface RectangularRegion extends Region
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Dimension along the Y axis.
+	 * Dimension along the Y axis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>YDimension</em>' attribute.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularRegion_YDimension()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_YDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES' csa_units='m'"
 	 * @generated
@@ -186,7 +185,7 @@ public interface RectangularRegion extends Region
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Lower Left Corner</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularRegion_LowerLeftCorner()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_LowerLeftCorner()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -201,7 +200,7 @@ public interface RectangularRegion extends Region
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Upper Left Corner</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularRegion_UpperLeftCorner()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_UpperLeftCorner()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -216,7 +215,7 @@ public interface RectangularRegion extends Region
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Lower Right Corner</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularRegion_LowerRightCorner()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_LowerRightCorner()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -231,7 +230,7 @@ public interface RectangularRegion extends Region
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Upper Right Corner</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularRegion_UpperRightCorner()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_UpperRightCorner()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */

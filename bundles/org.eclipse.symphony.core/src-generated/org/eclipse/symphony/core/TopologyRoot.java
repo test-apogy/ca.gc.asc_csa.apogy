@@ -25,7 +25,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.core.TopologyRoot#getOriginNode <em>Origin Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getTopologyRoot()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getTopologyRoot()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface TopologyRoot extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Origin Node</em>' containment reference.
 	 * @see #setOriginNode(Node)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getTopologyRoot_OriginNode()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getTopologyRoot_OriginNode()
 	 * @model containment="true"
 	 * @generated
 	 */

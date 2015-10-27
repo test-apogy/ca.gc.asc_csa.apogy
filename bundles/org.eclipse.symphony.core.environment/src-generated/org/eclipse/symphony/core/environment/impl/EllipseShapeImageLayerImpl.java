@@ -22,8 +22,8 @@ import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.environment.EllipseShapeImageLayer;
 import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -117,7 +117,7 @@ public class EllipseShapeImageLayerImpl extends AbstractShapeImageLayerImpl impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.ELLIPSE_SHAPE_IMAGE_LAYER;
+		return Symphony__CoreEnvironmentPackage.Literals.ELLIPSE_SHAPE_IMAGE_LAYER;
 	}
 
 	/**
@@ -138,7 +138,7 @@ public class EllipseShapeImageLayerImpl extends AbstractShapeImageLayerImpl impl
 		double oldEllipseWidth = ellipseWidth;
 		ellipseWidth = newEllipseWidth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_WIDTH, oldEllipseWidth, ellipseWidth));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_WIDTH, oldEllipseWidth, ellipseWidth));
 	}
 
 	/**
@@ -159,7 +159,7 @@ public class EllipseShapeImageLayerImpl extends AbstractShapeImageLayerImpl impl
 		double oldEllipseHeight = ellipseHeight;
 		ellipseHeight = newEllipseHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_HEIGHT, oldEllipseHeight, ellipseHeight));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_HEIGHT, oldEllipseHeight, ellipseHeight));
 	}
 
 	/**
@@ -180,7 +180,7 @@ public class EllipseShapeImageLayerImpl extends AbstractShapeImageLayerImpl impl
 		boolean oldShowCenterLines = showCenterLines;
 		showCenterLines = newShowCenterLines;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES, oldShowCenterLines, showCenterLines));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES, oldShowCenterLines, showCenterLines));
 	}
 
 	/**
@@ -191,11 +191,11 @@ public class EllipseShapeImageLayerImpl extends AbstractShapeImageLayerImpl impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_WIDTH:
+			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_WIDTH:
 				return getEllipseWidth();
-			case SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_HEIGHT:
+			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_HEIGHT:
 				return getEllipseHeight();
-			case SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
+			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
 				return isShowCenterLines();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -209,13 +209,13 @@ public class EllipseShapeImageLayerImpl extends AbstractShapeImageLayerImpl impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_WIDTH:
+			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_WIDTH:
 				setEllipseWidth((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_HEIGHT:
+			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_HEIGHT:
 				setEllipseHeight((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
+			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
 				setShowCenterLines((Boolean)newValue);
 				return;
 		}
@@ -230,13 +230,13 @@ public class EllipseShapeImageLayerImpl extends AbstractShapeImageLayerImpl impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_WIDTH:
+			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_WIDTH:
 				setEllipseWidth(ELLIPSE_WIDTH_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_HEIGHT:
+			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_HEIGHT:
 				setEllipseHeight(ELLIPSE_HEIGHT_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
+			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
 				setShowCenterLines(SHOW_CENTER_LINES_EDEFAULT);
 				return;
 		}
@@ -251,11 +251,11 @@ public class EllipseShapeImageLayerImpl extends AbstractShapeImageLayerImpl impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_WIDTH:
+			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_WIDTH:
 				return ellipseWidth != ELLIPSE_WIDTH_EDEFAULT;
-			case SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_HEIGHT:
+			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_HEIGHT:
 				return ellipseHeight != ELLIPSE_HEIGHT_EDEFAULT;
-			case SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
+			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
 				return showCenterLines != SHOW_CENTER_LINES_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -372,7 +372,7 @@ public class EllipseShapeImageLayerImpl extends AbstractShapeImageLayerImpl impl
 	@Override
 	public RectangularRegion getImageMapLayerRegion() 
 	{
-		RectangularRegion rectangularRegion = SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion();
+		RectangularRegion rectangularRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
  		rectangularRegion.setTransformation(MathFacade.INSTANCE.createIdentityMatrix4x4());
  		
  		if(getMap() != null && getMap().getTransformation() != null)

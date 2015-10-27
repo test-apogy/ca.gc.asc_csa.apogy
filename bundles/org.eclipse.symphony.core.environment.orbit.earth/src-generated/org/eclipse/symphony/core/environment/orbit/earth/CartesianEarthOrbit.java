@@ -18,7 +18,7 @@ import org.orekit.orbits.CartesianOrbit;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit#getPvaCoordinates <em>Pva Coordinates</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getCartesianEarthOrbit()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getCartesianEarthOrbit()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface CartesianEarthOrbit extends EarthOrbit {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pva Coordinates</em>' containment reference.
 	 * @see #setPvaCoordinates(TimedStampedPVACoordinates)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getCartesianEarthOrbit_PvaCoordinates()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getCartesianEarthOrbit_PvaCoordinates()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

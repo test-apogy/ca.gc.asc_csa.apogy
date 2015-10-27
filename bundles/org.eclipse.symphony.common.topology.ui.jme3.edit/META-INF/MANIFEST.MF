@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.symphony.common.topology.ui.jme3.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.common.topology.ui.jme3.provider.JM3EditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.common.topology.ui.jme3.provider.Symphony__CommonTopologyUIJME3EditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

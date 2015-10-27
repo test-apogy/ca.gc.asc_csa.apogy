@@ -21,7 +21,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage"
+            class="org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage"
             genModel="model/symphony_core_invocator.xcore"/>
    </extension>
 
@@ -29,14 +29,7 @@
       <!-- @generated eclipse_emf_ecore_invocator -->
       <parser
             type="sym"
-            class="org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorResourceFactoryImpl"/>
+            class="org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorResourceFactoryImpl"/>
    </extension>
 
-   <extension
-         point="org.eclipse.symphony.core.invocator.invocatorDelegate">
-      <element
-            invocatorDelegateClass="org.eclipse.symphony.core.invocator.delegates.DefaultInvocatorDelegate">
-      </element>
-   </extension>
-
-</plugin>
+null</plugin>

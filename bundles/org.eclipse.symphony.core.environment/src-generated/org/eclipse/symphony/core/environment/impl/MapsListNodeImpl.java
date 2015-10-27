@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 import org.eclipse.symphony.core.environment.Map;
 import org.eclipse.symphony.core.environment.MapsList;
 import org.eclipse.symphony.core.environment.MapsListNode;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -65,7 +65,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.MAPS_LIST_NODE;
+		return Symphony__CoreEnvironmentPackage.Literals.MAPS_LIST_NODE;
 	}
 
   /**
@@ -80,7 +80,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
 			mapsList = (MapsList)eResolveProxy(oldMapsList);
 			if (mapsList != oldMapsList) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
 			}
 		}
 		return mapsList;
@@ -106,7 +106,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
 		MapsList oldMapsList = mapsList;
 		mapsList = newMapsList;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST, oldMapsList, mapsList));
 	}
 
   /**
@@ -118,7 +118,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+			case Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
 				if (resolve) return getMapsList();
 				return basicGetMapsList();
 		}
@@ -134,7 +134,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+			case Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
 				setMapsList((MapsList)newValue);
 				return;
 		}
@@ -150,7 +150,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+			case Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
 				setMapsList((MapsList)null);
 				return;
 		}
@@ -166,7 +166,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
+			case Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST:
 				return mapsList != null;
 		}
 		return super.eIsSet(featureID);
@@ -222,7 +222,7 @@ public class MapsListNodeImpl extends AggregateGroupNodeImpl implements MapsList
 	
 					if(notification.getNotifier() instanceof MapsListNode)
 					{
-						if(notification.getFeatureID(MapsListNode.class) == SymphonyEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST)
+						if(notification.getFeatureID(MapsListNode.class) == Symphony__CoreEnvironmentPackage.MAPS_LIST_NODE__MAPS_LIST)
 						{
 							clearTopology();
 							

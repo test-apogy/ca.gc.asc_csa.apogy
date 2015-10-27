@@ -23,7 +23,7 @@ import javax.vecmath.Color3f;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.MapRuler#getRulerColor <em>Ruler Color</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapRuler()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapRuler()
  * @model
  * @generated
  */
@@ -36,11 +36,11 @@ public interface MapRuler extends MapTool
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * The color of the ruler.
+	 * The color of the ruler.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ruler Color</em>' attribute.
 	 * @see #setRulerColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapRuler_RulerColor()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapRuler_RulerColor()
 	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.core.environment.ui.Color3f"
 	 * @generated
 	 */

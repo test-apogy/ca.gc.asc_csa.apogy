@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.camera.Activator;
 import org.eclipse.symphony.examples.camera.CameraSimulated;
-import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
+import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -193,7 +193,7 @@ public class CameraSimulatedImpl extends CameraImpl implements CameraSimulated
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleCameraPackage.Literals.CAMERA_SIMULATED;
+		return Symphony__ExamplesCameraPackage.Literals.CAMERA_SIMULATED;
 	}
 	
 	/**

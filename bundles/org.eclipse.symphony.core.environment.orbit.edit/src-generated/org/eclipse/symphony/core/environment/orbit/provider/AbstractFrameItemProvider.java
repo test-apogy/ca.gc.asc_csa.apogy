@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.orbit.AbstractFrame;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.AbstractFrame} object.
@@ -137,8 +137,8 @@ public class AbstractFrameItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractFrame.class)) {
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_FRAME__NAME:
-			case SymphonyOrbitEnvironmentPackage.ABSTRACT_FRAME__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_FRAME__NAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ABSTRACT_FRAME__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

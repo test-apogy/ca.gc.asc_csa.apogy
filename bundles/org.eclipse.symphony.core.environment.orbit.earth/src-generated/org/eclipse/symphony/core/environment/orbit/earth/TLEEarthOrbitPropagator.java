@@ -17,7 +17,7 @@ import org.orekit.propagation.analytical.tle.TLEPropagator;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLEEarthOrbitPropagator#getTle <em>Tle</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLEEarthOrbitPropagator()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLEEarthOrbitPropagator()
  * @model
  * @generated
  */
@@ -27,12 +27,11 @@ public interface TLEEarthOrbitPropagator extends EarthOrbitPropagator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The Two-Line Elements used by this propagator.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tle</em>' containment reference.
 	 * @see #setTle(TLE)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLEEarthOrbitPropagator_Tle()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLEEarthOrbitPropagator_Tle()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

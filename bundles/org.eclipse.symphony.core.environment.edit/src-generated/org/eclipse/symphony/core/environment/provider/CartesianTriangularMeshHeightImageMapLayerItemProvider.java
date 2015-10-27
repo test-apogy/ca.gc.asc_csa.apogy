@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer} object.
@@ -65,7 +65,7 @@ public class CartesianTriangularMeshHeightImageMapLayerItemProvider extends Cart
 				 getResourceLocator(),
 				 getString("_UI_CartesianTriangularMeshHeightImageMapLayer_autoScale_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshHeightImageMapLayer_autoScale_feature", "_UI_CartesianTriangularMeshHeightImageMapLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__AUTO_SCALE,
+				 Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__AUTO_SCALE,
 				 true,
 				 false,
 				 false,
@@ -87,7 +87,7 @@ public class CartesianTriangularMeshHeightImageMapLayerItemProvider extends Cart
 				 getResourceLocator(),
 				 getString("_UI_CartesianTriangularMeshHeightImageMapLayer_minimumHeight_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshHeightImageMapLayer_minimumHeight_feature", "_UI_CartesianTriangularMeshHeightImageMapLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MINIMUM_HEIGHT,
+				 Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MINIMUM_HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class CartesianTriangularMeshHeightImageMapLayerItemProvider extends Cart
 				 getResourceLocator(),
 				 getString("_UI_CartesianTriangularMeshHeightImageMapLayer_maximumHeight_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshHeightImageMapLayer_maximumHeight_feature", "_UI_CartesianTriangularMeshHeightImageMapLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MAXIMUM_HEIGHT,
+				 Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MAXIMUM_HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -156,9 +156,9 @@ public class CartesianTriangularMeshHeightImageMapLayerItemProvider extends Cart
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CartesianTriangularMeshHeightImageMapLayer.class)) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__AUTO_SCALE:
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MINIMUM_HEIGHT:
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MAXIMUM_HEIGHT:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__AUTO_SCALE:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MINIMUM_HEIGHT:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_HEIGHT_IMAGE_MAP_LAYER__MAXIMUM_HEIGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -189,8 +189,8 @@ public class CartesianTriangularMeshHeightImageMapLayerItemProvider extends Cart
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
 
 		if (qualify) {
 			return getString

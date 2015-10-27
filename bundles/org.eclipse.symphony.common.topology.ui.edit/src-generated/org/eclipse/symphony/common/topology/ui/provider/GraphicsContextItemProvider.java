@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ui.GraphicsContext} object.
@@ -75,7 +75,7 @@ public class GraphicsContextItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GraphicsContext_topology_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GraphicsContext_topology_feature", "_UI_GraphicsContext_type"),
-				 TopologyUIPackage.Literals.GRAPHICS_CONTEXT__TOPOLOGY,
+				 Symphony__CommonTopologyUIPackage.Literals.GRAPHICS_CONTEXT__TOPOLOGY,
 				 true,
 				 false,
 				 true,
@@ -97,7 +97,7 @@ public class GraphicsContextItemProvider
 				 getResourceLocator(),
 				 getString("_UI_GraphicsContext_topologyPresentationSet_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GraphicsContext_topologyPresentationSet_feature", "_UI_GraphicsContext_type"),
-				 TopologyUIPackage.Literals.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET,
+				 Symphony__CommonTopologyUIPackage.Literals.GRAPHICS_CONTEXT__TOPOLOGY_PRESENTATION_SET,
 				 true,
 				 false,
 				 true,

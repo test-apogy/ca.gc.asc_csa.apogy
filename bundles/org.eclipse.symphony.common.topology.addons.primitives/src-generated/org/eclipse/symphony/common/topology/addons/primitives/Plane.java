@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Plane#getHeight <em>Height</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getPlane()
+ * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPlane()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Plane extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>V0</em>' containment reference.
 	 * @see #setV0(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getPlane_V0()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPlane_V0()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -63,7 +63,7 @@ public interface Plane extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>V1</em>' containment reference.
 	 * @see #setV1(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getPlane_V1()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPlane_V1()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -89,7 +89,7 @@ public interface Plane extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
 	 * @see #setWidth(double)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getPlane_Width()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPlane_Width()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -115,7 +115,7 @@ public interface Plane extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Height</em>' attribute.
 	 * @see #setHeight(double)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getPlane_Height()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPlane_Height()
 	 * @model unique="false"
 	 * @generated
 	 */

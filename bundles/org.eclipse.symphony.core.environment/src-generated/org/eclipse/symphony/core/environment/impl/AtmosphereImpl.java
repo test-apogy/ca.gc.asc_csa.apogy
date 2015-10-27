@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.environment.Atmosphere;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -138,7 +138,7 @@ public class AtmosphereImpl extends MinimalEObjectImpl.Container implements Atmo
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.ATMOSPHERE;
+		return Symphony__CoreEnvironmentPackage.Literals.ATMOSPHERE;
 	}
 
   /**
@@ -161,7 +161,7 @@ public class AtmosphereImpl extends MinimalEObjectImpl.Container implements Atmo
 		double oldWindSpeed = windSpeed;
 		windSpeed = newWindSpeed;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ATMOSPHERE__WIND_SPEED, oldWindSpeed, windSpeed));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ATMOSPHERE__WIND_SPEED, oldWindSpeed, windSpeed));
 	}
 
   /**
@@ -184,7 +184,7 @@ public class AtmosphereImpl extends MinimalEObjectImpl.Container implements Atmo
 		double oldWindDirection = windDirection;
 		windDirection = newWindDirection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ATMOSPHERE__WIND_DIRECTION, oldWindDirection, windDirection));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ATMOSPHERE__WIND_DIRECTION, oldWindDirection, windDirection));
 	}
 
   /**
@@ -207,7 +207,7 @@ public class AtmosphereImpl extends MinimalEObjectImpl.Container implements Atmo
 		double oldTemperature = temperature;
 		temperature = newTemperature;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ATMOSPHERE__TEMPERATURE, oldTemperature, temperature));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ATMOSPHERE__TEMPERATURE, oldTemperature, temperature));
 	}
 
   /**
@@ -230,7 +230,7 @@ public class AtmosphereImpl extends MinimalEObjectImpl.Container implements Atmo
 		double oldSurfacePressure = surfacePressure;
 		surfacePressure = newSurfacePressure;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ATMOSPHERE__SURFACE_PRESSURE, oldSurfacePressure, surfacePressure));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ATMOSPHERE__SURFACE_PRESSURE, oldSurfacePressure, surfacePressure));
 	}
 
   /**
@@ -253,7 +253,7 @@ public class AtmosphereImpl extends MinimalEObjectImpl.Container implements Atmo
 		double oldSurfaceDensity = surfaceDensity;
 		surfaceDensity = newSurfaceDensity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ATMOSPHERE__SURFACE_DENSITY, oldSurfaceDensity, surfaceDensity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ATMOSPHERE__SURFACE_DENSITY, oldSurfaceDensity, surfaceDensity));
 	}
 
   /**
@@ -265,15 +265,15 @@ public class AtmosphereImpl extends MinimalEObjectImpl.Container implements Atmo
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ATMOSPHERE__WIND_SPEED:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__WIND_SPEED:
 				return getWindSpeed();
-			case SymphonyEnvironmentPackage.ATMOSPHERE__WIND_DIRECTION:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__WIND_DIRECTION:
 				return getWindDirection();
-			case SymphonyEnvironmentPackage.ATMOSPHERE__TEMPERATURE:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__TEMPERATURE:
 				return getTemperature();
-			case SymphonyEnvironmentPackage.ATMOSPHERE__SURFACE_PRESSURE:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__SURFACE_PRESSURE:
 				return getSurfacePressure();
-			case SymphonyEnvironmentPackage.ATMOSPHERE__SURFACE_DENSITY:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__SURFACE_DENSITY:
 				return getSurfaceDensity();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -288,19 +288,19 @@ public class AtmosphereImpl extends MinimalEObjectImpl.Container implements Atmo
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ATMOSPHERE__WIND_SPEED:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__WIND_SPEED:
 				setWindSpeed((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.ATMOSPHERE__WIND_DIRECTION:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__WIND_DIRECTION:
 				setWindDirection((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.ATMOSPHERE__TEMPERATURE:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__TEMPERATURE:
 				setTemperature((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.ATMOSPHERE__SURFACE_PRESSURE:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__SURFACE_PRESSURE:
 				setSurfacePressure((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.ATMOSPHERE__SURFACE_DENSITY:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__SURFACE_DENSITY:
 				setSurfaceDensity((Double)newValue);
 				return;
 		}
@@ -316,19 +316,19 @@ public class AtmosphereImpl extends MinimalEObjectImpl.Container implements Atmo
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ATMOSPHERE__WIND_SPEED:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__WIND_SPEED:
 				setWindSpeed(WIND_SPEED_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.ATMOSPHERE__WIND_DIRECTION:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__WIND_DIRECTION:
 				setWindDirection(WIND_DIRECTION_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.ATMOSPHERE__TEMPERATURE:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__TEMPERATURE:
 				setTemperature(TEMPERATURE_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.ATMOSPHERE__SURFACE_PRESSURE:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__SURFACE_PRESSURE:
 				setSurfacePressure(SURFACE_PRESSURE_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.ATMOSPHERE__SURFACE_DENSITY:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__SURFACE_DENSITY:
 				setSurfaceDensity(SURFACE_DENSITY_EDEFAULT);
 				return;
 		}
@@ -344,15 +344,15 @@ public class AtmosphereImpl extends MinimalEObjectImpl.Container implements Atmo
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ATMOSPHERE__WIND_SPEED:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__WIND_SPEED:
 				return windSpeed != WIND_SPEED_EDEFAULT;
-			case SymphonyEnvironmentPackage.ATMOSPHERE__WIND_DIRECTION:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__WIND_DIRECTION:
 				return windDirection != WIND_DIRECTION_EDEFAULT;
-			case SymphonyEnvironmentPackage.ATMOSPHERE__TEMPERATURE:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__TEMPERATURE:
 				return temperature != TEMPERATURE_EDEFAULT;
-			case SymphonyEnvironmentPackage.ATMOSPHERE__SURFACE_PRESSURE:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__SURFACE_PRESSURE:
 				return surfacePressure != SURFACE_PRESSURE_EDEFAULT;
-			case SymphonyEnvironmentPackage.ATMOSPHERE__SURFACE_DENSITY:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__SURFACE_DENSITY:
 				return surfaceDensity != SURFACE_DENSITY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

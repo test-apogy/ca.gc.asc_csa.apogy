@@ -17,7 +17,7 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage.Literals;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage.Literals;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 public class NewSymphonySessionComposite extends Composite {

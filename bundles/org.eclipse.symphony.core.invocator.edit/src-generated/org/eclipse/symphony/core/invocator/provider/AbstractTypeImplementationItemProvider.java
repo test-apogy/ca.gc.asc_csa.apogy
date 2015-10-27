@@ -22,8 +22,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation} object.
@@ -85,7 +85,7 @@ public class AbstractTypeImplementationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTypeImplementation_implementationClass_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTypeImplementation_implementationClass_feature", "_UI_AbstractTypeImplementation_type"),
-				 EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
+				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
 				 true,
 				 false,
 				 true,
@@ -108,7 +108,7 @@ public class AbstractTypeImplementationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTypeImplementation_instance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTypeImplementation_instance_feature", "_UI_AbstractTypeImplementation_type"),
-				 EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE,
+				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE,
 				 true,
 				 false,
 				 true,
@@ -131,7 +131,7 @@ public class AbstractTypeImplementationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTypeImplementation_adapterInstance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTypeImplementation_adapterInstance_feature", "_UI_AbstractTypeImplementation_type"),
-				 EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE,
+				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE,
 				 true,
 				 false,
 				 true,
@@ -154,7 +154,7 @@ public class AbstractTypeImplementationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractTypeImplementation_handlingType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractTypeImplementation_handlingType_feature", "_UI_AbstractTypeImplementation_type"),
-				 EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__HANDLING_TYPE,
+				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__HANDLING_TYPE,
 				 false,
 				 false,
 				 false,
@@ -176,10 +176,10 @@ public class AbstractTypeImplementationItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE);
 		}
 		return childrenFeatures;
 	}
@@ -223,13 +223,13 @@ public class AbstractTypeImplementationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractTypeImplementation.class)) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS:
-			case EMFEcoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA:
-			case EMFEcoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE:
-			case EMFEcoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__INSTANCE:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_TYPE_IMPLEMENTATION__ADAPTER_INSTANCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -250,13 +250,13 @@ public class AbstractTypeImplementationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createTypeMemberImplementation()));
+				(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createTypeMemberImplementation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createInitializationData()));
+				(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__ABSTRACT_INITIALIZATION_DATA,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createInitializationData()));
 	}
 
   /**

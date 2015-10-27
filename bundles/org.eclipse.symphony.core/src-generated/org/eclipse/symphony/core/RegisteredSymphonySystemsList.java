@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getRegisteredSymphonySystemsList()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getRegisteredSymphonySystemsList()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface RegisteredSymphonySystemsList extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
    * @return the value of the '<em>Symphony Systems</em>' reference list.
-   * @see org.eclipse.symphony.core.SymphonyCorePackage#getRegisteredSymphonySystemsList_SymphonySystems()
+   * @see org.eclipse.symphony.core.Symphony__CorePackage#getRegisteredSymphonySystemsList_SymphonySystems()
    * @model transient="true" changeable="false" derived="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' createChild='false' property='None'"
    * @generated

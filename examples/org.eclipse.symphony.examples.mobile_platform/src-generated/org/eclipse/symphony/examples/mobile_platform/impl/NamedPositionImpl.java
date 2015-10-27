@@ -6,7 +6,7 @@ package org.eclipse.symphony.examples.mobile_platform.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage;
+import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
 import org.eclipse.symphony.examples.mobile_platform.NamedPosition;
 
 /**
@@ -62,7 +62,7 @@ public class NamedPositionImpl extends PositionImpl implements NamedPosition
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreExampleMobilePlatformPackage.Literals.NAMED_POSITION;
+		return Symphony__ExamplesMobilePlatformPackage.Literals.NAMED_POSITION;
 	}
 
   /**
@@ -85,7 +85,7 @@ public class NamedPositionImpl extends PositionImpl implements NamedPosition
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleMobilePlatformPackage.NAMED_POSITION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformPackage.NAMED_POSITION__NAME, oldName, name));
 	}
 
   /**
@@ -97,7 +97,7 @@ public class NamedPositionImpl extends PositionImpl implements NamedPosition
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreExampleMobilePlatformPackage.NAMED_POSITION__NAME:
+			case Symphony__ExamplesMobilePlatformPackage.NAMED_POSITION__NAME:
 				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -112,7 +112,7 @@ public class NamedPositionImpl extends PositionImpl implements NamedPosition
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreExampleMobilePlatformPackage.NAMED_POSITION__NAME:
+			case Symphony__ExamplesMobilePlatformPackage.NAMED_POSITION__NAME:
 				setName((String)newValue);
 				return;
 		}
@@ -128,7 +128,7 @@ public class NamedPositionImpl extends PositionImpl implements NamedPosition
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreExampleMobilePlatformPackage.NAMED_POSITION__NAME:
+			case Symphony__ExamplesMobilePlatformPackage.NAMED_POSITION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 		}
@@ -144,7 +144,7 @@ public class NamedPositionImpl extends PositionImpl implements NamedPosition
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreExampleMobilePlatformPackage.NAMED_POSITION__NAME:
+			case Symphony__ExamplesMobilePlatformPackage.NAMED_POSITION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);

@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.UserDefinedResult;
 import org.eclipse.symphony.core.invocator.Context;
@@ -146,7 +146,7 @@ public class CreateUserDefinedResultDialog extends Dialog
 	@Override
 	protected void okPressed() 
 	{
-		userDefinedResult = SymphonyCoreFactory.eINSTANCE.createUserDefinedResult();
+		userDefinedResult = Symphony__CoreFactory.eINSTANCE.createUserDefinedResult();
 		userDefinedResult.setName(getResultName());
 		userDefinedResult.setDescription(getResultDescription());
 		userDefinedResult.setPose(getResultPose());		

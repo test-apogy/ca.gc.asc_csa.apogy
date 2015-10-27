@@ -11,7 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * The equatorial coordinate system is a widely-used method of mapping celestial objects. It functions by projecting the Earth's geographic poles and equator onto the celestial sphere. The projection of the Earth's equator onto the celestial sphere is called the celestial equator. Similarly, the projections of the Earth's north and south geographic poles become the north and south celestial poles, respectively.
+ * The equatorial coordinate system is a widely-used method of mapping celestial objects.
+ * It functions by projecting the Earth's geographic poles and equator onto the celestial
+ * sphere. The projection of the Earth's equator onto the celestial sphere is called the
+ * celestial equator. Similarly, the projections of the Earth's north and south geographic
+ * poles become the north and south celestial poles, respectively.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -23,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.environment.EquatorialCoordinates#getRadius <em>Radius</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEquatorialCoordinates()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEquatorialCoordinates()
  * @model
  * @generated
  */
@@ -39,7 +43,7 @@ public interface EquatorialCoordinates extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Right Ascension</em>' attribute.
 	 * @see #setRightAscension(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEquatorialCoordinates_RightAscension()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEquatorialCoordinates_RightAscension()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -65,7 +69,7 @@ public interface EquatorialCoordinates extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Declination</em>' attribute.
 	 * @see #setDeclination(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEquatorialCoordinates_Declination()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEquatorialCoordinates_Declination()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -91,7 +95,7 @@ public interface EquatorialCoordinates extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEquatorialCoordinates_Radius()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEquatorialCoordinates_Radius()
 	 * @model unique="false"
 	 * @generated
 	 */

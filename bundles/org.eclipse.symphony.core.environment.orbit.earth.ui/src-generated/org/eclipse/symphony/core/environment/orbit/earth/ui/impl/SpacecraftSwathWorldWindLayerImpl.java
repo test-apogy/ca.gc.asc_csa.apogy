@@ -31,9 +31,9 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
 import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.utils.WorldWindUtils;
 
 /**
@@ -238,7 +238,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER;
+		return Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER;
 	}
 
 	/**
@@ -252,7 +252,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 			orbitModel = (OrbitModel)eResolveProxy(oldOrbitModel);
 			if (orbitModel != oldOrbitModel) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__ORBIT_MODEL, oldOrbitModel, orbitModel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__ORBIT_MODEL, oldOrbitModel, orbitModel));
 			}
 		}
 		return orbitModel;
@@ -289,7 +289,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 		OrbitModel oldOrbitModel = orbitModel;
 		orbitModel = newOrbitModel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__ORBIT_MODEL, oldOrbitModel, orbitModel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__ORBIT_MODEL, oldOrbitModel, orbitModel));
 	}
 
 	/**
@@ -303,7 +303,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 			timeSource = (Timed)eResolveProxy(oldTimeSource);
 			if (timeSource != oldTimeSource) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
 			}
 		}
 		return timeSource;
@@ -327,7 +327,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 		Timed oldTimeSource = timeSource;
 		timeSource = newTimeSource;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
 	}
 
 	/**
@@ -386,7 +386,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 		double oldForwardPropagationDuration = forwardPropagationDuration;
 		forwardPropagationDuration = newForwardPropagationDuration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION, oldForwardPropagationDuration, forwardPropagationDuration));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION, oldForwardPropagationDuration, forwardPropagationDuration));
 	}
 
 	/**
@@ -420,7 +420,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 		double oldBackwardPropagationDuration = backwardPropagationDuration;
 		backwardPropagationDuration = newBackwardPropagationDuration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION, oldBackwardPropagationDuration, backwardPropagationDuration));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION, oldBackwardPropagationDuration, backwardPropagationDuration));
 	}
 
 	/**
@@ -453,7 +453,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 		double oldTimeInterval = timeInterval;
 		timeInterval = newTimeInterval;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_INTERVAL, oldTimeInterval, timeInterval));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_INTERVAL, oldTimeInterval, timeInterval));
 	}
 
 	/**
@@ -486,7 +486,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 		double oldLeftSwathAngle = leftSwathAngle;
 		leftSwathAngle = newLeftSwathAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__LEFT_SWATH_ANGLE, oldLeftSwathAngle, leftSwathAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__LEFT_SWATH_ANGLE, oldLeftSwathAngle, leftSwathAngle));
 	}
 
 	/**
@@ -519,7 +519,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 		double oldRightSwathAngle = rightSwathAngle;
 		rightSwathAngle = newRightSwathAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__RIGHT_SWATH_ANGLE, oldRightSwathAngle, rightSwathAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__RIGHT_SWATH_ANGLE, oldRightSwathAngle, rightSwathAngle));
 	}
 
 	/**
@@ -552,7 +552,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 		boolean oldShowGroundTrace = showGroundTrace;
 		showGroundTrace = newShowGroundTrace;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__SHOW_GROUND_TRACE, oldShowGroundTrace, showGroundTrace));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__SHOW_GROUND_TRACE, oldShowGroundTrace, showGroundTrace));
 	}
 
 	/**
@@ -573,7 +573,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 		SpacecraftSwathCorridor oldForwardSpacecraftSwathCorridor = forwardSpacecraftSwathCorridor;
 		forwardSpacecraftSwathCorridor = newForwardSpacecraftSwathCorridor;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR, oldForwardSpacecraftSwathCorridor, newForwardSpacecraftSwathCorridor);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR, oldForwardSpacecraftSwathCorridor, newForwardSpacecraftSwathCorridor);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -588,14 +588,14 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 		if (newForwardSpacecraftSwathCorridor != forwardSpacecraftSwathCorridor) {
 			NotificationChain msgs = null;
 			if (forwardSpacecraftSwathCorridor != null)
-				msgs = ((InternalEObject)forwardSpacecraftSwathCorridor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR, null, msgs);
+				msgs = ((InternalEObject)forwardSpacecraftSwathCorridor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR, null, msgs);
 			if (newForwardSpacecraftSwathCorridor != null)
-				msgs = ((InternalEObject)newForwardSpacecraftSwathCorridor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR, null, msgs);
+				msgs = ((InternalEObject)newForwardSpacecraftSwathCorridor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR, null, msgs);
 			msgs = basicSetForwardSpacecraftSwathCorridor(newForwardSpacecraftSwathCorridor, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR, newForwardSpacecraftSwathCorridor, newForwardSpacecraftSwathCorridor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR, newForwardSpacecraftSwathCorridor, newForwardSpacecraftSwathCorridor));
 	}
 
 	/**
@@ -616,7 +616,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 		SpacecraftSwathCorridor oldBackwardSpacecraftSwathCorridor = backwardSpacecraftSwathCorridor;
 		backwardSpacecraftSwathCorridor = newBackwardSpacecraftSwathCorridor;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR, oldBackwardSpacecraftSwathCorridor, newBackwardSpacecraftSwathCorridor);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR, oldBackwardSpacecraftSwathCorridor, newBackwardSpacecraftSwathCorridor);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -631,14 +631,14 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 		if (newBackwardSpacecraftSwathCorridor != backwardSpacecraftSwathCorridor) {
 			NotificationChain msgs = null;
 			if (backwardSpacecraftSwathCorridor != null)
-				msgs = ((InternalEObject)backwardSpacecraftSwathCorridor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR, null, msgs);
+				msgs = ((InternalEObject)backwardSpacecraftSwathCorridor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR, null, msgs);
 			if (newBackwardSpacecraftSwathCorridor != null)
-				msgs = ((InternalEObject)newBackwardSpacecraftSwathCorridor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR, null, msgs);
+				msgs = ((InternalEObject)newBackwardSpacecraftSwathCorridor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR, null, msgs);
 			msgs = basicSetBackwardSpacecraftSwathCorridor(newBackwardSpacecraftSwathCorridor, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR, newBackwardSpacecraftSwathCorridor, newBackwardSpacecraftSwathCorridor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR, newBackwardSpacecraftSwathCorridor, newBackwardSpacecraftSwathCorridor));
 	}
 
 	/**
@@ -649,9 +649,9 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR:
 				return basicSetForwardSpacecraftSwathCorridor(null, msgs);
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR:
 				return basicSetBackwardSpacecraftSwathCorridor(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -665,27 +665,27 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__ORBIT_MODEL:
 				if (resolve) return getOrbitModel();
 				return basicGetOrbitModel();
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE:
 				if (resolve) return getTimeSource();
 				return basicGetTimeSource();
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
 				return getForwardPropagationDuration();
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
 				return getBackwardPropagationDuration();
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_INTERVAL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_INTERVAL:
 				return getTimeInterval();
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__LEFT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__LEFT_SWATH_ANGLE:
 				return getLeftSwathAngle();
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__RIGHT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__RIGHT_SWATH_ANGLE:
 				return getRightSwathAngle();
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
 				return isShowGroundTrace();
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR:
 				return getForwardSpacecraftSwathCorridor();
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR:
 				return getBackwardSpacecraftSwathCorridor();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -699,34 +699,34 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE:
 				setTimeSource((Timed)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
 				setForwardPropagationDuration((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
 				setBackwardPropagationDuration((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_INTERVAL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_INTERVAL:
 				setTimeInterval((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__LEFT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__LEFT_SWATH_ANGLE:
 				setLeftSwathAngle((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__RIGHT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__RIGHT_SWATH_ANGLE:
 				setRightSwathAngle((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
 				setShowGroundTrace((Boolean)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR:
 				setForwardSpacecraftSwathCorridor((SpacecraftSwathCorridor)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR:
 				setBackwardSpacecraftSwathCorridor((SpacecraftSwathCorridor)newValue);
 				return;
 		}
@@ -741,34 +741,34 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)null);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE:
 				setTimeSource((Timed)null);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
 				setForwardPropagationDuration(FORWARD_PROPAGATION_DURATION_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
 				setBackwardPropagationDuration(BACKWARD_PROPAGATION_DURATION_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_INTERVAL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_INTERVAL:
 				setTimeInterval(TIME_INTERVAL_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__LEFT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__LEFT_SWATH_ANGLE:
 				setLeftSwathAngle(LEFT_SWATH_ANGLE_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__RIGHT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__RIGHT_SWATH_ANGLE:
 				setRightSwathAngle(RIGHT_SWATH_ANGLE_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
 				setShowGroundTrace(SHOW_GROUND_TRACE_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR:
 				setForwardSpacecraftSwathCorridor((SpacecraftSwathCorridor)null);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR:
 				setBackwardSpacecraftSwathCorridor((SpacecraftSwathCorridor)null);
 				return;
 		}
@@ -783,25 +783,25 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__ORBIT_MODEL:
 				return orbitModel != null;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE:
 				return timeSource != null;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
 				return forwardPropagationDuration != FORWARD_PROPAGATION_DURATION_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
 				return backwardPropagationDuration != BACKWARD_PROPAGATION_DURATION_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_INTERVAL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_INTERVAL:
 				return timeInterval != TIME_INTERVAL_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__LEFT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__LEFT_SWATH_ANGLE:
 				return leftSwathAngle != LEFT_SWATH_ANGLE_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__RIGHT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__RIGHT_SWATH_ANGLE:
 				return rightSwathAngle != RIGHT_SWATH_ANGLE_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
 				return showGroundTrace != SHOW_GROUND_TRACE_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR:
 				return forwardSpacecraftSwathCorridor != null;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR:
 				return backwardSpacecraftSwathCorridor != null;
 		}
 		return super.eIsSet(featureID);
@@ -869,7 +869,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 								System.out.println("End Time : "      + endDate);
 								System.out.println("Duration (s) : "  + duration * 0.001);
 								
-								SpacecraftSwathCorridor spacecraftSwathCorridor = SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createSpacecraftSwathCorridor();
+								SpacecraftSwathCorridor spacecraftSwathCorridor = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createSpacecraftSwathCorridor();
 								spacecraftSwathCorridor.setStartTime(startDate);
 								spacecraftSwathCorridor.setEndTime(endDate);
 								spacecraftSwathCorridor.setOrbitModel(getOrbitModel());
@@ -939,7 +939,7 @@ public class SpacecraftSwathWorldWindLayerImpl extends AbstractWorldWindLayerImp
 								Date startDate = getTimeSource().getTime();										
 								Date endDate = new Date(getTimeSource().getTime().getTime() + duration);	
 								
-								SpacecraftSwathCorridor spacecraftSwathCorridor = SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createSpacecraftSwathCorridor();
+								SpacecraftSwathCorridor spacecraftSwathCorridor = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createSpacecraftSwathCorridor();
 								spacecraftSwathCorridor.setStartTime(startDate);
 								spacecraftSwathCorridor.setEndTime(endDate);
 								spacecraftSwathCorridor.setOrbitModel(getOrbitModel());

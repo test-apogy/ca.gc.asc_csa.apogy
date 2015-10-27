@@ -10,7 +10,7 @@
       <!-- @generated symphony_common_math_statistics -->
       <package
             uri="org.eclipse.symphony.common.math.statistics"
-            class="org.eclipse.symphony.common.math.statistics.StatisticsPackage"
+            class="org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage"
             genModel="model/symphony_common_math_statistics.xcore"/>
    </extension>
 

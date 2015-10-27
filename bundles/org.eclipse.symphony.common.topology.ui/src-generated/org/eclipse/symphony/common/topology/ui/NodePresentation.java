@@ -33,7 +33,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.common.topology.ui.NodePresentation#getSceneObject <em>Scene Object</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodePresentation()
+ * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodePresentation()
  * @model
  * @generated
  */
@@ -45,11 +45,10 @@ public interface NodePresentation extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The list of TopologyPresentationSet referring to this NodePresentation.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Topology Presentation Set</em>' reference list.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodePresentation_TopologyPresentationSet()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodePresentation_TopologyPresentationSet()
 	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getNodePresentationList
 	 * @model opposite="nodePresentationList"
 	 * @generated
@@ -66,7 +65,7 @@ public interface NodePresentation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node</em>' reference.
 	 * @see #setNode(Node)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodePresentation_Node()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodePresentation_Node()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='None' propertyCategory='PRESENTATION_INTERNAL_INFORMATION'"
 	 * @generated
 	 */
@@ -92,7 +91,7 @@ public interface NodePresentation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Color</em>' attribute.
 	 * @see #setColor(RGB)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodePresentation_Color()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodePresentation_Color()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.topology.ui.RGB"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated
@@ -120,7 +119,7 @@ public interface NodePresentation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Visible</em>' attribute.
 	 * @see #setVisible(boolean)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodePresentation_Visible()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodePresentation_Visible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated
@@ -148,7 +147,7 @@ public interface NodePresentation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Use In Bounding Calculation</em>' attribute.
 	 * @see #setUseInBoundingCalculation(boolean)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodePresentation_UseInBoundingCalculation()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodePresentation_UseInBoundingCalculation()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='BOUNDING_VOLUME_INFORMATION' child='false'"
 	 * @generated
@@ -174,7 +173,7 @@ public interface NodePresentation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Centroid</em>' reference.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodePresentation_Centroid()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodePresentation_Centroid()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='BOUNDING_VOLUME_INFORMATION'"
 	 * @generated
@@ -190,7 +189,7 @@ public interface NodePresentation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Min</em>' reference.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodePresentation_Min()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodePresentation_Min()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='BOUNDING_VOLUME_INFORMATION'"
 	 * @generated
@@ -206,7 +205,7 @@ public interface NodePresentation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max</em>' reference.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodePresentation_Max()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodePresentation_Max()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='BOUNDING_VOLUME_INFORMATION'"
 	 * @generated
@@ -222,7 +221,7 @@ public interface NodePresentation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XRange</em>' attribute.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodePresentation_XRange()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodePresentation_XRange()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='BOUNDING_VOLUME_INFORMATION'"
 	 * @generated
@@ -238,7 +237,7 @@ public interface NodePresentation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YRange</em>' attribute.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodePresentation_YRange()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodePresentation_YRange()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='BOUNDING_VOLUME_INFORMATION'"
 	 * @generated
@@ -254,7 +253,7 @@ public interface NodePresentation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZRange</em>' attribute.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodePresentation_ZRange()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodePresentation_ZRange()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='BOUNDING_VOLUME_INFORMATION'"
 	 * @generated
@@ -271,7 +270,7 @@ public interface NodePresentation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scene Object</em>' attribute.
 	 * @see #setSceneObject(SceneObject)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodePresentation_SceneObject()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodePresentation_SceneObject()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.topology.ui.SceneObject" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='PRESENTATION_INTERNAL_INFORMATION' child='false'"
 	 * @generated
@@ -300,7 +299,7 @@ public interface NodePresentation extends EObject {
 	 * @return the value of the '<em>Shadow Mode</em>' attribute.
 	 * @see org.eclipse.symphony.common.topology.ui.ShadowMode
 	 * @see #setShadowMode(ShadowMode)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodePresentation_ShadowMode()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodePresentation_ShadowMode()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION' child='false'"
 	 * @generated

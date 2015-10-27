@@ -14,8 +14,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.environment.SurfaceEnvironment;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.SurfaceEnvironment} object.
@@ -66,8 +66,8 @@ public class SurfaceEnvironmentItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__ATMOSPHERE);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__GRAVITY);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__ATMOSPHERE);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__GRAVITY);
 		}
 		return childrenFeatures;
 	}
@@ -126,8 +126,8 @@ public class SurfaceEnvironmentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SurfaceEnvironment.class)) {
-			case SymphonyEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE:
-			case SymphonyEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY:
+			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__ATMOSPHERE:
+			case Symphony__CoreEnvironmentPackage.SURFACE_ENVIRONMENT__GRAVITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -148,12 +148,12 @@ public class SurfaceEnvironmentItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__ATMOSPHERE,
-				 SymphonyEnvironmentFactory.eINSTANCE.createAtmosphere()));
+				(Symphony__CoreEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__ATMOSPHERE,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createAtmosphere()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__GRAVITY,
+				(Symphony__CoreEnvironmentPackage.Literals.SURFACE_ENVIRONMENT__GRAVITY,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 

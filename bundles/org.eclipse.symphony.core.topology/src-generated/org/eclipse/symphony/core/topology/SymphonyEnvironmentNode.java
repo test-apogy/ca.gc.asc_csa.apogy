@@ -29,7 +29,7 @@ import org.eclipse.symphony.core.environment.WorksiteNode;
  *   <li>{@link org.eclipse.symphony.core.topology.SymphonyEnvironmentNode#getSymphonySystemAPIsNode <em>Symphony System AP Is Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getSymphonyEnvironmentNode()
+ * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSymphonyEnvironmentNode()
  * @model
  * @generated
  */
@@ -45,7 +45,7 @@ public interface SymphonyEnvironmentNode extends ReferencedGroupNode
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Symphony Environment</em>' reference.
 	 * @see #setSymphonyEnvironment(SymphonyEnvironment)
-	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getSymphonyEnvironmentNode_SymphonyEnvironment()
+	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSymphonyEnvironmentNode_SymphonyEnvironment()
 	 * @model transient="true"
 	 * @generated
 	 */
@@ -71,7 +71,7 @@ public interface SymphonyEnvironmentNode extends ReferencedGroupNode
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Worksite Node</em>' reference.
 	 * @see #setWorksiteNode(WorksiteNode)
-	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getSymphonyEnvironmentNode_WorksiteNode()
+	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSymphonyEnvironmentNode_WorksiteNode()
 	 * @model required="true" transient="true" derived="true"
 	 * @generated
 	 */
@@ -96,7 +96,7 @@ public interface SymphonyEnvironmentNode extends ReferencedGroupNode
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Results List Node</em>' reference.
-	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getSymphonyEnvironmentNode_ResultsListNode()
+	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSymphonyEnvironmentNode_ResultsListNode()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -111,7 +111,7 @@ public interface SymphonyEnvironmentNode extends ReferencedGroupNode
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Symphony System AP Is Node</em>' reference.
-	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getSymphonyEnvironmentNode_SymphonySystemAPIsNode()
+	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSymphonyEnvironmentNode_SymphonySystemAPIsNode()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */

@@ -121,7 +121,7 @@ public class DishAntennaSymphonySystemApiAdapterItemProvider
   @Override
   public ResourceLocator getResourceLocator()
   {
-    return SymphonyExampleAntennaEditPlugin.INSTANCE;
+    return Symphony__ExamplesAntennaSymphonyEditPlugin.INSTANCE;
   }
 
 }

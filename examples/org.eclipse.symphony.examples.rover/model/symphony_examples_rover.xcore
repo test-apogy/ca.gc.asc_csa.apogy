@@ -1,6 +1,6 @@
-@GenModel(prefix="EMFEcoreExampleRover",
+@GenModel(prefix="Symphony__ExamplesRover",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-		  modelName="EMFEcoreExampleRover",
+		  modelName="Symphony__ExamplesRover",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")

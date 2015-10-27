@@ -24,11 +24,11 @@ import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.chart.annotations.XYShapeAnnotation;
 import org.jfree.chart.annotations.XYTextAnnotation;
@@ -94,7 +94,7 @@ public class PoseVariableAnnotationImpl extends AbstractVariableAnnotationImpl i
 	 * @generated
 	 * @ordered
 	 */
-  protected static final Color3f VECTOR_COLOR_EDEFAULT = (Color3f)SymphonyEnvironmentUIFactory.eINSTANCE.createFromString(SymphonyEnvironmentUIPackage.eINSTANCE.getColor3f(), "0.0,0.0,1.0");
+  protected static final Color3f VECTOR_COLOR_EDEFAULT = (Color3f)Symphony__CoreEnvironmentUIFactory.eINSTANCE.createFromString(Symphony__CoreEnvironmentUIPackage.eINSTANCE.getColor3f(), "0.0,0.0,1.0");
 
   /**
 	 * The cached value of the '{@link #getVectorColor() <em>Vector Color</em>}' attribute.
@@ -144,7 +144,7 @@ public class PoseVariableAnnotationImpl extends AbstractVariableAnnotationImpl i
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentUIPackage.Literals.POSE_VARIABLE_ANNOTATION;
+		return Symphony__CoreEnvironmentUIPackage.Literals.POSE_VARIABLE_ANNOTATION;
 	}
 
   /**
@@ -167,7 +167,7 @@ public class PoseVariableAnnotationImpl extends AbstractVariableAnnotationImpl i
 		double oldVectorlength = vectorlength;
 		vectorlength = newVectorlength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTORLENGTH, oldVectorlength, vectorlength));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTORLENGTH, oldVectorlength, vectorlength));
 	}
 
   /**
@@ -190,7 +190,7 @@ public class PoseVariableAnnotationImpl extends AbstractVariableAnnotationImpl i
 		Color3f oldVectorColor = vectorColor;
 		vectorColor = newVectorColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR, oldVectorColor, vectorColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR, oldVectorColor, vectorColor));
 	}
 
   /**
@@ -225,7 +225,7 @@ public class PoseVariableAnnotationImpl extends AbstractVariableAnnotationImpl i
 		boolean oldShowPose = showPose;
 		showPose = newShowPose;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__SHOW_POSE, oldShowPose, showPose));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__SHOW_POSE, oldShowPose, showPose));
 	}
 
    /**
@@ -296,11 +296,11 @@ public class PoseVariableAnnotationImpl extends AbstractVariableAnnotationImpl i
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTORLENGTH:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTORLENGTH:
 				return getVectorlength();
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR:
 				return getVectorColor();
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__SHOW_POSE:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__SHOW_POSE:
 				return isShowPose();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -315,13 +315,13 @@ public class PoseVariableAnnotationImpl extends AbstractVariableAnnotationImpl i
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTORLENGTH:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTORLENGTH:
 				setVectorlength((Double)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR:
 				setVectorColor((Color3f)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__SHOW_POSE:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__SHOW_POSE:
 				setShowPose((Boolean)newValue);
 				return;
 		}
@@ -337,13 +337,13 @@ public class PoseVariableAnnotationImpl extends AbstractVariableAnnotationImpl i
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTORLENGTH:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTORLENGTH:
 				setVectorlength(VECTORLENGTH_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR:
 				setVectorColor(VECTOR_COLOR_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__SHOW_POSE:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__SHOW_POSE:
 				setShowPose(SHOW_POSE_EDEFAULT);
 				return;
 		}
@@ -359,11 +359,11 @@ public class PoseVariableAnnotationImpl extends AbstractVariableAnnotationImpl i
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTORLENGTH:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTORLENGTH:
 				return vectorlength != VECTORLENGTH_EDEFAULT;
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__VECTOR_COLOR:
 				return VECTOR_COLOR_EDEFAULT == null ? vectorColor != null : !VECTOR_COLOR_EDEFAULT.equals(vectorColor);
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__SHOW_POSE:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION__SHOW_POSE:
 				return showPose != SHOW_POSE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -377,7 +377,7 @@ public class PoseVariableAnnotationImpl extends AbstractVariableAnnotationImpl i
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION___UPDATE_POSE__DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__CoreEnvironmentUIPackage.POSE_VARIABLE_ANNOTATION___UPDATE_POSE__DOUBLE_DOUBLE_DOUBLE:
 				updatePose((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
 				return null;
 		}
@@ -496,7 +496,7 @@ public class PoseVariableAnnotationImpl extends AbstractVariableAnnotationImpl i
 			  @Override
 			  public void notifyChanged(Notification msg) 
 			  {
-				  if(msg.getFeatureID(PoseProvider.class) == SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM)
+				  if(msg.getFeatureID(PoseProvider.class) == Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM)
 				  {					  					  
 					  if(msg.getNewValue() instanceof Matrix4x4)
 					  {

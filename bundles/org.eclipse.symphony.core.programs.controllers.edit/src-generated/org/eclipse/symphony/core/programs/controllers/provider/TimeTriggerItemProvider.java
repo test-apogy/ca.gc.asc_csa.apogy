@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.TimeTrigger;
 
 /**
@@ -68,7 +68,7 @@ public class TimeTriggerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TimeTrigger_refreshPeriod_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TimeTrigger_refreshPeriod_feature", "_UI_TimeTrigger_type"),
-				 EMFEcoreControllersPackage.Literals.TIME_TRIGGER__REFRESH_PERIOD,
+				 Symphony__CoreProgramsControllersPackage.Literals.TIME_TRIGGER__REFRESH_PERIOD,
 				 true,
 				 false,
 				 false,
@@ -120,7 +120,7 @@ public class TimeTriggerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TimeTrigger.class)) {
-			case EMFEcoreControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
+			case Symphony__CoreProgramsControllersPackage.TIME_TRIGGER__REFRESH_PERIOD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

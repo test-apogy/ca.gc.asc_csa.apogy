@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ToolsList;
 
 /**
@@ -47,7 +47,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.ABSTRACT_TOOLS_LIST_CONTAINER;
+		return Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TOOLS_LIST_CONTAINER;
 	}
 
   /**
@@ -57,7 +57,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
 	 */
   public ToolsList getToolsList()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST) return null;
 		return (ToolsList)eContainer();
 	}
 
@@ -68,7 +68,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
 	 */
   public ToolsList basicGetToolsList()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST) return null;
 		return (ToolsList)eInternalContainer();
 	}
 
@@ -79,7 +79,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
 	 */
   public NotificationChain basicSetToolsList(ToolsList newToolsList, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newToolsList, EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newToolsList, Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST, msgs);
 		return msgs;
 	}
 
@@ -90,19 +90,19 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
 	 */
   public void setToolsList(ToolsList newToolsList)
   {
-		if (newToolsList != eInternalContainer() || (eContainerFeatureID() != EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST && newToolsList != null)) {
+		if (newToolsList != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST && newToolsList != null)) {
 			if (EcoreUtil.isAncestor(this, newToolsList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newToolsList != null)
-				msgs = ((InternalEObject)newToolsList).eInverseAdd(this, EMFEcoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS, ToolsList.class, msgs);
+				msgs = ((InternalEObject)newToolsList).eInverseAdd(this, Symphony__CoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS, ToolsList.class, msgs);
 			msgs = basicSetToolsList(newToolsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST, newToolsList, newToolsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST, newToolsList, newToolsList));
 	}
 
   /**
@@ -114,7 +114,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetToolsList((ToolsList)otherEnd, msgs);
@@ -131,7 +131,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
 				return basicSetToolsList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -146,8 +146,8 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS, ToolsList.class, msgs);
+			case Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS, ToolsList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -161,7 +161,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
 				if (resolve) return getToolsList();
 				return basicGetToolsList();
 		}
@@ -177,7 +177,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
 				setToolsList((ToolsList)newValue);
 				return;
 		}
@@ -193,7 +193,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
 				setToolsList((ToolsList)null);
 				return;
 		}
@@ -209,7 +209,7 @@ public abstract class AbstractToolsListContainerImpl extends MinimalEObjectImpl.
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST:
 				return basicGetToolsList() != null;
 		}
 		return super.eIsSet(featureID);

@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.addons.primitives.PointLight;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.PointLight} object.
@@ -64,8 +64,8 @@ public class PointLightItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PrimitivesPackage.Literals.POINT_LIGHT__POSITION);
-			childrenFeatures.add(PrimitivesPackage.Literals.POINT_LIGHT__ATTENUATION);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__POSITION);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__ATTENUATION);
 		}
 		return childrenFeatures;
 	}
@@ -120,8 +120,8 @@ public class PointLightItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PointLight.class)) {
-			case PrimitivesPackage.POINT_LIGHT__POSITION:
-			case PrimitivesPackage.POINT_LIGHT__ATTENUATION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.POINT_LIGHT__POSITION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.POINT_LIGHT__ATTENUATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -141,12 +141,12 @@ public class PointLightItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PrimitivesPackage.Literals.POINT_LIGHT__POSITION,
+				(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__POSITION,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PrimitivesPackage.Literals.POINT_LIGHT__ATTENUATION,
+				(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__ATTENUATION,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
@@ -162,9 +162,9 @@ public class PointLightItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == PrimitivesPackage.Literals.LIGHT__COLOR ||
-			childFeature == PrimitivesPackage.Literals.POINT_LIGHT__POSITION ||
-			childFeature == PrimitivesPackage.Literals.POINT_LIGHT__ATTENUATION;
+			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.LIGHT__COLOR ||
+			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__POSITION ||
+			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__ATTENUATION;
 
 		if (qualify) {
 			return getString

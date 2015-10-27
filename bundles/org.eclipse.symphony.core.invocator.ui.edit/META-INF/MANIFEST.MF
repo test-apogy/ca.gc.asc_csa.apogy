@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.symphony.core.invocator.ui.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.core.invocator.ui.provider.EMFEcoreInvocatorUiEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.core.invocator.ui.provider.Symphony__CoreInvocatorUIEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

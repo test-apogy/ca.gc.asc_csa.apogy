@@ -15,7 +15,6 @@ import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * A specialization of AbstractCamera that is a camera mounted on a satellite.
  * <!-- end-model-doc -->
  *
@@ -27,7 +26,7 @@ import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteImager#getImagesAcquired <em>Images Acquired</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteImager()
+ * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteImager()
  * @model
  * @generated
  */
@@ -43,7 +42,7 @@ public interface SatelliteImager extends AbstractCamera, Zoomable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Satellite</em>' container reference.
 	 * @see #setSatellite(Satellite)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteImager_Satellite()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteImager_Satellite()
 	 * @see org.eclipse.symphony.examples.satellite.Satellite#getImager
 	 * @model opposite="imager" transient="false"
 	 * @generated
@@ -70,12 +69,11 @@ public interface SatelliteImager extends AbstractCamera, Zoomable {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * List of images stored on-board the imager. Note that when the maximum number of image has been acquired,
 	 * further takeImageSnapshot command will be rejected.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Images Acquired</em>' containment reference list.
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteImager_ImagesAcquired()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteImager_ImagesAcquired()
 	 * @model containment="true" upper="10"
 	 * @generated
 	 */
@@ -85,7 +83,6 @@ public interface SatelliteImager extends AbstractCamera, Zoomable {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Command that downloads a specified number of images.
 	 * @param maximumNumberOfImages The maximum number of images to download.
 	 * <!-- end-model-doc -->

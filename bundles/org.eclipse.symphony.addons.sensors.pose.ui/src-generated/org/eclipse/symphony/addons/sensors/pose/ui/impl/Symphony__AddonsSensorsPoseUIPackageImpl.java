@@ -13,7 +13,7 @@ import org.eclipse.symphony.addons.sensors.pose.ui.PoseSensorPresentation;
 import org.eclipse.symphony.addons.sensors.pose.ui.PositionSensorPresentation;
 import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIFactory;
 import org.eclipse.symphony.addons.sensors.pose.ui.Symphony__AddonsSensorsPoseUIPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -90,7 +90,7 @@ public class Symphony__AddonsSensorsPoseUIPackageImpl extends EPackageImpl imple
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyUIPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsSensorsPoseUIPackage.createPackageContents();
@@ -223,7 +223,7 @@ public class Symphony__AddonsSensorsPoseUIPackageImpl extends EPackageImpl imple
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyUIPackage theTopologyUIPackage = (TopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyUIPackage.eNS_URI);
+		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -231,9 +231,9 @@ public class Symphony__AddonsSensorsPoseUIPackageImpl extends EPackageImpl imple
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		positionSensorPresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
-		orientationSensorPresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
-		poseSensorPresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
+		positionSensorPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		orientationSensorPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		poseSensorPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(positionSensorPresentationEClass, PositionSensorPresentation.class, "PositionSensorPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

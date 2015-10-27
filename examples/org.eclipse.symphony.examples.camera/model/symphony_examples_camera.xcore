@@ -1,6 +1,6 @@
-@GenModel(prefix="EMFEcoreExampleCamera",
+@GenModel(prefix="Symphony__ExamplesCamera",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-		  modelName="EMFEcoreExampleCamera",
+		  modelName="Symphony__ExamplesCamera",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")

@@ -58,7 +58,7 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.ListFeatureNode;
 import org.eclipse.symphony.common.emf.ListRootNode;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.symphony.core.invocator.TypeMember;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
@@ -162,7 +162,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 					SetCommand command = new SetCommand(
 							editingDomain,
 							variableFeatureReference,
-							EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT,
+							Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT,
 							null);
 					editingDomain.getCommandStack().execute(command);
 				}
@@ -214,7 +214,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 					SetCommand command = new SetCommand(
 							editingDomain,
 							variableFeatureReference,
-							EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT,
+							Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT,
 							null);
 					editingDomain.getCommandStack().execute(command);
 				}
@@ -295,7 +295,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 		 */
 		ViewerSupport.bind(variablesViewer, EMFObservables.observeList(
 				variables,
-				EMFEcoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES),
+				Symphony__CoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES),
 				EMFProperties.value(Symphony__CommonEMFPackage.Literals.NAMED__NAME));
 
 		/**
@@ -307,12 +307,12 @@ public class VariableFeatureReferenceComposite extends Composite {
 		IObservableValue observeVariableValue = editingDomain == null ? 
 				EMFObservables.observeValue(
 						variableFeatureReference,
-						EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE):
+						Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE):
 
 				EMFEditObservables.observeValue(
 						editingDomain,
 						variableFeatureReference,
-						EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE);
+						Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE);
 		
 		bindingContext.bindValue(observeSingleSelectionVariablesViewer,
 				observeVariableValue, null, null);
@@ -328,16 +328,16 @@ public class VariableFeatureReferenceComposite extends Composite {
 					listProperty = EMFProperties
 							.list(FeaturePath
 									.fromList(
-											EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE,
-											EMFEcoreInvocatorPackage.Literals.VARIABLE__VARIABLE_TYPE,
-											EMFEcoreInvocatorPackage.Literals.TYPE__MEMBERS));
+											Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE,
+											Symphony__CoreInvocatorPackage.Literals.VARIABLE__VARIABLE_TYPE,
+											Symphony__CoreInvocatorPackage.Literals.TYPE__MEMBERS));
 				}
 				if (source instanceof TypeMember) {
 					listProperty = EMFProperties
 							.list(FeaturePath
 									.fromList(
-											EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER__MEMBER_TYPE,
-											EMFEcoreInvocatorPackage.Literals.TYPE__MEMBERS));
+											Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER__MEMBER_TYPE,
+											Symphony__CoreInvocatorPackage.Literals.TYPE__MEMBERS));
 				}
 				return listProperty;
 			}
@@ -379,13 +379,13 @@ public class VariableFeatureReferenceComposite extends Composite {
 				EMFObservables
 				.observeValue(
 						variableFeatureReference,
-						EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT):
+						Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT):
 				
 				EMFEditObservables
 				.observeValue(
 						editingDomain,
 						variableFeatureReference,
-						EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT);
+						Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT);
 		
 		
 		bindingContext.bindValue(observeSingleSelectionTypeViewer,
@@ -461,12 +461,12 @@ public class VariableFeatureReferenceComposite extends Composite {
 				EMFObservables
 				.observeValue(
 						variableFeatureReference,
-						EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT):			
+						Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT):			
 				EMFEditObservables
 				.observeValue(
 						editingDomain,
 						variableFeatureReference,
-						EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT);
+						Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT);
 
 		bindingContext.bindValue(observeSingleSelectionFeaturesViewer,
 				observeFeaturesValue, new UpdateValueStrategy()
@@ -508,9 +508,9 @@ public class VariableFeatureReferenceComposite extends Composite {
 				@Override
 				public void notifyChanged(Notification msg) {
 					switch (msg.getFeatureID(VariableFeatureReference.class)) {
-					case EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
+					case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
 						typeMemberViewer.setSelection(null);
-					case EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
+					case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
 						if (m_FeaturesbindingContext != null) {
 							m_FeaturesbindingContext.dispose();
 							m_FeaturesbindingContext = null;

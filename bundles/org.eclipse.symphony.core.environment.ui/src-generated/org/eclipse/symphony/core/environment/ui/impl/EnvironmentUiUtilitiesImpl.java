@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.environment.AtmosphereUtils;
 import org.eclipse.symphony.core.environment.Star;
 import org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -53,7 +53,7 @@ public class EnvironmentUiUtilitiesImpl extends MinimalEObjectImpl.Container imp
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentUIPackage.Literals.ENVIRONMENT_UI_UTILITIES;
+		return Symphony__CoreEnvironmentUIPackage.Literals.ENVIRONMENT_UI_UTILITIES;
 	}
 
   /**
@@ -185,15 +185,15 @@ public class EnvironmentUiUtilitiesImpl extends MinimalEObjectImpl.Container imp
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case SymphonyEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___TO_POINT3F__STAR:
+			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___TO_POINT3F__STAR:
 				return toPoint3f((Star)arguments.get(0));
-			case SymphonyEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT:
+			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT:
 				return getPointSizeForMagnitude((Float)arguments.get(0), (Float)arguments.get(1), (Float)arguments.get(2), (Float)arguments.get(3), (Float)arguments.get(4));
-			case SymphonyEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE:
+			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE:
 				return getSunLightColor((Double)arguments.get(0));
-			case SymphonyEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE:
+			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE:
 				return getSkyTransparency((Double)arguments.get(0));
-			case SymphonyEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE:
+			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE:
 				return getSkyColor((Double)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

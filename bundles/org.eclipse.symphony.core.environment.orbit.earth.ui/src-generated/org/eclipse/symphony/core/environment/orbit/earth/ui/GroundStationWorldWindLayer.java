@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer#getReferenceAltitude <em>Reference Altitude</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getGroundStationWorldWindLayer()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getGroundStationWorldWindLayer()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface GroundStationWorldWindLayer extends EarthSurfaceLocationWorldWi
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ground Station</em>' reference.
 	 * @see #setGroundStation(GroundStation)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getGroundStationWorldWindLayer_GroundStation()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getGroundStationWorldWindLayer_GroundStation()
 	 * @model
 	 * @generated
 	 */
@@ -59,7 +59,7 @@ public interface GroundStationWorldWindLayer extends EarthSurfaceLocationWorldWi
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Reference Altitude</em>' attribute.
 	 * @see #setReferenceAltitude(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getGroundStationWorldWindLayer_ReferenceAltitude()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getGroundStationWorldWindLayer_ReferenceAltitude()
 	 * @model default="500" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VISUALS' csa_units='km'"
 	 * @generated

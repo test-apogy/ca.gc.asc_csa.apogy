@@ -11,7 +11,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
 
 /**
@@ -65,7 +65,7 @@ public class TransformMatrixBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TransformMatrixBinding_transformNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TransformMatrixBinding_transformNode_feature", "_UI_TransformMatrixBinding_type"),
-				 TopologyBindingsPackage.Literals.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE,
+				 Symphony__CommonTopologyBindingsPackage.Literals.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE,
 				 true,
 				 false,
 				 true,

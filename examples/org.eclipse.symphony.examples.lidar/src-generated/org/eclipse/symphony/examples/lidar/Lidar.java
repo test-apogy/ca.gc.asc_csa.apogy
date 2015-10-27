@@ -29,7 +29,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
  *   <li>{@link org.eclipse.symphony.examples.lidar.Lidar#isInitialized <em>Initialized</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage#getLidar()
+ * @see org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage#getLidar()
  * @model abstract="true"
  * @generated
  */
@@ -49,7 +49,7 @@ public interface Lidar extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fov</em>' containment reference.
 	 * @see #setFov(RectangularFrustrumFieldOfView)
-	 * @see org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage#getLidar_Fov()
+	 * @see org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage#getLidar_Fov()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Readonly' propertyCategory='Field Of View'"
 	 * @generated
@@ -78,7 +78,7 @@ public interface Lidar extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage#getLidar_Initialized()
+	 * @see org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage#getLidar_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated

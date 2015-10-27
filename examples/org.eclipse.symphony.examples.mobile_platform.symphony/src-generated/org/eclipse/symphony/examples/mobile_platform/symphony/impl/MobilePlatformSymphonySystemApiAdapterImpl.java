@@ -20,14 +20,14 @@ import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformFactory;
-import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage;
+import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformFactory;
+import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
 import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
 import org.eclipse.symphony.examples.mobile_platform.Position;
 import org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData;
 import org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformFactory;
-import org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformPackage;
+import org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyFactory;
+import org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -61,7 +61,7 @@ public class MobilePlatformSymphonySystemApiAdapterImpl extends SymphonySystemAp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM_SYMPHONY_SYSTEM_API_ADAPTER;
+		return Symphony__ExamplesMobilePlatformSymphonyPackage.Literals.MOBILE_PLATFORM_SYMPHONY_SYSTEM_API_ADAPTER;
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class MobilePlatformSymphonySystemApiAdapterImpl extends SymphonySystemAp
 		// Use the relevant factor method to create the desired
 		// initialization data object, which, in this case, is
 		// an instance of MobilePlatformData
-		return SymphonyExampleMobilePlatformFactory.eINSTANCE.createMobilePlatformData();
+		return Symphony__ExamplesMobilePlatformSymphonyFactory.eINSTANCE.createMobilePlatformData();
 	}
 	
 	/**
@@ -215,7 +215,7 @@ public class MobilePlatformSymphonySystemApiAdapterImpl extends SymphonySystemAp
 				Tuple3d orientation = MathFacade.INSTANCE.extractOrientation(matrix);
 
 				// Create a new position object filled with that extracted information
-				Position newPlatformPosition = EMFEcoreExampleMobilePlatformFactory.eINSTANCE.createPosition();
+				Position newPlatformPosition = Symphony__ExamplesMobilePlatformFactory.eINSTANCE.createPosition();
 				newPlatformPosition.setX(position.getX());
 				newPlatformPosition.setY(position.getY());
 				newPlatformPosition.setTheta(orientation.getZ());
@@ -326,7 +326,7 @@ class PositionAdapter extends AdapterImpl
 			{
 				// If the feature being changed was the position
 				if (msg.getFeatureID(MobilePlatform.class) ==
-						EMFEcoreExampleMobilePlatformPackage.MOBILE_PLATFORM__POSITION)
+						Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION)
 				{
 					// If there was a previous Position object
 					if (msg.getOldValue() instanceof Position)

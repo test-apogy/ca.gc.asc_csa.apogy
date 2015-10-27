@@ -10,7 +10,7 @@ import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerFactory;
+import org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerFactory;
 import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
 import org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesConstants;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
@@ -81,7 +81,7 @@ public final class Activator extends AbstractUIPlugin implements BundleActivator
 	{
 		if(topologyViewerRegistry == null)
 		{
-			topologyViewerRegistry = TopologyViewerFactory.eINSTANCE.createTopologyViewerRegistry();
+			topologyViewerRegistry = Symphony__CommonTopologyUIViewerFactory.eINSTANCE.createTopologyViewerRegistry();
 			topologyViewerRegistry.setVerbose(true);
 		}
 		return topologyViewerRegistry;

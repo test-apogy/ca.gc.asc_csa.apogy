@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.TopologyRoot;
 import org.eclipse.symphony.core.topology.ui.Activator;
@@ -300,7 +300,7 @@ public class SymphonySystem3DView extends AbstractSymphony3DView implements IPro
 							
 							switch (featureId) 
 							{
-								case SymphonyCorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
+								case Symphony__CorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
 									// Force the System to be displayed.
 									setSymphonySystem(ss);
 									
@@ -318,7 +318,7 @@ public class SymphonySystem3DView extends AbstractSymphony3DView implements IPro
 							
 							switch (featureId) 
 							{
-								case SymphonyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
+								case Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
 									// Force the System to be displayed.
 									setSymphonySystem(ss);
 									

@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.examples.robotic_arm.RoboticArm#getSpeed <em>Speed</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage#getRoboticArm()
+ * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm()
  * @model abstract="true"
  * @generated
  */
@@ -48,7 +48,7 @@ public interface RoboticArm extends EObject
 	 * @return the value of the '<em>Speed</em>' attribute.
 	 * @see org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel
 	 * @see #setSpeed(MoveSpeedLevel)
-	 * @see org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage#getRoboticArm_Speed()
+	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_Speed()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -90,7 +90,7 @@ public interface RoboticArm extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Turret Angle</em>' attribute.
 	 * @see #setTurretAngle(double)
-	 * @see org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage#getRoboticArm_TurretAngle()
+	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_TurretAngle()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' csa_units='\260'"
 	 * @generated
@@ -122,7 +122,7 @@ public interface RoboticArm extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Shoulder Angle</em>' attribute.
 	 * @see #setShoulderAngle(double)
-	 * @see org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage#getRoboticArm_ShoulderAngle()
+	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_ShoulderAngle()
 	 * @model default="90.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' csa_units='\260'"
 	 * @generated
@@ -154,7 +154,7 @@ public interface RoboticArm extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Elbow Angle</em>' attribute.
 	 * @see #setElbowAngle(double)
-	 * @see org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage#getRoboticArm_ElbowAngle()
+	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_ElbowAngle()
 	 * @model default="-180.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' csa_units='\260'"
 	 * @generated
@@ -186,7 +186,7 @@ public interface RoboticArm extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Wrist Angle</em>' attribute.
 	 * @see #setWristAngle(double)
-	 * @see org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage#getRoboticArm_WristAngle()
+	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_WristAngle()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' csa_units='\260'"
 	 * @generated
@@ -215,7 +215,7 @@ public interface RoboticArm extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage#getRoboticArm_Initialized()
+	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -245,7 +245,7 @@ public interface RoboticArm extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Arm Moving</em>' attribute.
 	 * @see #setArmMoving(boolean)
-	 * @see org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage#getRoboticArm_ArmMoving()
+	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_ArmMoving()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated

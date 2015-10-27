@@ -12,7 +12,6 @@ import org.eclipse.symphony.common.emf.Timed;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Defines a space craft state (position, velocity, acceleration and attitude) at one point in time.
  * <!-- end-model-doc -->
  *
@@ -25,7 +24,7 @@ import org.eclipse.symphony.common.emf.Timed;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.SpacecraftState#getOrbit <em>Orbit</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getSpacecraftState()
+ * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getSpacecraftState()
  * @model
  * @generated
  */
@@ -43,7 +42,7 @@ public interface SpacecraftState extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Coordinates</em>' containment reference.
 	 * @see #setCoordinates(TimedStampedPVACoordinates)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getSpacecraftState_Coordinates()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getSpacecraftState_Coordinates()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -73,7 +72,7 @@ public interface SpacecraftState extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Attitude</em>' containment reference.
 	 * @see #setAttitude(TimedStampedAngularCoordinates)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getSpacecraftState_Attitude()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getSpacecraftState_Attitude()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -99,7 +98,7 @@ public interface SpacecraftState extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orbit</em>' containment reference.
 	 * @see #setOrbit(Orbit)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getSpacecraftState_Orbit()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getSpacecraftState_Orbit()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated

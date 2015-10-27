@@ -10,7 +10,6 @@ package org.eclipse.symphony.core.environment;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * ImageMapLayer that refers to an image at a URL
  * <!-- end-model-doc -->
  *
@@ -21,7 +20,7 @@ package org.eclipse.symphony.core.environment;
  *   <li>{@link org.eclipse.symphony.core.environment.URLImageMapLayer#getLegendURL <em>Legend URL</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getURLImageMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getURLImageMapLayer()
  * @model
  * @generated
  */
@@ -33,11 +32,11 @@ public interface URLImageMapLayer extends ImageMapLayer, URLMapLayer
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  URL to the Image Map Layer legend.
+	 * URL to the Image Map Layer legend.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Legend URL</em>' attribute.
 	 * @see #setLegendURL(String)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getURLImageMapLayer_LegendURL()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getURLImageMapLayer_LegendURL()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='URL'"
 	 * @generated

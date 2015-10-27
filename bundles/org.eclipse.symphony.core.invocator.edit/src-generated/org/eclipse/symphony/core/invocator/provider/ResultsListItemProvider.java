@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ResultsList;
 
 /**
@@ -129,7 +129,7 @@ public class ResultsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.RESULTS_LIST__RESULTS);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.RESULTS_LIST__RESULTS);
 		}
 		return childrenFeatures;
 	}
@@ -176,11 +176,11 @@ public class ResultsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ResultsList.class)) {
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__NAME:
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__RESULTS:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__RESULTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.PoseProvider} object.
@@ -79,7 +79,7 @@ public class PoseProviderItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
+			childrenFeatures.add(Symphony__CorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
 		}
 		return childrenFeatures;
 	}
@@ -135,7 +135,7 @@ public class PoseProviderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PoseProvider.class)) {
-			case SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM:
+			case Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -156,7 +156,7 @@ public class PoseProviderItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM,
+				(Symphony__CorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM,
 				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 

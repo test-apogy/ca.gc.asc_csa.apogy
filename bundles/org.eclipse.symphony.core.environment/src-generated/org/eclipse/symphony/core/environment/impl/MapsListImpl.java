@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.core.environment.Map;
 import org.eclipse.symphony.core.environment.MapsList;
 import org.eclipse.symphony.core.environment.MapsListNode;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -74,7 +74,7 @@ public class MapsListImpl extends MinimalEObjectImpl.Container implements MapsLi
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.MAPS_LIST;
+		return Symphony__CoreEnvironmentPackage.Literals.MAPS_LIST;
 	}
 
   /**
@@ -85,7 +85,7 @@ public class MapsListImpl extends MinimalEObjectImpl.Container implements MapsLi
   public EList<Map> getMaps()
   {
 		if (maps == null) {
-			maps = new EObjectContainmentEList<Map>(Map.class, this, SymphonyEnvironmentPackage.MAPS_LIST__MAPS);
+			maps = new EObjectContainmentEList<Map>(Map.class, this, Symphony__CoreEnvironmentPackage.MAPS_LIST__MAPS);
 		}
 		return maps;
 	}
@@ -99,7 +99,7 @@ public class MapsListImpl extends MinimalEObjectImpl.Container implements MapsLi
   {
 	  if(getMapsListNodeGen() == null)
 	  {
-		  mapsListNode = SymphonyEnvironmentFactory.eINSTANCE.createMapsListNode();
+		  mapsListNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createMapsListNode();
 		  mapsListNode.setMapsList(this);
 	  }
 	  
@@ -118,7 +118,7 @@ public class MapsListImpl extends MinimalEObjectImpl.Container implements MapsLi
 			mapsListNode = (MapsListNode)eResolveProxy(oldMapsListNode);
 			if (mapsListNode != oldMapsListNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentPackage.MAPS_LIST__MAPS_LIST_NODE, oldMapsListNode, mapsListNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.MAPS_LIST__MAPS_LIST_NODE, oldMapsListNode, mapsListNode));
 			}
 		}
 		return mapsListNode;
@@ -143,7 +143,7 @@ public class MapsListImpl extends MinimalEObjectImpl.Container implements MapsLi
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAPS_LIST__MAPS:
+			case Symphony__CoreEnvironmentPackage.MAPS_LIST__MAPS:
 				return ((InternalEList<?>)getMaps()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -158,9 +158,9 @@ public class MapsListImpl extends MinimalEObjectImpl.Container implements MapsLi
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAPS_LIST__MAPS:
+			case Symphony__CoreEnvironmentPackage.MAPS_LIST__MAPS:
 				return getMaps();
-			case SymphonyEnvironmentPackage.MAPS_LIST__MAPS_LIST_NODE:
+			case Symphony__CoreEnvironmentPackage.MAPS_LIST__MAPS_LIST_NODE:
 				if (resolve) return getMapsListNode();
 				return basicGetMapsListNode();
 		}
@@ -177,7 +177,7 @@ public class MapsListImpl extends MinimalEObjectImpl.Container implements MapsLi
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAPS_LIST__MAPS:
+			case Symphony__CoreEnvironmentPackage.MAPS_LIST__MAPS:
 				getMaps().clear();
 				getMaps().addAll((Collection<? extends Map>)newValue);
 				return;
@@ -194,7 +194,7 @@ public class MapsListImpl extends MinimalEObjectImpl.Container implements MapsLi
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAPS_LIST__MAPS:
+			case Symphony__CoreEnvironmentPackage.MAPS_LIST__MAPS:
 				getMaps().clear();
 				return;
 		}
@@ -210,9 +210,9 @@ public class MapsListImpl extends MinimalEObjectImpl.Container implements MapsLi
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAPS_LIST__MAPS:
+			case Symphony__CoreEnvironmentPackage.MAPS_LIST__MAPS:
 				return maps != null && !maps.isEmpty();
-			case SymphonyEnvironmentPackage.MAPS_LIST__MAPS_LIST_NODE:
+			case Symphony__CoreEnvironmentPackage.MAPS_LIST__MAPS_LIST_NODE:
 				return mapsListNode != null;
 		}
 		return super.eIsSet(featureID);

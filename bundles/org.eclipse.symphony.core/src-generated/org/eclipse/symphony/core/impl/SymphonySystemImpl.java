@@ -12,7 +12,7 @@ import org.eclipse.symphony.common.topology.bindings.BindingsSet;
 import org.eclipse.symphony.core.AssemblyLinksList;
 import org.eclipse.symphony.core.ConnectionPointsList;
 import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.TopologyRoot;
 import org.eclipse.symphony.core.invocator.AbstractType;
@@ -110,7 +110,7 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.SYMPHONY_SYSTEM;
+		return Symphony__CorePackage.Literals.SYMPHONY_SYSTEM;
 	}
 
 	/**
@@ -130,7 +130,7 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 		TopologyRoot oldTopologyRoot = topologyRoot;
 		topologyRoot = newTopologyRoot;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT, oldTopologyRoot, newTopologyRoot);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT, oldTopologyRoot, newTopologyRoot);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -144,14 +144,14 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 		if (newTopologyRoot != topologyRoot) {
 			NotificationChain msgs = null;
 			if (topologyRoot != null)
-				msgs = ((InternalEObject)topologyRoot).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT, null, msgs);
+				msgs = ((InternalEObject)topologyRoot).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT, null, msgs);
 			if (newTopologyRoot != null)
-				msgs = ((InternalEObject)newTopologyRoot).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT, null, msgs);
+				msgs = ((InternalEObject)newTopologyRoot).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT, null, msgs);
 			msgs = basicSetTopologyRoot(newTopologyRoot, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT, newTopologyRoot, newTopologyRoot));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT, newTopologyRoot, newTopologyRoot));
 	}
 
 	/**
@@ -171,7 +171,7 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 		BindingsSet oldBindingSet = bindingSet;
 		bindingSet = newBindingSet;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_SYSTEM__BINDING_SET, oldBindingSet, newBindingSet);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM__BINDING_SET, oldBindingSet, newBindingSet);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -185,14 +185,14 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 		if (newBindingSet != bindingSet) {
 			NotificationChain msgs = null;
 			if (bindingSet != null)
-				msgs = ((InternalEObject)bindingSet).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_SYSTEM__BINDING_SET, null, msgs);
+				msgs = ((InternalEObject)bindingSet).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_SYSTEM__BINDING_SET, null, msgs);
 			if (newBindingSet != null)
-				msgs = ((InternalEObject)newBindingSet).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_SYSTEM__BINDING_SET, null, msgs);
+				msgs = ((InternalEObject)newBindingSet).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_SYSTEM__BINDING_SET, null, msgs);
 			msgs = basicSetBindingSet(newBindingSet, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_SYSTEM__BINDING_SET, newBindingSet, newBindingSet));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM__BINDING_SET, newBindingSet, newBindingSet));
 	}
 
 	/**
@@ -212,7 +212,7 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 		ConnectionPointsList oldConnectionPointsList = connectionPointsList;
 		connectionPointsList = newConnectionPointsList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST, oldConnectionPointsList, newConnectionPointsList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST, oldConnectionPointsList, newConnectionPointsList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -227,14 +227,14 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 		if (newConnectionPointsList != connectionPointsList) {
 			NotificationChain msgs = null;
 			if (connectionPointsList != null)
-				msgs = ((InternalEObject)connectionPointsList).eInverseRemove(this, SymphonyCorePackage.CONNECTION_POINTS_LIST__SYMPHONY_SYSTEM, ConnectionPointsList.class, msgs);
+				msgs = ((InternalEObject)connectionPointsList).eInverseRemove(this, Symphony__CorePackage.CONNECTION_POINTS_LIST__SYMPHONY_SYSTEM, ConnectionPointsList.class, msgs);
 			if (newConnectionPointsList != null)
-				msgs = ((InternalEObject)newConnectionPointsList).eInverseAdd(this, SymphonyCorePackage.CONNECTION_POINTS_LIST__SYMPHONY_SYSTEM, ConnectionPointsList.class, msgs);
+				msgs = ((InternalEObject)newConnectionPointsList).eInverseAdd(this, Symphony__CorePackage.CONNECTION_POINTS_LIST__SYMPHONY_SYSTEM, ConnectionPointsList.class, msgs);
 			msgs = basicSetConnectionPointsList(newConnectionPointsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST, newConnectionPointsList, newConnectionPointsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST, newConnectionPointsList, newConnectionPointsList));
 	}
 
 	/**
@@ -254,7 +254,7 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 		AssemblyLinksList oldAssemblyLinksList = assemblyLinksList;
 		assemblyLinksList = newAssemblyLinksList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST, oldAssemblyLinksList, newAssemblyLinksList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST, oldAssemblyLinksList, newAssemblyLinksList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -268,14 +268,14 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 		if (newAssemblyLinksList != assemblyLinksList) {
 			NotificationChain msgs = null;
 			if (assemblyLinksList != null)
-				msgs = ((InternalEObject)assemblyLinksList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST, null, msgs);
+				msgs = ((InternalEObject)assemblyLinksList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST, null, msgs);
 			if (newAssemblyLinksList != null)
-				msgs = ((InternalEObject)newAssemblyLinksList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST, null, msgs);
+				msgs = ((InternalEObject)newAssemblyLinksList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST, null, msgs);
 			msgs = basicSetAssemblyLinksList(newAssemblyLinksList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST, newAssemblyLinksList, newAssemblyLinksList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST, newAssemblyLinksList, newAssemblyLinksList));
 	}
 
 	/**
@@ -290,7 +290,7 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 			poseProvider = (AbstractType)eResolveProxy(oldPoseProvider);
 			if (poseProvider != oldPoseProvider) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER, oldPoseProvider, poseProvider));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER, oldPoseProvider, poseProvider));
 			}
 		}
 		return poseProvider;
@@ -316,7 +316,7 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 		AbstractType oldPoseProvider = poseProvider;
 		poseProvider = newPoseProvider;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER, oldPoseProvider, poseProvider));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER, oldPoseProvider, poseProvider));
 	}
 
   /**
@@ -331,7 +331,7 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 			poseProviderInstance = (PoseProvider)eResolveProxy(oldPoseProviderInstance);
 			if (poseProviderInstance != oldPoseProviderInstance) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER_INSTANCE, oldPoseProviderInstance, poseProviderInstance));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER_INSTANCE, oldPoseProviderInstance, poseProviderInstance));
 			}
 		}
 		return poseProviderInstance;
@@ -357,7 +357,7 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 		PoseProvider oldPoseProviderInstance = poseProviderInstance;
 		poseProviderInstance = newPoseProviderInstance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER_INSTANCE, oldPoseProviderInstance, poseProviderInstance));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER_INSTANCE, oldPoseProviderInstance, poseProviderInstance));
 	}
 
   /**
@@ -368,9 +368,9 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 	public NotificationChain eInverseAdd(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST:
 				if (connectionPointsList != null)
-					msgs = ((InternalEObject)connectionPointsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST, null, msgs);
+					msgs = ((InternalEObject)connectionPointsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST, null, msgs);
 				return basicSetConnectionPointsList((ConnectionPointsList)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -384,13 +384,13 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
 				return basicSetTopologyRoot(null, msgs);
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__BINDING_SET:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__BINDING_SET:
 				return basicSetBindingSet(null, msgs);
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST:
 				return basicSetConnectionPointsList(null, msgs);
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST:
 				return basicSetAssemblyLinksList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -403,18 +403,18 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
 				return getTopologyRoot();
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__BINDING_SET:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__BINDING_SET:
 				return getBindingSet();
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST:
 				return getConnectionPointsList();
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST:
 				return getAssemblyLinksList();
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER:
 				if (resolve) return getPoseProvider();
 				return basicGetPoseProvider();
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER_INSTANCE:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER_INSTANCE:
 				if (resolve) return getPoseProviderInstance();
 				return basicGetPoseProviderInstance();
 		}
@@ -428,22 +428,22 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
 				setTopologyRoot((TopologyRoot)newValue);
 				return;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__BINDING_SET:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__BINDING_SET:
 				setBindingSet((BindingsSet)newValue);
 				return;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST:
 				setConnectionPointsList((ConnectionPointsList)newValue);
 				return;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST:
 				setAssemblyLinksList((AssemblyLinksList)newValue);
 				return;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER:
 				setPoseProvider((AbstractType)newValue);
 				return;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER_INSTANCE:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER_INSTANCE:
 				setPoseProviderInstance((PoseProvider)newValue);
 				return;
 		}
@@ -457,22 +457,22 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
 				setTopologyRoot((TopologyRoot)null);
 				return;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__BINDING_SET:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__BINDING_SET:
 				setBindingSet((BindingsSet)null);
 				return;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST:
 				setConnectionPointsList((ConnectionPointsList)null);
 				return;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST:
 				setAssemblyLinksList((AssemblyLinksList)null);
 				return;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER:
 				setPoseProvider((AbstractType)null);
 				return;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER_INSTANCE:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER_INSTANCE:
 				setPoseProviderInstance((PoseProvider)null);
 				return;
 		}
@@ -486,17 +486,17 @@ public class SymphonySystemImpl extends TypeImpl implements SymphonySystem {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
 				return topologyRoot != null;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__BINDING_SET:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__BINDING_SET:
 				return bindingSet != null;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST:
 				return connectionPointsList != null;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST:
 				return assemblyLinksList != null;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER:
 				return poseProvider != null;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER_INSTANCE:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__POSE_PROVIDER_INSTANCE:
 				return poseProviderInstance != null;
 		}
 		return super.eIsSet(featureID);

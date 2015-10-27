@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.robotic_arm.Activator;
-import org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage;
+import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage;
 import org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel;
 import org.eclipse.symphony.examples.robotic_arm.RoboticArmSimulated;
 
@@ -59,7 +59,7 @@ public class RoboticArmSimulatedImpl extends RoboticArmImpl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleRoboticArmPackage.Literals.ROBOTIC_ARM_SIMULATED;
+		return Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM_SIMULATED;
 	}
 
 	/**

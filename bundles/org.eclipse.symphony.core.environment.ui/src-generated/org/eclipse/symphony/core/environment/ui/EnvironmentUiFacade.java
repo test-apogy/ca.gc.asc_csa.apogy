@@ -20,7 +20,7 @@ import org.jfree.data.xy.XYSeries;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getEnvironmentUiFacade()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEnvironmentUiFacade()
  * @model
  * @generated
  */
@@ -32,7 +32,6 @@ public interface EnvironmentUiFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns an image representing the assembly of the specified list of ImageMapLayerPresentation.
 	 * @param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.
 	 * @return The image representing the specified list of ImageMapLayerPresentation.
@@ -46,7 +45,6 @@ public interface EnvironmentUiFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns an image representing the specified MapViewExtent using a specified MapViewConfiguration.
 	 * If the MapViewExtent is larger than the area covered by the MapViewConfiguration, transparent pixels will be added.
 	 * @param mapViewConfiguration The specified MapViewConfiguration.
@@ -76,7 +74,6 @@ public interface EnvironmentUiFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Return the identifier associated with a given MapViewConfiguration.
 	 * @param mapViewConfiguration The given MapViewConfiguration.
 	 * @return The identifier, null if none is found.
@@ -90,7 +87,6 @@ public interface EnvironmentUiFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Return the MapViewConfiguration (in the Active Session) with the specified identifier.
 	 * @param identifier The MapViewConfiguration identifier.
 	 * @return The MapViewConfiguration with the specified identifier, null if non is found.
@@ -104,7 +100,6 @@ public interface EnvironmentUiFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Return the MapViewConfigurationList in the Active Session.
 	 * @return The MapViewConfigurationList in the Active Session, null if none is found.
 	 * <!-- end-model-doc -->

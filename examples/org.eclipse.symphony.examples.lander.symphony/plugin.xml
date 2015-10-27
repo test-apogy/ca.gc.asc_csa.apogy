@@ -11,7 +11,7 @@
       <!-- @generated symphony_examples_lander -->
       <package
             uri="org.eclipse.symphony.examples.lander.symphony"
-            class="org.eclipse.symphony.examples.lander.symphony.SymphonyExampleLanderPackage"
+            class="org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage"
             genModel="model/symphony_examples_lander_symphony.xcore"/>
    </extension>
    <extension

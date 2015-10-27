@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.addons.primitives.impl.PrimitivesFac
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getPrimitivesFacade()
+ * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPrimitivesFacade()
  * @model
  * @generated
  */

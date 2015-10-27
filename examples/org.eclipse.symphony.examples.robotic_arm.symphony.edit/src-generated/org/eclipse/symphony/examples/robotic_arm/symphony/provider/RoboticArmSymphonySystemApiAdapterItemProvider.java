@@ -109,7 +109,7 @@ public class RoboticArmSymphonySystemApiAdapterItemProvider
   @Override
   public ResourceLocator getResourceLocator()
   {
-		return SymphonyExampleRoboticArmEditPlugin.INSTANCE;
+		return Symphony__ExamplesRoboticArmSymphonyEditPlugin.INSTANCE;
 	}
 
 }

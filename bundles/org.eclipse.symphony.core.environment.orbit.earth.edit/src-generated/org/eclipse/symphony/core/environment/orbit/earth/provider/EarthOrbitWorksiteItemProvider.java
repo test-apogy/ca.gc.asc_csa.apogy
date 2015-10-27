@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.provider.OrbitWorksiteItemProvider;
 
 /**
@@ -61,8 +61,8 @@ public class EarthOrbitWorksiteItemProvider extends OrbitWorksiteItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_ORBIT_WORKSITE__SKY);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__SKY);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -118,8 +118,8 @@ public class EarthOrbitWorksiteItemProvider extends OrbitWorksiteItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EarthOrbitWorksite.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_ORBIT_WORKSITE__SKY:
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__SKY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,13 +139,13 @@ public class EarthOrbitWorksiteItemProvider extends OrbitWorksiteItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_ORBIT_WORKSITE__SKY,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createEarthOrbitSky()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__SKY,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthOrbitSky()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createEarthSurfaceLocationList()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_WORKSITE__EARTH_LOCATIONS,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocationList()));
 	}
 
 }

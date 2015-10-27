@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Presentation properties for an item displayed
  * on the MapView.
  * <!-- end-model-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewItemPresentation#isVisible <em>Visible</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewItemPresentation()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewItemPresentation()
  * @model abstract="true"
  * @generated
  */
@@ -35,11 +34,11 @@ public interface MapViewItemPresentation extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Visibility
+	 * Visibility
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Visible</em>' attribute.
 	 * @see #setVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewItemPresentation_Visible()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewItemPresentation_Visible()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */

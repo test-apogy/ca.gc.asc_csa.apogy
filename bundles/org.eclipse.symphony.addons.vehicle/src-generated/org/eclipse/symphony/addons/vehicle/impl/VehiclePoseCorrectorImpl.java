@@ -47,7 +47,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.impl.PoseCorrectorImpl;
 
 /**
@@ -859,7 +859,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 		  		  
 		  List<Node> nodes = TopologyFacade.INSTANCE.findNodesByType(Symphony__CommonTopologyPackage.Literals.REFERENCED_CONTENT_NODE, root);		  		  
 		  nodes.addAll(TopologyFacade.INSTANCE.findNodesByType(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE, root));
-		  nodes.addAll(TopologyFacade.INSTANCE.findNodesByType(SymphonyEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE, root));
+		  nodes.addAll(TopologyFacade.INSTANCE.findNodesByType(Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE, root));
 		  
 		  for(Node node : nodes)
 		  {

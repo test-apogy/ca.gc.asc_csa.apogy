@@ -25,8 +25,8 @@ import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer;
 import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,7 +52,7 @@ public abstract class PolygonShapeImageMapLayerImpl extends AbstractShapeImageLa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.POLYGON_SHAPE_IMAGE_MAP_LAYER;
+		return Symphony__CoreEnvironmentPackage.Literals.POLYGON_SHAPE_IMAGE_MAP_LAYER;
 	}
 
 	
@@ -94,7 +94,7 @@ public abstract class PolygonShapeImageMapLayerImpl extends AbstractShapeImageLa
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEnvironmentPackage.POLYGON_SHAPE_IMAGE_MAP_LAYER___GET_VERTICES:
+			case Symphony__CoreEnvironmentPackage.POLYGON_SHAPE_IMAGE_MAP_LAYER___GET_VERTICES:
 				return getVertices();
 		}
 		return super.eInvoke(operationID, arguments);
@@ -177,7 +177,7 @@ public abstract class PolygonShapeImageMapLayerImpl extends AbstractShapeImageLa
 	 */
 	protected RectangularRegion getRectangularRegion(List<Tuple3d> vertices)
 	{
-		RectangularRegion rectangularRegion = SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion();
+		RectangularRegion rectangularRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
 		rectangularRegion.setTransformation(MathFacade.INSTANCE.createIdentityMatrix4x4());
 		if(vertices.size() > 0)
 		{			

@@ -27,7 +27,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.Program#getValuesList <em>Values List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getProgram()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getProgram()
  * @model abstract="true"
  * @generated
  */
@@ -44,7 +44,7 @@ public interface Program extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Programs List</em>' container reference.
 	 * @see #setProgramsList(ProgramsList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getProgram_ProgramsList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getProgram_ProgramsList()
 	 * @see org.eclipse.symphony.core.invocator.ProgramsList#getPrograms
 	 * @model opposite="programs" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -71,7 +71,7 @@ public interface Program extends Named, Described
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Invocator Session</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getProgram_InvocatorSession()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getProgram_InvocatorSession()
 	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' property='None' get='<%org.eclipse.symphony.core.invocator.ProgramsList%> _programsList = this.getProgramsList();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_programsList, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.ProgramsList%> _programsList_1 = this.getProgramsList();\n\treturn _programsList_1.getInvocatorSession();\n}'"
 	 * @generated
@@ -83,13 +83,12 @@ public interface Program extends Named, Described
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Contains values that could be used as parameter values in the operation
 	 * calls.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Values List</em>' containment reference.
 	 * @see #setValuesList(ValuesList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getProgram_ValuesList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getProgram_ValuesList()
 	 * @model containment="true"
 	 * @generated
 	 */

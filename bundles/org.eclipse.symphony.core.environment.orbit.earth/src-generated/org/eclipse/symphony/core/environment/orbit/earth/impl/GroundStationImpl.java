@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,7 +62,7 @@ public class GroundStationImpl extends EarthSurfaceLocationImpl implements Groun
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.GROUND_STATION;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class GroundStationImpl extends EarthSurfaceLocationImpl implements Groun
 		Matrix3x3 oldFieldOfViewOrientation = fieldOfViewOrientation;
 		fieldOfViewOrientation = newFieldOfViewOrientation;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION, oldFieldOfViewOrientation, newFieldOfViewOrientation);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION, oldFieldOfViewOrientation, newFieldOfViewOrientation);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -98,14 +98,14 @@ public class GroundStationImpl extends EarthSurfaceLocationImpl implements Groun
 		if (newFieldOfViewOrientation != fieldOfViewOrientation) {
 			NotificationChain msgs = null;
 			if (fieldOfViewOrientation != null)
-				msgs = ((InternalEObject)fieldOfViewOrientation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION, null, msgs);
+				msgs = ((InternalEObject)fieldOfViewOrientation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION, null, msgs);
 			if (newFieldOfViewOrientation != null)
-				msgs = ((InternalEObject)newFieldOfViewOrientation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION, null, msgs);
+				msgs = ((InternalEObject)newFieldOfViewOrientation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION, null, msgs);
 			msgs = basicSetFieldOfViewOrientation(newFieldOfViewOrientation, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION, newFieldOfViewOrientation, newFieldOfViewOrientation));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION, newFieldOfViewOrientation, newFieldOfViewOrientation));
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class GroundStationImpl extends EarthSurfaceLocationImpl implements Groun
 		ElevationMask oldElevationMask = elevationMask;
 		elevationMask = newElevationMask;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__ELEVATION_MASK, oldElevationMask, newElevationMask);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__ELEVATION_MASK, oldElevationMask, newElevationMask);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -141,14 +141,14 @@ public class GroundStationImpl extends EarthSurfaceLocationImpl implements Groun
 		if (newElevationMask != elevationMask) {
 			NotificationChain msgs = null;
 			if (elevationMask != null)
-				msgs = ((InternalEObject)elevationMask).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__ELEVATION_MASK, null, msgs);
+				msgs = ((InternalEObject)elevationMask).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__ELEVATION_MASK, null, msgs);
 			if (newElevationMask != null)
-				msgs = ((InternalEObject)newElevationMask).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__ELEVATION_MASK, null, msgs);
+				msgs = ((InternalEObject)newElevationMask).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__ELEVATION_MASK, null, msgs);
 			msgs = basicSetElevationMask(newElevationMask, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__ELEVATION_MASK, newElevationMask, newElevationMask));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__ELEVATION_MASK, newElevationMask, newElevationMask));
 	}
 
 	/**
@@ -159,9 +159,9 @@ public class GroundStationImpl extends EarthSurfaceLocationImpl implements Groun
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION:
 				return basicSetFieldOfViewOrientation(null, msgs);
-			case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__ELEVATION_MASK:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__ELEVATION_MASK:
 				return basicSetElevationMask(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -175,9 +175,9 @@ public class GroundStationImpl extends EarthSurfaceLocationImpl implements Groun
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION:
 				return getFieldOfViewOrientation();
-			case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__ELEVATION_MASK:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__ELEVATION_MASK:
 				return getElevationMask();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -191,10 +191,10 @@ public class GroundStationImpl extends EarthSurfaceLocationImpl implements Groun
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION:
 				setFieldOfViewOrientation((Matrix3x3)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__ELEVATION_MASK:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__ELEVATION_MASK:
 				setElevationMask((ElevationMask)newValue);
 				return;
 		}
@@ -209,10 +209,10 @@ public class GroundStationImpl extends EarthSurfaceLocationImpl implements Groun
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION:
 				setFieldOfViewOrientation((Matrix3x3)null);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__ELEVATION_MASK:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__ELEVATION_MASK:
 				setElevationMask((ElevationMask)null);
 				return;
 		}
@@ -227,9 +227,9 @@ public class GroundStationImpl extends EarthSurfaceLocationImpl implements Groun
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION:
 				return fieldOfViewOrientation != null;
-			case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__ELEVATION_MASK:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__ELEVATION_MASK:
 				return elevationMask != null;
 		}
 		return super.eIsSet(featureID);

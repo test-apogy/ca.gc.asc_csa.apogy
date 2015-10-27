@@ -11,7 +11,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 import org.eclipse.symphony.core.environment.provider.WorksiteItemProvider;
 
 /**
@@ -60,7 +60,7 @@ public class OrbitWorksiteItemProvider extends WorksiteItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_OrbitWorksite_activeOrbitModel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitWorksite_activeOrbitModel_feature", "_UI_OrbitWorksite_type"),
-				 SymphonyOrbitEnvironmentPackage.Literals.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL,
+				 Symphony__CoreEnvironmentOrbitPackage.Literals.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL,
 				 true,
 				 false,
 				 true,

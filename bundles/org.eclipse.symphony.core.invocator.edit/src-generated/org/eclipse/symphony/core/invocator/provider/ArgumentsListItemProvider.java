@@ -22,8 +22,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.invocator.ArgumentsList;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.ArgumentsList} object.
@@ -82,7 +82,7 @@ public class ArgumentsListItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ArgumentsList_operationCall_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ArgumentsList_operationCall_feature", "_UI_ArgumentsList_type"),
-				 EMFEcoreInvocatorPackage.Literals.ARGUMENTS_LIST__OPERATION_CALL,
+				 Symphony__CoreInvocatorPackage.Literals.ARGUMENTS_LIST__OPERATION_CALL,
 				 false,
 				 false,
 				 true,
@@ -104,7 +104,7 @@ public class ArgumentsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -169,7 +169,7 @@ public class ArgumentsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ArgumentsList.class)) {
-			case EMFEcoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
+			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -190,18 +190,18 @@ public class ArgumentsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createEDataTypeArgument()));
+				(Symphony__CoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createEDataTypeArgument()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createEEnumArgument()));
+				(Symphony__CoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createEEnumArgument()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createEClassArgument()));
+				(Symphony__CoreInvocatorPackage.Literals.ARGUMENTS_LIST__ARGUMENTS,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createEClassArgument()));
 	}
 
   /**

@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.addons.primitives.Plane;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 import org.eclipse.symphony.common.topology.impl.NodeImpl;
 
 /**
@@ -109,7 +109,7 @@ public class PlaneImpl extends NodeImpl implements Plane {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PrimitivesPackage.Literals.PLANE;
+		return Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PLANE;
 	}
 
 	/**
@@ -130,7 +130,7 @@ public class PlaneImpl extends NodeImpl implements Plane {
 		Tuple3d oldV0 = v0;
 		v0 = newV0;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PrimitivesPackage.PLANE__V0, oldV0, newV0);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V0, oldV0, newV0);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -145,14 +145,14 @@ public class PlaneImpl extends NodeImpl implements Plane {
 		if (newV0 != v0) {
 			NotificationChain msgs = null;
 			if (v0 != null)
-				msgs = ((InternalEObject)v0).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PrimitivesPackage.PLANE__V0, null, msgs);
+				msgs = ((InternalEObject)v0).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V0, null, msgs);
 			if (newV0 != null)
-				msgs = ((InternalEObject)newV0).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PrimitivesPackage.PLANE__V0, null, msgs);
+				msgs = ((InternalEObject)newV0).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V0, null, msgs);
 			msgs = basicSetV0(newV0, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PrimitivesPackage.PLANE__V0, newV0, newV0));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V0, newV0, newV0));
 	}
 
 	/**
@@ -173,7 +173,7 @@ public class PlaneImpl extends NodeImpl implements Plane {
 		Tuple3d oldV1 = v1;
 		v1 = newV1;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PrimitivesPackage.PLANE__V1, oldV1, newV1);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V1, oldV1, newV1);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -188,14 +188,14 @@ public class PlaneImpl extends NodeImpl implements Plane {
 		if (newV1 != v1) {
 			NotificationChain msgs = null;
 			if (v1 != null)
-				msgs = ((InternalEObject)v1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PrimitivesPackage.PLANE__V1, null, msgs);
+				msgs = ((InternalEObject)v1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V1, null, msgs);
 			if (newV1 != null)
-				msgs = ((InternalEObject)newV1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PrimitivesPackage.PLANE__V1, null, msgs);
+				msgs = ((InternalEObject)newV1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V1, null, msgs);
 			msgs = basicSetV1(newV1, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PrimitivesPackage.PLANE__V1, newV1, newV1));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V1, newV1, newV1));
 	}
 
 	/**
@@ -216,7 +216,7 @@ public class PlaneImpl extends NodeImpl implements Plane {
 		double oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PrimitivesPackage.PLANE__WIDTH, oldWidth, width));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__WIDTH, oldWidth, width));
 	}
 
 	/**
@@ -237,7 +237,7 @@ public class PlaneImpl extends NodeImpl implements Plane {
 		double oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PrimitivesPackage.PLANE__HEIGHT, oldHeight, height));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__HEIGHT, oldHeight, height));
 	}
 
 	/**
@@ -248,9 +248,9 @@ public class PlaneImpl extends NodeImpl implements Plane {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case PrimitivesPackage.PLANE__V0:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V0:
 				return basicSetV0(null, msgs);
-			case PrimitivesPackage.PLANE__V1:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V1:
 				return basicSetV1(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -264,13 +264,13 @@ public class PlaneImpl extends NodeImpl implements Plane {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PrimitivesPackage.PLANE__V0:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V0:
 				return getV0();
-			case PrimitivesPackage.PLANE__V1:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V1:
 				return getV1();
-			case PrimitivesPackage.PLANE__WIDTH:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__WIDTH:
 				return getWidth();
-			case PrimitivesPackage.PLANE__HEIGHT:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__HEIGHT:
 				return getHeight();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -284,16 +284,16 @@ public class PlaneImpl extends NodeImpl implements Plane {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PrimitivesPackage.PLANE__V0:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V0:
 				setV0((Tuple3d)newValue);
 				return;
-			case PrimitivesPackage.PLANE__V1:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V1:
 				setV1((Tuple3d)newValue);
 				return;
-			case PrimitivesPackage.PLANE__WIDTH:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__WIDTH:
 				setWidth((Double)newValue);
 				return;
-			case PrimitivesPackage.PLANE__HEIGHT:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__HEIGHT:
 				setHeight((Double)newValue);
 				return;
 		}
@@ -308,16 +308,16 @@ public class PlaneImpl extends NodeImpl implements Plane {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PrimitivesPackage.PLANE__V0:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V0:
 				setV0((Tuple3d)null);
 				return;
-			case PrimitivesPackage.PLANE__V1:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V1:
 				setV1((Tuple3d)null);
 				return;
-			case PrimitivesPackage.PLANE__WIDTH:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__WIDTH:
 				setWidth(WIDTH_EDEFAULT);
 				return;
-			case PrimitivesPackage.PLANE__HEIGHT:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__HEIGHT:
 				setHeight(HEIGHT_EDEFAULT);
 				return;
 		}
@@ -332,13 +332,13 @@ public class PlaneImpl extends NodeImpl implements Plane {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PrimitivesPackage.PLANE__V0:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V0:
 				return v0 != null;
-			case PrimitivesPackage.PLANE__V1:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__V1:
 				return v1 != null;
-			case PrimitivesPackage.PLANE__WIDTH:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__WIDTH:
 				return width != WIDTH_EDEFAULT;
-			case PrimitivesPackage.PLANE__HEIGHT:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PLANE__HEIGHT:
 				return height != HEIGHT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

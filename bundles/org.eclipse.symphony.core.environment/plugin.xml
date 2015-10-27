@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.core.environment"
-            class="org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage"
+            class="org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage"
             genModel="model/symphony_core_environment.xcore"/>
    </extension>
    <extension
@@ -31,75 +31,5 @@
             name="Toggle Mesh Layer Visibility">
       </command>
    </extension>
-   <extension
-         point="org.eclipse.ui.menus">
-      <menuContribution
-            allPopups="true"
-            locationURI="popup:org.eclipse.symphony.core.ui.menu?after=additions">
-         <command
-               commandId="org.eclipse.symphony.core.environment.commands.UpdateCartesianTriangularMeshMapLayerImageCommandHandler"
-               label="Update Mesh Image"
-               style="push">
-            <visibleWhen
-                  checkEnabled="false">
-               <with
-                    variable="activeMenuSelection">
-                   <iterate
-                      ifEmpty="false"
-                      operator="or">
-                         <instanceof
-                             value="org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer">
-                         </instanceof>
-                   </iterate>
-               </with>
-            </visibleWhen>
-         </command>
-         <command
-               commandId="org.eclipse.symphony.core.environment.commands.UpdateImageMapLayerCommandHandler"
-               label="Update Image"
-               style="push">
-            <visibleWhen
-                  checkEnabled="false">
-               <with
-                     variable="activeMenuSelection">
-                  <iterate
-                     ifEmpty="false"
-                     operator="or">
-                         <instanceof
-                             value="org.eclipse.symphony.core.environment.ImageMapLayer">
-                         </instanceof>
-                  </iterate>
-               </with>
-            </visibleWhen>
-         </command>
-         <command
-               commandId="org.eclipse.symphony.core.environment.commands.ToggleCartesianTriangularMeshMapLayerVisibilityCommandHandler"
-               label="Toggle Mesh Layer Visibility"
-               style="push">
-            <visibleWhen
-                  checkEnabled="false">
-               <with
-                     variable="activeMenuSelection">
-                  <iterate
-                        ifEmpty="false"
-                        operator="or">
-                     <instanceof
-                           value="org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer">
-                     </instanceof>
-                  </iterate>
-               </with>
-            </visibleWhen>
-         </command>
-      </menuContribution>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.common.converters">
-      <new_element
-            Class="org.eclipse.symphony.core.environment.converters.GeographicalCoordinatesToPositionConverter">
-      </new_element>
-      <new_element
-            Class="org.eclipse.symphony.core.environment.converters.PositionedToGeographicalCoordinatesConverter">
-      </new_element>
-   </extension>
-
+null
 </plugin>

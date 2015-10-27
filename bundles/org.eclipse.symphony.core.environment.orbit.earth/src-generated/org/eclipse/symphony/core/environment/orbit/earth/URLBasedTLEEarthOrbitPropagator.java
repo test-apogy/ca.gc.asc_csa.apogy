@@ -16,7 +16,7 @@ package org.eclipse.symphony.core.environment.orbit.earth;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator#getTleURL <em>Tle URL</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getURLBasedTLEEarthOrbitPropagator()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getURLBasedTLEEarthOrbitPropagator()
  * @model
  * @generated
  */
@@ -30,7 +30,7 @@ public interface URLBasedTLEEarthOrbitPropagator extends TLEEarthOrbitPropagator
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tle URL</em>' attribute.
 	 * @see #setTleURL(String)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getURLBasedTLEEarthOrbitPropagator_TleURL()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getURLBasedTLEEarthOrbitPropagator_TleURL()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='TLE_RAW_DATA' notify='true'"
 	 * @generated

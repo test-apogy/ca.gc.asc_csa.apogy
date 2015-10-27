@@ -11,7 +11,6 @@ import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Defines a worksite in orbit. The reference frame used is inertial (J2000), with its origin at the current orbital position.
  * <!-- end-model-doc -->
  *
@@ -23,7 +22,7 @@ import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite#getEarthLocations <em>Earth Locations</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthOrbitWorksite()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getEarthOrbitWorksite()
  * @model
  * @generated
  */
@@ -40,7 +39,7 @@ public interface EarthOrbitWorksite extends OrbitWorksite {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sky</em>' containment reference.
 	 * @see #setSky(EarthOrbitSky)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthOrbitWorksite_Sky()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getEarthOrbitWorksite_Sky()
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky#getEarthOrbitWorksite
 	 * @model opposite="earthOrbitWorksite" containment="true" required="true"
 	 * @generated
@@ -70,7 +69,7 @@ public interface EarthOrbitWorksite extends OrbitWorksite {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Earth Locations</em>' containment reference.
 	 * @see #setEarthLocations(EarthSurfaceLocationList)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthOrbitWorksite_EarthLocations()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getEarthOrbitWorksite_EarthLocations()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true'"
 	 * @generated

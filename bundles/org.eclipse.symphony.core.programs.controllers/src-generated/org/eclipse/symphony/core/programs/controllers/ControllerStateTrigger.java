@@ -17,7 +17,7 @@ package org.eclipse.symphony.core.programs.controllers;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerStateTrigger#getRepeatPeriod <em>Repeat Period</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerStateTrigger()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerStateTrigger()
  * @model
  * @generated
  */
@@ -32,9 +32,12 @@ public interface ControllerStateTrigger extends ControllerTrigger
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The value of controller input that will enable the binding.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Enabling Value</em>' attribute.
 	 * @see #setEnablingValue(boolean)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerStateTrigger_EnablingValue()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerStateTrigger_EnablingValue()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
@@ -59,9 +62,12 @@ public interface ControllerStateTrigger extends ControllerTrigger
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The repeat period, in millisecond, at which the operation should be called.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Repeat Period</em>' attribute.
 	 * @see #setRepeatPeriod(long)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerStateTrigger_RepeatPeriod()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerStateTrigger_RepeatPeriod()
 	 * @model default="100" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='ms'"
 	 * @generated

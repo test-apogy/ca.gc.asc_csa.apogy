@@ -7,7 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.orekit.utils.ElevationMask;
 
 /**
@@ -60,7 +60,7 @@ public class ConstantElevationMaskImpl extends ElevationMaskImpl implements Cons
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.CONSTANT_ELEVATION_MASK;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CONSTANT_ELEVATION_MASK;
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class ConstantElevationMaskImpl extends ElevationMaskImpl implements Cons
 		double oldConstantElevation = constantElevation;
 		constantElevation = newConstantElevation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION, oldConstantElevation, constantElevation));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION, oldConstantElevation, constantElevation));
 	}
 
 	/**
@@ -92,7 +92,7 @@ public class ConstantElevationMaskImpl extends ElevationMaskImpl implements Cons
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION:
 				return getConstantElevation();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -106,7 +106,7 @@ public class ConstantElevationMaskImpl extends ElevationMaskImpl implements Cons
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION:
 				setConstantElevation((Double)newValue);
 				return;
 		}
@@ -121,7 +121,7 @@ public class ConstantElevationMaskImpl extends ElevationMaskImpl implements Cons
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION:
 				setConstantElevation(CONSTANT_ELEVATION_EDEFAULT);
 				return;
 		}
@@ -136,7 +136,7 @@ public class ConstantElevationMaskImpl extends ElevationMaskImpl implements Cons
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION:
 				return constantElevation != CONSTANT_ELEVATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

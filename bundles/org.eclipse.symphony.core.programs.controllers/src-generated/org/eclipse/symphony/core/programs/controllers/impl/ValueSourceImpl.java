@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.ValueSource;
 
 /**
@@ -50,7 +50,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreControllersPackage.Literals.VALUE_SOURCE;
+		return Symphony__CoreProgramsControllersPackage.Literals.VALUE_SOURCE;
 	}
 
   /**
@@ -60,7 +60,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
 	 */
   public BindedEDataTypeArgument getBindedEDataTypeArgument()
   {
-		if (eContainerFeatureID() != EMFEcoreControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT) return null;
+		if (eContainerFeatureID() != Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT) return null;
 		return (BindedEDataTypeArgument)eContainer();
 	}
 
@@ -71,7 +71,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
 	 */
   public BindedEDataTypeArgument basicGetBindedEDataTypeArgument()
   {
-		if (eContainerFeatureID() != EMFEcoreControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT) return null;
+		if (eContainerFeatureID() != Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT) return null;
 		return (BindedEDataTypeArgument)eInternalContainer();
 	}
 
@@ -82,7 +82,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
 	 */
   public NotificationChain basicSetBindedEDataTypeArgument(BindedEDataTypeArgument newBindedEDataTypeArgument, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newBindedEDataTypeArgument, EMFEcoreControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newBindedEDataTypeArgument, Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, msgs);
 		return msgs;
 	}
 
@@ -93,19 +93,19 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
 	 */
   public void setBindedEDataTypeArgument(BindedEDataTypeArgument newBindedEDataTypeArgument)
   {
-		if (newBindedEDataTypeArgument != eInternalContainer() || (eContainerFeatureID() != EMFEcoreControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT && newBindedEDataTypeArgument != null)) {
+		if (newBindedEDataTypeArgument != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT && newBindedEDataTypeArgument != null)) {
 			if (EcoreUtil.isAncestor(this, newBindedEDataTypeArgument))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newBindedEDataTypeArgument != null)
-				msgs = ((InternalEObject)newBindedEDataTypeArgument).eInverseAdd(this, EMFEcoreControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, BindedEDataTypeArgument.class, msgs);
+				msgs = ((InternalEObject)newBindedEDataTypeArgument).eInverseAdd(this, Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, BindedEDataTypeArgument.class, msgs);
 			msgs = basicSetBindedEDataTypeArgument(newBindedEDataTypeArgument, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, newBindedEDataTypeArgument, newBindedEDataTypeArgument));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT, newBindedEDataTypeArgument, newBindedEDataTypeArgument));
 	}
 
   /**
@@ -129,7 +129,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetBindedEDataTypeArgument((BindedEDataTypeArgument)otherEnd, msgs);
@@ -146,7 +146,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				return basicSetBindedEDataTypeArgument(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -161,8 +161,8 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, BindedEDataTypeArgument.class, msgs);
+			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE, BindedEDataTypeArgument.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -176,7 +176,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				if (resolve) return getBindedEDataTypeArgument();
 				return basicGetBindedEDataTypeArgument();
 		}
@@ -192,7 +192,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				setBindedEDataTypeArgument((BindedEDataTypeArgument)newValue);
 				return;
 		}
@@ -208,7 +208,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				setBindedEDataTypeArgument((BindedEDataTypeArgument)null);
 				return;
 		}
@@ -224,7 +224,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
+			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE__BINDED_EDATA_TYPE_ARGUMENT:
 				return basicGetBindedEDataTypeArgument() != null;
 		}
 		return super.eIsSet(featureID);
@@ -239,7 +239,7 @@ public abstract class ValueSourceImpl extends MinimalEObjectImpl.Container imple
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case EMFEcoreControllersPackage.VALUE_SOURCE___GET_SOURCE_VALUE:
+			case Symphony__CoreProgramsControllersPackage.VALUE_SOURCE___GET_SOURCE_VALUE:
 				return getSourceValue();
 		}
 		return super.eInvoke(operationID, arguments);

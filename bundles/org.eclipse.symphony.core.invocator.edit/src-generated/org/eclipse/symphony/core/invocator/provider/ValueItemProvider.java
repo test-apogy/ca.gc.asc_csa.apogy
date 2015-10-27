@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Value;
 
 /**
@@ -105,7 +105,7 @@ public class ValueItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.VALUE__VALUE);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.VALUE__VALUE);
 		}
 		return childrenFeatures;
 	}
@@ -164,10 +164,10 @@ public class ValueItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Value.class)) {
-			case EMFEcoreInvocatorPackage.VALUE__NAME:
+			case Symphony__CoreInvocatorPackage.VALUE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.VALUE__VALUE:
+			case Symphony__CoreInvocatorPackage.VALUE__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -188,7 +188,7 @@ public class ValueItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.VALUE__VALUE,
+				(Symphony__CoreInvocatorPackage.Literals.VALUE__VALUE,
 				 EcoreFactory.eINSTANCE.createEObject()));
 	}
 

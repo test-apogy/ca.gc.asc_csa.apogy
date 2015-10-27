@@ -12,7 +12,6 @@ import org.eclipse.symphony.common.topology.Node;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * A class used to keep a the relationship between a given topology and its associated TopologyPresentationSet.
  * <!-- end-model-doc -->
  *
@@ -24,7 +23,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.common.topology.ui.GraphicsContext#getTopologyPresentationSet <em>Topology Presentation Set</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getGraphicsContext()
+ * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getGraphicsContext()
  * @model
  * @generated
  */
@@ -38,12 +37,11 @@ public interface GraphicsContext extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The root of the topology.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Topology</em>' reference.
 	 * @see #setTopology(Node)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getGraphicsContext_Topology()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getGraphicsContext_Topology()
 	 * @model
 	 * @generated
 	 */
@@ -65,12 +63,11 @@ public interface GraphicsContext extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The TopologyPresentationSet associated with the root of the topology.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Topology Presentation Set</em>' reference.
 	 * @see #setTopologyPresentationSet(TopologyPresentationSet)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getGraphicsContext_TopologyPresentationSet()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getGraphicsContext_TopologyPresentationSet()
 	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getGraphicsContext
 	 * @model opposite="graphicsContext"
 	 * @generated
@@ -91,7 +88,6 @@ public interface GraphicsContext extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Dispose of this GraphicsContext.
 	 * <!-- end-model-doc -->
 	 * @model

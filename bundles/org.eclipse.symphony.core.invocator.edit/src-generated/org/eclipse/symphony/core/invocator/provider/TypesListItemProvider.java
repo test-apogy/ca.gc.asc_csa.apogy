@@ -21,8 +21,8 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypesList;
 
 /**
@@ -80,8 +80,8 @@ public class TypesListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.TYPES_LIST__LOCAL_TYPES);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.TYPES_LIST__REGISTERED_TYPES);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TYPES_LIST__LOCAL_TYPES);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TYPES_LIST__REGISTERED_TYPES);
 		}
 		return childrenFeatures;
 	}
@@ -137,8 +137,8 @@ public class TypesListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TypesList.class)) {
-			case EMFEcoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES:
-			case EMFEcoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES:
+			case Symphony__CoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES:
+			case Symphony__CoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -159,13 +159,13 @@ public class TypesListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.TYPES_LIST__LOCAL_TYPES,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createLocalTypesList()));
+				(Symphony__CoreInvocatorPackage.Literals.TYPES_LIST__LOCAL_TYPES,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createLocalTypesList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.TYPES_LIST__REGISTERED_TYPES,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createRegisteredTypesList()));
+				(Symphony__CoreInvocatorPackage.Literals.TYPES_LIST__REGISTERED_TYPES,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createRegisteredTypesList()));
 	}
 
   /**

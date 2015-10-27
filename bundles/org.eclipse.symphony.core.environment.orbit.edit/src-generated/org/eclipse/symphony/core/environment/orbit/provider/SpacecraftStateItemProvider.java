@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFactory;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.SpacecraftState} object.
@@ -106,7 +106,7 @@ public class SpacecraftStateItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftState_coordinates_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftState_coordinates_feature", "_UI_SpacecraftState_type"),
-				 SymphonyOrbitEnvironmentPackage.Literals.SPACECRAFT_STATE__COORDINATES,
+				 Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__COORDINATES,
 				 false,
 				 false,
 				 false,
@@ -128,7 +128,7 @@ public class SpacecraftStateItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftState_attitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftState_attitude_feature", "_UI_SpacecraftState_type"),
-				 SymphonyOrbitEnvironmentPackage.Literals.SPACECRAFT_STATE__ATTITUDE,
+				 Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ATTITUDE,
 				 false,
 				 false,
 				 false,
@@ -150,7 +150,7 @@ public class SpacecraftStateItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftState_orbit_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftState_orbit_feature", "_UI_SpacecraftState_type"),
-				 SymphonyOrbitEnvironmentPackage.Literals.SPACECRAFT_STATE__ORBIT,
+				 Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT,
 				 false,
 				 false,
 				 false,
@@ -171,9 +171,9 @@ public class SpacecraftStateItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyOrbitEnvironmentPackage.Literals.SPACECRAFT_STATE__COORDINATES);
-			childrenFeatures.add(SymphonyOrbitEnvironmentPackage.Literals.SPACECRAFT_STATE__ATTITUDE);
-			childrenFeatures.add(SymphonyOrbitEnvironmentPackage.Literals.SPACECRAFT_STATE__ORBIT);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__COORDINATES);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ATTITUDE);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ORBIT);
 		}
 		return childrenFeatures;
 	}
@@ -230,12 +230,12 @@ public class SpacecraftStateItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SpacecraftState.class)) {
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_STATE__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_STATE__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_STATE__COORDINATES:
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_STATE__ATTITUDE:
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_STATE__ORBIT:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_STATE__COORDINATES:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ATTITUDE:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_STATE__ORBIT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -255,13 +255,13 @@ public class SpacecraftStateItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyOrbitEnvironmentPackage.Literals.SPACECRAFT_STATE__COORDINATES,
-				 SymphonyOrbitEnvironmentFactory.eINSTANCE.createTimedStampedPVACoordinates()));
+				(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__COORDINATES,
+				 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedPVACoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyOrbitEnvironmentPackage.Literals.SPACECRAFT_STATE__ATTITUDE,
-				 SymphonyOrbitEnvironmentFactory.eINSTANCE.createTimedStampedAngularCoordinates()));
+				(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_STATE__ATTITUDE,
+				 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedAngularCoordinates()));
 	}
 
 	/**

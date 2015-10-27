@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.VariablesList#getVariables <em>Variables</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariablesList()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariablesList()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface VariablesList extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environment</em>' container reference.
 	 * @see #setEnvironment(Environment)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariablesList_Environment()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariablesList_Environment()
 	 * @see org.eclipse.symphony.core.invocator.Environment#getVariablesList
 	 * @model opposite="variablesList" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -71,7 +71,7 @@ public interface VariablesList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variables</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariablesList_Variables()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariablesList_Variables()
 	 * @see org.eclipse.symphony.core.invocator.Variable#getVariablesList
 	 * @model opposite="variablesList" containment="true"
 	 * @generated

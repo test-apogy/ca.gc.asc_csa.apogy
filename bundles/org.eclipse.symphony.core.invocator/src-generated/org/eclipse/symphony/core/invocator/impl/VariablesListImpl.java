@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariablesList;
 
@@ -64,7 +64,7 @@ public class VariablesListImpl extends MinimalEObjectImpl.Container implements V
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.VARIABLES_LIST;
+		return Symphony__CoreInvocatorPackage.Literals.VARIABLES_LIST;
 	}
 
   /**
@@ -74,7 +74,7 @@ public class VariablesListImpl extends MinimalEObjectImpl.Container implements V
 	 */
   public Environment getEnvironment()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT) return null;
 		return (Environment)eContainer();
 	}
 
@@ -85,7 +85,7 @@ public class VariablesListImpl extends MinimalEObjectImpl.Container implements V
 	 */
   public Environment basicGetEnvironment()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT) return null;
 		return (Environment)eInternalContainer();
 	}
 
@@ -96,7 +96,7 @@ public class VariablesListImpl extends MinimalEObjectImpl.Container implements V
 	 */
   public NotificationChain basicSetEnvironment(Environment newEnvironment, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newEnvironment, EMFEcoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newEnvironment, Symphony__CoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT, msgs);
 		return msgs;
 	}
 
@@ -107,19 +107,19 @@ public class VariablesListImpl extends MinimalEObjectImpl.Container implements V
 	 */
   public void setEnvironment(Environment newEnvironment)
   {
-		if (newEnvironment != eInternalContainer() || (eContainerFeatureID() != EMFEcoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT && newEnvironment != null)) {
+		if (newEnvironment != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT && newEnvironment != null)) {
 			if (EcoreUtil.isAncestor(this, newEnvironment))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newEnvironment != null)
-				msgs = ((InternalEObject)newEnvironment).eInverseAdd(this, EMFEcoreInvocatorPackage.ENVIRONMENT__VARIABLES_LIST, Environment.class, msgs);
+				msgs = ((InternalEObject)newEnvironment).eInverseAdd(this, Symphony__CoreInvocatorPackage.ENVIRONMENT__VARIABLES_LIST, Environment.class, msgs);
 			msgs = basicSetEnvironment(newEnvironment, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT, newEnvironment, newEnvironment));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT, newEnvironment, newEnvironment));
 	}
 
   /**
@@ -130,7 +130,7 @@ public class VariablesListImpl extends MinimalEObjectImpl.Container implements V
   public EList<Variable> getVariables()
   {
 		if (variables == null) {
-			variables = new EObjectContainmentWithInverseEList<Variable>(Variable.class, this, EMFEcoreInvocatorPackage.VARIABLES_LIST__VARIABLES, EMFEcoreInvocatorPackage.VARIABLE__VARIABLES_LIST);
+			variables = new EObjectContainmentWithInverseEList<Variable>(Variable.class, this, Symphony__CoreInvocatorPackage.VARIABLES_LIST__VARIABLES, Symphony__CoreInvocatorPackage.VARIABLE__VARIABLES_LIST);
 		}
 		return variables;
 	}
@@ -145,11 +145,11 @@ public class VariablesListImpl extends MinimalEObjectImpl.Container implements V
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT:
+			case Symphony__CoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetEnvironment((Environment)otherEnd, msgs);
-			case EMFEcoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
+			case Symphony__CoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getVariables()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -164,9 +164,9 @@ public class VariablesListImpl extends MinimalEObjectImpl.Container implements V
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT:
+			case Symphony__CoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT:
 				return basicSetEnvironment(null, msgs);
-			case EMFEcoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
+			case Symphony__CoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
 				return ((InternalEList<?>)getVariables()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -181,8 +181,8 @@ public class VariablesListImpl extends MinimalEObjectImpl.Container implements V
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreInvocatorPackage.ENVIRONMENT__VARIABLES_LIST, Environment.class, msgs);
+			case Symphony__CoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.ENVIRONMENT__VARIABLES_LIST, Environment.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -196,10 +196,10 @@ public class VariablesListImpl extends MinimalEObjectImpl.Container implements V
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT:
+			case Symphony__CoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT:
 				if (resolve) return getEnvironment();
 				return basicGetEnvironment();
-			case EMFEcoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
+			case Symphony__CoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
 				return getVariables();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -215,10 +215,10 @@ public class VariablesListImpl extends MinimalEObjectImpl.Container implements V
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT:
+			case Symphony__CoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT:
 				setEnvironment((Environment)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
+			case Symphony__CoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
 				getVariables().clear();
 				getVariables().addAll((Collection<? extends Variable>)newValue);
 				return;
@@ -235,10 +235,10 @@ public class VariablesListImpl extends MinimalEObjectImpl.Container implements V
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT:
+			case Symphony__CoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT:
 				setEnvironment((Environment)null);
 				return;
-			case EMFEcoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
+			case Symphony__CoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
 				getVariables().clear();
 				return;
 		}
@@ -254,9 +254,9 @@ public class VariablesListImpl extends MinimalEObjectImpl.Container implements V
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT:
+			case Symphony__CoreInvocatorPackage.VARIABLES_LIST__ENVIRONMENT:
 				return basicGetEnvironment() != null;
-			case EMFEcoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
+			case Symphony__CoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
 				return variables != null && !variables.isEmpty();
 		}
 		return super.eIsSet(featureID);

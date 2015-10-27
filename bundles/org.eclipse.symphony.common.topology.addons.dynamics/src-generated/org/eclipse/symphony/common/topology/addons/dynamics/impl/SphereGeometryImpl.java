@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.topology.addons.dynamics.SphereGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,7 +62,7 @@ public class SphereGeometryImpl extends GeometryImpl implements SphereGeometry {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyDynamicsPackage.Literals.SPHERE_GEOMETRY;
+		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.SPHERE_GEOMETRY;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class SphereGeometryImpl extends GeometryImpl implements SphereGeometry {
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.SPHERE_GEOMETRY__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.SPHERE_GEOMETRY__RADIUS, oldRadius, radius));
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class SphereGeometryImpl extends GeometryImpl implements SphereGeometry {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.SPHERE_GEOMETRY__RADIUS:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.SPHERE_GEOMETRY__RADIUS:
 				return getRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class SphereGeometryImpl extends GeometryImpl implements SphereGeometry {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.SPHERE_GEOMETRY__RADIUS:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.SPHERE_GEOMETRY__RADIUS:
 				setRadius((Double)newValue);
 				return;
 		}
@@ -123,7 +123,7 @@ public class SphereGeometryImpl extends GeometryImpl implements SphereGeometry {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.SPHERE_GEOMETRY__RADIUS:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.SPHERE_GEOMETRY__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
 		}
@@ -138,7 +138,7 @@ public class SphereGeometryImpl extends GeometryImpl implements SphereGeometry {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.SPHERE_GEOMETRY__RADIUS:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.SPHERE_GEOMETRY__RADIUS:
 				return radius != RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

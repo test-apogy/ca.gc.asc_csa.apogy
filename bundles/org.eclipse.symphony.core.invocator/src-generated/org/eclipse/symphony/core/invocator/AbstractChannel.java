@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractChannel#getChannelsList <em>Channels List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractChannel()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractChannel()
  * @model abstract="true"
  * @generated
  */
@@ -35,7 +35,7 @@ public interface AbstractChannel extends Named, Described {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Channels List</em>' container reference.
 	 * @see #setChannelsList(ChannelsList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractChannel_ChannelsList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractChannel_ChannelsList()
 	 * @see org.eclipse.symphony.core.invocator.ChannelsList#getChannels
 	 * @model opposite="channels" transient="false"
 	 * @generated

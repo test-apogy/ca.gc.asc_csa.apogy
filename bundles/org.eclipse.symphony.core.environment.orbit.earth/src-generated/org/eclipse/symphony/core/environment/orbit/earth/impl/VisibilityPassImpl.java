@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
 import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 
@@ -143,7 +143,7 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS;
 	}
 
 	/**
@@ -157,7 +157,7 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 			orbitModel = (OrbitModel)eResolveProxy(oldOrbitModel);
 			if (orbitModel != oldOrbitModel) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__ORBIT_MODEL, oldOrbitModel, orbitModel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__ORBIT_MODEL, oldOrbitModel, orbitModel));
 			}
 		}
 		return orbitModel;
@@ -181,7 +181,7 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 		OrbitModel oldOrbitModel = orbitModel;
 		orbitModel = newOrbitModel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__ORBIT_MODEL, oldOrbitModel, orbitModel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__ORBIT_MODEL, oldOrbitModel, orbitModel));
 	}
 
 	/**
@@ -195,7 +195,7 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 			surfaceLocation = (EarthSurfaceLocation)eResolveProxy(oldSurfaceLocation);
 			if (surfaceLocation != oldSurfaceLocation) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__SURFACE_LOCATION, oldSurfaceLocation, surfaceLocation));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__SURFACE_LOCATION, oldSurfaceLocation, surfaceLocation));
 			}
 		}
 		return surfaceLocation;
@@ -219,7 +219,7 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 		EarthSurfaceLocation oldSurfaceLocation = surfaceLocation;
 		surfaceLocation = newSurfaceLocation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__SURFACE_LOCATION, oldSurfaceLocation, surfaceLocation));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__SURFACE_LOCATION, oldSurfaceLocation, surfaceLocation));
 	}
 
 	/**
@@ -252,7 +252,7 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 		Date oldStartTime = startTime;
 		startTime = newStartTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__START_TIME, oldStartTime, startTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__START_TIME, oldStartTime, startTime));
 	}
 
 	/**
@@ -285,7 +285,7 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 		Date oldEndTime = endTime;
 		endTime = newEndTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__END_TIME, oldEndTime, endTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__END_TIME, oldEndTime, endTime));
 	}
 
 	/**
@@ -298,7 +298,7 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 		VisibilityPassSpacecraftPositionHistory tmp = getPositionHistoryGen();
 		if(tmp == null)
 		{
-			tmp = SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createVisibilityPassSpacecraftPositionHistory();
+			tmp = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPassSpacecraftPositionHistory();
 			setPositionHistory(tmp);
 		}
 		
@@ -323,7 +323,7 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 		VisibilityPassSpacecraftPositionHistory oldPositionHistory = positionHistory;
 		positionHistory = newPositionHistory;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__POSITION_HISTORY, oldPositionHistory, newPositionHistory);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY, oldPositionHistory, newPositionHistory);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -338,14 +338,14 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 		if (newPositionHistory != positionHistory) {
 			NotificationChain msgs = null;
 			if (positionHistory != null)
-				msgs = ((InternalEObject)positionHistory).eInverseRemove(this, SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS, VisibilityPassSpacecraftPositionHistory.class, msgs);
+				msgs = ((InternalEObject)positionHistory).eInverseRemove(this, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS, VisibilityPassSpacecraftPositionHistory.class, msgs);
 			if (newPositionHistory != null)
-				msgs = ((InternalEObject)newPositionHistory).eInverseAdd(this, SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS, VisibilityPassSpacecraftPositionHistory.class, msgs);
+				msgs = ((InternalEObject)newPositionHistory).eInverseAdd(this, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS, VisibilityPassSpacecraftPositionHistory.class, msgs);
 			msgs = basicSetPositionHistory(newPositionHistory, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__POSITION_HISTORY, newPositionHistory, newPositionHistory));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY, newPositionHistory, newPositionHistory));
 	}
 
 	/**
@@ -366,7 +366,7 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 		double oldDuration = duration;
 		duration = newDuration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__DURATION, oldDuration, duration));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__DURATION, oldDuration, duration));
 	}
 
 	/**
@@ -377,9 +377,9 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__POSITION_HISTORY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY:
 				if (positionHistory != null)
-					msgs = ((InternalEObject)positionHistory).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__POSITION_HISTORY, null, msgs);
+					msgs = ((InternalEObject)positionHistory).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY, null, msgs);
 				return basicSetPositionHistory((VisibilityPassSpacecraftPositionHistory)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -393,7 +393,7 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__POSITION_HISTORY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY:
 				return basicSetPositionHistory(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -407,19 +407,19 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__ORBIT_MODEL:
 				if (resolve) return getOrbitModel();
 				return basicGetOrbitModel();
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__SURFACE_LOCATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__SURFACE_LOCATION:
 				if (resolve) return getSurfaceLocation();
 				return basicGetSurfaceLocation();
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__START_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__START_TIME:
 				return getStartTime();
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__END_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__END_TIME:
 				return getEndTime();
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__POSITION_HISTORY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY:
 				return getPositionHistory();
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__DURATION:
 				return getDuration();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -433,22 +433,22 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__SURFACE_LOCATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__SURFACE_LOCATION:
 				setSurfaceLocation((EarthSurfaceLocation)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__START_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__START_TIME:
 				setStartTime((Date)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__END_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__END_TIME:
 				setEndTime((Date)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__POSITION_HISTORY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY:
 				setPositionHistory((VisibilityPassSpacecraftPositionHistory)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__DURATION:
 				setDuration((Double)newValue);
 				return;
 		}
@@ -463,22 +463,22 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)null);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__SURFACE_LOCATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__SURFACE_LOCATION:
 				setSurfaceLocation((EarthSurfaceLocation)null);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__START_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__START_TIME:
 				setStartTime(START_TIME_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__END_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__END_TIME:
 				setEndTime(END_TIME_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__POSITION_HISTORY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY:
 				setPositionHistory((VisibilityPassSpacecraftPositionHistory)null);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__DURATION:
 				setDuration(DURATION_EDEFAULT);
 				return;
 		}
@@ -493,17 +493,17 @@ public class VisibilityPassImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__ORBIT_MODEL:
 				return orbitModel != null;
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__SURFACE_LOCATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__SURFACE_LOCATION:
 				return surfaceLocation != null;
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__START_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__START_TIME:
 				return START_TIME_EDEFAULT == null ? startTime != null : !START_TIME_EDEFAULT.equals(startTime);
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__END_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__END_TIME:
 				return END_TIME_EDEFAULT == null ? endTime != null : !END_TIME_EDEFAULT.equals(endTime);
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__POSITION_HISTORY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY:
 				return positionHistory != null;
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__DURATION:
 				return duration != DURATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

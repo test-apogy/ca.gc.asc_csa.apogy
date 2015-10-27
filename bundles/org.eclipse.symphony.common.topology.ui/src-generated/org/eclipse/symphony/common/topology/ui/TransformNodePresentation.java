@@ -17,7 +17,7 @@ package org.eclipse.symphony.common.topology.ui;
  *   <li>{@link org.eclipse.symphony.common.topology.ui.TransformNodePresentation#getAxisLenght <em>Axis Lenght</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getTransformNodePresentation()
+ * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTransformNodePresentation()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface TransformNodePresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Axis Visible</em>' attribute.
 	 * @see #setAxisVisible(boolean)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getTransformNodePresentation_AxisVisible()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTransformNodePresentation_AxisVisible()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated
@@ -61,7 +61,7 @@ public interface TransformNodePresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Axis Lenght</em>' attribute.
 	 * @see #setAxisLenght(double)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getTransformNodePresentation_AxisLenght()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTransformNodePresentation_AxisLenght()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated

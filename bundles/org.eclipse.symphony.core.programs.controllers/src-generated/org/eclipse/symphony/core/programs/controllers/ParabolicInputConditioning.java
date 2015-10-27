@@ -17,7 +17,7 @@ package org.eclipse.symphony.core.programs.controllers;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ParabolicInputConditioning#getMaximum <em>Maximum</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getParabolicInputConditioning()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getParabolicInputConditioning()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface ParabolicInputConditioning extends AbstractInputConditioning
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum</em>' attribute.
 	 * @see #setMinimum(float)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getParabolicInputConditioning_Minimum()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getParabolicInputConditioning_Minimum()
 	 * @model default="-1.0" unique="false"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface ParabolicInputConditioning extends AbstractInputConditioning
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum</em>' attribute.
 	 * @see #setMaximum(float)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getParabolicInputConditioning_Maximum()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getParabolicInputConditioning_Maximum()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */

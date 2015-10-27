@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.invocator.EEnumArgument;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a
@@ -63,7 +63,7 @@ public class EEnumArgumentItemProvider extends ArgumentItemProvider {
          getResourceLocator(),
          getString("_UI_EEnumArgument_eEnumLiteral_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_EEnumArgument_eEnumLiteral_feature", "_UI_EEnumArgument_type"),
-         EMFEcoreInvocatorPackage.Literals.EENUM_ARGUMENT__EENUM_LITERAL,
+         Symphony__CoreInvocatorPackage.Literals.EENUM_ARGUMENT__EENUM_LITERAL,
          true,
          false,
          true,
@@ -125,7 +125,7 @@ public class EEnumArgumentItemProvider extends ArgumentItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EEnumArgument.class)) {
-			case EMFEcoreInvocatorPackage.EENUM_ARGUMENT__EENUM:
+			case Symphony__CoreInvocatorPackage.EENUM_ARGUMENT__EENUM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

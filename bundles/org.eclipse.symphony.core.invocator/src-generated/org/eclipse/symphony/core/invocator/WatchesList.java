@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.WatchesList#getWatches <em>Watches</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatchesList()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchesList()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface WatchesList extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Watches Lists Container</em>' container reference.
 	 * @see #setWatchesListsContainer(WatchesListsContainer)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatchesList_WatchesListsContainer()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchesList_WatchesListsContainer()
 	 * @see org.eclipse.symphony.core.invocator.WatchesListsContainer#getWatches
 	 * @model opposite="watches" transient="false"
 	 * @generated
@@ -71,7 +71,7 @@ public interface WatchesList extends Named, Described
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Watches</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatchesList_Watches()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchesList_Watches()
 	 * @see org.eclipse.symphony.core.invocator.Watch#getWatchesList
 	 * @model opposite="watchesList" containment="true"
 	 * @generated

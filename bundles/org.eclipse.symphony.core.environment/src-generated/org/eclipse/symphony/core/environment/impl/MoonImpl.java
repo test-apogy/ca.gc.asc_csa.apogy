@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.topology.impl.GroupNodeImpl;
 import org.eclipse.symphony.core.environment.Moon;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -63,7 +63,7 @@ public class MoonImpl extends GroupNodeImpl implements Moon
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.MOON;
+		return Symphony__CoreEnvironmentPackage.Literals.MOON;
 	}
 
   /**
@@ -86,7 +86,7 @@ public class MoonImpl extends GroupNodeImpl implements Moon
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.MOON__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.MOON__RADIUS, oldRadius, radius));
 	}
 
   /**
@@ -98,7 +98,7 @@ public class MoonImpl extends GroupNodeImpl implements Moon
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MOON__RADIUS:
+			case Symphony__CoreEnvironmentPackage.MOON__RADIUS:
 				return getRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -113,7 +113,7 @@ public class MoonImpl extends GroupNodeImpl implements Moon
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MOON__RADIUS:
+			case Symphony__CoreEnvironmentPackage.MOON__RADIUS:
 				setRadius((Double)newValue);
 				return;
 		}
@@ -129,7 +129,7 @@ public class MoonImpl extends GroupNodeImpl implements Moon
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MOON__RADIUS:
+			case Symphony__CoreEnvironmentPackage.MOON__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
 		}
@@ -145,7 +145,7 @@ public class MoonImpl extends GroupNodeImpl implements Moon
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MOON__RADIUS:
+			case Symphony__CoreEnvironmentPackage.MOON__RADIUS:
 				return radius != RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

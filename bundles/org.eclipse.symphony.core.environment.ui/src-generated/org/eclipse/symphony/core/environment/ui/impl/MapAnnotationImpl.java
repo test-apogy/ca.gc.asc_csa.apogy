@@ -9,7 +9,7 @@ import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.core.environment.ui.MapAnnotation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 
 /**
@@ -39,7 +39,7 @@ public abstract class MapAnnotationImpl extends MapViewItemPresentationImpl impl
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentUIPackage.Literals.MAP_ANNOTATION;
+		return Symphony__CoreEnvironmentUIPackage.Literals.MAP_ANNOTATION;
 	}
 
   /**
@@ -63,7 +63,7 @@ public abstract class MapAnnotationImpl extends MapViewItemPresentationImpl impl
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case SymphonyEnvironmentUIPackage.MAP_ANNOTATION___GET_XY_SHAPE_ANNOTATION:
+			case Symphony__CoreEnvironmentUIPackage.MAP_ANNOTATION___GET_XY_SHAPE_ANNOTATION:
 				return getXYShapeAnnotation();
 		}
 		return super.eInvoke(operationID, arguments);

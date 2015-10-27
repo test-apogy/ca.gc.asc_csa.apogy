@@ -17,7 +17,7 @@ import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 import org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation} object.
@@ -77,7 +77,7 @@ public class EarthSurfaceWorksitePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceWorksitePresentation_axisVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksitePresentation_axisVisible_feature", "_UI_EarthSurfaceWorksitePresentation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE,
+				 Symphony__CoreEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -100,7 +100,7 @@ public class EarthSurfaceWorksitePresentationItemProvider
          getResourceLocator(),
          getString("_UI_EarthSurfaceWorksitePresentation_axisLength_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksitePresentation_axisLength_feature", "_UI_EarthSurfaceWorksitePresentation_type"),
-         SymphonyEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH,
+         Symphony__CoreEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH,
          true,
          false,
          false,
@@ -123,7 +123,7 @@ public class EarthSurfaceWorksitePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceWorksitePresentation_azimuthVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksitePresentation_azimuthVisible_feature", "_UI_EarthSurfaceWorksitePresentation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE,
+				 Symphony__CoreEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -146,7 +146,7 @@ public class EarthSurfaceWorksitePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceWorksitePresentation_elevationLinesVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksitePresentation_elevationLinesVisible_feature", "_UI_EarthSurfaceWorksitePresentation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE,
+				 Symphony__CoreEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -169,7 +169,7 @@ public class EarthSurfaceWorksitePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceWorksitePresentation_azimuthLinesVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksitePresentation_azimuthLinesVisible_feature", "_UI_EarthSurfaceWorksitePresentation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE,
+				 Symphony__CoreEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -192,7 +192,7 @@ public class EarthSurfaceWorksitePresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EarthSurfaceWorksitePresentation_planeVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksitePresentation_planeVisible_feature", "_UI_EarthSurfaceWorksitePresentation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE,
+				 Symphony__CoreEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -215,7 +215,7 @@ public class EarthSurfaceWorksitePresentationItemProvider
          getResourceLocator(),
          getString("_UI_EarthSurfaceWorksitePresentation_planeGridSize_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksitePresentation_planeGridSize_feature", "_UI_EarthSurfaceWorksitePresentation_type"),
-         SymphonyEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE,
+         Symphony__CoreEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE,
          true,
          false,
          false,
@@ -238,7 +238,7 @@ public class EarthSurfaceWorksitePresentationItemProvider
          getResourceLocator(),
          getString("_UI_EarthSurfaceWorksitePresentation_planeSize_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_EarthSurfaceWorksitePresentation_planeSize_feature", "_UI_EarthSurfaceWorksitePresentation_type"),
-         SymphonyEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE,
+         Symphony__CoreEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE,
          true,
          false,
          false,
@@ -288,14 +288,14 @@ public class EarthSurfaceWorksitePresentationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EarthSurfaceWorksitePresentation.class)) {
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE:
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH:
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE:
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE:
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE:
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE:
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE:
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

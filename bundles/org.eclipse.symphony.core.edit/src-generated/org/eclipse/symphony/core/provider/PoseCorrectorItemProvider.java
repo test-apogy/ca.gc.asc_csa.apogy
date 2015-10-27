@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.PoseCorrector;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.PoseCorrector} object.
@@ -82,7 +82,7 @@ public class PoseCorrectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PoseCorrector_symphonySystemApiAdapter_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PoseCorrector_symphonySystemApiAdapter_feature", "_UI_PoseCorrector_type"),
-				 SymphonyCorePackage.Literals.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER,
+				 Symphony__CorePackage.Literals.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER,
 				 true,
 				 false,
 				 true,
@@ -105,7 +105,7 @@ public class PoseCorrectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PoseCorrector_enabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PoseCorrector_enabled_feature", "_UI_PoseCorrector_type"),
-				 SymphonyCorePackage.Literals.POSE_CORRECTOR__ENABLED,
+				 Symphony__CorePackage.Literals.POSE_CORRECTOR__ENABLED,
 				 true,
 				 false,
 				 false,
@@ -140,7 +140,7 @@ public class PoseCorrectorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PoseCorrector.class)) {
-			case SymphonyCorePackage.POSE_CORRECTOR__ENABLED:
+			case Symphony__CorePackage.POSE_CORRECTOR__ENABLED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -32,9 +32,9 @@ import org.eclipse.symphony.addons.mobility.pathplanners.ui.util.Symphony__Addon
 import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
-import org.eclipse.symphony.common.topology.ui.util.TopologyUISwitch;
+import org.eclipse.symphony.common.topology.ui.util.Symphony__CommonTopologyUISwitch;
 import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
 
 /**
@@ -246,19 +246,19 @@ public class Symphony__AddonsMobilityPathplannersUIItemProviderAdapterFactory ex
 	}
 
 	/**
-	 * A child creation extender for the {@link TopologyUIPackage}.
+	 * A child creation extender for the {@link Symphony__CommonTopologyUIPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class TopologyUIChildCreationExtender implements IChildCreationExtender {
+	public static class Symphony__CommonTopologyUIChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends TopologyUISwitch<Object> {
+		protected static class CreationSwitch extends Symphony__CommonTopologyUISwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -294,7 +294,7 @@ public class Symphony__AddonsMobilityPathplannersUIItemProviderAdapterFactory ex
 			public Object caseTopologyPresentationRegistry(TopologyPresentationRegistry object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+						(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
 						 Symphony__AddonsMobilityPathplannersUIFactory.eINSTANCE.createCircularExclusionZonePresentation()));
 
 				return null;

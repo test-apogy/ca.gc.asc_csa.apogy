@@ -11,7 +11,7 @@
       <!-- @generated topology_viewer -->
       <factory
             uri="org.eclipse.symphony.common.topology.ui.viewer"
-            class="org.eclipse.symphony.common.topology.ui.viewer.provider.TopologyViewerItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.topology.ui.viewer.provider.Symphony__CommonTopologyUIViewerItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -24,14 +24,7 @@
       <!-- @generated symphony_common_topology_ui_viewer -->
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.common.topology.ui.viewer.provider.TopologyViewerItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated topology_viewer -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.common.topology.ui.viewer.provider.TopologyViewerItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.common.topology.ui.viewer.provider.Symphony__CommonTopologyUIViewerItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

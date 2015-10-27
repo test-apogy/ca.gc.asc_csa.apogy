@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage;
+import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage;
 import org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel;
 import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
 
@@ -171,7 +171,7 @@ public abstract class RoboticArmImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleRoboticArmPackage.Literals.ROBOTIC_ARM;
+		return Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM;
 	}
 
 	/**
@@ -192,7 +192,7 @@ public abstract class RoboticArmImpl extends MinimalEObjectImpl.Container
 		MoveSpeedLevel oldSpeed = speed;
 		speed = newSpeed == null ? SPEED_EDEFAULT : newSpeed;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__SPEED, oldSpeed, speed));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__SPEED, oldSpeed, speed));
 	}
 
 	/**
@@ -213,7 +213,7 @@ public abstract class RoboticArmImpl extends MinimalEObjectImpl.Container
 		double oldTurretAngle = turretAngle;
 		turretAngle = newTurretAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__TURRET_ANGLE, oldTurretAngle, turretAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__TURRET_ANGLE, oldTurretAngle, turretAngle));
 	}
 
 	/**
@@ -232,7 +232,7 @@ public abstract class RoboticArmImpl extends MinimalEObjectImpl.Container
 		double oldShoulderAngle = shoulderAngle;
 		shoulderAngle = newShoulderAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__SHOULDER_ANGLE, oldShoulderAngle, shoulderAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__SHOULDER_ANGLE, oldShoulderAngle, shoulderAngle));
 	}
 
 	/**
@@ -251,7 +251,7 @@ public abstract class RoboticArmImpl extends MinimalEObjectImpl.Container
 		double oldElbowAngle = elbowAngle;
 		elbowAngle = newElbowAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__ELBOW_ANGLE, oldElbowAngle, elbowAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__ELBOW_ANGLE, oldElbowAngle, elbowAngle));
 	}
 
 	/**
@@ -270,7 +270,7 @@ public abstract class RoboticArmImpl extends MinimalEObjectImpl.Container
 		double oldWristAngle = wristAngle;
 		wristAngle = newWristAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__WRIST_ANGLE, oldWristAngle, wristAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__WRIST_ANGLE, oldWristAngle, wristAngle));
 	}
 
 	/**
@@ -291,7 +291,7 @@ public abstract class RoboticArmImpl extends MinimalEObjectImpl.Container
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__INITIALIZED, oldInitialized, initialized));
 	}
 
 	/**
@@ -312,7 +312,7 @@ public abstract class RoboticArmImpl extends MinimalEObjectImpl.Container
 		boolean oldArmMoving = armMoving;
 		armMoving = newArmMoving;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__ARM_MOVING, oldArmMoving, armMoving));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__ARM_MOVING, oldArmMoving, armMoving));
 	}
 
 	/**
@@ -356,19 +356,19 @@ public abstract class RoboticArmImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__TURRET_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__TURRET_ANGLE:
 				return getTurretAngle();
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__SHOULDER_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__SHOULDER_ANGLE:
 				return getShoulderAngle();
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__ELBOW_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__ELBOW_ANGLE:
 				return getElbowAngle();
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__WRIST_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__WRIST_ANGLE:
 				return getWristAngle();
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__INITIALIZED:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__INITIALIZED:
 				return isInitialized();
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__ARM_MOVING:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__ARM_MOVING:
 				return isArmMoving();
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__SPEED:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__SPEED:
 				return getSpeed();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -381,25 +381,25 @@ public abstract class RoboticArmImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__TURRET_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__TURRET_ANGLE:
 				setTurretAngle((Double)newValue);
 				return;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__SHOULDER_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__SHOULDER_ANGLE:
 				setShoulderAngle((Double)newValue);
 				return;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__ELBOW_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__ELBOW_ANGLE:
 				setElbowAngle((Double)newValue);
 				return;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__WRIST_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__WRIST_ANGLE:
 				setWristAngle((Double)newValue);
 				return;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__INITIALIZED:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__ARM_MOVING:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__ARM_MOVING:
 				setArmMoving((Boolean)newValue);
 				return;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__SPEED:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__SPEED:
 				setSpeed((MoveSpeedLevel)newValue);
 				return;
 		}
@@ -413,25 +413,25 @@ public abstract class RoboticArmImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__TURRET_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__TURRET_ANGLE:
 				setTurretAngle(TURRET_ANGLE_EDEFAULT);
 				return;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__SHOULDER_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__SHOULDER_ANGLE:
 				setShoulderAngle(SHOULDER_ANGLE_EDEFAULT);
 				return;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__ELBOW_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__ELBOW_ANGLE:
 				setElbowAngle(ELBOW_ANGLE_EDEFAULT);
 				return;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__WRIST_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__WRIST_ANGLE:
 				setWristAngle(WRIST_ANGLE_EDEFAULT);
 				return;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__INITIALIZED:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__ARM_MOVING:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__ARM_MOVING:
 				setArmMoving(ARM_MOVING_EDEFAULT);
 				return;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__SPEED:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__SPEED:
 				setSpeed(SPEED_EDEFAULT);
 				return;
 		}
@@ -445,19 +445,19 @@ public abstract class RoboticArmImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__TURRET_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__TURRET_ANGLE:
 				return turretAngle != TURRET_ANGLE_EDEFAULT;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__SHOULDER_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__SHOULDER_ANGLE:
 				return shoulderAngle != SHOULDER_ANGLE_EDEFAULT;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__ELBOW_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__ELBOW_ANGLE:
 				return elbowAngle != ELBOW_ANGLE_EDEFAULT;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__WRIST_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__WRIST_ANGLE:
 				return wristAngle != WRIST_ANGLE_EDEFAULT;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__INITIALIZED:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__ARM_MOVING:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__ARM_MOVING:
 				return armMoving != ARM_MOVING_EDEFAULT;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__SPEED:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__SPEED:
 				return speed != SPEED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -471,15 +471,15 @@ public abstract class RoboticArmImpl extends MinimalEObjectImpl.Container
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM___INIT:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM___INIT:
 				return init();
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM___CMD_MOVE_SPEED_LEVEL__MOVESPEEDLEVEL:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM___CMD_MOVE_SPEED_LEVEL__MOVESPEEDLEVEL:
 				cmdMoveSpeedLevel((MoveSpeedLevel)arguments.get(0));
 				return null;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM___MOVE_TO__DOUBLE_DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM___MOVE_TO__DOUBLE_DOUBLE_DOUBLE_DOUBLE:
 				moveTo((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3));
 				return null;
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM___STOW:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM___STOW:
 				stow();
 				return null;
 		}

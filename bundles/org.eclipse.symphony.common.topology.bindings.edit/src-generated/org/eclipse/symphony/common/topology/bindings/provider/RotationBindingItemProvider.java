@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.bindings.RotationBinding;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.RotationBinding} object.
@@ -66,7 +66,7 @@ public class RotationBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RotationBinding_rotationNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RotationBinding_rotationNode_feature", "_UI_RotationBinding_type"),
-				 TopologyBindingsPackage.Literals.ROTATION_BINDING__ROTATION_NODE,
+				 Symphony__CommonTopologyBindingsPackage.Literals.ROTATION_BINDING__ROTATION_NODE,
 				 true,
 				 false,
 				 true,
@@ -89,7 +89,7 @@ public class RotationBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RotationBinding_rotationAxis_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RotationBinding_rotationAxis_feature", "_UI_RotationBinding_type"),
-				 TopologyBindingsPackage.Literals.ROTATION_BINDING__ROTATION_AXIS,
+				 Symphony__CommonTopologyBindingsPackage.Literals.ROTATION_BINDING__ROTATION_AXIS,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class RotationBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RotationBinding_rotationUnits_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RotationBinding_rotationUnits_feature", "_UI_RotationBinding_type"),
-				 TopologyBindingsPackage.Literals.ROTATION_BINDING__ROTATION_UNITS,
+				 Symphony__CommonTopologyBindingsPackage.Literals.ROTATION_BINDING__ROTATION_UNITS,
 				 true,
 				 false,
 				 false,
@@ -187,8 +187,8 @@ public class RotationBindingItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RotationBinding.class)) {
-			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
-			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
+			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
+			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

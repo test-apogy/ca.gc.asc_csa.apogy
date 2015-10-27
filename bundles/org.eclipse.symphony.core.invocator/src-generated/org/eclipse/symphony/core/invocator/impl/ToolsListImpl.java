@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ToolsList;
 
 /**
@@ -108,7 +108,7 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.TOOLS_LIST;
+		return Symphony__CoreInvocatorPackage.Literals.TOOLS_LIST;
 	}
 
   /**
@@ -131,7 +131,7 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TOOLS_LIST__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TOOLS_LIST__NAME, oldName, name));
 	}
 
   /**
@@ -154,7 +154,7 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TOOLS_LIST__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TOOLS_LIST__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -164,7 +164,7 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
 	 */
   public InvocatorSession getInvocatorSession()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION) return null;
 		return (InvocatorSession)eContainer();
 	}
 
@@ -175,7 +175,7 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
 	 */
   public InvocatorSession basicGetInvocatorSession()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION) return null;
 		return (InvocatorSession)eInternalContainer();
 	}
 
@@ -186,7 +186,7 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
 	 */
   public NotificationChain basicSetInvocatorSession(InvocatorSession newInvocatorSession, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newInvocatorSession, EMFEcoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newInvocatorSession, Symphony__CoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION, msgs);
 		return msgs;
 	}
 
@@ -197,19 +197,19 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
 	 */
   public void setInvocatorSession(InvocatorSession newInvocatorSession)
   {
-		if (newInvocatorSession != eInternalContainer() || (eContainerFeatureID() != EMFEcoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION && newInvocatorSession != null)) {
+		if (newInvocatorSession != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION && newInvocatorSession != null)) {
 			if (EcoreUtil.isAncestor(this, newInvocatorSession))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newInvocatorSession != null)
-				msgs = ((InternalEObject)newInvocatorSession).eInverseAdd(this, EMFEcoreInvocatorPackage.INVOCATOR_SESSION__TOOLS_LIST, InvocatorSession.class, msgs);
+				msgs = ((InternalEObject)newInvocatorSession).eInverseAdd(this, Symphony__CoreInvocatorPackage.INVOCATOR_SESSION__TOOLS_LIST, InvocatorSession.class, msgs);
 			msgs = basicSetInvocatorSession(newInvocatorSession, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION, newInvocatorSession, newInvocatorSession));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION, newInvocatorSession, newInvocatorSession));
 	}
 
   /**
@@ -220,7 +220,7 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
   public EList<AbstractToolsListContainer> getToolsListContainers()
   {
 		if (toolsListContainers == null) {
-			toolsListContainers = new EObjectContainmentWithInverseEList<AbstractToolsListContainer>(AbstractToolsListContainer.class, this, EMFEcoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS, EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST);
+			toolsListContainers = new EObjectContainmentWithInverseEList<AbstractToolsListContainer>(AbstractToolsListContainer.class, this, Symphony__CoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS, Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST);
 		}
 		return toolsListContainers;
 	}
@@ -235,11 +235,11 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetInvocatorSession((InvocatorSession)otherEnd, msgs);
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getToolsListContainers()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -254,9 +254,9 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION:
 				return basicSetInvocatorSession(null, msgs);
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
 				return ((InternalEList<?>)getToolsListContainers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -271,8 +271,8 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreInvocatorPackage.INVOCATOR_SESSION__TOOLS_LIST, InvocatorSession.class, msgs);
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.INVOCATOR_SESSION__TOOLS_LIST, InvocatorSession.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -286,14 +286,14 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__NAME:
 				return getName();
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__DESCRIPTION:
 				return getDescription();
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION:
 				if (resolve) return getInvocatorSession();
 				return basicGetInvocatorSession();
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
 				return getToolsListContainers();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -309,16 +309,16 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__NAME:
 				setName((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION:
 				setInvocatorSession((InvocatorSession)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
 				getToolsListContainers().clear();
 				getToolsListContainers().addAll((Collection<? extends AbstractToolsListContainer>)newValue);
 				return;
@@ -335,16 +335,16 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION:
 				setInvocatorSession((InvocatorSession)null);
 				return;
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
 				getToolsListContainers().clear();
 				return;
 		}
@@ -360,13 +360,13 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__INVOCATOR_SESSION:
 				return basicGetInvocatorSession() != null;
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
 				return toolsListContainers != null && !toolsListContainers.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -382,7 +382,7 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreInvocatorPackage.TOOLS_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreInvocatorPackage.TOOLS_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -399,7 +399,7 @@ public class ToolsListImpl extends MinimalEObjectImpl.Container implements Tools
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.TOOLS_LIST__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreInvocatorPackage.TOOLS_LIST__DESCRIPTION;
 				default: return -1;
 			}
 		}

@@ -30,7 +30,7 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet#getGroundStationToVisibilityMap <em>Ground Station To Visibility Map</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftsVisibilitySet()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet()
  * @model
  * @generated
  */
@@ -44,7 +44,7 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Start Time</em>' attribute.
 	 * @see #setStartTime(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftsVisibilitySet_StartTime()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_StartTime()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='TIME_PERIOD'"
 	 * @generated
@@ -70,7 +70,7 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>End Time</em>' attribute.
 	 * @see #setEndTime(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftsVisibilitySet_EndTime()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_EndTime()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='TIME_PERIOD'"
 	 * @generated
@@ -93,11 +93,10 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The OrbitModel of the Spacecraft(s) to use for visibility calculation.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orbit Models</em>' reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftsVisibilitySet_OrbitModels()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_OrbitModels()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Editable'"
 	 * @generated
 	 */
@@ -109,11 +108,10 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The ground station (s) for which to display Spacecraft visibility status.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ground Stations</em>' reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftsVisibilitySet_GroundStations()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_GroundStations()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Editable'"
 	 * @generated
 	 */
@@ -129,7 +127,7 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Passes</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftsVisibilitySet_Passes()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_Passes()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Readonly'"
 	 * @generated
@@ -141,12 +139,11 @@ public interface SpacecraftsVisibilitySet extends Named, Described, Updatable {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * A map that contains the GroundStation to VisibilityPass relationships.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ground Station To Visibility Map</em>' attribute.
 	 * @see #setGroundStationToVisibilityMap(Map)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftsVisibilitySet_GroundStationToVisibilityMap()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftsVisibilitySet_GroundStationToVisibilityMap()
 	 * @model unique="false" dataType="org.eclipse.symphony.core.environment.orbit.earth.Map<org.eclipse.symphony.core.environment.orbit.earth.GroundStation, org.eclipse.symphony.core.environment.orbit.earth.List<org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass>>" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='None'"
 	 * @generated

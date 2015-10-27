@@ -16,7 +16,7 @@ package org.eclipse.symphony.core.programs.controllers;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.CenteredLinearInputConditioning#getDeadBand <em>Dead Band</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getCenteredLinearInputConditioning()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getCenteredLinearInputConditioning()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface CenteredLinearInputConditioning extends LinearInputConditioning
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Dead Band</em>' attribute.
 	 * @see #setDeadBand(float)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getCenteredLinearInputConditioning_DeadBand()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getCenteredLinearInputConditioning_DeadBand()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */

@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.common.images.URLEImage;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.URLImageMapLayer;
 import org.eclipse.symphony.core.environment.URLMapLayer;
 
@@ -86,7 +86,7 @@ public class URLImageMapLayerImpl extends ImageMapLayerImpl implements URLImageM
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.URL_IMAGE_MAP_LAYER;
+		return Symphony__CoreEnvironmentPackage.Literals.URL_IMAGE_MAP_LAYER;
 	}
 
   /**
@@ -125,7 +125,7 @@ public class URLImageMapLayerImpl extends ImageMapLayerImpl implements URLImageM
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL, oldUrl, url));
 	}
 
   /**
@@ -167,7 +167,7 @@ public class URLImageMapLayerImpl extends ImageMapLayerImpl implements URLImageM
 		String oldLegendURL = legendURL;
 		legendURL = newLegendURL;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.URL_IMAGE_MAP_LAYER__LEGEND_URL, oldLegendURL, legendURL));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__LEGEND_URL, oldLegendURL, legendURL));
 	}
   
   /**
@@ -179,9 +179,9 @@ public class URLImageMapLayerImpl extends ImageMapLayerImpl implements URLImageM
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL:
+			case Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL:
 				return getUrl();
-			case SymphonyEnvironmentPackage.URL_IMAGE_MAP_LAYER__LEGEND_URL:
+			case Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__LEGEND_URL:
 				return getLegendURL();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -196,10 +196,10 @@ public class URLImageMapLayerImpl extends ImageMapLayerImpl implements URLImageM
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL:
+			case Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL:
 				setUrl((String)newValue);
 				return;
-			case SymphonyEnvironmentPackage.URL_IMAGE_MAP_LAYER__LEGEND_URL:
+			case Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__LEGEND_URL:
 				setLegendURL((String)newValue);
 				return;
 		}
@@ -215,10 +215,10 @@ public class URLImageMapLayerImpl extends ImageMapLayerImpl implements URLImageM
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL:
+			case Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL:
 				setUrl(URL_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.URL_IMAGE_MAP_LAYER__LEGEND_URL:
+			case Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__LEGEND_URL:
 				setLegendURL(LEGEND_URL_EDEFAULT);
 				return;
 		}
@@ -234,9 +234,9 @@ public class URLImageMapLayerImpl extends ImageMapLayerImpl implements URLImageM
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL:
+			case Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL:
 				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-			case SymphonyEnvironmentPackage.URL_IMAGE_MAP_LAYER__LEGEND_URL:
+			case Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__LEGEND_URL:
 				return LEGEND_URL_EDEFAULT == null ? legendURL != null : !LEGEND_URL_EDEFAULT.equals(legendURL);
 		}
 		return super.eIsSet(featureID);
@@ -252,7 +252,7 @@ public class URLImageMapLayerImpl extends ImageMapLayerImpl implements URLImageM
   {
 		if (baseClass == URLMapLayer.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL: return SymphonyEnvironmentPackage.URL_MAP_LAYER__URL;
+				case Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL: return Symphony__CoreEnvironmentPackage.URL_MAP_LAYER__URL;
 				default: return -1;
 			}
 		}
@@ -269,7 +269,7 @@ public class URLImageMapLayerImpl extends ImageMapLayerImpl implements URLImageM
   {
 		if (baseClass == URLMapLayer.class) {
 			switch (baseFeatureID) {
-				case SymphonyEnvironmentPackage.URL_MAP_LAYER__URL: return SymphonyEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL;
+				case Symphony__CoreEnvironmentPackage.URL_MAP_LAYER__URL: return Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL;
 				default: return -1;
 			}
 		}

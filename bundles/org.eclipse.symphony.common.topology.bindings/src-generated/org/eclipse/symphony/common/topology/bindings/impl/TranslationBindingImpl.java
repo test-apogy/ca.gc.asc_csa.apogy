@@ -13,9 +13,9 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.bindings.AXIS;
+import org.eclipse.symphony.common.topology.bindings.Axis;
 import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
 
 /**
@@ -52,7 +52,7 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-  protected static final AXIS TRANSLATION_AXIS_EDEFAULT = AXIS.XAXIS;
+  protected static final Axis TRANSLATION_AXIS_EDEFAULT = Axis.XAXIS;
 
 		/**
 	 * The cached value of the '{@link #getTranslationAxis() <em>Translation Axis</em>}' attribute.
@@ -62,7 +62,7 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
 	 * @generated
 	 * @ordered
 	 */
-  protected AXIS translationAxis = TRANSLATION_AXIS_EDEFAULT;
+  protected Axis translationAxis = TRANSLATION_AXIS_EDEFAULT;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -82,7 +82,7 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
   @Override
   protected EClass eStaticClass()
   {
-		return TopologyBindingsPackage.Literals.TRANSLATION_BINDING;
+		return Symphony__CommonTopologyBindingsPackage.Literals.TRANSLATION_BINDING;
 	}
 
   /**
@@ -90,7 +90,7 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public AXIS getTranslationAxis()
+  public Axis getTranslationAxis()
   {
 		return translationAxis;
 	}
@@ -100,12 +100,12 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setTranslationAxis(AXIS newTranslationAxis)
+  public void setTranslationAxis(Axis newTranslationAxis)
   {
-		AXIS oldTranslationAxis = translationAxis;
+		Axis oldTranslationAxis = translationAxis;
 		translationAxis = newTranslationAxis == null ? TRANSLATION_AXIS_EDEFAULT : newTranslationAxis;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS, oldTranslationAxis, translationAxis));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS, oldTranslationAxis, translationAxis));
 	}
 
   /**
@@ -120,7 +120,7 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
 			positionNode = (PositionNode)eResolveProxy(oldPositionNode);
 			if (positionNode != oldPositionNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE, oldPositionNode, positionNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE, oldPositionNode, positionNode));
 			}
 		}
 		return positionNode;
@@ -146,7 +146,7 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
 		PositionNode oldPositionNode = positionNode;
 		positionNode = newPositionNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE, oldPositionNode, positionNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE, oldPositionNode, positionNode));
 	}
 
   /**
@@ -158,10 +158,10 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
+			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
 				if (resolve) return getPositionNode();
 				return basicGetPositionNode();
-			case TopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
+			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
 				return getTranslationAxis();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -176,11 +176,11 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
+			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
 				setPositionNode((PositionNode)newValue);
 				return;
-			case TopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
-				setTranslationAxis((AXIS)newValue);
+			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
+				setTranslationAxis((Axis)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -195,10 +195,10 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
+			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
 				setPositionNode((PositionNode)null);
 				return;
-			case TopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
+			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
 				setTranslationAxis(TRANSLATION_AXIS_EDEFAULT);
 				return;
 		}
@@ -214,9 +214,9 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
+			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__POSITION_NODE:
 				return positionNode != null;
-			case TopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
+			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
 				return translationAxis != TRANSLATION_AXIS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -270,37 +270,37 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
 		/* Rotate around the specified axis.*/
 		switch(getTranslationAxis().getValue())
 		{					
-			case AXIS.XAXIS_VALUE:
+			case Axis.XAXIS_VALUE:
 				double x = newValue;
 				double y = getPositionNode().getPosition().getY();
 				double z = getPositionNode().getPosition().getZ();								
 				getPositionNode().setPosition(MathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
-			case AXIS.MINUS_XAXIS_VALUE:
+			case Axis.MINUS_XAXIS_VALUE:
 				x = -newValue;
 				y = getPositionNode().getPosition().getY();
 				z = getPositionNode().getPosition().getZ();								
 				getPositionNode().setPosition(MathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
-			case AXIS.YAXIS_VALUE:
+			case Axis.YAXIS_VALUE:
 				x = getPositionNode().getPosition().getX();
 				y = newValue;
 				z = getPositionNode().getPosition().getZ();
 				getPositionNode().setPosition(MathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
-			case AXIS.MINUS_YAXIS_VALUE:
+			case Axis.MINUS_YAXIS_VALUE:
 				x = getPositionNode().getPosition().getX();
 				y = -newValue;
 				z = getPositionNode().getPosition().getZ();
 				getPositionNode().setPosition(MathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
-			case AXIS.ZAXIS_VALUE:
+			case Axis.ZAXIS_VALUE:
 				x = getPositionNode().getPosition().getX();
 				y = getPositionNode().getPosition().getY();
 				z = newValue;
 				getPositionNode().setPosition(MathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
-			case AXIS.MINUS_ZAXIS_VALUE:
+			case Axis.MINUS_ZAXIS_VALUE:
 				x = getPositionNode().getPosition().getX();
 				y = getPositionNode().getPosition().getY();
 				z = -newValue;

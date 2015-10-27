@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.TopologyRoot;
 
 /**
@@ -50,7 +50,7 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.TOPOLOGY_ROOT;
+		return Symphony__CorePackage.Literals.TOPOLOGY_ROOT;
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 		Node oldOriginNode = originNode;
 		originNode = newOriginNode;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, oldOriginNode, newOriginNode);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, oldOriginNode, newOriginNode);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -84,14 +84,14 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 		if (newOriginNode != originNode) {
 			NotificationChain msgs = null;
 			if (originNode != null)
-				msgs = ((InternalEObject)originNode).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, null, msgs);
+				msgs = ((InternalEObject)originNode).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, null, msgs);
 			if (newOriginNode != null)
-				msgs = ((InternalEObject)newOriginNode).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, null, msgs);
+				msgs = ((InternalEObject)newOriginNode).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, null, msgs);
 			msgs = basicSetOriginNode(newOriginNode, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, newOriginNode, newOriginNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE, newOriginNode, newOriginNode));
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
+			case Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
 				return basicSetOriginNode(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -115,7 +115,7 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
+			case Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
 				return getOriginNode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -128,7 +128,7 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
+			case Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
 				setOriginNode((Node)newValue);
 				return;
 		}
@@ -142,7 +142,7 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
+			case Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
 				setOriginNode((Node)null);
 				return;
 		}
@@ -156,7 +156,7 @@ public class TopologyRootImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
+			case Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
 				return originNode != null;
 		}
 		return super.eIsSet(featureID);

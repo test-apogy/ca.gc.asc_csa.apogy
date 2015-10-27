@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Edge Type</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getEdgeType()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getEdgeType()
  * @model
  * @generated
  */

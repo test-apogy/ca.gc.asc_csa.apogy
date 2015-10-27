@@ -28,11 +28,11 @@ import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
 import org.eclipse.symphony.core.invocator.Argument;
 import org.eclipse.symphony.core.invocator.ArgumentsList;
 import org.eclipse.symphony.core.invocator.EEnumArgument;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.provider.OperationCallItemProvider;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersFactory;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFactory;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding;
 
 /**
@@ -86,7 +86,7 @@ public class OperationCallControllerBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_OperationCallControllerBinding_createResult_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OperationCallControllerBinding_createResult_feature", "_UI_OperationCallControllerBinding_type"),
-				 EMFEcoreControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT,
+				 Symphony__CoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class OperationCallControllerBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_OperationCallControllerBinding_active_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OperationCallControllerBinding_active_feature", "_UI_OperationCallControllerBinding_type"),
-				 EMFEcoreControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE,
+				 Symphony__CoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE,
 				 false,
 				 false,
 				 false,
@@ -131,7 +131,7 @@ public class OperationCallControllerBindingItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER);
+			childrenFeatures.add(Symphony__CoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER);
 		}
 		return childrenFeatures;
 	}
@@ -199,11 +199,11 @@ public class OperationCallControllerBindingItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OperationCallControllerBinding.class)) {
-			case EMFEcoreControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT:
-			case EMFEcoreControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE:
+			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__CREATE_RESULT:
+			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__ACTIVE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
+			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -224,18 +224,18 @@ public class OperationCallControllerBindingItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER,
-				 EMFEcoreControllersFactory.eINSTANCE.createTimeTrigger()));
+				(Symphony__CoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER,
+				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createTimeTrigger()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER,
-				 EMFEcoreControllersFactory.eINSTANCE.createControllerEdgeTrigger()));
+				(Symphony__CoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER,
+				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createControllerEdgeTrigger()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER,
-				 EMFEcoreControllersFactory.eINSTANCE.createControllerStateTrigger()));
+				(Symphony__CoreProgramsControllersPackage.Literals.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER,
+				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createControllerStateTrigger()));
 	}
 
   @Override
@@ -245,7 +245,7 @@ public class OperationCallControllerBindingItemProvider
   protected Command createSetCommand(EditingDomain domain, EObject owner,
 			EStructuralFeature feature, Object value, int index) 
   {
-		if (feature == EMFEcoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION) 
+		if (feature == Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION) 
 		{
 			EOperation eOperation = (EOperation) value;
 			CompoundCommand compoundCommand = new CompoundCommand();
@@ -261,7 +261,7 @@ public class OperationCallControllerBindingItemProvider
 				
 				if (parameter.getEType() instanceof EEnum)
 				{
-					argument = EMFEcoreInvocatorFactory.eINSTANCE.createEEnumArgument();
+					argument = Symphony__CoreInvocatorFactory.eINSTANCE.createEEnumArgument();
 					EEnum eEnum = (EEnum) parameter.getEType();			
 					((EEnumArgument)argument).setEEnum(eEnum);
 					
@@ -271,7 +271,7 @@ public class OperationCallControllerBindingItemProvider
 				else if (parameter.getEType() instanceof EDataType)
 				{							
 					// Create the Controller Binding specific Argument.
-					argument = EMFEcoreControllersFactory.eINSTANCE.createBindedEDataTypeArgument();					
+					argument = Symphony__CoreProgramsControllersFactory.eINSTANCE.createBindedEDataTypeArgument();					
 					
 //					Object defaultValue = parameter.getEType().getDefaultValue();	
 					
@@ -283,7 +283,7 @@ public class OperationCallControllerBindingItemProvider
 				}
 				else
 				{
-					argument = EMFEcoreInvocatorFactory.eINSTANCE.createEClassArgument();
+					argument = Symphony__CoreInvocatorFactory.eINSTANCE.createEClassArgument();
 				}
 				arguments.add(argument);
 			}
@@ -291,13 +291,13 @@ public class OperationCallControllerBindingItemProvider
 			/** Add arguments if there are parameters only. */
 			if (!arguments.isEmpty())
 			{
-				ArgumentsList argumentsList = EMFEcoreInvocatorFactory.eINSTANCE.createArgumentsList();
+				ArgumentsList argumentsList = Symphony__CoreInvocatorFactory.eINSTANCE.createArgumentsList();
 				argumentsList.getArguments().addAll(arguments);
 	
 				compoundCommand.append(new SetCommand(
 											domain, 
 											owner, 
-											EMFEcoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, 
+											Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, 
 											argumentsList));
 			}
 			else
@@ -306,7 +306,7 @@ public class OperationCallControllerBindingItemProvider
 				compoundCommand.append(new SetCommand(
 							domain, 
 							owner, 
-							EMFEcoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, 
+							Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST, 
 							null));
 			}
 			

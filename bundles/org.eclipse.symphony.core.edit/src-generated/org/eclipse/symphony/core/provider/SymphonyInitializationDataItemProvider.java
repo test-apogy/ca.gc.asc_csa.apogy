@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyInitializationData;
 import org.eclipse.symphony.core.invocator.provider.InitializationDataItemProvider;
 
@@ -62,7 +62,7 @@ public class SymphonyInitializationDataItemProvider extends
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM);
+			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM);
 		}
 		return childrenFeatures;
 	}
@@ -113,7 +113,7 @@ public class SymphonyInitializationDataItemProvider extends
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SymphonyInitializationData.class)) {
-			case SymphonyCorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
+			case Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -134,7 +134,7 @@ public class SymphonyInitializationDataItemProvider extends
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM,
+				(Symphony__CorePackage.Literals.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM,
 				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 

@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.symphony.common.topology.ui.Activator;
 import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.URLNodePresentation;
 import org.eclipse.symphony.common.topology.ui.adapters.URLNodeSceneObject;
 import org.eclipse.symphony.common.topology.ui.preferences.PreferencesConstants;
@@ -106,7 +106,7 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyUIPackage.Literals.URL_NODE_PRESENTATION;
+		return Symphony__CommonTopologyUIPackage.Literals.URL_NODE_PRESENTATION;
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 		boolean oldAxisVisible = axisVisible;
 		axisVisible = newAxisVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE, oldAxisVisible, axisVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE, oldAxisVisible, axisVisible));
 	}
 
 	/**
@@ -148,7 +148,7 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 		double oldAxisLenght = axisLenght;
 		axisLenght = newAxisLenght;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT, oldAxisLenght, axisLenght));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT, oldAxisLenght, axisLenght));
 	}
 
 	/**
@@ -169,7 +169,7 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 		MeshPresentationMode oldPresentationMode = presentationMode;
 		presentationMode = newPresentationMode == null ? PRESENTATION_MODE_EDEFAULT : newPresentationMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE, oldPresentationMode, presentationMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE, oldPresentationMode, presentationMode));
 	}
 
 	/**
@@ -180,11 +180,11 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE:
 				return isAxisVisible();
-			case TopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT:
 				return getAxisLenght();
-			case TopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE:
 				return getPresentationMode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -198,13 +198,13 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE:
 				setAxisVisible((Boolean)newValue);
 				return;
-			case TopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT:
 				setAxisLenght((Double)newValue);
 				return;
-			case TopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode((MeshPresentationMode)newValue);
 				return;
 		}
@@ -219,13 +219,13 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE:
 				setAxisVisible(AXIS_VISIBLE_EDEFAULT);
 				return;
-			case TopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT:
 				setAxisLenght(AXIS_LENGHT_EDEFAULT);
 				return;
-			case TopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode(PRESENTATION_MODE_EDEFAULT);
 				return;
 		}
@@ -240,11 +240,11 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE:
 				return axisVisible != AXIS_VISIBLE_EDEFAULT;
-			case TopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT:
 				return axisLenght != AXIS_LENGHT_EDEFAULT;
-			case TopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE:
 				return presentationMode != PRESENTATION_MODE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -290,15 +290,15 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 		{							
 			URLNodeSceneObject object = (URLNodeSceneObject) getSceneObject();
 
-			if (notification.getFeatureID(URLNodePresentation.class) == TopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE) 
+			if (notification.getFeatureID(URLNodePresentation.class) == Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE) 
 			{
 				object.setAxisVisible(isAxisVisible());
 			}
-			else if(notification.getFeatureID(URLNodePresentation.class) == TopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT)
+			else if(notification.getFeatureID(URLNodePresentation.class) == Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT)
 			{
 				object.setAxisLength(getAxisLenght());
 			}
-			else if(notification.getFeatureID(URLNodePresentation.class) == TopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE)
+			else if(notification.getFeatureID(URLNodePresentation.class) == Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE)
 			{
 				object.setPresentationMode(getPresentationMode());
 			}

@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
 import org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIFactory;
 import org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -74,7 +74,7 @@ public class Symphony__AddonsMobilityPathplannersUIPackageImpl extends EPackageI
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyUIPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsMobilityPathplannersUIPackage.createPackageContents();
@@ -185,7 +185,7 @@ public class Symphony__AddonsMobilityPathplannersUIPackageImpl extends EPackageI
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyUIPackage theTopologyUIPackage = (TopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyUIPackage.eNS_URI);
+		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -193,12 +193,12 @@ public class Symphony__AddonsMobilityPathplannersUIPackageImpl extends EPackageI
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		circularExclusionZonePresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
+		circularExclusionZonePresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(circularExclusionZonePresentationEClass, CircularExclusionZonePresentation.class, "CircularExclusionZonePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCircularExclusionZonePresentation_Transparency(), theEcorePackage.getEFloat(), "transparency", null, 0, 1, CircularExclusionZonePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCircularExclusionZonePresentation_PresentationMode(), theTopologyUIPackage.getMeshPresentationMode(), "presentationMode", "SURFACE", 0, 1, CircularExclusionZonePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCircularExclusionZonePresentation_PresentationMode(), theSymphony__CommonTopologyUIPackage.getMeshPresentationMode(), "presentationMode", "SURFACE", 0, 1, CircularExclusionZonePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCircularExclusionZonePresentation_Height(), theEcorePackage.getEDouble(), "height", "10.0", 0, 1, CircularExclusionZonePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

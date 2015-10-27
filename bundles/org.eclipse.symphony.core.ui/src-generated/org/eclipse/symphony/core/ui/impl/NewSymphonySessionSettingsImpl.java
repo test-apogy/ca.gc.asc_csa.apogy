@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -173,7 +173,7 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyCoreUiPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS;
+		return Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS;
 	}
 
   /**
@@ -196,7 +196,7 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 		String oldFolder = folder;
 		folder = newFolder;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER, oldFolder, folder));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER, oldFolder, folder));
 	}
 
   /**
@@ -219,7 +219,7 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 		String oldFilename = filename;
 		filename = newFilename;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME, oldFilename, filename));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME, oldFilename, filename));
 	}
 
   /**
@@ -242,7 +242,7 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 		boolean oldCreateEnvironment = createEnvironment;
 		createEnvironment = newCreateEnvironment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT, oldCreateEnvironment, createEnvironment));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT, oldCreateEnvironment, createEnvironment));
 	}
 
   /**
@@ -265,7 +265,7 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 		boolean oldCreatePrograms = createPrograms;
 		createPrograms = newCreatePrograms;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS, oldCreatePrograms, createPrograms));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS, oldCreatePrograms, createPrograms));
 	}
 
   /**
@@ -288,7 +288,7 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 		boolean oldCreateDataProducts = createDataProducts;
 		createDataProducts = newCreateDataProducts;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS, oldCreateDataProducts, createDataProducts));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS, oldCreateDataProducts, createDataProducts));
 	}
 
   /**
@@ -311,7 +311,7 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 		boolean oldCreateTools = createTools;
 		createTools = newCreateTools;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS, oldCreateTools, createTools));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS, oldCreateTools, createTools));
 	}
 
   /**
@@ -351,17 +351,17 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER:
 				return getFolder();
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME:
 				return getFilename();
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
 				return isCreateEnvironment();
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS:
 				return isCreatePrograms();
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
 				return isCreateDataProducts();
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS:
 				return isCreateTools();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -376,22 +376,22 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER:
 				setFolder((String)newValue);
 				return;
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME:
 				setFilename((String)newValue);
 				return;
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
 				setCreateEnvironment((Boolean)newValue);
 				return;
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS:
 				setCreatePrograms((Boolean)newValue);
 				return;
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
 				setCreateDataProducts((Boolean)newValue);
 				return;
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS:
 				setCreateTools((Boolean)newValue);
 				return;
 		}
@@ -407,22 +407,22 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER:
 				setFolder(FOLDER_EDEFAULT);
 				return;
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME:
 				setFilename(FILENAME_EDEFAULT);
 				return;
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
 				setCreateEnvironment(CREATE_ENVIRONMENT_EDEFAULT);
 				return;
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS:
 				setCreatePrograms(CREATE_PROGRAMS_EDEFAULT);
 				return;
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
 				setCreateDataProducts(CREATE_DATA_PRODUCTS_EDEFAULT);
 				return;
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS:
 				setCreateTools(CREATE_TOOLS_EDEFAULT);
 				return;
 		}
@@ -438,17 +438,17 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER:
 				return FOLDER_EDEFAULT == null ? folder != null : !FOLDER_EDEFAULT.equals(folder);
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME:
 				return FILENAME_EDEFAULT == null ? filename != null : !FILENAME_EDEFAULT.equals(filename);
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
 				return createEnvironment != CREATE_ENVIRONMENT_EDEFAULT;
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS:
 				return createPrograms != CREATE_PROGRAMS_EDEFAULT;
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
 				return createDataProducts != CREATE_DATA_PRODUCTS_EDEFAULT;
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS:
 				return createTools != CREATE_TOOLS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -462,9 +462,9 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS___GET_DEFAULT_FILENAME__ICONTAINER:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS___GET_DEFAULT_FILENAME__ICONTAINER:
 				return getDefaultFilename((IContainer)arguments.get(0));
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS___SET_DEFAULT_VALUES__ICONTAINER:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS___SET_DEFAULT_VALUES__ICONTAINER:
 				setDefaultValues((IContainer)arguments.get(0));
 				return null;
 		}

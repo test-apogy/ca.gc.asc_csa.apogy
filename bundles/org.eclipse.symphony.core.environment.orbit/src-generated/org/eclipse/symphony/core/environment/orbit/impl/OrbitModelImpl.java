@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.Orbit;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 import org.eclipse.symphony.core.impl.AbstractOrbitModelImpl;
 
 /**
@@ -64,7 +64,7 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyOrbitEnvironmentPackage.Literals.ORBIT_MODEL;
+		return Symphony__CoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL;
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 		Orbit oldInitialOrbit = initialOrbit;
 		initialOrbit = newInitialOrbit;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__INITIAL_ORBIT, oldInitialOrbit, newInitialOrbit);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT, oldInitialOrbit, newInitialOrbit);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -100,14 +100,14 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 		if (newInitialOrbit != initialOrbit) {
 			NotificationChain msgs = null;
 			if (initialOrbit != null)
-				msgs = ((InternalEObject)initialOrbit).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__INITIAL_ORBIT, null, msgs);
+				msgs = ((InternalEObject)initialOrbit).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT, null, msgs);
 			if (newInitialOrbit != null)
-				msgs = ((InternalEObject)newInitialOrbit).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__INITIAL_ORBIT, null, msgs);
+				msgs = ((InternalEObject)newInitialOrbit).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT, null, msgs);
 			msgs = basicSetInitialOrbit(newInitialOrbit, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__INITIAL_ORBIT, newInitialOrbit, newInitialOrbit));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT, newInitialOrbit, newInitialOrbit));
 	}
 
 	/**
@@ -128,7 +128,7 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 		AbstractOrbitPropagator oldPropagator = propagator;
 		propagator = newPropagator;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__PROPAGATOR, oldPropagator, newPropagator);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR, oldPropagator, newPropagator);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -143,14 +143,14 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 		if (newPropagator != propagator) {
 			NotificationChain msgs = null;
 			if (propagator != null)
-				msgs = ((InternalEObject)propagator).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__PROPAGATOR, null, msgs);
+				msgs = ((InternalEObject)propagator).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR, null, msgs);
 			if (newPropagator != null)
-				msgs = ((InternalEObject)newPropagator).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__PROPAGATOR, null, msgs);
+				msgs = ((InternalEObject)newPropagator).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR, null, msgs);
 			msgs = basicSetPropagator(newPropagator, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__PROPAGATOR, newPropagator, newPropagator));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR, newPropagator, newPropagator));
 	}
 
 	/**
@@ -161,9 +161,9 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__INITIAL_ORBIT:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT:
 				return basicSetInitialOrbit(null, msgs);
-			case SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__PROPAGATOR:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR:
 				return basicSetPropagator(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -177,9 +177,9 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__INITIAL_ORBIT:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT:
 				return getInitialOrbit();
-			case SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__PROPAGATOR:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR:
 				return getPropagator();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -193,10 +193,10 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__INITIAL_ORBIT:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT:
 				setInitialOrbit((Orbit)newValue);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__PROPAGATOR:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR:
 				setPropagator((AbstractOrbitPropagator)newValue);
 				return;
 		}
@@ -211,10 +211,10 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__INITIAL_ORBIT:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT:
 				setInitialOrbit((Orbit)null);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__PROPAGATOR:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR:
 				setPropagator((AbstractOrbitPropagator)null);
 				return;
 		}
@@ -229,9 +229,9 @@ public class OrbitModelImpl extends AbstractOrbitModelImpl implements OrbitModel
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__INITIAL_ORBIT:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT:
 				return initialOrbit != null;
-			case SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__PROPAGATOR:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR:
 				return propagator != null;
 		}
 		return super.eIsSet(featureID);

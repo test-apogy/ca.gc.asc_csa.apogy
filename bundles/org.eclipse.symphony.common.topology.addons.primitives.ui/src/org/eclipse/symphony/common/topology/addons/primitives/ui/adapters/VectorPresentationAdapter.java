@@ -2,7 +2,7 @@ package org.eclipse.symphony.common.topology.addons.primitives.ui.adapters;
 
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.addons.primitives.Vector;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesFactory;
+import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIFactory;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
@@ -30,7 +30,7 @@ public class VectorPresentationAdapter implements NodePresentationAdapter
 
 		Vector vector = (Vector) obj;
 		
-		VectorPresentation presentationNode = TopologyUIPrimitivesFactory.eINSTANCE.createVectorPresentation();
+		VectorPresentation presentationNode = Symphony__CommonTopologyAddonsPrimitivesUIFactory.eINSTANCE.createVectorPresentation();
 		presentationNode.setNode(vector);			
 						
 		return presentationNode;

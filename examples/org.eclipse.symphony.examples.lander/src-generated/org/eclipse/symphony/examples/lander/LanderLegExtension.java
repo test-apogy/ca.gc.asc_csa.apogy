@@ -18,7 +18,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * This enumeration is used to define the possible levels
  * of extension that the lander's legs can have.
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLanderLegExtension()
+ * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLanderLegExtension()
  * @model
  * @generated
  */

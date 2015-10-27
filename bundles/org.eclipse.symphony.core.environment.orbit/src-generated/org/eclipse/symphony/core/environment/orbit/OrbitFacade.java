@@ -12,12 +12,11 @@ import org.eclipse.symphony.core.environment.orbit.impl.OrbitFacadeImpl;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * A class providing ustilities methods for Orbits.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getOrbitFacade()
+ * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getOrbitFacade()
  * @model
  * @generated
  */

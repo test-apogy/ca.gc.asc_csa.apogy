@@ -12,7 +12,7 @@ import org.eclipse.symphony.common.emf.Timed;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getTimedStampedAngularCoordinates()
+ * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getTimedStampedAngularCoordinates()
  * @model
  * @generated
  */

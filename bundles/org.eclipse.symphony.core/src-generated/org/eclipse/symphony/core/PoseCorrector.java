@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *   <li>{@link org.eclipse.symphony.core.PoseCorrector#isEnabled <em>Enabled</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getPoseCorrector()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getPoseCorrector()
  * @model abstract="true"
  * @generated
  */
@@ -40,7 +40,7 @@ public interface PoseCorrector extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Symphony System Api Adapter</em>' container reference.
 	 * @see #setSymphonySystemApiAdapter(SymphonySystemApiAdapter)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getPoseCorrector_SymphonySystemApiAdapter()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getPoseCorrector_SymphonySystemApiAdapter()
 	 * @see org.eclipse.symphony.core.SymphonySystemApiAdapter#getPoseCorrector
 	 * @model opposite="poseCorrector" transient="false"
 	 * @generated
@@ -67,11 +67,11 @@ public interface PoseCorrector extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Whether the Pose Predictor is enabled.
+	 * Whether the Pose Predictor is enabled.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Enabled</em>' attribute.
 	 * @see #setEnabled(boolean)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getPoseCorrector_Enabled()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getPoseCorrector_Enabled()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='SETTINGS_INFO'"
 	 * @generated

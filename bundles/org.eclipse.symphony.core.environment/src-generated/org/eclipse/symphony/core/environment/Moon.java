@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.GroupNode;
  *   <li>{@link org.eclipse.symphony.core.environment.Moon#getRadius <em>Radius</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMoon()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMoon()
  * @model
  * @generated
  */
@@ -33,11 +33,11 @@ public interface Moon extends GroupNode
    * </p>
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Moon radius, in meters.
+	 * Moon radius, in meters.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMoon_Radius()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMoon_Radius()
 	 * @model default="1737100" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated

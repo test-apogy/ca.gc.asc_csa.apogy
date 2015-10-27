@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory#getPositions <em>Positions</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPassSpacecraftPositionHistory()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPositionHistory()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface VisibilityPassSpacecraftPositionHistory extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Interval</em>' attribute.
 	 * @see #setTimeInterval(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPassSpacecraftPositionHistory_TimeInterval()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPositionHistory_TimeInterval()
 	 * @model default="30.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' csa_unit='s'"
 	 * @generated
@@ -66,7 +66,7 @@ public interface VisibilityPassSpacecraftPositionHistory extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Visibility Pass</em>' container reference.
 	 * @see #setVisibilityPass(VisibilityPass)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPassSpacecraftPositionHistory_VisibilityPass()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPositionHistory_VisibilityPass()
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getPositionHistory
 	 * @model opposite="positionHistory" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='None' children='false'"
@@ -97,7 +97,7 @@ public interface VisibilityPassSpacecraftPositionHistory extends EObject {
 	 * The position history.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Positions</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPassSpacecraftPositionHistory_Positions()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPositionHistory_Positions()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' children='true'"
 	 * @generated
@@ -108,7 +108,6 @@ public interface VisibilityPassSpacecraftPositionHistory extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the VisibilityPassSpacecraftPosition with the highest elevation in the position history.
 	 * @return The VisibilityPassSpacecraftPosition with the highest elevation, null if the history position is empty.
 	 * <!-- end-model-doc -->
@@ -121,7 +120,6 @@ public interface VisibilityPassSpacecraftPositionHistory extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the VisibilityPassSpacecraftPosition with the smallest spacecraft cross-track angle in the position history.
 	 * @return The VisibilityPassSpacecraftPosition with the smallest spacecraft cross-track angle, null if the history position is empty.
 	 * <!-- end-model-doc -->
@@ -134,7 +132,6 @@ public interface VisibilityPassSpacecraftPositionHistory extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Force the update of VisibilityPassSpacecraftPositionHistory.
 	 * <!-- end-model-doc -->
 	 * @model

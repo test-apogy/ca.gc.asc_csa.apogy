@@ -12,10 +12,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentFactory;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFactory;
 import org.eclipse.symphony.core.invocator.provider.AbstractInitializationDataItemProvider;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.SatelliteInitializationData;
 
 /**
@@ -62,8 +62,8 @@ public class SatelliteInitializationDataItemProvider extends AbstractInitializat
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_INITIALIZATION_DATA__SATELLITE);
-			childrenFeatures.add(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL);
+			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_INITIALIZATION_DATA__SATELLITE);
+			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL);
 		}
 		return childrenFeatures;
 	}
@@ -116,8 +116,8 @@ public class SatelliteInitializationDataItemProvider extends AbstractInitializat
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SatelliteInitializationData.class)) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE:
-			case EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -137,18 +137,18 @@ public class SatelliteInitializationDataItemProvider extends AbstractInitializat
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_INITIALIZATION_DATA__SATELLITE,
-				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteSimulated()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_INITIALIZATION_DATA__SATELLITE,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteSimulated()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_INITIALIZATION_DATA__SATELLITE,
-				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteStub()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_INITIALIZATION_DATA__SATELLITE,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteStub()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL,
-				 SymphonyOrbitEnvironmentFactory.eINSTANCE.createOrbitModel()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL,
+				 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createOrbitModel()));
 	}
 
 }

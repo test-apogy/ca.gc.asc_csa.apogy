@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.environment.impl.EnvironmentUtilitiesImpl;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEnvironmentUtilities()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEnvironmentUtilities()
  * @model
  * @generated
  */
@@ -32,7 +32,8 @@ public interface EnvironmentUtilities extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Convert from Date (UTC) to Julian. Uses formula found at http://en.wikipedia.org/wiki/Julian_date#cite_note-12
+	 * Convert from Date (UTC) to Julian.
+	 * Uses formula found at http://en.wikipedia.org/wiki/Julian_date#cite_note-12
 	 * <!-- end-model-doc -->
 	 * @model unique="false" dateDataType="org.eclipse.symphony.core.environment.Date" dateUnique="false"
 	 * @generated
@@ -43,7 +44,8 @@ public interface EnvironmentUtilities extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Methods that parses Right Ascension angle expressed in HH:mm:ss format and return an angle in radians.
+	 * Method that parses Right Ascension angle expressed in
+	 * HH:mm:ss format and return an angle in radians.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" exceptions="org.eclipse.symphony.common.emf.Exception" rightAscensionStringUnique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
@@ -55,7 +57,8 @@ public interface EnvironmentUtilities extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Methods that parses an angle expressed in deg:mm:ss format and return an angle in radians.
+	 * Method that parses an angle expressed in deg:mm:ss format
+	 * and return an angle in radians.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" degMinSecAngleStringUnique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"

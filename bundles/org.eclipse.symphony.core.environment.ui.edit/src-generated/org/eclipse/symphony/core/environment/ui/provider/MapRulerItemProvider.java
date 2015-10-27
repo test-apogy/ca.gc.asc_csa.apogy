@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.ui.MapRuler;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.MapRuler} object.
@@ -67,7 +67,7 @@ public class MapRulerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapRuler_rulerColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapRuler_rulerColor_feature", "_UI_MapRuler_type"),
-				 SymphonyEnvironmentUIPackage.Literals.MAP_RULER__RULER_COLOR,
+				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_RULER__RULER_COLOR,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class MapRulerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MapRuler.class)) {
-			case SymphonyEnvironmentUIPackage.MAP_RULER__RULER_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.MAP_RULER__RULER_COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

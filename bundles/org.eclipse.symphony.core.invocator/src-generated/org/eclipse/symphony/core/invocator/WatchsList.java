@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatchsList()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchsList()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface WatchsList extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Watches</em>' containment reference list.
-   * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatchsList_Watches()
+   * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchsList_Watches()
    * @model containment="true"
    * @generated
    */

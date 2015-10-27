@@ -13,8 +13,8 @@ import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.impl.TypeApiAdapterImpl;
 import org.eclipse.symphony.examples.satellite.Activator;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.ImageOrder;
 import org.eclipse.symphony.examples.satellite.Satellite;
 import org.eclipse.symphony.examples.satellite.SatelliteConstellation;
@@ -46,13 +46,13 @@ public class SatelliteConstellationTypeApiAdapterImpl extends TypeApiAdapterImpl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION_TYPE_API_ADAPTER;
+		return Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION_TYPE_API_ADAPTER;
 	}
 
 	@Override
 	public AbstractInitializationData createInitializationData() 
 	{
-		return EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteConstellationInitializationData();
+		return Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteConstellationInitializationData();
 	}
 	
 	@Override
@@ -146,7 +146,7 @@ public class SatelliteConstellationTypeApiAdapterImpl extends TypeApiAdapterImpl
 	
 	private SatelliteInitializationData createSatelliteInitializationData(Satellite satellite)
 	{
-		SatelliteInitializationData data = EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteInitializationData();
+		SatelliteInitializationData data = Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteInitializationData();
 		
 		// Sets the satellite.
 		Satellite satCopy = EcoreUtil.copy(satellite);		

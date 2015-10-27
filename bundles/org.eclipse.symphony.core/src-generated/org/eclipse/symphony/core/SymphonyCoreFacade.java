@@ -24,7 +24,7 @@ import org.eclipse.symphony.core.invocator.InvocatorSession;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonyCoreFacade()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyCoreFacade()
  * @model
  * @generated
  */
@@ -77,7 +77,6 @@ public interface SymphonyCoreFacade extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Loads FeatureOfInterest from file.
 	 * @param url The URL locating the file.
 	 * @return The list of loaded FeatureOfInterest.
@@ -92,7 +91,6 @@ public interface SymphonyCoreFacade extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Saves a list of FeatureOfInterest to file (in CSV format).
 	 * @param path The path to the file.
 	 * @param foiList The list of FeatureOfInterest.

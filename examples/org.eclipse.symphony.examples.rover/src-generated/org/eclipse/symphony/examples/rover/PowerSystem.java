@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.examples.rover.PowerSystem#getCurrentCurrent <em>Current Current</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getPowerSystem()
+ * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getPowerSystem()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface PowerSystem extends EObject {
 	 * power system.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Batteries</em>' containment reference list.
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getPowerSystem_Batteries()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getPowerSystem_Batteries()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' createChild='false'"
 	 * @generated
@@ -58,7 +58,7 @@ public interface PowerSystem extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Active Battery</em>' reference.
 	 * @see #setActiveBattery(Battery)
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getPowerSystem_ActiveBattery()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getPowerSystem_ActiveBattery()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -84,7 +84,7 @@ public interface PowerSystem extends EObject {
 	 * is currently outputting.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Voltage</em>' attribute.
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getPowerSystem_CurrentVoltage()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getPowerSystem_CurrentVoltage()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='V' get='<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery = this.getActiveBattery();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_activeBattery, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery_1 = this.getActiveBattery();\n\treturn _activeBattery_1.getVoltage();\n}\nelse\n{\n\treturn 0.0;\n}'"
 	 * @generated
@@ -100,7 +100,7 @@ public interface PowerSystem extends EObject {
 	 * is currently outputting.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Current</em>' attribute.
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getPowerSystem_CurrentCurrent()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getPowerSystem_CurrentCurrent()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='A' get='<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery = this.getActiveBattery();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_activeBattery, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery_1 = this.getActiveBattery();\n\treturn _activeBattery_1.getCurrent();\n}\nelse\n{\n\treturn 0.0;\n}'"
 	 * @generated

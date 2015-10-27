@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.AngularCoordinates#getAngularAcceleration <em>Angular Acceleration</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getAngularCoordinates()
+ * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAngularCoordinates()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface AngularCoordinates extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Rotation</em>' containment reference.
 	 * @see #setRotation(Matrix3x3)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getAngularCoordinates_Rotation()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAngularCoordinates_Rotation()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface AngularCoordinates extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Angular Rate</em>' containment reference.
 	 * @see #setAngularRate(Tuple3d)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getAngularCoordinates_AngularRate()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAngularCoordinates_AngularRate()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -85,7 +85,7 @@ public interface AngularCoordinates extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Angular Acceleration</em>' containment reference.
 	 * @see #setAngularAcceleration(Tuple3d)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getAngularCoordinates_AngularAcceleration()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAngularCoordinates_AngularAcceleration()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

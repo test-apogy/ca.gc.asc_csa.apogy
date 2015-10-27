@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.environment.Region;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.Region} object.
@@ -79,7 +79,7 @@ public class RegionItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.REGION__TRANSFORMATION);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.REGION__TRANSFORMATION);
 		}
 		return childrenFeatures;
 	}
@@ -123,7 +123,7 @@ public class RegionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Region.class)) {
-			case SymphonyEnvironmentPackage.REGION__TRANSFORMATION:
+			case Symphony__CoreEnvironmentPackage.REGION__TRANSFORMATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -144,7 +144,7 @@ public class RegionItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.REGION__TRANSFORMATION,
+				(Symphony__CoreEnvironmentPackage.Literals.REGION__TRANSFORMATION,
 				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 

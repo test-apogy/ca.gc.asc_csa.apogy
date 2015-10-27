@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage;
+import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
 import org.eclipse.symphony.examples.mobile_platform.Position;
 
 /**
@@ -84,7 +84,7 @@ IItemPropertySource
 						getResourceLocator(),
 						getString("_UI_Position_x_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Position_x_feature", "_UI_Position_type"),
-						EMFEcoreExampleMobilePlatformPackage.Literals.POSITION__X,
+						Symphony__ExamplesMobilePlatformPackage.Literals.POSITION__X,
 						true,
 						false,
 						false,
@@ -107,7 +107,7 @@ IItemPropertySource
 						getResourceLocator(),
 						getString("_UI_Position_y_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Position_y_feature", "_UI_Position_type"),
-						EMFEcoreExampleMobilePlatformPackage.Literals.POSITION__Y,
+						Symphony__ExamplesMobilePlatformPackage.Literals.POSITION__Y,
 						true,
 						false,
 						false,
@@ -130,7 +130,7 @@ IItemPropertySource
 						getResourceLocator(),
 						getString("_UI_Position_theta_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Position_theta_feature", "_UI_Position_type"),
-						EMFEcoreExampleMobilePlatformPackage.Literals.POSITION__THETA,
+						Symphony__ExamplesMobilePlatformPackage.Literals.POSITION__THETA,
 						true,
 						false,
 						false,
@@ -196,9 +196,9 @@ IItemPropertySource
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Position.class)) {
-			case EMFEcoreExampleMobilePlatformPackage.POSITION__X:
-			case EMFEcoreExampleMobilePlatformPackage.POSITION__Y:
-			case EMFEcoreExampleMobilePlatformPackage.POSITION__THETA:
+			case Symphony__ExamplesMobilePlatformPackage.POSITION__X:
+			case Symphony__ExamplesMobilePlatformPackage.POSITION__Y:
+			case Symphony__ExamplesMobilePlatformPackage.POSITION__THETA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

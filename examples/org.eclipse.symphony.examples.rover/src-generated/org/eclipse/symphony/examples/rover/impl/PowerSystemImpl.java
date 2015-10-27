@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.examples.rover.Battery;
-import org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage;
+import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
 import org.eclipse.symphony.examples.rover.PowerSystem;
 
 /**
@@ -94,7 +94,7 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleRoverPackage.Literals.POWER_SYSTEM;
+		return Symphony__ExamplesRoverPackage.Literals.POWER_SYSTEM;
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	 */
 	public EList<Battery> getBatteries() {
 		if (batteries == null) {
-			batteries = new EObjectContainmentEList<Battery>(Battery.class, this, EMFEcoreExampleRoverPackage.POWER_SYSTEM__BATTERIES);
+			batteries = new EObjectContainmentEList<Battery>(Battery.class, this, Symphony__ExamplesRoverPackage.POWER_SYSTEM__BATTERIES);
 		}
 		return batteries;
 	}
@@ -120,7 +120,7 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 			activeBattery = (Battery)eResolveProxy(oldActiveBattery);
 			if (activeBattery != oldActiveBattery) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreExampleRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY, oldActiveBattery, activeBattery));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__ExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY, oldActiveBattery, activeBattery));
 			}
 		}
 		return activeBattery;
@@ -144,7 +144,7 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 		Battery oldActiveBattery = activeBattery;
 		activeBattery = newActiveBattery;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY, oldActiveBattery, activeBattery));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY, oldActiveBattery, activeBattery));
 	}
 
 	/**
@@ -227,7 +227,7 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__BATTERIES:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
 				return ((InternalEList<?>)getBatteries()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -241,14 +241,14 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__BATTERIES:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
 				return getBatteries();
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
 				if (resolve) return getActiveBattery();
 				return basicGetActiveBattery();
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__CURRENT_VOLTAGE:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__CURRENT_VOLTAGE:
 				return getCurrentVoltage();
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__CURRENT_CURRENT:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__CURRENT_CURRENT:
 				return getCurrentCurrent();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -263,11 +263,11 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__BATTERIES:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
 				getBatteries().clear();
 				getBatteries().addAll((Collection<? extends Battery>)newValue);
 				return;
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
 				setActiveBattery((Battery)newValue);
 				return;
 		}
@@ -282,10 +282,10 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__BATTERIES:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
 				getBatteries().clear();
 				return;
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
 				setActiveBattery((Battery)null);
 				return;
 		}
@@ -300,13 +300,13 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__BATTERIES:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
 				return batteries != null && !batteries.isEmpty();
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
 				return activeBattery != null;
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__CURRENT_VOLTAGE:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__CURRENT_VOLTAGE:
 				return getCurrentVoltage() != CURRENT_VOLTAGE_EDEFAULT;
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__CURRENT_CURRENT:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__CURRENT_CURRENT:
 				return getCurrentCurrent() != CURRENT_CURRENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -320,7 +320,7 @@ public class PowerSystemImpl extends MinimalEObjectImpl.Container implements Pow
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM___CHANGE_ACTIVE_BATTERY_TO__INT:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM___CHANGE_ACTIVE_BATTERY_TO__INT:
 				changeActiveBatteryTo((Integer)arguments.get(0));
 				return null;
 		}

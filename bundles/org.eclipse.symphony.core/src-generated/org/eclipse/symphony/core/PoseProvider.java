@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *   <li>{@link org.eclipse.symphony.core.PoseProvider#getPoseTransform <em>Pose Transform</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getPoseProvider()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getPoseProvider()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface PoseProvider extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pose Transform</em>' containment reference.
 	 * @see #setPoseTransform(Matrix4x4)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getPoseProvider_PoseTransform()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getPoseProvider_PoseTransform()
 	 * @model containment="true"
 	 * @generated
 	 */

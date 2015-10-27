@@ -25,11 +25,4 @@
             class="org.eclipse.symphony.addons.sensors.gps.provider.Symphony__AddonsSensorsGPSItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated GPS -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.gps.provider.Symphony__AddonsSensorsGPSItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-   </extension>
-
 </plugin>

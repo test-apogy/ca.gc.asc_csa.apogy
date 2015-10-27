@@ -1,8 +1,13 @@
-@GenModel(prefix="TopologyUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="TopologyUI", complianceLevel="6.0")
+@GenModel(prefix="Symphony__CommonTopologyUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="Symphony__CommonTopologyUI",
+		  complianceLevel="6.0")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.topology.ui/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.common.topology.ui.edit/src-generated")
 @GenModel(testsDirectory="/org.eclipse.symphony.common.topology.ui.tests/src-generated")
-
 
 package org.eclipse.symphony.common.topology.ui
 
@@ -37,35 +42,35 @@ enum MeshPresentationMode
 	WIREFRAME as "WIREFRAME" = 2
 }
 
-/**
+/*
  * The registry of all NodePresentation. This class is intended to be a singleton.
  * It associates at most one NodePresentation to each Node. It registers to 
  */
 class TopologyPresentationRegistry
 {
-	/**
+	/*
 	 * The list of TopologyPresentationSet managed by the TopologyPresentationRegistry.
 	 */
 	contains TopologyPresentationSet[0..*] topologyPresentationSetList opposite topologyPresentationRegistry
 	
-	/**
+	/*
  	 * The list of NodePresentation managed by this PresentationTopology.
  	 */
 	contains NodePresentation[0..*] nodePresentationList
 	
-	/**
+	/*
 	 * Creates a TopologyPresentationSet from a specified topologyRoot.
 	 * @param topologyRoot The node at the root of the topology.
 	 */
 	op TopologyPresentationSet createTopologyPresentationSet(Node topologyRoot)
 	
-	/**
+	/*
 	 * Release a TopologyPresentationSet no longer needed.
 	 * @param topologyPresentationSet The TopologyPresentationSet to release.
 	 */
 	op void release(TopologyPresentationSet topologyPresentationSet)
 	
-	/**
+	/*
 	 * Returns the NodePresentation associated with a specified Node.
 	 * @param node The specified Node.
 	 * @return The NodePresentation associated with specified Node, null if none is found.
@@ -73,28 +78,28 @@ class TopologyPresentationRegistry
 	op NodePresentation getPresentationNode(Node node)
 }
 
-/**
+/*
  * A class used to keep a the relationship between a given topology and its associated TopologyPresentationSet.
  */
 class GraphicsContext
 {
-	/**
+	/*
 	 * The root of the topology.
 	 */
 	refers Node topology
 	
-	/**
+	/*
 	 * The TopologyPresentationSet associated with the root of the topology.
 	 */
 	refers TopologyPresentationSet topologyPresentationSet opposite graphicsContext
 	
-	/**
+	/*
 	 * Dispose of this GraphicsContext.
 	 */
 	op void dispose()
 }
 
-/**
+/*
  * Class that represent the result of a selection in a topology.
  */
 class NodeSelection
@@ -117,29 +122,29 @@ class NodeSelection
 // Presentation Topology
 class TopologyPresentationSet
 {
-	/**
+	/*
 	 * The TopologyPresentationRegistry containing this TopologyPresentationSet.
 	 */
 	refers TopologyPresentationRegistry topologyPresentationRegistry opposite topologyPresentationSetList
 		
-	/**
+	/*
 	 * The GraphicsContext containing this PresentationTopology.
 	 */
 	refers GraphicsContext graphicsContext opposite topologyPresentationSet
 	
-	/**
+	/*
  	 * The list of NodePresentation managed by this PresentationTopology.
  	 */
 	refers NodePresentation[0..*] nodePresentationList opposite topologyPresentationSet
 	
-	/**
+	/*
 	 * Returns the NodePresentation associated with a specified Node.
 	 * @param node The specified Node.
 	 * @return The NodePresentation associated with specified Node, null if none is found.
 	 */
 	op NodePresentation getPresentationNode(Node node)
 	
-	/**
+	/*
  	 * Returns the list of Nodes managed by this PresentationTopology.
  	 * @return The list of Nodes. Never null.
  	 */
@@ -150,7 +155,7 @@ class TopologyPresentationSet
 
 class NodePresentation
 {
-	/**
+	/*
 	 * The list of TopologyPresentationSet referring to this NodePresentation.
 	 */
 	refers TopologyPresentationSet[0..*] topologyPresentationSet opposite nodePresentationList

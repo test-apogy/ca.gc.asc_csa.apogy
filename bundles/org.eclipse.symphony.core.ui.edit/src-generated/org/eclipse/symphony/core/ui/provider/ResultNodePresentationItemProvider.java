@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.topology.ui.provider.TransformNodePresentationItemProvider;
 import org.eclipse.symphony.core.ui.ResultNodePresentation;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.ui.ResultNodePresentation} object.
@@ -66,7 +66,7 @@ public class ResultNodePresentationItemProvider extends TransformNodePresentatio
 				 getResourceLocator(),
 				 getString("_UI_ResultNodePresentation_poleHeight_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ResultNodePresentation_poleHeight_feature", "_UI_ResultNodePresentation_type"),
-				 SymphonyCoreUiPackage.Literals.RESULT_NODE_PRESENTATION__POLE_HEIGHT,
+				 Symphony__CoreUIPackage.Literals.RESULT_NODE_PRESENTATION__POLE_HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -88,7 +88,7 @@ public class ResultNodePresentationItemProvider extends TransformNodePresentatio
 				 getResourceLocator(),
 				 getString("_UI_ResultNodePresentation_flagVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ResultNodePresentation_flagVisible_feature", "_UI_ResultNodePresentation_type"),
-				 SymphonyCoreUiPackage.Literals.RESULT_NODE_PRESENTATION__FLAG_VISIBLE,
+				 Symphony__CoreUIPackage.Literals.RESULT_NODE_PRESENTATION__FLAG_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -136,8 +136,8 @@ public class ResultNodePresentationItemProvider extends TransformNodePresentatio
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ResultNodePresentation.class)) {
-			case SymphonyCoreUiPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
-			case SymphonyCoreUiPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
+			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
+			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -164,7 +164,7 @@ public class ResultNodePresentationItemProvider extends TransformNodePresentatio
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SymphonyCoreUiEditPlugin.INSTANCE;
+		return Symphony__CoreUIEditPlugin.INSTANCE;
 	}
 
 }

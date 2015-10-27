@@ -17,7 +17,7 @@ import org.eclipse.symphony.core.invocator.InitializationData;
  *   <li>{@link org.eclipse.symphony.core.SymphonyInitializationData#getInitialPoseTransform <em>Initial Pose Transform</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonyInitializationData()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyInitializationData()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface SymphonyInitializationData extends InitializationData {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Initial Pose Transform</em>' containment reference.
 	 * @see #setInitialPoseTransform(Matrix4x4)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonyInitializationData_InitialPoseTransform()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyInitializationData_InitialPoseTransform()
 	 * @model containment="true"
 	 * @generated
 	 */

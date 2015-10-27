@@ -11,7 +11,7 @@
       <!-- @generated symphony_examples_mobile_platform -->
       <factory
             uri="org.eclipse.symphony.examples.mobile_platform.symphony"
-            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory"
+            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -24,26 +24,13 @@
       <!-- @generated symphony_examples_mobile_platform_symphony -->
       <extender
             uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory$Symphony__CoreInvocatorChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core.environment.ui"
-            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$SymphonyEnvironmentUIChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory$Symphony__CoreEnvironmentUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_examples_mobile_platform -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.core.environment.ui"
-            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.SymphonyExampleMobilePlatformItemProviderAdapterFactory$SymphonyEnvironmentUIChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.mobile_platform.symphony.provider.Symphony__ExamplesMobilePlatformSymphonyItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

@@ -15,10 +15,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.listeners.AbstractTypeImplementationListener;
@@ -91,7 +91,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION;
+		return Symphony__CoreEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION;
 	}
 
   /**
@@ -106,7 +106,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 			variable = (Variable)eResolveProxy(oldVariable);
 			if (variable != oldVariable) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE, oldVariable, variable));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE, oldVariable, variable));
 			}
 		}
 		return variable;
@@ -144,7 +144,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 		Variable oldVariable = variable;
 		variable = newVariable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE, oldVariable, variable));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE, oldVariable, variable));
 	}
 
   /**
@@ -159,7 +159,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 			variableInstance = eResolveProxy(oldVariableInstance);
 			if (variableInstance != oldVariableInstance) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE, oldVariableInstance, variableInstance));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE, oldVariableInstance, variableInstance));
 			}
 		}
 		return variableInstance;
@@ -185,7 +185,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 		EObject oldVariableInstance = variableInstance;
 		variableInstance = newVariableInstance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE, oldVariableInstance, variableInstance));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE, oldVariableInstance, variableInstance));
 	}
 
   /**
@@ -200,7 +200,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 			symphonySystemApiAdapter = (SymphonySystemApiAdapter)eResolveProxy(oldSymphonySystemApiAdapter);
 			if (symphonySystemApiAdapter != oldSymphonySystemApiAdapter) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER, oldSymphonySystemApiAdapter, symphonySystemApiAdapter));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER, oldSymphonySystemApiAdapter, symphonySystemApiAdapter));
 			}
 		}
 		return symphonySystemApiAdapter;
@@ -249,7 +249,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 		SymphonySystemApiAdapter oldSymphonySystemApiAdapter = symphonySystemApiAdapter;
 		symphonySystemApiAdapter = newSymphonySystemApiAdapter;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER, oldSymphonySystemApiAdapter, symphonySystemApiAdapter));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER, oldSymphonySystemApiAdapter, symphonySystemApiAdapter));
 	}
 
   /**
@@ -273,13 +273,13 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
 				if (resolve) return getVariable();
 				return basicGetVariable();
-			case SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
 				if (resolve) return getVariableInstance();
 				return basicGetVariableInstance();
-			case SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER:
 				if (resolve) return getSymphonySystemApiAdapter();
 				return basicGetSymphonySystemApiAdapter();
 		}
@@ -295,13 +295,13 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
 				setVariable((Variable)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
 				setVariableInstance((EObject)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER:
 				setSymphonySystemApiAdapter((SymphonySystemApiAdapter)newValue);
 				return;
 		}
@@ -317,13 +317,13 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
 				setVariable((Variable)null);
 				return;
-			case SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
 				setVariableInstance((EObject)null);
 				return;
-			case SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER:
 				setSymphonySystemApiAdapter((SymphonySystemApiAdapter)null);
 				return;
 		}
@@ -339,11 +339,11 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE:
 				return variable != null;
-			case SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE:
 				return variableInstance != null;
-			case SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER:
 				return symphonySystemApiAdapter != null;
 		}
 		return super.eIsSet(featureID);
@@ -357,7 +357,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION___UPDATE_POSE__MATRIX4X4:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_VARIABLE_ANNOTATION___UPDATE_POSE__MATRIX4X4:
 				updatePose((Matrix4x4)arguments.get(0));
 				return null;
 		}
@@ -412,7 +412,7 @@ public abstract class AbstractVariableAnnotationImpl extends MapAnnotationImpl i
 			  @Override
 			  public void notifyChanged(Notification msg) 
 			  {
-				  if(msg.getFeatureID(PoseProvider.class) == SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM)
+				  if(msg.getFeatureID(PoseProvider.class) == Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM)
 				  {					  					  
 					  if(msg.getNewValue() instanceof Matrix4x4)
 					  {

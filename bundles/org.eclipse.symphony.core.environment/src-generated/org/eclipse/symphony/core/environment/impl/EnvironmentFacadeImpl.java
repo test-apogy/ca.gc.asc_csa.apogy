@@ -34,7 +34,7 @@ import org.eclipse.symphony.core.ConnectionPoint;
 import org.eclipse.symphony.core.ConnectionPointsList;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.SymphonyCoreFacade;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.environment.Activator;
@@ -63,8 +63,8 @@ import org.eclipse.symphony.core.environment.Star;
 import org.eclipse.symphony.core.environment.StarField;
 import org.eclipse.symphony.core.environment.Sun;
 import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.URLImageMapLayer;
 import org.eclipse.symphony.core.environment.Worksite;
 import org.eclipse.symphony.core.invocator.Environment;
@@ -107,7 +107,7 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.ENVIRONMENT_FACADE;
+		return Symphony__CoreEnvironmentPackage.Literals.ENVIRONMENT_FACADE;
 	}
   
   /**
@@ -117,7 +117,7 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
    */
   public StarField createAndInitializeStars()
   {
-		StarField starField = SymphonyEnvironmentFactory.eINSTANCE.createStarField();
+		StarField starField = Symphony__CoreEnvironmentFactory.eINSTANCE.createStarField();
 		starField.setDescription("Star Field.");
 		starField.setStarFieldFileName("bright_star_catalog_5.txt");
 		starField.setNodeId("STAR FIELD");
@@ -134,7 +134,7 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
 		Date now = new Date();
 		
 		// Initialise the worksite.
-		EarthSurfaceWorksite worksite = SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();
+		EarthSurfaceWorksite worksite = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();
 		worksite.setName("CSA AT");
 		worksite.setDescription("The CSA Default Worksite.");
 		
@@ -143,11 +143,11 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
 		worksite.setXAxisAzimuth(Math.toRadians(179.4));
 		
 		// Creates and initialise the Earth Sky.
-		EarthSky earthSky = SymphonyEnvironmentFactory.eINSTANCE.createEarthSky();
+		EarthSky earthSky = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSky();
 		worksite.setSky(earthSky);
 		
 		// Create and initialise the EarthSkyNode.
-		EarthSkyNode earthSkyNode = SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode();		
+		EarthSkyNode earthSkyNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSkyNode();		
 		initializeEarthSkyNode(earthSky, earthSkyNode);
 		
 		// Attaches the sky to the worksite.
@@ -180,7 +180,7 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
 		skyNode.setNodeId("SKY");
 	  
 		// Creates the Sun
-		Sun sun = SymphonyEnvironmentFactory.eINSTANCE.createSun();
+		Sun sun = Symphony__CoreEnvironmentFactory.eINSTANCE.createSun();
 		sun.setDescription("The Sun.");
 		sun.setNodeId("SUN");
 		
@@ -244,7 +244,7 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
 		GeographicCoordinates coord = worksite.getGeographicalCoordinates();
 		
 		// Creates the Moon.
-		Moon moon = SymphonyEnvironmentFactory.eINSTANCE.createMoon();
+		Moon moon = Symphony__CoreEnvironmentFactory.eINSTANCE.createMoon();
 		moon.setDescription("The Moon.");
 		moon.setNodeId("MOON");
 		
@@ -275,7 +275,7 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
    */
   public GeographicCoordinates getMarsYardGeographicalCoordinates()
   {
-		GeographicCoordinates coordinates = SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
+		GeographicCoordinates coordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
 		
 		coordinates.setElevation(30.0);
 		coordinates.setLongitude(Math.toRadians(-73.393904468182));
@@ -291,10 +291,10 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
    */
   public Star createStar(float magnitude, double rightAscension, double declination)
   {
-		Star star = SymphonyEnvironmentFactory.eINSTANCE.createStar();
+		Star star = Symphony__CoreEnvironmentFactory.eINSTANCE.createStar();
 		star.setMagnitude((float) magnitude);
 		
-		EquatorialCoordinates equatorialCoordinates = SymphonyEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
+		EquatorialCoordinates equatorialCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
 		equatorialCoordinates.setRightAscension(rightAscension);
 		equatorialCoordinates.setDeclination(declination);
 		equatorialCoordinates.setRadius(Double.MAX_VALUE);
@@ -325,7 +325,7 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
    */
   public EarthSurfaceEnvironment createAndInitializeEarthSurfaceEnvironment()
   {
-		EarthSurfaceEnvironment earthSurfaceEnvironment = SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment();
+		EarthSurfaceEnvironment earthSurfaceEnvironment = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceEnvironment();
 		earthSurfaceEnvironment.setName("Earth Surface Environment");
 		earthSurfaceEnvironment.setDescription("Default Earth Surface Environment");
 		
@@ -343,7 +343,7 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
    */
   public Atmosphere createAndInitializeEarthAtmosphere()
   {
-		Atmosphere atmosphere = SymphonyEnvironmentFactory.eINSTANCE.createAtmosphere();
+		Atmosphere atmosphere = Symphony__CoreEnvironmentFactory.eINSTANCE.createAtmosphere();
 		
 		// @see http://en.wikipedia.org/wiki/International_Standard_Atmosphere
 		atmosphere.setSurfacePressure(101325.0);
@@ -945,7 +945,7 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public RectangularVolumeRegion getRectangularVolumeRegion(CartesianTriangularMesh mesh) 
 	{
-		RectangularVolumeRegion rectangularVolumeRegion = SymphonyEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion();
+		RectangularVolumeRegion rectangularVolumeRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion();
 		
 		if(mesh != null)
 		{
@@ -959,7 +959,7 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
 		}
 		else
 		{
-			rectangularVolumeRegion = SymphonyEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion();
+			rectangularVolumeRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion();
 		}	
 		
 		rectangularVolumeRegion.setTransformation(MathFacade.INSTANCE.createIdentityMatrix4x4());
@@ -1076,77 +1076,77 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_STARS:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_STARS:
 				return createAndInitializeStars();
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE:
 				return createAndInitializeDefaultCSAWorksite();
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE:
 				initializeSkyNode((Sky)arguments.get(0), (SkyNode)arguments.get(1));
 				return null;
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE:
 				initializeEarthSkyNode((EarthSky)arguments.get(0), (EarthSkyNode)arguments.get(1));
 				return null;
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES:
 				return getMarsYardGeographicalCoordinates();
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE:
 				return createStar((Float)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE:
 				return getMarsYardTransformNode();
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_SURFACE_ENVIRONMENT:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_SURFACE_ENVIRONMENT:
 				return createAndInitializeEarthSurfaceEnvironment();
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_ATMOSPHERE:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_ATMOSPHERE:
 				return createAndInitializeEarthAtmosphere();
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_SUN_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_SUN_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT:
 				return getSunVector((SymphonySystem)arguments.get(0), (String)arguments.get(1), (Environment)arguments.get(2));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT:
 				return getSunVector((Node)arguments.get(0), (Environment)arguments.get(1));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_MOON_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_MOON_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT:
 				return getMoonVector((SymphonySystem)arguments.get(0), (String)arguments.get(1), (Environment)arguments.get(2));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_MOON_VECTOR__NODE_ENVIRONMENT:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_MOON_VECTOR__NODE_ENVIRONMENT:
 				return getMoonVector((Node)arguments.get(0), (Environment)arguments.get(1));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_VECTOR__NODE_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_VECTOR__NODE_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT:
 				return getVector((Node)arguments.get(0), (SymphonySystem)arguments.get(1), (ConnectionPoint)arguments.get(2), (Environment)arguments.get(3));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT:
 				return getVector((SymphonySystem)arguments.get(0), (String)arguments.get(1), (SymphonySystem)arguments.get(2), (ConnectionPoint)arguments.get(3), (Environment)arguments.get(4));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_STRING_ENVIRONMENT:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_STRING_ENVIRONMENT:
 				return getVector((SymphonySystem)arguments.get(0), (String)arguments.get(1), (SymphonySystem)arguments.get(2), (String)arguments.get(3), (Environment)arguments.get(4));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_STRING_STRING_ENVIRONMENT:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_STRING_STRING_ENVIRONMENT:
 				return getVector((SymphonySystem)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Environment)arguments.get(4));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___CREATE_EIMAGE__LIST:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___CREATE_EIMAGE__LIST:
 				return createEImage((List<? extends RectangularRegionImage>)arguments.get(0));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_ABSOLUTE_RECTANGULAR_REGION_CORNERS__RECTANGULARREGION:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_ABSOLUTE_RECTANGULAR_REGION_CORNERS__RECTANGULARREGION:
 				return getAbsoluteRectangularRegionCorners((RectangularRegion)arguments.get(0));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_RECTANGULAR_REGION_IMAGE__LIST:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_RECTANGULAR_REGION_IMAGE__LIST:
 				return getBestResolutionRectangularRegionImage((List<? extends RectangularRegionImage>)arguments.get(0));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__RECTANGULARREGIONPROVIDER_TUPLE3D_TUPLE3D:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__RECTANGULARREGIONPROVIDER_TUPLE3D_TUPLE3D:
 				getRectangularRegionExtent((RectangularRegionProvider)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2));
 				return null;
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__RECTANGULARREGIONIMAGE_TUPLE3D_TUPLE3D:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__RECTANGULARREGIONIMAGE_TUPLE3D_TUPLE3D:
 				getRectangularRegionImageExtent((RectangularRegionImage)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2));
 				return null;
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__LIST_TUPLE3D_TUPLE3D:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__LIST_TUPLE3D_TUPLE3D:
 				getRectangularRegionExtent((List<? extends RectangularRegionProvider>)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2));
 				return null;
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__LIST_TUPLE3D_TUPLE3D:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__LIST_TUPLE3D_TUPLE3D:
 				getRectangularRegionImageExtent((List<? extends RectangularRegionImage>)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2));
 				return null;
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___FITS_INSIDE__RECTANGULARREGION_RECTANGULARREGION:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___FITS_INSIDE__RECTANGULARREGION_RECTANGULARREGION:
 				return fitsInside((RectangularRegion)arguments.get(0), (RectangularRegion)arguments.get(1));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___INTERSECTS__RECTANGULARREGION_RECTANGULARREGION_MATRIX4X4:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___INTERSECTS__RECTANGULARREGION_RECTANGULARREGION_MATRIX4X4:
 				return intersects((RectangularRegion)arguments.get(0), (RectangularRegion)arguments.get(1), (Matrix4x4)arguments.get(2));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__IMAGEMAPLAYERPRESENTATION_TUPLE3D_TUPLE3D:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__IMAGEMAPLAYERPRESENTATION_TUPLE3D_TUPLE3D:
 				getImageMapLayerPresentationExtent((ImageMapLayerPresentation)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2));
 				return null;
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__LIST_TUPLE3D_TUPLE3D:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__LIST_TUPLE3D_TUPLE3D:
 				getImageMapLayerPresentationExtent((List<ImageMapLayerPresentation>)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2));
 				return null;
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__LIST:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__LIST:
 				return getImageMapLayerPresentationImage((List<ImageMapLayerPresentation>)arguments.get(0));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_MAP_LAYER__LIST:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_MAP_LAYER__LIST:
 				return getBestResolutionMapLayer((List<ImageMapLayerPresentation>)arguments.get(0));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_VISIBLE_IMAGE_MAP_LAYER_PRESENTATION__LIST:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_VISIBLE_IMAGE_MAP_LAYER_PRESENTATION__LIST:
 				return getVisibleImageMapLayerPresentation((List<ImageMapLayerPresentation>)arguments.get(0));
-			case SymphonyEnvironmentPackage.ENVIRONMENT_FACADE___GET_RECTANGULAR_VOLUME_REGION__CARTESIANTRIANGULARMESH:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE___GET_RECTANGULAR_VOLUME_REGION__CARTESIANTRIANGULARMESH:
 				return getRectangularVolumeRegion((CartesianTriangularMesh)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -1154,7 +1154,7 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
 
 	private Map getDefaultMarsTerrainMap()
 	{
-		Map map = SymphonyEnvironmentFactory.eINSTANCE.createMap();
+		Map map = Symphony__CoreEnvironmentFactory.eINSTANCE.createMap();
 		map.setName("MarsYard");
 		map.setDescription("Simple Mars Yard Map.");
 		
@@ -1164,7 +1164,7 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
 		
 		// Creates a MeshMapLayer.
 		
-		CartesianTriangularMeshURLMapLayer meshLayer = SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer();
+		CartesianTriangularMeshURLMapLayer meshLayer = Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer();
 		meshLayer.setUrl("platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri");
 		meshLayer.setName("MarsYardDEM 1.0 meters resolution");
 		meshLayer.setDescription("MarsYard DEM at 1.0 meters resolution");
@@ -1172,7 +1172,7 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
 		map.getLayers().add(meshLayer);		
 	
 		// Create Aerial Image map.
-		URLImageMapLayer imageLayer = SymphonyEnvironmentFactory.eINSTANCE.createURLImageMapLayer();
+		URLImageMapLayer imageLayer = Symphony__CoreEnvironmentFactory.eINSTANCE.createURLImageMapLayer();
 		imageLayer.setUrl("platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-NGC-MET-seen-from-sky.jpg");
 		imageLayer.setName("Mars Yard Aerial Image.");
 		imageLayer.setDescription("Mars Yard seen from above.");
@@ -1182,8 +1182,8 @@ public class EnvironmentFacadeImpl extends MinimalEObjectImpl.Container implemen
 		map.getLayers().add(imageLayer);	
 		
 		// Creates the default Feature Of Interest List.
-		FeaturesOfInterestMapLayer foiLayer = SymphonyEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer();
-		foiLayer.setFeatures(SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestList());
+		FeaturesOfInterestMapLayer foiLayer = Symphony__CoreEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer();
+		foiLayer.setFeatures(Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestList());
 		foiLayer.setName("CSA AT Features");
 		foiLayer.setDescription("CSA AT Features Of Interest.");
 		String foiURL = "platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-FOI.csv";

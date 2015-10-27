@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.io.jinput.EComponent;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getAbstractInputConditioning()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getAbstractInputConditioning()
  * @model abstract="true"
  * @generated
  */
@@ -28,6 +28,10 @@ public interface AbstractInputConditioning extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Condition the value of the component and produces an Argument that
+	 * will be used as an input to an EOperation.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" componentUnique="false"
 	 * @generated
 	 */

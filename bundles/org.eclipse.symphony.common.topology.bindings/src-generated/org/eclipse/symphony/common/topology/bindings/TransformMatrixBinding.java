@@ -11,8 +11,8 @@ import org.eclipse.symphony.common.topology.TransformNode;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
- * Binding that binds a TransformNode transform to a feature value. The feature value must be of type Matrix4x4.
+ * Binding that binds a TransformNode transform to a feature value.
+ * The feature value must be of type Matrix4x4.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.topology.TransformNode;
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding#getTransformNode <em>Transform Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getTransformMatrixBinding()
+ * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getTransformMatrixBinding()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface TransformMatrixBinding extends AbstractTopologyBinding
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Transform Node</em>' reference.
 	 * @see #setTransformNode(TransformNode)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getTransformMatrixBinding_TransformNode()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getTransformMatrixBinding_TransformNode()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DESTINATION'"
 	 * @generated
 	 */

@@ -14,8 +14,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersFactory;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFactory;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning;
 
 /**
@@ -65,7 +65,7 @@ public class UserDefinedInputConditioningItemProvider
 				 getResourceLocator(),
 				 getString("_UI_UserDefinedInputConditioning_units_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_UserDefinedInputConditioning_units_feature", "_UI_UserDefinedInputConditioning_type"),
-				 EMFEcoreControllersPackage.Literals.USER_DEFINED_INPUT_CONDITIONING__UNITS,
+				 Symphony__CoreProgramsControllersPackage.Literals.USER_DEFINED_INPUT_CONDITIONING__UNITS,
 				 true,
 				 false,
 				 false,
@@ -86,7 +86,7 @@ public class UserDefinedInputConditioningItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreControllersPackage.Literals.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION);
+			childrenFeatures.add(Symphony__CoreProgramsControllersPackage.Literals.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION);
 		}
 		return childrenFeatures;
 	}
@@ -148,10 +148,10 @@ public class UserDefinedInputConditioningItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(UserDefinedInputConditioning.class)) {
-			case EMFEcoreControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
+			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
+			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -171,8 +171,8 @@ public class UserDefinedInputConditioningItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreControllersPackage.Literals.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION,
-				 EMFEcoreControllersFactory.eINSTANCE.createCustomInputConditioningPoint()));
+				(Symphony__CoreProgramsControllersPackage.Literals.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION,
+				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createCustomInputConditioningPoint()));
 	}
 
 }

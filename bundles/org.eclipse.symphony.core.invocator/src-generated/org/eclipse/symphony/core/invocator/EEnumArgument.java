@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EEnumLiteral;
  *   <li>{@link org.eclipse.symphony.core.invocator.EEnumArgument#getEEnum <em>EEnum</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEEnumArgument()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEEnumArgument()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface EEnumArgument extends Argument
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>EEnum Literal</em>' reference.
 	 * @see #setEEnumLiteral(EEnumLiteral)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEEnumArgument_EEnumLiteral()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEEnumArgument_EEnumLiteral()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable'"
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface EEnumArgument extends Argument
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>EEnum</em>' reference.
 	 * @see #setEEnum(EEnum)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEEnumArgument_EEnum()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEEnumArgument_EEnum()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel property='None' notify='true'"
 	 * @generated
 	 */

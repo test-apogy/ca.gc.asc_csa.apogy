@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
 import org.eclipse.symphony.core.environment.ui.MapViewConfigurationList;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.invocator.impl.AbstractToolsListContainerImpl;
 
 /**
@@ -59,7 +59,7 @@ public class MapViewConfigurationListImpl extends AbstractToolsListContainerImpl
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION_LIST;
+		return Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION_LIST;
 	}
 
   /**
@@ -70,7 +70,7 @@ public class MapViewConfigurationListImpl extends AbstractToolsListContainerImpl
   public EList<MapViewConfiguration> getMapViewConfigurations()
   {
 		if (mapViewConfigurations == null) {
-			mapViewConfigurations = new EObjectContainmentEList<MapViewConfiguration>(MapViewConfiguration.class, this, SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS);
+			mapViewConfigurations = new EObjectContainmentEList<MapViewConfiguration>(MapViewConfiguration.class, this, Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS);
 		}
 		return mapViewConfigurations;
 	}
@@ -84,7 +84,7 @@ public class MapViewConfigurationListImpl extends AbstractToolsListContainerImpl
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS:
 				return ((InternalEList<?>)getMapViewConfigurations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -99,7 +99,7 @@ public class MapViewConfigurationListImpl extends AbstractToolsListContainerImpl
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS:
 				return getMapViewConfigurations();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -115,7 +115,7 @@ public class MapViewConfigurationListImpl extends AbstractToolsListContainerImpl
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS:
 				getMapViewConfigurations().clear();
 				getMapViewConfigurations().addAll((Collection<? extends MapViewConfiguration>)newValue);
 				return;
@@ -132,7 +132,7 @@ public class MapViewConfigurationListImpl extends AbstractToolsListContainerImpl
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS:
 				getMapViewConfigurations().clear();
 				return;
 		}
@@ -148,7 +148,7 @@ public class MapViewConfigurationListImpl extends AbstractToolsListContainerImpl
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS:
 				return mapViewConfigurations != null && !mapViewConfigurations.isEmpty();
 		}
 		return super.eIsSet(featureID);

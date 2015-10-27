@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 import org.eclipse.symphony.core.provider.AbstractOrbitModelItemProvider;
 
 /**
@@ -60,8 +60,8 @@ public class OrbitModelItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyOrbitEnvironmentPackage.Literals.ORBIT_MODEL__INITIAL_ORBIT);
-			childrenFeatures.add(SymphonyOrbitEnvironmentPackage.Literals.ORBIT_MODEL__PROPAGATOR);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__INITIAL_ORBIT);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.ORBIT_MODEL__PROPAGATOR);
 		}
 		return childrenFeatures;
 	}
@@ -117,8 +117,8 @@ public class OrbitModelItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OrbitModel.class)) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__INITIAL_ORBIT:
-			case SymphonyOrbitEnvironmentPackage.ORBIT_MODEL__PROPAGATOR:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__INITIAL_ORBIT:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL__PROPAGATOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

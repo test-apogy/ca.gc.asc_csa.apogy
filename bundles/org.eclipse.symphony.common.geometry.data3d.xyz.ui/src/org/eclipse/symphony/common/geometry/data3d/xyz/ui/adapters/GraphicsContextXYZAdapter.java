@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.topology.TopologyFacade;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
 import org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 public class GraphicsContextXYZAdapter implements GraphicsContextAdapter {
 
@@ -65,7 +65,7 @@ public class GraphicsContextXYZAdapter implements GraphicsContextAdapter {
 
 				root.getChildren().add(content);
 
-				ctx = TopologyUIFactory.eINSTANCE.createGraphicsContext();
+				ctx = Symphony__CommonTopologyUIFactory.eINSTANCE.createGraphicsContext();
 				ctx.setTopology(root);
 
 			} catch (IOException e) {

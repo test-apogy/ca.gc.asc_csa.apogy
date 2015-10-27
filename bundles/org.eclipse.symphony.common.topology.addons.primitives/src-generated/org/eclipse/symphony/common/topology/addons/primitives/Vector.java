@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Vector#getEndPoint <em>End Point</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getVector()
+ * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getVector()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface Vector extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XRotation</em>' attribute.
 	 * @see #setXRotation(double)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getVector_XRotation()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getVector_XRotation()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
@@ -66,7 +66,7 @@ public interface Vector extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>YRotation</em>' attribute.
 	 * @see #setYRotation(double)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getVector_YRotation()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getVector_YRotation()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
@@ -93,7 +93,7 @@ public interface Vector extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ZRotation</em>' attribute.
 	 * @see #setZRotation(double)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getVector_ZRotation()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getVector_ZRotation()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
@@ -119,7 +119,7 @@ public interface Vector extends Node {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Length</em>' attribute.
 	 * @see #setLength(double)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getVector_Length()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getVector_Length()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -144,7 +144,7 @@ public interface Vector extends Node {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>End Point</em>' attribute.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getVector_EndPoint()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getVector_EndPoint()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.topology.addons.primitives.Point3d" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

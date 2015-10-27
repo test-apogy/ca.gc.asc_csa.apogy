@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.addons.dynamics.CapsuleGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.CapsuleGeometry} object.
@@ -67,7 +67,7 @@ public class CapsuleGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CapsuleGeometry_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CapsuleGeometry_radius_feature", "_UI_CapsuleGeometry_type"),
-				 Symphony__CommonTopologyDynamicsPackage.Literals.CAPSULE_GEOMETRY__RADIUS,
+				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.CAPSULE_GEOMETRY__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -89,7 +89,7 @@ public class CapsuleGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CapsuleGeometry_length_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CapsuleGeometry_length_feature", "_UI_CapsuleGeometry_type"),
-				 Symphony__CommonTopologyDynamicsPackage.Literals.CAPSULE_GEOMETRY__LENGTH,
+				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.CAPSULE_GEOMETRY__LENGTH,
 				 true,
 				 false,
 				 false,
@@ -133,8 +133,8 @@ public class CapsuleGeometryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CapsuleGeometry.class)) {
-			case Symphony__CommonTopologyDynamicsPackage.CAPSULE_GEOMETRY__RADIUS:
-			case Symphony__CommonTopologyDynamicsPackage.CAPSULE_GEOMETRY__LENGTH:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.CAPSULE_GEOMETRY__RADIUS:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.CAPSULE_GEOMETRY__LENGTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

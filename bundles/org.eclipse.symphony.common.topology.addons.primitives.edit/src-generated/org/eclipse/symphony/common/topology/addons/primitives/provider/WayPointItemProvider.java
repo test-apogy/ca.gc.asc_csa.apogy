@@ -14,7 +14,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFactory;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFactory;
 import org.eclipse.symphony.common.topology.addons.primitives.WayPoint;
 import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
 
@@ -103,102 +103,102 @@ public class WayPointItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createVector()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createVector()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createPickVector()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPickVector()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createPlane()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPlane()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createWayPoint()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createWayPoint()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createLabel()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createLabel()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createSpherePrimitive()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpherePrimitive()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createAmbientLight()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createAmbientLight()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createDirectionalLight()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createDirectionalLight()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createPointLight()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPointLight()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createSpotLight()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpotLight()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createVector()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createVector()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createPickVector()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPickVector()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createPlane()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPlane()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createWayPoint()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createWayPoint()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createLabel()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createLabel()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createSpherePrimitive()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpherePrimitive()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createAmbientLight()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createAmbientLight()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createDirectionalLight()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createDirectionalLight()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createPointLight()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPointLight()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 PrimitivesFactory.eINSTANCE.createSpotLight()));
+				 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpotLight()));
 	}
 
 	/**

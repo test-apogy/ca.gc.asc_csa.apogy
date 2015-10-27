@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.OrbitModelsList;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.OrbitModelsList} object.
@@ -123,7 +123,7 @@ public class OrbitModelsListItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.ORBIT_MODELS_LIST__ORBIT_MODELS);
+			childrenFeatures.add(Symphony__CorePackage.Literals.ORBIT_MODELS_LIST__ORBIT_MODELS);
 		}
 		return childrenFeatures;
 	}
@@ -179,11 +179,11 @@ public class OrbitModelsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OrbitModelsList.class)) {
-			case SymphonyCorePackage.ORBIT_MODELS_LIST__NAME:
-			case SymphonyCorePackage.ORBIT_MODELS_LIST__DESCRIPTION:
+			case Symphony__CorePackage.ORBIT_MODELS_LIST__NAME:
+			case Symphony__CorePackage.ORBIT_MODELS_LIST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyCorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS:
+			case Symphony__CorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

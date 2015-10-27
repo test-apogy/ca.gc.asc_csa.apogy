@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFactory;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude} object.
@@ -102,8 +102,8 @@ public class SpacecraftAttitudeItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyOrbitEnvironmentPackage.Literals.SPACECRAFT_ATTITUDE__ORIENTATION);
-			childrenFeatures.add(SymphonyOrbitEnvironmentPackage.Literals.SPACECRAFT_ATTITUDE__REFERENCE_FRAME);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_ATTITUDE__ORIENTATION);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_ATTITUDE__REFERENCE_FRAME);
 		}
 		return childrenFeatures;
 	}
@@ -160,11 +160,11 @@ public class SpacecraftAttitudeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SpacecraftAttitude.class)) {
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__ORIENTATION:
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__ORIENTATION:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -184,8 +184,8 @@ public class SpacecraftAttitudeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyOrbitEnvironmentPackage.Literals.SPACECRAFT_ATTITUDE__ORIENTATION,
-				 SymphonyOrbitEnvironmentFactory.eINSTANCE.createTimedStampedAngularCoordinates()));
+				(Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_ATTITUDE__ORIENTATION,
+				 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedAngularCoordinates()));
 	}
 
 	/**

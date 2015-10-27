@@ -14,7 +14,6 @@ import org.eclipse.symphony.common.emf.Timed;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Defines an Orbit. An orbit defines the orbital parameter at a given point in time (orbital parameters can change with time.)
  * <!-- end-model-doc -->
  *
@@ -25,7 +24,7 @@ import org.eclipse.symphony.common.emf.Timed;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.Orbit#getReferenceFrame <em>Reference Frame</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getOrbit()
+ * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getOrbit()
  * @model abstract="true"
  * @generated
  */
@@ -36,12 +35,11 @@ public interface Orbit extends Named, Described, Timed {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The inertial frame used to represent this orbit.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Reference Frame</em>' containment reference.
 	 * @see #setReferenceFrame(AbstractFrame)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getOrbit_ReferenceFrame()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getOrbit_ReferenceFrame()
 	 * @model containment="true"
 	 * @generated
 	 */

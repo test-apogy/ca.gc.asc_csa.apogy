@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 import org.eclipse.symphony.core.environment.ui.Activator;
 import org.eclipse.symphony.core.environment.ui.StarFieldPresentation;
 import org.eclipse.symphony.core.environment.ui.StarFieldSceneObject;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentUIPreferencesConstants;
 
 /**
@@ -74,7 +74,7 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentUIPackage.Literals.STAR_FIELD_PRESENTATION;
+		return Symphony__CoreEnvironmentUIPackage.Literals.STAR_FIELD_PRESENTATION;
 	}
 
   /**
@@ -110,7 +110,7 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
 		float oldCutOffMagnitude = cutOffMagnitude;
 		cutOffMagnitude = newCutOffMagnitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE, oldCutOffMagnitude, cutOffMagnitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE, oldCutOffMagnitude, cutOffMagnitude));
 	}
 
   /**
@@ -122,7 +122,7 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
+			case Symphony__CoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
 				return getCutOffMagnitude();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -137,7 +137,7 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
+			case Symphony__CoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
 				setCutOffMagnitude((Float)newValue);
 				return;
 		}
@@ -153,7 +153,7 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
+			case Symphony__CoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
 				setCutOffMagnitude(CUT_OFF_MAGNITUDE_EDEFAULT);
 				return;
 		}
@@ -169,7 +169,7 @@ public class StarFieldPresentationImpl extends NodePresentationImpl implements S
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
+			case Symphony__CoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
 				return cutOffMagnitude != CUT_OFF_MAGNITUDE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

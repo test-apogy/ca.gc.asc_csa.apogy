@@ -17,7 +17,7 @@ package org.eclipse.symphony.examples.mobile_platform;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage#getMobilePlatformSimulated()
+ * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatformSimulated()
  * @model
  * @generated
  */

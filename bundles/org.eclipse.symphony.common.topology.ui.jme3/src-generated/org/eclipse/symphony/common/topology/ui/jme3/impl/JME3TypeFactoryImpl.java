@@ -10,7 +10,7 @@ import javax.vecmath.Color3f;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.topology.ui.jme3.JME3Package;
+import org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3TypeFactory;
 
 import com.jme3.math.ColorRGBA;
@@ -38,7 +38,7 @@ public class JME3TypeFactoryImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return JME3Package.Literals.JME3_TYPE_FACTORY;
+		return Symphony__CommonTopologyUIJME3Package.Literals.JME3_TYPE_FACTORY;
 	}
 
 	/**
@@ -71,9 +71,9 @@ public class JME3TypeFactoryImpl extends MinimalEObjectImpl.Container implements
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case JME3Package.JME3_TYPE_FACTORY___CREATE_COLOR_RGBA__COLOR3F:
+			case Symphony__CommonTopologyUIJME3Package.JME3_TYPE_FACTORY___CREATE_COLOR_RGBA__COLOR3F:
 				return createColorRGBA((Color3f)arguments.get(0));
-			case JME3Package.JME3_TYPE_FACTORY___CREATE_VECTOR3F__VECTOR3F:
+			case Symphony__CommonTopologyUIJME3Package.JME3_TYPE_FACTORY___CREATE_VECTOR3F__VECTOR3F:
 				return createVector3f((javax.vecmath.Vector3f)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

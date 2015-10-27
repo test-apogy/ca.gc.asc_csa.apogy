@@ -17,8 +17,8 @@ import org.eclipse.symphony.common.emf.TimeSource;
 import org.eclipse.symphony.common.emf.TimeSourcesList;
 import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.SymphonyTopology;
 import org.eclipse.symphony.core.WorksitesList;
@@ -130,7 +130,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.SYMPHONY_ENVIRONMENT;
+		return Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT;
 	}
 
 	/**
@@ -166,7 +166,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		Date oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME, oldTime, time));
 	}
 
 	/**
@@ -186,7 +186,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		WorksitesList oldWorksitesList = worksitesList;
 		worksitesList = newWorksitesList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST, oldWorksitesList, newWorksitesList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST, oldWorksitesList, newWorksitesList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -200,14 +200,14 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		if (newWorksitesList != worksitesList) {
 			NotificationChain msgs = null;
 			if (worksitesList != null)
-				msgs = ((InternalEObject)worksitesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST, null, msgs);
+				msgs = ((InternalEObject)worksitesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST, null, msgs);
 			if (newWorksitesList != null)
-				msgs = ((InternalEObject)newWorksitesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST, null, msgs);
+				msgs = ((InternalEObject)newWorksitesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST, null, msgs);
 			msgs = basicSetWorksitesList(newWorksitesList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST, newWorksitesList, newWorksitesList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST, newWorksitesList, newWorksitesList));
 	}
 
 	/**
@@ -220,7 +220,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 			activeWorksite = (AbstractWorksite)eResolveProxy(oldActiveWorksite);
 			if (activeWorksite != oldActiveWorksite) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE, oldActiveWorksite, activeWorksite));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE, oldActiveWorksite, activeWorksite));
 			}
 		}
 		return activeWorksite;
@@ -242,7 +242,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		AbstractWorksite oldActiveWorksite = activeWorksite;
 		activeWorksite = newActiveWorksite;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE, oldActiveWorksite, activeWorksite));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE, oldActiveWorksite, activeWorksite));
 	}
 
 	/**
@@ -253,7 +253,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	public SymphonyTopology getSymphonyTopology() {
 		SymphonyTopology tmp = getSymphonyTopologyGen();
 		if (tmp == null) {
-			tmp = SymphonyCoreFactory.eINSTANCE.createSymphonyTopology();
+			tmp = Symphony__CoreFactory.eINSTANCE.createSymphonyTopology();
 			setSymphonyTopology(tmp);
 		}
 
@@ -270,7 +270,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 			symphonyTopology = (SymphonyTopology)eResolveProxy(oldSymphonyTopology);
 			if (symphonyTopology != oldSymphonyTopology) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY, oldSymphonyTopology, symphonyTopology));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY, oldSymphonyTopology, symphonyTopology));
 			}
 		}
 		return symphonyTopology;
@@ -292,7 +292,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		SymphonyTopology oldSymphonyTopology = symphonyTopology;
 		symphonyTopology = newSymphonyTopology;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY, oldSymphonyTopology, symphonyTopology));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY, oldSymphonyTopology, symphonyTopology));
 	}
 
 	/**
@@ -313,7 +313,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		TimeSourcesList oldTimeSourcesList = timeSourcesList;
 		timeSourcesList = newTimeSourcesList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST, oldTimeSourcesList, newTimeSourcesList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST, oldTimeSourcesList, newTimeSourcesList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -328,14 +328,14 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		if (newTimeSourcesList != timeSourcesList) {
 			NotificationChain msgs = null;
 			if (timeSourcesList != null)
-				msgs = ((InternalEObject)timeSourcesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST, null, msgs);
+				msgs = ((InternalEObject)timeSourcesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST, null, msgs);
 			if (newTimeSourcesList != null)
-				msgs = ((InternalEObject)newTimeSourcesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST, null, msgs);
+				msgs = ((InternalEObject)newTimeSourcesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST, null, msgs);
 			msgs = basicSetTimeSourcesList(newTimeSourcesList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST, newTimeSourcesList, newTimeSourcesList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST, newTimeSourcesList, newTimeSourcesList));
 	}
 
 	/**
@@ -349,7 +349,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 			activeTimeSource = (TimeSource)eResolveProxy(oldActiveTimeSource);
 			if (activeTimeSource != oldActiveTimeSource) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE, oldActiveTimeSource, activeTimeSource));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE, oldActiveTimeSource, activeTimeSource));
 			}
 		}
 		return activeTimeSource;
@@ -394,7 +394,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		TimeSource oldActiveTimeSource = activeTimeSource;
 		activeTimeSource = newActiveTimeSource;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE, oldActiveTimeSource, activeTimeSource));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE, oldActiveTimeSource, activeTimeSource));
 	}
 	
 	/**
@@ -405,9 +405,9 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
 				return basicSetWorksitesList(null, msgs);
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
 				return basicSetTimeSourcesList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -420,19 +420,19 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME:
 				return getTime();
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
 				return getWorksitesList();
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE:
 				if (resolve) return getActiveWorksite();
 				return basicGetActiveWorksite();
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY:
 				if (resolve) return getSymphonyTopology();
 				return basicGetSymphonyTopology();
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
 				return getTimeSourcesList();
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
 				if (resolve) return getActiveTimeSource();
 				return basicGetActiveTimeSource();
 		}
@@ -446,22 +446,22 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME:
 				setTime((Date)newValue);
 				return;
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
 				setWorksitesList((WorksitesList)newValue);
 				return;
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE:
 				setActiveWorksite((AbstractWorksite)newValue);
 				return;
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY:
 				setSymphonyTopology((SymphonyTopology)newValue);
 				return;
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
 				setTimeSourcesList((TimeSourcesList)newValue);
 				return;
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
 				setActiveTimeSource((TimeSource)newValue);
 				return;
 		}
@@ -475,22 +475,22 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
 				setWorksitesList((WorksitesList)null);
 				return;
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE:
 				setActiveWorksite((AbstractWorksite)null);
 				return;
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY:
 				setSymphonyTopology((SymphonyTopology)null);
 				return;
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
 				setTimeSourcesList((TimeSourcesList)null);
 				return;
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
 				setActiveTimeSource((TimeSource)null);
 				return;
 		}
@@ -504,17 +504,17 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
 				return worksitesList != null;
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE:
 				return activeWorksite != null;
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY:
 				return symphonyTopology != null;
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
 				return timeSourcesList != null;
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE:
 				return activeTimeSource != null;
 		}
 		return super.eIsSet(featureID);
@@ -529,7 +529,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Timed.class) {
 			switch (derivedFeatureID) {
-				case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
+				case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
 				default: return -1;
 			}
 		}
@@ -545,7 +545,7 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Timed.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.TIMED__TIME: return SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME;
+				case Symphony__CommonEMFPackage.TIMED__TIME: return Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME;
 				default: return -1;
 			}
 		}

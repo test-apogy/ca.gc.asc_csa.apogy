@@ -5,7 +5,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
 import org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode;
 import org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIFactory;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
 
 public class EarthSurfaceWorksitePresentationAdapter implements NodePresentationAdapter
 {
@@ -34,7 +34,7 @@ public class EarthSurfaceWorksitePresentationAdapter implements NodePresentation
 			throw new IllegalArgumentException();
 		}
 
-		EarthSurfaceWorksitePresentation presentationNode = SymphonyEnvironmentUIFactory.eINSTANCE.createEarthSurfaceWorksitePresentation();
+		EarthSurfaceWorksitePresentation presentationNode = Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEarthSurfaceWorksitePresentation();
 		presentationNode.setNode(obj);			
 						
 		return presentationNode;

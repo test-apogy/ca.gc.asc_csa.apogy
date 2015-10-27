@@ -4,7 +4,7 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.URLNode;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 public class URLNodePresentationAdapter implements
 		NodePresentationAdapter {
@@ -24,7 +24,7 @@ public class URLNodePresentationAdapter implements
 		NodePresentation nodePresentation = null;
 
 		if (isAdapterFor(obj)) {
-			nodePresentation = TopologyUIFactory.eINSTANCE.createURLNodePresentation();
+			nodePresentation = Symphony__CommonTopologyUIFactory.eINSTANCE.createURLNodePresentation();
 			nodePresentation.setNode(obj);
 		}
 		return nodePresentation;

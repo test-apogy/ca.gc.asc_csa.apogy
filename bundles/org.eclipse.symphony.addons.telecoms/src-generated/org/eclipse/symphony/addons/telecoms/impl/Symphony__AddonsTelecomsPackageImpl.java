@@ -31,7 +31,7 @@ import org.eclipse.symphony.addons.telecoms.TelecomStatusMonitorToolList;
 import org.eclipse.symphony.addons.telecoms.URlBasedAntennaRadiationPattern;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -179,7 +179,7 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 
 		// Initialize simple dependencies
 		Symphony__AddonsPackage.eINSTANCE.eClass();
-		SymphonyEnvironmentPackage.eINSTANCE.eClass();
+		Symphony__CoreEnvironmentPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsTelecomsPackage.createPackageContents();
@@ -688,7 +688,7 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 		Symphony__AddonsPackage theSymphony__AddonsPackage = (Symphony__AddonsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsPackage.eNS_URI);
 		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
 		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		SymphonyEnvironmentPackage theSymphonyEnvironmentPackage = (SymphonyEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyEnvironmentPackage.eNS_URI);
+		Symphony__CoreEnvironmentPackage theSymphony__CoreEnvironmentPackage = (Symphony__CoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -704,7 +704,7 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 		simpleConicalRadiationPatternEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());
 		simpleRectangularFrustumRadiationPatternEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());
 		uRlBasedAntennaRadiationPatternEClass.getESuperTypes().add(this.getAbstractAntennaRadiationPattern());
-		antennaRadiationPatternImageMapLayerEClass.getESuperTypes().add(theSymphonyEnvironmentPackage.getLineOfSightImageMapLayer());
+		antennaRadiationPatternImageMapLayerEClass.getESuperTypes().add(theSymphony__CoreEnvironmentPackage.getLineOfSightImageMapLayer());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(telecomNodeEClass, TelecomNode.class, "TelecomNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

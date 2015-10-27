@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.ConnectionPoint;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.invocator.TypeMember;
 
@@ -162,7 +162,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.ASSEMBLY_LINK;
+		return Symphony__CorePackage.Literals.ASSEMBLY_LINK;
 	}
 
 	/**
@@ -181,7 +181,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.ASSEMBLY_LINK__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ASSEMBLY_LINK__NAME, oldName, name));
 	}
 
 	/**
@@ -200,7 +200,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.ASSEMBLY_LINK__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ASSEMBLY_LINK__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -213,7 +213,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 			subSystemTypeMember = (TypeMember)eResolveProxy(oldSubSystemTypeMember);
 			if (subSystemTypeMember != oldSubSystemTypeMember) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.ASSEMBLY_LINK__SUB_SYSTEM_TYPE_MEMBER, oldSubSystemTypeMember, subSystemTypeMember));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.ASSEMBLY_LINK__SUB_SYSTEM_TYPE_MEMBER, oldSubSystemTypeMember, subSystemTypeMember));
 			}
 		}
 		return subSystemTypeMember;
@@ -235,7 +235,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 		TypeMember oldSubSystemTypeMember = subSystemTypeMember;
 		subSystemTypeMember = newSubSystemTypeMember;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.ASSEMBLY_LINK__SUB_SYSTEM_TYPE_MEMBER, oldSubSystemTypeMember, subSystemTypeMember));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ASSEMBLY_LINK__SUB_SYSTEM_TYPE_MEMBER, oldSubSystemTypeMember, subSystemTypeMember));
 	}
 
 	/**
@@ -248,7 +248,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 			parentTypeMember = (TypeMember)eResolveProxy(oldParentTypeMember);
 			if (parentTypeMember != oldParentTypeMember) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.ASSEMBLY_LINK__PARENT_TYPE_MEMBER, oldParentTypeMember, parentTypeMember));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.ASSEMBLY_LINK__PARENT_TYPE_MEMBER, oldParentTypeMember, parentTypeMember));
 			}
 		}
 		return parentTypeMember;
@@ -270,7 +270,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 		TypeMember oldParentTypeMember = parentTypeMember;
 		parentTypeMember = newParentTypeMember;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.ASSEMBLY_LINK__PARENT_TYPE_MEMBER, oldParentTypeMember, parentTypeMember));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ASSEMBLY_LINK__PARENT_TYPE_MEMBER, oldParentTypeMember, parentTypeMember));
 	}
 
 	/**
@@ -283,7 +283,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 			parentConnectionPoint = (ConnectionPoint)eResolveProxy(oldParentConnectionPoint);
 			if (parentConnectionPoint != oldParentConnectionPoint) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.ASSEMBLY_LINK__PARENT_CONNECTION_POINT, oldParentConnectionPoint, parentConnectionPoint));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.ASSEMBLY_LINK__PARENT_CONNECTION_POINT, oldParentConnectionPoint, parentConnectionPoint));
 			}
 		}
 		return parentConnectionPoint;
@@ -306,7 +306,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 		ConnectionPoint oldParentConnectionPoint = parentConnectionPoint;
 		parentConnectionPoint = newParentConnectionPoint;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.ASSEMBLY_LINK__PARENT_CONNECTION_POINT, oldParentConnectionPoint, parentConnectionPoint));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ASSEMBLY_LINK__PARENT_CONNECTION_POINT, oldParentConnectionPoint, parentConnectionPoint));
 	}
 
 	/**
@@ -326,7 +326,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 		Matrix4x4 oldTransformationMatrix = transformationMatrix;
 		transformationMatrix = newTransformationMatrix;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX, oldTransformationMatrix, newTransformationMatrix);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX, oldTransformationMatrix, newTransformationMatrix);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -340,14 +340,14 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 		if (newTransformationMatrix != transformationMatrix) {
 			NotificationChain msgs = null;
 			if (transformationMatrix != null)
-				msgs = ((InternalEObject)transformationMatrix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX, null, msgs);
+				msgs = ((InternalEObject)transformationMatrix).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX, null, msgs);
 			if (newTransformationMatrix != null)
-				msgs = ((InternalEObject)newTransformationMatrix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX, null, msgs);
+				msgs = ((InternalEObject)newTransformationMatrix).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX, null, msgs);
 			msgs = basicSetTransformationMatrix(newTransformationMatrix, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX, newTransformationMatrix, newTransformationMatrix));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX, newTransformationMatrix, newTransformationMatrix));
 	}
 
 	/**
@@ -367,7 +367,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 		Node oldGeometryNode = geometryNode;
 		geometryNode = newGeometryNode;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.ASSEMBLY_LINK__GEOMETRY_NODE, oldGeometryNode, newGeometryNode);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ASSEMBLY_LINK__GEOMETRY_NODE, oldGeometryNode, newGeometryNode);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -381,14 +381,14 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 		if (newGeometryNode != geometryNode) {
 			NotificationChain msgs = null;
 			if (geometryNode != null)
-				msgs = ((InternalEObject)geometryNode).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.ASSEMBLY_LINK__GEOMETRY_NODE, null, msgs);
+				msgs = ((InternalEObject)geometryNode).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.ASSEMBLY_LINK__GEOMETRY_NODE, null, msgs);
 			if (newGeometryNode != null)
-				msgs = ((InternalEObject)newGeometryNode).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.ASSEMBLY_LINK__GEOMETRY_NODE, null, msgs);
+				msgs = ((InternalEObject)newGeometryNode).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.ASSEMBLY_LINK__GEOMETRY_NODE, null, msgs);
 			msgs = basicSetGeometryNode(newGeometryNode, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.ASSEMBLY_LINK__GEOMETRY_NODE, newGeometryNode, newGeometryNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ASSEMBLY_LINK__GEOMETRY_NODE, newGeometryNode, newGeometryNode));
 	}
 
 	/**
@@ -401,7 +401,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 			parentInstance = (SymphonySystem)eResolveProxy(oldParentInstance);
 			if (parentInstance != oldParentInstance) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.ASSEMBLY_LINK__PARENT_INSTANCE, oldParentInstance, parentInstance));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.ASSEMBLY_LINK__PARENT_INSTANCE, oldParentInstance, parentInstance));
 			}
 		}
 		return parentInstance;
@@ -423,7 +423,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 		SymphonySystem oldParentInstance = parentInstance;
 		parentInstance = newParentInstance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.ASSEMBLY_LINK__PARENT_INSTANCE, oldParentInstance, parentInstance));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ASSEMBLY_LINK__PARENT_INSTANCE, oldParentInstance, parentInstance));
 	}
 
 	/**
@@ -436,7 +436,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 			subSystemInstance = (SymphonySystem)eResolveProxy(oldSubSystemInstance);
 			if (subSystemInstance != oldSubSystemInstance) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.ASSEMBLY_LINK__SUB_SYSTEM_INSTANCE, oldSubSystemInstance, subSystemInstance));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.ASSEMBLY_LINK__SUB_SYSTEM_INSTANCE, oldSubSystemInstance, subSystemInstance));
 			}
 		}
 		return subSystemInstance;
@@ -458,7 +458,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 		SymphonySystem oldSubSystemInstance = subSystemInstance;
 		subSystemInstance = newSubSystemInstance;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.ASSEMBLY_LINK__SUB_SYSTEM_INSTANCE, oldSubSystemInstance, subSystemInstance));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ASSEMBLY_LINK__SUB_SYSTEM_INSTANCE, oldSubSystemInstance, subSystemInstance));
 	}
 
 	/**
@@ -469,9 +469,9 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX:
+			case Symphony__CorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX:
 				return basicSetTransformationMatrix(null, msgs);
-			case SymphonyCorePackage.ASSEMBLY_LINK__GEOMETRY_NODE:
+			case Symphony__CorePackage.ASSEMBLY_LINK__GEOMETRY_NODE:
 				return basicSetGeometryNode(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -484,27 +484,27 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.ASSEMBLY_LINK__NAME:
+			case Symphony__CorePackage.ASSEMBLY_LINK__NAME:
 				return getName();
-			case SymphonyCorePackage.ASSEMBLY_LINK__DESCRIPTION:
+			case Symphony__CorePackage.ASSEMBLY_LINK__DESCRIPTION:
 				return getDescription();
-			case SymphonyCorePackage.ASSEMBLY_LINK__PARENT_TYPE_MEMBER:
+			case Symphony__CorePackage.ASSEMBLY_LINK__PARENT_TYPE_MEMBER:
 				if (resolve) return getParentTypeMember();
 				return basicGetParentTypeMember();
-			case SymphonyCorePackage.ASSEMBLY_LINK__SUB_SYSTEM_TYPE_MEMBER:
+			case Symphony__CorePackage.ASSEMBLY_LINK__SUB_SYSTEM_TYPE_MEMBER:
 				if (resolve) return getSubSystemTypeMember();
 				return basicGetSubSystemTypeMember();
-			case SymphonyCorePackage.ASSEMBLY_LINK__PARENT_CONNECTION_POINT:
+			case Symphony__CorePackage.ASSEMBLY_LINK__PARENT_CONNECTION_POINT:
 				if (resolve) return getParentConnectionPoint();
 				return basicGetParentConnectionPoint();
-			case SymphonyCorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX:
+			case Symphony__CorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX:
 				return getTransformationMatrix();
-			case SymphonyCorePackage.ASSEMBLY_LINK__GEOMETRY_NODE:
+			case Symphony__CorePackage.ASSEMBLY_LINK__GEOMETRY_NODE:
 				return getGeometryNode();
-			case SymphonyCorePackage.ASSEMBLY_LINK__PARENT_INSTANCE:
+			case Symphony__CorePackage.ASSEMBLY_LINK__PARENT_INSTANCE:
 				if (resolve) return getParentInstance();
 				return basicGetParentInstance();
-			case SymphonyCorePackage.ASSEMBLY_LINK__SUB_SYSTEM_INSTANCE:
+			case Symphony__CorePackage.ASSEMBLY_LINK__SUB_SYSTEM_INSTANCE:
 				if (resolve) return getSubSystemInstance();
 				return basicGetSubSystemInstance();
 		}
@@ -518,31 +518,31 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.ASSEMBLY_LINK__NAME:
+			case Symphony__CorePackage.ASSEMBLY_LINK__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__DESCRIPTION:
+			case Symphony__CorePackage.ASSEMBLY_LINK__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__PARENT_TYPE_MEMBER:
+			case Symphony__CorePackage.ASSEMBLY_LINK__PARENT_TYPE_MEMBER:
 				setParentTypeMember((TypeMember)newValue);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__SUB_SYSTEM_TYPE_MEMBER:
+			case Symphony__CorePackage.ASSEMBLY_LINK__SUB_SYSTEM_TYPE_MEMBER:
 				setSubSystemTypeMember((TypeMember)newValue);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__PARENT_CONNECTION_POINT:
+			case Symphony__CorePackage.ASSEMBLY_LINK__PARENT_CONNECTION_POINT:
 				setParentConnectionPoint((ConnectionPoint)newValue);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX:
+			case Symphony__CorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX:
 				setTransformationMatrix((Matrix4x4)newValue);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__GEOMETRY_NODE:
+			case Symphony__CorePackage.ASSEMBLY_LINK__GEOMETRY_NODE:
 				setGeometryNode((Node)newValue);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__PARENT_INSTANCE:
+			case Symphony__CorePackage.ASSEMBLY_LINK__PARENT_INSTANCE:
 				setParentInstance((SymphonySystem)newValue);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__SUB_SYSTEM_INSTANCE:
+			case Symphony__CorePackage.ASSEMBLY_LINK__SUB_SYSTEM_INSTANCE:
 				setSubSystemInstance((SymphonySystem)newValue);
 				return;
 		}
@@ -556,31 +556,31 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.ASSEMBLY_LINK__NAME:
+			case Symphony__CorePackage.ASSEMBLY_LINK__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__DESCRIPTION:
+			case Symphony__CorePackage.ASSEMBLY_LINK__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__PARENT_TYPE_MEMBER:
+			case Symphony__CorePackage.ASSEMBLY_LINK__PARENT_TYPE_MEMBER:
 				setParentTypeMember((TypeMember)null);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__SUB_SYSTEM_TYPE_MEMBER:
+			case Symphony__CorePackage.ASSEMBLY_LINK__SUB_SYSTEM_TYPE_MEMBER:
 				setSubSystemTypeMember((TypeMember)null);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__PARENT_CONNECTION_POINT:
+			case Symphony__CorePackage.ASSEMBLY_LINK__PARENT_CONNECTION_POINT:
 				setParentConnectionPoint((ConnectionPoint)null);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX:
+			case Symphony__CorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX:
 				setTransformationMatrix((Matrix4x4)null);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__GEOMETRY_NODE:
+			case Symphony__CorePackage.ASSEMBLY_LINK__GEOMETRY_NODE:
 				setGeometryNode((Node)null);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__PARENT_INSTANCE:
+			case Symphony__CorePackage.ASSEMBLY_LINK__PARENT_INSTANCE:
 				setParentInstance((SymphonySystem)null);
 				return;
-			case SymphonyCorePackage.ASSEMBLY_LINK__SUB_SYSTEM_INSTANCE:
+			case Symphony__CorePackage.ASSEMBLY_LINK__SUB_SYSTEM_INSTANCE:
 				setSubSystemInstance((SymphonySystem)null);
 				return;
 		}
@@ -594,23 +594,23 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.ASSEMBLY_LINK__NAME:
+			case Symphony__CorePackage.ASSEMBLY_LINK__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyCorePackage.ASSEMBLY_LINK__DESCRIPTION:
+			case Symphony__CorePackage.ASSEMBLY_LINK__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyCorePackage.ASSEMBLY_LINK__PARENT_TYPE_MEMBER:
+			case Symphony__CorePackage.ASSEMBLY_LINK__PARENT_TYPE_MEMBER:
 				return parentTypeMember != null;
-			case SymphonyCorePackage.ASSEMBLY_LINK__SUB_SYSTEM_TYPE_MEMBER:
+			case Symphony__CorePackage.ASSEMBLY_LINK__SUB_SYSTEM_TYPE_MEMBER:
 				return subSystemTypeMember != null;
-			case SymphonyCorePackage.ASSEMBLY_LINK__PARENT_CONNECTION_POINT:
+			case Symphony__CorePackage.ASSEMBLY_LINK__PARENT_CONNECTION_POINT:
 				return parentConnectionPoint != null;
-			case SymphonyCorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX:
+			case Symphony__CorePackage.ASSEMBLY_LINK__TRANSFORMATION_MATRIX:
 				return transformationMatrix != null;
-			case SymphonyCorePackage.ASSEMBLY_LINK__GEOMETRY_NODE:
+			case Symphony__CorePackage.ASSEMBLY_LINK__GEOMETRY_NODE:
 				return geometryNode != null;
-			case SymphonyCorePackage.ASSEMBLY_LINK__PARENT_INSTANCE:
+			case Symphony__CorePackage.ASSEMBLY_LINK__PARENT_INSTANCE:
 				return parentInstance != null;
-			case SymphonyCorePackage.ASSEMBLY_LINK__SUB_SYSTEM_INSTANCE:
+			case Symphony__CorePackage.ASSEMBLY_LINK__SUB_SYSTEM_INSTANCE:
 				return subSystemInstance != null;
 		}
 		return super.eIsSet(featureID);
@@ -624,7 +624,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyCorePackage.ASSEMBLY_LINK__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CorePackage.ASSEMBLY_LINK__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -639,7 +639,7 @@ public class AssemblyLinkImpl extends MinimalEObjectImpl.Container implements
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyCorePackage.ASSEMBLY_LINK__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CorePackage.ASSEMBLY_LINK__DESCRIPTION;
 				default: return -1;
 			}
 		}

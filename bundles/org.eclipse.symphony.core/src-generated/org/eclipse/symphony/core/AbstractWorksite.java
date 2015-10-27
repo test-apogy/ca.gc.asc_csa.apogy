@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.emf.Timed;
  *   <li>{@link org.eclipse.symphony.core.AbstractWorksite#getWorksitesList <em>Worksites List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getAbstractWorksite()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getAbstractWorksite()
  * @model abstract="true"
  * @generated
  */
@@ -34,7 +34,7 @@ public interface AbstractWorksite extends Named, Described, Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Worksites List</em>' container reference.
 	 * @see #setWorksitesList(WorksitesList)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getAbstractWorksite_WorksitesList()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getAbstractWorksite_WorksitesList()
 	 * @see org.eclipse.symphony.core.WorksitesList#getWorksites
 	 * @model opposite="worksites" transient="false"
 	 * @generated

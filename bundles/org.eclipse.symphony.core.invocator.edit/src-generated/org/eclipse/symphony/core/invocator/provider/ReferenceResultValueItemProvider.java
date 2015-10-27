@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.EcoreFactory;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ReferenceResultValue;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.ReferenceResultValue} object.
@@ -68,7 +68,7 @@ public class ReferenceResultValueItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ReferenceResultValue_value_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ReferenceResultValue_value_feature", "_UI_ReferenceResultValue_type"),
-				 EMFEcoreInvocatorPackage.Literals.REFERENCE_RESULT_VALUE__VALUE,
+				 Symphony__CoreInvocatorPackage.Literals.REFERENCE_RESULT_VALUE__VALUE,
 				 false,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class ReferenceResultValueItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.REFERENCE_RESULT_VALUE__VALUE);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.REFERENCE_RESULT_VALUE__VALUE);
 		}
 		return childrenFeatures;
 	}
@@ -146,7 +146,7 @@ public class ReferenceResultValueItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ReferenceResultValue.class)) {
-			case EMFEcoreInvocatorPackage.REFERENCE_RESULT_VALUE__VALUE:
+			case Symphony__CoreInvocatorPackage.REFERENCE_RESULT_VALUE__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -167,7 +167,7 @@ public class ReferenceResultValueItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.REFERENCE_RESULT_VALUE__VALUE,
+				(Symphony__CoreInvocatorPackage.Literals.REFERENCE_RESULT_VALUE__VALUE,
 				 EcoreFactory.eINSTANCE.createEObject()));
 	}
 

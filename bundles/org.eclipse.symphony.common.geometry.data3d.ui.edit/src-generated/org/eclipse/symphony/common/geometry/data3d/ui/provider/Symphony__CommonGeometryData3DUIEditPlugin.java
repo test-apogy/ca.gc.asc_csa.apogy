@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.images.provider.Symphony__CommonImagesEditPlu
 import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
-import org.eclipse.symphony.common.topology.ui.provider.TopologyUIEditPlugin;
+import org.eclipse.symphony.common.topology.ui.provider.Symphony__CommonTopologyUIEditPlugin;
 
 /**
  * This is the central singleton for the Symphony__CommonGeometryData3DUI edit plugin.
@@ -45,7 +45,7 @@ public final class Symphony__CommonGeometryData3DUIEditPlugin extends EMFPlugin 
 	public Symphony__CommonGeometryData3DUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     TopologyUIEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyUIEditPlugin.INSTANCE,
 		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
 		     Symphony__CommonImagesEditPlugin.INSTANCE,
 		     Symphony__CommonTopologyEditPlugin.INSTANCE,

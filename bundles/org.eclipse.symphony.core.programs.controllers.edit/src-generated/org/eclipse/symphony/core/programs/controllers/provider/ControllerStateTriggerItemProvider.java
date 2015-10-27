@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.programs.controllers.ControllerStateTrigger;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.ControllerStateTrigger} object.
@@ -69,7 +69,7 @@ public class ControllerStateTriggerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ControllerStateTrigger_enablingValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ControllerStateTrigger_enablingValue_feature", "_UI_ControllerStateTrigger_type"),
-				 EMFEcoreControllersPackage.Literals.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE,
+				 Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class ControllerStateTriggerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ControllerStateTrigger_repeatPeriod_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ControllerStateTrigger_repeatPeriod_feature", "_UI_ControllerStateTrigger_type"),
-				 EMFEcoreControllersPackage.Literals.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD,
+				 Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD,
 				 true,
 				 false,
 				 false,
@@ -147,8 +147,8 @@ public class ControllerStateTriggerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ControllerStateTrigger.class)) {
-			case EMFEcoreControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
-			case EMFEcoreControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

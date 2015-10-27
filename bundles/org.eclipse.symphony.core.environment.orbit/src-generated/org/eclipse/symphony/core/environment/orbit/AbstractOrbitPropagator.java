@@ -15,7 +15,6 @@ import org.eclipse.symphony.common.emf.Named;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Defines a class that propagate an initial orbit through time.
  * <!-- end-model-doc -->
  *
@@ -30,7 +29,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator#getValidToDate <em>Valid To Date</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getAbstractOrbitPropagator()
+ * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAbstractOrbitPropagator()
  * @model abstract="true"
  * @generated
  */
@@ -40,12 +39,11 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The frame in which the orbit is propagated.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Reference Frame</em>' containment reference.
 	 * @see #setReferenceFrame(AbstractFrame)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getAbstractOrbitPropagator_ReferenceFrame()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_ReferenceFrame()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -67,11 +65,10 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The attitude provider. Can be used to specify an attitude control law.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Attitude Provider</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getAbstractOrbitPropagator_AttitudeProvider()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_AttitudeProvider()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -82,12 +79,11 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The initial orbit to propagate in time.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initial Orbit</em>' reference.
 	 * @see #setInitialOrbit(Orbit)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getAbstractOrbitPropagator_InitialOrbit()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_InitialOrbit()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -108,12 +104,11 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Defines the earliest data for which the propagator is valid.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Valid From Date</em>' attribute.
 	 * @see #setValidFromDate(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getAbstractOrbitPropagator_ValidFromDate()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_ValidFromDate()
 	 * @model unique="false" required="true"
 	 * @generated
 	 */
@@ -134,12 +129,11 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Defines the latest data for which the propagator is valid.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Valid To Date</em>' attribute.
 	 * @see #setValidToDate(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getAbstractOrbitPropagator_ValidToDate()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getAbstractOrbitPropagator_ValidToDate()
 	 * @model unique="false" required="true"
 	 * @generated
 	 */
@@ -159,7 +153,6 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Propagate the current orbit to a specified time to get a Spacecraft state.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.Exception" targetDateUnique="false"
@@ -171,7 +164,6 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns a list of SpacecraftState from startDate to endDate at time interval of timeInterval.
 	 * @param timeInterval The time interval to get spacecraft states, in seconds.
 	 * <!-- end-model-doc -->
@@ -185,7 +177,6 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns wether or not a specified date falls within the validity range of the propagator.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" dateUnique="false"

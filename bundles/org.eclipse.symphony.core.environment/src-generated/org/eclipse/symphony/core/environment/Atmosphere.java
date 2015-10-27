@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.environment.Atmosphere#getSurfaceDensity <em>Surface Density</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAtmosphere()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAtmosphere()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Atmosphere extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Wind Speed</em>' attribute.
 	 * @see #setWindSpeed(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAtmosphere_WindSpeed()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAtmosphere_WindSpeed()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m/s'"
 	 * @generated
@@ -63,7 +63,7 @@ public interface Atmosphere extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Wind Direction</em>' attribute.
 	 * @see #setWindDirection(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAtmosphere_WindDirection()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAtmosphere_WindDirection()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
@@ -89,9 +89,9 @@ public interface Atmosphere extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Temperature</em>' attribute.
 	 * @see #setTemperature(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAtmosphere_Temperature()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAtmosphere_Temperature()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='\u2103'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='deg'"
 	 * @generated
 	 */
   double getTemperature();
@@ -111,11 +111,11 @@ public interface Atmosphere extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The atmosphere pressure at the reference altitude, in pascals.
+	 * The atmosphere pressure at the reference altitude, in Pascals.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Surface Pressure</em>' attribute.
 	 * @see #setSurfacePressure(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAtmosphere_SurfacePressure()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAtmosphere_SurfacePressure()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='Pa'"
 	 * @generated
@@ -141,7 +141,7 @@ public interface Atmosphere extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Surface Density</em>' attribute.
 	 * @see #setSurfaceDensity(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAtmosphere_SurfaceDensity()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAtmosphere_SurfaceDensity()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='kg/m\263'"
 	 * @generated

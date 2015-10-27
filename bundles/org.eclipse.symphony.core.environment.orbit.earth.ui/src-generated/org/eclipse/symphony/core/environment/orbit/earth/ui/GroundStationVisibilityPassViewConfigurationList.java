@@ -22,7 +22,7 @@ import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getGroundStationVisibilityPassViewConfigurationList()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getGroundStationVisibilityPassViewConfigurationList()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface GroundStationVisibilityPassViewConfigurationList extends Abstra
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Configurations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getGroundStationVisibilityPassViewConfigurationList_Configurations()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getGroundStationVisibilityPassViewConfigurationList_Configurations()
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationVisibilityPassViewConfiguration#getConfigurationsList
 	 * @model opposite="configurationsList" containment="true"
 	 * @generated

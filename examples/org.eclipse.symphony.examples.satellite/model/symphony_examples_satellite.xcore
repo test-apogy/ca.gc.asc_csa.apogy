@@ -1,4 +1,9 @@
-@GenModel(prefix="EMFEcoreExampleSatellite", copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)", modelName="EMFEcoreExampleSatellite",childCreationExtenders="true", extensibleProviderFactory="true",suppressGenModelAnnotations="false")
+@GenModel(prefix="Symphony__ExamplesSatellite",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+		  modelName="Symphony__ExamplesSatellite",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.examples.satellite/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.examples.satellite.edit/src-generated")
 
@@ -27,61 +32,63 @@ type List < T > wraps java.util.List
 type SortedSet<T> wraps java.util.SortedSet
 type Exception wraps java.lang.Exception
 
-/**
+/*
  * An example satellite. The satellite is nadir looking, and can roll back and forth (+- 5.0 deg) along its trajectory.
  * An imager is mounted on its nadir axis and can take images of the Earth below. 
  */
 abstract class Satellite extends Named
 {	
-	/**
+	/*
 	 * The satellite maximum roll rate.
 	 */
 	@GenModel(csa_units="rad/s")
 	double maximumRollRate = "0.017452778"
 	
-	/**
+	/*
 	 * The satellite maximum roll.
 	 */
 	@GenModel(csa_units="rad")
 	double maximumRoll = "0.087"
 	
-	/**
+	/*
 	 * The Orbit Model defining this satellite orbit around the Earth.
 	 */
 	contains OrbitModel orbitModel
 	
-	/**
+	/*
 	 * The imager on-board the satellite.
 	 */
 	contains SatelliteImager imager opposite satellite
 	
-	/**
+	/*
 	 * Commands the spacecraft to roll to the specified roll angle, in radians.
 	 */
 	op boolean roll(double targetRollAngle)
 	
-	/**
+	/*
 	 * Commands the spacecraft to acquire an image with a given zoom.
 	 */
 	op OrbitalImage acquireImage(double zoom)
 	
-	/**
+	/*
 	 * Commands the spacecraft to download a number of OrbitalImage.
 	 */
 	op List<OrbitalImage> downloadImages(int maximumNumberOfImages)
 	
-	/**
+	/*
 	 * Enqueues a command for future execution.
 	 */
 	op boolean enqueueSatelliteCommand(SatelliteCommand command)
 }
 
 class SatelliteSimulated extends Satellite
-{	
+{
+	
 }
 
 class SatelliteStub extends Satellite
-{	
+{
+	
 }
 
 // Satellite Commands
@@ -120,58 +127,58 @@ class ImageOrder
 	double commandedZoom = "1.0"
 }
 
-/**
+/*
  * A specialization of AbstractCamera that is a camera mounted on a satellite.
  */
 class SatelliteImager extends AbstractCamera, Zoomable
 {
 	container Satellite satellite opposite imager
 	
-	/**
+	/*
 	 * List of images stored on-board the imager. Note that when the maximum number of image has been acquired,
 	 * further takeImageSnapshot command will be rejected.
 	 */
 	contains OrbitalImage[0..10] imagesAcquired
 	
-	/**
+	/*
 	 * Command that downloads a specified number of images.
 	 * @param maximumNumberOfImages The maximum number of images to download.
 	 */
 	op List<OrbitalImage> downloadImages(int maximumNumberOfImages)
 }
 
-/**
+/*
  * A specialization of AbstractEImage that includes the geographical coordinates of the center of the image.
  */
 class OrbitalImage extends AbstractEImage
 {	
 	int orderId = "-1"
 	
-	/**
+	/*
 	 * The GeographicCoordinates of the center of the image.
 	 */
 	contains GeographicCoordinates imageCenter
 	
-	/**
+	/*
 	 * The image download size, in bytes.
 	 */
 	int downloadSize = "0"
 }
 
 
-/**
+/*
  * A class representing a constellation of Satellites. It provides basic queries used to schedule 
  * image acquisition and upload/downloads from the satellites.
  */
 class SatelliteConstellation
 {
-	/**
+	/*
 	 * The list of satellite(s) available.
 	 */
 	@GenModel(notify="true", children= "true", createChild="true")
 	refers Satellite[1..*] satellites
 
-	/**
+	/*
 	 * The list of GroundStation used to communicate with the satellite(s).
 	 */
 	@GenModel(notify="true", child="true", createChild="true")
@@ -184,14 +191,14 @@ class SatelliteConstellation
 	
 	EDate endDate
 	
-	/**
+	/*
 	 * Returns the satellite associated with the specified OrbitModel.
 	 * @param orbitModel The specified OrbitModel.
 	 * @return The Satellite associated with the specified OrbitModel, null if none is found.
 	 */
 	op Satellite getSatellite(OrbitModel orbitModel)
 
-	/**
+	/*
 	 * Returns the visibility passes for a given ImageOrder. 
 	 * @param imageOrder The ImageOrder that needs imaging.
 	 * @param startDate The start date of the period to be queried.
@@ -201,7 +208,7 @@ class SatelliteConstellation
 	 */
 	op SortedSet<VisibilityPass> getTargetPasses(ImageOrder imageOrder, EDate startDate, EDate endDate, ElevationMask elevationMask) throws Exception
 
-	/**
+	/*
 	 * Returns the Ground Station(s) visibility passes for a given Satellite. 
 	 * @param satellite The Satellite.
 	 * @param startDate The start date of the period to be queried.
@@ -211,23 +218,23 @@ class SatelliteConstellation
 	 */
 	op SortedSet<VisibilityPass> getGroundStationPasses(Satellite satellite, EDate startDate, EDate endDate, ElevationMask elevationMask) throws Exception	
 
-	/**
+	/*
 	 * Using the pending orders and the current satellite(s) state, creates the list of commands that needs to be uploaded to the satellite(s).
 	 */
 	op SatelliteCommandList plan(List<ImageOrder> imageOrders, EDate startDate, EDate endDate)	
 	
-	/**
+	/*
 	 * Using the pending orders and the current satellite(s) state, creates the list of commands that needs to be uploaded to the satellite(s).
 	 */
 	op SatelliteCommandList plan(EDate startDate, EDate endDate)	
 	
-	/**
+	/*
 	 * Using the pending orders and the current satellite(s) state, creates the list of commands that needs to be uploaded to the satellite(s).
 	 */
 	op SatelliteCommandList plan()	
 }
 
-/**
+/*
  * Utilities class for the Satellite example.
  */
 class SatelliteUtils
@@ -243,7 +250,7 @@ class SatelliteUtils
  * Invocator support.
  * ----------------------------------------------------------------------*/
  
-/**
+/*
  * Specific TypeAdapter for SatelliteConstellation.
  */
 class SatelliteConstellationTypeApiAdapter extends TypeApiAdapter
@@ -251,7 +258,7 @@ class SatelliteConstellationTypeApiAdapter extends TypeApiAdapter
 	
 }
  
-/**
+/*
  * Initialization Data representing the state of of a SatelliteConstellation.
  */
 class SatelliteConstellationInitializationData extends AbstractInitializationData
@@ -266,7 +273,7 @@ class SatelliteConstellationInitializationData extends AbstractInitializationDat
 	contains ImageOrder[0..*] pendingImageOrders
 }
 
-/**
+/*
  * Initialization Data representing the state of a Satellite.
  */
 class SatelliteInitializationData extends AbstractInitializationData

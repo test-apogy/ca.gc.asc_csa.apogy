@@ -21,8 +21,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.ConnectionPointsList;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * This is the item provider adapter for a
@@ -73,7 +73,7 @@ public class ConnectionPointsListItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_ConnectionPointsList_symphonySystem_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionPointsList_symphonySystem_feature", "_UI_ConnectionPointsList_type"),
-				 SymphonyCorePackage.Literals.CONNECTION_POINTS_LIST__SYMPHONY_SYSTEM,
+				 Symphony__CorePackage.Literals.CONNECTION_POINTS_LIST__SYMPHONY_SYSTEM,
 				 true,
 				 false,
 				 true,
@@ -94,7 +94,7 @@ public class ConnectionPointsListItemProvider extends ItemProviderAdapter
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.CONNECTION_POINTS_LIST__CONNECTION_POINTS);
+			childrenFeatures.add(Symphony__CorePackage.Literals.CONNECTION_POINTS_LIST__CONNECTION_POINTS);
 		}
 		return childrenFeatures;
 	}
@@ -145,7 +145,7 @@ public class ConnectionPointsListItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConnectionPointsList.class)) {
-			case SymphonyCorePackage.CONNECTION_POINTS_LIST__CONNECTION_POINTS:
+			case Symphony__CorePackage.CONNECTION_POINTS_LIST__CONNECTION_POINTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -166,8 +166,8 @@ public class ConnectionPointsListItemProvider extends ItemProviderAdapter
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.CONNECTION_POINTS_LIST__CONNECTION_POINTS,
-				 SymphonyCoreFactory.eINSTANCE.createConnectionPoint()));
+				(Symphony__CorePackage.Literals.CONNECTION_POINTS_LIST__CONNECTION_POINTS,
+				 Symphony__CoreFactory.eINSTANCE.createConnectionPoint()));
 	}
 
 	/**

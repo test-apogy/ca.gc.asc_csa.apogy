@@ -23,8 +23,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.Context} object.
@@ -109,7 +109,7 @@ public class ContextItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Context_dataProductsList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Context_dataProductsList_feature", "_UI_Context_type"),
-				 EMFEcoreInvocatorPackage.Literals.CONTEXT__DATA_PRODUCTS_LIST,
+				 Symphony__CoreInvocatorPackage.Literals.CONTEXT__DATA_PRODUCTS_LIST,
 				 true,
 				 false,
 				 true,
@@ -132,7 +132,7 @@ public class ContextItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Context_instancesCreationDate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Context_instancesCreationDate_feature", "_UI_Context_type"),
-				 EMFEcoreInvocatorPackage.Literals.CONTEXT__INSTANCES_CREATION_DATE,
+				 Symphony__CoreInvocatorPackage.Literals.CONTEXT__INSTANCES_CREATION_DATE,
 				 false,
 				 false,
 				 false,
@@ -155,7 +155,7 @@ public class ContextItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Context_instancesDisposalDate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Context_instancesDisposalDate_feature", "_UI_Context_type"),
-				 EMFEcoreInvocatorPackage.Literals.CONTEXT__INSTANCES_DISPOSAL_DATE,
+				 Symphony__CoreInvocatorPackage.Literals.CONTEXT__INSTANCES_DISPOSAL_DATE,
 				 false,
 				 false,
 				 false,
@@ -177,8 +177,8 @@ public class ContextItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.CONTEXT__DATA_PRODUCTS_LIST);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.CONTEXT__DATA_PRODUCTS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -225,12 +225,12 @@ public class ContextItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Context.class)) {
-			case EMFEcoreInvocatorPackage.CONTEXT__NAME:
-			case EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
-			case EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
+			case Symphony__CoreInvocatorPackage.CONTEXT__NAME:
+			case Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
+			case Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -251,8 +251,8 @@ public class ContextItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createVariableImplementationsList()));
+				(Symphony__CoreInvocatorPackage.Literals.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createVariableImplementationsList()));
 	}
 
   /**

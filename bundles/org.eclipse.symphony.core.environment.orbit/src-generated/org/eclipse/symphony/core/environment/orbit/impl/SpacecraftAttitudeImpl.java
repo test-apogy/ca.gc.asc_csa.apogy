@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.environment.orbit.AbstractFrame;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 import org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates;
 
 /**
@@ -85,7 +85,7 @@ public class SpacecraftAttitudeImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyOrbitEnvironmentPackage.Literals.SPACECRAFT_ATTITUDE;
+		return Symphony__CoreEnvironmentOrbitPackage.Literals.SPACECRAFT_ATTITUDE;
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class SpacecraftAttitudeImpl extends MinimalEObjectImpl.Container impleme
 		Date oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__TIME, oldTime, time));
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class SpacecraftAttitudeImpl extends MinimalEObjectImpl.Container impleme
 		TimedStampedAngularCoordinates oldOrientation = orientation;
 		orientation = newOrientation;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__ORIENTATION, oldOrientation, newOrientation);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__ORIENTATION, oldOrientation, newOrientation);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -142,14 +142,14 @@ public class SpacecraftAttitudeImpl extends MinimalEObjectImpl.Container impleme
 		if (newOrientation != orientation) {
 			NotificationChain msgs = null;
 			if (orientation != null)
-				msgs = ((InternalEObject)orientation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__ORIENTATION, null, msgs);
+				msgs = ((InternalEObject)orientation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__ORIENTATION, null, msgs);
 			if (newOrientation != null)
-				msgs = ((InternalEObject)newOrientation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__ORIENTATION, null, msgs);
+				msgs = ((InternalEObject)newOrientation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__ORIENTATION, null, msgs);
 			msgs = basicSetOrientation(newOrientation, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__ORIENTATION, newOrientation, newOrientation));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__ORIENTATION, newOrientation, newOrientation));
 	}
 
 	/**
@@ -170,7 +170,7 @@ public class SpacecraftAttitudeImpl extends MinimalEObjectImpl.Container impleme
 		AbstractFrame oldReferenceFrame = referenceFrame;
 		referenceFrame = newReferenceFrame;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME, oldReferenceFrame, newReferenceFrame);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME, oldReferenceFrame, newReferenceFrame);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -185,14 +185,14 @@ public class SpacecraftAttitudeImpl extends MinimalEObjectImpl.Container impleme
 		if (newReferenceFrame != referenceFrame) {
 			NotificationChain msgs = null;
 			if (referenceFrame != null)
-				msgs = ((InternalEObject)referenceFrame).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME, null, msgs);
+				msgs = ((InternalEObject)referenceFrame).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME, null, msgs);
 			if (newReferenceFrame != null)
-				msgs = ((InternalEObject)newReferenceFrame).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME, null, msgs);
+				msgs = ((InternalEObject)newReferenceFrame).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME, null, msgs);
 			msgs = basicSetReferenceFrame(newReferenceFrame, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME, newReferenceFrame, newReferenceFrame));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME, newReferenceFrame, newReferenceFrame));
 	}
 
 	/**
@@ -203,9 +203,9 @@ public class SpacecraftAttitudeImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__ORIENTATION:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__ORIENTATION:
 				return basicSetOrientation(null, msgs);
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME:
 				return basicSetReferenceFrame(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -219,11 +219,11 @@ public class SpacecraftAttitudeImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__TIME:
 				return getTime();
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__ORIENTATION:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__ORIENTATION:
 				return getOrientation();
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME:
 				return getReferenceFrame();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -237,13 +237,13 @@ public class SpacecraftAttitudeImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__TIME:
 				setTime((Date)newValue);
 				return;
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__ORIENTATION:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__ORIENTATION:
 				setOrientation((TimedStampedAngularCoordinates)newValue);
 				return;
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME:
 				setReferenceFrame((AbstractFrame)newValue);
 				return;
 		}
@@ -258,13 +258,13 @@ public class SpacecraftAttitudeImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__ORIENTATION:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__ORIENTATION:
 				setOrientation((TimedStampedAngularCoordinates)null);
 				return;
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME:
 				setReferenceFrame((AbstractFrame)null);
 				return;
 		}
@@ -279,11 +279,11 @@ public class SpacecraftAttitudeImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__ORIENTATION:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__ORIENTATION:
 				return orientation != null;
-			case SymphonyOrbitEnvironmentPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE__REFERENCE_FRAME:
 				return referenceFrame != null;
 		}
 		return super.eIsSet(featureID);

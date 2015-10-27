@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.OrbitalImage;
 import org.eclipse.symphony.examples.satellite.Satellite;
 import org.eclipse.symphony.examples.satellite.SatelliteCommand;
@@ -127,7 +127,7 @@ public abstract class SatelliteImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleSatellitePackage.Literals.SATELLITE;
+		return Symphony__ExamplesSatellitePackage.Literals.SATELLITE;
 	}
 
 	/**
@@ -148,7 +148,7 @@ public abstract class SatelliteImpl extends MinimalEObjectImpl.Container impleme
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE__NAME, oldName, name));
 	}
 
 	/**
@@ -169,7 +169,7 @@ public abstract class SatelliteImpl extends MinimalEObjectImpl.Container impleme
 		double oldMaximumRollRate = maximumRollRate;
 		maximumRollRate = newMaximumRollRate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE, oldMaximumRollRate, maximumRollRate));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE, oldMaximumRollRate, maximumRollRate));
 	}
 
 	/**
@@ -190,7 +190,7 @@ public abstract class SatelliteImpl extends MinimalEObjectImpl.Container impleme
 		double oldMaximumRoll = maximumRoll;
 		maximumRoll = newMaximumRoll;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE__MAXIMUM_ROLL, oldMaximumRoll, maximumRoll));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL, oldMaximumRoll, maximumRoll));
 	}
 
 	/**
@@ -211,7 +211,7 @@ public abstract class SatelliteImpl extends MinimalEObjectImpl.Container impleme
 		OrbitModel oldOrbitModel = orbitModel;
 		orbitModel = newOrbitModel;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE__ORBIT_MODEL, oldOrbitModel, newOrbitModel);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL, oldOrbitModel, newOrbitModel);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -226,14 +226,14 @@ public abstract class SatelliteImpl extends MinimalEObjectImpl.Container impleme
 		if (newOrbitModel != orbitModel) {
 			NotificationChain msgs = null;
 			if (orbitModel != null)
-				msgs = ((InternalEObject)orbitModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleSatellitePackage.SATELLITE__ORBIT_MODEL, null, msgs);
+				msgs = ((InternalEObject)orbitModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL, null, msgs);
 			if (newOrbitModel != null)
-				msgs = ((InternalEObject)newOrbitModel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleSatellitePackage.SATELLITE__ORBIT_MODEL, null, msgs);
+				msgs = ((InternalEObject)newOrbitModel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL, null, msgs);
 			msgs = basicSetOrbitModel(newOrbitModel, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE__ORBIT_MODEL, newOrbitModel, newOrbitModel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL, newOrbitModel, newOrbitModel));
 	}
 
 	/**
@@ -254,7 +254,7 @@ public abstract class SatelliteImpl extends MinimalEObjectImpl.Container impleme
 		SatelliteImager oldImager = imager;
 		imager = newImager;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE__IMAGER, oldImager, newImager);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE__IMAGER, oldImager, newImager);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -269,14 +269,14 @@ public abstract class SatelliteImpl extends MinimalEObjectImpl.Container impleme
 		if (newImager != imager) {
 			NotificationChain msgs = null;
 			if (imager != null)
-				msgs = ((InternalEObject)imager).eInverseRemove(this, EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__SATELLITE, SatelliteImager.class, msgs);
+				msgs = ((InternalEObject)imager).eInverseRemove(this, Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__SATELLITE, SatelliteImager.class, msgs);
 			if (newImager != null)
-				msgs = ((InternalEObject)newImager).eInverseAdd(this, EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__SATELLITE, SatelliteImager.class, msgs);
+				msgs = ((InternalEObject)newImager).eInverseAdd(this, Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__SATELLITE, SatelliteImager.class, msgs);
 			msgs = basicSetImager(newImager, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE__IMAGER, newImager, newImager));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE__IMAGER, newImager, newImager));
 	}
 
 	/**
@@ -331,9 +331,9 @@ public abstract class SatelliteImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE__IMAGER:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__IMAGER:
 				if (imager != null)
-					msgs = ((InternalEObject)imager).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleSatellitePackage.SATELLITE__IMAGER, null, msgs);
+					msgs = ((InternalEObject)imager).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.SATELLITE__IMAGER, null, msgs);
 				return basicSetImager((SatelliteImager)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -347,9 +347,9 @@ public abstract class SatelliteImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE__ORBIT_MODEL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
 				return basicSetOrbitModel(null, msgs);
-			case EMFEcoreExampleSatellitePackage.SATELLITE__IMAGER:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__IMAGER:
 				return basicSetImager(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -363,15 +363,15 @@ public abstract class SatelliteImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE__NAME:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__NAME:
 				return getName();
-			case EMFEcoreExampleSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
 				return getMaximumRollRate();
-			case EMFEcoreExampleSatellitePackage.SATELLITE__MAXIMUM_ROLL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
 				return getMaximumRoll();
-			case EMFEcoreExampleSatellitePackage.SATELLITE__ORBIT_MODEL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
 				return getOrbitModel();
-			case EMFEcoreExampleSatellitePackage.SATELLITE__IMAGER:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__IMAGER:
 				return getImager();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -385,19 +385,19 @@ public abstract class SatelliteImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE__NAME:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__NAME:
 				setName((String)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
 				setMaximumRollRate((Double)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE__MAXIMUM_ROLL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
 				setMaximumRoll((Double)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE__ORBIT_MODEL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE__IMAGER:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__IMAGER:
 				setImager((SatelliteImager)newValue);
 				return;
 		}
@@ -412,19 +412,19 @@ public abstract class SatelliteImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE__NAME:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
 				setMaximumRollRate(MAXIMUM_ROLL_RATE_EDEFAULT);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE__MAXIMUM_ROLL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
 				setMaximumRoll(MAXIMUM_ROLL_EDEFAULT);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE__ORBIT_MODEL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)null);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE__IMAGER:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__IMAGER:
 				setImager((SatelliteImager)null);
 				return;
 		}
@@ -439,15 +439,15 @@ public abstract class SatelliteImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE__NAME:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EMFEcoreExampleSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
 				return maximumRollRate != MAXIMUM_ROLL_RATE_EDEFAULT;
-			case EMFEcoreExampleSatellitePackage.SATELLITE__MAXIMUM_ROLL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
 				return maximumRoll != MAXIMUM_ROLL_EDEFAULT;
-			case EMFEcoreExampleSatellitePackage.SATELLITE__ORBIT_MODEL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
 				return orbitModel != null;
-			case EMFEcoreExampleSatellitePackage.SATELLITE__IMAGER:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__IMAGER:
 				return imager != null;
 		}
 		return super.eIsSet(featureID);
@@ -461,13 +461,13 @@ public abstract class SatelliteImpl extends MinimalEObjectImpl.Container impleme
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE___ROLL__DOUBLE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE___ROLL__DOUBLE:
 				return roll((Double)arguments.get(0));
-			case EMFEcoreExampleSatellitePackage.SATELLITE___ACQUIRE_IMAGE__DOUBLE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE___ACQUIRE_IMAGE__DOUBLE:
 				return acquireImage((Double)arguments.get(0));
-			case EMFEcoreExampleSatellitePackage.SATELLITE___DOWNLOAD_IMAGES__INT:
+			case Symphony__ExamplesSatellitePackage.SATELLITE___DOWNLOAD_IMAGES__INT:
 				return downloadImages((Integer)arguments.get(0));
-			case EMFEcoreExampleSatellitePackage.SATELLITE___ENQUEUE_SATELLITE_COMMAND__SATELLITECOMMAND:
+			case Symphony__ExamplesSatellitePackage.SATELLITE___ENQUEUE_SATELLITE_COMMAND__SATELLITECOMMAND:
 				return enqueueSatelliteCommand((SatelliteCommand)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

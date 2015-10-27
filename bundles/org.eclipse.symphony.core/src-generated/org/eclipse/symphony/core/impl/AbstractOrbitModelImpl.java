@@ -14,7 +14,7 @@ import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.AbstractOrbitModel;
 import org.eclipse.symphony.core.OrbitModelsList;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 
 /**
@@ -100,7 +100,7 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.ABSTRACT_ORBIT_MODEL;
+		return Symphony__CorePackage.Literals.ABSTRACT_ORBIT_MODEL;
 	}
 
 	/**
@@ -121,7 +121,7 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__NAME, oldName, name));
 	}
 
 	/**
@@ -142,7 +142,7 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -151,7 +151,7 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	 * @generated
 	 */
 	public OrbitModelsList getOrbitModelsList() {
-		if (eContainerFeatureID() != SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST) return null;
 		return (OrbitModelsList)eContainer();
 	}
 
@@ -161,7 +161,7 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	 * @generated
 	 */
 	public OrbitModelsList basicGetOrbitModelsList() {
-		if (eContainerFeatureID() != SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST) return null;
 		return (OrbitModelsList)eInternalContainer();
 	}
 
@@ -171,7 +171,7 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	 * @generated
 	 */
 	public NotificationChain basicSetOrbitModelsList(OrbitModelsList newOrbitModelsList, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newOrbitModelsList, SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOrbitModelsList, Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST, msgs);
 		return msgs;
 	}
 
@@ -181,19 +181,19 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	 * @generated
 	 */
 	public void setOrbitModelsList(OrbitModelsList newOrbitModelsList) {
-		if (newOrbitModelsList != eInternalContainer() || (eContainerFeatureID() != SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST && newOrbitModelsList != null)) {
+		if (newOrbitModelsList != eInternalContainer() || (eContainerFeatureID() != Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST && newOrbitModelsList != null)) {
 			if (EcoreUtil.isAncestor(this, newOrbitModelsList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOrbitModelsList != null)
-				msgs = ((InternalEObject)newOrbitModelsList).eInverseAdd(this, SymphonyCorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS, OrbitModelsList.class, msgs);
+				msgs = ((InternalEObject)newOrbitModelsList).eInverseAdd(this, Symphony__CorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS, OrbitModelsList.class, msgs);
 			msgs = basicSetOrbitModelsList(newOrbitModelsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST, newOrbitModelsList, newOrbitModelsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST, newOrbitModelsList, newOrbitModelsList));
 	}
 
 	/**
@@ -207,7 +207,7 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 			variableFeatureReference = (VariableFeatureReference)eResolveProxy(oldVariableFeatureReference);
 			if (variableFeatureReference != oldVariableFeatureReference) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE, oldVariableFeatureReference, variableFeatureReference));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE, oldVariableFeatureReference, variableFeatureReference));
 			}
 		}
 		return variableFeatureReference;
@@ -231,7 +231,7 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 		VariableFeatureReference oldVariableFeatureReference = variableFeatureReference;
 		variableFeatureReference = newVariableFeatureReference;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE, oldVariableFeatureReference, variableFeatureReference));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE, oldVariableFeatureReference, variableFeatureReference));
 	}
 
 	/**
@@ -242,7 +242,7 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOrbitModelsList((OrbitModelsList)otherEnd, msgs);
@@ -258,7 +258,7 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
 				return basicSetOrbitModelsList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -272,8 +272,8 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
-				return eInternalContainer().eInverseRemove(this, SymphonyCorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS, OrbitModelsList.class, msgs);
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
+				return eInternalContainer().eInverseRemove(this, Symphony__CorePackage.ORBIT_MODELS_LIST__ORBIT_MODELS, OrbitModelsList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -286,14 +286,14 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__NAME:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__NAME:
 				return getName();
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION:
 				return getDescription();
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
 				if (resolve) return getOrbitModelsList();
 				return basicGetOrbitModelsList();
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE:
 				if (resolve) return getVariableFeatureReference();
 				return basicGetVariableFeatureReference();
 		}
@@ -308,16 +308,16 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__NAME:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
 				setOrbitModelsList((OrbitModelsList)newValue);
 				return;
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE:
 				setVariableFeatureReference((VariableFeatureReference)newValue);
 				return;
 		}
@@ -332,16 +332,16 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__NAME:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
 				setOrbitModelsList((OrbitModelsList)null);
 				return;
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE:
 				setVariableFeatureReference((VariableFeatureReference)null);
 				return;
 		}
@@ -356,13 +356,13 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__NAME:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
 				return basicGetOrbitModelsList() != null;
-			case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE:
+			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE:
 				return variableFeatureReference != null;
 		}
 		return super.eIsSet(featureID);
@@ -377,7 +377,7 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -393,7 +393,7 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyCorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__DESCRIPTION;
 				default: return -1;
 			}
 		}

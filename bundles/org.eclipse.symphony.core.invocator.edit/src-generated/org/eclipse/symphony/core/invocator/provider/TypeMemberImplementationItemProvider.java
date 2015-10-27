@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
 
 /**
@@ -67,7 +67,7 @@ public class TypeMemberImplementationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TypeMemberImplementation_typeMember_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TypeMemberImplementation_typeMember_feature", "_UI_TypeMemberImplementation_type"),
-				 EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER,
+				 Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_IMPLEMENTATION__TYPE_MEMBER,
 				 true,
 				 false,
 				 true,
@@ -90,7 +90,7 @@ public class TypeMemberImplementationItemProvider
          getResourceLocator(),
          getString("_UI_TypeMemberImplementation_implementationClass_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_TypeMemberImplementation_implementationClass_feature", "_UI_TypeMemberImplementation_type"),
-         EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
+         Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
          true,
          false,
          true,

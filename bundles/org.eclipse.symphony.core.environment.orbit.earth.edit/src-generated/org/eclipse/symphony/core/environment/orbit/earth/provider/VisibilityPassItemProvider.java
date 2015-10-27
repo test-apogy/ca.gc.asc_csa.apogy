@@ -27,8 +27,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
 
 /**
@@ -89,7 +89,7 @@ public class VisibilityPassItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPass_orbitModel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPass_orbitModel_feature", "_UI_VisibilityPass_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS__ORBIT_MODEL,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__ORBIT_MODEL,
 				 false,
 				 false,
 				 true,
@@ -111,7 +111,7 @@ public class VisibilityPassItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPass_surfaceLocation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPass_surfaceLocation_feature", "_UI_VisibilityPass_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS__SURFACE_LOCATION,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__SURFACE_LOCATION,
 				 false,
 				 false,
 				 true,
@@ -133,7 +133,7 @@ public class VisibilityPassItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPass_startTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPass_startTime_feature", "_UI_VisibilityPass_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS__START_TIME,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__START_TIME,
 				 false,
 				 false,
 				 false,
@@ -155,7 +155,7 @@ public class VisibilityPassItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPass_endTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPass_endTime_feature", "_UI_VisibilityPass_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS__END_TIME,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__END_TIME,
 				 false,
 				 false,
 				 false,
@@ -177,7 +177,7 @@ public class VisibilityPassItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPass_positionHistory_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPass_positionHistory_feature", "_UI_VisibilityPass_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS__POSITION_HISTORY,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__POSITION_HISTORY,
 				 false,
 				 false,
 				 false,
@@ -199,7 +199,7 @@ public class VisibilityPassItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPass_duration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPass_duration_feature", "_UI_VisibilityPass_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS__DURATION,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__DURATION,
 				 true,
 				 false,
 				 false,
@@ -220,7 +220,7 @@ public class VisibilityPassItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS__POSITION_HISTORY);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__POSITION_HISTORY);
 		}
 		return childrenFeatures;
 	}
@@ -277,14 +277,14 @@ public class VisibilityPassItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VisibilityPass.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__ORBIT_MODEL:
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__SURFACE_LOCATION:
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__START_TIME:
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__END_TIME:
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__SURFACE_LOCATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__START_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__END_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__DURATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS__POSITION_HISTORY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS__POSITION_HISTORY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -304,8 +304,8 @@ public class VisibilityPassItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS__POSITION_HISTORY,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createVisibilityPassSpacecraftPositionHistory()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS__POSITION_HISTORY,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPassSpacecraftPositionHistory()));
 	}
 
 	/**

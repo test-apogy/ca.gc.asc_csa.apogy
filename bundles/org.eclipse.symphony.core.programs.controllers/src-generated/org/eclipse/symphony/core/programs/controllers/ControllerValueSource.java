@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource#getLastValue <em>Last Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerValueSource()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerValueSource()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface ControllerValueSource extends ValueSource
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Component</em>' reference.
 	 * @see #setComponent(EComponent)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerValueSource_Component()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerValueSource_Component()
 	 * @model transient="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' notify='true' resolveProxies='false'"
 	 * @generated
@@ -64,7 +64,7 @@ public interface ControllerValueSource extends ValueSource
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>EComponent Qualifier</em>' containment reference.
 	 * @see #setEComponentQualifier(EComponentQualifier)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerValueSource_EComponentQualifier()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerValueSource_EComponentQualifier()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -91,7 +91,7 @@ public interface ControllerValueSource extends ValueSource
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Conditioning</em>' containment reference.
 	 * @see #setConditioning(AbstractInputConditioning)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerValueSource_Conditioning()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerValueSource_Conditioning()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true'"
 	 * @generated
@@ -118,7 +118,7 @@ public interface ControllerValueSource extends ValueSource
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Last Value</em>' attribute.
 	 * @see #setLastValue(Object)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerValueSource_LastValue()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerValueSource_LastValue()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated

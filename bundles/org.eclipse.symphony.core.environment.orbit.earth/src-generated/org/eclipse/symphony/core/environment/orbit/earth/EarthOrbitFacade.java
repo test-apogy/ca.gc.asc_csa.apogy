@@ -29,7 +29,7 @@ import org.orekit.utils.TimeStampedPVCoordinates;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthOrbitFacade()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getEarthOrbitFacade()
  * @model
  * @generated
  */
@@ -41,7 +41,6 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the Earth gravitational constant from GRIM5C1 model: 3.986004415e14 m³/s².
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
@@ -55,7 +54,6 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Creates an AbsoluteDate from a Date.
 	 * @param date A date.
 	 * @return The AbsoluteDate (OreKit type) for the specified date.
@@ -80,7 +78,6 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Creates an EarthSurfaceLocation from parameters.
 	 * @param name The name of the location.
 	 * @param description The description of the location.
@@ -102,7 +99,6 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Create an OreKitBackedFrame based on an OreKit frame.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" oreKitFrameDataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitFrame" oreKitFrameUnique="false"
@@ -125,7 +121,8 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Returns the elevation angle of a spacecraft relative to a Earth surface location.
+	 * Returns the elevation angle of a spacecraft relative
+	 * to a Earth surface location.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" spacecraftStateUnique="false" earthSurfaceLocationUnique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_unit='rad'"
@@ -137,7 +134,8 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Returns the azimuth angle (relative to North) of a spacecraft at a Earth surface location.
+	 * Returns the azimuth angle (relative to North) of a
+	 * spacecraft at a Earth surface location.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" spacecraftStateUnique="false" earthSurfaceLocationUnique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_unit='rad'"
@@ -209,7 +207,6 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Creates a Keplerian Orbit based on a EarthOrbitPropagator.
 	 * @param earthOrbitPropagator The EarthOrbitPropagator.
 	 * @return A KeplerianEarthOrbit representing the initial orbit of the propagator.
@@ -223,7 +220,6 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Creates a CartesianEarthOrbit Orbit based on a EarthOrbitPropagator.
 	 * @param earthOrbitPropagator The EarthOrbitPropagator.
 	 * @return A CartesianEarthOrbit representing the initial orbit of the propagator.
@@ -237,7 +233,6 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Creates a KeplerianEarthOrbit from an OreKit KeplerianOrbit.
 	 * @param oreKitKeplerianOrbit The OreKit Keplerian Orbit.
 	 * @return the associated KeplerianEarthOrbit.
@@ -251,7 +246,6 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Creates a CartesianEarthOrbit from an OreKit CartesianOrbit.
 	 * @param oreKitKeplerianOrbit The OreKit Cartesian Orbit.
 	 * @return the associated CartesianEarthOrbit.
@@ -265,7 +259,6 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Converts an OreKit SpacecraftState to GeographicCoordinates. The conversion uses the IERS_2010 frame with a WGS84 equatorial radius and earth flatenning.
 	 * @param oreKitBackedSpacecraftState The OreKit SpacecraftState.
 	 * @return the associated GeographicCoordinates.
@@ -279,7 +272,6 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Sorts a list of VisibilityPass by increasing date order (form earlier to later). If two or more VisibilityPass
 	 * have the same start date, they are ordered by duration.
 	 * @param passes The list of VisibilityPass.
@@ -294,7 +286,6 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Sorts a list of VisibilityPass by increasing duration. If two or more VisibilityPass
 	 * have the same duration, they are ordered by start date.
 	 * @param passes The list of VisibilityPass.
@@ -310,7 +301,6 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Sorts a list of VisibilityPassSpacecraftPosition by increasing elevation.
 	 * @param passes The list of VisibilityPassSpacecraftPosition.
 	 * @return the SortedSet of VisibilityPassSpacecraftPosition.
@@ -325,7 +315,6 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Sorts a list of VisibilityPassSpacecraftPosition by increasing spacecraft cross-track angle.
 	 * @param passes The list of VisibilityPassSpacecraftPosition.
 	 * @return the SortedSet of VisibilityPassSpacecraftPosition.
@@ -340,7 +329,6 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Loads a TLE from a URL.
 	 * @param url The URL as a String.
 	 * @return The loaded TLE
@@ -355,7 +343,6 @@ public interface EarthOrbitFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Create a TLEEarthOrbitPropagator using a TLE.
 	 * @param tle The Two-Line Element defining the propagator.
 	 * @return The TLEEarthOrbitPropagator.

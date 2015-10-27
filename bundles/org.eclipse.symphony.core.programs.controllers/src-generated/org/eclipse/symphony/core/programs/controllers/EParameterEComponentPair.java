@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EParameter;
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getEParameterEComponentPair()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getEParameterEComponentPair()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface EParameterEComponentPair extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>EParameter</em>' reference.
    * @see #setEParameter(EParameter)
-   * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getEParameterEComponentPair_EParameter()
+   * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getEParameterEComponentPair_EParameter()
    * @model required="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
    * @generated
@@ -63,7 +63,7 @@ public interface EParameterEComponentPair extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Value Source</em>' containment reference.
    * @see #setValueSource(ValueSource)
-   * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getEParameterEComponentPair_ValueSource()
+   * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getEParameterEComponentPair_ValueSource()
    * @see org.eclipse.symphony.core.programs.controllers.ValueSource#getPair
    * @model opposite="pair" containment="true" required="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true'"

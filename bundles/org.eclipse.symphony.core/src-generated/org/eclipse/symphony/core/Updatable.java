@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.Updatable#isAutoUpdateEnabled <em>Auto Update Enabled</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getUpdatable()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getUpdatable()
  * @model abstract="true"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface Updatable extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Updating</em>' attribute.
 	 * @see #setUpdating(boolean)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getUpdatable_Updating()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getUpdatable_Updating()
 	 * @model default="false" unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='UPDATABLE'"
 	 * @generated
@@ -67,7 +67,7 @@ public interface Updatable extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Auto Update Enabled</em>' attribute.
 	 * @see #setAutoUpdateEnabled(boolean)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getUpdatable_AutoUpdateEnabled()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getUpdatable_AutoUpdateEnabled()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='UPDATABLE'"
 	 * @generated
@@ -88,7 +88,6 @@ public interface Updatable extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the default value of autoUpdateEnabled;
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
@@ -100,7 +99,7 @@ public interface Updatable extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Update method.
+	 * Update method.
 	 * <!-- end-model-doc -->
 	 * @model exceptions="org.eclipse.symphony.core.Exception"
 	 * @generated

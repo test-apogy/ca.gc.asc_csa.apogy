@@ -11,12 +11,11 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Defines a rectangular region covered by an image.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularRegionImage()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegionImage()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -26,7 +25,6 @@ public interface RectangularRegionImage extends RectangularRegionProvider
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Return the image associated with this region.
 	 * @return The image, can be null.
 	 * <!-- end-model-doc -->
@@ -39,7 +37,6 @@ public interface RectangularRegionImage extends RectangularRegionProvider
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the image resolution.
 	 * @return The resolution, in meters / pixel, or -1 if not defined.
 	 * <!-- end-model-doc -->

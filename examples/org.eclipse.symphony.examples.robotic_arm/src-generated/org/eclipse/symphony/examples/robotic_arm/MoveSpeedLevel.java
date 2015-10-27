@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * expected, this used by RoboticArm (and its subclasses) when
  * moveTo() is called.
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage#getMoveSpeedLevel()
+ * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getMoveSpeedLevel()
  * @model
  * @generated
  */

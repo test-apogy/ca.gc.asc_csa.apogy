@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMember;
 import org.eclipse.symphony.core.invocator.TypeMemberReference;
 
@@ -55,7 +55,7 @@ public class TypeMemberReferenceImpl extends MinimalEObjectImpl.Container implem
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE;
+		return Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE;
 	}
 
   /**
@@ -70,7 +70,7 @@ public class TypeMemberReferenceImpl extends MinimalEObjectImpl.Container implem
 			typeMember = (TypeMember)eResolveProxy(oldTypeMember);
 			if (typeMember != oldTypeMember) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER, oldTypeMember, typeMember));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER, oldTypeMember, typeMember));
 			}
 		}
 		return typeMember;
@@ -96,7 +96,7 @@ public class TypeMemberReferenceImpl extends MinimalEObjectImpl.Container implem
 		TypeMember oldTypeMember = typeMember;
 		typeMember = newTypeMember;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER, oldTypeMember, typeMember));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER, oldTypeMember, typeMember));
 	}
 
   /**
@@ -108,7 +108,7 @@ public class TypeMemberReferenceImpl extends MinimalEObjectImpl.Container implem
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER:
 				if (resolve) return getTypeMember();
 				return basicGetTypeMember();
 		}
@@ -124,7 +124,7 @@ public class TypeMemberReferenceImpl extends MinimalEObjectImpl.Container implem
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER:
 				setTypeMember((TypeMember)newValue);
 				return;
 		}
@@ -140,7 +140,7 @@ public class TypeMemberReferenceImpl extends MinimalEObjectImpl.Container implem
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER:
 				setTypeMember((TypeMember)null);
 				return;
 		}
@@ -156,7 +156,7 @@ public class TypeMemberReferenceImpl extends MinimalEObjectImpl.Container implem
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER:
 				return typeMember != null;
 		}
 		return super.eIsSet(featureID);

@@ -23,9 +23,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.Environment} object.
@@ -132,7 +132,7 @@ public class EnvironmentItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Environment_activeContext_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Environment_activeContext_feature", "_UI_Environment_type"),
-				 EMFEcoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT,
+				 Symphony__CoreInvocatorPackage.Literals.ENVIRONMENT__ACTIVE_CONTEXT,
 				 true,
 				 false,
 				 true,
@@ -154,9 +154,9 @@ public class EnvironmentItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.ENVIRONMENT__TYPES_LIST);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.ENVIRONMENT__VARIABLES_LIST);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.ENVIRONMENT__CONTEXTS_LIST);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ENVIRONMENT__TYPES_LIST);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ENVIRONMENT__VARIABLES_LIST);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ENVIRONMENT__CONTEXTS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -226,14 +226,14 @@ public class EnvironmentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Environment.class)) {
-			case EMFEcoreInvocatorPackage.ENVIRONMENT__NAME:
-			case EMFEcoreInvocatorPackage.ENVIRONMENT__DESCRIPTION:
-			case EMFEcoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT:
+			case Symphony__CoreInvocatorPackage.ENVIRONMENT__NAME:
+			case Symphony__CoreInvocatorPackage.ENVIRONMENT__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.ENVIRONMENT__TYPES_LIST:
-			case EMFEcoreInvocatorPackage.ENVIRONMENT__VARIABLES_LIST:
-			case EMFEcoreInvocatorPackage.ENVIRONMENT__CONTEXTS_LIST:
+			case Symphony__CoreInvocatorPackage.ENVIRONMENT__TYPES_LIST:
+			case Symphony__CoreInvocatorPackage.ENVIRONMENT__VARIABLES_LIST:
+			case Symphony__CoreInvocatorPackage.ENVIRONMENT__CONTEXTS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -254,18 +254,18 @@ public class EnvironmentItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.ENVIRONMENT__TYPES_LIST,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createTypesList()));
+				(Symphony__CoreInvocatorPackage.Literals.ENVIRONMENT__TYPES_LIST,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createTypesList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.ENVIRONMENT__VARIABLES_LIST,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createVariablesList()));
+				(Symphony__CoreInvocatorPackage.Literals.ENVIRONMENT__VARIABLES_LIST,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createVariablesList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.ENVIRONMENT__CONTEXTS_LIST,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createContextsList()));
+				(Symphony__CoreInvocatorPackage.Literals.ENVIRONMENT__CONTEXTS_LIST,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createContextsList()));
 	}
 
   /**

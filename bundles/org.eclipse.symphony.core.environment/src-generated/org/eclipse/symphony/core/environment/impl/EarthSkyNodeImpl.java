@@ -23,7 +23,7 @@ import org.eclipse.symphony.core.environment.Moon;
 import org.eclipse.symphony.core.environment.Sky;
 import org.eclipse.symphony.core.environment.StarField;
 import org.eclipse.symphony.core.environment.Sun;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,7 +50,7 @@ public class EarthSkyNodeImpl extends SkyNodeImpl implements EarthSkyNode
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.EARTH_SKY_NODE;
+		return Symphony__CoreEnvironmentPackage.Literals.EARTH_SKY_NODE;
 	}
 
 	@Override
@@ -82,7 +82,7 @@ public class EarthSkyNodeImpl extends SkyNodeImpl implements EarthSkyNode
 					{
 						EarthSky earthSky = (EarthSky) msg.getNotifier();
 						
-						if(msg.getFeatureID(EarthSky.class) == SymphonyEnvironmentPackage.EARTH_SKY__SUN_HORIZONTAL_COORDINATES)
+						if(msg.getFeatureID(EarthSky.class) == Symphony__CoreEnvironmentPackage.EARTH_SKY__SUN_HORIZONTAL_COORDINATES)
 						{				
 							//System.out.println("Sun has moved ! ");
 							
@@ -100,7 +100,7 @@ public class EarthSkyNodeImpl extends SkyNodeImpl implements EarthSkyNode
 								sunTransformNode.setPosition(MathFacade.INSTANCE.createTuple3d(sunPosition));
 							}
 						}
-						else if(msg.getFeatureID(EarthSky.class) == SymphonyEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES)
+						else if(msg.getFeatureID(EarthSky.class) == Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES)
 						{
 							//System.out.println("Moon has moved ! ");
 							
@@ -119,7 +119,7 @@ public class EarthSkyNodeImpl extends SkyNodeImpl implements EarthSkyNode
 								moonTransformNode.setPosition(MathFacade.INSTANCE.createTuple3d(moonPosition));
 							}							
 						}
-						else if(msg.getFeatureID(EarthSky.class) == SymphonyEnvironmentPackage.SKY__TIME)
+						else if(msg.getFeatureID(EarthSky.class) == Symphony__CoreEnvironmentPackage.SKY__TIME)
 						{
 							//System.out.println("Time has changed ! ");
 							

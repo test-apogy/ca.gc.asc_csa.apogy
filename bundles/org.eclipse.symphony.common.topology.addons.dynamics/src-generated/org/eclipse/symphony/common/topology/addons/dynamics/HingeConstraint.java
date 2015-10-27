@@ -20,7 +20,7 @@ package org.eclipse.symphony.common.topology.addons.dynamics;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint#getAngularCurrentState <em>Angular Current State</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getHingeConstraint()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getHingeConstraint()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface HingeConstraint extends AbstractConstraint {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Angular Current State</em>' containment reference.
 	 * @see #setAngularCurrentState(ConstraintState)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getHingeConstraint_AngularCurrentState()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getHingeConstraint_AngularCurrentState()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

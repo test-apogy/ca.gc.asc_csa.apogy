@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.examples.camera.CameraSimulated;
-import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
+import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.camera.CameraSimulated} object.
@@ -124,7 +124,7 @@ public class CameraSimulatedItemProvider extends CameraItemProvider {
 		boolean qualify =
 			childFeature == Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN ||
 			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
-			childFeature == EMFEcoreExampleCameraPackage.Literals.CAMERA__FOV;
+			childFeature == Symphony__ExamplesCameraPackage.Literals.CAMERA__FOV;
 
 		if (qualify) {
 			return getString

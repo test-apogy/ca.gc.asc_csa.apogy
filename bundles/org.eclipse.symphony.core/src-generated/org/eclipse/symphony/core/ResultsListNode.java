@@ -21,7 +21,7 @@ import org.eclipse.symphony.core.invocator.ResultsList;
  *   <li>{@link org.eclipse.symphony.core.ResultsListNode#getResultsList <em>Results List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getResultsListNode()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getResultsListNode()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface ResultsListNode extends AggregateGroupNode {
 	 * 
 	 * @return the value of the '<em>Results List</em>' reference.
 	 * @see #setResultsList(ResultsList)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getResultsListNode_ResultsList()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getResultsListNode_ResultsList()
 	 * @model transient="true"
 	 * @generated
 	 */

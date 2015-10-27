@@ -18,7 +18,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.environment.AbstractMapLayer;
 import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
@@ -124,7 +124,7 @@ public class FeatureOfInterestCreationDialog extends Dialog
 	@Override
 	protected void okPressed() 
 	{					
-		foi = SymphonyCoreFactory.eINSTANCE.createFeatureOfInterest();
+		foi = Symphony__CoreFactory.eINSTANCE.createFeatureOfInterest();
 		foi.setPose(pose);
 		foi.setName(nameText.getText());
 		foi.setDescription(descriptionText.getText());

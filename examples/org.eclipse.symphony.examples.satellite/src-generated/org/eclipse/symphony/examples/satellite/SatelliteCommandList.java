@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteCommandList#getCommands <em>Commands</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteCommandList()
+ * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteCommandList()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface SatelliteCommandList extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Commands</em>' containment reference list.
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteCommandList_Commands()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteCommandList_Commands()
 	 * @model containment="true"
 	 * @generated
 	 */

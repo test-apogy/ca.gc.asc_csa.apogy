@@ -14,12 +14,12 @@ import org.eclipse.symphony.common.topology.TopologyFacade;
 import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
+import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
 import org.eclipse.symphony.examples.camera.PTUCamera;
 import org.eclipse.symphony.examples.camera.symphony.PTUCameraData;
 import org.eclipse.symphony.examples.camera.symphony.PTUCameraSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraFactory;
-import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage;
+import org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyFactory;
+import org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -47,7 +47,7 @@ public class PTUCameraSymphonySystemApiAdapterImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyExampleCameraPackage.Literals.PTU_CAMERA_SYMPHONY_SYSTEM_API_ADAPTER;
+		return Symphony__ExamplesCameraSymphonyPackage.Literals.PTU_CAMERA_SYMPHONY_SYSTEM_API_ADAPTER;
 	}
 
 	/**
@@ -74,7 +74,7 @@ public class PTUCameraSymphonySystemApiAdapterImpl extends
 		// Use the relevant factory method to create the desired
 		// initialization data object, which, in this case, is
 		// an instance of PTUCameraData.
-		return SymphonyExampleCameraFactory.eINSTANCE.createPTUCameraData();
+		return Symphony__ExamplesCameraSymphonyFactory.eINSTANCE.createPTUCameraData();
 	}
 	
 	/**
@@ -210,7 +210,7 @@ public class PTUCameraSymphonySystemApiAdapterImpl extends
 	public Matrix4x4 createResultMatrix(OperationCall operationCall) 
 	{
 		// If the takeSnapshot() method was called
-		if (operationCall.getEOperation().getOperationID() == EMFEcoreExampleCameraPackage.CAMERA___TAKE_SNAPSHOT)
+		if (operationCall.getEOperation().getOperationID() == Symphony__ExamplesCameraPackage.CAMERA___TAKE_SNAPSHOT)
 		{
 			// Extract the camera lens and root nodes
 			Node tip = TopologyFacade.INSTANCE.findNodesByID("PTU_CAMERA_SYM_SYS_LENS",

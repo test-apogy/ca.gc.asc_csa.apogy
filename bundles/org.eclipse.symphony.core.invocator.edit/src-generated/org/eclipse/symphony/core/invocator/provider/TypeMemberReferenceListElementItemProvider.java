@@ -14,8 +14,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 
@@ -66,7 +66,7 @@ public class TypeMemberReferenceListElementItemProvider extends
 				 getResourceLocator(),
 				 getString("_UI_TypeMemberReferenceListElement_subSegmentsCount_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TypeMemberReferenceListElement_subSegmentsCount_feature", "_UI_TypeMemberReferenceListElement_type"),
-				 EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__SUB_SEGMENTS_COUNT,
+				 Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__SUB_SEGMENTS_COUNT,
 				 false,
 				 false,
 				 false,
@@ -89,7 +89,7 @@ public class TypeMemberReferenceListElementItemProvider extends
          getResourceLocator(),
          getString("_UI_TypeMemberReference_typeMember_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_TypeMemberReference_typeMember_feature", "_UI_TypeMemberReference_type"),
-         EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE__TYPE_MEMBER,
+         Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE__TYPE_MEMBER,
          true,
          false,
          true,
@@ -144,7 +144,7 @@ public class TypeMemberReferenceListElementItemProvider extends
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD);
 		}
 		return childrenFeatures;
 	}
@@ -195,12 +195,12 @@ public class TypeMemberReferenceListElementItemProvider extends
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TypeMemberReferenceListElement.class)) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__ROOT:
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__LEAF:
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__SUB_SEGMENTS_COUNT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__ROOT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__LEAF:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__SUB_SEGMENTS_COUNT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -220,8 +220,8 @@ public class TypeMemberReferenceListElementItemProvider extends
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceListElement()));
+				(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceListElement()));
 	}
 	
 	/** 
@@ -237,7 +237,7 @@ public class TypeMemberReferenceListElementItemProvider extends
 			EMFEcoreEditUtilsFacade.INSTANCE
 					.removeChildDescriptor(
 							newChildDescriptors,
-							EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD);
+							Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD);
 		}
 	}
 }

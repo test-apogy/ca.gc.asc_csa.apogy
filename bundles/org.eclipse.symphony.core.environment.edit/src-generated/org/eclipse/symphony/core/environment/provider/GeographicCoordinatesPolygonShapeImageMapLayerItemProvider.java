@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer} object.
@@ -60,7 +60,7 @@ public class GeographicCoordinatesPolygonShapeImageMapLayerItemProvider extends 
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES);
 		}
 		return childrenFeatures;
 	}
@@ -124,7 +124,7 @@ public class GeographicCoordinatesPolygonShapeImageMapLayerItemProvider extends 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GeographicCoordinatesPolygonShapeImageMapLayer.class)) {
-			case SymphonyEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES:
+			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -144,8 +144,8 @@ public class GeographicCoordinatesPolygonShapeImageMapLayerItemProvider extends 
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
-				 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+				(Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 	}
 
 	/**
@@ -160,8 +160,8 @@ public class GeographicCoordinatesPolygonShapeImageMapLayerItemProvider extends 
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
 
 		if (qualify) {
 			return getString

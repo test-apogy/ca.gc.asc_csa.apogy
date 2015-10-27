@@ -12,7 +12,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.topology.addons.dynamics.AbstractDynamicsEngine;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ public abstract class AbstractDynamicsEngineImpl extends MinimalEObjectImpl.Cont
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyDynamicsPackage.Literals.ABSTRACT_DYNAMICS_ENGINE;
+		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.ABSTRACT_DYNAMICS_ENGINE;
 	}
 
 	/**
@@ -71,10 +71,10 @@ public abstract class AbstractDynamicsEngineImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_DYNAMICS_ENGINE___START_SIMULATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_DYNAMICS_ENGINE___START_SIMULATION:
 				startSimulation();
 				return null;
-			case Symphony__CommonTopologyDynamicsPackage.ABSTRACT_DYNAMICS_ENGINE___STOP_SIMULATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.ABSTRACT_DYNAMICS_ENGINE___STOP_SIMULATION:
 				stopSimulation();
 				return null;
 		}

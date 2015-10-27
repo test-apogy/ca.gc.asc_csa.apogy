@@ -16,7 +16,7 @@ package org.eclipse.symphony.core.environment.orbit.earth;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask#getConstantElevation <em>Constant Elevation</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getConstantElevationMask()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getConstantElevationMask()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface ConstantElevationMask extends ElevationMask {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constant Elevation</em>' attribute.
 	 * @see #setConstantElevation(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getConstantElevationMask_ConstantElevation()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getConstantElevationMask_ConstantElevation()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' csa_units='rad'"
 	 * @generated

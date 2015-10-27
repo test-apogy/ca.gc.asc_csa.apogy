@@ -29,14 +29,14 @@ import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.Updatable;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.earth.Activator;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
 import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
 
 /**
@@ -239,7 +239,7 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.SPACECRAFTS_VISIBILITY_SET;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFTS_VISIBILITY_SET;
 	}
 
 	/**
@@ -260,7 +260,7 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__NAME, oldName, name));
 	}
 
 	/**
@@ -281,7 +281,7 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -302,7 +302,7 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 		boolean oldUpdating = updating;
 		updating = newUpdating;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING, oldUpdating, updating));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING, oldUpdating, updating));
 	}
 
 	/**
@@ -323,7 +323,7 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 		boolean oldAutoUpdateEnabled = autoUpdateEnabled;
 		autoUpdateEnabled = newAutoUpdateEnabled;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED, oldAutoUpdateEnabled, autoUpdateEnabled));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED, oldAutoUpdateEnabled, autoUpdateEnabled));
 	}
 
 	/**
@@ -373,7 +373,7 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 		Date oldStartTime = startTime;
 		startTime = newStartTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__START_TIME, oldStartTime, startTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__START_TIME, oldStartTime, startTime));
 	}
 
 	/**
@@ -426,7 +426,7 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 		Date oldEndTime = endTime;
 		endTime = newEndTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__END_TIME, oldEndTime, endTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__END_TIME, oldEndTime, endTime));
 	}
 
 	/**
@@ -436,7 +436,7 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 	 */
 	public EList<OrbitModel> getOrbitModels() {
 		if (orbitModels == null) {
-			orbitModels = new EObjectResolvingEList<OrbitModel>(OrbitModel.class, this, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS);
+			orbitModels = new EObjectResolvingEList<OrbitModel>(OrbitModel.class, this, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS);
 		}
 		return orbitModels;
 	}
@@ -448,7 +448,7 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 	 */
 	public EList<GroundStation> getGroundStations() {
 		if (groundStations == null) {
-			groundStations = new EObjectResolvingEList<GroundStation>(GroundStation.class, this, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS);
+			groundStations = new EObjectResolvingEList<GroundStation>(GroundStation.class, this, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS);
 		}
 		return groundStations;
 	}
@@ -460,7 +460,7 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 	 */
 	public EList<VisibilityPass> getPasses() {
 		if (passes == null) {
-			passes = new EObjectContainmentEList<VisibilityPass>(VisibilityPass.class, this, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__PASSES);
+			passes = new EObjectContainmentEList<VisibilityPass>(VisibilityPass.class, this, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__PASSES);
 		}
 		return passes;
 	}
@@ -483,7 +483,7 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 		Map<GroundStation, List<VisibilityPass>> oldGroundStationToVisibilityMap = groundStationToVisibilityMap;
 		groundStationToVisibilityMap = newGroundStationToVisibilityMap;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP, oldGroundStationToVisibilityMap, groundStationToVisibilityMap));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP, oldGroundStationToVisibilityMap, groundStationToVisibilityMap));
 	}
 
 	/**
@@ -578,7 +578,7 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__PASSES:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__PASSES:
 				return ((InternalEList<?>)getPasses()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -592,25 +592,25 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__NAME:
 				return getName();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION:
 				return getDescription();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING:
 				return isUpdating();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED:
 				return isAutoUpdateEnabled();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__START_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__START_TIME:
 				return getStartTime();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__END_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__END_TIME:
 				return getEndTime();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS:
 				return getOrbitModels();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS:
 				return getGroundStations();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__PASSES:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__PASSES:
 				return getPasses();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP:
 				return getGroundStationToVisibilityMap();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -625,37 +625,37 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING:
 				setUpdating((Boolean)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED:
 				setAutoUpdateEnabled((Boolean)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__START_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__START_TIME:
 				setStartTime((Date)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__END_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__END_TIME:
 				setEndTime((Date)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS:
 				getOrbitModels().clear();
 				getOrbitModels().addAll((Collection<? extends OrbitModel>)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS:
 				getGroundStations().clear();
 				getGroundStations().addAll((Collection<? extends GroundStation>)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__PASSES:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__PASSES:
 				getPasses().clear();
 				getPasses().addAll((Collection<? extends VisibilityPass>)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP:
 				setGroundStationToVisibilityMap((Map<GroundStation, List<VisibilityPass>>)newValue);
 				return;
 		}
@@ -670,34 +670,34 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING:
 				setUpdating(UPDATING_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED:
 				setAutoUpdateEnabled(AUTO_UPDATE_ENABLED_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__START_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__START_TIME:
 				setStartTime(START_TIME_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__END_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__END_TIME:
 				setEndTime(END_TIME_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS:
 				getOrbitModels().clear();
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS:
 				getGroundStations().clear();
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__PASSES:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__PASSES:
 				getPasses().clear();
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP:
 				setGroundStationToVisibilityMap((Map<GroundStation, List<VisibilityPass>>)null);
 				return;
 		}
@@ -712,25 +712,25 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING:
 				return updating != UPDATING_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED:
 				return autoUpdateEnabled != AUTO_UPDATE_ENABLED_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__START_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__START_TIME:
 				return START_TIME_EDEFAULT == null ? startTime != null : !START_TIME_EDEFAULT.equals(startTime);
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__END_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__END_TIME:
 				return END_TIME_EDEFAULT == null ? endTime != null : !END_TIME_EDEFAULT.equals(endTime);
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS:
 				return orbitModels != null && !orbitModels.isEmpty();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS:
 				return groundStations != null && !groundStations.isEmpty();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__PASSES:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__PASSES:
 				return passes != null && !passes.isEmpty();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP:
 				return groundStationToVisibilityMap != null;
 		}
 		return super.eIsSet(featureID);
@@ -745,14 +745,14 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
 		if (baseClass == Updatable.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING: return SymphonyCorePackage.UPDATABLE__UPDATING;
-				case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED: return SymphonyCorePackage.UPDATABLE__AUTO_UPDATE_ENABLED;
+				case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING: return Symphony__CorePackage.UPDATABLE__UPDATING;
+				case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED: return Symphony__CorePackage.UPDATABLE__AUTO_UPDATE_ENABLED;
 				default: return -1;
 			}
 		}
@@ -768,14 +768,14 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION;
 				default: return -1;
 			}
 		}
 		if (baseClass == Updatable.class) {
 			switch (baseFeatureID) {
-				case SymphonyCorePackage.UPDATABLE__UPDATING: return SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING;
-				case SymphonyCorePackage.UPDATABLE__AUTO_UPDATE_ENABLED: return SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED;
+				case Symphony__CorePackage.UPDATABLE__UPDATING: return Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING;
+				case Symphony__CorePackage.UPDATABLE__AUTO_UPDATE_ENABLED: return Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED;
 				default: return -1;
 			}
 		}
@@ -796,8 +796,8 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 		}
 		if (baseClass == Updatable.class) {
 			switch (baseOperationID) {
-				case SymphonyCorePackage.UPDATABLE___GET_DEFAULT_AUTO_UPDATE_ENABLED: return SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET___GET_DEFAULT_AUTO_UPDATE_ENABLED;
-				case SymphonyCorePackage.UPDATABLE___UPDATE: return SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET___UPDATE;
+				case Symphony__CorePackage.UPDATABLE___GET_DEFAULT_AUTO_UPDATE_ENABLED: return Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET___GET_DEFAULT_AUTO_UPDATE_ENABLED;
+				case Symphony__CorePackage.UPDATABLE___UPDATE: return Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET___UPDATE;
 				default: return -1;
 			}
 		}
@@ -812,9 +812,9 @@ public class SpacecraftsVisibilitySetImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET___GET_DEFAULT_AUTO_UPDATE_ENABLED:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET___GET_DEFAULT_AUTO_UPDATE_ENABLED:
 				return getDefaultAutoUpdateEnabled();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET___UPDATE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET___UPDATE:
 				try {
 					update();
 					return null;

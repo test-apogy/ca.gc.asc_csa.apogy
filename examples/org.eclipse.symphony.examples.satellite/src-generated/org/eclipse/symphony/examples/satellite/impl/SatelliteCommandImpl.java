@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.Satellite;
 import org.eclipse.symphony.examples.satellite.SatelliteCommand;
 
@@ -75,7 +75,7 @@ public class SatelliteCommandImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleSatellitePackage.Literals.SATELLITE_COMMAND;
+		return Symphony__ExamplesSatellitePackage.Literals.SATELLITE_COMMAND;
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class SatelliteCommandImpl extends MinimalEObjectImpl.Container implement
 			satellite = (Satellite)eResolveProxy(oldSatellite);
 			if (satellite != oldSatellite) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND__SATELLITE, oldSatellite, satellite));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND__SATELLITE, oldSatellite, satellite));
 			}
 		}
 		return satellite;
@@ -113,7 +113,7 @@ public class SatelliteCommandImpl extends MinimalEObjectImpl.Container implement
 		Satellite oldSatellite = satellite;
 		satellite = newSatellite;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND__SATELLITE, oldSatellite, satellite));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND__SATELLITE, oldSatellite, satellite));
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class SatelliteCommandImpl extends MinimalEObjectImpl.Container implement
 		Date oldCommandStartTime = commandStartTime;
 		commandStartTime = newCommandStartTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND__COMMAND_START_TIME, oldCommandStartTime, commandStartTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND__COMMAND_START_TIME, oldCommandStartTime, commandStartTime));
 	}
 
 	/**
@@ -145,10 +145,10 @@ public class SatelliteCommandImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND__SATELLITE:
 				if (resolve) return getSatellite();
 				return basicGetSatellite();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND__COMMAND_START_TIME:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND__COMMAND_START_TIME:
 				return getCommandStartTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -162,10 +162,10 @@ public class SatelliteCommandImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND__SATELLITE:
 				setSatellite((Satellite)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND__COMMAND_START_TIME:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND__COMMAND_START_TIME:
 				setCommandStartTime((Date)newValue);
 				return;
 		}
@@ -180,10 +180,10 @@ public class SatelliteCommandImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND__SATELLITE:
 				setSatellite((Satellite)null);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND__COMMAND_START_TIME:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND__COMMAND_START_TIME:
 				setCommandStartTime(COMMAND_START_TIME_EDEFAULT);
 				return;
 		}
@@ -198,9 +198,9 @@ public class SatelliteCommandImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND__SATELLITE:
 				return satellite != null;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND__COMMAND_START_TIME:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND__COMMAND_START_TIME:
 				return COMMAND_START_TIME_EDEFAULT == null ? commandStartTime != null : !COMMAND_START_TIME_EDEFAULT.equals(commandStartTime);
 		}
 		return super.eIsSet(featureID);

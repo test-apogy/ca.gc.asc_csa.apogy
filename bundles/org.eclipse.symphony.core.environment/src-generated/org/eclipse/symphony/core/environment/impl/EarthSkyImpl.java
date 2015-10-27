@@ -30,8 +30,8 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.HorizontalCoordinates;
 import org.eclipse.symphony.core.environment.Moon;
 import org.eclipse.symphony.core.environment.SkyNode;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -91,7 +91,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.EARTH_SKY;
+		return Symphony__CoreEnvironmentPackage.Literals.EARTH_SKY;
 	}
 
   /**
@@ -163,7 +163,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   {
 		if(getMoonHorizontalCoordinatesGen() == null)
 		{
-			HorizontalCoordinates newHorizontalCoordinates = SymphonyEnvironmentFactory.eINSTANCE.createHorizontalCoordinates();
+			HorizontalCoordinates newHorizontalCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createHorizontalCoordinates();
 			setMoonHorizontalCoordinates(newHorizontalCoordinates);
 		}
 		
@@ -182,7 +182,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
 			moonHorizontalCoordinates = (HorizontalCoordinates)eResolveProxy(oldMoonHorizontalCoordinates);
 			if (moonHorizontalCoordinates != oldMoonHorizontalCoordinates) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES, oldMoonHorizontalCoordinates, moonHorizontalCoordinates));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES, oldMoonHorizontalCoordinates, moonHorizontalCoordinates));
 			}
 		}
 		return moonHorizontalCoordinates;
@@ -208,7 +208,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
 		HorizontalCoordinates oldMoonHorizontalCoordinates = moonHorizontalCoordinates;
 		moonHorizontalCoordinates = newMoonHorizontalCoordinates;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES, oldMoonHorizontalCoordinates, moonHorizontalCoordinates));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES, oldMoonHorizontalCoordinates, moonHorizontalCoordinates));
 	}
   
   /**
@@ -234,7 +234,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   	{
 	  	if(skyNode == null || !(skyNode instanceof EarthSkyNode))
 	  	{	  		
-	  		skyNode = SymphonyEnvironmentFactory.eINSTANCE.createEarthSkyNode();
+	  		skyNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSkyNode();
 	  		EnvironmentFacade.INSTANCE.initializeEarthSkyNode(this, (EarthSkyNode) skyNode);							
 	  	}
 	  	
@@ -250,10 +250,10 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.EARTH_SKY__MOON:
+			case Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON:
 				if (resolve) return getMoon();
 				return basicGetMoon();
-			case SymphonyEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
+			case Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
 				if (resolve) return getMoonHorizontalCoordinates();
 				return basicGetMoonHorizontalCoordinates();
 		}
@@ -269,7 +269,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
+			case Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
 				setMoonHorizontalCoordinates((HorizontalCoordinates)newValue);
 				return;
 		}
@@ -285,7 +285,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
+			case Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
 				setMoonHorizontalCoordinates((HorizontalCoordinates)null);
 				return;
 		}
@@ -301,9 +301,9 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.EARTH_SKY__MOON:
+			case Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON:
 				return moon != null;
-			case SymphonyEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
+			case Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES:
 				return moonHorizontalCoordinates != null;
 		}
 		return super.eIsSet(featureID);
@@ -318,7 +318,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case SymphonyEnvironmentPackage.EARTH_SKY___GET_MOON_ANGULAR_DIAMETER:
+			case Symphony__CoreEnvironmentPackage.EARTH_SKY___GET_MOON_ANGULAR_DIAMETER:
 				return getMoonAngularDiameter();
 		}
 		return super.eInvoke(operationID, arguments);
@@ -391,7 +391,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
 							switch (featureId) 
 							{
 								// Surface Worksite has changed.
-								case SymphonyEnvironmentPackage.EARTH_SKY__SURFACE_WORKSITE:
+								case Symphony__CoreEnvironmentPackage.EARTH_SKY__SURFACE_WORKSITE:
 								{
 									// Unregister from previous Worksite if applicable.
 									if(msg.getOldValue() instanceof EarthSurfaceWorksite)
@@ -435,7 +435,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
 							switch(featureId)
 							{
 								// Geographical Coordinates of the Surface Worksite have changed.
-								case SymphonyEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
+								case Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES:
 								{
 									// Unregister from previous GeographicCoordinates if applicable.
 									if(msg.getOldValue() instanceof GeographicCoordinates)

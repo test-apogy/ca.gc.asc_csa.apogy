@@ -14,12 +14,11 @@ import org.jfree.chart.annotations.AbstractXYAnnotation;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Presentation properties for an ImageMapLayer displayed on the MapView.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapAnnotation()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapAnnotation()
  * @model abstract="true"
  * @generated
  */
@@ -30,7 +29,7 @@ public interface MapAnnotation extends MapViewItemPresentation
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * TheXYPlot being used by MapView.
+	 *  TheXYPlot being used by MapView.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" dataType="org.eclipse.symphony.core.environment.ui.List<org.eclipse.symphony.core.environment.ui.AbstractXYAnnotation>" unique="false" many="false"
 	 * @generated

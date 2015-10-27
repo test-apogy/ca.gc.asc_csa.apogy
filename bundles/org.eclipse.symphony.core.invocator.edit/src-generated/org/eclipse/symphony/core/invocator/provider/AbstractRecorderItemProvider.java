@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.AbstractRecorder;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.AbstractRecorder} object.
@@ -143,8 +143,8 @@ public class AbstractRecorderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractRecorder.class)) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_RECORDER__NAME:
-			case EMFEcoreInvocatorPackage.ABSTRACT_RECORDER__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RECORDER__NAME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RECORDER__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -6,7 +6,7 @@ package org.eclipse.symphony.addons.sensors.fov.bindings;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -76,7 +76,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__BINDED = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__BINDED = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -85,7 +85,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__DESCRIPTION = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__DESCRIPTION = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -94,7 +94,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__NAME = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__NAME = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME;
 
   /**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -103,7 +103,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__SOURCE = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__SOURCE = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE;
 
   /**
 	 * The feature id for the '<em><b>Feature Node</b></em>' reference.
@@ -112,7 +112,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FEATURE_NODE = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FEATURE_NODE = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE;
 
   /**
 	 * The feature id for the '<em><b>Feature Node Adapter</b></em>' reference.
@@ -121,7 +121,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FEATURE_NODE_ADAPTER = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FEATURE_NODE_ADAPTER = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER;
 
   /**
 	 * The feature id for the '<em><b>Fov</b></em>' reference.
@@ -130,7 +130,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 0;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING__FOV = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Circular Sector Field Of View Binding</em>' class.
@@ -139,7 +139,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING_FEATURE_COUNT = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 1;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING_FEATURE_COUNT = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 1;
 
   /**
 	 * The operation id for the '<em>Bind</em>' operation.
@@ -148,7 +148,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING___BIND = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___BIND;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING___BIND = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___BIND;
 
   /**
 	 * The operation id for the '<em>Unbind</em>' operation.
@@ -157,7 +157,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING___UNBIND = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___UNBIND;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING___UNBIND = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___UNBIND;
 
   /**
 	 * The operation id for the '<em>Clone</em>' operation.
@@ -166,7 +166,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING___CLONE__MAP = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___CLONE__MAP;
+	int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING___CLONE__MAP = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___CLONE__MAP;
 
 		/**
 	 * The number of operations of the '<em>Circular Sector Field Of View Binding</em>' class.
@@ -175,7 +175,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING_OPERATION_COUNT = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
+  int CIRCULAR_SECTOR_FIELD_OF_VIEW_BINDING_OPERATION_COUNT = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.bindings.impl.ConicalFieldOfViewBindingImpl <em>Conical Field Of View Binding</em>}' class.
@@ -194,7 +194,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING__BINDED = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED;
+  int CONICAL_FIELD_OF_VIEW_BINDING__BINDED = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -203,7 +203,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING__DESCRIPTION = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION;
+  int CONICAL_FIELD_OF_VIEW_BINDING__DESCRIPTION = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -212,7 +212,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING__NAME = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME;
+  int CONICAL_FIELD_OF_VIEW_BINDING__NAME = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME;
 
   /**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -221,7 +221,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING__SOURCE = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE;
+  int CONICAL_FIELD_OF_VIEW_BINDING__SOURCE = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE;
 
   /**
 	 * The feature id for the '<em><b>Feature Node</b></em>' reference.
@@ -230,7 +230,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING__FEATURE_NODE = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE;
+  int CONICAL_FIELD_OF_VIEW_BINDING__FEATURE_NODE = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE;
 
   /**
 	 * The feature id for the '<em><b>Feature Node Adapter</b></em>' reference.
@@ -239,7 +239,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING__FEATURE_NODE_ADAPTER = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER;
+  int CONICAL_FIELD_OF_VIEW_BINDING__FEATURE_NODE_ADAPTER = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER;
 
   /**
 	 * The feature id for the '<em><b>Fov</b></em>' reference.
@@ -248,7 +248,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING__FOV = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 0;
+  int CONICAL_FIELD_OF_VIEW_BINDING__FOV = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Conical Field Of View Binding</em>' class.
@@ -257,7 +257,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING_FEATURE_COUNT = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 1;
+  int CONICAL_FIELD_OF_VIEW_BINDING_FEATURE_COUNT = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 1;
 
   /**
 	 * The operation id for the '<em>Bind</em>' operation.
@@ -266,7 +266,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING___BIND = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___BIND;
+  int CONICAL_FIELD_OF_VIEW_BINDING___BIND = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___BIND;
 
   /**
 	 * The operation id for the '<em>Unbind</em>' operation.
@@ -275,7 +275,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING___UNBIND = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___UNBIND;
+  int CONICAL_FIELD_OF_VIEW_BINDING___UNBIND = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___UNBIND;
 
   /**
 	 * The operation id for the '<em>Clone</em>' operation.
@@ -284,7 +284,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CONICAL_FIELD_OF_VIEW_BINDING___CLONE__MAP = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___CLONE__MAP;
+	int CONICAL_FIELD_OF_VIEW_BINDING___CLONE__MAP = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___CLONE__MAP;
 
 		/**
 	 * The number of operations of the '<em>Conical Field Of View Binding</em>' class.
@@ -293,7 +293,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CONICAL_FIELD_OF_VIEW_BINDING_OPERATION_COUNT = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
+  int CONICAL_FIELD_OF_VIEW_BINDING_OPERATION_COUNT = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.bindings.impl.RectangularFrustrumFieldOfViewBindingImpl <em>Rectangular Frustrum Field Of View Binding</em>}' class.
@@ -312,7 +312,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__BINDED = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__BINDED = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__BINDED;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -321,7 +321,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__DESCRIPTION = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__DESCRIPTION = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__DESCRIPTION;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -330,7 +330,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__NAME = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__NAME = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__NAME;
 
   /**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -339,7 +339,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__SOURCE = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__SOURCE = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__SOURCE;
 
   /**
 	 * The feature id for the '<em><b>Feature Node</b></em>' reference.
@@ -348,7 +348,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FEATURE_NODE = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FEATURE_NODE = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE;
 
   /**
 	 * The feature id for the '<em><b>Feature Node Adapter</b></em>' reference.
@@ -357,7 +357,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FEATURE_NODE_ADAPTER = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FEATURE_NODE_ADAPTER = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING__FEATURE_NODE_ADAPTER;
 
   /**
 	 * The feature id for the '<em><b>Fov</b></em>' reference.
@@ -366,7 +366,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 0;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING__FOV = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Rectangular Frustrum Field Of View Binding</em>' class.
@@ -375,7 +375,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING_FEATURE_COUNT = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 1;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING_FEATURE_COUNT = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_FEATURE_COUNT + 1;
 
   /**
 	 * The operation id for the '<em>Bind</em>' operation.
@@ -384,7 +384,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING___BIND = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___BIND;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING___BIND = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___BIND;
 
   /**
 	 * The operation id for the '<em>Unbind</em>' operation.
@@ -393,7 +393,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING___UNBIND = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___UNBIND;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING___UNBIND = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___UNBIND;
 
   /**
 	 * The operation id for the '<em>Clone</em>' operation.
@@ -402,7 +402,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING___CLONE__MAP = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___CLONE__MAP;
+	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING___CLONE__MAP = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING___CLONE__MAP;
 
 		/**
 	 * The number of operations of the '<em>Rectangular Frustrum Field Of View Binding</em>' class.
@@ -411,7 +411,7 @@ public interface Symphony__AddonsSensorsFOVBindingsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING_OPERATION_COUNT = TopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
+  int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_BINDING_OPERATION_COUNT = Symphony__CommonTopologyBindingsPackage.ABSTRACT_TOPOLOGY_BINDING_OPERATION_COUNT + 0;
 
 
   /**

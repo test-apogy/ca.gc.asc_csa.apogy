@@ -36,7 +36,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.PointLight#getAttenuation <em>Attenuation</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getPointLight()
+ * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPointLight()
  * @model
  * @generated
  */
@@ -51,7 +51,7 @@ public interface PointLight extends Light {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position</em>' containment reference.
 	 * @see #setPosition(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getPointLight_Position()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPointLight_Position()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -77,7 +77,7 @@ public interface PointLight extends Light {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attenuation</em>' containment reference.
 	 * @see #setAttenuation(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getPointLight_Attenuation()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPointLight_Attenuation()
 	 * @model containment="true"
 	 * @generated
 	 */

@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.AttributeValue#getObject <em>Object</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAttributeValue()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAttributeValue()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface AttributeValue extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Object</em>' attribute.
 	 * @see #setObject(Object)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAttributeValue_Object()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAttributeValue_Object()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated

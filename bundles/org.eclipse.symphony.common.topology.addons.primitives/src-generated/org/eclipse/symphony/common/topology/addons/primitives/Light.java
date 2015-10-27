@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.topology.Leaf;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.Light#getColor <em>Color</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getLight()
+ * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getLight()
  * @model abstract="true"
  * @generated
  */
@@ -36,7 +36,7 @@ public interface Light extends Leaf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Enabled</em>' attribute.
 	 * @see #setEnabled(boolean)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getLight_Enabled()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getLight_Enabled()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface Light extends Leaf {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Color</em>' containment reference.
 	 * @see #setColor(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getLight_Color()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getLight_Color()
 	 * @model containment="true"
 	 * @generated
 	 */

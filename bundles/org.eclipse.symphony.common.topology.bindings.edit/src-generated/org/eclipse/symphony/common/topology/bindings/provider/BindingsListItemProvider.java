@@ -21,8 +21,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.bindings.BindingsList;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.BindingsList} object.
@@ -79,7 +79,7 @@ public class BindingsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS);
+			childrenFeatures.add(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS);
 		}
 		return childrenFeatures;
 	}
@@ -144,7 +144,7 @@ public class BindingsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BindingsList.class)) {
-			case TopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
+			case Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -165,23 +165,23 @@ public class BindingsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
-				 TopologyBindingsFactory.eINSTANCE.createRotationBinding()));
+				(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
+				 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createRotationBinding()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
-				 TopologyBindingsFactory.eINSTANCE.createTranslationBinding()));
+				(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
+				 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createTranslationBinding()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
-				 TopologyBindingsFactory.eINSTANCE.createTransformMatrixBinding()));
+				(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
+				 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createTransformMatrixBinding()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
-				 TopologyBindingsFactory.eINSTANCE.createEnumerationSwitchBinding()));
+				(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
+				 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createEnumerationSwitchBinding()));
 	}
 
   /**

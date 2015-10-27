@@ -20,8 +20,8 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.VariableImplementationsList;
 
 /**
@@ -79,7 +79,7 @@ public class VariableImplementationsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -135,7 +135,7 @@ public class VariableImplementationsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VariableImplementationsList.class)) {
-			case EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS:
+			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -156,8 +156,8 @@ public class VariableImplementationsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createVariableImplementation()));
+				(Symphony__CoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createVariableImplementation()));
 	}
 
   /**

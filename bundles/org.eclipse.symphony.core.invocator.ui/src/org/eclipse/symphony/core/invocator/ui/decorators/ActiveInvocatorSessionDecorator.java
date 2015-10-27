@@ -16,7 +16,7 @@ import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.ui.Activator;
 import org.eclipse.ui.IDecoratorManager;
@@ -48,7 +48,7 @@ public class ActiveInvocatorSessionDecorator extends LabelProvider implements
 			emfEcoreInvocatorFacadeAdapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(EMFEcoreInvocatorFacade.class) == EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION) {
+					if (msg.getFeatureID(EMFEcoreInvocatorFacade.class) == Symphony__CoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION) {
 						final ActiveInvocatorSessionDecorator decorator = getActiveInvocatorSessionDecorator();
 						if (decorator != null) {
 							Display.getDefault().asyncExec(new Runnable() {

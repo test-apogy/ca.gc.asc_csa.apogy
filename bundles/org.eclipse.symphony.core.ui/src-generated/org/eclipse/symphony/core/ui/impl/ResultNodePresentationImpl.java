@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.topology.ui.impl.TransformNodePresentationImp
 import org.eclipse.symphony.core.ui.Activator;
 import org.eclipse.symphony.core.ui.ResultNodePresentation;
 import org.eclipse.symphony.core.ui.ResultNodeSceneObject;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 import org.eclipse.symphony.core.ui.preferences.SymphonyCorePreferencesConstants;
 
 /**
@@ -98,7 +98,7 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyCoreUiPackage.Literals.RESULT_NODE_PRESENTATION;
+		return Symphony__CoreUIPackage.Literals.RESULT_NODE_PRESENTATION;
 	}
 
   /**
@@ -120,7 +120,7 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
 		float oldPoleHeight = poleHeight;
 		poleHeight = newPoleHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCoreUiPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT, oldPoleHeight, poleHeight));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT, oldPoleHeight, poleHeight));
 	}
   
   /**
@@ -144,7 +144,7 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
 		boolean oldFlagVisible = flagVisible;
 		flagVisible = newFlagVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCoreUiPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE, oldFlagVisible, flagVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE, oldFlagVisible, flagVisible));
 	}
 
   /**
@@ -156,9 +156,9 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
+			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
 				return getPoleHeight();
-			case SymphonyCoreUiPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
+			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
 				return isFlagVisible();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -173,10 +173,10 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
+			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
 				setPoleHeight((Float)newValue);
 				return;
-			case SymphonyCoreUiPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
+			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
 				setFlagVisible((Boolean)newValue);
 				return;
 		}
@@ -192,10 +192,10 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
+			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
 				setPoleHeight(POLE_HEIGHT_EDEFAULT);
 				return;
-			case SymphonyCoreUiPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
+			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
 				setFlagVisible(FLAG_VISIBLE_EDEFAULT);
 				return;
 		}
@@ -211,9 +211,9 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
+			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
 				return poleHeight != POLE_HEIGHT_EDEFAULT;
-			case SymphonyCoreUiPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
+			case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
 				return flagVisible != FLAG_VISIBLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -272,11 +272,11 @@ public class ResultNodePresentationImpl extends TransformNodePresentationImpl im
 			
 			switch (featureId) 
 			{
-				case SymphonyCoreUiPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
+				case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__FLAG_VISIBLE:
 					resultNodeSceneObject.setFlagVisible(this.isFlagVisible());
 				break;
 								
-				case SymphonyCoreUiPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
+				case Symphony__CoreUIPackage.RESULT_NODE_PRESENTATION__POLE_HEIGHT:
 					resultNodeSceneObject.setFlagPoleHeight(this.getPoleHeight());
 				break;
 										

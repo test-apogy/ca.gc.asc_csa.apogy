@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.lidar.Activator;
-import org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage;
+import org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage;
 import org.eclipse.symphony.examples.lidar.LidarSimulated;
 
 /**
@@ -125,7 +125,7 @@ public class LidarSimulatedImpl extends LidarImpl implements LidarSimulated
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleLidarPackage.Literals.LIDAR_SIMULATED;
+		return Symphony__ExamplesLidarPackage.Literals.LIDAR_SIMULATED;
 	}
 
 	/**

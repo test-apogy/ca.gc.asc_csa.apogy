@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.ConnectionPointsList#getConnectionPoints <em>Connection Points</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getConnectionPointsList()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getConnectionPointsList()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface ConnectionPointsList extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Symphony System</em>' container reference.
 	 * @see #setSymphonySystem(SymphonySystem)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getConnectionPointsList_SymphonySystem()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getConnectionPointsList_SymphonySystem()
 	 * @see org.eclipse.symphony.core.SymphonySystem#getConnectionPointsList
 	 * @model opposite="connectionPointsList" required="true" transient="false"
 	 * @generated
@@ -62,7 +62,7 @@ public interface ConnectionPointsList extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Connection Points</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getConnectionPointsList_ConnectionPoints()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getConnectionPointsList_ConnectionPoints()
 	 * @see org.eclipse.symphony.core.ConnectionPoint#getPointsList
 	 * @model opposite="pointsList" containment="true"
 	 * @generated

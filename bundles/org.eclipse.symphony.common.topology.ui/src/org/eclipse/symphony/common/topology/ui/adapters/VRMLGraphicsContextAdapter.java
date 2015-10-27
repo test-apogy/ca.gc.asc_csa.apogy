@@ -6,7 +6,7 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.URLNode;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
 import org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 public class VRMLGraphicsContextAdapter implements GraphicsContextAdapter {
 
@@ -46,7 +46,7 @@ public class VRMLGraphicsContextAdapter implements GraphicsContextAdapter {
 			GroupNode root = Symphony__CommonTopologyFactory.eINSTANCE.createGroupNode();
 			root.getChildren().add(node);
 			
-			grContext = TopologyUIFactory.eINSTANCE.createGraphicsContext();
+			grContext = Symphony__CommonTopologyUIFactory.eINSTANCE.createGraphicsContext();
 			grContext.setTopology(root);			
 		}
 		

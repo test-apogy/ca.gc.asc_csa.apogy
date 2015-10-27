@@ -29,8 +29,8 @@ import org.eclipse.symphony.core.Positioned;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.DegreeStringToRadiansConverter;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.RadiansToDegreesStringConverter;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
@@ -178,8 +178,8 @@ public class CoordinateConversionComposite extends Composite
 			IObservableValue txtLatObsVal = WidgetProperties.text(SWT.Modify).observe(txtLat); 
 			
 			IObservableValue modelLatObsVal = (objDomain == null ?
-											   EMFProperties.value(SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(coordinates) :
-											   EMFEditProperties.value(objDomain, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(coordinates));
+											   EMFProperties.value(Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(coordinates) :
+											   EMFEditProperties.value(objDomain, Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE).observe(coordinates));
 			
 			UpdateValueStrategy txtToModelLatUpdateStrategy = new UpdateValueStrategy();
 			txtToModelLatUpdateStrategy.setConverter(new DegreeStringToRadiansConverter());
@@ -197,8 +197,8 @@ public class CoordinateConversionComposite extends Composite
 			IObservableValue txtLongObsVal = WidgetProperties.text(SWT.Modify).observe(txtLong);
 			
 			IObservableValue modelLongObsVal = (objDomain == null ?
-											    EMFProperties.value(SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(coordinates) :
-											    EMFEditProperties.value(objDomain, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(coordinates));
+											    EMFProperties.value(Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(coordinates) :
+											    EMFEditProperties.value(objDomain, Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE).observe(coordinates));
 			
 			UpdateValueStrategy txtToModelLongUpdateStrategy = new UpdateValueStrategy();
 			txtToModelLongUpdateStrategy.setConverter(new DegreeStringToRadiansConverter());
@@ -216,8 +216,8 @@ public class CoordinateConversionComposite extends Composite
 			IObservableValue txtElevObsVal = WidgetProperties.text(SWT.Modify).observe(txtElev); 
 			
 			IObservableValue modelElevObsVal = (objDomain == null ?
-												EMFProperties.value(SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(coordinates) :
-												EMFEditProperties.value(objDomain, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(coordinates));
+												EMFProperties.value(Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(coordinates) :
+												EMFEditProperties.value(objDomain, Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION).observe(coordinates));
 			
 			UpdateValueStrategy txtToModelElevUpdateStrategy = new UpdateValueStrategy();
 			txtToModelElevUpdateStrategy.setConverter(new StringToDoubleConverter());
@@ -427,7 +427,7 @@ public class CoordinateConversionComposite extends Composite
 			if (esw == null)
 			{
 				// Just create one (to facilitate the conversions)
-				esw = SymphonyEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();				
+				esw = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksite();				
 			}
 
 			// Update the listener's earth surface worksite accordingly
@@ -573,7 +573,7 @@ public class CoordinateConversionComposite extends Composite
 							longVal = Math.toRadians(longVal);
 						
 							// Create a geographic coordinate with those given values
-							GeographicCoordinates coords = SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
+							GeographicCoordinates coords = Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
 							coords.setLatitude(latVal);
 							coords.setLongitude(longVal);
 							coords.setElevation(elevVal);

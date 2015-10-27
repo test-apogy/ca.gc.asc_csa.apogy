@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.invocator.AttributeValue;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.AttributeValue} object.
@@ -81,7 +81,7 @@ public class AttributeValueItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AttributeValue_object_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AttributeValue_object_feature", "_UI_AttributeValue_type"),
-				 EMFEcoreInvocatorPackage.Literals.ATTRIBUTE_VALUE__OBJECT,
+				 Symphony__CoreInvocatorPackage.Literals.ATTRIBUTE_VALUE__OBJECT,
 				 false,
 				 false,
 				 false,
@@ -131,7 +131,7 @@ public class AttributeValueItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AttributeValue.class)) {
-			case EMFEcoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
+			case Symphony__CoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

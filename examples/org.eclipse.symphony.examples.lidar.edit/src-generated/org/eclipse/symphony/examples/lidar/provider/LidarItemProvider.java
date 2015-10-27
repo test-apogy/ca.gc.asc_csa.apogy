@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
-import org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage;
+import org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage;
 import org.eclipse.symphony.examples.lidar.Lidar;
 
 /**
@@ -83,7 +83,7 @@ public class LidarItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Lidar_fov_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Lidar_fov_feature", "_UI_Lidar_type"),
-				 EMFEcoreExampleLidarPackage.Literals.LIDAR__FOV,
+				 Symphony__ExamplesLidarPackage.Literals.LIDAR__FOV,
 				 false,
 				 false,
 				 false,
@@ -105,7 +105,7 @@ public class LidarItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Lidar_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Lidar_initialized_feature", "_UI_Lidar_type"),
-				 EMFEcoreExampleLidarPackage.Literals.LIDAR__INITIALIZED,
+				 Symphony__ExamplesLidarPackage.Literals.LIDAR__INITIALIZED,
 				 false,
 				 false,
 				 false,
@@ -127,7 +127,7 @@ public class LidarItemProvider extends ItemProviderAdapter
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreExampleLidarPackage.Literals.LIDAR__FOV);
+			childrenFeatures.add(Symphony__ExamplesLidarPackage.Literals.LIDAR__FOV);
 		}
 		return childrenFeatures;
 	}
@@ -185,10 +185,10 @@ public class LidarItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Lidar.class)) {
-			case EMFEcoreExampleLidarPackage.LIDAR__INITIALIZED:
+			case Symphony__ExamplesLidarPackage.LIDAR__INITIALIZED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreExampleLidarPackage.LIDAR__FOV:
+			case Symphony__ExamplesLidarPackage.LIDAR__FOV:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -209,7 +209,7 @@ public class LidarItemProvider extends ItemProviderAdapter
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleLidarPackage.Literals.LIDAR__FOV,
+				(Symphony__ExamplesLidarPackage.Literals.LIDAR__FOV,
 				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 	}
 

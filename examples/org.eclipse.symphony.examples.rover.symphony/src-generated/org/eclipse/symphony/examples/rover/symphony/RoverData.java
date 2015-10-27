@@ -26,7 +26,7 @@ import org.eclipse.symphony.core.SymphonyInitializationData;
  *   <li>{@link org.eclipse.symphony.examples.rover.symphony.RoverData#isDisposed <em>Disposed</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.rover.symphony.SymphonyExampleRoverPackage#getRoverData()
+ * @see org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage#getRoverData()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface RoverData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.rover.symphony.SymphonyExampleRoverPackage#getRoverData_Initialized()
+	 * @see org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage#getRoverData_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated
@@ -69,7 +69,7 @@ public interface RoverData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Disposed</em>' attribute.
 	 * @see #setDisposed(boolean)
-	 * @see org.eclipse.symphony.examples.rover.symphony.SymphonyExampleRoverPackage#getRoverData_Disposed()
+	 * @see org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage#getRoverData_Disposed()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated

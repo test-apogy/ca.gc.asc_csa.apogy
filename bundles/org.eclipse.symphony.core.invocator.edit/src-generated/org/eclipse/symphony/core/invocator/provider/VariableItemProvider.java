@@ -24,8 +24,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Type;
 import org.eclipse.symphony.core.invocator.Variable;
 
@@ -110,7 +110,7 @@ public class VariableItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Variable_variableType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Variable_variableType_feature", "_UI_Variable_type"),
-				 EMFEcoreInvocatorPackage.Literals.VARIABLE__VARIABLE_TYPE,
+				 Symphony__CoreInvocatorPackage.Literals.VARIABLE__VARIABLE_TYPE,
 				 true,
 				 false,
 				 true,
@@ -180,8 +180,8 @@ public class VariableItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Variable.class)) {
-			case EMFEcoreInvocatorPackage.VARIABLE__NAME:
-			case EMFEcoreInvocatorPackage.VARIABLE__ENVIRONMENT:
+			case Symphony__CoreInvocatorPackage.VARIABLE__NAME:
+			case Symphony__CoreInvocatorPackage.VARIABLE__ENVIRONMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

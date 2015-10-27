@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.ArgumentsList#getArguments <em>Arguments</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getArgumentsList()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getArgumentsList()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface ArgumentsList extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operation Call</em>' container reference.
 	 * @see #setOperationCall(OperationCall)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getArgumentsList_OperationCall()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getArgumentsList_OperationCall()
 	 * @see org.eclipse.symphony.core.invocator.OperationCall#getArgumentsList
 	 * @model opposite="argumentsList" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
@@ -67,7 +67,7 @@ public interface ArgumentsList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Arguments</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getArgumentsList_Arguments()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getArgumentsList_Arguments()
 	 * @see org.eclipse.symphony.core.invocator.Argument#getArgumentsList
 	 * @model opposite="argumentsList" containment="true"
 	 * @generated

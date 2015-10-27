@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.utils.WorldWindUtils;
 
 /**
@@ -187,7 +187,7 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER;
+		return Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER;
 	}
 	
 	/**
@@ -201,7 +201,7 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 			orbitModel = (OrbitModel)eResolveProxy(oldOrbitModel);
 			if (orbitModel != oldOrbitModel) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__ORBIT_MODEL, oldOrbitModel, orbitModel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__ORBIT_MODEL, oldOrbitModel, orbitModel));
 			}
 		}
 		return orbitModel;
@@ -238,7 +238,7 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 		OrbitModel oldOrbitModel = orbitModel;
 		orbitModel = newOrbitModel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__ORBIT_MODEL, oldOrbitModel, orbitModel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__ORBIT_MODEL, oldOrbitModel, orbitModel));
 	}
 
 	/**
@@ -252,7 +252,7 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 			timeSource = (Timed)eResolveProxy(oldTimeSource);
 			if (timeSource != oldTimeSource) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
 			}
 		}
 		return timeSource;
@@ -301,7 +301,7 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 		Timed oldTimeSource = timeSource;
 		timeSource = newTimeSource;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_SOURCE, oldTimeSource, timeSource));
 	}	
 	
 	/**
@@ -322,7 +322,7 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 		double oldTimeInterval = timeInterval;
 		timeInterval = newTimeInterval;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_INTERVAL, oldTimeInterval, timeInterval));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_INTERVAL, oldTimeInterval, timeInterval));
 	}
 
 	/**
@@ -356,7 +356,7 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 		double oldForwardPropagationDuration = forwardPropagationDuration;
 		forwardPropagationDuration = newForwardPropagationDuration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION, oldForwardPropagationDuration, forwardPropagationDuration));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION, oldForwardPropagationDuration, forwardPropagationDuration));
 	}
 
 	/**
@@ -391,7 +391,7 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 		double oldBackwardPropagationDuration = backwardPropagationDuration;
 		backwardPropagationDuration = newBackwardPropagationDuration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION, oldBackwardPropagationDuration, backwardPropagationDuration));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION, oldBackwardPropagationDuration, backwardPropagationDuration));
 	}
 
 	/**
@@ -425,7 +425,7 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 		boolean oldShowGroundTrace = showGroundTrace;
 		showGroundTrace = newShowGroundTrace;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_GROUND_TRACE, oldShowGroundTrace, showGroundTrace));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_GROUND_TRACE, oldShowGroundTrace, showGroundTrace));
 	}
 
 	/**
@@ -446,7 +446,7 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 		boolean oldShowOrbit = showOrbit;
 		showOrbit = newShowOrbit;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_ORBIT, oldShowOrbit, showOrbit));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_ORBIT, oldShowOrbit, showOrbit));
 	}
 
 	/**
@@ -457,21 +457,21 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__ORBIT_MODEL:
 				if (resolve) return getOrbitModel();
 				return basicGetOrbitModel();
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_SOURCE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_SOURCE:
 				if (resolve) return getTimeSource();
 				return basicGetTimeSource();
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_INTERVAL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_INTERVAL:
 				return getTimeInterval();
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
 				return getForwardPropagationDuration();
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
 				return getBackwardPropagationDuration();
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
 				return isShowGroundTrace();
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_ORBIT:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_ORBIT:
 				return isShowOrbit();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -485,25 +485,25 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_SOURCE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_SOURCE:
 				setTimeSource((Timed)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_INTERVAL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_INTERVAL:
 				setTimeInterval((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
 				setForwardPropagationDuration((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
 				setBackwardPropagationDuration((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
 				setShowGroundTrace((Boolean)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_ORBIT:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_ORBIT:
 				setShowOrbit((Boolean)newValue);
 				return;
 		}
@@ -518,25 +518,25 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)null);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_SOURCE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_SOURCE:
 				setTimeSource((Timed)null);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_INTERVAL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_INTERVAL:
 				setTimeInterval(TIME_INTERVAL_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
 				setForwardPropagationDuration(FORWARD_PROPAGATION_DURATION_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
 				setBackwardPropagationDuration(BACKWARD_PROPAGATION_DURATION_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
 				setShowGroundTrace(SHOW_GROUND_TRACE_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_ORBIT:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_ORBIT:
 				setShowOrbit(SHOW_ORBIT_EDEFAULT);
 				return;
 		}
@@ -551,19 +551,19 @@ public class OrbitModelWorldWindLayerImpl extends AbstractWorldWindLayerImpl imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__ORBIT_MODEL:
 				return orbitModel != null;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_SOURCE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_SOURCE:
 				return timeSource != null;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_INTERVAL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_INTERVAL:
 				return timeInterval != TIME_INTERVAL_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
 				return forwardPropagationDuration != FORWARD_PROPAGATION_DURATION_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
 				return backwardPropagationDuration != BACKWARD_PROPAGATION_DURATION_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
 				return showGroundTrace != SHOW_GROUND_TRACE_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_ORBIT:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_ORBIT:
 				return showOrbit != SHOW_ORBIT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.emf.Described;
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractDisplay#getDisplaysList <em>Displays List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractDisplay()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractDisplay()
  * @model abstract="true"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface AbstractDisplay extends Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Displays List</em>' container reference.
 	 * @see #setDisplaysList(DisplaysList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractDisplay_DisplaysList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractDisplay_DisplaysList()
 	 * @see org.eclipse.symphony.core.invocator.DisplaysList#getDisplays
 	 * @model opposite="displays" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"

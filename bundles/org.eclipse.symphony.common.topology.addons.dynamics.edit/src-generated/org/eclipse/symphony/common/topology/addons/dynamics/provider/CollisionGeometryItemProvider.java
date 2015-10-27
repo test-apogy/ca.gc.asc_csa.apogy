@@ -27,8 +27,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFactory;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.CollisionGeometry} object.
@@ -86,7 +86,7 @@ public class CollisionGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CollisionGeometry_simulationProperties_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CollisionGeometry_simulationProperties_feature", "_UI_CollisionGeometry_type"),
-				 Symphony__CommonTopologyDynamicsPackage.Literals.COLLISION_GEOMETRY__SIMULATION_PROPERTIES,
+				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__SIMULATION_PROPERTIES,
 				 true,
 				 false,
 				 true,
@@ -108,7 +108,7 @@ public class CollisionGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CollisionGeometry_material_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CollisionGeometry_material_feature", "_UI_CollisionGeometry_type"),
-				 Symphony__CommonTopologyDynamicsPackage.Literals.COLLISION_GEOMETRY__MATERIAL,
+				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__MATERIAL,
 				 true,
 				 false,
 				 true,
@@ -130,7 +130,7 @@ public class CollisionGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CollisionGeometry_description_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CollisionGeometry_description_feature", "_UI_CollisionGeometry_type"),
-				 Symphony__CommonTopologyDynamicsPackage.Literals.COLLISION_GEOMETRY__DESCRIPTION,
+				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__DESCRIPTION,
 				 true,
 				 false,
 				 false,
@@ -152,7 +152,7 @@ public class CollisionGeometryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CollisionGeometry_geometryId_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CollisionGeometry_geometryId_feature", "_UI_CollisionGeometry_type"),
-				 Symphony__CommonTopologyDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY_ID,
+				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY_ID,
 				 true,
 				 false,
 				 false,
@@ -173,8 +173,8 @@ public class CollisionGeometryItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY);
-			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.COLLISION_GEOMETRY__TRANSFORM);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__TRANSFORM);
 		}
 		return childrenFeatures;
 	}
@@ -229,12 +229,12 @@ public class CollisionGeometryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CollisionGeometry.class)) {
-			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__DESCRIPTION:
-			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY_ID:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY__DESCRIPTION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY_ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY:
-			case Symphony__CommonTopologyDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY__GEOMETRY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.COLLISION_GEOMETRY__TRANSFORM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -254,27 +254,27 @@ public class CollisionGeometryItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createBoxGeometry()));
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createBoxGeometry()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createCapsuleGeometry()));
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createCapsuleGeometry()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createCylinderGeometry()));
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createCylinderGeometry()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createSphereGeometry()));
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__GEOMETRY,
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createSphereGeometry()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.COLLISION_GEOMETRY__TRANSFORM,
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.COLLISION_GEOMETRY__TRANSFORM,
 				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 

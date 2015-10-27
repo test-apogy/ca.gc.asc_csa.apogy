@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 import org.eclipse.symphony.core.provider.UpdatableItemProvider;
 
 /**
@@ -64,7 +64,7 @@ public class AbstractWorldWindLayerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractWorldWindLayer_visible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractWorldWindLayer_visible_feature", "_UI_AbstractWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.ABSTRACT_WORLD_WIND_LAYER__VISIBLE,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.ABSTRACT_WORLD_WIND_LAYER__VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -121,7 +121,7 @@ public class AbstractWorldWindLayerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractWorldWindLayer.class)) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.ABSTRACT_WORLD_WIND_LAYER__VISIBLE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ABSTRACT_WORLD_WIND_LAYER__VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class GeographicCoordinatesPolygonShapeImageMapLayerImpl extends PolygonS
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER;
+		return Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER;
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class GeographicCoordinatesPolygonShapeImageMapLayerImpl extends PolygonS
 	 */
 	public EList<GeographicCoordinates> getPolygonVerticesGeographicCoordinates() {
 		if (polygonVerticesGeographicCoordinates == null) {
-			polygonVerticesGeographicCoordinates = new EObjectContainmentEList<GeographicCoordinates>(GeographicCoordinates.class, this, SymphonyEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES);
+			polygonVerticesGeographicCoordinates = new EObjectContainmentEList<GeographicCoordinates>(GeographicCoordinates.class, this, Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES);
 		}
 		return polygonVerticesGeographicCoordinates;
 	}
@@ -83,7 +83,7 @@ public class GeographicCoordinatesPolygonShapeImageMapLayerImpl extends PolygonS
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES:
+			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES:
 				return ((InternalEList<?>)getPolygonVerticesGeographicCoordinates()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -97,7 +97,7 @@ public class GeographicCoordinatesPolygonShapeImageMapLayerImpl extends PolygonS
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES:
+			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES:
 				return getPolygonVerticesGeographicCoordinates();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -112,7 +112,7 @@ public class GeographicCoordinatesPolygonShapeImageMapLayerImpl extends PolygonS
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES:
+			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES:
 				getPolygonVerticesGeographicCoordinates().clear();
 				getPolygonVerticesGeographicCoordinates().addAll((Collection<? extends GeographicCoordinates>)newValue);
 				return;
@@ -128,7 +128,7 @@ public class GeographicCoordinatesPolygonShapeImageMapLayerImpl extends PolygonS
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES:
+			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES:
 				getPolygonVerticesGeographicCoordinates().clear();
 				return;
 		}
@@ -143,7 +143,7 @@ public class GeographicCoordinatesPolygonShapeImageMapLayerImpl extends PolygonS
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES:
+			case Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES_GEOGRAPHIC_COORDINATES:
 				return polygonVerticesGeographicCoordinates != null && !polygonVerticesGeographicCoordinates.isEmpty();
 		}
 		return super.eIsSet(featureID);

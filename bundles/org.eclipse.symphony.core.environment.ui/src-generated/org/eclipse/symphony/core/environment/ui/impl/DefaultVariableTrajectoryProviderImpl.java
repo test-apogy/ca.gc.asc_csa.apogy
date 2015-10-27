@@ -14,10 +14,10 @@ import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.jfree.data.xy.XYDataItem;
@@ -100,7 +100,7 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentUIPackage.Literals.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER;
+		return Symphony__CoreEnvironmentUIPackage.Literals.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER;
 	}
 
   /**
@@ -143,7 +143,7 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
 		double oldDistanceThreshold = distanceThreshold;
 		distanceThreshold = newDistanceThreshold;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD, oldDistanceThreshold, distanceThreshold));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD, oldDistanceThreshold, distanceThreshold));
 	}
 
   /**
@@ -166,7 +166,7 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
 		double oldAzimuthThreshold = azimuthThreshold;
 		azimuthThreshold = newAzimuthThreshold;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD, oldAzimuthThreshold, azimuthThreshold));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD, oldAzimuthThreshold, azimuthThreshold));
 	}
 
   /**
@@ -178,9 +178,9 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
+			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
 				return getDistanceThreshold();
-			case SymphonyEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
+			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
 				return getAzimuthThreshold();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -195,10 +195,10 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
+			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
 				setDistanceThreshold((Double)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
+			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
 				setAzimuthThreshold((Double)newValue);
 				return;
 		}
@@ -214,10 +214,10 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
+			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
 				setDistanceThreshold(DISTANCE_THRESHOLD_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
+			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
 				setAzimuthThreshold(AZIMUTH_THRESHOLD_EDEFAULT);
 				return;
 		}
@@ -233,9 +233,9 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
+			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
 				return distanceThreshold != DISTANCE_THRESHOLD_EDEFAULT;
-			case SymphonyEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
+			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
 				return azimuthThreshold != AZIMUTH_THRESHOLD_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -347,7 +347,7 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
 			  @Override
 			  public void notifyChanged(Notification msg) 
 			  {
-				  if(msg.getFeatureID(PoseProvider.class) == SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM)
+				  if(msg.getFeatureID(PoseProvider.class) == Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM)
 				  {					  					  
 					  if(msg.getNewValue() instanceof Matrix4x4)
 					  {

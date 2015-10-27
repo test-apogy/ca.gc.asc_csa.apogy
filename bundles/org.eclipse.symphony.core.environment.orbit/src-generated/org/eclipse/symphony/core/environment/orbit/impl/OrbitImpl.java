@@ -14,7 +14,7 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.environment.orbit.AbstractFrame;
 import org.eclipse.symphony.core.environment.orbit.Orbit;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 import java.util.Date;
 
 /**
@@ -120,7 +120,7 @@ public abstract class OrbitImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyOrbitEnvironmentPackage.Literals.ORBIT;
+		return Symphony__CoreEnvironmentOrbitPackage.Literals.ORBIT;
 	}
 
 	/**
@@ -141,7 +141,7 @@ public abstract class OrbitImpl extends MinimalEObjectImpl.Container implements 
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ORBIT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ORBIT__NAME, oldName, name));
 	}
 
 	/**
@@ -162,7 +162,7 @@ public abstract class OrbitImpl extends MinimalEObjectImpl.Container implements 
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ORBIT__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ORBIT__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -183,7 +183,7 @@ public abstract class OrbitImpl extends MinimalEObjectImpl.Container implements 
 		Date oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ORBIT__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ORBIT__TIME, oldTime, time));
 	}
 
 	/**
@@ -204,7 +204,7 @@ public abstract class OrbitImpl extends MinimalEObjectImpl.Container implements 
 		AbstractFrame oldReferenceFrame = referenceFrame;
 		referenceFrame = newReferenceFrame;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ORBIT__REFERENCE_FRAME, oldReferenceFrame, newReferenceFrame);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ORBIT__REFERENCE_FRAME, oldReferenceFrame, newReferenceFrame);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -219,14 +219,14 @@ public abstract class OrbitImpl extends MinimalEObjectImpl.Container implements 
 		if (newReferenceFrame != referenceFrame) {
 			NotificationChain msgs = null;
 			if (referenceFrame != null)
-				msgs = ((InternalEObject)referenceFrame).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyOrbitEnvironmentPackage.ORBIT__REFERENCE_FRAME, null, msgs);
+				msgs = ((InternalEObject)referenceFrame).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.ORBIT__REFERENCE_FRAME, null, msgs);
 			if (newReferenceFrame != null)
-				msgs = ((InternalEObject)newReferenceFrame).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyOrbitEnvironmentPackage.ORBIT__REFERENCE_FRAME, null, msgs);
+				msgs = ((InternalEObject)newReferenceFrame).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitPackage.ORBIT__REFERENCE_FRAME, null, msgs);
 			msgs = basicSetReferenceFrame(newReferenceFrame, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ORBIT__REFERENCE_FRAME, newReferenceFrame, newReferenceFrame));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ORBIT__REFERENCE_FRAME, newReferenceFrame, newReferenceFrame));
 	}
 
 	/**
@@ -237,7 +237,7 @@ public abstract class OrbitImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__REFERENCE_FRAME:
 				return basicSetReferenceFrame(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -251,13 +251,13 @@ public abstract class OrbitImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT__NAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__NAME:
 				return getName();
-			case SymphonyOrbitEnvironmentPackage.ORBIT__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__DESCRIPTION:
 				return getDescription();
-			case SymphonyOrbitEnvironmentPackage.ORBIT__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__TIME:
 				return getTime();
-			case SymphonyOrbitEnvironmentPackage.ORBIT__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__REFERENCE_FRAME:
 				return getReferenceFrame();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -271,16 +271,16 @@ public abstract class OrbitImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT__NAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ORBIT__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ORBIT__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__TIME:
 				setTime((Date)newValue);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ORBIT__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__REFERENCE_FRAME:
 				setReferenceFrame((AbstractFrame)newValue);
 				return;
 		}
@@ -295,16 +295,16 @@ public abstract class OrbitImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT__NAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ORBIT__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ORBIT__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
-			case SymphonyOrbitEnvironmentPackage.ORBIT__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__REFERENCE_FRAME:
 				setReferenceFrame((AbstractFrame)null);
 				return;
 		}
@@ -319,13 +319,13 @@ public abstract class OrbitImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT__NAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyOrbitEnvironmentPackage.ORBIT__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyOrbitEnvironmentPackage.ORBIT__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
-			case SymphonyOrbitEnvironmentPackage.ORBIT__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__REFERENCE_FRAME:
 				return referenceFrame != null;
 		}
 		return super.eIsSet(featureID);
@@ -340,13 +340,13 @@ public abstract class OrbitImpl extends MinimalEObjectImpl.Container implements 
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyOrbitEnvironmentPackage.ORBIT__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreEnvironmentOrbitPackage.ORBIT__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
 		if (baseClass == Timed.class) {
 			switch (derivedFeatureID) {
-				case SymphonyOrbitEnvironmentPackage.ORBIT__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
+				case Symphony__CoreEnvironmentOrbitPackage.ORBIT__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
 				default: return -1;
 			}
 		}
@@ -362,13 +362,13 @@ public abstract class OrbitImpl extends MinimalEObjectImpl.Container implements 
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyOrbitEnvironmentPackage.ORBIT__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentOrbitPackage.ORBIT__DESCRIPTION;
 				default: return -1;
 			}
 		}
 		if (baseClass == Timed.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.TIMED__TIME: return SymphonyOrbitEnvironmentPackage.ORBIT__TIME;
+				case Symphony__CommonEMFPackage.TIMED__TIME: return Symphony__CoreEnvironmentOrbitPackage.ORBIT__TIME;
 				default: return -1;
 			}
 		}

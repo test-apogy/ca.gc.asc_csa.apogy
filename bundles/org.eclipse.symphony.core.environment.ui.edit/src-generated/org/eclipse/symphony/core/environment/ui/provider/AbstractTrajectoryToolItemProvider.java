@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool} object.
@@ -67,7 +67,7 @@ public class AbstractTrajectoryToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapViewItemPresentation_visible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapViewItemPresentation_visible_feature", "_UI_MapViewItemPresentation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_ITEM_PRESENTATION__VISIBLE,
+				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_ITEM_PRESENTATION__VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class AbstractTrajectoryToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapTool_active_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapTool_active_feature", "_UI_MapTool_type"),
-				 SymphonyEnvironmentUIPackage.Literals.MAP_TOOL__ACTIVE,
+				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_TOOL__ACTIVE,
 				 true,
 				 false,
 				 false,
@@ -158,8 +158,8 @@ public class AbstractTrajectoryToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractTrajectoryTool.class)) {
-			case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
-			case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

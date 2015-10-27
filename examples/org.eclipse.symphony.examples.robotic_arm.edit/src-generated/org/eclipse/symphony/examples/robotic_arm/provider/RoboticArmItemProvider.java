@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage;
+import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage;
 import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
 
 /**
@@ -86,7 +86,7 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_RoboticArm_speed_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RoboticArm_speed_feature", "_UI_RoboticArm_type"),
-				 EMFEcoreExampleRoboticArmPackage.Literals.ROBOTIC_ARM__SPEED,
+				 Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__SPEED,
 				 false,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_RoboticArm_turretAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArm_turretAngle_feature", "_UI_RoboticArm_type"),
-				EMFEcoreExampleRoboticArmPackage.Literals.ROBOTIC_ARM__TURRET_ANGLE,
+				Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__TURRET_ANGLE,
 				false,
 				false,
 				false,
@@ -132,7 +132,7 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_RoboticArm_shoulderAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArm_shoulderAngle_feature", "_UI_RoboticArm_type"),
-				EMFEcoreExampleRoboticArmPackage.Literals.ROBOTIC_ARM__SHOULDER_ANGLE,
+				Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__SHOULDER_ANGLE,
 				false,
 				false,
 				false,
@@ -155,7 +155,7 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_RoboticArm_elbowAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArm_elbowAngle_feature", "_UI_RoboticArm_type"),
-				EMFEcoreExampleRoboticArmPackage.Literals.ROBOTIC_ARM__ELBOW_ANGLE,
+				Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__ELBOW_ANGLE,
 				false,
 				false,
 				false,
@@ -178,7 +178,7 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_RoboticArm_wristAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_RoboticArm_wristAngle_feature", "_UI_RoboticArm_type"),
-				EMFEcoreExampleRoboticArmPackage.Literals.ROBOTIC_ARM__WRIST_ANGLE,
+				Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__WRIST_ANGLE,
 				false,
 				false,
 				false,
@@ -200,7 +200,7 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_RoboticArm_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RoboticArm_initialized_feature", "_UI_RoboticArm_type"),
-				 EMFEcoreExampleRoboticArmPackage.Literals.ROBOTIC_ARM__INITIALIZED,
+				 Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__INITIALIZED,
 				 false,
 				 false,
 				 false,
@@ -222,7 +222,7 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_RoboticArm_armMoving_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RoboticArm_armMoving_feature", "_UI_RoboticArm_type"),
-				 EMFEcoreExampleRoboticArmPackage.Literals.ROBOTIC_ARM__ARM_MOVING,
+				 Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM__ARM_MOVING,
 				 false,
 				 false,
 				 false,
@@ -278,13 +278,13 @@ public class RoboticArmItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RoboticArm.class)) {
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__TURRET_ANGLE:
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__SHOULDER_ANGLE:
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__ELBOW_ANGLE:
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__WRIST_ANGLE:
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__INITIALIZED:
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__ARM_MOVING:
-			case EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM__SPEED:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__TURRET_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__SHOULDER_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__ELBOW_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__WRIST_ANGLE:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__INITIALIZED:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__ARM_MOVING:
+			case Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM__SPEED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

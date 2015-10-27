@@ -10,7 +10,6 @@ package org.eclipse.symphony.core.environment;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * A map Layer that contains an arbitray topology tree.
  * <!-- end-model-doc -->
  *
@@ -21,7 +20,7 @@ package org.eclipse.symphony.core.environment;
  *   <li>{@link org.eclipse.symphony.core.environment.TopologyTreeMapLayer#getTopologyTreeRoot <em>Topology Tree Root</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getTopologyTreeMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getTopologyTreeMapLayer()
  * @model
  * @generated
  */
@@ -36,7 +35,7 @@ public interface TopologyTreeMapLayer extends AbstractMapLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Topology Tree Root</em>' containment reference.
 	 * @see #setTopologyTreeRoot(TopologyTreeMapLayerNode)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getTopologyTreeMapLayer_TopologyTreeRoot()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getTopologyTreeMapLayer_TopologyTreeRoot()
 	 * @see org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode#getTopologyTreeMapLayer
 	 * @model opposite="topologyTreeMapLayer" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' property='None'"

@@ -25,7 +25,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.ResultsList#getResults <em>Results</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getResultsList()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getResultsList()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -42,7 +42,7 @@ public interface ResultsList extends Named, Described
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Results</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getResultsList_Results()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getResultsList_Results()
 	 * @see org.eclipse.symphony.core.invocator.AbstractResult#getResultsList
 	 * @model opposite="resultsList" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' createChild='false'"

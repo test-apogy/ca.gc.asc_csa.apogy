@@ -206,7 +206,7 @@ public class Activator extends AbstractUIPlugin {
 	{
 		if(topologyPresentationRegistry == null)
 		{
-			topologyPresentationRegistry = TopologyUIFactory.eINSTANCE.createTopologyPresentationRegistry();
+			topologyPresentationRegistry = Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyPresentationRegistry();
 		}		
 		return topologyPresentationRegistry;
 	}

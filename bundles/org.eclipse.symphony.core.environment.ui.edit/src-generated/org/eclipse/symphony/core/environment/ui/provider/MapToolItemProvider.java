@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.ui.MapTool;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.MapTool} object.
@@ -67,7 +67,7 @@ public class MapToolItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapTool_active_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapTool_active_feature", "_UI_MapTool_type"),
-				 SymphonyEnvironmentUIPackage.Literals.MAP_TOOL__ACTIVE,
+				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_TOOL__ACTIVE,
 				 true,
 				 false,
 				 false,
@@ -138,7 +138,7 @@ public class MapToolItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MapTool.class)) {
-			case SymphonyEnvironmentUIPackage.MAP_TOOL__ACTIVE:
+			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

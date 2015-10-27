@@ -12,7 +12,7 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.programs.controllers.Activator;
 import org.eclipse.symphony.core.programs.controllers.ControllerStateTrigger;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -91,7 +91,7 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreControllersPackage.Literals.CONTROLLER_STATE_TRIGGER;
+		return Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_STATE_TRIGGER;
 	}
 
   /**
@@ -114,7 +114,7 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
 		boolean oldEnablingValue = enablingValue;
 		enablingValue = newEnablingValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE, oldEnablingValue, enablingValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE, oldEnablingValue, enablingValue));
 	}
 
   /**
@@ -151,7 +151,7 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
 		long oldRepeatPeriod = repeatPeriod;
 		repeatPeriod = newRepeatPeriod;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD, oldRepeatPeriod, repeatPeriod));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD, oldRepeatPeriod, repeatPeriod));
 	}
   
   /**
@@ -163,9 +163,9 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
 				return isEnablingValue();
-			case EMFEcoreControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
 				return getRepeatPeriod();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -180,10 +180,10 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
 				setEnablingValue((Boolean)newValue);
 				return;
-			case EMFEcoreControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
 				setRepeatPeriod((Long)newValue);
 				return;
 		}
@@ -199,10 +199,10 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
 				setEnablingValue(ENABLING_VALUE_EDEFAULT);
 				return;
-			case EMFEcoreControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
 				setRepeatPeriod(REPEAT_PERIOD_EDEFAULT);
 				return;
 		}
@@ -218,9 +218,9 @@ public class ControllerStateTriggerImpl extends ControllerTriggerImpl implements
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__ENABLING_VALUE:
 				return enablingValue != ENABLING_VALUE_EDEFAULT;
-			case EMFEcoreControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_STATE_TRIGGER__REPEAT_PERIOD:
 				return repeatPeriod != REPEAT_PERIOD_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

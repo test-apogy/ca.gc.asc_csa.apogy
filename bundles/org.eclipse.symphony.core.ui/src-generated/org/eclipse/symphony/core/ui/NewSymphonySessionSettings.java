@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings#isCreateTools <em>Create Tools</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getNewSymphonySessionSettings()
+ * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getNewSymphonySessionSettings()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface NewSymphonySessionSettings extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Folder</em>' attribute.
 	 * @see #setFolder(String)
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getNewSymphonySessionSettings_Folder()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getNewSymphonySessionSettings_Folder()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -66,7 +66,7 @@ public interface NewSymphonySessionSettings extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Filename</em>' attribute.
 	 * @see #setFilename(String)
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getNewSymphonySessionSettings_Filename()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getNewSymphonySessionSettings_Filename()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -93,7 +93,7 @@ public interface NewSymphonySessionSettings extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Create Environment</em>' attribute.
 	 * @see #setCreateEnvironment(boolean)
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getNewSymphonySessionSettings_CreateEnvironment()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getNewSymphonySessionSettings_CreateEnvironment()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
@@ -120,7 +120,7 @@ public interface NewSymphonySessionSettings extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Create Programs</em>' attribute.
 	 * @see #setCreatePrograms(boolean)
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getNewSymphonySessionSettings_CreatePrograms()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getNewSymphonySessionSettings_CreatePrograms()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
@@ -147,7 +147,7 @@ public interface NewSymphonySessionSettings extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Create Data Products</em>' attribute.
 	 * @see #setCreateDataProducts(boolean)
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getNewSymphonySessionSettings_CreateDataProducts()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getNewSymphonySessionSettings_CreateDataProducts()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
@@ -174,7 +174,7 @@ public interface NewSymphonySessionSettings extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Create Tools</em>' attribute.
 	 * @see #setCreateTools(boolean)
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getNewSymphonySessionSettings_CreateTools()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getNewSymphonySessionSettings_CreateTools()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
@@ -194,7 +194,7 @@ public interface NewSymphonySessionSettings extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Returns an available session filename.
+	 * Returns an available session filename.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" resourceContainerDataType="org.eclipse.symphony.core.ui.IContainer" resourceContainerUnique="false"
 	 * @generated
@@ -205,7 +205,7 @@ public interface NewSymphonySessionSettings extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Sets the default values of the instance.
+	 * Sets the default values of the instance.
 	 * <!-- end-model-doc -->
 	 * @model resourceContainerDataType="org.eclipse.symphony.core.ui.IContainer" resourceContainerUnique="false"
 	 * @generated

@@ -16,8 +16,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
 import org.eclipse.symphony.core.programs.controllers.ControllerValueSource;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersFactory;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFactory;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.ControllerValueSource} object.
@@ -70,7 +70,7 @@ public class ControllerValueSourceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ControllerValueSource_lastValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ControllerValueSource_lastValue_feature", "_UI_ControllerValueSource_type"),
-				 EMFEcoreControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__LAST_VALUE,
+				 Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__LAST_VALUE,
 				 false,
 				 false,
 				 false,
@@ -92,8 +92,8 @@ public class ControllerValueSourceItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER);
-			childrenFeatures.add(EMFEcoreControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING);
+			childrenFeatures.add(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER);
+			childrenFeatures.add(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING);
 		}
 		return childrenFeatures;
 	}
@@ -156,12 +156,12 @@ public class ControllerValueSourceItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ControllerValueSource.class)) {
-			case EMFEcoreControllersPackage.CONTROLLER_VALUE_SOURCE__COMPONENT:
-			case EMFEcoreControllersPackage.CONTROLLER_VALUE_SOURCE__LAST_VALUE:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__COMPONENT:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__LAST_VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER:
-			case EMFEcoreControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_VALUE_SOURCE__CONDITIONING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -182,33 +182,33 @@ public class ControllerValueSourceItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER,
+				(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__ECOMPONENT_QUALIFIER,
 				 Symphony__CommonIOJInputFactory.eINSTANCE.createEComponentQualifier()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
-				 EMFEcoreControllersFactory.eINSTANCE.createLinearInputConditioning()));
+				(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
+				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createLinearInputConditioning()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
-				 EMFEcoreControllersFactory.eINSTANCE.createCenteredLinearInputConditioning()));
+				(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
+				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createCenteredLinearInputConditioning()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
-				 EMFEcoreControllersFactory.eINSTANCE.createParabolicInputConditioning()));
+				(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
+				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createParabolicInputConditioning()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
-				 EMFEcoreControllersFactory.eINSTANCE.createCenteredParabolicInputConditioning()));
+				(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
+				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createCenteredParabolicInputConditioning()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
-				 EMFEcoreControllersFactory.eINSTANCE.createUserDefinedInputConditioning()));
+				(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_VALUE_SOURCE__CONDITIONING,
+				 Symphony__CoreProgramsControllersFactory.eINSTANCE.createUserDefinedInputConditioning()));
 	}
 
 }

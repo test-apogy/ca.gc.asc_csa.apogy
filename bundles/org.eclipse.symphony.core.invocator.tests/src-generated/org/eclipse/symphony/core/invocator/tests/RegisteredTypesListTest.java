@@ -6,9 +6,8 @@ package org.eclipse.symphony.core.invocator.tests;
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
-
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.RegisteredTypesList;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -79,7 +78,7 @@ public class RegisteredTypesListTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createRegisteredTypesList());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createRegisteredTypesList());
 	}
 
 	/**

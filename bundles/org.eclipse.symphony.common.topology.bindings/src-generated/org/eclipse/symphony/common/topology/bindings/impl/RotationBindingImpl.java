@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.RotationNode;
 import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.common.topology.bindings.ANGLE_UNITS;
-import org.eclipse.symphony.common.topology.bindings.AXIS;
+import org.eclipse.symphony.common.topology.bindings.AngleUnits;
+import org.eclipse.symphony.common.topology.bindings.Axis;
 import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
 import org.eclipse.symphony.common.topology.bindings.RotationBinding;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-  protected static final AXIS ROTATION_AXIS_EDEFAULT = AXIS.XAXIS;
+  protected static final Axis ROTATION_AXIS_EDEFAULT = Axis.XAXIS;
 
   /**
 	 * The cached value of the '{@link #getRotationAxis() <em>Rotation Axis</em>}' attribute.
@@ -64,7 +64,7 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-  protected AXIS rotationAxis = ROTATION_AXIS_EDEFAULT;
+  protected Axis rotationAxis = ROTATION_AXIS_EDEFAULT;
 
   /**
 	 * The default value of the '{@link #getRotationUnits() <em>Rotation Units</em>}' attribute.
@@ -74,7 +74,7 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-  protected static final ANGLE_UNITS ROTATION_UNITS_EDEFAULT = ANGLE_UNITS.DEGREES;
+  protected static final AngleUnits ROTATION_UNITS_EDEFAULT = AngleUnits.DEGREES;
 
   /**
 	 * The cached value of the '{@link #getRotationUnits() <em>Rotation Units</em>}' attribute.
@@ -84,7 +84,7 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 	 * @generated
 	 * @ordered
 	 */
-  protected ANGLE_UNITS rotationUnits = ROTATION_UNITS_EDEFAULT;
+  protected AngleUnits rotationUnits = ROTATION_UNITS_EDEFAULT;
 
   /**
 	 * <!-- begin-user-doc -->
@@ -104,7 +104,7 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
   @Override
   protected EClass eStaticClass()
   {
-		return TopologyBindingsPackage.Literals.ROTATION_BINDING;
+		return Symphony__CommonTopologyBindingsPackage.Literals.ROTATION_BINDING;
 	}
 
   /**
@@ -119,7 +119,7 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 			rotationNode = (RotationNode)eResolveProxy(oldRotationNode);
 			if (rotationNode != oldRotationNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyBindingsPackage.ROTATION_BINDING__ROTATION_NODE, oldRotationNode, rotationNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_NODE, oldRotationNode, rotationNode));
 			}
 		}
 		return rotationNode;
@@ -145,7 +145,7 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 		RotationNode oldRotationNode = rotationNode;
 		rotationNode = newRotationNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyBindingsPackage.ROTATION_BINDING__ROTATION_NODE, oldRotationNode, rotationNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_NODE, oldRotationNode, rotationNode));
 	}
 
   /**
@@ -153,7 +153,7 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public AXIS getRotationAxis()
+  public Axis getRotationAxis()
   {
 		return rotationAxis;
 	}
@@ -163,12 +163,12 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setRotationAxis(AXIS newRotationAxis)
+  public void setRotationAxis(Axis newRotationAxis)
   {
-		AXIS oldRotationAxis = rotationAxis;
+		Axis oldRotationAxis = rotationAxis;
 		rotationAxis = newRotationAxis == null ? ROTATION_AXIS_EDEFAULT : newRotationAxis;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS, oldRotationAxis, rotationAxis));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS, oldRotationAxis, rotationAxis));
 	}
 
   /**
@@ -176,7 +176,7 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public ANGLE_UNITS getRotationUnits()
+  public AngleUnits getRotationUnits()
   {
 		return rotationUnits;
 	}
@@ -186,12 +186,12 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setRotationUnits(ANGLE_UNITS newRotationUnits)
+  public void setRotationUnits(AngleUnits newRotationUnits)
   {
-		ANGLE_UNITS oldRotationUnits = rotationUnits;
+		AngleUnits oldRotationUnits = rotationUnits;
 		rotationUnits = newRotationUnits == null ? ROTATION_UNITS_EDEFAULT : newRotationUnits;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS, oldRotationUnits, rotationUnits));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS, oldRotationUnits, rotationUnits));
 	}
 
   /**
@@ -203,12 +203,12 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_NODE:
+			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_NODE:
 				if (resolve) return getRotationNode();
 				return basicGetRotationNode();
-			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
+			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
 				return getRotationAxis();
-			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
+			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
 				return getRotationUnits();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -223,14 +223,14 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_NODE:
+			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_NODE:
 				setRotationNode((RotationNode)newValue);
 				return;
-			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
-				setRotationAxis((AXIS)newValue);
+			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
+				setRotationAxis((Axis)newValue);
 				return;
-			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
-				setRotationUnits((ANGLE_UNITS)newValue);
+			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
+				setRotationUnits((AngleUnits)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -245,13 +245,13 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_NODE:
+			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_NODE:
 				setRotationNode((RotationNode)null);
 				return;
-			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
+			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
 				setRotationAxis(ROTATION_AXIS_EDEFAULT);
 				return;
-			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
+			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
 				setRotationUnits(ROTATION_UNITS_EDEFAULT);
 				return;
 		}
@@ -267,11 +267,11 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_NODE:
+			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_NODE:
 				return rotationNode != null;
-			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
+			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_AXIS:
 				return rotationAxis != ROTATION_AXIS_EDEFAULT;
-			case TopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
+			case Symphony__CommonTopologyBindingsPackage.ROTATION_BINDING__ROTATION_UNITS:
 				return rotationUnits != ROTATION_UNITS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -329,7 +329,7 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 		/* Converts to radians if required.*/					
 		switch (getRotationUnits().getValue()) 
 		{
-				case ANGLE_UNITS.DEGREES_VALUE:
+				case AngleUnits.DEGREES_VALUE:
 					value = Math.toRadians(newValue);
 				break;
 
@@ -340,22 +340,22 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 		/* Rotate around the specified axis.*/
 		switch(getRotationAxis().getValue())
 		{
-			case AXIS.XAXIS_VALUE:
+			case Axis.XAXIS_VALUE:
 				getRotationNode().setRotationMatrix(TopologyFacade.INSTANCE.createRotationNodeXYZ(value, 0, 0).getRotationMatrix());
 				break;
-			case AXIS.MINUS_XAXIS_VALUE:
+			case Axis.MINUS_XAXIS_VALUE:
 				getRotationNode().setRotationMatrix(TopologyFacade.INSTANCE.createRotationNodeXYZ(-value, 0, 0).getRotationMatrix());
 				break;
-			case AXIS.YAXIS_VALUE:
+			case Axis.YAXIS_VALUE:
 				getRotationNode().setRotationMatrix(TopologyFacade.INSTANCE.createRotationNodeXYZ(0, value, 0).getRotationMatrix());
 				break;
-			case AXIS.MINUS_YAXIS_VALUE:
+			case Axis.MINUS_YAXIS_VALUE:
 				getRotationNode().setRotationMatrix(TopologyFacade.INSTANCE.createRotationNodeXYZ(0, -value, 0).getRotationMatrix());
 				break;
-			case AXIS.ZAXIS_VALUE:
+			case Axis.ZAXIS_VALUE:
 				getRotationNode().setRotationMatrix(TopologyFacade.INSTANCE.createRotationNodeXYZ(0, 0,value).getRotationMatrix());
 				break;
-			case AXIS.MINUS_ZAXIS_VALUE:
+			case Axis.MINUS_ZAXIS_VALUE:
 				getRotationNode().setRotationMatrix(TopologyFacade.INSTANCE.createRotationNodeXYZ(0, 0,-value).getRotationMatrix());
 				break;
 		}	

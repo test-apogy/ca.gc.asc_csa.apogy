@@ -5,7 +5,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
 import org.eclipse.symphony.core.environment.Sun;
 import org.eclipse.symphony.core.environment.ui.SunPresentation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIFactory;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
 
 public class SunPresentationAdapter implements NodePresentationAdapter
 {
@@ -34,7 +34,7 @@ public class SunPresentationAdapter implements NodePresentationAdapter
 			throw new IllegalArgumentException();
 		}
 
-		SunPresentation presentationNode = SymphonyEnvironmentUIFactory.eINSTANCE.createSunPresentation();
+		SunPresentation presentationNode = Symphony__CoreEnvironmentUIFactory.eINSTANCE.createSunPresentation();
 		presentationNode.setNode(obj);			
 						
 		return presentationNode;

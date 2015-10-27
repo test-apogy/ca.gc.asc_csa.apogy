@@ -11,10 +11,10 @@ import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeomet
 import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
 import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
-import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
+import org.eclipse.symphony.common.topology.bindings.provider.Symphony__CommonTopologyBindingsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
-import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
-import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
+import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorEditPlugin;
+import org.eclipse.symphony.core.provider.Symphony__CoreEditPlugin;
 
 /**
  * This is the central singleton for the SymphonyToolsCore edit plugin.
@@ -54,12 +54,12 @@ public final class SymphonyToolsCoreEditPlugin extends EMFPlugin
 		     Symphony__CommonProcessorsEditPlugin.INSTANCE,
 		     Symphony__CommonTopologyEditPlugin.INSTANCE,
 		     Symphony__CommonMathEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
+		     Symphony__CoreEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyBindingsEditPlugin.INSTANCE,
 		     PathsEditPlugin.INSTANCE,
 		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
 		     Symphony__CommonEMFEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     Symphony__CoreInvocatorEditPlugin.INSTANCE,
 		   });
 	}
 

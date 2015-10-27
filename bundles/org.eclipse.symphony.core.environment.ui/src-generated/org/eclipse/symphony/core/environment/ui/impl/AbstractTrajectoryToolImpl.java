@@ -15,7 +15,7 @@ import org.eclipse.symphony.core.environment.ui.AbstractTrajectoryTool;
 import org.eclipse.symphony.core.environment.ui.MapAnnotation;
 import org.eclipse.symphony.core.environment.ui.MapTool;
 import org.eclipse.symphony.core.environment.ui.MapViewItemPresentation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.experimental.chart.swt.ChartComposite;
@@ -94,7 +94,7 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentUIPackage.Literals.ABSTRACT_TRAJECTORY_TOOL;
+		return Symphony__CoreEnvironmentUIPackage.Literals.ABSTRACT_TRAJECTORY_TOOL;
 	}
 
   /**
@@ -117,7 +117,7 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
 		boolean oldVisible = visible;
 		visible = newVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE, oldVisible, visible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE, oldVisible, visible));
 	}
 
   /**
@@ -140,7 +140,7 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
 		boolean oldActive = active;
 		active = newActive;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE, oldActive, active));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE, oldActive, active));
 	}
 
   /**
@@ -192,9 +192,9 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
 				return isVisible();
-			case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
 				return isActive();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -209,10 +209,10 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
 				setVisible((Boolean)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
 				setActive((Boolean)newValue);
 				return;
 		}
@@ -228,10 +228,10 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
 				setActive(ACTIVE_EDEFAULT);
 				return;
 		}
@@ -247,9 +247,9 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE:
 				return visible != VISIBLE_EDEFAULT;
-			case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE:
 				return active != ACTIVE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -265,7 +265,7 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   {
 		if (baseClass == MapViewItemPresentation.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE: return SymphonyEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE;
+				case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE: return Symphony__CoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE;
 				default: return -1;
 			}
 		}
@@ -276,7 +276,7 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
 		}
 		if (baseClass == MapTool.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE: return SymphonyEnvironmentUIPackage.MAP_TOOL__ACTIVE;
+				case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE: return Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE;
 				default: return -1;
 			}
 		}
@@ -293,7 +293,7 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   {
 		if (baseClass == MapViewItemPresentation.class) {
 			switch (baseFeatureID) {
-				case SymphonyEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE: return SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE;
+				case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE: return Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__VISIBLE;
 				default: return -1;
 			}
 		}
@@ -304,7 +304,7 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
 		}
 		if (baseClass == MapTool.class) {
 			switch (baseFeatureID) {
-				case SymphonyEnvironmentUIPackage.MAP_TOOL__ACTIVE: return SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE;
+				case Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE: return Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL__ACTIVE;
 				default: return -1;
 			}
 		}
@@ -326,15 +326,15 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
 		}
 		if (baseClass == MapAnnotation.class) {
 			switch (baseOperationID) {
-				case SymphonyEnvironmentUIPackage.MAP_ANNOTATION___GET_XY_SHAPE_ANNOTATION: return SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___GET_XY_SHAPE_ANNOTATION;
+				case Symphony__CoreEnvironmentUIPackage.MAP_ANNOTATION___GET_XY_SHAPE_ANNOTATION: return Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___GET_XY_SHAPE_ANNOTATION;
 				default: return -1;
 			}
 		}
 		if (baseClass == MapTool.class) {
 			switch (baseOperationID) {
-				case SymphonyEnvironmentUIPackage.MAP_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART: return SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART;
-				case SymphonyEnvironmentUIPackage.MAP_TOOL___DISPOSE: return SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___DISPOSE;
-				case SymphonyEnvironmentUIPackage.MAP_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE: return SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE;
+				case Symphony__CoreEnvironmentUIPackage.MAP_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART: return Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART;
+				case Symphony__CoreEnvironmentUIPackage.MAP_TOOL___DISPOSE: return Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___DISPOSE;
+				case Symphony__CoreEnvironmentUIPackage.MAP_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE: return Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE;
 				default: return -1;
 			}
 		}
@@ -350,16 +350,16 @@ public abstract class AbstractTrajectoryToolImpl extends TrajectoryProviderImpl 
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART:
 				initialize((ChartComposite)arguments.get(0), (JFreeChart)arguments.get(1));
 				return null;
-			case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___DISPOSE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___DISPOSE:
 				dispose();
 				return null;
-			case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE:
 				positionSelected((Integer)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
 				return null;
-			case SymphonyEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___GET_XY_SHAPE_ANNOTATION:
+			case Symphony__CoreEnvironmentUIPackage.ABSTRACT_TRAJECTORY_TOOL___GET_XY_SHAPE_ANNOTATION:
 				return getXYShapeAnnotation();
 		}
 		return super.eInvoke(operationID, arguments);

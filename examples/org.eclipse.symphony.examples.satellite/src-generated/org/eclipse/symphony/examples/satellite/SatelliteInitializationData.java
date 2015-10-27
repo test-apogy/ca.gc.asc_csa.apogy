@@ -12,7 +12,6 @@ import org.eclipse.symphony.core.invocator.AbstractInitializationData;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Initialization Data representing the state of a Satellite.
  * <!-- end-model-doc -->
  *
@@ -24,7 +23,7 @@ import org.eclipse.symphony.core.invocator.AbstractInitializationData;
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteInitializationData#getOrbitModel <em>Orbit Model</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteInitializationData()
+ * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteInitializationData()
  * @model
  * @generated
  */
@@ -39,7 +38,7 @@ public interface SatelliteInitializationData extends AbstractInitializationData 
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Satellite</em>' containment reference.
 	 * @see #setSatellite(Satellite)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteInitializationData_Satellite()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteInitializationData_Satellite()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -65,7 +64,7 @@ public interface SatelliteInitializationData extends AbstractInitializationData 
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Orbit Model</em>' containment reference.
 	 * @see #setOrbitModel(OrbitModel)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteInitializationData_OrbitModel()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteInitializationData_OrbitModel()
 	 * @model containment="true"
 	 * @generated
 	 */

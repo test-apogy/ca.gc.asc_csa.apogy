@@ -10,7 +10,7 @@ package org.eclipse.symphony.common.topology.addons.primitives;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getAmbientLight()
+ * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getAmbientLight()
  * @model
  * @generated
  */

@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.symphony.core.environment.orbit.earth.ui.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.core.environment.orbit.earth.ui.provider.SymphonyEarthOrbitEnvironmentUIEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.core.environment.orbit.earth.ui.provider.Symphony__CoreEnvironmentOrbitEarthUIEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

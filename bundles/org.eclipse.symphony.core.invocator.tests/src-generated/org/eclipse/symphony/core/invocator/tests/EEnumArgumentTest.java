@@ -6,7 +6,7 @@ package org.eclipse.symphony.core.invocator.tests;
 import junit.textui.TestRunner;
 
 import org.eclipse.symphony.core.invocator.EEnumArgument;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class EEnumArgumentTest extends ArgumentTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createEEnumArgument());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createEEnumArgument());
 	}
 
 	/**

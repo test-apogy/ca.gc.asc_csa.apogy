@@ -399,7 +399,7 @@
       <!-- @generated eclipse_emf_ecore_invocator_ui -->
       <package
             uri="org.eclipse.symphony.core.invocator.ui"
-            class="org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUiPackage"
+            class="org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIPackage"
             genModel="model/symphony_core_invocator_ui.xcore"/>
    </extension>
 

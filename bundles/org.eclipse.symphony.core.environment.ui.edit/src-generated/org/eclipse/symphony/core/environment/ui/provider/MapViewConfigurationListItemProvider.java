@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.ui.MapViewConfigurationList;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.invocator.provider.AbstractToolsListContainerItemProvider;
 
 /**
@@ -66,7 +66,7 @@ public class MapViewConfigurationListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS);
+			childrenFeatures.add(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -131,7 +131,7 @@ public class MapViewConfigurationListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MapViewConfigurationList.class)) {
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -152,8 +152,8 @@ public class MapViewConfigurationListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS,
-				 SymphonyEnvironmentUIFactory.eINSTANCE.createMapViewConfiguration()));
+				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS,
+				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMapViewConfiguration()));
 	}
 
 }

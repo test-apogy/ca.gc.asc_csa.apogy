@@ -7,7 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.io.jinput.EComponent;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.ParabolicInputConditioning;
 
 /**
@@ -81,7 +81,7 @@ public class ParabolicInputConditioningImpl extends AbstractInputConditioningImp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreControllersPackage.Literals.PARABOLIC_INPUT_CONDITIONING;
+		return Symphony__CoreProgramsControllersPackage.Literals.PARABOLIC_INPUT_CONDITIONING;
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class ParabolicInputConditioningImpl extends AbstractInputConditioningImp
 		float oldMinimum = minimum;
 		minimum = newMinimum;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreControllersPackage.PARABOLIC_INPUT_CONDITIONING__MINIMUM, oldMinimum, minimum));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING__MINIMUM, oldMinimum, minimum));
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class ParabolicInputConditioningImpl extends AbstractInputConditioningImp
 		float oldMaximum = maximum;
 		maximum = newMaximum;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreControllersPackage.PARABOLIC_INPUT_CONDITIONING__MAXIMUM, oldMaximum, maximum));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING__MAXIMUM, oldMaximum, maximum));
 	}
 
 	/**
@@ -134,9 +134,9 @@ public class ParabolicInputConditioningImpl extends AbstractInputConditioningImp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.PARABOLIC_INPUT_CONDITIONING__MINIMUM:
+			case Symphony__CoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING__MINIMUM:
 				return getMinimum();
-			case EMFEcoreControllersPackage.PARABOLIC_INPUT_CONDITIONING__MAXIMUM:
+			case Symphony__CoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING__MAXIMUM:
 				return getMaximum();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -150,10 +150,10 @@ public class ParabolicInputConditioningImpl extends AbstractInputConditioningImp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.PARABOLIC_INPUT_CONDITIONING__MINIMUM:
+			case Symphony__CoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING__MINIMUM:
 				setMinimum((Float)newValue);
 				return;
-			case EMFEcoreControllersPackage.PARABOLIC_INPUT_CONDITIONING__MAXIMUM:
+			case Symphony__CoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING__MAXIMUM:
 				setMaximum((Float)newValue);
 				return;
 		}
@@ -168,10 +168,10 @@ public class ParabolicInputConditioningImpl extends AbstractInputConditioningImp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.PARABOLIC_INPUT_CONDITIONING__MINIMUM:
+			case Symphony__CoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING__MINIMUM:
 				setMinimum(MINIMUM_EDEFAULT);
 				return;
-			case EMFEcoreControllersPackage.PARABOLIC_INPUT_CONDITIONING__MAXIMUM:
+			case Symphony__CoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING__MAXIMUM:
 				setMaximum(MAXIMUM_EDEFAULT);
 				return;
 		}
@@ -186,9 +186,9 @@ public class ParabolicInputConditioningImpl extends AbstractInputConditioningImp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.PARABOLIC_INPUT_CONDITIONING__MINIMUM:
+			case Symphony__CoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING__MINIMUM:
 				return minimum != MINIMUM_EDEFAULT;
-			case EMFEcoreControllersPackage.PARABOLIC_INPUT_CONDITIONING__MAXIMUM:
+			case Symphony__CoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING__MAXIMUM:
 				return maximum != MAXIMUM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

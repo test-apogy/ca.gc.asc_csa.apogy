@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBodyNodeCenterOfMassVisitor;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBodyNodeMassVisitor;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBodyNodeVisitor;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -61,7 +61,7 @@ public class DynamicsFacadeImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMICS_FACADE;
+		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.DYNAMICS_FACADE;
 	}
 
 	/**
@@ -146,15 +146,15 @@ public class DynamicsFacadeImpl extends MinimalEObjectImpl.Container implements 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case Symphony__CommonTopologyDynamicsPackage.DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE:
 				return findCenterOfMass((Node)arguments.get(0));
-			case Symphony__CommonTopologyDynamicsPackage.DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE:
 				return findTotalMass((Node)arguments.get(0));
-			case Symphony__CommonTopologyDynamicsPackage.DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE:
 				return getPhysicalBodies((Node)arguments.get(0));
-			case Symphony__CommonTopologyDynamicsPackage.DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS:
 				return getPhysicalNodeSimulationProperty((PhysicalBody)arguments.get(0), (Class)arguments.get(1));
-			case Symphony__CommonTopologyDynamicsPackage.DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS:
 				return getConstraintSimulationProperty((AbstractConstraint)arguments.get(0), (Class)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

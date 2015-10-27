@@ -20,8 +20,8 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.SatelliteCommandList;
 
 /**
@@ -75,7 +75,7 @@ public class SatelliteCommandListItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_COMMAND_LIST__COMMANDS);
+			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_COMMAND_LIST__COMMANDS);
 		}
 		return childrenFeatures;
 	}
@@ -128,7 +128,7 @@ public class SatelliteCommandListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SatelliteCommandList.class)) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_LIST__COMMANDS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_LIST__COMMANDS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -148,18 +148,18 @@ public class SatelliteCommandListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_COMMAND_LIST__COMMANDS,
-				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommand()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_COMMAND_LIST__COMMANDS,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteCommand()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_COMMAND_LIST__COMMANDS,
-				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandRoll()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_COMMAND_LIST__COMMANDS,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteCommandRoll()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_COMMAND_LIST__COMMANDS,
-				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandAcquireImage()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_COMMAND_LIST__COMMANDS,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteCommandAcquireImage()));
 	}
 
 	/**

@@ -109,7 +109,7 @@ public class RoverSymphonySystemApiAdapterItemProvider
   @Override
   public ResourceLocator getResourceLocator()
   {
-		return SymphonyExampleRoverEditPlugin.INSTANCE;
+		return Symphony__ExamplesRoverSymphonyEditPlugin.INSTANCE;
 	}
 
 }

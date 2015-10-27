@@ -10,9 +10,9 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
 import org.eclipse.symphony.core.environment.orbit.provider.AbstractOrbitPropagatorItemProvider;
 
 /**
@@ -88,13 +88,13 @@ public class EarthOrbitPropagatorItemProvider extends AbstractOrbitPropagatorIte
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyOrbitEnvironmentPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createOreKitBackedFrame()));
+				(Symphony__CoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__REFERENCE_FRAME,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createOreKitBackedFrame()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyOrbitEnvironmentPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createNadirPointingAttitudeProvider()));
+				(Symphony__CoreEnvironmentOrbitPackage.Literals.ABSTRACT_ORBIT_PROPAGATOR__ATTITUDE_PROVIDER,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createNadirPointingAttitudeProvider()));
 	}
 
 }

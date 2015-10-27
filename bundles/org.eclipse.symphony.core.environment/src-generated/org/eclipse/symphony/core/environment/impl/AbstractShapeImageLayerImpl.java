@@ -9,8 +9,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.core.environment.AbstractShapeImageLayer;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -56,7 +56,7 @@ public abstract class AbstractShapeImageLayerImpl extends ImageMapLayerImpl impl
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color3f COLOR_EDEFAULT = (Color3f)SymphonyEnvironmentFactory.eINSTANCE.createFromString(SymphonyEnvironmentPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
+	protected static final Color3f COLOR_EDEFAULT = (Color3f)Symphony__CoreEnvironmentFactory.eINSTANCE.createFromString(Symphony__CoreEnvironmentPackage.eINSTANCE.getColor3f(), "0.0,1.0,0.0");
 
 	/**
 	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
@@ -104,7 +104,7 @@ public abstract class AbstractShapeImageLayerImpl extends ImageMapLayerImpl impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.ABSTRACT_SHAPE_IMAGE_LAYER;
+		return Symphony__CoreEnvironmentPackage.Literals.ABSTRACT_SHAPE_IMAGE_LAYER;
 	}
 
 	/**
@@ -125,7 +125,7 @@ public abstract class AbstractShapeImageLayerImpl extends ImageMapLayerImpl impl
 		boolean oldShapedFilled = shapedFilled;
 		shapedFilled = newShapedFilled;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__SHAPED_FILLED, oldShapedFilled, shapedFilled));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__SHAPED_FILLED, oldShapedFilled, shapedFilled));
 	}
 
 	/**
@@ -146,7 +146,7 @@ public abstract class AbstractShapeImageLayerImpl extends ImageMapLayerImpl impl
 		Color3f oldColor = color;
 		color = newColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__COLOR, oldColor, color));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__COLOR, oldColor, color));
 	}
 
 	/**
@@ -167,7 +167,7 @@ public abstract class AbstractShapeImageLayerImpl extends ImageMapLayerImpl impl
 		double oldRequiredResolution = requiredResolution;
 		requiredResolution = newRequiredResolution;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__REQUIRED_RESOLUTION, oldRequiredResolution, requiredResolution));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__REQUIRED_RESOLUTION, oldRequiredResolution, requiredResolution));
 	}
 
 	/**
@@ -178,11 +178,11 @@ public abstract class AbstractShapeImageLayerImpl extends ImageMapLayerImpl impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__SHAPED_FILLED:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__SHAPED_FILLED:
 				return isShapedFilled();
-			case SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__COLOR:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__COLOR:
 				return getColor();
-			case SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__REQUIRED_RESOLUTION:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__REQUIRED_RESOLUTION:
 				return getRequiredResolution();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -196,13 +196,13 @@ public abstract class AbstractShapeImageLayerImpl extends ImageMapLayerImpl impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__SHAPED_FILLED:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__SHAPED_FILLED:
 				setShapedFilled((Boolean)newValue);
 				return;
-			case SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__COLOR:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__COLOR:
 				setColor((Color3f)newValue);
 				return;
-			case SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__REQUIRED_RESOLUTION:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__REQUIRED_RESOLUTION:
 				setRequiredResolution((Double)newValue);
 				return;
 		}
@@ -217,13 +217,13 @@ public abstract class AbstractShapeImageLayerImpl extends ImageMapLayerImpl impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__SHAPED_FILLED:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__SHAPED_FILLED:
 				setShapedFilled(SHAPED_FILLED_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__COLOR:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__COLOR:
 				setColor(COLOR_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__REQUIRED_RESOLUTION:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__REQUIRED_RESOLUTION:
 				setRequiredResolution(REQUIRED_RESOLUTION_EDEFAULT);
 				return;
 		}
@@ -238,11 +238,11 @@ public abstract class AbstractShapeImageLayerImpl extends ImageMapLayerImpl impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__SHAPED_FILLED:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__SHAPED_FILLED:
 				return shapedFilled != SHAPED_FILLED_EDEFAULT;
-			case SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__COLOR:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__COLOR:
 				return COLOR_EDEFAULT == null ? color != null : !COLOR_EDEFAULT.equals(color);
-			case SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__REQUIRED_RESOLUTION:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__REQUIRED_RESOLUTION:
 				return requiredResolution != REQUIRED_RESOLUTION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

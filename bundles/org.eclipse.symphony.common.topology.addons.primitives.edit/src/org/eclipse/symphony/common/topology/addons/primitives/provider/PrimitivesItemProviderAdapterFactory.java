@@ -34,9 +34,9 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFactory;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
-import org.eclipse.symphony.common.topology.addons.primitives.util.PrimitivesAdapterFactory;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFactory;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.util.Symphony__CommonTopologyAddonsPrimitivesAdapterFactory;
 import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
 
 /**

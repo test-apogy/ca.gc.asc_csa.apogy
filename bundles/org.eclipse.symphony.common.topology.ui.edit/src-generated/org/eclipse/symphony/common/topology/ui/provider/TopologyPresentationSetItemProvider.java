@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ui.TopologyPresentationSet} object.
@@ -76,7 +76,7 @@ public class TopologyPresentationSetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TopologyPresentationSet_topologyPresentationRegistry_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TopologyPresentationSet_topologyPresentationRegistry_feature", "_UI_TopologyPresentationSet_type"),
-				 TopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_SET__TOPOLOGY_PRESENTATION_REGISTRY,
+				 Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_SET__TOPOLOGY_PRESENTATION_REGISTRY,
 				 true,
 				 false,
 				 true,
@@ -98,7 +98,7 @@ public class TopologyPresentationSetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TopologyPresentationSet_graphicsContext_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TopologyPresentationSet_graphicsContext_feature", "_UI_TopologyPresentationSet_type"),
-				 TopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_SET__GRAPHICS_CONTEXT,
+				 Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_SET__GRAPHICS_CONTEXT,
 				 true,
 				 false,
 				 true,
@@ -120,7 +120,7 @@ public class TopologyPresentationSetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TopologyPresentationSet_nodePresentationList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TopologyPresentationSet_nodePresentationList_feature", "_UI_TopologyPresentationSet_type"),
-				 TopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_SET__NODE_PRESENTATION_LIST,
+				 Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_SET__NODE_PRESENTATION_LIST,
 				 true,
 				 false,
 				 true,

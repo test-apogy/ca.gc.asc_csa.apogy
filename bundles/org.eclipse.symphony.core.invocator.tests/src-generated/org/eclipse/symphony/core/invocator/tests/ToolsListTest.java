@@ -6,8 +6,7 @@ package org.eclipse.symphony.core.invocator.tests;
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
-
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.ToolsList;
 
 /**
@@ -73,7 +72,7 @@ public class ToolsListTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createToolsList());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createToolsList());
 	}
 
 	/**

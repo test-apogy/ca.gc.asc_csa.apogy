@@ -11,7 +11,7 @@
       <!-- @generated symphony_examples_camera -->
       <package
             uri="org.eclipse.symphony.examples.camera.symphony"
-            class="org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage"
+            class="org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage"
             genModel="model/symphony_examples_camera_symphony.xcore"/>
    </extension>
    <extension

@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.ContextsList#getContexts <em>Contexts</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getContextsList()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContextsList()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface ContextsList extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environment</em>' container reference.
 	 * @see #setEnvironment(Environment)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getContextsList_Environment()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContextsList_Environment()
 	 * @see org.eclipse.symphony.core.invocator.Environment#getContextsList
 	 * @model opposite="contextsList" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -71,7 +71,7 @@ public interface ContextsList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contexts</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getContextsList_Contexts()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContextsList_Contexts()
 	 * @see org.eclipse.symphony.core.invocator.Context#getContextsList
 	 * @model opposite="contextsList" containment="true"
 	 * @generated

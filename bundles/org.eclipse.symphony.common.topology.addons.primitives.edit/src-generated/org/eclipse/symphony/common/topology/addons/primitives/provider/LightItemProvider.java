@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.addons.primitives.Light;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 import org.eclipse.symphony.common.topology.provider.LeafItemProvider;
 
 /**
@@ -69,7 +69,7 @@ public class LightItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Light_enabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Light_enabled_feature", "_UI_Light_type"),
-				 PrimitivesPackage.Literals.LIGHT__ENABLED,
+				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.LIGHT__ENABLED,
 				 true,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class LightItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PrimitivesPackage.Literals.LIGHT__COLOR);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.LIGHT__COLOR);
 		}
 		return childrenFeatures;
 	}
@@ -134,10 +134,10 @@ public class LightItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Light.class)) {
-			case PrimitivesPackage.LIGHT__ENABLED:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__ENABLED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case PrimitivesPackage.LIGHT__COLOR:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.LIGHT__COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -157,7 +157,7 @@ public class LightItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PrimitivesPackage.Literals.LIGHT__COLOR,
+				(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.LIGHT__COLOR,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 

@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.ui.NewSymphonySessionSettings} object.
@@ -81,7 +81,7 @@ public class NewSymphonySessionSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NewSymphonySessionSettings_folder_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonySessionSettings_folder_feature", "_UI_NewSymphonySessionSettings_type"),
-				 SymphonyCoreUiPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER,
+				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER,
 				 true,
 				 false,
 				 false,
@@ -103,7 +103,7 @@ public class NewSymphonySessionSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NewSymphonySessionSettings_filename_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonySessionSettings_filename_feature", "_UI_NewSymphonySessionSettings_type"),
-				 SymphonyCoreUiPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME,
+				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME,
 				 true,
 				 false,
 				 false,
@@ -125,7 +125,7 @@ public class NewSymphonySessionSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NewSymphonySessionSettings_createEnvironment_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonySessionSettings_createEnvironment_feature", "_UI_NewSymphonySessionSettings_type"),
-				 SymphonyCoreUiPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT,
+				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT,
 				 true,
 				 false,
 				 false,
@@ -147,7 +147,7 @@ public class NewSymphonySessionSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NewSymphonySessionSettings_createPrograms_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonySessionSettings_createPrograms_feature", "_UI_NewSymphonySessionSettings_type"),
-				 SymphonyCoreUiPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS,
+				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS,
 				 true,
 				 false,
 				 false,
@@ -169,7 +169,7 @@ public class NewSymphonySessionSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NewSymphonySessionSettings_createDataProducts_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonySessionSettings_createDataProducts_feature", "_UI_NewSymphonySessionSettings_type"),
-				 SymphonyCoreUiPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS,
+				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS,
 				 true,
 				 false,
 				 false,
@@ -191,7 +191,7 @@ public class NewSymphonySessionSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NewSymphonySessionSettings_createTools_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonySessionSettings_createTools_feature", "_UI_NewSymphonySessionSettings_type"),
-				 SymphonyCoreUiPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS,
+				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS,
 				 true,
 				 false,
 				 false,
@@ -238,12 +238,12 @@ public class NewSymphonySessionSettingsItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(NewSymphonySessionSettings.class)) {
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER:
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME:
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS:
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FOLDER:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__FILENAME:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_ENVIRONMENT:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_PROGRAMS:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_DATA_PRODUCTS:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS__CREATE_TOOLS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -270,7 +270,7 @@ public class NewSymphonySessionSettingsItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SymphonyCoreUiEditPlugin.INSTANCE;
+		return Symphony__CoreUIEditPlugin.INSTANCE;
 	}
 
 }

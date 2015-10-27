@@ -20,8 +20,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.invocator.ContextsList;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.ContextsList} object.
@@ -78,7 +78,7 @@ public class ContextsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS);
 		}
 		return childrenFeatures;
 	}
@@ -134,7 +134,7 @@ public class ContextsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ContextsList.class)) {
-			case EMFEcoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
+			case Symphony__CoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -155,8 +155,8 @@ public class ContextsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createBasicContext()));
+				(Symphony__CoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createBasicContext()));
 	}
 
   /**

@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -1018,7 +1018,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__NAME = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__NAME;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__NAME = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1027,7 +1027,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__DESCRIPTION = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__DESCRIPTION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__DESCRIPTION = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Map</b></em>' container reference.
@@ -1036,7 +1036,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__MAP = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__MAP;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__MAP = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__MAP;
 
 	/**
 	 * The feature id for the '<em><b>Abstract Map Layer Node</b></em>' reference.
@@ -1045,7 +1045,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__ABSTRACT_MAP_LAYER_NODE;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -1054,7 +1054,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__WIDTH = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__WIDTH;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__WIDTH = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -1063,7 +1063,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__HEIGHT = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__HEIGHT;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__HEIGHT = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__HEIGHT;
 
 	/**
 	 * The feature id for the '<em><b>Opaque</b></em>' attribute.
@@ -1072,7 +1072,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__OPAQUE = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OPAQUE;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__OPAQUE = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OPAQUE;
 
 	/**
 	 * The feature id for the '<em><b>Image</b></em>' containment reference.
@@ -1081,7 +1081,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__IMAGE = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__IMAGE;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__IMAGE = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__IMAGE;
 
 	/**
 	 * The feature id for the '<em><b>Legend</b></em>' containment reference.
@@ -1090,7 +1090,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LEGEND = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LEGEND;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LEGEND = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LEGEND;
 
 	/**
 	 * The feature id for the '<em><b>Resolution</b></em>' attribute.
@@ -1099,7 +1099,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__RESOLUTION = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__RESOLUTION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__RESOLUTION = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__RESOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Required Resolution</b></em>' attribute.
@@ -1108,7 +1108,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION;
 
 	/**
 	 * The feature id for the '<em><b>Cartesian Triangular Mesh Map Layer</b></em>' reference.
@@ -1117,7 +1117,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER;
 
 	/**
 	 * The feature id for the '<em><b>Line Of Sight Available Color</b></em>' attribute.
@@ -1126,7 +1126,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_AVAILABLE_COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Line Of Sight Not Available Color</b></em>' attribute.
@@ -1135,7 +1135,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__LINE_OF_SIGHT_NOT_AVAILABLE_COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Observer Pose</b></em>' containment reference.
@@ -1144,7 +1144,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__OBSERVER_POSE = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OBSERVER_POSE;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__OBSERVER_POSE = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__OBSERVER_POSE;
 
 	/**
 	 * The feature id for the '<em><b>Target Height Above Ground</b></em>' attribute.
@@ -1153,7 +1153,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__TARGET_HEIGHT_ABOVE_GROUND;
 
 	/**
 	 * The feature id for the '<em><b>Use Height Perpendicular To Ground</b></em>' attribute.
@@ -1162,7 +1162,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER__USE_HEIGHT_PERPENDICULAR_TO_GROUND;
 
 	/**
 	 * The feature id for the '<em><b>Antenna Radiation Pattern</b></em>' containment reference.
@@ -1171,7 +1171,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 0;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__ANTENNA_RADIATION_PATTERN = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Signal Strength Cutoff</b></em>' attribute.
@@ -1180,7 +1180,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 1;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__SIGNAL_STRENGTH_CUTOFF = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Bellow Cutoff Color</b></em>' attribute.
@@ -1189,7 +1189,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 2;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER__BELLOW_CUTOFF_COLOR = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Antenna Radiation Pattern Image Map Layer</em>' class.
@@ -1198,7 +1198,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER_FEATURE_COUNT = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 3;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER_FEATURE_COUNT = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Get Region</em>' operation.
@@ -1207,7 +1207,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_REGION = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_REGION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_REGION = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_REGION;
 
 	/**
 	 * The operation id for the '<em>Get Region Image</em>' operation.
@@ -1216,7 +1216,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_REGION_IMAGE = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_REGION_IMAGE;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_REGION_IMAGE = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_REGION_IMAGE;
 
 	/**
 	 * The operation id for the '<em>Get Resolution</em>' operation.
@@ -1225,7 +1225,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_RESOLUTION = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_RESOLUTION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_RESOLUTION = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_RESOLUTION;
 
 	/**
 	 * The operation id for the '<em>Update Image</em>' operation.
@@ -1234,7 +1234,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___UPDATE_IMAGE__IPROGRESSMONITOR;
 
 	/**
 	 * The operation id for the '<em>Get Image Map Layer Region</em>' operation.
@@ -1243,7 +1243,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER___GET_IMAGE_MAP_LAYER_REGION;
 
 	/**
 	 * The number of operations of the '<em>Antenna Radiation Pattern Image Map Layer</em>' class.
@@ -1252,7 +1252,7 @@ public interface Symphony__AddonsTelecomsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER_OPERATION_COUNT = SymphonyEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_OPERATION_COUNT + 0;
+	int ANTENNA_RADIATION_PATTERN_IMAGE_MAP_LAYER_OPERATION_COUNT = Symphony__CoreEnvironmentPackage.LINE_OF_SIGHT_IMAGE_MAP_LAYER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.telecoms.TelecomNodeStatus <em>Telecom Node Status</em>}' enum.

@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.AbstractPlayer;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.AbstractPlayer} object.
@@ -129,7 +129,7 @@ public class AbstractPlayerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractPlayer_recordingToolsContainer_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractPlayer_recordingToolsContainer_feature", "_UI_AbstractPlayer_type"),
-				 EMFEcoreInvocatorPackage.Literals.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER,
+				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER,
 				 true,
 				 false,
 				 true,
@@ -166,8 +166,8 @@ public class AbstractPlayerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractPlayer.class)) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__NAME:
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__NAME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

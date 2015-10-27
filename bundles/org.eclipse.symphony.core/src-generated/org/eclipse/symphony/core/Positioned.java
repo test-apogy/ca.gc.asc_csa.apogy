@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *   <li>{@link org.eclipse.symphony.core.Positioned#getPose <em>Pose</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getPositioned()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getPositioned()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface Positioned extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pose</em>' containment reference.
 	 * @see #setPose(Matrix4x4)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getPositioned_Pose()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getPositioned_Pose()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Editable' propertyCategory='POSITION_INFO'"
 	 * @generated

@@ -21,8 +21,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.bindings.BindingsSet;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.BindingsSet} object.
@@ -75,8 +75,8 @@ public class BindingsSetItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyBindingsPackage.Literals.BINDINGS_SET__FEATURE_ROOTS_LIST);
-			childrenFeatures.add(TopologyBindingsPackage.Literals.BINDINGS_SET__BINDINGS_LIST);
+			childrenFeatures.add(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_SET__FEATURE_ROOTS_LIST);
+			childrenFeatures.add(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_SET__BINDINGS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -129,8 +129,8 @@ public class BindingsSetItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BindingsSet.class)) {
-			case TopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST:
-			case TopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST:
+			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__FEATURE_ROOTS_LIST:
+			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET__BINDINGS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -150,13 +150,13 @@ public class BindingsSetItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.BINDINGS_SET__FEATURE_ROOTS_LIST,
-				 TopologyBindingsFactory.eINSTANCE.createFeatureRootsList()));
+				(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_SET__FEATURE_ROOTS_LIST,
+				 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createFeatureRootsList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.BINDINGS_SET__BINDINGS_LIST,
-				 TopologyBindingsFactory.eINSTANCE.createBindingsList()));
+				(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_SET__BINDINGS_LIST,
+				 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createBindingsList()));
 	}
 
 	/**

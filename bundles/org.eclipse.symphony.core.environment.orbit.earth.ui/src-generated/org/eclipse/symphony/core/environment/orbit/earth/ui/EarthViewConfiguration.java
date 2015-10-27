@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration#getLayers <em>Layers</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getEarthViewConfiguration()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getEarthViewConfiguration()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface EarthViewConfiguration extends Named, Described {
 	 * * List of Maps being displayed.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Layers</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getEarthViewConfiguration_Layers()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getEarthViewConfiguration_Layers()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='None'"
 	 * @generated

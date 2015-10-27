@@ -4,9 +4,8 @@
 package org.eclipse.symphony.core.invocator.tests;
 
 import junit.textui.TestRunner;
-
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.RecordingToolsContainer;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,7 +53,7 @@ public class RecordingToolsContainerTest extends AbstractToolsListContainerTest 
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createRecordingToolsContainer());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createRecordingToolsContainer());
 	}
 
 	/**

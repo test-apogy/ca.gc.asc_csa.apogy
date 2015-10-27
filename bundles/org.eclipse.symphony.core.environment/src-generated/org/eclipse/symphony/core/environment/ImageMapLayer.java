@@ -12,7 +12,6 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Map Layer containing a 2D image.
  * <!-- end-model-doc -->
  *
@@ -28,7 +27,7 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  *   <li>{@link org.eclipse.symphony.core.environment.ImageMapLayer#getResolution <em>Resolution</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getImageMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getImageMapLayer()
  * @model
  * @generated
  */
@@ -40,11 +39,11 @@ public interface ImageMapLayer extends AbstractMapLayer, RectangularRegionImage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The width of the region covered by the map, in meters.
+	 * The width of the region covered by the map, in meters.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Width</em>' attribute.
 	 * @see #setWidth(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getImageMapLayer_Width()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getImageMapLayer_Width()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='SIZE_AND_RESOLUTION' csa_units='m'"
 	 * @generated
@@ -67,11 +66,11 @@ public interface ImageMapLayer extends AbstractMapLayer, RectangularRegionImage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The height of the region covered by the map, in meters.
+	 * The height of the region covered by the map, in meters.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Height</em>' attribute.
 	 * @see #setHeight(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getImageMapLayer_Height()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getImageMapLayer_Height()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='SIZE_AND_RESOLUTION' csa_units='m'"
 	 * @generated
@@ -94,11 +93,11 @@ public interface ImageMapLayer extends AbstractMapLayer, RectangularRegionImage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Wether or not the map is opaque (i.e. cannot be superimposed on other ImageMapLayer.
+	 * Whether or not the map is opaque (i.e. cannot be superimposed on other ImageMapLayer.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Opaque</em>' attribute.
 	 * @see #setOpaque(boolean)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getImageMapLayer_Opaque()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getImageMapLayer_Opaque()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
@@ -119,11 +118,11 @@ public interface ImageMapLayer extends AbstractMapLayer, RectangularRegionImage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The image.
+	 * The image.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Image</em>' containment reference.
 	 * @see #setImage(AbstractEImage)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getImageMapLayer_Image()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getImageMapLayer_Image()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='IMAGES'"
 	 * @generated
@@ -145,11 +144,11 @@ public interface ImageMapLayer extends AbstractMapLayer, RectangularRegionImage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  An image containing the legend associated with the image.
+	 * An image containing the legend associated with the image.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Legend</em>' containment reference.
 	 * @see #setLegend(AbstractEImage)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getImageMapLayer_Legend()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getImageMapLayer_Legend()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='IMAGES'"
 	 * @generated
@@ -174,7 +173,7 @@ public interface ImageMapLayer extends AbstractMapLayer, RectangularRegionImage
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Return the RectangularRegion represented by this ImageMapLayer.
+	 * Return the RectangularRegion represented by this ImageMapLayer.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
 	 * @generated
@@ -186,10 +185,10 @@ public interface ImageMapLayer extends AbstractMapLayer, RectangularRegionImage
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The resolution, in meters / pixels
+	 * The resolution, in meters / pixels
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Resolution</em>' attribute.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getImageMapLayer_Resolution()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getImageMapLayer_Resolution()
 	 * @model unique="false" transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='SIZE_AND_RESOLUTION' csa_units='m/pixel'"
 	 * @generated

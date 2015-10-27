@@ -1,9 +1,9 @@
-@GenModel(prefix="SymphonyExampleMobilePlatform",
+@GenModel(prefix="Symphony__ExamplesMobilePlatformSymphony",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  multipleEditorPages="false",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015",
-		  modelName="SymphonyExampleMobilePlatform")
+		  modelName="Symphony__ExamplesMobilePlatformSymphony")
 @GenModel(modelDirectory="/org.eclipse.symphony.examples.mobile_platform.symphony/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.examples.mobile_platform.symphony.edit/src-generated")
 

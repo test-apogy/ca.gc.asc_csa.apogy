@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.LocalTypesList#getTypes <em>Types</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getLocalTypesList()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getLocalTypesList()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface LocalTypesList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Types</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getLocalTypesList_Types()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getLocalTypesList_Types()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' createChild='true' property='None'"
 	 * @generated

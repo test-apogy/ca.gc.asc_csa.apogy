@@ -22,7 +22,7 @@ package org.eclipse.symphony.core.environment.ui;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider#getAzimuthThreshold <em>Azimuth Threshold</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getDefaultVariableTrajectoryProvider()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getDefaultVariableTrajectoryProvider()
  * @model
  * @generated
  */
@@ -34,11 +34,11 @@ public interface DefaultVariableTrajectoryProvider extends VariableTrajectoryPro
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Minimum distance to keep between points added to the XYSeries.
+	 *  Minimum distance to keep between points added to the XYSeries.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Distance Threshold</em>' attribute.
 	 * @see #setDistanceThreshold(double)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getDefaultVariableTrajectoryProvider_DistanceThreshold()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getDefaultVariableTrajectoryProvider_DistanceThreshold()
 	 * @model default="0.5" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='THRESHOLDS' csa_units='m'"
 	 * @generated
@@ -61,11 +61,11 @@ public interface DefaultVariableTrajectoryProvider extends VariableTrajectoryPro
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Minimum azimuth change that will trigger an azimuthAngle change.
+	 *  Minimum azimuth change that will trigger an azimuthAngle change.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Azimuth Threshold</em>' attribute.
 	 * @see #setAzimuthThreshold(double)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getDefaultVariableTrajectoryProvider_AzimuthThreshold()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getDefaultVariableTrajectoryProvider_AzimuthThreshold()
 	 * @model default="0.017" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='THRESHOLDS' csa_units='rad'"
 	 * @generated

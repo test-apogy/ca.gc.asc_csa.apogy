@@ -11,7 +11,7 @@ package org.eclipse.symphony.core.environment;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Asbtract class defining an ImageMapLayer for which the image is derived from a Mesh.
+ * Abstract class defining an ImageMapLayer for which the image is derived from a Mesh.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -22,7 +22,7 @@ package org.eclipse.symphony.core.environment;
  *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer#getCartesianTriangularMeshMapLayer <em>Cartesian Triangular Mesh Map Layer</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshDerivedImageMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshDerivedImageMapLayer()
  * @model abstract="true"
  * @generated
  */
@@ -33,11 +33,11 @@ public interface CartesianTriangularMeshDerivedImageMapLayer extends ImageMapLay
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The required resolution, in meters / pixels
+	 * The required resolution, in meters / pixels
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Required Resolution</em>' attribute.
 	 * @see #setRequiredResolution(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshDerivedImageMapLayer_RequiredResolution()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshDerivedImageMapLayer_RequiredResolution()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS' csa_units='m/pixel'"
 	 * @generated
@@ -63,7 +63,7 @@ public interface CartesianTriangularMeshDerivedImageMapLayer extends ImageMapLay
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Cartesian Triangular Mesh Map Layer</em>' reference.
 	 * @see #setCartesianTriangularMeshMapLayer(CartesianTriangularMeshMapLayer)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshDerivedImageMapLayer_CartesianTriangularMeshMapLayer()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshDerivedImageMapLayer_CartesianTriangularMeshMapLayer()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS'"
 	 * @generated
 	 */

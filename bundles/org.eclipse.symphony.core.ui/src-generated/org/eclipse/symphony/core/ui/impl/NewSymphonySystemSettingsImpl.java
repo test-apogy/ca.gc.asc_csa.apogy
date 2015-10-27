@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -81,7 +81,7 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCoreUiPackage.Literals.NEW_SYMPHONY_SYSTEM_SETTINGS;
+		return Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SYSTEM_SETTINGS;
 	}
 
 	/**
@@ -102,7 +102,7 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 		String oldFolder = folder;
 		folder = newFolder;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCoreUiPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER, oldFolder, folder));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER, oldFolder, folder));
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 		String oldFilename = filename;
 		filename = newFilename;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCoreUiPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME, oldFilename, filename));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME, oldFilename, filename));
 	}
 
 	/**
@@ -134,9 +134,9 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER:
 				return getFolder();
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME:
 				return getFilename();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -150,10 +150,10 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER:
 				setFolder((String)newValue);
 				return;
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME:
 				setFilename((String)newValue);
 				return;
 		}
@@ -168,10 +168,10 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER:
 				setFolder(FOLDER_EDEFAULT);
 				return;
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME:
 				setFilename(FILENAME_EDEFAULT);
 				return;
 		}
@@ -186,9 +186,9 @@ public class NewSymphonySystemSettingsImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER:
 				return FOLDER_EDEFAULT == null ? folder != null : !FOLDER_EDEFAULT.equals(folder);
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME:
 				return FILENAME_EDEFAULT == null ? filename != null : !FILENAME_EDEFAULT.equals(filename);
 		}
 		return super.eIsSet(featureID);

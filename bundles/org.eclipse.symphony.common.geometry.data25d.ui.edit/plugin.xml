@@ -26,19 +26,10 @@
       <!-- @generated symphony_common_geometry_data25d_ui -->
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.common.geometry.data25d.ui.provider.Symphony__CommonGeometryData25DUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.common.geometry.data25d.ui.provider.Symphony__CommonGeometryData25DUIItemProviderAdapterFactory$Symphony__CommonTopologyUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.common.geometry.data25d.ui.provider.Symphony__CommonGeometryData25DUIItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.common.geometry.data25d.ui.provider.Symphony__CommonGeometryData25DUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.common.geometry.data25d.ui.provider.Symphony__CommonGeometryData25DUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
    </extension>
 
 </plugin>

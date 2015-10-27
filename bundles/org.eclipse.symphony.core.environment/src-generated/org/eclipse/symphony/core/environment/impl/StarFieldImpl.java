@@ -27,8 +27,8 @@ import org.eclipse.symphony.core.environment.EnvironmentUtilities;
 import org.eclipse.symphony.core.environment.EquatorialCoordinates;
 import org.eclipse.symphony.core.environment.Star;
 import org.eclipse.symphony.core.environment.StarField;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -95,7 +95,7 @@ public class StarFieldImpl extends NodeImpl implements StarField
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.STAR_FIELD;
+		return Symphony__CoreEnvironmentPackage.Literals.STAR_FIELD;
 	}
 
   /**
@@ -131,7 +131,7 @@ public class StarFieldImpl extends NodeImpl implements StarField
   public EList<Star> getStarsGen()
   {
 		if (stars == null) {
-			stars = new EObjectResolvingEList<Star>(Star.class, this, SymphonyEnvironmentPackage.STAR_FIELD__STARS);
+			stars = new EObjectResolvingEList<Star>(Star.class, this, Symphony__CoreEnvironmentPackage.STAR_FIELD__STARS);
 		}
 		return stars;
 	}
@@ -168,7 +168,7 @@ public class StarFieldImpl extends NodeImpl implements StarField
 		String oldStarFieldFileName = starFieldFileName;
 		starFieldFileName = newStarFieldFileName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME, oldStarFieldFileName, starFieldFileName));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME, oldStarFieldFileName, starFieldFileName));
 	}
 
   /**
@@ -180,9 +180,9 @@ public class StarFieldImpl extends NodeImpl implements StarField
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.STAR_FIELD__STARS:
+			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STARS:
 				return getStars();
-			case SymphonyEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
+			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
 				return getStarFieldFileName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -198,11 +198,11 @@ public class StarFieldImpl extends NodeImpl implements StarField
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.STAR_FIELD__STARS:
+			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STARS:
 				getStars().clear();
 				getStars().addAll((Collection<? extends Star>)newValue);
 				return;
-			case SymphonyEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
+			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
 				setStarFieldFileName((String)newValue);
 				return;
 		}
@@ -218,10 +218,10 @@ public class StarFieldImpl extends NodeImpl implements StarField
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.STAR_FIELD__STARS:
+			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STARS:
 				getStars().clear();
 				return;
-			case SymphonyEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
+			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
 				setStarFieldFileName(STAR_FIELD_FILE_NAME_EDEFAULT);
 				return;
 		}
@@ -237,9 +237,9 @@ public class StarFieldImpl extends NodeImpl implements StarField
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.STAR_FIELD__STARS:
+			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STARS:
 				return stars != null && !stars.isEmpty();
-			case SymphonyEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
+			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
 				return STAR_FIELD_FILE_NAME_EDEFAULT == null ? starFieldFileName != null : !STAR_FIELD_FILE_NAME_EDEFAULT.equals(starFieldFileName);
 		}
 		return super.eIsSet(featureID);
@@ -328,8 +328,8 @@ public class StarFieldImpl extends NodeImpl implements StarField
 			float declination = EnvironmentUtilities.INSTANCE.parseDegMinSec(entries[2]);
 			float magnitude = Float.parseFloat( entries[6]);						
 			
-			star = SymphonyEnvironmentFactory.eINSTANCE.createStar();
-			EquatorialCoordinates equatorialCoordinates = SymphonyEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
+			star = Symphony__CoreEnvironmentFactory.eINSTANCE.createStar();
+			EquatorialCoordinates equatorialCoordinates = Symphony__CoreEnvironmentFactory.eINSTANCE.createEquatorialCoordinates();
 			
 			equatorialCoordinates.setRightAscension(rightAscension);
 			equatorialCoordinates.setDeclination(declination);

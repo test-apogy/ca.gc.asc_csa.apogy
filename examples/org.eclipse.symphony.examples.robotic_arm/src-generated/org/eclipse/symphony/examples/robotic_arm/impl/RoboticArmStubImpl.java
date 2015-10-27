@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.robotic_arm.Activator;
-import org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage;
+import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage;
 import org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel;
 import org.eclipse.symphony.examples.robotic_arm.RoboticArmStub;
 
@@ -35,7 +35,7 @@ public class RoboticArmStubImpl extends RoboticArmImpl implements RoboticArmStub
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleRoboticArmPackage.Literals.ROBOTIC_ARM_STUB;
+		return Symphony__ExamplesRoboticArmPackage.Literals.ROBOTIC_ARM_STUB;
 	}
 
 	/**

@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * This is the item provider adapter for a
@@ -142,7 +142,7 @@ public class AbstractWorksiteItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_AbstractWorksite_worksitesList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractWorksite_worksitesList_feature", "_UI_AbstractWorksite_type"),
-				 SymphonyCorePackage.Literals.ABSTRACT_WORKSITE__WORKSITES_LIST,
+				 Symphony__CorePackage.Literals.ABSTRACT_WORKSITE__WORKSITES_LIST,
 				 true,
 				 false,
 				 true,
@@ -177,9 +177,9 @@ public class AbstractWorksiteItemProvider extends ItemProviderAdapter implements
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractWorksite.class)) {
-			case SymphonyCorePackage.ABSTRACT_WORKSITE__NAME:
-			case SymphonyCorePackage.ABSTRACT_WORKSITE__DESCRIPTION:
-			case SymphonyCorePackage.ABSTRACT_WORKSITE__TIME:
+			case Symphony__CorePackage.ABSTRACT_WORKSITE__NAME:
+			case Symphony__CorePackage.ABSTRACT_WORKSITE__DESCRIPTION:
+			case Symphony__CorePackage.ABSTRACT_WORKSITE__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

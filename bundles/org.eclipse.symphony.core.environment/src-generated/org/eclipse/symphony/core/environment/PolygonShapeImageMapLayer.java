@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getPolygonShapeImageMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getPolygonShapeImageMapLayer()
  * @model abstract="true"
  * @generated
  */

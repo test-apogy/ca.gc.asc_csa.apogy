@@ -23,10 +23,10 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet} object.
@@ -133,7 +133,7 @@ public class SpacecraftsVisibilitySetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Updatable_updating_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Updatable_updating_feature", "_UI_Updatable_type"),
-				 SymphonyCorePackage.Literals.UPDATABLE__UPDATING,
+				 Symphony__CorePackage.Literals.UPDATABLE__UPDATING,
 				 false,
 				 false,
 				 false,
@@ -155,7 +155,7 @@ public class SpacecraftsVisibilitySetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Updatable_autoUpdateEnabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Updatable_autoUpdateEnabled_feature", "_UI_Updatable_type"),
-				 SymphonyCorePackage.Literals.UPDATABLE__AUTO_UPDATE_ENABLED,
+				 Symphony__CorePackage.Literals.UPDATABLE__AUTO_UPDATE_ENABLED,
 				 true,
 				 false,
 				 false,
@@ -177,7 +177,7 @@ public class SpacecraftsVisibilitySetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftsVisibilitySet_startTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftsVisibilitySet_startTime_feature", "_UI_SpacecraftsVisibilitySet_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.SPACECRAFTS_VISIBILITY_SET__START_TIME,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFTS_VISIBILITY_SET__START_TIME,
 				 true,
 				 false,
 				 false,
@@ -199,7 +199,7 @@ public class SpacecraftsVisibilitySetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftsVisibilitySet_endTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftsVisibilitySet_endTime_feature", "_UI_SpacecraftsVisibilitySet_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.SPACECRAFTS_VISIBILITY_SET__END_TIME,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFTS_VISIBILITY_SET__END_TIME,
 				 true,
 				 false,
 				 false,
@@ -221,7 +221,7 @@ public class SpacecraftsVisibilitySetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftsVisibilitySet_orbitModels_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftsVisibilitySet_orbitModels_feature", "_UI_SpacecraftsVisibilitySet_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS,
 				 true,
 				 false,
 				 true,
@@ -243,7 +243,7 @@ public class SpacecraftsVisibilitySetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftsVisibilitySet_groundStations_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftsVisibilitySet_groundStations_feature", "_UI_SpacecraftsVisibilitySet_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS,
 				 true,
 				 false,
 				 true,
@@ -265,7 +265,7 @@ public class SpacecraftsVisibilitySetItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftsVisibilitySet_passes_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftsVisibilitySet_passes_feature", "_UI_SpacecraftsVisibilitySet_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.SPACECRAFTS_VISIBILITY_SET__PASSES,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFTS_VISIBILITY_SET__PASSES,
 				 false,
 				 false,
 				 false,
@@ -286,9 +286,9 @@ public class SpacecraftsVisibilitySetItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.SPACECRAFTS_VISIBILITY_SET__PASSES);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFTS_VISIBILITY_SET__PASSES);
 		}
 		return childrenFeatures;
 	}
@@ -344,18 +344,18 @@ public class SpacecraftsVisibilitySetItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SpacecraftsVisibilitySet.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__NAME:
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION:
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING:
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED:
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__START_TIME:
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__END_TIME:
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__UPDATING:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__AUTO_UPDATE_ENABLED:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__START_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__END_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS:
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS:
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__PASSES:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__ORBIT_MODELS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATIONS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__PASSES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -375,8 +375,8 @@ public class SpacecraftsVisibilitySetItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.SPACECRAFTS_VISIBILITY_SET__PASSES,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createVisibilityPass()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFTS_VISIBILITY_SET__PASSES,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPass()));
 	}
 
 	/**

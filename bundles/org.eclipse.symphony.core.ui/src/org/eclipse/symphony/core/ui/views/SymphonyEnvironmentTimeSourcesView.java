@@ -14,7 +14,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.ui.Activator;
 import org.eclipse.symphony.core.ui.composites.SymphonyEnvironmentTimeSourceComposite;
@@ -139,7 +139,7 @@ public class SymphonyEnvironmentTimeSourcesView extends AbstractView
 						int featureId = msg.getFeatureID(EMFEcoreInvocatorFacade.class);
 						switch (featureId) 
 						{
-							case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
+							case Symphony__CoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 								if(msg.getNewValue() instanceof InvocatorSession)
 								{																		
 									// Gets the current Active Session if one exists.

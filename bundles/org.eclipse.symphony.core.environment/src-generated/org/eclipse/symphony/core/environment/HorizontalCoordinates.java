@@ -11,13 +11,23 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * The horizontal coordinate system is a celestial coordinate system that uses the observer's local horizon as the fundamental plane. This conveniently divides the sky into the upper hemisphere that you can see, and the lower hemisphere that you cannot (because the Earth is in the way). The pole of the upper hemisphere is called the zenith. The pole of the lower hemisphere is called the nadir.
+ * The horizontal coordinate system is a celestial coordinate system that uses the
+ * observer's local horizon as the fundamental plane. This conveniently divides the
+ * sky into the upper hemisphere that you can see, and the lower hemisphere that you
+ * cannot (because the Earth is in the way). The pole of the upper hemisphere is called
+ * the zenith. The pole of the lower hemisphere is called the nadir.
  * 
  * The horizontal coordinates are:
  * 
- *     * altitude (Alt), sometimes referred to as elevation, that is the angle between the object and the observer's local horizon.
- *     * azimuth (Az), that is the angle of the object around the horizon, usually measured from the north point towards the east. In former times, it was common to refer to azimuth from the south, as it was then zero at the same time the hour angle of a star was zero. This assumes, however, that the star (upper) culminates in the south, which is only true for most stars in the Northern Hemisphere.
+ * - altitude (Alt): sometimes referred to as elevation, that is the angle between the
+ *                   object and the observer's local horizon
  * 
+ * - azimuth (Az): the angle of the object around the horizon, usually measured from the
+ *                 north point towards the east. In former times, it was common to refer
+ *                 to azimuth from the south, as it was then zero at the same time the hour
+ *                 angle of a star was zero. This assumes, however, that the star (upper)
+ *                 culminates in the south, which is only true for most stars in the
+ *                 Northern Hemisphere
  * <!-- end-model-doc -->
  *
  * <p>
@@ -29,7 +39,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.environment.HorizontalCoordinates#getRadius <em>Radius</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getHorizontalCoordinates()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getHorizontalCoordinates()
  * @model
  * @generated
  */
@@ -46,7 +56,7 @@ public interface HorizontalCoordinates extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Altitude</em>' attribute.
 	 * @see #setAltitude(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getHorizontalCoordinates_Altitude()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getHorizontalCoordinates_Altitude()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -72,7 +82,7 @@ public interface HorizontalCoordinates extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Azimuth</em>' attribute.
 	 * @see #setAzimuth(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getHorizontalCoordinates_Azimuth()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getHorizontalCoordinates_Azimuth()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -98,7 +108,7 @@ public interface HorizontalCoordinates extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getHorizontalCoordinates_Radius()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getHorizontalCoordinates_Radius()
 	 * @model unique="false"
 	 * @generated
 	 */

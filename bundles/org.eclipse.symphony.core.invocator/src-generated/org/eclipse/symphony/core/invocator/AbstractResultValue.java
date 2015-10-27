@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractResultValue#getResult <em>Result</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractResultValue()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractResultValue()
  * @model abstract="true"
  * @generated
  */
@@ -38,7 +38,7 @@ public interface AbstractResultValue extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Result</em>' container reference.
 	 * @see #setResult(AbstractResult)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractResultValue_Result()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractResultValue_Result()
 	 * @see org.eclipse.symphony.core.invocator.AbstractResult#getResultValue
 	 * @model opposite="resultValue" transient="false"
 	 * @generated

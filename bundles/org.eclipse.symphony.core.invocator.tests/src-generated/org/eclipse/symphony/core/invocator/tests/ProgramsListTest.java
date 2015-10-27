@@ -6,9 +6,8 @@ package org.eclipse.symphony.core.invocator.tests;
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
-
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.ProgramsList;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -73,7 +72,7 @@ public class ProgramsListTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createProgramsList());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createProgramsList());
 	}
 
 	/**

@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.SpotLight;
 
 /**
@@ -97,7 +97,7 @@ public class SpotLightImpl extends PointLightImpl implements SpotLight {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PrimitivesPackage.Literals.SPOT_LIGHT;
+		return Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.SPOT_LIGHT;
 	}
 
 	/**
@@ -118,7 +118,7 @@ public class SpotLightImpl extends PointLightImpl implements SpotLight {
 		float oldConcentration = concentration;
 		concentration = newConcentration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PrimitivesPackage.SPOT_LIGHT__CONCENTRATION, oldConcentration, concentration));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__CONCENTRATION, oldConcentration, concentration));
 	}
 
 	/**
@@ -139,7 +139,7 @@ public class SpotLightImpl extends PointLightImpl implements SpotLight {
 		float oldSpreadAngle = spreadAngle;
 		spreadAngle = newSpreadAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PrimitivesPackage.SPOT_LIGHT__SPREAD_ANGLE, oldSpreadAngle, spreadAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__SPREAD_ANGLE, oldSpreadAngle, spreadAngle));
 	}
 
 	/**
@@ -160,7 +160,7 @@ public class SpotLightImpl extends PointLightImpl implements SpotLight {
 		Tuple3d oldDirection = direction;
 		direction = newDirection;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PrimitivesPackage.SPOT_LIGHT__DIRECTION, oldDirection, newDirection);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__DIRECTION, oldDirection, newDirection);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -175,14 +175,14 @@ public class SpotLightImpl extends PointLightImpl implements SpotLight {
 		if (newDirection != direction) {
 			NotificationChain msgs = null;
 			if (direction != null)
-				msgs = ((InternalEObject)direction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PrimitivesPackage.SPOT_LIGHT__DIRECTION, null, msgs);
+				msgs = ((InternalEObject)direction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__DIRECTION, null, msgs);
 			if (newDirection != null)
-				msgs = ((InternalEObject)newDirection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PrimitivesPackage.SPOT_LIGHT__DIRECTION, null, msgs);
+				msgs = ((InternalEObject)newDirection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__DIRECTION, null, msgs);
 			msgs = basicSetDirection(newDirection, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PrimitivesPackage.SPOT_LIGHT__DIRECTION, newDirection, newDirection));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__DIRECTION, newDirection, newDirection));
 	}
 
 	/**
@@ -193,7 +193,7 @@ public class SpotLightImpl extends PointLightImpl implements SpotLight {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case PrimitivesPackage.SPOT_LIGHT__DIRECTION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__DIRECTION:
 				return basicSetDirection(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -207,11 +207,11 @@ public class SpotLightImpl extends PointLightImpl implements SpotLight {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case PrimitivesPackage.SPOT_LIGHT__CONCENTRATION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__CONCENTRATION:
 				return getConcentration();
-			case PrimitivesPackage.SPOT_LIGHT__SPREAD_ANGLE:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__SPREAD_ANGLE:
 				return getSpreadAngle();
-			case PrimitivesPackage.SPOT_LIGHT__DIRECTION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__DIRECTION:
 				return getDirection();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -225,13 +225,13 @@ public class SpotLightImpl extends PointLightImpl implements SpotLight {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case PrimitivesPackage.SPOT_LIGHT__CONCENTRATION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__CONCENTRATION:
 				setConcentration((Float)newValue);
 				return;
-			case PrimitivesPackage.SPOT_LIGHT__SPREAD_ANGLE:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__SPREAD_ANGLE:
 				setSpreadAngle((Float)newValue);
 				return;
-			case PrimitivesPackage.SPOT_LIGHT__DIRECTION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__DIRECTION:
 				setDirection((Tuple3d)newValue);
 				return;
 		}
@@ -246,13 +246,13 @@ public class SpotLightImpl extends PointLightImpl implements SpotLight {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case PrimitivesPackage.SPOT_LIGHT__CONCENTRATION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__CONCENTRATION:
 				setConcentration(CONCENTRATION_EDEFAULT);
 				return;
-			case PrimitivesPackage.SPOT_LIGHT__SPREAD_ANGLE:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__SPREAD_ANGLE:
 				setSpreadAngle(SPREAD_ANGLE_EDEFAULT);
 				return;
-			case PrimitivesPackage.SPOT_LIGHT__DIRECTION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__DIRECTION:
 				setDirection((Tuple3d)null);
 				return;
 		}
@@ -267,11 +267,11 @@ public class SpotLightImpl extends PointLightImpl implements SpotLight {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case PrimitivesPackage.SPOT_LIGHT__CONCENTRATION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__CONCENTRATION:
 				return concentration != CONCENTRATION_EDEFAULT;
-			case PrimitivesPackage.SPOT_LIGHT__SPREAD_ANGLE:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__SPREAD_ANGLE:
 				return spreadAngle != SPREAD_ANGLE_EDEFAULT;
-			case PrimitivesPackage.SPOT_LIGHT__DIRECTION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__DIRECTION:
 				return direction != null;
 		}
 		return super.eIsSet(featureID);

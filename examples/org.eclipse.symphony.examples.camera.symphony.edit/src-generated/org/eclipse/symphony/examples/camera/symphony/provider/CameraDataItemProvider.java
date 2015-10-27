@@ -18,7 +18,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
 import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
 import org.eclipse.symphony.examples.camera.symphony.CameraData;
-import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage;
+import org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.camera.symphony.CameraData} object.
@@ -72,7 +72,7 @@ public class CameraDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraData_fov_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraData_fov_feature", "_UI_CameraData_type"),
-				 SymphonyExampleCameraPackage.Literals.CAMERA_DATA__FOV,
+				 Symphony__ExamplesCameraSymphonyPackage.Literals.CAMERA_DATA__FOV,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class CameraDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraData_zoom_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraData_zoom_feature", "_UI_CameraData_type"),
-				 SymphonyExampleCameraPackage.Literals.CAMERA_DATA__ZOOM,
+				 Symphony__ExamplesCameraSymphonyPackage.Literals.CAMERA_DATA__ZOOM,
 				 true,
 				 false,
 				 false,
@@ -117,7 +117,7 @@ public class CameraDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CameraData_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CameraData_initialized_feature", "_UI_CameraData_type"),
-				 SymphonyExampleCameraPackage.Literals.CAMERA_DATA__INITIALIZED,
+				 Symphony__ExamplesCameraSymphonyPackage.Literals.CAMERA_DATA__INITIALIZED,
 				 true,
 				 false,
 				 false,
@@ -138,7 +138,7 @@ public class CameraDataItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyExampleCameraPackage.Literals.CAMERA_DATA__FOV);
+			childrenFeatures.add(Symphony__ExamplesCameraSymphonyPackage.Literals.CAMERA_DATA__FOV);
 		}
 		return childrenFeatures;
 	}
@@ -194,11 +194,11 @@ public class CameraDataItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CameraData.class)) {
-			case SymphonyExampleCameraPackage.CAMERA_DATA__ZOOM:
-			case SymphonyExampleCameraPackage.CAMERA_DATA__INITIALIZED:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__ZOOM:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__INITIALIZED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyExampleCameraPackage.CAMERA_DATA__FOV:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__FOV:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -219,7 +219,7 @@ public class CameraDataItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyExampleCameraPackage.Literals.CAMERA_DATA__FOV,
+				(Symphony__ExamplesCameraSymphonyPackage.Literals.CAMERA_DATA__FOV,
 				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 	}
 
@@ -232,7 +232,7 @@ public class CameraDataItemProvider
   @Override
   public ResourceLocator getResourceLocator()
   {
-		return SymphonyExampleCameraEditPlugin.INSTANCE;
+		return Symphony__ExamplesCameraSymphonyEditPlugin.INSTANCE;
 	}
 
 }

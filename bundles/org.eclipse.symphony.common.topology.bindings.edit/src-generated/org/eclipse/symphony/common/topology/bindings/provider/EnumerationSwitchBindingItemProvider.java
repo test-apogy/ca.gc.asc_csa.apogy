@@ -14,8 +14,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding} object.
@@ -69,7 +69,7 @@ public class EnumerationSwitchBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EnumerationSwitchBinding_parentNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EnumerationSwitchBinding_parentNode_feature", "_UI_EnumerationSwitchBinding_type"),
-				 TopologyBindingsPackage.Literals.ENUMERATION_SWITCH_BINDING__PARENT_NODE,
+				 Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_SWITCH_BINDING__PARENT_NODE,
 				 true,
 				 false,
 				 true,
@@ -92,7 +92,7 @@ public class EnumerationSwitchBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EnumerationSwitchBinding_activeCase_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EnumerationSwitchBinding_activeCase_feature", "_UI_EnumerationSwitchBinding_type"),
-				 TopologyBindingsPackage.Literals.ENUMERATION_SWITCH_BINDING__ACTIVE_CASE,
+				 Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_SWITCH_BINDING__ACTIVE_CASE,
 				 false,
 				 false,
 				 true,
@@ -114,7 +114,7 @@ public class EnumerationSwitchBindingItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyBindingsPackage.Literals.ENUMERATION_SWITCH_BINDING__CASES);
+			childrenFeatures.add(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_SWITCH_BINDING__CASES);
 		}
 		return childrenFeatures;
 	}
@@ -173,7 +173,7 @@ public class EnumerationSwitchBindingItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EnumerationSwitchBinding.class)) {
-			case TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__CASES:
+			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__CASES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -194,8 +194,8 @@ public class EnumerationSwitchBindingItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_SWITCH_BINDING__CASES,
-				 TopologyBindingsFactory.eINSTANCE.createEnumerationCase()));
+				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_SWITCH_BINDING__CASES,
+				 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createEnumerationCase()));
 	}
 
 }

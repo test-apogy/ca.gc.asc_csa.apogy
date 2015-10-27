@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Type;
 import org.eclipse.symphony.core.invocator.TypeMember;
 
@@ -104,7 +104,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.TYPE;
+		return Symphony__CoreInvocatorPackage.Literals.TYPE;
 	}
 
   /**
@@ -127,7 +127,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPE__NAME, oldName, name));
 	}
 
   /**
@@ -138,7 +138,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
   public EList<TypeMember> getMembers()
   {
 		if (members == null) {
-			members = new EObjectContainmentEList<TypeMember>(TypeMember.class, this, EMFEcoreInvocatorPackage.TYPE__MEMBERS);
+			members = new EObjectContainmentEList<TypeMember>(TypeMember.class, this, Symphony__CoreInvocatorPackage.TYPE__MEMBERS);
 		}
 		return members;
 	}
@@ -155,7 +155,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
 			interfaceClass = (EClass)eResolveProxy(oldInterfaceClass);
 			if (interfaceClass != oldInterfaceClass) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorPackage.TYPE__INTERFACE_CLASS, oldInterfaceClass, interfaceClass));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.TYPE__INTERFACE_CLASS, oldInterfaceClass, interfaceClass));
 			}
 		}
 		return interfaceClass;
@@ -181,7 +181,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
 		EClass oldInterfaceClass = interfaceClass;
 		interfaceClass = newInterfaceClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPE__INTERFACE_CLASS, oldInterfaceClass, interfaceClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPE__INTERFACE_CLASS, oldInterfaceClass, interfaceClass));
 	}
 
   /**
@@ -196,7 +196,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
 			typeApiAdapterClass = (EClass)eResolveProxy(oldTypeApiAdapterClass);
 			if (typeApiAdapterClass != oldTypeApiAdapterClass) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS, oldTypeApiAdapterClass, typeApiAdapterClass));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS, oldTypeApiAdapterClass, typeApiAdapterClass));
 			}
 		}
 		return typeApiAdapterClass;
@@ -222,7 +222,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
 		EClass oldTypeApiAdapterClass = typeApiAdapterClass;
 		typeApiAdapterClass = newTypeApiAdapterClass;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS, oldTypeApiAdapterClass, typeApiAdapterClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS, oldTypeApiAdapterClass, typeApiAdapterClass));
 	}
 
   /**
@@ -234,7 +234,7 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE__MEMBERS:
+			case Symphony__CoreInvocatorPackage.TYPE__MEMBERS:
 				return ((InternalEList<?>)getMembers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -249,14 +249,14 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE__NAME:
+			case Symphony__CoreInvocatorPackage.TYPE__NAME:
 				return getName();
-			case EMFEcoreInvocatorPackage.TYPE__MEMBERS:
+			case Symphony__CoreInvocatorPackage.TYPE__MEMBERS:
 				return getMembers();
-			case EMFEcoreInvocatorPackage.TYPE__INTERFACE_CLASS:
+			case Symphony__CoreInvocatorPackage.TYPE__INTERFACE_CLASS:
 				if (resolve) return getInterfaceClass();
 				return basicGetInterfaceClass();
-			case EMFEcoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS:
+			case Symphony__CoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS:
 				if (resolve) return getTypeApiAdapterClass();
 				return basicGetTypeApiAdapterClass();
 		}
@@ -273,17 +273,17 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE__NAME:
+			case Symphony__CoreInvocatorPackage.TYPE__NAME:
 				setName((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.TYPE__MEMBERS:
+			case Symphony__CoreInvocatorPackage.TYPE__MEMBERS:
 				getMembers().clear();
 				getMembers().addAll((Collection<? extends TypeMember>)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.TYPE__INTERFACE_CLASS:
+			case Symphony__CoreInvocatorPackage.TYPE__INTERFACE_CLASS:
 				setInterfaceClass((EClass)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS:
+			case Symphony__CoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS:
 				setTypeApiAdapterClass((EClass)newValue);
 				return;
 		}
@@ -299,16 +299,16 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE__NAME:
+			case Symphony__CoreInvocatorPackage.TYPE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.TYPE__MEMBERS:
+			case Symphony__CoreInvocatorPackage.TYPE__MEMBERS:
 				getMembers().clear();
 				return;
-			case EMFEcoreInvocatorPackage.TYPE__INTERFACE_CLASS:
+			case Symphony__CoreInvocatorPackage.TYPE__INTERFACE_CLASS:
 				setInterfaceClass((EClass)null);
 				return;
-			case EMFEcoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS:
+			case Symphony__CoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS:
 				setTypeApiAdapterClass((EClass)null);
 				return;
 		}
@@ -324,13 +324,13 @@ public class TypeImpl extends MinimalEObjectImpl.Container implements Type
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE__NAME:
+			case Symphony__CoreInvocatorPackage.TYPE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EMFEcoreInvocatorPackage.TYPE__MEMBERS:
+			case Symphony__CoreInvocatorPackage.TYPE__MEMBERS:
 				return members != null && !members.isEmpty();
-			case EMFEcoreInvocatorPackage.TYPE__INTERFACE_CLASS:
+			case Symphony__CoreInvocatorPackage.TYPE__INTERFACE_CLASS:
 				return interfaceClass != null;
-			case EMFEcoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS:
+			case Symphony__CoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS:
 				return typeApiAdapterClass != null;
 		}
 		return super.eIsSet(featureID);

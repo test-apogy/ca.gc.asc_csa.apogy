@@ -24,7 +24,7 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
 import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
 import org.eclipse.ui.progress.UIJob;
 
@@ -282,7 +282,7 @@ public class SpacecraftsVisibilitySetComposite extends Composite
 						int featureId = msg.getFeatureID(SpacecraftsVisibilitySet.class);
 						switch (featureId) 
 						{
-							case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP:
+							case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFTS_VISIBILITY_SET__GROUND_STATION_TO_VISIBILITY_MAP:
 								
 								if(msg.getNewValue() != null)
 								{

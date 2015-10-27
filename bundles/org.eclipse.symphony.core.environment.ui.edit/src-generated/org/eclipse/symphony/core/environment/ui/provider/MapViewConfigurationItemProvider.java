@@ -25,10 +25,10 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation;
 
 /**
@@ -139,7 +139,7 @@ public class MapViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapViewConfiguration_backgroundColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapViewConfiguration_backgroundColor_feature", "_UI_MapViewConfiguration_type"),
-				 SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR,
+				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR,
 				 true,
 				 false,
 				 false,
@@ -161,7 +161,7 @@ public class MapViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapViewConfiguration_defaultRectangularRegion_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapViewConfiguration_defaultRectangularRegion_feature", "_UI_MapViewConfiguration_type"),
-				 SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION,
+				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION,
 				 true,
 				 false,
 				 true,
@@ -183,7 +183,7 @@ public class MapViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapViewConfiguration_mapImageRectangularRegion_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapViewConfiguration_mapImageRectangularRegion_feature", "_UI_MapViewConfiguration_type"),
-				 SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION,
+				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION,
 				 false,
 				 false,
 				 false,
@@ -205,7 +205,7 @@ public class MapViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapViewConfiguration_extent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapViewConfiguration_extent_feature", "_UI_MapViewConfiguration_type"),
-				 SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__EXTENT,
+				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__EXTENT,
 				 false,
 				 false,
 				 true,
@@ -227,8 +227,8 @@ public class MapViewConfigurationItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_LAYERS);
-			childrenFeatures.add(SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS);
+			childrenFeatures.add(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_LAYERS);
+			childrenFeatures.add(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -287,16 +287,16 @@ public class MapViewConfigurationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MapViewConfiguration.class)) {
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__NAME:
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION:
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE:
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION:
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__NAME:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -347,10 +347,10 @@ public class MapViewConfigurationItemProvider
 	   if(variableTrajectoryAnnotationCommandParameter != null) newChildDescriptors.remove(variableTrajectoryAnnotationCommandParameter);
 	   
 	   // Create a new NewChildDescriptor for VariableTrajectoryAnnotation.
-	   VariableTrajectoryAnnotation vta = SymphonyEnvironmentUIFactory.eINSTANCE.createVariableTrajectoryAnnotation();
-	   vta.setTrajectoryProvider(SymphonyEnvironmentUIFactory.eINSTANCE.createDefaultVariableTrajectoryProvider());
+	   VariableTrajectoryAnnotation vta = Symphony__CoreEnvironmentUIFactory.eINSTANCE.createVariableTrajectoryAnnotation();
+	   vta.setTrajectoryProvider(Symphony__CoreEnvironmentUIFactory.eINSTANCE.createDefaultVariableTrajectoryProvider());
 	   
-	   newChildDescriptors.add(createChildParameter(SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,vta));
+	   newChildDescriptors.add(createChildParameter(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,vta));
    }
    
    /**
@@ -366,38 +366,38 @@ public class MapViewConfigurationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayerPresentation()));
+				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createImageMapLayerPresentation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
-				 SymphonyEnvironmentUIFactory.eINSTANCE.createMapRuler()));
+				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
+				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMapRuler()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
-				 SymphonyEnvironmentUIFactory.eINSTANCE.createFeaturesOfInterestMapLayerPresentation()));
+				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
+				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createFeaturesOfInterestMapLayerPresentation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
-				 SymphonyEnvironmentUIFactory.eINSTANCE.createTrajectoryPickingTool()));
+				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
+				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createTrajectoryPickingTool()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
-				 SymphonyEnvironmentUIFactory.eINSTANCE.createPoseVariableAnnotation()));
+				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
+				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createPoseVariableAnnotation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
-				 SymphonyEnvironmentUIFactory.eINSTANCE.createVariableTrajectoryAnnotation()));
+				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
+				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createVariableTrajectoryAnnotation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
-				 SymphonyEnvironmentUIFactory.eINSTANCE.createVehicleVariableAnnotation()));
+				(Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS,
+				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createVehicleVariableAnnotation()));
 	}
 
   

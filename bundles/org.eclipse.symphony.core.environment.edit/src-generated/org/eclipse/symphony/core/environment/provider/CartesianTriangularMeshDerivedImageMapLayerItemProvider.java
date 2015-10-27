@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer} object.
@@ -64,7 +64,7 @@ public class CartesianTriangularMeshDerivedImageMapLayerItemProvider extends Ima
 				 getResourceLocator(),
 				 getString("_UI_CartesianTriangularMeshDerivedImageMapLayer_requiredResolution_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshDerivedImageMapLayer_requiredResolution_feature", "_UI_CartesianTriangularMeshDerivedImageMapLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION,
+				 Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION,
 				 true,
 				 false,
 				 false,
@@ -86,7 +86,7 @@ public class CartesianTriangularMeshDerivedImageMapLayerItemProvider extends Ima
 				 getResourceLocator(),
 				 getString("_UI_CartesianTriangularMeshDerivedImageMapLayer_cartesianTriangularMeshMapLayer_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshDerivedImageMapLayer_cartesianTriangularMeshMapLayer_feature", "_UI_CartesianTriangularMeshDerivedImageMapLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER,
+				 Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER,
 				 true,
 				 false,
 				 true,
@@ -121,7 +121,7 @@ public class CartesianTriangularMeshDerivedImageMapLayerItemProvider extends Ima
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CartesianTriangularMeshDerivedImageMapLayer.class)) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DERIVED_IMAGE_MAP_LAYER__REQUIRED_RESOLUTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -152,8 +152,8 @@ public class CartesianTriangularMeshDerivedImageMapLayerItemProvider extends Ima
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
 
 		if (qualify) {
 			return getString

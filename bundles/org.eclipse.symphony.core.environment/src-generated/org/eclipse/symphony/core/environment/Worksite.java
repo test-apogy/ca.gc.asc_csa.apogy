@@ -21,7 +21,7 @@ import org.eclipse.symphony.core.AbstractWorksite;
  *   <li>{@link org.eclipse.symphony.core.environment.Worksite#getEnvironment <em>Environment</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getWorksite()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getWorksite()
  * @model abstract="true"
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Worksite extends AbstractWorksite
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Worksite Node</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getWorksite_WorksiteNode()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getWorksite_WorksiteNode()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */
@@ -53,7 +53,7 @@ public interface Worksite extends AbstractWorksite
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Orbits Models</em>' reference list.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getWorksite_OrbitsModels()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getWorksite_OrbitsModels()
 	 * @model
 	 * @generated
 	 */
@@ -69,7 +69,7 @@ public interface Worksite extends AbstractWorksite
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environment</em>' containment reference.
 	 * @see #setEnvironment(Environment)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getWorksite_Environment()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getWorksite_Environment()
 	 * @model containment="true"
 	 * @generated
 	 */

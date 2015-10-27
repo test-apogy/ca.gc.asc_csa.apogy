@@ -13,8 +13,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage;
 
 /**
@@ -61,7 +61,7 @@ public class SatelliteCommandAcquireImageItemProvider extends SatelliteCommandIt
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER);
+			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER);
 		}
 		return childrenFeatures;
 	}
@@ -118,7 +118,7 @@ public class SatelliteCommandAcquireImageItemProvider extends SatelliteCommandIt
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SatelliteCommandAcquireImage.class)) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -138,8 +138,8 @@ public class SatelliteCommandAcquireImageItemProvider extends SatelliteCommandIt
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER,
-				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createImageOrder()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createImageOrder()));
 	}
 
 }

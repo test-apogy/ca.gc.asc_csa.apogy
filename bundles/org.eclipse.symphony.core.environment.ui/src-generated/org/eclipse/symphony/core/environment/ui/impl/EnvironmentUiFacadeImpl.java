@@ -35,7 +35,7 @@ import org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade;
 import org.eclipse.symphony.core.environment.ui.MapAnnotation;
 import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
 import org.eclipse.symphony.core.environment.ui.MapViewConfigurationList;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
@@ -82,7 +82,7 @@ public class EnvironmentUiFacadeImpl extends MinimalEObjectImpl.Container implem
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentUIPackage.Literals.ENVIRONMENT_UI_FACADE;
+		return Symphony__CoreEnvironmentUIPackage.Literals.ENVIRONMENT_UI_FACADE;
 	}
 
 //  /**
@@ -449,19 +449,19 @@ public class EnvironmentUiFacadeImpl extends MinimalEObjectImpl.Container implem
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case SymphonyEnvironmentUIPackage.ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION:
+			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION:
 				return getVisibleRectangularRegionProvider((MapViewConfiguration)arguments.get(0));
-			case SymphonyEnvironmentUIPackage.ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT:
+			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT:
 				return getImageMapLayerPresentationImage((MapViewConfiguration)arguments.get(0), (RectangularRegion)arguments.get(1), (Integer)arguments.get(2));
-			case SymphonyEnvironmentUIPackage.ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES:
+			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES:
 				return getTrajectoryLength((XYSeries)arguments.get(0));
-			case SymphonyEnvironmentUIPackage.ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION:
+			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION:
 				return getMapViewConfigurationIdentifier((MapViewConfiguration)arguments.get(0));
-			case SymphonyEnvironmentUIPackage.ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING:
+			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING:
 				return getActiveMapViewConfiguration((String)arguments.get(0));
-			case SymphonyEnvironmentUIPackage.ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST:
+			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST:
 				return getActiveMapViewConfigurationList();
-			case SymphonyEnvironmentUIPackage.ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION:
+			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION:
 				return getFeatureOfInterestLists((InvocatorSession)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

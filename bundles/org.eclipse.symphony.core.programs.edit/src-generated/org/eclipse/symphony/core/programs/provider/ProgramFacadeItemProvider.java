@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.core.programs.InvocatorProgramsPackage;
+import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.ProgramFacade} object.
@@ -75,7 +75,7 @@ public class ProgramFacadeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ProgramFacade_session_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ProgramFacade_session_feature", "_UI_ProgramFacade_type"),
-				 InvocatorProgramsPackage.Literals.PROGRAM_FACADE__SESSION,
+				 Symphony__CoreProgramsPackage.Literals.PROGRAM_FACADE__SESSION,
 				 false,
 				 false,
 				 false,
@@ -97,7 +97,7 @@ public class ProgramFacadeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ProgramFacade_variables_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ProgramFacade_variables_feature", "_UI_ProgramFacade_type"),
-				 InvocatorProgramsPackage.Literals.PROGRAM_FACADE__VARIABLES,
+				 Symphony__CoreProgramsPackage.Literals.PROGRAM_FACADE__VARIABLES,
 				 false,
 				 false,
 				 false,

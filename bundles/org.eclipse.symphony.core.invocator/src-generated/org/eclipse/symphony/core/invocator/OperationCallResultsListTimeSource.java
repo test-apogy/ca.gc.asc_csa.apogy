@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource#getOpsCallList <em>Ops Call List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCallResultsListTimeSource()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCallResultsListTimeSource()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface OperationCallResultsListTimeSource extends CollectionTimedTimeS
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ops Call List</em>' reference.
 	 * @see #setOpsCallList(OperationCallResultsList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCallResultsListTimeSource_OpsCallList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCallResultsListTimeSource_OpsCallList()
 	 * @model
 	 * @generated
 	 */

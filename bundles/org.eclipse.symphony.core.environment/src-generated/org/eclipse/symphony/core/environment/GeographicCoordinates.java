@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.environment.GeographicCoordinates#getElevation <em>Elevation</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getGeographicCoordinates()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getGeographicCoordinates()
  * @model
  * @generated
  */
@@ -35,11 +35,12 @@ public interface GeographicCoordinates extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The longitude, in radians. Longitude East of Greenwich are positive, West of Greenwich are negative.
+	 * The longitude, in radians. Longitude east of Greenwich, UK  are positive
+	 * while those west of Greenwich are negative.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Longitude</em>' attribute.
 	 * @see #setLongitude(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getGeographicCoordinates_Longitude()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getGeographicCoordinates_Longitude()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
@@ -61,11 +62,12 @@ public interface GeographicCoordinates extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The latitude, in radians. Latitude North of the equator are positive, South of the equator are negative.
+	 * The latitude, in radians. Latitude north of the equator are positive while those
+	 * south of the equator are negative.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Latitude</em>' attribute.
 	 * @see #setLatitude(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getGeographicCoordinates_Latitude()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getGeographicCoordinates_Latitude()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
@@ -91,7 +93,7 @@ public interface GeographicCoordinates extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Elevation</em>' attribute.
 	 * @see #setElevation(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getGeographicCoordinates_Elevation()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getGeographicCoordinates_Elevation()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated

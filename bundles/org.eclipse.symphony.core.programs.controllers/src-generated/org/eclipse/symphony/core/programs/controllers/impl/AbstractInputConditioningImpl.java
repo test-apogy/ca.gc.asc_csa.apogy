@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.io.jinput.EComponent;
 import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ public abstract class AbstractInputConditioningImpl extends MinimalEObjectImpl.C
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreControllersPackage.Literals.ABSTRACT_INPUT_CONDITIONING;
+		return Symphony__CoreProgramsControllersPackage.Literals.ABSTRACT_INPUT_CONDITIONING;
 	}
 
   /**
@@ -63,7 +63,7 @@ public abstract class AbstractInputConditioningImpl extends MinimalEObjectImpl.C
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case EMFEcoreControllersPackage.ABSTRACT_INPUT_CONDITIONING___CONDITION_INPUT__ECOMPONENT:
+			case Symphony__CoreProgramsControllersPackage.ABSTRACT_INPUT_CONDITIONING___CONDITION_INPUT__ECOMPONENT:
 				return conditionInput((EComponent)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

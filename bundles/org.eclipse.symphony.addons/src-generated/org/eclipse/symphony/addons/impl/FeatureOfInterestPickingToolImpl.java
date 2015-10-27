@@ -31,7 +31,7 @@ import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.FeatureOfInterestList;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
 import org.eclipse.symphony.core.environment.ui.dialogs.FeatureOfInterestCreationDialog;
 
@@ -523,7 +523,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 					EditingDomain editingDomain = org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain.getEditingDomainFor(getFeatureOfInterestList());
 					
 					// Creates an ADD command to add the FeatureOfInterest.
-					Command addCommand = AddCommand.create(editingDomain, getFeatureOfInterestList(), SymphonyCorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST, foi);
+					Command addCommand = AddCommand.create(editingDomain, getFeatureOfInterestList(), Symphony__CorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST, foi);
 					
 					// Executes the command.
 					editingDomain.getCommandStack().execute(addCommand);
@@ -569,7 +569,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 //					EditingDomain editingDomain = org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain.getEditingDomainFor(getFeatureOfInterestList());
 //					
 //					// Creates an ADD command to add the FeatureOfInterest.
-//					Command addCommand = AddCommand.create(editingDomain, getFeatureOfInterestList(), SymphonyCorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST, foi);
+//					Command addCommand = AddCommand.create(editingDomain, getFeatureOfInterestList(), Symphony__CorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST, foi);
 //					
 //					// Executes the command.
 //					editingDomain.getCommandStack().execute(addCommand);

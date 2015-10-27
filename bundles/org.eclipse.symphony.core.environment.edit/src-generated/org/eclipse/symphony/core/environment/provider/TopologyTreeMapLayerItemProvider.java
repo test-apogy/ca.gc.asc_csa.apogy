@@ -12,8 +12,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.TopologyTreeMapLayer;
 
 /**
@@ -60,7 +60,7 @@ public class TopologyTreeMapLayerItemProvider extends AbstractMapLayerItemProvid
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT);
 		}
 		return childrenFeatures;
 	}
@@ -116,7 +116,7 @@ public class TopologyTreeMapLayerItemProvider extends AbstractMapLayerItemProvid
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TopologyTreeMapLayer.class)) {
-			case SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
+			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -136,8 +136,8 @@ public class TopologyTreeMapLayerItemProvider extends AbstractMapLayerItemProvid
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT,
-				 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
+				(Symphony__CoreEnvironmentPackage.Literals.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
 	}
 
 }

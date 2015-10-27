@@ -1,6 +1,9 @@
-@GenModel(prefix="SymphonyCoreUi", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)", modelName="SymphonyCoreUi") 
+@GenModel(prefix="Symphony__CoreUI",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="Symphony__CoreUI") 
 @GenModel(modelDirectory="/org.eclipse.symphony.core.ui/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.core.ui.edit/src-generated")
+
 package org.eclipse.symphony.core.ui
 
 import org.eclipse.symphony.core.invocator.InvocatorSession
@@ -20,18 +23,25 @@ type IFolder wraps IFolder
 
 class SymphonyCoreUiFacade
 {	
-	/** Default Symphony Project Name Prefix. */
+	/*
+	 * Default Symphony Project Name Prefix.
+	 */
 	readonly String defaultSymphonyProjectNamePrefix = "Project"
 
-	/** Default Symphony Session Filename Prefix. */
+	/*
+	 * Default Symphony Session Filename Prefix.
+	 */
 	readonly String defaultSymphonySessionFilename = "session"
 	
-	/** Default Symphony Session Filename Extension Prefix. */
+	/*
+	 * Default Symphony Session Filename Extension Prefix.
+	 */
 	readonly String defaultSymphonySessionFilenameExtension = "sym"
 	
-	/** Default Symphony Sessions Directory. */
+	/*
+	 * Default Symphony Sessions Directory.
+	 */
 	readonly String defaultSymphonySessionFolderName = "Sessions"
-	
 		
 	op IProject createSymphonyProject(NewSymphonyProjectSettings settings)	
 	op IFolder createSymphonySessionFolder(NewSymphonyProjectSettings settings)
@@ -41,7 +51,9 @@ class SymphonyCoreUiFacade
 	op SymphonySystem createSymphonySystem(NewSymphonySystemSettings systemSettings)
 }
 
-/** This class is used to support Symphony wizards. */
+/*
+ * This class is used to support Symphony wizards.
+ */
 class SymphonyResourceSettings
 {
 	IProject resourceProject
@@ -51,23 +63,33 @@ class SymphonyResourceSettings
 
 class NewSymphonyProjectSettings
 {	
-	/** Returns an available project name. */
+	/*
+	 * Returns an available project name.
+	 */
 	op String getDefaultProjectName()
 	
-	/** Name of the project. */
+	/*
+	 * Name of the project.
+	 */
 	String name
 	
-	/** Import an existing registered project. */
+	/*
+	 * Import an existing registered project.
+	 */
 	boolean importRegisteredProject = "false"
 	
-	/** Sets the default values of the instance.  */
+	/*
+	 * Sets the default values of the instance.
+	 */
 	op void setDefaultValues()
 }
 
 
 class NewSymphonySessionSettings
 {	
-	/** Returns an available session filename. */
+	/*
+	 * Returns an available session filename.
+	 */
 	op String getDefaultFilename(IContainer resourceContainer)	
 	
 	String folder	
@@ -77,7 +99,9 @@ class NewSymphonySessionSettings
 	boolean createDataProducts = "true"
 	boolean createTools = "true"
 	
-	/** Sets the default values of the instance.  */
+	/*
+	 * Sets the default values of the instance.
+	 */
 	op void setDefaultValues(IContainer resourceContainer)
 }
 

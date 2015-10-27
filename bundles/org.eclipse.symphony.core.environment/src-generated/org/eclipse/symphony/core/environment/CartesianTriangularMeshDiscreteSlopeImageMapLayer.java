@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer#getSlopeRanges <em>Slope Ranges</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshDiscreteSlopeImageMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshDiscreteSlopeImageMapLayer()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface CartesianTriangularMeshDiscreteSlopeImageMapLayer extends Carte
 	 * The range of slope for which to generate colors.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Slope Ranges</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshDiscreteSlopeImageMapLayer_SlopeRanges()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshDiscreteSlopeImageMapLayer_SlopeRanges()
 	 * @model containment="true"
 	 * @generated
 	 */

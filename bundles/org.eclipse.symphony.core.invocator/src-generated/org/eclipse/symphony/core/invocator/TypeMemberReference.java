@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReference#getTypeMember <em>Type Member</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReference()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReference()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface TypeMemberReference extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Member</em>' reference.
 	 * @see #setTypeMember(TypeMember)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReference_TypeMember()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReference_TypeMember()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated

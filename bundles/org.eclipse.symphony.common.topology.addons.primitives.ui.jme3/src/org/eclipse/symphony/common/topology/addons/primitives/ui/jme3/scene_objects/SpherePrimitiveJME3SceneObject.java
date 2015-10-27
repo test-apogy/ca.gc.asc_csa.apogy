@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.Activator;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.SpherePrimitive;
 
 import com.jme3.asset.AssetManager;
@@ -185,7 +185,7 @@ public class SpherePrimitiveJME3SceneObject extends DefaultJME3SceneObject<Spher
 				@Override
 				public void notifyChanged(Notification notification) 
 				{
-					if (notification.getFeatureID(SpherePrimitive.class) == PrimitivesPackage.SPHERE_PRIMITIVE__RADIUS) 
+					if (notification.getFeatureID(SpherePrimitive.class) == Symphony__CommonTopologyAddonsPrimitivesPackage.SPHERE_PRIMITIVE__RADIUS) 
 					{
 						float newRadius = (float) notification.getNewDoubleValue();						
 						updateGeometry(newRadius);

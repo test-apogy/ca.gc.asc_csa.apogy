@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.topology.impl.GroupNodeImpl;
 import org.eclipse.symphony.core.environment.Sun;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,7 +67,7 @@ public class SunImpl extends GroupNodeImpl implements Sun
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.SUN;
+		return Symphony__CoreEnvironmentPackage.Literals.SUN;
 	}
 
   /**
@@ -90,7 +90,7 @@ public class SunImpl extends GroupNodeImpl implements Sun
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.SUN__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SUN__RADIUS, oldRadius, radius));
 	}
 
   /**
@@ -113,7 +113,7 @@ public class SunImpl extends GroupNodeImpl implements Sun
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SUN__RADIUS:
+			case Symphony__CoreEnvironmentPackage.SUN__RADIUS:
 				return getRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -128,7 +128,7 @@ public class SunImpl extends GroupNodeImpl implements Sun
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SUN__RADIUS:
+			case Symphony__CoreEnvironmentPackage.SUN__RADIUS:
 				setRadius((Double)newValue);
 				return;
 		}
@@ -144,7 +144,7 @@ public class SunImpl extends GroupNodeImpl implements Sun
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SUN__RADIUS:
+			case Symphony__CoreEnvironmentPackage.SUN__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
 		}
@@ -160,7 +160,7 @@ public class SunImpl extends GroupNodeImpl implements Sun
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SUN__RADIUS:
+			case Symphony__CoreEnvironmentPackage.SUN__RADIUS:
 				return radius != RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -175,7 +175,7 @@ public class SunImpl extends GroupNodeImpl implements Sun
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case SymphonyEnvironmentPackage.SUN___GET_IRRADIANCE__DOUBLE:
+			case Symphony__CoreEnvironmentPackage.SUN___GET_IRRADIANCE__DOUBLE:
 				return getIrradiance((Double)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

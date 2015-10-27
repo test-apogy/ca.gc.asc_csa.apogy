@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
@@ -131,7 +131,7 @@ public class EMFFeatureOverlayImpl extends AbstractTextOverlayImpl implements EM
 	   VariableFeatureReference tmp = getVariableFeatureReferenceGen();
 	   if(tmp == null)
 	   {
-		   tmp = EMFEcoreInvocatorFactory.eINSTANCE.createVariableFeatureReference();
+		   tmp = Symphony__CoreInvocatorFactory.eINSTANCE.createVariableFeatureReference();
 		   setVariableFeatureReference(tmp);
 	   }
 	   

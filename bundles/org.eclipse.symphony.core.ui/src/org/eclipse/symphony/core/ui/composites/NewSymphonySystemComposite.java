@@ -19,7 +19,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage.Literals;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage.Literals;
 import org.eclipse.ui.dialogs.ContainerSelectionDialog;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 

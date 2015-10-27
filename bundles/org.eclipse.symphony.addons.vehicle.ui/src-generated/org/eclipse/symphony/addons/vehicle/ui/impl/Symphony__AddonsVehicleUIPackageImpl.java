@@ -13,7 +13,7 @@ import org.eclipse.symphony.addons.vehicle.ui.PhysicalWheelPresentation;
 import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIFactory;
 import org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage;
 import org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -93,7 +93,7 @@ public class Symphony__AddonsVehicleUIPackageImpl extends EPackageImpl implement
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyUIPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsVehicleUIPackage.createPackageContents();
@@ -221,7 +221,7 @@ public class Symphony__AddonsVehicleUIPackageImpl extends EPackageImpl implement
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyUIPackage theTopologyUIPackage = (TopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyUIPackage.eNS_URI);
+		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -229,9 +229,9 @@ public class Symphony__AddonsVehicleUIPackageImpl extends EPackageImpl implement
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		physicalWheelPresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
-		landerSphericalFootPresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
-		thrusterPresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
+		physicalWheelPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		landerSphericalFootPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		thrusterPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(physicalWheelPresentationEClass, PhysicalWheelPresentation.class, "PhysicalWheelPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

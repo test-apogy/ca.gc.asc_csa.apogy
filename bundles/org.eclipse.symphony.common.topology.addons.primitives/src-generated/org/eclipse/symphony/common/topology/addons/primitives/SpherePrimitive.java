@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.SpherePrimitive#getRadius <em>Radius</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getSpherePrimitive()
+ * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getSpherePrimitive()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface SpherePrimitive extends AggregateGroupNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getSpherePrimitive_Radius()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getSpherePrimitive_Radius()
 	 * @model unique="false"
 	 * @generated
 	 */

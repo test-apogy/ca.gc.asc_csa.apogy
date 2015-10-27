@@ -8,7 +8,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.ImageOrder;
 import org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage;
 
@@ -52,7 +52,7 @@ public class SatelliteCommandAcquireImageImpl extends SatelliteCommandImpl imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleSatellitePackage.Literals.SATELLITE_COMMAND_ACQUIRE_IMAGE;
+		return Symphony__ExamplesSatellitePackage.Literals.SATELLITE_COMMAND_ACQUIRE_IMAGE;
 	}
 
 	/**
@@ -73,7 +73,7 @@ public class SatelliteCommandAcquireImageImpl extends SatelliteCommandImpl imple
 		ImageOrder oldImageOrder = imageOrder;
 		imageOrder = newImageOrder;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER, oldImageOrder, newImageOrder);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER, oldImageOrder, newImageOrder);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -88,14 +88,14 @@ public class SatelliteCommandAcquireImageImpl extends SatelliteCommandImpl imple
 		if (newImageOrder != imageOrder) {
 			NotificationChain msgs = null;
 			if (imageOrder != null)
-				msgs = ((InternalEObject)imageOrder).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER, null, msgs);
+				msgs = ((InternalEObject)imageOrder).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER, null, msgs);
 			if (newImageOrder != null)
-				msgs = ((InternalEObject)newImageOrder).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER, null, msgs);
+				msgs = ((InternalEObject)newImageOrder).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER, null, msgs);
 			msgs = basicSetImageOrder(newImageOrder, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER, newImageOrder, newImageOrder));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER, newImageOrder, newImageOrder));
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class SatelliteCommandAcquireImageImpl extends SatelliteCommandImpl imple
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER:
 				return basicSetImageOrder(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -120,7 +120,7 @@ public class SatelliteCommandAcquireImageImpl extends SatelliteCommandImpl imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER:
 				return getImageOrder();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -134,7 +134,7 @@ public class SatelliteCommandAcquireImageImpl extends SatelliteCommandImpl imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER:
 				setImageOrder((ImageOrder)newValue);
 				return;
 		}
@@ -149,7 +149,7 @@ public class SatelliteCommandAcquireImageImpl extends SatelliteCommandImpl imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER:
 				setImageOrder((ImageOrder)null);
 				return;
 		}
@@ -164,7 +164,7 @@ public class SatelliteCommandAcquireImageImpl extends SatelliteCommandImpl imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER:
 				return imageOrder != null;
 		}
 		return super.eIsSet(featureID);

@@ -11,7 +11,7 @@ import org.eclipse.symphony.core.invocator.EDataTypeArgument;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getFixedValueSource()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getFixedValueSource()
  * @model
  * @generated
  */

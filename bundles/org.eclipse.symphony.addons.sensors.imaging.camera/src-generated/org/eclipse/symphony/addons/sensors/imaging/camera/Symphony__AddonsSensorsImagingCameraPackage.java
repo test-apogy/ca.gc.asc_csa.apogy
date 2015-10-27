@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -136,7 +136,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION_LIST__TOOLS_LIST = EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
+  int CAMERA_VIEW_CONFIGURATION_LIST__TOOLS_LIST = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
 
   /**
 	 * The feature id for the '<em><b>Camera View Configurations</b></em>' containment reference list.
@@ -145,7 +145,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS = EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
+  int CAMERA_VIEW_CONFIGURATION_LIST__CAMERA_VIEW_CONFIGURATIONS = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
 
   /**
 	 * The number of structural features of the '<em>Camera View Configuration List</em>' class.
@@ -154,7 +154,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION_LIST_FEATURE_COUNT = EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
+  int CAMERA_VIEW_CONFIGURATION_LIST_FEATURE_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
 
   /**
 	 * The number of operations of the '<em>Camera View Configuration List</em>' class.
@@ -163,7 +163,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION_LIST_OPERATION_COUNT = EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
+  int CAMERA_VIEW_CONFIGURATION_LIST_OPERATION_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.CameraViewConfigurationImpl <em>Camera View Configuration</em>}' class.
@@ -182,7 +182,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__NAME = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME;
+  int CAMERA_VIEW_CONFIGURATION__NAME = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -191,7 +191,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__VARIABLE = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE;
+  int CAMERA_VIEW_CONFIGURATION__VARIABLE = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE;
 
 		/**
 	 * The feature id for the '<em><b>Type Member Reference List Element</b></em>' containment reference.
@@ -200,7 +200,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT;
+  int CAMERA_VIEW_CONFIGURATION__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT;
 
 		/**
 	 * The feature id for the '<em><b>Feature Root</b></em>' containment reference.
@@ -209,7 +209,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__FEATURE_ROOT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT;
+  int CAMERA_VIEW_CONFIGURATION__FEATURE_ROOT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -218,7 +218,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__DESCRIPTION = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 0;
+  int CAMERA_VIEW_CONFIGURATION__DESCRIPTION = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 0;
 
   /**
 	 * The feature id for the '<em><b>Camera View Configuration List</b></em>' container reference.
@@ -227,7 +227,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__CAMERA_VIEW_CONFIGURATION_LIST = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 1;
+	int CAMERA_VIEW_CONFIGURATION__CAMERA_VIEW_CONFIGURATION_LIST = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 1;
 
 		/**
 	 * The feature id for the '<em><b>Camera</b></em>' reference.
@@ -236,7 +236,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__CAMERA = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 2;
+  int CAMERA_VIEW_CONFIGURATION__CAMERA = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 2;
 
   /**
 	 * The feature id for the '<em><b>Image Width</b></em>' attribute.
@@ -245,7 +245,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 3;
+  int CAMERA_VIEW_CONFIGURATION__IMAGE_WIDTH = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 3;
 
   /**
 	 * The feature id for the '<em><b>Image Height</b></em>' attribute.
@@ -254,7 +254,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 4;
+  int CAMERA_VIEW_CONFIGURATION__IMAGE_HEIGHT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 4;
 
   /**
 	 * The feature id for the '<em><b>Image Count</b></em>' attribute.
@@ -263,7 +263,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 5;
+	int CAMERA_VIEW_CONFIGURATION__IMAGE_COUNT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 5;
 
 		/**
 	 * The feature id for the '<em><b>Display Rectified Image</b></em>' attribute.
@@ -272,7 +272,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 6;
+  int CAMERA_VIEW_CONFIGURATION__DISPLAY_RECTIFIED_IMAGE = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 6;
 
   /**
 	 * The feature id for the '<em><b>Overlay List</b></em>' containment reference.
@@ -281,7 +281,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 7;
+  int CAMERA_VIEW_CONFIGURATION__OVERLAY_LIST = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 7;
 
   /**
 	 * The feature id for the '<em><b>Tool List</b></em>' containment reference.
@@ -290,7 +290,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__TOOL_LIST = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 8;
+	int CAMERA_VIEW_CONFIGURATION__TOOL_LIST = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 8;
 
 		/**
 	 * The feature id for the '<em><b>Filter List</b></em>' containment reference.
@@ -299,7 +299,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION__FILTER_LIST = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 9;
+  int CAMERA_VIEW_CONFIGURATION__FILTER_LIST = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 9;
 
   /**
 	 * The feature id for the '<em><b>Image Auto Save Enable</b></em>' attribute.
@@ -308,7 +308,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_ENABLE = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 10;
+	int CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_ENABLE = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 10;
 
 		/**
 	 * The feature id for the '<em><b>Save Image With Overlays</b></em>' attribute.
@@ -317,7 +317,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__SAVE_IMAGE_WITH_OVERLAYS = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 11;
+	int CAMERA_VIEW_CONFIGURATION__SAVE_IMAGE_WITH_OVERLAYS = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 11;
 
 		/**
 	 * The feature id for the '<em><b>Image Auto Save Folder Path</b></em>' attribute.
@@ -326,7 +326,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_FOLDER_PATH = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 12;
+	int CAMERA_VIEW_CONFIGURATION__IMAGE_AUTO_SAVE_FOLDER_PATH = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 12;
 
 		/**
 	 * The number of structural features of the '<em>Camera View Configuration</em>' class.
@@ -335,7 +335,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION_FEATURE_COUNT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 13;
+  int CAMERA_VIEW_CONFIGURATION_FEATURE_COUNT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 13;
 
   /**
 	 * The operation id for the '<em>Get Camera Image Annotations</em>' operation.
@@ -344,7 +344,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int CAMERA_VIEW_CONFIGURATION___GET_CAMERA_IMAGE_ANNOTATIONS = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 0;
+	int CAMERA_VIEW_CONFIGURATION___GET_CAMERA_IMAGE_ANNOTATIONS = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 0;
 
 		/**
 	 * The number of operations of the '<em>Camera View Configuration</em>' class.
@@ -353,7 +353,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA_VIEW_CONFIGURATION_OPERATION_COUNT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 1;
+  int CAMERA_VIEW_CONFIGURATION_OPERATION_COUNT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 1;
 
 
   /**
@@ -2999,7 +2999,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int AZIMUTH_FEATURE_REFERENCE__NAME = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME;
+	int AZIMUTH_FEATURE_REFERENCE__NAME = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -3008,7 +3008,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int AZIMUTH_FEATURE_REFERENCE__VARIABLE = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE;
+	int AZIMUTH_FEATURE_REFERENCE__VARIABLE = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE;
 
 		/**
 	 * The feature id for the '<em><b>Type Member Reference List Element</b></em>' containment reference.
@@ -3017,7 +3017,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int AZIMUTH_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT;
+	int AZIMUTH_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT;
 
 		/**
 	 * The feature id for the '<em><b>Feature Root</b></em>' containment reference.
@@ -3026,7 +3026,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int AZIMUTH_FEATURE_REFERENCE__FEATURE_ROOT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT;
+	int AZIMUTH_FEATURE_REFERENCE__FEATURE_ROOT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT;
 
 		/**
 	 * The number of structural features of the '<em>Azimuth Feature Reference</em>' class.
@@ -3035,7 +3035,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int AZIMUTH_FEATURE_REFERENCE_FEATURE_COUNT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 0;
+	int AZIMUTH_FEATURE_REFERENCE_FEATURE_COUNT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of operations of the '<em>Azimuth Feature Reference</em>' class.
@@ -3044,7 +3044,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int AZIMUTH_FEATURE_REFERENCE_OPERATION_COUNT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 0;
+	int AZIMUTH_FEATURE_REFERENCE_OPERATION_COUNT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 0;
 
 		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ElevationFeatureReferenceImpl <em>Elevation Feature Reference</em>}' class.
@@ -3063,7 +3063,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATION_FEATURE_REFERENCE__NAME = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME;
+	int ELEVATION_FEATURE_REFERENCE__NAME = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__NAME;
 
 		/**
 	 * The feature id for the '<em><b>Variable</b></em>' reference.
@@ -3072,7 +3072,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATION_FEATURE_REFERENCE__VARIABLE = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE;
+	int ELEVATION_FEATURE_REFERENCE__VARIABLE = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE;
 
 		/**
 	 * The feature id for the '<em><b>Type Member Reference List Element</b></em>' containment reference.
@@ -3081,7 +3081,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATION_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT;
+	int ELEVATION_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT;
 
 		/**
 	 * The feature id for the '<em><b>Feature Root</b></em>' containment reference.
@@ -3090,7 +3090,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATION_FEATURE_REFERENCE__FEATURE_ROOT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT;
+	int ELEVATION_FEATURE_REFERENCE__FEATURE_ROOT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT;
 
 		/**
 	 * The number of structural features of the '<em>Elevation Feature Reference</em>' class.
@@ -3099,7 +3099,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATION_FEATURE_REFERENCE_FEATURE_COUNT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 0;
+	int ELEVATION_FEATURE_REFERENCE_FEATURE_COUNT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of operations of the '<em>Elevation Feature Reference</em>' class.
@@ -3108,7 +3108,7 @@ public interface Symphony__AddonsSensorsImagingCameraPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ELEVATION_FEATURE_REFERENCE_OPERATION_COUNT = EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 0;
+	int ELEVATION_FEATURE_REFERENCE_OPERATION_COUNT = Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE_OPERATION_COUNT + 0;
 
 		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.imaging.camera.impl.ToolTipTextProviderImpl <em>Tool Tip Text Provider</em>}' class.

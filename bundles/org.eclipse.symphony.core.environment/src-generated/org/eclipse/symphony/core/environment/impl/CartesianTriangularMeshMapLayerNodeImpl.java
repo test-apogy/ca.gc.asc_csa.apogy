@@ -9,7 +9,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public class CartesianTriangularMeshMapLayerNodeImpl extends AbstractMapLayerNod
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE;
+		return Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE;
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class CartesianTriangularMeshMapLayerNodeImpl extends AbstractMapLayerNod
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE___GET_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE___GET_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER:
 				return getCartesianTriangularMeshMapLayer();
 		}
 		return super.eInvoke(operationID, arguments);

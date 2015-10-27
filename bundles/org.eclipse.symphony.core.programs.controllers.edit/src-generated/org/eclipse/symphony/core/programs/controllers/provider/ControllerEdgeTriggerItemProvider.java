@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.programs.controllers.ControllerEdgeTrigger;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.EdgeType;
 
 /**
@@ -72,7 +72,7 @@ public class ControllerEdgeTriggerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ControllerEdgeTrigger_edgeType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ControllerEdgeTrigger_edgeType_feature", "_UI_ControllerEdgeTrigger_type"),
-				 EMFEcoreControllersPackage.Literals.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE,
+				 Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE,
 				 true,
 				 false,
 				 false,
@@ -161,7 +161,7 @@ public class ControllerEdgeTriggerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ControllerEdgeTrigger.class)) {
-			case EMFEcoreControllersPackage.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

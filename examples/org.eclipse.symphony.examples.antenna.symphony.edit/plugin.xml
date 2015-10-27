@@ -11,7 +11,7 @@
       <!-- @generated symphony_examples_antenna -->
       <factory
             uri="org.eclipse.symphony.examples.antenna"
-            class="org.eclipse.symphony.examples.antenna.symphony.provider.SymphonyExampleAntennaItemProviderAdapterFactory"
+            class="org.eclipse.symphony.examples.antenna.symphony.provider.Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -21,13 +21,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_examples_antenna -->
+      <!-- @generated symphony_examples_antenna_symphony -->
       <extender
             uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.examples.antenna.symphony.provider.SymphonyExampleAntennaItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.antenna.symphony.provider.Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory$Symphony__CoreInvocatorChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.antenna.symphony.provider.SymphonyExampleAntennaItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.antenna.symphony.provider.Symphony__ExamplesAntennaSymphonyItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

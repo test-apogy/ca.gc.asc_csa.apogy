@@ -29,7 +29,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCall#getEnvironment <em>Environment</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCall()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCall()
  * @model
  * @generated
  */
@@ -45,7 +45,7 @@ public interface OperationCall extends VariableFeatureReference, Named, Describe
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>EOperation</em>' reference.
 	 * @see #setEOperation(EOperation)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCall_EOperation()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCall_EOperation()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -73,7 +73,7 @@ public interface OperationCall extends VariableFeatureReference, Named, Describe
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Arguments List</em>' containment reference.
 	 * @see #setArgumentsList(ArgumentsList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCall_ArgumentsList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCall_ArgumentsList()
 	 * @see org.eclipse.symphony.core.invocator.ArgumentsList#getOperationCall
 	 * @model opposite="operationCall" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel createChild='false'"
@@ -102,7 +102,7 @@ public interface OperationCall extends VariableFeatureReference, Named, Describe
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operation Call Container</em>' container reference.
 	 * @see #setOperationCallContainer(OperationCallContainer)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCall_OperationCallContainer()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCall_OperationCallContainer()
 	 * @see org.eclipse.symphony.core.invocator.OperationCallContainer#getOperationCalls
 	 * @model opposite="operationCalls" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -129,7 +129,7 @@ public interface OperationCall extends VariableFeatureReference, Named, Describe
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Invocator Session</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCall_InvocatorSession()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCall_InvocatorSession()
 	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%org.eclipse.symphony.core.invocator.OperationCallContainer%> _operationCallContainer = this.getOperationCallContainer();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_operationCallContainer, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.OperationCallContainer%> _operationCallContainer_1 = this.getOperationCallContainer();\n\treturn _operationCallContainer_1.getInvocatorSession();\n}'"
 	 * @generated
@@ -145,7 +145,7 @@ public interface OperationCall extends VariableFeatureReference, Named, Describe
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environment</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCall_Environment()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCall_Environment()
 	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%org.eclipse.symphony.core.invocator.InvocatorSession%> _invocatorSession = this.getInvocatorSession();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_invocatorSession, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.InvocatorSession%> _invocatorSession_1 = this.getInvocatorSession();\n\treturn _invocatorSession_1.getEnvironment();\n}'"
 	 * @generated

@@ -5,7 +5,7 @@ package org.eclipse.symphony.core.environment.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.ui.TrajectoryPickingTool;
 import org.jfree.data.xy.XYDataItem;
 
@@ -36,7 +36,7 @@ public class TrajectoryPickingToolImpl extends AbstractTrajectoryToolImpl implem
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentUIPackage.Literals.TRAJECTORY_PICKING_TOOL;
+		return Symphony__CoreEnvironmentUIPackage.Literals.TRAJECTORY_PICKING_TOOL;
 	} 
    
   @Override

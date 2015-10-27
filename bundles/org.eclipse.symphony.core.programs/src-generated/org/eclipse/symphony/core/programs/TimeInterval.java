@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.programs.TimeInterval#getDuration <em>Duration</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.InvocatorProgramsPackage#getTimeInterval()
+ * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#getTimeInterval()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface TimeInterval extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Start Time</em>' attribute.
 	 * @see #setStartTime(long)
-	 * @see org.eclipse.symphony.core.programs.InvocatorProgramsPackage#getTimeInterval_StartTime()
+	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#getTimeInterval_StartTime()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface TimeInterval extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>End Time</em>' attribute.
 	 * @see #setEndTime(long)
-	 * @see org.eclipse.symphony.core.programs.InvocatorProgramsPackage#getTimeInterval_EndTime()
+	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#getTimeInterval_EndTime()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -85,7 +85,7 @@ public interface TimeInterval extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Duration</em>' attribute.
-	 * @see org.eclipse.symphony.core.programs.InvocatorProgramsPackage#getTimeInterval_Duration()
+	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#getTimeInterval_Duration()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='long _endTime = this.getEndTime();\nlong _startTime = this.getStartTime();\nreturn (_endTime - _startTime);'"
 	 * @generated

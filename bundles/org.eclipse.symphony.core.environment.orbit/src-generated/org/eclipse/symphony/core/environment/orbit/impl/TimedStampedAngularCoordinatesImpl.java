@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 import org.eclipse.symphony.core.environment.orbit.TimedStampedAngularCoordinates;
 
 /**
@@ -62,7 +62,7 @@ public class TimedStampedAngularCoordinatesImpl extends AngularCoordinatesImpl i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyOrbitEnvironmentPackage.Literals.TIMED_STAMPED_ANGULAR_COORDINATES;
+		return Symphony__CoreEnvironmentOrbitPackage.Literals.TIMED_STAMPED_ANGULAR_COORDINATES;
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class TimedStampedAngularCoordinatesImpl extends AngularCoordinatesImpl i
 		Date oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME, oldTime, time));
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class TimedStampedAngularCoordinatesImpl extends AngularCoordinatesImpl i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME:
 				return getTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class TimedStampedAngularCoordinatesImpl extends AngularCoordinatesImpl i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME:
 				setTime((Date)newValue);
 				return;
 		}
@@ -123,7 +123,7 @@ public class TimedStampedAngularCoordinatesImpl extends AngularCoordinatesImpl i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
 		}
@@ -138,7 +138,7 @@ public class TimedStampedAngularCoordinatesImpl extends AngularCoordinatesImpl i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
 		}
 		return super.eIsSet(featureID);
@@ -153,7 +153,7 @@ public class TimedStampedAngularCoordinatesImpl extends AngularCoordinatesImpl i
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Timed.class) {
 			switch (derivedFeatureID) {
-				case SymphonyOrbitEnvironmentPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
+				case Symphony__CoreEnvironmentOrbitPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME: return Symphony__CommonEMFPackage.TIMED__TIME;
 				default: return -1;
 			}
 		}
@@ -169,7 +169,7 @@ public class TimedStampedAngularCoordinatesImpl extends AngularCoordinatesImpl i
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Timed.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.TIMED__TIME: return SymphonyOrbitEnvironmentPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME;
+				case Symphony__CommonEMFPackage.TIMED__TIME: return Symphony__CoreEnvironmentOrbitPackage.TIMED_STAMPED_ANGULAR_COORDINATES__TIME;
 				default: return -1;
 			}
 		}

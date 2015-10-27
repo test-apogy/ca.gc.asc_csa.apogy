@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation;
 
 /**
@@ -68,7 +68,7 @@ public class VehicleVariableAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VehicleVariableAnnotation_vehicleLength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VehicleVariableAnnotation_vehicleLength_feature", "_UI_VehicleVariableAnnotation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_LENGTH,
+				 Symphony__CoreEnvironmentUIPackage.Literals.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class VehicleVariableAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VehicleVariableAnnotation_vehicleWidth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VehicleVariableAnnotation_vehicleWidth_feature", "_UI_VehicleVariableAnnotation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_WIDTH,
+				 Symphony__CoreEnvironmentUIPackage.Literals.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_WIDTH,
 				 true,
 				 false,
 				 false,
@@ -141,8 +141,8 @@ public class VehicleVariableAnnotationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VehicleVariableAnnotation.class)) {
-			case SymphonyEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_LENGTH:
-			case SymphonyEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_WIDTH:
+			case Symphony__CoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_LENGTH:
+			case Symphony__CoreEnvironmentUIPackage.VEHICLE_VARIABLE_ANNOTATION__VEHICLE_WIDTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

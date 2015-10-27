@@ -109,7 +109,7 @@ public class PTUCameraSymphonySystemApiAdapterItemProvider
   @Override
   public ResourceLocator getResourceLocator()
   {
-		return SymphonyExampleCameraEditPlugin.INSTANCE;
+		return Symphony__ExamplesCameraSymphonyEditPlugin.INSTANCE;
 	}
 
 }

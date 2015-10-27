@@ -13,7 +13,6 @@ import org.eclipse.symphony.common.topology.Node;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * The registry of all NodePresentation. This class is intended to be a singleton.
  * It associates at most one NodePresentation to each Node. It registers to
  * <!-- end-model-doc -->
@@ -26,7 +25,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry#getNodePresentationList <em>Node Presentation List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getTopologyPresentationRegistry()
+ * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTopologyPresentationRegistry()
  * @model
  * @generated
  */
@@ -38,11 +37,10 @@ public interface TopologyPresentationRegistry extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The list of TopologyPresentationSet managed by the TopologyPresentationRegistry.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Topology Presentation Set List</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getTopologyPresentationRegistry_TopologyPresentationSetList()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTopologyPresentationRegistry_TopologyPresentationSetList()
 	 * @see org.eclipse.symphony.common.topology.ui.TopologyPresentationSet#getTopologyPresentationRegistry
 	 * @model opposite="topologyPresentationRegistry" containment="true"
 	 * @generated
@@ -55,11 +53,10 @@ public interface TopologyPresentationRegistry extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The list of NodePresentation managed by this PresentationTopology.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Node Presentation List</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getTopologyPresentationRegistry_NodePresentationList()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getTopologyPresentationRegistry_NodePresentationList()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -69,7 +66,6 @@ public interface TopologyPresentationRegistry extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Creates a TopologyPresentationSet from a specified topologyRoot.
 	 * @param topologyRoot The node at the root of the topology.
 	 * <!-- end-model-doc -->
@@ -82,7 +78,6 @@ public interface TopologyPresentationRegistry extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Release a TopologyPresentationSet no longer needed.
 	 * @param topologyPresentationSet The TopologyPresentationSet to release.
 	 * <!-- end-model-doc -->
@@ -95,7 +90,6 @@ public interface TopologyPresentationRegistry extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the NodePresentation associated with a specified Node.
 	 * @param node The specified Node.
 	 * @return The NodePresentation associated with specified Node, null if none is found.

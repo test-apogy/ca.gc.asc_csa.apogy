@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.AssemblyLinksList;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -54,7 +54,7 @@ public class AssemblyLinksListImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.ASSEMBLY_LINKS_LIST;
+		return Symphony__CorePackage.Literals.ASSEMBLY_LINKS_LIST;
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class AssemblyLinksListImpl extends MinimalEObjectImpl.Container
 	 */
 	public EList<AssemblyLink> getAssemblyLinks() {
 		if (assemblyLinks == null) {
-			assemblyLinks = new EObjectContainmentEList<AssemblyLink>(AssemblyLink.class, this, SymphonyCorePackage.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS);
+			assemblyLinks = new EObjectContainmentEList<AssemblyLink>(AssemblyLink.class, this, Symphony__CorePackage.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS);
 		}
 		return assemblyLinks;
 	}
@@ -76,7 +76,7 @@ public class AssemblyLinksListImpl extends MinimalEObjectImpl.Container
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCorePackage.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS:
+			case Symphony__CorePackage.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS:
 				return ((InternalEList<?>)getAssemblyLinks()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -89,7 +89,7 @@ public class AssemblyLinksListImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS:
+			case Symphony__CorePackage.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS:
 				return getAssemblyLinks();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -103,7 +103,7 @@ public class AssemblyLinksListImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS:
+			case Symphony__CorePackage.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS:
 				getAssemblyLinks().clear();
 				getAssemblyLinks().addAll((Collection<? extends AssemblyLink>)newValue);
 				return;
@@ -118,7 +118,7 @@ public class AssemblyLinksListImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS:
+			case Symphony__CorePackage.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS:
 				getAssemblyLinks().clear();
 				return;
 		}
@@ -132,7 +132,7 @@ public class AssemblyLinksListImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS:
+			case Symphony__CorePackage.ASSEMBLY_LINKS_LIST__ASSEMBLY_LINKS:
 				return assemblyLinks != null && !assemblyLinks.isEmpty();
 		}
 		return super.eIsSet(featureID);

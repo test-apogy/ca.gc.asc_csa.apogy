@@ -11,7 +11,7 @@
       <!-- @generated eclipse_emf_ecore_invocator_programs -->
       <package
             uri="org.eclipse.symphony.core.programs"
-            class="org.eclipse.symphony.core.programs.InvocatorProgramsPackage"
+            class="org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage"
             genModel="model/symphony_core_programs.xcore"/>
    </extension>
 

@@ -6,7 +6,7 @@ package org.eclipse.symphony.core.invocator.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public abstract class AbstractInitializationDataImpl extends MinimalEObjectImpl.
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.ABSTRACT_INITIALIZATION_DATA;
+		return Symphony__CoreInvocatorPackage.Literals.ABSTRACT_INITIALIZATION_DATA;
 	}
 
 } //AbstractInitializationDataImpl

@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage;
+import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
 import org.eclipse.symphony.examples.antenna.PTUDishAntenna;
 
 /**
@@ -69,7 +69,7 @@ public class PTUDishAntennaItemProvider extends DishAntennaItemProvider
 				getResourceLocator(),
 				getString("_UI_PTUDishAntenna_panAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntenna_panAngle_feature", "_UI_PTUDishAntenna_type"),
-				EMFEcoreExampleAntennaPackage.Literals.PTU_DISH_ANTENNA__PAN_ANGLE,
+				Symphony__ExamplesAntennaPackage.Literals.PTU_DISH_ANTENNA__PAN_ANGLE,
 				false,
 				false,
 				false,
@@ -92,7 +92,7 @@ public class PTUDishAntennaItemProvider extends DishAntennaItemProvider
 				getResourceLocator(),
 				getString("_UI_PTUDishAntenna_tiltAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntenna_tiltAngle_feature", "_UI_PTUDishAntenna_type"),
-				EMFEcoreExampleAntennaPackage.Literals.PTU_DISH_ANTENNA__TILT_ANGLE,
+				Symphony__ExamplesAntennaPackage.Literals.PTU_DISH_ANTENNA__TILT_ANGLE,
 				false,
 				false,
 				false,
@@ -114,7 +114,7 @@ public class PTUDishAntennaItemProvider extends DishAntennaItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PTUDishAntenna_trackingSun_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntenna_trackingSun_feature", "_UI_PTUDishAntenna_type"),
-				 EMFEcoreExampleAntennaPackage.Literals.PTU_DISH_ANTENNA__TRACKING_SUN,
+				 Symphony__ExamplesAntennaPackage.Literals.PTU_DISH_ANTENNA__TRACKING_SUN,
 				 false,
 				 false,
 				 false,
@@ -171,9 +171,9 @@ public class PTUDishAntennaItemProvider extends DishAntennaItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PTUDishAntenna.class)) {
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__PAN_ANGLE:
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__TILT_ANGLE:
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__TRACKING_SUN:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__PAN_ANGLE:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__TILT_ANGLE:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__TRACKING_SUN:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

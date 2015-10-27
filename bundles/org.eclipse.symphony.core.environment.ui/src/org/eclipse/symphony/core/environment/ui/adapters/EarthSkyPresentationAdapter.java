@@ -5,7 +5,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
 import org.eclipse.symphony.core.environment.EarthSky;
 import org.eclipse.symphony.core.environment.ui.EarthSkyPresentation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIFactory;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
 
 public class EarthSkyPresentationAdapter implements NodePresentationAdapter
 {
@@ -34,7 +34,7 @@ public class EarthSkyPresentationAdapter implements NodePresentationAdapter
 			throw new IllegalArgumentException();
 		}
 
-		EarthSkyPresentation presentationNode = SymphonyEnvironmentUIFactory.eINSTANCE.createEarthSkyPresentation();
+		EarthSkyPresentation presentationNode = Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEarthSkyPresentation();
 		presentationNode.setNode(obj);			
 						
 		return presentationNode;

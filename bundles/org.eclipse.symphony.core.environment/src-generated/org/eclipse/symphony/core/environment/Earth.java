@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.topology.GroupNode;
  *   <li>{@link org.eclipse.symphony.core.environment.Earth#getRadius <em>Radius</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEarth()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarth()
  * @model
  * @generated
  */
@@ -33,11 +33,11 @@ public interface Earth extends GroupNode {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Earth mean radius, in meters.
+	 * Earth mean radius, in meters.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEarth_Radius()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarth_Radius()
 	 * @model default="6371000" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated

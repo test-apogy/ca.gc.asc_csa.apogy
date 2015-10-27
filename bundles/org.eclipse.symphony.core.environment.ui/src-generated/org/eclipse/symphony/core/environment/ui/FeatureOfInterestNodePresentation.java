@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation#isFlagVisible <em>Flag Visible</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getFeatureOfInterestNodePresentation()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getFeatureOfInterestNodePresentation()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface FeatureOfInterestNodePresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pole Height</em>' attribute.
 	 * @see #setPoleHeight(double)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getFeatureOfInterestNodePresentation_PoleHeight()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getFeatureOfInterestNodePresentation_PoleHeight()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface FeatureOfInterestNodePresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Flag Visible</em>' attribute.
 	 * @see #setFlagVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getFeatureOfInterestNodePresentation_FlagVisible()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getFeatureOfInterestNodePresentation_FlagVisible()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */

@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.TLEEarthOrbitPropagator;
 
 /**
@@ -63,7 +63,7 @@ public class TLEEarthOrbitPropagatorItemProvider extends EarthOrbitPropagatorIte
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__TLE);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__TLE);
 		}
 		return childrenFeatures;
 	}
@@ -119,7 +119,7 @@ public class TLEEarthOrbitPropagatorItemProvider extends EarthOrbitPropagatorIte
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TLEEarthOrbitPropagator.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE_EARTH_ORBIT_PROPAGATOR__TLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,8 +139,8 @@ public class TLEEarthOrbitPropagatorItemProvider extends EarthOrbitPropagatorIte
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__TLE,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createTLE()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE_EARTH_ORBIT_PROPAGATOR__TLE,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createTLE()));
 	}
 
 }

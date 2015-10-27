@@ -27,7 +27,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.WorksitesList#getOrbitsModels <em>Orbits Models</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getWorksitesList()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getWorksitesList()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface WorksitesList extends Named, Described {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Worksites</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getWorksitesList_Worksites()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getWorksitesList_Worksites()
 	 * @see org.eclipse.symphony.core.AbstractWorksite#getWorksitesList
 	 * @model opposite="worksitesList" containment="true"
 	 * @generated
@@ -60,7 +60,7 @@ public interface WorksitesList extends Named, Described {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Orbits Models</em>' containment reference.
 	 * @see #setOrbitsModels(OrbitModelsList)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getWorksitesList_OrbitsModels()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getWorksitesList_OrbitsModels()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Editable'"
 	 * @generated

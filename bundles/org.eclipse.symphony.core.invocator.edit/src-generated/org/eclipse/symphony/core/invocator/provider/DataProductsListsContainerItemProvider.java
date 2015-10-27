@@ -24,8 +24,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.DataProductsListsContainer;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.DataProductsListsContainer} object.
@@ -132,7 +132,7 @@ public class DataProductsListsContainerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DataProductsListsContainer_invocatorSession_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DataProductsListsContainer_invocatorSession_feature", "_UI_DataProductsListsContainer_type"),
-				 EMFEcoreInvocatorPackage.Literals.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION,
+				 Symphony__CoreInvocatorPackage.Literals.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION,
 				 true,
 				 false,
 				 true,
@@ -154,7 +154,7 @@ public class DataProductsListsContainerItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -213,11 +213,11 @@ public class DataProductsListsContainerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DataProductsListsContainer.class)) {
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__NAME:
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__NAME:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -238,8 +238,8 @@ public class DataProductsListsContainerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createDataProductsList()));
+				(Symphony__CoreInvocatorPackage.Literals.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createDataProductsList()));
 	}
 
   /**

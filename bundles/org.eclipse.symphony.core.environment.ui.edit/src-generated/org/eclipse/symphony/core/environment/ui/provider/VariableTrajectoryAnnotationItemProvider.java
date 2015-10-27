@@ -14,8 +14,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation;
 
 /**
@@ -72,7 +72,7 @@ public class VariableTrajectoryAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TrajectoryProvider_latestPosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TrajectoryProvider_latestPosition_feature", "_UI_TrajectoryProvider_type"),
-				 SymphonyEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__LATEST_POSITION,
+				 Symphony__CoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__LATEST_POSITION,
 				 true,
 				 false,
 				 false,
@@ -95,7 +95,7 @@ public class VariableTrajectoryAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TrajectoryProvider_azimuthAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TrajectoryProvider_azimuthAngle_feature", "_UI_TrajectoryProvider_type"),
-				 SymphonyEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE,
+				 Symphony__CoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__AZIMUTH_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -118,7 +118,7 @@ public class VariableTrajectoryAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TrajectoryProvider_trajectoryLength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TrajectoryProvider_trajectoryLength_feature", "_UI_TrajectoryProvider_type"),
-				 SymphonyEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH,
+				 Symphony__CoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__TRAJECTORY_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -141,7 +141,7 @@ public class VariableTrajectoryAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TrajectoryProvider_trajectoryColor_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TrajectoryProvider_trajectoryColor_feature", "_UI_TrajectoryProvider_type"),
-				 SymphonyEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR,
+				 Symphony__CoreEnvironmentUIPackage.Literals.TRAJECTORY_PROVIDER__TRAJECTORY_COLOR,
 				 true,
 				 false,
 				 false,
@@ -163,7 +163,7 @@ public class VariableTrajectoryAnnotationItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER);
+			childrenFeatures.add(Symphony__CoreEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER);
 		}
 		return childrenFeatures;
 	}
@@ -225,13 +225,13 @@ public class VariableTrajectoryAnnotationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VariableTrajectoryAnnotation.class)) {
-			case SymphonyEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION:
-			case SymphonyEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE:
-			case SymphonyEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH:
-			case SymphonyEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__LATEST_POSITION:
+			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__AZIMUTH_ANGLE:
+			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_LENGTH:
+			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
+			case Symphony__CoreEnvironmentUIPackage.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -252,8 +252,8 @@ public class VariableTrajectoryAnnotationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER,
-				 SymphonyEnvironmentUIFactory.eINSTANCE.createDefaultVariableTrajectoryProvider()));
+				(Symphony__CoreEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_ANNOTATION__TRAJECTORY_PROVIDER,
+				 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createDefaultVariableTrajectoryProvider()));
 	}
 
 }

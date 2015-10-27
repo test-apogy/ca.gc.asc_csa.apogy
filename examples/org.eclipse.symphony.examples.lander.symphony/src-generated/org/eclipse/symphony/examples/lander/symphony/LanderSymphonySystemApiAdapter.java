@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.lander.symphony.SymphonyExampleLanderPackage#getLanderSymphonySystemApiAdapter()
+ * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderSymphonySystemApiAdapter()
  * @model
  * @generated
  */

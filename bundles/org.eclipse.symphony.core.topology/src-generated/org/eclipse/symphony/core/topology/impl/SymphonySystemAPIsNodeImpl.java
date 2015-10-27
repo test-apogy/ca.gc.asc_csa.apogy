@@ -29,25 +29,25 @@ import org.eclipse.symphony.common.topology.ReferencedGroupNode;
 import org.eclipse.symphony.common.topology.TopologyFacade;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
 import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
 import org.eclipse.symphony.common.topology.impl.ReferencedGroupNodeImpl;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableImplementation;
 import org.eclipse.symphony.core.topology.Activator;
 import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
-import org.eclipse.symphony.core.topology.SymphonyTopologyPackage;
+import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -96,7 +96,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyTopologyPackage.Literals.SYMPHONY_SYSTEM_AP_IS_NODE;
+		return Symphony__CoreTopologyPackage.Literals.SYMPHONY_SYSTEM_AP_IS_NODE;
 	}
 
   /**
@@ -111,7 +111,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 			symphonyEnvironment = (SymphonyEnvironment)eResolveProxy(oldSymphonyEnvironment);
 			if (symphonyEnvironment != oldSymphonyEnvironment) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT, oldSymphonyEnvironment, symphonyEnvironment));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT, oldSymphonyEnvironment, symphonyEnvironment));
 			}
 		}
 		return symphonyEnvironment;
@@ -151,7 +151,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 		SymphonyEnvironment oldSymphonyEnvironment = symphonyEnvironment;
 		symphonyEnvironment = newSymphonyEnvironment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT, oldSymphonyEnvironment, symphonyEnvironment));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT, oldSymphonyEnvironment, symphonyEnvironment));
 	}
   
   /**
@@ -163,7 +163,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT:
+			case Symphony__CoreTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT:
 				if (resolve) return getSymphonyEnvironment();
 				return basicGetSymphonyEnvironment();
 		}
@@ -179,7 +179,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT:
+			case Symphony__CoreTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT:
 				setSymphonyEnvironment((SymphonyEnvironment)newValue);
 				return;
 		}
@@ -195,7 +195,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT:
+			case Symphony__CoreTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT:
 				setSymphonyEnvironment((SymphonyEnvironment)null);
 				return;
 		}
@@ -211,7 +211,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT:
+			case Symphony__CoreTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT:
 				return symphonyEnvironment != null;
 		}
 		return super.eIsSet(featureID);
@@ -287,13 +287,13 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 
   private TransformMatrixBinding createTransformMatrixBinding(final SymphonySystem symphonySystem, final TransformNode poseTransform, final PoseProvider poseProvider)
   {
-	  TransformMatrixBinding binding = TopologyBindingsFactory.eINSTANCE.createTransformMatrixBinding();
+	  TransformMatrixBinding binding = Symphony__CommonTopologyBindingsFactory.eINSTANCE.createTransformMatrixBinding();
 	  
 	  ListRootNode listRootNode = Symphony__CommonEMFFactory.eINSTANCE.createListRootNode();
 	  listRootNode.setSourceClass(poseProvider.eClass());
 	  
 	  ListFeatureNode listFeatureNode = Symphony__CommonEMFFactory.eINSTANCE.createListFeatureNode();	  	 
-	  listFeatureNode.setStructuralFeature(SymphonyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
+	  listFeatureNode.setStructuralFeature(Symphony__CorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
 	  listRootNode.setChild(listFeatureNode);
 	  
 	  binding.setFeatureNode(listFeatureNode);  
@@ -557,7 +557,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 										
 					if(msg.getNotifier() instanceof Environment)
 					{
-						if(msg.getFeatureID(Environment.class) == EMFEcoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT)					
+						if(msg.getFeatureID(Environment.class) == Symphony__CoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT)					
 						{
 							// Active Context has changed, update.
 							Context oldContext = (Context) msg.getOldValue();
@@ -567,12 +567,12 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 					}	
 					else if(msg.getNotifier() instanceof Context)
 					{
-						if(msg.getFeatureID(Context.class) == EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE)
+						if(msg.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE)
 						{
 							// Variable implementation has changed, update.
 							updateVariablesImplementations();			
 						}
-						else if(msg.getFeatureID(Context.class) == EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE)
+						else if(msg.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE)
 						{
 							if(msg.getNewValue() != null)
 							{

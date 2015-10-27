@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ImageMapLayerPresentation} object.
@@ -66,7 +66,7 @@ public class ImageMapLayerPresentationItemProvider extends MapLayerPresentationI
 				 getResourceLocator(),
 				 getString("_UI_ImageMapLayerPresentation_alpha_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageMapLayerPresentation_alpha_feature", "_UI_ImageMapLayerPresentation_type"),
-				 SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER_PRESENTATION__ALPHA,
+				 Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER_PRESENTATION__ALPHA,
 				 true,
 				 false,
 				 false,
@@ -139,7 +139,7 @@ public class ImageMapLayerPresentationItemProvider extends MapLayerPresentationI
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageMapLayerPresentation.class)) {
-			case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
+			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

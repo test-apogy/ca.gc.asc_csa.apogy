@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.AbstractWorksite;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.WorksiteContributor;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
@@ -83,13 +83,13 @@ public class ImportSymphonyWorksiteWizard extends Wizard implements INewWizard {
 			CompoundCommand command = new CompoundCommand();
 			command.append(new AddCommand(editingDomain, environment
 					.getWorksitesList(),
-					SymphonyCorePackage.Literals.WORKSITES_LIST__WORKSITES,
+					Symphony__CorePackage.Literals.WORKSITES_LIST__WORKSITES,
 					worksite));
 
 			command.append(new SetCommand(
 					editingDomain,
 					environment,
-					SymphonyCorePackage.Literals.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE,
+					Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE,
 					worksite));
 			editingDomain.getCommandStack().execute(command);
 

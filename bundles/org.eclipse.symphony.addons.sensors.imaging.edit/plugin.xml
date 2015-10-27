@@ -28,10 +28,4 @@
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.addons.sensors.imaging.provider.Symphony__AddonsSensorsImagingItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.imaging.provider.Symphony__AddonsSensorsImagingItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-   </extension>
 </plugin>

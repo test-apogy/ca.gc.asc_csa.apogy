@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
 
 /**
@@ -79,7 +79,7 @@ public class SymphonyResourceSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SymphonyResourceSettings_resourceProject_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyResourceSettings_resourceProject_feature", "_UI_SymphonyResourceSettings_type"),
-				 SymphonyCoreUiPackage.Literals.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT,
+				 Symphony__CoreUIPackage.Literals.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT,
 				 true,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class SymphonyResourceSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SymphonyResourceSettings_resourceFile_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyResourceSettings_resourceFile_feature", "_UI_SymphonyResourceSettings_type"),
-				 SymphonyCoreUiPackage.Literals.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE,
+				 Symphony__CoreUIPackage.Literals.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE,
 				 true,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class SymphonyResourceSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SymphonyResourceSettings_resourceContainer_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyResourceSettings_resourceContainer_feature", "_UI_SymphonyResourceSettings_type"),
-				 SymphonyCoreUiPackage.Literals.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER,
+				 Symphony__CoreUIPackage.Literals.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER,
 				 true,
 				 false,
 				 false,
@@ -171,9 +171,9 @@ public class SymphonyResourceSettingsItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SymphonyResourceSettings.class)) {
-			case SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
-			case SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE:
-			case SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
+			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
+			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE:
+			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -200,7 +200,7 @@ public class SymphonyResourceSettingsItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SymphonyCoreUiEditPlugin.INSTANCE;
+		return Symphony__CoreUIEditPlugin.INSTANCE;
 	}
 
 }

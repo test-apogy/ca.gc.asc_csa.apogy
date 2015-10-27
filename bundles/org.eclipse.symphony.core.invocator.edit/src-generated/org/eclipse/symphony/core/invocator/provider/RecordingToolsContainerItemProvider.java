@@ -12,9 +12,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.RecordingToolsContainer;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.RecordingToolsContainer} object.
@@ -60,9 +60,9 @@ public class RecordingToolsContainerItemProvider extends AbstractToolsListContai
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__RECORDER);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__PLAYER);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__RECORDER);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__PLAYER);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS);
 		}
 		return childrenFeatures;
 	}
@@ -115,9 +115,9 @@ public class RecordingToolsContainerItemProvider extends AbstractToolsListContai
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RecordingToolsContainer.class)) {
-			case EMFEcoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
-			case EMFEcoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
-			case EMFEcoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
+			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__RECORDER:
+			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER:
+			case Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -137,8 +137,8 @@ public class RecordingToolsContainerItemProvider extends AbstractToolsListContai
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createChannelsList()));
+				(Symphony__CoreInvocatorPackage.Literals.RECORDING_TOOLS_CONTAINER__CHANNELS_LISTS,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createChannelsList()));
 	}
 
 }

@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 
 /**
@@ -106,7 +106,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_azimuth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPassSpacecraftPosition_azimuth_feature", "_UI_VisibilityPassSpacecraftPosition_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__AZIMUTH,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__AZIMUTH,
 				 false,
 				 false,
 				 false,
@@ -128,7 +128,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_elevation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPassSpacecraftPosition_elevation_feature", "_UI_VisibilityPassSpacecraftPosition_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__ELEVATION,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__ELEVATION,
 				 false,
 				 false,
 				 false,
@@ -150,7 +150,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_range_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPassSpacecraftPosition_range_feature", "_UI_VisibilityPassSpacecraftPosition_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE,
 				 false,
 				 false,
 				 false,
@@ -172,7 +172,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_rangeRate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPassSpacecraftPosition_rangeRate_feature", "_UI_VisibilityPassSpacecraftPosition_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE_RATE,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE_RATE,
 				 false,
 				 false,
 				 false,
@@ -194,7 +194,7 @@ public class VisibilityPassSpacecraftPositionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPosition_spacecraftCrossTrackAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPassSpacecraftPosition_spacecraftCrossTrackAngle_feature", "_UI_VisibilityPassSpacecraftPosition_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE,
 				 false,
 				 false,
 				 false,
@@ -242,12 +242,12 @@ public class VisibilityPassSpacecraftPositionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VisibilityPassSpacecraftPosition.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__TIME:
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__AZIMUTH:
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__ELEVATION:
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE:
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE_RATE:
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__AZIMUTH:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__ELEVATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__RANGE_RATE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION__SPACECRAFT_CROSS_TRACK_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

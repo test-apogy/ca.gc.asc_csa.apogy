@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.TypeApiAdapter} object.
@@ -80,7 +80,7 @@ public class TypeApiAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TypeApiAdapter_environment_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TypeApiAdapter_environment_feature", "_UI_TypeApiAdapter_type"),
-				 EMFEcoreInvocatorPackage.Literals.TYPE_API_ADAPTER__ENVIRONMENT,
+				 Symphony__CoreInvocatorPackage.Literals.TYPE_API_ADAPTER__ENVIRONMENT,
 				 true,
 				 false,
 				 true,
@@ -103,7 +103,7 @@ public class TypeApiAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TypeApiAdapter_instance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TypeApiAdapter_instance_feature", "_UI_TypeApiAdapter_type"),
-				 EMFEcoreInvocatorPackage.Literals.TYPE_API_ADAPTER__INSTANCE,
+				 Symphony__CoreInvocatorPackage.Literals.TYPE_API_ADAPTER__INSTANCE,
 				 true,
 				 false,
 				 true,
@@ -126,7 +126,7 @@ public class TypeApiAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TypeApiAdapter_elementType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TypeApiAdapter_elementType_feature", "_UI_TypeApiAdapter_type"),
-				 EMFEcoreInvocatorPackage.Literals.TYPE_API_ADAPTER__ELEMENT_TYPE,
+				 Symphony__CoreInvocatorPackage.Literals.TYPE_API_ADAPTER__ELEMENT_TYPE,
 				 true,
 				 false,
 				 true,

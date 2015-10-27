@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.TypesList#getRegisteredTypes <em>Registered Types</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypesList()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypesList()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface TypesList extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Local Types</em>' containment reference.
 	 * @see #setLocalTypes(LocalTypesList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypesList_LocalTypes()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypesList_LocalTypes()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -66,7 +66,7 @@ public interface TypesList extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Registered Types</em>' containment reference.
 	 * @see #setRegisteredTypes(RegisteredTypesList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypesList_RegisteredTypes()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypesList_RegisteredTypes()
 	 * @model containment="true"
 	 * @generated
 	 */

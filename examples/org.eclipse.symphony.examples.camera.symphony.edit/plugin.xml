@@ -11,7 +11,7 @@
       <!-- @generated symphony_examples_camera -->
       <factory
             uri="org.eclipse.symphony.examples.camera.symphony"
-            class="org.eclipse.symphony.examples.camera.symphony.provider.SymphonyExampleCameraItemProviderAdapterFactory"
+            class="org.eclipse.symphony.examples.camera.symphony.provider.Symphony__ExamplesCameraSymphonyItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

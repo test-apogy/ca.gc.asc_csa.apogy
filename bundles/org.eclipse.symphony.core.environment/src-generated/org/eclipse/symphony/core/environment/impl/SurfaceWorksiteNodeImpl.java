@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.core.environment.MapsList;
 import org.eclipse.symphony.core.environment.SurfaceWorksite;
 import org.eclipse.symphony.core.environment.SurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +42,7 @@ public class SurfaceWorksiteNodeImpl extends WorksiteNodeImpl implements Surface
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.SURFACE_WORKSITE_NODE;
+		return Symphony__CoreEnvironmentPackage.Literals.SURFACE_WORKSITE_NODE;
 	}
 
   private void clearTopology()
@@ -78,7 +78,7 @@ public class SurfaceWorksiteNodeImpl extends WorksiteNodeImpl implements Surface
 					
 					if(notification.getNotifier() instanceof SurfaceWorksiteNode)
 					{
-						if(notification.getFeatureID(SurfaceWorksiteNode.class) == SymphonyEnvironmentPackage.WORKSITE_NODE__WORKSITE)
+						if(notification.getFeatureID(SurfaceWorksiteNode.class) == Symphony__CoreEnvironmentPackage.WORKSITE_NODE__WORKSITE)
 						{
 							// Worksite of SurfaceWorksiteNode has been set.
 							
@@ -100,7 +100,7 @@ public class SurfaceWorksiteNodeImpl extends WorksiteNodeImpl implements Surface
 					}
 					else if(notification.getNotifier() instanceof SurfaceWorksite)
 					{
-						if(notification.getFeatureID(SurfaceWorksite.class) == SymphonyEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST)
+						if(notification.getFeatureID(SurfaceWorksite.class) == Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST)
 						{
 							// MapsList of Worksite has been set.					
 							

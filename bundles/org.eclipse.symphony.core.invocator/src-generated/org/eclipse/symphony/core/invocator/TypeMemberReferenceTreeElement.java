@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.emf.TreeRootNode;
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#isLeaf <em>Leaf</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceTreeElement()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceTreeElement()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Child</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceTreeElement_Child()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceTreeElement_Child()
 	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getParent
 	 * @model opposite="parent" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -59,7 +59,7 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent</em>' container reference.
 	 * @see #setParent(TypeMemberReferenceTreeElement)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceTreeElement_Parent()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceTreeElement_Parent()
 	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement#getChild
 	 * @model opposite="child" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -87,7 +87,7 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Feature Root Node</em>' containment reference.
 	 * @see #setFeatureRootNode(TreeRootNode)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceTreeElement_FeatureRootNode()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceTreeElement_FeatureRootNode()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -112,7 +112,7 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Root</em>' attribute.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceTreeElement_Root()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceTreeElement_Root()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement%> _parent = this.getParent();\nreturn <%com.google.common.base.Objects%>.equal(_parent, null);'"
 	 * @generated
@@ -128,7 +128,7 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Root Element</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceTreeElement_RootElement()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceTreeElement_RootElement()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement%> _xifexpression = null;\nboolean _isRoot = this.isRoot();\nif (_isRoot)\n{\n\treturn this;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement%> _parent = this.getParent();\n\t_xifexpression = _parent.getRootElement();\n}\nreturn _xifexpression;'"
 	 * @generated
@@ -144,7 +144,7 @@ public interface TypeMemberReferenceTreeElement extends TypeMemberReference
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Leaf</em>' attribute.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceTreeElement_Leaf()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceTreeElement_Leaf()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%org.eclipse.emf.common.util.EList%><<%org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement%>> _child = this.getChild();\nreturn <%com.google.common.base.Objects%>.equal(_child, null);'"
 	 * @generated

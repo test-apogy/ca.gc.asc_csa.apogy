@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest#getKinematicState <em>Kinematic State</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPointOfInterest()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPointOfInterest()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface PointOfInterest extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Offset</em>' containment reference.
 	 * @see #setOffset(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPointOfInterest_Offset()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPointOfInterest_Offset()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -65,7 +65,7 @@ public interface PointOfInterest extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Kinematic State</em>' containment reference.
 	 * @see #setKinematicState(KinematicState)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPointOfInterest_KinematicState()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPointOfInterest_KinematicState()
 	 * @model containment="true"
 	 * @generated
 	 */

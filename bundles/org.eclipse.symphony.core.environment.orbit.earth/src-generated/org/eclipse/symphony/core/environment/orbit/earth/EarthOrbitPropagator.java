@@ -15,12 +15,11 @@ import org.orekit.propagation.Propagator;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Defines an Orbit propagator for Earth orbits.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthOrbitPropagator()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getEarthOrbitPropagator()
  * @model abstract="true"
  * @generated
  */

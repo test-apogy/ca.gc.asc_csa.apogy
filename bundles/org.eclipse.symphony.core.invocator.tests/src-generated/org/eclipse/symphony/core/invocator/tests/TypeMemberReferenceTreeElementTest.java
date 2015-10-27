@@ -4,8 +4,7 @@
 package org.eclipse.symphony.core.invocator.tests;
 
 import junit.textui.TestRunner;
-
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
 
 /**
@@ -62,7 +61,7 @@ public class TypeMemberReferenceTreeElementTest extends TypeMemberReferenceTest 
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceTreeElement());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceTreeElement());
 	}
 
 	/**

@@ -24,8 +24,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.FeatureOfInterestList;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.FeatureOfInterestList} object.
@@ -124,7 +124,7 @@ public class FeatureOfInterestListItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST);
+			childrenFeatures.add(Symphony__CorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST);
 		}
 		return childrenFeatures;
 	}
@@ -189,11 +189,11 @@ public class FeatureOfInterestListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FeatureOfInterestList.class)) {
-			case SymphonyCorePackage.FEATURE_OF_INTEREST_LIST__NAME:
-			case SymphonyCorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION:
+			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__NAME:
+			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyCorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST:
+			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -213,8 +213,8 @@ public class FeatureOfInterestListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterest()));
+				(Symphony__CorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST,
+				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterest()));
 	}
 
 	/**

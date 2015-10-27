@@ -6,7 +6,7 @@ package org.eclipse.symphony.common.geometry.data25d.ui;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -75,7 +75,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__TOPOLOGY_PRESENTATION_SET = TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -84,7 +84,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__NODE = TopologyUIPackage.NODE_PRESENTATION__NODE;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -93,7 +93,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__COLOR = TopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -102,7 +102,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__VISIBLE = TopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -111,7 +111,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__SHADOW_MODE = TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -120,7 +120,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__USE_IN_BOUNDING_CALCULATION = TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -129,7 +129,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__CENTROID = TopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -138,7 +138,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__MIN = TopologyUIPackage.NODE_PRESENTATION__MIN;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -147,7 +147,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__MAX = TopologyUIPackage.NODE_PRESENTATION__MAX;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -156,7 +156,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__XRANGE = TopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -165,7 +165,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__YRANGE = TopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -174,7 +174,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__ZRANGE = TopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -183,7 +183,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__SCENE_OBJECT = TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Points Cloud</b></em>' reference.
@@ -192,7 +192,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__POINTS_CLOUD = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION__POINTS_CLOUD = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Volumetric Coordinates Set25 DPresentation</em>' class.
@@ -201,7 +201,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION_FEATURE_COUNT = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Volumetric Coordinates Set25 DPresentation</em>' class.
@@ -210,7 +210,7 @@ public interface Symphony__CommonGeometryData25DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION_OPERATION_COUNT = TopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int VOLUMETRIC_COORDINATES_SET25_DPRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
 	/**

@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ResultsList;
 
 /**
@@ -105,7 +105,7 @@ public abstract class ResultsListImpl extends MinimalEObjectImpl.Container imple
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.RESULTS_LIST;
+		return Symphony__CoreInvocatorPackage.Literals.RESULTS_LIST;
 	}
 
   /**
@@ -128,7 +128,7 @@ public abstract class ResultsListImpl extends MinimalEObjectImpl.Container imple
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.RESULTS_LIST__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.RESULTS_LIST__NAME, oldName, name));
 	}
 
   /**
@@ -151,7 +151,7 @@ public abstract class ResultsListImpl extends MinimalEObjectImpl.Container imple
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.RESULTS_LIST__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.RESULTS_LIST__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -162,7 +162,7 @@ public abstract class ResultsListImpl extends MinimalEObjectImpl.Container imple
   public EList<AbstractResult> getResults()
   {
 		if (results == null) {
-			results = new EObjectContainmentWithInverseEList<AbstractResult>(AbstractResult.class, this, EMFEcoreInvocatorPackage.RESULTS_LIST__RESULTS, EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST);
+			results = new EObjectContainmentWithInverseEList<AbstractResult>(AbstractResult.class, this, Symphony__CoreInvocatorPackage.RESULTS_LIST__RESULTS, Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST);
 		}
 		return results;
 	}
@@ -176,7 +176,7 @@ public abstract class ResultsListImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__RESULTS:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__RESULTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getResults()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -191,7 +191,7 @@ public abstract class ResultsListImpl extends MinimalEObjectImpl.Container imple
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__RESULTS:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__RESULTS:
 				return ((InternalEList<?>)getResults()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -206,11 +206,11 @@ public abstract class ResultsListImpl extends MinimalEObjectImpl.Container imple
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__NAME:
 				return getName();
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__DESCRIPTION:
 				return getDescription();
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__RESULTS:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__RESULTS:
 				return getResults();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -226,13 +226,13 @@ public abstract class ResultsListImpl extends MinimalEObjectImpl.Container imple
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__NAME:
 				setName((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__RESULTS:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__RESULTS:
 				getResults().clear();
 				getResults().addAll((Collection<? extends AbstractResult>)newValue);
 				return;
@@ -249,13 +249,13 @@ public abstract class ResultsListImpl extends MinimalEObjectImpl.Container imple
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__RESULTS:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__RESULTS:
 				getResults().clear();
 				return;
 		}
@@ -271,11 +271,11 @@ public abstract class ResultsListImpl extends MinimalEObjectImpl.Container imple
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case EMFEcoreInvocatorPackage.RESULTS_LIST__RESULTS:
+			case Symphony__CoreInvocatorPackage.RESULTS_LIST__RESULTS:
 				return results != null && !results.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -291,7 +291,7 @@ public abstract class ResultsListImpl extends MinimalEObjectImpl.Container imple
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreInvocatorPackage.RESULTS_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreInvocatorPackage.RESULTS_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -308,7 +308,7 @@ public abstract class ResultsListImpl extends MinimalEObjectImpl.Container imple
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.RESULTS_LIST__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreInvocatorPackage.RESULTS_LIST__DESCRIPTION;
 				default: return -1;
 			}
 		}

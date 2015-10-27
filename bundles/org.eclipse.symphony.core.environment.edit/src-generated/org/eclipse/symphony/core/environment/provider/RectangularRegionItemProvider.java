@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.RectangularRegion} object.
@@ -77,7 +77,7 @@ public class RectangularRegionItemProvider
          getResourceLocator(),
          getString("_UI_RectangularRegion_xMin_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_xMin_feature", "_UI_RectangularRegion_type"),
-         SymphonyEnvironmentPackage.Literals.RECTANGULAR_REGION__XMIN,
+         Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__XMIN,
          false,
          false,
          false,
@@ -100,7 +100,7 @@ public class RectangularRegionItemProvider
          getResourceLocator(),
          getString("_UI_RectangularRegion_xMax_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_xMax_feature", "_UI_RectangularRegion_type"),
-         SymphonyEnvironmentPackage.Literals.RECTANGULAR_REGION__XMAX,
+         Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__XMAX,
          false,
          false,
          false,
@@ -123,7 +123,7 @@ public class RectangularRegionItemProvider
          getResourceLocator(),
          getString("_UI_RectangularRegion_yMin_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_yMin_feature", "_UI_RectangularRegion_type"),
-         SymphonyEnvironmentPackage.Literals.RECTANGULAR_REGION__YMIN,
+         Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__YMIN,
          false,
          false,
          false,
@@ -146,7 +146,7 @@ public class RectangularRegionItemProvider
          getResourceLocator(),
          getString("_UI_RectangularRegion_yMax_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_yMax_feature", "_UI_RectangularRegion_type"),
-         SymphonyEnvironmentPackage.Literals.RECTANGULAR_REGION__YMAX,
+         Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__YMAX,
          false,
          false,
          false,
@@ -169,7 +169,7 @@ public class RectangularRegionItemProvider
          getResourceLocator(),
          getString("_UI_RectangularRegion_xDimension_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_xDimension_feature", "_UI_RectangularRegion_type"),
-         SymphonyEnvironmentPackage.Literals.RECTANGULAR_REGION__XDIMENSION,
+         Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__XDIMENSION,
          false,
          false,
          false,
@@ -192,7 +192,7 @@ public class RectangularRegionItemProvider
          getResourceLocator(),
          getString("_UI_RectangularRegion_yDimension_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_yDimension_feature", "_UI_RectangularRegion_type"),
-         SymphonyEnvironmentPackage.Literals.RECTANGULAR_REGION__YDIMENSION,
+         Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__YDIMENSION,
          false,
          false,
          false,
@@ -215,7 +215,7 @@ public class RectangularRegionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RectangularRegion_lowerLeftCorner_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_lowerLeftCorner_feature", "_UI_RectangularRegion_type"),
-				 SymphonyEnvironmentPackage.Literals.RECTANGULAR_REGION__LOWER_LEFT_CORNER,
+				 Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__LOWER_LEFT_CORNER,
 				 false,
 				 false,
 				 false,
@@ -238,7 +238,7 @@ public class RectangularRegionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RectangularRegion_upperLeftCorner_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_upperLeftCorner_feature", "_UI_RectangularRegion_type"),
-				 SymphonyEnvironmentPackage.Literals.RECTANGULAR_REGION__UPPER_LEFT_CORNER,
+				 Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__UPPER_LEFT_CORNER,
 				 false,
 				 false,
 				 false,
@@ -261,7 +261,7 @@ public class RectangularRegionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RectangularRegion_lowerRightCorner_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_lowerRightCorner_feature", "_UI_RectangularRegion_type"),
-				 SymphonyEnvironmentPackage.Literals.RECTANGULAR_REGION__LOWER_RIGHT_CORNER,
+				 Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__LOWER_RIGHT_CORNER,
 				 false,
 				 false,
 				 false,
@@ -284,7 +284,7 @@ public class RectangularRegionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RectangularRegion_upperRightCorner_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RectangularRegion_upperRightCorner_feature", "_UI_RectangularRegion_type"),
-				 SymphonyEnvironmentPackage.Literals.RECTANGULAR_REGION__UPPER_RIGHT_CORNER,
+				 Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION__UPPER_RIGHT_CORNER,
 				 false,
 				 false,
 				 false,
@@ -336,12 +336,12 @@ public class RectangularRegionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RectangularRegion.class)) {
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__XMIN:
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__XMAX:
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__YMIN:
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__YMAX:
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__XDIMENSION:
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__YDIMENSION:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMIN:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMAX:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMIN:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMAX:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XDIMENSION:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YDIMENSION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

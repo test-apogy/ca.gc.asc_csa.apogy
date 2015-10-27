@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.Star;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.Star} object.
@@ -88,7 +88,7 @@ public class StarItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Star_magnitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Star_magnitude_feature", "_UI_Star_type"),
-				 SymphonyEnvironmentPackage.Literals.STAR__MAGNITUDE,
+				 Symphony__CoreEnvironmentPackage.Literals.STAR__MAGNITUDE,
 				 true,
 				 false,
 				 false,
@@ -111,7 +111,7 @@ public class StarItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Star_equatorialCoordinates_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Star_equatorialCoordinates_feature", "_UI_Star_type"),
-				 SymphonyEnvironmentPackage.Literals.STAR__EQUATORIAL_COORDINATES,
+				 Symphony__CoreEnvironmentPackage.Literals.STAR__EQUATORIAL_COORDINATES,
 				 true,
 				 false,
 				 true,
@@ -169,7 +169,7 @@ public class StarItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Star.class)) {
-			case SymphonyEnvironmentPackage.STAR__MAGNITUDE:
+			case Symphony__CoreEnvironmentPackage.STAR__MAGNITUDE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

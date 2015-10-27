@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformPackage#getMobilePlatformSymphonySystemAnnotation()
+ * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage#getMobilePlatformSymphonySystemAnnotation()
  * @model
  * @generated
  */

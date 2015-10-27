@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.environment.EnvironmentUtilities;
 import org.eclipse.symphony.core.environment.Star;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -64,7 +64,7 @@ public class EnvironmentUtilitiesImpl extends MinimalEObjectImpl.Container imple
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.ENVIRONMENT_UTILITIES;
+		return Symphony__CoreEnvironmentPackage.Literals.ENVIRONMENT_UTILITIES;
 	}
 
   /**
@@ -183,18 +183,18 @@ public class EnvironmentUtilitiesImpl extends MinimalEObjectImpl.Container imple
   {
     switch (operationID)
     {
-      case SymphonyEnvironmentPackage.ENVIRONMENT_UTILITIES___CONVERT_TO_JULIAN_DATE__DATE:
+      case Symphony__CoreEnvironmentPackage.ENVIRONMENT_UTILITIES___CONVERT_TO_JULIAN_DATE__DATE:
         return convertToJulianDate((Date)arguments.get(0));
-      case SymphonyEnvironmentPackage.ENVIRONMENT_UTILITIES___PARSE_RIGHT_ASCENSION__STRING:
+      case Symphony__CoreEnvironmentPackage.ENVIRONMENT_UTILITIES___PARSE_RIGHT_ASCENSION__STRING:
         try {
 			return parseRightAscension((String)arguments.get(0));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-      case SymphonyEnvironmentPackage.ENVIRONMENT_UTILITIES___PARSE_DEG_MIN_SEC__STRING:
+      case Symphony__CoreEnvironmentPackage.ENVIRONMENT_UTILITIES___PARSE_DEG_MIN_SEC__STRING:
         return parseDegMinSec((String)arguments.get(0));
-      case SymphonyEnvironmentPackage.ENVIRONMENT_UTILITIES___SORT_BY_MAGNITUDE__LIST:
+      case Symphony__CoreEnvironmentPackage.ENVIRONMENT_UTILITIES___SORT_BY_MAGNITUDE__LIST:
         return sortByMagnitude((List<Star>)arguments.get(0));
     }
     return super.eInvoke(operationID, arguments);

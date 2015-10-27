@@ -24,9 +24,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint} object.
@@ -102,9 +102,9 @@ public class CorridorPointItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.CORRIDOR_POINT__LEFT);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.CORRIDOR_POINT__CENTER);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.CORRIDOR_POINT__RIGHT);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT);
 		}
 		return childrenFeatures;
 	}
@@ -161,12 +161,12 @@ public class CorridorPointItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CorridorPoint.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__LEFT:
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__CENTER:
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__RIGHT:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__LEFT:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__CENTER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__RIGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -186,18 +186,18 @@ public class CorridorPointItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.CORRIDOR_POINT__LEFT,
-				 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.CORRIDOR_POINT__CENTER,
-				 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.CORRIDOR_POINT__RIGHT,
-				 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 	}
 
 	/**
@@ -212,9 +212,9 @@ public class CorridorPointItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyEarthOrbitEnvironmentPackage.Literals.CORRIDOR_POINT__LEFT ||
-			childFeature == SymphonyEarthOrbitEnvironmentPackage.Literals.CORRIDOR_POINT__CENTER ||
-			childFeature == SymphonyEarthOrbitEnvironmentPackage.Literals.CORRIDOR_POINT__RIGHT;
+			childFeature == Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__LEFT ||
+			childFeature == Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__CENTER ||
+			childFeature == Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT__RIGHT;
 
 		if (qualify) {
 			return getString

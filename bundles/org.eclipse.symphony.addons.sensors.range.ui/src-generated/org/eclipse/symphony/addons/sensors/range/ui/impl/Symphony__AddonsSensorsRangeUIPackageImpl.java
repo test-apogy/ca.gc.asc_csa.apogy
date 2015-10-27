@@ -10,9 +10,9 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIFactory;
 import org.eclipse.symphony.addons.sensors.range.ui.Symphony__AddonsSensorsRangeUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.addons.sensors.range.ui.RasterScanDataPresentation;
 import org.eclipse.symphony.addons.sensors.range.ui.SimpleSonarPresentation;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -82,7 +82,7 @@ public class Symphony__AddonsSensorsRangeUIPackageImpl extends EPackageImpl impl
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyUIPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsSensorsRangeUIPackage.createPackageContents();
@@ -214,7 +214,7 @@ public class Symphony__AddonsSensorsRangeUIPackageImpl extends EPackageImpl impl
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyUIPackage theTopologyUIPackage = (TopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyUIPackage.eNS_URI);
+		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -222,12 +222,12 @@ public class Symphony__AddonsSensorsRangeUIPackageImpl extends EPackageImpl impl
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		rasterScanDataPresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
-		simpleSonarPresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
+		rasterScanDataPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		simpleSonarPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(rasterScanDataPresentationEClass, RasterScanDataPresentation.class, "RasterScanDataPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRasterScanDataPresentation_FovPresentationMode(), theTopologyUIPackage.getMeshPresentationMode(), "fovPresentationMode", "WIREFRAME", 0, 1, RasterScanDataPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRasterScanDataPresentation_FovPresentationMode(), theSymphony__CommonTopologyUIPackage.getMeshPresentationMode(), "fovPresentationMode", "WIREFRAME", 0, 1, RasterScanDataPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRasterScanDataPresentation_FovVisible(), theEcorePackage.getEBoolean(), "fovVisible", "true", 0, 1, RasterScanDataPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRasterScanDataPresentation_DataVisible(), theEcorePackage.getEBoolean(), "dataVisible", "true", 0, 1, RasterScanDataPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

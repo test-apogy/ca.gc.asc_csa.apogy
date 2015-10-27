@@ -5,7 +5,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
 import org.eclipse.symphony.core.FeatureOfInterestNode;
 import org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIFactory;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
 
 public class FeatureOfInterestPresentationAdapter implements NodePresentationAdapter
 {
@@ -34,7 +34,7 @@ public class FeatureOfInterestPresentationAdapter implements NodePresentationAda
 			throw new IllegalArgumentException();
 		}
 
-		FeatureOfInterestNodePresentation presentationNode = SymphonyEnvironmentUIFactory.eINSTANCE.createFeatureOfInterestNodePresentation();
+		FeatureOfInterestNodePresentation presentationNode = Symphony__CoreEnvironmentUIFactory.eINSTANCE.createFeatureOfInterestNodePresentation();
 		presentationNode.setNode(obj);			
 						
 		return presentationNode;

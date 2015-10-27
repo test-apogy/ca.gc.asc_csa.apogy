@@ -11,7 +11,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider;
 import org.jfree.data.xy.XYDataItem;
 
@@ -66,7 +66,7 @@ public class VariableTrajectoryProviderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VariableTrajectoryProvider_poseProvider_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VariableTrajectoryProvider_poseProvider_feature", "_UI_VariableTrajectoryProvider_type"),
-				 SymphonyEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER,
+				 Symphony__CoreEnvironmentUIPackage.Literals.VARIABLE_TRAJECTORY_PROVIDER__POSE_PROVIDER,
 				 true,
 				 false,
 				 true,

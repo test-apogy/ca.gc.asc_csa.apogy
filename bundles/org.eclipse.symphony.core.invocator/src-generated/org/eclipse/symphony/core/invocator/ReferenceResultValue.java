@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.ReferenceResultValue#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getReferenceResultValue()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getReferenceResultValue()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface ReferenceResultValue extends AbstractResultValue
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' containment reference.
 	 * @see #setValue(EObject)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getReferenceResultValue_Value()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getReferenceResultValue_Value()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel createChild='true' property='Readonly'"
 	 * @generated

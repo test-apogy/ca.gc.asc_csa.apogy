@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraFactory;
 import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay} object.
@@ -189,12 +189,12 @@ public class EMFFeatureOverlayItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createVariableFeatureReference()));
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createVariableFeatureReference()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__AddonsSensorsImagingCameraPackage.Literals.EMF_FEATURE_OVERLAY__VARIABLE_FEATURE_REFERENCE,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createOperationCall()));
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCall()));
 	}
 
 }

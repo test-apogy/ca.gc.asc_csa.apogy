@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.AbstractChannel;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.AbstractChannel} object.
@@ -124,7 +124,7 @@ public class AbstractChannelItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractChannel_channelsList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractChannel_channelsList_feature", "_UI_AbstractChannel_type"),
-				 EMFEcoreInvocatorPackage.Literals.ABSTRACT_CHANNEL__CHANNELS_LIST,
+				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_CHANNEL__CHANNELS_LIST,
 				 true,
 				 false,
 				 true,
@@ -160,8 +160,8 @@ public class AbstractChannelItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractChannel.class)) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__NAME:
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__NAME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

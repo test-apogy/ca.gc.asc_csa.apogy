@@ -18,7 +18,7 @@ package org.eclipse.symphony.core.environment;
  *   <li>{@link org.eclipse.symphony.core.environment.SurfaceWorksite#getMapsList <em>Maps List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSurfaceWorksite()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSurfaceWorksite()
  * @model abstract="true"
  * @generated
  */
@@ -36,7 +36,7 @@ public interface SurfaceWorksite extends Worksite
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sky</em>' containment reference.
 	 * @see #setSky(Sky)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSurfaceWorksite_Sky()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSurfaceWorksite_Sky()
 	 * @see org.eclipse.symphony.core.environment.Sky#getSurfaceWorksite
 	 * @model opposite="surfaceWorksite" containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='None'"
@@ -64,7 +64,7 @@ public interface SurfaceWorksite extends Worksite
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maps List</em>' containment reference.
 	 * @see #setMapsList(MapsList)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSurfaceWorksite_MapsList()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSurfaceWorksite_MapsList()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

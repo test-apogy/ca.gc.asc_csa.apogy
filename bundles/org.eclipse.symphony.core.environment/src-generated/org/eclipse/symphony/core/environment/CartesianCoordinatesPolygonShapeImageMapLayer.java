@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer#getPolygonVertices <em>Polygon Vertices</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianCoordinatesPolygonShapeImageMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianCoordinatesPolygonShapeImageMapLayer()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface CartesianCoordinatesPolygonShapeImageMapLayer extends PolygonSh
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polygon Vertices</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianCoordinatesPolygonShapeImageMapLayer_PolygonVertices()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianCoordinatesPolygonShapeImageMapLayer_PolygonVertices()
 	 * @model containment="true"
 	 * @generated
 	 */

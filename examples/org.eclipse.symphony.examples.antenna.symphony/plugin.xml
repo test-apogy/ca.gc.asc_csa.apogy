@@ -11,7 +11,7 @@
       <!-- @generated symphony_examples_antenna -->
       <package
             uri="org.eclipse.symphony.examples.antenna.symphony"
-            class="org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage"
+            class="org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage"
             genModel="model/symphony_examples_antenna_symphony.xcore"/>
    </extension>
    <extension

@@ -7,7 +7,7 @@ import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 import org.eclipse.symphony.core.invocator.VariablesList;
 import org.eclipse.symphony.core.invocator.ui.composites.VariableFeatureReferenceComposite;
@@ -50,7 +50,7 @@ public class VariableFeatureReferenceWizardPage extends WizardPage {
 			adapter = new AdapterImpl(){
 				@Override
 				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(VariableFeatureReference.class) == EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE){
+					if (msg.getFeatureID(VariableFeatureReference.class) == Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE){
 						validate();
 					}
 				}

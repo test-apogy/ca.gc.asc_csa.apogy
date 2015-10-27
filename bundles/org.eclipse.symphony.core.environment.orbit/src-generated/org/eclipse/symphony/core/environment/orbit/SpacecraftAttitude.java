@@ -12,8 +12,8 @@ import org.eclipse.symphony.common.emf.Timed;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
- * This class represents the rotation between a reference frame and the satellite frame, as well as the spin of the satellite (axis and rotation rate).
+ * This class represents the rotation between a reference frame and the satellite frame,
+ * as well as the spin of the satellite (axis and rotation rate).
  * <!-- end-model-doc -->
  *
  * <p>
@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.emf.Timed;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude#getReferenceFrame <em>Reference Frame</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getSpacecraftAttitude()
+ * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getSpacecraftAttitude()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface SpacecraftAttitude extends Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Orientation</em>' containment reference.
 	 * @see #setOrientation(TimedStampedAngularCoordinates)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getSpacecraftAttitude_Orientation()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getSpacecraftAttitude_Orientation()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -66,7 +66,7 @@ public interface SpacecraftAttitude extends Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Reference Frame</em>' containment reference.
 	 * @see #setReferenceFrame(AbstractFrame)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getSpacecraftAttitude_ReferenceFrame()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getSpacecraftAttitude_ReferenceFrame()
 	 * @model containment="true"
 	 * @generated
 	 */

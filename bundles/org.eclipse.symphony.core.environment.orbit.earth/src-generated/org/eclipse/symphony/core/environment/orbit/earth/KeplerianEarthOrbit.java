@@ -12,7 +12,6 @@ import org.orekit.orbits.KeplerianOrbit;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * An Earth orbit represented by Keplerian Elements.
  * @see http://en.wikipedia.org/wiki/Orbital_elements
  * <!-- end-model-doc -->
@@ -30,7 +29,7 @@ import org.orekit.orbits.KeplerianOrbit;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit#getTrueAnomaly <em>True Anomaly</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getKeplerianEarthOrbit()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit()
  * @model
  * @generated
  */
@@ -44,7 +43,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Semi Major Axis</em>' attribute.
 	 * @see #setSemiMajorAxis(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getKeplerianEarthOrbit_SemiMajorAxis()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_SemiMajorAxis()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated
@@ -70,7 +69,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Eccentricity</em>' attribute.
 	 * @see #setEccentricity(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getKeplerianEarthOrbit_Eccentricity()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_Eccentricity()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -95,7 +94,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Inclination</em>' attribute.
 	 * @see #setInclination(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getKeplerianEarthOrbit_Inclination()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_Inclination()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
@@ -121,7 +120,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Perigee Argument</em>' attribute.
 	 * @see #setPerigeeArgument(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getKeplerianEarthOrbit_PerigeeArgument()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_PerigeeArgument()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
@@ -147,7 +146,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Right Ascention Of Ascending Node</em>' attribute.
 	 * @see #setRightAscentionOfAscendingNode(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getKeplerianEarthOrbit_RightAscentionOfAscendingNode()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_RightAscentionOfAscendingNode()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
@@ -173,7 +172,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mean Anomaly</em>' attribute.
 	 * @see #setMeanAnomaly(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getKeplerianEarthOrbit_MeanAnomaly()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_MeanAnomaly()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -198,7 +197,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>True Anomaly</em>' attribute.
 	 * @see #setTrueAnomaly(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getKeplerianEarthOrbit_TrueAnomaly()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_TrueAnomaly()
 	 * @model unique="false"
 	 * @generated
 	 */

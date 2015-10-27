@@ -33,7 +33,7 @@ public class ResultNodePresentationAdapter implements NodePresentationAdapter
 			throw new IllegalArgumentException();
 		}
 
-		ResultNodePresentation presentationNode = SymphonyCoreUiFactory.eINSTANCE.createResultNodePresentation();
+		ResultNodePresentation presentationNode = Symphony__CoreUIFactory.eINSTANCE.createResultNodePresentation();
 		presentationNode.setNode(obj);			
 						
 		return presentationNode;

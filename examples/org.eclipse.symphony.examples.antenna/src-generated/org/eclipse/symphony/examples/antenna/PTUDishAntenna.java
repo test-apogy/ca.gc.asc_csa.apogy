@@ -26,7 +26,7 @@ package org.eclipse.symphony.examples.antenna;
  *   <li>{@link org.eclipse.symphony.examples.antenna.PTUDishAntenna#isTrackingSun <em>Tracking Sun</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage#getPTUDishAntenna()
+ * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getPTUDishAntenna()
  * @model abstract="true"
  * @generated
  */
@@ -42,7 +42,7 @@ public interface PTUDishAntenna extends DishAntenna
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Pan Angle</em>' attribute.
 	 * @see #setPanAngle(double)
-	 * @see org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage#getPTUDishAntenna_PanAngle()
+	 * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getPTUDishAntenna_PanAngle()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='rad' property='Readonly' propertyCategory='PTU Angles'"
 	 * @generated
@@ -69,7 +69,7 @@ public interface PTUDishAntenna extends DishAntenna
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tilt Angle</em>' attribute.
 	 * @see #setTiltAngle(double)
-	 * @see org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage#getPTUDishAntenna_TiltAngle()
+	 * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getPTUDishAntenna_TiltAngle()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='rad' property='Readonly' propertyCategory='PTU Angles'"
 	 * @generated
@@ -97,7 +97,7 @@ public interface PTUDishAntenna extends DishAntenna
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tracking Sun</em>' attribute.
 	 * @see #setTrackingSun(boolean)
-	 * @see org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage#getPTUDishAntenna_TrackingSun()
+	 * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getPTUDishAntenna_TrackingSun()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Tracking'"
 	 * @generated

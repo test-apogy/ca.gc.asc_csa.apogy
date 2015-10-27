@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
 
 /**
@@ -64,7 +64,7 @@ public class TransformNodePresentationItemProvider extends NodePresentationItemP
 				 getResourceLocator(),
 				 getString("_UI_TransformNodePresentation_axisVisible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TransformNodePresentation_axisVisible_feature", "_UI_TransformNodePresentation_type"),
-				 TopologyUIPackage.Literals.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE,
+				 Symphony__CommonTopologyUIPackage.Literals.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -86,7 +86,7 @@ public class TransformNodePresentationItemProvider extends NodePresentationItemP
 				 getResourceLocator(),
 				 getString("_UI_TransformNodePresentation_axisLenght_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TransformNodePresentation_axisLenght_feature", "_UI_TransformNodePresentation_type"),
-				 TopologyUIPackage.Literals.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT,
+				 Symphony__CommonTopologyUIPackage.Literals.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT,
 				 true,
 				 false,
 				 false,
@@ -134,8 +134,8 @@ public class TransformNodePresentationItemProvider extends NodePresentationItemP
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TransformNodePresentation.class)) {
-			case TopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE:
-			case TopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

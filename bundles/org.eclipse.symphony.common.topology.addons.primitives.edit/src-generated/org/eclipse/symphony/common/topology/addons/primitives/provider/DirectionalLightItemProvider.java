@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.addons.primitives.DirectionalLight;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.DirectionalLight} object.
@@ -64,7 +64,7 @@ public class DirectionalLightItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PrimitivesPackage.Literals.DIRECTIONAL_LIGHT__DIRECTION);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.DIRECTIONAL_LIGHT__DIRECTION);
 		}
 		return childrenFeatures;
 	}
@@ -119,7 +119,7 @@ public class DirectionalLightItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DirectionalLight.class)) {
-			case PrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT__DIRECTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,7 +139,7 @@ public class DirectionalLightItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PrimitivesPackage.Literals.DIRECTIONAL_LIGHT__DIRECTION,
+				(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.DIRECTIONAL_LIGHT__DIRECTION,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
@@ -155,8 +155,8 @@ public class DirectionalLightItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == PrimitivesPackage.Literals.LIGHT__COLOR ||
-			childFeature == PrimitivesPackage.Literals.DIRECTIONAL_LIGHT__DIRECTION;
+			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.LIGHT__COLOR ||
+			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.DIRECTIONAL_LIGHT__DIRECTION;
 
 		if (qualify) {
 			return getString

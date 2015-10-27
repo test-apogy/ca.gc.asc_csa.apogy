@@ -23,22 +23,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated mrt_sensors_pose_ui -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.pose.ui.provider.Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <!-- @generated symphony_addons_sensors_pose_ui -->
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.addons.sensors.pose.ui.provider.Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <extender
-            uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.addons.sensors.pose.ui.provider.Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.pose.ui.provider.Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory$Symphony__CommonTopologyUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.pose.ui.provider.Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.pose.ui.provider.Symphony__AddonsSensorsPoseUIItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

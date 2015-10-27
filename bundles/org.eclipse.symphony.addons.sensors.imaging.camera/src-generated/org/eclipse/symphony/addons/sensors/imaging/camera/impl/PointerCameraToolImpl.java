@@ -43,12 +43,12 @@ import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.TopologyFacade;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.TransformNode;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFactory;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFactory;
 import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.core.AbsolutePoseProvider;
 import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 import org.eclipse.symphony.core.invocator.Variable;
@@ -483,7 +483,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 		}
 		if (baseClass == PoseProvider.class) {
 			switch (derivedFeatureID) {
-				case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM: return SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM;
+				case Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM: return Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM;
 				default: return -1;
 			}
 		}
@@ -509,7 +509,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 		}
 		if (baseClass == PoseProvider.class) {
 			switch (baseFeatureID) {
-				case SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM: return Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM;
+				case Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM: return Symphony__AddonsSensorsImagingCameraPackage.POINTER_CAMERA_TOOL__POSE_TRANSFORM;
 				default: return -1;
 			}
 		}
@@ -764,7 +764,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 		if(vector == null)
 		{
 			// Creates a vector of lenght 100 along the Z axis.
-			vector =  PrimitivesFactory.eINSTANCE.createPickVector();
+			vector =  Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPickVector();
 			vector.getNodeTypesInIntersection().add(Symphony__CommonGeometryData3DPackage.eINSTANCE.getCartesianCoordinatesMesh());
 			vector.getNodeTypesInIntersection().add(Symphony__CommonTopologyPackage.eINSTANCE.getContentNode());
 			

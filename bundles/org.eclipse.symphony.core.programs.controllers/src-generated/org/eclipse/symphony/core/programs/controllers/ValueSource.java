@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ValueSource#getBindedEDataTypeArgument <em>Binded EData Type Argument</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getValueSource()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getValueSource()
  * @model abstract="true"
  * @generated
  */
@@ -34,7 +34,7 @@ public interface ValueSource extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Binded EData Type Argument</em>' container reference.
 	 * @see #setBindedEDataTypeArgument(BindedEDataTypeArgument)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getValueSource_BindedEDataTypeArgument()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getValueSource_BindedEDataTypeArgument()
 	 * @see org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument#getValueSource
 	 * @model opposite="valueSource" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"

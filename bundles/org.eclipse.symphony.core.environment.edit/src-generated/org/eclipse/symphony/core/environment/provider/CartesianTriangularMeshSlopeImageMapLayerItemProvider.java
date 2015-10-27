@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshSlopeImageMapLayer;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.CartesianTriangularMeshSlopeImageMapLayer} object.
@@ -65,7 +65,7 @@ public class CartesianTriangularMeshSlopeImageMapLayerItemProvider extends Carte
 				 getResourceLocator(),
 				 getString("_UI_CartesianTriangularMeshSlopeImageMapLayer_autoScale_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshSlopeImageMapLayer_autoScale_feature", "_UI_CartesianTriangularMeshSlopeImageMapLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__AUTO_SCALE,
+				 Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__AUTO_SCALE,
 				 true,
 				 false,
 				 false,
@@ -87,7 +87,7 @@ public class CartesianTriangularMeshSlopeImageMapLayerItemProvider extends Carte
 				 getResourceLocator(),
 				 getString("_UI_CartesianTriangularMeshSlopeImageMapLayer_minimumSlope_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshSlopeImageMapLayer_minimumSlope_feature", "_UI_CartesianTriangularMeshSlopeImageMapLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MINIMUM_SLOPE,
+				 Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MINIMUM_SLOPE,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class CartesianTriangularMeshSlopeImageMapLayerItemProvider extends Carte
 				 getResourceLocator(),
 				 getString("_UI_CartesianTriangularMeshSlopeImageMapLayer_maximumSlope_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CartesianTriangularMeshSlopeImageMapLayer_maximumSlope_feature", "_UI_CartesianTriangularMeshSlopeImageMapLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MAXIMUM_SLOPE,
+				 Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MAXIMUM_SLOPE,
 				 true,
 				 false,
 				 false,
@@ -155,9 +155,9 @@ public class CartesianTriangularMeshSlopeImageMapLayerItemProvider extends Carte
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CartesianTriangularMeshSlopeImageMapLayer.class)) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__AUTO_SCALE:
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MINIMUM_SLOPE:
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MAXIMUM_SLOPE:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__AUTO_SCALE:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MINIMUM_SLOPE:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_SLOPE_IMAGE_MAP_LAYER__MAXIMUM_SLOPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -188,8 +188,8 @@ public class CartesianTriangularMeshSlopeImageMapLayerItemProvider extends Carte
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
 
 		if (qualify) {
 			return getString

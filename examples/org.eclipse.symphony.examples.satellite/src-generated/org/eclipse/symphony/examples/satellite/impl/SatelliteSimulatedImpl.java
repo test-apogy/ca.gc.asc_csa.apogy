@@ -4,7 +4,7 @@
 package org.eclipse.symphony.examples.satellite.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.SatelliteSimulated;
 
 /**
@@ -31,7 +31,7 @@ public class SatelliteSimulatedImpl extends SatelliteImpl implements SatelliteSi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleSatellitePackage.Literals.SATELLITE_SIMULATED;
+		return Symphony__ExamplesSatellitePackage.Literals.SATELLITE_SIMULATED;
 	}
 
 } //SatelliteSimulatedImpl

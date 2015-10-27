@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.symphony.common.topology.ui.Activator;
 import org.eclipse.symphony.common.topology.ui.RotationNodePresentation;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.adapters.TransformNodeSceneObject;
 import org.eclipse.symphony.common.topology.ui.preferences.PreferencesConstants;
 
@@ -84,7 +84,7 @@ public class RotationNodePresentationImpl extends NodePresentationImpl implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyUIPackage.Literals.ROTATION_NODE_PRESENTATION;
+		return Symphony__CommonTopologyUIPackage.Literals.ROTATION_NODE_PRESENTATION;
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class RotationNodePresentationImpl extends NodePresentationImpl implement
 		boolean oldAxisVisible = axisVisible;
 		axisVisible = newAxisVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE, oldAxisVisible, axisVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE, oldAxisVisible, axisVisible));
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class RotationNodePresentationImpl extends NodePresentationImpl implement
 		double oldAxisLenght = axisLenght;
 		axisLenght = newAxisLenght;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_LENGHT, oldAxisLenght, axisLenght));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_LENGHT, oldAxisLenght, axisLenght));
 	}
 
 	/**
@@ -137,9 +137,9 @@ public class RotationNodePresentationImpl extends NodePresentationImpl implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE:
 				return isAxisVisible();
-			case TopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_LENGHT:
 				return getAxisLenght();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -153,10 +153,10 @@ public class RotationNodePresentationImpl extends NodePresentationImpl implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE:
 				setAxisVisible((Boolean)newValue);
 				return;
-			case TopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_LENGHT:
 				setAxisLenght((Double)newValue);
 				return;
 		}
@@ -171,10 +171,10 @@ public class RotationNodePresentationImpl extends NodePresentationImpl implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE:
 				setAxisVisible(AXIS_VISIBLE_EDEFAULT);
 				return;
-			case TopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_LENGHT:
 				setAxisLenght(AXIS_LENGHT_EDEFAULT);
 				return;
 		}
@@ -189,9 +189,9 @@ public class RotationNodePresentationImpl extends NodePresentationImpl implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE:
 				return axisVisible != AXIS_VISIBLE_EDEFAULT;
-			case TopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_LENGHT:
 				return axisLenght != AXIS_LENGHT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -234,11 +234,11 @@ public class RotationNodePresentationImpl extends NodePresentationImpl implement
 		{
 			TransformNodeSceneObject object = (TransformNodeSceneObject) getSceneObject();
 
-			if (notification.getFeatureID(RotationNodePresentation.class) == TopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE) 
+			if (notification.getFeatureID(RotationNodePresentation.class) == Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_VISIBLE) 
 			{
 				object.setAxisVisible(isAxisVisible());
 			}
-			else if(notification.getFeatureID(RotationNodePresentation.class) == TopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_LENGHT) 
+			else if(notification.getFeatureID(RotationNodePresentation.class) == Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION__AXIS_LENGHT) 
 			{
 				object.setAxisLength(getAxisLenght());
 			}

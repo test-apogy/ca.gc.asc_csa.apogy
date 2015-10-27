@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.SymphonyEnvironment;
  *   <li>{@link org.eclipse.symphony.core.topology.SymphonySystemAPIsNode#getSymphonyEnvironment <em>Symphony Environment</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getSymphonySystemAPIsNode()
+ * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSymphonySystemAPIsNode()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface SymphonySystemAPIsNode extends ReferencedGroupNode
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Symphony Environment</em>' reference.
 	 * @see #setSymphonyEnvironment(SymphonyEnvironment)
-	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getSymphonySystemAPIsNode_SymphonyEnvironment()
+	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSymphonySystemAPIsNode_SymphonyEnvironment()
 	 * @model transient="true"
 	 * @generated
 	 */

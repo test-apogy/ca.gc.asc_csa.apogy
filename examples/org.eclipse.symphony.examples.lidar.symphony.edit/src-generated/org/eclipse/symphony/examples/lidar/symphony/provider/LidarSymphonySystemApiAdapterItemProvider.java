@@ -101,7 +101,7 @@ public class LidarSymphonySystemApiAdapterItemProvider extends SymphonySystemApi
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SymphonyExampleLidarEditPlugin.INSTANCE;
+		return Symphony__ExamplesLidarSymphonyEditPlugin.INSTANCE;
 	}
 
 }

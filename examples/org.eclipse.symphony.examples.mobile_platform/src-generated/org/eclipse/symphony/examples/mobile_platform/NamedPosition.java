@@ -20,7 +20,7 @@ package org.eclipse.symphony.examples.mobile_platform;
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.NamedPosition#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage#getNamedPosition()
+ * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getNamedPosition()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface NamedPosition extends Position
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage#getNamedPosition_Name()
+	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getNamedPosition_Name()
 	 * @model default="" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly'"
 	 * @generated

@@ -23,8 +23,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.WatchesList;
 
 /**
@@ -132,7 +132,7 @@ public class WatchesListItemProvider
 				 getResourceLocator(),
 				 getString("_UI_WatchesList_watchesListsContainer_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WatchesList_watchesListsContainer_feature", "_UI_WatchesList_type"),
-				 EMFEcoreInvocatorPackage.Literals.WATCHES_LIST__WATCHES_LISTS_CONTAINER,
+				 Symphony__CoreInvocatorPackage.Literals.WATCHES_LIST__WATCHES_LISTS_CONTAINER,
 				 true,
 				 false,
 				 true,
@@ -154,7 +154,7 @@ public class WatchesListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.WATCHES_LIST__WATCHES);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.WATCHES_LIST__WATCHES);
 		}
 		return childrenFeatures;
 	}
@@ -213,11 +213,11 @@ public class WatchesListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WatchesList.class)) {
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__NAME:
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -238,8 +238,8 @@ public class WatchesListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.WATCHES_LIST__WATCHES,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createWatch()));
+				(Symphony__CoreInvocatorPackage.Literals.WATCHES_LIST__WATCHES,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createWatch()));
 	}
 
   /**

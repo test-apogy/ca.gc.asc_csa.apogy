@@ -6,7 +6,7 @@ package org.eclipse.symphony.addons.vehicle.ui;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -76,7 +76,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_WHEEL_PRESENTATION__TOPOLOGY_PRESENTATION_SET = TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int PHYSICAL_WHEEL_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 		/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -85,7 +85,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__NODE = TopologyUIPackage.NODE_PRESENTATION__NODE;
+  int PHYSICAL_WHEEL_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
   /**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -94,7 +94,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__COLOR = TopologyUIPackage.NODE_PRESENTATION__COLOR;
+  int PHYSICAL_WHEEL_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
   /**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -103,7 +103,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__VISIBLE = TopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+  int PHYSICAL_WHEEL_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
   /**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -112,7 +112,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_WHEEL_PRESENTATION__SHADOW_MODE = TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int PHYSICAL_WHEEL_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 		/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -121,7 +121,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__USE_IN_BOUNDING_CALCULATION = TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+  int PHYSICAL_WHEEL_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 		/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -130,7 +130,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__CENTROID = TopologyUIPackage.NODE_PRESENTATION__CENTROID;
+  int PHYSICAL_WHEEL_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 		/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -139,7 +139,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__MIN = TopologyUIPackage.NODE_PRESENTATION__MIN;
+  int PHYSICAL_WHEEL_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 		/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -148,7 +148,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__MAX = TopologyUIPackage.NODE_PRESENTATION__MAX;
+  int PHYSICAL_WHEEL_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 		/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -157,7 +157,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__XRANGE = TopologyUIPackage.NODE_PRESENTATION__XRANGE;
+  int PHYSICAL_WHEEL_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 		/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -166,7 +166,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__YRANGE = TopologyUIPackage.NODE_PRESENTATION__YRANGE;
+  int PHYSICAL_WHEEL_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 		/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -175,7 +175,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__ZRANGE = TopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+  int PHYSICAL_WHEEL_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 		/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -184,7 +184,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION__SCENE_OBJECT = TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+  int PHYSICAL_WHEEL_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 		/**
 	 * The number of structural features of the '<em>Physical Wheel Presentation</em>' class.
@@ -193,7 +193,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION_FEATURE_COUNT = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+  int PHYSICAL_WHEEL_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
   /**
 	 * The number of operations of the '<em>Physical Wheel Presentation</em>' class.
@@ -202,7 +202,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int PHYSICAL_WHEEL_PRESENTATION_OPERATION_COUNT = TopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+  int PHYSICAL_WHEEL_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
   /**
@@ -222,7 +222,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER_SPHERICAL_FOOT_PRESENTATION__TOPOLOGY_PRESENTATION_SET = TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int LANDER_SPHERICAL_FOOT_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 		/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -231,7 +231,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__NODE = TopologyUIPackage.NODE_PRESENTATION__NODE;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
   /**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -240,7 +240,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__COLOR = TopologyUIPackage.NODE_PRESENTATION__COLOR;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
   /**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -249,7 +249,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__VISIBLE = TopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
   /**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -258,7 +258,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int LANDER_SPHERICAL_FOOT_PRESENTATION__SHADOW_MODE = TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int LANDER_SPHERICAL_FOOT_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 		/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -267,7 +267,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__USE_IN_BOUNDING_CALCULATION = TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 		/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -276,7 +276,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__CENTROID = TopologyUIPackage.NODE_PRESENTATION__CENTROID;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 		/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -285,7 +285,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__MIN = TopologyUIPackage.NODE_PRESENTATION__MIN;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 		/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -294,7 +294,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__MAX = TopologyUIPackage.NODE_PRESENTATION__MAX;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 		/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -303,7 +303,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__XRANGE = TopologyUIPackage.NODE_PRESENTATION__XRANGE;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 		/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -312,7 +312,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__YRANGE = TopologyUIPackage.NODE_PRESENTATION__YRANGE;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 		/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -321,7 +321,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__ZRANGE = TopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 		/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -330,7 +330,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION__SCENE_OBJECT = TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 		/**
 	 * The number of structural features of the '<em>Lander Spherical Foot Presentation</em>' class.
@@ -339,7 +339,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION_FEATURE_COUNT = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
   /**
 	 * The number of operations of the '<em>Lander Spherical Foot Presentation</em>' class.
@@ -348,7 +348,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int LANDER_SPHERICAL_FOOT_PRESENTATION_OPERATION_COUNT = TopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+  int LANDER_SPHERICAL_FOOT_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
   /**
@@ -368,7 +368,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int THRUSTER_PRESENTATION__TOPOLOGY_PRESENTATION_SET = TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int THRUSTER_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 		/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -377,7 +377,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__NODE = TopologyUIPackage.NODE_PRESENTATION__NODE;
+  int THRUSTER_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
   /**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -386,7 +386,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__COLOR = TopologyUIPackage.NODE_PRESENTATION__COLOR;
+  int THRUSTER_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
   /**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -395,7 +395,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__VISIBLE = TopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+  int THRUSTER_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
   /**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -404,7 +404,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int THRUSTER_PRESENTATION__SHADOW_MODE = TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int THRUSTER_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 		/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -413,7 +413,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__USE_IN_BOUNDING_CALCULATION = TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+  int THRUSTER_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 		/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -422,7 +422,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__CENTROID = TopologyUIPackage.NODE_PRESENTATION__CENTROID;
+  int THRUSTER_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 		/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -431,7 +431,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__MIN = TopologyUIPackage.NODE_PRESENTATION__MIN;
+  int THRUSTER_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 		/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -440,7 +440,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__MAX = TopologyUIPackage.NODE_PRESENTATION__MAX;
+  int THRUSTER_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 		/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -449,7 +449,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__XRANGE = TopologyUIPackage.NODE_PRESENTATION__XRANGE;
+  int THRUSTER_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 		/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -458,7 +458,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__YRANGE = TopologyUIPackage.NODE_PRESENTATION__YRANGE;
+  int THRUSTER_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 		/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -467,7 +467,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__ZRANGE = TopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+  int THRUSTER_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 		/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -476,7 +476,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION__SCENE_OBJECT = TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+  int THRUSTER_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 		/**
 	 * The feature id for the '<em><b>Plume Envelope Visible</b></em>' attribute.
@@ -485,7 +485,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 		/**
 	 * The feature id for the '<em><b>Plume Envelope Lenght</b></em>' attribute.
@@ -494,7 +494,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of structural features of the '<em>Thruster Presentation</em>' class.
@@ -503,7 +503,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION_FEATURE_COUNT = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
+  int THRUSTER_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
 
   /**
 	 * The number of operations of the '<em>Thruster Presentation</em>' class.
@@ -512,7 +512,7 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-  int THRUSTER_PRESENTATION_OPERATION_COUNT = TopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+  int THRUSTER_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
   /**

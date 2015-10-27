@@ -7,7 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.programs.InvocatorProgramsPackage;
+import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
 import org.eclipse.symphony.core.programs.TimeInterval;
 
 /**
@@ -92,7 +92,7 @@ public class TimeIntervalImpl extends MinimalEObjectImpl.Container implements Ti
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return InvocatorProgramsPackage.Literals.TIME_INTERVAL;
+		return Symphony__CoreProgramsPackage.Literals.TIME_INTERVAL;
 	}
 
 	/**
@@ -113,7 +113,7 @@ public class TimeIntervalImpl extends MinimalEObjectImpl.Container implements Ti
 		long oldStartTime = startTime;
 		startTime = newStartTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, InvocatorProgramsPackage.TIME_INTERVAL__START_TIME, oldStartTime, startTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsPackage.TIME_INTERVAL__START_TIME, oldStartTime, startTime));
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class TimeIntervalImpl extends MinimalEObjectImpl.Container implements Ti
 		long oldEndTime = endTime;
 		endTime = newEndTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, InvocatorProgramsPackage.TIME_INTERVAL__END_TIME, oldEndTime, endTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsPackage.TIME_INTERVAL__END_TIME, oldEndTime, endTime));
 	}
 
 	/**
@@ -156,11 +156,11 @@ public class TimeIntervalImpl extends MinimalEObjectImpl.Container implements Ti
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case InvocatorProgramsPackage.TIME_INTERVAL__START_TIME:
+			case Symphony__CoreProgramsPackage.TIME_INTERVAL__START_TIME:
 				return getStartTime();
-			case InvocatorProgramsPackage.TIME_INTERVAL__END_TIME:
+			case Symphony__CoreProgramsPackage.TIME_INTERVAL__END_TIME:
 				return getEndTime();
-			case InvocatorProgramsPackage.TIME_INTERVAL__DURATION:
+			case Symphony__CoreProgramsPackage.TIME_INTERVAL__DURATION:
 				return getDuration();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -174,10 +174,10 @@ public class TimeIntervalImpl extends MinimalEObjectImpl.Container implements Ti
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case InvocatorProgramsPackage.TIME_INTERVAL__START_TIME:
+			case Symphony__CoreProgramsPackage.TIME_INTERVAL__START_TIME:
 				setStartTime((Long)newValue);
 				return;
-			case InvocatorProgramsPackage.TIME_INTERVAL__END_TIME:
+			case Symphony__CoreProgramsPackage.TIME_INTERVAL__END_TIME:
 				setEndTime((Long)newValue);
 				return;
 		}
@@ -192,10 +192,10 @@ public class TimeIntervalImpl extends MinimalEObjectImpl.Container implements Ti
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case InvocatorProgramsPackage.TIME_INTERVAL__START_TIME:
+			case Symphony__CoreProgramsPackage.TIME_INTERVAL__START_TIME:
 				setStartTime(START_TIME_EDEFAULT);
 				return;
-			case InvocatorProgramsPackage.TIME_INTERVAL__END_TIME:
+			case Symphony__CoreProgramsPackage.TIME_INTERVAL__END_TIME:
 				setEndTime(END_TIME_EDEFAULT);
 				return;
 		}
@@ -210,11 +210,11 @@ public class TimeIntervalImpl extends MinimalEObjectImpl.Container implements Ti
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case InvocatorProgramsPackage.TIME_INTERVAL__START_TIME:
+			case Symphony__CoreProgramsPackage.TIME_INTERVAL__START_TIME:
 				return startTime != START_TIME_EDEFAULT;
-			case InvocatorProgramsPackage.TIME_INTERVAL__END_TIME:
+			case Symphony__CoreProgramsPackage.TIME_INTERVAL__END_TIME:
 				return endTime != END_TIME_EDEFAULT;
-			case InvocatorProgramsPackage.TIME_INTERVAL__DURATION:
+			case Symphony__CoreProgramsPackage.TIME_INTERVAL__DURATION:
 				return getDuration() != DURATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

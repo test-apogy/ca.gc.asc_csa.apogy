@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Watch;
 import org.eclipse.symphony.core.invocator.WatchesList;
 import org.eclipse.symphony.core.invocator.WatchesListsContainer;
@@ -108,7 +108,7 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.WATCHES_LIST;
+		return Symphony__CoreInvocatorPackage.Literals.WATCHES_LIST;
 	}
 
   /**
@@ -131,7 +131,7 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.WATCHES_LIST__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.WATCHES_LIST__NAME, oldName, name));
 	}
 
   /**
@@ -154,7 +154,7 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.WATCHES_LIST__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.WATCHES_LIST__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -164,7 +164,7 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
 	 */
   public WatchesListsContainer getWatchesListsContainer()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER) return null;
 		return (WatchesListsContainer)eContainer();
 	}
 
@@ -175,7 +175,7 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
 	 */
   public WatchesListsContainer basicGetWatchesListsContainer()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER) return null;
 		return (WatchesListsContainer)eInternalContainer();
 	}
 
@@ -186,7 +186,7 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
 	 */
   public NotificationChain basicSetWatchesListsContainer(WatchesListsContainer newWatchesListsContainer, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newWatchesListsContainer, EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newWatchesListsContainer, Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER, msgs);
 		return msgs;
 	}
 
@@ -197,19 +197,19 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
 	 */
   public void setWatchesListsContainer(WatchesListsContainer newWatchesListsContainer)
   {
-		if (newWatchesListsContainer != eInternalContainer() || (eContainerFeatureID() != EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER && newWatchesListsContainer != null)) {
+		if (newWatchesListsContainer != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER && newWatchesListsContainer != null)) {
 			if (EcoreUtil.isAncestor(this, newWatchesListsContainer))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newWatchesListsContainer != null)
-				msgs = ((InternalEObject)newWatchesListsContainer).eInverseAdd(this, EMFEcoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES, WatchesListsContainer.class, msgs);
+				msgs = ((InternalEObject)newWatchesListsContainer).eInverseAdd(this, Symphony__CoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES, WatchesListsContainer.class, msgs);
 			msgs = basicSetWatchesListsContainer(newWatchesListsContainer, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER, newWatchesListsContainer, newWatchesListsContainer));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER, newWatchesListsContainer, newWatchesListsContainer));
 	}
 
   /**
@@ -220,7 +220,7 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
   public EList<Watch> getWatches()
   {
 		if (watches == null) {
-			watches = new EObjectContainmentWithInverseEList<Watch>(Watch.class, this, EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES, EMFEcoreInvocatorPackage.WATCH__WATCHES_LIST);
+			watches = new EObjectContainmentWithInverseEList<Watch>(Watch.class, this, Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES, Symphony__CoreInvocatorPackage.WATCH__WATCHES_LIST);
 		}
 		return watches;
 	}
@@ -235,11 +235,11 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetWatchesListsContainer((WatchesListsContainer)otherEnd, msgs);
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getWatches()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -254,9 +254,9 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER:
 				return basicSetWatchesListsContainer(null, msgs);
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES:
 				return ((InternalEList<?>)getWatches()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -271,8 +271,8 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES, WatchesListsContainer.class, msgs);
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.WATCHES_LISTS_CONTAINER__WATCHES, WatchesListsContainer.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -286,14 +286,14 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__NAME:
 				return getName();
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__DESCRIPTION:
 				return getDescription();
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER:
 				if (resolve) return getWatchesListsContainer();
 				return basicGetWatchesListsContainer();
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES:
 				return getWatches();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -309,16 +309,16 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__NAME:
 				setName((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER:
 				setWatchesListsContainer((WatchesListsContainer)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES:
 				getWatches().clear();
 				getWatches().addAll((Collection<? extends Watch>)newValue);
 				return;
@@ -335,16 +335,16 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER:
 				setWatchesListsContainer((WatchesListsContainer)null);
 				return;
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES:
 				getWatches().clear();
 				return;
 		}
@@ -360,13 +360,13 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES_LISTS_CONTAINER:
 				return basicGetWatchesListsContainer() != null;
-			case EMFEcoreInvocatorPackage.WATCHES_LIST__WATCHES:
+			case Symphony__CoreInvocatorPackage.WATCHES_LIST__WATCHES:
 				return watches != null && !watches.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -382,7 +382,7 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreInvocatorPackage.WATCHES_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreInvocatorPackage.WATCHES_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -399,7 +399,7 @@ public class WatchesListImpl extends MinimalEObjectImpl.Container implements Wat
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.WATCHES_LIST__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreInvocatorPackage.WATCHES_LIST__DESCRIPTION;
 				default: return -1;
 			}
 		}

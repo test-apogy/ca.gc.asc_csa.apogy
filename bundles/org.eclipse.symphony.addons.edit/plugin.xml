@@ -25,38 +25,19 @@
       <!-- @generated symphony_addons -->
       <extender
             uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.addons.provider.Symphony__AddonsItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.provider.Symphony__AddonsItemProviderAdapterFactory$Symphony__CoreInvocatorChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.addons.provider.Symphony__AddonsItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core"
-            class="org.eclipse.symphony.addons.provider.Symphony__AddonsItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.provider.Symphony__AddonsItemProviderAdapterFactory$Symphony__CoreChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.addons.geometry.paths"
             class="org.eclipse.symphony.addons.provider.Symphony__AddonsItemProviderAdapterFactory$Symphony__AddonsGeometryPathsChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.addons.provider.Symphony__AddonsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_tools_core -->
-      <extender
-            uri="org.eclipse.symphony.core"
-            class="org.eclipse.symphony.addons.provider.Symphony__AddonsItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.addons.provider.Symphony__AddonsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.addons.provider.Symphony__AddonsItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.provider.Symphony__AddonsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.addons.geometry.paths"
-            class="org.eclipse.symphony.addons.provider.Symphony__AddonsItemProviderAdapterFactory$PathsChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.provider.Symphony__AddonsItemProviderAdapterFactory$Symphony__CommonTopologyBindingsChildCreationExtender"/>
    </extension>
 
 </plugin>

@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.AbstractTransformationJME3SceneObject;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.FeatureOfInterestNode;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.environment.ui.FeatureOfInterestSceneObject;
 
 import com.jme3.asset.AssetManager;
@@ -252,11 +252,11 @@ public class FeatureOfInterestNodeJME3Object extends AbstractTransformationJME3S
 					if(msg.getNotifier() instanceof FeatureOfInterestNode)
 					{
 						int featureId = msg.getFeatureID(FeatureOfInterestNode.class);						
-						if(featureId == SymphonyCorePackage.FEATURE_OF_INTEREST_NODE__POSITION || featureId == SymphonyCorePackage.FEATURE_OF_INTEREST_NODE__ROTATION_MATRIX)
+						if(featureId == Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__POSITION || featureId == Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__ROTATION_MATRIX)
 						{
 							updateTransform();							
 						}
-						else if(featureId == SymphonyCorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST)
+						else if(featureId == Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST)
 						{
 							if(msg.getOldValue() instanceof FeatureOfInterest)
 							{
@@ -277,7 +277,7 @@ public class FeatureOfInterestNodeJME3Object extends AbstractTransformationJME3S
 					else if(msg.getNotifier() instanceof FeatureOfInterest)
 					{
 						int featureId = msg.getFeatureID(FeatureOfInterest.class);
-						if(featureId == SymphonyCorePackage.FEATURE_OF_INTEREST__NAME)
+						if(featureId == Symphony__CorePackage.FEATURE_OF_INTEREST__NAME)
 						{
 							updateGeometry();
 							// setFlagPoleText(msg.getNewStringValue());

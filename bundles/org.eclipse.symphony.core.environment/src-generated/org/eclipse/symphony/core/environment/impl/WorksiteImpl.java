@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.symphony.core.AbstractOrbitModel;
 import org.eclipse.symphony.core.environment.Environment;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.Worksite;
 import org.eclipse.symphony.core.environment.WorksiteNode;
 import org.eclipse.symphony.core.impl.AbstractWorksiteImpl;
@@ -85,7 +85,7 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.WORKSITE;
+		return Symphony__CoreEnvironmentPackage.Literals.WORKSITE;
 	}
   
   /**
@@ -97,7 +97,7 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
   {
 	  if(getWorksiteNodeGen() == null)
 	  {
-		  worksiteNode = SymphonyEnvironmentFactory.eINSTANCE.createWorksiteNode();
+		  worksiteNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createWorksiteNode();
 		  worksiteNode.setWorksite(this);
 	  }
 	  
@@ -116,7 +116,7 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
 			worksiteNode = (WorksiteNode)eResolveProxy(oldWorksiteNode);
 			if (worksiteNode != oldWorksiteNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentPackage.WORKSITE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.WORKSITE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
 			}
 		}
 		return worksiteNode;
@@ -139,7 +139,7 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
 	 */
 	public EList<AbstractOrbitModel> getOrbitsModels() {
 		if (orbitsModels == null) {
-			orbitsModels = new EObjectResolvingEList<AbstractOrbitModel>(AbstractOrbitModel.class, this, SymphonyEnvironmentPackage.WORKSITE__ORBITS_MODELS);
+			orbitsModels = new EObjectResolvingEList<AbstractOrbitModel>(AbstractOrbitModel.class, this, Symphony__CoreEnvironmentPackage.WORKSITE__ORBITS_MODELS);
 		}
 		return orbitsModels;
 	}
@@ -164,7 +164,7 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
 		Environment oldEnvironment = environment;
 		environment = newEnvironment;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.WORKSITE__ENVIRONMENT, oldEnvironment, newEnvironment);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.WORKSITE__ENVIRONMENT, oldEnvironment, newEnvironment);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -180,14 +180,14 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
 		if (newEnvironment != environment) {
 			NotificationChain msgs = null;
 			if (environment != null)
-				msgs = ((InternalEObject)environment).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEnvironmentPackage.WORKSITE__ENVIRONMENT, null, msgs);
+				msgs = ((InternalEObject)environment).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.WORKSITE__ENVIRONMENT, null, msgs);
 			if (newEnvironment != null)
-				msgs = ((InternalEObject)newEnvironment).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyEnvironmentPackage.WORKSITE__ENVIRONMENT, null, msgs);
+				msgs = ((InternalEObject)newEnvironment).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.WORKSITE__ENVIRONMENT, null, msgs);
 			msgs = basicSetEnvironment(newEnvironment, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.WORKSITE__ENVIRONMENT, newEnvironment, newEnvironment));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.WORKSITE__ENVIRONMENT, newEnvironment, newEnvironment));
 	}
 
   /**
@@ -199,7 +199,7 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.WORKSITE__ENVIRONMENT:
+			case Symphony__CoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
 				return basicSetEnvironment(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -214,12 +214,12 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.WORKSITE__WORKSITE_NODE:
+			case Symphony__CoreEnvironmentPackage.WORKSITE__WORKSITE_NODE:
 				if (resolve) return getWorksiteNode();
 				return basicGetWorksiteNode();
-			case SymphonyEnvironmentPackage.WORKSITE__ORBITS_MODELS:
+			case Symphony__CoreEnvironmentPackage.WORKSITE__ORBITS_MODELS:
 				return getOrbitsModels();
-			case SymphonyEnvironmentPackage.WORKSITE__ENVIRONMENT:
+			case Symphony__CoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
 				return getEnvironment();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -235,11 +235,11 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.WORKSITE__ORBITS_MODELS:
+			case Symphony__CoreEnvironmentPackage.WORKSITE__ORBITS_MODELS:
 				getOrbitsModels().clear();
 				getOrbitsModels().addAll((Collection<? extends AbstractOrbitModel>)newValue);
 				return;
-			case SymphonyEnvironmentPackage.WORKSITE__ENVIRONMENT:
+			case Symphony__CoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
 				setEnvironment((Environment)newValue);
 				return;
 		}
@@ -255,10 +255,10 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.WORKSITE__ORBITS_MODELS:
+			case Symphony__CoreEnvironmentPackage.WORKSITE__ORBITS_MODELS:
 				getOrbitsModels().clear();
 				return;
-			case SymphonyEnvironmentPackage.WORKSITE__ENVIRONMENT:
+			case Symphony__CoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
 				setEnvironment((Environment)null);
 				return;
 		}
@@ -274,11 +274,11 @@ public abstract class WorksiteImpl extends AbstractWorksiteImpl implements Works
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.WORKSITE__WORKSITE_NODE:
+			case Symphony__CoreEnvironmentPackage.WORKSITE__WORKSITE_NODE:
 				return worksiteNode != null;
-			case SymphonyEnvironmentPackage.WORKSITE__ORBITS_MODELS:
+			case Symphony__CoreEnvironmentPackage.WORKSITE__ORBITS_MODELS:
 				return orbitsModels != null && !orbitsModels.isEmpty();
-			case SymphonyEnvironmentPackage.WORKSITE__ENVIRONMENT:
+			case Symphony__CoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
 				return environment != null;
 		}
 		return super.eIsSet(featureID);

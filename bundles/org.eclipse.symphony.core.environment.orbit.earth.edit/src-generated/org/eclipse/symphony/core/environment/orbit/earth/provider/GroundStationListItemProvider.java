@@ -24,8 +24,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStationList;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.GroundStationList} object.
@@ -124,7 +124,7 @@ public class GroundStationListItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.GROUND_STATION_LIST__GROUND_STATIONS);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION_LIST__GROUND_STATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -180,11 +180,11 @@ public class GroundStationListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GroundStationList.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION_LIST__NAME:
-			case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION_LIST__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION_LIST__GROUND_STATIONS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST__GROUND_STATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -204,8 +204,8 @@ public class GroundStationListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.GROUND_STATION_LIST__GROUND_STATIONS,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createGroundStation()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION_LIST__GROUND_STATIONS,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
 	}
 
 	/**

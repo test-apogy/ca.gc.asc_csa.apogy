@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.invocator.Program;
  *   <li>{@link org.eclipse.symphony.core.programs.AbstractProgramRuntime#getProgram <em>Program</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.InvocatorProgramsPackage#getAbstractProgramRuntime()
+ * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#getAbstractProgramRuntime()
  * @model abstract="true"
  * @generated
  */
@@ -33,7 +33,7 @@ public interface AbstractProgramRuntime extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Program</em>' reference.
 	 * @see #setProgram(Program)
-	 * @see org.eclipse.symphony.core.programs.InvocatorProgramsPackage#getAbstractProgramRuntime_Program()
+	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#getAbstractProgramRuntime_Program()
 	 * @model
 	 * @generated
 	 */

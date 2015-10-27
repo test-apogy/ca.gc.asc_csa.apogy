@@ -23,8 +23,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.RecordingResultsList;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.RecordingResultsList} object.
@@ -122,7 +122,7 @@ public class RecordingResultsListItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RecordingResultsList_dataProductsList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RecordingResultsList_dataProductsList_feature", "_UI_RecordingResultsList_type"),
-				 EMFEcoreInvocatorPackage.Literals.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST,
+				 Symphony__CoreInvocatorPackage.Literals.RECORDING_RESULTS_LIST__DATA_PRODUCTS_LIST,
 				 true,
 				 false,
 				 true,
@@ -143,7 +143,7 @@ public class RecordingResultsListItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.RESULTS_LIST__RESULTS);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.RESULTS_LIST__RESULTS);
 		}
 		return childrenFeatures;
 	}
@@ -201,11 +201,11 @@ public class RecordingResultsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RecordingResultsList.class)) {
-			case EMFEcoreInvocatorPackage.RECORDING_RESULTS_LIST__NAME:
-			case EMFEcoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS:
+			case Symphony__CoreInvocatorPackage.RECORDING_RESULTS_LIST__RESULTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

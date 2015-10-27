@@ -12,9 +12,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentFactory;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFactory;
 import org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit} object.
@@ -60,7 +60,7 @@ public class CartesianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.CARTESIAN_EARTH_ORBIT__PVA_COORDINATES);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CARTESIAN_EARTH_ORBIT__PVA_COORDINATES);
 		}
 		return childrenFeatures;
 	}
@@ -116,7 +116,7 @@ public class CartesianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CartesianEarthOrbit.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.CARTESIAN_EARTH_ORBIT__PVA_COORDINATES:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CARTESIAN_EARTH_ORBIT__PVA_COORDINATES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -136,8 +136,8 @@ public class CartesianEarthOrbitItemProvider extends EarthOrbitItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.CARTESIAN_EARTH_ORBIT__PVA_COORDINATES,
-				 SymphonyOrbitEnvironmentFactory.eINSTANCE.createTimedStampedPVACoordinates()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CARTESIAN_EARTH_ORBIT__PVA_COORDINATES,
+				 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createTimedStampedPVACoordinates()));
 	}
 
 }

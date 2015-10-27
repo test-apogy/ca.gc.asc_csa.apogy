@@ -12,8 +12,8 @@ import org.eclipse.symphony.core.environment.MapsList;
 import org.eclipse.symphony.core.environment.Sky;
 import org.eclipse.symphony.core.environment.SurfaceWorksite;
 import org.eclipse.symphony.core.environment.SurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.WorksiteNode;
 
 /**
@@ -70,7 +70,7 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.SURFACE_WORKSITE;
+		return Symphony__CoreEnvironmentPackage.Literals.SURFACE_WORKSITE;
 	}
 
   /**
@@ -93,7 +93,7 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
 		Sky oldSky = sky;
 		sky = newSky;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.SURFACE_WORKSITE__SKY, oldSky, newSky);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY, oldSky, newSky);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -104,7 +104,7 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
 	{
   		if(!(super.getWorksiteNode() instanceof SurfaceWorksiteNode))
   		{
-  			worksiteNode = SymphonyEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode();
+  			worksiteNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode();
   			worksiteNode.setWorksite(this);  			
   		}
   		
@@ -155,14 +155,14 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
 		if (newSky != sky) {
 			NotificationChain msgs = null;
 			if (sky != null)
-				msgs = ((InternalEObject)sky).eInverseRemove(this, SymphonyEnvironmentPackage.SKY__SURFACE_WORKSITE, Sky.class, msgs);
+				msgs = ((InternalEObject)sky).eInverseRemove(this, Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE, Sky.class, msgs);
 			if (newSky != null)
-				msgs = ((InternalEObject)newSky).eInverseAdd(this, SymphonyEnvironmentPackage.SKY__SURFACE_WORKSITE, Sky.class, msgs);
+				msgs = ((InternalEObject)newSky).eInverseAdd(this, Symphony__CoreEnvironmentPackage.SKY__SURFACE_WORKSITE, Sky.class, msgs);
 			msgs = basicSetSky(newSky, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.SURFACE_WORKSITE__SKY, newSky, newSky));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY, newSky, newSky));
 	}
 
   /**
@@ -174,7 +174,7 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   {
 	  if(mapsList == null)
 	  {
-		  mapsList = SymphonyEnvironmentFactory.eINSTANCE.createMapsList();
+		  mapsList = Symphony__CoreEnvironmentFactory.eINSTANCE.createMapsList();
 		  setMapsList(mapsList);
 	  }
 	  return mapsList;
@@ -190,7 +190,7 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
 		MapsList oldMapsList = mapsList;
 		mapsList = newMapsList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, oldMapsList, newMapsList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, oldMapsList, newMapsList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -206,14 +206,14 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
 		if (newMapsList != mapsList) {
 			NotificationChain msgs = null;
 			if (mapsList != null)
-				msgs = ((InternalEObject)mapsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, null, msgs);
+				msgs = ((InternalEObject)mapsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, null, msgs);
 			if (newMapsList != null)
-				msgs = ((InternalEObject)newMapsList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, null, msgs);
+				msgs = ((InternalEObject)newMapsList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, null, msgs);
 			msgs = basicSetMapsList(newMapsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, newMapsList, newMapsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST, newMapsList, newMapsList));
 	}
 
   /**
@@ -225,9 +225,9 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SURFACE_WORKSITE__SKY:
+			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
 				if (sky != null)
-					msgs = ((InternalEObject)sky).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEnvironmentPackage.SURFACE_WORKSITE__SKY, null, msgs);
+					msgs = ((InternalEObject)sky).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY, null, msgs);
 				return basicSetSky((Sky)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -242,9 +242,9 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SURFACE_WORKSITE__SKY:
+			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
 				return basicSetSky(null, msgs);
-			case SymphonyEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
+			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
 				return basicSetMapsList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -259,9 +259,9 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SURFACE_WORKSITE__SKY:
+			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
 				return getSky();
-			case SymphonyEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
+			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
 				return getMapsList();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -276,10 +276,10 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SURFACE_WORKSITE__SKY:
+			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
 				setSky((Sky)newValue);
 				return;
-			case SymphonyEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
+			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
 				setMapsList((MapsList)newValue);
 				return;
 		}
@@ -295,10 +295,10 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SURFACE_WORKSITE__SKY:
+			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
 				setSky((Sky)null);
 				return;
-			case SymphonyEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
+			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
 				setMapsList((MapsList)null);
 				return;
 		}
@@ -314,9 +314,9 @@ public abstract class SurfaceWorksiteImpl extends WorksiteImpl implements Surfac
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SURFACE_WORKSITE__SKY:
+			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
 				return sky != null;
-			case SymphonyEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
+			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
 				return mapsList != null;
 		}
 		return super.eIsSet(featureID);

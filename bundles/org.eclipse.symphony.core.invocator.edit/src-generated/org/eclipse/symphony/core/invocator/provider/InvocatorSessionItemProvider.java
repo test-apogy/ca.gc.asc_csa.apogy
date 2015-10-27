@@ -23,9 +23,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.InvocatorSession} object.
@@ -130,10 +130,10 @@ public class InvocatorSessionItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.INVOCATOR_SESSION__ENVIRONMENT);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.INVOCATOR_SESSION__PROGRAMS_LIST);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.INVOCATOR_SESSION__TOOLS_LIST);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.INVOCATOR_SESSION__ENVIRONMENT);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.INVOCATOR_SESSION__PROGRAMS_LIST);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.INVOCATOR_SESSION__TOOLS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -192,14 +192,14 @@ public class InvocatorSessionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(InvocatorSession.class)) {
-			case EMFEcoreInvocatorPackage.INVOCATOR_SESSION__NAME:
-			case EMFEcoreInvocatorPackage.INVOCATOR_SESSION__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.INVOCATOR_SESSION__NAME:
+			case Symphony__CoreInvocatorPackage.INVOCATOR_SESSION__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.INVOCATOR_SESSION__ENVIRONMENT:
-			case EMFEcoreInvocatorPackage.INVOCATOR_SESSION__PROGRAMS_LIST:
-			case EMFEcoreInvocatorPackage.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER:
-			case EMFEcoreInvocatorPackage.INVOCATOR_SESSION__TOOLS_LIST:
+			case Symphony__CoreInvocatorPackage.INVOCATOR_SESSION__ENVIRONMENT:
+			case Symphony__CoreInvocatorPackage.INVOCATOR_SESSION__PROGRAMS_LIST:
+			case Symphony__CoreInvocatorPackage.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER:
+			case Symphony__CoreInvocatorPackage.INVOCATOR_SESSION__TOOLS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -220,23 +220,23 @@ public class InvocatorSessionItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.INVOCATOR_SESSION__ENVIRONMENT,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createEnvironment()));
+				(Symphony__CoreInvocatorPackage.Literals.INVOCATOR_SESSION__ENVIRONMENT,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createEnvironment()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.INVOCATOR_SESSION__PROGRAMS_LIST,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createProgramsList()));
+				(Symphony__CoreInvocatorPackage.Literals.INVOCATOR_SESSION__PROGRAMS_LIST,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createProgramsList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createDataProductsListsContainer()));
+				(Symphony__CoreInvocatorPackage.Literals.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createDataProductsListsContainer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.INVOCATOR_SESSION__TOOLS_LIST,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createToolsList()));
+				(Symphony__CoreInvocatorPackage.Literals.INVOCATOR_SESSION__TOOLS_LIST,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createToolsList()));
 	}
 
   /**

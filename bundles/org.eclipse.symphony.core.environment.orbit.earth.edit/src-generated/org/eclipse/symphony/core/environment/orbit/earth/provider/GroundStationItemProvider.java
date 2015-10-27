@@ -18,8 +18,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation} object.
@@ -65,8 +65,8 @@ public class GroundStationItemProvider extends EarthSurfaceLocationItemProvider 
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.GROUND_STATION__ELEVATION_MASK);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION__ELEVATION_MASK);
 		}
 		return childrenFeatures;
 	}
@@ -122,8 +122,8 @@ public class GroundStationItemProvider extends EarthSurfaceLocationItemProvider 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GroundStation.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION:
-			case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__ELEVATION_MASK:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__ELEVATION_MASK:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -143,13 +143,13 @@ public class GroundStationItemProvider extends EarthSurfaceLocationItemProvider 
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION,
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION__FIELD_OF_VIEW_ORIENTATION,
 				 Symphony__CommonMathFactory.eINSTANCE.createMatrix3x3()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.GROUND_STATION__ELEVATION_MASK,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createConstantElevationMask()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.GROUND_STATION__ELEVATION_MASK,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createConstantElevationMask()));
 	}
 
 }

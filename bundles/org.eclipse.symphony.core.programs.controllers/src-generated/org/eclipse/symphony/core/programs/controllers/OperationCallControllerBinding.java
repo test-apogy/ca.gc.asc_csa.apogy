@@ -19,7 +19,7 @@ import org.eclipse.symphony.core.invocator.OperationCall;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding#getTrigger <em>Trigger</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getOperationCallControllerBinding()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getOperationCallControllerBinding()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface OperationCallControllerBinding extends OperationCall
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Create Result</em>' attribute.
 	 * @see #setCreateResult(boolean)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getOperationCallControllerBinding_CreateResult()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getOperationCallControllerBinding_CreateResult()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -62,7 +62,7 @@ public interface OperationCallControllerBinding extends OperationCall
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Active</em>' attribute.
 	 * @see #setActive(boolean)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getOperationCallControllerBinding_Active()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getOperationCallControllerBinding_Active()
 	 * @model unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -90,7 +90,7 @@ public interface OperationCallControllerBinding extends OperationCall
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Trigger</em>' containment reference.
 	 * @see #setTrigger(Trigger)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getOperationCallControllerBinding_Trigger()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getOperationCallControllerBinding_Trigger()
 	 * @see org.eclipse.symphony.core.programs.controllers.Trigger#getOperationCallControllerBinding
 	 * @model opposite="operationCallControllerBinding" containment="true" required="true"
 	 * @generated

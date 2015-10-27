@@ -11,7 +11,7 @@
       <!-- @generated jme3 -->
       <factory
             uri="org.eclipse.symphony.common.topology.ui.jme3"
-            class="org.eclipse.symphony.common.topology.ui.jme3.provider.JME3ItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.topology.ui.jme3.provider.Symphony__CommonTopologyUIJME3ItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

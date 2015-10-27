@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -76,7 +76,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__TOPOLOGY_PRESENTATION_SET = TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -85,7 +85,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__NODE = TopologyUIPackage.NODE_PRESENTATION__NODE;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -94,7 +94,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__COLOR = TopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -103,7 +103,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__VISIBLE = TopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -112,7 +112,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__SHADOW_MODE = TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -121,7 +121,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__USE_IN_BOUNDING_CALCULATION = TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -130,7 +130,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__CENTROID = TopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -139,7 +139,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__MIN = TopologyUIPackage.NODE_PRESENTATION__MIN;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -148,7 +148,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__MAX = TopologyUIPackage.NODE_PRESENTATION__MAX;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -157,7 +157,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__XRANGE = TopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -166,7 +166,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__YRANGE = TopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -175,7 +175,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__ZRANGE = TopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -184,7 +184,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__SCENE_OBJECT = TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Point Cloud</b></em>' reference.
@@ -193,7 +193,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_CLOUD = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Point Size</b></em>' attribute.
@@ -202,7 +202,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__POINT_SIZE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Number Of Points</b></em>' attribute.
@@ -211,7 +211,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION__NUMBER_OF_POINTS = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Cartesian Coordinates Set Presentation</em>' class.
@@ -220,7 +220,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION_FEATURE_COUNT = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 3;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Cartesian Coordinates Set Presentation</em>' class.
@@ -229,7 +229,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_PRESENTATION_OPERATION_COUNT = TopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int CARTESIAN_COORDINATES_SET_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.ui.impl.TriangularMeshPresentationImpl <em>Triangular Mesh Presentation</em>}' class.
@@ -248,7 +248,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__TOPOLOGY_PRESENTATION_SET = TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int TRIANGULAR_MESH_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -257,7 +257,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__NODE = TopologyUIPackage.NODE_PRESENTATION__NODE;
+	int TRIANGULAR_MESH_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -266,7 +266,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__COLOR = TopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int TRIANGULAR_MESH_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -275,7 +275,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__VISIBLE = TopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int TRIANGULAR_MESH_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -284,7 +284,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__SHADOW_MODE = TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int TRIANGULAR_MESH_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -293,7 +293,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__USE_IN_BOUNDING_CALCULATION = TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int TRIANGULAR_MESH_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -302,7 +302,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__CENTROID = TopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int TRIANGULAR_MESH_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -311,7 +311,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__MIN = TopologyUIPackage.NODE_PRESENTATION__MIN;
+	int TRIANGULAR_MESH_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -320,7 +320,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__MAX = TopologyUIPackage.NODE_PRESENTATION__MAX;
+	int TRIANGULAR_MESH_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -329,7 +329,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__XRANGE = TopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int TRIANGULAR_MESH_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -338,7 +338,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__YRANGE = TopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int TRIANGULAR_MESH_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -347,7 +347,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__ZRANGE = TopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int TRIANGULAR_MESH_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -356,7 +356,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__SCENE_OBJECT = TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int TRIANGULAR_MESH_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Mesh</b></em>' reference.
@@ -365,7 +365,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__MESH = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int TRIANGULAR_MESH_PRESENTATION__MESH = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Point Size</b></em>' attribute.
@@ -374,7 +374,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__POINT_SIZE = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int TRIANGULAR_MESH_PRESENTATION__POINT_SIZE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Number Of Points</b></em>' attribute.
@@ -383,7 +383,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
+	int TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POINTS = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Number Of Polygons</b></em>' attribute.
@@ -392,7 +392,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 3;
+	int TRIANGULAR_MESH_PRESENTATION__NUMBER_OF_POLYGONS = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Presentation Mode</b></em>' attribute.
@@ -401,7 +401,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 4;
+	int TRIANGULAR_MESH_PRESENTATION__PRESENTATION_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Transparency</b></em>' attribute.
@@ -410,7 +410,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 5;
+	int TRIANGULAR_MESH_PRESENTATION__TRANSPARENCY = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Use Shading</b></em>' attribute.
@@ -419,7 +419,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__USE_SHADING = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 6;
+	int TRIANGULAR_MESH_PRESENTATION__USE_SHADING = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Texture Image</b></em>' reference.
@@ -428,7 +428,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 7;
+	int TRIANGULAR_MESH_PRESENTATION__TEXTURE_IMAGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Triangular Mesh Presentation</em>' class.
@@ -437,7 +437,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION_FEATURE_COUNT = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 8;
+	int TRIANGULAR_MESH_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Triangular Mesh Presentation</em>' class.
@@ -446,7 +446,7 @@ public interface Symphony__CommonGeometryData3DUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRIANGULAR_MESH_PRESENTATION_OPERATION_COUNT = TopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int TRIANGULAR_MESH_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
 	/**

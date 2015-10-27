@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.Trigger;
 
 /**
@@ -141,8 +141,8 @@ public class TriggerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Trigger.class)) {
-			case EMFEcoreControllersPackage.TRIGGER__NAME:
-			case EMFEcoreControllersPackage.TRIGGER__DESCRIPTION:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__NAME:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

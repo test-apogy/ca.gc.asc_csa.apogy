@@ -5,7 +5,7 @@ package org.eclipse.symphony.core.environment.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.core.environment.EarthSurfaceEnvironment;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class EarthSurfaceEnvironmentImpl extends SurfaceEnvironmentImpl implemen
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.EARTH_SURFACE_ENVIRONMENT;
+		return Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_ENVIRONMENT;
 	}
 
 } //EarthSurfaceEnvironmentImpl

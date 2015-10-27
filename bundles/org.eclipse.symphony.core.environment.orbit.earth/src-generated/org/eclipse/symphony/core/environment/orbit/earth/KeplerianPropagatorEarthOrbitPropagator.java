@@ -16,7 +16,7 @@ import org.orekit.propagation.analytical.KeplerianPropagator;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getKeplerianPropagatorEarthOrbitPropagator()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianPropagatorEarthOrbitPropagator()
  * @model
  * @generated
  */

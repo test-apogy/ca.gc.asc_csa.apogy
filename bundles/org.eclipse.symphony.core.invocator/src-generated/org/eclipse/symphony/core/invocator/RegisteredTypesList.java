@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.RegisteredTypesList#getTypes <em>Types</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getRegisteredTypesList()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getRegisteredTypesList()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface RegisteredTypesList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Types</em>' reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getRegisteredTypesList_Types()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getRegisteredTypesList_Types()
 	 * @model transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' createChild='false' property='None'"
 	 * @generated

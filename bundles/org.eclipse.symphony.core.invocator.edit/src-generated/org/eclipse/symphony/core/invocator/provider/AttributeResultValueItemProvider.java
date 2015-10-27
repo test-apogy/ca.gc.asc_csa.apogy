@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.invocator.AttributeResultValue;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.AttributeResultValue} object.
@@ -67,7 +67,7 @@ public class AttributeResultValueItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AttributeResultValue_value_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AttributeResultValue_value_feature", "_UI_AttributeResultValue_type"),
-				 EMFEcoreInvocatorPackage.Literals.ATTRIBUTE_RESULT_VALUE__VALUE,
+				 Symphony__CoreInvocatorPackage.Literals.ATTRIBUTE_RESULT_VALUE__VALUE,
 				 false,
 				 false,
 				 false,
@@ -89,7 +89,7 @@ public class AttributeResultValueItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.ATTRIBUTE_RESULT_VALUE__VALUE);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ATTRIBUTE_RESULT_VALUE__VALUE);
 		}
 		return childrenFeatures;
 	}
@@ -153,7 +153,7 @@ public class AttributeResultValueItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AttributeResultValue.class)) {
-			case EMFEcoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE:
+			case Symphony__CoreInvocatorPackage.ATTRIBUTE_RESULT_VALUE__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

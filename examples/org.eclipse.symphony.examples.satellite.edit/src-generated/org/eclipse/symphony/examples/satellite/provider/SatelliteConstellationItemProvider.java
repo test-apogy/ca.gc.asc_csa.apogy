@@ -23,9 +23,9 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.SatelliteConstellation;
 
 /**
@@ -85,7 +85,7 @@ public class SatelliteConstellationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SatelliteConstellation_satellites_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SatelliteConstellation_satellites_feature", "_UI_SatelliteConstellation_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION__SATELLITES,
+				 Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION__SATELLITES,
 				 true,
 				 false,
 				 true,
@@ -107,7 +107,7 @@ public class SatelliteConstellationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SatelliteConstellation_groundStations_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SatelliteConstellation_groundStations_feature", "_UI_SatelliteConstellation_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION__GROUND_STATIONS,
+				 Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION__GROUND_STATIONS,
 				 true,
 				 false,
 				 true,
@@ -129,7 +129,7 @@ public class SatelliteConstellationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SatelliteConstellation_pendingImageOrders_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SatelliteConstellation_pendingImageOrders_feature", "_UI_SatelliteConstellation_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS,
+				 Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS,
 				 true,
 				 false,
 				 true,
@@ -151,7 +151,7 @@ public class SatelliteConstellationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SatelliteConstellation_startDate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SatelliteConstellation_startDate_feature", "_UI_SatelliteConstellation_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION__START_DATE,
+				 Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION__START_DATE,
 				 true,
 				 false,
 				 false,
@@ -173,7 +173,7 @@ public class SatelliteConstellationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SatelliteConstellation_endDate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SatelliteConstellation_endDate_feature", "_UI_SatelliteConstellation_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION__END_DATE,
+				 Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION__END_DATE,
 				 true,
 				 false,
 				 false,
@@ -194,7 +194,7 @@ public class SatelliteConstellationItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION__SATELLITES);
+			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION__SATELLITES);
 		}
 		return childrenFeatures;
 	}
@@ -251,13 +251,13 @@ public class SatelliteConstellationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SatelliteConstellation.class)) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__GROUND_STATIONS:
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS:
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__START_DATE:
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__END_DATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__GROUND_STATIONS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__START_DATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__END_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__SATELLITES:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__SATELLITES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -277,23 +277,23 @@ public class SatelliteConstellationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION__SATELLITES,
-				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteSimulated()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION__SATELLITES,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteSimulated()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION__SATELLITES,
-				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteStub()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION__SATELLITES,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteStub()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION__GROUND_STATIONS,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createGroundStation()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION__GROUND_STATIONS,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS,
-				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createImageOrder()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createImageOrder()));
 	}
 
 	/**

@@ -13,12 +13,11 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * This interface represents a PVCoordinates provider.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getPVCoordinatesProviderProvider()
+ * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getPVCoordinatesProviderProvider()
  * @model interface="true" abstract="true"
  * @generated
  */

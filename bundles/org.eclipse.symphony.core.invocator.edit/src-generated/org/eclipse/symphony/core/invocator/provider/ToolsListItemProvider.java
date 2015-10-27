@@ -23,8 +23,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ToolsList;
 
 /**
@@ -132,7 +132,7 @@ public class ToolsListItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ToolsList_invocatorSession_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ToolsList_invocatorSession_feature", "_UI_ToolsList_type"),
-				 EMFEcoreInvocatorPackage.Literals.TOOLS_LIST__INVOCATOR_SESSION,
+				 Symphony__CoreInvocatorPackage.Literals.TOOLS_LIST__INVOCATOR_SESSION,
 				 true,
 				 false,
 				 true,
@@ -154,7 +154,7 @@ public class ToolsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS);
 		}
 		return childrenFeatures;
 	}
@@ -213,11 +213,11 @@ public class ToolsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ToolsList.class)) {
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__NAME:
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__NAME:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
+			case Symphony__CoreInvocatorPackage.TOOLS_LIST__TOOLS_LIST_CONTAINERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -238,18 +238,18 @@ public class ToolsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createWatchesListsContainer()));
+				(Symphony__CoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createWatchesListsContainer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createDisplaysListsContainer()));
+				(Symphony__CoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createDisplaysListsContainer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createRecordingToolsContainer()));
+				(Symphony__CoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createRecordingToolsContainer()));
 	}
 
   /**

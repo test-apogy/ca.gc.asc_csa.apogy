@@ -10,7 +10,7 @@ package org.eclipse.symphony.core.invocator;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getInitializationData()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getInitializationData()
  * @model
  * @generated
  */

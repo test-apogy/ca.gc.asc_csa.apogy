@@ -11,7 +11,7 @@
       <!-- @generated eclipse_emf_ecore_invocator_programs -->
       <factory
             uri="org.eclipse.symphony.core.programs"
-            class="org.eclipse.symphony.core.programs.provider.InvocatorProgramsItemProviderAdapterFactory"
+            class="org.eclipse.symphony.core.programs.provider.Symphony__CoreProgramsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

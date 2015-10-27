@@ -29,7 +29,7 @@ import org.eclipse.symphony.common.emf.TreeRootNode;
  *   <li>{@link org.eclipse.symphony.core.invocator.Watch#getTreeRootNode <em>Tree Root Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatch()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatch()
  * @model
  * @generated
  */
@@ -46,7 +46,7 @@ public interface Watch extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Watches List</em>' container reference.
 	 * @see #setWatchesList(WatchesList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatch_WatchesList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatch_WatchesList()
 	 * @see org.eclipse.symphony.core.invocator.WatchesList#getWatches
 	 * @model opposite="watches" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -74,7 +74,7 @@ public interface Watch extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable</em>' reference.
 	 * @see #setVariable(Variable)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatch_Variable()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatch_Variable()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -101,7 +101,7 @@ public interface Watch extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Member Reference Tree Element</em>' containment reference.
 	 * @see #setTypeMemberReferenceTreeElement(TypeMemberReferenceTreeElement)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatch_TypeMemberReferenceTreeElement()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatch_TypeMemberReferenceTreeElement()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -127,7 +127,7 @@ public interface Watch extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tree Root Node</em>' containment reference.
 	 * @see #setTreeRootNode(TreeRootNode)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatch_TreeRootNode()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatch_TreeRootNode()
 	 * @model containment="true"
 	 * @generated
 	 */

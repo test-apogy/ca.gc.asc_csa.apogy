@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.Sky;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.Sky} object.
@@ -111,7 +111,7 @@ public class SkyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Sky_surfaceWorksite_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Sky_surfaceWorksite_feature", "_UI_Sky_type"),
-				 SymphonyEnvironmentPackage.Literals.SKY__SURFACE_WORKSITE,
+				 Symphony__CoreEnvironmentPackage.Literals.SKY__SURFACE_WORKSITE,
 				 true,
 				 false,
 				 true,
@@ -134,7 +134,7 @@ public class SkyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Sky_sun_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Sky_sun_feature", "_UI_Sky_type"),
-				 SymphonyEnvironmentPackage.Literals.SKY__SUN,
+				 Symphony__CoreEnvironmentPackage.Literals.SKY__SUN,
 				 false,
 				 false,
 				 false,
@@ -157,7 +157,7 @@ public class SkyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Sky_sunHorizontalCoordinates_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Sky_sunHorizontalCoordinates_feature", "_UI_Sky_type"),
-				 SymphonyEnvironmentPackage.Literals.SKY__SUN_HORIZONTAL_COORDINATES,
+				 Symphony__CoreEnvironmentPackage.Literals.SKY__SUN_HORIZONTAL_COORDINATES,
 				 true,
 				 false,
 				 true,
@@ -180,7 +180,7 @@ public class SkyItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Sky_starField_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Sky_starField_feature", "_UI_Sky_type"),
-				 SymphonyEnvironmentPackage.Literals.SKY__STAR_FIELD,
+				 Symphony__CoreEnvironmentPackage.Literals.SKY__STAR_FIELD,
 				 false,
 				 false,
 				 false,
@@ -202,7 +202,7 @@ public class SkyItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.SKY__SKY_NODE);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.SKY__SKY_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -262,10 +262,10 @@ public class SkyItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Sky.class)) {
-			case SymphonyEnvironmentPackage.SKY__TIME:
+			case Symphony__CoreEnvironmentPackage.SKY__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEnvironmentPackage.SKY__SKY_NODE:
+			case Symphony__CoreEnvironmentPackage.SKY__SKY_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

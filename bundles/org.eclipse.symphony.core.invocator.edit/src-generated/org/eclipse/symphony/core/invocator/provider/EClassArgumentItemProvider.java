@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
 import org.eclipse.symphony.core.invocator.EClassArgument;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a
@@ -75,7 +75,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 						"_UI_PropertyDescriptor_description",
 						"_UI_EClassArgument_value_feature",
 						"_UI_EClassArgument_type"),
-				EMFEcoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE, true,
+				Symphony__CoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE, true,
 				false, false, null, null, null) {
 			@Override
 			protected Collection<?> getComboBoxObjects(Object object) {
@@ -107,7 +107,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 	protected Command createSetCommand(EditingDomain domain, EObject owner,
 			EStructuralFeature feature, Object value) {
 		
-		if (feature == EMFEcoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE){			
+		if (feature == Symphony__CoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE){			
 			if (value instanceof EClass){
 				return new SetCommand(domain, owner, feature, EcoreUtil.create((EClass) value));
 			}							
@@ -127,7 +127,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE);
 		}
 		return childrenFeatures;
 	}
@@ -178,7 +178,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EClassArgument.class)) {
-			case EMFEcoreInvocatorPackage.ECLASS_ARGUMENT__VALUE:
+			case Symphony__CoreInvocatorPackage.ECLASS_ARGUMENT__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -198,7 +198,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE,
+				(Symphony__CoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE,
 				 EcoreFactory.eINSTANCE.createEObject()));
 	}
 
@@ -214,7 +214,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 		EMFEcoreEditUtilsFacade.INSTANCE
 		.removeChildDescriptor(
 				newChildDescriptors,
-				EMFEcoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE);
+				Symphony__CoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE);
 		
 		EClassArgument eClassArgument = (EClassArgument) object;
 		EClassifier eClassifier = eClassArgument.getEParameter().getEType();
@@ -224,7 +224,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 				EClass currentEClass = eClasses.next();
 					newChildDescriptors.add
 					(createChildParameter
-						(EMFEcoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE,
+						(Symphony__CoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE,
 						 EcoreUtil.create(currentEClass)));					
 			}
 		}

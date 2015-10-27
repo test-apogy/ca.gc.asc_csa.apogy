@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
 
 /**
@@ -64,7 +64,7 @@ public class TransformMatrixBindingImpl extends AbstractTopologyBindingImpl impl
   @Override
   protected EClass eStaticClass()
   {
-		return TopologyBindingsPackage.Literals.TRANSFORM_MATRIX_BINDING;
+		return Symphony__CommonTopologyBindingsPackage.Literals.TRANSFORM_MATRIX_BINDING;
 	}
 
   /**
@@ -79,7 +79,7 @@ public class TransformMatrixBindingImpl extends AbstractTopologyBindingImpl impl
 			transformNode = (TransformNode)eResolveProxy(oldTransformNode);
 			if (transformNode != oldTransformNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE, oldTransformNode, transformNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE, oldTransformNode, transformNode));
 			}
 		}
 		return transformNode;
@@ -105,7 +105,7 @@ public class TransformMatrixBindingImpl extends AbstractTopologyBindingImpl impl
 		TransformNode oldTransformNode = transformNode;
 		transformNode = newTransformNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE, oldTransformNode, transformNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE, oldTransformNode, transformNode));
 	}
 
   /**
@@ -117,7 +117,7 @@ public class TransformMatrixBindingImpl extends AbstractTopologyBindingImpl impl
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
+			case Symphony__CommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
 				if (resolve) return getTransformNode();
 				return basicGetTransformNode();
 		}
@@ -133,7 +133,7 @@ public class TransformMatrixBindingImpl extends AbstractTopologyBindingImpl impl
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
+			case Symphony__CommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
 				setTransformNode((TransformNode)newValue);
 				return;
 		}
@@ -149,7 +149,7 @@ public class TransformMatrixBindingImpl extends AbstractTopologyBindingImpl impl
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
+			case Symphony__CommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
 				setTransformNode((TransformNode)null);
 				return;
 		}
@@ -165,7 +165,7 @@ public class TransformMatrixBindingImpl extends AbstractTopologyBindingImpl impl
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
+			case Symphony__CommonTopologyBindingsPackage.TRANSFORM_MATRIX_BINDING__TRANSFORM_NODE:
 				return transformNode != null;
 		}
 		return super.eIsSet(featureID);

@@ -10,9 +10,9 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
 import org.eclipse.symphony.core.environment.orbit.provider.OrbitItemProvider;
 
 /**
@@ -88,8 +88,8 @@ public class EarthOrbitItemProvider extends OrbitItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyOrbitEnvironmentPackage.Literals.ORBIT__REFERENCE_FRAME,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createOreKitBackedFrame()));
+				(Symphony__CoreEnvironmentOrbitPackage.Literals.ORBIT__REFERENCE_FRAME,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createOreKitBackedFrame()));
 	}
 
 }

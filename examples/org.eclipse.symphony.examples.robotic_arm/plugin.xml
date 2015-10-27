@@ -11,7 +11,7 @@
       <!-- @generated emf_ecore_examples_robotic_arm -->
       <package
             uri="org.eclipse.symphony.examples.robotic_arm"
-            class="org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage"
+            class="org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage"
             genModel="model/symphony_examples_robotic_arm.xcore"/>
    </extension>
 

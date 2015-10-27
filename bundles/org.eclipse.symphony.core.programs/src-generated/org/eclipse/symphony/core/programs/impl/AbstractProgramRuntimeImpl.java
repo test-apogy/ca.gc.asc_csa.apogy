@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.invocator.Program;
 import org.eclipse.symphony.core.programs.AbstractProgramRuntime;
-import org.eclipse.symphony.core.programs.InvocatorProgramsPackage;
+import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +55,7 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return InvocatorProgramsPackage.Literals.ABSTRACT_PROGRAM_RUNTIME;
+		return Symphony__CoreProgramsPackage.Literals.ABSTRACT_PROGRAM_RUNTIME;
 	}
 
 	/**
@@ -69,7 +69,7 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 			program = (Program)eResolveProxy(oldProgram);
 			if (program != oldProgram) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, InvocatorProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM, oldProgram, program));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM, oldProgram, program));
 			}
 		}
 		return program;
@@ -93,7 +93,7 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 		Program oldProgram = program;
 		program = newProgram;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, InvocatorProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM, oldProgram, program));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM, oldProgram, program));
 	}
 
 	/**
@@ -170,7 +170,7 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case InvocatorProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
+			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
 				if (resolve) return getProgram();
 				return basicGetProgram();
 		}
@@ -185,7 +185,7 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case InvocatorProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
+			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
 				setProgram((Program)newValue);
 				return;
 		}
@@ -200,7 +200,7 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case InvocatorProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
+			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
 				setProgram((Program)null);
 				return;
 		}
@@ -215,7 +215,7 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case InvocatorProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
+			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME__PROGRAM:
 				return program != null;
 		}
 		return super.eIsSet(featureID);
@@ -229,22 +229,22 @@ public abstract class AbstractProgramRuntimeImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case InvocatorProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___RESUME:
+			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___RESUME:
 				resume();
 				return null;
-			case InvocatorProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___SUSPEND:
+			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___SUSPEND:
 				suspend();
 				return null;
-			case InvocatorProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___TERMINATE:
+			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___TERMINATE:
 				terminate();
 				return null;
-			case InvocatorProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___STEP_INTO:
+			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___STEP_INTO:
 				stepInto();
 				return null;
-			case InvocatorProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___STEP_OVER:
+			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___STEP_OVER:
 				stepOver();
 				return null;
-			case InvocatorProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___STEP_RETURN:
+			case Symphony__CoreProgramsPackage.ABSTRACT_PROGRAM_RUNTIME___STEP_RETURN:
 				stepReturn();
 				return null;
 		}

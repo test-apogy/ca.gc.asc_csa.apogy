@@ -16,7 +16,7 @@ package org.eclipse.symphony.core.programs.controllers;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerEdgeTrigger#getEdgeType <em>Edge Type</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerEdgeTrigger()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerEdgeTrigger()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface ControllerEdgeTrigger extends ControllerTrigger
 	 * @return the value of the '<em>Edge Type</em>' attribute.
 	 * @see org.eclipse.symphony.core.programs.controllers.EdgeType
 	 * @see #setEdgeType(EdgeType)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerEdgeTrigger_EdgeType()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerEdgeTrigger_EdgeType()
 	 * @model unique="false"
 	 * @generated
 	 */

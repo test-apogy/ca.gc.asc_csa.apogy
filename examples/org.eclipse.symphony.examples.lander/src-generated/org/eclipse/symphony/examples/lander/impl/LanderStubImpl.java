@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.lander.Activator;
-import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage;
+import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
 import org.eclipse.symphony.examples.lander.LanderLegExtension;
 import org.eclipse.symphony.examples.lander.LanderStub;
 
@@ -41,7 +41,7 @@ public class LanderStubImpl extends LanderImpl implements LanderStub
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleLanderPackage.Literals.LANDER_STUB;
+		return Symphony__ExamplesLanderPackage.Literals.LANDER_STUB;
 	}
 	
 	/**

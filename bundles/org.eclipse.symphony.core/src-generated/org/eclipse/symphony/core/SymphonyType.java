@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.invocator.Type;
  * <!-- end-model-doc -->
  * 
  * 
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonyType()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyType()
  * @model abstract="true"
  * @generated
  */

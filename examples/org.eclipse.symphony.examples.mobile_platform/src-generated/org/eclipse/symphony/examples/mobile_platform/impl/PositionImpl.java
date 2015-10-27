@@ -7,7 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage;
+import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
 import org.eclipse.symphony.examples.mobile_platform.Position;
 
 /**
@@ -105,7 +105,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreExampleMobilePlatformPackage.Literals.POSITION;
+		return Symphony__ExamplesMobilePlatformPackage.Literals.POSITION;
 	}
 
   /**
@@ -128,7 +128,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
 		double oldX = x;
 		x = newX;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleMobilePlatformPackage.POSITION__X, oldX, x));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformPackage.POSITION__X, oldX, x));
 	}
 
   /**
@@ -151,7 +151,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
 		double oldY = y;
 		y = newY;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleMobilePlatformPackage.POSITION__Y, oldY, y));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformPackage.POSITION__Y, oldY, y));
 	}
 
   /**
@@ -174,7 +174,7 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
 		double oldTheta = theta;
 		theta = newTheta;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleMobilePlatformPackage.POSITION__THETA, oldTheta, theta));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesMobilePlatformPackage.POSITION__THETA, oldTheta, theta));
 	}
 
   /**
@@ -186,11 +186,11 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreExampleMobilePlatformPackage.POSITION__X:
+			case Symphony__ExamplesMobilePlatformPackage.POSITION__X:
 				return getX();
-			case EMFEcoreExampleMobilePlatformPackage.POSITION__Y:
+			case Symphony__ExamplesMobilePlatformPackage.POSITION__Y:
 				return getY();
-			case EMFEcoreExampleMobilePlatformPackage.POSITION__THETA:
+			case Symphony__ExamplesMobilePlatformPackage.POSITION__THETA:
 				return getTheta();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -205,13 +205,13 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreExampleMobilePlatformPackage.POSITION__X:
+			case Symphony__ExamplesMobilePlatformPackage.POSITION__X:
 				setX((Double)newValue);
 				return;
-			case EMFEcoreExampleMobilePlatformPackage.POSITION__Y:
+			case Symphony__ExamplesMobilePlatformPackage.POSITION__Y:
 				setY((Double)newValue);
 				return;
-			case EMFEcoreExampleMobilePlatformPackage.POSITION__THETA:
+			case Symphony__ExamplesMobilePlatformPackage.POSITION__THETA:
 				setTheta((Double)newValue);
 				return;
 		}
@@ -227,13 +227,13 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreExampleMobilePlatformPackage.POSITION__X:
+			case Symphony__ExamplesMobilePlatformPackage.POSITION__X:
 				setX(X_EDEFAULT);
 				return;
-			case EMFEcoreExampleMobilePlatformPackage.POSITION__Y:
+			case Symphony__ExamplesMobilePlatformPackage.POSITION__Y:
 				setY(Y_EDEFAULT);
 				return;
-			case EMFEcoreExampleMobilePlatformPackage.POSITION__THETA:
+			case Symphony__ExamplesMobilePlatformPackage.POSITION__THETA:
 				setTheta(THETA_EDEFAULT);
 				return;
 		}
@@ -249,11 +249,11 @@ public class PositionImpl extends MinimalEObjectImpl.Container implements Positi
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreExampleMobilePlatformPackage.POSITION__X:
+			case Symphony__ExamplesMobilePlatformPackage.POSITION__X:
 				return x != X_EDEFAULT;
-			case EMFEcoreExampleMobilePlatformPackage.POSITION__Y:
+			case Symphony__ExamplesMobilePlatformPackage.POSITION__Y:
 				return y != Y_EDEFAULT;
-			case EMFEcoreExampleMobilePlatformPackage.POSITION__THETA:
+			case Symphony__ExamplesMobilePlatformPackage.POSITION__THETA:
 				return theta != THETA_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

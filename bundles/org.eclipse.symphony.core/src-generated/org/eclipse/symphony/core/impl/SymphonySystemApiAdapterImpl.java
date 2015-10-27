@@ -20,8 +20,8 @@ import org.eclipse.symphony.core.OperationCallPositionedResult;
 import org.eclipse.symphony.core.PoseCorrector;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.SymphonyCoreFacade;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyInitializationData;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
@@ -90,7 +90,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER;
+		return Symphony__CorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER;
 	}
 
 	/**
@@ -111,7 +111,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 		Matrix4x4 oldPoseTransform = poseTransform;
 		poseTransform = newPoseTransform;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, oldPoseTransform, newPoseTransform);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, oldPoseTransform, newPoseTransform);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -146,14 +146,14 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 		if (newPoseTransform != poseTransform) {
 			NotificationChain msgs = null;
 			if (poseTransform != null)
-				msgs = ((InternalEObject)poseTransform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)poseTransform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, null, msgs);
 			if (newPoseTransform != null)
-				msgs = ((InternalEObject)newPoseTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)newPoseTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, null, msgs);
 			msgs = basicSetPoseTransform(newPoseTransform, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, newPoseTransform, newPoseTransform));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM, newPoseTransform, newPoseTransform));
 	}
 
 	/**
@@ -176,7 +176,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 		PoseCorrector oldPoseCorrector = poseCorrector;
 		poseCorrector = newPoseCorrector;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, oldPoseCorrector, newPoseCorrector);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, oldPoseCorrector, newPoseCorrector);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -205,19 +205,19 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 		if (newPoseCorrector != poseCorrector) {
 			NotificationChain msgs = null;
 			if (poseCorrector != null)
-				msgs = ((InternalEObject)poseCorrector).eInverseRemove(this, SymphonyCorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER, PoseCorrector.class, msgs);
+				msgs = ((InternalEObject)poseCorrector).eInverseRemove(this, Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER, PoseCorrector.class, msgs);
 			if (newPoseCorrector != null)
-				msgs = ((InternalEObject)newPoseCorrector).eInverseAdd(this, SymphonyCorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER, PoseCorrector.class, msgs);
+				msgs = ((InternalEObject)newPoseCorrector).eInverseAdd(this, Symphony__CorePackage.POSE_CORRECTOR__SYMPHONY_SYSTEM_API_ADAPTER, PoseCorrector.class, msgs);
 			msgs = basicSetPoseCorrector(newPoseCorrector, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, newPoseCorrector, newPoseCorrector));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, newPoseCorrector, newPoseCorrector));
 	}
 
   @Override
 	public OperationCallResult createResult(OperationCall operationCall) {
-		return SymphonyCoreFactory.eINSTANCE.createOperationCallPositionedResult();
+		return Symphony__CoreFactory.eINSTANCE.createOperationCallPositionedResult();
 	}
 
 	/**
@@ -230,7 +230,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 			symphonySystem = (SymphonySystem)eResolveProxy(oldSymphonySystem);
 			if (symphonySystem != oldSymphonySystem) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM, oldSymphonySystem, symphonySystem));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM, oldSymphonySystem, symphonySystem));
 			}
 		}
 		return symphonySystem;
@@ -252,7 +252,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 		SymphonySystem oldSymphonySystem = symphonySystem;
 		symphonySystem = newSymphonySystem;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM, oldSymphonySystem, symphonySystem));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM, oldSymphonySystem, symphonySystem));
 	}
 
 	/**
@@ -275,9 +275,9 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
 				if (poseCorrector != null)
-					msgs = ((InternalEObject)poseCorrector).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, null, msgs);
+					msgs = ((InternalEObject)poseCorrector).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR, null, msgs);
 				return basicSetPoseCorrector((PoseCorrector)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -292,9 +292,9 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
 				return basicSetPoseTransform(null, msgs);
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
 				return basicSetPoseCorrector(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -307,11 +307,11 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
 				return getPoseTransform();
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
 				return getPoseCorrector();
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM:
 				if (resolve) return getSymphonySystem();
 				return basicGetSymphonySystem();
 		}
@@ -325,13 +325,13 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
 				setPoseTransform((Matrix4x4)newValue);
 				return;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
 				setPoseCorrector((PoseCorrector)newValue);
 				return;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM:
 				setSymphonySystem((SymphonySystem)newValue);
 				return;
 		}
@@ -345,13 +345,13 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
 				setPoseTransform((Matrix4x4)null);
 				return;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
 				setPoseCorrector((PoseCorrector)null);
 				return;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM:
 				setSymphonySystem((SymphonySystem)null);
 				return;
 		}
@@ -365,11 +365,11 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
 				return poseTransform != null;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
 				return poseCorrector != null;
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM:
 				return symphonySystem != null;
 		}
 		return super.eIsSet(featureID);
@@ -383,7 +383,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == PoseProvider.class) {
 			switch (derivedFeatureID) {
-				case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM: return SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM;
+				case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM: return Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM;
 				default: return -1;
 			}
 		}
@@ -398,7 +398,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == PoseProvider.class) {
 			switch (baseFeatureID) {
-				case SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM: return SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM;
+				case Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM: return Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM;
 				default: return -1;
 			}
 		}
@@ -413,7 +413,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER___CREATE_RESULT_MATRIX__OPERATIONCALL:
 				return createResultMatrix((OperationCall)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
@@ -445,7 +445,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 
 	@Override
 	public AbstractInitializationData createInitializationData() {
-		return SymphonyCoreFactory.eINSTANCE.createSymphonyInitializationData();
+		return Symphony__CoreFactory.eINSTANCE.createSymphonyInitializationData();
 	}
 
 	@Override

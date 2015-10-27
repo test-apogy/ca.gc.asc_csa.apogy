@@ -26,7 +26,7 @@ import org.eclipse.symphony.core.invocator.TypeMember;
  *   <li>{@link org.eclipse.symphony.core.AssemblyLink#getSubSystemInstance <em>Sub System Instance</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getAssemblyLink()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getAssemblyLink()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface AssemblyLink extends Named, Described {
 	 * 
 	 * @return the value of the '<em>Sub System Type Member</em>' reference.
 	 * @see #setSubSystemTypeMember(TypeMember)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getAssemblyLink_SubSystemTypeMember()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getAssemblyLink_SubSystemTypeMember()
 	 * @model required="true" annotation=
 	 *        "http://www.eclipse.org/emf/2002/GenModel propertyCategory='LINK_CHILD'"
 	 * @generated
@@ -72,7 +72,7 @@ public interface AssemblyLink extends Named, Described {
 	 * 
 	 * @return the value of the '<em>Parent Type Member</em>' reference.
 	 * @see #setParentTypeMember(TypeMember)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getAssemblyLink_ParentTypeMember()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getAssemblyLink_ParentTypeMember()
 	 * @model required="true" annotation=
 	 *        "http://www.eclipse.org/emf/2002/GenModel propertyCategory='LINK_PARENT'"
 	 * @generated
@@ -101,7 +101,7 @@ public interface AssemblyLink extends Named, Described {
 	 * 
 	 * @return the value of the '<em>Parent Connection Point</em>' reference.
 	 * @see #setParentConnectionPoint(ConnectionPoint)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getAssemblyLink_ParentConnectionPoint()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getAssemblyLink_ParentConnectionPoint()
 	 * @model required="true" annotation=
 	 *        "http://www.eclipse.org/emf/2002/GenModel propertyCategory='LINK_PARENT'"
 	 * @generated
@@ -133,7 +133,7 @@ public interface AssemblyLink extends Named, Described {
 	 * @return the value of the '<em>Transformation Matrix</em>' containment
 	 *         reference.
 	 * @see #setTransformationMatrix(Matrix4x4)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getAssemblyLink_TransformationMatrix()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getAssemblyLink_TransformationMatrix()
 	 * @model containment="true" annotation=
 	 *        "http://www.eclipse.org/emf/2002/GenModel propertyCategory='LINK_TOPOLOGY'"
 	 * @generated
@@ -167,7 +167,7 @@ public interface AssemblyLink extends Named, Described {
 	 * 
 	 * @return the value of the '<em>Geometry Node</em>' containment reference.
 	 * @see #setGeometryNode(Node)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getAssemblyLink_GeometryNode()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getAssemblyLink_GeometryNode()
 	 * @model containment="true" annotation=
 	 *        "http://www.eclipse.org/emf/2002/GenModel propertyCategory='LINK_TOPOLOGY'"
 	 * @generated
@@ -194,7 +194,7 @@ public interface AssemblyLink extends Named, Described {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent Instance</em>' reference.
 	 * @see #setParentInstance(SymphonySystem)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getAssemblyLink_ParentInstance()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getAssemblyLink_ParentInstance()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='LINK_PARENT'"
 	 * @generated
@@ -221,7 +221,7 @@ public interface AssemblyLink extends Named, Described {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sub System Instance</em>' reference.
 	 * @see #setSubSystemInstance(SymphonySystem)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getAssemblyLink_SubSystemInstance()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getAssemblyLink_SubSystemInstance()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='LINK_CHILD'"
 	 * @generated

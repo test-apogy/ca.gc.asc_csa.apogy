@@ -54,7 +54,7 @@ import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
  * 
  * @generated_NOT
  */
-public class CustomEMFEcoreInvocatorEditor extends EMFEcoreInvocatorEditor
+public class CustomEMFEcoreInvocatorEditor extends Symphony__CoreInvocatorEditor
 		implements ITabbedPropertySheetPageContributor {
 
 	public static String ID = "org.eclipse.symphony.core.invocator.presentation.EMFEcoreInvocatorEditorID";
@@ -382,7 +382,7 @@ public class CustomEMFEcoreInvocatorEditor extends EMFEcoreInvocatorEditor
 		} catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			EMFEcoreInvocatorEditorPlugin.INSTANCE.log(exception);
+			Symphony__CoreInvocatorEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();

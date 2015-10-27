@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.examples.rover.Battery;
-import org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage;
+import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -133,7 +133,7 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleRoverPackage.Literals.BATTERY;
+		return Symphony__ExamplesRoverPackage.Literals.BATTERY;
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 		boolean oldActive = active;
 		active = newActive;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoverPackage.BATTERY__ACTIVE, oldActive, active));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.BATTERY__ACTIVE, oldActive, active));
 	}
 
 	/**
@@ -175,7 +175,7 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 		double oldVoltage = voltage;
 		voltage = newVoltage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoverPackage.BATTERY__VOLTAGE, oldVoltage, voltage));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.BATTERY__VOLTAGE, oldVoltage, voltage));
 	}
 
 	/**
@@ -196,7 +196,7 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 		double oldCurrent = current;
 		current = newCurrent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoverPackage.BATTERY__CURRENT, oldCurrent, current));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.BATTERY__CURRENT, oldCurrent, current));
 	}
 
 	/**
@@ -239,11 +239,11 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreExampleRoverPackage.BATTERY__ACTIVE:
+			case Symphony__ExamplesRoverPackage.BATTERY__ACTIVE:
 				return isActive();
-			case EMFEcoreExampleRoverPackage.BATTERY__VOLTAGE:
+			case Symphony__ExamplesRoverPackage.BATTERY__VOLTAGE:
 				return getVoltage();
-			case EMFEcoreExampleRoverPackage.BATTERY__CURRENT:
+			case Symphony__ExamplesRoverPackage.BATTERY__CURRENT:
 				return getCurrent();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -257,13 +257,13 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreExampleRoverPackage.BATTERY__ACTIVE:
+			case Symphony__ExamplesRoverPackage.BATTERY__ACTIVE:
 				setActive((Boolean)newValue);
 				return;
-			case EMFEcoreExampleRoverPackage.BATTERY__VOLTAGE:
+			case Symphony__ExamplesRoverPackage.BATTERY__VOLTAGE:
 				setVoltage((Double)newValue);
 				return;
-			case EMFEcoreExampleRoverPackage.BATTERY__CURRENT:
+			case Symphony__ExamplesRoverPackage.BATTERY__CURRENT:
 				setCurrent((Double)newValue);
 				return;
 		}
@@ -278,13 +278,13 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleRoverPackage.BATTERY__ACTIVE:
+			case Symphony__ExamplesRoverPackage.BATTERY__ACTIVE:
 				setActive(ACTIVE_EDEFAULT);
 				return;
-			case EMFEcoreExampleRoverPackage.BATTERY__VOLTAGE:
+			case Symphony__ExamplesRoverPackage.BATTERY__VOLTAGE:
 				setVoltage(VOLTAGE_EDEFAULT);
 				return;
-			case EMFEcoreExampleRoverPackage.BATTERY__CURRENT:
+			case Symphony__ExamplesRoverPackage.BATTERY__CURRENT:
 				setCurrent(CURRENT_EDEFAULT);
 				return;
 		}
@@ -299,11 +299,11 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleRoverPackage.BATTERY__ACTIVE:
+			case Symphony__ExamplesRoverPackage.BATTERY__ACTIVE:
 				return active != ACTIVE_EDEFAULT;
-			case EMFEcoreExampleRoverPackage.BATTERY__VOLTAGE:
+			case Symphony__ExamplesRoverPackage.BATTERY__VOLTAGE:
 				return voltage != VOLTAGE_EDEFAULT;
-			case EMFEcoreExampleRoverPackage.BATTERY__CURRENT:
+			case Symphony__ExamplesRoverPackage.BATTERY__CURRENT:
 				return current != CURRENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -317,10 +317,10 @@ public class BatteryImpl extends MinimalEObjectImpl.Container implements Battery
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EMFEcoreExampleRoverPackage.BATTERY___ACTIVATE:
+			case Symphony__ExamplesRoverPackage.BATTERY___ACTIVATE:
 				activate();
 				return null;
-			case EMFEcoreExampleRoverPackage.BATTERY___DEACTIVATE:
+			case Symphony__ExamplesRoverPackage.BATTERY___DEACTIVATE:
 				deactivate();
 				return null;
 		}

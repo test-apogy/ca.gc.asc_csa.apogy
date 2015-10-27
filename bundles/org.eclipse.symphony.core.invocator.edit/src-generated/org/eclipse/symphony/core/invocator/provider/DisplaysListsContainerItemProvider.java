@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.invocator.DisplaysListsContainer;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.DisplaysListsContainer} object.
@@ -65,7 +65,7 @@ public class DisplaysListsContainerItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.DISPLAYS_LISTS_CONTAINER__DISPLAYS);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.DISPLAYS_LISTS_CONTAINER__DISPLAYS);
 		}
 		return childrenFeatures;
 	}
@@ -121,7 +121,7 @@ public class DisplaysListsContainerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DisplaysListsContainer.class)) {
-			case EMFEcoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
+			case Symphony__CoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -142,8 +142,8 @@ public class DisplaysListsContainerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.DISPLAYS_LISTS_CONTAINER__DISPLAYS,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createDisplaysList()));
+				(Symphony__CoreInvocatorPackage.Literals.DISPLAYS_LISTS_CONTAINER__DISPLAYS,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createDisplaysList()));
 	}
 
 }

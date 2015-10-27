@@ -21,7 +21,7 @@ package org.eclipse.symphony.common.topology.addons.dynamics;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry#getLength <em>Length</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCylinderGeometry()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getCylinderGeometry()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface CylinderGeometry extends Geometry {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCylinderGeometry_Radius()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getCylinderGeometry_Radius()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface CylinderGeometry extends Geometry {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Length</em>' attribute.
 	 * @see #setLength(double)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCylinderGeometry_Length()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getCylinderGeometry_Length()
 	 * @model unique="false"
 	 * @generated
 	 */

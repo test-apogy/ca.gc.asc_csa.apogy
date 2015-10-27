@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.symphony.examples.rover.symphony.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.examples.rover.symphony.provider.SymphonyExampleRoverEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.examples.rover.symphony.provider.Symphony__ExamplesRoverSymphonyEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

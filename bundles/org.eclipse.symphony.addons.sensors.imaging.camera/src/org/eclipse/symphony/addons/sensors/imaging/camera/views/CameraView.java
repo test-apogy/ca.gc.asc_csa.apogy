@@ -21,7 +21,7 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.composites.CameraViewC
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.IViewSite;
@@ -257,7 +257,7 @@ public class CameraView extends AbstractView implements ISelectionListener
 					{
 						int featureId = msg.getFeatureID(EMFEcoreInvocatorFacade.class);
 						
-						if(featureId == EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
+						if(featureId == Symphony__CoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
 						{
 							// Tries to update the CameraViewConfiguration being displayed.
 							setCameraViewConfiguration(CameraViewUtilities.INSTANCE.getActiveCameraViewConfiguration(cameraViewConfigurationId));

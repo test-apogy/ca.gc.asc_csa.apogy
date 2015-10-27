@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -110,7 +110,7 @@ public class EarthViewConfigurationImpl extends MinimalEObjectImpl.Container imp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentUIPackage.Literals.EARTH_VIEW_CONFIGURATION;
+		return Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION;
 	}
 
 	/**
@@ -131,7 +131,7 @@ public class EarthViewConfigurationImpl extends MinimalEObjectImpl.Container imp
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__NAME, oldName, name));
 	}
 
 	/**
@@ -152,7 +152,7 @@ public class EarthViewConfigurationImpl extends MinimalEObjectImpl.Container imp
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -162,7 +162,7 @@ public class EarthViewConfigurationImpl extends MinimalEObjectImpl.Container imp
 	 */
 	public EList<AbstractWorldWindLayer> getLayers() {
 		if (layers == null) {
-			layers = new EObjectContainmentEList<AbstractWorldWindLayer>(AbstractWorldWindLayer.class, this, SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS);
+			layers = new EObjectContainmentEList<AbstractWorldWindLayer>(AbstractWorldWindLayer.class, this, Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS);
 		}
 		return layers;
 	}
@@ -175,7 +175,7 @@ public class EarthViewConfigurationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
 				return ((InternalEList<?>)getLayers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -189,11 +189,11 @@ public class EarthViewConfigurationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__NAME:
 				return getName();
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION:
 				return getDescription();
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
 				return getLayers();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -208,13 +208,13 @@ public class EarthViewConfigurationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
 				getLayers().clear();
 				getLayers().addAll((Collection<? extends AbstractWorldWindLayer>)newValue);
 				return;
@@ -230,13 +230,13 @@ public class EarthViewConfigurationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
 				getLayers().clear();
 				return;
 		}
@@ -251,11 +251,11 @@ public class EarthViewConfigurationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
 				return layers != null && !layers.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -270,7 +270,7 @@ public class EarthViewConfigurationImpl extends MinimalEObjectImpl.Container imp
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -286,7 +286,7 @@ public class EarthViewConfigurationImpl extends MinimalEObjectImpl.Container imp
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -325,7 +325,7 @@ public class EarthViewConfigurationImpl extends MinimalEObjectImpl.Container imp
 						int featureId = msg.getFeatureID(EarthViewConfiguration.class);
 						switch (featureId) 
 						{
-							case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
+							case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
 								int eventType = msg.getEventType();
 								switch (eventType) 
 								{

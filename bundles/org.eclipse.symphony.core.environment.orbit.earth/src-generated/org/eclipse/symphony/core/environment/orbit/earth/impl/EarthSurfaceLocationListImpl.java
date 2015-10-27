@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocationList;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -102,7 +102,7 @@ public class EarthSurfaceLocationListImpl extends MinimalEObjectImpl.Container i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_SURFACE_LOCATION_LIST;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION_LIST;
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class EarthSurfaceLocationListImpl extends MinimalEObjectImpl.Container i
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__NAME, oldName, name));
 	}
 
 	/**
@@ -144,7 +144,7 @@ public class EarthSurfaceLocationListImpl extends MinimalEObjectImpl.Container i
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class EarthSurfaceLocationListImpl extends MinimalEObjectImpl.Container i
 	 */
 	public EList<EarthSurfaceLocation> getEarthSurfaceLocations() {
 		if (earthSurfaceLocations == null) {
-			earthSurfaceLocations = new EObjectContainmentEList<EarthSurfaceLocation>(EarthSurfaceLocation.class, this, SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS);
+			earthSurfaceLocations = new EObjectContainmentEList<EarthSurfaceLocation>(EarthSurfaceLocation.class, this, Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS);
 		}
 		return earthSurfaceLocations;
 	}
@@ -167,7 +167,7 @@ public class EarthSurfaceLocationListImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS:
 				return ((InternalEList<?>)getEarthSurfaceLocations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -181,11 +181,11 @@ public class EarthSurfaceLocationListImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__NAME:
 				return getName();
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION:
 				return getDescription();
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS:
 				return getEarthSurfaceLocations();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -200,13 +200,13 @@ public class EarthSurfaceLocationListImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS:
 				getEarthSurfaceLocations().clear();
 				getEarthSurfaceLocations().addAll((Collection<? extends EarthSurfaceLocation>)newValue);
 				return;
@@ -222,13 +222,13 @@ public class EarthSurfaceLocationListImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS:
 				getEarthSurfaceLocations().clear();
 				return;
 		}
@@ -243,11 +243,11 @@ public class EarthSurfaceLocationListImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS:
 				return earthSurfaceLocations != null && !earthSurfaceLocations.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -262,7 +262,7 @@ public class EarthSurfaceLocationListImpl extends MinimalEObjectImpl.Container i
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -278,7 +278,7 @@ public class EarthSurfaceLocationListImpl extends MinimalEObjectImpl.Container i
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION;
 				default: return -1;
 			}
 		}

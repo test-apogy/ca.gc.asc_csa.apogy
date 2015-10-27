@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.topology.TransformNode;
  *   <li>{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode#getSkyTransformNode <em>Sky Transform Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEarthSurfaceWorksiteNode()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSurfaceWorksiteNode()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface EarthSurfaceWorksiteNode extends SurfaceWorksiteNode
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sky Transform Node</em>' reference.
 	 * @see #setSkyTransformNode(TransformNode)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEarthSurfaceWorksiteNode_SkyTransformNode()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSurfaceWorksiteNode_SkyTransformNode()
 	 * @model transient="true"
 	 * @generated
 	 */

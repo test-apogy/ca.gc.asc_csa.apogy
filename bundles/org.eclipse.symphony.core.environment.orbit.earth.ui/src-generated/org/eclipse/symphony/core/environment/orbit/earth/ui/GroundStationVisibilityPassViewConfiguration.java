@@ -23,7 +23,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getGroundStationVisibilityPassViewConfiguration()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getGroundStationVisibilityPassViewConfiguration()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface GroundStationVisibilityPassViewConfiguration extends Named, Des
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Configurations List</em>' container reference.
 	 * @see #setConfigurationsList(GroundStationVisibilityPassViewConfigurationList)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getGroundStationVisibilityPassViewConfiguration_ConfigurationsList()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getGroundStationVisibilityPassViewConfiguration_ConfigurationsList()
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationVisibilityPassViewConfigurationList#getConfigurations
 	 * @model opposite="configurations" transient="false"
 	 * @generated
@@ -66,7 +66,7 @@ public interface GroundStationVisibilityPassViewConfiguration extends Named, Des
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Orbit Models</em>' reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getGroundStationVisibilityPassViewConfiguration_OrbitModels()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getGroundStationVisibilityPassViewConfiguration_OrbitModels()
 	 * @model
 	 * @generated
 	 */
@@ -82,7 +82,7 @@ public interface GroundStationVisibilityPassViewConfiguration extends Named, Des
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ground Stations</em>' reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getGroundStationVisibilityPassViewConfiguration_GroundStations()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getGroundStationVisibilityPassViewConfiguration_GroundStations()
 	 * @model
 	 * @generated
 	 */

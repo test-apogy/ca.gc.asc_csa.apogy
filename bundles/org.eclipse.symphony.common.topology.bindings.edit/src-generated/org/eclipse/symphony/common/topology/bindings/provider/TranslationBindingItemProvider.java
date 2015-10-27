@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
 
 /**
@@ -64,7 +64,7 @@ public class TranslationBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TranslationBinding_translationAxis_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TranslationBinding_translationAxis_feature", "_UI_TranslationBinding_type"),
-				 TopologyBindingsPackage.Literals.TRANSLATION_BINDING__TRANSLATION_AXIS,
+				 Symphony__CommonTopologyBindingsPackage.Literals.TRANSLATION_BINDING__TRANSLATION_AXIS,
 				 true,
 				 false,
 				 false,
@@ -86,7 +86,7 @@ public class TranslationBindingItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TranslationBinding_positionNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TranslationBinding_positionNode_feature", "_UI_TranslationBinding_type"),
-				 TopologyBindingsPackage.Literals.TRANSLATION_BINDING__POSITION_NODE,
+				 Symphony__CommonTopologyBindingsPackage.Literals.TRANSLATION_BINDING__POSITION_NODE,
 				 true,
 				 false,
 				 true,
@@ -149,7 +149,7 @@ public class TranslationBindingItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TranslationBinding.class)) {
-			case TopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
+			case Symphony__CommonTopologyBindingsPackage.TRANSLATION_BINDING__TRANSLATION_AXIS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.programs.controllers.CenteredParabolicInputConditioning;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.CenteredParabolicInputConditioning} object.
@@ -68,7 +68,7 @@ public class CenteredParabolicInputConditioningItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CenteredParabolicInputConditioning_deadBand_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CenteredParabolicInputConditioning_deadBand_feature", "_UI_CenteredParabolicInputConditioning_type"),
-				 EMFEcoreControllersPackage.Literals.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND,
+				 Symphony__CoreProgramsControllersPackage.Literals.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND,
 				 true,
 				 false,
 				 false,
@@ -120,7 +120,7 @@ public class CenteredParabolicInputConditioningItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CenteredParabolicInputConditioning.class)) {
-			case EMFEcoreControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND:
+			case Symphony__CoreProgramsControllersPackage.CENTERED_PARABOLIC_INPUT_CONDITIONING__DEAD_BAND:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

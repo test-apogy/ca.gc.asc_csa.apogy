@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.SatelliteCommand;
 import org.eclipse.symphony.examples.satellite.SatelliteCommandList;
 
@@ -56,7 +56,7 @@ public class SatelliteCommandListImpl extends MinimalEObjectImpl.Container imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleSatellitePackage.Literals.SATELLITE_COMMAND_LIST;
+		return Symphony__ExamplesSatellitePackage.Literals.SATELLITE_COMMAND_LIST;
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class SatelliteCommandListImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<SatelliteCommand> getCommands() {
 		if (commands == null) {
-			commands = new EObjectContainmentEList<SatelliteCommand>(SatelliteCommand.class, this, EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_LIST__COMMANDS);
+			commands = new EObjectContainmentEList<SatelliteCommand>(SatelliteCommand.class, this, Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_LIST__COMMANDS);
 		}
 		return commands;
 	}
@@ -79,7 +79,7 @@ public class SatelliteCommandListImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_LIST__COMMANDS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_LIST__COMMANDS:
 				return ((InternalEList<?>)getCommands()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -93,7 +93,7 @@ public class SatelliteCommandListImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_LIST__COMMANDS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_LIST__COMMANDS:
 				return getCommands();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class SatelliteCommandListImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_LIST__COMMANDS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_LIST__COMMANDS:
 				getCommands().clear();
 				getCommands().addAll((Collection<? extends SatelliteCommand>)newValue);
 				return;
@@ -124,7 +124,7 @@ public class SatelliteCommandListImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_LIST__COMMANDS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_LIST__COMMANDS:
 				getCommands().clear();
 				return;
 		}
@@ -139,7 +139,7 @@ public class SatelliteCommandListImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_LIST__COMMANDS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_LIST__COMMANDS:
 				return commands != null && !commands.isEmpty();
 		}
 		return super.eIsSet(featureID);

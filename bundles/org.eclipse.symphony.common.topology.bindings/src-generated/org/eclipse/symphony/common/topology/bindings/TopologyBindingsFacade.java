@@ -15,12 +15,11 @@ import org.eclipse.symphony.common.topology.bindings.impl.TopologyBindingsFacade
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
- * Utility Binding facade.
+ * Utility Binding Facade.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getTopologyBindingsFacade()
+ * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getTopologyBindingsFacade()
  * @model
  * @generated
  */
@@ -32,7 +31,6 @@ public interface TopologyBindingsFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Convenience method that copies a Binding.
 	 * @param originalBinding The original binding to copy.
 	 * @param originalToCopyNodeMap Maps original Nodes to copied ones.

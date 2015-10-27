@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
 import org.eclipse.symphony.common.topology.bindings.BindingsList;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -59,7 +59,7 @@ public class BindingsListImpl extends MinimalEObjectImpl.Container implements Bi
   @Override
   protected EClass eStaticClass()
   {
-		return TopologyBindingsPackage.Literals.BINDINGS_LIST;
+		return Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_LIST;
 	}
 
   /**
@@ -70,7 +70,7 @@ public class BindingsListImpl extends MinimalEObjectImpl.Container implements Bi
   public EList<AbstractTopologyBinding> getBindings()
   {
 		if (bindings == null) {
-			bindings = new EObjectContainmentEList<AbstractTopologyBinding>(AbstractTopologyBinding.class, this, TopologyBindingsPackage.BINDINGS_LIST__BINDINGS);
+			bindings = new EObjectContainmentEList<AbstractTopologyBinding>(AbstractTopologyBinding.class, this, Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS);
 		}
 		return bindings;
 	}
@@ -84,7 +84,7 @@ public class BindingsListImpl extends MinimalEObjectImpl.Container implements Bi
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
+			case Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
 				return ((InternalEList<?>)getBindings()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -99,7 +99,7 @@ public class BindingsListImpl extends MinimalEObjectImpl.Container implements Bi
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
+			case Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
 				return getBindings();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -115,7 +115,7 @@ public class BindingsListImpl extends MinimalEObjectImpl.Container implements Bi
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
+			case Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
 				getBindings().clear();
 				getBindings().addAll((Collection<? extends AbstractTopologyBinding>)newValue);
 				return;
@@ -132,7 +132,7 @@ public class BindingsListImpl extends MinimalEObjectImpl.Container implements Bi
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
+			case Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
 				getBindings().clear();
 				return;
 		}
@@ -148,7 +148,7 @@ public class BindingsListImpl extends MinimalEObjectImpl.Container implements Bi
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
+			case Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST__BINDINGS:
 				return bindings != null && !bindings.isEmpty();
 		}
 		return super.eIsSet(featureID);

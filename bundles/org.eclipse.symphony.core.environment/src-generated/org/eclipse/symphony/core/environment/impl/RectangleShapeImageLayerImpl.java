@@ -22,8 +22,8 @@ import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.environment.RectangleShapeImageLayer;
 import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -117,7 +117,7 @@ public class RectangleShapeImageLayerImpl extends AbstractShapeImageLayerImpl im
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.RECTANGLE_SHAPE_IMAGE_LAYER;
+		return Symphony__CoreEnvironmentPackage.Literals.RECTANGLE_SHAPE_IMAGE_LAYER;
 	}
 
 	/**
@@ -138,7 +138,7 @@ public class RectangleShapeImageLayerImpl extends AbstractShapeImageLayerImpl im
 		double oldRectangleWidth = rectangleWidth;
 		rectangleWidth = newRectangleWidth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_WIDTH, oldRectangleWidth, rectangleWidth));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_WIDTH, oldRectangleWidth, rectangleWidth));
 	}
 
 	/**
@@ -159,7 +159,7 @@ public class RectangleShapeImageLayerImpl extends AbstractShapeImageLayerImpl im
 		double oldRectangleHeight = rectangleHeight;
 		rectangleHeight = newRectangleHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_HEIGHT, oldRectangleHeight, rectangleHeight));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_HEIGHT, oldRectangleHeight, rectangleHeight));
 	}
 
 	/**
@@ -180,7 +180,7 @@ public class RectangleShapeImageLayerImpl extends AbstractShapeImageLayerImpl im
 		boolean oldShowCenterLines = showCenterLines;
 		showCenterLines = newShowCenterLines;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES, oldShowCenterLines, showCenterLines));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES, oldShowCenterLines, showCenterLines));
 	}
 
 	/**
@@ -191,11 +191,11 @@ public class RectangleShapeImageLayerImpl extends AbstractShapeImageLayerImpl im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_WIDTH:
+			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_WIDTH:
 				return getRectangleWidth();
-			case SymphonyEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_HEIGHT:
+			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_HEIGHT:
 				return getRectangleHeight();
-			case SymphonyEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
+			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
 				return isShowCenterLines();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -209,13 +209,13 @@ public class RectangleShapeImageLayerImpl extends AbstractShapeImageLayerImpl im
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_WIDTH:
+			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_WIDTH:
 				setRectangleWidth((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_HEIGHT:
+			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_HEIGHT:
 				setRectangleHeight((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
+			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
 				setShowCenterLines((Boolean)newValue);
 				return;
 		}
@@ -230,13 +230,13 @@ public class RectangleShapeImageLayerImpl extends AbstractShapeImageLayerImpl im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_WIDTH:
+			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_WIDTH:
 				setRectangleWidth(RECTANGLE_WIDTH_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_HEIGHT:
+			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_HEIGHT:
 				setRectangleHeight(RECTANGLE_HEIGHT_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
+			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
 				setShowCenterLines(SHOW_CENTER_LINES_EDEFAULT);
 				return;
 		}
@@ -251,11 +251,11 @@ public class RectangleShapeImageLayerImpl extends AbstractShapeImageLayerImpl im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_WIDTH:
+			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_WIDTH:
 				return rectangleWidth != RECTANGLE_WIDTH_EDEFAULT;
-			case SymphonyEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_HEIGHT:
+			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__RECTANGLE_HEIGHT:
 				return rectangleHeight != RECTANGLE_HEIGHT_EDEFAULT;
-			case SymphonyEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
+			case Symphony__CoreEnvironmentPackage.RECTANGLE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
 				return showCenterLines != SHOW_CENTER_LINES_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -372,7 +372,7 @@ public class RectangleShapeImageLayerImpl extends AbstractShapeImageLayerImpl im
 	@Override
 	public RectangularRegion getImageMapLayerRegion() 
 	{
-		RectangularRegion rectangularRegion = SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion();
+		RectangularRegion rectangularRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
  		rectangularRegion.setTransformation(MathFacade.INSTANCE.createIdentityMatrix4x4());
  		
  		if(getMap() != null && getMap().getTransformation() != null)

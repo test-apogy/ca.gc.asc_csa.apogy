@@ -25,7 +25,7 @@ import org.eclipse.symphony.core.invocator.Argument;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument#getValueSource <em>Value Source</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getBindedEDataTypeArgument()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getBindedEDataTypeArgument()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface BindedEDataTypeArgument extends Argument
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value Source</em>' containment reference.
 	 * @see #setValueSource(ValueSource)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getBindedEDataTypeArgument_ValueSource()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getBindedEDataTypeArgument_ValueSource()
 	 * @see org.eclipse.symphony.core.programs.controllers.ValueSource#getBindedEDataTypeArgument
 	 * @model opposite="bindedEDataTypeArgument" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='None'"

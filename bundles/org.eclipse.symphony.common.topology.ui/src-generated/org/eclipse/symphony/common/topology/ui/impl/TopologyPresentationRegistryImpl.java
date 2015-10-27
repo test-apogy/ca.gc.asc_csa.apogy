@@ -26,10 +26,10 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.Activator;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 import org.eclipse.symphony.common.topology.ui.internal.MultiNodeListener;
 
 /**
@@ -87,7 +87,7 @@ public class TopologyPresentationRegistryImpl extends MinimalEObjectImpl.Contain
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY;
+		return Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY;
 	}
 
 	/**
@@ -97,7 +97,7 @@ public class TopologyPresentationRegistryImpl extends MinimalEObjectImpl.Contain
 	 */
 	public EList<TopologyPresentationSet> getTopologyPresentationSetList() {
 		if (topologyPresentationSetList == null) {
-			topologyPresentationSetList = new EObjectContainmentWithInverseEList<TopologyPresentationSet>(TopologyPresentationSet.class, this, TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST, TopologyUIPackage.TOPOLOGY_PRESENTATION_SET__TOPOLOGY_PRESENTATION_REGISTRY);
+			topologyPresentationSetList = new EObjectContainmentWithInverseEList<TopologyPresentationSet>(TopologyPresentationSet.class, this, Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST, Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_SET__TOPOLOGY_PRESENTATION_REGISTRY);
 		}
 		return topologyPresentationSetList;
 	}
@@ -109,7 +109,7 @@ public class TopologyPresentationRegistryImpl extends MinimalEObjectImpl.Contain
 	 */
 	public EList<NodePresentation> getNodePresentationList() {
 		if (nodePresentationList == null) {
-			nodePresentationList = new EObjectContainmentEList<NodePresentation>(NodePresentation.class, this, TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST);
+			nodePresentationList = new EObjectContainmentEList<NodePresentation>(NodePresentation.class, this, Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST);
 		}
 		return nodePresentationList;
 	}
@@ -121,7 +121,7 @@ public class TopologyPresentationRegistryImpl extends MinimalEObjectImpl.Contain
 	 */
 	public TopologyPresentationSet createTopologyPresentationSet(Node topologyRoot) 
 	{
-		final TopologyPresentationSet topologyPresentationSet = TopologyUIFactory.eINSTANCE.createTopologyPresentationSet();
+		final TopologyPresentationSet topologyPresentationSet = Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyPresentationSet();
 		
 		// Visit the topology spanned by the topologyRoot.
 		AbstractNodeVisitor visitor = new AbstractNodeVisitor() 
@@ -213,7 +213,7 @@ public class TopologyPresentationRegistryImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTopologyPresentationSetList()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -227,9 +227,9 @@ public class TopologyPresentationRegistryImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
 				return ((InternalEList<?>)getTopologyPresentationSetList()).basicRemove(otherEnd, msgs);
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST:
 				return ((InternalEList<?>)getNodePresentationList()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -243,9 +243,9 @@ public class TopologyPresentationRegistryImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
 				return getTopologyPresentationSetList();
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST:
 				return getNodePresentationList();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -260,11 +260,11 @@ public class TopologyPresentationRegistryImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
 				getTopologyPresentationSetList().clear();
 				getTopologyPresentationSetList().addAll((Collection<? extends TopologyPresentationSet>)newValue);
 				return;
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST:
 				getNodePresentationList().clear();
 				getNodePresentationList().addAll((Collection<? extends NodePresentation>)newValue);
 				return;
@@ -280,10 +280,10 @@ public class TopologyPresentationRegistryImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
 				getTopologyPresentationSetList().clear();
 				return;
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST:
 				getNodePresentationList().clear();
 				return;
 		}
@@ -298,9 +298,9 @@ public class TopologyPresentationRegistryImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
 				return topologyPresentationSetList != null && !topologyPresentationSetList.isEmpty();
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST:
 				return nodePresentationList != null && !nodePresentationList.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -314,12 +314,12 @@ public class TopologyPresentationRegistryImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY___CREATE_TOPOLOGY_PRESENTATION_SET__NODE:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY___CREATE_TOPOLOGY_PRESENTATION_SET__NODE:
 				return createTopologyPresentationSet((Node)arguments.get(0));
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY___RELEASE__TOPOLOGYPRESENTATIONSET:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY___RELEASE__TOPOLOGYPRESENTATIONSET:
 				release((TopologyPresentationSet)arguments.get(0));
 				return null;
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY___GET_PRESENTATION_NODE__NODE:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY___GET_PRESENTATION_NODE__NODE:
 				return getPresentationNode((Node)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

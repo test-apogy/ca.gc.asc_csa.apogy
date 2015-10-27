@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.EllipseShapeImageLayer;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.EllipseShapeImageLayer} object.
@@ -69,7 +69,7 @@ public class EllipseShapeImageLayerItemProvider extends AbstractShapeImageLayerI
 				 getResourceLocator(),
 				 getString("_UI_EllipseShapeImageLayer_ellipseWidth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EllipseShapeImageLayer_ellipseWidth_feature", "_UI_EllipseShapeImageLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_WIDTH,
+				 Symphony__CoreEnvironmentPackage.Literals.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_WIDTH,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class EllipseShapeImageLayerItemProvider extends AbstractShapeImageLayerI
 				 getResourceLocator(),
 				 getString("_UI_EllipseShapeImageLayer_ellipseHeight_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EllipseShapeImageLayer_ellipseHeight_feature", "_UI_EllipseShapeImageLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_HEIGHT,
+				 Symphony__CoreEnvironmentPackage.Literals.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -113,7 +113,7 @@ public class EllipseShapeImageLayerItemProvider extends AbstractShapeImageLayerI
 				 getResourceLocator(),
 				 getString("_UI_EllipseShapeImageLayer_showCenterLines_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EllipseShapeImageLayer_showCenterLines_feature", "_UI_EllipseShapeImageLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.ELLIPSE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES,
+				 Symphony__CoreEnvironmentPackage.Literals.ELLIPSE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES,
 				 true,
 				 false,
 				 false,
@@ -169,9 +169,9 @@ public class EllipseShapeImageLayerItemProvider extends AbstractShapeImageLayerI
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EllipseShapeImageLayer.class)) {
-			case SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_WIDTH:
-			case SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_HEIGHT:
-			case SymphonyEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
+			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_WIDTH:
+			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__ELLIPSE_HEIGHT:
+			case Symphony__CoreEnvironmentPackage.ELLIPSE_SHAPE_IMAGE_LAYER__SHOW_CENTER_LINES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -202,8 +202,8 @@ public class EllipseShapeImageLayerItemProvider extends AbstractShapeImageLayerI
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
 
 		if (qualify) {
 			return getString

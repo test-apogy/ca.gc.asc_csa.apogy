@@ -10,7 +10,7 @@ package org.eclipse.symphony.core.invocator;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A value of a basic type (i.e. no an EObject).
+ * A value of a basic type (i.e. not an EObject).
  * <!-- end-model-doc -->
  *
  * <p>
@@ -20,7 +20,7 @@ package org.eclipse.symphony.core.invocator;
  *   <li>{@link org.eclipse.symphony.core.invocator.AttributeResultValue#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAttributeResultValue()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAttributeResultValue()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface AttributeResultValue extends AbstractResultValue
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Value</em>' containment reference.
 	 * @see #setValue(AttributeValue)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAttributeResultValue_Value()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAttributeResultValue_Value()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' children='true' createChild='false'"
 	 * @generated

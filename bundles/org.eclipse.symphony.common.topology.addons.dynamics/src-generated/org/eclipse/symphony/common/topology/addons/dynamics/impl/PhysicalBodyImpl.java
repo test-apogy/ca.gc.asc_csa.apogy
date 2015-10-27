@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.KinematicState;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalProperties;
 import org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
 import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 
 /**
@@ -119,7 +119,7 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyDynamicsPackage.Literals.PHYSICAL_BODY;
+		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.PHYSICAL_BODY;
 	}
 
 	/**
@@ -140,7 +140,7 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 		PhysicalProperties oldPhysicalProperties = physicalProperties;
 		physicalProperties = newPhysicalProperties;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES, oldPhysicalProperties, newPhysicalProperties);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES, oldPhysicalProperties, newPhysicalProperties);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -155,14 +155,14 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 		if (newPhysicalProperties != physicalProperties) {
 			NotificationChain msgs = null;
 			if (physicalProperties != null)
-				msgs = ((InternalEObject)physicalProperties).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES, null, msgs);
+				msgs = ((InternalEObject)physicalProperties).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES, null, msgs);
 			if (newPhysicalProperties != null)
-				msgs = ((InternalEObject)newPhysicalProperties).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES, null, msgs);
+				msgs = ((InternalEObject)newPhysicalProperties).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES, null, msgs);
 			msgs = basicSetPhysicalProperties(newPhysicalProperties, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES, newPhysicalProperties, newPhysicalProperties));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES, newPhysicalProperties, newPhysicalProperties));
 	}
 
 	/**
@@ -172,7 +172,7 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 	 */
 	public EList<ConstraintAttachmentPoint> getConstraintAttachmentPoints() {
 		if (constraintAttachmentPoints == null) {
-			constraintAttachmentPoints = new EObjectWithInverseResolvingEList<ConstraintAttachmentPoint>(ConstraintAttachmentPoint.class, this, Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS, Symphony__CommonTopologyDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY);
+			constraintAttachmentPoints = new EObjectWithInverseResolvingEList<ConstraintAttachmentPoint>(ConstraintAttachmentPoint.class, this, Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS, Symphony__CommonTopologyAddonsDynamicsPackage.CONSTRAINT_ATTACHMENT_POINT__PHYSICAL_BODY);
 		}
 		return constraintAttachmentPoints;
 	}
@@ -184,7 +184,7 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 	 */
 	public EList<AbstractPhysicalBodySimulationProperties> getSimulationProperties() {
 		if (simulationProperties == null) {
-			simulationProperties = new EObjectContainmentEList<AbstractPhysicalBodySimulationProperties>(AbstractPhysicalBodySimulationProperties.class, this, Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES);
+			simulationProperties = new EObjectContainmentEList<AbstractPhysicalBodySimulationProperties>(AbstractPhysicalBodySimulationProperties.class, this, Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES);
 		}
 		return simulationProperties;
 	}
@@ -207,7 +207,7 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 		KinematicState oldCenterOfMassKinematicState = centerOfMassKinematicState;
 		centerOfMassKinematicState = newCenterOfMassKinematicState;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE, oldCenterOfMassKinematicState, newCenterOfMassKinematicState);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE, oldCenterOfMassKinematicState, newCenterOfMassKinematicState);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -222,14 +222,14 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 		if (newCenterOfMassKinematicState != centerOfMassKinematicState) {
 			NotificationChain msgs = null;
 			if (centerOfMassKinematicState != null)
-				msgs = ((InternalEObject)centerOfMassKinematicState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE, null, msgs);
+				msgs = ((InternalEObject)centerOfMassKinematicState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE, null, msgs);
 			if (newCenterOfMassKinematicState != null)
-				msgs = ((InternalEObject)newCenterOfMassKinematicState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE, null, msgs);
+				msgs = ((InternalEObject)newCenterOfMassKinematicState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE, null, msgs);
 			msgs = basicSetCenterOfMassKinematicState(newCenterOfMassKinematicState, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE, newCenterOfMassKinematicState, newCenterOfMassKinematicState));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE, newCenterOfMassKinematicState, newCenterOfMassKinematicState));
 	}
 
 	/**
@@ -239,7 +239,7 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 	 */
 	public EList<PointOfInterest> getPointsOfInterest() {
 		if (pointsOfInterest == null) {
-			pointsOfInterest = new EObjectContainmentEList<PointOfInterest>(PointOfInterest.class, this, Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST);
+			pointsOfInterest = new EObjectContainmentEList<PointOfInterest>(PointOfInterest.class, this, Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST);
 		}
 		return pointsOfInterest;
 	}
@@ -251,7 +251,7 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 	 */
 	public EList<CollisionGeometry> getCollisionGeometry() {
 		if (collisionGeometry == null) {
-			collisionGeometry = new EObjectContainmentEList<CollisionGeometry>(CollisionGeometry.class, this, Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY);
+			collisionGeometry = new EObjectContainmentEList<CollisionGeometry>(CollisionGeometry.class, this, Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY);
 		}
 		return collisionGeometry;
 	}
@@ -265,7 +265,7 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getConstraintAttachmentPoints()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -279,17 +279,17 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES:
 				return basicSetPhysicalProperties(null, msgs);
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS:
 				return ((InternalEList<?>)getConstraintAttachmentPoints()).basicRemove(otherEnd, msgs);
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES:
 				return ((InternalEList<?>)getSimulationProperties()).basicRemove(otherEnd, msgs);
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE:
 				return basicSetCenterOfMassKinematicState(null, msgs);
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST:
 				return ((InternalEList<?>)getPointsOfInterest()).basicRemove(otherEnd, msgs);
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY:
 				return ((InternalEList<?>)getCollisionGeometry()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -303,17 +303,17 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES:
 				return getPhysicalProperties();
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS:
 				return getConstraintAttachmentPoints();
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES:
 				return getSimulationProperties();
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE:
 				return getCenterOfMassKinematicState();
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST:
 				return getPointsOfInterest();
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY:
 				return getCollisionGeometry();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -328,25 +328,25 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES:
 				setPhysicalProperties((PhysicalProperties)newValue);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS:
 				getConstraintAttachmentPoints().clear();
 				getConstraintAttachmentPoints().addAll((Collection<? extends ConstraintAttachmentPoint>)newValue);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES:
 				getSimulationProperties().clear();
 				getSimulationProperties().addAll((Collection<? extends AbstractPhysicalBodySimulationProperties>)newValue);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE:
 				setCenterOfMassKinematicState((KinematicState)newValue);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST:
 				getPointsOfInterest().clear();
 				getPointsOfInterest().addAll((Collection<? extends PointOfInterest>)newValue);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY:
 				getCollisionGeometry().clear();
 				getCollisionGeometry().addAll((Collection<? extends CollisionGeometry>)newValue);
 				return;
@@ -362,22 +362,22 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES:
 				setPhysicalProperties((PhysicalProperties)null);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS:
 				getConstraintAttachmentPoints().clear();
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES:
 				getSimulationProperties().clear();
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE:
 				setCenterOfMassKinematicState((KinematicState)null);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST:
 				getPointsOfInterest().clear();
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY:
 				getCollisionGeometry().clear();
 				return;
 		}
@@ -392,17 +392,17 @@ public class PhysicalBodyImpl extends AggregateGroupNodeImpl implements Physical
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__PHYSICAL_PROPERTIES:
 				return physicalProperties != null;
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CONSTRAINT_ATTACHMENT_POINTS:
 				return constraintAttachmentPoints != null && !constraintAttachmentPoints.isEmpty();
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__SIMULATION_PROPERTIES:
 				return simulationProperties != null && !simulationProperties.isEmpty();
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__CENTER_OF_MASS_KINEMATIC_STATE:
 				return centerOfMassKinematicState != null;
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__POINTS_OF_INTEREST:
 				return pointsOfInterest != null && !pointsOfInterest.isEmpty();
-			case Symphony__CommonTopologyDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY__COLLISION_GEOMETRY:
 				return collisionGeometry != null && !collisionGeometry.isEmpty();
 		}
 		return super.eIsSet(featureID);

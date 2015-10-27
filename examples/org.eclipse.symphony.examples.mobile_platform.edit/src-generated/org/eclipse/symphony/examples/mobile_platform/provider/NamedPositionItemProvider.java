@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage;
+import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
 import org.eclipse.symphony.examples.mobile_platform.NamedPosition;
 
 /**
@@ -67,7 +67,7 @@ extends PositionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NamedPosition_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NamedPosition_name_feature", "_UI_NamedPosition_type"),
-				 EMFEcoreExampleMobilePlatformPackage.Literals.NAMED_POSITION__NAME,
+				 Symphony__ExamplesMobilePlatformPackage.Literals.NAMED_POSITION__NAME,
 				 false,
 				 false,
 				 false,
@@ -135,7 +135,7 @@ extends PositionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(NamedPosition.class)) {
-			case EMFEcoreExampleMobilePlatformPackage.NAMED_POSITION__NAME:
+			case Symphony__ExamplesMobilePlatformPackage.NAMED_POSITION__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

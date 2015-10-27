@@ -13,7 +13,7 @@ import org.eclipse.symphony.core.environment.orbit.AbstractFrame;
 import org.eclipse.symphony.core.environment.orbit.PVCoordinatesProviderProvider;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftAttitude;
 import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedAttitudeProvider;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.orekit.attitudes.AttitudeProvider;
 
 /**
@@ -40,7 +40,7 @@ public abstract class OreKitBackedAttitudeProviderImpl extends MinimalEObjectImp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.ORE_KIT_BACKED_ATTITUDE_PROVIDER;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.ORE_KIT_BACKED_ATTITUDE_PROVIDER;
 	}
 
 	/**
@@ -73,9 +73,9 @@ public abstract class OreKitBackedAttitudeProviderImpl extends MinimalEObjectImp
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEarthOrbitEnvironmentPackage.ORE_KIT_BACKED_ATTITUDE_PROVIDER___GET_ORE_KIT_ATTITUDE_PROVIDER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_ATTITUDE_PROVIDER___GET_ORE_KIT_ATTITUDE_PROVIDER:
 				return getOreKitAttitudeProvider();
-			case SymphonyEarthOrbitEnvironmentPackage.ORE_KIT_BACKED_ATTITUDE_PROVIDER___GET_ATTITUDE__PVCOORDINATESPROVIDERPROVIDER_DATE_ABSTRACTFRAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_ATTITUDE_PROVIDER___GET_ATTITUDE__PVCOORDINATESPROVIDERPROVIDER_DATE_ABSTRACTFRAME:
 				return getAttitude((PVCoordinatesProviderProvider)arguments.get(0), (Date)arguments.get(1), (AbstractFrame)arguments.get(2));
 		}
 		return super.eInvoke(operationID, arguments);

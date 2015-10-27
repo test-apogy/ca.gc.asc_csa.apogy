@@ -14,7 +14,7 @@ package org.eclipse.symphony.core.environment;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshMapLayerNode()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshMapLayerNode()
  * @model
  * @generated
  */

@@ -12,11 +12,11 @@ import org.eclipse.symphony.common.emf.Named;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- *  A feature of interest.
+ * A feature of interest.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getFeatureOfInterest()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getFeatureOfInterest()
  * @model
  * @generated
  */

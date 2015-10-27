@@ -11,7 +11,7 @@
       <!-- @generated emf_ecore_examples_lander -->
       <package
             uri="org.eclipse.symphony.examples.lander"
-            class="org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage"
+            class="org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage"
             genModel="model/symphony_examples_lander.xcore"/>
    </extension>
 

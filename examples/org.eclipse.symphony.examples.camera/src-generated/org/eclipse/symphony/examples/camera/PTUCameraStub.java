@@ -17,7 +17,7 @@ package org.eclipse.symphony.examples.camera;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage#getPTUCameraStub()
+ * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage#getPTUCameraStub()
  * @model
  * @generated
  */

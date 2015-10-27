@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.invocator.impl.AbstractInitializationDataImpl;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.Satellite;
 import org.eclipse.symphony.examples.satellite.SatelliteInitializationData;
 
@@ -65,7 +65,7 @@ public class SatelliteInitializationDataImpl extends AbstractInitializationDataI
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleSatellitePackage.Literals.SATELLITE_INITIALIZATION_DATA;
+		return Symphony__ExamplesSatellitePackage.Literals.SATELLITE_INITIALIZATION_DATA;
 	}
 
 	/**
@@ -86,7 +86,7 @@ public class SatelliteInitializationDataImpl extends AbstractInitializationDataI
 		Satellite oldSatellite = satellite;
 		satellite = newSatellite;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE, oldSatellite, newSatellite);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE, oldSatellite, newSatellite);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -101,14 +101,14 @@ public class SatelliteInitializationDataImpl extends AbstractInitializationDataI
 		if (newSatellite != satellite) {
 			NotificationChain msgs = null;
 			if (satellite != null)
-				msgs = ((InternalEObject)satellite).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE, null, msgs);
+				msgs = ((InternalEObject)satellite).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE, null, msgs);
 			if (newSatellite != null)
-				msgs = ((InternalEObject)newSatellite).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE, null, msgs);
+				msgs = ((InternalEObject)newSatellite).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE, null, msgs);
 			msgs = basicSetSatellite(newSatellite, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE, newSatellite, newSatellite));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE, newSatellite, newSatellite));
 	}
 
 	/**
@@ -129,7 +129,7 @@ public class SatelliteInitializationDataImpl extends AbstractInitializationDataI
 		OrbitModel oldOrbitModel = orbitModel;
 		orbitModel = newOrbitModel;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL, oldOrbitModel, newOrbitModel);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL, oldOrbitModel, newOrbitModel);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -144,14 +144,14 @@ public class SatelliteInitializationDataImpl extends AbstractInitializationDataI
 		if (newOrbitModel != orbitModel) {
 			NotificationChain msgs = null;
 			if (orbitModel != null)
-				msgs = ((InternalEObject)orbitModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL, null, msgs);
+				msgs = ((InternalEObject)orbitModel).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL, null, msgs);
 			if (newOrbitModel != null)
-				msgs = ((InternalEObject)newOrbitModel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL, null, msgs);
+				msgs = ((InternalEObject)newOrbitModel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL, null, msgs);
 			msgs = basicSetOrbitModel(newOrbitModel, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL, newOrbitModel, newOrbitModel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL, newOrbitModel, newOrbitModel));
 	}
 
 	/**
@@ -162,9 +162,9 @@ public class SatelliteInitializationDataImpl extends AbstractInitializationDataI
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE:
 				return basicSetSatellite(null, msgs);
-			case EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL:
 				return basicSetOrbitModel(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -178,9 +178,9 @@ public class SatelliteInitializationDataImpl extends AbstractInitializationDataI
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE:
 				return getSatellite();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL:
 				return getOrbitModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -194,10 +194,10 @@ public class SatelliteInitializationDataImpl extends AbstractInitializationDataI
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE:
 				setSatellite((Satellite)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)newValue);
 				return;
 		}
@@ -212,10 +212,10 @@ public class SatelliteInitializationDataImpl extends AbstractInitializationDataI
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE:
 				setSatellite((Satellite)null);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)null);
 				return;
 		}
@@ -230,9 +230,9 @@ public class SatelliteInitializationDataImpl extends AbstractInitializationDataI
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__SATELLITE:
 				return satellite != null;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL:
 				return orbitModel != null;
 		}
 		return super.eIsSet(featureID);

@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.DataProductsListsContainer#getDataProductsList <em>Data Products List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getDataProductsListsContainer()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getDataProductsListsContainer()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface DataProductsListsContainer extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Invocator Session</em>' container reference.
 	 * @see #setInvocatorSession(InvocatorSession)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getDataProductsListsContainer_InvocatorSession()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getDataProductsListsContainer_InvocatorSession()
 	 * @see org.eclipse.symphony.core.invocator.InvocatorSession#getDataProductsListContainer
 	 * @model opposite="dataProductsListContainer" transient="false"
 	 * @generated
@@ -71,7 +71,7 @@ public interface DataProductsListsContainer extends Named, Described
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Products List</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getDataProductsListsContainer_DataProductsList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getDataProductsListsContainer_DataProductsList()
 	 * @see org.eclipse.symphony.core.invocator.DataProductsList#getDataProductsListsContainer
 	 * @model opposite="dataProductsListsContainer" containment="true"
 	 * @generated

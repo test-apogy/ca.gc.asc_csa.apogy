@@ -44,8 +44,8 @@ import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
 import org.eclipse.symphony.core.environment.MapLayerPresentation;
 import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.RectangularVolumeRegion;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -142,7 +142,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER;
+		return Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER;
 	}
 
 	/**
@@ -163,7 +163,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 		boolean oldMeshIsDirty = meshIsDirty;
 		meshIsDirty = newMeshIsDirty;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY, oldMeshIsDirty, meshIsDirty));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY, oldMeshIsDirty, meshIsDirty));
 	}
 
 	/**
@@ -173,7 +173,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 	 */
 	public EList<MapLayerPresentation> getMapLayerPresentations() {
 		if (mapLayerPresentations == null) {
-			mapLayerPresentations = new EObjectContainmentEList<MapLayerPresentation>(MapLayerPresentation.class, this, SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MAP_LAYER_PRESENTATIONS);
+			mapLayerPresentations = new EObjectContainmentEList<MapLayerPresentation>(MapLayerPresentation.class, this, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MAP_LAYER_PRESENTATIONS);
 		}
 		return mapLayerPresentations;
 	}
@@ -205,7 +205,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 			textureImage = (AbstractEImage)eResolveProxy(oldTextureImage);
 			if (textureImage != oldTextureImage) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE, oldTextureImage, textureImage));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE, oldTextureImage, textureImage));
 			}
 		}
 		return textureImage;
@@ -229,7 +229,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 		AbstractEImage oldTextureImage = textureImage;
 		textureImage = newTextureImage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE, oldTextureImage, textureImage));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE, oldTextureImage, textureImage));
 	}
 
 	/**
@@ -243,7 +243,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 		
 		if(tmp == null)
 		{
-			tmp = SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode();
+			tmp = Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode();
 			tmp.setAbstractMapLayer(this);			
 			setCartesianTriangularMeshMapLayerNode(tmp);
 		}
@@ -262,7 +262,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 			cartesianTriangularMeshMapLayerNode = (CartesianTriangularMeshMapLayerNode)eResolveProxy(oldCartesianTriangularMeshMapLayerNode);
 			if (cartesianTriangularMeshMapLayerNode != oldCartesianTriangularMeshMapLayerNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE, oldCartesianTriangularMeshMapLayerNode, cartesianTriangularMeshMapLayerNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE, oldCartesianTriangularMeshMapLayerNode, cartesianTriangularMeshMapLayerNode));
 			}
 		}
 		return cartesianTriangularMeshMapLayerNode;
@@ -286,7 +286,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 		CartesianTriangularMeshMapLayerNode oldCartesianTriangularMeshMapLayerNode = cartesianTriangularMeshMapLayerNode;
 		cartesianTriangularMeshMapLayerNode = newCartesianTriangularMeshMapLayerNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE, oldCartesianTriangularMeshMapLayerNode, cartesianTriangularMeshMapLayerNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE, oldCartesianTriangularMeshMapLayerNode, cartesianTriangularMeshMapLayerNode));
 	}
 
 	/**
@@ -304,7 +304,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 		}
 		else
 		{
-			rectangularVolumeRegion = SymphonyEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion();
+			rectangularVolumeRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularVolumeRegion();
 		}
 		
 		// Sets the transformation
@@ -352,7 +352,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MAP_LAYER_PRESENTATIONS:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MAP_LAYER_PRESENTATIONS:
 				return ((InternalEList<?>)getMapLayerPresentations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -366,14 +366,14 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY:
 				return isMeshIsDirty();
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MAP_LAYER_PRESENTATIONS:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MAP_LAYER_PRESENTATIONS:
 				return getMapLayerPresentations();
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE:
 				if (resolve) return getTextureImage();
 				return basicGetTextureImage();
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE:
 				if (resolve) return getCartesianTriangularMeshMapLayerNode();
 				return basicGetCartesianTriangularMeshMapLayerNode();
 		}
@@ -389,17 +389,17 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY:
 				setMeshIsDirty((Boolean)newValue);
 				return;
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MAP_LAYER_PRESENTATIONS:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MAP_LAYER_PRESENTATIONS:
 				getMapLayerPresentations().clear();
 				getMapLayerPresentations().addAll((Collection<? extends MapLayerPresentation>)newValue);
 				return;
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE:
 				setTextureImage((AbstractEImage)newValue);
 				return;
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE:
 				setCartesianTriangularMeshMapLayerNode((CartesianTriangularMeshMapLayerNode)newValue);
 				return;
 		}
@@ -414,16 +414,16 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY:
 				setMeshIsDirty(MESH_IS_DIRTY_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MAP_LAYER_PRESENTATIONS:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MAP_LAYER_PRESENTATIONS:
 				getMapLayerPresentations().clear();
 				return;
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE:
 				setTextureImage((AbstractEImage)null);
 				return;
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE:
 				setCartesianTriangularMeshMapLayerNode((CartesianTriangularMeshMapLayerNode)null);
 				return;
 		}
@@ -438,13 +438,13 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY:
 				return meshIsDirty != MESH_IS_DIRTY_EDEFAULT;
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MAP_LAYER_PRESENTATIONS:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MAP_LAYER_PRESENTATIONS:
 				return mapLayerPresentations != null && !mapLayerPresentations.isEmpty();
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE:
 				return textureImage != null;
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE:
 				return cartesianTriangularMeshMapLayerNode != null;
 		}
 		return super.eIsSet(featureID);
@@ -458,9 +458,9 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER___GET_CURRENT_MESH:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER___GET_CURRENT_MESH:
 				return getCurrentMesh();
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER___FORCE_UPDATE_TEXTURE_IMAGE:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER___FORCE_UPDATE_TEXTURE_IMAGE:
 				forceUpdateTextureImage();
 				return null;
 		}
@@ -677,7 +677,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 						int featureId = notification.getFeatureID(CartesianTriangularMeshMapLayer.class);
 						switch (featureId) 
 						{
-							case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MAP_LAYER_PRESENTATIONS:
+							case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MAP_LAYER_PRESENTATIONS:
 								updateImage = true;
 							break;
 
@@ -691,7 +691,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 						int featureId = notification.getFeatureID(MapLayerPresentation.class);
 						switch (featureId) 
 						{
-							case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE:						
+							case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE:						
 								updateImage = true;
 							break;
 
@@ -706,8 +706,8 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 						switch (featureId) 
 						{
 							// Cases where NOT to update the images.
-							case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__NAME:	
-							case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__DESCRIPTION:	
+							case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__NAME:	
+							case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__DESCRIPTION:	
 							break;																					
 							
 							default:

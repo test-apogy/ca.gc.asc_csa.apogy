@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerPackage;
+import org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage;
 import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
 
 /**
@@ -79,7 +79,7 @@ public class TopologyViewerRegistryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TopologyViewerRegistry_verbose_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TopologyViewerRegistry_verbose_feature", "_UI_TopologyViewerRegistry_type"),
-				 TopologyViewerPackage.Literals.TOPOLOGY_VIEWER_REGISTRY__VERBOSE,
+				 Symphony__CommonTopologyUIViewerPackage.Literals.TOPOLOGY_VIEWER_REGISTRY__VERBOSE,
 				 true,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class TopologyViewerRegistryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TopologyViewerRegistry_iTopologyViewers_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TopologyViewerRegistry_iTopologyViewers_feature", "_UI_TopologyViewerRegistry_type"),
-				 TopologyViewerPackage.Literals.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS,
+				 Symphony__CommonTopologyUIViewerPackage.Literals.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS,
 				 true,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class TopologyViewerRegistryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TopologyViewerRegistry_latestNodeSelection_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TopologyViewerRegistry_latestNodeSelection_feature", "_UI_TopologyViewerRegistry_type"),
-				 TopologyViewerPackage.Literals.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION,
+				 Symphony__CommonTopologyUIViewerPackage.Literals.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION,
 				 true,
 				 false,
 				 true,
@@ -168,8 +168,8 @@ public class TopologyViewerRegistryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TopologyViewerRegistry.class)) {
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__VERBOSE:
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__VERBOSE:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

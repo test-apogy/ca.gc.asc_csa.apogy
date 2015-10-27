@@ -27,19 +27,10 @@
       <!-- @generated symphony_addons_geometry_paths_ui -->
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.Symphony__AddonsGeometryPathsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.Symphony__AddonsGeometryPathsUIItemProviderAdapterFactory$Symphony__CommonTopologyUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.addons.geometry.paths.ui.provider.Symphony__AddonsGeometryPathsUIItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.Symphony__AddonsGeometryPathsUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.addons.geometry.paths.ui.provider.Symphony__AddonsGeometryPathsUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
    </extension>
 
 </plugin>

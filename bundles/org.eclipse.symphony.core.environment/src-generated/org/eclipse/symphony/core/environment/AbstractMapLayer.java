@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.environment.AbstractMapLayer#getAbstractMapLayerNode <em>Abstract Map Layer Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAbstractMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractMapLayer()
  * @model abstract="true"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface AbstractMapLayer extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map</em>' container reference.
 	 * @see #setMap(Map)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAbstractMapLayer_Map()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractMapLayer_Map()
 	 * @see org.eclipse.symphony.core.environment.Map#getLayers
 	 * @model opposite="layers" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -68,7 +68,7 @@ public interface AbstractMapLayer extends Named, Described
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Abstract Map Layer Node</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAbstractMapLayer_AbstractMapLayerNode()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractMapLayer_AbstractMapLayerNode()
 	 * @model transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated

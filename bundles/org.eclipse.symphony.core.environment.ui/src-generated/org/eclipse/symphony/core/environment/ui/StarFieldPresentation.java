@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.StarFieldPresentation#getCutOffMagnitude <em>Cut Off Magnitude</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getStarFieldPresentation()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getStarFieldPresentation()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface StarFieldPresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cut Off Magnitude</em>' attribute.
 	 * @see #setCutOffMagnitude(float)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getStarFieldPresentation_CutOffMagnitude()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getStarFieldPresentation_CutOffMagnitude()
 	 * @model default="6.0" unique="false"
 	 * @generated
 	 */

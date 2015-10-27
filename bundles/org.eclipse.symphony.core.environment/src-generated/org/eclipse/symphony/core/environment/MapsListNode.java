@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *   <li>{@link org.eclipse.symphony.core.environment.MapsListNode#getMapsList <em>Maps List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMapsListNode()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapsListNode()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface MapsListNode extends AggregateGroupNode
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maps List</em>' reference.
 	 * @see #setMapsList(MapsList)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMapsListNode_MapsList()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapsListNode_MapsList()
 	 * @model transient="true"
 	 * @generated
 	 */

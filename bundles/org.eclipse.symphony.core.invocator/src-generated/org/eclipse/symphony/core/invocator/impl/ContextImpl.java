@@ -17,9 +17,9 @@ import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.ContextsList;
 import org.eclipse.symphony.core.invocator.DataProductsList;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Environment;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableImplementation;
 import org.eclipse.symphony.core.invocator.VariableImplementationsList;
@@ -146,7 +146,7 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.CONTEXT;
+		return Symphony__CoreInvocatorPackage.Literals.CONTEXT;
 	}
 
   /**
@@ -169,7 +169,7 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.CONTEXT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.CONTEXT__NAME, oldName, name));
 	}
 
   /**
@@ -179,7 +179,7 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 	 */
   public ContextsList getContextsList()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.CONTEXT__CONTEXTS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.CONTEXT__CONTEXTS_LIST) return null;
 		return (ContextsList)eContainer();
 	}
 
@@ -190,7 +190,7 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 	 */
   public ContextsList basicGetContextsList()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.CONTEXT__CONTEXTS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.CONTEXT__CONTEXTS_LIST) return null;
 		return (ContextsList)eInternalContainer();
 	}
 
@@ -201,7 +201,7 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 	 */
   public NotificationChain basicSetContextsList(ContextsList newContextsList, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newContextsList, EMFEcoreInvocatorPackage.CONTEXT__CONTEXTS_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newContextsList, Symphony__CoreInvocatorPackage.CONTEXT__CONTEXTS_LIST, msgs);
 		return msgs;
 	}
 
@@ -212,19 +212,19 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 	 */
   public void setContextsList(ContextsList newContextsList)
   {
-		if (newContextsList != eInternalContainer() || (eContainerFeatureID() != EMFEcoreInvocatorPackage.CONTEXT__CONTEXTS_LIST && newContextsList != null)) {
+		if (newContextsList != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.CONTEXT__CONTEXTS_LIST && newContextsList != null)) {
 			if (EcoreUtil.isAncestor(this, newContextsList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newContextsList != null)
-				msgs = ((InternalEObject)newContextsList).eInverseAdd(this, EMFEcoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS, ContextsList.class, msgs);
+				msgs = ((InternalEObject)newContextsList).eInverseAdd(this, Symphony__CoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS, ContextsList.class, msgs);
 			msgs = basicSetContextsList(newContextsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.CONTEXT__CONTEXTS_LIST, newContextsList, newContextsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.CONTEXT__CONTEXTS_LIST, newContextsList, newContextsList));
 	}
 
   /**
@@ -244,7 +244,7 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
   {
 	  VariableImplementationsList list = getVariableImplementationsListGen();
 	  if (list == null){
-		  list = EMFEcoreInvocatorFactory.eINSTANCE.createVariableImplementationsList();
+		  list = Symphony__CoreInvocatorFactory.eINSTANCE.createVariableImplementationsList();
 		  setVariableImplementationsList(list);
 		  
 		  /**
@@ -253,7 +253,7 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 		  Iterator<Variable> variables = getEnvironment().getVariablesList().getVariables().iterator();
 		  while (variables.hasNext()){
 			  Variable variable = variables.next();
-			  VariableImplementation variableImplementation = EMFEcoreInvocatorFactory.eINSTANCE.createVariableImplementation();
+			  VariableImplementation variableImplementation = Symphony__CoreInvocatorFactory.eINSTANCE.createVariableImplementation();
 			  variableImplementation.setVariable(variable);
 			  
 			  /** Create TypeMemberImplementations. */
@@ -275,7 +275,7 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 		VariableImplementationsList oldVariableImplementationsList = variableImplementationsList;
 		variableImplementationsList = newVariableImplementationsList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST, oldVariableImplementationsList, newVariableImplementationsList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST, oldVariableImplementationsList, newVariableImplementationsList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -291,14 +291,14 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 		if (newVariableImplementationsList != variableImplementationsList) {
 			NotificationChain msgs = null;
 			if (variableImplementationsList != null)
-				msgs = ((InternalEObject)variableImplementationsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST, null, msgs);
+				msgs = ((InternalEObject)variableImplementationsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST, null, msgs);
 			if (newVariableImplementationsList != null)
-				msgs = ((InternalEObject)newVariableImplementationsList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST, null, msgs);
+				msgs = ((InternalEObject)newVariableImplementationsList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST, null, msgs);
 			msgs = basicSetVariableImplementationsList(newVariableImplementationsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST, newVariableImplementationsList, newVariableImplementationsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST, newVariableImplementationsList, newVariableImplementationsList));
 	}
 
   /**
@@ -331,7 +331,7 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 			dataProductsList = (DataProductsList)eResolveProxy(oldDataProductsList);
 			if (dataProductsList != oldDataProductsList) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorPackage.CONTEXT__DATA_PRODUCTS_LIST, oldDataProductsList, dataProductsList));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.CONTEXT__DATA_PRODUCTS_LIST, oldDataProductsList, dataProductsList));
 			}
 		}
 		return dataProductsList;
@@ -357,7 +357,7 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 		DataProductsList oldDataProductsList = dataProductsList;
 		dataProductsList = newDataProductsList;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.CONTEXT__DATA_PRODUCTS_LIST, oldDataProductsList, dataProductsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.CONTEXT__DATA_PRODUCTS_LIST, oldDataProductsList, dataProductsList));
 	}
 
   /**
@@ -380,7 +380,7 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 		Date oldInstancesCreationDate = instancesCreationDate;
 		instancesCreationDate = newInstancesCreationDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE, oldInstancesCreationDate, instancesCreationDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE, oldInstancesCreationDate, instancesCreationDate));
 	}
 
   /**
@@ -403,7 +403,7 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 		Date oldInstancesDisposalDate = instancesDisposalDate;
 		instancesDisposalDate = newInstancesDisposalDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE, oldInstancesDisposalDate, instancesDisposalDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE, oldInstancesDisposalDate, instancesDisposalDate));
 	}
 
   /**
@@ -415,7 +415,7 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetContextsList((ContextsList)otherEnd, msgs);
@@ -432,9 +432,9 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
 				return basicSetContextsList(null, msgs);
-			case EMFEcoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
 				return basicSetVariableImplementationsList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -449,8 +449,8 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS, ContextsList.class, msgs);
+			case Symphony__CoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.CONTEXTS_LIST__CONTEXTS, ContextsList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -464,21 +464,21 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.CONTEXT__NAME:
+			case Symphony__CoreInvocatorPackage.CONTEXT__NAME:
 				return getName();
-			case EMFEcoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
 				if (resolve) return getContextsList();
 				return basicGetContextsList();
-			case EMFEcoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
 				return getVariableImplementationsList();
-			case EMFEcoreInvocatorPackage.CONTEXT__ENVIRONMENT:
+			case Symphony__CoreInvocatorPackage.CONTEXT__ENVIRONMENT:
 				return getEnvironment();
-			case EMFEcoreInvocatorPackage.CONTEXT__DATA_PRODUCTS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__DATA_PRODUCTS_LIST:
 				if (resolve) return getDataProductsList();
 				return basicGetDataProductsList();
-			case EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
+			case Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
 				return getInstancesCreationDate();
-			case EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
+			case Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
 				return getInstancesDisposalDate();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -493,22 +493,22 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.CONTEXT__NAME:
+			case Symphony__CoreInvocatorPackage.CONTEXT__NAME:
 				setName((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
 				setContextsList((ContextsList)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
 				setVariableImplementationsList((VariableImplementationsList)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.CONTEXT__DATA_PRODUCTS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__DATA_PRODUCTS_LIST:
 				setDataProductsList((DataProductsList)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
+			case Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
 				setInstancesCreationDate((Date)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
+			case Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
 				setInstancesDisposalDate((Date)newValue);
 				return;
 		}
@@ -524,22 +524,22 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.CONTEXT__NAME:
+			case Symphony__CoreInvocatorPackage.CONTEXT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
 				setContextsList((ContextsList)null);
 				return;
-			case EMFEcoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
 				setVariableImplementationsList((VariableImplementationsList)null);
 				return;
-			case EMFEcoreInvocatorPackage.CONTEXT__DATA_PRODUCTS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__DATA_PRODUCTS_LIST:
 				setDataProductsList((DataProductsList)null);
 				return;
-			case EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
+			case Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
 				setInstancesCreationDate(INSTANCES_CREATION_DATE_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
+			case Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
 				setInstancesDisposalDate(INSTANCES_DISPOSAL_DATE_EDEFAULT);
 				return;
 		}
@@ -555,19 +555,19 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.CONTEXT__NAME:
+			case Symphony__CoreInvocatorPackage.CONTEXT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EMFEcoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__CONTEXTS_LIST:
 				return basicGetContextsList() != null;
-			case EMFEcoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST:
 				return variableImplementationsList != null;
-			case EMFEcoreInvocatorPackage.CONTEXT__ENVIRONMENT:
+			case Symphony__CoreInvocatorPackage.CONTEXT__ENVIRONMENT:
 				return getEnvironment() != null;
-			case EMFEcoreInvocatorPackage.CONTEXT__DATA_PRODUCTS_LIST:
+			case Symphony__CoreInvocatorPackage.CONTEXT__DATA_PRODUCTS_LIST:
 				return dataProductsList != null;
-			case EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
+			case Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE:
 				return INSTANCES_CREATION_DATE_EDEFAULT == null ? instancesCreationDate != null : !INSTANCES_CREATION_DATE_EDEFAULT.equals(instancesCreationDate);
-			case EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
+			case Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE:
 				return INSTANCES_DISPOSAL_DATE_EDEFAULT == null ? instancesDisposalDate != null : !INSTANCES_DISPOSAL_DATE_EDEFAULT.equals(instancesDisposalDate);
 		}
 		return super.eIsSet(featureID);

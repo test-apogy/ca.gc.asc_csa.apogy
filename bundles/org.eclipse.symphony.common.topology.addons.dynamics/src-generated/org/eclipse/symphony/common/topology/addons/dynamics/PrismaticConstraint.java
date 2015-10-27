@@ -20,7 +20,7 @@ package org.eclipse.symphony.common.topology.addons.dynamics;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint#getLinearCurrentState <em>Linear Current State</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPrismaticConstraint()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPrismaticConstraint()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface PrismaticConstraint extends AbstractConstraint {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Linear Current State</em>' containment reference.
 	 * @see #setLinearCurrentState(ConstraintState)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPrismaticConstraint_LinearCurrentState()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPrismaticConstraint_LinearCurrentState()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

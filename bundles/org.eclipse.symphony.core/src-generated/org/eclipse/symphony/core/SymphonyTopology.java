@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.GroupNode;
  *   <li>{@link org.eclipse.symphony.core.SymphonyTopology#getRootNode <em>Root Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonyTopology()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyTopology()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface SymphonyTopology extends EObject {
 	 * 
 	 * @return the value of the '<em>Root Node</em>' reference.
 	 * @see #setRootNode(GroupNode)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonyTopology_RootNode()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyTopology_RootNode()
 	 * @model transient="true" derived="true" annotation=
 	 *        "http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Readonly'"
 	 * @generated

@@ -11,7 +11,6 @@ import org.eclipse.symphony.core.AbstractOrbitModel;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Class that defines an orbit model. An orbit model specifies both initial condition (through the initial Orbit), and
  * a propagation method (through the AbstractOrbitPropagator).
  * <!-- end-model-doc -->
@@ -24,7 +23,7 @@ import org.eclipse.symphony.core.AbstractOrbitModel;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.OrbitModel#getPropagator <em>Propagator</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getOrbitModel()
+ * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getOrbitModel()
  * @model
  * @generated
  */
@@ -40,7 +39,7 @@ public interface OrbitModel extends AbstractOrbitModel {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Initial Orbit</em>' containment reference.
 	 * @see #setInitialOrbit(Orbit)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getOrbitModel_InitialOrbit()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getOrbitModel_InitialOrbit()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -66,7 +65,7 @@ public interface OrbitModel extends AbstractOrbitModel {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Propagator</em>' containment reference.
 	 * @see #setPropagator(AbstractOrbitPropagator)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getOrbitModel_Propagator()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getOrbitModel_Propagator()
 	 * @model containment="true"
 	 * @generated
 	 */

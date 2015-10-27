@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.Positioned;
 import org.eclipse.symphony.core.PositionedResult;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.invocator.impl.AbstractResultImpl;
 
 /**
@@ -52,7 +52,7 @@ public class PositionedResultImpl extends AbstractResultImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.POSITIONED_RESULT;
+		return Symphony__CorePackage.Literals.POSITIONED_RESULT;
 	}
 
 	/**
@@ -73,7 +73,7 @@ public class PositionedResultImpl extends AbstractResultImpl implements
 		Matrix4x4 oldPose = pose;
 		pose = newPose;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.POSITIONED_RESULT__POSE, oldPose, newPose);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.POSITIONED_RESULT__POSE, oldPose, newPose);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -88,14 +88,14 @@ public class PositionedResultImpl extends AbstractResultImpl implements
 		if (newPose != pose) {
 			NotificationChain msgs = null;
 			if (pose != null)
-				msgs = ((InternalEObject)pose).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.POSITIONED_RESULT__POSE, null, msgs);
+				msgs = ((InternalEObject)pose).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.POSITIONED_RESULT__POSE, null, msgs);
 			if (newPose != null)
-				msgs = ((InternalEObject)newPose).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.POSITIONED_RESULT__POSE, null, msgs);
+				msgs = ((InternalEObject)newPose).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.POSITIONED_RESULT__POSE, null, msgs);
 			msgs = basicSetPose(newPose, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.POSITIONED_RESULT__POSE, newPose, newPose));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.POSITIONED_RESULT__POSE, newPose, newPose));
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class PositionedResultImpl extends AbstractResultImpl implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCorePackage.POSITIONED_RESULT__POSE:
+			case Symphony__CorePackage.POSITIONED_RESULT__POSE:
 				return basicSetPose(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -119,7 +119,7 @@ public class PositionedResultImpl extends AbstractResultImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.POSITIONED_RESULT__POSE:
+			case Symphony__CorePackage.POSITIONED_RESULT__POSE:
 				return getPose();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -132,7 +132,7 @@ public class PositionedResultImpl extends AbstractResultImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.POSITIONED_RESULT__POSE:
+			case Symphony__CorePackage.POSITIONED_RESULT__POSE:
 				setPose((Matrix4x4)newValue);
 				return;
 		}
@@ -146,7 +146,7 @@ public class PositionedResultImpl extends AbstractResultImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.POSITIONED_RESULT__POSE:
+			case Symphony__CorePackage.POSITIONED_RESULT__POSE:
 				setPose((Matrix4x4)null);
 				return;
 		}
@@ -160,7 +160,7 @@ public class PositionedResultImpl extends AbstractResultImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.POSITIONED_RESULT__POSE:
+			case Symphony__CorePackage.POSITIONED_RESULT__POSE:
 				return pose != null;
 		}
 		return super.eIsSet(featureID);
@@ -175,7 +175,7 @@ public class PositionedResultImpl extends AbstractResultImpl implements
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Positioned.class) {
 			switch (derivedFeatureID) {
-				case SymphonyCorePackage.POSITIONED_RESULT__POSE: return SymphonyCorePackage.POSITIONED__POSE;
+				case Symphony__CorePackage.POSITIONED_RESULT__POSE: return Symphony__CorePackage.POSITIONED__POSE;
 				default: return -1;
 			}
 		}
@@ -191,7 +191,7 @@ public class PositionedResultImpl extends AbstractResultImpl implements
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Positioned.class) {
 			switch (baseFeatureID) {
-				case SymphonyCorePackage.POSITIONED__POSE: return SymphonyCorePackage.POSITIONED_RESULT__POSE;
+				case Symphony__CorePackage.POSITIONED__POSE: return Symphony__CorePackage.POSITIONED_RESULT__POSE;
 				default: return -1;
 			}
 		}

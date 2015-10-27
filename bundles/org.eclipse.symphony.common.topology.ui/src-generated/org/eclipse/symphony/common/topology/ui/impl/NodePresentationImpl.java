@@ -27,8 +27,8 @@ import org.eclipse.symphony.common.topology.ui.Activator;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.SceneObject;
 import org.eclipse.symphony.common.topology.ui.ShadowMode;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -231,7 +231,7 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyUIPackage.Literals.NODE_PRESENTATION;
+		return Symphony__CommonTopologyUIPackage.Literals.NODE_PRESENTATION;
 	}
 
 	/**
@@ -241,7 +241,7 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public EList<TopologyPresentationSet> getTopologyPresentationSet() {
 		if (topologyPresentationSet == null) {
-			topologyPresentationSet = new EObjectWithInverseResolvingEList.ManyInverse<TopologyPresentationSet>(TopologyPresentationSet.class, this, TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET, TopologyUIPackage.TOPOLOGY_PRESENTATION_SET__NODE_PRESENTATION_LIST);
+			topologyPresentationSet = new EObjectWithInverseResolvingEList.ManyInverse<TopologyPresentationSet>(TopologyPresentationSet.class, this, Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET, Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_SET__NODE_PRESENTATION_LIST);
 		}
 		return topologyPresentationSet;
 	}
@@ -257,7 +257,7 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 			node = (Node)eResolveProxy(oldNode);
 			if (node != oldNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyUIPackage.NODE_PRESENTATION__NODE, oldNode, node));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE, oldNode, node));
 			}
 		}
 		return node;
@@ -281,7 +281,7 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 		Node oldNode = node;
 		node = newNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.NODE_PRESENTATION__NODE, oldNode, node));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE, oldNode, node));
 	}
 
 	/**
@@ -302,7 +302,7 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 		RGB oldColor = color;
 		color = newColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.NODE_PRESENTATION__COLOR, oldColor, color));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR, oldColor, color));
 	}
 
 	/**
@@ -323,7 +323,7 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 		boolean oldVisible = visible;
 		visible = newVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.NODE_PRESENTATION__VISIBLE, oldVisible, visible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE, oldVisible, visible));
 	}
 
 	/**
@@ -344,7 +344,7 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 		boolean oldUseInBoundingCalculation = useInBoundingCalculation;
 		useInBoundingCalculation = newUseInBoundingCalculation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION, oldUseInBoundingCalculation, useInBoundingCalculation));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION, oldUseInBoundingCalculation, useInBoundingCalculation));
 	}
 
 	/**
@@ -508,7 +508,7 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 		SceneObject oldSceneObject = sceneObject;
 		sceneObject = newSceneObject;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT, oldSceneObject, sceneObject));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT, oldSceneObject, sceneObject));
 	}
 
 	/**
@@ -520,7 +520,7 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTopologyPresentationSet()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -534,7 +534,7 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET:
 				return ((InternalEList<?>)getTopologyPresentationSet()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -558,7 +558,7 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 		ShadowMode oldShadowMode = shadowMode;
 		shadowMode = newShadowMode == null ? SHADOW_MODE_EDEFAULT : newShadowMode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE, oldShadowMode, shadowMode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE, oldShadowMode, shadowMode));
 	}
 
 	/**
@@ -569,35 +569,35 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET:
 				return getTopologyPresentationSet();
-			case TopologyUIPackage.NODE_PRESENTATION__NODE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE:
 				if (resolve) return getNode();
 				return basicGetNode();
-			case TopologyUIPackage.NODE_PRESENTATION__COLOR:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR:
 				return getColor();
-			case TopologyUIPackage.NODE_PRESENTATION__VISIBLE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE:
 				return isVisible();
-			case TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE:
 				return getShadowMode();
-			case TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION:
 				return isUseInBoundingCalculation();
-			case TopologyUIPackage.NODE_PRESENTATION__CENTROID:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID:
 				if (resolve) return getCentroid();
 				return basicGetCentroid();
-			case TopologyUIPackage.NODE_PRESENTATION__MIN:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN:
 				if (resolve) return getMin();
 				return basicGetMin();
-			case TopologyUIPackage.NODE_PRESENTATION__MAX:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX:
 				if (resolve) return getMax();
 				return basicGetMax();
-			case TopologyUIPackage.NODE_PRESENTATION__XRANGE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE:
 				return getXRange();
-			case TopologyUIPackage.NODE_PRESENTATION__YRANGE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE:
 				return getYRange();
-			case TopologyUIPackage.NODE_PRESENTATION__ZRANGE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE:
 				return getZRange();
-			case TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT:
 				return getSceneObject();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -612,26 +612,26 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET:
 				getTopologyPresentationSet().clear();
 				getTopologyPresentationSet().addAll((Collection<? extends TopologyPresentationSet>)newValue);
 				return;
-			case TopologyUIPackage.NODE_PRESENTATION__NODE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE:
 				setNode((Node)newValue);
 				return;
-			case TopologyUIPackage.NODE_PRESENTATION__COLOR:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR:
 				setColor((RGB)newValue);
 				return;
-			case TopologyUIPackage.NODE_PRESENTATION__VISIBLE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE:
 				setVisible((Boolean)newValue);
 				return;
-			case TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE:
 				setShadowMode((ShadowMode)newValue);
 				return;
-			case TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION:
 				setUseInBoundingCalculation((Boolean)newValue);
 				return;
-			case TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT:
 				setSceneObject((SceneObject)newValue);
 				return;
 		}
@@ -646,25 +646,25 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET:
 				getTopologyPresentationSet().clear();
 				return;
-			case TopologyUIPackage.NODE_PRESENTATION__NODE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE:
 				setNode((Node)null);
 				return;
-			case TopologyUIPackage.NODE_PRESENTATION__COLOR:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR:
 				setColor(COLOR_EDEFAULT);
 				return;
-			case TopologyUIPackage.NODE_PRESENTATION__VISIBLE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
 				return;
-			case TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE:
 				setShadowMode(SHADOW_MODE_EDEFAULT);
 				return;
-			case TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION:
 				setUseInBoundingCalculation(USE_IN_BOUNDING_CALCULATION_EDEFAULT);
 				return;
-			case TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT:
 				setSceneObject(SCENE_OBJECT_EDEFAULT);
 				return;
 		}
@@ -679,31 +679,31 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET:
 				return topologyPresentationSet != null && !topologyPresentationSet.isEmpty();
-			case TopologyUIPackage.NODE_PRESENTATION__NODE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE:
 				return node != null;
-			case TopologyUIPackage.NODE_PRESENTATION__COLOR:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR:
 				return COLOR_EDEFAULT == null ? color != null : !COLOR_EDEFAULT.equals(color);
-			case TopologyUIPackage.NODE_PRESENTATION__VISIBLE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE:
 				return visible != VISIBLE_EDEFAULT;
-			case TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE:
 				return shadowMode != SHADOW_MODE_EDEFAULT;
-			case TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION:
 				return useInBoundingCalculation != USE_IN_BOUNDING_CALCULATION_EDEFAULT;
-			case TopologyUIPackage.NODE_PRESENTATION__CENTROID:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID:
 				return basicGetCentroid() != null;
-			case TopologyUIPackage.NODE_PRESENTATION__MIN:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN:
 				return basicGetMin() != null;
-			case TopologyUIPackage.NODE_PRESENTATION__MAX:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX:
 				return basicGetMax() != null;
-			case TopologyUIPackage.NODE_PRESENTATION__XRANGE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE:
 				return getXRange() != XRANGE_EDEFAULT;
-			case TopologyUIPackage.NODE_PRESENTATION__YRANGE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE:
 				return getYRange() != YRANGE_EDEFAULT;
-			case TopologyUIPackage.NODE_PRESENTATION__ZRANGE:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE:
 				return getZRange() != ZRANGE_EDEFAULT;
-			case TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT:
+			case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT:
 				return SCENE_OBJECT_EDEFAULT == null ? sceneObject != null : !SCENE_OBJECT_EDEFAULT.equals(sceneObject);
 		}
 		return super.eIsSet(featureID);
@@ -754,15 +754,15 @@ public class NodePresentationImpl extends MinimalEObjectImpl.Container implement
 			
 			switch (featureId) 
 			{
-				case TopologyUIPackage.NODE_PRESENTATION__COLOR:
+				case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR:
 					sceneObject.setColor(getColor());
 				break;
 				
-				case TopologyUIPackage.NODE_PRESENTATION__VISIBLE:
+				case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE:
 					sceneObject.setVisible(isVisible());
 				break;
 				
-				case TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE:
+				case Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE:
 					sceneObject.setShadowMode(getShadowMode());
 				break;
 				

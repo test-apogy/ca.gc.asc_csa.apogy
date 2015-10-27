@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.environment.orbit.PVACoordinates;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.PVACoordinates} object.
@@ -74,10 +74,10 @@ public class PVACoordinatesItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__POSITION);
-			childrenFeatures.add(SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__VELOCITY);
-			childrenFeatures.add(SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__ACCELERATION);
-			childrenFeatures.add(SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__ANGULAR_VELOCITY);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__POSITION);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__VELOCITY);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ACCELERATION);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ANGULAR_VELOCITY);
 		}
 		return childrenFeatures;
 	}
@@ -130,10 +130,10 @@ public class PVACoordinatesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PVACoordinates.class)) {
-			case SymphonyOrbitEnvironmentPackage.PVA_COORDINATES__POSITION:
-			case SymphonyOrbitEnvironmentPackage.PVA_COORDINATES__VELOCITY:
-			case SymphonyOrbitEnvironmentPackage.PVA_COORDINATES__ACCELERATION:
-			case SymphonyOrbitEnvironmentPackage.PVA_COORDINATES__ANGULAR_VELOCITY:
+			case Symphony__CoreEnvironmentOrbitPackage.PVA_COORDINATES__POSITION:
+			case Symphony__CoreEnvironmentOrbitPackage.PVA_COORDINATES__VELOCITY:
+			case Symphony__CoreEnvironmentOrbitPackage.PVA_COORDINATES__ACCELERATION:
+			case Symphony__CoreEnvironmentOrbitPackage.PVA_COORDINATES__ANGULAR_VELOCITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -153,22 +153,22 @@ public class PVACoordinatesItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__POSITION,
+				(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__POSITION,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__VELOCITY,
+				(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__VELOCITY,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__ACCELERATION,
+				(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ACCELERATION,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__ANGULAR_VELOCITY,
+				(Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ANGULAR_VELOCITY,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
@@ -184,10 +184,10 @@ public class PVACoordinatesItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__POSITION ||
-			childFeature == SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__VELOCITY ||
-			childFeature == SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__ACCELERATION ||
-			childFeature == SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__ANGULAR_VELOCITY;
+			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__POSITION ||
+			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__VELOCITY ||
+			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ACCELERATION ||
+			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ANGULAR_VELOCITY;
 
 		if (qualify) {
 			return getString

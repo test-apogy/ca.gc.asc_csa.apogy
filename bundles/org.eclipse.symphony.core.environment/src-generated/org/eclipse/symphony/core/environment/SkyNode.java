@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.GroupNode;
  *   <li>{@link org.eclipse.symphony.core.environment.SkyNode#getSky <em>Sky</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSkyNode()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSkyNode()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface SkyNode extends GroupNode
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sky</em>' reference.
 	 * @see #setSky(Sky)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSkyNode_Sky()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSkyNode_Sky()
 	 * @model transient="true"
 	 * @generated
 	 */

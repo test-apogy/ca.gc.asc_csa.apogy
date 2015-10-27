@@ -11,12 +11,11 @@ import org.orekit.propagation.analytical.KeplerianPropagator;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Simple keplerian orbit propagator for Earth orbits.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getKeplerianEarthOrbitPropagator()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbitPropagator()
  * @model
  * @generated
  */

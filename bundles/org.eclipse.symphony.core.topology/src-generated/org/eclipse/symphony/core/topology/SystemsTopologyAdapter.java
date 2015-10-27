@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.SymphonyEnvironment;
  *   <li>{@link org.eclipse.symphony.core.topology.SystemsTopologyAdapter#getSystemsGroup <em>Systems Group</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getSystemsTopologyAdapter()
+ * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSystemsTopologyAdapter()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface SystemsTopologyAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Deployment</em>' reference.
 	 * @see #setDeployment(SymphonyEnvironment)
-	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getSystemsTopologyAdapter_Deployment()
+	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSystemsTopologyAdapter_Deployment()
 	 * @model transient="true"
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface SystemsTopologyAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Systems Group</em>' reference.
 	 * @see #setSystemsGroup(ReferencedGroupNode)
-	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getSystemsTopologyAdapter_SystemsGroup()
+	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSystemsTopologyAdapter_SystemsGroup()
 	 * @model transient="true"
 	 * @generated
 	 */

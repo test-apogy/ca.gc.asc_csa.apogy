@@ -17,7 +17,7 @@ package org.eclipse.symphony.core.programs.controllers;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ToggleValueSource#isCurrentValue <em>Current Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getToggleValueSource()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getToggleValueSource()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface ToggleValueSource extends ValueSource
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Initial Value</em>' attribute.
 	 * @see #setInitialValue(boolean)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getToggleValueSource_InitialValue()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getToggleValueSource_InitialValue()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/Ecore notify='true'"
 	 * @generated
@@ -61,7 +61,7 @@ public interface ToggleValueSource extends ValueSource
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Current Value</em>' attribute.
 	 * @see #setCurrentValue(boolean)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getToggleValueSource_CurrentValue()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getToggleValueSource_CurrentValue()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated

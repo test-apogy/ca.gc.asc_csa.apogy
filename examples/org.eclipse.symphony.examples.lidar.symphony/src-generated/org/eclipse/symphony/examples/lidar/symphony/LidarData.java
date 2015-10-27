@@ -26,7 +26,7 @@ import org.eclipse.symphony.core.SymphonyInitializationData;
  *   <li>{@link org.eclipse.symphony.examples.lidar.symphony.LidarData#isInitialized <em>Initialized</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarPackage#getLidarData()
+ * @see org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage#getLidarData()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface LidarData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fov</em>' containment reference.
 	 * @see #setFov(RectangularFrustrumFieldOfView)
-	 * @see org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarPackage#getLidarData_Fov()
+	 * @see org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage#getLidarData_Fov()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Editable' propertyCategory='Field Of View'"
 	 * @generated
@@ -67,7 +67,7 @@ public interface LidarData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarPackage#getLidarData_Initialized()
+	 * @see org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage#getLidarData_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated

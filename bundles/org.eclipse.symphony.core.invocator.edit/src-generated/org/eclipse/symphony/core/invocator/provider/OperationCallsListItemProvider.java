@@ -11,9 +11,9 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCallsList;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.OperationCallsList} object.
@@ -64,7 +64,7 @@ public class OperationCallsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
 		}
 		return childrenFeatures;
 	}
@@ -123,7 +123,7 @@ public class OperationCallsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OperationCallsList.class)) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -144,8 +144,8 @@ public class OperationCallsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createOperationCall()));
+				(Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCall()));
 	}
 
 }

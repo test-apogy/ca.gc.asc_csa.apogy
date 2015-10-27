@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 import org.eclipse.symphony.core.environment.orbit.TimedStampedPVACoordinates;
 
 /**
@@ -112,7 +112,7 @@ public class TimedStampedPVACoordinatesItemProvider extends PVACoordinatesItemPr
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TimedStampedPVACoordinates.class)) {
-			case SymphonyOrbitEnvironmentPackage.TIMED_STAMPED_PVA_COORDINATES__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.TIMED_STAMPED_PVA_COORDINATES__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -143,10 +143,10 @@ public class TimedStampedPVACoordinatesItemProvider extends PVACoordinatesItemPr
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__POSITION ||
-			childFeature == SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__VELOCITY ||
-			childFeature == SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__ACCELERATION ||
-			childFeature == SymphonyOrbitEnvironmentPackage.Literals.PVA_COORDINATES__ANGULAR_VELOCITY;
+			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__POSITION ||
+			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__VELOCITY ||
+			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ACCELERATION ||
+			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.PVA_COORDINATES__ANGULAR_VELOCITY;
 
 		if (qualify) {
 			return getString

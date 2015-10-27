@@ -16,7 +16,7 @@ package org.eclipse.symphony.core.invocator;
  *   <li>{@link org.eclipse.symphony.core.invocator.EDataTypeArgument#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEDataTypeArgument()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEDataTypeArgument()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface EDataTypeArgument extends Argument
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEDataTypeArgument_Value()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEDataTypeArgument_Value()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
