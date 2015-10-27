@@ -421,7 +421,7 @@ class EnvironmentUtilities
 /*
  * A class providing utilities methods to create fully initialze object.
  */
-class EnvironmentFacade
+class Symphony__CoreEnvironmentFacade
 {	
 	op StarField createAndInitializeStars()
 	

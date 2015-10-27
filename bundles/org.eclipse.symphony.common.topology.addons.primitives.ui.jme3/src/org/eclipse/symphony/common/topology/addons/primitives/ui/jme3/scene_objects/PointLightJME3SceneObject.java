@@ -9,7 +9,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 
@@ -73,7 +73,7 @@ public class PointLightJME3SceneObject extends DefaultJME3SceneObject<org.eclips
 			Vector3f lightPosition = new Vector3f();
 			if(getTopologyNode() != null)
 			{
-				Matrix4d m = TopologyFacade.INSTANCE.expressNodeInRootFrame(getTopologyNode());
+				Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(getTopologyNode());
 				Vector3d position = new Vector3d();
 				m.get(position);
 								

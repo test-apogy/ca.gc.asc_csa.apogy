@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.sensors.gps.GPSConnection;
 import org.eclipse.symphony.addons.sensors.gps.GPSDataInterpreter;
-import org.eclipse.symphony.addons.sensors.gps.GPSFacade;
+import org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFacade;
 import org.eclipse.symphony.addons.sensors.gps.GPSPoseSensor;
 import org.eclipse.symphony.addons.sensors.gps.GPSQuality;
 import org.eclipse.symphony.addons.sensors.gps.GPSReading;
@@ -92,7 +92,7 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass gpsFacadeEClass = null;
+	private EClass symphony__AddonsSensorsGPSFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -609,8 +609,8 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGPSFacade() {
-		return gpsFacadeEClass;
+	public EClass getSymphony__AddonsSensorsGPSFacade() {
+		return symphony__AddonsSensorsGPSFacadeEClass;
 	}
 
 	/**
@@ -618,8 +618,8 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGPSFacade__CreateGPSPoseSensor__double_double() {
-		return gpsFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__AddonsSensorsGPSFacade__CreateGPSPoseSensor__double_double() {
+		return symphony__AddonsSensorsGPSFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -627,8 +627,8 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGPSFacade__CreateMarkedGPS__PositionMarker() {
-		return gpsFacadeEClass.getEOperations().get(1);
+	public EOperation getSymphony__AddonsSensorsGPSFacade__CreateMarkedGPS__PositionMarker() {
+		return symphony__AddonsSensorsGPSFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -773,9 +773,9 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 		createEOperation(gpsRepositoryEClass, GPS_REPOSITORY___SCAN_FOR_DEVICES);
 		createEOperation(gpsRepositoryEClass, GPS_REPOSITORY___GET_GPS_BY_ID__STRING);
 
-		gpsFacadeEClass = createEClass(GPS_FACADE);
-		createEOperation(gpsFacadeEClass, GPS_FACADE___CREATE_GPS_POSE_SENSOR__DOUBLE_DOUBLE);
-		createEOperation(gpsFacadeEClass, GPS_FACADE___CREATE_MARKED_GPS__POSITIONMARKER);
+		symphony__AddonsSensorsGPSFacadeEClass = createEClass(SYMPHONY_ADDONS_SENSORS_GPS_FACADE);
+		createEOperation(symphony__AddonsSensorsGPSFacadeEClass, SYMPHONY_ADDONS_SENSORS_GPS_FACADE___CREATE_GPS_POSE_SENSOR__DOUBLE_DOUBLE);
+		createEOperation(symphony__AddonsSensorsGPSFacadeEClass, SYMPHONY_ADDONS_SENSORS_GPS_FACADE___CREATE_MARKED_GPS__POSITIONMARKER);
 
 		// Create enums
 		gpsStatusEEnum = createEEnum(GPS_STATUS);
@@ -890,13 +890,13 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 		op = initEOperation(getGPSRepository__GetGPSById__String(), this.getGPS(), "getGPSById", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "gpsId", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(gpsFacadeEClass, GPSFacade.class, "GPSFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__AddonsSensorsGPSFacadeEClass, Symphony__AddonsSensorsGPSFacade.class, "Symphony__AddonsSensorsGPSFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getGPSFacade__CreateGPSPoseSensor__double_double(), this.getGPSPoseSensor(), "createGPSPoseSensor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__AddonsSensorsGPSFacade__CreateGPSPoseSensor__double_double(), this.getGPSPoseSensor(), "createGPSPoseSensor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "originLatitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "originLongitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getGPSFacade__CreateMarkedGPS__PositionMarker(), this.getMarkedGPS(), "createMarkedGPS", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__AddonsSensorsGPSFacade__CreateMarkedGPS__PositionMarker(), this.getMarkedGPS(), "createMarkedGPS", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonGeometryData3DPackage.getPositionMarker(), "marker", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize enums and add enum literals

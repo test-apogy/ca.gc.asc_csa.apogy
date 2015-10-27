@@ -16,7 +16,7 @@ import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
 import org.eclipse.symphony.common.emf.CurrentTimeSource;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 import org.eclipse.symphony.common.emf.FixedTimeSource;
@@ -91,9 +91,9 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE: {
-				EMFEcoreFacade emfEcoreFacade = (EMFEcoreFacade)theEObject;
-				T result = caseEMFEcoreFacade(emfEcoreFacade);
+			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE: {
+				Symphony__CommonEMFFacade symphony__CommonEMFFacade = (Symphony__CommonEMFFacade)theEObject;
+				T result = caseSymphony__CommonEMFFacade(symphony__CommonEMFFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -273,22 +273,21 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>EMF Ecore Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EMF Ecore Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseEMFEcoreFacade(EMFEcoreFacade object)
-  {
+	public T caseSymphony__CommonEMFFacade(Symphony__CommonEMFFacade object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Named</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

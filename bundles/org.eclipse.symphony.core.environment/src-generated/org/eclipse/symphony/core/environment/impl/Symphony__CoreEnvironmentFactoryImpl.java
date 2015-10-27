@@ -36,7 +36,7 @@ import org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode;
 import org.eclipse.symphony.core.environment.EclipticCoordinates;
 import org.eclipse.symphony.core.environment.EllipseShapeImageLayer;
 import org.eclipse.symphony.core.environment.Environment;
-import org.eclipse.symphony.core.environment.EnvironmentFacade;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
 import org.eclipse.symphony.core.environment.EnvironmentUtilities;
 import org.eclipse.symphony.core.environment.EquatorialCoordinates;
 import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
@@ -133,7 +133,7 @@ public class Symphony__CoreEnvironmentFactoryImpl extends EFactoryImpl implement
 			case Symphony__CoreEnvironmentPackage.EARTH: return createEarth();
 			case Symphony__CoreEnvironmentPackage.MOON: return createMoon();
 			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_UTILITIES: return createEnvironmentUtilities();
-			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE: return createEnvironmentFacade();
+			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE: return createSymphony__CoreEnvironmentFacade();
 			case Symphony__CoreEnvironmentPackage.STAR: return createStar();
 			case Symphony__CoreEnvironmentPackage.STAR_FIELD: return createStarField();
 			case Symphony__CoreEnvironmentPackage.ASTRONOMY_UTILS: return createAstronomyUtils();
@@ -402,16 +402,15 @@ public class Symphony__CoreEnvironmentFactoryImpl extends EFactoryImpl implement
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EnvironmentFacade createEnvironmentFacade()
-  {
-		EnvironmentFacadeImpl environmentFacade = new EnvironmentFacadeImpl();
-		return environmentFacade;
+	public Symphony__CoreEnvironmentFacade createSymphony__CoreEnvironmentFacade() {
+		Symphony__CoreEnvironmentFacadeImpl symphony__CoreEnvironmentFacade = new Symphony__CoreEnvironmentFacadeImpl();
+		return symphony__CoreEnvironmentFacade;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

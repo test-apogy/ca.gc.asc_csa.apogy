@@ -9,7 +9,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 
 /**
  * Class that maintains a target WayPointPath in sync with a source WayPointPath.
@@ -84,7 +84,7 @@ public class WayPointPathBinding
 		if(getTargetWayPointPath() != null)
 		{
 			// First, copy the original point
-			CartesianPositionCoordinates pointCopy = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(point);
+			CartesianPositionCoordinates pointCopy = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
 			
 			// Adds the point to the target path.
 			getTargetWayPointPath().getPoints().add(pointCopy);
@@ -103,7 +103,7 @@ public class WayPointPathBinding
 			for(CartesianPositionCoordinates point : points)
 			{						
 				// First, copy the original point
-				CartesianPositionCoordinates pointCopy = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(point);
+				CartesianPositionCoordinates pointCopy = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
 				
 				// Adds point to temporary list.
 				pointsCopy.add(pointCopy);

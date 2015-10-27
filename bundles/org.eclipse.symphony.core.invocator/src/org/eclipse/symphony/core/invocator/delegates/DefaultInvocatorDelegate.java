@@ -10,7 +10,7 @@ import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.Activator;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.OperationCall;
@@ -22,7 +22,7 @@ import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableImplementation;
 
 import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 
 public class DefaultInvocatorDelegate implements InvocatorDelegate {
 
@@ -74,7 +74,7 @@ public class DefaultInvocatorDelegate implements InvocatorDelegate {
 
 				if (!typeMember.getTypeFeatureRootNode().getChildren()
 						.isEmpty()) {
-					EMFEcoreFacade.INSTANCE.setValue(srcObj, typeMember
+					Symphony__CommonEMFFacade.INSTANCE.setValue(srcObj, typeMember
 							.getTypeFeatureRootNode().getChildren().get(0),
 							subTypeMemberImplementation.getInstance());
 				}
@@ -190,7 +190,7 @@ public class DefaultInvocatorDelegate implements InvocatorDelegate {
 
 	public void execute(EObject instance, OperationCall operationCall,
 			boolean saveResult) {
-		TypeApiAdapter typeApiAdapter = EMFEcoreInvocatorFacade.INSTANCE
+		TypeApiAdapter typeApiAdapter = Symphony__CoreInvocatorFacade.INSTANCE
 				.getTypeApiAdapter(operationCall);
 		typeApiAdapter.invoke(instance, operationCall, saveResult);
 	}

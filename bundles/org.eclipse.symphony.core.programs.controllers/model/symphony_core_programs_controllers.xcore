@@ -37,7 +37,7 @@ type TreeSet<T> wraps java.util.TreeSet
  * 
  * ------------------------------------------------------------------------- */
 
-class ControllerFacade
+class Symphony__CoreProgramsControllersFacade
 {
 	op Object createValue(EParameter eParameter, float value)	
 	

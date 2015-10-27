@@ -26,19 +26,19 @@ import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePac
 import org.eclipse.symphony.addons.sensors.range.RasterScanRangeSensor;
 import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
 import org.eclipse.symphony.addons.sensors.range.RayData;
-import org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade;
 import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScanner;
 import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator;
 import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
-import org.eclipse.symphony.common.geometry.data25d.DataFacade;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshPolygonSampler;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.TransformNode;
 
 /**
@@ -274,12 +274,12 @@ public class SimpleRasterScanRangeScannerSimulatorImpl extends RangeScannerSimul
 	    	if(rasterScanSettings == null)
 	    	{
 	    		// Creates a transform node to position and orient the fov.	    		
-	    		TransformNode transformNode = TopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);
+	    		TransformNode transformNode = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);
 	    		transformNode.setDescription("Field Of View Transform");
 	    		getChildren().add(transformNode);
 	    		
 	    		// Adds the rasterscan to the transform.
-	    		rasterScanSettings = SensorsRangeFacade.INSTANCE.createRasterScanSettings(0, 100.0, Math.toRadians(90), Math.toRadians(45), 100, 100);
+	    		rasterScanSettings = Symphony__AddonsSensorsRangeFacade.INSTANCE.createRasterScanSettings(0, 100.0, Math.toRadians(90), Math.toRadians(45), 100, 100);
 	    		transformNode.getChildren().add(rasterScanSettings);
 	    	}
 		}
@@ -451,7 +451,7 @@ public class SimpleRasterScanRangeScannerSimulatorImpl extends RangeScannerSimul
 		CartesianTriangularMesh croppedMesh = null;
 		
 		// Gets the position on the lidar with respect to the meshNode.
-		Matrix4d laserToMesh = TopologyFacade.INSTANCE.expressInFrame(this, getMeshNode());	
+		Matrix4d laserToMesh = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(this, getMeshNode());	
 				
 		// Sample the terrain to retain only polygon that are partially or fully within the maximum range.
 		CartesianTriangularMeshPolygonSampler meshSampler = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMeshPolygonSampler();				
@@ -459,7 +459,7 @@ public class SimpleRasterScanRangeScannerSimulatorImpl extends RangeScannerSimul
 		// Setup the sampling shape.
 		RectangularFrustrumFieldOfViewSamplingShape<CartesianTriangle> samplingShape = Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfViewSamplingShape();
 		samplingShape.setRectangularFrustrumFieldOfView(getScanSettings());
-		samplingShape.setTransform(MathFacade.INSTANCE.createMatrix4x4(laserToMesh));
+		samplingShape.setTransform(Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(laserToMesh));
 		
 		meshSampler.getPolygonSamplingShapes().add(samplingShape);
 						
@@ -536,7 +536,7 @@ public class SimpleRasterScanRangeScannerSimulatorImpl extends RangeScannerSimul
 			v.scale(range);
 			v.add(rayData.getOrigin());
 			
-			return DataFacade.INSTANCE.createCoordinates25D(v.x, v.y, v.z);
+			return Symphony__CommonGeometryData25DFacade.INSTANCE.createCoordinates25D(v.x, v.y, v.z);
 		}
 		else
 		{

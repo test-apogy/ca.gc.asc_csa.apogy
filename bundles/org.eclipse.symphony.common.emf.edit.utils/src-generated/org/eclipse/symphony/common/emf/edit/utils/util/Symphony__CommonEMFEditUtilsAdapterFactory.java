@@ -6,7 +6,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
+import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
 import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPackage;
 
 /**
@@ -69,8 +69,8 @@ public class Symphony__CommonEMFEditUtilsAdapterFactory extends AdapterFactoryIm
   protected Symphony__CommonEMFEditUtilsSwitch<Adapter> modelSwitch =
     new Symphony__CommonEMFEditUtilsSwitch<Adapter>() {
 			@Override
-			public Adapter caseEMFEcoreEditUtilsFacade(EMFEcoreEditUtilsFacade object) {
-				return createEMFEcoreEditUtilsFacadeAdapter();
+			public Adapter caseSymphony__CommonEMFEditUtilsFacade(Symphony__CommonEMFEditUtilsFacade object) {
+				return createSymphony__CommonEMFEditUtilsFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -94,21 +94,20 @@ public class Symphony__CommonEMFEditUtilsAdapterFactory extends AdapterFactoryIm
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade <em>EMF Ecore Edit Utils Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade
+	 * @see org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade
 	 * @generated
 	 */
-  public Adapter createEMFEcoreEditUtilsFacadeAdapter()
-  {
+	public Adapter createSymphony__CommonEMFEditUtilsFacadeAdapter() {
 		return null;
 	}
 
-  /**
+		/**
 	 * Creates a new adapter for the default case.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null.

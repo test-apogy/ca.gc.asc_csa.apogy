@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.geometry.data.impl.MeshPolygonShapesSamplerIm
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshPolygonSampler;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
@@ -48,7 +48,7 @@ public class CartesianTriangularMeshPolygonSamplerImpl extends MeshPolygonShapes
 	@Override
 	protected CartesianPositionCoordinates copyCoordinates(CartesianPositionCoordinates point)
 	{
-		return Data3dFacade.INSTANCE.createCartesianPositionCoordinates(point);
+		return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
 	}
 
 	@Override

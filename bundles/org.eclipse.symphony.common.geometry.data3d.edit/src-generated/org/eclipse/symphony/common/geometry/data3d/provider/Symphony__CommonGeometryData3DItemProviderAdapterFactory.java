@@ -1152,26 +1152,26 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Data3dFacadeItemProvider data3dFacadeItemProvider;
+	protected Symphony__CommonGeometryData3DFacadeItemProvider symphony__CommonGeometryData3DFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createData3dFacadeAdapter() {
-		if (data3dFacadeItemProvider == null) {
-			data3dFacadeItemProvider = new Data3dFacadeItemProvider(this);
+	public Adapter createSymphony__CommonGeometryData3DFacadeAdapter() {
+		if (symphony__CommonGeometryData3DFacadeItemProvider == null) {
+			symphony__CommonGeometryData3DFacadeItemProvider = new Symphony__CommonGeometryData3DFacadeItemProvider(this);
 		}
 
-		return data3dFacadeItemProvider;
+		return symphony__CommonGeometryData3DFacadeItemProvider;
 	}
 
 	/**
@@ -1392,7 +1392,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 		if (voxelBased3DPointCloudResamplerItemProvider != null) voxelBased3DPointCloudResamplerItemProvider.dispose();
 		if (rigidBodyPoseTrackerItemProvider != null) rigidBodyPoseTrackerItemProvider.dispose();
 		if (positionMarkerItemProvider != null) positionMarkerItemProvider.dispose();
-		if (data3dFacadeItemProvider != null) data3dFacadeItemProvider.dispose();
+		if (symphony__CommonGeometryData3DFacadeItemProvider != null) symphony__CommonGeometryData3DFacadeItemProvider.dispose();
 		if (data3DIOItemProvider != null) data3DIOItemProvider.dispose();
 		if (data3DUtilsItemProvider != null) data3DUtilsItemProvider.dispose();
 	}

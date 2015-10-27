@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -122,7 +122,7 @@ public class CartesianCoordinatesSetImpl extends CoordinatesSetImpl<CartesianPos
 	 */
 	public CartesianCoordinatesSetExtent getExtent() 
 	{
-		return Geometry3dUtilities.getCartesianCoordinatesSetExtent(getPoints());
+		return Geometry3DUtilities.getCartesianCoordinatesSetExtent(getPoints());
 	}
 
 	/**

@@ -21,12 +21,12 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.symphony.addons.FeatureOfInterestPickingTool;
 import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
 import org.eclipse.symphony.core.FeatureOfInterest;
@@ -484,7 +484,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			
 			if(nodeSelection.getRelativeIntersectionPoint() != null)
 			{
-				setPickRelativePosition(MathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint()));
+				setPickRelativePosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint()));
 			}
 			else
 			{
@@ -493,7 +493,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 			
 			if(nodeSelection.getAbsoluteIntersectionNormal() != null)
 			{				
-				setPickAbsoluteNormal(MathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z));
+				setPickAbsoluteNormal(Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z));
 			}
 			else
 			{
@@ -587,7 +587,7 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		Matrix4x4 pose = null;
 		
 		// Gets the transform of the selected point relative to the root.
-		Matrix4d transform = TopologyFacade.INSTANCE.expressNodeInRootFrame(node);
+		Matrix4d transform = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(node);
 		
 		Point3d selectedPoint = new Point3d();
 		if(relativePosition != null)
@@ -599,17 +599,17 @@ public class FeatureOfInterestPickingToolImpl extends Simple3DToolImpl implement
 		transform.transform(selectedPoint);
 		
 		// Updates absolute position
-		Tuple3d absolutePosition = MathFacade.INSTANCE.createTuple3d(selectedPoint);
+		Tuple3d absolutePosition = Symphony__CommonMathFacade.INSTANCE.createTuple3d(selectedPoint);
 		setPickAbsolutePosition(absolutePosition);
 		
 		// Gets the rotation matrix associated with the normal.
-		Matrix3x3 rotation = MathFacade.INSTANCE.createMatrix3x3(createFOIOrientation(normal));
+		Matrix3x3 rotation = Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(createFOIOrientation(normal));
 				
 		// Creates the pose of the FeatureOfInterest to be created.								
-		TransformNode t = TopologyFacade.INSTANCE.createTransformNodeXYZ(selectedPoint.x, selectedPoint.y, selectedPoint.z, 0, 0, 0);
+		TransformNode t = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(selectedPoint.x, selectedPoint.y, selectedPoint.z, 0, 0, 0);
 		t.setRotationMatrix(rotation);
 				
-		pose = MathFacade.INSTANCE.createMatrix4x4(t.asMatrix4d());
+		pose = Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(t.asMatrix4d());
 		
 		return pose;
 	}

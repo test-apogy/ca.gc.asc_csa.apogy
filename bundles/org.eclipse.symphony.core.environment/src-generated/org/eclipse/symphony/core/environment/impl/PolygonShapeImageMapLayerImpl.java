@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer;
 import org.eclipse.symphony.core.environment.RectangularRegion;
@@ -178,7 +178,7 @@ public abstract class PolygonShapeImageMapLayerImpl extends AbstractShapeImageLa
 	protected RectangularRegion getRectangularRegion(List<Tuple3d> vertices)
 	{
 		RectangularRegion rectangularRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
-		rectangularRegion.setTransformation(MathFacade.INSTANCE.createIdentityMatrix4x4());
+		rectangularRegion.setTransformation(Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4());
 		if(vertices.size() > 0)
 		{			
 			double xMin = Double.POSITIVE_INFINITY;
@@ -204,7 +204,7 @@ public abstract class PolygonShapeImageMapLayerImpl extends AbstractShapeImageLa
 			Matrix4d matrix = new Matrix4d();	
 			matrix.setIdentity();
 			matrix.setTranslation(new Vector3d(xMin, yMin, 0));
-			rectangularRegion.setTransformation(MathFacade.INSTANCE.createMatrix4x4(matrix));
+			rectangularRegion.setTransformation(Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(matrix));
 		}
 
 		return rectangularRegion;

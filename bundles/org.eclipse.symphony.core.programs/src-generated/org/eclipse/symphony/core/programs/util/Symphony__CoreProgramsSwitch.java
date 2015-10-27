@@ -71,9 +71,9 @@ public class Symphony__CoreProgramsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreProgramsPackage.PROGRAM_FACADE: {
-				ProgramFacade programFacade = (ProgramFacade)theEObject;
-				T result = caseProgramFacade(programFacade);
+			case Symphony__CoreProgramsPackage.SYMPHONY_CORE_PROGRAMS_FACADE: {
+				Symphony__CoreProgramsFacade symphony__CoreProgramsFacade = (Symphony__CoreProgramsFacade)theEObject;
+				T result = caseSymphony__CoreProgramsFacade(symphony__CoreProgramsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -103,17 +103,17 @@ public class Symphony__CoreProgramsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Program Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Program Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseProgramFacade(ProgramFacade object) {
+	public T caseSymphony__CoreProgramsFacade(Symphony__CoreProgramsFacade object) {
 		return null;
 	}
 

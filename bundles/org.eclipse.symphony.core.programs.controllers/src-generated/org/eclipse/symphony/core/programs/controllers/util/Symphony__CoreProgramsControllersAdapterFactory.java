@@ -74,8 +74,8 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 	protected Symphony__CoreProgramsControllersSwitch<Adapter> modelSwitch =
 		new Symphony__CoreProgramsControllersSwitch<Adapter>() {
 			@Override
-			public Adapter caseControllerFacade(ControllerFacade object) {
-				return createControllerFacadeAdapter();
+			public Adapter caseSymphony__CoreProgramsControllersFacade(Symphony__CoreProgramsControllersFacade object) {
+				return createSymphony__CoreProgramsControllersFacadeAdapter();
 			}
 			@Override
 			public Adapter caseControllersConfiguration(ControllersConfiguration object) {
@@ -206,16 +206,16 @@ public class Symphony__CoreProgramsControllersAdapterFactory extends AdapterFact
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.ControllerFacade <em>Controller Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.controllers.ControllerFacade
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade
 	 * @generated
 	 */
-	public Adapter createControllerFacadeAdapter() {
+	public Adapter createSymphony__CoreProgramsControllersFacadeAdapter() {
 		return null;
 	}
 

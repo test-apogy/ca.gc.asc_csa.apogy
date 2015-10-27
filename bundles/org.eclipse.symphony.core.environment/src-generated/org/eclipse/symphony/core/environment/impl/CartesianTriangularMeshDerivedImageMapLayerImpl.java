@@ -28,7 +28,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
@@ -38,7 +38,7 @@ import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.environment.Activator;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImageMapLayer;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.EnvironmentFacade;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
 import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.RectangularVolumeRegion;
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
@@ -285,7 +285,7 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 	{		
 		if(getCartesianTriangularMeshMapLayer() != null && getCartesianTriangularMeshMapLayer().getCurrentMesh() != null)
 		{
-			return EnvironmentFacade.INSTANCE.getRectangularVolumeRegion(getCartesianTriangularMeshMapLayer().getCurrentMesh());
+			return Symphony__CoreEnvironmentFacade.INSTANCE.getRectangularVolumeRegion(getCartesianTriangularMeshMapLayer().getCurrentMesh());
 		}
 		else
 		{
@@ -938,7 +938,7 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 					CartesianPositionCoordinates projection = null;
 					while(it.hasNext() && projection == null)
 					{						
-						projection = Geometry3dUtilities.getProjectionAlongAxisOnToPolygon(CartesianAxis.Z, point, it.next());
+						projection = Geometry3DUtilities.getProjectionAlongAxisOnToPolygon(CartesianAxis.Z, point, it.next());
 						if(projection != null)
 						{
 							intersectionPoints[i][j] = projection.asPoint3d();
@@ -1031,7 +1031,7 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 						if(monitor.isCanceled()) return Status.CANCEL_STATUS;
 						
 						CartesianTriangle triangle = it.next();
-						projection = Geometry3dUtilities.getProjectionAlongAxisOnToPolygon(CartesianAxis.Z, point, triangle);
+						projection = Geometry3DUtilities.getProjectionAlongAxisOnToPolygon(CartesianAxis.Z, point, triangle);
 						if(projection != null)
 						{
 							intersectionTriangles[i][j] = triangle;
@@ -1123,7 +1123,7 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerImpl extends Im
 		List<CartesianTriangle> triangles = mesh.getPolygonNeighbours(triangle);
 		
 		// Computes a area weighted average of the slope.
-		Vector3d normal = Geometry3dUtilities.getAreaWeightedAverageNormal(triangles);
+		Vector3d normal = Geometry3DUtilities.getAreaWeightedAverageNormal(triangles);
 		
 		return normal;
 	}

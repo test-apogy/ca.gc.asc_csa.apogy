@@ -96,15 +96,15 @@ public interface Symphony__CommonTopologyBindingsFactory extends EFactory
   BindingsSet createBindingsSet();
 
   /**
-	 * Returns a new object of class '<em>Topology Bindings Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Topology Bindings Facade</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-  TopologyBindingsFacade createTopologyBindingsFacade();
+	Symphony__CommonTopologyBindingsFacade createSymphony__CommonTopologyBindingsFacade();
 
-  /**
+		/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

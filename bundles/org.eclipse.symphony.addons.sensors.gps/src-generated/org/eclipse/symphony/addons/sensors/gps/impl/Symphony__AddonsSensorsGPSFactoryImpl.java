@@ -68,7 +68,7 @@ public class Symphony__AddonsSensorsGPSFactoryImpl extends EFactoryImpl implemen
 			case Symphony__AddonsSensorsGPSPackage.GPS_POSE_SENSOR: return createGPSPoseSensor();
 			case Symphony__AddonsSensorsGPSPackage.GPS: return createGPS();
 			case Symphony__AddonsSensorsGPSPackage.MARKED_GPS: return createMarkedGPS();
-			case Symphony__AddonsSensorsGPSPackage.GPS_FACADE: return createGPSFacade();
+			case Symphony__AddonsSensorsGPSPackage.SYMPHONY_ADDONS_SENSORS_GPS_FACADE: return createSymphony__AddonsSensorsGPSFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -173,9 +173,9 @@ public class Symphony__AddonsSensorsGPSFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GPSFacade createGPSFacade() {
-		GPSFacadeImpl gpsFacade = new GPSFacadeImpl();
-		return gpsFacade;
+	public Symphony__AddonsSensorsGPSFacade createSymphony__AddonsSensorsGPSFacade() {
+		Symphony__AddonsSensorsGPSFacadeImpl symphony__AddonsSensorsGPSFacade = new Symphony__AddonsSensorsGPSFacadeImpl();
+		return symphony__AddonsSensorsGPSFacade;
 	}
 
 	/**

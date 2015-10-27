@@ -65,8 +65,8 @@ public class Symphony__CoreInvocatorUIAdapterFactory extends AdapterFactoryImpl 
 	protected Symphony__CoreInvocatorUISwitch<Adapter> modelSwitch =
 		new Symphony__CoreInvocatorUISwitch<Adapter>() {
 			@Override
-			public Adapter caseEMFEcoreInvocatorUIFacade(EMFEcoreInvocatorUIFacade object) {
-				return createEMFEcoreInvocatorUIFacadeAdapter();
+			public Adapter caseSymphony__CoreInvocatorUIFacade(Symphony__CoreInvocatorUIFacade object) {
+				return createSymphony__CoreInvocatorUIFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -89,16 +89,16 @@ public class Symphony__CoreInvocatorUIAdapterFactory extends AdapterFactoryImpl 
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUIFacade <em>EMF Ecore Invocator UI Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUIFacade
+	 * @see org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade
 	 * @generated
 	 */
-	public Adapter createEMFEcoreInvocatorUIFacadeAdapter() {
+	public Adapter createSymphony__CoreInvocatorUIFacadeAdapter() {
 		return null;
 	}
 

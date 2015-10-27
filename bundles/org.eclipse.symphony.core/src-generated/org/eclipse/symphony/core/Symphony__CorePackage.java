@@ -64,17 +64,17 @@ public interface Symphony__CorePackage extends EPackage {
 	Symphony__CorePackage eINSTANCE = org.eclipse.symphony.core.impl.Symphony__CorePackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.SymphonyCoreFacadeImpl <em>Symphony Core Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.Symphony__CoreFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.impl.SymphonyCoreFacadeImpl
-	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getSymphonyCoreFacade()
+	 * @see org.eclipse.symphony.core.impl.Symphony__CoreFacadeImpl
+	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getSymphony__CoreFacade()
 	 * @generated
 	 */
 	int SYMPHONY_CORE_FACADE = 0;
 
 	/**
-	 * The number of structural features of the '<em>Symphony Core Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -137,7 +137,7 @@ public interface Symphony__CorePackage extends EPackage {
 	int SYMPHONY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST = 5;
 
 	/**
-	 * The number of operations of the '<em>Symphony Core Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2296,74 +2296,74 @@ public interface Symphony__CorePackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.SymphonyCoreFacade <em>Symphony Core Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.core.Symphony__CoreFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Symphony Core Facade</em>'.
-	 * @see org.eclipse.symphony.core.SymphonyCoreFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.core.Symphony__CoreFacade
 	 * @generated
 	 */
-	EClass getSymphonyCoreFacade();
+	EClass getSymphony__CoreFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.SymphonyCoreFacade#computeAbsolutePoseMatrix(org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.common.math.Matrix4x4) <em>Compute Absolute Pose Matrix</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.Symphony__CoreFacade#computeAbsolutePoseMatrix(org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.common.math.Matrix4x4) <em>Compute Absolute Pose Matrix</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Compute Absolute Pose Matrix</em>' operation.
-	 * @see org.eclipse.symphony.core.SymphonyCoreFacade#computeAbsolutePoseMatrix(org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.common.math.Matrix4x4)
+	 * @see org.eclipse.symphony.core.Symphony__CoreFacade#computeAbsolutePoseMatrix(org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.common.math.Matrix4x4)
 	 * @generated
 	 */
-	EOperation getSymphonyCoreFacade__ComputeAbsolutePoseMatrix__SymphonySystem_Matrix4x4();
+	EOperation getSymphony__CoreFacade__ComputeAbsolutePoseMatrix__SymphonySystem_Matrix4x4();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.SymphonyCoreFacade#createResultNode(org.eclipse.symphony.core.PositionedResult) <em>Create Result Node</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.Symphony__CoreFacade#createResultNode(org.eclipse.symphony.core.PositionedResult) <em>Create Result Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Result Node</em>' operation.
-	 * @see org.eclipse.symphony.core.SymphonyCoreFacade#createResultNode(org.eclipse.symphony.core.PositionedResult)
+	 * @see org.eclipse.symphony.core.Symphony__CoreFacade#createResultNode(org.eclipse.symphony.core.PositionedResult)
 	 * @generated
 	 */
-	EOperation getSymphonyCoreFacade__CreateResultNode__PositionedResult();
+	EOperation getSymphony__CoreFacade__CreateResultNode__PositionedResult();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.SymphonyCoreFacade#createSymphonySession(boolean, boolean, boolean, boolean) <em>Create Symphony Session</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.Symphony__CoreFacade#createSymphonySession(boolean, boolean, boolean, boolean) <em>Create Symphony Session</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Symphony Session</em>' operation.
-	 * @see org.eclipse.symphony.core.SymphonyCoreFacade#createSymphonySession(boolean, boolean, boolean, boolean)
+	 * @see org.eclipse.symphony.core.Symphony__CoreFacade#createSymphonySession(boolean, boolean, boolean, boolean)
 	 * @generated
 	 */
-	EOperation getSymphonyCoreFacade__CreateSymphonySession__boolean_boolean_boolean_boolean();
+	EOperation getSymphony__CoreFacade__CreateSymphonySession__boolean_boolean_boolean_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.SymphonyCoreFacade#getSymphonySystem(org.eclipse.symphony.core.invocator.Environment, java.lang.String) <em>Get Symphony System</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.Symphony__CoreFacade#getSymphonySystem(org.eclipse.symphony.core.invocator.Environment, java.lang.String) <em>Get Symphony System</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Symphony System</em>' operation.
-	 * @see org.eclipse.symphony.core.SymphonyCoreFacade#getSymphonySystem(org.eclipse.symphony.core.invocator.Environment, java.lang.String)
+	 * @see org.eclipse.symphony.core.Symphony__CoreFacade#getSymphonySystem(org.eclipse.symphony.core.invocator.Environment, java.lang.String)
 	 * @generated
 	 */
-	EOperation getSymphonyCoreFacade__GetSymphonySystem__Environment_String();
+	EOperation getSymphony__CoreFacade__GetSymphonySystem__Environment_String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.SymphonyCoreFacade#loadFeatureOfInterestFromFile(java.lang.String) <em>Load Feature Of Interest From File</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.Symphony__CoreFacade#loadFeatureOfInterestFromFile(java.lang.String) <em>Load Feature Of Interest From File</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Feature Of Interest From File</em>' operation.
-	 * @see org.eclipse.symphony.core.SymphonyCoreFacade#loadFeatureOfInterestFromFile(java.lang.String)
+	 * @see org.eclipse.symphony.core.Symphony__CoreFacade#loadFeatureOfInterestFromFile(java.lang.String)
 	 * @generated
 	 */
-	EOperation getSymphonyCoreFacade__LoadFeatureOfInterestFromFile__String();
+	EOperation getSymphony__CoreFacade__LoadFeatureOfInterestFromFile__String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.SymphonyCoreFacade#saveFeatureOfInterestToFile(java.lang.String, java.util.List) <em>Save Feature Of Interest To File</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.Symphony__CoreFacade#saveFeatureOfInterestToFile(java.lang.String, java.util.List) <em>Save Feature Of Interest To File</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Save Feature Of Interest To File</em>' operation.
-	 * @see org.eclipse.symphony.core.SymphonyCoreFacade#saveFeatureOfInterestToFile(java.lang.String, java.util.List)
+	 * @see org.eclipse.symphony.core.Symphony__CoreFacade#saveFeatureOfInterestToFile(java.lang.String, java.util.List)
 	 * @generated
 	 */
-	EOperation getSymphonyCoreFacade__SaveFeatureOfInterestToFile__String_List();
+	EOperation getSymphony__CoreFacade__SaveFeatureOfInterestToFile__String_List();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.core.SymphonyEnvironment <em>Symphony Environment</em>}'.
@@ -3259,14 +3259,14 @@ public interface Symphony__CorePackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.impl.SymphonyCoreFacadeImpl <em>Symphony Core Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.core.impl.Symphony__CoreFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.impl.SymphonyCoreFacadeImpl
-		 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getSymphonyCoreFacade()
+		 * @see org.eclipse.symphony.core.impl.Symphony__CoreFacadeImpl
+		 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getSymphony__CoreFacade()
 		 * @generated
 		 */
-		EClass SYMPHONY_CORE_FACADE = eINSTANCE.getSymphonyCoreFacade();
+		EClass SYMPHONY_CORE_FACADE = eINSTANCE.getSymphony__CoreFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Compute Absolute Pose Matrix</b></em>' operation.
@@ -3274,7 +3274,7 @@ public interface Symphony__CorePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__SYMPHONYSYSTEM_MATRIX4X4 = eINSTANCE.getSymphonyCoreFacade__ComputeAbsolutePoseMatrix__SymphonySystem_Matrix4x4();
+		EOperation SYMPHONY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__SYMPHONYSYSTEM_MATRIX4X4 = eINSTANCE.getSymphony__CoreFacade__ComputeAbsolutePoseMatrix__SymphonySystem_Matrix4x4();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Result Node</b></em>' operation.
@@ -3282,7 +3282,7 @@ public interface Symphony__CorePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT = eINSTANCE.getSymphonyCoreFacade__CreateResultNode__PositionedResult();
+		EOperation SYMPHONY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT = eINSTANCE.getSymphony__CoreFacade__CreateResultNode__PositionedResult();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Symphony Session</b></em>' operation.
@@ -3290,7 +3290,7 @@ public interface Symphony__CorePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_FACADE___CREATE_SYMPHONY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN = eINSTANCE.getSymphonyCoreFacade__CreateSymphonySession__boolean_boolean_boolean_boolean();
+		EOperation SYMPHONY_CORE_FACADE___CREATE_SYMPHONY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN = eINSTANCE.getSymphony__CoreFacade__CreateSymphonySession__boolean_boolean_boolean_boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Symphony System</b></em>' operation.
@@ -3298,7 +3298,7 @@ public interface Symphony__CorePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_FACADE___GET_SYMPHONY_SYSTEM__ENVIRONMENT_STRING = eINSTANCE.getSymphonyCoreFacade__GetSymphonySystem__Environment_String();
+		EOperation SYMPHONY_CORE_FACADE___GET_SYMPHONY_SYSTEM__ENVIRONMENT_STRING = eINSTANCE.getSymphony__CoreFacade__GetSymphonySystem__Environment_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Load Feature Of Interest From File</b></em>' operation.
@@ -3306,7 +3306,7 @@ public interface Symphony__CorePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING = eINSTANCE.getSymphonyCoreFacade__LoadFeatureOfInterestFromFile__String();
+		EOperation SYMPHONY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING = eINSTANCE.getSymphony__CoreFacade__LoadFeatureOfInterestFromFile__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Save Feature Of Interest To File</b></em>' operation.
@@ -3314,7 +3314,7 @@ public interface Symphony__CorePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST = eINSTANCE.getSymphonyCoreFacade__SaveFeatureOfInterestToFile__String_List();
+		EOperation SYMPHONY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST = eINSTANCE.getSymphony__CoreFacade__SaveFeatureOfInterestToFile__String_List();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.core.impl.SymphonyEnvironmentImpl <em>Symphony Environment</em>}' class.

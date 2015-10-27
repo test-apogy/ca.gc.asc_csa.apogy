@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.topology.ui.PositionNodePresentation;
 import org.eclipse.symphony.common.topology.ui.RotationNodePresentation;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
 import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
 import org.eclipse.symphony.common.topology.ui.URLNodePresentation;
@@ -133,9 +133,9 @@ public class Symphony__CommonTopologyUISwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyUIPackage.TOPOLOGY_UI_FACADE: {
-				TopologyUIFacade topologyUIFacade = (TopologyUIFacade)theEObject;
-				T result = caseTopologyUIFacade(topologyUIFacade);
+			case Symphony__CommonTopologyUIPackage.SYMPHONY_COMMON_TOPOLOGY_UI_FACADE: {
+				Symphony__CommonTopologyUIFacade symphony__CommonTopologyUIFacade = (Symphony__CommonTopologyUIFacade)theEObject;
+				T result = caseSymphony__CommonTopologyUIFacade(symphony__CommonTopologyUIFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -279,17 +279,17 @@ public class Symphony__CommonTopologyUISwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Topology UI Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Topology UI Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTopologyUIFacade(TopologyUIFacade object) {
+	public T caseSymphony__CommonTopologyUIFacade(Symphony__CommonTopologyUIFacade object) {
 		return null;
 	}
 

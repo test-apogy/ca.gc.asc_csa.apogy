@@ -57,7 +57,7 @@ public class InvocatorDisplayPreferencePage extends PreferencePage implements IW
 //			instanceTypecombo = new CCombo(filterGroup, SWT.BORDER);
 //			instanceTypecombo.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 1, 1));
 //			
-//			List<EClass> classes = org.eclipse.symphony.common.emf.EMFEcoreFacade.INSTANCE.getAllAvailableEClasses();
+//			List<EClass> classes = org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade.INSTANCE.getAllAvailableEClasses();
 //						
 //			updateInstanceTypeCombo(classes);		
 //			selectInstanceType(getPreferenceStore().getString(PreferencesConstants.INSTANCE_TYPE_CLASS_FILTER_ID));

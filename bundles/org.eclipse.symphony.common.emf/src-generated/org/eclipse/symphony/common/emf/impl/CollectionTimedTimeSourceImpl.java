@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.symphony.common.emf.Activator;
 import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeDirection;
 import org.eclipse.symphony.common.emf.Timed;
@@ -502,7 +502,7 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 	{
 		if(getTimedsList() != null)
 		{
-			return EMFEcoreFacade.INSTANCE.sortTimed(getTimedsList());
+			return Symphony__CommonEMFFacade.INSTANCE.sortTimed(getTimedsList());
 		}
 		else
 		{

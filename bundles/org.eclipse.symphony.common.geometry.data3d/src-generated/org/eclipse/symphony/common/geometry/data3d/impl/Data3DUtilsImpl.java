@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.Data3DUtils;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.PointLocator;
@@ -91,7 +91,7 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 
 		centroid.scale(1.0 / (double) points.getPoints().size());
 
-		CartesianPositionCoordinates centroidCoord = Data3dFacade.INSTANCE
+		CartesianPositionCoordinates centroidCoord = Symphony__CommonGeometryData3DFacade.INSTANCE
 				.createCartesianPositionCoordinates(centroid.x, centroid.y,
 						centroid.z);
 
@@ -298,18 +298,18 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 			switch (extrusionAxis.getValue()) 
 			{
 				case CartesianAxis.X_VALUE:
-					positivePoint = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(halfExtrusionWidth, y, z);
-					negativePoint = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(-halfExtrusionWidth, y, z);
+					positivePoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(halfExtrusionWidth, y, z);
+					negativePoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(-halfExtrusionWidth, y, z);
 				break;
 
 				case CartesianAxis.Y_VALUE:		
-					positivePoint = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(x, halfExtrusionWidth, z);
-					negativePoint = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(x, -halfExtrusionWidth, z);
+					positivePoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, halfExtrusionWidth, z);
+					negativePoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, -halfExtrusionWidth, z);
 				break;
 
 				case CartesianAxis.Z_VALUE:		
-					positivePoint = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(x, y, halfExtrusionWidth);
-					negativePoint = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(x, y, -halfExtrusionWidth);
+					positivePoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, halfExtrusionWidth);
+					negativePoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, -halfExtrusionWidth);
 				break;
 				
 				default:
@@ -337,7 +337,7 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 			CartesianPositionCoordinates v2 = edgeNegative.get(i+1);
 			CartesianPositionCoordinates v3 = edgePositive.get(i);
 			
-			CartesianTriangle triangle = Data3dFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
+			CartesianTriangle triangle = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
 			mesh.getPolygons().add(triangle);
 		}
 		for(int i = 0; i < edgeNegative.size() - 1; i++)
@@ -346,7 +346,7 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 			CartesianPositionCoordinates v2 = edgeNegative.get(i+1);
 			CartesianPositionCoordinates v3 = edgePositive.get(i+1);
 			
-			CartesianTriangle triangle = Data3dFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
+			CartesianTriangle triangle = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
 			mesh.getPolygons().add(triangle);
 		}			
 		
@@ -356,14 +356,14 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 			CartesianPositionCoordinates v2 = edgeNegative.get(0);
 			CartesianPositionCoordinates v3 = edgePositive.get(edgeNegative.size() - 1);
 			
-			CartesianTriangle triangle = Data3dFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
+			CartesianTriangle triangle = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
 			mesh.getPolygons().add(triangle);
 			
 			v1 = edgePositive.get(edgeNegative.size() - 1);
 			v2 = edgeNegative.get(0);
 			v3 = edgePositive.get(0);
 			
-			triangle = Data3dFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
+			triangle = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v1, v2, v3);
 			mesh.getPolygons().add(triangle);
 		}
 		

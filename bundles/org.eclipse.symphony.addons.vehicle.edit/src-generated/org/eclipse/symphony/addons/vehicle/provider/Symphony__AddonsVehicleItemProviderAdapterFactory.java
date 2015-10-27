@@ -301,30 +301,29 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.VehicleToolsFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VehicleToolsFacadeItemProvider vehicleToolsFacadeItemProvider;
+	protected Symphony__AddonsVehicleFacadeItemProvider symphony__AddonsVehicleFacadeItemProvider;
 
 		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.VehicleToolsFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createVehicleToolsFacadeAdapter()
-  {
-		if (vehicleToolsFacadeItemProvider == null) {
-			vehicleToolsFacadeItemProvider = new VehicleToolsFacadeItemProvider(this);
+	@Override
+	public Adapter createSymphony__AddonsVehicleFacadeAdapter() {
+		if (symphony__AddonsVehicleFacadeItemProvider == null) {
+			symphony__AddonsVehicleFacadeItemProvider = new Symphony__AddonsVehicleFacadeItemProvider(this);
 		}
 
-		return vehicleToolsFacadeItemProvider;
+		return symphony__AddonsVehicleFacadeItemProvider;
 	}
 
-  /**
+		/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -587,7 +586,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 		if (wheelContactProviderItemProvider != null) wheelContactProviderItemProvider.dispose();
 		if (landerSphericalFootItemProvider != null) landerSphericalFootItemProvider.dispose();
 		if (landerSphericalFootContactProviderItemProvider != null) landerSphericalFootContactProviderItemProvider.dispose();
-		if (vehicleToolsFacadeItemProvider != null) vehicleToolsFacadeItemProvider.dispose();
+		if (symphony__AddonsVehicleFacadeItemProvider != null) symphony__AddonsVehicleFacadeItemProvider.dispose();
 		if (wheelVehicleUtilitiesItemProvider != null) wheelVehicleUtilitiesItemProvider.dispose();
 		if (meshExtent2DItemProvider != null) meshExtent2DItemProvider.dispose();
 		if (pathPlannerToolItemProvider != null) pathPlannerToolItemProvider.dispose();
@@ -832,7 +831,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehicleToolsFacade()));
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createSymphony__AddonsVehicleFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -912,7 +911,7 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehicleToolsFacade()));
+						 Symphony__AddonsVehicleFactory.eINSTANCE.createSymphony__AddonsVehicleFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter

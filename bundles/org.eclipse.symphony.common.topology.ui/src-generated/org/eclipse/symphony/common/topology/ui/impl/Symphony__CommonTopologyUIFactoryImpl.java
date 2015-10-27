@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.topology.ui.SceneObject;
 import org.eclipse.symphony.common.topology.ui.ShadowMode;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
 import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
@@ -83,7 +83,7 @@ public class Symphony__CommonTopologyUIFactoryImpl extends EFactoryImpl implemen
 			case Symphony__CommonTopologyUIPackage.ROTATION_NODE_PRESENTATION: return createRotationNodePresentation();
 			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION: return createPositionNodePresentation();
 			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION: return createURLNodePresentation();
-			case Symphony__CommonTopologyUIPackage.TOPOLOGY_UI_FACADE: return createTopologyUIFacade();
+			case Symphony__CommonTopologyUIPackage.SYMPHONY_COMMON_TOPOLOGY_UI_FACADE: return createSymphony__CommonTopologyUIFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -242,9 +242,9 @@ public class Symphony__CommonTopologyUIFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TopologyUIFacade createTopologyUIFacade() {
-		TopologyUIFacadeImpl topologyUIFacade = new TopologyUIFacadeImpl();
-		return topologyUIFacade;
+	public Symphony__CommonTopologyUIFacade createSymphony__CommonTopologyUIFacade() {
+		Symphony__CommonTopologyUIFacadeImpl symphony__CommonTopologyUIFacade = new Symphony__CommonTopologyUIFacadeImpl();
+		return symphony__CommonTopologyUIFacade;
 	}
 
 	/**

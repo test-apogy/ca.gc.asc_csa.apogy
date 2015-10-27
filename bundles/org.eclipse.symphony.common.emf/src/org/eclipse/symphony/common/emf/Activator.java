@@ -8,7 +8,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
@@ -45,7 +45,7 @@ public class Activator implements BundleActivator
 			@Override
 			protected IStatus run(IProgressMonitor monitor) {
 				try{
-					EMFEcoreFacade.INSTANCE.getAllSubEClasses(Symphony__CommonEMFPackage.Literals.EMF_ECORE_FACADE);
+					Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(Symphony__CommonEMFPackage.Literals.SYMPHONY_COMMON_EMF_FACADE);
 					Logger.INSTANCE.log(ID, Activator.this, "EMF Class Definitions loaded", EventSeverity.INFO);				
 				}catch (UnsatisfiedLinkError e){
 					Logger.INSTANCE.log(ID, Activator.this, "Error while loading EMF Class Definitions", EventSeverity.ERROR, e);

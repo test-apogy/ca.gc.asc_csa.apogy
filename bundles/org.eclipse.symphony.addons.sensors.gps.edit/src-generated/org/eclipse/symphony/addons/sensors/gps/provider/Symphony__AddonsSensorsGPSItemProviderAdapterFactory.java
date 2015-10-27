@@ -195,26 +195,26 @@ public class Symphony__AddonsSensorsGPSItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.gps.GPSFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected GPSFacadeItemProvider gpsFacadeItemProvider;
+	protected Symphony__AddonsSensorsGPSFacadeItemProvider symphony__AddonsSensorsGPSFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.gps.GPSFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createGPSFacadeAdapter() {
-		if (gpsFacadeItemProvider == null) {
-			gpsFacadeItemProvider = new GPSFacadeItemProvider(this);
+	public Adapter createSymphony__AddonsSensorsGPSFacadeAdapter() {
+		if (symphony__AddonsSensorsGPSFacadeItemProvider == null) {
+			symphony__AddonsSensorsGPSFacadeItemProvider = new Symphony__AddonsSensorsGPSFacadeItemProvider(this);
 		}
 
-		return gpsFacadeItemProvider;
+		return symphony__AddonsSensorsGPSFacadeItemProvider;
 	}
 
 	/**
@@ -347,7 +347,7 @@ public class Symphony__AddonsSensorsGPSItemProviderAdapterFactory extends Sympho
 		if (gpsPoseSensorItemProvider != null) gpsPoseSensorItemProvider.dispose();
 		if (gpsItemProvider != null) gpsItemProvider.dispose();
 		if (markedGPSItemProvider != null) markedGPSItemProvider.dispose();
-		if (gpsFacadeItemProvider != null) gpsFacadeItemProvider.dispose();
+		if (symphony__AddonsSensorsGPSFacadeItemProvider != null) symphony__AddonsSensorsGPSFacadeItemProvider.dispose();
 	}
 
 	/**
@@ -420,7 +420,7 @@ public class Symphony__AddonsSensorsGPSItemProviderAdapterFactory extends Sympho
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsGPSFactory.eINSTANCE.createGPSFacade()));
+						 Symphony__AddonsSensorsGPSFactory.eINSTANCE.createSymphony__AddonsSensorsGPSFacade()));
 
 				return null;
 			}
@@ -455,7 +455,7 @@ public class Symphony__AddonsSensorsGPSItemProviderAdapterFactory extends Sympho
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsGPSFactory.eINSTANCE.createGPSFacade()));
+						 Symphony__AddonsSensorsGPSFactory.eINSTANCE.createSymphony__AddonsSensorsGPSFacade()));
 
 				return null;
 			}

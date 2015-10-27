@@ -7,7 +7,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.environment.EarthSky;
-import org.eclipse.symphony.core.environment.EnvironmentFacade;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.ui.Activator;
 import org.eclipse.symphony.core.environment.ui.composites.EarthSkyComposite;
@@ -17,7 +17,7 @@ public class EarthSkyView extends AbstractView
 	public static final String PART_NAME = "Earth Sky View";
 	private EarthSky earthSky;
 	
-	private GeographicCoordinates marsYardCoordinates = EnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();
+	private GeographicCoordinates marsYardCoordinates = Symphony__CoreEnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();
 	
 	// Default values are the ones for Mars Yard.
 	public double defaultObserverLongitude =  marsYardCoordinates.getLongitude();

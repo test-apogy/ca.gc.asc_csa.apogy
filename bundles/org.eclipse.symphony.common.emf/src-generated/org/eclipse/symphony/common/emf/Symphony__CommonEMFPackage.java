@@ -62,329 +62,329 @@ public interface Symphony__CommonEMFPackage extends EPackage
   Symphony__CommonEMFPackage eINSTANCE = org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.emf.impl.EMFEcoreFacadeImpl <em>EMF Ecore Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.emf.impl.EMFEcoreFacadeImpl
-	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getEMFEcoreFacade()
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFFacadeImpl
+	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getSymphony__CommonEMFFacade()
 	 * @generated
 	 */
-  int EMF_ECORE_FACADE = 0;
+	int SYMPHONY_COMMON_EMF_FACADE = 0;
 
-  /**
-	 * The number of structural features of the '<em>EMF Ecore Facade</em>' class.
+		/**
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_COMMON_EMF_FACADE_FEATURE_COUNT = 0;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get All Available EClasses</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_ALL_AVAILABLE_ECLASSES = 0;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_ALL_AVAILABLE_ECLASSES = 0;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get All Sub EClasses</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_ALL_SUB_ECLASSES__ECLASS = 1;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_ALL_SUB_ECLASSES__ECLASS = 1;
 
-  /**
+		/**
 	 * The operation id for the '<em>Filter EClasses</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___FILTER_ECLASSES__LIST_ECLASSFILTER = 2;
+	int SYMPHONY_COMMON_EMF_FACADE___FILTER_ECLASSES__LIST_ECLASSFILTER = 2;
 
-  /**
+		/**
 	 * The operation id for the '<em>Filter EClasses</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___FILTER_ECLASSES__LIST_LIST = 3;
+	int SYMPHONY_COMMON_EMF_FACADE___FILTER_ECLASSES__LIST_LIST = 3;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get EClass</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_ECLASS__STRING = 4;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_ECLASS__STRING = 4;
 
-  /**
+		/**
 	 * The operation id for the '<em>Sort Alphabetically</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___SORT_ALPHABETICALLY__LIST = 5;
+	int SYMPHONY_COMMON_EMF_FACADE___SORT_ALPHABETICALLY__LIST = 5;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get All Available EOperations</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_ALL_AVAILABLE_EOPERATIONS__ECLASS = 6;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_ALL_AVAILABLE_EOPERATIONS__ECLASS = 6;
 
-  /**
+		/**
 	 * The operation id for the '<em>Sort EOperations Alphabetically</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___SORT_EOPERATIONS_ALPHABETICALLY__LIST = 7;
+	int SYMPHONY_COMMON_EMF_FACADE___SORT_EOPERATIONS_ALPHABETICALLY__LIST = 7;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Documentation</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_DOCUMENTATION__ETYPEDELEMENT = 8;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_DOCUMENTATION__ETYPEDELEMENT = 8;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Engineering Units As String</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_ENGINEERING_UNITS_AS_STRING__ETYPEDELEMENT = 9;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_ENGINEERING_UNITS_AS_STRING__ETYPEDELEMENT = 9;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Engineering Units</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_ENGINEERING_UNITS__ETYPEDELEMENT = 10;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_ENGINEERING_UNITS__ETYPEDELEMENT = 10;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Value Update Rate</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_VALUE_UPDATE_RATE__ETYPEDELEMENT = 11;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_VALUE_UPDATE_RATE__ETYPEDELEMENT = 11;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Warning OCL Expression</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_WARNING_OCL_EXPRESSION__ETYPEDELEMENT = 12;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_WARNING_OCL_EXPRESSION__ETYPEDELEMENT = 12;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Alarm OCL Expression</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_ALARM_OCL_EXPRESSION__ETYPEDELEMENT = 13;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_ALARM_OCL_EXPRESSION__ETYPEDELEMENT = 13;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Out Of Range OCL Expression</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_OUT_OF_RANGE_OCL_EXPRESSION__ETYPEDELEMENT = 14;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_OCL_EXPRESSION__ETYPEDELEMENT = 14;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Warning Min Value</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_WARNING_MIN_VALUE__ETYPEDELEMENT = 15;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_WARNING_MIN_VALUE__ETYPEDELEMENT = 15;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Warning Max Value</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_WARNING_MAX_VALUE__ETYPEDELEMENT = 16;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_WARNING_MAX_VALUE__ETYPEDELEMENT = 16;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Alarm Min Value</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_ALARM_MIN_VALUE__ETYPEDELEMENT = 17;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_ALARM_MIN_VALUE__ETYPEDELEMENT = 17;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Alarm Max Value</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_ALARM_MAX_VALUE__ETYPEDELEMENT = 18;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_ALARM_MAX_VALUE__ETYPEDELEMENT = 18;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Out Of Range Min Value</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_OUT_OF_RANGE_MIN_VALUE__ETYPEDELEMENT = 19;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_MIN_VALUE__ETYPEDELEMENT = 19;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Out Of Range Max Value</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_OUT_OF_RANGE_MAX_VALUE__ETYPEDELEMENT = 20;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_MAX_VALUE__ETYPEDELEMENT = 20;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Range</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_RANGE__ETYPEDELEMENT_OBJECT = 21;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_RANGE__ETYPEDELEMENT_OBJECT = 21;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Full Description</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_FULL_DESCRIPTION__ETYPEDELEMENT = 22;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_FULL_DESCRIPTION__ETYPEDELEMENT = 22;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Ancestries String</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_ANCESTRIES_STRING__ABSTRACTFEATURENODE = 23;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_ANCESTRIES_STRING__ABSTRACTFEATURENODE = 23;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Feature Root</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_FEATURE_ROOT__ABSTRACTFEATURENODE = 24;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_FEATURE_ROOT__ABSTRACTFEATURENODE = 24;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Ancestries</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_ANCESTRIES__ABSTRACTFEATURENODE = 25;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_ANCESTRIES__ABSTRACTFEATURENODE = 25;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Descendants</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_DESCENDANTS__ABSTRACTFEATURENODE = 26;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_DESCENDANTS__ABSTRACTFEATURENODE = 26;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Child EStructural Features</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_CHILD_ESTRUCTURAL_FEATURES__ABSTRACTFEATURENODE = 27;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_CHILD_ESTRUCTURAL_FEATURES__ABSTRACTFEATURENODE = 27;
 
-  /**
+		/**
 	 * The operation id for the '<em>Resolve</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___RESOLVE__EOBJECT_ABSTRACTFEATURENODE = 28;
+	int SYMPHONY_COMMON_EMF_FACADE___RESOLVE__EOBJECT_ABSTRACTFEATURENODE = 28;
 
-  /**
+		/**
 	 * The operation id for the '<em>Set Value</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___SET_VALUE__EOBJECT_ABSTRACTFEATURENODE_OBJECT = 29;
+	int SYMPHONY_COMMON_EMF_FACADE___SET_VALUE__EOBJECT_ABSTRACTFEATURENODE_OBJECT = 29;
 
-  /**
+		/**
 	 * The operation id for the '<em>Is Resolved</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___IS_RESOLVED__EOBJECT_ABSTRACTFEATURENODE = 30;
+	int SYMPHONY_COMMON_EMF_FACADE___IS_RESOLVED__EOBJECT_ABSTRACTFEATURENODE = 30;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Leaf</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_LEAF__LISTROOTNODE = 31;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_LEAF__LISTROOTNODE = 31;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get File</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE___GET_FILE__RESOURCE = 32;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_FILE__RESOURCE = 32;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Content</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_ECORE_FACADE___GET_CONTENT__URI = 33;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_CONTENT__URI = 33;
 
 		/**
 	 * The operation id for the '<em>Sort Timed</em>' operation.
@@ -393,7 +393,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_ECORE_FACADE___SORT_TIMED__COLLECTION = 34;
+	int SYMPHONY_COMMON_EMF_FACADE___SORT_TIMED__COLLECTION = 34;
 
 		/**
 	 * The operation id for the '<em>Get Time Span</em>' operation.
@@ -402,7 +402,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_ECORE_FACADE___GET_TIME_SPAN__COLLECTION = 35;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_TIME_SPAN__COLLECTION = 35;
 
 		/**
 	 * The operation id for the '<em>Get ID</em>' operation.
@@ -411,18 +411,18 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_ECORE_FACADE___GET_ID__EOBJECT = 36;
+	int SYMPHONY_COMMON_EMF_FACADE___GET_ID__EOBJECT = 36;
 
 		/**
-	 * The number of operations of the '<em>EMF Ecore Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_FACADE_OPERATION_COUNT = 37;
+	int SYMPHONY_COMMON_EMF_FACADE_OPERATION_COUNT = 37;
 
-  /**
+		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1897,384 +1897,384 @@ public interface Symphony__CommonEMFPackage extends EPackage
 
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade <em>EMF Ecore Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EMF Ecore Facade</em>'.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade
 	 * @generated
 	 */
-  EClass getEMFEcoreFacade();
+	EClass getSymphony__CommonEMFFacade();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getAllAvailableEClasses() <em>Get All Available EClasses</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAllAvailableEClasses() <em>Get All Available EClasses</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get All Available EClasses</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getAllAvailableEClasses()
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAllAvailableEClasses()
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetAllAvailableEClasses();
+	EOperation getSymphony__CommonEMFFacade__GetAllAvailableEClasses();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getAllSubEClasses(org.eclipse.emf.ecore.EClass) <em>Get All Sub EClasses</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAllSubEClasses(org.eclipse.emf.ecore.EClass) <em>Get All Sub EClasses</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get All Sub EClasses</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getAllSubEClasses(org.eclipse.emf.ecore.EClass)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAllSubEClasses(org.eclipse.emf.ecore.EClass)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetAllSubEClasses__EClass();
+	EOperation getSymphony__CommonEMFFacade__GetAllSubEClasses__EClass();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#filterEClasses(java.util.List, org.eclipse.symphony.common.emf.EClassFilter) <em>Filter EClasses</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#filterEClasses(java.util.List, org.eclipse.symphony.common.emf.EClassFilter) <em>Filter EClasses</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Filter EClasses</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#filterEClasses(java.util.List, org.eclipse.symphony.common.emf.EClassFilter)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#filterEClasses(java.util.List, org.eclipse.symphony.common.emf.EClassFilter)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__FilterEClasses__List_EClassFilter();
+	EOperation getSymphony__CommonEMFFacade__FilterEClasses__List_EClassFilter();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#filterEClasses(java.util.List, java.util.List) <em>Filter EClasses</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#filterEClasses(java.util.List, java.util.List) <em>Filter EClasses</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Filter EClasses</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#filterEClasses(java.util.List, java.util.List)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#filterEClasses(java.util.List, java.util.List)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__FilterEClasses__List_List();
+	EOperation getSymphony__CommonEMFFacade__FilterEClasses__List_List();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getEClass(java.lang.String) <em>Get EClass</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getEClass(java.lang.String) <em>Get EClass</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get EClass</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getEClass(java.lang.String)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getEClass(java.lang.String)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetEClass__String();
+	EOperation getSymphony__CommonEMFFacade__GetEClass__String();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#sortAlphabetically(java.util.List) <em>Sort Alphabetically</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#sortAlphabetically(java.util.List) <em>Sort Alphabetically</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Sort Alphabetically</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#sortAlphabetically(java.util.List)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#sortAlphabetically(java.util.List)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__SortAlphabetically__List();
+	EOperation getSymphony__CommonEMFFacade__SortAlphabetically__List();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getAllAvailableEOperations(org.eclipse.emf.ecore.EClass) <em>Get All Available EOperations</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAllAvailableEOperations(org.eclipse.emf.ecore.EClass) <em>Get All Available EOperations</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get All Available EOperations</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getAllAvailableEOperations(org.eclipse.emf.ecore.EClass)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAllAvailableEOperations(org.eclipse.emf.ecore.EClass)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetAllAvailableEOperations__EClass();
+	EOperation getSymphony__CommonEMFFacade__GetAllAvailableEOperations__EClass();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#sortEOperationsAlphabetically(java.util.List) <em>Sort EOperations Alphabetically</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#sortEOperationsAlphabetically(java.util.List) <em>Sort EOperations Alphabetically</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Sort EOperations Alphabetically</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#sortEOperationsAlphabetically(java.util.List)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#sortEOperationsAlphabetically(java.util.List)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__SortEOperationsAlphabetically__List();
+	EOperation getSymphony__CommonEMFFacade__SortEOperationsAlphabetically__List();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getDocumentation(org.eclipse.emf.ecore.ETypedElement) <em>Get Documentation</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getDocumentation(org.eclipse.emf.ecore.ETypedElement) <em>Get Documentation</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Documentation</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getDocumentation(org.eclipse.emf.ecore.ETypedElement)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getDocumentation(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetDocumentation__ETypedElement();
+	EOperation getSymphony__CommonEMFFacade__GetDocumentation__ETypedElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getEngineeringUnitsAsString(org.eclipse.emf.ecore.ETypedElement) <em>Get Engineering Units As String</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getEngineeringUnitsAsString(org.eclipse.emf.ecore.ETypedElement) <em>Get Engineering Units As String</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Engineering Units As String</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getEngineeringUnitsAsString(org.eclipse.emf.ecore.ETypedElement)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getEngineeringUnitsAsString(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetEngineeringUnitsAsString__ETypedElement();
+	EOperation getSymphony__CommonEMFFacade__GetEngineeringUnitsAsString__ETypedElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getEngineeringUnits(org.eclipse.emf.ecore.ETypedElement) <em>Get Engineering Units</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getEngineeringUnits(org.eclipse.emf.ecore.ETypedElement) <em>Get Engineering Units</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Engineering Units</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getEngineeringUnits(org.eclipse.emf.ecore.ETypedElement)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getEngineeringUnits(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetEngineeringUnits__ETypedElement();
+	EOperation getSymphony__CommonEMFFacade__GetEngineeringUnits__ETypedElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getValueUpdateRate(org.eclipse.emf.ecore.ETypedElement) <em>Get Value Update Rate</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getValueUpdateRate(org.eclipse.emf.ecore.ETypedElement) <em>Get Value Update Rate</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Value Update Rate</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getValueUpdateRate(org.eclipse.emf.ecore.ETypedElement)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getValueUpdateRate(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetValueUpdateRate__ETypedElement();
+	EOperation getSymphony__CommonEMFFacade__GetValueUpdateRate__ETypedElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getWarningOCLExpression(org.eclipse.emf.ecore.ETypedElement) <em>Get Warning OCL Expression</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getWarningOCLExpression(org.eclipse.emf.ecore.ETypedElement) <em>Get Warning OCL Expression</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Warning OCL Expression</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getWarningOCLExpression(org.eclipse.emf.ecore.ETypedElement)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getWarningOCLExpression(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetWarningOCLExpression__ETypedElement();
+	EOperation getSymphony__CommonEMFFacade__GetWarningOCLExpression__ETypedElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getAlarmOCLExpression(org.eclipse.emf.ecore.ETypedElement) <em>Get Alarm OCL Expression</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAlarmOCLExpression(org.eclipse.emf.ecore.ETypedElement) <em>Get Alarm OCL Expression</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Alarm OCL Expression</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getAlarmOCLExpression(org.eclipse.emf.ecore.ETypedElement)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAlarmOCLExpression(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetAlarmOCLExpression__ETypedElement();
+	EOperation getSymphony__CommonEMFFacade__GetAlarmOCLExpression__ETypedElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getOutOfRangeOCLExpression(org.eclipse.emf.ecore.ETypedElement) <em>Get Out Of Range OCL Expression</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getOutOfRangeOCLExpression(org.eclipse.emf.ecore.ETypedElement) <em>Get Out Of Range OCL Expression</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Out Of Range OCL Expression</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getOutOfRangeOCLExpression(org.eclipse.emf.ecore.ETypedElement)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getOutOfRangeOCLExpression(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetOutOfRangeOCLExpression__ETypedElement();
+	EOperation getSymphony__CommonEMFFacade__GetOutOfRangeOCLExpression__ETypedElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getWarningMinValue(org.eclipse.emf.ecore.ETypedElement) <em>Get Warning Min Value</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getWarningMinValue(org.eclipse.emf.ecore.ETypedElement) <em>Get Warning Min Value</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Warning Min Value</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getWarningMinValue(org.eclipse.emf.ecore.ETypedElement)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getWarningMinValue(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetWarningMinValue__ETypedElement();
+	EOperation getSymphony__CommonEMFFacade__GetWarningMinValue__ETypedElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getWarningMaxValue(org.eclipse.emf.ecore.ETypedElement) <em>Get Warning Max Value</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getWarningMaxValue(org.eclipse.emf.ecore.ETypedElement) <em>Get Warning Max Value</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Warning Max Value</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getWarningMaxValue(org.eclipse.emf.ecore.ETypedElement)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getWarningMaxValue(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetWarningMaxValue__ETypedElement();
+	EOperation getSymphony__CommonEMFFacade__GetWarningMaxValue__ETypedElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getAlarmMinValue(org.eclipse.emf.ecore.ETypedElement) <em>Get Alarm Min Value</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAlarmMinValue(org.eclipse.emf.ecore.ETypedElement) <em>Get Alarm Min Value</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Alarm Min Value</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getAlarmMinValue(org.eclipse.emf.ecore.ETypedElement)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAlarmMinValue(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetAlarmMinValue__ETypedElement();
+	EOperation getSymphony__CommonEMFFacade__GetAlarmMinValue__ETypedElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getAlarmMaxValue(org.eclipse.emf.ecore.ETypedElement) <em>Get Alarm Max Value</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAlarmMaxValue(org.eclipse.emf.ecore.ETypedElement) <em>Get Alarm Max Value</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Alarm Max Value</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getAlarmMaxValue(org.eclipse.emf.ecore.ETypedElement)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAlarmMaxValue(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetAlarmMaxValue__ETypedElement();
+	EOperation getSymphony__CommonEMFFacade__GetAlarmMaxValue__ETypedElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getOutOfRangeMinValue(org.eclipse.emf.ecore.ETypedElement) <em>Get Out Of Range Min Value</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getOutOfRangeMinValue(org.eclipse.emf.ecore.ETypedElement) <em>Get Out Of Range Min Value</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Out Of Range Min Value</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getOutOfRangeMinValue(org.eclipse.emf.ecore.ETypedElement)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getOutOfRangeMinValue(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetOutOfRangeMinValue__ETypedElement();
+	EOperation getSymphony__CommonEMFFacade__GetOutOfRangeMinValue__ETypedElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getOutOfRangeMaxValue(org.eclipse.emf.ecore.ETypedElement) <em>Get Out Of Range Max Value</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getOutOfRangeMaxValue(org.eclipse.emf.ecore.ETypedElement) <em>Get Out Of Range Max Value</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Out Of Range Max Value</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getOutOfRangeMaxValue(org.eclipse.emf.ecore.ETypedElement)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getOutOfRangeMaxValue(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetOutOfRangeMaxValue__ETypedElement();
+	EOperation getSymphony__CommonEMFFacade__GetOutOfRangeMaxValue__ETypedElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getRange(org.eclipse.emf.ecore.ETypedElement, java.lang.Object) <em>Get Range</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getRange(org.eclipse.emf.ecore.ETypedElement, java.lang.Object) <em>Get Range</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Range</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getRange(org.eclipse.emf.ecore.ETypedElement, java.lang.Object)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getRange(org.eclipse.emf.ecore.ETypedElement, java.lang.Object)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetRange__ETypedElement_Object();
+	EOperation getSymphony__CommonEMFFacade__GetRange__ETypedElement_Object();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getFullDescription(org.eclipse.emf.ecore.ETypedElement) <em>Get Full Description</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getFullDescription(org.eclipse.emf.ecore.ETypedElement) <em>Get Full Description</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Full Description</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getFullDescription(org.eclipse.emf.ecore.ETypedElement)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getFullDescription(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetFullDescription__ETypedElement();
+	EOperation getSymphony__CommonEMFFacade__GetFullDescription__ETypedElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getAncestriesString(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Ancestries String</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAncestriesString(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Ancestries String</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Ancestries String</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getAncestriesString(org.eclipse.symphony.common.emf.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAncestriesString(org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetAncestriesString__AbstractFeatureNode();
+	EOperation getSymphony__CommonEMFFacade__GetAncestriesString__AbstractFeatureNode();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getFeatureRoot(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Feature Root</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getFeatureRoot(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Feature Root</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Feature Root</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getFeatureRoot(org.eclipse.symphony.common.emf.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getFeatureRoot(org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetFeatureRoot__AbstractFeatureNode();
+	EOperation getSymphony__CommonEMFFacade__GetFeatureRoot__AbstractFeatureNode();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getAncestries(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Ancestries</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAncestries(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Ancestries</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Ancestries</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getAncestries(org.eclipse.symphony.common.emf.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getAncestries(org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetAncestries__AbstractFeatureNode();
+	EOperation getSymphony__CommonEMFFacade__GetAncestries__AbstractFeatureNode();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getDescendants(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Descendants</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getDescendants(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Descendants</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Descendants</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getDescendants(org.eclipse.symphony.common.emf.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getDescendants(org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetDescendants__AbstractFeatureNode();
+	EOperation getSymphony__CommonEMFFacade__GetDescendants__AbstractFeatureNode();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getChildEStructuralFeatures(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Child EStructural Features</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getChildEStructuralFeatures(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Child EStructural Features</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Child EStructural Features</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getChildEStructuralFeatures(org.eclipse.symphony.common.emf.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getChildEStructuralFeatures(org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetChildEStructuralFeatures__AbstractFeatureNode();
+	EOperation getSymphony__CommonEMFFacade__GetChildEStructuralFeatures__AbstractFeatureNode();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#resolve(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Resolve</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#resolve(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Resolve</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Resolve</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#resolve(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.common.emf.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#resolve(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__Resolve__EObject_AbstractFeatureNode();
+	EOperation getSymphony__CommonEMFFacade__Resolve__EObject_AbstractFeatureNode();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#setValue(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.common.emf.AbstractFeatureNode, java.lang.Object) <em>Set Value</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#setValue(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.common.emf.AbstractFeatureNode, java.lang.Object) <em>Set Value</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Set Value</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#setValue(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.common.emf.AbstractFeatureNode, java.lang.Object)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#setValue(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.common.emf.AbstractFeatureNode, java.lang.Object)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__SetValue__EObject_AbstractFeatureNode_Object();
+	EOperation getSymphony__CommonEMFFacade__SetValue__EObject_AbstractFeatureNode_Object();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#isResolved(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Is Resolved</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#isResolved(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Is Resolved</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Resolved</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#isResolved(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.common.emf.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#isResolved(org.eclipse.emf.ecore.EObject, org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__IsResolved__EObject_AbstractFeatureNode();
+	EOperation getSymphony__CommonEMFFacade__IsResolved__EObject_AbstractFeatureNode();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getLeaf(org.eclipse.symphony.common.emf.ListRootNode) <em>Get Leaf</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getLeaf(org.eclipse.symphony.common.emf.ListRootNode) <em>Get Leaf</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Leaf</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getLeaf(org.eclipse.symphony.common.emf.ListRootNode)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getLeaf(org.eclipse.symphony.common.emf.ListRootNode)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetLeaf__ListRootNode();
+	EOperation getSymphony__CommonEMFFacade__GetLeaf__ListRootNode();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getFile(org.eclipse.emf.ecore.resource.Resource) <em>Get File</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getFile(org.eclipse.emf.ecore.resource.Resource) <em>Get File</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get File</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getFile(org.eclipse.emf.ecore.resource.Resource)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getFile(org.eclipse.emf.ecore.resource.Resource)
 	 * @generated
 	 */
-  EOperation getEMFEcoreFacade__GetFile__Resource();
+	EOperation getSymphony__CommonEMFFacade__GetFile__Resource();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getContent(org.eclipse.emf.common.util.URI) <em>Get Content</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getContent(org.eclipse.emf.common.util.URI) <em>Get Content</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Content</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getContent(org.eclipse.emf.common.util.URI)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getContent(org.eclipse.emf.common.util.URI)
 	 * @generated
 	 */
-	EOperation getEMFEcoreFacade__GetContent__URI();
+	EOperation getSymphony__CommonEMFFacade__GetContent__URI();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#sortTimed(java.util.Collection) <em>Sort Timed</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#sortTimed(java.util.Collection) <em>Sort Timed</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Sort Timed</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#sortTimed(java.util.Collection)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#sortTimed(java.util.Collection)
 	 * @generated
 	 */
-	EOperation getEMFEcoreFacade__SortTimed__Collection();
+	EOperation getSymphony__CommonEMFFacade__SortTimed__Collection();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getTimeSpan(java.util.Collection) <em>Get Time Span</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getTimeSpan(java.util.Collection) <em>Get Time Span</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Time Span</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getTimeSpan(java.util.Collection)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getTimeSpan(java.util.Collection)
 	 * @generated
 	 */
-	EOperation getEMFEcoreFacade__GetTimeSpan__Collection();
+	EOperation getSymphony__CommonEMFFacade__GetTimeSpan__Collection();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade#getID(org.eclipse.emf.ecore.EObject) <em>Get ID</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getID(org.eclipse.emf.ecore.EObject) <em>Get ID</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get ID</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade#getID(org.eclipse.emf.ecore.EObject)
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade#getID(org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
-	EOperation getEMFEcoreFacade__GetID__EObject();
+	EOperation getSymphony__CommonEMFFacade__GetID__EObject();
 
 		/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'.
@@ -3102,310 +3102,310 @@ public interface Symphony__CommonEMFPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.emf.impl.EMFEcoreFacadeImpl <em>EMF Ecore Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.emf.impl.EMFEcoreFacadeImpl
-		 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getEMFEcoreFacade()
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFFacadeImpl
+		 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getSymphony__CommonEMFFacade()
 		 * @generated
 		 */
-    EClass EMF_ECORE_FACADE = eINSTANCE.getEMFEcoreFacade();
+		EClass SYMPHONY_COMMON_EMF_FACADE = eINSTANCE.getSymphony__CommonEMFFacade();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get All Available EClasses</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_ALL_AVAILABLE_ECLASSES = eINSTANCE.getEMFEcoreFacade__GetAllAvailableEClasses();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_ALL_AVAILABLE_ECLASSES = eINSTANCE.getSymphony__CommonEMFFacade__GetAllAvailableEClasses();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get All Sub EClasses</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_ALL_SUB_ECLASSES__ECLASS = eINSTANCE.getEMFEcoreFacade__GetAllSubEClasses__EClass();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_ALL_SUB_ECLASSES__ECLASS = eINSTANCE.getSymphony__CommonEMFFacade__GetAllSubEClasses__EClass();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Filter EClasses</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___FILTER_ECLASSES__LIST_ECLASSFILTER = eINSTANCE.getEMFEcoreFacade__FilterEClasses__List_EClassFilter();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___FILTER_ECLASSES__LIST_ECLASSFILTER = eINSTANCE.getSymphony__CommonEMFFacade__FilterEClasses__List_EClassFilter();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Filter EClasses</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___FILTER_ECLASSES__LIST_LIST = eINSTANCE.getEMFEcoreFacade__FilterEClasses__List_List();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___FILTER_ECLASSES__LIST_LIST = eINSTANCE.getSymphony__CommonEMFFacade__FilterEClasses__List_List();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get EClass</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_ECLASS__STRING = eINSTANCE.getEMFEcoreFacade__GetEClass__String();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_ECLASS__STRING = eINSTANCE.getSymphony__CommonEMFFacade__GetEClass__String();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Sort Alphabetically</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___SORT_ALPHABETICALLY__LIST = eINSTANCE.getEMFEcoreFacade__SortAlphabetically__List();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___SORT_ALPHABETICALLY__LIST = eINSTANCE.getSymphony__CommonEMFFacade__SortAlphabetically__List();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get All Available EOperations</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_ALL_AVAILABLE_EOPERATIONS__ECLASS = eINSTANCE.getEMFEcoreFacade__GetAllAvailableEOperations__EClass();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_ALL_AVAILABLE_EOPERATIONS__ECLASS = eINSTANCE.getSymphony__CommonEMFFacade__GetAllAvailableEOperations__EClass();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Sort EOperations Alphabetically</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___SORT_EOPERATIONS_ALPHABETICALLY__LIST = eINSTANCE.getEMFEcoreFacade__SortEOperationsAlphabetically__List();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___SORT_EOPERATIONS_ALPHABETICALLY__LIST = eINSTANCE.getSymphony__CommonEMFFacade__SortEOperationsAlphabetically__List();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Documentation</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_DOCUMENTATION__ETYPEDELEMENT = eINSTANCE.getEMFEcoreFacade__GetDocumentation__ETypedElement();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_DOCUMENTATION__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFFacade__GetDocumentation__ETypedElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Engineering Units As String</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_ENGINEERING_UNITS_AS_STRING__ETYPEDELEMENT = eINSTANCE.getEMFEcoreFacade__GetEngineeringUnitsAsString__ETypedElement();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_ENGINEERING_UNITS_AS_STRING__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFFacade__GetEngineeringUnitsAsString__ETypedElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Engineering Units</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_ENGINEERING_UNITS__ETYPEDELEMENT = eINSTANCE.getEMFEcoreFacade__GetEngineeringUnits__ETypedElement();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_ENGINEERING_UNITS__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFFacade__GetEngineeringUnits__ETypedElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Value Update Rate</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_VALUE_UPDATE_RATE__ETYPEDELEMENT = eINSTANCE.getEMFEcoreFacade__GetValueUpdateRate__ETypedElement();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_VALUE_UPDATE_RATE__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFFacade__GetValueUpdateRate__ETypedElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Warning OCL Expression</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_WARNING_OCL_EXPRESSION__ETYPEDELEMENT = eINSTANCE.getEMFEcoreFacade__GetWarningOCLExpression__ETypedElement();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_WARNING_OCL_EXPRESSION__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFFacade__GetWarningOCLExpression__ETypedElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Alarm OCL Expression</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_ALARM_OCL_EXPRESSION__ETYPEDELEMENT = eINSTANCE.getEMFEcoreFacade__GetAlarmOCLExpression__ETypedElement();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_ALARM_OCL_EXPRESSION__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFFacade__GetAlarmOCLExpression__ETypedElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Out Of Range OCL Expression</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_OUT_OF_RANGE_OCL_EXPRESSION__ETYPEDELEMENT = eINSTANCE.getEMFEcoreFacade__GetOutOfRangeOCLExpression__ETypedElement();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_OCL_EXPRESSION__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFFacade__GetOutOfRangeOCLExpression__ETypedElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Warning Min Value</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_WARNING_MIN_VALUE__ETYPEDELEMENT = eINSTANCE.getEMFEcoreFacade__GetWarningMinValue__ETypedElement();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_WARNING_MIN_VALUE__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFFacade__GetWarningMinValue__ETypedElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Warning Max Value</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_WARNING_MAX_VALUE__ETYPEDELEMENT = eINSTANCE.getEMFEcoreFacade__GetWarningMaxValue__ETypedElement();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_WARNING_MAX_VALUE__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFFacade__GetWarningMaxValue__ETypedElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Alarm Min Value</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_ALARM_MIN_VALUE__ETYPEDELEMENT = eINSTANCE.getEMFEcoreFacade__GetAlarmMinValue__ETypedElement();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_ALARM_MIN_VALUE__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFFacade__GetAlarmMinValue__ETypedElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Alarm Max Value</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_ALARM_MAX_VALUE__ETYPEDELEMENT = eINSTANCE.getEMFEcoreFacade__GetAlarmMaxValue__ETypedElement();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_ALARM_MAX_VALUE__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFFacade__GetAlarmMaxValue__ETypedElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Out Of Range Min Value</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_OUT_OF_RANGE_MIN_VALUE__ETYPEDELEMENT = eINSTANCE.getEMFEcoreFacade__GetOutOfRangeMinValue__ETypedElement();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_MIN_VALUE__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFFacade__GetOutOfRangeMinValue__ETypedElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Out Of Range Max Value</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_OUT_OF_RANGE_MAX_VALUE__ETYPEDELEMENT = eINSTANCE.getEMFEcoreFacade__GetOutOfRangeMaxValue__ETypedElement();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_OUT_OF_RANGE_MAX_VALUE__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFFacade__GetOutOfRangeMaxValue__ETypedElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Range</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_RANGE__ETYPEDELEMENT_OBJECT = eINSTANCE.getEMFEcoreFacade__GetRange__ETypedElement_Object();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_RANGE__ETYPEDELEMENT_OBJECT = eINSTANCE.getSymphony__CommonEMFFacade__GetRange__ETypedElement_Object();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Full Description</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_FULL_DESCRIPTION__ETYPEDELEMENT = eINSTANCE.getEMFEcoreFacade__GetFullDescription__ETypedElement();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_FULL_DESCRIPTION__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFFacade__GetFullDescription__ETypedElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Ancestries String</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_ANCESTRIES_STRING__ABSTRACTFEATURENODE = eINSTANCE.getEMFEcoreFacade__GetAncestriesString__AbstractFeatureNode();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_ANCESTRIES_STRING__ABSTRACTFEATURENODE = eINSTANCE.getSymphony__CommonEMFFacade__GetAncestriesString__AbstractFeatureNode();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Feature Root</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_FEATURE_ROOT__ABSTRACTFEATURENODE = eINSTANCE.getEMFEcoreFacade__GetFeatureRoot__AbstractFeatureNode();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_FEATURE_ROOT__ABSTRACTFEATURENODE = eINSTANCE.getSymphony__CommonEMFFacade__GetFeatureRoot__AbstractFeatureNode();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Ancestries</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_ANCESTRIES__ABSTRACTFEATURENODE = eINSTANCE.getEMFEcoreFacade__GetAncestries__AbstractFeatureNode();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_ANCESTRIES__ABSTRACTFEATURENODE = eINSTANCE.getSymphony__CommonEMFFacade__GetAncestries__AbstractFeatureNode();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Descendants</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_DESCENDANTS__ABSTRACTFEATURENODE = eINSTANCE.getEMFEcoreFacade__GetDescendants__AbstractFeatureNode();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_DESCENDANTS__ABSTRACTFEATURENODE = eINSTANCE.getSymphony__CommonEMFFacade__GetDescendants__AbstractFeatureNode();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Child EStructural Features</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_CHILD_ESTRUCTURAL_FEATURES__ABSTRACTFEATURENODE = eINSTANCE.getEMFEcoreFacade__GetChildEStructuralFeatures__AbstractFeatureNode();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_CHILD_ESTRUCTURAL_FEATURES__ABSTRACTFEATURENODE = eINSTANCE.getSymphony__CommonEMFFacade__GetChildEStructuralFeatures__AbstractFeatureNode();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Resolve</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___RESOLVE__EOBJECT_ABSTRACTFEATURENODE = eINSTANCE.getEMFEcoreFacade__Resolve__EObject_AbstractFeatureNode();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___RESOLVE__EOBJECT_ABSTRACTFEATURENODE = eINSTANCE.getSymphony__CommonEMFFacade__Resolve__EObject_AbstractFeatureNode();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Set Value</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___SET_VALUE__EOBJECT_ABSTRACTFEATURENODE_OBJECT = eINSTANCE.getEMFEcoreFacade__SetValue__EObject_AbstractFeatureNode_Object();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___SET_VALUE__EOBJECT_ABSTRACTFEATURENODE_OBJECT = eINSTANCE.getSymphony__CommonEMFFacade__SetValue__EObject_AbstractFeatureNode_Object();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Is Resolved</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___IS_RESOLVED__EOBJECT_ABSTRACTFEATURENODE = eINSTANCE.getEMFEcoreFacade__IsResolved__EObject_AbstractFeatureNode();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___IS_RESOLVED__EOBJECT_ABSTRACTFEATURENODE = eINSTANCE.getSymphony__CommonEMFFacade__IsResolved__EObject_AbstractFeatureNode();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Leaf</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_LEAF__LISTROOTNODE = eINSTANCE.getEMFEcoreFacade__GetLeaf__ListRootNode();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_LEAF__LISTROOTNODE = eINSTANCE.getSymphony__CommonEMFFacade__GetLeaf__ListRootNode();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get File</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_FACADE___GET_FILE__RESOURCE = eINSTANCE.getEMFEcoreFacade__GetFile__Resource();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_FILE__RESOURCE = eINSTANCE.getSymphony__CommonEMFFacade__GetFile__Resource();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Content</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMF_ECORE_FACADE___GET_CONTENT__URI = eINSTANCE.getEMFEcoreFacade__GetContent__URI();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_CONTENT__URI = eINSTANCE.getSymphony__CommonEMFFacade__GetContent__URI();
 
-				/**
+			/**
 		 * The meta object literal for the '<em><b>Sort Timed</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMF_ECORE_FACADE___SORT_TIMED__COLLECTION = eINSTANCE.getEMFEcoreFacade__SortTimed__Collection();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___SORT_TIMED__COLLECTION = eINSTANCE.getSymphony__CommonEMFFacade__SortTimed__Collection();
 
-				/**
+			/**
 		 * The meta object literal for the '<em><b>Get Time Span</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMF_ECORE_FACADE___GET_TIME_SPAN__COLLECTION = eINSTANCE.getEMFEcoreFacade__GetTimeSpan__Collection();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_TIME_SPAN__COLLECTION = eINSTANCE.getSymphony__CommonEMFFacade__GetTimeSpan__Collection();
 
-				/**
+			/**
 		 * The meta object literal for the '<em><b>Get ID</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMF_ECORE_FACADE___GET_ID__EOBJECT = eINSTANCE.getEMFEcoreFacade__GetID__EObject();
+		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_ID__EOBJECT = eINSTANCE.getSymphony__CommonEMFFacade__GetID__EObject();
 
 				/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}' class.

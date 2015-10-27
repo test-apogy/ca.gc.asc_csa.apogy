@@ -31,13 +31,13 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.Tuple3d;
-import org.eclipse.symphony.core.environment.EnvironmentFacade;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
 import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
 import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.RectangularRegionProvider;
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 import org.eclipse.symphony.core.environment.ui.Activator;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
 import org.eclipse.symphony.core.environment.ui.MapAnnotation;
 import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
 import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
@@ -763,15 +763,15 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 	  			  AbstractEImage oldMapImage = getMapImage();
 	  			  	  		 		  
 	  			  // Gets the list of visible ImageMapLayerPresentation to generate the background image.
-	  			  List<ImageMapLayerPresentation> visiblePresentations = EnvironmentFacade.INSTANCE.getVisibleImageMapLayerPresentation(getMapLayers());
+	  			  List<ImageMapLayerPresentation> visiblePresentations = Symphony__CoreEnvironmentFacade.INSTANCE.getVisibleImageMapLayerPresentation(getMapLayers());
 	  			  
 	  			  // Updates size.
 	  			  Tuple3d lowerLeftCorner = Symphony__CommonMathFactory.eINSTANCE.createTuple3d(); 
 	  			  Tuple3d upperRightCorner = Symphony__CommonMathFactory.eINSTANCE.createTuple3d(); 
-	  			  EnvironmentFacade.INSTANCE.getRectangularRegionImageExtent(visiblePresentations, lowerLeftCorner, upperRightCorner);		  		 
+	  			  Symphony__CoreEnvironmentFacade.INSTANCE.getRectangularRegionImageExtent(visiblePresentations, lowerLeftCorner, upperRightCorner);		  		 
 	  			  
 	  			  // Update MapImage.
-	  			  AbstractEImage tmpEImage = EnvironmentFacade.INSTANCE.createEImage(visiblePresentations);	
+	  			  AbstractEImage tmpEImage = Symphony__CoreEnvironmentFacade.INSTANCE.createEImage(visiblePresentations);	
 	  		
 	  			  // Creates the background image.
 	  			  int red = getBackgroundColor().get().getRed();
@@ -802,11 +802,11 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 	  			  }
 	  			  
 	  			  // Updates the Map Extent
-	  			  List<RectangularRegionProvider> rectangularRegionProviders = EnvironmentUiFacade.INSTANCE.getVisibleRectangularRegionProvider(MapViewConfigurationImpl.this);
+	  			  List<RectangularRegionProvider> rectangularRegionProviders = Symphony__CoreEnvironmentUIFacade.INSTANCE.getVisibleRectangularRegionProvider(MapViewConfigurationImpl.this);
 
 	  			  Tuple3d mapLowerLeftCorner = Symphony__CommonMathFactory.eINSTANCE.createTuple3d(); 
 	  			  Tuple3d mapUpperRightCorner = Symphony__CommonMathFactory.eINSTANCE.createTuple3d(); 
-	  			  EnvironmentFacade.INSTANCE.getRectangularRegionExtent(rectangularRegionProviders, mapLowerLeftCorner, mapUpperRightCorner);
+	  			  Symphony__CoreEnvironmentFacade.INSTANCE.getRectangularRegionExtent(rectangularRegionProviders, mapLowerLeftCorner, mapUpperRightCorner);
 	  			 
 	  			  if(lowerLeftCorner.getX() < mapLowerLeftCorner.getX())
 	  			  {

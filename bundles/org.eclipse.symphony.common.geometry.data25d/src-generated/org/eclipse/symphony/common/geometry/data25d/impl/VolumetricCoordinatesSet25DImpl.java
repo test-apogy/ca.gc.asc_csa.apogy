@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
 import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,7 +52,7 @@ public class VolumetricCoordinatesSet25DImpl extends CoordinatesSet25DImpl imple
 	 */
 	public CartesianPositionCoordinates getCartesianPositionCoordinates(Coordinates25D coordinates)
 	{
-		return Data3dFacade.INSTANCE.createCartesianPositionCoordinates(coordinates.getU(), coordinates.getV(), coordinates.getW());
+		return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(coordinates.getU(), coordinates.getV(), coordinates.getW());
 	}
 
 	/**

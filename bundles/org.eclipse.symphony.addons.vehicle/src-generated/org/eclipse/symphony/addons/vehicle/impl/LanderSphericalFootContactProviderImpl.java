@@ -18,10 +18,10 @@ import org.eclipse.symphony.addons.vehicle.MeshNodeEntry;
 import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 
 /**
@@ -62,7 +62,7 @@ public class LanderSphericalFootContactProviderImpl extends ContactProviderImpl 
 	  try
 	  {
 		  Node root = getVehiclePoseCorrector().getSymphonySystemApiAdapter().getSymphonySystem().getTopologyRoot().getOriginNode();
-		  List<Node> nodes = TopologyFacade.INSTANCE.findNodesByType(Symphony__AddonsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT, root);
+		  List<Node> nodes = Symphony__CommonTopologyFacade.INSTANCE.findNodesByType(Symphony__AddonsVehiclePackage.Literals.LANDER_SPHERICAL_FOOT, root);
 		  
 		  for(Node node : nodes)
 		  {
@@ -98,7 +98,7 @@ public class LanderSphericalFootContactProviderImpl extends ContactProviderImpl 
 			  Vector3d footPosition = new Vector3d();			  			  			  
 			  footTransform.get(footPosition);				 	
 			  
-			  points.add(Data3dFacade.INSTANCE.createCartesianPositionCoordinates(footPosition.x, footPosition.y, footPosition.z));  
+			  points.add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(footPosition.x, footPosition.y, footPosition.z));  
 		  }
 		  
 		  // Finds the intersection of the vector along Z going through the center of foot with the mesh.		 
@@ -148,7 +148,7 @@ public class LanderSphericalFootContactProviderImpl extends ContactProviderImpl 
 //	  bodyToWorldTransform.mul(bodyToSystemTransform);
 //	  
 //	  // Gets the mesh to world transform.
-//	  Matrix4d meshToWorldTransform = TopologyFacade.INSTANCE.expressNodeInRootFrame(contentNode);
+//	  Matrix4d meshToWorldTransform = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(contentNode);
 //	  
 //	  // Gets the bodyToMeshTransform
 //	  meshToWorldTransform.invert();
@@ -161,7 +161,7 @@ public class LanderSphericalFootContactProviderImpl extends ContactProviderImpl 
 //  {
 //
 //	  Node root = getVehiclePoseCorrector().getSymphonySystemApiAdapter().getSymphonySystem().getTopologyRoot().getOriginNode();	  
-//	  Matrix4d transform = TopologyFacade.INSTANCE.expressInFrame(body, root);	  	  
+//	  Matrix4d transform = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(body, root);	  	  
 //	  return transform;
 //  }
 } //LanderSphericalFootContactProviderImpl

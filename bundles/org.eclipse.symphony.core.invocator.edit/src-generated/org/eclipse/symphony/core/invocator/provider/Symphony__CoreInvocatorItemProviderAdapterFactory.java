@@ -92,30 +92,29 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EMFEcoreInvocatorFacadeItemProvider emfEcoreInvocatorFacadeItemProvider;
+	protected Symphony__CoreInvocatorFacadeItemProvider symphony__CoreInvocatorFacadeItemProvider;
 
-  /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade}.
+		/**
+	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEMFEcoreInvocatorFacadeAdapter()
-  {
-		if (emfEcoreInvocatorFacadeItemProvider == null) {
-			emfEcoreInvocatorFacadeItemProvider = new EMFEcoreInvocatorFacadeItemProvider(this);
+	@Override
+	public Adapter createSymphony__CoreInvocatorFacadeAdapter() {
+		if (symphony__CoreInvocatorFacadeItemProvider == null) {
+			symphony__CoreInvocatorFacadeItemProvider = new Symphony__CoreInvocatorFacadeItemProvider(this);
 		}
 
-		return emfEcoreInvocatorFacadeItemProvider;
+		return symphony__CoreInvocatorFacadeItemProvider;
 	}
 
-  /**
+		/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.InvocatorSession} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1402,7 +1401,7 @@ public class Symphony__CoreInvocatorItemProviderAdapterFactory extends Symphony_
 	 */
   public void dispose()
   {
-		if (emfEcoreInvocatorFacadeItemProvider != null) emfEcoreInvocatorFacadeItemProvider.dispose();
+		if (symphony__CoreInvocatorFacadeItemProvider != null) symphony__CoreInvocatorFacadeItemProvider.dispose();
 		if (invocatorSessionItemProvider != null) invocatorSessionItemProvider.dispose();
 		if (environmentItemProvider != null) environmentItemProvider.dispose();
 		if (dataProductsListsContainerItemProvider != null) dataProductsListsContainerItemProvider.dispose();

@@ -17,13 +17,13 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.environment.ui.Activator;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
 import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
 import org.eclipse.symphony.core.environment.ui.actions.ClearAllTrajectoriesAction;
 import org.eclipse.symphony.core.environment.ui.actions.UpdateMapAction;
 import org.eclipse.symphony.core.environment.ui.actions.ZoomFitMapAction;
 import org.eclipse.symphony.core.environment.ui.composites.MapComposite;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.IViewSite;
@@ -58,10 +58,10 @@ public class MapView extends AbstractView
 		mapComposite = new MapComposite(parent, SWT.NONE);
 		
 		// Attempts to initialize the MapViewConfiguration.				
-		setMapViewConfiguration(EnvironmentUiFacade.INSTANCE.getActiveMapViewConfiguration(mapViewConfigurationId));
+		setMapViewConfiguration(Symphony__CoreEnvironmentUIFacade.INSTANCE.getActiveMapViewConfiguration(mapViewConfigurationId));
 		
-		// Register to EMFEcoreInvocatorFacade to listen for change on Active Session.
-		EMFEcoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
+		// Register to Symphony__CoreInvocatorFacade to listen for change on Active Session.
+		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
 	}
 	
 	@Override
@@ -87,7 +87,7 @@ public class MapView extends AbstractView
 	{	
 		if(mapViewConfiguration != null)
 		{
-			mapViewConfigurationId = EnvironmentUiFacade.INSTANCE.getMapViewConfigurationIdentifier(mapViewConfiguration);
+			mapViewConfigurationId = Symphony__CoreEnvironmentUIFacade.INSTANCE.getMapViewConfigurationIdentifier(mapViewConfiguration);
 			memento.putString(MAP_VIEW_CONFIG, mapViewConfigurationId);
 		}
 		memento.putBoolean(MAP_VIEW_PINNED, this.pinned);
@@ -125,8 +125,8 @@ public class MapView extends AbstractView
 	@Override
 	public void dispose() 
 	{
-		// Unregister to EMFEcoreInvocatorFacade.
-		EMFEcoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
+		// Unregister to Symphony__CoreInvocatorFacade.
+		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
 		
 		setMapViewConfiguration(null);
 		
@@ -276,14 +276,14 @@ public class MapView extends AbstractView
 				@Override
 				public void notifyChanged(Notification msg) 
 				{				
-					if(msg.getNotifier() instanceof EMFEcoreInvocatorFacade)
+					if(msg.getNotifier() instanceof Symphony__CoreInvocatorFacade)
 					{
-						int featureId = msg.getFeatureID(EMFEcoreInvocatorFacade.class);
+						int featureId = msg.getFeatureID(Symphony__CoreInvocatorFacade.class);
 						
-						if(featureId == Symphony__CoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
+						if(featureId == Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
 						{
 							// Tries to update the MapViewConfiguration being displayed.
-							setMapViewConfiguration(EnvironmentUiFacade.INSTANCE.getActiveMapViewConfiguration(mapViewConfigurationId));
+							setMapViewConfiguration(Symphony__CoreEnvironmentUIFacade.INSTANCE.getActiveMapViewConfiguration(mapViewConfigurationId));
 						}						
 					}
 				}

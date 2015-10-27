@@ -21,7 +21,7 @@ import org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.AngularCoordinates;
 import org.eclipse.symphony.core.environment.orbit.AttitudeProvider;
 import org.eclipse.symphony.core.environment.orbit.Orbit;
-import org.eclipse.symphony.core.environment.orbit.OrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
 import org.eclipse.symphony.core.environment.orbit.PVACoordinates;
@@ -137,7 +137,7 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass orbitFacadeEClass = null;
+	private EClass symphony__CoreEnvironmentOrbitFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -573,8 +573,8 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getOrbitFacade() {
-		return orbitFacadeEClass;
+	public EClass getSymphony__CoreEnvironmentOrbitFacade() {
+		return symphony__CoreEnvironmentOrbitFacadeEClass;
 	}
 
 	/**
@@ -582,8 +582,8 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getOrbitFacade__CreateOrbitModelCopy__OrbitModel() {
-		return orbitFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__CoreEnvironmentOrbitFacade__CreateOrbitModelCopy__OrbitModel() {
+		return symphony__CoreEnvironmentOrbitFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -684,8 +684,8 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 		createEReference(orbitModelEClass, ORBIT_MODEL__INITIAL_ORBIT);
 		createEReference(orbitModelEClass, ORBIT_MODEL__PROPAGATOR);
 
-		orbitFacadeEClass = createEClass(ORBIT_FACADE);
-		createEOperation(orbitFacadeEClass, ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL);
+		symphony__CoreEnvironmentOrbitFacadeEClass = createEClass(SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE);
+		createEOperation(symphony__CoreEnvironmentOrbitFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL);
 
 		// Create data types
 		listEDataType = createEDataType(LIST);
@@ -818,9 +818,9 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 		initEReference(getOrbitModel_InitialOrbit(), this.getOrbit(), null, "initialOrbit", null, 0, 1, OrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOrbitModel_Propagator(), this.getAbstractOrbitPropagator(), null, "propagator", null, 0, 1, OrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(orbitFacadeEClass, OrbitFacade.class, "OrbitFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CoreEnvironmentOrbitFacadeEClass, Symphony__CoreEnvironmentOrbitFacade.class, "Symphony__CoreEnvironmentOrbitFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getOrbitFacade__CreateOrbitModelCopy__OrbitModel(), this.getOrbitModel(), "createOrbitModelCopy", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitFacade__CreateOrbitModelCopy__OrbitModel(), this.getOrbitModel(), "createOrbitModelCopy", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOrbitModel(), "originalOrbitModel", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
@@ -1048,10 +1048,10 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 			 "documentation", "Class that defines an orbit model. An orbit model specifies both initial condition (through the initial Orbit), and\na propagation method (through the AbstractOrbitPropagator)."
 		   });	
 		addAnnotation
-		  (orbitFacadeEClass, 
+		  (symphony__CoreEnvironmentOrbitFacadeEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "A class providing ustilities methods for Orbits."
+			 "documentation", "A class providing utilities methods for Orbits."
 		   });
 	}
 

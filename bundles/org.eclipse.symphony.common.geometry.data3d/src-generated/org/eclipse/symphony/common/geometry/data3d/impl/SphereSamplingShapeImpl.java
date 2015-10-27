@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 import org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape;
 
 /**
@@ -203,7 +203,7 @@ public class SphereSamplingShapeImpl<PolygonType extends CartesianPolygon> exten
 	 */
 	public boolean isInside(CartesianPositionCoordinates point)
 	{
-		double distance = Geometry3dUtilities.getDistance(this.getCenter(), point);
+		double distance = Geometry3DUtilities.getDistance(this.getCenter(), point);
 		
 		if(distance <= getRadius())
 		{
@@ -356,7 +356,7 @@ public class SphereSamplingShapeImpl<PolygonType extends CartesianPolygon> exten
 
 	public boolean isPolygonInside(PolygonType polygon)
 	{
-		return Geometry3dUtilities.isSphereIntersectsPolygon(getCenter(), getRadius(), isIncludeJustTouching(), polygon);
+		return Geometry3DUtilities.isSphereIntersectsPolygon(getCenter(), getRadius(), isIncludeJustTouching(), polygon);
 	}
 
 } //SphereSamplingShapeImpl

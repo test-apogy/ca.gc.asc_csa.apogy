@@ -264,26 +264,26 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.FOVFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FOVFacadeItemProvider fovFacadeItemProvider;
+	protected Symphony__AddonsSensorsFOVFacadeItemProvider symphony__AddonsSensorsFOVFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.FOVFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createFOVFacadeAdapter() {
-		if (fovFacadeItemProvider == null) {
-			fovFacadeItemProvider = new FOVFacadeItemProvider(this);
+	public Adapter createSymphony__AddonsSensorsFOVFacadeAdapter() {
+		if (symphony__AddonsSensorsFOVFacadeItemProvider == null) {
+			symphony__AddonsSensorsFOVFacadeItemProvider = new Symphony__AddonsSensorsFOVFacadeItemProvider(this);
 		}
 
-		return fovFacadeItemProvider;
+		return symphony__AddonsSensorsFOVFacadeItemProvider;
 	}
 
 	/**
@@ -419,7 +419,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 		if (conicalFieldOfViewItemProvider != null) conicalFieldOfViewItemProvider.dispose();
 		if (circularSectorFieldOfViewItemProvider != null) circularSectorFieldOfViewItemProvider.dispose();
 		if (rectangularFrustrumFieldOfViewSamplingShapeItemProvider != null) rectangularFrustrumFieldOfViewSamplingShapeItemProvider.dispose();
-		if (fovFacadeItemProvider != null) fovFacadeItemProvider.dispose();
+		if (symphony__AddonsSensorsFOVFacadeItemProvider != null) symphony__AddonsSensorsFOVFacadeItemProvider.dispose();
 	}
 
 	/**
@@ -507,7 +507,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFOVFacade()));
+						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createSymphony__AddonsSensorsFOVFacade()));
 
 				return null;
 			}
@@ -557,7 +557,7 @@ public class Symphony__AddonsSensorsFOVItemProviderAdapterFactory extends Sympho
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFOVFacade()));
+						 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createSymphony__AddonsSensorsFOVFacade()));
 
 				return null;
 			}

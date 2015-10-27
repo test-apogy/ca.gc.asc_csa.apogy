@@ -12,7 +12,7 @@ import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
 import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
 import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
 import org.eclipse.symphony.core.ui.ResultNodePresentation;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
 import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
 
@@ -78,8 +78,8 @@ public class Symphony__CoreUISwitch<T> extends Switch<T>
   {
 		switch (classifierID) {
 			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE: {
-				SymphonyCoreUiFacade symphonyCoreUiFacade = (SymphonyCoreUiFacade)theEObject;
-				T result = caseSymphonyCoreUiFacade(symphonyCoreUiFacade);
+				Symphony__CoreUIFacade symphony__CoreUIFacade = (Symphony__CoreUIFacade)theEObject;
+				T result = caseSymphony__CoreUIFacade(symphony__CoreUIFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -120,22 +120,21 @@ public class Symphony__CoreUISwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony Core Ui Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony Core Ui Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseSymphonyCoreUiFacade(SymphonyCoreUiFacade object)
-  {
+	public T caseSymphony__CoreUIFacade(Symphony__CoreUIFacade object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Symphony Resource Settings</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;

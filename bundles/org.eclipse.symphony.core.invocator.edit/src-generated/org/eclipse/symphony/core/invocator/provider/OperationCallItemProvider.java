@@ -26,9 +26,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
+import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
 import org.eclipse.symphony.core.invocator.Argument;
 import org.eclipse.symphony.core.invocator.ArgumentsList;
 import org.eclipse.symphony.core.invocator.EDataTypeArgument;
@@ -136,7 +136,7 @@ public class OperationCallItemProvider extends
 				// Gets the EClass that is refered to by the OperationCall
 				// AbstractFeatureNode.
 				if (operationCall.getFeatureRoot() != null) {
-					AbstractFeatureSpecifier specifier = (AbstractFeatureSpecifier) EMFEcoreFacade.INSTANCE
+					AbstractFeatureSpecifier specifier = (AbstractFeatureSpecifier) Symphony__CommonEMFFacade.INSTANCE
 							.getLeaf(operationCall.getFeatureRoot());
 					EClassifier eClassifier = specifier.getStructuralFeature()
 							.getEType();
@@ -149,7 +149,7 @@ public class OperationCallItemProvider extends
 
 				/** Returns the list of possible operations. */
 				if (interface_class != null) {
-					eOperations = EMFEcoreFacade.INSTANCE
+					eOperations = Symphony__CommonEMFFacade.INSTANCE
 							.getAllAvailableEOperations(interface_class);
 				}
 
@@ -214,21 +214,21 @@ public class OperationCallItemProvider extends
 		}
 
 		String variable_str = operationCall.getVariable() == null ? getString("_UI_NOT_DEFINED")
-				: EMFEcoreEditUtilsFacade.INSTANCE.getText(operationCall
+				: Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(operationCall
 						.getVariable());
 
 		String feature_str = null;
 		if (operationCall.getFeatureRoot() != null) {
-			AbstractFeatureListNode leaf = EMFEcoreFacade.INSTANCE
+			AbstractFeatureListNode leaf = Symphony__CommonEMFFacade.INSTANCE
 					.getLeaf(operationCall.getFeatureRoot());
 			if (leaf != null) {
-				feature_str = EMFEcoreFacade.INSTANCE.getAncestriesString(leaf);
+				feature_str = Symphony__CommonEMFFacade.INSTANCE.getAncestriesString(leaf);
 			}
 		}
 
 		String operation_str = operationCall.getEOperation() == null ? getString("_UI_NOT_DEFINED")
 				+ "()"
-				: EMFEcoreEditUtilsFacade.INSTANCE.getText(operationCall
+				: Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(operationCall
 						.getEOperation());
 
 		if (feature_str != null) {

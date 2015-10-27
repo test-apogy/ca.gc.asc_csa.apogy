@@ -70,8 +70,8 @@ public class Symphony__CoreProgramsAdapterFactory extends AdapterFactoryImpl {
 				return createAbstractProgramRuntimeAdapter();
 			}
 			@Override
-			public Adapter caseProgramFacade(ProgramFacade object) {
-				return createProgramFacadeAdapter();
+			public Adapter caseSymphony__CoreProgramsFacade(Symphony__CoreProgramsFacade object) {
+				return createSymphony__CoreProgramsFacadeAdapter();
 			}
 			@Override
 			public Adapter caseTimeInterval(TimeInterval object) {
@@ -112,16 +112,16 @@ public class Symphony__CoreProgramsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.ProgramFacade <em>Program Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.programs.ProgramFacade
+	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade
 	 * @generated
 	 */
-	public Adapter createProgramFacadeAdapter() {
+	public Adapter createSymphony__CoreProgramsFacadeAdapter() {
 		return null;
 	}
 

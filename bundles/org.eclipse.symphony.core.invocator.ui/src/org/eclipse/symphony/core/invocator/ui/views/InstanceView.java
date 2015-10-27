@@ -11,7 +11,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.emf.ui.composites.EObjectComposite;
 import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Variable;
 
 public class InstanceView extends AbstractView implements IEditingDomainProvider {
@@ -41,7 +41,7 @@ public class InstanceView extends AbstractView implements IEditingDomainProvider
 			Object obj = ss.getFirstElement();
 			if (obj instanceof Variable){
 				Variable variable = (Variable) obj;				
-				selectedEObject = EMFEcoreInvocatorFacade.INSTANCE.getInstance(variable);				
+				selectedEObject = Symphony__CoreInvocatorFacade.INSTANCE.getInstance(variable);				
 			}
 			if (obj instanceof AbstractTypeImplementation){
 				AbstractTypeImplementation abstractTypeImplementation = (AbstractTypeImplementation) obj;
@@ -56,6 +56,6 @@ public class InstanceView extends AbstractView implements IEditingDomainProvider
 
 	@Override
 	public EditingDomain getEditingDomain() {
-		return AdapterFactoryEditingDomain.getEditingDomainFor(EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+		return AdapterFactoryEditingDomain.getEditingDomainFor(Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 	}
 }

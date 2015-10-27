@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
@@ -710,7 +710,7 @@ public class LineOfSightImageMapLayerImpl extends CartesianTriangularMeshDerived
 						while(intersection == null && it.hasNext())
 						{
 							CartesianTriangle triangle = it.next();
-							intersection = Geometry3dUtilities.getLineAndPolygonIntersectionPoint(observerPosition, target, triangle);														
+							intersection = Geometry3DUtilities.getLineAndPolygonIntersectionPoint(observerPosition, target, triangle);														
 						}
 						
 						if(intersection == null)
@@ -797,7 +797,7 @@ public class LineOfSightImageMapLayerImpl extends CartesianTriangularMeshDerived
 						while(intersection == null && it.hasNext())
 						{
 							CartesianTriangle triangle = it.next();
-							intersection = Geometry3dUtilities.getLineAndPolygonIntersectionPoint(observerPosition, target, triangle);														
+							intersection = Geometry3DUtilities.getLineAndPolygonIntersectionPoint(observerPosition, target, triangle);														
 						}
 						
 						if(intersection == null)

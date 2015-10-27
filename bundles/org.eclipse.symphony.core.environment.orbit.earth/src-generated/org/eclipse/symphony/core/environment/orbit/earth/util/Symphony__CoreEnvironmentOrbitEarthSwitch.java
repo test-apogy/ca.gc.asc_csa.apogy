@@ -24,7 +24,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
 import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite;
@@ -334,9 +334,9 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_FACADE: {
-				EarthOrbitFacade earthOrbitFacade = (EarthOrbitFacade)theEObject;
-				T result = caseEarthOrbitFacade(earthOrbitFacade);
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE: {
+				Symphony__CoreEnvironmentOrbitEarthFacade symphony__CoreEnvironmentOrbitEarthFacade = (Symphony__CoreEnvironmentOrbitEarthFacade)theEObject;
+				T result = caseSymphony__CoreEnvironmentOrbitEarthFacade(symphony__CoreEnvironmentOrbitEarthFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -750,17 +750,17 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Earth Orbit Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Earth Orbit Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEarthOrbitFacade(EarthOrbitFacade object) {
+	public T caseSymphony__CoreEnvironmentOrbitEarthFacade(Symphony__CoreEnvironmentOrbitEarthFacade object) {
 		return null;
 	}
 

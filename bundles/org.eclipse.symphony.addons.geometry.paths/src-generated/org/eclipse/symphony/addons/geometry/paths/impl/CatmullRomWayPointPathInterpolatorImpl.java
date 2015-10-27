@@ -18,7 +18,7 @@ import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsP
 import org.eclipse.symphony.addons.geometry.paths.SplineEndControlPointGenerationMode;
 import org.eclipse.symphony.addons.geometry.paths.SplinesUtilities;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 
 /**
  * <!-- begin-user-doc -->
@@ -281,7 +281,7 @@ public class CatmullRomWayPointPathInterpolatorImpl extends WayPointPathInterpol
 		
 		WayPointPath output = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 		
-		List<Point3d> controlPoints = Geometry3dUtilities.getPoint3dList(input.getPoints());
+		List<Point3d> controlPoints = Geometry3DUtilities.getPoint3dList(input.getPoints());
 		
 		List<Point3d> resultPoints = SplinesUtilities.generateCatMullSplineArcLenghtParam(controlPoints, 
 				getMaximumWayPointsDistance(), 
@@ -290,7 +290,7 @@ public class CatmullRomWayPointPathInterpolatorImpl extends WayPointPathInterpol
 				getProgressMonitor());
 		
 		
-		output.getPoints().addAll(Geometry3dUtilities.getCartesianPositionCoordinates(resultPoints));
+		output.getPoints().addAll(Geometry3DUtilities.getCartesianPositionCoordinates(resultPoints));
 		
 		return output;
 	}			

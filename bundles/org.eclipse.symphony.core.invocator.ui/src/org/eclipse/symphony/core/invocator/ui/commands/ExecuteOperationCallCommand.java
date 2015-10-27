@@ -14,7 +14,7 @@ import org.eclipse.emf.common.command.IdentityCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.symphony.core.invocator.OperationCallsList;
 import org.eclipse.ui.handlers.HandlerUtil;
@@ -36,10 +36,10 @@ public class ExecuteOperationCallCommand extends AbstractHandler implements
 
 					final Object selection = selections.next();
 					if (selection instanceof OperationCall) {
-						EMFEcoreInvocatorFacade.INSTANCE
+						Symphony__CoreInvocatorFacade.INSTANCE
 								.exec((OperationCall) selection);
 					} else if (selection instanceof OperationCallsList) {
-						EMFEcoreInvocatorFacade.INSTANCE
+						Symphony__CoreInvocatorFacade.INSTANCE
 								.exec((OperationCallsList) selection);
 					}
 

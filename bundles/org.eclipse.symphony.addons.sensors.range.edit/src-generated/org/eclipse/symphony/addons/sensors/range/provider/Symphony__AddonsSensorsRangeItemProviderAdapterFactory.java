@@ -402,26 +402,26 @@ public class Symphony__AddonsSensorsRangeItemProviderAdapterFactory extends Symp
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SensorsRangeFacadeItemProvider sensorsRangeFacadeItemProvider;
+	protected Symphony__AddonsSensorsRangeFacadeItemProvider symphony__AddonsSensorsRangeFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSensorsRangeFacadeAdapter() {
-		if (sensorsRangeFacadeItemProvider == null) {
-			sensorsRangeFacadeItemProvider = new SensorsRangeFacadeItemProvider(this);
+	public Adapter createSymphony__AddonsSensorsRangeFacadeAdapter() {
+		if (symphony__AddonsSensorsRangeFacadeItemProvider == null) {
+			symphony__AddonsSensorsRangeFacadeItemProvider = new Symphony__AddonsSensorsRangeFacadeItemProvider(this);
 		}
 
-		return sensorsRangeFacadeItemProvider;
+		return symphony__AddonsSensorsRangeFacadeItemProvider;
 	}
 
 	/**
@@ -563,7 +563,7 @@ public class Symphony__AddonsSensorsRangeItemProviderAdapterFactory extends Symp
 		if (simpleRasterScanRangeScannerItemProvider != null) simpleRasterScanRangeScannerItemProvider.dispose();
 		if (simpleRasterScanRangeScannerSimulatorItemProvider != null) simpleRasterScanRangeScannerSimulatorItemProvider.dispose();
 		if (rasterScanDataItemProvider != null) rasterScanDataItemProvider.dispose();
-		if (sensorsRangeFacadeItemProvider != null) sensorsRangeFacadeItemProvider.dispose();
+		if (symphony__AddonsSensorsRangeFacadeItemProvider != null) symphony__AddonsSensorsRangeFacadeItemProvider.dispose();
 	}
 
 	/**
@@ -681,7 +681,7 @@ public class Symphony__AddonsSensorsRangeItemProviderAdapterFactory extends Symp
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSensorsRangeFacade()));
+						 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSymphony__AddonsSensorsRangeFacade()));
 
 				return null;
 			}
@@ -761,7 +761,7 @@ public class Symphony__AddonsSensorsRangeItemProviderAdapterFactory extends Symp
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSensorsRangeFacade()));
+						 Symphony__AddonsSensorsRangeFactory.eINSTANCE.createSymphony__AddonsSensorsRangeFacade()));
 
 				return null;
 			}

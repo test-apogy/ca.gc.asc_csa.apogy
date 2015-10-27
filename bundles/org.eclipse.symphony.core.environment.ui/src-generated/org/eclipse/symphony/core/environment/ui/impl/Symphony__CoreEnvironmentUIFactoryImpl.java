@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider;
 import org.eclipse.symphony.core.environment.ui.EarthSkyPresentation;
 import org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
+import org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities;
 import org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation;
 import org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
 import org.eclipse.symphony.core.environment.ui.MapRuler;
@@ -93,8 +93,8 @@ public class Symphony__CoreEnvironmentUIFactoryImpl extends EFactoryImpl impleme
 			case Symphony__CoreEnvironmentUIPackage.EARTH_SKY_PRESENTATION: return createEarthSkyPresentation();
 			case Symphony__CoreEnvironmentUIPackage.MOON_PRESENTATION: return createMoonPresentation();
 			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION: return createFeatureOfInterestNodePresentation();
-			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES: return createEnvironmentUiUtilities();
-			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_FACADE: return createEnvironmentUiFacade();
+			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES: return createEnvironmentUIUtilities();
+			case Symphony__CoreEnvironmentUIPackage.SYMPHONY_CORE_ENVIRONMENT_UI_FACADE: return createSymphony__CoreEnvironmentUIFacade();
 			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION_LIST: return createMapViewConfigurationList();
 			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION: return createMapViewConfiguration();
 			case Symphony__CoreEnvironmentUIPackage.MAP_RULER: return createMapRuler();
@@ -244,27 +244,25 @@ public class Symphony__CoreEnvironmentUIFactoryImpl extends EFactoryImpl impleme
 
 		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EnvironmentUiUtilities createEnvironmentUiUtilities()
-  {
-		EnvironmentUiUtilitiesImpl environmentUiUtilities = new EnvironmentUiUtilitiesImpl();
-		return environmentUiUtilities;
+	public EnvironmentUIUtilities createEnvironmentUIUtilities() {
+		EnvironmentUIUtilitiesImpl environmentUIUtilities = new EnvironmentUIUtilitiesImpl();
+		return environmentUIUtilities;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EnvironmentUiFacade createEnvironmentUiFacade()
-  {
-		EnvironmentUiFacadeImpl environmentUiFacade = new EnvironmentUiFacadeImpl();
-		return environmentUiFacade;
+	public Symphony__CoreEnvironmentUIFacade createSymphony__CoreEnvironmentUIFacade() {
+		Symphony__CoreEnvironmentUIFacadeImpl symphony__CoreEnvironmentUIFacade = new Symphony__CoreEnvironmentUIFacadeImpl();
+		return symphony__CoreEnvironmentUIFacade;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

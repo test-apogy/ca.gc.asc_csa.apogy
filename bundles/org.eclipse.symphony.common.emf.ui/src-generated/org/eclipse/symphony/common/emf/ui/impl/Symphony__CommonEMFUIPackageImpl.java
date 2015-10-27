@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
+import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade;
 import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFactory;
 import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage;
 
@@ -26,12 +26,12 @@ public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Sy
 {
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass emfEcoreUIFacadeEClass = null;
+	private EClass symphony__CommonEMFUIFacadeEClass = null;
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -113,35 +113,32 @@ public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Sy
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getEMFEcoreUIFacade()
-  {
-		return emfEcoreUIFacadeEClass;
+	public EClass getSymphony__CommonEMFUIFacade() {
+		return symphony__CommonEMFUIFacadeEClass;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getEMFEcoreUIFacade__GetColorForRange__Ranges()
-  {
-		return emfEcoreUIFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__CommonEMFUIFacade__GetColorForRange__Ranges() {
+		return symphony__CommonEMFUIFacadeEClass.getEOperations().get(0);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getEMFEcoreUIFacade__GetDisplayUnits__ETypedElement()
-  {
-		return emfEcoreUIFacadeEClass.getEOperations().get(1);
+	public EOperation getSymphony__CommonEMFUIFacade__GetDisplayUnits__ETypedElement() {
+		return symphony__CommonEMFUIFacadeEClass.getEOperations().get(1);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -190,9 +187,9 @@ public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Sy
 		isCreated = true;
 
 		// Create classes and their features
-		emfEcoreUIFacadeEClass = createEClass(EMF_ECORE_UI_FACADE);
-		createEOperation(emfEcoreUIFacadeEClass, EMF_ECORE_UI_FACADE___GET_COLOR_FOR_RANGE__RANGES);
-		createEOperation(emfEcoreUIFacadeEClass, EMF_ECORE_UI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT);
+		symphony__CommonEMFUIFacadeEClass = createEClass(SYMPHONY_COMMON_EMFUI_FACADE);
+		createEOperation(symphony__CommonEMFUIFacadeEClass, SYMPHONY_COMMON_EMFUI_FACADE___GET_COLOR_FOR_RANGE__RANGES);
+		createEOperation(symphony__CommonEMFUIFacadeEClass, SYMPHONY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT);
 
 		// Create data types
 		colorEDataType = createEDataType(COLOR);
@@ -234,12 +231,12 @@ public class Symphony__CommonEMFUIPackageImpl extends EPackageImpl implements Sy
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(emfEcoreUIFacadeEClass, EMFEcoreUIFacade.class, "EMFEcoreUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CommonEMFUIFacadeEClass, Symphony__CommonEMFUIFacade.class, "Symphony__CommonEMFUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getEMFEcoreUIFacade__GetColorForRange__Ranges(), this.getColor(), "getColorForRange", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getSymphony__CommonEMFUIFacade__GetColorForRange__Ranges(), this.getColor(), "getColorForRange", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonEMFPackage.getRanges(), "range", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreUIFacade__GetDisplayUnits__ETypedElement(), this.getUnit(), "getDisplayUnits", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonEMFUIFacade__GetDisplayUnits__ETypedElement(), this.getUnit(), "getDisplayUnits", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getETypedElement(), "eTypedElement", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types

@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
+import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
 import org.eclipse.symphony.core.invocator.Argument;
 import org.eclipse.symphony.core.invocator.ArgumentsList;
 import org.eclipse.symphony.core.invocator.EEnumArgument;
@@ -175,12 +175,12 @@ public class OperationCallControllerBindingItemProvider
 		String name_str = operationCall.getName() == null ? "unamed" : operationCall.getName();
 
 		String variable_str = operationCall.getVariable() == null ? "Not Defined"
-				: EMFEcoreEditUtilsFacade.INSTANCE.getText(operationCall
+				: Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(operationCall
 						.getVariable());
 
 		String operation_str = operationCall.getEOperation() == null ? "Not Defined"
 				+ "()"
-				: EMFEcoreEditUtilsFacade.INSTANCE.getText(operationCall
+				: Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(operationCall
 						.getEOperation());
 
 		return name_str + " - [" + variable_str + "." + operation_str + "]";	    

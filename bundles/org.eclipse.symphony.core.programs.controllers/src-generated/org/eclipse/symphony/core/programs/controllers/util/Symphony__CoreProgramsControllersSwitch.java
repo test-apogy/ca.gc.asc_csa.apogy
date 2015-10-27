@@ -73,9 +73,9 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_FACADE: {
-				ControllerFacade controllerFacade = (ControllerFacade)theEObject;
-				T result = caseControllerFacade(controllerFacade);
+			case Symphony__CoreProgramsControllersPackage.SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE: {
+				Symphony__CoreProgramsControllersFacade symphony__CoreProgramsControllersFacade = (Symphony__CoreProgramsControllersFacade)theEObject;
+				T result = caseSymphony__CoreProgramsControllersFacade(symphony__CoreProgramsControllersFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -235,17 +235,17 @@ public class Symphony__CoreProgramsControllersSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Controller Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Controller Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseControllerFacade(ControllerFacade object) {
+	public T caseSymphony__CoreProgramsControllersFacade(Symphony__CoreProgramsControllersFacade object) {
 		return null;
 	}
 

@@ -195,9 +195,9 @@ public class Symphony__AddonsSensorsPoseSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsPosePackage.POSE_FACADE: {
-				PoseFacade poseFacade = (PoseFacade)theEObject;
-				T result = casePoseFacade(poseFacade);
+			case Symphony__AddonsSensorsPosePackage.SYMPHONY_ADDONS_SENSORS_POSE_FACADE: {
+				Symphony__AddonsSensorsPoseFacade symphony__AddonsSensorsPoseFacade = (Symphony__AddonsSensorsPoseFacade)theEObject;
+				T result = caseSymphony__AddonsSensorsPoseFacade(symphony__AddonsSensorsPoseFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -356,17 +356,17 @@ public class Symphony__AddonsSensorsPoseSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Pose Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Pose Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePoseFacade(PoseFacade object) {
+	public T caseSymphony__AddonsSensorsPoseFacade(Symphony__AddonsSensorsPoseFacade object) {
 		return null;
 	}
 

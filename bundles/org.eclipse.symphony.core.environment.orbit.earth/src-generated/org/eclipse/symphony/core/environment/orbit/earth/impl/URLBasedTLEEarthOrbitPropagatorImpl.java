@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.environment.orbit.earth.Activator;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.TLE;
 import org.eclipse.symphony.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator;
@@ -178,7 +178,7 @@ public class URLBasedTLEEarthOrbitPropagatorImpl extends TLEEarthOrbitPropagator
 	{
 		try
 		{
-			TLE newTLE = EarthOrbitFacade.INSTANCE.loadTLE(getTleURL());
+			TLE newTLE = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.loadTLE(getTleURL());
 			setTle(newTLE);
 			Logger.INSTANCE.log(Activator.ID, this, "Sucessfully loaded Two-Lines Element from <" + getTleURL() + ">.", EventSeverity.OK);
 		}

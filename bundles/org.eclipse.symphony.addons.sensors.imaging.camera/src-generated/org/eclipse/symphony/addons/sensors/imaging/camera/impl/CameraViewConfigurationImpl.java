@@ -30,7 +30,7 @@ import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.impl.VariableFeatureReferenceImpl;
 import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureReferenceListener;
@@ -1102,7 +1102,7 @@ public class CameraViewConfigurationImpl extends VariableFeatureReferenceImpl im
 	  
 	  try
 	  {
-		  EObject instance = EMFEcoreInvocatorFacade.INSTANCE.getInstance(this);
+		  EObject instance = Symphony__CoreInvocatorFacade.INSTANCE.getInstance(this);
 	  
 		  if(instance instanceof AbstractCamera)
 		  {

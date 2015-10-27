@@ -20,7 +20,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.PoseProvider;
@@ -421,8 +421,8 @@ public class PoseVariableAnnotationImpl extends AbstractVariableAnnotationImpl i
   @Override
   public void updatePose(Matrix4x4 newPose) 
   {
-	  Tuple3d position = MathFacade.INSTANCE.extractPosition(newPose);
-	  Tuple3d orientation = MathFacade.INSTANCE.extractOrientation(newPose);		  
+	  Tuple3d position = Symphony__CommonMathFacade.INSTANCE.extractPosition(newPose);
+	  Tuple3d orientation = Symphony__CommonMathFacade.INSTANCE.extractOrientation(newPose);		  
 	  double currentAzimuth = orientation.getZ();
 	 
 	  updatePose(position.getX(), position.getY(), currentAzimuth);

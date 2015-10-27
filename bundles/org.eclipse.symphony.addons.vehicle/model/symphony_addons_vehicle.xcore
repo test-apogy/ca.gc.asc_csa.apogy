@@ -212,7 +212,7 @@ class LanderSphericalFootContactProvider extends ContactProvider
 
 // Others
 
-class VehicleToolsFacade
+class Symphony__AddonsVehicleFacade
 {	
 }
 

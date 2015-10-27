@@ -723,23 +723,23 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	int LAS_POINT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASFacadeImpl <em>LAS Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LASFacadeImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getLASFacade()
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASFacadeImpl
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getSymphony__CommonGeometryData3DLASFacade()
 	 * @generated
 	 */
-	int LAS_FACADE = 4;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE = 4;
 
 	/**
-	 * The number of structural features of the '<em>LAS Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAS_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Point</em>' operation.
@@ -748,16 +748,16 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAS_FACADE___CREATE_POINT__INT_BYTE = 0;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE___CREATE_POINT__INT_BYTE = 0;
 
 	/**
-	 * The number of operations of the '<em>LAS Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAS_FACADE_OPERATION_COUNT = 1;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl <em>LAS Writer</em>}' class.
@@ -1695,24 +1695,24 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	EAttribute getLASPoint_Blue();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.las.LASFacade <em>LAS Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>LAS Facade</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade
 	 * @generated
 	 */
-	EClass getLASFacade();
+	EClass getSymphony__CommonGeometryData3DLASFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.las.LASFacade#createPoint(int, byte[]) <em>Create Point</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade#createPoint(int, byte[]) <em>Create Point</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Point</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASFacade#createPoint(int, byte[])
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade#createPoint(int, byte[])
 	 * @generated
 	 */
-	EOperation getLASFacade__CreatePoint__int_byte();
+	EOperation getSymphony__CommonGeometryData3DLASFacade__CreatePoint__int_byte();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.las.LASWriter <em>LAS Writer</em>}'.
@@ -2502,14 +2502,14 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		EAttribute LAS_POINT__BLUE = eINSTANCE.getLASPoint_Blue();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASFacadeImpl <em>LAS Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.LASFacadeImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getLASFacade()
+		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASFacadeImpl
+		 * @see org.eclipse.symphony.common.geometry.data3d.las.impl.Symphony__CommonGeometryData3DLASPackageImpl#getSymphony__CommonGeometryData3DLASFacade()
 		 * @generated
 		 */
-		EClass LAS_FACADE = eINSTANCE.getLASFacade();
+		EClass SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE = eINSTANCE.getSymphony__CommonGeometryData3DLASFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Point</b></em>' operation.
@@ -2517,7 +2517,7 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation LAS_FACADE___CREATE_POINT__INT_BYTE = eINSTANCE.getLASFacade__CreatePoint__int_byte();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE___CREATE_POINT__INT_BYTE = eINSTANCE.getSymphony__CommonGeometryData3DLASFacade__CreatePoint__int_byte();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.las.impl.LASWriterImpl <em>LAS Writer</em>}' class.

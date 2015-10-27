@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
 import org.eclipse.symphony.core.environment.orbit.earth.Activator;
 import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
 import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
@@ -133,19 +133,19 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 				try
 				{
 					// Checks that the state falls inside the specified range.
-					Date date = EarthOrbitFacade.INSTANCE.createDate(spacecraftState.getDate());
+					Date date = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(spacecraftState.getDate());
 					if(date.getTime() >= startDate.getTime() && endDate.getTime() >= date.getTime())
 					{	
 						Orbit orbit = null;
 						if(spacecraftState.getOrbit() instanceof KeplerianOrbit)
 						{
-							orbit = EarthOrbitFacade.INSTANCE.createKeplerianOrbit((KeplerianOrbit) spacecraftState.getOrbit());	
+							orbit = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createKeplerianOrbit((KeplerianOrbit) spacecraftState.getOrbit());	
 						}
 						else if(spacecraftState.getOrbit() instanceof CartesianOrbit)
 						{
-							orbit = EarthOrbitFacade.INSTANCE.createCartesianEarthOrbit((CartesianOrbit) spacecraftState.getOrbit());
+							orbit = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createCartesianEarthOrbit((CartesianOrbit) spacecraftState.getOrbit());
 						}
-						OreKitBackedSpacecraftState ss = EarthOrbitFacade.INSTANCE.createOreKitBackedSpacecraftState(orbit, spacecraftState);
+						OreKitBackedSpacecraftState ss = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createOreKitBackedSpacecraftState(orbit, spacecraftState);
 						states.add(ss);
 					}
 				}
@@ -160,7 +160,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 			}
 		});
 						
-		AbsoluteDate startAbsoluteDate = EarthOrbitFacade.INSTANCE.createAbsoluteDate(startDate);
+		AbsoluteDate startAbsoluteDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
 		
 		try 
 		{						
@@ -226,7 +226,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 					if(lastPass == null)
 					{
 						lastPass = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPass();						
-						lastPass.setStartTime(EarthOrbitFacade.INSTANCE.createDate(s.getDate()));
+						lastPass.setStartTime(Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
 						lastPass.setSurfaceLocation(earthSurfaceLocation);						
 						
 						if(eContainer() instanceof OrbitModel)
@@ -243,7 +243,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 				{
 					if(lastPass != null)
 					{
-						lastPass.setEndTime(EarthOrbitFacade.INSTANCE.createDate(s.getDate()));
+						lastPass.setEndTime(Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
 						passes.add(lastPass);
 						
 						// Update pass position history
@@ -285,8 +285,8 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 		propagator.setSlaveMode();
 		propagator.addEventDetector(detector);
 		
-		AbsoluteDate startAbsoluteDate = EarthOrbitFacade.INSTANCE.createAbsoluteDate(startDate);
-		AbsoluteDate endAbsoluteDate = EarthOrbitFacade.INSTANCE.createAbsoluteDate(endDate);
+		AbsoluteDate startAbsoluteDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
+		AbsoluteDate endAbsoluteDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(endDate);
 		
 		propagator.propagate(startAbsoluteDate, endAbsoluteDate);
 		
@@ -332,7 +332,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 					{
 						lastPass = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPass();	
 						lastPass.setSurfaceLocation(groundStation);
-						lastPass.setStartTime(EarthOrbitFacade.INSTANCE.createDate(s.getDate()));
+						lastPass.setStartTime(Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
 						
 						if(eContainer() instanceof OrbitModel)
 						{
@@ -344,7 +344,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 				{
 					if(lastPass != null)
 					{
-						lastPass.setEndTime(EarthOrbitFacade.INSTANCE.createDate(s.getDate()));
+						lastPass.setEndTime(Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(s.getDate()));
 						passes.add(lastPass);
 						
 						// Update pass position history
@@ -385,8 +385,8 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 		propagator.setSlaveMode();
 		propagator.addEventDetector(detector);
 		
-		AbsoluteDate startAbsoluteDate = EarthOrbitFacade.INSTANCE.createAbsoluteDate(startDate);
-		AbsoluteDate endAbsoluteDate = EarthOrbitFacade.INSTANCE.createAbsoluteDate(endDate);
+		AbsoluteDate startAbsoluteDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(startDate);
+		AbsoluteDate endAbsoluteDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(endDate);
 		
 		propagator.propagate(startAbsoluteDate, endAbsoluteDate);
 		
@@ -399,7 +399,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 		if(isDateInValidRange(targetDate))
 		{
 			Propagator propagator = getOreKitPropagator();
-			AbsoluteDate targetAbsoluteDate = EarthOrbitFacade.INSTANCE.createAbsoluteDate(targetDate);
+			AbsoluteDate targetAbsoluteDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(targetDate);
 			
 			// Set propagator to slave mode.
 			propagator.setSlaveMode();
@@ -410,7 +410,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 			// Makes a copy of the initial Orbit
 			Orbit orbitCopy = EcoreUtil.copy(getInitialOrbit());
 			
-			return EarthOrbitFacade.INSTANCE.createSpacecraftState(orbitCopy, ss);
+			return Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createSpacecraftState(orbitCopy, ss);
 		}
 		else
 		{

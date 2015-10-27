@@ -172,27 +172,26 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.PathPlannersFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PathPlannersFacadeItemProvider pathPlannersFacadeItemProvider;
+	protected Symphony__AddonsMobilityPathplannersFacadeItemProvider symphony__AddonsMobilityPathplannersFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.PathPlannersFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPathPlannersFacadeAdapter()
-	{
-		if (pathPlannersFacadeItemProvider == null) {
-			pathPlannersFacadeItemProvider = new PathPlannersFacadeItemProvider(this);
+	public Adapter createSymphony__AddonsMobilityPathplannersFacadeAdapter() {
+		if (symphony__AddonsMobilityPathplannersFacadeItemProvider == null) {
+			symphony__AddonsMobilityPathplannersFacadeItemProvider = new Symphony__AddonsMobilityPathplannersFacadeItemProvider(this);
 		}
 
-		return pathPlannersFacadeItemProvider;
+		return symphony__AddonsMobilityPathplannersFacadeItemProvider;
 	}
 
 	/**
@@ -333,7 +332,7 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 		if (wayPointPathPlannerItemProvider != null) wayPointPathPlannerItemProvider.dispose();
 		if (meshWayPointPathPlannerItemProvider != null) meshWayPointPathPlannerItemProvider.dispose();
 		if (circularExclusionZoneItemProvider != null) circularExclusionZoneItemProvider.dispose();
-		if (pathPlannersFacadeItemProvider != null) pathPlannersFacadeItemProvider.dispose();
+		if (symphony__AddonsMobilityPathplannersFacadeItemProvider != null) symphony__AddonsMobilityPathplannersFacadeItemProvider.dispose();
 	}
 
 	/**
@@ -503,7 +502,7 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createPathPlannersFacade()));
+						 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createSymphony__AddonsMobilityPathplannersFacade()));
 
 				return null;
 			}
@@ -533,7 +532,7 @@ public class Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory exte
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createPathPlannersFacade()));
+						 Symphony__AddonsMobilityPathplannersFactory.eINSTANCE.createSymphony__AddonsMobilityPathplannersFacade()));
 
 				return null;
 			}

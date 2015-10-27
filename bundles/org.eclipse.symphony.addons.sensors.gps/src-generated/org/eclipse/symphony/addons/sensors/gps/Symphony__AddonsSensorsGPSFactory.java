@@ -59,13 +59,13 @@ public interface Symphony__AddonsSensorsGPSFactory extends EFactory {
 	MarkedGPS createMarkedGPS();
 
 	/**
-	 * Returns a new object of class '<em>GPS Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>GPS Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	GPSFacade createGPSFacade();
+	Symphony__AddonsSensorsGPSFacade createSymphony__AddonsSensorsGPSFacade();
 
 	/**
 	 * Returns the package supported by this factory.

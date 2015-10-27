@@ -11,14 +11,11 @@ import javax.vecmath.Vector3d;
 
 import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 
-public class PathUtilities {
-	
-	private static Data3dFacade data3dFacade = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade(); 	
-	
+public class PathUtilities
+{	
 	/**
 	 * Appends two paths to form one.
 	 * @param path1 The first path. 
@@ -67,12 +64,12 @@ public class PathUtilities {
 					CartesianPositionCoordinates currentEndPoint = path.getPoints().get(path.getPoints().size() -1);
 					if(!currentWayPoint.equals(currentEndPoint))
 					{
-						path.getPoints().add(data3dFacade.createCartesianPositionCoordinates(currentWayPoint));
+						path.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(currentWayPoint));
 					}
 				}
 				else
 				{				
-					path.getPoints().add(data3dFacade.createCartesianPositionCoordinates(currentWayPoint));
+					path.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(currentWayPoint));
 				}
 			}			
 		}
@@ -97,7 +94,7 @@ public class PathUtilities {
 			
 			// Gets the flatten coordinates on the plane perpendicular to the specified axis.
 			List<CartesianPositionCoordinates> flattenCoord = 
-				Geometry3dUtilities.getFlattenCoordinates(Geometry3dUtilities.getPerpendicularPlane(axis), 
+				Geometry3DUtilities.getFlattenCoordinates(Geometry3DUtilities.getPerpendicularPlane(axis), 
 						wayPointPath.getPoints());
 			
 			for(int i = 0; i < flattenCoord.size() - 2; i++)
@@ -139,7 +136,7 @@ public class PathUtilities {
 				CartesianPositionCoordinates p1 = wayPointPath.getPoints().get(i);
 				CartesianPositionCoordinates p2 = wayPointPath.getPoints().get(i+1);
 				
-				double segmentLength = Geometry3dUtilities.getDistance(p1, p2);				
+				double segmentLength = Geometry3DUtilities.getDistance(p1, p2);				
 				if(segmentLength >= maxLength)
 				{
 					maxLength = segmentLength;
@@ -165,7 +162,7 @@ public class PathUtilities {
 		List<CartesianPositionCoordinates> longestSegment = getLongestSegment(wayPointPath);
 		if(longestSegment.size() == 2)
 		{
-			maximumLenght = Geometry3dUtilities.getDistance(longestSegment.get(0), longestSegment.get(1));
+			maximumLenght = Geometry3DUtilities.getDistance(longestSegment.get(0), longestSegment.get(1));
 		}
 		
 		return maximumLenght;
@@ -190,7 +187,7 @@ public class PathUtilities {
 				CartesianPositionCoordinates p1 = wayPointPath.getPoints().get(i);
 				CartesianPositionCoordinates p2 = wayPointPath.getPoints().get(i+1);
 				
-				double segmentLength = Geometry3dUtilities.getDistance(p1, p2);				
+				double segmentLength = Geometry3DUtilities.getDistance(p1, p2);				
 				if(segmentLength <= minLength)
 				{
 					minLength = segmentLength;
@@ -216,7 +213,7 @@ public class PathUtilities {
 		List<CartesianPositionCoordinates> shortestSegment = getShortestSegment(wayPointPath);
 		if(shortestSegment.size() == 2)
 		{
-			minimumLenght = Geometry3dUtilities.getDistance(shortestSegment.get(0), shortestSegment.get(1));
+			minimumLenght = Geometry3DUtilities.getDistance(shortestSegment.get(0), shortestSegment.get(1));
 		}
 		
 		return minimumLenght;
@@ -239,7 +236,7 @@ public class PathUtilities {
 			Point3d p = new Point3d(point.getX(), point.getY(), point.getZ());
 			transform3d.transform(p);
 			
-			CartesianPositionCoordinates newPoint = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(p.x, p.y, p.z);
+			CartesianPositionCoordinates newPoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(p.x, p.y, p.z);
 			points.add(newPoint);
 		}
 		transformedPath.getPoints().addAll(points);

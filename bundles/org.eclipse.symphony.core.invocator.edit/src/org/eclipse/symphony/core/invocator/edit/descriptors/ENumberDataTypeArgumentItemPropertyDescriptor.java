@@ -7,8 +7,8 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
-import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
+import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.invocator.EDataTypeArgument;
@@ -124,12 +124,12 @@ public class ENumberDataTypeArgumentItemPropertyDescriptor extends
 	}
 
 	protected Unit<?> getDisplayUnit(EDataTypeArgument argument) {
-		return EMFEcoreUIFacade.INSTANCE.getDisplayUnits(argument
+		return Symphony__CommonEMFUIFacade.INSTANCE.getDisplayUnits(argument
 				.getEParameter());
 	}
 
 	protected Unit<?> getNativeUnit(EDataTypeArgument argument) {
-		return EMFEcoreFacade.INSTANCE.getEngineeringUnits(argument
+		return Symphony__CommonEMFFacade.INSTANCE.getEngineeringUnits(argument
 				.getEParameter());
 	}
 

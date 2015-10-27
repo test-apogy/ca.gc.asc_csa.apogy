@@ -6,7 +6,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
@@ -52,7 +52,7 @@ public class AbstractTypeImplementationListener
 				
 				try
 				{
-					AbstractTypeImplementation ati = EMFEcoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());
+					AbstractTypeImplementation ati = Symphony__CoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());
 					if(ati != null)
 					{
 						newInstance = ati.getInstance();
@@ -109,7 +109,7 @@ public class AbstractTypeImplementationListener
 	{
 		try
 		{
-			AbstractTypeImplementation ati = EMFEcoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());
+			AbstractTypeImplementation ati = Symphony__CoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());
 			if(ati != null)
 			{
 				updateInstance(ati.getInstance());

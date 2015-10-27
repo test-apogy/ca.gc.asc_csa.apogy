@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.environment.orbit.earth.Activator;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.EphemerisType;
 import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.TLE;
@@ -1067,7 +1067,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 			org.orekit.propagation.analytical.tle.TLE tle = getOreKitTLE();
 			
 			setBStar(tle.getBStar());
-			setEpoch(EarthOrbitFacade.INSTANCE.createDate(tle.getDate()));
+			setEpoch(Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(tle.getDate()));
 			setEccentricity(tle.getE());
 			setElementNumber(tle.getElementNumber());
 			setEphemerisType(EphemerisType.get(tle.getEphemerisType()));

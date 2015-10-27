@@ -109,7 +109,7 @@ class PickAndPlaceNode extends TransformNode
 	
 }
 
-class TopologyFacade
+class Symphony__CommonTopologyFacade
 {
 	op Link createLink(Node node)
 	

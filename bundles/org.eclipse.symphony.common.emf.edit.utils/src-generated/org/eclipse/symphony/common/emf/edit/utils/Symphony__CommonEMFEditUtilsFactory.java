@@ -23,15 +23,15 @@ public interface Symphony__CommonEMFEditUtilsFactory extends EFactory
   Symphony__CommonEMFEditUtilsFactory eINSTANCE = org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsFactoryImpl.init();
 
   /**
-	 * Returns a new object of class '<em>EMF Ecore Edit Utils Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EMF Ecore Edit Utils Facade</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-  EMFEcoreEditUtilsFacade createEMFEcoreEditUtilsFacade();
+	Symphony__CommonEMFEditUtilsFacade createSymphony__CommonEMFEditUtilsFacade();
 
-  /**
+		/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

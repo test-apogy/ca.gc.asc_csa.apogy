@@ -10,7 +10,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.symphony.core.PoseCorrector;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableImplementation;
 import org.eclipse.ui.handlers.HandlerUtil;
@@ -37,7 +37,7 @@ public class TogglePoseCorrectorEnabledCommandHandler extends AbstractHandler im
 			{
 				Variable variable = (Variable) selection;
 				
-				AbstractTypeImplementation ati = EMFEcoreInvocatorFacade.INSTANCE.getTypeImplementation(variable);
+				AbstractTypeImplementation ati = Symphony__CoreInvocatorFacade.INSTANCE.getTypeImplementation(variable);
 				if(ati instanceof VariableImplementation)
 				{
 					VariableImplementation va = (VariableImplementation) ati;

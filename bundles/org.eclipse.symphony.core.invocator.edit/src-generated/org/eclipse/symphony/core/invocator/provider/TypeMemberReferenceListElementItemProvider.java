@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
+import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
@@ -234,7 +234,7 @@ public class TypeMemberReferenceListElementItemProvider extends
 		TypeMemberReferenceListElement typeMemberReferenceListElement = (TypeMemberReferenceListElement) object;
 				
 		if (typeMemberReferenceListElement.getTypeMember() == null || typeMemberReferenceListElement.getTypeMember().getMemberType().getMembers().isEmpty()) {
-			EMFEcoreEditUtilsFacade.INSTANCE
+			Symphony__CommonEMFEditUtilsFacade.INSTANCE
 					.removeChildDescriptor(
 							newChildDescriptors,
 							Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_LIST_ELEMENT__CHILD);

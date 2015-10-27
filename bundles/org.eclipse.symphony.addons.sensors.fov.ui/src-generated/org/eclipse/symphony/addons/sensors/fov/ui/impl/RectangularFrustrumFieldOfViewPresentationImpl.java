@@ -17,7 +17,7 @@ import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPa
 import org.eclipse.symphony.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation;
 import org.eclipse.symphony.addons.sensors.fov.ui.preferences.MRTFOVPreferencesConstants;
 import org.eclipse.symphony.addons.sensors.fov.ui.scene_objects.RectangularFrustrumFieldOfViewSceneObject;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
 
@@ -61,7 +61,7 @@ public class RectangularFrustrumFieldOfViewPresentationImpl extends
 			point3d = getSceneObject().getCentroid();
 		}
 
-		return MathFacade.INSTANCE.createTuple3d(point3d);
+		return Symphony__CommonMathFacade.INSTANCE.createTuple3d(point3d);
 	}
 
 	@Override

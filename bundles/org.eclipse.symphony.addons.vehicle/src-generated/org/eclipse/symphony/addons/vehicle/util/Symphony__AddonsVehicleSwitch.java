@@ -22,7 +22,7 @@ import org.eclipse.symphony.addons.vehicle.Thruster;
 import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
 import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
-import org.eclipse.symphony.addons.vehicle.VehicleToolsFacade;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade;
 import org.eclipse.symphony.addons.vehicle.Wheel;
 import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
 import org.eclipse.symphony.addons.vehicle.WheelVehicleUtilities;
@@ -163,9 +163,9 @@ public class Symphony__AddonsVehicleSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsVehiclePackage.VEHICLE_TOOLS_FACADE: {
-				VehicleToolsFacade vehicleToolsFacade = (VehicleToolsFacade)theEObject;
-				T result = caseVehicleToolsFacade(vehicleToolsFacade);
+			case Symphony__AddonsVehiclePackage.SYMPHONY_ADDONS_VEHICLE_FACADE: {
+				Symphony__AddonsVehicleFacade symphony__AddonsVehicleFacade = (Symphony__AddonsVehicleFacade)theEObject;
+				T result = caseSymphony__AddonsVehicleFacade(symphony__AddonsVehicleFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -363,22 +363,21 @@ public class Symphony__AddonsVehicleSwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Vehicle Tools Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Vehicle Tools Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseVehicleToolsFacade(VehicleToolsFacade object)
-  {
+	public T caseSymphony__AddonsVehicleFacade(Symphony__AddonsVehicleFacade object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Wheel Vehicle Utilities</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

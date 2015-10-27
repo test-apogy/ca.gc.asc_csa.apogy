@@ -42,7 +42,7 @@ type Job wraps org.eclipse.core.runtime.jobs.Job
  * 
  * ------------------------------------------------------------------------------------------ */ 
 
-class EMFEcoreFacade
+class Symphony__CommonEMFFacade
 {	
 	op List<EClass> getAllAvailableEClasses()
 	

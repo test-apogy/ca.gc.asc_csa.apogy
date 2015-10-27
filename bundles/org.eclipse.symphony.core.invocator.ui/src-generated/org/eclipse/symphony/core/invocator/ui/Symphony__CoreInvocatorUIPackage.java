@@ -58,32 +58,23 @@ public interface Symphony__CoreInvocatorUIPackage extends EPackage {
 	Symphony__CoreInvocatorUIPackage eINSTANCE = org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.ui.impl.EMFEcoreInvocatorUIFacadeImpl <em>EMF Ecore Invocator UI Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.ui.impl.EMFEcoreInvocatorUIFacadeImpl
-	 * @see org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIPackageImpl#getEMFEcoreInvocatorUIFacade()
+	 * @see org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIFacadeImpl
+	 * @see org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIPackageImpl#getSymphony__CoreInvocatorUIFacade()
 	 * @generated
 	 */
-	int EMF_ECORE_INVOCATOR_UI_FACADE = 0;
+	int SYMPHONY_CORE_INVOCATOR_UI_FACADE = 0;
 
 	/**
-	 * The number of structural features of the '<em>EMF Ecore Invocator UI Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_ECORE_INVOCATOR_UI_FACADE_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Copy Initialization Data</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMF_ECORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT = 0;
+	int SYMPHONY_CORE_INVOCATOR_UI_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Copy Initialization Data</em>' operation.
@@ -92,17 +83,25 @@ public interface Symphony__CoreInvocatorUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_ECORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND = 1;
+	int SYMPHONY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT = 0;
 
 	/**
-	 * The number of operations of the '<em>EMF Ecore Invocator UI Facade</em>' class.
+	 * The operation id for the '<em>Copy Initialization Data</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_ECORE_INVOCATOR_UI_FACADE_OPERATION_COUNT = 2;
+	int SYMPHONY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND = 1;
 
+	/**
+	 * The number of operations of the '<em>Facade</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMPHONY_CORE_INVOCATOR_UI_FACADE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '<em>Compound Command</em>' data type.
@@ -116,34 +115,34 @@ public interface Symphony__CoreInvocatorUIPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUIFacade <em>EMF Ecore Invocator UI Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EMF Ecore Invocator UI Facade</em>'.
-	 * @see org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUIFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade
 	 * @generated
 	 */
-	EClass getEMFEcoreInvocatorUIFacade();
+	EClass getSymphony__CoreInvocatorUIFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUIFacade#copyInitializationData(org.eclipse.symphony.core.invocator.Context, org.eclipse.symphony.core.invocator.Context) <em>Copy Initialization Data</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade#copyInitializationData(org.eclipse.symphony.core.invocator.Context, org.eclipse.symphony.core.invocator.Context) <em>Copy Initialization Data</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Copy Initialization Data</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUIFacade#copyInitializationData(org.eclipse.symphony.core.invocator.Context, org.eclipse.symphony.core.invocator.Context)
+	 * @see org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade#copyInitializationData(org.eclipse.symphony.core.invocator.Context, org.eclipse.symphony.core.invocator.Context)
 	 * @generated
 	 */
-	EOperation getEMFEcoreInvocatorUIFacade__CopyInitializationData__Context_Context();
+	EOperation getSymphony__CoreInvocatorUIFacade__CopyInitializationData__Context_Context();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUIFacade#copyInitializationData(org.eclipse.symphony.core.invocator.AbstractTypeImplementation, org.eclipse.symphony.core.invocator.AbstractTypeImplementation, org.eclipse.emf.common.command.CompoundCommand) <em>Copy Initialization Data</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade#copyInitializationData(org.eclipse.symphony.core.invocator.AbstractTypeImplementation, org.eclipse.symphony.core.invocator.AbstractTypeImplementation, org.eclipse.emf.common.command.CompoundCommand) <em>Copy Initialization Data</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Copy Initialization Data</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUIFacade#copyInitializationData(org.eclipse.symphony.core.invocator.AbstractTypeImplementation, org.eclipse.symphony.core.invocator.AbstractTypeImplementation, org.eclipse.emf.common.command.CompoundCommand)
+	 * @see org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade#copyInitializationData(org.eclipse.symphony.core.invocator.AbstractTypeImplementation, org.eclipse.symphony.core.invocator.AbstractTypeImplementation, org.eclipse.emf.common.command.CompoundCommand)
 	 * @generated
 	 */
-	EOperation getEMFEcoreInvocatorUIFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand();
+	EOperation getSymphony__CoreInvocatorUIFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand();
 
 	/**
 	 * Returns the meta object for data type '{@link org.eclipse.emf.common.command.CompoundCommand <em>Compound Command</em>}'.
@@ -180,28 +179,28 @@ public interface Symphony__CoreInvocatorUIPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.ui.impl.EMFEcoreInvocatorUIFacadeImpl <em>EMF Ecore Invocator UI Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.ui.impl.EMFEcoreInvocatorUIFacadeImpl
-		 * @see org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIPackageImpl#getEMFEcoreInvocatorUIFacade()
+		 * @see org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIFacadeImpl
+		 * @see org.eclipse.symphony.core.invocator.ui.impl.Symphony__CoreInvocatorUIPackageImpl#getSymphony__CoreInvocatorUIFacade()
 		 * @generated
 		 */
-		EClass EMF_ECORE_INVOCATOR_UI_FACADE = eINSTANCE.getEMFEcoreInvocatorUIFacade();
+		EClass SYMPHONY_CORE_INVOCATOR_UI_FACADE = eINSTANCE.getSymphony__CoreInvocatorUIFacade();
 		/**
 		 * The meta object literal for the '<em><b>Copy Initialization Data</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMF_ECORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT = eINSTANCE.getEMFEcoreInvocatorUIFacade__CopyInitializationData__Context_Context();
+		EOperation SYMPHONY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT = eINSTANCE.getSymphony__CoreInvocatorUIFacade__CopyInitializationData__Context_Context();
 		/**
 		 * The meta object literal for the '<em><b>Copy Initialization Data</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMF_ECORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND = eINSTANCE.getEMFEcoreInvocatorUIFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand();
+		EOperation SYMPHONY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND = eINSTANCE.getSymphony__CoreInvocatorUIFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand();
 		/**
 		 * The meta object literal for the '<em>Compound Command</em>' data type.
 		 * <!-- begin-user-doc -->

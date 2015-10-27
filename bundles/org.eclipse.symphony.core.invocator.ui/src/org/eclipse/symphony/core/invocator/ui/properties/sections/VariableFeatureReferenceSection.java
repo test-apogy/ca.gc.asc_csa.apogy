@@ -4,7 +4,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.ui.properties.sections.AbstractExtendedPropertySection;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 import org.eclipse.symphony.core.invocator.VariablesList;
@@ -14,7 +14,7 @@ public class VariableFeatureReferenceSection extends AbstractExtendedPropertySec
 		
 	@Override
 	protected void render(EObject eObject) {
-		InvocatorSession session = EMFEcoreInvocatorFacade.INSTANCE
+		InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE
 				.getActiveInvocatorSession();
 		VariablesList variables = session.getEnvironment()
 				.getVariablesList();

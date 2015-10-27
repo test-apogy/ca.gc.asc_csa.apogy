@@ -44,7 +44,7 @@ import org.eclipse.symphony.addons.vehicle.Thruster;
 import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
 import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
-import org.eclipse.symphony.addons.vehicle.VehicleToolsFacade;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade;
 import org.eclipse.symphony.addons.vehicle.Wheel;
 import org.eclipse.symphony.addons.vehicle.WheelContactMode;
 import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
@@ -135,7 +135,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vehicleToolsFacadeEClass = null;
+	private EClass symphony__AddonsVehicleFacadeEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -692,15 +692,14 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getVehicleToolsFacade()
-  {
-		return vehicleToolsFacadeEClass;
+	public EClass getSymphony__AddonsVehicleFacade() {
+		return symphony__AddonsVehicleFacadeEClass;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1171,7 +1170,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 
 		landerSphericalFootContactProviderEClass = createEClass(LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER);
 
-		vehicleToolsFacadeEClass = createEClass(VEHICLE_TOOLS_FACADE);
+		symphony__AddonsVehicleFacadeEClass = createEClass(SYMPHONY_ADDONS_VEHICLE_FACADE);
 
 		wheelVehicleUtilitiesEClass = createEClass(WHEEL_VEHICLE_UTILITIES);
 		createEOperation(wheelVehicleUtilitiesEClass, WHEEL_VEHICLE_UTILITIES___GET_WHEEL_CENTER_POINT__DOUBLE_DOUBLE_SEGMENT2D);
@@ -1260,7 +1259,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		Symphony__CoreEnvironmentPackage theSymphony__CoreEnvironmentPackage = (Symphony__CoreEnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreEnvironmentPackage.eNS_URI);
 		Symphony__AddonsMobilityPathplannersPackage theSymphony__AddonsMobilityPathplannersPackage = (Symphony__AddonsMobilityPathplannersPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsMobilityPathplannersPackage.eNS_URI);
 		Symphony__AddonsGeometryPathsPackage theSymphony__AddonsGeometryPathsPackage = (Symphony__AddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsGeometryPathsPackage.eNS_URI);
-		Symphony__CoreInvocatorPackage theEMFEcoreInvocatorPackage = (Symphony__CoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreInvocatorPackage.eNS_URI);
+		Symphony__CoreInvocatorPackage theSymphony__CoreInvocatorPackage = (Symphony__CoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreInvocatorPackage.eNS_URI);
 
 		// Create type parameters
 		addETypeParameter(mapEDataType, "K");
@@ -1346,7 +1345,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 
 		initEClass(landerSphericalFootContactProviderEClass, LanderSphericalFootContactProvider.class, "LanderSphericalFootContactProvider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(vehicleToolsFacadeEClass, VehicleToolsFacade.class, "VehicleToolsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__AddonsVehicleFacadeEClass, Symphony__AddonsVehicleFacade.class, "Symphony__AddonsVehicleFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(wheelVehicleUtilitiesEClass, WheelVehicleUtilities.class, "WheelVehicleUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1409,7 +1408,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		initEReference(getPathPlannerToolNode_PathPlannerTool(), this.getPathPlannerTool(), this.getPathPlannerTool_PathPlannerToolNode(), "pathPlannerTool", null, 0, 1, PathPlannerToolNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vehiclePathPlannerToolEClass, VehiclePathPlannerTool.class, "VehiclePathPlannerTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVehiclePathPlannerTool_Variable(), theEMFEcoreInvocatorPackage.getVariable(), null, "variable", null, 1, 1, VehiclePathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVehiclePathPlannerTool_Variable(), theSymphony__CoreInvocatorPackage.getVariable(), null, "variable", null, 1, 1, VehiclePathPlannerTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(zCorrectionModeEEnum, ZCorrectionMode.class, "ZCorrectionMode");

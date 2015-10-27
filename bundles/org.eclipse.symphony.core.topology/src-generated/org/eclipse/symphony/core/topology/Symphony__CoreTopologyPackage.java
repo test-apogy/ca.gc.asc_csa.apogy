@@ -326,32 +326,32 @@ public interface Symphony__CoreTopologyPackage extends EPackage
   int SYMPHONY_SYSTEM_AP_IS_NODE_OPERATION_COUNT = Symphony__CommonTopologyPackage.REFERENCED_GROUP_NODE_OPERATION_COUNT + 0;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.topology.impl.SymphonyTopologyFacadeImpl <em>Symphony Topology Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.core.topology.impl.Symphony__CoreTopologyFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.topology.impl.SymphonyTopologyFacadeImpl
-	 * @see org.eclipse.symphony.core.topology.impl.Symphony__CoreTopologyPackageImpl#getSymphonyTopologyFacade()
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.core.topology.impl.Symphony__CoreTopologyFacadeImpl
+	 * @see org.eclipse.symphony.core.topology.impl.Symphony__CoreTopologyPackageImpl#getSymphony__CoreTopologyFacade()
 	 * @generated
 	 */
-  int SYMPHONY_TOPOLOGY_FACADE = 3;
+	int SYMPHONY_CORE_TOPOLOGY_FACADE = 3;
 
-  /**
-	 * The number of structural features of the '<em>Symphony Topology Facade</em>' class.
+		/**
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_TOPOLOGY_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_CORE_TOPOLOGY_FACADE_FEATURE_COUNT = 0;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Variable Origin Node</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_TOPOLOGY_FACADE___GET_VARIABLE_ORIGIN_NODE__VARIABLE = 0;
+	int SYMPHONY_CORE_TOPOLOGY_FACADE___GET_VARIABLE_ORIGIN_NODE__VARIABLE = 0;
 
 		/**
 	 * The operation id for the '<em>Get Abstract Type Implementation Origin Node</em>' operation.
@@ -360,7 +360,7 @@ public interface Symphony__CoreTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_TOPOLOGY_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_ORIGIN_NODE__ABSTRACTTYPEIMPLEMENTATION = 1;
+	int SYMPHONY_CORE_TOPOLOGY_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_ORIGIN_NODE__ABSTRACTTYPEIMPLEMENTATION = 1;
 
 		/**
 	 * The operation id for the '<em>Create Symphony Environment Node</em>' operation.
@@ -369,18 +369,18 @@ public interface Symphony__CoreTopologyPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_TOPOLOGY_FACADE___CREATE_SYMPHONY_ENVIRONMENT_NODE__SYMPHONYENVIRONMENT = 2;
+	int SYMPHONY_CORE_TOPOLOGY_FACADE___CREATE_SYMPHONY_ENVIRONMENT_NODE__SYMPHONYENVIRONMENT = 2;
 
 		/**
-	 * The number of operations of the '<em>Symphony Topology Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int SYMPHONY_TOPOLOGY_FACADE_OPERATION_COUNT = 3;
+	int SYMPHONY_CORE_TOPOLOGY_FACADE_OPERATION_COUNT = 3;
 
-  /**
+		/**
 	 * The meta object id for the '<em>Sorted Set</em>' data type.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -509,44 +509,44 @@ public interface Symphony__CoreTopologyPackage extends EPackage
   EReference getSymphonySystemAPIsNode_SymphonyEnvironment();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.topology.SymphonyTopologyFacade <em>Symphony Topology Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Symphony Topology Facade</em>'.
-	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyFacade
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade
 	 * @generated
 	 */
-  EClass getSymphonyTopologyFacade();
+	EClass getSymphony__CoreTopologyFacade();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.topology.SymphonyTopologyFacade#getVariableOriginNode(org.eclipse.symphony.core.invocator.Variable) <em>Get Variable Origin Node</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade#getVariableOriginNode(org.eclipse.symphony.core.invocator.Variable) <em>Get Variable Origin Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Variable Origin Node</em>' operation.
-	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyFacade#getVariableOriginNode(org.eclipse.symphony.core.invocator.Variable)
+	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade#getVariableOriginNode(org.eclipse.symphony.core.invocator.Variable)
 	 * @generated
 	 */
-	EOperation getSymphonyTopologyFacade__GetVariableOriginNode__Variable();
+	EOperation getSymphony__CoreTopologyFacade__GetVariableOriginNode__Variable();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.topology.SymphonyTopologyFacade#getAbstractTypeImplementationOriginNode(org.eclipse.symphony.core.invocator.AbstractTypeImplementation) <em>Get Abstract Type Implementation Origin Node</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade#getAbstractTypeImplementationOriginNode(org.eclipse.symphony.core.invocator.AbstractTypeImplementation) <em>Get Abstract Type Implementation Origin Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Abstract Type Implementation Origin Node</em>' operation.
-	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyFacade#getAbstractTypeImplementationOriginNode(org.eclipse.symphony.core.invocator.AbstractTypeImplementation)
+	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade#getAbstractTypeImplementationOriginNode(org.eclipse.symphony.core.invocator.AbstractTypeImplementation)
 	 * @generated
 	 */
-	EOperation getSymphonyTopologyFacade__GetAbstractTypeImplementationOriginNode__AbstractTypeImplementation();
+	EOperation getSymphony__CoreTopologyFacade__GetAbstractTypeImplementationOriginNode__AbstractTypeImplementation();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.topology.SymphonyTopologyFacade#createSymphonyEnvironmentNode(org.eclipse.symphony.core.SymphonyEnvironment) <em>Create Symphony Environment Node</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade#createSymphonyEnvironmentNode(org.eclipse.symphony.core.SymphonyEnvironment) <em>Create Symphony Environment Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Symphony Environment Node</em>' operation.
-	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyFacade#createSymphonyEnvironmentNode(org.eclipse.symphony.core.SymphonyEnvironment)
+	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade#createSymphonyEnvironmentNode(org.eclipse.symphony.core.SymphonyEnvironment)
 	 * @generated
 	 */
-	EOperation getSymphonyTopologyFacade__CreateSymphonyEnvironmentNode__SymphonyEnvironment();
+	EOperation getSymphony__CoreTopologyFacade__CreateSymphonyEnvironmentNode__SymphonyEnvironment();
 
 		/**
 	 * Returns the meta object for data type '{@link java.util.SortedSet <em>Sorted Set</em>}'.
@@ -678,22 +678,22 @@ public interface Symphony__CoreTopologyPackage extends EPackage
     EReference SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT = eINSTANCE.getSymphonySystemAPIsNode_SymphonyEnvironment();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.topology.impl.SymphonyTopologyFacadeImpl <em>Symphony Topology Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.core.topology.impl.Symphony__CoreTopologyFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.topology.impl.SymphonyTopologyFacadeImpl
-		 * @see org.eclipse.symphony.core.topology.impl.Symphony__CoreTopologyPackageImpl#getSymphonyTopologyFacade()
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.core.topology.impl.Symphony__CoreTopologyFacadeImpl
+		 * @see org.eclipse.symphony.core.topology.impl.Symphony__CoreTopologyPackageImpl#getSymphony__CoreTopologyFacade()
 		 * @generated
 		 */
-    EClass SYMPHONY_TOPOLOGY_FACADE = eINSTANCE.getSymphonyTopologyFacade();
+		EClass SYMPHONY_CORE_TOPOLOGY_FACADE = eINSTANCE.getSymphony__CoreTopologyFacade();
 
-    /**
+				/**
 		 * The meta object literal for the '<em><b>Get Variable Origin Node</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_TOPOLOGY_FACADE___GET_VARIABLE_ORIGIN_NODE__VARIABLE = eINSTANCE.getSymphonyTopologyFacade__GetVariableOriginNode__Variable();
+		EOperation SYMPHONY_CORE_TOPOLOGY_FACADE___GET_VARIABLE_ORIGIN_NODE__VARIABLE = eINSTANCE.getSymphony__CoreTopologyFacade__GetVariableOriginNode__Variable();
 
 				/**
 		 * The meta object literal for the '<em><b>Get Abstract Type Implementation Origin Node</b></em>' operation.
@@ -701,7 +701,7 @@ public interface Symphony__CoreTopologyPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_TOPOLOGY_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_ORIGIN_NODE__ABSTRACTTYPEIMPLEMENTATION = eINSTANCE.getSymphonyTopologyFacade__GetAbstractTypeImplementationOriginNode__AbstractTypeImplementation();
+		EOperation SYMPHONY_CORE_TOPOLOGY_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_ORIGIN_NODE__ABSTRACTTYPEIMPLEMENTATION = eINSTANCE.getSymphony__CoreTopologyFacade__GetAbstractTypeImplementationOriginNode__AbstractTypeImplementation();
 
 				/**
 		 * The meta object literal for the '<em><b>Create Symphony Environment Node</b></em>' operation.
@@ -709,7 +709,7 @@ public interface Symphony__CoreTopologyPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_TOPOLOGY_FACADE___CREATE_SYMPHONY_ENVIRONMENT_NODE__SYMPHONYENVIRONMENT = eINSTANCE.getSymphonyTopologyFacade__CreateSymphonyEnvironmentNode__SymphonyEnvironment();
+		EOperation SYMPHONY_CORE_TOPOLOGY_FACADE___CREATE_SYMPHONY_ENVIRONMENT_NODE__SYMPHONYENVIRONMENT = eINSTANCE.getSymphony__CoreTopologyFacade__CreateSymphonyEnvironmentNode__SymphonyEnvironment();
 
 				/**
 		 * The meta object literal for the '<em>Sorted Set</em>' data type.

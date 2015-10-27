@@ -255,26 +255,26 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.OrbitFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected OrbitFacadeItemProvider orbitFacadeItemProvider;
+	protected Symphony__CoreEnvironmentOrbitFacadeItemProvider symphony__CoreEnvironmentOrbitFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.OrbitFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createOrbitFacadeAdapter() {
-		if (orbitFacadeItemProvider == null) {
-			orbitFacadeItemProvider = new OrbitFacadeItemProvider(this);
+	public Adapter createSymphony__CoreEnvironmentOrbitFacadeAdapter() {
+		if (symphony__CoreEnvironmentOrbitFacadeItemProvider == null) {
+			symphony__CoreEnvironmentOrbitFacadeItemProvider = new Symphony__CoreEnvironmentOrbitFacadeItemProvider(this);
 		}
 
-		return orbitFacadeItemProvider;
+		return symphony__CoreEnvironmentOrbitFacadeItemProvider;
 	}
 
 	/**
@@ -410,7 +410,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 		if (spacecraftAttitudeItemProvider != null) spacecraftAttitudeItemProvider.dispose();
 		if (spacecraftStateItemProvider != null) spacecraftStateItemProvider.dispose();
 		if (orbitModelItemProvider != null) orbitModelItemProvider.dispose();
-		if (orbitFacadeItemProvider != null) orbitFacadeItemProvider.dispose();
+		if (symphony__CoreEnvironmentOrbitFacadeItemProvider != null) symphony__CoreEnvironmentOrbitFacadeItemProvider.dispose();
 	}
 
 	/**
@@ -585,7 +585,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createOrbitFacade()));
+						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createSymphony__CoreEnvironmentOrbitFacade()));
 
 				return null;
 			}
@@ -635,7 +635,7 @@ public class Symphony__CoreEnvironmentOrbitItemProviderAdapterFactory extends Sy
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createOrbitFacade()));
+						 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createSymphony__CoreEnvironmentOrbitFacade()));
 
 				return null;
 			}

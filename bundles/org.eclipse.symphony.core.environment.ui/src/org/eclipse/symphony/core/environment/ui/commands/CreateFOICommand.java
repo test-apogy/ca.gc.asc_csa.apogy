@@ -14,7 +14,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.AbsolutePoseProvider;
 import org.eclipse.symphony.core.FeatureOfInterest;
@@ -44,7 +44,7 @@ public class CreateFOICommand extends AbstractHandler implements IHandler
 				Matrix4x4 pose = absolutePoseProvider.getPoseTransform();
 				if(pose == null)
 				{		
-					pose = MathFacade.INSTANCE.createIdentityMatrix4x4();
+					pose = Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4();
 				}
 				
 				final Shell shell = Display.getCurrent().getActiveShell();

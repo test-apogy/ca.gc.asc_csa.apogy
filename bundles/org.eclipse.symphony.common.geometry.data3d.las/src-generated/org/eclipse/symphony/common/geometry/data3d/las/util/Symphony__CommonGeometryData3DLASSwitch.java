@@ -91,9 +91,9 @@ public class Symphony__CommonGeometryData3DLASSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DLASPackage.LAS_FACADE: {
-				LASFacade lasFacade = (LASFacade)theEObject;
-				T result = caseLASFacade(lasFacade);
+			case Symphony__CommonGeometryData3DLASPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE: {
+				Symphony__CommonGeometryData3DLASFacade symphony__CommonGeometryData3DLASFacade = (Symphony__CommonGeometryData3DLASFacade)theEObject;
+				T result = caseSymphony__CommonGeometryData3DLASFacade(symphony__CommonGeometryData3DLASFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -168,17 +168,17 @@ public class Symphony__CommonGeometryData3DLASSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>LAS Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>LAS Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLASFacade(LASFacade object) {
+	public T caseSymphony__CommonGeometryData3DLASFacade(Symphony__CommonGeometryData3DLASFacade object) {
 		return null;
 	}
 

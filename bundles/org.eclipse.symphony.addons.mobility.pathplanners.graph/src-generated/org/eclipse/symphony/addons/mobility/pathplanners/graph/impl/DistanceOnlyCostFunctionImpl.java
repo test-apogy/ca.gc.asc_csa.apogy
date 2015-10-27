@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.DistanceOnlyCostFunction;
 import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsMobilityPathplannersGraphPackage;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,6 +40,6 @@ public class DistanceOnlyCostFunctionImpl extends MeshDisplacementCostFunctionIm
 
 	@Override
 	public double getCost(CartesianPolygon from, CartesianPolygon to) {
-		return Geometry3dUtilities.getDistance(from.getCentroid(), to.getCentroid());	
+		return Geometry3DUtilities.getDistance(from.getCentroid(), to.getCentroid());	
 	}
 } //DistanceOnlyCostFunctionImpl

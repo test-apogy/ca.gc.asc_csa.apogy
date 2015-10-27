@@ -15,8 +15,8 @@ import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
 import org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider;
 import org.eclipse.symphony.core.environment.ui.EarthSkyPresentation;
 import org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
+import org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities;
 import org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation;
 import org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
 import org.eclipse.symphony.core.environment.ui.MapAnnotation;
@@ -141,14 +141,14 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
 				return result;
 			}
 			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_UTILITIES: {
-				EnvironmentUiUtilities environmentUiUtilities = (EnvironmentUiUtilities)theEObject;
-				T result = caseEnvironmentUiUtilities(environmentUiUtilities);
+				EnvironmentUIUtilities environmentUIUtilities = (EnvironmentUIUtilities)theEObject;
+				T result = caseEnvironmentUIUtilities(environmentUIUtilities);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentUIPackage.ENVIRONMENT_UI_FACADE: {
-				EnvironmentUiFacade environmentUiFacade = (EnvironmentUiFacade)theEObject;
-				T result = caseEnvironmentUiFacade(environmentUiFacade);
+			case Symphony__CoreEnvironmentUIPackage.SYMPHONY_CORE_ENVIRONMENT_UI_FACADE: {
+				Symphony__CoreEnvironmentUIFacade symphony__CoreEnvironmentUIFacade = (Symphony__CoreEnvironmentUIFacade)theEObject;
+				T result = caseSymphony__CoreEnvironmentUIFacade(symphony__CoreEnvironmentUIFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -385,38 +385,36 @@ public class Symphony__CoreEnvironmentUISwitch<T> extends Switch<T>
 	}
 
 		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Environment Ui Utilities</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Environment UI Utilities</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Environment Ui Utilities</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Environment UI Utilities</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseEnvironmentUiUtilities(EnvironmentUiUtilities object)
-  {
+	public T caseEnvironmentUIUtilities(EnvironmentUIUtilities object) {
 		return null;
 	}
 
-  /**
-	 * Returns the result of interpreting the object as an instance of '<em>Environment Ui Facade</em>'.
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Environment Ui Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseEnvironmentUiFacade(EnvironmentUiFacade object)
-  {
+	public T caseSymphony__CoreEnvironmentUIFacade(Symphony__CoreEnvironmentUIFacade object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Map View Configuration List</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

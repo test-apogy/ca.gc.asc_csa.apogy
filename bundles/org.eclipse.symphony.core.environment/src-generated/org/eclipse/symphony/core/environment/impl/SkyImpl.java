@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.core.AbstractWorksite;
 import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.environment.EnvironmentFacade;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
 import org.eclipse.symphony.core.environment.HorizontalCoordinates;
 import org.eclipse.symphony.core.environment.Sky;
 import org.eclipse.symphony.core.environment.SkyNode;
@@ -244,7 +244,7 @@ public class SkyImpl extends MinimalEObjectImpl.Container implements Sky
 	  if(getSkyNodeGen() == null)
 	  {
 		  	skyNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createSkyNode();			
-			EnvironmentFacade.INSTANCE.initializeSkyNode(this, skyNode);
+			Symphony__CoreEnvironmentFacade.INSTANCE.initializeSkyNode(this, skyNode);
 	  }
 	  
 	  return getSkyNodeGen();

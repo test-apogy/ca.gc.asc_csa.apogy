@@ -16,8 +16,8 @@ import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
 import org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider;
 import org.eclipse.symphony.core.environment.ui.EarthSkyPresentation;
 import org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
+import org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities;
 import org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation;
 import org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
 import org.eclipse.symphony.core.environment.ui.MapAnnotation;
@@ -122,12 +122,12 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 				return createFeatureOfInterestNodePresentationAdapter();
 			}
 			@Override
-			public Adapter caseEnvironmentUiUtilities(EnvironmentUiUtilities object) {
-				return createEnvironmentUiUtilitiesAdapter();
+			public Adapter caseEnvironmentUIUtilities(EnvironmentUIUtilities object) {
+				return createEnvironmentUIUtilitiesAdapter();
 			}
 			@Override
-			public Adapter caseEnvironmentUiFacade(EnvironmentUiFacade object) {
-				return createEnvironmentUiFacadeAdapter();
+			public Adapter caseSymphony__CoreEnvironmentUIFacade(Symphony__CoreEnvironmentUIFacade object) {
+				return createSymphony__CoreEnvironmentUIFacadeAdapter();
 			}
 			@Override
 			public Adapter caseMapViewConfigurationList(MapViewConfigurationList object) {
@@ -324,36 +324,34 @@ public class Symphony__CoreEnvironmentUIAdapterFactory extends AdapterFactoryImp
 	}
 
 		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities <em>Environment Ui Utilities</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities <em>Environment UI Utilities</em>}'.
 	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities
+	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities
 	 * @generated
 	 */
-  public Adapter createEnvironmentUiUtilitiesAdapter()
-  {
+	public Adapter createEnvironmentUIUtilitiesAdapter() {
 		return null;
 	}
 
-  /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade <em>Environment Ui Facade</em>}'.
+		/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade
 	 * @generated
 	 */
-  public Adapter createEnvironmentUiFacadeAdapter()
-  {
+	public Adapter createSymphony__CoreEnvironmentUIFacadeAdapter() {
 		return null;
 	}
 
-  /**
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.ui.MapViewConfigurationList <em>Map View Configuration List</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;

@@ -648,7 +648,7 @@ class SpacecraftSwathCorridor extends Named, Described, Updatable
 	contains Corridor corridor		
 }
 
-class EarthOrbitFacade
+class Symphony__CoreEnvironmentOrbitEarthFacade
 {
 	/*
 	 * Returns the Earth gravitational constant from GRIM5C1 model: 3.986004415e14 m³/s².

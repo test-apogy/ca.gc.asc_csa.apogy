@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.geometry.data.Mesh;
 import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 
 /**
  * <!-- begin-user-doc -->
@@ -301,7 +301,7 @@ public class DistanceAndRoverFootprintCostFunctionImpl extends DistanceAndSlopes
 		Set<CartesianPolygon> polygons = polygonToNeibours.get(center);
 		if(polygons == null)
 		{
-			polygons = Geometry3dUtilities.getCartesianPolygonsPartiallyWithinRadius(center, getRoverFootPrintRadius(), mesh);
+			polygons = Geometry3DUtilities.getCartesianPolygonsPartiallyWithinRadius(center, getRoverFootPrintRadius(), mesh);
 			polygonToNeibours.put(center, polygons);			
 		}		
 		else
@@ -315,7 +315,7 @@ public class DistanceAndRoverFootprintCostFunctionImpl extends DistanceAndSlopes
 		Vector3d normal = polygonToAverageNormal.get(polygon);
 		if(normal == null)
 		{
-			normal = Geometry3dUtilities.getAverageNormal(getPolygonsWithinRadius(mesh, polygon));
+			normal = Geometry3DUtilities.getAverageNormal(getPolygonsWithinRadius(mesh, polygon));
 			polygonToAverageNormal.put(polygon, normal);			
 		}
 		else
@@ -432,7 +432,7 @@ public class DistanceAndRoverFootprintCostFunctionImpl extends DistanceAndSlopes
 		}
 
 		// Compute the roughness of the footprint 		
-		double roughnessIndex = Geometry3dUtilities.getSurfaceRoughnessIndex(polygonsWithinRadius, normal, to, getRoverFootPrintRadius());
+		double roughnessIndex = Geometry3DUtilities.getSurfaceRoughnessIndex(polygonsWithinRadius, normal, to, getRoverFootPrintRadius());
 		if (roughnessIndex > getMaximumRoughness()) 
 		{
 			cost = Double.POSITIVE_INFINITY;

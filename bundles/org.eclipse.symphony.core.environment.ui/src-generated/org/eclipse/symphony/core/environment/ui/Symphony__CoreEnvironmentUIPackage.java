@@ -1034,17 +1034,17 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	int FEATURE_OF_INTEREST_NODE_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 		/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.EnvironmentUiUtilitiesImpl <em>Environment Ui Utilities</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.EnvironmentUIUtilitiesImpl <em>Environment UI Utilities</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.EnvironmentUiUtilitiesImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getEnvironmentUiUtilities()
+	 * @see org.eclipse.symphony.core.environment.ui.impl.EnvironmentUIUtilitiesImpl
+	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getEnvironmentUIUtilities()
 	 * @generated
 	 */
   int ENVIRONMENT_UI_UTILITIES = 6;
 
   /**
-	 * The number of structural features of the '<em>Environment Ui Utilities</em>' class.
+	 * The number of structural features of the '<em>Environment UI Utilities</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1098,7 +1098,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE = 4;
 
   /**
-	 * The number of operations of the '<em>Environment Ui Utilities</em>' class.
+	 * The number of operations of the '<em>Environment UI Utilities</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1107,59 +1107,59 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
   int ENVIRONMENT_UI_UTILITIES_OPERATION_COUNT = 5;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.EnvironmentUiFacadeImpl <em>Environment Ui Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.ui.impl.EnvironmentUiFacadeImpl
-	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getEnvironmentUiFacade()
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIFacadeImpl
+	 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getSymphony__CoreEnvironmentUIFacade()
 	 * @generated
 	 */
-  int ENVIRONMENT_UI_FACADE = 7;
+	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE = 7;
 
-  /**
-	 * The number of structural features of the '<em>Environment Ui Facade</em>' class.
+		/**
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_UI_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE_FEATURE_COUNT = 0;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Visible Rectangular Region Provider</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION = 0;
+	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION = 0;
 
 		/**
 	 * The operation id for the '<em>Get Image Map Layer Presentation Image</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT = 1;
+	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT = 1;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Trajectory Length</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES = 2;
+	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES = 2;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Map View Configuration Identifier</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION = 3;
+	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION = 3;
 
 		/**
 	 * The operation id for the '<em>Get Active Map View Configuration</em>' operation.
@@ -1168,7 +1168,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING = 4;
+	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING = 4;
 
 		/**
 	 * The operation id for the '<em>Get Active Map View Configuration List</em>' operation.
@@ -1177,7 +1177,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST = 5;
+	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST = 5;
 
 		/**
 	 * The operation id for the '<em>Get Feature Of Interest Lists</em>' operation.
@@ -1186,18 +1186,18 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION = 6;
+	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION = 6;
 
 		/**
-	 * The number of operations of the '<em>Environment Ui Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_UI_FACADE_OPERATION_COUNT = 7;
+	int SYMPHONY_CORE_ENVIRONMENT_UI_FACADE_OPERATION_COUNT = 7;
 
-  /**
+		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationListImpl <em>Map View Configuration List</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3145,144 +3145,144 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 	EAttribute getFeatureOfInterestNodePresentation_FlagVisible();
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities <em>Environment Ui Utilities</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities <em>Environment UI Utilities</em>}'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Environment Ui Utilities</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Environment UI Utilities</em>'.
+	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities
 	 * @generated
 	 */
-  EClass getEnvironmentUiUtilities();
+	EClass getEnvironmentUIUtilities();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities#toPoint3f(org.eclipse.symphony.core.environment.Star) <em>To Point3f</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#toPoint3f(org.eclipse.symphony.core.environment.Star) <em>To Point3f</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>To Point3f</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities#toPoint3f(org.eclipse.symphony.core.environment.Star)
+	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#toPoint3f(org.eclipse.symphony.core.environment.Star)
 	 * @generated
 	 */
-  EOperation getEnvironmentUiUtilities__ToPoint3f__Star();
+	EOperation getEnvironmentUIUtilities__ToPoint3f__Star();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities#getPointSizeForMagnitude(float, float, float, float, float) <em>Get Point Size For Magnitude</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getPointSizeForMagnitude(float, float, float, float, float) <em>Get Point Size For Magnitude</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Point Size For Magnitude</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities#getPointSizeForMagnitude(float, float, float, float, float)
+	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getPointSizeForMagnitude(float, float, float, float, float)
 	 * @generated
 	 */
-  EOperation getEnvironmentUiUtilities__GetPointSizeForMagnitude__float_float_float_float_float();
+	EOperation getEnvironmentUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities#getSunLightColor(double) <em>Get Sun Light Color</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getSunLightColor(double) <em>Get Sun Light Color</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Sun Light Color</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities#getSunLightColor(double)
+	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getSunLightColor(double)
 	 * @generated
 	 */
-  EOperation getEnvironmentUiUtilities__GetSunLightColor__double();
+	EOperation getEnvironmentUIUtilities__GetSunLightColor__double();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities#getSkyTransparency(double) <em>Get Sky Transparency</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getSkyTransparency(double) <em>Get Sky Transparency</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Sky Transparency</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities#getSkyTransparency(double)
+	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getSkyTransparency(double)
 	 * @generated
 	 */
-  EOperation getEnvironmentUiUtilities__GetSkyTransparency__double();
+	EOperation getEnvironmentUIUtilities__GetSkyTransparency__double();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities#getSkyColor(double) <em>Get Sky Color</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getSkyColor(double) <em>Get Sky Color</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Sky Color</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities#getSkyColor(double)
+	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities#getSkyColor(double)
 	 * @generated
 	 */
-  EOperation getEnvironmentUiUtilities__GetSkyColor__double();
+	EOperation getEnvironmentUIUtilities__GetSkyColor__double();
 
-  /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade <em>Environment Ui Facade</em>}'.
+		/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Environment Ui Facade</em>'.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade
 	 * @generated
 	 */
-  EClass getEnvironmentUiFacade();
+	EClass getSymphony__CoreEnvironmentUIFacade();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade#getVisibleRectangularRegionProvider(org.eclipse.symphony.core.environment.ui.MapViewConfiguration) <em>Get Visible Rectangular Region Provider</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getVisibleRectangularRegionProvider(org.eclipse.symphony.core.environment.ui.MapViewConfiguration) <em>Get Visible Rectangular Region Provider</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Visible Rectangular Region Provider</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade#getVisibleRectangularRegionProvider(org.eclipse.symphony.core.environment.ui.MapViewConfiguration)
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getVisibleRectangularRegionProvider(org.eclipse.symphony.core.environment.ui.MapViewConfiguration)
 	 * @generated
 	 */
-	EOperation getEnvironmentUiFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration();
+	EOperation getSymphony__CoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade#getImageMapLayerPresentationImage(org.eclipse.symphony.core.environment.ui.MapViewConfiguration, org.eclipse.symphony.core.environment.RectangularRegion, int) <em>Get Image Map Layer Presentation Image</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getImageMapLayerPresentationImage(org.eclipse.symphony.core.environment.ui.MapViewConfiguration, org.eclipse.symphony.core.environment.RectangularRegion, int) <em>Get Image Map Layer Presentation Image</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Image Map Layer Presentation Image</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade#getImageMapLayerPresentationImage(org.eclipse.symphony.core.environment.ui.MapViewConfiguration, org.eclipse.symphony.core.environment.RectangularRegion, int)
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getImageMapLayerPresentationImage(org.eclipse.symphony.core.environment.ui.MapViewConfiguration, org.eclipse.symphony.core.environment.RectangularRegion, int)
 	 * @generated
 	 */
-  EOperation getEnvironmentUiFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int();
+	EOperation getSymphony__CoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade#getTrajectoryLength(org.jfree.data.xy.XYSeries) <em>Get Trajectory Length</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getTrajectoryLength(org.jfree.data.xy.XYSeries) <em>Get Trajectory Length</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Trajectory Length</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade#getTrajectoryLength(org.jfree.data.xy.XYSeries)
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getTrajectoryLength(org.jfree.data.xy.XYSeries)
 	 * @generated
 	 */
-  EOperation getEnvironmentUiFacade__GetTrajectoryLength__XYSeries();
+	EOperation getSymphony__CoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade#getMapViewConfigurationIdentifier(org.eclipse.symphony.core.environment.ui.MapViewConfiguration) <em>Get Map View Configuration Identifier</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getMapViewConfigurationIdentifier(org.eclipse.symphony.core.environment.ui.MapViewConfiguration) <em>Get Map View Configuration Identifier</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Map View Configuration Identifier</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade#getMapViewConfigurationIdentifier(org.eclipse.symphony.core.environment.ui.MapViewConfiguration)
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getMapViewConfigurationIdentifier(org.eclipse.symphony.core.environment.ui.MapViewConfiguration)
 	 * @generated
 	 */
-	EOperation getEnvironmentUiFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration();
+	EOperation getSymphony__CoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade#getActiveMapViewConfiguration(java.lang.String) <em>Get Active Map View Configuration</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getActiveMapViewConfiguration(java.lang.String) <em>Get Active Map View Configuration</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Active Map View Configuration</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade#getActiveMapViewConfiguration(java.lang.String)
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getActiveMapViewConfiguration(java.lang.String)
 	 * @generated
 	 */
-	EOperation getEnvironmentUiFacade__GetActiveMapViewConfiguration__String();
+	EOperation getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade#getActiveMapViewConfigurationList() <em>Get Active Map View Configuration List</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getActiveMapViewConfigurationList() <em>Get Active Map View Configuration List</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Active Map View Configuration List</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade#getActiveMapViewConfigurationList()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getActiveMapViewConfigurationList()
 	 * @generated
 	 */
-	EOperation getEnvironmentUiFacade__GetActiveMapViewConfigurationList();
+	EOperation getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfigurationList();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade#getFeatureOfInterestLists(org.eclipse.symphony.core.invocator.InvocatorSession) <em>Get Feature Of Interest Lists</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getFeatureOfInterestLists(org.eclipse.symphony.core.invocator.InvocatorSession) <em>Get Feature Of Interest Lists</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Feature Of Interest Lists</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade#getFeatureOfInterestLists(org.eclipse.symphony.core.invocator.InvocatorSession)
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade#getFeatureOfInterestLists(org.eclipse.symphony.core.invocator.InvocatorSession)
 	 * @generated
 	 */
-	EOperation getEnvironmentUiFacade__GetFeatureOfInterestLists__InvocatorSession();
+	EOperation getSymphony__CoreEnvironmentUIFacade__GetFeatureOfInterestLists__InvocatorSession();
 
 		/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.ui.MapViewConfigurationList <em>Map View Configuration List</em>}'.
@@ -4178,14 +4178,14 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		EAttribute FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE = eINSTANCE.getFeatureOfInterestNodePresentation_FlagVisible();
 
 				/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.EnvironmentUiUtilitiesImpl <em>Environment Ui Utilities</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.EnvironmentUIUtilitiesImpl <em>Environment UI Utilities</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.EnvironmentUiUtilitiesImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getEnvironmentUiUtilities()
+		 * @see org.eclipse.symphony.core.environment.ui.impl.EnvironmentUIUtilitiesImpl
+		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getEnvironmentUIUtilities()
 		 * @generated
 		 */
-    EClass ENVIRONMENT_UI_UTILITIES = eINSTANCE.getEnvironmentUiUtilities();
+    EClass ENVIRONMENT_UI_UTILITIES = eINSTANCE.getEnvironmentUIUtilities();
 
     /**
 		 * The meta object literal for the '<em><b>To Point3f</b></em>' operation.
@@ -4193,7 +4193,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_UI_UTILITIES___TO_POINT3F__STAR = eINSTANCE.getEnvironmentUiUtilities__ToPoint3f__Star();
+    EOperation ENVIRONMENT_UI_UTILITIES___TO_POINT3F__STAR = eINSTANCE.getEnvironmentUIUtilities__ToPoint3f__Star();
 
     /**
 		 * The meta object literal for the '<em><b>Get Point Size For Magnitude</b></em>' operation.
@@ -4201,7 +4201,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT = eINSTANCE.getEnvironmentUiUtilities__GetPointSizeForMagnitude__float_float_float_float_float();
+    EOperation ENVIRONMENT_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT = eINSTANCE.getEnvironmentUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float();
 
     /**
 		 * The meta object literal for the '<em><b>Get Sun Light Color</b></em>' operation.
@@ -4209,7 +4209,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE = eINSTANCE.getEnvironmentUiUtilities__GetSunLightColor__double();
+    EOperation ENVIRONMENT_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE = eINSTANCE.getEnvironmentUIUtilities__GetSunLightColor__double();
 
     /**
 		 * The meta object literal for the '<em><b>Get Sky Transparency</b></em>' operation.
@@ -4217,7 +4217,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE = eINSTANCE.getEnvironmentUiUtilities__GetSkyTransparency__double();
+    EOperation ENVIRONMENT_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE = eINSTANCE.getEnvironmentUIUtilities__GetSkyTransparency__double();
 
     /**
 		 * The meta object literal for the '<em><b>Get Sky Color</b></em>' operation.
@@ -4225,49 +4225,49 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
      * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE = eINSTANCE.getEnvironmentUiUtilities__GetSkyColor__double();
+    EOperation ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE = eINSTANCE.getEnvironmentUIUtilities__GetSkyColor__double();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.EnvironmentUiFacadeImpl <em>Environment Ui Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.ui.impl.EnvironmentUiFacadeImpl
-		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getEnvironmentUiFacade()
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIFacadeImpl
+		 * @see org.eclipse.symphony.core.environment.ui.impl.Symphony__CoreEnvironmentUIPackageImpl#getSymphony__CoreEnvironmentUIFacade()
 		 * @generated
 		 */
-    EClass ENVIRONMENT_UI_FACADE = eINSTANCE.getEnvironmentUiFacade();
+		EClass SYMPHONY_CORE_ENVIRONMENT_UI_FACADE = eINSTANCE.getSymphony__CoreEnvironmentUIFacade();
 
-    /**
+				/**
 		 * The meta object literal for the '<em><b>Get Visible Rectangular Region Provider</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION = eINSTANCE.getEnvironmentUiFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION = eINSTANCE.getSymphony__CoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration();
 
 				/**
 		 * The meta object literal for the '<em><b>Get Image Map Layer Presentation Image</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT = eINSTANCE.getEnvironmentUiFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT = eINSTANCE.getSymphony__CoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int();
 
-    /**
+				/**
 		 * The meta object literal for the '<em><b>Get Trajectory Length</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES = eINSTANCE.getEnvironmentUiFacade__GetTrajectoryLength__XYSeries();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES = eINSTANCE.getSymphony__CoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries();
 
-    /**
+				/**
 		 * The meta object literal for the '<em><b>Get Map View Configuration Identifier</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION = eINSTANCE.getEnvironmentUiFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION = eINSTANCE.getSymphony__CoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration();
 
 				/**
 		 * The meta object literal for the '<em><b>Get Active Map View Configuration</b></em>' operation.
@@ -4275,7 +4275,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING = eINSTANCE.getEnvironmentUiFacade__GetActiveMapViewConfiguration__String();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING = eINSTANCE.getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String();
 
 				/**
 		 * The meta object literal for the '<em><b>Get Active Map View Configuration List</b></em>' operation.
@@ -4283,7 +4283,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST = eINSTANCE.getEnvironmentUiFacade__GetActiveMapViewConfigurationList();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST = eINSTANCE.getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfigurationList();
 
 				/**
 		 * The meta object literal for the '<em><b>Get Feature Of Interest Lists</b></em>' operation.
@@ -4291,7 +4291,7 @@ public interface Symphony__CoreEnvironmentUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION = eINSTANCE.getEnvironmentUiFacade__GetFeatureOfInterestLists__InvocatorSession();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION = eINSTANCE.getSymphony__CoreEnvironmentUIFacade__GetFeatureOfInterestLists__InvocatorSession();
 
 				/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.ui.impl.MapViewConfigurationListImpl <em>Map View Configuration List</em>}' class.

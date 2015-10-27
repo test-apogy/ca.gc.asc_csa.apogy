@@ -1645,23 +1645,23 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	int SPHERE_GEOMETRY_OPERATION_COUNT = GEOMETRY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.DynamicsFacadeImpl <em>Dynamics Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.DynamicsFacadeImpl
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getDynamicsFacade()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsFacadeImpl
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getSymphony__CommonTopologyAddonsDynamicsFacade()
 	 * @generated
 	 */
-	int DYNAMICS_FACADE = 25;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE = 25;
 
 	/**
-	 * The number of structural features of the '<em>Dynamics Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMICS_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Find Center Of Mass</em>' operation.
@@ -1670,7 +1670,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE = 0;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE = 0;
 
 	/**
 	 * The operation id for the '<em>Find Total Mass</em>' operation.
@@ -1679,7 +1679,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE = 1;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE = 1;
 
 	/**
 	 * The operation id for the '<em>Get Physical Bodies</em>' operation.
@@ -1688,7 +1688,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE = 2;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE = 2;
 
 	/**
 	 * The operation id for the '<em>Get Physical Node Simulation Property</em>' operation.
@@ -1697,7 +1697,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS = 3;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS = 3;
 
 	/**
 	 * The operation id for the '<em>Get Constraint Simulation Property</em>' operation.
@@ -1706,16 +1706,16 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS = 4;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS = 4;
 
 	/**
-	 * The number of operations of the '<em>Dynamics Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DYNAMICS_FACADE_OPERATION_COUNT = 5;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE_OPERATION_COUNT = 5;
 
 	/**
 	 * The meta object id for the '<em>Set</em>' data type.
@@ -2593,64 +2593,64 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 	EAttribute getSphereGeometry_Radius();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade <em>Dynamics Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dynamics Facade</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade
 	 * @generated
 	 */
-	EClass getDynamicsFacade();
+	EClass getSymphony__CommonTopologyAddonsDynamicsFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade#findCenterOfMass(org.eclipse.symphony.common.topology.Node) <em>Find Center Of Mass</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#findCenterOfMass(org.eclipse.symphony.common.topology.Node) <em>Find Center Of Mass</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Center Of Mass</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade#findCenterOfMass(org.eclipse.symphony.common.topology.Node)
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#findCenterOfMass(org.eclipse.symphony.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getDynamicsFacade__FindCenterOfMass__Node();
+	EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade#findTotalMass(org.eclipse.symphony.common.topology.Node) <em>Find Total Mass</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#findTotalMass(org.eclipse.symphony.common.topology.Node) <em>Find Total Mass</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Total Mass</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade#findTotalMass(org.eclipse.symphony.common.topology.Node)
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#findTotalMass(org.eclipse.symphony.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getDynamicsFacade__FindTotalMass__Node();
+	EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__FindTotalMass__Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade#getPhysicalBodies(org.eclipse.symphony.common.topology.Node) <em>Get Physical Bodies</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#getPhysicalBodies(org.eclipse.symphony.common.topology.Node) <em>Get Physical Bodies</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Physical Bodies</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade#getPhysicalBodies(org.eclipse.symphony.common.topology.Node)
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#getPhysicalBodies(org.eclipse.symphony.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getDynamicsFacade__GetPhysicalBodies__Node();
+	EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade#getPhysicalNodeSimulationProperty(org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody, java.lang.Class) <em>Get Physical Node Simulation Property</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#getPhysicalNodeSimulationProperty(org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody, java.lang.Class) <em>Get Physical Node Simulation Property</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Physical Node Simulation Property</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade#getPhysicalNodeSimulationProperty(org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody, java.lang.Class)
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#getPhysicalNodeSimulationProperty(org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody, java.lang.Class)
 	 * @generated
 	 */
-	EOperation getDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class();
+	EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade#getConstraintSimulationProperty(org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint, java.lang.Class) <em>Get Constraint Simulation Property</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#getConstraintSimulationProperty(org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint, java.lang.Class) <em>Get Constraint Simulation Property</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Constraint Simulation Property</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade#getConstraintSimulationProperty(org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint, java.lang.Class)
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade#getConstraintSimulationProperty(org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint, java.lang.Class)
 	 * @generated
 	 */
-	EOperation getDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class();
+	EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class();
 
 	/**
 	 * Returns the meta object for data type '{@link java.util.Set <em>Set</em>}'.
@@ -3385,14 +3385,14 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		EAttribute SPHERE_GEOMETRY__RADIUS = eINSTANCE.getSphereGeometry_Radius();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.DynamicsFacadeImpl <em>Dynamics Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.DynamicsFacadeImpl
-		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getDynamicsFacade()
+		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsFacadeImpl
+		 * @see org.eclipse.symphony.common.topology.addons.dynamics.impl.Symphony__CommonTopologyAddonsDynamicsPackageImpl#getSymphony__CommonTopologyAddonsDynamicsFacade()
 		 * @generated
 		 */
-		EClass DYNAMICS_FACADE = eINSTANCE.getDynamicsFacade();
+		EClass SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE = eINSTANCE.getSymphony__CommonTopologyAddonsDynamicsFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Center Of Mass</b></em>' operation.
@@ -3400,7 +3400,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE = eINSTANCE.getDynamicsFacade__FindCenterOfMass__Node();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE = eINSTANCE.getSymphony__CommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Total Mass</b></em>' operation.
@@ -3408,7 +3408,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE = eINSTANCE.getDynamicsFacade__FindTotalMass__Node();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE = eINSTANCE.getSymphony__CommonTopologyAddonsDynamicsFacade__FindTotalMass__Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Physical Bodies</b></em>' operation.
@@ -3416,7 +3416,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE = eINSTANCE.getDynamicsFacade__GetPhysicalBodies__Node();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE = eINSTANCE.getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Physical Node Simulation Property</b></em>' operation.
@@ -3424,7 +3424,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS = eINSTANCE.getDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS = eINSTANCE.getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Constraint Simulation Property</b></em>' operation.
@@ -3432,7 +3432,7 @@ public interface Symphony__CommonTopologyAddonsDynamicsPackage extends EPackage 
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS = eINSTANCE.getDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS = eINSTANCE.getSymphony__CommonTopologyAddonsDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class();
 
 		/**
 		 * The meta object literal for the '<em>Set</em>' data type.

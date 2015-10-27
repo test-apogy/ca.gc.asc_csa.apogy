@@ -11,7 +11,7 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.transaction.RecordingCommand;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.ui.handlers.HandlerUtil;
 
@@ -34,7 +34,7 @@ public class VariableInstancesCollectInitializationDataCommand extends AbstractH
 					final Object selection = selections.next();
 
 					if (selection instanceof Environment) {						
-						EMFEcoreInvocatorFacade.INSTANCE
+						Symphony__CoreInvocatorFacade.INSTANCE
 						.collectInitializationData((Environment) selection);
 					}
 				}
@@ -42,7 +42,7 @@ public class VariableInstancesCollectInitializationDataCommand extends AbstractH
 			}
 		};
 		
-		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+		EditingDomain domain = AdapterFactoryEditingDomain.getEditingDomainFor(Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 		domain.getCommandStack().execute(command);
 		
 		return null;

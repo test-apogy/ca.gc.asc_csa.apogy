@@ -14,7 +14,7 @@ import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
 import org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding;
 import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
 import org.eclipse.symphony.common.topology.bindings.RotationBinding;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade;
 import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
 import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
@@ -115,8 +115,8 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
 				return createBindingsSetAdapter();
 			}
 			@Override
-			public Adapter caseTopologyBindingsFacade(TopologyBindingsFacade object) {
-				return createTopologyBindingsFacadeAdapter();
+			public Adapter caseSymphony__CommonTopologyBindingsFacade(Symphony__CommonTopologyBindingsFacade object) {
+				return createSymphony__CommonTopologyBindingsFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -275,21 +275,20 @@ public class Symphony__CommonTopologyBindingsAdapterFactory extends AdapterFacto
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade <em>Topology Bindings Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade
 	 * @generated
 	 */
-  public Adapter createTopologyBindingsFacadeAdapter()
-  {
+	public Adapter createSymphony__CommonTopologyBindingsFacadeAdapter() {
 		return null;
 	}
 
-  /**
+		/**
 	 * Creates a new adapter for the default case.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null.

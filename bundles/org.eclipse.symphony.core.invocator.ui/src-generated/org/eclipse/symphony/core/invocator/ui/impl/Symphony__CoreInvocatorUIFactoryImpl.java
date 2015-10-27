@@ -55,7 +55,7 @@ public class Symphony__CoreInvocatorUIFactoryImpl extends EFactoryImpl implement
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CoreInvocatorUIPackage.EMF_ECORE_INVOCATOR_UI_FACADE: return createEMFEcoreInvocatorUIFacade();
+			case Symphony__CoreInvocatorUIPackage.SYMPHONY_CORE_INVOCATOR_UI_FACADE: return createSymphony__CoreInvocatorUIFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -96,9 +96,9 @@ public class Symphony__CoreInvocatorUIFactoryImpl extends EFactoryImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EMFEcoreInvocatorUIFacade createEMFEcoreInvocatorUIFacade() {
-		EMFEcoreInvocatorUIFacadeImpl emfEcoreInvocatorUIFacade = new EMFEcoreInvocatorUIFacadeImpl();
-		return emfEcoreInvocatorUIFacade;
+	public Symphony__CoreInvocatorUIFacade createSymphony__CoreInvocatorUIFacade() {
+		Symphony__CoreInvocatorUIFacadeImpl symphony__CoreInvocatorUIFacade = new Symphony__CoreInvocatorUIFacadeImpl();
+		return symphony__CoreInvocatorUIFacade;
 	}
 
 	/**

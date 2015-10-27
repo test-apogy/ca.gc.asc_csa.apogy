@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
 import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
 import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
@@ -303,7 +303,7 @@ implements LanderSymphonySystemApiAdapter
 			LanderData landerData = (LanderData) initializationData;
 
 			// Create a copy of the lander's current pose transform
-			Matrix4x4 currPose = MathFacade.INSTANCE.createMatrix4x4(this.getPoseTransform().asMatrix4d());
+			Matrix4x4 currPose = Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(this.getPoseTransform().asMatrix4d());
 			
 			// Save the pose transform of the lander 
 			landerData.setInitialPoseTransform(currPose);
@@ -456,7 +456,7 @@ class PositionAdapter extends AdapterImpl
 		}
 
 		// Create a EObject wrapper for the complete transform
-		Matrix4x4 matrix = MathFacade.INSTANCE.createMatrix4x4(m);
+		Matrix4x4 matrix = Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(m);
 		
 		// Set the pose transform accordingly, causing
 		// the pose corrector to trigger (if it is enabled)

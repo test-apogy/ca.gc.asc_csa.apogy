@@ -21,7 +21,7 @@ import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPat
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation;
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathSceneObject;
 import org.eclipse.symphony.addons.geometry.paths.ui.preferences.MRTPathsPreferencesConstants;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
@@ -342,7 +342,7 @@ public class WayPointPathPresentationImpl extends NodePresentationImpl implement
 			point3d = sceneObject.getCentroid();
 		}
 		
-		return MathFacade.INSTANCE.createTuple3d(point3d);
+		return Symphony__CommonMathFacade.INSTANCE.createTuple3d(point3d);
 	}
 	
 	@Override

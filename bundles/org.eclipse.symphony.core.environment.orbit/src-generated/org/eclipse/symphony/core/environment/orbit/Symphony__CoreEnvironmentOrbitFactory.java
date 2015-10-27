@@ -86,13 +86,13 @@ public interface Symphony__CoreEnvironmentOrbitFactory extends EFactory {
 	OrbitModel createOrbitModel();
 
 	/**
-	 * Returns a new object of class '<em>Orbit Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Orbit Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	OrbitFacade createOrbitFacade();
+	Symphony__CoreEnvironmentOrbitFacade createSymphony__CoreEnvironmentOrbitFacade();
 
 	/**
 	 * Returns the package supported by this factory.

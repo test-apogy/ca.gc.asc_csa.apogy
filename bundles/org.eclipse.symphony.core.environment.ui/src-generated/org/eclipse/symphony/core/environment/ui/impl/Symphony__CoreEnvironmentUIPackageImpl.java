@@ -29,8 +29,8 @@ import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
 import org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider;
 import org.eclipse.symphony.core.environment.ui.EarthSkyPresentation;
 import org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
+import org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities;
 import org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation;
 import org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
 import org.eclipse.symphony.core.environment.ui.MapAnnotation;
@@ -110,19 +110,19 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 
 		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass environmentUiUtilitiesEClass = null;
+	private EClass environmentUIUtilitiesEClass = null;
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass environmentUiFacadeEClass = null;
+	private EClass symphony__CoreEnvironmentUIFacadeEClass = null;
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -540,110 +540,11 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 
 		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EClass getEnvironmentUiUtilities()
-  {
-		return environmentUiUtilitiesEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEnvironmentUiUtilities__ToPoint3f__Star()
-  {
-		return environmentUiUtilitiesEClass.getEOperations().get(0);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEnvironmentUiUtilities__GetPointSizeForMagnitude__float_float_float_float_float()
-  {
-		return environmentUiUtilitiesEClass.getEOperations().get(1);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEnvironmentUiUtilities__GetSunLightColor__double()
-  {
-		return environmentUiUtilitiesEClass.getEOperations().get(2);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEnvironmentUiUtilities__GetSkyTransparency__double()
-  {
-		return environmentUiUtilitiesEClass.getEOperations().get(3);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEnvironmentUiUtilities__GetSkyColor__double()
-  {
-		return environmentUiUtilitiesEClass.getEOperations().get(4);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EClass getEnvironmentUiFacade()
-  {
-		return environmentUiFacadeEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEnvironmentUiFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration() {
-		return environmentUiFacadeEClass.getEOperations().get(0);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEnvironmentUiFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int()
-  {
-		return environmentUiFacadeEClass.getEOperations().get(1);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEnvironmentUiFacade__GetTrajectoryLength__XYSeries()
-  {
-		return environmentUiFacadeEClass.getEOperations().get(2);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnvironmentUiFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration() {
-		return environmentUiFacadeEClass.getEOperations().get(3);
+	public EClass getEnvironmentUIUtilities() {
+		return environmentUIUtilitiesEClass;
 	}
 
 		/**
@@ -651,8 +552,8 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEnvironmentUiFacade__GetActiveMapViewConfiguration__String() {
-		return environmentUiFacadeEClass.getEOperations().get(4);
+	public EOperation getEnvironmentUIUtilities__ToPoint3f__Star() {
+		return environmentUIUtilitiesEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -660,8 +561,8 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEnvironmentUiFacade__GetActiveMapViewConfigurationList() {
-		return environmentUiFacadeEClass.getEOperations().get(5);
+	public EOperation getEnvironmentUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float() {
+		return environmentUIUtilitiesEClass.getEOperations().get(1);
 	}
 
 		/**
@@ -669,8 +570,98 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEnvironmentUiFacade__GetFeatureOfInterestLists__InvocatorSession() {
-		return environmentUiFacadeEClass.getEOperations().get(6);
+	public EOperation getEnvironmentUIUtilities__GetSunLightColor__double() {
+		return environmentUIUtilitiesEClass.getEOperations().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnvironmentUIUtilities__GetSkyTransparency__double() {
+		return environmentUIUtilitiesEClass.getEOperations().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnvironmentUIUtilities__GetSkyColor__double() {
+		return environmentUIUtilitiesEClass.getEOperations().get(4);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSymphony__CoreEnvironmentUIFacade() {
+		return symphony__CoreEnvironmentUIFacadeEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration() {
+		return symphony__CoreEnvironmentUIFacadeEClass.getEOperations().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int() {
+		return symphony__CoreEnvironmentUIFacadeEClass.getEOperations().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries() {
+		return symphony__CoreEnvironmentUIFacadeEClass.getEOperations().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration() {
+		return symphony__CoreEnvironmentUIFacadeEClass.getEOperations().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String() {
+		return symphony__CoreEnvironmentUIFacadeEClass.getEOperations().get(4);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfigurationList() {
+		return symphony__CoreEnvironmentUIFacadeEClass.getEOperations().get(5);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreEnvironmentUIFacade__GetFeatureOfInterestLists__InvocatorSession() {
+		return symphony__CoreEnvironmentUIFacadeEClass.getEOperations().get(6);
 	}
 
 		/**
@@ -1395,21 +1386,21 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		createEAttribute(featureOfInterestNodePresentationEClass, FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT);
 		createEAttribute(featureOfInterestNodePresentationEClass, FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE);
 
-		environmentUiUtilitiesEClass = createEClass(ENVIRONMENT_UI_UTILITIES);
-		createEOperation(environmentUiUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___TO_POINT3F__STAR);
-		createEOperation(environmentUiUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT);
-		createEOperation(environmentUiUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE);
-		createEOperation(environmentUiUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE);
-		createEOperation(environmentUiUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE);
+		environmentUIUtilitiesEClass = createEClass(ENVIRONMENT_UI_UTILITIES);
+		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___TO_POINT3F__STAR);
+		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_POINT_SIZE_FOR_MAGNITUDE__FLOAT_FLOAT_FLOAT_FLOAT_FLOAT);
+		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SUN_LIGHT_COLOR__DOUBLE);
+		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SKY_TRANSPARENCY__DOUBLE);
+		createEOperation(environmentUIUtilitiesEClass, ENVIRONMENT_UI_UTILITIES___GET_SKY_COLOR__DOUBLE);
 
-		environmentUiFacadeEClass = createEClass(ENVIRONMENT_UI_FACADE);
-		createEOperation(environmentUiFacadeEClass, ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION);
-		createEOperation(environmentUiFacadeEClass, ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT);
-		createEOperation(environmentUiFacadeEClass, ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES);
-		createEOperation(environmentUiFacadeEClass, ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION);
-		createEOperation(environmentUiFacadeEClass, ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING);
-		createEOperation(environmentUiFacadeEClass, ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST);
-		createEOperation(environmentUiFacadeEClass, ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION);
+		symphony__CoreEnvironmentUIFacadeEClass = createEClass(SYMPHONY_CORE_ENVIRONMENT_UI_FACADE);
+		createEOperation(symphony__CoreEnvironmentUIFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_VISIBLE_RECTANGULAR_REGION_PROVIDER__MAPVIEWCONFIGURATION);
+		createEOperation(symphony__CoreEnvironmentUIFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__MAPVIEWCONFIGURATION_RECTANGULARREGION_INT);
+		createEOperation(symphony__CoreEnvironmentUIFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_TRAJECTORY_LENGTH__XYSERIES);
+		createEOperation(symphony__CoreEnvironmentUIFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_MAP_VIEW_CONFIGURATION_IDENTIFIER__MAPVIEWCONFIGURATION);
+		createEOperation(symphony__CoreEnvironmentUIFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION__STRING);
+		createEOperation(symphony__CoreEnvironmentUIFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_ACTIVE_MAP_VIEW_CONFIGURATION_LIST);
+		createEOperation(symphony__CoreEnvironmentUIFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_UI_FACADE___GET_FEATURE_OF_INTEREST_LISTS__INVOCATORSESSION);
 
 		mapViewConfigurationListEClass = createEClass(MAP_VIEW_CONFIGURATION_LIST);
 		createEReference(mapViewConfigurationListEClass, MAP_VIEW_CONFIGURATION_LIST__MAP_VIEW_CONFIGURATIONS);
@@ -1587,53 +1578,53 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		initEAttribute(getFeatureOfInterestNodePresentation_PoleHeight(), theEcorePackage.getEDouble(), "poleHeight", null, 0, 1, FeatureOfInterestNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFeatureOfInterestNodePresentation_FlagVisible(), theEcorePackage.getEBoolean(), "flagVisible", "false", 0, 1, FeatureOfInterestNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(environmentUiUtilitiesEClass, EnvironmentUiUtilities.class, "EnvironmentUiUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(environmentUIUtilitiesEClass, EnvironmentUIUtilities.class, "EnvironmentUIUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getEnvironmentUiUtilities__ToPoint3f__Star(), this.getPoint3f(), "toPoint3f", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getEnvironmentUIUtilities__ToPoint3f__Star(), this.getPoint3f(), "toPoint3f", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreEnvironmentPackage.getStar(), "star", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentUiUtilities__GetPointSizeForMagnitude__float_float_float_float_float(), theEcorePackage.getEFloat(), "getPointSizeForMagnitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentUIUtilities__GetPointSizeForMagnitude__float_float_float_float_float(), theEcorePackage.getEFloat(), "getPointSizeForMagnitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "magnitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "magnitudeRangeMinimum", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "magnitudeRangeMaximum", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "minimumPointSize", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "maximumPointSize", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentUiUtilities__GetSunLightColor__double(), this.getColor3f(), "getSunLightColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentUIUtilities__GetSunLightColor__double(), this.getColor3f(), "getSunLightColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "sunAltitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentUiUtilities__GetSkyTransparency__double(), theEcorePackage.getEDouble(), "getSkyTransparency", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentUIUtilities__GetSkyTransparency__double(), theEcorePackage.getEDouble(), "getSkyTransparency", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "sunAltitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentUiUtilities__GetSkyColor__double(), this.getColor3f(), "getSkyColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getEnvironmentUIUtilities__GetSkyColor__double(), this.getColor3f(), "getSkyColor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "sunAltitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(environmentUiFacadeEClass, EnvironmentUiFacade.class, "EnvironmentUiFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CoreEnvironmentUIFacadeEClass, Symphony__CoreEnvironmentUIFacade.class, "Symphony__CoreEnvironmentUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getEnvironmentUiFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration(), null, "getVisibleRectangularRegionProvider", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration(), null, "getVisibleRectangularRegionProvider", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMapViewConfiguration(), "mapViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(this.getList());
 		EGenericType g2 = createEGenericType(theSymphony__CoreEnvironmentPackage.getRectangularRegionProvider());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getEnvironmentUiFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int(), theSymphony__CommonImagesPackage.getAbstractEImage(), "getImageMapLayerPresentationImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int(), theSymphony__CommonImagesPackage.getAbstractEImage(), "getImageMapLayerPresentationImage", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMapViewConfiguration(), "mapViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreEnvironmentPackage.getRectangularRegion(), "mapViewExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "maximumImageSizePixels", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentUiFacade__GetTrajectoryLength__XYSeries(), theEcorePackage.getEDouble(), "getTrajectoryLength", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries(), theEcorePackage.getEDouble(), "getTrajectoryLength", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getXYSeries(), "xySeries", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentUiFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration(), theEcorePackage.getEString(), "getMapViewConfigurationIdentifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration(), theEcorePackage.getEString(), "getMapViewConfigurationIdentifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMapViewConfiguration(), "mapViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentUiFacade__GetActiveMapViewConfiguration__String(), this.getMapViewConfiguration(), "getActiveMapViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String(), this.getMapViewConfiguration(), "getActiveMapViewConfiguration", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "identifier", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getEnvironmentUiFacade__GetActiveMapViewConfigurationList(), this.getMapViewConfigurationList(), "getActiveMapViewConfigurationList", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfigurationList(), this.getMapViewConfigurationList(), "getActiveMapViewConfigurationList", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEnvironmentUiFacade__GetFeatureOfInterestLists__InvocatorSession(), null, "getFeatureOfInterestLists", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentUIFacade__GetFeatureOfInterestLists__InvocatorSession(), null, "getFeatureOfInterestLists", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreInvocatorPackage.getInvocatorSession(), "session", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(theSymphony__CorePackage.getFeatureOfInterestList());
@@ -1839,73 +1830,73 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 			 "csa_units", "m"
 		   });	
 		addAnnotation
-		  (getEnvironmentUiUtilities__GetSunLightColor__double(), 
+		  (getEnvironmentUIUtilities__GetSunLightColor__double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the sun color for a given altitude above the horizon.\n@param sunAltitude The altitude above the horizon, in radians."
 		   });	
 		addAnnotation
-		  ((getEnvironmentUiUtilities__GetSunLightColor__double()).getEParameters().get(0), 
+		  ((getEnvironmentUIUtilities__GetSunLightColor__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
 			 "csa_units", "rad"
 		   });	
 		addAnnotation
-		  (getEnvironmentUiUtilities__GetSkyTransparency__double(), 
+		  (getEnvironmentUIUtilities__GetSkyTransparency__double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the transparency value (between no transparency 0 and full transparency 1.0)\nto be used for the blus sky as a function of the sun altitude angle.\n@param sunAltitude The altitude above the horizon, in radians."
 		   });	
 		addAnnotation
-		  ((getEnvironmentUiUtilities__GetSkyTransparency__double()).getEParameters().get(0), 
+		  ((getEnvironmentUIUtilities__GetSkyTransparency__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
 			 "csa_units", "rad"
 		   });	
 		addAnnotation
-		  (getEnvironmentUiUtilities__GetSkyColor__double(), 
+		  (getEnvironmentUIUtilities__GetSkyColor__double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the sky color for a given altitude above the horizon.\n@param sunAltitude The altitude above the horizon, in radians."
 		   });	
 		addAnnotation
-		  ((getEnvironmentUiUtilities__GetSkyColor__double()).getEParameters().get(0), 
+		  ((getEnvironmentUIUtilities__GetSkyColor__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
 			 "csa_units", "rad"
 		   });	
 		addAnnotation
-		  (getEnvironmentUiFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration(), 
+		  (getSymphony__CoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns an image representing the assembly of the specified list of ImageMapLayerPresentation.\n@param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.\n@return The image representing the specified list of ImageMapLayerPresentation."
 		   });	
 		addAnnotation
-		  (getEnvironmentUiFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int(), 
+		  (getSymphony__CoreEnvironmentUIFacade__GetImageMapLayerPresentationImage__MapViewConfiguration_RectangularRegion_int(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns an image representing the specified MapViewExtent using a specified MapViewConfiguration.\nIf the MapViewExtent is larger than the area covered by the MapViewConfiguration, transparent pixels will be added.\n@param mapViewConfiguration The specified MapViewConfiguration.\n@param mapViewExtent The specified ground area to be covered.\n@param maximumImageSizePixels The maximum size, in pixel, of the generated image.\n@return The image representing the specified MapViewExtent."
 		   });	
 		addAnnotation
-		  (getEnvironmentUiFacade__GetTrajectoryLength__XYSeries(), 
+		  (getSymphony__CoreEnvironmentUIFacade__GetTrajectoryLength__XYSeries(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Computes the length of a 2D trajectory.\n@param The XYSeries.\n@return The length of the trajectory represented in the XYSerie."
 		   });	
 		addAnnotation
-		  (getEnvironmentUiFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration(), 
+		  (getSymphony__CoreEnvironmentUIFacade__GetMapViewConfigurationIdentifier__MapViewConfiguration(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the identifier associated with a given MapViewConfiguration.\n@param mapViewConfiguration The given MapViewConfiguration.\n@return The identifier, null if none is found."
 		   });	
 		addAnnotation
-		  (getEnvironmentUiFacade__GetActiveMapViewConfiguration__String(), 
+		  (getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfiguration__String(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the MapViewConfiguration (in the Active Session) with the specified identifier.\n@param identifier The MapViewConfiguration identifier.\n@return The MapViewConfiguration with the specified identifier, null if non is found."
 		   });	
 		addAnnotation
-		  (getEnvironmentUiFacade__GetActiveMapViewConfigurationList(), 
+		  (getSymphony__CoreEnvironmentUIFacade__GetActiveMapViewConfigurationList(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the MapViewConfigurationList in the Active Session.\n@return The MapViewConfigurationList in the Active Session, null if none is found."

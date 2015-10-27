@@ -6,7 +6,7 @@ package org.eclipse.symphony.core.environment.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
@@ -305,7 +305,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   {	  
 	  if(lowerLeftCorner == null)
 	  {
-		  lowerLeftCorner = MathFacade.INSTANCE.createTuple3d(getXMin(), getYMin(), 0);		 
+		  lowerLeftCorner = Symphony__CommonMathFacade.INSTANCE.createTuple3d(getXMin(), getYMin(), 0);		 
 	  }
 	  
 	  return lowerLeftCorner;
@@ -331,7 +331,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   {
 	  if(upperLeftCorner == null)
 	  {
-		  upperLeftCorner = MathFacade.INSTANCE.createTuple3d(getXMin(), getYMax(), 0);	
+		  upperLeftCorner = Symphony__CommonMathFacade.INSTANCE.createTuple3d(getXMin(), getYMax(), 0);	
 	  }
 	  return upperLeftCorner;
   }
@@ -355,7 +355,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   {
 	  if(lowerRightCorner == null)
 	  {
-		  lowerRightCorner = MathFacade.INSTANCE.createTuple3d(getXMax(), getYMin(), 0);	
+		  lowerRightCorner = Symphony__CommonMathFacade.INSTANCE.createTuple3d(getXMax(), getYMin(), 0);	
 	  }
 	  return lowerRightCorner;
   }
@@ -379,7 +379,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   {
 	  if(upperRightCorner == null)
 	  {
-		  upperRightCorner = MathFacade.INSTANCE.createTuple3d(getXMax(), getYMax(), 0);
+		  upperRightCorner = Symphony__CommonMathFacade.INSTANCE.createTuple3d(getXMax(), getYMax(), 0);
 	  }
 	  return upperRightCorner;
   }

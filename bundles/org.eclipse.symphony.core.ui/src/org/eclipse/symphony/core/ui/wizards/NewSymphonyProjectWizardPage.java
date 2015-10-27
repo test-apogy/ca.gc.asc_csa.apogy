@@ -10,7 +10,7 @@ import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
 import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
 import org.eclipse.symphony.core.ui.composites.NewSymphonyProjectComposite;
 
@@ -75,7 +75,7 @@ public class NewSymphonyProjectWizardPage extends WizardPage {
 	protected void updateSymphonyResourceSettings() {
 		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(projectSettings.getName());
 		symphonyResourceSettings.setResourceProject(project);
-		symphonyResourceSettings.setResourceContainer(project.getFolder(SymphonyCoreUiFacade.INSTANCE.getDefaultSymphonySessionFolderName()));
+		symphonyResourceSettings.setResourceContainer(project.getFolder(Symphony__CoreUIFacade.INSTANCE.getDefaultSymphonySessionFolderName()));
 	}
 
 	private String validate() {

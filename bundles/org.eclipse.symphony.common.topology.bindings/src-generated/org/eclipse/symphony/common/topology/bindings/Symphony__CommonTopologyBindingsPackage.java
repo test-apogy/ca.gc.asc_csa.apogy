@@ -873,43 +873,43 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
   int BINDINGS_SET_OPERATION_COUNT = 2;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.bindings.impl.TopologyBindingsFacadeImpl <em>Topology Bindings Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.TopologyBindingsFacadeImpl
-	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getTopologyBindingsFacade()
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsFacadeImpl
+	 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getSymphony__CommonTopologyBindingsFacade()
 	 * @generated
 	 */
-  int TOPOLOGY_BINDINGS_FACADE = 9;
+	int SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE = 9;
 
-  /**
-	 * The number of structural features of the '<em>Topology Bindings Facade</em>' class.
+		/**
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int TOPOLOGY_BINDINGS_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE_FEATURE_COUNT = 0;
 
-  /**
+		/**
 	 * The operation id for the '<em>Copy</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP = 0;
+	int SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP = 0;
 
-  /**
-	 * The number of operations of the '<em>Topology Bindings Facade</em>' class.
+		/**
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int TOPOLOGY_BINDINGS_FACADE_OPERATION_COUNT = 1;
+	int SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE_OPERATION_COUNT = 1;
 
-  /**
+		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.bindings.Axis <em>Axis</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1312,26 +1312,26 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
   EOperation getBindingsSet__Unbind();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade <em>Topology Bindings Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Topology Bindings Facade</em>'.
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade
 	 * @generated
 	 */
-  EClass getTopologyBindingsFacade();
+	EClass getSymphony__CommonTopologyBindingsFacade();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade#copy(org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding, java.util.Map) <em>Copy</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade#copy(org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding, java.util.Map) <em>Copy</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Copy</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade#copy(org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding, java.util.Map)
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade#copy(org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding, java.util.Map)
 	 * @generated
 	 */
-  EOperation getTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map();
+	EOperation getSymphony__CommonTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map();
 
-  /**
+		/**
 	 * Returns the meta object for enum '{@link org.eclipse.symphony.common.topology.bindings.Axis <em>Axis</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1685,24 +1685,24 @@ public interface Symphony__CommonTopologyBindingsPackage extends EPackage
     EOperation BINDINGS_SET___UNBIND = eINSTANCE.getBindingsSet__Unbind();
 
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.bindings.impl.TopologyBindingsFacadeImpl <em>Topology Bindings Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.TopologyBindingsFacadeImpl
-		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getTopologyBindingsFacade()
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsFacadeImpl
+		 * @see org.eclipse.symphony.common.topology.bindings.impl.Symphony__CommonTopologyBindingsPackageImpl#getSymphony__CommonTopologyBindingsFacade()
 		 * @generated
 		 */
-    EClass TOPOLOGY_BINDINGS_FACADE = eINSTANCE.getTopologyBindingsFacade();
+		EClass SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE = eINSTANCE.getSymphony__CommonTopologyBindingsFacade();
 
-    /**
+				/**
 		 * The meta object literal for the '<em><b>Copy</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP = eINSTANCE.getTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP = eINSTANCE.getSymphony__CommonTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map();
 
-    /**
+				/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.bindings.Axis <em>Axis</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->

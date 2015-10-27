@@ -134,9 +134,9 @@ public class Symphony__AddonsSensorsGPSSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsGPSPackage.GPS_FACADE: {
-				GPSFacade gpsFacade = (GPSFacade)theEObject;
-				T result = caseGPSFacade(gpsFacade);
+			case Symphony__AddonsSensorsGPSPackage.SYMPHONY_ADDONS_SENSORS_GPS_FACADE: {
+				Symphony__AddonsSensorsGPSFacade symphony__AddonsSensorsGPSFacade = (Symphony__AddonsSensorsGPSFacade)theEObject;
+				T result = caseSymphony__AddonsSensorsGPSFacade(symphony__AddonsSensorsGPSFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -250,17 +250,17 @@ public class Symphony__AddonsSensorsGPSSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>GPS Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>GPS Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGPSFacade(GPSFacade object) {
+	public T caseSymphony__AddonsSensorsGPSFacade(Symphony__AddonsSensorsGPSFacade object) {
 		return null;
 	}
 

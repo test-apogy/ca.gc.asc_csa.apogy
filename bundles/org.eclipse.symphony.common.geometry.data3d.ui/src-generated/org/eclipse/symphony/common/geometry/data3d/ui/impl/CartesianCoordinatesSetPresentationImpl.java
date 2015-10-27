@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.geometry.data3d.ui.CartesianCoordinatesSetPre
 import org.eclipse.symphony.common.geometry.data3d.ui.Symphony__CommonGeometryData3DUIPackage;
 import org.eclipse.symphony.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
 import org.eclipse.symphony.common.geometry.data3d.ui.scene_objects.CartesianCoordinatesSetSceneObject;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.ui.SceneObject;
@@ -308,7 +308,7 @@ public class CartesianCoordinatesSetPresentationImpl extends NodePresentationImp
 
 		CartesianPositionCoordinates centroid = utils.computeCentroid(getPointCloud());
 
-		Tuple3d point = MathFacade.INSTANCE.createTuple3d(centroid.asPoint3d());
+		Tuple3d point = Symphony__CommonMathFacade.INSTANCE.createTuple3d(centroid.asPoint3d());
 
 		return point;
 	}

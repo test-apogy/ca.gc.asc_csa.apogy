@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
 import org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding;
 import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
 import org.eclipse.symphony.common.topology.bindings.RotationBinding;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade;
 import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
 import org.eclipse.symphony.common.topology.bindings.TranslationBinding;
@@ -137,9 +137,9 @@ public class Symphony__CommonTopologyBindingsSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyBindingsPackage.TOPOLOGY_BINDINGS_FACADE: {
-				TopologyBindingsFacade topologyBindingsFacade = (TopologyBindingsFacade)theEObject;
-				T result = caseTopologyBindingsFacade(topologyBindingsFacade);
+			case Symphony__CommonTopologyBindingsPackage.SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE: {
+				Symphony__CommonTopologyBindingsFacade symphony__CommonTopologyBindingsFacade = (Symphony__CommonTopologyBindingsFacade)theEObject;
+				T result = caseSymphony__CommonTopologyBindingsFacade(symphony__CommonTopologyBindingsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -292,22 +292,21 @@ public class Symphony__CommonTopologyBindingsSwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Topology Bindings Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Topology Bindings Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseTopologyBindingsFacade(TopologyBindingsFacade object)
-  {
+	public T caseSymphony__CommonTopologyBindingsFacade(Symphony__CommonTopologyBindingsFacade object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

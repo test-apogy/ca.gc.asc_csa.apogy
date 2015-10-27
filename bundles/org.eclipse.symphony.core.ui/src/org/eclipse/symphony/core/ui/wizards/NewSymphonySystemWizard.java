@@ -21,7 +21,7 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.invocator.presentation.CustomEMFEcoreInvocatorEditor;
 import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
 import org.eclipse.symphony.core.ui.Symphony__CoreUIFactory;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
@@ -141,7 +141,7 @@ public class NewSymphonySystemWizard extends Wizard implements INewWizard {
 
 						// Add the initial model object to the contents.
 						//
-						SymphonySystem system = SymphonyCoreUiFacade.INSTANCE
+						SymphonySystem system = Symphony__CoreUIFacade.INSTANCE
 								.createSymphonySystem(newSymphonySystemSettings);
 						if (system != null) {
 							resource.getContents().add(system);

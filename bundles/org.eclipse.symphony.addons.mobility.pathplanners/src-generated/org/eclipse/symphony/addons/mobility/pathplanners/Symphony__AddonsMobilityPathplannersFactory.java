@@ -52,13 +52,13 @@ public interface Symphony__AddonsMobilityPathplannersFactory extends EFactory {
 	CircularExclusionZone createCircularExclusionZone();
 
 	/**
-	 * Returns a new object of class '<em>Path Planners Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Path Planners Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	PathPlannersFacade createPathPlannersFacade();
+	Symphony__AddonsMobilityPathplannersFacade createSymphony__AddonsMobilityPathplannersFacade();
 
 	/**
 	 * Returns the package supported by this factory.

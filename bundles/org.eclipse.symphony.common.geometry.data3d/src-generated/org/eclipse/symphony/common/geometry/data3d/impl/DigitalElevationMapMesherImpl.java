@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
@@ -78,7 +78,7 @@ public class DigitalElevationMapMesherImpl extends ProcessorImpl<DigitalElevatio
 		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
 		for(CartesianPositionCoordinates p : input.getPoints())
 		{
-			CartesianPositionCoordinates copy = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(p);
+			CartesianPositionCoordinates copy = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(p);
 			points.add(copy);
 		}
 		result.getPoints().addAll(points);
@@ -96,10 +96,10 @@ public class DigitalElevationMapMesherImpl extends ProcessorImpl<DigitalElevatio
 					CartesianPositionCoordinates pc = array[xn + 1][ym + 1];
 					CartesianPositionCoordinates pd = array[xn][ym + 1];
 					
-					CartesianTriangle t1 = Data3dFacade.INSTANCE.createCartesianTriangle(pa, pb, pc);
+					CartesianTriangle t1 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(pa, pb, pc);
 					triangles.add(t1);
 					
-					CartesianTriangle t2 = Data3dFacade.INSTANCE.createCartesianTriangle(pa, pc, pd);				
+					CartesianTriangle t2 = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(pa, pc, pd);				
 					triangles.add(t2);
 				}			
 		}

@@ -18,8 +18,8 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
 import org.eclipse.symphony.core.invocator.Variable;
@@ -103,7 +103,7 @@ public class VariableImplementationItemProvider extends AbstractTypeImplementati
 			@Override
 			protected Collection<?> getComboBoxObjects(Object object) {
 				VariableImplementation implementation = (VariableImplementation) object;											
-				return EMFEcoreFacade.INSTANCE.getAllSubEClasses(implementation.getVariable().getVariableType().getInterfaceClass());
+				return Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(implementation.getVariable().getVariableType().getInterfaceClass());
 			}
 		});
   }
@@ -190,7 +190,7 @@ public class VariableImplementationItemProvider extends AbstractTypeImplementati
 
 			if (variable.getVariableType() != null) {
 
-				List<TypeMemberImplementation> implementations = EMFEcoreInvocatorFacade.INSTANCE
+				List<TypeMemberImplementation> implementations = Symphony__CoreInvocatorFacade.INSTANCE
 						.createTypeMemberImplementations(variable
 								.getVariableType());
 

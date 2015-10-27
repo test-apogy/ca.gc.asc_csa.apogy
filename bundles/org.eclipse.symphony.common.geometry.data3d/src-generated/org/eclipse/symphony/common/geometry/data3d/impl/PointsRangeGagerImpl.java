@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.PointsRangeGager;
@@ -461,7 +461,7 @@ public class PointsRangeGagerImpl extends
 		for (CartesianPositionCoordinates point : input.getPoints()) {
 			if (isInRange(point)) {
 				// We create a copy of the point.
-				CartesianPositionCoordinates pointCopy = Data3dFacade.INSTANCE
+				CartesianPositionCoordinates pointCopy = Symphony__CommonGeometryData3DFacade.INSTANCE
 						.createCartesianPositionCoordinates(point);
 
 				output.getPoints().add(pointCopy);

@@ -37,12 +37,12 @@ import org.eclipse.symphony.addons.vehicle.ZCorrectionMode;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 import org.eclipse.symphony.core.SymphonyEnvironment;
@@ -557,7 +557,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 						  rotationCorrection = computeOrientationCorrection(originalPose);
 						  				  
 						  // Updates rotationCorrection			 
-						  setOrientationCorrection(MathFacade.INSTANCE.createMatrix3x3(rotationCorrection));
+						  setOrientationCorrection(Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(rotationCorrection));
 						  
 						  // Applies the rotation correction to the correction matrix.
 						  Matrix4d rot = new Matrix4d();
@@ -575,7 +575,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 				  Matrix4d corrected = new Matrix4d(originalPose.asMatrix4d());
 				  corrected.mul(correctionMatrix);
 				  
-				  Matrix4x4 correctedPose = MathFacade.INSTANCE.createMatrix4x4(corrected);
+				  Matrix4x4 correctedPose = Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(corrected);
 				  
 				  return correctedPose;
 			  }
@@ -855,11 +855,11 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
 		  
 		  // Gets the list of nodes that are part of the system topology.
 		  Node systemRoot = getSymphonySystemApiAdapter().getSymphonySystem().getTopologyRoot().getOriginNode();
-		  List<Node> systemNodes = TopologyFacade.INSTANCE.findNodesByType(Symphony__CommonTopologyPackage.Literals.NODE, systemRoot);
+		  List<Node> systemNodes = Symphony__CommonTopologyFacade.INSTANCE.findNodesByType(Symphony__CommonTopologyPackage.Literals.NODE, systemRoot);
 		  		  
-		  List<Node> nodes = TopologyFacade.INSTANCE.findNodesByType(Symphony__CommonTopologyPackage.Literals.REFERENCED_CONTENT_NODE, root);		  		  
-		  nodes.addAll(TopologyFacade.INSTANCE.findNodesByType(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE, root));
-		  nodes.addAll(TopologyFacade.INSTANCE.findNodesByType(Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE, root));
+		  List<Node> nodes = Symphony__CommonTopologyFacade.INSTANCE.findNodesByType(Symphony__CommonTopologyPackage.Literals.REFERENCED_CONTENT_NODE, root);		  		  
+		  nodes.addAll(Symphony__CommonTopologyFacade.INSTANCE.findNodesByType(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE, root));
+		  nodes.addAll(Symphony__CommonTopologyFacade.INSTANCE.findNodesByType(Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER_NODE, root));
 		  
 		  for(Node node : nodes)
 		  {
@@ -1140,7 +1140,7 @@ public class VehiclePoseCorrectorImpl extends PoseCorrectorImpl implements Vehic
   protected Matrix4d getPhysicalBodyToSystemTransform(PhysicalBody wheel)
   {
 	  Node root = getSymphonySystemApiAdapter().getSymphonySystem().getTopologyRoot().getOriginNode();	  
-	  Matrix4d transform = TopologyFacade.INSTANCE.expressInFrame(wheel, root);	  	  
+	  Matrix4d transform = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(wheel, root);	  	  
 	  return transform;
   }
     

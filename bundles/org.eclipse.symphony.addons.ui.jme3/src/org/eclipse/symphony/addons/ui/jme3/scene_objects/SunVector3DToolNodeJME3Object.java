@@ -18,7 +18,7 @@ import org.eclipse.symphony.addons.Symphony__AddonsPackage;
 import org.eclipse.symphony.addons.ui.jme3.Activator;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
@@ -435,11 +435,11 @@ public class SunVector3DToolNodeJME3Object extends DefaultJME3SceneObject<SunVec
 	
 	private Vector3f getSunVectorDirection()
 	{
-		Matrix4d sunMatrix = TopologyFacade.INSTANCE.expressNodeInRootFrame(getTopologyNode().getSunVector3DTool().getFromNode());				
+		Matrix4d sunMatrix = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(getTopologyNode().getSunVector3DTool().getFromNode());				
 		javax.vecmath.Vector3d sun = new Vector3d();
 		sunMatrix.get(sun);
 		
-		Matrix4d toMatrix = TopologyFacade.INSTANCE.expressNodeInRootFrame(getTopologyNode().getSunVector3DTool().getToNode());
+		Matrix4d toMatrix = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(getTopologyNode().getSunVector3DTool().getToNode());
 		javax.vecmath.Vector3d to = new Vector3d();
 		toMatrix.get(to);				
 		

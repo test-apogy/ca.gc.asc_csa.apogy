@@ -14,12 +14,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.OperationCallPositionedResult;
 import org.eclipse.symphony.core.PoseCorrector;
 import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyCoreFacade;
+import org.eclipse.symphony.core.Symphony__CoreFacade;
 import org.eclipse.symphony.core.Symphony__CoreFactory;
 import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyInitializationData;
@@ -263,7 +263,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 	public Matrix4x4 createResultMatrix(OperationCall operationCall) {
 		Matrix4d m = new Matrix4d();
 		m.setIdentity();
-		return MathFacade.INSTANCE.createMatrix4x4(m);
+		return Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(m);
 	}
 
 	/**
@@ -426,7 +426,7 @@ public class SymphonySystemApiAdapterImpl extends TypeApiAdapterImpl implements	
 
 		// Computes the absolute pose of the result.
 		Matrix4x4 relativePose = createResultMatrix(operationCall);
-		Matrix4x4 absolutePose = SymphonyCoreFacade.INSTANCE.computeAbsolutePoseMatrix(getSymphonySystem(), relativePose);
+		Matrix4x4 absolutePose = Symphony__CoreFacade.INSTANCE.computeAbsolutePoseMatrix(getSymphonySystem(), relativePose);
 
 		result.setRelativePose(relativePose);
 		result.setPose(absolutePose);

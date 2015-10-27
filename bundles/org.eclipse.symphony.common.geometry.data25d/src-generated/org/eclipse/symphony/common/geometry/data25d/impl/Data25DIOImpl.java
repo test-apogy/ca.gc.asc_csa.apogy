@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.geometry.data25d.Coordinates25D;
 import org.eclipse.symphony.common.geometry.data25d.Data25DIO;
 import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFactory;
 import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
-import org.eclipse.symphony.common.geometry.data25d.DataFacade;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
 
 /**
@@ -130,7 +130,7 @@ public class Data25DIOImpl extends MinimalEObjectImpl.Container implements Data2
 						double y = Double.parseDouble(cols[1]);
 						double z = Double.parseDouble(cols[2]);
 
-						Coordinates25D point = DataFacade.INSTANCE
+						Coordinates25D point = Symphony__CommonGeometryData25DFacade.INSTANCE
 								.createCoordinates25D(x, y, z);
 
 						data.getPoints().add(point);

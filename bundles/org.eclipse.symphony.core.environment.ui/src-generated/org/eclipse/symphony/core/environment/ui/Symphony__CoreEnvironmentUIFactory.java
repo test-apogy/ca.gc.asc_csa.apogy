@@ -78,24 +78,24 @@ public interface Symphony__CoreEnvironmentUIFactory extends EFactory
 	FeatureOfInterestNodePresentation createFeatureOfInterestNodePresentation();
 
 		/**
-	 * Returns a new object of class '<em>Environment Ui Utilities</em>'.
+	 * Returns a new object of class '<em>Environment UI Utilities</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Environment Ui Utilities</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Environment UI Utilities</em>'.
 	 * @generated
 	 */
-  EnvironmentUiUtilities createEnvironmentUiUtilities();
+	EnvironmentUIUtilities createEnvironmentUIUtilities();
 
-  /**
-	 * Returns a new object of class '<em>Environment Ui Facade</em>'.
+		/**
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Environment Ui Facade</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-  EnvironmentUiFacade createEnvironmentUiFacade();
+	Symphony__CoreEnvironmentUIFacade createSymphony__CoreEnvironmentUIFacade();
 
-  /**
+		/**
 	 * Returns a new object of class '<em>Map View Configuration List</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

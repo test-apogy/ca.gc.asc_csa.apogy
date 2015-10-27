@@ -1483,257 +1483,257 @@ public interface Symphony__CoreEnvironmentPackage extends EPackage
   int ENVIRONMENT_UTILITIES_OPERATION_COUNT = 4;
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.impl.EnvironmentFacadeImpl <em>Environment Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.impl.Symphony__CoreEnvironmentFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.impl.EnvironmentFacadeImpl
-	 * @see org.eclipse.symphony.core.environment.impl.Symphony__CoreEnvironmentPackageImpl#getEnvironmentFacade()
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.core.environment.impl.Symphony__CoreEnvironmentFacadeImpl
+	 * @see org.eclipse.symphony.core.environment.impl.Symphony__CoreEnvironmentPackageImpl#getSymphony__CoreEnvironmentFacade()
 	 * @generated
 	 */
-  int ENVIRONMENT_FACADE = 18;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE = 18;
 
-  /**
-	 * The number of structural features of the '<em>Environment Facade</em>' class.
+		/**
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE_FEATURE_COUNT = 0;
 
-  /**
+		/**
 	 * The operation id for the '<em>Create And Initialize Stars</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_STARS = 0;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_STARS = 0;
 
-  /**
+		/**
 	 * The operation id for the '<em>Create And Initialize Default CSA Worksite</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE = 1;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE = 1;
 
-  /**
+		/**
 	 * The operation id for the '<em>Initialize Sky Node</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE = 2;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE = 2;
 
-  /**
+		/**
 	 * The operation id for the '<em>Initialize Earth Sky Node</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE = 3;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE = 3;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Mars Yard Geographical Coordinates</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES = 4;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES = 4;
 
-  /**
+		/**
 	 * The operation id for the '<em>Create Star</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE = 5;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE = 5;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Mars Yard Transform Node</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE = 6;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE = 6;
 
-  /**
+		/**
 	 * The operation id for the '<em>Create And Initialize Earth Surface Environment</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_SURFACE_ENVIRONMENT = 7;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_SURFACE_ENVIRONMENT = 7;
 
-  /**
+		/**
 	 * The operation id for the '<em>Create And Initialize Earth Atmosphere</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_ATMOSPHERE = 8;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_ATMOSPHERE = 8;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Sun Vector</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___GET_SUN_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT = 9;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT = 9;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Sun Vector</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT = 10;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT = 10;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Moon Vector</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___GET_MOON_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT = 11;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT = 11;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Moon Vector</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___GET_MOON_VECTOR__NODE_ENVIRONMENT = 12;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__NODE_ENVIRONMENT = 12;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___GET_VECTOR__NODE_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 13;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 13;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 14;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = 14;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_STRING_ENVIRONMENT = 15;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_STRING_ENVIRONMENT = 15;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Vector</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_STRING_STRING_ENVIRONMENT = 16;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_STRING_STRING_ENVIRONMENT = 16;
 
-  /**
+		/**
 	 * The operation id for the '<em>Create EImage</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___CREATE_EIMAGE__LIST = 17;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_EIMAGE__LIST = 17;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Absolute Rectangular Region Corners</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___GET_ABSOLUTE_RECTANGULAR_REGION_CORNERS__RECTANGULARREGION = 18;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_ABSOLUTE_RECTANGULAR_REGION_CORNERS__RECTANGULARREGION = 18;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Best Resolution Rectangular Region Image</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_RECTANGULAR_REGION_IMAGE__LIST = 19;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_RECTANGULAR_REGION_IMAGE__LIST = 19;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Rectangular Region Extent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__RECTANGULARREGIONPROVIDER_TUPLE3D_TUPLE3D = 20;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__RECTANGULARREGIONPROVIDER_TUPLE3D_TUPLE3D = 20;
 
 		/**
 	 * The operation id for the '<em>Get Rectangular Region Image Extent</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__RECTANGULARREGIONIMAGE_TUPLE3D_TUPLE3D = 21;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__RECTANGULARREGIONIMAGE_TUPLE3D_TUPLE3D = 21;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Rectangular Region Extent</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__LIST_TUPLE3D_TUPLE3D = 22;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__LIST_TUPLE3D_TUPLE3D = 22;
 
 		/**
 	 * The operation id for the '<em>Get Rectangular Region Image Extent</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__LIST_TUPLE3D_TUPLE3D = 23;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__LIST_TUPLE3D_TUPLE3D = 23;
 
-  /**
+		/**
 	 * The operation id for the '<em>Fits Inside</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE___FITS_INSIDE__RECTANGULARREGION_RECTANGULARREGION = 24;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___FITS_INSIDE__RECTANGULARREGION_RECTANGULARREGION = 24;
 
-  /**
+		/**
 	 * The operation id for the '<em>Intersects</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_FACADE___INTERSECTS__RECTANGULARREGION_RECTANGULARREGION_MATRIX4X4 = 25;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___INTERSECTS__RECTANGULARREGION_RECTANGULARREGION_MATRIX4X4 = 25;
 
 		/**
 	 * The operation id for the '<em>Get Image Map Layer Presentation Extent</em>' operation.
@@ -1742,7 +1742,7 @@ public interface Symphony__CoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__IMAGEMAPLAYERPRESENTATION_TUPLE3D_TUPLE3D = 26;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__IMAGEMAPLAYERPRESENTATION_TUPLE3D_TUPLE3D = 26;
 
 		/**
 	 * The operation id for the '<em>Get Image Map Layer Presentation Extent</em>' operation.
@@ -1751,7 +1751,7 @@ public interface Symphony__CoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__LIST_TUPLE3D_TUPLE3D = 27;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__LIST_TUPLE3D_TUPLE3D = 27;
 
 		/**
 	 * The operation id for the '<em>Get Image Map Layer Presentation Image</em>' operation.
@@ -1760,7 +1760,7 @@ public interface Symphony__CoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__LIST = 28;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__LIST = 28;
 
 		/**
 	 * The operation id for the '<em>Get Best Resolution Map Layer</em>' operation.
@@ -1769,7 +1769,7 @@ public interface Symphony__CoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_MAP_LAYER__LIST = 29;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_MAP_LAYER__LIST = 29;
 
 		/**
 	 * The operation id for the '<em>Get Visible Image Map Layer Presentation</em>' operation.
@@ -1778,7 +1778,7 @@ public interface Symphony__CoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_FACADE___GET_VISIBLE_IMAGE_MAP_LAYER_PRESENTATION__LIST = 30;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VISIBLE_IMAGE_MAP_LAYER_PRESENTATION__LIST = 30;
 
 		/**
 	 * The operation id for the '<em>Get Rectangular Volume Region</em>' operation.
@@ -1787,18 +1787,18 @@ public interface Symphony__CoreEnvironmentPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_FACADE___GET_RECTANGULAR_VOLUME_REGION__CARTESIANTRIANGULARMESH = 31;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_VOLUME_REGION__CARTESIANTRIANGULARMESH = 31;
 
 		/**
-	 * The number of operations of the '<em>Environment Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ENVIRONMENT_FACADE_OPERATION_COUNT = 32;
+	int SYMPHONY_CORE_ENVIRONMENT_FACADE_OPERATION_COUNT = 32;
 
-  /**
+		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.impl.StarImpl <em>Star</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7963,334 +7963,334 @@ public interface Symphony__CoreEnvironmentPackage extends EPackage
   EOperation getEnvironmentUtilities__SortByMagnitude__List();
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.EnvironmentFacade <em>Environment Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Environment Facade</em>'.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade
 	 * @generated
 	 */
-  EClass getEnvironmentFacade();
+	EClass getSymphony__CoreEnvironmentFacade();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#createAndInitializeStars() <em>Create And Initialize Stars</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeStars() <em>Create And Initialize Stars</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create And Initialize Stars</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#createAndInitializeStars()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeStars()
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__CreateAndInitializeStars();
+	EOperation getSymphony__CoreEnvironmentFacade__CreateAndInitializeStars();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#createAndInitializeDefaultCSAWorksite() <em>Create And Initialize Default CSA Worksite</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeDefaultCSAWorksite() <em>Create And Initialize Default CSA Worksite</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create And Initialize Default CSA Worksite</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#createAndInitializeDefaultCSAWorksite()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeDefaultCSAWorksite()
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite();
+	EOperation getSymphony__CoreEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#initializeSkyNode(org.eclipse.symphony.core.environment.Sky, org.eclipse.symphony.core.environment.SkyNode) <em>Initialize Sky Node</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#initializeSkyNode(org.eclipse.symphony.core.environment.Sky, org.eclipse.symphony.core.environment.SkyNode) <em>Initialize Sky Node</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Initialize Sky Node</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#initializeSkyNode(org.eclipse.symphony.core.environment.Sky, org.eclipse.symphony.core.environment.SkyNode)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#initializeSkyNode(org.eclipse.symphony.core.environment.Sky, org.eclipse.symphony.core.environment.SkyNode)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__InitializeSkyNode__Sky_SkyNode();
+	EOperation getSymphony__CoreEnvironmentFacade__InitializeSkyNode__Sky_SkyNode();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#initializeEarthSkyNode(org.eclipse.symphony.core.environment.EarthSky, org.eclipse.symphony.core.environment.EarthSkyNode) <em>Initialize Earth Sky Node</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#initializeEarthSkyNode(org.eclipse.symphony.core.environment.EarthSky, org.eclipse.symphony.core.environment.EarthSkyNode) <em>Initialize Earth Sky Node</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Initialize Earth Sky Node</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#initializeEarthSkyNode(org.eclipse.symphony.core.environment.EarthSky, org.eclipse.symphony.core.environment.EarthSkyNode)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#initializeEarthSkyNode(org.eclipse.symphony.core.environment.EarthSky, org.eclipse.symphony.core.environment.EarthSkyNode)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode();
+	EOperation getSymphony__CoreEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getMarsYardGeographicalCoordinates() <em>Get Mars Yard Geographical Coordinates</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMarsYardGeographicalCoordinates() <em>Get Mars Yard Geographical Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Mars Yard Geographical Coordinates</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getMarsYardGeographicalCoordinates()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMarsYardGeographicalCoordinates()
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__GetMarsYardGeographicalCoordinates();
+	EOperation getSymphony__CoreEnvironmentFacade__GetMarsYardGeographicalCoordinates();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#createStar(float, double, double) <em>Create Star</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createStar(float, double, double) <em>Create Star</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Star</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#createStar(float, double, double)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createStar(float, double, double)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__CreateStar__float_double_double();
+	EOperation getSymphony__CoreEnvironmentFacade__CreateStar__float_double_double();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getMarsYardTransformNode() <em>Get Mars Yard Transform Node</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMarsYardTransformNode() <em>Get Mars Yard Transform Node</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Mars Yard Transform Node</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getMarsYardTransformNode()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMarsYardTransformNode()
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__GetMarsYardTransformNode();
+	EOperation getSymphony__CoreEnvironmentFacade__GetMarsYardTransformNode();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#createAndInitializeEarthSurfaceEnvironment() <em>Create And Initialize Earth Surface Environment</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeEarthSurfaceEnvironment() <em>Create And Initialize Earth Surface Environment</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create And Initialize Earth Surface Environment</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#createAndInitializeEarthSurfaceEnvironment()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeEarthSurfaceEnvironment()
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__CreateAndInitializeEarthSurfaceEnvironment();
+	EOperation getSymphony__CoreEnvironmentFacade__CreateAndInitializeEarthSurfaceEnvironment();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#createAndInitializeEarthAtmosphere() <em>Create And Initialize Earth Atmosphere</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeEarthAtmosphere() <em>Create And Initialize Earth Atmosphere</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create And Initialize Earth Atmosphere</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#createAndInitializeEarthAtmosphere()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createAndInitializeEarthAtmosphere()
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__CreateAndInitializeEarthAtmosphere();
+	EOperation getSymphony__CoreEnvironmentFacade__CreateAndInitializeEarthAtmosphere();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getSunVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Sun Vector</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getSunVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Sun Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Sun Vector</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getSunVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getSunVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__GetSunVector__SymphonySystem_String_Environment();
+	EOperation getSymphony__CoreEnvironmentFacade__GetSunVector__SymphonySystem_String_Environment();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getSunVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment) <em>Get Sun Vector</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getSunVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment) <em>Get Sun Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Sun Vector</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getSunVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getSunVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__GetSunVector__Node_Environment();
+	EOperation getSymphony__CoreEnvironmentFacade__GetSunVector__Node_Environment();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getMoonVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Moon Vector</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMoonVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Moon Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Moon Vector</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getMoonVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMoonVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__GetMoonVector__SymphonySystem_String_Environment();
+	EOperation getSymphony__CoreEnvironmentFacade__GetMoonVector__SymphonySystem_String_Environment();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getMoonVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment) <em>Get Moon Vector</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMoonVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment) <em>Get Moon Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Moon Vector</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getMoonVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getMoonVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__GetMoonVector__Node_Environment();
+	EOperation getSymphony__CoreEnvironmentFacade__GetMoonVector__Node_Environment();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Vector</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__GetVector__Node_SymphonySystem_ConnectionPoint_Environment();
+	EOperation getSymphony__CoreEnvironmentFacade__GetVector__Node_SymphonySystem_ConnectionPoint_Environment();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Vector</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.SymphonySystem, org.eclipse.symphony.core.ConnectionPoint, org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_ConnectionPoint_Environment();
+	EOperation getSymphony__CoreEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_ConnectionPoint_Environment();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Vector</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.SymphonySystem, java.lang.String, org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_String_Environment();
+	EOperation getSymphony__CoreEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_String_Environment();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, java.lang.String, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, java.lang.String, java.lang.String, org.eclipse.symphony.core.invocator.Environment) <em>Get Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Vector</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, java.lang.String, java.lang.String, org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVector(org.eclipse.symphony.core.SymphonySystem, java.lang.String, java.lang.String, java.lang.String, org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__GetVector__SymphonySystem_String_String_String_Environment();
+	EOperation getSymphony__CoreEnvironmentFacade__GetVector__SymphonySystem_String_String_String_Environment();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#createEImage(java.util.List) <em>Create EImage</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createEImage(java.util.List) <em>Create EImage</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create EImage</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#createEImage(java.util.List)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#createEImage(java.util.List)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__CreateEImage__List();
+	EOperation getSymphony__CoreEnvironmentFacade__CreateEImage__List();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getAbsoluteRectangularRegionCorners(org.eclipse.symphony.core.environment.RectangularRegion) <em>Get Absolute Rectangular Region Corners</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getAbsoluteRectangularRegionCorners(org.eclipse.symphony.core.environment.RectangularRegion) <em>Get Absolute Rectangular Region Corners</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Absolute Rectangular Region Corners</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getAbsoluteRectangularRegionCorners(org.eclipse.symphony.core.environment.RectangularRegion)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getAbsoluteRectangularRegionCorners(org.eclipse.symphony.core.environment.RectangularRegion)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__GetAbsoluteRectangularRegionCorners__RectangularRegion();
+	EOperation getSymphony__CoreEnvironmentFacade__GetAbsoluteRectangularRegionCorners__RectangularRegion();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getBestResolutionRectangularRegionImage(java.util.List) <em>Get Best Resolution Rectangular Region Image</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getBestResolutionRectangularRegionImage(java.util.List) <em>Get Best Resolution Rectangular Region Image</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Best Resolution Rectangular Region Image</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getBestResolutionRectangularRegionImage(java.util.List)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getBestResolutionRectangularRegionImage(java.util.List)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__GetBestResolutionRectangularRegionImage__List();
+	EOperation getSymphony__CoreEnvironmentFacade__GetBestResolutionRectangularRegionImage__List();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getRectangularRegionExtent(org.eclipse.symphony.core.environment.RectangularRegionProvider, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Extent</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionExtent(org.eclipse.symphony.core.environment.RectangularRegionProvider, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Rectangular Region Extent</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getRectangularRegionExtent(org.eclipse.symphony.core.environment.RectangularRegionProvider, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionExtent(org.eclipse.symphony.core.environment.RectangularRegionProvider, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
-	EOperation getEnvironmentFacade__GetRectangularRegionExtent__RectangularRegionProvider_Tuple3d_Tuple3d();
+	EOperation getSymphony__CoreEnvironmentFacade__GetRectangularRegionExtent__RectangularRegionProvider_Tuple3d_Tuple3d();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getRectangularRegionImageExtent(org.eclipse.symphony.core.environment.RectangularRegionImage, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionImageExtent(org.eclipse.symphony.core.environment.RectangularRegionImage, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Rectangular Region Image Extent</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getRectangularRegionImageExtent(org.eclipse.symphony.core.environment.RectangularRegionImage, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionImageExtent(org.eclipse.symphony.core.environment.RectangularRegionImage, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__GetRectangularRegionImageExtent__RectangularRegionImage_Tuple3d_Tuple3d();
+	EOperation getSymphony__CoreEnvironmentFacade__GetRectangularRegionImageExtent__RectangularRegionImage_Tuple3d_Tuple3d();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getRectangularRegionExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Extent</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Rectangular Region Extent</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getRectangularRegionExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
-	EOperation getEnvironmentFacade__GetRectangularRegionExtent__List_Tuple3d_Tuple3d();
+	EOperation getSymphony__CoreEnvironmentFacade__GetRectangularRegionExtent__List_Tuple3d_Tuple3d();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getRectangularRegionImageExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionImageExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Rectangular Region Image Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Rectangular Region Image Extent</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getRectangularRegionImageExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularRegionImageExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__GetRectangularRegionImageExtent__List_Tuple3d_Tuple3d();
+	EOperation getSymphony__CoreEnvironmentFacade__GetRectangularRegionImageExtent__List_Tuple3d_Tuple3d();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#fitsInside(org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.core.environment.RectangularRegion) <em>Fits Inside</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#fitsInside(org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.core.environment.RectangularRegion) <em>Fits Inside</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Fits Inside</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#fitsInside(org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.core.environment.RectangularRegion)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#fitsInside(org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.core.environment.RectangularRegion)
 	 * @generated
 	 */
-  EOperation getEnvironmentFacade__FitsInside__RectangularRegion_RectangularRegion();
+	EOperation getSymphony__CoreEnvironmentFacade__FitsInside__RectangularRegion_RectangularRegion();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#intersects(org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.common.math.Matrix4x4) <em>Intersects</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#intersects(org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.common.math.Matrix4x4) <em>Intersects</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Intersects</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#intersects(org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.common.math.Matrix4x4)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#intersects(org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.core.environment.RectangularRegion, org.eclipse.symphony.common.math.Matrix4x4)
 	 * @generated
 	 */
-	EOperation getEnvironmentFacade__Intersects__RectangularRegion_RectangularRegion_Matrix4x4();
+	EOperation getSymphony__CoreEnvironmentFacade__Intersects__RectangularRegion_RectangularRegion_Matrix4x4();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getImageMapLayerPresentationExtent(org.eclipse.symphony.core.environment.ImageMapLayerPresentation, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getImageMapLayerPresentationExtent(org.eclipse.symphony.core.environment.ImageMapLayerPresentation, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Image Map Layer Presentation Extent</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getImageMapLayerPresentationExtent(org.eclipse.symphony.core.environment.ImageMapLayerPresentation, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getImageMapLayerPresentationExtent(org.eclipse.symphony.core.environment.ImageMapLayerPresentation, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
-	EOperation getEnvironmentFacade__GetImageMapLayerPresentationExtent__ImageMapLayerPresentation_Tuple3d_Tuple3d();
+	EOperation getSymphony__CoreEnvironmentFacade__GetImageMapLayerPresentationExtent__ImageMapLayerPresentation_Tuple3d_Tuple3d();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getImageMapLayerPresentationExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getImageMapLayerPresentationExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Get Image Map Layer Presentation Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Image Map Layer Presentation Extent</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getImageMapLayerPresentationExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getImageMapLayerPresentationExtent(java.util.List, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
-	EOperation getEnvironmentFacade__GetImageMapLayerPresentationExtent__List_Tuple3d_Tuple3d();
+	EOperation getSymphony__CoreEnvironmentFacade__GetImageMapLayerPresentationExtent__List_Tuple3d_Tuple3d();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getImageMapLayerPresentationImage(java.util.List) <em>Get Image Map Layer Presentation Image</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getImageMapLayerPresentationImage(java.util.List) <em>Get Image Map Layer Presentation Image</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Image Map Layer Presentation Image</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getImageMapLayerPresentationImage(java.util.List)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getImageMapLayerPresentationImage(java.util.List)
 	 * @generated
 	 */
-	EOperation getEnvironmentFacade__GetImageMapLayerPresentationImage__List();
+	EOperation getSymphony__CoreEnvironmentFacade__GetImageMapLayerPresentationImage__List();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getBestResolutionMapLayer(java.util.List) <em>Get Best Resolution Map Layer</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getBestResolutionMapLayer(java.util.List) <em>Get Best Resolution Map Layer</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Best Resolution Map Layer</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getBestResolutionMapLayer(java.util.List)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getBestResolutionMapLayer(java.util.List)
 	 * @generated
 	 */
-	EOperation getEnvironmentFacade__GetBestResolutionMapLayer__List();
+	EOperation getSymphony__CoreEnvironmentFacade__GetBestResolutionMapLayer__List();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getVisibleImageMapLayerPresentation(java.util.List) <em>Get Visible Image Map Layer Presentation</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVisibleImageMapLayerPresentation(java.util.List) <em>Get Visible Image Map Layer Presentation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Visible Image Map Layer Presentation</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getVisibleImageMapLayerPresentation(java.util.List)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getVisibleImageMapLayerPresentation(java.util.List)
 	 * @generated
 	 */
-	EOperation getEnvironmentFacade__GetVisibleImageMapLayerPresentation__List();
+	EOperation getSymphony__CoreEnvironmentFacade__GetVisibleImageMapLayerPresentation__List();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.EnvironmentFacade#getRectangularVolumeRegion(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Get Rectangular Volume Region</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularVolumeRegion(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Get Rectangular Volume Region</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Rectangular Volume Region</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade#getRectangularVolumeRegion(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade#getRectangularVolumeRegion(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
 	 * @generated
 	 */
-	EOperation getEnvironmentFacade__GetRectangularVolumeRegion__CartesianTriangularMesh();
+	EOperation getSymphony__CoreEnvironmentFacade__GetRectangularVolumeRegion__CartesianTriangularMesh();
 
 		/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.Star <em>Star</em>}'.
@@ -10555,238 +10555,238 @@ public interface Symphony__CoreEnvironmentPackage extends EPackage
 		 */
     EOperation ENVIRONMENT_UTILITIES___SORT_BY_MAGNITUDE__LIST = eINSTANCE.getEnvironmentUtilities__SortByMagnitude__List();
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.impl.EnvironmentFacadeImpl <em>Environment Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.impl.Symphony__CoreEnvironmentFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.impl.EnvironmentFacadeImpl
-		 * @see org.eclipse.symphony.core.environment.impl.Symphony__CoreEnvironmentPackageImpl#getEnvironmentFacade()
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.core.environment.impl.Symphony__CoreEnvironmentFacadeImpl
+		 * @see org.eclipse.symphony.core.environment.impl.Symphony__CoreEnvironmentPackageImpl#getSymphony__CoreEnvironmentFacade()
 		 * @generated
 		 */
-    EClass ENVIRONMENT_FACADE = eINSTANCE.getEnvironmentFacade();
-    /**
+		EClass SYMPHONY_CORE_ENVIRONMENT_FACADE = eINSTANCE.getSymphony__CoreEnvironmentFacade();
+				/**
 		 * The meta object literal for the '<em><b>Create And Initialize Stars</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_STARS = eINSTANCE.getEnvironmentFacade__CreateAndInitializeStars();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_STARS = eINSTANCE.getSymphony__CoreEnvironmentFacade__CreateAndInitializeStars();
+				/**
 		 * The meta object literal for the '<em><b>Create And Initialize Default CSA Worksite</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE = eINSTANCE.getEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_DEFAULT_CSA_WORKSITE = eINSTANCE.getSymphony__CoreEnvironmentFacade__CreateAndInitializeDefaultCSAWorksite();
+				/**
 		 * The meta object literal for the '<em><b>Initialize Sky Node</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE = eINSTANCE.getEnvironmentFacade__InitializeSkyNode__Sky_SkyNode();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___INITIALIZE_SKY_NODE__SKY_SKYNODE = eINSTANCE.getSymphony__CoreEnvironmentFacade__InitializeSkyNode__Sky_SkyNode();
+				/**
 		 * The meta object literal for the '<em><b>Initialize Earth Sky Node</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE = eINSTANCE.getEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___INITIALIZE_EARTH_SKY_NODE__EARTHSKY_EARTHSKYNODE = eINSTANCE.getSymphony__CoreEnvironmentFacade__InitializeEarthSkyNode__EarthSky_EarthSkyNode();
+				/**
 		 * The meta object literal for the '<em><b>Get Mars Yard Geographical Coordinates</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES = eINSTANCE.getEnvironmentFacade__GetMarsYardGeographicalCoordinates();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_GEOGRAPHICAL_COORDINATES = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetMarsYardGeographicalCoordinates();
+				/**
 		 * The meta object literal for the '<em><b>Create Star</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE = eINSTANCE.getEnvironmentFacade__CreateStar__float_double_double();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_STAR__FLOAT_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CoreEnvironmentFacade__CreateStar__float_double_double();
+				/**
 		 * The meta object literal for the '<em><b>Get Mars Yard Transform Node</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE = eINSTANCE.getEnvironmentFacade__GetMarsYardTransformNode();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MARS_YARD_TRANSFORM_NODE = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetMarsYardTransformNode();
+				/**
 		 * The meta object literal for the '<em><b>Create And Initialize Earth Surface Environment</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_SURFACE_ENVIRONMENT = eINSTANCE.getEnvironmentFacade__CreateAndInitializeEarthSurfaceEnvironment();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_SURFACE_ENVIRONMENT = eINSTANCE.getSymphony__CoreEnvironmentFacade__CreateAndInitializeEarthSurfaceEnvironment();
+				/**
 		 * The meta object literal for the '<em><b>Create And Initialize Earth Atmosphere</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_ATMOSPHERE = eINSTANCE.getEnvironmentFacade__CreateAndInitializeEarthAtmosphere();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_AND_INITIALIZE_EARTH_ATMOSPHERE = eINSTANCE.getSymphony__CoreEnvironmentFacade__CreateAndInitializeEarthAtmosphere();
+				/**
 		 * The meta object literal for the '<em><b>Get Sun Vector</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___GET_SUN_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT = eINSTANCE.getEnvironmentFacade__GetSunVector__SymphonySystem_String_Environment();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetSunVector__SymphonySystem_String_Environment();
+				/**
 		 * The meta object literal for the '<em><b>Get Sun Vector</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT = eINSTANCE.getEnvironmentFacade__GetSunVector__Node_Environment();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_SUN_VECTOR__NODE_ENVIRONMENT = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetSunVector__Node_Environment();
+				/**
 		 * The meta object literal for the '<em><b>Get Moon Vector</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___GET_MOON_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT = eINSTANCE.getEnvironmentFacade__GetMoonVector__SymphonySystem_String_Environment();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__SYMPHONYSYSTEM_STRING_ENVIRONMENT = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetMoonVector__SymphonySystem_String_Environment();
+				/**
 		 * The meta object literal for the '<em><b>Get Moon Vector</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___GET_MOON_VECTOR__NODE_ENVIRONMENT = eINSTANCE.getEnvironmentFacade__GetMoonVector__Node_Environment();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_MOON_VECTOR__NODE_ENVIRONMENT = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetMoonVector__Node_Environment();
+				/**
 		 * The meta object literal for the '<em><b>Get Vector</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___GET_VECTOR__NODE_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = eINSTANCE.getEnvironmentFacade__GetVector__Node_SymphonySystem_ConnectionPoint_Environment();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__NODE_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetVector__Node_SymphonySystem_ConnectionPoint_Environment();
+				/**
 		 * The meta object literal for the '<em><b>Get Vector</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = eINSTANCE.getEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_ConnectionPoint_Environment();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_CONNECTIONPOINT_ENVIRONMENT = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_ConnectionPoint_Environment();
+				/**
 		 * The meta object literal for the '<em><b>Get Vector</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_STRING_ENVIRONMENT = eINSTANCE.getEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_String_Environment();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_SYMPHONYSYSTEM_STRING_ENVIRONMENT = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetVector__SymphonySystem_String_SymphonySystem_String_Environment();
+				/**
 		 * The meta object literal for the '<em><b>Get Vector</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_STRING_STRING_ENVIRONMENT = eINSTANCE.getEnvironmentFacade__GetVector__SymphonySystem_String_String_String_Environment();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VECTOR__SYMPHONYSYSTEM_STRING_STRING_STRING_ENVIRONMENT = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetVector__SymphonySystem_String_String_String_Environment();
+				/**
 		 * The meta object literal for the '<em><b>Create EImage</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___CREATE_EIMAGE__LIST = eINSTANCE.getEnvironmentFacade__CreateEImage__List();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___CREATE_EIMAGE__LIST = eINSTANCE.getSymphony__CoreEnvironmentFacade__CreateEImage__List();
+				/**
 		 * The meta object literal for the '<em><b>Get Absolute Rectangular Region Corners</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___GET_ABSOLUTE_RECTANGULAR_REGION_CORNERS__RECTANGULARREGION = eINSTANCE.getEnvironmentFacade__GetAbsoluteRectangularRegionCorners__RectangularRegion();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_ABSOLUTE_RECTANGULAR_REGION_CORNERS__RECTANGULARREGION = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetAbsoluteRectangularRegionCorners__RectangularRegion();
+				/**
 		 * The meta object literal for the '<em><b>Get Best Resolution Rectangular Region Image</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_RECTANGULAR_REGION_IMAGE__LIST = eINSTANCE.getEnvironmentFacade__GetBestResolutionRectangularRegionImage__List();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_RECTANGULAR_REGION_IMAGE__LIST = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetBestResolutionRectangularRegionImage__List();
+				/**
 		 * The meta object literal for the '<em><b>Get Rectangular Region Extent</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__RECTANGULARREGIONPROVIDER_TUPLE3D_TUPLE3D = eINSTANCE.getEnvironmentFacade__GetRectangularRegionExtent__RectangularRegionProvider_Tuple3d_Tuple3d();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__RECTANGULARREGIONPROVIDER_TUPLE3D_TUPLE3D = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetRectangularRegionExtent__RectangularRegionProvider_Tuple3d_Tuple3d();
 				/**
 		 * The meta object literal for the '<em><b>Get Rectangular Region Image Extent</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__RECTANGULARREGIONIMAGE_TUPLE3D_TUPLE3D = eINSTANCE.getEnvironmentFacade__GetRectangularRegionImageExtent__RectangularRegionImage_Tuple3d_Tuple3d();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__RECTANGULARREGIONIMAGE_TUPLE3D_TUPLE3D = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetRectangularRegionImageExtent__RectangularRegionImage_Tuple3d_Tuple3d();
+				/**
 		 * The meta object literal for the '<em><b>Get Rectangular Region Extent</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__LIST_TUPLE3D_TUPLE3D = eINSTANCE.getEnvironmentFacade__GetRectangularRegionExtent__List_Tuple3d_Tuple3d();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_EXTENT__LIST_TUPLE3D_TUPLE3D = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetRectangularRegionExtent__List_Tuple3d_Tuple3d();
 				/**
 		 * The meta object literal for the '<em><b>Get Rectangular Region Image Extent</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__LIST_TUPLE3D_TUPLE3D = eINSTANCE.getEnvironmentFacade__GetRectangularRegionImageExtent__List_Tuple3d_Tuple3d();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_REGION_IMAGE_EXTENT__LIST_TUPLE3D_TUPLE3D = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetRectangularRegionImageExtent__List_Tuple3d_Tuple3d();
+				/**
 		 * The meta object literal for the '<em><b>Fits Inside</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation ENVIRONMENT_FACADE___FITS_INSIDE__RECTANGULARREGION_RECTANGULARREGION = eINSTANCE.getEnvironmentFacade__FitsInside__RectangularRegion_RectangularRegion();
-    /**
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___FITS_INSIDE__RECTANGULARREGION_RECTANGULARREGION = eINSTANCE.getSymphony__CoreEnvironmentFacade__FitsInside__RectangularRegion_RectangularRegion();
+				/**
 		 * The meta object literal for the '<em><b>Intersects</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_FACADE___INTERSECTS__RECTANGULARREGION_RECTANGULARREGION_MATRIX4X4 = eINSTANCE.getEnvironmentFacade__Intersects__RectangularRegion_RectangularRegion_Matrix4x4();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___INTERSECTS__RECTANGULARREGION_RECTANGULARREGION_MATRIX4X4 = eINSTANCE.getSymphony__CoreEnvironmentFacade__Intersects__RectangularRegion_RectangularRegion_Matrix4x4();
 				/**
 		 * The meta object literal for the '<em><b>Get Image Map Layer Presentation Extent</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__IMAGEMAPLAYERPRESENTATION_TUPLE3D_TUPLE3D = eINSTANCE.getEnvironmentFacade__GetImageMapLayerPresentationExtent__ImageMapLayerPresentation_Tuple3d_Tuple3d();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__IMAGEMAPLAYERPRESENTATION_TUPLE3D_TUPLE3D = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetImageMapLayerPresentationExtent__ImageMapLayerPresentation_Tuple3d_Tuple3d();
 				/**
 		 * The meta object literal for the '<em><b>Get Image Map Layer Presentation Extent</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__LIST_TUPLE3D_TUPLE3D = eINSTANCE.getEnvironmentFacade__GetImageMapLayerPresentationExtent__List_Tuple3d_Tuple3d();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_EXTENT__LIST_TUPLE3D_TUPLE3D = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetImageMapLayerPresentationExtent__List_Tuple3d_Tuple3d();
 				/**
 		 * The meta object literal for the '<em><b>Get Image Map Layer Presentation Image</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__LIST = eINSTANCE.getEnvironmentFacade__GetImageMapLayerPresentationImage__List();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_IMAGE_MAP_LAYER_PRESENTATION_IMAGE__LIST = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetImageMapLayerPresentationImage__List();
 				/**
 		 * The meta object literal for the '<em><b>Get Best Resolution Map Layer</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_MAP_LAYER__LIST = eINSTANCE.getEnvironmentFacade__GetBestResolutionMapLayer__List();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_BEST_RESOLUTION_MAP_LAYER__LIST = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetBestResolutionMapLayer__List();
 				/**
 		 * The meta object literal for the '<em><b>Get Visible Image Map Layer Presentation</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_FACADE___GET_VISIBLE_IMAGE_MAP_LAYER_PRESENTATION__LIST = eINSTANCE.getEnvironmentFacade__GetVisibleImageMapLayerPresentation__List();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_VISIBLE_IMAGE_MAP_LAYER_PRESENTATION__LIST = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetVisibleImageMapLayerPresentation__List();
 				/**
 		 * The meta object literal for the '<em><b>Get Rectangular Volume Region</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ENVIRONMENT_FACADE___GET_RECTANGULAR_VOLUME_REGION__CARTESIANTRIANGULARMESH = eINSTANCE.getEnvironmentFacade__GetRectangularVolumeRegion__CartesianTriangularMesh();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_FACADE___GET_RECTANGULAR_VOLUME_REGION__CARTESIANTRIANGULARMESH = eINSTANCE.getSymphony__CoreEnvironmentFacade__GetRectangularVolumeRegion__CartesianTriangularMesh();
 				/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.impl.StarImpl <em>Star</em>}' class.
 		 * <!-- begin-user-doc -->

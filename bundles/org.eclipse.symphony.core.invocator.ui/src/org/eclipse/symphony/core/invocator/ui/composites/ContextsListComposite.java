@@ -348,7 +348,7 @@ public class ContextsListComposite extends Composite {
 //						EClass interfaceClass = variableImplementation
 //								.getVariable().getVariableType()
 //								.getInterfaceClass();
-//						elements = EMFEcoreFacade.INSTANCE.getAllSubEClasses(
+//						elements = Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(
 //								interfaceClass).toArray();
 //					}
 //				}
@@ -360,7 +360,7 @@ public class ContextsListComposite extends Composite {
 //						EClass interfaceClass = typeMemberImplementation
 //								.getTypeMember().getMemberType()
 //								.getInterfaceClass();
-//						elements = EMFEcoreFacade.INSTANCE.getAllSubEClasses(
+//						elements = Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(
 //								interfaceClass).toArray();
 //					}
 //				}

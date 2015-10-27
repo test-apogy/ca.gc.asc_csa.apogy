@@ -76,7 +76,7 @@ public class Symphony__AddonsSensorsRangeFactoryImpl extends EFactoryImpl implem
 			case Symphony__AddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER: return createSimpleRasterScanRangeScanner();
 			case Symphony__AddonsSensorsRangePackage.SIMPLE_RASTER_SCAN_RANGE_SCANNER_SIMULATOR: return createSimpleRasterScanRangeScannerSimulator();
 			case Symphony__AddonsSensorsRangePackage.RASTER_SCAN_DATA: return createRasterScanData();
-			case Symphony__AddonsSensorsRangePackage.SENSORS_RANGE_FACADE: return createSensorsRangeFacade();
+			case Symphony__AddonsSensorsRangePackage.SYMPHONY_ADDONS_SENSORS_RANGE_FACADE: return createSymphony__AddonsSensorsRangeFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -259,9 +259,9 @@ public class Symphony__AddonsSensorsRangeFactoryImpl extends EFactoryImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SensorsRangeFacade createSensorsRangeFacade() {
-		SensorsRangeFacadeImpl sensorsRangeFacade = new SensorsRangeFacadeImpl();
-		return sensorsRangeFacade;
+	public Symphony__AddonsSensorsRangeFacade createSymphony__AddonsSensorsRangeFacade() {
+		Symphony__AddonsSensorsRangeFacadeImpl symphony__AddonsSensorsRangeFacade = new Symphony__AddonsSensorsRangeFacadeImpl();
+		return symphony__AddonsSensorsRangeFacade;
 	}
 
 	/**

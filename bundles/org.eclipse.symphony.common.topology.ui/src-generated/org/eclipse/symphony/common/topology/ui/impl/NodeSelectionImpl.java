@@ -314,7 +314,7 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 			if(getSelectedNode() != null && getRelativeIntersectionPoint() != null)
 			{
 				absoluteIntersectionPoint = new Point3d(getRelativeIntersectionPoint());	
-				Matrix4d m = org.eclipse.symphony.common.topology.TopologyFacade.INSTANCE.expressNodeInRootFrame(getSelectedNode());
+				Matrix4d m = org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(getSelectedNode());
 				m.transform(absoluteIntersectionPoint);
 				
 				setAbsoluteIntersectionPoint(absoluteIntersectionPoint);
@@ -369,7 +369,7 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 			if(getSelectedNode() != null && getRelativeIntersectionNormal() != null)
 			{
 				absoluteIntersectionNormal = new Vector3f(getRelativeIntersectionNormal());	
-				Matrix4d m = org.eclipse.symphony.common.topology.TopologyFacade.INSTANCE.expressNodeInRootFrame(getSelectedNode());
+				Matrix4d m = org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(getSelectedNode());
 				m.transform(absoluteIntersectionNormal);
 				
 				setAbsoluteIntersectionNormal(absoluteIntersectionNormal);

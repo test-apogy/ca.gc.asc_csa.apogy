@@ -16,7 +16,7 @@ import org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolato
 import org.eclipse.symphony.addons.geometry.paths.UniformDistanceWayPointPathInterpolator;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 
 /**
  * <!-- begin-user-doc -->
@@ -224,7 +224,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 		}
 		
 		// Adds the first point into the resulting path.
-		result.getPoints().add(Data3dFacade.INSTANCE.createCartesianPositionCoordinates(path.getPoints().get(0)));
+		result.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(path.getPoints().get(0)));
 		
 		// Interpolate the trajectory.
 		int ihpath = 0;
@@ -249,7 +249,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 			
 			ihpath = ihpath + n;
 			Point3d lastPoint = result.getEndPoint().asPoint3d();
-			CartesianPositionCoordinates newPoint = Data3dFacade.INSTANCE.createCartesianPositionCoordinates( lastPoint.x + ux * getDistanceInterval(),
+			CartesianPositionCoordinates newPoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates( lastPoint.x + ux * getDistanceInterval(),
 										   							  lastPoint.y + uy * getDistanceInterval(), 
 										   							  lastPoint.z + uz * getDistanceInterval());
 			
@@ -271,7 +271,7 @@ public class UniformDistanceWayPointPathInterpolatorImpl extends WayPointPathFil
 		else
 		{
 			// Last point is far from the last point of the hight resolution trajectory, need to add an extra point.
-			result.getPoints().add(Data3dFacade.INSTANCE.createCartesianPositionCoordinates(path.getEndPoint()));
+			result.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(path.getEndPoint()));
 		}
 		
 		return result;

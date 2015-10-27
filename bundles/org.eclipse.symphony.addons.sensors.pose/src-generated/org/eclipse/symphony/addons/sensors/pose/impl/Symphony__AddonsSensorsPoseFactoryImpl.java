@@ -69,7 +69,7 @@ public class Symphony__AddonsSensorsPoseFactoryImpl extends EFactoryImpl impleme
 			case Symphony__AddonsSensorsPosePackage.POSE_SENSOR: return createPoseSensor();
 			case Symphony__AddonsSensorsPosePackage.SIMULATED_POSE_SENSOR: return createSimulatedPoseSensor();
 			case Symphony__AddonsSensorsPosePackage.CSV_DATA_LOGGER: return createCSVDataLogger();
-			case Symphony__AddonsSensorsPosePackage.POSE_FACADE: return createPoseFacade();
+			case Symphony__AddonsSensorsPosePackage.SYMPHONY_ADDONS_SENSORS_POSE_FACADE: return createSymphony__AddonsSensorsPoseFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -204,9 +204,9 @@ public class Symphony__AddonsSensorsPoseFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PoseFacade createPoseFacade() {
-		PoseFacadeImpl poseFacade = new PoseFacadeImpl();
-		return poseFacade;
+	public Symphony__AddonsSensorsPoseFacade createSymphony__AddonsSensorsPoseFacade() {
+		Symphony__AddonsSensorsPoseFacadeImpl symphony__AddonsSensorsPoseFacade = new Symphony__AddonsSensorsPoseFacadeImpl();
+		return symphony__AddonsSensorsPoseFacade;
 	}
 
 	/**

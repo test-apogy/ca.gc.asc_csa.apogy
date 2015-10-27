@@ -18,7 +18,7 @@ import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsP
 import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
 import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone;
 import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.PathPlannersFacade;
+import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade;
 import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFactory;
 import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
 import org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner;
@@ -67,7 +67,7 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass pathPlannersFacadeEClass = null;
+	private EClass symphony__AddonsMobilityPathplannersFacadeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -247,8 +247,8 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPathPlannersFacade() {
-		return pathPlannersFacadeEClass;
+	public EClass getSymphony__AddonsMobilityPathplannersFacade() {
+		return symphony__AddonsMobilityPathplannersFacadeEClass;
 	}
 
 	/**
@@ -256,8 +256,8 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPathPlannersFacade__CreateCircularExclusionZone__double_GroupNode() {
-		return pathPlannersFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__AddonsMobilityPathplannersFacade__CreateCircularExclusionZone__double_GroupNode() {
+		return symphony__AddonsMobilityPathplannersFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -304,8 +304,8 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 		createEAttribute(circularExclusionZoneEClass, CIRCULAR_EXCLUSION_ZONE__RADIUS);
 		createEAttribute(circularExclusionZoneEClass, CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE);
 
-		pathPlannersFacadeEClass = createEClass(PATH_PLANNERS_FACADE);
-		createEOperation(pathPlannersFacadeEClass, PATH_PLANNERS_FACADE___CREATE_CIRCULAR_EXCLUSION_ZONE__DOUBLE_GROUPNODE);
+		symphony__AddonsMobilityPathplannersFacadeEClass = createEClass(SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE);
+		createEOperation(symphony__AddonsMobilityPathplannersFacadeEClass, SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE___CREATE_CIRCULAR_EXCLUSION_ZONE__DOUBLE_GROUPNODE);
 	}
 
 	/**
@@ -399,9 +399,9 @@ public class Symphony__AddonsMobilityPathplannersPackageImpl extends EPackageImp
 		initEAttribute(getCircularExclusionZone_Radius(), theEcorePackage.getEDouble(), "radius", null, 0, 1, CircularExclusionZone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCircularExclusionZone_InvertSamplingShape(), theEcorePackage.getEBoolean(), "invertSamplingShape", null, 0, 1, CircularExclusionZone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(pathPlannersFacadeEClass, PathPlannersFacade.class, "PathPlannersFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__AddonsMobilityPathplannersFacadeEClass, Symphony__AddonsMobilityPathplannersFacade.class, "Symphony__AddonsMobilityPathplannersFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getPathPlannersFacade__CreateCircularExclusionZone__double_GroupNode(), this.getCircularExclusionZone(), "createCircularExclusionZone", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__AddonsMobilityPathplannersFacade__CreateCircularExclusionZone__double_GroupNode(), this.getCircularExclusionZone(), "createCircularExclusionZone", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "radius", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonTopologyPackage.getGroupNode(), "parent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 

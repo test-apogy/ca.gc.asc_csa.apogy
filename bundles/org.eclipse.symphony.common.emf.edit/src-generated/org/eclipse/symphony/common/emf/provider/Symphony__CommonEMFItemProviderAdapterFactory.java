@@ -86,30 +86,29 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.EMFEcoreFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EMFEcoreFacadeItemProvider emfEcoreFacadeItemProvider;
+	protected Symphony__CommonEMFFacadeItemProvider symphony__CommonEMFFacadeItemProvider;
 
-  /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.EMFEcoreFacade}.
+		/**
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEMFEcoreFacadeAdapter()
-  {
-		if (emfEcoreFacadeItemProvider == null) {
-			emfEcoreFacadeItemProvider = new EMFEcoreFacadeItemProvider(this);
+	@Override
+	public Adapter createSymphony__CommonEMFFacadeAdapter() {
+		if (symphony__CommonEMFFacadeItemProvider == null) {
+			symphony__CommonEMFFacadeItemProvider = new Symphony__CommonEMFFacadeItemProvider(this);
 		}
 
-		return emfEcoreFacadeItemProvider;
+		return symphony__CommonEMFFacadeItemProvider;
 	}
 
-  /**
+		/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.Server} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -548,7 +547,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	 */
   public void dispose()
   {
-		if (emfEcoreFacadeItemProvider != null) emfEcoreFacadeItemProvider.dispose();
+		if (symphony__CommonEMFFacadeItemProvider != null) symphony__CommonEMFFacadeItemProvider.dispose();
 		if (serverItemProvider != null) serverItemProvider.dispose();
 		if (startableItemProvider != null) startableItemProvider.dispose();
 		if (timeSourcesListItemProvider != null) timeSourcesListItemProvider.dispose();

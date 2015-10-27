@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.MathIO;
 import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
@@ -40,12 +40,6 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mathFacadeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass matrix3x3EClass = null;
 
 	/**
@@ -59,6 +53,13 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * @generated
 	 */
 	private EClass polynomialEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass symphony__CommonMathFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -318,95 +319,6 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMathFacade() {
-		return mathFacadeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMathFacade__CreateMatrix4x4__Matrix4d() {
-		return mathFacadeEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMathFacade__CreateMatrix3x3__Matrix3d() {
-		return mathFacadeEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMathFacade__CreateTuple3d__Tuple3d() {
-		return mathFacadeEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMathFacade__CreateTuple3d__double_double_double() {
-		return mathFacadeEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMathFacade__CreatePolynomial__double() {
-		return mathFacadeEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMathFacade__CreateIdentityMatrix4x4() {
-		return mathFacadeEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMathFacade__CreateIdentityMatrix3x3() {
-		return mathFacadeEClass.getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMathFacade__ExtractPosition__Matrix4x4() {
-		return mathFacadeEClass.getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMathFacade__ExtractOrientation__Matrix4x4() {
-		return mathFacadeEClass.getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getMatrix3x3() {
 		return matrix3x3EClass;
 	}
@@ -575,6 +487,96 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSymphony__CommonMathFacade() {
+		return symphony__CommonMathFacadeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonMathFacade__CreateMatrix4x4__Matrix4d() {
+		return symphony__CommonMathFacadeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonMathFacade__CreateMatrix3x3__Matrix3d() {
+		return symphony__CommonMathFacadeEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonMathFacade__CreateTuple3d__Tuple3d() {
+		return symphony__CommonMathFacadeEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonMathFacade__CreateTuple3d__double_double_double() {
+		return symphony__CommonMathFacadeEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonMathFacade__CreatePolynomial__double() {
+		return symphony__CommonMathFacadeEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonMathFacade__CreateIdentityMatrix4x4() {
+		return symphony__CommonMathFacadeEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonMathFacade__CreateIdentityMatrix3x3() {
+		return symphony__CommonMathFacadeEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonMathFacade__ExtractPosition__Matrix4x4() {
+		return symphony__CommonMathFacadeEClass.getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonMathFacade__ExtractOrientation__Matrix4x4() {
+		return symphony__CommonMathFacadeEClass.getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -724,16 +726,16 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 		createEAttribute(polynomialEClass, POLYNOMIAL__REAL_ROOTS);
 		createEAttribute(polynomialEClass, POLYNOMIAL__IMAGINARY_ROOTS);
 
-		mathFacadeEClass = createEClass(MATH_FACADE);
-		createEOperation(mathFacadeEClass, MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D);
-		createEOperation(mathFacadeEClass, MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D);
-		createEOperation(mathFacadeEClass, MATH_FACADE___CREATE_TUPLE3D__TUPLE3D);
-		createEOperation(mathFacadeEClass, MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(mathFacadeEClass, MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE);
-		createEOperation(mathFacadeEClass, MATH_FACADE___CREATE_IDENTITY_MATRIX4X4);
-		createEOperation(mathFacadeEClass, MATH_FACADE___CREATE_IDENTITY_MATRIX3X3);
-		createEOperation(mathFacadeEClass, MATH_FACADE___EXTRACT_POSITION__MATRIX4X4);
-		createEOperation(mathFacadeEClass, MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4);
+		symphony__CommonMathFacadeEClass = createEClass(SYMPHONY_COMMON_MATH_FACADE);
+		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___CREATE_MATRIX4X4__MATRIX4D);
+		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___CREATE_MATRIX3X3__MATRIX3D);
+		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___CREATE_TUPLE3D__TUPLE3D);
+		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___CREATE_TUPLE3D__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___CREATE_POLYNOMIAL__DOUBLE);
+		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX4X4);
+		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___CREATE_IDENTITY_MATRIX3X3);
+		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___EXTRACT_POSITION__MATRIX4X4);
+		createEOperation(symphony__CommonMathFacadeEClass, SYMPHONY_COMMON_MATH_FACADE___EXTRACT_ORIENTATION__MATRIX4X4);
 
 		mathIOEClass = createEClass(MATH_IO);
 		createEOperation(mathIOEClass, MATH_IO___READ_TR_MATRIX__STRING);
@@ -826,33 +828,33 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 		initEAttribute(getPolynomial_RealRoots(), this.getEDoubleArray(), "realRoots", null, 0, 1, Polynomial.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPolynomial_ImaginaryRoots(), this.getEDoubleArray(), "imaginaryRoots", null, 0, 1, Polynomial.class, IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(mathFacadeEClass, MathFacade.class, "MathFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CommonMathFacadeEClass, Symphony__CommonMathFacade.class, "Symphony__CommonMathFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getMathFacade__CreateMatrix4x4__Matrix4d(), this.getMatrix4x4(), "createMatrix4x4", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getSymphony__CommonMathFacade__CreateMatrix4x4__Matrix4d(), this.getMatrix4x4(), "createMatrix4x4", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4d(), "matrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getMathFacade__CreateMatrix3x3__Matrix3d(), this.getMatrix3x3(), "createMatrix3x3", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonMathFacade__CreateMatrix3x3__Matrix3d(), this.getMatrix3x3(), "createMatrix3x3", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix3d(), "matrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getMathFacade__CreateTuple3d__Tuple3d(), this.getTuple3d(), "createTuple3d", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonMathFacade__CreateTuple3d__Tuple3d(), this.getTuple3d(), "createTuple3d", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVecmathTuple3d(), "tuple", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getMathFacade__CreateTuple3d__double_double_double(), this.getTuple3d(), "createTuple3d", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonMathFacade__CreateTuple3d__double_double_double(), this.getTuple3d(), "createTuple3d", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "y", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "z", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getMathFacade__CreatePolynomial__double(), this.getPolynomial(), "createPolynomial", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonMathFacade__CreatePolynomial__double(), this.getPolynomial(), "createPolynomial", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEDoubleArray(), "coeffs", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getMathFacade__CreateIdentityMatrix4x4(), this.getMatrix4x4(), "createIdentityMatrix4x4", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getSymphony__CommonMathFacade__CreateIdentityMatrix4x4(), this.getMatrix4x4(), "createIdentityMatrix4x4", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEOperation(getMathFacade__CreateIdentityMatrix3x3(), this.getMatrix3x3(), "createIdentityMatrix3x3", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getSymphony__CommonMathFacade__CreateIdentityMatrix3x3(), this.getMatrix3x3(), "createIdentityMatrix3x3", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getMathFacade__ExtractPosition__Matrix4x4(), this.getTuple3d(), "extractPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonMathFacade__ExtractPosition__Matrix4x4(), this.getTuple3d(), "extractPosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4x4(), "matrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getMathFacade__ExtractOrientation__Matrix4x4(), this.getTuple3d(), "extractOrientation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonMathFacade__ExtractOrientation__Matrix4x4(), this.getTuple3d(), "extractOrientation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4x4(), "matrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(mathIOEClass, MathIO.class, "MathIO", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -916,7 +918,7 @@ public class Symphony__CommonMathPackageImpl extends EPackageImpl implements Sym
 			 "documentation", "The coefficients of the polynomial, sorted in increasing order.\ncoeffs[n-1]*x^n-1 + coeffs[n-2]*x^n-2 + ... + coeffs[0].\n\nFor instance: polynomial 3*x^2 + 5*x + 2, the coefficients would be:\ncoeffs = { 2, 5, 3 }."
 		   });	
 		addAnnotation
-		  (getMathFacade__CreatePolynomial__double(), 
+		  (getSymphony__CommonMathFacade__CreatePolynomial__double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "@param coeffs The coefficients of the polynomial, sorted in increasing order.\\ncoeffs[n-1]*x^n-1 + coeffs[n-2]*x^n-2 + ... + coeffs[0]"

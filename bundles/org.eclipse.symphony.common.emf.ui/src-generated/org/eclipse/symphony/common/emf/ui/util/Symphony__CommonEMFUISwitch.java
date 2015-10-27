@@ -5,7 +5,7 @@ package org.eclipse.symphony.common.emf.ui.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
+import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade;
 import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage;
 
 /**
@@ -69,9 +69,9 @@ public class Symphony__CommonEMFUISwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__CommonEMFUIPackage.EMF_ECORE_UI_FACADE: {
-				EMFEcoreUIFacade emfEcoreUIFacade = (EMFEcoreUIFacade)theEObject;
-				T result = caseEMFEcoreUIFacade(emfEcoreUIFacade);
+			case Symphony__CommonEMFUIPackage.SYMPHONY_COMMON_EMFUI_FACADE: {
+				Symphony__CommonEMFUIFacade symphony__CommonEMFUIFacade = (Symphony__CommonEMFUIFacade)theEObject;
+				T result = caseSymphony__CommonEMFUIFacade(symphony__CommonEMFUIFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -80,22 +80,21 @@ public class Symphony__CommonEMFUISwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>EMF Ecore UI Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EMF Ecore UI Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseEMFEcoreUIFacade(EMFEcoreUIFacade object)
-  {
+	public T caseSymphony__CommonEMFUIFacade(Symphony__CommonEMFUIFacade object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

@@ -124,8 +124,8 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 				return createOrbitModelAdapter();
 			}
 			@Override
-			public Adapter caseOrbitFacade(OrbitFacade object) {
-				return createOrbitFacadeAdapter();
+			public Adapter caseSymphony__CoreEnvironmentOrbitFacade(Symphony__CoreEnvironmentOrbitFacade object) {
+				return createSymphony__CoreEnvironmentOrbitFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNamed(Named object) {
@@ -354,16 +354,16 @@ public class Symphony__CoreEnvironmentOrbitAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.OrbitFacade <em>Orbit Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.OrbitFacade
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade
 	 * @generated
 	 */
-	public Adapter createOrbitFacadeAdapter() {
+	public Adapter createSymphony__CoreEnvironmentOrbitFacadeAdapter() {
 		return null;
 	}
 

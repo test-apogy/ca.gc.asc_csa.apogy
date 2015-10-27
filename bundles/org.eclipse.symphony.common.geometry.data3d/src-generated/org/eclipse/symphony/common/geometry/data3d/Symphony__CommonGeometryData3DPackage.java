@@ -3449,23 +3449,23 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int POSITION_MARKER_OPERATION_COUNT = CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.Data3dFacadeImpl <em>Data3d Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Data3dFacadeImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getData3dFacade()
+	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DFacadeImpl
+	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSymphony__CommonGeometryData3DFacade()
 	 * @generated
 	 */
-	int DATA3D_FACADE = 46;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE = 46;
 
 	/**
-	 * The number of structural features of the '<em>Data3d Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Position Coordinates</em>' operation.
@@ -3474,7 +3474,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 0;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 0;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Orientation Coordinates</em>' operation.
@@ -3483,7 +3483,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 1;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 1;
 
 	/**
 	 * The operation id for the '<em>Create Spherical Coordinates</em>' operation.
@@ -3492,7 +3492,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 2;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE = 2;
 
 	/**
 	 * The operation id for the '<em>Create Pose</em>' operation.
@@ -3501,7 +3501,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = 3;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = 3;
 
 	/**
 	 * The operation id for the '<em>Create Pose</em>' operation.
@@ -3510,7 +3510,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_POSE__POSE = 4;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__POSE = 4;
 
 	/**
 	 * The operation id for the '<em>Create Pose</em>' operation.
@@ -3519,7 +3519,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES = 5;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES = 5;
 
 	/**
 	 * The operation id for the '<em>Create Point Normal Locator</em>' operation.
@@ -3528,7 +3528,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_POINT_NORMAL_LOCATOR__NORMALPOINTCLOUD = 6;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POINT_NORMAL_LOCATOR__NORMALPOINTCLOUD = 6;
 
 	/**
 	 * The operation id for the '<em>Create Digital Elevation Map</em>' operation.
@@ -3537,7 +3537,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET = 7;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET = 7;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Polygon</em>' operation.
@@ -3546,7 +3546,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 8;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 8;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Position Coordinates</em>' operation.
@@ -3555,7 +3555,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES = 9;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES = 9;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Orientation Coordinates</em>' operation.
@@ -3564,7 +3564,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES = 10;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES = 10;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
@@ -3573,7 +3573,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH = 11;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH = 11;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangle</em>' operation.
@@ -3582,7 +3582,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 12;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 12;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangle</em>' operation.
@@ -3591,7 +3591,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON = 13;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON = 13;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
@@ -3600,7 +3600,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST = 14;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST = 14;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
@@ -3609,7 +3609,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH = 15;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH = 15;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangular Mesh</em>' operation.
@@ -3618,7 +3618,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST = 16;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST = 16;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangular Mesh</em>' operation.
@@ -3627,7 +3627,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH = 17;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH = 17;
 
 	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
@@ -3636,7 +3636,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D = 18;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D = 18;
 
 	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
@@ -3645,7 +3645,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___APPLY_TRANSFORM__LIST_MATRIX4D = 19;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D = 19;
 
 	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
@@ -3654,7 +3654,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D = 20;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D = 20;
 
 	/**
 	 * The operation id for the '<em>Apply Transform Int</em>' operation.
@@ -3663,7 +3663,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___APPLY_TRANSFORM_INT__CARTESIANTRIANGULARMESH_MATRIX4D = 21;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM_INT__CARTESIANTRIANGULARMESH_MATRIX4D = 21;
 
 	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
@@ -3672,7 +3672,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D = 22;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D = 22;
 
 	/**
 	 * The operation id for the '<em>Update Cartesian Coordinates Set</em>' operation.
@@ -3681,7 +3681,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE = 23;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE = 23;
 
 	/**
 	 * The operation id for the '<em>Concatenate Triangular Meshes</em>' operation.
@@ -3690,16 +3690,16 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE___CONCATENATE_TRIANGULAR_MESHES__ELIST = 24;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__ELIST = 24;
 
 	/**
-	 * The number of operations of the '<em>Data3d Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3D_FACADE_OPERATION_COUNT = 25;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE_OPERATION_COUNT = 25;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.Data3DIOImpl <em>Data3 DIO</em>}' class.
@@ -5531,264 +5531,264 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	EAttribute getPositionMarker_Identifier();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade <em>Data3d Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Data3d Facade</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade
 	 * @generated
 	 */
-	EClass getData3dFacade();
+	EClass getSymphony__CommonGeometryData3DFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianPositionCoordinates(double, double, double) <em>Create Cartesian Position Coordinates</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPositionCoordinates(double, double, double) <em>Create Cartesian Position Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Position Coordinates</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianPositionCoordinates(double, double, double)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPositionCoordinates(double, double, double)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreateCartesianPositionCoordinates__double_double_double();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianPositionCoordinates__double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianOrientationCoordinates(double, double, double) <em>Create Cartesian Orientation Coordinates</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianOrientationCoordinates(double, double, double) <em>Create Cartesian Orientation Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Orientation Coordinates</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianOrientationCoordinates(double, double, double)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianOrientationCoordinates(double, double, double)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreateCartesianOrientationCoordinates__double_double_double();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createSphericalCoordinates(double, double, double) <em>Create Spherical Coordinates</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createSphericalCoordinates(double, double, double) <em>Create Spherical Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Spherical Coordinates</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createSphericalCoordinates(double, double, double)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createSphericalCoordinates(double, double, double)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreateSphericalCoordinates__double_double_double();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreateSphericalCoordinates__double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createPose(double, double, double, double, double, double) <em>Create Pose</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(double, double, double, double, double, double) <em>Create Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Pose</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createPose(double, double, double, double, double, double)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(double, double, double, double, double, double)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreatePose__double_double_double_double_double_double();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreatePose__double_double_double_double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createPose(org.eclipse.symphony.common.geometry.data3d.Pose) <em>Create Pose</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(org.eclipse.symphony.common.geometry.data3d.Pose) <em>Create Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Pose</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createPose(org.eclipse.symphony.common.geometry.data3d.Pose)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(org.eclipse.symphony.common.geometry.data3d.Pose)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreatePose__Pose();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreatePose__Pose();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createPose(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Pose</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Pose</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Pose</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createPose(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPose(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createPointNormalLocator(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud) <em>Create Point Normal Locator</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPointNormalLocator(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud) <em>Create Point Normal Locator</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Point Normal Locator</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createPointNormalLocator(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPointNormalLocator(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreatePointNormalLocator__NormalPointCloud();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreatePointNormalLocator__NormalPointCloud();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createDigitalElevationMap(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet) <em>Create Digital Elevation Map</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createDigitalElevationMap(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet) <em>Create Digital Elevation Map</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Digital Elevation Map</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createDigitalElevationMap(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createDigitalElevationMap(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreateDigitalElevationMap__CartesianCoordinatesSet();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreateDigitalElevationMap__CartesianCoordinatesSet();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianPolygon(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Polygon</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPolygon(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Polygon</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Polygon</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianPolygon(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPolygon(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianPositionCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Position Coordinates</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPositionCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Position Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Position Coordinates</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianPositionCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianPositionCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianOrientationCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Cartesian Orientation Coordinates</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianOrientationCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates) <em>Create Cartesian Orientation Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Orientation Coordinates</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianOrientationCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianOrientationCoordinates(org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh) <em>Create Cartesian Coordinates Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh) <em>Create Cartesian Coordinates Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Triangle</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Create Cartesian Triangle</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Triangle</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPolygon) <em>Create Cartesian Triangle</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPolygon) <em>Create Cartesian Triangle</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Triangle</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPolygon)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangle(org.eclipse.symphony.common.geometry.data3d.CartesianPolygon)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreateCartesianTriangle__CartesianPolygon();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPolygon();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianCoordinatesMesh(java.util.List) <em>Create Cartesian Coordinates Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(java.util.List) <em>Create Cartesian Coordinates Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianCoordinatesMesh(java.util.List)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(java.util.List)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreateCartesianCoordinatesMesh__List();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Coordinates Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Coordinates Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianCoordinatesMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianTriangularMesh(java.util.List) <em>Create Cartesian Triangular Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangularMesh(java.util.List) <em>Create Cartesian Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Triangular Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianTriangularMesh(java.util.List)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangularMesh(java.util.List)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreateCartesianTriangularMesh__List();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Triangular Mesh</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh) <em>Create Cartesian Triangular Mesh</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Triangular Mesh</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#createCartesianTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createCartesianTriangularMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh)
 	 * @generated
 	 */
-	EOperation getData3dFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh();
+	EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Transform</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, javax.vecmath.Matrix4d)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, javax.vecmath.Matrix4d)
 	 * @generated
 	 */
-	EOperation getData3dFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d();
+	EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#applyTransform(java.util.List, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(java.util.List, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Transform</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#applyTransform(java.util.List, javax.vecmath.Matrix4d)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(java.util.List, javax.vecmath.Matrix4d)
 	 * @generated
 	 */
-	EOperation getData3dFacade__ApplyTransform__List_Matrix4d();
+	EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__List_Matrix4d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Transform</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
 	 * @generated
 	 */
-	EOperation getData3dFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d();
+	EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#applyTransformInt(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Apply Transform Int</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransformInt(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Apply Transform Int</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Transform Int</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#applyTransformInt(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransformInt(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
 	 * @generated
 	 */
-	EOperation getData3dFacade__ApplyTransformInt__CartesianTriangularMesh_Matrix4d();
+	EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransformInt__CartesianTriangularMesh_Matrix4d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Transform</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d)
 	 * @generated
 	 */
-	EOperation getData3dFacade__ApplyTransform__NormalPointCloud_Matrix4d();
+	EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__NormalPointCloud_Matrix4d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#updateCartesianCoordinatesSet(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, double[][]) <em>Update Cartesian Coordinates Set</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#updateCartesianCoordinatesSet(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, double[][]) <em>Update Cartesian Coordinates Set</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Update Cartesian Coordinates Set</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#updateCartesianCoordinatesSet(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, double[][])
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#updateCartesianCoordinatesSet(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet, double[][])
 	 * @generated
 	 */
-	EOperation getData3dFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double();
+	EOperation getSymphony__CommonGeometryData3DFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade#concatenateTriangularMeshes(org.eclipse.emf.common.util.EList) <em>Concatenate Triangular Meshes</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#concatenateTriangularMeshes(org.eclipse.emf.common.util.EList) <em>Concatenate Triangular Meshes</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Concatenate Triangular Meshes</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade#concatenateTriangularMeshes(org.eclipse.emf.common.util.EList)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#concatenateTriangularMeshes(org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getData3dFacade__ConcatenateTriangularMeshes__EList();
+	EOperation getSymphony__CommonGeometryData3DFacade__ConcatenateTriangularMeshes__EList();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO <em>Data3 DIO</em>}'.
@@ -7407,14 +7407,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EAttribute POSITION_MARKER__IDENTIFIER = eINSTANCE.getPositionMarker_Identifier();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.Data3dFacadeImpl <em>Data3d Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Data3dFacadeImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getData3dFacade()
+		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DFacadeImpl
+		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSymphony__CommonGeometryData3DFacade()
 		 * @generated
 		 */
-		EClass DATA3D_FACADE = eINSTANCE.getData3dFacade();
+		EClass SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE = eINSTANCE.getSymphony__CommonGeometryData3DFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Position Coordinates</b></em>' operation.
@@ -7422,7 +7422,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getData3dFacade__CreateCartesianPositionCoordinates__double_double_double();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianPositionCoordinates__double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Orientation Coordinates</b></em>' operation.
@@ -7430,7 +7430,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getData3dFacade__CreateCartesianOrientationCoordinates__double_double_double();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Spherical Coordinates</b></em>' operation.
@@ -7438,7 +7438,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getData3dFacade__CreateSphericalCoordinates__double_double_double();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateSphericalCoordinates__double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Pose</b></em>' operation.
@@ -7446,7 +7446,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getData3dFacade__CreatePose__double_double_double_double_double_double();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreatePose__double_double_double_double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Pose</b></em>' operation.
@@ -7454,7 +7454,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_POSE__POSE = eINSTANCE.getData3dFacade__CreatePose__Pose();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__POSE = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreatePose__Pose();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Pose</b></em>' operation.
@@ -7462,7 +7462,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES = eINSTANCE.getData3dFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Point Normal Locator</b></em>' operation.
@@ -7470,7 +7470,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_POINT_NORMAL_LOCATOR__NORMALPOINTCLOUD = eINSTANCE.getData3dFacade__CreatePointNormalLocator__NormalPointCloud();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POINT_NORMAL_LOCATOR__NORMALPOINTCLOUD = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreatePointNormalLocator__NormalPointCloud();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Digital Elevation Map</b></em>' operation.
@@ -7478,7 +7478,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET = eINSTANCE.getData3dFacade__CreateDigitalElevationMap__CartesianCoordinatesSet();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateDigitalElevationMap__CartesianCoordinatesSet();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Polygon</b></em>' operation.
@@ -7486,7 +7486,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = eINSTANCE.getData3dFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Position Coordinates</b></em>' operation.
@@ -7494,7 +7494,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES = eINSTANCE.getData3dFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Orientation Coordinates</b></em>' operation.
@@ -7502,7 +7502,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES = eINSTANCE.getData3dFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Coordinates Mesh</b></em>' operation.
@@ -7510,7 +7510,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH = eINSTANCE.getData3dFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Triangle</b></em>' operation.
@@ -7518,7 +7518,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = eINSTANCE.getData3dFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Triangle</b></em>' operation.
@@ -7526,7 +7526,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON = eINSTANCE.getData3dFacade__CreateCartesianTriangle__CartesianPolygon();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPolygon();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Coordinates Mesh</b></em>' operation.
@@ -7534,7 +7534,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST = eINSTANCE.getData3dFacade__CreateCartesianCoordinatesMesh__List();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__List();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Coordinates Mesh</b></em>' operation.
@@ -7542,7 +7542,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH = eINSTANCE.getData3dFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Triangular Mesh</b></em>' operation.
@@ -7550,7 +7550,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST = eINSTANCE.getData3dFacade__CreateCartesianTriangularMesh__List();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__List();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Triangular Mesh</b></em>' operation.
@@ -7558,7 +7558,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH = eINSTANCE.getData3dFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh();
 
 		/**
 		 * The meta object literal for the '<em><b>Apply Transform</b></em>' operation.
@@ -7566,7 +7566,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D = eINSTANCE.getData3dFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d();
 
 		/**
 		 * The meta object literal for the '<em><b>Apply Transform</b></em>' operation.
@@ -7574,7 +7574,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___APPLY_TRANSFORM__LIST_MATRIX4D = eINSTANCE.getData3dFacade__ApplyTransform__List_Matrix4d();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ApplyTransform__List_Matrix4d();
 
 		/**
 		 * The meta object literal for the '<em><b>Apply Transform</b></em>' operation.
@@ -7582,7 +7582,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D = eINSTANCE.getData3dFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d();
 
 		/**
 		 * The meta object literal for the '<em><b>Apply Transform Int</b></em>' operation.
@@ -7590,7 +7590,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___APPLY_TRANSFORM_INT__CARTESIANTRIANGULARMESH_MATRIX4D = eINSTANCE.getData3dFacade__ApplyTransformInt__CartesianTriangularMesh_Matrix4d();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM_INT__CARTESIANTRIANGULARMESH_MATRIX4D = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ApplyTransformInt__CartesianTriangularMesh_Matrix4d();
 
 		/**
 		 * The meta object literal for the '<em><b>Apply Transform</b></em>' operation.
@@ -7598,7 +7598,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D = eINSTANCE.getData3dFacade__ApplyTransform__NormalPointCloud_Matrix4d();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ApplyTransform__NormalPointCloud_Matrix4d();
 
 		/**
 		 * The meta object literal for the '<em><b>Update Cartesian Coordinates Set</b></em>' operation.
@@ -7606,7 +7606,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE = eINSTANCE.getData3dFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE = eINSTANCE.getSymphony__CommonGeometryData3DFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Concatenate Triangular Meshes</b></em>' operation.
@@ -7614,7 +7614,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA3D_FACADE___CONCATENATE_TRIANGULAR_MESHES__ELIST = eINSTANCE.getData3dFacade__ConcatenateTriangularMeshes__EList();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__ELIST = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ConcatenateTriangularMeshes__EList();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.Data3DIOImpl <em>Data3 DIO</em>}' class.

@@ -71,7 +71,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesFactoryImpl extends EFactor
 			case Symphony__CommonTopologyAddonsPrimitivesPackage.DIRECTIONAL_LIGHT: return createDirectionalLight();
 			case Symphony__CommonTopologyAddonsPrimitivesPackage.POINT_LIGHT: return createPointLight();
 			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT: return createSpotLight();
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE: return createPrimitivesFacade();
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE: return createSymphony__CommonTopologyAddonsPrimitivesFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -216,9 +216,9 @@ public class Symphony__CommonTopologyAddonsPrimitivesFactoryImpl extends EFactor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrimitivesFacade createPrimitivesFacade() {
-		PrimitivesFacadeImpl primitivesFacade = new PrimitivesFacadeImpl();
-		return primitivesFacade;
+	public Symphony__CommonTopologyAddonsPrimitivesFacade createSymphony__CommonTopologyAddonsPrimitivesFacade() {
+		Symphony__CommonTopologyAddonsPrimitivesFacadeImpl symphony__CommonTopologyAddonsPrimitivesFacade = new Symphony__CommonTopologyAddonsPrimitivesFacadeImpl();
+		return symphony__CommonTopologyAddonsPrimitivesFacade;
 	}
 
 	/**

@@ -35,7 +35,7 @@ import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 import org.eclipse.symphony.core.environment.ui.Activator;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
 import org.eclipse.symphony.core.environment.ui.MapAnnotation;
 import org.eclipse.symphony.core.environment.ui.MapTool;
 import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
@@ -665,7 +665,7 @@ public class MapComposite extends Composite
 			try
 			{		
 				// Gets the sub image that falls within the zoom rectangle.
-				AbstractEImage zoomedImage = EnvironmentUiFacade.INSTANCE.getImageMapLayerPresentationImage(getMapViewConfiguration(), mapExtent, (int) getMaximumImageSize());
+				AbstractEImage zoomedImage = Symphony__CoreEnvironmentUIFacade.INSTANCE.getImageMapLayerPresentationImage(getMapViewConfiguration(), mapExtent, (int) getMaximumImageSize());
 								
 				// Update tick size.				
 				double tickSize = getTickSize(mapExtent.getXDimension());				

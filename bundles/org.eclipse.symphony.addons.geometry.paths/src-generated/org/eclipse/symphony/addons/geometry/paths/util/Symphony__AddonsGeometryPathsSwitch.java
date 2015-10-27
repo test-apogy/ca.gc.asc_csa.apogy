@@ -158,9 +158,9 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsGeometryPathsPackage.PATHS_FACADE: {
-				PathsFacade pathsFacade = (PathsFacade)theEObject;
-				T1 result = casePathsFacade(pathsFacade);
+			case Symphony__AddonsGeometryPathsPackage.SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE: {
+				Symphony__AddonsGeometryPathsFacade symphony__AddonsGeometryPathsFacade = (Symphony__AddonsGeometryPathsFacade)theEObject;
+				T1 result = caseSymphony__AddonsGeometryPathsFacade(symphony__AddonsGeometryPathsFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -304,17 +304,17 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Paths Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Paths Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 casePathsFacade(PathsFacade object) {
+	public T1 caseSymphony__AddonsGeometryPathsFacade(Symphony__AddonsGeometryPathsFacade object) {
 		return null;
 	}
 

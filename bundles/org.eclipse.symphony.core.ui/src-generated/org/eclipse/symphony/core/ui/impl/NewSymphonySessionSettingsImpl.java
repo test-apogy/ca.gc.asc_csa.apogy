@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
 import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 
 /**
@@ -321,8 +321,8 @@ public class NewSymphonySessionSettingsImpl extends MinimalEObjectImpl.Container
 	 */
 	public String getDefaultFilename(IContainer resourceContainer) {
 		// Make up a unique new name here.
-		String defaultModelBaseFilename = SymphonyCoreUiFacade.INSTANCE.getDefaultSymphonySessionFilename();
-		String defaultModelFilenameExtension = SymphonyCoreUiFacade.INSTANCE.getDefaultSymphonySessionFilenameExtension();
+		String defaultModelBaseFilename = Symphony__CoreUIFacade.INSTANCE.getDefaultSymphonySessionFilename();
+		String defaultModelFilenameExtension = Symphony__CoreUIFacade.INSTANCE.getDefaultSymphonySessionFilenameExtension();
 
 		String modelFilename = defaultModelBaseFilename + "."
 				+ defaultModelFilenameExtension;

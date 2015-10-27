@@ -118,8 +118,8 @@ public class Symphony__AddonsSensorsPoseAdapterFactory extends AdapterFactoryImp
 				return createCSVDataLoggerAdapter();
 			}
 			@Override
-			public Adapter casePoseFacade(PoseFacade object) {
-				return createPoseFacadeAdapter();
+			public Adapter caseSymphony__AddonsSensorsPoseFacade(Symphony__AddonsSensorsPoseFacade object) {
+				return createSymphony__AddonsSensorsPoseFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
@@ -310,16 +310,16 @@ public class Symphony__AddonsSensorsPoseAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.pose.PoseFacade <em>Pose Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PoseFacade
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade
 	 * @generated
 	 */
-	public Adapter createPoseFacadeAdapter() {
+	public Adapter createSymphony__AddonsSensorsPoseFacadeAdapter() {
 		return null;
 	}
 

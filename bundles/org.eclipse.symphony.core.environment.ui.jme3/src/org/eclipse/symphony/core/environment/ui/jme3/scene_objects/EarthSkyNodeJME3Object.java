@@ -18,7 +18,7 @@ import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.JME3PrimitivesUtilities;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
@@ -27,7 +27,7 @@ import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 import org.eclipse.symphony.core.environment.EarthSky;
 import org.eclipse.symphony.core.environment.EarthSkyNode;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities;
+import org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities;
 import org.eclipse.symphony.core.environment.ui.jme3.Activator;
 import org.eclipse.symphony.core.environment.ui.jme3.preferences.SymphonyEnvironmentUIJME3PreferencesConstants;
 
@@ -332,7 +332,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 	{
 		// Computes Sun Visibility
 		TransformNode sunTranformNode = (TransformNode) earthSky.getSun().getParent();		
-		Matrix4d mSun = TopologyFacade.INSTANCE.expressNodeInRootFrame(sunTranformNode);		
+		Matrix4d mSun = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(sunTranformNode);		
 		Vector3d vSun = new Vector3d();
 		mSun.get(vSun);
 		vSun.normalize();
@@ -348,7 +348,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 		
 		// Computes Moon Visibility
 		TransformNode moonTranformNode = (TransformNode) earthSky.getMoon().getParent();		
-		Matrix4d mMoon = TopologyFacade.INSTANCE.expressNodeInRootFrame(moonTranformNode);		
+		Matrix4d mMoon = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(moonTranformNode);		
 		Vector3d vMoon = new Vector3d();
 		mMoon.get(vMoon);
 		vMoon.normalize();
@@ -609,7 +609,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 	private Material createAtmosphereMaterial()
 	{		
 		Material mat = new Material(assetManager, "Common/MatDefs/Misc/Unshaded.j3md");		
-		ColorRGBA atmosphereColor = JME3Utilities.convertToColorRGBA(EnvironmentUiUtilities.DAY_SKY_COLOR);
+		ColorRGBA atmosphereColor = JME3Utilities.convertToColorRGBA(EnvironmentUIUtilities.DAY_SKY_COLOR);
 		mat.setColor("Color", atmosphereColor);				
 		mat.getAdditionalRenderState().setBlendMode(BlendMode.Alpha);				
 		mat.getAdditionalRenderState().setFaceCullMode(FaceCullMode.Off);		
@@ -729,7 +729,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 	private void updateSunLight()
 	{
 		TransformNode sunTranformNode = (TransformNode) earthSky.getSun().getParent();		
-		Matrix4d m = TopologyFacade.INSTANCE.expressNodeInRootFrame(sunTranformNode);
+		Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(sunTranformNode);
 		
 		Vector3d v = new Vector3d();
 		m.get(v);
@@ -760,7 +760,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 		
 		if(isSunVisible())
 		{					
-			sunColor = JME3Utilities.convertToColorRGBA(EnvironmentUiUtilities.INSTANCE.getSunLightColor(sunAltitude));
+			sunColor = JME3Utilities.convertToColorRGBA(EnvironmentUIUtilities.INSTANCE.getSunLightColor(sunAltitude));
 		}
 		else
 		{
@@ -805,7 +805,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 	{
 		TransformNode moonTranformNode = (TransformNode) earthSky.getMoon().getParent();
 		
-		Matrix4d m = TopologyFacade.INSTANCE.expressNodeInRootFrame(moonTranformNode);
+		Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(moonTranformNode);
 		
 		Vector3d v = new Vector3d();
 		m.get(v);
@@ -864,7 +864,7 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 			
 			if(isMoonVisible())
 			{			
-				moonColor = JME3Utilities.convertToColorRGBA(EnvironmentUiUtilities.INSTANCE.getSunLightColor(moonAltitude));
+				moonColor = JME3Utilities.convertToColorRGBA(EnvironmentUIUtilities.INSTANCE.getSunLightColor(moonAltitude));
 			}
 			else
 			{
@@ -908,8 +908,8 @@ public class EarthSkyNodeJME3Object extends DefaultJME3SceneObject<EarthSkyNode>
 	 * --------------------------------------------------------------------------------------------------------------*/	
 	private void updateAtmosphere()
 	{		
-		float atmosphereTransparency = (float) EnvironmentUiUtilities.INSTANCE.getSkyTransparency(earthSky.getSunHorizontalCoordinates().getAltitude());										
-		Color3f skyColor = EnvironmentUiUtilities.INSTANCE.getSkyColor(earthSky.getSunHorizontalCoordinates().getAltitude());
+		float atmosphereTransparency = (float) EnvironmentUIUtilities.INSTANCE.getSkyTransparency(earthSky.getSunHorizontalCoordinates().getAltitude());										
+		Color3f skyColor = EnvironmentUIUtilities.INSTANCE.getSkyColor(earthSky.getSunHorizontalCoordinates().getAltitude());
 		ColorRGBA atmosphereColor = new ColorRGBA(skyColor.x, skyColor.y, skyColor.z, 1.0f - atmosphereTransparency);		
 		getAtmosphere().getMaterial().setColor("Color", atmosphereColor);		
 	}

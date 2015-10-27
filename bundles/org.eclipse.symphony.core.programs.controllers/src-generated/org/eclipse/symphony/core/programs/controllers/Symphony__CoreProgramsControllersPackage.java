@@ -64,23 +64,23 @@ public interface Symphony__CoreProgramsControllersPackage extends EPackage {
 	Symphony__CoreProgramsControllersPackage eINSTANCE = org.eclipse.symphony.core.programs.controllers.impl.Symphony__CoreProgramsControllersPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerFacadeImpl <em>Controller Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.core.programs.controllers.impl.Symphony__CoreProgramsControllersFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.programs.controllers.impl.ControllerFacadeImpl
-	 * @see org.eclipse.symphony.core.programs.controllers.impl.Symphony__CoreProgramsControllersPackageImpl#getControllerFacade()
+	 * @see org.eclipse.symphony.core.programs.controllers.impl.Symphony__CoreProgramsControllersFacadeImpl
+	 * @see org.eclipse.symphony.core.programs.controllers.impl.Symphony__CoreProgramsControllersPackageImpl#getSymphony__CoreProgramsControllersFacade()
 	 * @generated
 	 */
-	int CONTROLLER_FACADE = 0;
+	int SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE = 0;
 
 	/**
-	 * The number of structural features of the '<em>Controller Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Value</em>' operation.
@@ -89,7 +89,7 @@ public interface Symphony__CoreProgramsControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_FACADE___CREATE_VALUE__EPARAMETER_FLOAT = 0;
+	int SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_VALUE__EPARAMETER_FLOAT = 0;
 
 	/**
 	 * The operation id for the '<em>Sort Custom Input Conditioning Point</em>' operation.
@@ -98,7 +98,7 @@ public interface Symphony__CoreProgramsControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_FACADE___SORT_CUSTOM_INPUT_CONDITIONING_POINT__LIST = 1;
+	int SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE___SORT_CUSTOM_INPUT_CONDITIONING_POINT__LIST = 1;
 
 	/**
 	 * The operation id for the '<em>Create Custom Input Conditioning Point</em>' operation.
@@ -107,16 +107,16 @@ public interface Symphony__CoreProgramsControllersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE = 2;
+	int SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE = 2;
 
 	/**
-	 * The number of operations of the '<em>Controller Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_FACADE_OPERATION_COUNT = 3;
+	int SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.programs.controllers.impl.ControllersConfigurationImpl <em>Controllers Configuration</em>}' class.
@@ -1474,44 +1474,44 @@ public interface Symphony__CoreProgramsControllersPackage extends EPackage {
 
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.programs.controllers.ControllerFacade <em>Controller Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Controller Facade</em>'.
-	 * @see org.eclipse.symphony.core.programs.controllers.ControllerFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade
 	 * @generated
 	 */
-	EClass getControllerFacade();
+	EClass getSymphony__CoreProgramsControllersFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.controllers.ControllerFacade#createValue(org.eclipse.emf.ecore.EParameter, float) <em>Create Value</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade#createValue(org.eclipse.emf.ecore.EParameter, float) <em>Create Value</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Value</em>' operation.
-	 * @see org.eclipse.symphony.core.programs.controllers.ControllerFacade#createValue(org.eclipse.emf.ecore.EParameter, float)
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade#createValue(org.eclipse.emf.ecore.EParameter, float)
 	 * @generated
 	 */
-	EOperation getControllerFacade__CreateValue__EParameter_float();
+	EOperation getSymphony__CoreProgramsControllersFacade__CreateValue__EParameter_float();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.controllers.ControllerFacade#sortCustomInputConditioningPoint(java.util.List) <em>Sort Custom Input Conditioning Point</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade#sortCustomInputConditioningPoint(java.util.List) <em>Sort Custom Input Conditioning Point</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Sort Custom Input Conditioning Point</em>' operation.
-	 * @see org.eclipse.symphony.core.programs.controllers.ControllerFacade#sortCustomInputConditioningPoint(java.util.List)
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade#sortCustomInputConditioningPoint(java.util.List)
 	 * @generated
 	 */
-	EOperation getControllerFacade__SortCustomInputConditioningPoint__List();
+	EOperation getSymphony__CoreProgramsControllersFacade__SortCustomInputConditioningPoint__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.controllers.ControllerFacade#createCustomInputConditioningPoint(double, double) <em>Create Custom Input Conditioning Point</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade#createCustomInputConditioningPoint(double, double) <em>Create Custom Input Conditioning Point</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Custom Input Conditioning Point</em>' operation.
-	 * @see org.eclipse.symphony.core.programs.controllers.ControllerFacade#createCustomInputConditioningPoint(double, double)
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade#createCustomInputConditioningPoint(double, double)
 	 * @generated
 	 */
-	EOperation getControllerFacade__CreateCustomInputConditioningPoint__double_double();
+	EOperation getSymphony__CoreProgramsControllersFacade__CreateCustomInputConditioningPoint__double_double();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.core.programs.controllers.ControllersConfiguration <em>Controllers Configuration</em>}'.
@@ -2097,14 +2097,14 @@ public interface Symphony__CoreProgramsControllersPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.programs.controllers.impl.ControllerFacadeImpl <em>Controller Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.core.programs.controllers.impl.Symphony__CoreProgramsControllersFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.programs.controllers.impl.ControllerFacadeImpl
-		 * @see org.eclipse.symphony.core.programs.controllers.impl.Symphony__CoreProgramsControllersPackageImpl#getControllerFacade()
+		 * @see org.eclipse.symphony.core.programs.controllers.impl.Symphony__CoreProgramsControllersFacadeImpl
+		 * @see org.eclipse.symphony.core.programs.controllers.impl.Symphony__CoreProgramsControllersPackageImpl#getSymphony__CoreProgramsControllersFacade()
 		 * @generated
 		 */
-		EClass CONTROLLER_FACADE = eINSTANCE.getControllerFacade();
+		EClass SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE = eINSTANCE.getSymphony__CoreProgramsControllersFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Value</b></em>' operation.
@@ -2112,7 +2112,7 @@ public interface Symphony__CoreProgramsControllersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLLER_FACADE___CREATE_VALUE__EPARAMETER_FLOAT = eINSTANCE.getControllerFacade__CreateValue__EParameter_float();
+		EOperation SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_VALUE__EPARAMETER_FLOAT = eINSTANCE.getSymphony__CoreProgramsControllersFacade__CreateValue__EParameter_float();
 
 		/**
 		 * The meta object literal for the '<em><b>Sort Custom Input Conditioning Point</b></em>' operation.
@@ -2120,7 +2120,7 @@ public interface Symphony__CoreProgramsControllersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLLER_FACADE___SORT_CUSTOM_INPUT_CONDITIONING_POINT__LIST = eINSTANCE.getControllerFacade__SortCustomInputConditioningPoint__List();
+		EOperation SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE___SORT_CUSTOM_INPUT_CONDITIONING_POINT__LIST = eINSTANCE.getSymphony__CoreProgramsControllersFacade__SortCustomInputConditioningPoint__List();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Custom Input Conditioning Point</b></em>' operation.
@@ -2128,7 +2128,7 @@ public interface Symphony__CoreProgramsControllersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation CONTROLLER_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE = eINSTANCE.getControllerFacade__CreateCustomInputConditioningPoint__double_double();
+		EOperation SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE = eINSTANCE.getSymphony__CoreProgramsControllersFacade__CreateCustomInputConditioningPoint__double_double();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.core.programs.controllers.impl.ControllersConfigurationImpl <em>Controllers Configuration</em>}' class.

@@ -118,7 +118,7 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER: return createVoxelBased3DPointCloudResampler();
 			case Symphony__CommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER: return createRigidBodyPoseTracker();
 			case Symphony__CommonGeometryData3DPackage.POSITION_MARKER: return createPositionMarker();
-			case Symphony__CommonGeometryData3DPackage.DATA3D_FACADE: return createData3dFacade();
+			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE: return createSymphony__CommonGeometryData3DFacade();
 			case Symphony__CommonGeometryData3DPackage.DATA3_DIO: return createData3DIO();
 			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS: return createData3DUtils();
 			default:
@@ -701,9 +701,9 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Data3dFacade createData3dFacade() {
-		Data3dFacadeImpl data3dFacade = new Data3dFacadeImpl();
-		return data3dFacade;
+	public Symphony__CommonGeometryData3DFacade createSymphony__CommonGeometryData3DFacade() {
+		Symphony__CommonGeometryData3DFacadeImpl symphony__CommonGeometryData3DFacade = new Symphony__CommonGeometryData3DFacadeImpl();
+		return symphony__CommonGeometryData3DFacade;
 	}
 
 	/**

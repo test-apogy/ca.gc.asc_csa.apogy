@@ -28,7 +28,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
 import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite;
@@ -271,7 +271,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass earthOrbitFacadeEClass = null;
+	private EClass symphony__CoreEnvironmentOrbitEarthFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1545,8 +1545,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEarthOrbitFacade() {
-		return earthOrbitFacadeEClass;
+	public EClass getSymphony__CoreEnvironmentOrbitEarthFacade() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass;
 	}
 
 	/**
@@ -1554,8 +1554,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__GetMu() {
-		return earthOrbitFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetMu() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1563,8 +1563,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__CreateAbsoluteDate__Date() {
-		return earthOrbitFacadeEClass.getEOperations().get(1);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateAbsoluteDate__Date() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -1572,8 +1572,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__CreateDate__AbsoluteDate() {
-		return earthOrbitFacadeEClass.getEOperations().get(2);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateDate__AbsoluteDate() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -1581,8 +1581,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__CreateEarthSurfaceLocation__String_String_double_double_double() {
-		return earthOrbitFacadeEClass.getEOperations().get(3);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -1590,8 +1590,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__CreateOreKitBackedFrame__Frame() {
-		return earthOrbitFacadeEClass.getEOperations().get(4);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateOreKitBackedFrame__Frame() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -1599,8 +1599,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__GetSpacecraftEarthSubPoint__OreKitBackedSpacecraftState() {
-		return earthOrbitFacadeEClass.getEOperations().get(5);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftEarthSubPoint__OreKitBackedSpacecraftState() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -1608,8 +1608,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__GetSpacecraftElevationAngle__SpacecraftState_EarthSurfaceLocation() {
-		return earthOrbitFacadeEClass.getEOperations().get(6);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftElevationAngle__SpacecraftState_EarthSurfaceLocation() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -1617,8 +1617,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__GetSpacecraftAzimuthAngle__SpacecraftState_EarthSurfaceLocation() {
-		return earthOrbitFacadeEClass.getEOperations().get(7);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftAzimuthAngle__SpacecraftState_EarthSurfaceLocation() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -1626,8 +1626,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__GetRange__SpacecraftState_EarthSurfaceLocation() {
-		return earthOrbitFacadeEClass.getEOperations().get(8);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetRange__SpacecraftState_EarthSurfaceLocation() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -1635,8 +1635,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__CreateSpacecraftState__Orbit_SpacecraftState() {
-		return earthOrbitFacadeEClass.getEOperations().get(9);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateSpacecraftState__Orbit_SpacecraftState() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(9);
 	}
 
 	/**
@@ -1644,8 +1644,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__CreateOreKitBackedSpacecraftState__Orbit_SpacecraftState() {
-		return earthOrbitFacadeEClass.getEOperations().get(10);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateOreKitBackedSpacecraftState__Orbit_SpacecraftState() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(10);
 	}
 
 	/**
@@ -1653,8 +1653,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__CreateTimedStampedPVACoordinates__TimeStampedPVCoordinates() {
-		return earthOrbitFacadeEClass.getEOperations().get(11);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateTimedStampedPVACoordinates__TimeStampedPVCoordinates() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(11);
 	}
 
 	/**
@@ -1662,8 +1662,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__CreateTimedStampedAngularCoordinates__TimeStampedAngularCoordinates() {
-		return earthOrbitFacadeEClass.getEOperations().get(12);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateTimedStampedAngularCoordinates__TimeStampedAngularCoordinates() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(12);
 	}
 
 	/**
@@ -1671,8 +1671,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__CreateMatrix3x3__Rotation() {
-		return earthOrbitFacadeEClass.getEOperations().get(13);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateMatrix3x3__Rotation() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(13);
 	}
 
 	/**
@@ -1680,8 +1680,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__CreateRotation__Matrix3x3() {
-		return earthOrbitFacadeEClass.getEOperations().get(14);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateRotation__Matrix3x3() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(14);
 	}
 
 	/**
@@ -1689,8 +1689,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__CreateKeplerianOrbit__EarthOrbitPropagator() {
-		return earthOrbitFacadeEClass.getEOperations().get(15);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateKeplerianOrbit__EarthOrbitPropagator() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(15);
 	}
 
 	/**
@@ -1698,8 +1698,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__CreateCartesianEarthOrbit__EarthOrbitPropagator() {
-		return earthOrbitFacadeEClass.getEOperations().get(16);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateCartesianEarthOrbit__EarthOrbitPropagator() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(16);
 	}
 
 	/**
@@ -1707,8 +1707,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__CreateKeplerianOrbit__KeplerianOrbit() {
-		return earthOrbitFacadeEClass.getEOperations().get(17);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateKeplerianOrbit__KeplerianOrbit() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(17);
 	}
 
 	/**
@@ -1716,8 +1716,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__CreateCartesianEarthOrbit__CartesianOrbit() {
-		return earthOrbitFacadeEClass.getEOperations().get(18);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateCartesianEarthOrbit__CartesianOrbit() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(18);
 	}
 
 	/**
@@ -1725,8 +1725,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__ConvertToGeographicCoordinates__OreKitBackedSpacecraftState() {
-		return earthOrbitFacadeEClass.getEOperations().get(19);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__ConvertToGeographicCoordinates__OreKitBackedSpacecraftState() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(19);
 	}
 
 	/**
@@ -1734,8 +1734,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__GetVisibilityPassSortedByStartDate__List() {
-		return earthOrbitFacadeEClass.getEOperations().get(20);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByStartDate__List() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(20);
 	}
 
 	/**
@@ -1743,8 +1743,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__GetVisibilityPassSortedByDuration__List() {
-		return earthOrbitFacadeEClass.getEOperations().get(21);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByDuration__List() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(21);
 	}
 
 	/**
@@ -1752,8 +1752,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__GetVisibilityPassSpacecraftPositionSortedByElevation__List() {
-		return earthOrbitFacadeEClass.getEOperations().get(22);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedByElevation__List() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(22);
 	}
 
 	/**
@@ -1761,8 +1761,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__GetVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle__List() {
-		return earthOrbitFacadeEClass.getEOperations().get(23);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle__List() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(23);
 	}
 
 	/**
@@ -1770,8 +1770,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__LoadTLE__String() {
-		return earthOrbitFacadeEClass.getEOperations().get(24);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__LoadTLE__String() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(24);
 	}
 
 	/**
@@ -1779,8 +1779,8 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEarthOrbitFacade__CreateTLEEarthOrbitPropagator__TLE() {
-		return earthOrbitFacadeEClass.getEOperations().get(25);
+	public EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitPropagator__TLE() {
+		return symphony__CoreEnvironmentOrbitEarthFacadeEClass.getEOperations().get(25);
 	}
 
 	/**
@@ -2169,33 +2169,33 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		createEAttribute(spacecraftSwathCorridorEClass, SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE);
 		createEReference(spacecraftSwathCorridorEClass, SPACECRAFT_SWATH_CORRIDOR__CORRIDOR);
 
-		earthOrbitFacadeEClass = createEClass(EARTH_ORBIT_FACADE);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___GET_MU);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CREATE_ABSOLUTE_DATE__DATE);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CREATE_DATE__ABSOLUTEDATE);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CREATE_EARTH_SURFACE_LOCATION__STRING_STRING_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CREATE_ORE_KIT_BACKED_FRAME__FRAME);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___GET_SPACECRAFT_EARTH_SUB_POINT__OREKITBACKEDSPACECRAFTSTATE);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___GET_SPACECRAFT_ELEVATION_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___GET_SPACECRAFT_AZIMUTH_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___GET_RANGE__SPACECRAFTSTATE_EARTHSURFACELOCATION);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CREATE_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CREATE_ORE_KIT_BACKED_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CREATE_TIMED_STAMPED_PVA_COORDINATES__TIMESTAMPEDPVCOORDINATES);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CREATE_TIMED_STAMPED_ANGULAR_COORDINATES__TIMESTAMPEDANGULARCOORDINATES);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CREATE_MATRIX3X3__ROTATION);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CREATE_ROTATION__MATRIX3X3);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CREATE_KEPLERIAN_ORBIT__EARTHORBITPROPAGATOR);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__EARTHORBITPROPAGATOR);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CREATE_KEPLERIAN_ORBIT__KEPLERIANORBIT);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__CARTESIANORBIT);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CONVERT_TO_GEOGRAPHIC_COORDINATES__OREKITBACKEDSPACECRAFTSTATE);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___GET_VISIBILITY_PASS_SORTED_BY_START_DATE__LIST);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___GET_VISIBILITY_PASS_SORTED_BY_DURATION__LIST);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_ELEVATION__LIST);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_SPACECRAFT_CROSS_TRACK_ANGLE__LIST);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___LOAD_TLE__STRING);
-		createEOperation(earthOrbitFacadeEClass, EARTH_ORBIT_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE);
+		symphony__CoreEnvironmentOrbitEarthFacadeEClass = createEClass(SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_MU);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ABSOLUTE_DATE__DATE);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_DATE__ABSOLUTEDATE);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_EARTH_SURFACE_LOCATION__STRING_STRING_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ORE_KIT_BACKED_FRAME__FRAME);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_EARTH_SUB_POINT__OREKITBACKEDSPACECRAFTSTATE);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_ELEVATION_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_AZIMUTH_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_RANGE__SPACECRAFTSTATE_EARTHSURFACELOCATION);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ORE_KIT_BACKED_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TIMED_STAMPED_PVA_COORDINATES__TIMESTAMPEDPVCOORDINATES);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TIMED_STAMPED_ANGULAR_COORDINATES__TIMESTAMPEDANGULARCOORDINATES);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_MATRIX3X3__ROTATION);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ROTATION__MATRIX3X3);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_KEPLERIAN_ORBIT__EARTHORBITPROPAGATOR);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__EARTHORBITPROPAGATOR);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_KEPLERIAN_ORBIT__KEPLERIANORBIT);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__CARTESIANORBIT);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CONVERT_TO_GEOGRAPHIC_COORDINATES__OREKITBACKEDSPACECRAFTSTATE);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_START_DATE__LIST);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_DURATION__LIST);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_ELEVATION__LIST);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_SPACECRAFT_CROSS_TRACK_ANGLE__LIST);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___LOAD_TLE__STRING);
+		createEOperation(symphony__CoreEnvironmentOrbitEarthFacadeEClass, SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE);
 
 		// Create enums
 		ephemerisTypeEEnum = createEEnum(EPHEMERIS_TYPE);
@@ -2485,86 +2485,86 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		initEAttribute(getSpacecraftSwathCorridor_RightSwathAngle(), theEcorePackage.getEDouble(), "rightSwathAngle", "0", 0, 1, SpacecraftSwathCorridor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpacecraftSwathCorridor_Corridor(), this.getCorridor(), null, "corridor", null, 0, 1, SpacecraftSwathCorridor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(earthOrbitFacadeEClass, EarthOrbitFacade.class, "EarthOrbitFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CoreEnvironmentOrbitEarthFacadeEClass, Symphony__CoreEnvironmentOrbitEarthFacade.class, "Symphony__CoreEnvironmentOrbitEarthFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getEarthOrbitFacade__GetMu(), theEcorePackage.getEDouble(), "getMu", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__GetMu(), theEcorePackage.getEDouble(), "getMu", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEarthOrbitFacade__CreateAbsoluteDate__Date(), this.getAbsoluteDate(), "createAbsoluteDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__CreateAbsoluteDate__Date(), this.getAbsoluteDate(), "createAbsoluteDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDate(), "date", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEarthOrbitFacade__CreateDate__AbsoluteDate(), theEcorePackage.getEDate(), "createDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__CreateDate__AbsoluteDate(), theEcorePackage.getEDate(), "createDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAbsoluteDate(), "absoluteDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEarthOrbitFacade__CreateEarthSurfaceLocation__String_String_double_double_double(), this.getEarthSurfaceLocation(), "createEarthSurfaceLocation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double(), this.getEarthSurfaceLocation(), "createEarthSurfaceLocation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "name", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "description", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "longitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "latitude", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "elevation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEarthOrbitFacade__CreateOreKitBackedFrame__Frame(), this.getOreKitBackedFrame(), "createOreKitBackedFrame", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__CreateOreKitBackedFrame__Frame(), this.getOreKitBackedFrame(), "createOreKitBackedFrame", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOreKitFrame(), "oreKitFrame", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEarthOrbitFacade__GetSpacecraftEarthSubPoint__OreKitBackedSpacecraftState(), theSymphony__CoreEnvironmentPackage.getGeographicCoordinates(), "getSpacecraftEarthSubPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftEarthSubPoint__OreKitBackedSpacecraftState(), theSymphony__CoreEnvironmentPackage.getGeographicCoordinates(), "getSpacecraftEarthSubPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOreKitBackedSpacecraftState(), "oreKitBackedSpacecraftState", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getEarthOrbitFacade__GetSpacecraftElevationAngle__SpacecraftState_EarthSurfaceLocation(), theEcorePackage.getEDouble(), "getSpacecraftElevationAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftElevationAngle__SpacecraftState_EarthSurfaceLocation(), theEcorePackage.getEDouble(), "getSpacecraftElevationAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreEnvironmentOrbitPackage.getSpacecraftState(), "spacecraftState", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEarthSurfaceLocation(), "earthSurfaceLocation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getEarthOrbitFacade__GetSpacecraftAzimuthAngle__SpacecraftState_EarthSurfaceLocation(), theEcorePackage.getEDouble(), "getSpacecraftAzimuthAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftAzimuthAngle__SpacecraftState_EarthSurfaceLocation(), theEcorePackage.getEDouble(), "getSpacecraftAzimuthAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreEnvironmentOrbitPackage.getSpacecraftState(), "spacecraftState", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEarthSurfaceLocation(), "earthSurfaceLocation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getEarthOrbitFacade__GetRange__SpacecraftState_EarthSurfaceLocation(), theEcorePackage.getEDouble(), "getRange", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__GetRange__SpacecraftState_EarthSurfaceLocation(), theEcorePackage.getEDouble(), "getRange", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreEnvironmentOrbitPackage.getSpacecraftState(), "spacecraftState", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEarthSurfaceLocation(), "earthSurfaceLocation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getEarthOrbitFacade__CreateSpacecraftState__Orbit_SpacecraftState(), theSymphony__CoreEnvironmentOrbitPackage.getSpacecraftState(), "createSpacecraftState", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__CreateSpacecraftState__Orbit_SpacecraftState(), theSymphony__CoreEnvironmentOrbitPackage.getSpacecraftState(), "createSpacecraftState", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreEnvironmentOrbitPackage.getOrbit(), "orbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOreKitSpacecraftState(), "oreKitSpacecraftState", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEarthOrbitFacade__CreateOreKitBackedSpacecraftState__Orbit_SpacecraftState(), this.getOreKitBackedSpacecraftState(), "createOreKitBackedSpacecraftState", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__CreateOreKitBackedSpacecraftState__Orbit_SpacecraftState(), this.getOreKitBackedSpacecraftState(), "createOreKitBackedSpacecraftState", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreEnvironmentOrbitPackage.getOrbit(), "orbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOreKitSpacecraftState(), "oreKitSpacecraftState", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEarthOrbitFacade__CreateTimedStampedPVACoordinates__TimeStampedPVCoordinates(), theSymphony__CoreEnvironmentOrbitPackage.getTimedStampedPVACoordinates(), "createTimedStampedPVACoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__CreateTimedStampedPVACoordinates__TimeStampedPVCoordinates(), theSymphony__CoreEnvironmentOrbitPackage.getTimedStampedPVACoordinates(), "createTimedStampedPVACoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOreKitTimeStampedPVCoordinates(), "oreKitTimeStampedPVCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEarthOrbitFacade__CreateTimedStampedAngularCoordinates__TimeStampedAngularCoordinates(), theSymphony__CoreEnvironmentOrbitPackage.getTimedStampedAngularCoordinates(), "createTimedStampedAngularCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__CreateTimedStampedAngularCoordinates__TimeStampedAngularCoordinates(), theSymphony__CoreEnvironmentOrbitPackage.getTimedStampedAngularCoordinates(), "createTimedStampedAngularCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOreKitTimeStampedAngularCoordinates(), "oreKitTimeStampedAngularCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEarthOrbitFacade__CreateMatrix3x3__Rotation(), theSymphony__CommonMathPackage.getMatrix3x3(), "createMatrix3x3", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__CreateMatrix3x3__Rotation(), theSymphony__CommonMathPackage.getMatrix3x3(), "createMatrix3x3", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRotation(), "rotation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEarthOrbitFacade__CreateRotation__Matrix3x3(), this.getRotation(), "createRotation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__CreateRotation__Matrix3x3(), this.getRotation(), "createRotation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getMatrix3x3(), "matrix3x3", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEarthOrbitFacade__CreateKeplerianOrbit__EarthOrbitPropagator(), this.getKeplerianEarthOrbit(), "createKeplerianOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__CreateKeplerianOrbit__EarthOrbitPropagator(), this.getKeplerianEarthOrbit(), "createKeplerianOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEarthOrbitPropagator(), "earthOrbitPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getEarthOrbitFacade__CreateCartesianEarthOrbit__EarthOrbitPropagator(), this.getCartesianEarthOrbit(), "createCartesianEarthOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__CreateCartesianEarthOrbit__EarthOrbitPropagator(), this.getCartesianEarthOrbit(), "createCartesianEarthOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEarthOrbitPropagator(), "earthOrbitPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getEarthOrbitFacade__CreateKeplerianOrbit__KeplerianOrbit(), this.getKeplerianEarthOrbit(), "createKeplerianOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__CreateKeplerianOrbit__KeplerianOrbit(), this.getKeplerianEarthOrbit(), "createKeplerianOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOreKitKeplerianOrbit(), "oreKitKeplerianOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getEarthOrbitFacade__CreateCartesianEarthOrbit__CartesianOrbit(), this.getCartesianEarthOrbit(), "createCartesianEarthOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__CreateCartesianEarthOrbit__CartesianOrbit(), this.getCartesianEarthOrbit(), "createCartesianEarthOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOreKitCartesianOrbit(), "oreKitCartesianOrbit", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getEarthOrbitFacade__ConvertToGeographicCoordinates__OreKitBackedSpacecraftState(), theSymphony__CoreEnvironmentPackage.getGeographicCoordinates(), "convertToGeographicCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__ConvertToGeographicCoordinates__OreKitBackedSpacecraftState(), theSymphony__CoreEnvironmentPackage.getGeographicCoordinates(), "convertToGeographicCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOreKitBackedSpacecraftState(), "oreKitBackedSpacecraftState", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getEarthOrbitFacade__GetVisibilityPassSortedByStartDate__List(), null, "getVisibilityPassSortedByStartDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByStartDate__List(), null, "getVisibilityPassSortedByStartDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getVisibilityPass());
 		g1.getETypeArguments().add(g2);
@@ -2574,7 +2574,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getEarthOrbitFacade__GetVisibilityPassSortedByDuration__List(), null, "getVisibilityPassSortedByDuration", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByDuration__List(), null, "getVisibilityPassSortedByDuration", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getVisibilityPass());
 		g1.getETypeArguments().add(g2);
@@ -2584,7 +2584,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getEarthOrbitFacade__GetVisibilityPassSpacecraftPositionSortedByElevation__List(), null, "getVisibilityPassSpacecraftPositionSortedByElevation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedByElevation__List(), null, "getVisibilityPassSpacecraftPositionSortedByElevation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getVisibilityPassSpacecraftPosition());
 		g1.getETypeArguments().add(g2);
@@ -2594,7 +2594,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getEarthOrbitFacade__GetVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle__List(), null, "getVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle__List(), null, "getVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getVisibilityPassSpacecraftPosition());
 		g1.getETypeArguments().add(g2);
@@ -2604,11 +2604,11 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getEarthOrbitFacade__LoadTLE__String(), this.getTLE(), "loadTLE", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__LoadTLE__String(), this.getTLE(), "loadTLE", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "url", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
-		op = initEOperation(getEarthOrbitFacade__CreateTLEEarthOrbitPropagator__TLE(), this.getTLEEarthOrbitPropagator(), "createTLEEarthOrbitPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitPropagator__TLE(), this.getTLEEarthOrbitPropagator(), "createTLEEarthOrbitPropagator", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTLE(), "tle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 
@@ -3338,143 +3338,143 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "documentation", "*\nThe corridor."
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__GetMu(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__GetMu(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the Earth gravitational constant from GRIM5C1 model: 3.986004415e14 m\u00b3/s\u00b2.",
 			 "csa_unit", "m\u00b3/s\u00b2"
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__CreateAbsoluteDate__Date(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__CreateAbsoluteDate__Date(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates an AbsoluteDate from a Date.\n@param date A date.\n@return The AbsoluteDate (OreKit type) for the specified date."
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__CreateDate__AbsoluteDate(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__CreateDate__AbsoluteDate(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates an Date from a AbsoluteDate."
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__CreateEarthSurfaceLocation__String_String_double_double_double(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates an EarthSurfaceLocation from parameters.\n@param name The name of the location.\n@param description The description of the location.\n@param longitude The longitude of the location, in radians.\n@param latitude The latitude of the location, in radians.\n@param elevation The elevation of the location, in meters.\n@return The EarthSurfaceLocation."
 		   });	
 		addAnnotation
-		  ((getEarthOrbitFacade__CreateEarthSurfaceLocation__String_String_double_double_double()).getEParameters().get(2), 
+		  ((getSymphony__CoreEnvironmentOrbitEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
 			 "csa_unit", "rad"
 		   });	
 		addAnnotation
-		  ((getEarthOrbitFacade__CreateEarthSurfaceLocation__String_String_double_double_double()).getEParameters().get(3), 
+		  ((getSymphony__CoreEnvironmentOrbitEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double()).getEParameters().get(3), 
 		   source, 
 		   new String[] {
 			 "csa_unit", "rad"
 		   });	
 		addAnnotation
-		  ((getEarthOrbitFacade__CreateEarthSurfaceLocation__String_String_double_double_double()).getEParameters().get(4), 
+		  ((getSymphony__CoreEnvironmentOrbitEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double()).getEParameters().get(4), 
 		   source, 
 		   new String[] {
 			 "csa_unit", "m"
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__CreateOreKitBackedFrame__Frame(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__CreateOreKitBackedFrame__Frame(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Create an OreKitBackedFrame based on an OreKit frame."
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__GetSpacecraftEarthSubPoint__OreKitBackedSpacecraftState(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftEarthSubPoint__OreKitBackedSpacecraftState(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the geographic sub-point for a given spacecraft state."
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__GetSpacecraftElevationAngle__SpacecraftState_EarthSurfaceLocation(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftElevationAngle__SpacecraftState_EarthSurfaceLocation(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the elevation angle of a spacecraft relative\nto a Earth surface location.",
 			 "csa_unit", "rad"
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__GetSpacecraftAzimuthAngle__SpacecraftState_EarthSurfaceLocation(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftAzimuthAngle__SpacecraftState_EarthSurfaceLocation(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the azimuth angle (relative to North) of a\nspacecraft at a Earth surface location.",
 			 "csa_unit", "rad"
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__GetRange__SpacecraftState_EarthSurfaceLocation(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__GetRange__SpacecraftState_EarthSurfaceLocation(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the distance between spacecraft and a specified target.",
 			 "csa_unit", "m"
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__CreateKeplerianOrbit__EarthOrbitPropagator(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__CreateKeplerianOrbit__EarthOrbitPropagator(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates a Keplerian Orbit based on a EarthOrbitPropagator.\n@param earthOrbitPropagator The EarthOrbitPropagator.\n@return A KeplerianEarthOrbit representing the initial orbit of the propagator."
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__CreateCartesianEarthOrbit__EarthOrbitPropagator(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__CreateCartesianEarthOrbit__EarthOrbitPropagator(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates a CartesianEarthOrbit Orbit based on a EarthOrbitPropagator.\n@param earthOrbitPropagator The EarthOrbitPropagator.\n@return A CartesianEarthOrbit representing the initial orbit of the propagator."
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__CreateKeplerianOrbit__KeplerianOrbit(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__CreateKeplerianOrbit__KeplerianOrbit(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates a KeplerianEarthOrbit from an OreKit KeplerianOrbit.\n@param oreKitKeplerianOrbit The OreKit Keplerian Orbit.\n@return the associated KeplerianEarthOrbit."
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__CreateCartesianEarthOrbit__CartesianOrbit(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__CreateCartesianEarthOrbit__CartesianOrbit(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates a CartesianEarthOrbit from an OreKit CartesianOrbit.\n@param oreKitKeplerianOrbit The OreKit Cartesian Orbit.\n@return the associated CartesianEarthOrbit."
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__ConvertToGeographicCoordinates__OreKitBackedSpacecraftState(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__ConvertToGeographicCoordinates__OreKitBackedSpacecraftState(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Converts an OreKit SpacecraftState to GeographicCoordinates. The conversion uses the IERS_2010 frame with a WGS84 equatorial radius and earth flatenning.\n@param oreKitBackedSpacecraftState The OreKit SpacecraftState.\n@return the associated GeographicCoordinates."
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__GetVisibilityPassSortedByStartDate__List(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByStartDate__List(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Sorts a list of VisibilityPass by increasing date order (form earlier to later). If two or more VisibilityPass\nhave the same start date, they are ordered by duration.\n@param passes The list of VisibilityPass.\n@return the SortedSet of VisibilityPass."
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__GetVisibilityPassSortedByDuration__List(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByDuration__List(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Sorts a list of VisibilityPass by increasing duration. If two or more VisibilityPass\nhave the same duration, they are ordered by start date.\n@param passes The list of VisibilityPass.\n@return the SortedSet of VisibilityPass."
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__GetVisibilityPassSpacecraftPositionSortedByElevation__List(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedByElevation__List(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Sorts a list of VisibilityPassSpacecraftPosition by increasing elevation.\n@param passes The list of VisibilityPassSpacecraftPosition.\n@return the SortedSet of VisibilityPassSpacecraftPosition."
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__GetVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle__List(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle__List(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Sorts a list of VisibilityPassSpacecraftPosition by increasing spacecraft cross-track angle.\n@param passes The list of VisibilityPassSpacecraftPosition.\n@return the SortedSet of VisibilityPassSpacecraftPosition."
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__LoadTLE__String(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__LoadTLE__String(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Loads a TLE from a URL.\n@param url The URL as a String.\n@return The loaded TLE"
 		   });	
 		addAnnotation
-		  (getEarthOrbitFacade__CreateTLEEarthOrbitPropagator__TLE(), 
+		  (getSymphony__CoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitPropagator__TLE(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Create a TLEEarthOrbitPropagator using a TLE.\n@param tle The Two-Line Element defining the propagator.\n@return The TLEEarthOrbitPropagator."

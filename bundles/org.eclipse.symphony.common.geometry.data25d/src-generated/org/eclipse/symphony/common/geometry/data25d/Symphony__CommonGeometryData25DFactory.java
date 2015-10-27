@@ -77,13 +77,13 @@ public interface Symphony__CommonGeometryData25DFactory extends EFactory {
 	VolumetricMesh25D createVolumetricMesh25D();
 
 	/**
-	 * Returns a new object of class '<em>Data Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Data Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	DataFacade createDataFacade();
+	Symphony__CommonGeometryData25DFacade createSymphony__CommonGeometryData25DFacade();
 
 	/**
 	 * Returns a new object of class '<em>Data25 DIO</em>'.

@@ -36,7 +36,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.Data3DIO;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.NormalPointCloud;
@@ -176,7 +176,7 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 
 		for (Point3d point : points) 
 		{
-			CartesianPositionCoordinates coord = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y,point.z);
+			CartesianPositionCoordinates coord = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y,point.z);
 			coordinates.add(coord);
 		}
 
@@ -188,7 +188,7 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 			CartesianPositionCoordinates v1 = mesh.getPoints().get(tri.getV1());
 			CartesianPositionCoordinates v2 = mesh.getPoints().get(tri.getV2());
 
-			CartesianTriangle triangle = Data3dFacade.INSTANCE.createCartesianTriangle(v0, v1, v2);
+			CartesianTriangle triangle = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v0, v1, v2);
 
 			cartTriangles.add(triangle);
 		}
@@ -330,7 +330,7 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 						double y = Double.parseDouble(cols[1]);
 						double z = Double.parseDouble(cols[2]);
 
-						CartesianPositionCoordinates point = Data3dFacade.INSTANCE
+						CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE
 								.createCartesianPositionCoordinates(x, y, z);
 
 						points.getPoints().add(point);
@@ -377,7 +377,7 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 
 		for (Point3d point : points) 
 		{
-			CartesianPositionCoordinates coord = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y,point.z);
+			CartesianPositionCoordinates coord = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y,point.z);
 			coordinates.add(coord);
 		}
 
@@ -389,7 +389,7 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 			CartesianPositionCoordinates v1 = mesh.getPoints().get(tri.getV1());
 			CartesianPositionCoordinates v2 = mesh.getPoints().get(tri.getV2());
 
-			CartesianTriangle triangle = Data3dFacade.INSTANCE.createCartesianTriangle(v0, v1, v2);
+			CartesianTriangle triangle = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(v0, v1, v2);
 
 			cartTriangles.add(triangle);
 		}

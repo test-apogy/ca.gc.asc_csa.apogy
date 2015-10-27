@@ -16,7 +16,7 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.ImageFilter;
 import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.listeners.AbstractVariableFeatureReferenceListener;
 
@@ -295,7 +295,7 @@ public class CameraViewConfigurationListener
 		  
 		  try
 		  {
-			  EObject instance = EMFEcoreInvocatorFacade.INSTANCE.getInstance(cameraViewConfiguration);
+			  EObject instance = Symphony__CoreInvocatorFacade.INSTANCE.getInstance(cameraViewConfiguration);
 		  
 			  if(instance instanceof AbstractCamera)
 			  {

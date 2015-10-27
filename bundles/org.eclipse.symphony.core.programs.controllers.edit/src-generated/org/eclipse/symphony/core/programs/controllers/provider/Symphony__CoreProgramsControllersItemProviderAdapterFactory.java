@@ -449,30 +449,29 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.ControllerFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected ControllerFacadeItemProvider controllerFacadeItemProvider;
+  protected Symphony__CoreProgramsControllersFacadeItemProvider symphony__CoreProgramsControllersFacadeItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.ControllerFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createControllerFacadeAdapter()
-  {
-		if (controllerFacadeItemProvider == null) {
-			controllerFacadeItemProvider = new ControllerFacadeItemProvider(this);
+	@Override
+	public Adapter createSymphony__CoreProgramsControllersFacadeAdapter() {
+		if (symphony__CoreProgramsControllersFacadeItemProvider == null) {
+			symphony__CoreProgramsControllersFacadeItemProvider = new Symphony__CoreProgramsControllersFacadeItemProvider(this);
 		}
 
-		return controllerFacadeItemProvider;
+		return symphony__CoreProgramsControllersFacadeItemProvider;
 	}
 
-  /**
+		/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -610,7 +609,7 @@ public class Symphony__CoreProgramsControllersItemProviderAdapterFactory extends
 	 */
   public void dispose()
   {
-		if (controllerFacadeItemProvider != null) controllerFacadeItemProvider.dispose();
+		if (symphony__CoreProgramsControllersFacadeItemProvider != null) symphony__CoreProgramsControllersFacadeItemProvider.dispose();
 		if (controllersConfigurationItemProvider != null) controllersConfigurationItemProvider.dispose();
 		if (operationCallControllerBindingItemProvider != null) operationCallControllerBindingItemProvider.dispose();
 		if (timeTriggerItemProvider != null) timeTriggerItemProvider.dispose();

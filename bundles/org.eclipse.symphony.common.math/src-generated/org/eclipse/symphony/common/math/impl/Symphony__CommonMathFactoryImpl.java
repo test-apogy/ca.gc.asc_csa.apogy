@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.MathIO;
 import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
@@ -70,7 +70,7 @@ public class Symphony__CommonMathFactoryImpl extends EFactoryImpl implements Sym
 			case Symphony__CommonMathPackage.MATRIX3X3: return createMatrix3x3();
 			case Symphony__CommonMathPackage.MATRIX4X4: return createMatrix4x4();
 			case Symphony__CommonMathPackage.POLYNOMIAL: return createPolynomial();
-			case Symphony__CommonMathPackage.MATH_FACADE: return createMathFacade();
+			case Symphony__CommonMathPackage.SYMPHONY_COMMON_MATH_FACADE: return createSymphony__CommonMathFacade();
 			case Symphony__CommonMathPackage.MATH_IO: return createMathIO();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -138,16 +138,6 @@ public class Symphony__CommonMathFactoryImpl extends EFactoryImpl implements Sym
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MathFacade createMathFacade() {
-		MathFacadeImpl mathFacade = new MathFacadeImpl();
-		return mathFacade;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Matrix3x3 createMatrix3x3() {
 		Matrix3x3Impl matrix3x3 = new Matrix3x3Impl();
 		return matrix3x3;
@@ -171,6 +161,16 @@ public class Symphony__CommonMathFactoryImpl extends EFactoryImpl implements Sym
 	public Polynomial createPolynomial() {
 		PolynomialImpl polynomial = new PolynomialImpl();
 		return polynomial;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Symphony__CommonMathFacade createSymphony__CommonMathFacade() {
+		Symphony__CommonMathFacadeImpl symphony__CommonMathFacade = new Symphony__CommonMathFacadeImpl();
+		return symphony__CommonMathFacade;
 	}
 
 	/**

@@ -1382,23 +1382,23 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	int PICK_AND_PLACE_NODE_OPERATION_COUNT = TRANSFORM_NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.impl.TopologyFacadeImpl <em>Topology Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.impl.Symphony__CommonTopologyFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.impl.TopologyFacadeImpl
-	 * @see org.eclipse.symphony.common.topology.impl.Symphony__CommonTopologyPackageImpl#getTopologyFacade()
+	 * @see org.eclipse.symphony.common.topology.impl.Symphony__CommonTopologyFacadeImpl
+	 * @see org.eclipse.symphony.common.topology.impl.Symphony__CommonTopologyPackageImpl#getSymphony__CommonTopologyFacade()
 	 * @generated
 	 */
-	int TOPOLOGY_FACADE = 16;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE = 16;
 
 	/**
-	 * The number of structural features of the '<em>Topology Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Link</em>' operation.
@@ -1407,7 +1407,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___CREATE_LINK__NODE = 0;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_LINK__NODE = 0;
 
 	/**
 	 * The operation id for the '<em>Create Content Node</em>' operation.
@@ -1416,7 +1416,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___CREATE_CONTENT_NODE__OBJECT = 1;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_CONTENT_NODE__OBJECT = 1;
 
 	/**
 	 * The operation id for the '<em>Create Referenced Content Node</em>' operation.
@@ -1425,7 +1425,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___CREATE_REFERENCED_CONTENT_NODE__OBJECT = 2;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_REFERENCED_CONTENT_NODE__OBJECT = 2;
 
 	/**
 	 * The operation id for the '<em>Create Aggregate Content Node</em>' operation.
@@ -1434,7 +1434,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___CREATE_AGGREGATE_CONTENT_NODE__OBJECT = 3;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_AGGREGATE_CONTENT_NODE__OBJECT = 3;
 
 	/**
 	 * The operation id for the '<em>Create Position Node</em>' operation.
@@ -1443,7 +1443,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___CREATE_POSITION_NODE__DOUBLE_DOUBLE_DOUBLE = 4;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_POSITION_NODE__DOUBLE_DOUBLE_DOUBLE = 4;
 
 	/**
 	 * The operation id for the '<em>Create Rotation Node XYZ</em>' operation.
@@ -1452,7 +1452,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___CREATE_ROTATION_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE = 5;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE = 5;
 
 	/**
 	 * The operation id for the '<em>Create Rotation Node YZX</em>' operation.
@@ -1461,7 +1461,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___CREATE_ROTATION_NODE_YZX__DOUBLE_DOUBLE_DOUBLE = 6;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_YZX__DOUBLE_DOUBLE_DOUBLE = 6;
 
 	/**
 	 * The operation id for the '<em>Create Rotation Node ZYX</em>' operation.
@@ -1470,7 +1470,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___CREATE_ROTATION_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE = 7;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE = 7;
 
 	/**
 	 * The operation id for the '<em>Create Transform Node XYZ</em>' operation.
@@ -1479,7 +1479,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = 8;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = 8;
 
 	/**
 	 * The operation id for the '<em>Create Transform Node YZX</em>' operation.
@@ -1488,7 +1488,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_YZX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = 9;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_YZX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = 9;
 
 	/**
 	 * The operation id for the '<em>Create Transform Node ZYX</em>' operation.
@@ -1497,7 +1497,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = 10;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = 10;
 
 	/**
 	 * The operation id for the '<em>Create Transform Node</em>' operation.
@@ -1506,7 +1506,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE__MATRIX4D = 11;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE__MATRIX4D = 11;
 
 	/**
 	 * The operation id for the '<em>Create Pick And Place Node</em>' operation.
@@ -1515,7 +1515,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___CREATE_PICK_AND_PLACE_NODE__MATRIX4D = 12;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_PICK_AND_PLACE_NODE__MATRIX4D = 12;
 
 	/**
 	 * The operation id for the '<em>Express Node In Root Frame</em>' operation.
@@ -1524,7 +1524,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___EXPRESS_NODE_IN_ROOT_FRAME__NODE = 13;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___EXPRESS_NODE_IN_ROOT_FRAME__NODE = 13;
 
 	/**
 	 * The operation id for the '<em>Express Root In Node Frame</em>' operation.
@@ -1533,7 +1533,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___EXPRESS_ROOT_IN_NODE_FRAME__NODE = 14;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___EXPRESS_ROOT_IN_NODE_FRAME__NODE = 14;
 
 	/**
 	 * The operation id for the '<em>Express In Frame</em>' operation.
@@ -1542,7 +1542,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___EXPRESS_IN_FRAME__NODE_NODE = 15;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___EXPRESS_IN_FRAME__NODE_NODE = 15;
 
 	/**
 	 * The operation id for the '<em>Find Nodes By Description</em>' operation.
@@ -1551,7 +1551,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___FIND_NODES_BY_DESCRIPTION__STRING_NODE = 16;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_DESCRIPTION__STRING_NODE = 16;
 
 	/**
 	 * The operation id for the '<em>Find Nodes By ID</em>' operation.
@@ -1560,7 +1560,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___FIND_NODES_BY_ID__STRING_NODE = 17;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_ID__STRING_NODE = 17;
 
 	/**
 	 * The operation id for the '<em>Find Nodes By Type</em>' operation.
@@ -1569,7 +1569,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___FIND_NODES_BY_TYPE__ECLASS_NODE = 18;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_TYPE__ECLASS_NODE = 18;
 
 	/**
 	 * The operation id for the '<em>Find Root</em>' operation.
@@ -1578,7 +1578,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___FIND_ROOT__NODE = 19;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_ROOT__NODE = 19;
 
 	/**
 	 * The operation id for the '<em>Get Euclidean Distance</em>' operation.
@@ -1587,7 +1587,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE = 20;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE = 20;
 
 	/**
 	 * The operation id for the '<em>Get Geodesic Distance</em>' operation.
@@ -1596,7 +1596,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE = 21;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE = 21;
 
 	/**
 	 * The operation id for the '<em>Print Topology</em>' operation.
@@ -1605,16 +1605,16 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE = 22;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE = 22;
 
 	/**
-	 * The number of operations of the '<em>Topology Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_FACADE_OPERATION_COUNT = 23;
+	int SYMPHONY_COMMON_TOPOLOGY_FACADE_OPERATION_COUNT = 23;
 
 	/**
 	 * The meta object id for the '<em>Matrix4d</em>' data type.
@@ -2026,244 +2026,244 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 	EClass getPickAndPlaceNode();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.TopologyFacade <em>Topology Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Topology Facade</em>'.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade
 	 * @generated
 	 */
-	EClass getTopologyFacade();
+	EClass getSymphony__CommonTopologyFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#createLink(org.eclipse.symphony.common.topology.Node) <em>Create Link</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createLink(org.eclipse.symphony.common.topology.Node) <em>Create Link</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Link</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#createLink(org.eclipse.symphony.common.topology.Node)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createLink(org.eclipse.symphony.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__CreateLink__Node();
+	EOperation getSymphony__CommonTopologyFacade__CreateLink__Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#createContentNode(java.lang.Object) <em>Create Content Node</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createContentNode(java.lang.Object) <em>Create Content Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Content Node</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#createContentNode(java.lang.Object)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createContentNode(java.lang.Object)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__CreateContentNode__Object();
+	EOperation getSymphony__CommonTopologyFacade__CreateContentNode__Object();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#createReferencedContentNode(java.lang.Object) <em>Create Referenced Content Node</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createReferencedContentNode(java.lang.Object) <em>Create Referenced Content Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Referenced Content Node</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#createReferencedContentNode(java.lang.Object)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createReferencedContentNode(java.lang.Object)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__CreateReferencedContentNode__Object();
+	EOperation getSymphony__CommonTopologyFacade__CreateReferencedContentNode__Object();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#createAggregateContentNode(java.lang.Object) <em>Create Aggregate Content Node</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createAggregateContentNode(java.lang.Object) <em>Create Aggregate Content Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Aggregate Content Node</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#createAggregateContentNode(java.lang.Object)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createAggregateContentNode(java.lang.Object)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__CreateAggregateContentNode__Object();
+	EOperation getSymphony__CommonTopologyFacade__CreateAggregateContentNode__Object();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#createPositionNode(double, double, double) <em>Create Position Node</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createPositionNode(double, double, double) <em>Create Position Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Position Node</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#createPositionNode(double, double, double)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createPositionNode(double, double, double)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__CreatePositionNode__double_double_double();
+	EOperation getSymphony__CommonTopologyFacade__CreatePositionNode__double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#createRotationNodeXYZ(double, double, double) <em>Create Rotation Node XYZ</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createRotationNodeXYZ(double, double, double) <em>Create Rotation Node XYZ</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Rotation Node XYZ</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#createRotationNodeXYZ(double, double, double)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createRotationNodeXYZ(double, double, double)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__CreateRotationNodeXYZ__double_double_double();
+	EOperation getSymphony__CommonTopologyFacade__CreateRotationNodeXYZ__double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#createRotationNodeYZX(double, double, double) <em>Create Rotation Node YZX</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createRotationNodeYZX(double, double, double) <em>Create Rotation Node YZX</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Rotation Node YZX</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#createRotationNodeYZX(double, double, double)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createRotationNodeYZX(double, double, double)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__CreateRotationNodeYZX__double_double_double();
+	EOperation getSymphony__CommonTopologyFacade__CreateRotationNodeYZX__double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#createRotationNodeZYX(double, double, double) <em>Create Rotation Node ZYX</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createRotationNodeZYX(double, double, double) <em>Create Rotation Node ZYX</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Rotation Node ZYX</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#createRotationNodeZYX(double, double, double)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createRotationNodeZYX(double, double, double)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__CreateRotationNodeZYX__double_double_double();
+	EOperation getSymphony__CommonTopologyFacade__CreateRotationNodeZYX__double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#createTransformNodeXYZ(double, double, double, double, double, double) <em>Create Transform Node XYZ</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createTransformNodeXYZ(double, double, double, double, double, double) <em>Create Transform Node XYZ</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Transform Node XYZ</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#createTransformNodeXYZ(double, double, double, double, double, double)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createTransformNodeXYZ(double, double, double, double, double, double)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__CreateTransformNodeXYZ__double_double_double_double_double_double();
+	EOperation getSymphony__CommonTopologyFacade__CreateTransformNodeXYZ__double_double_double_double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#createTransformNodeYZX(double, double, double, double, double, double) <em>Create Transform Node YZX</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createTransformNodeYZX(double, double, double, double, double, double) <em>Create Transform Node YZX</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Transform Node YZX</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#createTransformNodeYZX(double, double, double, double, double, double)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createTransformNodeYZX(double, double, double, double, double, double)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__CreateTransformNodeYZX__double_double_double_double_double_double();
+	EOperation getSymphony__CommonTopologyFacade__CreateTransformNodeYZX__double_double_double_double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#createTransformNodeZYX(double, double, double, double, double, double) <em>Create Transform Node ZYX</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createTransformNodeZYX(double, double, double, double, double, double) <em>Create Transform Node ZYX</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Transform Node ZYX</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#createTransformNodeZYX(double, double, double, double, double, double)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createTransformNodeZYX(double, double, double, double, double, double)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__CreateTransformNodeZYX__double_double_double_double_double_double();
+	EOperation getSymphony__CommonTopologyFacade__CreateTransformNodeZYX__double_double_double_double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#createTransformNode(javax.vecmath.Matrix4d) <em>Create Transform Node</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createTransformNode(javax.vecmath.Matrix4d) <em>Create Transform Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Transform Node</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#createTransformNode(javax.vecmath.Matrix4d)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createTransformNode(javax.vecmath.Matrix4d)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__CreateTransformNode__Matrix4d();
+	EOperation getSymphony__CommonTopologyFacade__CreateTransformNode__Matrix4d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#createPickAndPlaceNode(javax.vecmath.Matrix4d) <em>Create Pick And Place Node</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createPickAndPlaceNode(javax.vecmath.Matrix4d) <em>Create Pick And Place Node</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Pick And Place Node</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#createPickAndPlaceNode(javax.vecmath.Matrix4d)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#createPickAndPlaceNode(javax.vecmath.Matrix4d)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__CreatePickAndPlaceNode__Matrix4d();
+	EOperation getSymphony__CommonTopologyFacade__CreatePickAndPlaceNode__Matrix4d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#expressNodeInRootFrame(org.eclipse.symphony.common.topology.Node) <em>Express Node In Root Frame</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#expressNodeInRootFrame(org.eclipse.symphony.common.topology.Node) <em>Express Node In Root Frame</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Express Node In Root Frame</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#expressNodeInRootFrame(org.eclipse.symphony.common.topology.Node)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#expressNodeInRootFrame(org.eclipse.symphony.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__ExpressNodeInRootFrame__Node();
+	EOperation getSymphony__CommonTopologyFacade__ExpressNodeInRootFrame__Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#expressRootInNodeFrame(org.eclipse.symphony.common.topology.Node) <em>Express Root In Node Frame</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#expressRootInNodeFrame(org.eclipse.symphony.common.topology.Node) <em>Express Root In Node Frame</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Express Root In Node Frame</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#expressRootInNodeFrame(org.eclipse.symphony.common.topology.Node)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#expressRootInNodeFrame(org.eclipse.symphony.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__ExpressRootInNodeFrame__Node();
+	EOperation getSymphony__CommonTopologyFacade__ExpressRootInNodeFrame__Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#expressInFrame(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.Node) <em>Express In Frame</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#expressInFrame(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.Node) <em>Express In Frame</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Express In Frame</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#expressInFrame(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.Node)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#expressInFrame(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__ExpressInFrame__Node_Node();
+	EOperation getSymphony__CommonTopologyFacade__ExpressInFrame__Node_Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#findNodesByDescription(java.lang.String, org.eclipse.symphony.common.topology.Node) <em>Find Nodes By Description</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#findNodesByDescription(java.lang.String, org.eclipse.symphony.common.topology.Node) <em>Find Nodes By Description</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Nodes By Description</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#findNodesByDescription(java.lang.String, org.eclipse.symphony.common.topology.Node)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#findNodesByDescription(java.lang.String, org.eclipse.symphony.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__FindNodesByDescription__String_Node();
+	EOperation getSymphony__CommonTopologyFacade__FindNodesByDescription__String_Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#findNodesByID(java.lang.String, org.eclipse.symphony.common.topology.Node) <em>Find Nodes By ID</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#findNodesByID(java.lang.String, org.eclipse.symphony.common.topology.Node) <em>Find Nodes By ID</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Nodes By ID</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#findNodesByID(java.lang.String, org.eclipse.symphony.common.topology.Node)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#findNodesByID(java.lang.String, org.eclipse.symphony.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__FindNodesByID__String_Node();
+	EOperation getSymphony__CommonTopologyFacade__FindNodesByID__String_Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#findNodesByType(org.eclipse.emf.ecore.EClass, org.eclipse.symphony.common.topology.Node) <em>Find Nodes By Type</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#findNodesByType(org.eclipse.emf.ecore.EClass, org.eclipse.symphony.common.topology.Node) <em>Find Nodes By Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Nodes By Type</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#findNodesByType(org.eclipse.emf.ecore.EClass, org.eclipse.symphony.common.topology.Node)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#findNodesByType(org.eclipse.emf.ecore.EClass, org.eclipse.symphony.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__FindNodesByType__EClass_Node();
+	EOperation getSymphony__CommonTopologyFacade__FindNodesByType__EClass_Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#findRoot(org.eclipse.symphony.common.topology.Node) <em>Find Root</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#findRoot(org.eclipse.symphony.common.topology.Node) <em>Find Root</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Root</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#findRoot(org.eclipse.symphony.common.topology.Node)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#findRoot(org.eclipse.symphony.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__FindRoot__Node();
+	EOperation getSymphony__CommonTopologyFacade__FindRoot__Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#getEuclideanDistance(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.Node) <em>Get Euclidean Distance</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#getEuclideanDistance(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.Node) <em>Get Euclidean Distance</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Euclidean Distance</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#getEuclideanDistance(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.Node)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#getEuclideanDistance(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__GetEuclideanDistance__Node_Node();
+	EOperation getSymphony__CommonTopologyFacade__GetEuclideanDistance__Node_Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#getGeodesicDistance(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.Node) <em>Get Geodesic Distance</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#getGeodesicDistance(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.Node) <em>Get Geodesic Distance</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Geodesic Distance</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#getGeodesicDistance(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.Node)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#getGeodesicDistance(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__GetGeodesicDistance__Node_Node();
+	EOperation getSymphony__CommonTopologyFacade__GetGeodesicDistance__Node_Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.TopologyFacade#printTopology(org.eclipse.symphony.common.topology.Node) <em>Print Topology</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#printTopology(org.eclipse.symphony.common.topology.Node) <em>Print Topology</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Print Topology</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade#printTopology(org.eclipse.symphony.common.topology.Node)
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade#printTopology(org.eclipse.symphony.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getTopologyFacade__PrintTopology__Node();
+	EOperation getSymphony__CommonTopologyFacade__PrintTopology__Node();
 
 	/**
 	 * Returns the meta object for data type '{@link javax.vecmath.Matrix4d <em>Matrix4d</em>}'.
@@ -2642,14 +2642,14 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		EClass PICK_AND_PLACE_NODE = eINSTANCE.getPickAndPlaceNode();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.impl.TopologyFacadeImpl <em>Topology Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.impl.Symphony__CommonTopologyFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.impl.TopologyFacadeImpl
-		 * @see org.eclipse.symphony.common.topology.impl.Symphony__CommonTopologyPackageImpl#getTopologyFacade()
+		 * @see org.eclipse.symphony.common.topology.impl.Symphony__CommonTopologyFacadeImpl
+		 * @see org.eclipse.symphony.common.topology.impl.Symphony__CommonTopologyPackageImpl#getSymphony__CommonTopologyFacade()
 		 * @generated
 		 */
-		EClass TOPOLOGY_FACADE = eINSTANCE.getTopologyFacade();
+		EClass SYMPHONY_COMMON_TOPOLOGY_FACADE = eINSTANCE.getSymphony__CommonTopologyFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Link</b></em>' operation.
@@ -2657,7 +2657,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___CREATE_LINK__NODE = eINSTANCE.getTopologyFacade__CreateLink__Node();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_LINK__NODE = eINSTANCE.getSymphony__CommonTopologyFacade__CreateLink__Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Content Node</b></em>' operation.
@@ -2665,7 +2665,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___CREATE_CONTENT_NODE__OBJECT = eINSTANCE.getTopologyFacade__CreateContentNode__Object();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_CONTENT_NODE__OBJECT = eINSTANCE.getSymphony__CommonTopologyFacade__CreateContentNode__Object();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Referenced Content Node</b></em>' operation.
@@ -2673,7 +2673,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___CREATE_REFERENCED_CONTENT_NODE__OBJECT = eINSTANCE.getTopologyFacade__CreateReferencedContentNode__Object();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_REFERENCED_CONTENT_NODE__OBJECT = eINSTANCE.getSymphony__CommonTopologyFacade__CreateReferencedContentNode__Object();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Aggregate Content Node</b></em>' operation.
@@ -2681,7 +2681,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___CREATE_AGGREGATE_CONTENT_NODE__OBJECT = eINSTANCE.getTopologyFacade__CreateAggregateContentNode__Object();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_AGGREGATE_CONTENT_NODE__OBJECT = eINSTANCE.getSymphony__CommonTopologyFacade__CreateAggregateContentNode__Object();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Position Node</b></em>' operation.
@@ -2689,7 +2689,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___CREATE_POSITION_NODE__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getTopologyFacade__CreatePositionNode__double_double_double();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_POSITION_NODE__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonTopologyFacade__CreatePositionNode__double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Rotation Node XYZ</b></em>' operation.
@@ -2697,7 +2697,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___CREATE_ROTATION_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getTopologyFacade__CreateRotationNodeXYZ__double_double_double();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonTopologyFacade__CreateRotationNodeXYZ__double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Rotation Node YZX</b></em>' operation.
@@ -2705,7 +2705,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___CREATE_ROTATION_NODE_YZX__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getTopologyFacade__CreateRotationNodeYZX__double_double_double();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_YZX__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonTopologyFacade__CreateRotationNodeYZX__double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Rotation Node ZYX</b></em>' operation.
@@ -2713,7 +2713,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___CREATE_ROTATION_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getTopologyFacade__CreateRotationNodeZYX__double_double_double();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonTopologyFacade__CreateRotationNodeZYX__double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Transform Node XYZ</b></em>' operation.
@@ -2721,7 +2721,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getTopologyFacade__CreateTransformNodeXYZ__double_double_double_double_double_double();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonTopologyFacade__CreateTransformNodeXYZ__double_double_double_double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Transform Node YZX</b></em>' operation.
@@ -2729,7 +2729,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_YZX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getTopologyFacade__CreateTransformNodeYZX__double_double_double_double_double_double();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_YZX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonTopologyFacade__CreateTransformNodeYZX__double_double_double_double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Transform Node ZYX</b></em>' operation.
@@ -2737,7 +2737,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getTopologyFacade__CreateTransformNodeZYX__double_double_double_double_double_double();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonTopologyFacade__CreateTransformNodeZYX__double_double_double_double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Transform Node</b></em>' operation.
@@ -2745,7 +2745,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE__MATRIX4D = eINSTANCE.getTopologyFacade__CreateTransformNode__Matrix4d();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE__MATRIX4D = eINSTANCE.getSymphony__CommonTopologyFacade__CreateTransformNode__Matrix4d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Pick And Place Node</b></em>' operation.
@@ -2753,7 +2753,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___CREATE_PICK_AND_PLACE_NODE__MATRIX4D = eINSTANCE.getTopologyFacade__CreatePickAndPlaceNode__Matrix4d();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_PICK_AND_PLACE_NODE__MATRIX4D = eINSTANCE.getSymphony__CommonTopologyFacade__CreatePickAndPlaceNode__Matrix4d();
 
 		/**
 		 * The meta object literal for the '<em><b>Express Node In Root Frame</b></em>' operation.
@@ -2761,7 +2761,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___EXPRESS_NODE_IN_ROOT_FRAME__NODE = eINSTANCE.getTopologyFacade__ExpressNodeInRootFrame__Node();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___EXPRESS_NODE_IN_ROOT_FRAME__NODE = eINSTANCE.getSymphony__CommonTopologyFacade__ExpressNodeInRootFrame__Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Express Root In Node Frame</b></em>' operation.
@@ -2769,7 +2769,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___EXPRESS_ROOT_IN_NODE_FRAME__NODE = eINSTANCE.getTopologyFacade__ExpressRootInNodeFrame__Node();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___EXPRESS_ROOT_IN_NODE_FRAME__NODE = eINSTANCE.getSymphony__CommonTopologyFacade__ExpressRootInNodeFrame__Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Express In Frame</b></em>' operation.
@@ -2777,7 +2777,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___EXPRESS_IN_FRAME__NODE_NODE = eINSTANCE.getTopologyFacade__ExpressInFrame__Node_Node();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___EXPRESS_IN_FRAME__NODE_NODE = eINSTANCE.getSymphony__CommonTopologyFacade__ExpressInFrame__Node_Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Nodes By Description</b></em>' operation.
@@ -2785,7 +2785,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___FIND_NODES_BY_DESCRIPTION__STRING_NODE = eINSTANCE.getTopologyFacade__FindNodesByDescription__String_Node();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_DESCRIPTION__STRING_NODE = eINSTANCE.getSymphony__CommonTopologyFacade__FindNodesByDescription__String_Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Nodes By ID</b></em>' operation.
@@ -2793,7 +2793,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___FIND_NODES_BY_ID__STRING_NODE = eINSTANCE.getTopologyFacade__FindNodesByID__String_Node();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_ID__STRING_NODE = eINSTANCE.getSymphony__CommonTopologyFacade__FindNodesByID__String_Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Nodes By Type</b></em>' operation.
@@ -2801,7 +2801,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___FIND_NODES_BY_TYPE__ECLASS_NODE = eINSTANCE.getTopologyFacade__FindNodesByType__EClass_Node();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_TYPE__ECLASS_NODE = eINSTANCE.getSymphony__CommonTopologyFacade__FindNodesByType__EClass_Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Root</b></em>' operation.
@@ -2809,7 +2809,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___FIND_ROOT__NODE = eINSTANCE.getTopologyFacade__FindRoot__Node();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_ROOT__NODE = eINSTANCE.getSymphony__CommonTopologyFacade__FindRoot__Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Euclidean Distance</b></em>' operation.
@@ -2817,7 +2817,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE = eINSTANCE.getTopologyFacade__GetEuclideanDistance__Node_Node();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE = eINSTANCE.getSymphony__CommonTopologyFacade__GetEuclideanDistance__Node_Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Geodesic Distance</b></em>' operation.
@@ -2825,7 +2825,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE = eINSTANCE.getTopologyFacade__GetGeodesicDistance__Node_Node();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE = eINSTANCE.getSymphony__CommonTopologyFacade__GetGeodesicDistance__Node_Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Print Topology</b></em>' operation.
@@ -2833,7 +2833,7 @@ public interface Symphony__CommonTopologyPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE = eINSTANCE.getTopologyFacade__PrintTopology__Node();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE = eINSTANCE.getSymphony__CommonTopologyFacade__PrintTopology__Node();
 
 		/**
 		 * The meta object literal for the '<em>Matrix4d</em>' data type.

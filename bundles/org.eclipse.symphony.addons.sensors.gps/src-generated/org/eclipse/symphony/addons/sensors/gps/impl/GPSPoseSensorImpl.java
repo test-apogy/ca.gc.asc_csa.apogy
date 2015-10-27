@@ -45,14 +45,14 @@ import org.eclipse.symphony.common.emf.Server;
 import org.eclipse.symphony.common.emf.Startable;
 import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Pose;
 import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
 import org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker;
 import org.eclipse.symphony.common.lang.java.Timer;
 import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.gavaghan.geodesy.Ellipsoid;
@@ -366,7 +366,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 				if (currentPose != null) {
 					currentPose = convertToLocalFrame(currentPose);
 
-					Tuple3d position = MathFacade.INSTANCE
+					Tuple3d position = Symphony__CommonMathFacade.INSTANCE
 							.createTuple3d(new Vector3d(currentPose.getX(),
 									currentPose.getY(), currentPose.getZ()));
 
@@ -385,14 +385,14 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 						currentPose = computePoseNGPS();
 					}
 
-					Matrix3x3 mat = MathFacade.INSTANCE.createMatrix3x3(rotMat);
+					Matrix3x3 mat = Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(rotMat);
 
 					setRotationMatrix(mat);
 				}
 			} catch (Throwable t) {
 				setStatus(SensorStatus.FAILED);
 
-				Tuple3d newPosition = MathFacade.INSTANCE.createTuple3d(0.0,
+				Tuple3d newPosition = Symphony__CommonMathFacade.INSTANCE.createTuple3d(0.0,
 						0.0, 0.0);
 
 				setPosition(newPosition);
@@ -400,7 +400,7 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 				Matrix3d newRotationMatrix = new Matrix3d();
 				newRotationMatrix.setIdentity();
 
-				Matrix3x3 newMat = MathFacade.INSTANCE
+				Matrix3x3 newMat = Symphony__CommonMathFacade.INSTANCE
 						.createMatrix3x3(newRotationMatrix);
 
 				setRotationMatrix(newMat);
@@ -938,14 +938,14 @@ public class GPSPoseSensorImpl extends PoseSensorImpl implements GPSPoseSensor {
 			double y = newPose.getY();
 			double z = newPose.getZ();
 
-			CartesianPositionCoordinates newPosition = Data3dFacade.INSTANCE
+			CartesianPositionCoordinates newPosition = Symphony__CommonGeometryData3DFacade.INSTANCE
 					.createCartesianPositionCoordinates(x, y, z);
 
 			double rx = newPose.getXRotation();
 			double ry = newPose.getYRotation();
 			double rz = newPose.getZRotation();
 
-			CartesianOrientationCoordinates newOrientation = Data3dFacade.INSTANCE
+			CartesianOrientationCoordinates newOrientation = Symphony__CommonGeometryData3DFacade.INSTANCE
 					.createCartesianOrientationCoordinates(rx, ry, rz);
 
 			resetPosition(newPosition);

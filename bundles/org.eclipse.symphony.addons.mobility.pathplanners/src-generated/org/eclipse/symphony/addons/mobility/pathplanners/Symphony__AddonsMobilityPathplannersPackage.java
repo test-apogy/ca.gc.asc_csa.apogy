@@ -444,23 +444,23 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	int CIRCULAR_EXCLUSION_ZONE_OPERATION_COUNT = EXCLUSION_ZONE_OPERATION_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.PathPlannersFacadeImpl <em>Path Planners Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.Symphony__AddonsMobilityPathplannersFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.impl.PathPlannersFacadeImpl
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.impl.Symphony__AddonsMobilityPathplannersPackageImpl#getPathPlannersFacade()
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.impl.Symphony__AddonsMobilityPathplannersFacadeImpl
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.impl.Symphony__AddonsMobilityPathplannersPackageImpl#getSymphony__AddonsMobilityPathplannersFacade()
 	 * @generated
 	 */
-	int PATH_PLANNERS_FACADE = 4;
+	int SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE = 4;
 
 	/**
-	 * The number of structural features of the '<em>Path Planners Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNERS_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Circular Exclusion Zone</em>' operation.
@@ -469,17 +469,16 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNERS_FACADE___CREATE_CIRCULAR_EXCLUSION_ZONE__DOUBLE_GROUPNODE = 0;
+	int SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE___CREATE_CIRCULAR_EXCLUSION_ZONE__DOUBLE_GROUPNODE = 0;
 
 	/**
-	 * The number of operations of the '<em>Path Planners Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATH_PLANNERS_FACADE_OPERATION_COUNT = 1;
-
+	int SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE_OPERATION_COUNT = 1;
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner <em>Way Point Path Planner</em>}'.
@@ -607,24 +606,24 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 	EAttribute getCircularExclusionZone_InvertSamplingShape();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.pathplanners.PathPlannersFacade <em>Path Planners Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Path Planners Facade</em>'.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.PathPlannersFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade
 	 * @generated
 	 */
-	EClass getPathPlannersFacade();
+	EClass getSymphony__AddonsMobilityPathplannersFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.PathPlannersFacade#createCircularExclusionZone(double, org.eclipse.symphony.common.topology.GroupNode) <em>Create Circular Exclusion Zone</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade#createCircularExclusionZone(double, org.eclipse.symphony.common.topology.GroupNode) <em>Create Circular Exclusion Zone</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Circular Exclusion Zone</em>' operation.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.PathPlannersFacade#createCircularExclusionZone(double, org.eclipse.symphony.common.topology.GroupNode)
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade#createCircularExclusionZone(double, org.eclipse.symphony.common.topology.GroupNode)
 	 * @generated
 	 */
-	EOperation getPathPlannersFacade__CreateCircularExclusionZone__double_GroupNode();
+	EOperation getSymphony__AddonsMobilityPathplannersFacade__CreateCircularExclusionZone__double_GroupNode();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -754,14 +753,14 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 		EAttribute CIRCULAR_EXCLUSION_ZONE__INVERT_SAMPLING_SHAPE = eINSTANCE.getCircularExclusionZone_InvertSamplingShape();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.PathPlannersFacadeImpl <em>Path Planners Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.mobility.pathplanners.impl.Symphony__AddonsMobilityPathplannersFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.impl.PathPlannersFacadeImpl
-		 * @see org.eclipse.symphony.addons.mobility.pathplanners.impl.Symphony__AddonsMobilityPathplannersPackageImpl#getPathPlannersFacade()
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.impl.Symphony__AddonsMobilityPathplannersFacadeImpl
+		 * @see org.eclipse.symphony.addons.mobility.pathplanners.impl.Symphony__AddonsMobilityPathplannersPackageImpl#getSymphony__AddonsMobilityPathplannersFacade()
 		 * @generated
 		 */
-		EClass PATH_PLANNERS_FACADE = eINSTANCE.getPathPlannersFacade();
+		EClass SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE = eINSTANCE.getSymphony__AddonsMobilityPathplannersFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Circular Exclusion Zone</b></em>' operation.
@@ -769,7 +768,7 @@ public interface Symphony__AddonsMobilityPathplannersPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PATH_PLANNERS_FACADE___CREATE_CIRCULAR_EXCLUSION_ZONE__DOUBLE_GROUPNODE = eINSTANCE.getPathPlannersFacade__CreateCircularExclusionZone__double_GroupNode();
+		EOperation SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE___CREATE_CIRCULAR_EXCLUSION_ZONE__DOUBLE_GROUPNODE = eINSTANCE.getSymphony__AddonsMobilityPathplannersFacade__CreateCircularExclusionZone__double_GroupNode();
 
 	}
 

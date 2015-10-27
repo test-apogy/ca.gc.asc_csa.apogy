@@ -29,8 +29,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.ListRootNode;
-import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
@@ -221,18 +221,18 @@ public class VariableFeatureReferenceItemProvider extends ItemProviderAdapter
 		VariableFeatureReference variableFeatureReference = (VariableFeatureReference) object;
 
 		if (variableFeatureReference.getVariable() == null) {
-			EMFEcoreEditUtilsFacade.INSTANCE
+			Symphony__CommonEMFEditUtilsFacade.INSTANCE
 					.removeChildDescriptor(
 							newChildDescriptors,
 							Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT);
 
-			EMFEcoreEditUtilsFacade.INSTANCE
+			Symphony__CommonEMFEditUtilsFacade.INSTANCE
 					.removeChildDescriptor(
 							newChildDescriptors,
 							Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT);
 		} else {
 			// Remove default Root Node.
-			EMFEcoreEditUtilsFacade.INSTANCE
+			Symphony__CommonEMFEditUtilsFacade.INSTANCE
 					.removeChildDescriptor(
 							newChildDescriptors,
 							Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT);
@@ -240,7 +240,7 @@ public class VariableFeatureReferenceItemProvider extends ItemProviderAdapter
 			// Create a new Root Node with Source Class Defined.
 			ListRootNode rootNode = Symphony__CommonEMFFactory.eINSTANCE
 					.createListRootNode();
-		rootNode.setSourceClass(EMFEcoreInvocatorFacade.INSTANCE
+		rootNode.setSourceClass(Symphony__CoreInvocatorFacade.INSTANCE
 					.getInstanceClass(variableFeatureReference));
 			newChildDescriptors
 					.add(createChildParameter(

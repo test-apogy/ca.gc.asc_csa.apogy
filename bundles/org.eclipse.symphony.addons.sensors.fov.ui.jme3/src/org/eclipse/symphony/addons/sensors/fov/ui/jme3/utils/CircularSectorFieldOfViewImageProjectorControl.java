@@ -10,7 +10,7 @@ import org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.scene_objects.ProjectorData;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 
@@ -58,7 +58,7 @@ public class CircularSectorFieldOfViewImageProjectorControl extends AbstractFiel
 	@Override
 	protected Quaternion getProjectorRotation() 
 	{
-		Matrix4d m = TopologyFacade.INSTANCE.expressNodeInRootFrame(fieldOfView);
+		Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(fieldOfView);
 		Matrix3d rot = new Matrix3d();
 		m.get(rot);
 		

@@ -182,26 +182,26 @@ public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.las.LASFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LASFacadeItemProvider lasFacadeItemProvider;
+	protected Symphony__CommonGeometryData3DLASFacadeItemProvider symphony__CommonGeometryData3DLASFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.las.LASFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLASFacadeAdapter() {
-		if (lasFacadeItemProvider == null) {
-			lasFacadeItemProvider = new LASFacadeItemProvider(this);
+	public Adapter createSymphony__CommonGeometryData3DLASFacadeAdapter() {
+		if (symphony__CommonGeometryData3DLASFacadeItemProvider == null) {
+			symphony__CommonGeometryData3DLASFacadeItemProvider = new Symphony__CommonGeometryData3DLASFacadeItemProvider(this);
 		}
 
-		return lasFacadeItemProvider;
+		return symphony__CommonGeometryData3DLASFacadeItemProvider;
 	}
 
 	/**
@@ -357,7 +357,7 @@ public class Symphony__CommonGeometryData3DLASItemProviderAdapterFactory extends
 		if (variableLengthRecordItemProvider != null) variableLengthRecordItemProvider.dispose();
 		if (lasReaderItemProvider != null) lasReaderItemProvider.dispose();
 		if (lasPointItemProvider != null) lasPointItemProvider.dispose();
-		if (lasFacadeItemProvider != null) lasFacadeItemProvider.dispose();
+		if (symphony__CommonGeometryData3DLASFacadeItemProvider != null) symphony__CommonGeometryData3DLASFacadeItemProvider.dispose();
 		if (lasWriterItemProvider != null) lasWriterItemProvider.dispose();
 	}
 

@@ -113,13 +113,13 @@ public interface Symphony__CommonTopologyAddonsPrimitivesFactory extends EFactor
 	SpotLight createSpotLight();
 
 	/**
-	 * Returns a new object of class '<em>Primitives Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Primitives Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	PrimitivesFacade createPrimitivesFacade();
+	Symphony__CommonTopologyAddonsPrimitivesFacade createSymphony__CommonTopologyAddonsPrimitivesFacade();
 
 	/**
 	 * Returns the package supported by this factory.

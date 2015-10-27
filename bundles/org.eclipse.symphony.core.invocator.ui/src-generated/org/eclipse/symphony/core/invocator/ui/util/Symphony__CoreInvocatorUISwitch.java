@@ -64,9 +64,9 @@ public class Symphony__CoreInvocatorUISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case Symphony__CoreInvocatorUIPackage.EMF_ECORE_INVOCATOR_UI_FACADE: {
-				EMFEcoreInvocatorUIFacade emfEcoreInvocatorUIFacade = (EMFEcoreInvocatorUIFacade)theEObject;
-				T result = caseEMFEcoreInvocatorUIFacade(emfEcoreInvocatorUIFacade);
+			case Symphony__CoreInvocatorUIPackage.SYMPHONY_CORE_INVOCATOR_UI_FACADE: {
+				Symphony__CoreInvocatorUIFacade symphony__CoreInvocatorUIFacade = (Symphony__CoreInvocatorUIFacade)theEObject;
+				T result = caseSymphony__CoreInvocatorUIFacade(symphony__CoreInvocatorUIFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -75,17 +75,17 @@ public class Symphony__CoreInvocatorUISwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EMF Ecore Invocator UI Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EMF Ecore Invocator UI Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEMFEcoreInvocatorUIFacade(EMFEcoreInvocatorUIFacade object) {
+	public T caseSymphony__CoreInvocatorUIFacade(Symphony__CoreInvocatorUIFacade object) {
 		return null;
 	}
 

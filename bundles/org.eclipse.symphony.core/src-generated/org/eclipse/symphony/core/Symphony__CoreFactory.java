@@ -21,6 +21,15 @@ public interface Symphony__CoreFactory extends EFactory {
 	Symphony__CoreFactory eINSTANCE = org.eclipse.symphony.core.impl.Symphony__CoreFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Facade</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Facade</em>'.
+	 * @generated
+	 */
+	Symphony__CoreFacade createSymphony__CoreFacade();
+
+	/**
 	 * Returns a new object of class '<em>Symphony Environment</em>'. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
@@ -198,15 +207,6 @@ public interface Symphony__CoreFactory extends EFactory {
 	 * @generated
 	 */
 	UserDefinedResult createUserDefinedResult();
-
-	/**
-	 * Returns a new object of class '<em>Symphony Core Facade</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Symphony Core Facade</em>'.
-	 * @generated
-	 */
-	SymphonyCoreFacade createSymphonyCoreFacade();
 
 	/**
 	 * Returns a new object of class '<em>Result Node</em>'.

@@ -17,7 +17,7 @@ import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
 import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
 import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
 import org.eclipse.symphony.core.ui.ResultNodePresentation;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
 import org.eclipse.symphony.core.ui.Symphony__CoreUIFactory;
 import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
@@ -70,7 +70,7 @@ public class Symphony__CoreUIFactoryImpl extends EFactoryImpl implements Symphon
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE: return createSymphonyCoreUiFacade();
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE: return createSymphony__CoreUIFacade();
 			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS: return createSymphonyResourceSettings();
 			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS: return createNewSymphonyProjectSettings();
 			case Symphony__CoreUIPackage.NEW_SYMPHONY_SESSION_SETTINGS: return createNewSymphonySessionSettings();
@@ -125,16 +125,15 @@ public class Symphony__CoreUIFactoryImpl extends EFactoryImpl implements Symphon
 
 		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonyCoreUiFacade createSymphonyCoreUiFacade()
-  {
-		SymphonyCoreUiFacadeImpl symphonyCoreUiFacade = new SymphonyCoreUiFacadeImpl();
-		return symphonyCoreUiFacade;
+	public Symphony__CoreUIFacade createSymphony__CoreUIFacade() {
+		Symphony__CoreUIFacadeImpl symphony__CoreUIFacade = new Symphony__CoreUIFacadeImpl();
+		return symphony__CoreUIFacade;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

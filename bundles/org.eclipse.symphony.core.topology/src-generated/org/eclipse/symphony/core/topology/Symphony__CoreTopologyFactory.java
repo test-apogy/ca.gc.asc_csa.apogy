@@ -51,15 +51,15 @@ public interface Symphony__CoreTopologyFactory extends EFactory
   SymphonySystemAPIsNode createSymphonySystemAPIsNode();
 
   /**
-	 * Returns a new object of class '<em>Symphony Topology Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Symphony Topology Facade</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-  SymphonyTopologyFacade createSymphonyTopologyFacade();
+	Symphony__CoreTopologyFacade createSymphony__CoreTopologyFacade();
 
-  /**
+		/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -30,10 +30,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.traverse.BreadthFirstIterator;
@@ -317,7 +317,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
 			  while(it.hasNext() && projection == null)
 			  {
 				  CartesianPolygon polygon = it.next();
-				  projection = Geometry3dUtilities.getProjectionAlongAxisOnToPolygon(CartesianAxis.Z, point, polygon);			  			 
+				  projection = Geometry3DUtilities.getProjectionAlongAxisOnToPolygon(CartesianAxis.Z, point, polygon);			  			 
 				  
 				  if(projection != null) 
 				  {
@@ -348,7 +348,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
 	  bodyToWorldTransform.mul(bodyToSystemTransform);
 	  
 	  // Gets the mesh to world transform.
-	  Matrix4d meshToWorldTransform = TopologyFacade.INSTANCE.expressNodeInRootFrame(node);
+	  Matrix4d meshToWorldTransform = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(node);
 	  
 	  // Gets the bodyToMeshTransform
 	  meshToWorldTransform.invert();
@@ -366,7 +366,7 @@ public abstract class ContactProviderImpl extends MinimalEObjectImpl.Container i
   {
 
 	  Node root = getVehiclePoseCorrector().getSymphonySystemApiAdapter().getSymphonySystem().getTopologyRoot().getOriginNode();	  
-	  Matrix4d transform = TopologyFacade.INSTANCE.expressInFrame(body, root);	  	  
+	  Matrix4d transform = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(body, root);	  	  
 	  return transform;
   }
 } //ContactProviderImpl

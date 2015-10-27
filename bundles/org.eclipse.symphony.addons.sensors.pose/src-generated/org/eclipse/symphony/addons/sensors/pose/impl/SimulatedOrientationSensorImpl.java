@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.addons.sensors.pose.SimulatedOrientationSensor;
 import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 
 /**
@@ -144,7 +144,7 @@ public class SimulatedOrientationSensorImpl extends OrientationSensorImpl implem
 																	  getUpdatePeriod() * getZAngularVelocity());							
 												
 						oldRotation.mul(newRotation);						
-						setRotationMatrix(MathFacade.INSTANCE.createMatrix3x3(oldRotation));
+						setRotationMatrix(Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(oldRotation));
 												
 						long delay = Math.round(getUpdatePeriod() * 1000.0);
 						Thread.sleep(delay);

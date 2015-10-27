@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.io.jinput.EComponent;
-import org.eclipse.symphony.core.programs.controllers.ControllerFacade;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade;
 import org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint;
 import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning;
@@ -234,7 +234,7 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	
 		if(getSortedPoints().size() > 0)
 		{			
-			CustomInputConditioningPoint point = ControllerFacade.INSTANCE.createCustomInputConditioningPoint(rawData, 0);
+			CustomInputConditioningPoint point = Symphony__CoreProgramsControllersFacade.INSTANCE.createCustomInputConditioningPoint(rawData, 0);
 			
 			TreeSet<CustomInputConditioningPoint> sortedSet = getSortedPoints();
 			
@@ -270,7 +270,7 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	{		
 		if(sortedPoints == null)
 		{
-			sortedPoints = ControllerFacade.INSTANCE.sortCustomInputConditioningPoint(getTransferFunction());
+			sortedPoints = Symphony__CoreProgramsControllersFacade.INSTANCE.sortCustomInputConditioningPoint(getTransferFunction());
 		}
 		return sortedPoints;
 	}

@@ -3,7 +3,7 @@ package org.eclipse.symphony.core.ui.commands;
 import org.eclipse.core.expressions.PropertyTester;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableImplementation;
 
@@ -17,7 +17,7 @@ public class SymphonySystemVariableInstancePropertyTester extends PropertyTester
 		{
 			boolean result = false;
 			
-			AbstractTypeImplementation ati = EMFEcoreInvocatorFacade.INSTANCE.getTypeImplementation(variable);
+			AbstractTypeImplementation ati = Symphony__CoreInvocatorFacade.INSTANCE.getTypeImplementation(variable);
 			if(ati instanceof VariableImplementation)
 			{
 				VariableImplementation va = (VariableImplementation) ati;			

@@ -6,7 +6,7 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.invocator.ui.Activator;
-import org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUIFacade;
+import org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWizard;
@@ -48,7 +48,7 @@ public class CopyInitializationDataWizard extends Wizard implements INewWizard {
 	@Override
 	public boolean performFinish() {
 		try {
-			EMFEcoreInvocatorUIFacade.INSTANCE.copyInitializationData(page.getSourceContext(), page.getDestinationContext());
+			Symphony__CoreInvocatorUIFacade.INSTANCE.copyInitializationData(page.getSourceContext(), page.getDestinationContext());
 			return true;
 		} catch (Exception e) {
 			Logger.INSTANCE.log(Activator.ID, this, "Contexts <" + page.getSourceContext().getName() + "> and <" + page.getDestinationContext().getName() + "> are not consistent.", EventSeverity.ERROR, e);

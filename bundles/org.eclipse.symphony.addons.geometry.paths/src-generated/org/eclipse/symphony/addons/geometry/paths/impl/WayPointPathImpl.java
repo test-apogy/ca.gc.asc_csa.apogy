@@ -16,7 +16,7 @@ import org.eclipse.symphony.addons.geometry.paths.Path;
 import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 import org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetImpl;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
@@ -226,7 +226,7 @@ public class WayPointPathImpl extends CartesianCoordinatesSetImpl implements Way
 			for (int i = 1; i < getPoints().size(); i++) 
 			{
 				p2 = getPoints().get(i);
-				lenght += Geometry3dUtilities.getDistance(p1, p2);
+				lenght += Geometry3DUtilities.getDistance(p1, p2);
 				p1 = p2;
 			}
 		}

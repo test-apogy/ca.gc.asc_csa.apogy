@@ -67,7 +67,7 @@ public class Symphony__AddonsGeometryPathsFactoryImpl extends EFactoryImpl imple
 			case Symphony__AddonsGeometryPathsPackage.SEGMENT_WAY_POINT_PATH_INTERPOLATOR: return createSegmentWayPointPathInterpolator();
 			case Symphony__AddonsGeometryPathsPackage.MINIMUM_DISTANCE_FILTER: return createMinimumDistanceFilter();
 			case Symphony__AddonsGeometryPathsPackage.UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR: return createUniformDistanceWayPointPathInterpolator();
-			case Symphony__AddonsGeometryPathsPackage.PATHS_FACADE: return createPathsFacade();
+			case Symphony__AddonsGeometryPathsPackage.SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE: return createSymphony__AddonsGeometryPathsFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -182,9 +182,9 @@ public class Symphony__AddonsGeometryPathsFactoryImpl extends EFactoryImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PathsFacade createPathsFacade() {
-		PathsFacadeImpl pathsFacade = new PathsFacadeImpl();
-		return pathsFacade;
+	public Symphony__AddonsGeometryPathsFacade createSymphony__AddonsGeometryPathsFacade() {
+		Symphony__AddonsGeometryPathsFacadeImpl symphony__AddonsGeometryPathsFacade = new Symphony__AddonsGeometryPathsFacadeImpl();
+		return symphony__AddonsGeometryPathsFacade;
 	}
 
 	/**

@@ -14,10 +14,10 @@ import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
@@ -117,13 +117,13 @@ public class SymphonySystem3DView extends AbstractSymphony3DView implements IPro
 							// SymphonyEnvironmentNode to keep the topology updated.
 							if(newSS.getTopologyRoot() != null && newSS.getTopologyRoot().getOriginNode() != null)
 							{													
-								GraphicsContext graphicsContext = TopologyUIFacade.INSTANCE.createGraphicsContext(newSS.getTopologyRoot().getOriginNode());								
+								GraphicsContext graphicsContext = Symphony__CommonTopologyUIFacade.INSTANCE.createGraphicsContext(newSS.getTopologyRoot().getOriginNode());								
 								if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
 							}							
 							else
 							{
-								TransformNode root = TopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);
-								GraphicsContext graphicsContext = TopologyUIFacade.INSTANCE.createGraphicsContext(root);								
+								TransformNode root = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);
+								GraphicsContext graphicsContext = Symphony__CommonTopologyUIFacade.INSTANCE.createGraphicsContext(root);								
 								if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
 							}
 							

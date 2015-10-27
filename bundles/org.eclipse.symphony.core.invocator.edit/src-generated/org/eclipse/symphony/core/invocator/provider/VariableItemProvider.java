@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Type;
@@ -132,7 +132,7 @@ public class VariableItemProvider
 									return o1.getName().compareTo(o2.getName());
 								}
 							};
-							types = EMFEcoreInvocatorFacade.INSTANCE.getAllTypes(environment);
+							types = Symphony__CoreInvocatorFacade.INSTANCE.getAllTypes(environment);
 							Collections.sort(types, comparator);
 						}
 						return types;

@@ -487,27 +487,26 @@ public class Symphony__CoreEnvironmentItemProviderAdapterFactory extends Symphon
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.EnvironmentFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EnvironmentFacadeItemProvider environmentFacadeItemProvider;
+	protected Symphony__CoreEnvironmentFacadeItemProvider symphony__CoreEnvironmentFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.EnvironmentFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEnvironmentFacadeAdapter()
-	{
-		if (environmentFacadeItemProvider == null) {
-			environmentFacadeItemProvider = new EnvironmentFacadeItemProvider(this);
+	public Adapter createSymphony__CoreEnvironmentFacadeAdapter() {
+		if (symphony__CoreEnvironmentFacadeItemProvider == null) {
+			symphony__CoreEnvironmentFacadeItemProvider = new Symphony__CoreEnvironmentFacadeItemProvider(this);
 		}
 
-		return environmentFacadeItemProvider;
+		return symphony__CoreEnvironmentFacadeItemProvider;
 	}
 
 	/**
@@ -1463,7 +1462,7 @@ public class Symphony__CoreEnvironmentItemProviderAdapterFactory extends Symphon
 		if (earthItemProvider != null) earthItemProvider.dispose();
 		if (moonItemProvider != null) moonItemProvider.dispose();
 		if (environmentUtilitiesItemProvider != null) environmentUtilitiesItemProvider.dispose();
-		if (environmentFacadeItemProvider != null) environmentFacadeItemProvider.dispose();
+		if (symphony__CoreEnvironmentFacadeItemProvider != null) symphony__CoreEnvironmentFacadeItemProvider.dispose();
 		if (starItemProvider != null) starItemProvider.dispose();
 		if (starFieldItemProvider != null) starFieldItemProvider.dispose();
 		if (astronomyUtilsItemProvider != null) astronomyUtilsItemProvider.dispose();
@@ -1877,7 +1876,7 @@ public class Symphony__CoreEnvironmentItemProviderAdapterFactory extends Symphon
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentFactory.eINSTANCE.createEnvironmentFacade()));
+						 Symphony__CoreEnvironmentFactory.eINSTANCE.createSymphony__CoreEnvironmentFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -2142,7 +2141,7 @@ public class Symphony__CoreEnvironmentItemProviderAdapterFactory extends Symphon
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentFactory.eINSTANCE.createEnvironmentFacade()));
+						 Symphony__CoreEnvironmentFactory.eINSTANCE.createSymphony__CoreEnvironmentFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter

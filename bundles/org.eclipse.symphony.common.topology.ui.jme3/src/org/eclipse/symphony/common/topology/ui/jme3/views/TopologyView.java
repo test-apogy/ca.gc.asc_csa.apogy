@@ -5,12 +5,12 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.URLNode;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer;
 import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewer;
@@ -67,7 +67,7 @@ public class TopologyView extends ViewPart implements IPartListener2, TopologyVi
 						{
 							if (selection instanceof IStructuredSelection) 
 							{
-								GraphicsContext gc = TopologyUIFacade.INSTANCE.createGraphicsContext(createTestTopology());
+								GraphicsContext gc = Symphony__CommonTopologyUIFacade.INSTANCE.createGraphicsContext(createTestTopology());
 								getTopologyViewer().setInput(gc);
 								
 //								IStructuredSelection sSel = (IStructuredSelection) selection;
@@ -141,10 +141,10 @@ public class TopologyView extends ViewPart implements IPartListener2, TopologyVi
 	{
 		AggregateGroupNode root = Symphony__CommonTopologyFactory.eINSTANCE.createAggregateGroupNode();
 		
-		TransformNode t1 = TopologyFacade.INSTANCE.createTransformNodeXYZ(10, 5, 5,0, 0, 0);
+		TransformNode t1 = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(10, 5, 5,0, 0, 0);
 		root.getAggregatedChildren().add(t1);
 		
-		TransformNode t2 = TopologyFacade.INSTANCE.createTransformNodeXYZ(10, 5, 5,0, 0, 0);
+		TransformNode t2 = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(10, 5, 5,0, 0, 0);
 		t1.getAggregatedChildren().add(t2);
 		
 		URLNode urlNode = Symphony__CommonTopologyFactory.eINSTANCE.createURLNode();

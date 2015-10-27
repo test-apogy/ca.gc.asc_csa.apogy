@@ -21,7 +21,7 @@ import org.eclipse.symphony.addons.sensors.pose.CSVDataLogger;
 import org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit;
 import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
 import org.eclipse.symphony.addons.sensors.pose.PoseDataLogger;
-import org.eclipse.symphony.addons.sensors.pose.PoseFacade;
+import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade;
 import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFactory;
 import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
@@ -119,7 +119,7 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass poseFacadeEClass = null;
+	private EClass symphony__AddonsSensorsPoseFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -538,8 +538,8 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPoseFacade() {
-		return poseFacadeEClass;
+	public EClass getSymphony__AddonsSensorsPoseFacade() {
+		return symphony__AddonsSensorsPoseFacadeEClass;
 	}
 
 	/**
@@ -547,8 +547,8 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPoseFacade__CreateCSVDataLogger__String() {
-		return poseFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__AddonsSensorsPoseFacade__CreateCSVDataLogger__String() {
+		return symphony__AddonsSensorsPoseFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -644,8 +644,8 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 
 		csvDataLoggerEClass = createEClass(CSV_DATA_LOGGER);
 
-		poseFacadeEClass = createEClass(POSE_FACADE);
-		createEOperation(poseFacadeEClass, POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING);
+		symphony__AddonsSensorsPoseFacadeEClass = createEClass(SYMPHONY_ADDONS_SENSORS_POSE_FACADE);
+		createEOperation(symphony__AddonsSensorsPoseFacadeEClass, SYMPHONY_ADDONS_SENSORS_POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING);
 
 		// Create data types
 		exceptionEDataType = createEDataType(EXCEPTION);
@@ -763,9 +763,9 @@ public class Symphony__AddonsSensorsPosePackageImpl extends EPackageImpl impleme
 
 		initEClass(csvDataLoggerEClass, CSVDataLogger.class, "CSVDataLogger", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(poseFacadeEClass, PoseFacade.class, "PoseFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__AddonsSensorsPoseFacadeEClass, Symphony__AddonsSensorsPoseFacade.class, "Symphony__AddonsSensorsPoseFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getPoseFacade__CreateCSVDataLogger__String(), this.getCSVDataLogger(), "createCSVDataLogger", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__AddonsSensorsPoseFacade__CreateCSVDataLogger__String(), this.getCSVDataLogger(), "createCSVDataLogger", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "fileName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types

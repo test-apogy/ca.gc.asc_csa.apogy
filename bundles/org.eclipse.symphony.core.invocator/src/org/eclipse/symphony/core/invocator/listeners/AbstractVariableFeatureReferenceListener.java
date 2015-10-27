@@ -10,7 +10,7 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.ListFeatureNode;
 import org.eclipse.symphony.common.emf.ListRootNode;
 import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
@@ -130,10 +130,10 @@ public class AbstractVariableFeatureReferenceListener
 		{
 			if(variableFeatureReference != null)
 			{
-				EObject newInstance = EMFEcoreInvocatorFacade.INSTANCE.getInstance(variableFeatureReference);				
+				EObject newInstance = Symphony__CoreInvocatorFacade.INSTANCE.getInstance(variableFeatureReference);				
 				updateInstance(newInstance);
 				
-				TypeApiAdapter newTypeApiAdapter = EMFEcoreInvocatorFacade.INSTANCE.getTypeApiAdapter(variableFeatureReference);
+				TypeApiAdapter newTypeApiAdapter = Symphony__CoreInvocatorFacade.INSTANCE.getTypeApiAdapter(variableFeatureReference);
 				updateTypeApiAdapter(newTypeApiAdapter);
 			}
 			else
@@ -500,7 +500,7 @@ public class AbstractVariableFeatureReferenceListener
 								unRegisterFrom((ListRootNode) msg.getOldValue());
 								registerTo((ListRootNode) msg.getNewValue());
 								
-								EObject newInstance = EMFEcoreInvocatorFacade.INSTANCE.getInstance(variableFeatureReference);				
+								EObject newInstance = Symphony__CoreInvocatorFacade.INSTANCE.getInstance(variableFeatureReference);				
 								updateInstance(newInstance);								
 							}
 							break;
@@ -509,7 +509,7 @@ public class AbstractVariableFeatureReferenceListener
 								unRegisterFrom((TypeMemberReferenceListElement) msg.getOldValue(), this);
 								registerTo((TypeMemberReferenceListElement) msg.getNewValue(), this);
 								
-								TypeApiAdapter newTypeApiAdapter = EMFEcoreInvocatorFacade.INSTANCE.getTypeApiAdapter(variableFeatureReference);
+								TypeApiAdapter newTypeApiAdapter = Symphony__CoreInvocatorFacade.INSTANCE.getTypeApiAdapter(variableFeatureReference);
 								updateTypeApiAdapter(newTypeApiAdapter);
 							break;
 							

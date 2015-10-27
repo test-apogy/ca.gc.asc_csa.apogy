@@ -298,26 +298,26 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TopologyUIFacadeItemProvider topologyUIFacadeItemProvider;
+	protected Symphony__CommonTopologyUIFacadeItemProvider symphony__CommonTopologyUIFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createTopologyUIFacadeAdapter() {
-		if (topologyUIFacadeItemProvider == null) {
-			topologyUIFacadeItemProvider = new TopologyUIFacadeItemProvider(this);
+	public Adapter createSymphony__CommonTopologyUIFacadeAdapter() {
+		if (symphony__CommonTopologyUIFacadeItemProvider == null) {
+			symphony__CommonTopologyUIFacadeItemProvider = new Symphony__CommonTopologyUIFacadeItemProvider(this);
 		}
 
-		return topologyUIFacadeItemProvider;
+		return symphony__CommonTopologyUIFacadeItemProvider;
 	}
 
 	/**
@@ -455,7 +455,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 		if (rotationNodePresentationItemProvider != null) rotationNodePresentationItemProvider.dispose();
 		if (positionNodePresentationItemProvider != null) positionNodePresentationItemProvider.dispose();
 		if (urlNodePresentationItemProvider != null) urlNodePresentationItemProvider.dispose();
-		if (topologyUIFacadeItemProvider != null) topologyUIFacadeItemProvider.dispose();
+		if (symphony__CommonTopologyUIFacadeItemProvider != null) symphony__CommonTopologyUIFacadeItemProvider.dispose();
 	}
 
 	/**
@@ -553,7 +553,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyUIFacade()));
+						 Symphony__CommonTopologyUIFactory.eINSTANCE.createSymphony__CommonTopologyUIFacade()));
 
 				return null;
 			}
@@ -613,7 +613,7 @@ public class Symphony__CommonTopologyUIItemProviderAdapterFactory extends Sympho
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyUIFacade()));
+						 Symphony__CommonTopologyUIFactory.eINSTANCE.createSymphony__CommonTopologyUIFacade()));
 
 				return null;
 			}

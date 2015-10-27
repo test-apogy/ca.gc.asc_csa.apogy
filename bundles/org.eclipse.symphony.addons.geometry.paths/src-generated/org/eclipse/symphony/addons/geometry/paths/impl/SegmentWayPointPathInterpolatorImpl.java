@@ -18,7 +18,7 @@ import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsP
 import org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 
 /**
  * <!-- begin-user-doc -->
@@ -207,7 +207,7 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 				double y = point0.y + (t * deltaY);
 				double z = point0.z + (t * deltaZ);
 				
-				CartesianPositionCoordinates point = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z);
+				CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z);
 				points.add(point);
 				
 				t += deltaT;
@@ -245,13 +245,13 @@ public class SegmentWayPointPathInterpolatorImpl extends WayPointPathInterpolato
 				if(getProgressMonitor() != null) getProgressMonitor().worked(1);
 			}
 			// Adds the last point.
-			CartesianPositionCoordinates lastPoint = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(input.getEndPoint());			
+			CartesianPositionCoordinates lastPoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(input.getEndPoint());			
 			
 			result.getPoints().add(lastPoint);
 		}		
 		else if(input.getPoints().size() == 1)
 		{
-			CartesianPositionCoordinates point = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(input.getStartPoint());
+			CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(input.getStartPoint());
 			result.getPoints().add(point);
 		}
 		if(getProgressMonitor() != null) getProgressMonitor().done();

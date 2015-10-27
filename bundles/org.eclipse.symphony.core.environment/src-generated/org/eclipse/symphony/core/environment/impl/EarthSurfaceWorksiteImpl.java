@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.environment.Activator;
 import org.eclipse.symphony.core.environment.EarthSky;
 import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
 import org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.EnvironmentFacade;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.Sky;
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
@@ -120,7 +120,7 @@ public class EarthSurfaceWorksiteImpl extends SurfaceWorksiteImpl implements Ear
 	  GeographicCoordinates coords = getGeographicalCoordinatesGen();
 	  if(coords == null)
 	  {
-		  coords = EnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();		  
+		  coords = Symphony__CoreEnvironmentFacade.INSTANCE.getMarsYardGeographicalCoordinates();		  
 		  setGeographicalCoordinates(coords);
 	  }
 	  

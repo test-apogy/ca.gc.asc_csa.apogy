@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.topology.INodeVisitor;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
 import org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode;
@@ -81,11 +81,11 @@ public class EarthSurfaceWorksiteNodeImpl extends SurfaceWorksiteNodeImpl implem
 		  if(getWorksite() instanceof EarthSurfaceWorksite)
 		  {
 			  EarthSurfaceWorksite earthSurfaceWorksite = (EarthSurfaceWorksite) getWorksite();
-			  t = TopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, earthSurfaceWorksite.getXAxisAzimuth());			  
+			  t = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, earthSurfaceWorksite.getXAxisAzimuth());			  
 		  }
 		  else
 		  {
-			  t = TopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);  
+			  t = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);  
 		  }		  		  		  
 		  t.setNodeId("SKY_TRANSFORM");
 		  t.setDescription("Transform used to orient the sky to factor in the EarthSurfaceWorksite X Axis Azimuth.");

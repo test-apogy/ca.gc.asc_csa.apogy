@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.core.environment.AstronomyUtils;
 import org.eclipse.symphony.core.environment.EarthSky;
@@ -97,7 +97,7 @@ public class EarthSkyNodeImpl extends SkyNodeImpl implements EarthSkyNode
 							if(sun != null) 
 							{
 								TransformNode sunTransformNode = (TransformNode) sun.getParent();										
-								sunTransformNode.setPosition(MathFacade.INSTANCE.createTuple3d(sunPosition));
+								sunTransformNode.setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(sunPosition));
 							}
 						}
 						else if(msg.getFeatureID(EarthSky.class) == Symphony__CoreEnvironmentPackage.EARTH_SKY__MOON_HORIZONTAL_COORDINATES)
@@ -116,7 +116,7 @@ public class EarthSkyNodeImpl extends SkyNodeImpl implements EarthSkyNode
 							if(moon != null) 
 							{
 								TransformNode moonTransformNode = (TransformNode) moon.getParent();								
-								moonTransformNode.setPosition(MathFacade.INSTANCE.createTuple3d(moonPosition));
+								moonTransformNode.setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(moonPosition));
 							}							
 						}
 						else if(msg.getFeatureID(EarthSky.class) == Symphony__CoreEnvironmentPackage.SKY__TIME)
@@ -136,7 +136,7 @@ public class EarthSkyNodeImpl extends SkyNodeImpl implements EarthSkyNode
 							if(starField != null) 
 							{
 								TransformNode starFieldTransformNode = (TransformNode) starField.getParent();																
-								starFieldTransformNode.setRotationMatrix(MathFacade.INSTANCE.createMatrix3x3( m));			
+								starFieldTransformNode.setRotationMatrix(Symphony__CommonMathFacade.INSTANCE.createMatrix3x3( m));			
 							}
 						}
 					}

@@ -33,13 +33,13 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.environment.AbstractMapLayerNode;
 import org.eclipse.symphony.core.environment.Activator;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode;
-import org.eclipse.symphony.core.environment.EnvironmentFacade;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
 import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
 import org.eclipse.symphony.core.environment.MapLayerPresentation;
 import org.eclipse.symphony.core.environment.RectangularRegion;
@@ -300,7 +300,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 		
 		if(getCurrentMesh() != null)
 		{
-			EnvironmentFacade.INSTANCE.getRectangularVolumeRegion(getCurrentMesh());
+			Symphony__CoreEnvironmentFacade.INSTANCE.getRectangularVolumeRegion(getCurrentMesh());
 		}
 		else
 		{
@@ -310,11 +310,11 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 		// Sets the transformation
 		if(getMap() != null && getMap().getTransformation() != null)
 		{
-			rectangularVolumeRegion.setTransformation(MathFacade.INSTANCE.createMatrix4x4(getMap().getTransformation().asMatrix4d()));
+			rectangularVolumeRegion.setTransformation(Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(getMap().getTransformation().asMatrix4d()));
 		}
 		else
 		{
-			rectangularVolumeRegion.setTransformation(MathFacade.INSTANCE.createIdentityMatrix4x4());
+			rectangularVolumeRegion.setTransformation(Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4());
 		}
 		
 		return rectangularVolumeRegion;
@@ -509,7 +509,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 		Logger.INSTANCE.log(Activator.ID, this, getName() + " : Updating Texture Image starts.", EventSeverity.INFO);
 		
 		// First, finds the mesh extent in its own frame.		
-		RectangularRegion meshRegion = EnvironmentFacade.INSTANCE.getRectangularVolumeRegion(getCurrentMesh());
+		RectangularRegion meshRegion = Symphony__CoreEnvironmentFacade.INSTANCE.getRectangularVolumeRegion(getCurrentMesh());
 		
 		// Finds the mesh extent transform relative to the worksite origin.		
 		Matrix4d meshTransformMatrix = new Matrix4d();
@@ -544,7 +544,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 				imageToMeshTransform.mul(imageMapLayerPresentation.getRegion().getTransformation().asMatrix4d());
 												
 				// If the regions intersect the mesh.
-				if(EnvironmentFacade.INSTANCE.intersects(meshRegion, imageMapLayerPresentation.getRegion(), MathFacade.INSTANCE.createMatrix4x4(imageToMeshTransform)))
+				if(Symphony__CoreEnvironmentFacade.INSTANCE.intersects(meshRegion, imageMapLayerPresentation.getRegion(), Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(imageToMeshTransform)))
 				{
 					// Check to see if it has a better resolution as what we currently have.
 					if(imageMapLayerPresentation.getResolution() < bestResolution) bestResolution = imageMapLayerPresentation.getResolution();
@@ -591,7 +591,7 @@ public class CartesianTriangularMeshMapLayerImpl extends AbstractMapLayerImpl im
 					Matrix4d imageToMeshTransform = new Matrix4d(layerPresentationToTransformMap.get(imageMapLayerPresentation));
 															
 					// Finds the relative rotation around +Z between the image and the mesh.	
-					Tuple3d rotation = MathFacade.INSTANCE.extractOrientation(MathFacade.INSTANCE.createMatrix4x4(imageToMeshTransform));
+					Tuple3d rotation = Symphony__CommonMathFacade.INSTANCE.extractOrientation(Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(imageToMeshTransform));
 					double zRotationAngle = -rotation.getZ();				
 					
 					// Finds the translation between the image and the mesh in the XY plane.

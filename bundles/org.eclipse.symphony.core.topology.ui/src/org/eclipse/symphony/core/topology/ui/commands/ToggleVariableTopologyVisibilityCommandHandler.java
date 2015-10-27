@@ -14,7 +14,7 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.topology.SymphonyTopologyFacade;
+import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade;
 import org.eclipse.symphony.core.topology.ui.Activator;
 import org.eclipse.ui.handlers.HandlerUtil;
 
@@ -41,7 +41,7 @@ public class ToggleVariableTopologyVisibilityCommandHandler extends AbstractHand
 					{
 						try
 						{			
-							Node node = SymphonyTopologyFacade.INSTANCE.getVariableOriginNode(variable);
+							Node node = Symphony__CoreTopologyFacade.INSTANCE.getVariableOriginNode(variable);
 							if(node != null)
 							{								
 								NodePresentation nodePresentation = org.eclipse.symphony.common.topology.ui.Activator.getTopologyPresentationRegistry().getPresentationNode(node);				

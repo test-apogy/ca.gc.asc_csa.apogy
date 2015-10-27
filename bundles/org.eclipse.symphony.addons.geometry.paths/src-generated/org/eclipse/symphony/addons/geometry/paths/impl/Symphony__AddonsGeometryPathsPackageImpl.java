@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator;
 import org.eclipse.symphony.addons.geometry.paths.MinimumDistanceFilter;
 import org.eclipse.symphony.addons.geometry.paths.Path;
-import org.eclipse.symphony.addons.geometry.paths.PathsFacade;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade;
 import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
 import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.SegmentWayPointPathInterpolator;
@@ -109,7 +109,7 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass pathsFacadeEClass = null;
+	private EClass symphony__AddonsGeometryPathsFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -357,8 +357,8 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPathsFacade() {
-		return pathsFacadeEClass;
+	public EClass getSymphony__AddonsGeometryPathsFacade() {
+		return symphony__AddonsGeometryPathsFacadeEClass;
 	}
 
 	/**
@@ -366,8 +366,8 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPathsFacade__CreateWayPointPath__WayPointPath() {
-		return pathsFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__WayPointPath() {
+		return symphony__AddonsGeometryPathsFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -375,8 +375,8 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPathsFacade__CreateWayPointPath__List() {
-		return pathsFacadeEClass.getEOperations().get(1);
+	public EOperation getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__List() {
+		return symphony__AddonsGeometryPathsFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -452,9 +452,9 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 		uniformDistanceWayPointPathInterpolatorEClass = createEClass(UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR);
 		createEAttribute(uniformDistanceWayPointPathInterpolatorEClass, UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL);
 
-		pathsFacadeEClass = createEClass(PATHS_FACADE);
-		createEOperation(pathsFacadeEClass, PATHS_FACADE___CREATE_WAY_POINT_PATH__WAYPOINTPATH);
-		createEOperation(pathsFacadeEClass, PATHS_FACADE___CREATE_WAY_POINT_PATH__LIST);
+		symphony__AddonsGeometryPathsFacadeEClass = createEClass(SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE);
+		createEOperation(symphony__AddonsGeometryPathsFacadeEClass, SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__WAYPOINTPATH);
+		createEOperation(symphony__AddonsGeometryPathsFacadeEClass, SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__LIST);
 
 		// Create enums
 		splineEndControlPointGenerationModeEEnum = createEEnum(SPLINE_END_CONTROL_POINT_GENERATION_MODE);
@@ -550,12 +550,12 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 		initEClass(uniformDistanceWayPointPathInterpolatorEClass, UniformDistanceWayPointPathInterpolator.class, "UniformDistanceWayPointPathInterpolator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUniformDistanceWayPointPathInterpolator_DistanceInterval(), theEcorePackage.getEDouble(), "distanceInterval", null, 0, 1, UniformDistanceWayPointPathInterpolator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(pathsFacadeEClass, PathsFacade.class, "PathsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__AddonsGeometryPathsFacadeEClass, Symphony__AddonsGeometryPathsFacade.class, "Symphony__AddonsGeometryPathsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getPathsFacade__CreateWayPointPath__WayPointPath(), this.getWayPointPath(), "createWayPointPath", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__WayPointPath(), this.getWayPointPath(), "createWayPointPath", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getWayPointPath(), "wayPointPath", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getPathsFacade__CreateWayPointPath__List(), this.getWayPointPath(), "createWayPointPath", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__List(), this.getWayPointPath(), "createWayPointPath", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(theSymphony__CommonGeometryData3DPackage.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
@@ -609,13 +609,13 @@ public class Symphony__AddonsGeometryPathsPackageImpl extends EPackageImpl imple
 			 "documentation", "Fits a spline on the specified path using Catmull-Rom and generates an\ninterpolated path using the specified maximum point to point distance.\nThe original waypoints are included in the resulting interpolated path."
 		   });	
 		addAnnotation
-		  (getPathsFacade__CreateWayPointPath__WayPointPath(), 
+		  (getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__WayPointPath(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates a WayPointPath from a WayPointPath. The WayPointPath created\ncontains copies of all the points found in the specified WayPointPath."
 		   });	
 		addAnnotation
-		  (getPathsFacade__CreateWayPointPath__List(), 
+		  (getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__List(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates a WayPointPath using a list of CartesianPositionCoordinates.\nThe WayPointPath created contains copies of all the points found in\nthe specified list."

@@ -19,11 +19,11 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.core.Symphony__CoreFactory;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.UserDefinedResult;
@@ -33,7 +33,7 @@ public class CreateUserDefinedResultDialog extends Dialog
 {	
 	protected Context context;
 		
-	private Matrix4x4 resultPose = MathFacade.INSTANCE.createIdentityMatrix4x4();
+	private Matrix4x4 resultPose = Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4();
 	
 	private UserDefinedResult userDefinedResult = null;
 		
@@ -105,8 +105,8 @@ public class CreateUserDefinedResultDialog extends Dialog
 				Node selectedNode = indexToNodeMap.get(nodesCombo.getSelectionIndex());
 				if(selectedNode != null)
 				{
-					Matrix4d absolutePosition = TopologyFacade.INSTANCE.expressNodeInRootFrame(selectedNode);
-					resultPose = MathFacade.INSTANCE.createMatrix4x4(absolutePosition);
+					Matrix4d absolutePosition = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(selectedNode);
+					resultPose = Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(absolutePosition);
 				}
 			}
 			

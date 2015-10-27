@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.PoseProvider;
@@ -19,7 +19,7 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider;
 import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.jfree.data.xy.XYDataItem;
 
 /**
@@ -268,7 +268,7 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
 	  {
 		  try
 		  {
-			  AbstractTypeImplementation abstractTypeImplementation = EMFEcoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariableAnnotation().getVariable());			  
+			  AbstractTypeImplementation abstractTypeImplementation = Symphony__CoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariableAnnotation().getVariable());			  
 			  if(abstractTypeImplementation.getAdapterInstance() instanceof SymphonySystemApiAdapter)
 			  {
 				  SymphonySystemApiAdapter symphonySystemApiAdapter = (SymphonySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
@@ -313,8 +313,8 @@ public class DefaultVariableTrajectoryProviderImpl extends VariableTrajectoryPro
    */
   protected void updatePose(Matrix4x4 newPose)
   {
-	  Tuple3d position = MathFacade.INSTANCE.extractPosition(newPose);
-	  Tuple3d orientation = MathFacade.INSTANCE.extractOrientation(newPose);	
+	  Tuple3d position = Symphony__CommonMathFacade.INSTANCE.extractPosition(newPose);
+	  Tuple3d orientation = Symphony__CommonMathFacade.INSTANCE.extractOrientation(newPose);	
 	  
 	  if(previousPosition == null)
 	  {

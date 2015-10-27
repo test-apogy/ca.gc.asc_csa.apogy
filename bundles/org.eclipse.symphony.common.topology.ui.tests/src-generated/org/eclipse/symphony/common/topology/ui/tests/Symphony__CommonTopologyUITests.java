@@ -40,7 +40,7 @@ public class Symphony__CommonTopologyUITests extends TestSuite {
 		suite.addTestSuite(RotationNodePresentationTest.class);
 		suite.addTestSuite(PositionNodePresentationTest.class);
 		suite.addTestSuite(URLNodePresentationTest.class);
-		suite.addTestSuite(TopologyUIFacadeTest.class);
+		suite.addTestSuite(Symphony__CommonTopologyUIFacadeTest.class);
 		return suite;
 	}
 

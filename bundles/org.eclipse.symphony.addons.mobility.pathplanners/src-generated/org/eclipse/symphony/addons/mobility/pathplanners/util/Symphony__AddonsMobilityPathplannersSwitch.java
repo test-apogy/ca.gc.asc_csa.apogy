@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
 import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone;
 import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.PathPlannersFacade;
+import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade;
 import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
 import org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner;
 import org.eclipse.symphony.common.geometry.data.Coordinates;
@@ -116,9 +116,9 @@ public class Symphony__AddonsMobilityPathplannersSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsMobilityPathplannersPackage.PATH_PLANNERS_FACADE: {
-				PathPlannersFacade pathPlannersFacade = (PathPlannersFacade)theEObject;
-				T1 result = casePathPlannersFacade(pathPlannersFacade);
+			case Symphony__AddonsMobilityPathplannersPackage.SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE: {
+				Symphony__AddonsMobilityPathplannersFacade symphony__AddonsMobilityPathplannersFacade = (Symphony__AddonsMobilityPathplannersFacade)theEObject;
+				T1 result = caseSymphony__AddonsMobilityPathplannersFacade(symphony__AddonsMobilityPathplannersFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -187,17 +187,17 @@ public class Symphony__AddonsMobilityPathplannersSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Path Planners Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Path Planners Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 casePathPlannersFacade(PathPlannersFacade object) {
+	public T1 caseSymphony__AddonsMobilityPathplannersFacade(Symphony__AddonsMobilityPathplannersFacade object) {
 		return null;
 	}
 

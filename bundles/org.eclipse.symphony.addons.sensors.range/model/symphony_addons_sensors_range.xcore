@@ -195,7 +195,7 @@ class RasterScanData extends AggregateGroupNode, Timed
 	contains VolumetricCoordinatesSet25D scanData
 }
 
-class SensorsRangeFacade
+class Symphony__AddonsSensorsRangeFacade
 {
 	op RasterScanSettings createRasterScanSettings(double minimumDistance, double maximumDistance,
 		                                           double horizontalFieldOfViewAngle, double verticalFieldOfViewAngle,

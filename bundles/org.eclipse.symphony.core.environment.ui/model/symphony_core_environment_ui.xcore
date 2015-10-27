@@ -32,11 +32,9 @@ import org.eclipse.emf.ecore.EObject
 // Types
 type List<T> wraps java.util.List
 
-
 type Point2d wraps javax.vecmath.Point2d
 type Color3f wraps javax.vecmath.Color3f
 type Point3f wraps javax.vecmath.Point3f
-
 
 type XYSeries wraps  org.jfree.data.xy.XYSeries
 type XYPlot wraps org.jfree.chart.plot.XYPlot
@@ -103,7 +101,7 @@ class FeatureOfInterestNodePresentation extends NodePresentation
 
 // Utilities
 
-class EnvironmentUiUtilities
+class EnvironmentUIUtilities
 {
 	op Point3f toPoint3f(Star star)		
 	
@@ -129,7 +127,7 @@ class EnvironmentUiUtilities
 	op Color3f getSkyColor(@GenModel(csa_units="rad") double sunAltitude)
 }
 
-class EnvironmentUiFacade
+class Symphony__CoreEnvironmentUIFacade
 {
 	//op void getImageMapLayerPresentationExtent(ImageMapLayerPresentation imageMapLayerPresentation, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
 	

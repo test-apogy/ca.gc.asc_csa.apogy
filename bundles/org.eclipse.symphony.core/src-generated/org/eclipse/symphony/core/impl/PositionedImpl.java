@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.Positioned;
 import org.eclipse.symphony.core.Symphony__CorePackage;
@@ -68,7 +68,7 @@ public class PositionedImpl extends MinimalEObjectImpl.Container implements Posi
 		
 		if(tmp == null)
 		{
-			tmp = MathFacade.INSTANCE.createIdentityMatrix4x4();
+			tmp = Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4();
 			setPose(tmp);
 		}
 		

@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.geometry.data.impl.PolygonImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 
 /**
  * <!-- begin-user-doc -->
@@ -92,7 +92,7 @@ public class CartesianPolygonImpl extends PolygonImpl<CartesianPositionCoordinat
 	 * @generated NOT
 	 */
 	public double getSurface() {
-		return Geometry3dUtilities.getPolygonSurface(this.getVertices());		
+		return Geometry3DUtilities.getPolygonSurface(this.getVertices());		
 	}
 
 	/**
@@ -101,7 +101,7 @@ public class CartesianPolygonImpl extends PolygonImpl<CartesianPositionCoordinat
 	 * @generated NOT
 	 */
 	public Vector3d getNormal() {
-		return Geometry3dUtilities.getPolygonNormal(this.getVertices());
+		return Geometry3DUtilities.getPolygonNormal(this.getVertices());
 	}
 
 	/**
@@ -120,7 +120,7 @@ public class CartesianPolygonImpl extends PolygonImpl<CartesianPositionCoordinat
 	 * @generated NOT
 	 */
 	public CartesianPositionCoordinates basicGetCentroid() {
-		return Geometry3dUtilities.getCentroid(this.getVertices());
+		return Geometry3DUtilities.getCentroid(this.getVertices());
 	}
 
 	/**

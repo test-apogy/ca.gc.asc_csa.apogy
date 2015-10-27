@@ -6,7 +6,7 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
@@ -145,9 +145,9 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	 * @return List of programs.
 	 */
 	protected ProgramsList getProgramsList(){
-		return EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null ? 
+		return Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null ? 
 				null : 
-				EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList();
+				Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession().getProgramsList();
 	}
 	
 	/** 
@@ -169,7 +169,7 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	 */
 	protected VariablesList getVariablesList(){
 		VariablesList variablesList = null;
-		InvocatorSession session = EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 		if (session != null){
 			variablesList = session.getEnvironment() == null ? null : session.getEnvironment().getVariablesList();			
 		}

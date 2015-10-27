@@ -8,7 +8,7 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.las.LASHeader;
 import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
@@ -94,7 +94,7 @@ public class GraphicsContextLasAdapter implements GraphicsContextAdapter {
 					double y = (p.getY() * yScale) + yOffset;
 					double z = (p.getZ() * zScale) + zOffset;															
 
-					CartesianPositionCoordinates point = Data3dFacade.INSTANCE
+					CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE
 							.createCartesianPositionCoordinates(x, y, z);
 					pointList.add(point);
 				}
@@ -105,7 +105,7 @@ public class GraphicsContextLasAdapter implements GraphicsContextAdapter {
 				GroupNode root = Symphony__CommonTopologyFactory.eINSTANCE
 						.createAggregateGroupNode();
 
-				ContentNode<CartesianCoordinatesSet> pointNode = org.eclipse.symphony.common.topology.TopologyFacade.INSTANCE
+				ContentNode<CartesianCoordinatesSet> pointNode = org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade.INSTANCE
 						.createContentNode(pts);
 
 				root.getChildren().add(pointNode);

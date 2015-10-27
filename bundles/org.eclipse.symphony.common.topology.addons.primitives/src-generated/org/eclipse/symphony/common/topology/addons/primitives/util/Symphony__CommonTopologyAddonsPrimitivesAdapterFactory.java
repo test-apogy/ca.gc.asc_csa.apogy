@@ -118,8 +118,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 				return createSpotLightAdapter();
 			}
 			@Override
-			public Adapter casePrimitivesFacade(PrimitivesFacade object) {
-				return createPrimitivesFacadeAdapter();
+			public Adapter caseSymphony__CommonTopologyAddonsPrimitivesFacade(Symphony__CommonTopologyAddonsPrimitivesFacade object) {
+				return createSymphony__CommonTopologyAddonsPrimitivesFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
@@ -312,16 +312,16 @@ public class Symphony__CommonTopologyAddonsPrimitivesAdapterFactory extends Adap
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade <em>Primitives Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade
 	 * @generated
 	 */
-	public Adapter createPrimitivesFacadeAdapter() {
+	public Adapter createSymphony__CommonTopologyAddonsPrimitivesFacadeAdapter() {
 		return null;
 	}
 

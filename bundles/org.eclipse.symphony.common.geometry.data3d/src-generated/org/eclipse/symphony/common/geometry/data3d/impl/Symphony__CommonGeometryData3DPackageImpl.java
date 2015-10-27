@@ -51,7 +51,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshSample
 import org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape;
 import org.eclipse.symphony.common.geometry.data3d.Data3DIO;
 import org.eclipse.symphony.common.geometry.data3d.Data3DUtils;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.DelaunayMesher;
@@ -421,7 +421,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass data3dFacadeEClass = null;
+	private EClass symphony__CommonGeometryData3DFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1850,8 +1850,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getData3dFacade() {
-		return data3dFacadeEClass;
+	public EClass getSymphony__CommonGeometryData3DFacade() {
+		return symphony__CommonGeometryData3DFacadeEClass;
 	}
 
 	/**
@@ -1859,8 +1859,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreateCartesianPositionCoordinates__double_double_double() {
-		return data3dFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianPositionCoordinates__double_double_double() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1868,8 +1868,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreateCartesianOrientationCoordinates__double_double_double() {
-		return data3dFacadeEClass.getEOperations().get(1);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__double_double_double() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -1877,8 +1877,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreateSphericalCoordinates__double_double_double() {
-		return data3dFacadeEClass.getEOperations().get(2);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateSphericalCoordinates__double_double_double() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -1886,8 +1886,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreatePose__double_double_double_double_double_double() {
-		return data3dFacadeEClass.getEOperations().get(3);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreatePose__double_double_double_double_double_double() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -1895,8 +1895,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreatePose__Pose() {
-		return data3dFacadeEClass.getEOperations().get(4);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreatePose__Pose() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -1904,8 +1904,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates() {
-		return data3dFacadeEClass.getEOperations().get(5);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -1913,8 +1913,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreatePointNormalLocator__NormalPointCloud() {
-		return data3dFacadeEClass.getEOperations().get(6);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreatePointNormalLocator__NormalPointCloud() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -1922,8 +1922,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreateDigitalElevationMap__CartesianCoordinatesSet() {
-		return data3dFacadeEClass.getEOperations().get(7);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateDigitalElevationMap__CartesianCoordinatesSet() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -1931,8 +1931,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() {
-		return data3dFacadeEClass.getEOperations().get(8);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -1940,8 +1940,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates() {
-		return data3dFacadeEClass.getEOperations().get(9);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(9);
 	}
 
 	/**
@@ -1949,8 +1949,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates() {
-		return data3dFacadeEClass.getEOperations().get(10);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(10);
 	}
 
 	/**
@@ -1958,8 +1958,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh() {
-		return data3dFacadeEClass.getEOperations().get(11);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(11);
 	}
 
 	/**
@@ -1967,8 +1967,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() {
-		return data3dFacadeEClass.getEOperations().get(12);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(12);
 	}
 
 	/**
@@ -1976,8 +1976,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreateCartesianTriangle__CartesianPolygon() {
-		return data3dFacadeEClass.getEOperations().get(13);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPolygon() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(13);
 	}
 
 	/**
@@ -1985,8 +1985,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreateCartesianCoordinatesMesh__List() {
-		return data3dFacadeEClass.getEOperations().get(14);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__List() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(14);
 	}
 
 	/**
@@ -1994,8 +1994,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh() {
-		return data3dFacadeEClass.getEOperations().get(15);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(15);
 	}
 
 	/**
@@ -2003,8 +2003,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreateCartesianTriangularMesh__List() {
-		return data3dFacadeEClass.getEOperations().get(16);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__List() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(16);
 	}
 
 	/**
@@ -2012,8 +2012,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh() {
-		return data3dFacadeEClass.getEOperations().get(17);
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(17);
 	}
 
 	/**
@@ -2021,8 +2021,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d() {
-		return data3dFacadeEClass.getEOperations().get(18);
+	public EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(18);
 	}
 
 	/**
@@ -2030,8 +2030,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__ApplyTransform__List_Matrix4d() {
-		return data3dFacadeEClass.getEOperations().get(19);
+	public EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__List_Matrix4d() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(19);
 	}
 
 	/**
@@ -2039,8 +2039,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d() {
-		return data3dFacadeEClass.getEOperations().get(20);
+	public EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(20);
 	}
 
 	/**
@@ -2048,8 +2048,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__ApplyTransformInt__CartesianTriangularMesh_Matrix4d() {
-		return data3dFacadeEClass.getEOperations().get(21);
+	public EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransformInt__CartesianTriangularMesh_Matrix4d() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(21);
 	}
 
 	/**
@@ -2057,8 +2057,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__ApplyTransform__NormalPointCloud_Matrix4d() {
-		return data3dFacadeEClass.getEOperations().get(22);
+	public EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__NormalPointCloud_Matrix4d() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(22);
 	}
 
 	/**
@@ -2066,8 +2066,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double() {
-		return data3dFacadeEClass.getEOperations().get(23);
+	public EOperation getSymphony__CommonGeometryData3DFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(23);
 	}
 
 	/**
@@ -2075,8 +2075,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3dFacade__ConcatenateTriangularMeshes__EList() {
-		return data3dFacadeEClass.getEOperations().get(24);
+	public EOperation getSymphony__CommonGeometryData3DFacade__ConcatenateTriangularMeshes__EList() {
+		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(24);
 	}
 
 	/**
@@ -2664,32 +2664,32 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		positionMarkerEClass = createEClass(POSITION_MARKER);
 		createEAttribute(positionMarkerEClass, POSITION_MARKER__IDENTIFIER);
 
-		data3dFacadeEClass = createEClass(DATA3D_FACADE);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_POSE__POSE);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_POINT_NORMAL_LOCATOR__NORMALPOINTCLOUD);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___APPLY_TRANSFORM__LIST_MATRIX4D);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___APPLY_TRANSFORM_INT__CARTESIANTRIANGULARMESH_MATRIX4D);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE);
-		createEOperation(data3dFacadeEClass, DATA3D_FACADE___CONCATENATE_TRIANGULAR_MESHES__ELIST);
+		symphony__CommonGeometryData3DFacadeEClass = createEClass(SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_SPHERICAL_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__POSE);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POINT_NORMAL_LOCATOR__NORMALPOINTCLOUD);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM_INT__CARTESIANTRIANGULARMESH_MATRIX4D);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__ELIST);
 
 		data3DIOEClass = createEClass(DATA3_DIO);
 		createEOperation(data3DIOEClass, DATA3_DIO___LOAD_TRIANGULAR_MESH__STRING);
@@ -3236,24 +3236,24 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		initEClass(positionMarkerEClass, PositionMarker.class, "PositionMarker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPositionMarker_Identifier(), theEcorePackage.getEString(), "identifier", null, 0, 1, PositionMarker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(data3dFacadeEClass, Data3dFacade.class, "Data3dFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CommonGeometryData3DFacadeEClass, Symphony__CommonGeometryData3DFacade.class, "Symphony__CommonGeometryData3DFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getData3dFacade__CreateCartesianPositionCoordinates__double_double_double(), this.getCartesianPositionCoordinates(), "createCartesianPositionCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateCartesianPositionCoordinates__double_double_double(), this.getCartesianPositionCoordinates(), "createCartesianPositionCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "y", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "z", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreateCartesianOrientationCoordinates__double_double_double(), this.getCartesianOrientationCoordinates(), "createCartesianOrientationCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__double_double_double(), this.getCartesianOrientationCoordinates(), "createCartesianOrientationCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "xRotation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "yRotation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "zRotation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreateSphericalCoordinates__double_double_double(), this.getSphericalCoordinates(), "createSphericalCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateSphericalCoordinates__double_double_double(), this.getSphericalCoordinates(), "createSphericalCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "phi", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "theta", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "r", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreatePose__double_double_double_double_double_double(), this.getPose(), "createPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreatePose__double_double_double_double_double_double(), this.getPose(), "createPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "y", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "z", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -3261,39 +3261,39 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		addEParameter(op, theEcorePackage.getEDouble(), "yRotation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "zRotation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreatePose__Pose(), this.getPose(), "createPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreatePose__Pose(), this.getPose(), "createPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPose(), "pose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates(), this.getPose(), "createPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates(), this.getPose(), "createPose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianPositionCoordinates(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianOrientationCoordinates(), "orientation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreatePointNormalLocator__NormalPointCloud(), this.getPointNormalLocator(), "createPointNormalLocator", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreatePointNormalLocator__NormalPointCloud(), this.getPointNormalLocator(), "createPointNormalLocator", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNormalPointCloud(), "input", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreateDigitalElevationMap__CartesianCoordinatesSet(), this.getDigitalElevationMap(), "createDigitalElevationMap", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateDigitalElevationMap__CartesianCoordinatesSet(), this.getDigitalElevationMap(), "createDigitalElevationMap", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianCoordinatesSet(), "coordinatesSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates(), this.getCartesianPolygon(), "createCartesianPolygon", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates(), this.getCartesianPolygon(), "createCartesianPolygon", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianPositionCoordinates(), "v1", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianPositionCoordinates(), "v2", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianPositionCoordinates(), "v3", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates(), this.getCartesianPositionCoordinates(), "createCartesianPositionCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates(), this.getCartesianPositionCoordinates(), "createCartesianPositionCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianPositionCoordinates(), "coordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates(), this.getCartesianOrientationCoordinates(), "createCartesianOrientationCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates(), this.getCartesianOrientationCoordinates(), "createCartesianOrientationCoordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianOrientationCoordinates(), "coordinates", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh(), this.getCartesianCoordinatesMesh(), "createCartesianCoordinatesMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh(), this.getCartesianCoordinatesMesh(), "createCartesianCoordinatesMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianCoordinatesMesh(), "cartesianCoordinatesMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates(), this.getCartesianTriangle(), "createCartesianTriangle", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates(), this.getCartesianTriangle(), "createCartesianTriangle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianPositionCoordinates(), "v1", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianPositionCoordinates(), "v2", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianPositionCoordinates(), "v3", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreateCartesianTriangle__CartesianPolygon(), this.getCartesianTriangle(), "createCartesianTriangle", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPolygon(), this.getCartesianTriangle(), "createCartesianTriangle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		ETypeParameter t1 = addETypeParameter(op, "T");
 		g1 = createEGenericType(this.getCartesianPolygon());
 		t1.getEBounds().add(g1);
@@ -3301,29 +3301,29 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		addEParameter(op, g1, "polygon", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getIllegalArgumentException());
 
-		op = initEOperation(getData3dFacade__CreateCartesianCoordinatesMesh__List(), this.getCartesianCoordinatesMesh(), "createCartesianCoordinatesMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__List(), this.getCartesianCoordinatesMesh(), "createCartesianCoordinatesMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getCartesianPolygon());
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "polygons", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh(), this.getCartesianCoordinatesMesh(), "createCartesianCoordinatesMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh(), this.getCartesianCoordinatesMesh(), "createCartesianCoordinatesMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianTriangularMesh(), "cartesianCoordinatesMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreateCartesianTriangularMesh__List(), this.getCartesianTriangularMesh(), "createCartesianTriangularMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__List(), this.getCartesianTriangularMesh(), "createCartesianTriangularMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getCartesianTriangle());
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "polygons", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh(), this.getCartesianTriangularMesh(), "createCartesianTriangularMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh(), this.getCartesianTriangularMesh(), "createCartesianTriangularMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianTriangularMesh(), "cartesianCoordinatesMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d(), this.getCartesianCoordinatesSet(), "applyTransform", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d(), this.getCartesianCoordinatesSet(), "applyTransform", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianCoordinatesSet(), "points", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4d(), "trMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__ApplyTransform__List_Matrix4d(), null, "applyTransform", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__ApplyTransform__List_Matrix4d(), null, "applyTransform", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
@@ -3334,23 +3334,23 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getData3dFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d(), this.getCartesianTriangularMesh(), "applyTransform", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d(), this.getCartesianTriangularMesh(), "applyTransform", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4d(), "trMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__ApplyTransformInt__CartesianTriangularMesh_Matrix4d(), this.getCartesianTriangularMesh(), "applyTransformInt", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__ApplyTransformInt__CartesianTriangularMesh_Matrix4d(), this.getCartesianTriangularMesh(), "applyTransformInt", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4d(), "trMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__ApplyTransform__NormalPointCloud_Matrix4d(), this.getNormalPointCloud(), "applyTransform", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__ApplyTransform__NormalPointCloud_Matrix4d(), this.getNormalPointCloud(), "applyTransform", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNormalPointCloud(), "points", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4d(), "trMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double(), null, "updateCartesianCoordinatesSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double(), null, "updateCartesianCoordinatesSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianCoordinatesSet(), "cartesianCoordinatesSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getDoubleArrayOfArray(), "xyzData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getData3dFacade__ConcatenateTriangularMeshes__EList(), this.getCartesianTriangularMesh(), "concatenateTriangularMeshes", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__ConcatenateTriangularMeshes__EList(), this.getCartesianTriangularMesh(), "concatenateTriangularMeshes", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getEList());
 		g2 = createEGenericType(this.getCartesianTriangularMesh());
 		g1.getETypeArguments().add(g2);

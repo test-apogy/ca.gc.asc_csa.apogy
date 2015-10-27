@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.impl.TransformNodeImpl;
 import org.eclipse.symphony.core.FeatureOfInterest;
@@ -199,7 +199,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 	private void update()
 	{
 		FeatureOfInterest foi = getFeatureOfInterest();
-		Matrix4x4 pose = MathFacade.INSTANCE.createIdentityMatrix4x4();
+		Matrix4x4 pose = Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4();
 		if(foi != null)
 		{
 			if(foi.getPose() != null)

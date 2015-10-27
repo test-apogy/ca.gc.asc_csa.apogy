@@ -40,13 +40,12 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPlane;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
 import org.eclipse.symphony.common.processors.VerboseProvider;
 import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
@@ -69,10 +68,7 @@ import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<PolygonType extends CartesianPolygon> extends CostBasedMeshWayPointPathPlannerImpl<PolygonType> implements SimpleDirectedWeightedGraphBasedMeshWayPointPathPlanner<PolygonType> {	
 
 	private Adapter costFunctionsAdapter = null;
-	
-	
-	protected static Data3dFacade data3dFacade = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();
-	
+		
 	/**
 	 * The default value of the '{@link #isVerbose() <em>Verbose</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -577,7 +573,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 		printVerbose("getStartPolygon()...");
 		CartesianPolygon start = null;
 		
-		SortedSet<CartesianPolygon> sortedPolygons =Geometry3dUtilities.sortCartesianPolygonByDistance(startPositionCoordinates, this.getMesh().getPolygons());
+		SortedSet<CartesianPolygon> sortedPolygons =Geometry3DUtilities.sortCartesianPolygonByDistance(startPositionCoordinates, this.getMesh().getPolygons());
 		
 		if(sortedPolygons.size() > 0)
 		{
@@ -598,7 +594,7 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 		printVerbose("getEndPolygon()...");
 		
 		CartesianPolygon end = null;		
-		SortedSet<CartesianPolygon> sortedPolygons = Geometry3dUtilities.sortCartesianPolygonByDistance(endPositionCoordinates, this.getMesh().getPolygons());
+		SortedSet<CartesianPolygon> sortedPolygons = Geometry3DUtilities.sortCartesianPolygonByDistance(endPositionCoordinates, this.getMesh().getPolygons());
 		
 		if(sortedPolygons.size() > 0)
 		{
@@ -664,8 +660,8 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 			path = GraphUtilities.getPathThroughPolygonsCentroid(polygonPath);
 			
 			// Adds the start and end points.
-			path.getPoints().add(0, data3dFacade.createCartesianPositionCoordinates(currentPosition));
-			path.getPoints().add(data3dFacade.createCartesianPositionCoordinates(destinationPosition));
+			path.getPoints().add(0, Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(currentPosition));
+			path.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(destinationPosition));
 		}
 				
 		return path;
@@ -680,10 +676,10 @@ public class SimpleDirectedWeightedGraphBasedMeshWayPointPathPlannerImpl<Polygon
 	@SuppressWarnings({ "unused", "rawtypes" })
 	private void savePolygonPath(List<CartesianTriangle> polygonPath, String path, String fileName)
 	{			
-		TransformNode root = TopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);		
-		Mesh pathMesh = Data3dFacade.INSTANCE.createCartesianTriangularMesh(polygonPath);
+		TransformNode root = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, 0, 0);		
+		Mesh pathMesh = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangularMesh(polygonPath);
 						
-		ContentNode<Mesh> pathNode = TopologyFacade.INSTANCE.createContentNode(pathMesh); 
+		ContentNode<Mesh> pathNode = Symphony__CommonTopologyFacade.INSTANCE.createContentNode(pathMesh); 
 		pathNode.setDescription("Polygon Path.");
 		root.getChildren().add(pathNode);	
 		

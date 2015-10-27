@@ -24,15 +24,15 @@ public interface Symphony__CoreInvocatorFactory extends EFactory
   Symphony__CoreInvocatorFactory eINSTANCE = org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFactoryImpl.init();
 
   /**
-	 * Returns a new object of class '<em>EMF Ecore Invocator Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EMF Ecore Invocator Facade</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-  EMFEcoreInvocatorFacade createEMFEcoreInvocatorFacade();
+	Symphony__CoreInvocatorFacade createSymphony__CoreInvocatorFacade();
 
-  /**
+		/**
 	 * Returns a new object of class '<em>Invocator Session</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

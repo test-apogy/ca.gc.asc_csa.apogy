@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.AbstractFeatureNode;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.ListFeatureNode;
 
@@ -84,7 +84,7 @@ public class ListFeatureNodeItemProvider
 				ListFeatureNode listFeatureNode = (ListFeatureNode) object;
 				AbstractFeatureNode parent = listFeatureNode.getParent();
 				
-				List<EStructuralFeature> childFeatures = EMFEcoreFacade.INSTANCE.getChildEStructuralFeatures(parent);
+				List<EStructuralFeature> childFeatures = Symphony__CommonEMFFacade.INSTANCE.getChildEStructuralFeatures(parent);
 				return childFeatures;
 			}
 		});

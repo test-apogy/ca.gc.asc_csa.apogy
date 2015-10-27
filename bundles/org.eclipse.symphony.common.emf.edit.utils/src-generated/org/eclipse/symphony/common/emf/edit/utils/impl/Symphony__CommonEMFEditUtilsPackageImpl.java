@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
+import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
 import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFactory;
 import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPackage;
 
@@ -24,12 +24,12 @@ public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implem
 {
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass emfEcoreEditUtilsFacadeEClass = null;
+	private EClass symphony__CommonEMFEditUtilsFacadeEClass = null;
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -104,35 +104,32 @@ public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implem
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getEMFEcoreEditUtilsFacade()
-  {
-		return emfEcoreEditUtilsFacadeEClass;
+	public EClass getSymphony__CommonEMFEditUtilsFacade() {
+		return symphony__CommonEMFEditUtilsFacadeEClass;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getEMFEcoreEditUtilsFacade__GetText__Object()
-  {
-		return emfEcoreEditUtilsFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__CommonEMFEditUtilsFacade__GetText__Object() {
+		return symphony__CommonEMFEditUtilsFacadeEClass.getEOperations().get(0);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getEMFEcoreEditUtilsFacade__RemoveChildDescriptor__Collection_Object()
-  {
-		return emfEcoreEditUtilsFacadeEClass.getEOperations().get(1);
+	public EOperation getSymphony__CommonEMFEditUtilsFacade__RemoveChildDescriptor__Collection_Object() {
+		return symphony__CommonEMFEditUtilsFacadeEClass.getEOperations().get(1);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -171,9 +168,9 @@ public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implem
 		isCreated = true;
 
 		// Create classes and their features
-		emfEcoreEditUtilsFacadeEClass = createEClass(EMF_ECORE_EDIT_UTILS_FACADE);
-		createEOperation(emfEcoreEditUtilsFacadeEClass, EMF_ECORE_EDIT_UTILS_FACADE___GET_TEXT__OBJECT);
-		createEOperation(emfEcoreEditUtilsFacadeEClass, EMF_ECORE_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT);
+		symphony__CommonEMFEditUtilsFacadeEClass = createEClass(SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE);
+		createEOperation(symphony__CommonEMFEditUtilsFacadeEClass, SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE___GET_TEXT__OBJECT);
+		createEOperation(symphony__CommonEMFEditUtilsFacadeEClass, SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT);
 
 		// Create data types
 		collectionObjectEDataType = createEDataType(COLLECTION_OBJECT);
@@ -213,12 +210,12 @@ public class Symphony__CommonEMFEditUtilsPackageImpl extends EPackageImpl implem
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(emfEcoreEditUtilsFacadeEClass, EMFEcoreEditUtilsFacade.class, "EMFEcoreEditUtilsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CommonEMFEditUtilsFacadeEClass, Symphony__CommonEMFEditUtilsFacade.class, "Symphony__CommonEMFEditUtilsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getEMFEcoreEditUtilsFacade__GetText__Object(), theEcorePackage.getEString(), "getText", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getSymphony__CommonEMFEditUtilsFacade__GetText__Object(), theEcorePackage.getEString(), "getText", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "object", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreEditUtilsFacade__RemoveChildDescriptor__Collection_Object(), null, "removeChildDescriptor", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonEMFEditUtilsFacade__RemoveChildDescriptor__Collection_Object(), null, "removeChildDescriptor", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCollectionObject(), "newChildDescriptors", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "feature", 0, 1, !IS_UNIQUE, IS_ORDERED);
 

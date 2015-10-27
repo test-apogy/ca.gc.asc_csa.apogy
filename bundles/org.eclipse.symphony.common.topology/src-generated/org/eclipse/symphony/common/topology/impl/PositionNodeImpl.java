@@ -11,7 +11,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.INodeVisitor;
@@ -79,7 +79,7 @@ public class PositionNodeImpl extends AggregateGroupNodeImpl implements
 		Tuple3d tmp = getPositionGen();
 		if(tmp == null)
 		{
-			tmp = MathFacade.INSTANCE.createTuple3d(0, 0, 0);
+			tmp = Symphony__CommonMathFacade.INSTANCE.createTuple3d(0, 0, 0);
 			setPosition(tmp);
 		}
 		

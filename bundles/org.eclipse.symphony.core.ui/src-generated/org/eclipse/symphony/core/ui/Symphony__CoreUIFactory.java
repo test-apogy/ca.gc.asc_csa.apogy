@@ -24,15 +24,15 @@ public interface Symphony__CoreUIFactory extends EFactory
   Symphony__CoreUIFactory eINSTANCE = org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFactoryImpl.init();
 
   /**
-	 * Returns a new object of class '<em>Symphony Core Ui Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Symphony Core Ui Facade</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-  SymphonyCoreUiFacade createSymphonyCoreUiFacade();
+	Symphony__CoreUIFacade createSymphony__CoreUIFacade();
 
-  /**
+		/**
 	 * Returns a new object of class '<em>Symphony Resource Settings</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

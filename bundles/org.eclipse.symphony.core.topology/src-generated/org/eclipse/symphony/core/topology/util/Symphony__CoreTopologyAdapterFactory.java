@@ -12,7 +12,7 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ReferencedGroupNode;
 import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
 import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
-import org.eclipse.symphony.core.topology.SymphonyTopologyFacade;
+import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade;
 import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
 import org.eclipse.symphony.core.topology.SystemsTopologyAdapter;
 
@@ -88,8 +88,8 @@ public class Symphony__CoreTopologyAdapterFactory extends AdapterFactoryImpl
 				return createSymphonySystemAPIsNodeAdapter();
 			}
 			@Override
-			public Adapter caseSymphonyTopologyFacade(SymphonyTopologyFacade object) {
-				return createSymphonyTopologyFacadeAdapter();
+			public Adapter caseSymphony__CoreTopologyFacade(Symphony__CoreTopologyFacade object) {
+				return createSymphony__CoreTopologyFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
@@ -170,21 +170,20 @@ public class Symphony__CoreTopologyAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.topology.SymphonyTopologyFacade <em>Symphony Topology Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.topology.SymphonyTopologyFacade
+	 * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade
 	 * @generated
 	 */
-  public Adapter createSymphonyTopologyFacadeAdapter()
-  {
+	public Adapter createSymphony__CoreTopologyFacadeAdapter() {
 		return null;
 	}
 
-  /**
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;

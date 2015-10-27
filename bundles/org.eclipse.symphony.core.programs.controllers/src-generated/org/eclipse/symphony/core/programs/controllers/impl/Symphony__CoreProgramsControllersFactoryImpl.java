@@ -62,7 +62,7 @@ public class Symphony__CoreProgramsControllersFactoryImpl extends EFactoryImpl i
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CoreProgramsControllersPackage.CONTROLLER_FACADE: return createControllerFacade();
+			case Symphony__CoreProgramsControllersPackage.SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE: return createSymphony__CoreProgramsControllersFacade();
 			case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION: return createControllersConfiguration();
 			case Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING: return createOperationCallControllerBinding();
 			case Symphony__CoreProgramsControllersPackage.TIME_TRIGGER: return createTimeTrigger();
@@ -125,16 +125,15 @@ public class Symphony__CoreProgramsControllersFactoryImpl extends EFactoryImpl i
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public ControllerFacade createControllerFacade()
-  {
-		ControllerFacadeImpl controllerFacade = new ControllerFacadeImpl();
-		return controllerFacade;
+	public Symphony__CoreProgramsControllersFacade createSymphony__CoreProgramsControllersFacade() {
+		Symphony__CoreProgramsControllersFacadeImpl symphony__CoreProgramsControllersFacade = new Symphony__CoreProgramsControllersFacadeImpl();
+		return symphony__CoreProgramsControllersFacade;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

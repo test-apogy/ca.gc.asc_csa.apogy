@@ -923,23 +923,23 @@ public interface Symphony__CoreEnvironmentOrbitPackage extends EPackage {
 	int ORBIT_MODEL_OPERATION_COUNT = Symphony__CorePackage.ABSTRACT_ORBIT_MODEL_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.impl.OrbitFacadeImpl <em>Orbit Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.impl.Symphony__CoreEnvironmentOrbitFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.orbit.impl.OrbitFacadeImpl
-	 * @see org.eclipse.symphony.core.environment.orbit.impl.Symphony__CoreEnvironmentOrbitPackageImpl#getOrbitFacade()
+	 * @see org.eclipse.symphony.core.environment.orbit.impl.Symphony__CoreEnvironmentOrbitFacadeImpl
+	 * @see org.eclipse.symphony.core.environment.orbit.impl.Symphony__CoreEnvironmentOrbitPackageImpl#getSymphony__CoreEnvironmentOrbitFacade()
 	 * @generated
 	 */
-	int ORBIT_FACADE = 13;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE = 13;
 
 	/**
-	 * The number of structural features of the '<em>Orbit Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Orbit Model Copy</em>' operation.
@@ -948,16 +948,16 @@ public interface Symphony__CoreEnvironmentOrbitPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL = 0;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL = 0;
 
 	/**
-	 * The number of operations of the '<em>Orbit Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORBIT_FACADE_OPERATION_COUNT = 1;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '<em>List</em>' data type.
@@ -1391,24 +1391,24 @@ public interface Symphony__CoreEnvironmentOrbitPackage extends EPackage {
 	EReference getOrbitModel_Propagator();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.OrbitFacade <em>Orbit Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Orbit Facade</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.OrbitFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade
 	 * @generated
 	 */
-	EClass getOrbitFacade();
+	EClass getSymphony__CoreEnvironmentOrbitFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.OrbitFacade#createOrbitModelCopy(org.eclipse.symphony.core.environment.orbit.OrbitModel) <em>Create Orbit Model Copy</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade#createOrbitModelCopy(org.eclipse.symphony.core.environment.orbit.OrbitModel) <em>Create Orbit Model Copy</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Orbit Model Copy</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.OrbitFacade#createOrbitModelCopy(org.eclipse.symphony.core.environment.orbit.OrbitModel)
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade#createOrbitModelCopy(org.eclipse.symphony.core.environment.orbit.OrbitModel)
 	 * @generated
 	 */
-	EOperation getOrbitFacade__CreateOrbitModelCopy__OrbitModel();
+	EOperation getSymphony__CoreEnvironmentOrbitFacade__CreateOrbitModelCopy__OrbitModel();
 
 	/**
 	 * Returns the meta object for data type '{@link java.util.List <em>List</em>}'.
@@ -1794,14 +1794,14 @@ public interface Symphony__CoreEnvironmentOrbitPackage extends EPackage {
 		EReference ORBIT_MODEL__PROPAGATOR = eINSTANCE.getOrbitModel_Propagator();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.impl.OrbitFacadeImpl <em>Orbit Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.impl.Symphony__CoreEnvironmentOrbitFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.orbit.impl.OrbitFacadeImpl
-		 * @see org.eclipse.symphony.core.environment.orbit.impl.Symphony__CoreEnvironmentOrbitPackageImpl#getOrbitFacade()
+		 * @see org.eclipse.symphony.core.environment.orbit.impl.Symphony__CoreEnvironmentOrbitFacadeImpl
+		 * @see org.eclipse.symphony.core.environment.orbit.impl.Symphony__CoreEnvironmentOrbitPackageImpl#getSymphony__CoreEnvironmentOrbitFacade()
 		 * @generated
 		 */
-		EClass ORBIT_FACADE = eINSTANCE.getOrbitFacade();
+		EClass SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE = eINSTANCE.getSymphony__CoreEnvironmentOrbitFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Orbit Model Copy</b></em>' operation.
@@ -1809,7 +1809,7 @@ public interface Symphony__CoreEnvironmentOrbitPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL = eINSTANCE.getOrbitFacade__CreateOrbitModelCopy__OrbitModel();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL = eINSTANCE.getSymphony__CoreEnvironmentOrbitFacade__CreateOrbitModelCopy__OrbitModel();
 
 		/**
 		 * The meta object literal for the '<em>List</em>' data type.

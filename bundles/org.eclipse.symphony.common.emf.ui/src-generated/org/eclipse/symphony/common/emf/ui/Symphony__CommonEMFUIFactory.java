@@ -23,15 +23,15 @@ public interface Symphony__CommonEMFUIFactory extends EFactory
   Symphony__CommonEMFUIFactory eINSTANCE = org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIFactoryImpl.init();
 
   /**
-	 * Returns a new object of class '<em>EMF Ecore UI Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EMF Ecore UI Facade</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-  EMFEcoreUIFacade createEMFEcoreUIFacade();
+	Symphony__CommonEMFUIFacade createSymphony__CommonEMFUIFacade();
 
-  /**
+		/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -59,13 +59,13 @@ public interface Symphony__CommonMathFactory extends EFactory {
 	Polynomial createPolynomial();
 
 	/**
-	 * Returns a new object of class '<em>Math Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Math Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	MathFacade createMathFacade();
+	Symphony__CommonMathFacade createSymphony__CommonMathFacade();
 
 	/**
 	 * Returns a new object of class '<em>Math IO</em>'.

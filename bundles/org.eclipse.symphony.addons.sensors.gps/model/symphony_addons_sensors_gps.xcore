@@ -216,7 +216,7 @@ interface GPSRepository
 	op GPS getGPSById(String gpsId)
 }
 
-class GPSFacade
+class Symphony__AddonsSensorsGPSFacade
 {
 	op GPSPoseSensor createGPSPoseSensor(double originLatitude, double originLongitude)
 	

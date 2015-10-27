@@ -23,13 +23,13 @@ public interface Symphony__CoreProgramsFactory extends EFactory {
 	Symphony__CoreProgramsFactory eINSTANCE = org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Program Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Program Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	ProgramFacade createProgramFacade();
+	Symphony__CoreProgramsFacade createSymphony__CoreProgramsFacade();
 
 	/**
 	 * Returns a new object of class '<em>Time Interval</em>'.

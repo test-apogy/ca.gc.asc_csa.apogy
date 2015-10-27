@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
 import org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding;
 import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
 import org.eclipse.symphony.common.topology.bindings.RotationBinding;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade;
 import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
 import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
@@ -80,7 +80,7 @@ public class Symphony__CommonTopologyBindingsFactoryImpl extends EFactoryImpl im
 			case Symphony__CommonTopologyBindingsPackage.BINDINGS_LIST: return createBindingsList();
 			case Symphony__CommonTopologyBindingsPackage.FEATURE_ROOTS_LIST: return createFeatureRootsList();
 			case Symphony__CommonTopologyBindingsPackage.BINDINGS_SET: return createBindingsSet();
-			case Symphony__CommonTopologyBindingsPackage.TOPOLOGY_BINDINGS_FACADE: return createTopologyBindingsFacade();
+			case Symphony__CommonTopologyBindingsPackage.SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE: return createSymphony__CommonTopologyBindingsFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -216,16 +216,15 @@ public class Symphony__CommonTopologyBindingsFactoryImpl extends EFactoryImpl im
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public TopologyBindingsFacade createTopologyBindingsFacade()
-  {
-		TopologyBindingsFacadeImpl topologyBindingsFacade = new TopologyBindingsFacadeImpl();
-		return topologyBindingsFacade;
+	public Symphony__CommonTopologyBindingsFacade createSymphony__CommonTopologyBindingsFacade() {
+		Symphony__CommonTopologyBindingsFacadeImpl symphony__CommonTopologyBindingsFacade = new Symphony__CommonTopologyBindingsFacadeImpl();
+		return symphony__CommonTopologyBindingsFacade;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

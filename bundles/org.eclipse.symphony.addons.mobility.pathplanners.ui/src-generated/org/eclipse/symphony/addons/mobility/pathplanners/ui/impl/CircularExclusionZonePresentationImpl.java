@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.mobility.pathplanners.ui.CircularExclusionZonePresentation;
 import org.eclipse.symphony.addons.mobility.pathplanners.ui.Symphony__AddonsMobilityPathplannersUIPackage;
 import org.eclipse.symphony.addons.mobility.pathplanners.ui.scene_objects.CircularExclusionZoneSceneObject;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
 import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
@@ -326,6 +326,6 @@ public class CircularExclusionZonePresentationImpl extends NodePresentationImpl 
 			point3d = sceneObject.getCentroid();
 		}
 		
-		return MathFacade.INSTANCE.createTuple3d(point3d);
+		return Symphony__CommonMathFacade.INSTANCE.createTuple3d(point3d);
 	}	
 } //CircularExclusionZonePresentationImpl

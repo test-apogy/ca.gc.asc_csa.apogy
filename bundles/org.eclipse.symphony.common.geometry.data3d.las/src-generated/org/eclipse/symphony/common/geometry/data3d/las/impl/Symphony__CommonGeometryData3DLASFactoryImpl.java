@@ -68,7 +68,7 @@ public class Symphony__CommonGeometryData3DLASFactoryImpl extends EFactoryImpl i
 			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD: return createVariableLengthRecord();
 			case Symphony__CommonGeometryData3DLASPackage.LAS_READER: return createLASReader();
 			case Symphony__CommonGeometryData3DLASPackage.LAS_POINT: return createLASPoint();
-			case Symphony__CommonGeometryData3DLASPackage.LAS_FACADE: return createLASFacade();
+			case Symphony__CommonGeometryData3DLASPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE: return createSymphony__CommonGeometryData3DLASFacade();
 			case Symphony__CommonGeometryData3DLASPackage.LAS_WRITER: return createLASWriter();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -182,9 +182,9 @@ public class Symphony__CommonGeometryData3DLASFactoryImpl extends EFactoryImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LASFacade createLASFacade() {
-		LASFacadeImpl lasFacade = new LASFacadeImpl();
-		return lasFacade;
+	public Symphony__CommonGeometryData3DLASFacade createSymphony__CommonGeometryData3DLASFacade() {
+		Symphony__CommonGeometryData3DLASFacadeImpl symphony__CommonGeometryData3DLASFacade = new Symphony__CommonGeometryData3DLASFacadeImpl();
+		return symphony__CommonGeometryData3DLASFacade;
 	}
 
 	/**

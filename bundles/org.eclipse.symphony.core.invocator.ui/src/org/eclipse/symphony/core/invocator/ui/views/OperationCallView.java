@@ -9,7 +9,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.ui.views.AbstractView;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.symphony.core.invocator.VariablesList;
@@ -48,7 +48,7 @@ public class OperationCallView extends AbstractView {
 		List<OperationCall> operationCalls = (List<OperationCall>) org.eclipse.symphony.common.converters.Activator
 				.convert(selection, OperationCall.class);
 		if (!operationCalls.isEmpty()) {
-			InvocatorSession session = EMFEcoreInvocatorFacade.INSTANCE
+			InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE
 					.getActiveInvocatorSession();
 			VariablesList variables = session.getEnvironment()
 					.getVariablesList();

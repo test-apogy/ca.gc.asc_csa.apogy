@@ -226,9 +226,9 @@ class OrbitModel extends AbstractOrbitModel
 }
 
 /*
- * A class providing ustilities methods for Orbits.
+ * A class providing utilities methods for Orbits.
  */
-class OrbitFacade
+class Symphony__CoreEnvironmentOrbitFacade
 {
 	op OrbitModel createOrbitModelCopy(OrbitModel originalOrbitModel)
 }

@@ -13,7 +13,7 @@ import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
 import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
 import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
 import org.eclipse.symphony.core.ui.ResultNodePresentation;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
 import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
 
@@ -77,8 +77,8 @@ public class Symphony__CoreUIAdapterFactory extends AdapterFactoryImpl
   protected Symphony__CoreUISwitch<Adapter> modelSwitch =
     new Symphony__CoreUISwitch<Adapter>() {
 			@Override
-			public Adapter caseSymphonyCoreUiFacade(SymphonyCoreUiFacade object) {
-				return createSymphonyCoreUiFacadeAdapter();
+			public Adapter caseSymphony__CoreUIFacade(Symphony__CoreUIFacade object) {
+				return createSymphony__CoreUIFacadeAdapter();
 			}
 			@Override
 			public Adapter caseSymphonyResourceSettings(SymphonyResourceSettings object) {
@@ -130,21 +130,20 @@ public class Symphony__CoreUIAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade <em>Symphony Core Ui Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiFacade
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade
 	 * @generated
 	 */
-  public Adapter createSymphonyCoreUiFacadeAdapter()
-  {
+	public Adapter createSymphony__CoreUIFacadeAdapter() {
 		return null;
 	}
 
-  /**
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.ui.SymphonyResourceSettings <em>Symphony Resource Settings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;

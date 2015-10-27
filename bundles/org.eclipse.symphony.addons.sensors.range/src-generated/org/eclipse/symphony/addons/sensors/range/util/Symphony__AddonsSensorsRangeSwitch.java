@@ -239,9 +239,9 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsRangePackage.SENSORS_RANGE_FACADE: {
-				SensorsRangeFacade sensorsRangeFacade = (SensorsRangeFacade)theEObject;
-				T result = caseSensorsRangeFacade(sensorsRangeFacade);
+			case Symphony__AddonsSensorsRangePackage.SYMPHONY_ADDONS_SENSORS_RANGE_FACADE: {
+				Symphony__AddonsSensorsRangeFacade symphony__AddonsSensorsRangeFacade = (Symphony__AddonsSensorsRangeFacade)theEObject;
+				T result = caseSymphony__AddonsSensorsRangeFacade(symphony__AddonsSensorsRangeFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -460,17 +460,17 @@ public class Symphony__AddonsSensorsRangeSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sensors Range Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sensors Range Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSensorsRangeFacade(SensorsRangeFacade object) {
+	public T caseSymphony__AddonsSensorsRangeFacade(Symphony__AddonsSensorsRangeFacade object) {
 		return null;
 	}
 

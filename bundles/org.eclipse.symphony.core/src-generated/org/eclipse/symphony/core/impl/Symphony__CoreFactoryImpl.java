@@ -28,7 +28,7 @@ import org.eclipse.symphony.core.Positioned;
 import org.eclipse.symphony.core.PositionedResult;
 import org.eclipse.symphony.core.ResultNode;
 import org.eclipse.symphony.core.ResultsListNode;
-import org.eclipse.symphony.core.SymphonyCoreFacade;
+import org.eclipse.symphony.core.Symphony__CoreFacade;
 import org.eclipse.symphony.core.Symphony__CoreFactory;
 import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
@@ -83,7 +83,7 @@ public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CorePackage.SYMPHONY_CORE_FACADE: return createSymphonyCoreFacade();
+			case Symphony__CorePackage.SYMPHONY_CORE_FACADE: return createSymphony__CoreFacade();
 			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT: return createSymphonyEnvironment();
 			case Symphony__CorePackage.SYMPHONY_TOPOLOGY: return createSymphonyTopology();
 			case Symphony__CorePackage.SYMPHONY_SYSTEM: return createSymphonySystem();
@@ -151,6 +151,16 @@ public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Symphony__CoreFacade createSymphony__CoreFacade() {
+		Symphony__CoreFacadeImpl symphony__CoreFacade = new Symphony__CoreFacadeImpl();
+		return symphony__CoreFacade;
 	}
 
 	/**
@@ -342,15 +352,6 @@ public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
 	public UserDefinedResult createUserDefinedResult() {
 		UserDefinedResultImpl userDefinedResult = new UserDefinedResultImpl();
 		return userDefinedResult;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SymphonyCoreFacade createSymphonyCoreFacade() {
-		SymphonyCoreFacadeImpl symphonyCoreFacade = new SymphonyCoreFacadeImpl();
-		return symphonyCoreFacade;
 	}
 
 	/**

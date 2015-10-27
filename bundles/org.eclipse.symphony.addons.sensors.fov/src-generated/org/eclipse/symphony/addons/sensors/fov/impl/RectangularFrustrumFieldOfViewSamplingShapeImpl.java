@@ -23,8 +23,8 @@ import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPac
 import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 import org.eclipse.symphony.common.math.Matrix4x4;
 
 /**
@@ -192,7 +192,7 @@ public class RectangularFrustrumFieldOfViewSamplingShapeImpl<PolygonType extends
 			Vector3d u = edges[i][0];
 			Vector3d v = edges[i][1];									
 			
-			if(Geometry3dUtilities.getLineAndPolygonIntersectionPoint(u, v, (CartesianPolygon) transformedPolygon) != null)
+			if(Geometry3DUtilities.getLineAndPolygonIntersectionPoint(u, v, (CartesianPolygon) transformedPolygon) != null)
 			{
 				return true;
 			}
@@ -213,7 +213,7 @@ public class RectangularFrustrumFieldOfViewSamplingShapeImpl<PolygonType extends
 		{
 			Point3d point3d = new Point3d();
 			matrix.transform(p.asPoint3d(), point3d);
-			CartesianPositionCoordinates transformedP = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(point3d.x, point3d.y, point3d.z);
+			CartesianPositionCoordinates transformedP = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point3d.x, point3d.y, point3d.z);
 			newPolygon.getVertices().add(transformedP);
 		}
 				

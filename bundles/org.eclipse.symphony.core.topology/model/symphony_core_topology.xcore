@@ -61,9 +61,9 @@ class SymphonySystemAPIsNode extends ReferencedGroupNode
 }
 
 /* -------------------------------------------------------------------------
- * SymphonyTopologyFacade
+ * Symphony__CoreTopologyFacade
  * ------------------------------------------------------------------------- */ 
-class SymphonyTopologyFacade
+class Symphony__CoreTopologyFacade
 {
 	op Node getVariableOriginNode(Variable variable) 
 		

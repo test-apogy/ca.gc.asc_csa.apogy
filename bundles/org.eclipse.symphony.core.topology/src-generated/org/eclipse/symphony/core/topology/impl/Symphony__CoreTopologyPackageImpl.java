@@ -17,7 +17,7 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
 import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
-import org.eclipse.symphony.core.topology.SymphonyTopologyFacade;
+import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade;
 import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFactory;
 import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
 import org.eclipse.symphony.core.topology.SystemsTopologyAdapter;
@@ -53,12 +53,12 @@ public class Symphony__CoreTopologyPackageImpl extends EPackageImpl implements S
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass symphonyTopologyFacadeEClass = null;
+	private EClass symphony__CoreTopologyFacadeEClass = null;
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -243,21 +243,11 @@ public class Symphony__CoreTopologyPackageImpl extends EPackageImpl implements S
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EClass getSymphonyTopologyFacade()
-  {
-		return symphonyTopologyFacadeEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphonyTopologyFacade__GetVariableOriginNode__Variable() {
-		return symphonyTopologyFacadeEClass.getEOperations().get(0);
+	public EClass getSymphony__CoreTopologyFacade() {
+		return symphony__CoreTopologyFacadeEClass;
 	}
 
 		/**
@@ -265,8 +255,8 @@ public class Symphony__CoreTopologyPackageImpl extends EPackageImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphonyTopologyFacade__GetAbstractTypeImplementationOriginNode__AbstractTypeImplementation() {
-		return symphonyTopologyFacadeEClass.getEOperations().get(1);
+	public EOperation getSymphony__CoreTopologyFacade__GetVariableOriginNode__Variable() {
+		return symphony__CoreTopologyFacadeEClass.getEOperations().get(0);
 	}
 
 		/**
@@ -274,8 +264,17 @@ public class Symphony__CoreTopologyPackageImpl extends EPackageImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphonyTopologyFacade__CreateSymphonyEnvironmentNode__SymphonyEnvironment() {
-		return symphonyTopologyFacadeEClass.getEOperations().get(2);
+	public EOperation getSymphony__CoreTopologyFacade__GetAbstractTypeImplementationOriginNode__AbstractTypeImplementation() {
+		return symphony__CoreTopologyFacadeEClass.getEOperations().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreTopologyFacade__CreateSymphonyEnvironmentNode__SymphonyEnvironment() {
+		return symphony__CoreTopologyFacadeEClass.getEOperations().get(2);
 	}
 
 		/**
@@ -331,10 +330,10 @@ public class Symphony__CoreTopologyPackageImpl extends EPackageImpl implements S
 		symphonySystemAPIsNodeEClass = createEClass(SYMPHONY_SYSTEM_AP_IS_NODE);
 		createEReference(symphonySystemAPIsNodeEClass, SYMPHONY_SYSTEM_AP_IS_NODE__SYMPHONY_ENVIRONMENT);
 
-		symphonyTopologyFacadeEClass = createEClass(SYMPHONY_TOPOLOGY_FACADE);
-		createEOperation(symphonyTopologyFacadeEClass, SYMPHONY_TOPOLOGY_FACADE___GET_VARIABLE_ORIGIN_NODE__VARIABLE);
-		createEOperation(symphonyTopologyFacadeEClass, SYMPHONY_TOPOLOGY_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_ORIGIN_NODE__ABSTRACTTYPEIMPLEMENTATION);
-		createEOperation(symphonyTopologyFacadeEClass, SYMPHONY_TOPOLOGY_FACADE___CREATE_SYMPHONY_ENVIRONMENT_NODE__SYMPHONYENVIRONMENT);
+		symphony__CoreTopologyFacadeEClass = createEClass(SYMPHONY_CORE_TOPOLOGY_FACADE);
+		createEOperation(symphony__CoreTopologyFacadeEClass, SYMPHONY_CORE_TOPOLOGY_FACADE___GET_VARIABLE_ORIGIN_NODE__VARIABLE);
+		createEOperation(symphony__CoreTopologyFacadeEClass, SYMPHONY_CORE_TOPOLOGY_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_ORIGIN_NODE__ABSTRACTTYPEIMPLEMENTATION);
+		createEOperation(symphony__CoreTopologyFacadeEClass, SYMPHONY_CORE_TOPOLOGY_FACADE___CREATE_SYMPHONY_ENVIRONMENT_NODE__SYMPHONYENVIRONMENT);
 
 		// Create data types
 		sortedSetEDataType = createEDataType(SORTED_SET);
@@ -395,15 +394,15 @@ public class Symphony__CoreTopologyPackageImpl extends EPackageImpl implements S
 		initEClass(symphonySystemAPIsNodeEClass, SymphonySystemAPIsNode.class, "SymphonySystemAPIsNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSymphonySystemAPIsNode_SymphonyEnvironment(), theSymphony__CorePackage.getSymphonyEnvironment(), null, "symphonyEnvironment", null, 0, 1, SymphonySystemAPIsNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(symphonyTopologyFacadeEClass, SymphonyTopologyFacade.class, "SymphonyTopologyFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CoreTopologyFacadeEClass, Symphony__CoreTopologyFacade.class, "Symphony__CoreTopologyFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getSymphonyTopologyFacade__GetVariableOriginNode__Variable(), theSymphony__CommonTopologyPackage.getNode(), "getVariableOriginNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getSymphony__CoreTopologyFacade__GetVariableOriginNode__Variable(), theSymphony__CommonTopologyPackage.getNode(), "getVariableOriginNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreInvocatorPackage.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphonyTopologyFacade__GetAbstractTypeImplementationOriginNode__AbstractTypeImplementation(), theSymphony__CommonTopologyPackage.getNode(), "getAbstractTypeImplementationOriginNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreTopologyFacade__GetAbstractTypeImplementationOriginNode__AbstractTypeImplementation(), theSymphony__CommonTopologyPackage.getNode(), "getAbstractTypeImplementationOriginNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreInvocatorPackage.getAbstractTypeImplementation(), "abstractTypeImplementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphonyTopologyFacade__CreateSymphonyEnvironmentNode__SymphonyEnvironment(), this.getSymphonyEnvironmentNode(), "createSymphonyEnvironmentNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreTopologyFacade__CreateSymphonyEnvironmentNode__SymphonyEnvironment(), this.getSymphonyEnvironmentNode(), "createSymphonyEnvironmentNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CorePackage.getSymphonyEnvironment(), "symphonyEnvironment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types

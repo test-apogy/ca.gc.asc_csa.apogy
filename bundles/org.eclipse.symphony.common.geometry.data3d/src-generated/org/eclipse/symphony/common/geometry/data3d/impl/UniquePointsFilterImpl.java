@@ -8,7 +8,7 @@ package org.eclipse.symphony.common.geometry.data3d.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.UniquePointsFilter;
@@ -83,7 +83,7 @@ public class UniquePointsFilterImpl extends
 					point.getZ() };
 
 			if (kdTree.search(key) == null) {
-				CartesianPositionCoordinates pointCopy = Data3dFacade.INSTANCE
+				CartesianPositionCoordinates pointCopy = Symphony__CommonGeometryData3DFacade.INSTANCE
 						.createCartesianPositionCoordinates(point);
 				output.getPoints().add(pointCopy);
 				kdTree.insert(key, pointCopy);

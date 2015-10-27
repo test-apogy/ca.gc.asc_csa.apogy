@@ -57,7 +57,7 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.ListFeatureNode;
 import org.eclipse.symphony.common.emf.ListRootNode;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.symphony.core.invocator.TypeMember;
@@ -403,7 +403,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 									typeMembers[i] = (TypeMember) path
 											.getSegment(i);
 								}
-								return EMFEcoreInvocatorFacade.INSTANCE.createTypeMemberReferences(typeMembers);
+								return Symphony__CoreInvocatorFacade.INSTANCE.createTypeMemberReferences(typeMembers);
 							}
 						}), new UpdateValueStrategy(
 						UpdateValueStrategy.POLICY_NEVER));
@@ -544,15 +544,15 @@ public class VariableFeatureReferenceComposite extends Composite {
 	}	
 
 	/**
-	 * FIXME Move under EMFEcoreInvocatorFacade.  Wait for Eclipse MARS Release.  
+	 * FIXME Move under Symphony__CoreInvocatorFacade.  Wait for Eclipse MARS Release.  
 	 * XCore bug fixed by Ed Merks.
-	 * FIXME Move under {@link EMFEcoreInvocatorFacade}.  Wait XCore bug.  Unable to wrap EStructuralFeature to get a array data type. 
+	 * FIXME Move under {@link Symphony__CoreInvocatorFacade}.  Wait XCore bug.  Unable to wrap EStructuralFeature to get a array data type. 
 	 */
 	private ListRootNode createListRootNode(EStructuralFeature[] features) {
 		ListRootNode listRootNode = null;
 		if (features.length > 0) {
 			listRootNode = Symphony__CommonEMFFactory.eINSTANCE.createListRootNode();
-			listRootNode.setSourceClass(EMFEcoreInvocatorFacade.INSTANCE
+			listRootNode.setSourceClass(Symphony__CoreInvocatorFacade.INSTANCE
 					.getInstanceClass(variableFeatureReference));
 			AbstractFeatureListNode parentNode = listRootNode;
 			for (int i = 0; i < features.length; i++) {
@@ -609,7 +609,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 				VariableFeatureReference variableFeatureReference = (VariableFeatureReference) eObjectParent;
 				Variable variable = variableFeatureReference.getVariable();
 				if (variable != null) {
-					EClass eClass = EMFEcoreInvocatorFacade.INSTANCE
+					EClass eClass = Symphony__CoreInvocatorFacade.INSTANCE
 							.getInstanceClass(variableFeatureReference);
 					
 					if (eClass != null){					
@@ -644,7 +644,7 @@ public class VariableFeatureReferenceComposite extends Composite {
 				VariableFeatureReference variableFeatureReference = (VariableFeatureReference) element;
 				Variable variable = variableFeatureReference.getVariable();
 				if (variable != null) {
-					EClass eClass = EMFEcoreInvocatorFacade.INSTANCE
+					EClass eClass = Symphony__CoreInvocatorFacade.INSTANCE
 							.getInstanceClass(variableFeatureReference);
 					if (eClass == null){
 						getTreeViewer().setChildCount(element, 0);

@@ -173,8 +173,8 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 				return createSphereGeometryAdapter();
 			}
 			@Override
-			public Adapter caseDynamicsFacade(DynamicsFacade object) {
-				return createDynamicsFacadeAdapter();
+			public Adapter caseSymphony__CommonTopologyAddonsDynamicsFacade(Symphony__CommonTopologyAddonsDynamicsFacade object) {
+				return createSymphony__CommonTopologyAddonsDynamicsFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
@@ -559,16 +559,16 @@ public class Symphony__CommonTopologyAddonsDynamicsAdapterFactory extends Adapte
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade <em>Dynamics Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade
 	 * @generated
 	 */
-	public Adapter createDynamicsFacadeAdapter() {
+	public Adapter createSymphony__CommonTopologyAddonsDynamicsFacadeAdapter() {
 		return null;
 	}
 

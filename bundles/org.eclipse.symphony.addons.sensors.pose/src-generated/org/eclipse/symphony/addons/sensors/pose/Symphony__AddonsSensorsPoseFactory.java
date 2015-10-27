@@ -104,13 +104,13 @@ public interface Symphony__AddonsSensorsPoseFactory extends EFactory {
 	CSVDataLogger createCSVDataLogger();
 
 	/**
-	 * Returns a new object of class '<em>Pose Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Pose Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	PoseFacade createPoseFacade();
+	Symphony__AddonsSensorsPoseFacade createSymphony__AddonsSensorsPoseFacade();
 
 	/**
 	 * Returns the package supported by this factory.

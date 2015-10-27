@@ -15,7 +15,7 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Tuple3d;
@@ -145,7 +145,7 @@ public class RotationMatrixComposite extends Composite {
 									Math.toRadians(getOrientationTuple3d().getY()),
 									Math.toRadians(getOrientationTuple3d().getZ()));
 																	
-							MathEditUtils.updateOrientation(getMatrix(), MathFacade.INSTANCE.createMatrix3x3(matrix3d), editingDomain);								
+							MathEditUtils.updateOrientation(getMatrix(), Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(matrix3d), editingDomain);								
 						}
 						
 						/** Re-enable Matrix Events. */

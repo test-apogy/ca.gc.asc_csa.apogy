@@ -6,7 +6,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.core.Activator;
 import org.eclipse.symphony.core.WorksiteContributor;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.ui.composites.WorksiteContributorsListComposite;
 
 public class SymphonyWorksiteSelectionWizardPage extends WizardPage
@@ -47,7 +47,7 @@ public class SymphonyWorksiteSelectionWizardPage extends WizardPage
 	protected void validate()
 	{
 		String message = null;
-		if (EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null)
+		if (Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null)
 		{
 			message = "There is no active Symphony Session.  Activate a session first.";
 		}

@@ -15,7 +15,7 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.programs.AbstractProgramRuntime;
 import org.eclipse.symphony.core.programs.Symphony__CoreProgramsFactory;
 import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
-import org.eclipse.symphony.core.programs.ProgramFacade;
+import org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade;
 import org.eclipse.symphony.core.programs.TimeInterval;
 
 /**
@@ -36,7 +36,7 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass programFacadeEClass = null;
+	private EClass symphony__CoreProgramsFacadeEClass = null;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -185,8 +185,8 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getProgramFacade() {
-		return programFacadeEClass;
+	public EClass getSymphony__CoreProgramsFacade() {
+		return symphony__CoreProgramsFacadeEClass;
 	}
 
 	/**
@@ -194,8 +194,8 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProgramFacade_Session() {
-		return (EReference)programFacadeEClass.getEStructuralFeatures().get(0);
+	public EReference getSymphony__CoreProgramsFacade_Session() {
+		return (EReference)symphony__CoreProgramsFacadeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -203,8 +203,8 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProgramFacade_Variables() {
-		return (EReference)programFacadeEClass.getEStructuralFeatures().get(1);
+	public EReference getSymphony__CoreProgramsFacade_Variables() {
+		return (EReference)symphony__CoreProgramsFacadeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -212,8 +212,8 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getProgramFacade__Exec__OperationCall() {
-		return programFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__CoreProgramsFacade__Exec__OperationCall() {
+		return symphony__CoreProgramsFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -289,10 +289,10 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___STEP_OVER);
 		createEOperation(abstractProgramRuntimeEClass, ABSTRACT_PROGRAM_RUNTIME___STEP_RETURN);
 
-		programFacadeEClass = createEClass(PROGRAM_FACADE);
-		createEReference(programFacadeEClass, PROGRAM_FACADE__SESSION);
-		createEReference(programFacadeEClass, PROGRAM_FACADE__VARIABLES);
-		createEOperation(programFacadeEClass, PROGRAM_FACADE___EXEC__OPERATIONCALL);
+		symphony__CoreProgramsFacadeEClass = createEClass(SYMPHONY_CORE_PROGRAMS_FACADE);
+		createEReference(symphony__CoreProgramsFacadeEClass, SYMPHONY_CORE_PROGRAMS_FACADE__SESSION);
+		createEReference(symphony__CoreProgramsFacadeEClass, SYMPHONY_CORE_PROGRAMS_FACADE__VARIABLES);
+		createEOperation(symphony__CoreProgramsFacadeEClass, SYMPHONY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL);
 
 		timeIntervalEClass = createEClass(TIME_INTERVAL);
 		createEAttribute(timeIntervalEClass, TIME_INTERVAL__START_TIME);
@@ -350,11 +350,11 @@ public class Symphony__CoreProgramsPackageImpl extends EPackageImpl implements S
 
 		initEOperation(getAbstractProgramRuntime__StepReturn(), null, "stepReturn", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(programFacadeEClass, ProgramFacade.class, "ProgramFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getProgramFacade_Session(), theSymphony__CoreInvocatorPackage.getInvocatorSession(), null, "session", null, 0, 1, ProgramFacade.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProgramFacade_Variables(), theSymphony__CoreInvocatorPackage.getVariable(), null, "variables", null, 0, -1, ProgramFacade.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(symphony__CoreProgramsFacadeEClass, Symphony__CoreProgramsFacade.class, "Symphony__CoreProgramsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSymphony__CoreProgramsFacade_Session(), theSymphony__CoreInvocatorPackage.getInvocatorSession(), null, "session", null, 0, 1, Symphony__CoreProgramsFacade.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSymphony__CoreProgramsFacade_Variables(), theSymphony__CoreInvocatorPackage.getVariable(), null, "variables", null, 0, -1, Symphony__CoreProgramsFacade.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getProgramFacade__Exec__OperationCall(), theEcorePackage.getEJavaObject(), "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getSymphony__CoreProgramsFacade__Exec__OperationCall(), theEcorePackage.getEJavaObject(), "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreInvocatorPackage.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, theSymphony__CommonEMFPackage.getException());
 

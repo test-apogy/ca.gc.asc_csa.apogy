@@ -22,7 +22,7 @@ import org.eclipse.symphony.core.invocator.presentation.CustomEMFEcoreInvocatorE
 import org.eclipse.symphony.core.ui.Activator;
 import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
 import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
 import org.eclipse.symphony.core.ui.Symphony__CoreUIFactory;
 import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
 import org.eclipse.ui.INewWizard;
@@ -121,9 +121,9 @@ public class NewSymphonyProjectWizard extends Wizard implements INewWizard {
 			protected void execute(IProgressMonitor monitor)
 					throws CoreException, InvocationTargetException,
 					InterruptedException {
-				SymphonyCoreUiFacade.INSTANCE
+				Symphony__CoreUIFacade.INSTANCE
 						.createSymphonyProject(getNewSymphonyProjectSettings());
-				symphonyFolder = SymphonyCoreUiFacade.INSTANCE
+				symphonyFolder = Symphony__CoreUIFacade.INSTANCE
 						.createSymphonySessionFolder(getNewSymphonyProjectSettings());
 
 				if (getNewSymphonyProjectSettings().isImportRegisteredProject()) {
@@ -149,19 +149,19 @@ public class NewSymphonyProjectWizard extends Wizard implements INewWizard {
 					/**
 					 * Create a new Session.
 					 */
-					SymphonyCoreUiFacade.INSTANCE
+					Symphony__CoreUIFacade.INSTANCE
 							.createSymphonyProject(getNewSymphonyProjectSettings());
-					IFolder folder = SymphonyCoreUiFacade.INSTANCE
+					IFolder folder = Symphony__CoreUIFacade.INSTANCE
 							.createSymphonySessionFolder(getNewSymphonyProjectSettings());
 
 					InvocatorSession session = null;
 					String filename = null;
 
-					session = SymphonyCoreUiFacade.INSTANCE
+					session = Symphony__CoreUIFacade.INSTANCE
 							.createSymphonySession(getNewSymphonySessionSettings());
 					filename = getNewSymphonySessionSettings().getFilename();
 					try {
-						SymphonyCoreUiFacade.INSTANCE
+						Symphony__CoreUIFacade.INSTANCE
 								.createSymphonySessionFile(folder, filename,
 										session);
 					} catch (Exception e) {
@@ -182,7 +182,7 @@ public class NewSymphonyProjectWizard extends Wizard implements INewWizard {
 			/**
 			 * Selects the current file in the current view and open the editor.
 			 */
-			IFile modelFile = SymphonyCoreUiFacade.INSTANCE
+			IFile modelFile = Symphony__CoreUIFacade.INSTANCE
 					.getSymphonySessionFile(
 							(IFolder) getSymphonyResourceSettings()
 									.getResourceContainer(),

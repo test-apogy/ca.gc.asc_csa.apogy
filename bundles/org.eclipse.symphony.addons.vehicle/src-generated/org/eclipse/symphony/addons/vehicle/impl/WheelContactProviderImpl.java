@@ -21,10 +21,10 @@ import org.eclipse.symphony.addons.vehicle.WheelContactMode;
 import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
 import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
 
 /**
@@ -193,7 +193,7 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
 	  try
 	  {
 		  Node root = getVehiclePoseCorrector().getSymphonySystemApiAdapter().getSymphonySystem().getTopologyRoot().getOriginNode();
-		  List<Node> nodes = TopologyFacade.INSTANCE.findNodesByType(Symphony__AddonsVehiclePackage.Literals.WHEEL, root);
+		  List<Node> nodes = Symphony__CommonTopologyFacade.INSTANCE.findNodesByType(Symphony__AddonsVehiclePackage.Literals.WHEEL, root);
 		  
 		  for(Node node : nodes)
 		  {
@@ -239,17 +239,17 @@ public class WheelContactProviderImpl extends ContactProviderImpl implements Whe
 	  for(MeshNodeEntry meshNodeEntry : meshes)
 	  {		  		  		  		  
 		  // Gets the mesh to world matrix
-		  Matrix4d meshToWorld = TopologyFacade.INSTANCE.expressNodeInRootFrame(meshNodeEntry.getNode());		    
+		  Matrix4d meshToWorld = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(meshNodeEntry.getNode());		    
 		  
 		  // Finds the position of all the wheels relative to the mesh				  
 		  List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();		  		  
 		  for(PhysicalBody wheel : getVehiclePoseCorrector().getContactBodies())
 		  {
-			  Matrix4d wheelTransform = TopologyFacade.INSTANCE.expressInFrame(wheel, meshNodeEntry.getNode());
+			  Matrix4d wheelTransform = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(wheel, meshNodeEntry.getNode());
 			  Vector3d wheelPosition = new Vector3d();			  			  			  
 			  wheelTransform.get(wheelPosition);	
 			 	  
-			  points.add(Data3dFacade.INSTANCE.createCartesianPositionCoordinates(wheelPosition.x, wheelPosition.y, wheelPosition.z));  
+			  points.add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(wheelPosition.x, wheelPosition.y, wheelPosition.z));  
 		  }
 		  
 		  // Finds the intersection of the vector along Z going through the center of wheels with the mesh.		 

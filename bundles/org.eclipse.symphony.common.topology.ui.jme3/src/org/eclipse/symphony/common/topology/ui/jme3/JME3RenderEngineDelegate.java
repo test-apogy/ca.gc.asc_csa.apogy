@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
 import org.eclipse.symphony.common.topology.ui.viewer.IRenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer;
 
@@ -323,7 +323,7 @@ public class JME3RenderEngineDelegate  implements IRenderEngineDelegate
 			org.eclipse.symphony.common.math.Tuple3d min = Symphony__CommonMathFactory.eINSTANCE.createTuple3d(); 
 			org.eclipse.symphony.common.math.Tuple3d max = Symphony__CommonMathFactory.eINSTANCE.createTuple3d(); 
 			
-			TopologyUIFacade.INSTANCE.findExtent(topologyPresentationSet.getGraphicsContext().getTopology(), topologyPresentationSet, min, max);
+			Symphony__CommonTopologyUIFacade.INSTANCE.findExtent(topologyPresentationSet.getGraphicsContext().getTopology(), topologyPresentationSet, min, max);
 					
 			Tuple3d center = new Point3d( (max.getX() + min.getX()) / 2.0, (max.getY() + min.getY())/ 2.0, (max.getZ() + min.getZ()) / 2.0);
 						

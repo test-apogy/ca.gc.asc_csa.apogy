@@ -30,7 +30,7 @@ import org.eclipse.symphony.common.topology.PositionNode;
 import org.eclipse.symphony.common.topology.ReferencedContentNode;
 import org.eclipse.symphony.common.topology.ReferencedGroupNode;
 import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.TopologyProvider;
@@ -161,7 +161,7 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass topologyFacadeEClass = null;
+	private EClass symphony__CommonTopologyFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -577,8 +577,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTopologyFacade() {
-		return topologyFacadeEClass;
+	public EClass getSymphony__CommonTopologyFacade() {
+		return symphony__CommonTopologyFacadeEClass;
 	}
 
 	/**
@@ -586,8 +586,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__CreateLink__Node() {
-		return topologyFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__CommonTopologyFacade__CreateLink__Node() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -595,8 +595,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__CreateContentNode__Object() {
-		return topologyFacadeEClass.getEOperations().get(1);
+	public EOperation getSymphony__CommonTopologyFacade__CreateContentNode__Object() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -604,8 +604,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__CreateReferencedContentNode__Object() {
-		return topologyFacadeEClass.getEOperations().get(2);
+	public EOperation getSymphony__CommonTopologyFacade__CreateReferencedContentNode__Object() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -613,8 +613,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__CreateAggregateContentNode__Object() {
-		return topologyFacadeEClass.getEOperations().get(3);
+	public EOperation getSymphony__CommonTopologyFacade__CreateAggregateContentNode__Object() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -622,8 +622,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__CreatePositionNode__double_double_double() {
-		return topologyFacadeEClass.getEOperations().get(4);
+	public EOperation getSymphony__CommonTopologyFacade__CreatePositionNode__double_double_double() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -631,8 +631,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__CreateRotationNodeXYZ__double_double_double() {
-		return topologyFacadeEClass.getEOperations().get(5);
+	public EOperation getSymphony__CommonTopologyFacade__CreateRotationNodeXYZ__double_double_double() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -640,8 +640,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__CreateRotationNodeYZX__double_double_double() {
-		return topologyFacadeEClass.getEOperations().get(6);
+	public EOperation getSymphony__CommonTopologyFacade__CreateRotationNodeYZX__double_double_double() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -649,8 +649,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__CreateRotationNodeZYX__double_double_double() {
-		return topologyFacadeEClass.getEOperations().get(7);
+	public EOperation getSymphony__CommonTopologyFacade__CreateRotationNodeZYX__double_double_double() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -658,8 +658,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__CreateTransformNodeXYZ__double_double_double_double_double_double() {
-		return topologyFacadeEClass.getEOperations().get(8);
+	public EOperation getSymphony__CommonTopologyFacade__CreateTransformNodeXYZ__double_double_double_double_double_double() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -667,8 +667,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__CreateTransformNodeYZX__double_double_double_double_double_double() {
-		return topologyFacadeEClass.getEOperations().get(9);
+	public EOperation getSymphony__CommonTopologyFacade__CreateTransformNodeYZX__double_double_double_double_double_double() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(9);
 	}
 
 	/**
@@ -676,8 +676,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__CreateTransformNodeZYX__double_double_double_double_double_double() {
-		return topologyFacadeEClass.getEOperations().get(10);
+	public EOperation getSymphony__CommonTopologyFacade__CreateTransformNodeZYX__double_double_double_double_double_double() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(10);
 	}
 
 	/**
@@ -685,8 +685,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__CreateTransformNode__Matrix4d() {
-		return topologyFacadeEClass.getEOperations().get(11);
+	public EOperation getSymphony__CommonTopologyFacade__CreateTransformNode__Matrix4d() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(11);
 	}
 
 	/**
@@ -694,8 +694,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__CreatePickAndPlaceNode__Matrix4d() {
-		return topologyFacadeEClass.getEOperations().get(12);
+	public EOperation getSymphony__CommonTopologyFacade__CreatePickAndPlaceNode__Matrix4d() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(12);
 	}
 
 	/**
@@ -703,8 +703,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__ExpressNodeInRootFrame__Node() {
-		return topologyFacadeEClass.getEOperations().get(13);
+	public EOperation getSymphony__CommonTopologyFacade__ExpressNodeInRootFrame__Node() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(13);
 	}
 
 	/**
@@ -712,8 +712,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__ExpressRootInNodeFrame__Node() {
-		return topologyFacadeEClass.getEOperations().get(14);
+	public EOperation getSymphony__CommonTopologyFacade__ExpressRootInNodeFrame__Node() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(14);
 	}
 
 	/**
@@ -721,8 +721,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__ExpressInFrame__Node_Node() {
-		return topologyFacadeEClass.getEOperations().get(15);
+	public EOperation getSymphony__CommonTopologyFacade__ExpressInFrame__Node_Node() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(15);
 	}
 
 	/**
@@ -730,8 +730,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__FindNodesByDescription__String_Node() {
-		return topologyFacadeEClass.getEOperations().get(16);
+	public EOperation getSymphony__CommonTopologyFacade__FindNodesByDescription__String_Node() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(16);
 	}
 
 	/**
@@ -739,8 +739,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__FindNodesByID__String_Node() {
-		return topologyFacadeEClass.getEOperations().get(17);
+	public EOperation getSymphony__CommonTopologyFacade__FindNodesByID__String_Node() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(17);
 	}
 
 	/**
@@ -748,8 +748,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__FindNodesByType__EClass_Node() {
-		return topologyFacadeEClass.getEOperations().get(18);
+	public EOperation getSymphony__CommonTopologyFacade__FindNodesByType__EClass_Node() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(18);
 	}
 
 	/**
@@ -757,8 +757,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__FindRoot__Node() {
-		return topologyFacadeEClass.getEOperations().get(19);
+	public EOperation getSymphony__CommonTopologyFacade__FindRoot__Node() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(19);
 	}
 
 	/**
@@ -766,8 +766,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__GetEuclideanDistance__Node_Node() {
-		return topologyFacadeEClass.getEOperations().get(20);
+	public EOperation getSymphony__CommonTopologyFacade__GetEuclideanDistance__Node_Node() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(20);
 	}
 
 	/**
@@ -775,8 +775,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__GetGeodesicDistance__Node_Node() {
-		return topologyFacadeEClass.getEOperations().get(21);
+	public EOperation getSymphony__CommonTopologyFacade__GetGeodesicDistance__Node_Node() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(21);
 	}
 
 	/**
@@ -784,8 +784,8 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyFacade__PrintTopology__Node() {
-		return topologyFacadeEClass.getEOperations().get(22);
+	public EOperation getSymphony__CommonTopologyFacade__PrintTopology__Node() {
+		return symphony__CommonTopologyFacadeEClass.getEOperations().get(22);
 	}
 
 	/**
@@ -895,30 +895,30 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 
 		pickAndPlaceNodeEClass = createEClass(PICK_AND_PLACE_NODE);
 
-		topologyFacadeEClass = createEClass(TOPOLOGY_FACADE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___CREATE_LINK__NODE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___CREATE_CONTENT_NODE__OBJECT);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___CREATE_REFERENCED_CONTENT_NODE__OBJECT);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___CREATE_AGGREGATE_CONTENT_NODE__OBJECT);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___CREATE_POSITION_NODE__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___CREATE_ROTATION_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___CREATE_ROTATION_NODE_YZX__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___CREATE_ROTATION_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_YZX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE__MATRIX4D);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___CREATE_PICK_AND_PLACE_NODE__MATRIX4D);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___EXPRESS_NODE_IN_ROOT_FRAME__NODE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___EXPRESS_ROOT_IN_NODE_FRAME__NODE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___EXPRESS_IN_FRAME__NODE_NODE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___FIND_NODES_BY_DESCRIPTION__STRING_NODE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___FIND_NODES_BY_ID__STRING_NODE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___FIND_NODES_BY_TYPE__ECLASS_NODE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___FIND_ROOT__NODE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE);
-		createEOperation(topologyFacadeEClass, TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE);
+		symphony__CommonTopologyFacadeEClass = createEClass(SYMPHONY_COMMON_TOPOLOGY_FACADE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_LINK__NODE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_CONTENT_NODE__OBJECT);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_REFERENCED_CONTENT_NODE__OBJECT);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_AGGREGATE_CONTENT_NODE__OBJECT);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_POSITION_NODE__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_YZX__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_ROTATION_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_XYZ__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_YZX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE_ZYX__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_TRANSFORM_NODE__MATRIX4D);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___CREATE_PICK_AND_PLACE_NODE__MATRIX4D);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___EXPRESS_NODE_IN_ROOT_FRAME__NODE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___EXPRESS_ROOT_IN_NODE_FRAME__NODE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___EXPRESS_IN_FRAME__NODE_NODE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_DESCRIPTION__STRING_NODE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_ID__STRING_NODE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_NODES_BY_TYPE__ECLASS_NODE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___FIND_ROOT__NODE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___GET_EUCLIDEAN_DISTANCE__NODE_NODE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___GET_GEODESIC_DISTANCE__NODE_NODE);
+		createEOperation(symphony__CommonTopologyFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_FACADE___PRINT_TOPOLOGY__NODE);
 
 		// Create data types
 		matrix4dEDataType = createEDataType(MATRIX4D);
@@ -1044,12 +1044,12 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 
 		initEClass(pickAndPlaceNodeEClass, PickAndPlaceNode.class, "PickAndPlaceNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(topologyFacadeEClass, TopologyFacade.class, "TopologyFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CommonTopologyFacadeEClass, Symphony__CommonTopologyFacade.class, "Symphony__CommonTopologyFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getTopologyFacade__CreateLink__Node(), this.getLink(), "createLink", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__CreateLink__Node(), this.getLink(), "createLink", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__CreateContentNode__Object(), null, "createContentNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__CreateContentNode__Object(), null, "createContentNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		ETypeParameter t1 = addETypeParameter(op, "T");
 		g1 = createEGenericType(t1);
 		addEParameter(op, g1, "content", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1058,7 +1058,7 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getTopologyFacade__CreateReferencedContentNode__Object(), null, "createReferencedContentNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__CreateReferencedContentNode__Object(), null, "createReferencedContentNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		t1 = addETypeParameter(op, "T");
 		g1 = createEGenericType(t1);
 		addEParameter(op, g1, "content", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1067,7 +1067,7 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getTopologyFacade__CreateAggregateContentNode__Object(), null, "createAggregateContentNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__CreateAggregateContentNode__Object(), null, "createAggregateContentNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		t1 = addETypeParameter(op, "T");
 		g1 = createEGenericType(t1);
 		addEParameter(op, g1, "content", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1076,27 +1076,27 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getTopologyFacade__CreatePositionNode__double_double_double(), this.getPositionNode(), "createPositionNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__CreatePositionNode__double_double_double(), this.getPositionNode(), "createPositionNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "y", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "z", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__CreateRotationNodeXYZ__double_double_double(), this.getRotationNode(), "createRotationNodeXYZ", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__CreateRotationNodeXYZ__double_double_double(), this.getRotationNode(), "createRotationNodeXYZ", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "y", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "z", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__CreateRotationNodeYZX__double_double_double(), this.getRotationNode(), "createRotationNodeYZX", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__CreateRotationNodeYZX__double_double_double(), this.getRotationNode(), "createRotationNodeYZX", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "y", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "z", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__CreateRotationNodeZYX__double_double_double(), this.getRotationNode(), "createRotationNodeZYX", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__CreateRotationNodeZYX__double_double_double(), this.getRotationNode(), "createRotationNodeZYX", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "x", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "y", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "z", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__CreateTransformNodeXYZ__double_double_double_double_double_double(), this.getTransformNode(), "createTransformNodeXYZ", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__CreateTransformNodeXYZ__double_double_double_double_double_double(), this.getTransformNode(), "createTransformNodeXYZ", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "tx", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "ty", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "tz", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1104,7 +1104,7 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 		addEParameter(op, theEcorePackage.getEDouble(), "ry", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "rz", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__CreateTransformNodeYZX__double_double_double_double_double_double(), this.getTransformNode(), "createTransformNodeYZX", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__CreateTransformNodeYZX__double_double_double_double_double_double(), this.getTransformNode(), "createTransformNodeYZX", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "tx", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "ty", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "tz", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1112,7 +1112,7 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 		addEParameter(op, theEcorePackage.getEDouble(), "ry", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "rz", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__CreateTransformNodeZYX__double_double_double_double_double_double(), this.getTransformNode(), "createTransformNodeZYX", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__CreateTransformNodeZYX__double_double_double_double_double_double(), this.getTransformNode(), "createTransformNodeZYX", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "tx", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "ty", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "tz", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -1120,46 +1120,46 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 		addEParameter(op, theEcorePackage.getEDouble(), "ry", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "rz", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__CreateTransformNode__Matrix4d(), this.getTransformNode(), "createTransformNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__CreateTransformNode__Matrix4d(), this.getTransformNode(), "createTransformNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4d(), "matrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__CreatePickAndPlaceNode__Matrix4d(), this.getPickAndPlaceNode(), "createPickAndPlaceNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__CreatePickAndPlaceNode__Matrix4d(), this.getPickAndPlaceNode(), "createPickAndPlaceNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4d(), "matrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__ExpressNodeInRootFrame__Node(), this.getMatrix4d(), "expressNodeInRootFrame", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__ExpressNodeInRootFrame__Node(), this.getMatrix4d(), "expressNodeInRootFrame", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__ExpressRootInNodeFrame__Node(), this.getMatrix4d(), "expressRootInNodeFrame", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__ExpressRootInNodeFrame__Node(), this.getMatrix4d(), "expressRootInNodeFrame", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__ExpressInFrame__Node_Node(), this.getMatrix4d(), "expressInFrame", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__ExpressInFrame__Node_Node(), this.getMatrix4d(), "expressInFrame", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "sourceFrame", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "targetFrame", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__FindNodesByDescription__String_Node(), this.getNode(), "findNodesByDescription", 0, -1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__FindNodesByDescription__String_Node(), this.getNode(), "findNodesByDescription", 0, -1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "description", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "topology", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__FindNodesByID__String_Node(), this.getNode(), "findNodesByID", 0, -1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__FindNodesByID__String_Node(), this.getNode(), "findNodesByID", 0, -1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "nodeId", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "topology", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__FindNodesByType__EClass_Node(), this.getNode(), "findNodesByType", 0, -1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__FindNodesByType__EClass_Node(), this.getNode(), "findNodesByType", 0, -1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEClass(), "clazz", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "topology", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__FindRoot__Node(), this.getNode(), "findRoot", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__FindRoot__Node(), this.getNode(), "findRoot", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__GetEuclideanDistance__Node_Node(), theEcorePackage.getEDouble(), "getEuclideanDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__GetEuclideanDistance__Node_Node(), theEcorePackage.getEDouble(), "getEuclideanDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "fromNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "toNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__GetGeodesicDistance__Node_Node(), theEcorePackage.getEDouble(), "getGeodesicDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__GetGeodesicDistance__Node_Node(), theEcorePackage.getEDouble(), "getGeodesicDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "fromNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "toNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyFacade__PrintTopology__Node(), null, "printTopology", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyFacade__PrintTopology__Node(), null, "printTopology", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types
@@ -1199,43 +1199,43 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 			 "basePackage", "org.eclipse.symphony.common"
 		   });	
 		addAnnotation
-		  (getTopologyFacade__CreateRotationNodeXYZ__double_double_double(), 
+		  (getSymphony__CommonTopologyFacade__CreateRotationNodeXYZ__double_double_double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates a rotation node with the rotation order\nx*y*z\n\n@param x\n           the rotation around the x axis, in radians.\n@param y\n           the rotation around the y axis, in radians.\n@param z\n           the rotation around the z axis, in radians."
 		   });	
 		addAnnotation
-		  (getTopologyFacade__CreateRotationNodeYZX__double_double_double(), 
+		  (getSymphony__CommonTopologyFacade__CreateRotationNodeYZX__double_double_double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates a rotation node with the rotation order\ny*z*x\n\n@param x\n           the rotation around the x axis, in radians.\n@param y\n           the rotation around the y axis, in radians.\n@param z\n           the rotation around the z axis, in radians."
 		   });	
 		addAnnotation
-		  (getTopologyFacade__CreateRotationNodeZYX__double_double_double(), 
+		  (getSymphony__CommonTopologyFacade__CreateRotationNodeZYX__double_double_double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates a rotation node with the rotation order\nz*y*x\n\n@param x\n           the rotation around the x axis, in radians.\n@param y\n           the rotation around the y axis, in radians.\n@param z\n           the rotation around the z axis, in radians."
 		   });	
 		addAnnotation
-		  (getTopologyFacade__CreateTransformNodeXYZ__double_double_double_double_double_double(), 
+		  (getSymphony__CommonTopologyFacade__CreateTransformNodeXYZ__double_double_double_double_double_double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates a transformation node with the rotation\norder x*y*z\n\n@param tx\n           the x translation.\n@param ty\n           the y translation.\n@param tz\n           the z translation.\n@param rx\n           the rotation around the x axis, in radians.\n@param ry\n           the rotation around the y axis, in radians.\n@param rz\n           the rotation around the z axis, in radians."
 		   });	
 		addAnnotation
-		  (getTopologyFacade__CreateTransformNodeYZX__double_double_double_double_double_double(), 
+		  (getSymphony__CommonTopologyFacade__CreateTransformNodeYZX__double_double_double_double_double_double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates a transformation node with the rotation\norder y*z*x\n\n@param tx\n           the x translation.\n@param ty\n           the y translation.\n@param tz\n           the z translation.\n@param rx\n           the rotation around the x axis, in radians.\n@param ry\n           the rotation around the y axis, in radians.\n@param rz\n           the rotation around the z axis, in radians."
 		   });	
 		addAnnotation
-		  (getTopologyFacade__CreateTransformNodeZYX__double_double_double_double_double_double(), 
+		  (getSymphony__CommonTopologyFacade__CreateTransformNodeZYX__double_double_double_double_double_double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Creates a transformation node with the rotation\norder z*y*x\n\n@param tx\n           the x translation.\n@param ty\n           the y translation.\n@param tz\n           the z translation.\n@param rx\n           the rotation around the x axis, in radians.\n@param ry\n           the rotation around the y axis, in radians.\n@param rz\n           the rotation around the z axis, in radians."
 		   });	
 		addAnnotation
-		  (getTopologyFacade__ExpressInFrame__Node_Node(), 
+		  (getSymphony__CommonTopologyFacade__ExpressInFrame__Node_Node(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Compute the transformation to express sourceFrame\ninto targetFrame.\n<p>\nFor example\n<ul>\n<li>sourceFrame could be laser scanner</li>\n<li>targetFrame could be the sonar sensor</li>\n</ul>\nThis method can be used to express the point cloud coming out of the\nlaser scanner in the frame of the sonar sensor.\n</p>"

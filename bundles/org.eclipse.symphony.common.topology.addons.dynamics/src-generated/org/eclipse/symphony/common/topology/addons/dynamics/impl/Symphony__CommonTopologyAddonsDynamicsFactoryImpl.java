@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
 import org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry;
 import org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint;
 import org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade;
 import org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint;
 import org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint;
 import org.eclipse.symphony.common.topology.addons.dynamics.KinematicState;
@@ -97,7 +97,7 @@ public class Symphony__CommonTopologyAddonsDynamicsFactoryImpl extends EFactoryI
 			case Symphony__CommonTopologyAddonsDynamicsPackage.CAPSULE_GEOMETRY: return createCapsuleGeometry();
 			case Symphony__CommonTopologyAddonsDynamicsPackage.CYLINDER_GEOMETRY: return createCylinderGeometry();
 			case Symphony__CommonTopologyAddonsDynamicsPackage.SPHERE_GEOMETRY: return createSphereGeometry();
-			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMICS_FACADE: return createDynamicsFacade();
+			case Symphony__CommonTopologyAddonsDynamicsPackage.SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE: return createSymphony__CommonTopologyAddonsDynamicsFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -298,6 +298,16 @@ public class Symphony__CommonTopologyAddonsDynamicsFactoryImpl extends EFactoryI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Symphony__CommonTopologyAddonsDynamicsFacade createSymphony__CommonTopologyAddonsDynamicsFacade() {
+		Symphony__CommonTopologyAddonsDynamicsFacadeImpl symphony__CommonTopologyAddonsDynamicsFacade = new Symphony__CommonTopologyAddonsDynamicsFacadeImpl();
+		return symphony__CommonTopologyAddonsDynamicsFacade;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PointOfInterest createPointOfInterest() {
 		PointOfInterestImpl pointOfInterest = new PointOfInterestImpl();
 		return pointOfInterest;
@@ -311,16 +321,6 @@ public class Symphony__CommonTopologyAddonsDynamicsFactoryImpl extends EFactoryI
 	public KinematicState createKinematicState() {
 		KinematicStateImpl kinematicState = new KinematicStateImpl();
 		return kinematicState;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DynamicsFacade createDynamicsFacade() {
-		DynamicsFacadeImpl dynamicsFacade = new DynamicsFacadeImpl();
-		return dynamicsFacade;
 	}
 
 	/**

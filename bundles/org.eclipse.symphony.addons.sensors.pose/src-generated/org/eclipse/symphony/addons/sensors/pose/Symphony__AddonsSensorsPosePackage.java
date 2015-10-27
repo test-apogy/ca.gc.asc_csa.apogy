@@ -1416,23 +1416,23 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	int CSV_DATA_LOGGER_OPERATION_COUNT = POSE_DATA_LOGGER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseFacadeImpl <em>Pose Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPoseFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.PoseFacadeImpl
-	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getPoseFacade()
+	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPoseFacadeImpl
+	 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getSymphony__AddonsSensorsPoseFacade()
 	 * @generated
 	 */
-	int POSE_FACADE = 10;
+	int SYMPHONY_ADDONS_SENSORS_POSE_FACADE = 10;
 
 	/**
-	 * The number of structural features of the '<em>Pose Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_ADDONS_SENSORS_POSE_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create CSV Data Logger</em>' operation.
@@ -1441,16 +1441,16 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING = 0;
+	int SYMPHONY_ADDONS_SENSORS_POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING = 0;
 
 	/**
-	 * The number of operations of the '<em>Pose Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSE_FACADE_OPERATION_COUNT = 1;
+	int SYMPHONY_ADDONS_SENSORS_POSE_FACADE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '<em>Exception</em>' data type.
@@ -1866,24 +1866,24 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 	EClass getCSVDataLogger();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.pose.PoseFacade <em>Pose Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Pose Facade</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PoseFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade
 	 * @generated
 	 */
-	EClass getPoseFacade();
+	EClass getSymphony__AddonsSensorsPoseFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.pose.PoseFacade#createCSVDataLogger(java.lang.String) <em>Create CSV Data Logger</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade#createCSVDataLogger(java.lang.String) <em>Create CSV Data Logger</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create CSV Data Logger</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.pose.PoseFacade#createCSVDataLogger(java.lang.String)
+	 * @see org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade#createCSVDataLogger(java.lang.String)
 	 * @generated
 	 */
-	EOperation getPoseFacade__CreateCSVDataLogger__String();
+	EOperation getSymphony__AddonsSensorsPoseFacade__CreateCSVDataLogger__String();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.Exception <em>Exception</em>}'.
@@ -2247,14 +2247,14 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 		EClass CSV_DATA_LOGGER = eINSTANCE.getCSVDataLogger();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.PoseFacadeImpl <em>Pose Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPoseFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.PoseFacadeImpl
-		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getPoseFacade()
+		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPoseFacadeImpl
+		 * @see org.eclipse.symphony.addons.sensors.pose.impl.Symphony__AddonsSensorsPosePackageImpl#getSymphony__AddonsSensorsPoseFacade()
 		 * @generated
 		 */
-		EClass POSE_FACADE = eINSTANCE.getPoseFacade();
+		EClass SYMPHONY_ADDONS_SENSORS_POSE_FACADE = eINSTANCE.getSymphony__AddonsSensorsPoseFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create CSV Data Logger</b></em>' operation.
@@ -2262,7 +2262,7 @@ public interface Symphony__AddonsSensorsPosePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING = eINSTANCE.getPoseFacade__CreateCSVDataLogger__String();
+		EOperation SYMPHONY_ADDONS_SENSORS_POSE_FACADE___CREATE_CSV_DATA_LOGGER__STRING = eINSTANCE.getSymphony__AddonsSensorsPoseFacade__CreateCSVDataLogger__String();
 
 		/**
 		 * The meta object literal for the '<em>Exception</em>' data type.

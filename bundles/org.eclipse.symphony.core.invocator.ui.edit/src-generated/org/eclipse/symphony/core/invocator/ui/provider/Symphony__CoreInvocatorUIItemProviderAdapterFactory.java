@@ -70,26 +70,26 @@ public class Symphony__CoreInvocatorUIItemProviderAdapterFactory extends Symphon
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUIFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EMFEcoreInvocatorUIFacadeItemProvider emfEcoreInvocatorUIFacadeItemProvider;
+	protected Symphony__CoreInvocatorUIFacadeItemProvider symphony__CoreInvocatorUIFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUIFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEMFEcoreInvocatorUIFacadeAdapter() {
-		if (emfEcoreInvocatorUIFacadeItemProvider == null) {
-			emfEcoreInvocatorUIFacadeItemProvider = new EMFEcoreInvocatorUIFacadeItemProvider(this);
+	public Adapter createSymphony__CoreInvocatorUIFacadeAdapter() {
+		if (symphony__CoreInvocatorUIFacadeItemProvider == null) {
+			symphony__CoreInvocatorUIFacadeItemProvider = new Symphony__CoreInvocatorUIFacadeItemProvider(this);
 		}
 
-		return emfEcoreInvocatorUIFacadeItemProvider;
+		return symphony__CoreInvocatorUIFacadeItemProvider;
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class Symphony__CoreInvocatorUIItemProviderAdapterFactory extends Symphon
 	 * @generated
 	 */
 	public void dispose() {
-		if (emfEcoreInvocatorUIFacadeItemProvider != null) emfEcoreInvocatorUIFacadeItemProvider.dispose();
+		if (symphony__CoreInvocatorUIFacadeItemProvider != null) symphony__CoreInvocatorUIFacadeItemProvider.dispose();
 	}
 
 }

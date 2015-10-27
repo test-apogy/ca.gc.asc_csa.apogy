@@ -23,15 +23,15 @@ public interface Symphony__CommonEMFFactory extends EFactory
   Symphony__CommonEMFFactory eINSTANCE = org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFFactoryImpl.init();
 
   /**
-	 * Returns a new object of class '<em>EMF Ecore Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EMF Ecore Facade</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-  EMFEcoreFacade createEMFEcoreFacade();
+	Symphony__CommonEMFFacade createSymphony__CommonEMFFacade();
 
-  /**
+		/**
 	 * Returns a new object of class '<em>Server</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

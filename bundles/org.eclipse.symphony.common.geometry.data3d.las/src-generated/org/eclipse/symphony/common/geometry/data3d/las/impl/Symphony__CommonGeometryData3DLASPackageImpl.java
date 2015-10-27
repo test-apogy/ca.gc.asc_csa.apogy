@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.symphony.common.geometry.data3d.las.EdgeOfFlightLine;
-import org.eclipse.symphony.common.geometry.data3d.las.LASFacade;
+import org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade;
 import org.eclipse.symphony.common.geometry.data3d.las.LASHeader;
 import org.eclipse.symphony.common.geometry.data3d.las.LASPoint;
 import org.eclipse.symphony.common.geometry.data3d.las.LASReader;
@@ -71,7 +71,7 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass lasFacadeEClass = null;
+	private EClass symphony__CommonGeometryData3DLASFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -797,8 +797,8 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLASFacade() {
-		return lasFacadeEClass;
+	public EClass getSymphony__CommonGeometryData3DLASFacade() {
+		return symphony__CommonGeometryData3DLASFacadeEClass;
 	}
 
 	/**
@@ -806,8 +806,8 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLASFacade__CreatePoint__int_byte() {
-		return lasFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__CommonGeometryData3DLASFacade__CreatePoint__int_byte() {
+		return symphony__CommonGeometryData3DLASFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1105,8 +1105,8 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 		createEAttribute(lasPointEClass, LAS_POINT__GREEN);
 		createEAttribute(lasPointEClass, LAS_POINT__BLUE);
 
-		lasFacadeEClass = createEClass(LAS_FACADE);
-		createEOperation(lasFacadeEClass, LAS_FACADE___CREATE_POINT__INT_BYTE);
+		symphony__CommonGeometryData3DLASFacadeEClass = createEClass(SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE);
+		createEOperation(symphony__CommonGeometryData3DLASFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DLAS_FACADE___CREATE_POINT__INT_BYTE);
 
 		lasWriterEClass = createEClass(LAS_WRITER);
 		createEAttribute(lasWriterEClass, LAS_WRITER__FILE_NAME);
@@ -1240,9 +1240,9 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 		initEAttribute(getLASPoint_Green(), theEcorePackage.getEInt(), "green", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLASPoint_Blue(), theEcorePackage.getEInt(), "blue", null, 0, 1, LASPoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(lasFacadeEClass, LASFacade.class, "LASFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CommonGeometryData3DLASFacadeEClass, Symphony__CommonGeometryData3DLASFacade.class, "Symphony__CommonGeometryData3DLASFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getLASFacade__CreatePoint__int_byte(), this.getLASPoint(), "createPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DLASFacade__CreatePoint__int_byte(), this.getLASPoint(), "createPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "formatID", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEByteArray(), "data", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getIOException());

@@ -27,7 +27,7 @@ import org.eclipse.symphony.common.topology.addons.primitives.Light;
 import org.eclipse.symphony.common.topology.addons.primitives.PickVector;
 import org.eclipse.symphony.common.topology.addons.primitives.Plane;
 import org.eclipse.symphony.common.topology.addons.primitives.PointLight;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade;
 import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFactory;
 import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.SpherePrimitive;
@@ -124,7 +124,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass primitivesFacadeEClass = null;
+	private EClass symphony__CommonTopologyAddonsPrimitivesFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -533,8 +533,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPrimitivesFacade() {
-		return primitivesFacadeEClass;
+	public EClass getSymphony__CommonTopologyAddonsPrimitivesFacade() {
+		return symphony__CommonTopologyAddonsPrimitivesFacadeEClass;
 	}
 
 	/**
@@ -542,8 +542,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPrimitivesFacade__CreateVector__Vector() {
-		return primitivesFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateVector__Vector() {
+		return symphony__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -551,8 +551,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPrimitivesFacade__CreateVector__Point3d_Point3d() {
-		return primitivesFacadeEClass.getEOperations().get(1);
+	public EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateVector__Point3d_Point3d() {
+		return symphony__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -560,8 +560,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPrimitivesFacade__CreateVector__double_double_double_double() {
-		return primitivesFacadeEClass.getEOperations().get(2);
+	public EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateVector__double_double_double_double() {
+		return symphony__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -569,8 +569,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPrimitivesFacade__CreatePlane__Vector3d_Vector3d_double_double() {
-		return primitivesFacadeEClass.getEOperations().get(3);
+	public EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePlane__Vector3d_Vector3d_double_double() {
+		return symphony__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -578,8 +578,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPrimitivesFacade__CreateAmbientLight__Tuple3d() {
-		return primitivesFacadeEClass.getEOperations().get(4);
+	public EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateAmbientLight__Tuple3d() {
+		return symphony__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -587,8 +587,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPrimitivesFacade__CreateAmbientLight__boolean_Tuple3d() {
-		return primitivesFacadeEClass.getEOperations().get(5);
+	public EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateAmbientLight__boolean_Tuple3d() {
+		return symphony__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -596,8 +596,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPrimitivesFacade__CreateDirectionalLight__Tuple3d_Tuple3d() {
-		return primitivesFacadeEClass.getEOperations().get(6);
+	public EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateDirectionalLight__Tuple3d_Tuple3d() {
+		return symphony__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -605,8 +605,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPrimitivesFacade__CreateDirectionalLight__boolean_Tuple3d_Tuple3d() {
-		return primitivesFacadeEClass.getEOperations().get(7);
+	public EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateDirectionalLight__boolean_Tuple3d_Tuple3d() {
+		return symphony__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -614,8 +614,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPrimitivesFacade__CreatePointLight__Tuple3d() {
-		return primitivesFacadeEClass.getEOperations().get(8);
+	public EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__Tuple3d() {
+		return symphony__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -623,8 +623,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d() {
-		return primitivesFacadeEClass.getEOperations().get(9);
+	public EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d() {
+		return symphony__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(9);
 	}
 
 	/**
@@ -632,8 +632,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d_Tuple3d() {
-		return primitivesFacadeEClass.getEOperations().get(10);
+	public EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d_Tuple3d() {
+		return symphony__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(10);
 	}
 
 	/**
@@ -641,8 +641,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPrimitivesFacade__CreatePointLight__boolean_Tuple3d_Tuple3d_Tuple3d() {
-		return primitivesFacadeEClass.getEOperations().get(11);
+	public EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__boolean_Tuple3d_Tuple3d_Tuple3d() {
+		return symphony__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(11);
 	}
 
 	/**
@@ -650,8 +650,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPrimitivesFacade__CreateSpotLight__Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float() {
-		return primitivesFacadeEClass.getEOperations().get(12);
+	public EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateSpotLight__Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float() {
+		return symphony__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(12);
 	}
 
 	/**
@@ -659,8 +659,8 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPrimitivesFacade__CreateSpotLight__boolean_Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float() {
-		return primitivesFacadeEClass.getEOperations().get(13);
+	public EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateSpotLight__boolean_Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float() {
+		return symphony__CommonTopologyAddonsPrimitivesFacadeEClass.getEOperations().get(13);
 	}
 
 	/**
@@ -756,21 +756,21 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 		createEAttribute(spotLightEClass, SPOT_LIGHT__SPREAD_ANGLE);
 		createEReference(spotLightEClass, SPOT_LIGHT__DIRECTION);
 
-		primitivesFacadeEClass = createEClass(PRIMITIVES_FACADE);
-		createEOperation(primitivesFacadeEClass, PRIMITIVES_FACADE___CREATE_VECTOR__VECTOR);
-		createEOperation(primitivesFacadeEClass, PRIMITIVES_FACADE___CREATE_VECTOR__POINT3D_POINT3D);
-		createEOperation(primitivesFacadeEClass, PRIMITIVES_FACADE___CREATE_VECTOR__DOUBLE_DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(primitivesFacadeEClass, PRIMITIVES_FACADE___CREATE_PLANE__VECTOR3D_VECTOR3D_DOUBLE_DOUBLE);
-		createEOperation(primitivesFacadeEClass, PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__TUPLE3D);
-		createEOperation(primitivesFacadeEClass, PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__BOOLEAN_TUPLE3D);
-		createEOperation(primitivesFacadeEClass, PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__TUPLE3D_TUPLE3D);
-		createEOperation(primitivesFacadeEClass, PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D);
-		createEOperation(primitivesFacadeEClass, PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D);
-		createEOperation(primitivesFacadeEClass, PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D);
-		createEOperation(primitivesFacadeEClass, PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D);
-		createEOperation(primitivesFacadeEClass, PRIMITIVES_FACADE___CREATE_POINT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D);
-		createEOperation(primitivesFacadeEClass, PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT);
-		createEOperation(primitivesFacadeEClass, PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT);
+		symphony__CommonTopologyAddonsPrimitivesFacadeEClass = createEClass(SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE);
+		createEOperation(symphony__CommonTopologyAddonsPrimitivesFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_VECTOR__VECTOR);
+		createEOperation(symphony__CommonTopologyAddonsPrimitivesFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_VECTOR__POINT3D_POINT3D);
+		createEOperation(symphony__CommonTopologyAddonsPrimitivesFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_VECTOR__DOUBLE_DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(symphony__CommonTopologyAddonsPrimitivesFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_PLANE__VECTOR3D_VECTOR3D_DOUBLE_DOUBLE);
+		createEOperation(symphony__CommonTopologyAddonsPrimitivesFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__TUPLE3D);
+		createEOperation(symphony__CommonTopologyAddonsPrimitivesFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__BOOLEAN_TUPLE3D);
+		createEOperation(symphony__CommonTopologyAddonsPrimitivesFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__TUPLE3D_TUPLE3D);
+		createEOperation(symphony__CommonTopologyAddonsPrimitivesFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D);
+		createEOperation(symphony__CommonTopologyAddonsPrimitivesFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D);
+		createEOperation(symphony__CommonTopologyAddonsPrimitivesFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D);
+		createEOperation(symphony__CommonTopologyAddonsPrimitivesFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D);
+		createEOperation(symphony__CommonTopologyAddonsPrimitivesFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D);
+		createEOperation(symphony__CommonTopologyAddonsPrimitivesFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT);
+		createEOperation(symphony__CommonTopologyAddonsPrimitivesFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT);
 
 		// Create data types
 		point3dEDataType = createEDataType(POINT3D);
@@ -872,62 +872,62 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 		initEAttribute(getSpotLight_SpreadAngle(), theEcorePackage.getEFloat(), "spreadAngle", null, 0, 1, SpotLight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpotLight_Direction(), theSymphony__CommonMathPackage.getTuple3d(), null, "direction", null, 0, 1, SpotLight.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(primitivesFacadeEClass, PrimitivesFacade.class, "PrimitivesFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CommonTopologyAddonsPrimitivesFacadeEClass, Symphony__CommonTopologyAddonsPrimitivesFacade.class, "Symphony__CommonTopologyAddonsPrimitivesFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getPrimitivesFacade__CreateVector__Vector(), this.getVector(), "createVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateVector__Vector(), this.getVector(), "createVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVector(), "vector", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getPrimitivesFacade__CreateVector__Point3d_Point3d(), this.getVector(), "createVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateVector__Point3d_Point3d(), this.getVector(), "createVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPoint3d(), "p0", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPoint3d(), "p1", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getPrimitivesFacade__CreateVector__double_double_double_double(), this.getVector(), "createVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateVector__double_double_double_double(), this.getVector(), "createVector", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "rotationX", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "rotationY", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "rotationZ", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "length", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getPrimitivesFacade__CreatePlane__Vector3d_Vector3d_double_double(), this.getPlane(), "createPlane", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePlane__Vector3d_Vector3d_double_double(), this.getPlane(), "createPlane", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVector3d(), "v0", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVector3d(), "v1", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "width", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "height", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getPrimitivesFacade__CreateAmbientLight__Tuple3d(), this.getAmbientLight(), "createAmbientLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateAmbientLight__Tuple3d(), this.getAmbientLight(), "createAmbientLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getPrimitivesFacade__CreateAmbientLight__boolean_Tuple3d(), this.getAmbientLight(), "createAmbientLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateAmbientLight__boolean_Tuple3d(), this.getAmbientLight(), "createAmbientLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "lightOn", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getPrimitivesFacade__CreateDirectionalLight__Tuple3d_Tuple3d(), this.getDirectionalLight(), "createDirectionalLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateDirectionalLight__Tuple3d_Tuple3d(), this.getDirectionalLight(), "createDirectionalLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "direction", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getPrimitivesFacade__CreateDirectionalLight__boolean_Tuple3d_Tuple3d(), this.getDirectionalLight(), "createDirectionalLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateDirectionalLight__boolean_Tuple3d_Tuple3d(), this.getDirectionalLight(), "createDirectionalLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "lightOn", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "direction", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getPrimitivesFacade__CreatePointLight__Tuple3d(), this.getPointLight(), "createPointLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__Tuple3d(), this.getPointLight(), "createPointLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d(), this.getPointLight(), "createPointLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d(), this.getPointLight(), "createPointLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d_Tuple3d(), this.getPointLight(), "createPointLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d_Tuple3d(), this.getPointLight(), "createPointLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "attenuation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getPrimitivesFacade__CreatePointLight__boolean_Tuple3d_Tuple3d_Tuple3d(), this.getPointLight(), "createPointLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__boolean_Tuple3d_Tuple3d_Tuple3d(), this.getPointLight(), "createPointLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "lightOn", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "attenuation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getPrimitivesFacade__CreateSpotLight__Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float(), this.getSpotLight(), "createSpotLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateSpotLight__Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float(), this.getSpotLight(), "createSpotLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "attenuation", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -935,7 +935,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 		addEParameter(op, theEcorePackage.getEFloat(), "spreadAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "concentration", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getPrimitivesFacade__CreateSpotLight__boolean_Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float(), this.getSpotLight(), "createSpotLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateSpotLight__boolean_Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float(), this.getSpotLight(), "createSpotLight", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "lightOn", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "color", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);

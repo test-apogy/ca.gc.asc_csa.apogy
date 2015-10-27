@@ -107,8 +107,8 @@ public class Symphony__AddonsSensorsGPSAdapterFactory extends AdapterFactoryImpl
 				return createGPSRepositoryAdapter();
 			}
 			@Override
-			public Adapter caseGPSFacade(GPSFacade object) {
-				return createGPSFacadeAdapter();
+			public Adapter caseSymphony__AddonsSensorsGPSFacade(Symphony__AddonsSensorsGPSFacade object) {
+				return createSymphony__AddonsSensorsGPSFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
@@ -281,16 +281,16 @@ public class Symphony__AddonsSensorsGPSAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.gps.GPSFacade <em>GPS Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GPSFacade
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFacade
 	 * @generated
 	 */
-	public Adapter createGPSFacadeAdapter() {
+	public Adapter createSymphony__AddonsSensorsGPSFacadeAdapter() {
 		return null;
 	}
 

@@ -12,7 +12,7 @@ import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.ui.IWorkbench;
@@ -34,7 +34,7 @@ public class VariableInstancesApplyInitializationDataCommand extends AbstractHan
 			if (selection instanceof Environment) 
 			{						
 				applyInitializationData((Environment) selection);
-				// EMFEcoreInvocatorFacade.INSTANCE.applyInitializationData((Environment) selection);
+				// Symphony__CoreInvocatorFacade.INSTANCE.applyInitializationData((Environment) selection);
 			}
 		}
 		return null;
@@ -59,7 +59,7 @@ public class VariableInstancesApplyInitializationDataCommand extends AbstractHan
 					{						
 						monitor.subTask("Applying data on Variable <" + variable.getName() + ">...");
 						
-						EMFEcoreInvocatorFacade.INSTANCE.applyInitializationData(variable);
+						Symphony__CoreInvocatorFacade.INSTANCE.applyInitializationData(variable);
 						monitor.worked(1);
 						
 						if (monitor.isCanceled()) return;

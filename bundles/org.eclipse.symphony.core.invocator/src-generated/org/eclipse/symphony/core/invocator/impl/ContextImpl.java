@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.ContextsList;
 import org.eclipse.symphony.core.invocator.DataProductsList;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
@@ -257,7 +257,7 @@ public abstract class ContextImpl extends MinimalEObjectImpl.Container implement
 			  variableImplementation.setVariable(variable);
 			  
 			  /** Create TypeMemberImplementations. */
-			  variableImplementation.getTypeMemberImplementations().addAll(EMFEcoreInvocatorFacade.INSTANCE.createTypeMemberImplementations(variable.getVariableType()));			  
+			  variableImplementation.getTypeMemberImplementations().addAll(Symphony__CoreInvocatorFacade.INSTANCE.createTypeMemberImplementations(variable.getVariableType()));			  
 			  
 			  list.getVariableImplementations().add(variableImplementation);
 		  }

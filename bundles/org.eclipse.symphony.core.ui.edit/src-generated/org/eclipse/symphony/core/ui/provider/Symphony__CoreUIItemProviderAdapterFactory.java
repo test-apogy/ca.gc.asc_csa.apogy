@@ -71,26 +71,26 @@ public class Symphony__CoreUIItemProviderAdapterFactory extends Symphony__CoreUI
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SymphonyCoreUiFacadeItemProvider symphonyCoreUiFacadeItemProvider;
+	protected Symphony__CoreUIFacadeItemProvider symphony__CoreUIFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphonyCoreUiFacadeAdapter() {
-		if (symphonyCoreUiFacadeItemProvider == null) {
-			symphonyCoreUiFacadeItemProvider = new SymphonyCoreUiFacadeItemProvider(this);
+	public Adapter createSymphony__CoreUIFacadeAdapter() {
+		if (symphony__CoreUIFacadeItemProvider == null) {
+			symphony__CoreUIFacadeItemProvider = new Symphony__CoreUIFacadeItemProvider(this);
 		}
 
-		return symphonyCoreUiFacadeItemProvider;
+		return symphony__CoreUIFacadeItemProvider;
 	}
 
 	/**
@@ -307,7 +307,7 @@ public class Symphony__CoreUIItemProviderAdapterFactory extends Symphony__CoreUI
 	 * @generated
 	 */
 	public void dispose() {
-		if (symphonyCoreUiFacadeItemProvider != null) symphonyCoreUiFacadeItemProvider.dispose();
+		if (symphony__CoreUIFacadeItemProvider != null) symphony__CoreUIFacadeItemProvider.dispose();
 		if (symphonyResourceSettingsItemProvider != null) symphonyResourceSettingsItemProvider.dispose();
 		if (newSymphonyProjectSettingsItemProvider != null) newSymphonyProjectSettingsItemProvider.dispose();
 		if (newSymphonySessionSettingsItemProvider != null) newSymphonySessionSettingsItemProvider.dispose();

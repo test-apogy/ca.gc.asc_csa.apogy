@@ -10,7 +10,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.emf.ui.composites.EClassDocumentationComposite;
 import org.eclipse.symphony.common.ui.views.AbstractView;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Type;
 import org.eclipse.symphony.core.invocator.TypeMember;
 import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
@@ -69,6 +69,6 @@ public class DocumentationView extends AbstractView implements
 
 	@Override
 	public EditingDomain getEditingDomain() {
-		return AdapterFactoryEditingDomain.getEditingDomainFor(EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+		return AdapterFactoryEditingDomain.getEditingDomainFor(Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 	}
 }

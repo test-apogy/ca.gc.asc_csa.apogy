@@ -17,7 +17,7 @@ import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.programs.controllers.ControllerFacade;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade;
 import org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint;
 import org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning;
 import org.eclipse.symphony.core.programs.controllers.ui.Activator;
@@ -89,7 +89,7 @@ public class LoadUserDefinedInputConditioningFromFileCommand extends AbstractHan
 				double inputValue = Double.parseDouble(entries[0]);
 				double outputValue = Double.parseDouble(entries[1]);
 				
-				CustomInputConditioningPoint p = ControllerFacade.INSTANCE.createCustomInputConditioningPoint(inputValue, outputValue);
+				CustomInputConditioningPoint p = Symphony__CoreProgramsControllersFacade.INSTANCE.createCustomInputConditioningPoint(inputValue, outputValue);
 				
 				points.add(p);
 			}

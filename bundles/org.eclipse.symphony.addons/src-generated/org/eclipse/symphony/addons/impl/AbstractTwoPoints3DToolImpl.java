@@ -15,10 +15,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.AbstractTwoPoints3DTool;
 import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.util.NodeRelativePoseListener;
 
 /**
@@ -733,14 +733,14 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 		// Updates From Node Absolute Position.
 		if(getFromNode() != null)
 		{
-			Matrix4d m = TopologyFacade.INSTANCE.expressNodeInRootFrame(getFromNode());
+			Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(getFromNode());
 			Point3d from = new Point3d();
 			if(getFromRelativePosition() != null)
 			{
 				from = new Point3d(getFromRelativePosition().asTuple3d());
 			}
 			m.transform(from);
-			setFromAbsolutePosition(MathFacade.INSTANCE.createTuple3d(from));
+			setFromAbsolutePosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(from));
 		}
 	}
 	
@@ -752,14 +752,14 @@ public abstract class AbstractTwoPoints3DToolImpl extends Simple3DToolImpl imple
 		// Updates To Node Absolute Position.
 		if(getToNode() != null)
 		{
-			Matrix4d m = TopologyFacade.INSTANCE.expressNodeInRootFrame(getToNode());
+			Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(getToNode());
 			Point3d to = new Point3d();
 			if(getToRelativePosition() != null)
 			{
 				to = new Point3d(getToRelativePosition().asTuple3d());
 			}
 			m.transform(to);
-			setToAbsolutePosition(MathFacade.INSTANCE.createTuple3d(to));
+			setToAbsolutePosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(to));
 		}
 	}
 	

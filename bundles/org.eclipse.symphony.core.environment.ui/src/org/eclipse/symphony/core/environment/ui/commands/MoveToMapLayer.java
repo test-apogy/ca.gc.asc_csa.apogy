@@ -17,9 +17,9 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.AbstractWorksite;
@@ -41,9 +41,9 @@ import org.eclipse.ui.handlers.HandlerUtil;
 
 import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
 import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
+import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
 
 public class MoveToMapLayer extends AbstractHandler implements IHandler
 {
@@ -150,11 +150,11 @@ public class MoveToMapLayer extends AbstractHandler implements IHandler
 		meshLayer.setDescription(getDescription(positionedResult));
 		
 		// Makes a copy of the mesh.
-		CartesianTriangularMesh transformedMesh = Data3dFacade.INSTANCE.createCartesianTriangularMesh(mesh);
+		CartesianTriangularMesh transformedMesh = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangularMesh(mesh);
 		
 		// Transform the mesh coordinates.
 		Matrix4d transform = getTransformForMap(positionedResult, map);		
-		transformedMesh = Geometry3dUtilities.createTransformedCartesianTriangularMesh(transform, transformedMesh);
+		transformedMesh = Geometry3DUtilities.createTransformedCartesianTriangularMesh(transform, transformedMesh);
 								
 		// Sets the mesh
 		meshLayer.setMesh(transformedMesh);
@@ -180,13 +180,13 @@ public class MoveToMapLayer extends AbstractHandler implements IHandler
 		// Copies the coordinatesSet point to the mesh.
 		for(CartesianPositionCoordinates point : coordinatesSet.getPoints())
 		{
-			CartesianPositionCoordinates pointCopy = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(point);
+			CartesianPositionCoordinates pointCopy = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
 			mesh.getPoints().add(pointCopy);
 		}
 				
 		// Transform the points.
 		Matrix4d transform = getTransformForMap(positionedResult, map);	
-		mesh = Geometry3dUtilities.createTransformedCartesianTriangularMesh(transform, mesh);
+		mesh = Geometry3DUtilities.createTransformedCartesianTriangularMesh(transform, mesh);
 									
 		// Sets the mesh
 		meshLayer.setMesh(mesh);
@@ -309,23 +309,23 @@ public class MoveToMapLayer extends AbstractHandler implements IHandler
 		String variable_str = "?";
 		if( operationCall.getVariable() != null)
 		{
-			variable_str = EMFEcoreEditUtilsFacade.INSTANCE.getText(operationCall.getVariable());
+			variable_str = Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(operationCall.getVariable());
 		}
 		
 		String feature_str = null;
 		if (operationCall.getFeatureRoot() != null) 
 		{
-			AbstractFeatureListNode leaf = EMFEcoreFacade.INSTANCE.getLeaf(operationCall.getFeatureRoot());
+			AbstractFeatureListNode leaf = Symphony__CommonEMFFacade.INSTANCE.getLeaf(operationCall.getFeatureRoot());
 			if (leaf != null) 
 			{
-				feature_str = EMFEcoreFacade.INSTANCE.getAncestriesString(leaf);
+				feature_str = Symphony__CommonEMFFacade.INSTANCE.getAncestriesString(leaf);
 			}
 		}
 		String operation_str = "?";
 		
 		if(operationCall.getEOperation() != null)
 		{
-			operation_str = EMFEcoreEditUtilsFacade.INSTANCE.getText(operationCall.getEOperation());
+			operation_str = Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(operationCall.getEOperation());
 		}
 		
 		if (feature_str != null) 

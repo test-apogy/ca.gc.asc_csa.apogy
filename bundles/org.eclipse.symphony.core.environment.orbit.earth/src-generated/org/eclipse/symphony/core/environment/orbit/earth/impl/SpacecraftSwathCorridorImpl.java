@@ -28,7 +28,7 @@ import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.earth.Activator;
 import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor;
 import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
@@ -892,7 +892,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 			// Adds a fixed step handler to record the SpacecraftStates.
 			CorridorHandler corridorHandler = new CorridorHandler(getStartTime(), getEndTime(), leftSwathAngle, rightSwathAngle);
 			propagator.setMasterMode(getTimeInterval(), corridorHandler);						
-			AbsoluteDate startAbsoluteDate = EarthOrbitFacade.INSTANCE.createAbsoluteDate(getStartTime());
+			AbsoluteDate startAbsoluteDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(getStartTime());
 			
 			try 
 			{						
@@ -903,7 +903,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 				for(SpacecraftSwathCorridorImpl.CorridorPoint point : corridorHandler.getCorridor())
 				{
 					AbsoluteDate absoluteDate = point.getDate();
-					Date date = EarthOrbitFacade.INSTANCE.createDate(absoluteDate);
+					Date date = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(absoluteDate);
 					
 					GeodeticPoint left = point.getLeft();				
 					GeographicCoordinates leftCoord = Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
@@ -1016,7 +1016,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
             try 
             {
             	// Checks that the state falls inside the specified range.
-            	Date currentDate = EarthOrbitFacade.INSTANCE.createDate(currentState.getDate());
+            	Date currentDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(currentState.getDate());
 				if(currentDate.getTime() >= startDate.getTime() && endDate.getTime() >= currentDate.getTime())
 				{
 	                // compute sub-satellite track=

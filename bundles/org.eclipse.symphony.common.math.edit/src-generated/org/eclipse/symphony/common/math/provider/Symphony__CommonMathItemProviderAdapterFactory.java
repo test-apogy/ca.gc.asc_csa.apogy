@@ -110,26 +110,26 @@ public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__Co
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.math.MathFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MathFacadeItemProvider mathFacadeItemProvider;
+	protected Symphony__CommonMathFacadeItemProvider symphony__CommonMathFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.math.MathFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createMathFacadeAdapter() {
-		if (mathFacadeItemProvider == null) {
-			mathFacadeItemProvider = new MathFacadeItemProvider(this);
+	public Adapter createSymphony__CommonMathFacadeAdapter() {
+		if (symphony__CommonMathFacadeItemProvider == null) {
+			symphony__CommonMathFacadeItemProvider = new Symphony__CommonMathFacadeItemProvider(this);
 		}
 
-		return mathFacadeItemProvider;
+		return symphony__CommonMathFacadeItemProvider;
 	}
 
 	/**
@@ -354,7 +354,7 @@ public class Symphony__CommonMathItemProviderAdapterFactory extends Symphony__Co
 		if (matrix3x3ItemProvider != null) matrix3x3ItemProvider.dispose();
 		if (matrix4x4ItemProvider != null) matrix4x4ItemProvider.dispose();
 		if (polynomialItemProvider != null) polynomialItemProvider.dispose();
-		if (mathFacadeItemProvider != null) mathFacadeItemProvider.dispose();
+		if (symphony__CommonMathFacadeItemProvider != null) symphony__CommonMathFacadeItemProvider.dispose();
 		if (mathIOItemProvider != null) mathIOItemProvider.dispose();
 	}
 

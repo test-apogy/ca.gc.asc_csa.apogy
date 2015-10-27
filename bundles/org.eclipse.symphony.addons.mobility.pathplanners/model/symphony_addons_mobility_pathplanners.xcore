@@ -60,7 +60,7 @@ class CircularExclusionZone extends ExclusionZone, CoordinatesSamplingShape<Cart
 	boolean invertSamplingShape
 }
 
-class PathPlannersFacade
+class Symphony__AddonsMobilityPathplannersFacade
 {
 	op CircularExclusionZone createCircularExclusionZone(double radius, GroupNode parent)
 }

@@ -15,9 +15,8 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.programs.controllers.AbstractInputConditioning;
 import org.eclipse.symphony.core.programs.controllers.Activator;
-import org.eclipse.symphony.core.programs.controllers.ControllerFacade;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade;
 import org.eclipse.symphony.core.programs.controllers.ControllerValueSource;
-import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFactory;
 import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 
 /**
@@ -38,8 +37,6 @@ import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsCont
  */
 public class ControllerValueSourceImpl extends ValueSourceImpl implements ControllerValueSource
 {
-	private static ControllerFacade controllerFacade = Symphony__CoreProgramsControllersFactory.eINSTANCE.createControllerFacade();
-	
   /**
 	 * The cached value of the '{@link #getComponent() <em>Component</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -429,7 +426,7 @@ public class ControllerValueSourceImpl extends ValueSourceImpl implements Contro
 		  }
 		  
 		  // Converts the float to the required data type
-		  Object value = controllerFacade.createValue(getBindedEDataTypeArgument().getEParameter(), data);
+		  Object value = Symphony__CoreProgramsControllersFacade.INSTANCE.createValue(getBindedEDataTypeArgument().getEParameter(), data);
 		  
 		  // Update last value (used for display purposes).
 		  setLastValue(value);

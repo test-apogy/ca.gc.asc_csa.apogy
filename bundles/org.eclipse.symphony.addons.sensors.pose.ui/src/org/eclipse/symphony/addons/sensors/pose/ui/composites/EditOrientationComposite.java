@@ -9,7 +9,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
 import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 
 public class EditOrientationComposite extends Composite
 {
@@ -69,7 +69,7 @@ public class EditOrientationComposite extends Composite
 	
 	public CartesianOrientationCoordinates getNewValues()
 	{		
-		CartesianOrientationCoordinates orientation = Data3dFacade.INSTANCE.createCartesianOrientationCoordinates(orientationSensor.getOrientationCoordinates());
+		CartesianOrientationCoordinates orientation = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianOrientationCoordinates(orientationSensor.getOrientationCoordinates());
 		
 		try
 		{
@@ -77,7 +77,7 @@ public class EditOrientationComposite extends Composite
 			double yRotation = Math.toRadians(Double.parseDouble(yValueText.getText()));
 			double zRotation = Math.toRadians(Double.parseDouble(zValueText.getText()));
 			
-			orientation = Data3dFacade.INSTANCE.createCartesianOrientationCoordinates(xRotation, yRotation, zRotation);
+			orientation = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianOrientationCoordinates(xRotation, yRotation, zRotation);
 		}
 		catch(Exception e)
 		{

@@ -39,7 +39,7 @@ import org.eclipse.symphony.core.Positioned;
 import org.eclipse.symphony.core.PositionedResult;
 import org.eclipse.symphony.core.ResultNode;
 import org.eclipse.symphony.core.ResultsListNode;
-import org.eclipse.symphony.core.SymphonyCoreFacade;
+import org.eclipse.symphony.core.Symphony__CoreFacade;
 import org.eclipse.symphony.core.Symphony__CoreFactory;
 import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
@@ -60,6 +60,13 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
  */
 public class Symphony__CorePackageImpl extends EPackageImpl implements
 		Symphony__CorePackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass symphony__CoreFacadeEClass = null;
+
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -213,12 +220,6 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass symphonyCoreFacadeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass resultNodeEClass = null;
 
 	/**
@@ -339,6 +340,69 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(Symphony__CorePackage.eNS_URI, theSymphony__CorePackage);
 		return theSymphony__CorePackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSymphony__CoreFacade() {
+		return symphony__CoreFacadeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreFacade__ComputeAbsolutePoseMatrix__SymphonySystem_Matrix4x4() {
+		return symphony__CoreFacadeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreFacade__CreateResultNode__PositionedResult() {
+		return symphony__CoreFacadeEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreFacade__CreateSymphonySession__boolean_boolean_boolean_boolean() {
+		return symphony__CoreFacadeEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreFacade__GetSymphonySystem__Environment_String() {
+		return symphony__CoreFacadeEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreFacade__LoadFeatureOfInterestFromFile__String() {
+		return symphony__CoreFacadeEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreFacade__SaveFeatureOfInterestToFile__String_List() {
+		return symphony__CoreFacadeEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -906,68 +970,6 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSymphonyCoreFacade() {
-		return symphonyCoreFacadeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getSymphonyCoreFacade__ComputeAbsolutePoseMatrix__SymphonySystem_Matrix4x4()
-  {
-		return symphonyCoreFacadeEClass.getEOperations().get(0);
-	}
-
-  /**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymphonyCoreFacade__CreateResultNode__PositionedResult() {
-		return symphonyCoreFacadeEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymphonyCoreFacade__CreateSymphonySession__boolean_boolean_boolean_boolean() {
-		return symphonyCoreFacadeEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getSymphonyCoreFacade__GetSymphonySystem__Environment_String()
-  {
-		return symphonyCoreFacadeEClass.getEOperations().get(3);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymphonyCoreFacade__LoadFeatureOfInterestFromFile__String() {
-		return symphonyCoreFacadeEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymphonyCoreFacade__SaveFeatureOfInterestToFile__String_List() {
-		return symphonyCoreFacadeEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getResultNode() {
 		return resultNodeEClass;
 	}
@@ -1138,13 +1140,13 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 		isCreated = true;
 
 		// Create classes and their features
-		symphonyCoreFacadeEClass = createEClass(SYMPHONY_CORE_FACADE);
-		createEOperation(symphonyCoreFacadeEClass, SYMPHONY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__SYMPHONYSYSTEM_MATRIX4X4);
-		createEOperation(symphonyCoreFacadeEClass, SYMPHONY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT);
-		createEOperation(symphonyCoreFacadeEClass, SYMPHONY_CORE_FACADE___CREATE_SYMPHONY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN);
-		createEOperation(symphonyCoreFacadeEClass, SYMPHONY_CORE_FACADE___GET_SYMPHONY_SYSTEM__ENVIRONMENT_STRING);
-		createEOperation(symphonyCoreFacadeEClass, SYMPHONY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING);
-		createEOperation(symphonyCoreFacadeEClass, SYMPHONY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST);
+		symphony__CoreFacadeEClass = createEClass(SYMPHONY_CORE_FACADE);
+		createEOperation(symphony__CoreFacadeEClass, SYMPHONY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__SYMPHONYSYSTEM_MATRIX4X4);
+		createEOperation(symphony__CoreFacadeEClass, SYMPHONY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT);
+		createEOperation(symphony__CoreFacadeEClass, SYMPHONY_CORE_FACADE___CREATE_SYMPHONY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN);
+		createEOperation(symphony__CoreFacadeEClass, SYMPHONY_CORE_FACADE___GET_SYMPHONY_SYSTEM__ENVIRONMENT_STRING);
+		createEOperation(symphony__CoreFacadeEClass, SYMPHONY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING);
+		createEOperation(symphony__CoreFacadeEClass, SYMPHONY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST);
 
 		symphonyEnvironmentEClass = createEClass(SYMPHONY_ENVIRONMENT);
 		createEReference(symphonyEnvironmentEClass, SYMPHONY_ENVIRONMENT__WORKSITES_LIST);
@@ -1336,26 +1338,26 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 		featureOfInterestListNodeEClass.getESuperTypes().add(theSymphony__CommonTopologyPackage.getAggregateGroupNode());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(symphonyCoreFacadeEClass, SymphonyCoreFacade.class, "SymphonyCoreFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CoreFacadeEClass, Symphony__CoreFacade.class, "Symphony__CoreFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getSymphonyCoreFacade__ComputeAbsolutePoseMatrix__SymphonySystem_Matrix4x4(), theSymphony__CommonMathPackage.getMatrix4x4(), "computeAbsolutePoseMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getSymphony__CoreFacade__ComputeAbsolutePoseMatrix__SymphonySystem_Matrix4x4(), theSymphony__CommonMathPackage.getMatrix4x4(), "computeAbsolutePoseMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getSymphonySystem(), "symphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getMatrix4x4(), "relativePose", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphonyCoreFacade__CreateResultNode__PositionedResult(), this.getResultNode(), "createResultNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreFacade__CreateResultNode__PositionedResult(), this.getResultNode(), "createResultNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPositionedResult(), "result", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphonyCoreFacade__CreateSymphonySession__boolean_boolean_boolean_boolean(), theSymphony__CoreInvocatorPackage.getInvocatorSession(), "createSymphonySession", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreFacade__CreateSymphonySession__boolean_boolean_boolean_boolean(), theSymphony__CoreInvocatorPackage.getInvocatorSession(), "createSymphonySession", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "createEnvironment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "createPrograms", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "createDataProducts", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "createTools", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphonyCoreFacade__GetSymphonySystem__Environment_String(), this.getSymphonySystem(), "getSymphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreFacade__GetSymphonySystem__Environment_String(), this.getSymphonySystem(), "getSymphonySystem", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreInvocatorPackage.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "fullyQualifiedName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphonyCoreFacade__LoadFeatureOfInterestFromFile__String(), null, "loadFeatureOfInterestFromFile", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreFacade__LoadFeatureOfInterestFromFile__String(), null, "loadFeatureOfInterestFromFile", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "url", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
 		EGenericType g1 = createEGenericType(this.getList());
@@ -1363,7 +1365,7 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getSymphonyCoreFacade__SaveFeatureOfInterestToFile__String_List(), null, "saveFeatureOfInterestToFile", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreFacade__SaveFeatureOfInterestToFile__String_List(), null, "saveFeatureOfInterestToFile", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "path", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getFeatureOfInterest());

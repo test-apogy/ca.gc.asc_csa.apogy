@@ -21,7 +21,7 @@ import org.eclipse.symphony.core.environment.EnvironmentUtilities;
 import org.eclipse.symphony.core.environment.Star;
 import org.eclipse.symphony.core.environment.StarField;
 import org.eclipse.symphony.core.environment.ui.Activator;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities;
+import org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities;
 import org.eclipse.symphony.core.environment.ui.StarFieldSceneObject;
 import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentUIPreferencesConstants;
 
@@ -188,14 +188,14 @@ public class StarFieldJME3Object extends DefaultJME3SceneObject<StarField> imple
 	
 	private Mesh getShapeForStars(List<Star> stars, float magnitude)
 	{				
-		float pointSize = EnvironmentUiUtilities.INSTANCE.getPointSizeForMagnitude(magnitude, minMagnitudeLevel, maxMagnitudeLevel, MIN_POINT_SIZE, MAX_POINT_SIZE);
+		float pointSize = EnvironmentUIUtilities.INSTANCE.getPointSizeForMagnitude(magnitude, minMagnitudeLevel, maxMagnitudeLevel, MIN_POINT_SIZE, MAX_POINT_SIZE);
 		
 		Vector3f[] vertices = new Vector3f[stars.size()];	
 	
 		for(int i =0; i < stars.size(); i++)
 		{			
 			Star star = stars.get(i);	
-			Point3f p = EnvironmentUiUtilities.INSTANCE.toPoint3f(star);
+			Point3f p = EnvironmentUIUtilities.INSTANCE.toPoint3f(star);
 			p.scale((float) EarthSkyNodeJME3Object.CELESTIAL_SPHERE_RADIUS);
 			vertices[i] = new Vector3f(p.x, p.y, p.z);			
 		}

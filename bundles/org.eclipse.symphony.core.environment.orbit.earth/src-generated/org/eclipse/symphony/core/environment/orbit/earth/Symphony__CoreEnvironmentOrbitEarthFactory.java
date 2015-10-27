@@ -230,13 +230,13 @@ public interface Symphony__CoreEnvironmentOrbitEarthFactory extends EFactory {
 	SpacecraftSwathCorridor createSpacecraftSwathCorridor();
 
 	/**
-	 * Returns a new object of class '<em>Earth Orbit Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Earth Orbit Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	EarthOrbitFacade createEarthOrbitFacade();
+	Symphony__CoreEnvironmentOrbitEarthFacade createSymphony__CoreEnvironmentOrbitEarthFacade();
 
 	/**
 	 * Returns the package supported by this factory.

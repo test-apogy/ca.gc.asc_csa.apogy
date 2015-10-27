@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
 import org.eclipse.symphony.common.emf.CurrentTimeSource;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 import org.eclipse.symphony.common.emf.FixedTimeSource;
@@ -91,8 +91,8 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
   protected Symphony__CommonEMFSwitch<Adapter> modelSwitch =
     new Symphony__CommonEMFSwitch<Adapter>() {
 			@Override
-			public Adapter caseEMFEcoreFacade(EMFEcoreFacade object) {
-				return createEMFEcoreFacadeAdapter();
+			public Adapter caseSymphony__CommonEMFFacade(Symphony__CommonEMFFacade object) {
+				return createSymphony__CommonEMFFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNamed(Named object) {
@@ -208,21 +208,20 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.EMFEcoreFacade <em>EMF Ecore Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.EMFEcoreFacade
+	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade
 	 * @generated
 	 */
-  public Adapter createEMFEcoreFacadeAdapter()
-  {
+	public Adapter createSymphony__CommonEMFFacadeAdapter() {
 		return null;
 	}
 
-  /**
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;

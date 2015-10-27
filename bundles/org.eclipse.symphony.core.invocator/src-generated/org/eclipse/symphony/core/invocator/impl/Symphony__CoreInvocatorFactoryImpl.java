@@ -24,7 +24,7 @@ import org.eclipse.symphony.core.invocator.DisplaysListsContainer;
 import org.eclipse.symphony.core.invocator.EClassArgument;
 import org.eclipse.symphony.core.invocator.EDataTypeArgument;
 import org.eclipse.symphony.core.invocator.EEnumArgument;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
@@ -111,7 +111,7 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE: return createEMFEcoreInvocatorFacade();
+			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE: return createSymphony__CoreInvocatorFacade();
 			case Symphony__CoreInvocatorPackage.INVOCATOR_SESSION: return createInvocatorSession();
 			case Symphony__CoreInvocatorPackage.ENVIRONMENT: return createEnvironment();
 			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER: return createDataProductsListsContainer();
@@ -211,16 +211,15 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EMFEcoreInvocatorFacade createEMFEcoreInvocatorFacade()
-  {
-		EMFEcoreInvocatorFacadeImpl emfEcoreInvocatorFacade = new EMFEcoreInvocatorFacadeImpl();
-		return emfEcoreInvocatorFacade;
+	public Symphony__CoreInvocatorFacade createSymphony__CoreInvocatorFacade() {
+		Symphony__CoreInvocatorFacadeImpl symphony__CoreInvocatorFacade = new Symphony__CoreInvocatorFacadeImpl();
+		return symphony__CoreInvocatorFacade;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

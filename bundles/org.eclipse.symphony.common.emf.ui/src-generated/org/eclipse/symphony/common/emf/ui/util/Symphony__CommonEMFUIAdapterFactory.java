@@ -6,7 +6,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
+import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade;
 import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage;
 
 /**
@@ -69,8 +69,8 @@ public class Symphony__CommonEMFUIAdapterFactory extends AdapterFactoryImpl
   protected Symphony__CommonEMFUISwitch<Adapter> modelSwitch =
     new Symphony__CommonEMFUISwitch<Adapter>() {
 			@Override
-			public Adapter caseEMFEcoreUIFacade(EMFEcoreUIFacade object) {
-				return createEMFEcoreUIFacadeAdapter();
+			public Adapter caseSymphony__CommonEMFUIFacade(Symphony__CommonEMFUIFacade object) {
+				return createSymphony__CommonEMFUIFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -94,21 +94,20 @@ public class Symphony__CommonEMFUIAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade <em>EMF Ecore UI Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade
+	 * @see org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade
 	 * @generated
 	 */
-  public Adapter createEMFEcoreUIFacadeAdapter()
-  {
+	public Adapter createSymphony__CommonEMFUIFacadeAdapter() {
 		return null;
 	}
 
-  /**
+		/**
 	 * Creates a new adapter for the default case.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null.

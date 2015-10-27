@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
 import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
-import org.eclipse.symphony.core.topology.SymphonyTopologyFacade;
+import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade;
 import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFactory;
 import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
 import org.eclipse.symphony.core.topology.SystemsTopologyAdapter;
@@ -68,7 +68,7 @@ public class Symphony__CoreTopologyFactoryImpl extends EFactoryImpl implements S
 			case Symphony__CoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER: return createSystemsTopologyAdapter();
 			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE: return createSymphonyEnvironmentNode();
 			case Symphony__CoreTopologyPackage.SYMPHONY_SYSTEM_AP_IS_NODE: return createSymphonySystemAPIsNode();
-			case Symphony__CoreTopologyPackage.SYMPHONY_TOPOLOGY_FACADE: return createSymphonyTopologyFacade();
+			case Symphony__CoreTopologyPackage.SYMPHONY_CORE_TOPOLOGY_FACADE: return createSymphony__CoreTopologyFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -141,16 +141,15 @@ public class Symphony__CoreTopologyFactoryImpl extends EFactoryImpl implements S
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public SymphonyTopologyFacade createSymphonyTopologyFacade()
-  {
-		SymphonyTopologyFacadeImpl symphonyTopologyFacade = new SymphonyTopologyFacadeImpl();
-		return symphonyTopologyFacade;
+	public Symphony__CoreTopologyFacade createSymphony__CoreTopologyFacade() {
+		Symphony__CoreTopologyFacadeImpl symphony__CoreTopologyFacade = new Symphony__CoreTopologyFacadeImpl();
+		return symphony__CoreTopologyFacade;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

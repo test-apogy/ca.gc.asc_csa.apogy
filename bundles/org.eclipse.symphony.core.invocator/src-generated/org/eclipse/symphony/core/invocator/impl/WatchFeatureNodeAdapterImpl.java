@@ -16,12 +16,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 import org.eclipse.symphony.common.emf.AbstractRootNode;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
@@ -428,7 +428,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   
   protected void registerAdapters(AbstractFeatureNode newFeatureNode)
   {	  
-	  Watch watch = EMFEcoreInvocatorFacade.INSTANCE.resolveWatch(newFeatureNode);
+	  Watch watch = Symphony__CoreInvocatorFacade.INSTANCE.resolveWatch(newFeatureNode);
 	  
 	  if(watch != null)
 	  {
@@ -455,17 +455,17 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   {
 	  if(getFeatureNode() != null)
 	  {
-		  AbstractRootNode root = EMFEcoreFacade.INSTANCE.getFeatureRoot(getFeatureNode());
+		  AbstractRootNode root = Symphony__CommonEMFFacade.INSTANCE.getFeatureRoot(getFeatureNode());
 		  
 		  if(root.eContainer() instanceof Watch)
 		  {
 			  Watch watch = (Watch) root.eContainer();
-			  setSourceObject(EMFEcoreInvocatorFacade.INSTANCE.getInstance(watch.getVariable()));
+			  setSourceObject(Symphony__CoreInvocatorFacade.INSTANCE.getInstance(watch.getVariable()));
 		  }
 		  else if(root.eContainer() instanceof TypeMemberReferenceTreeElement)
 		  {
 			  TypeMemberReferenceTreeElement typeMemberReferenceTreeElement = (TypeMemberReferenceTreeElement) root.eContainer();
-			  setSourceObject(EMFEcoreInvocatorFacade.INSTANCE.getInstance(typeMemberReferenceTreeElement));
+			  setSourceObject(Symphony__CoreInvocatorFacade.INSTANCE.getInstance(typeMemberReferenceTreeElement));
 		  }
 	  }
   }
@@ -476,7 +476,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 	  
 	  if(getFeatureNode() != null)
 	  {
-		  watch = EMFEcoreInvocatorFacade.INSTANCE.resolveWatch(getFeatureNode());
+		  watch = Symphony__CoreInvocatorFacade.INSTANCE.resolveWatch(getFeatureNode());
 	  }
 	  
 	  return watch;

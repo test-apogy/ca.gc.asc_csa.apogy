@@ -1163,32 +1163,23 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 	int SPOT_LIGHT_OPERATION_COUNT = POINT_LIGHT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PrimitivesFacadeImpl <em>Primitives Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.addons.primitives.impl.Symphony__CommonTopologyAddonsPrimitivesFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.impl.PrimitivesFacadeImpl
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.impl.Symphony__CommonTopologyAddonsPrimitivesPackageImpl#getPrimitivesFacade()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.impl.Symphony__CommonTopologyAddonsPrimitivesFacadeImpl
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.impl.Symphony__CommonTopologyAddonsPrimitivesPackageImpl#getSymphony__CommonTopologyAddonsPrimitivesFacade()
 	 * @generated
 	 */
-	int PRIMITIVES_FACADE = 11;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE = 11;
 
 	/**
-	 * The number of structural features of the '<em>Primitives Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVES_FACADE_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Create Vector</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRIMITIVES_FACADE___CREATE_VECTOR__VECTOR = 0;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Vector</em>' operation.
@@ -1197,7 +1188,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVES_FACADE___CREATE_VECTOR__POINT3D_POINT3D = 1;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_VECTOR__VECTOR = 0;
 
 	/**
 	 * The operation id for the '<em>Create Vector</em>' operation.
@@ -1206,7 +1197,16 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVES_FACADE___CREATE_VECTOR__DOUBLE_DOUBLE_DOUBLE_DOUBLE = 2;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_VECTOR__POINT3D_POINT3D = 1;
+
+	/**
+	 * The operation id for the '<em>Create Vector</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_VECTOR__DOUBLE_DOUBLE_DOUBLE_DOUBLE = 2;
 
 	/**
 	 * The operation id for the '<em>Create Plane</em>' operation.
@@ -1215,7 +1215,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVES_FACADE___CREATE_PLANE__VECTOR3D_VECTOR3D_DOUBLE_DOUBLE = 3;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_PLANE__VECTOR3D_VECTOR3D_DOUBLE_DOUBLE = 3;
 
 	/**
 	 * The operation id for the '<em>Create Ambient Light</em>' operation.
@@ -1224,7 +1224,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__TUPLE3D = 4;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__TUPLE3D = 4;
 
 	/**
 	 * The operation id for the '<em>Create Ambient Light</em>' operation.
@@ -1233,7 +1233,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__BOOLEAN_TUPLE3D = 5;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__BOOLEAN_TUPLE3D = 5;
 
 	/**
 	 * The operation id for the '<em>Create Directional Light</em>' operation.
@@ -1242,7 +1242,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__TUPLE3D_TUPLE3D = 6;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__TUPLE3D_TUPLE3D = 6;
 
 	/**
 	 * The operation id for the '<em>Create Directional Light</em>' operation.
@@ -1251,7 +1251,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D = 7;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D = 7;
 
 	/**
 	 * The operation id for the '<em>Create Point Light</em>' operation.
@@ -1260,7 +1260,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D = 8;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D = 8;
 
 	/**
 	 * The operation id for the '<em>Create Point Light</em>' operation.
@@ -1269,7 +1269,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D = 9;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D = 9;
 
 	/**
 	 * The operation id for the '<em>Create Point Light</em>' operation.
@@ -1278,7 +1278,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D = 10;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D = 10;
 
 	/**
 	 * The operation id for the '<em>Create Point Light</em>' operation.
@@ -1287,7 +1287,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVES_FACADE___CREATE_POINT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D = 11;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D = 11;
 
 	/**
 	 * The operation id for the '<em>Create Spot Light</em>' operation.
@@ -1296,7 +1296,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT = 12;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT = 12;
 
 	/**
 	 * The operation id for the '<em>Create Spot Light</em>' operation.
@@ -1305,16 +1305,16 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT = 13;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT = 13;
 
 	/**
-	 * The number of operations of the '<em>Primitives Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVES_FACADE_OPERATION_COUNT = 14;
+	int SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE_OPERATION_COUNT = 14;
 
 	/**
 	 * The meta object id for the '<em>Point3d</em>' data type.
@@ -1722,154 +1722,154 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 	EReference getSpotLight_Direction();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade <em>Primitives Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Primitives Facade</em>'.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade
 	 * @generated
 	 */
-	EClass getPrimitivesFacade();
+	EClass getSymphony__CommonTopologyAddonsPrimitivesFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createVector(org.eclipse.symphony.common.topology.addons.primitives.Vector) <em>Create Vector</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Vector</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createVector(org.eclipse.symphony.common.topology.addons.primitives.Vector)
-	 * @generated
-	 */
-	EOperation getPrimitivesFacade__CreateVector__Vector();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createVector(javax.vecmath.Point3d, javax.vecmath.Point3d) <em>Create Vector</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createVector(org.eclipse.symphony.common.topology.addons.primitives.Vector) <em>Create Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Vector</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createVector(javax.vecmath.Point3d, javax.vecmath.Point3d)
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createVector(org.eclipse.symphony.common.topology.addons.primitives.Vector)
 	 * @generated
 	 */
-	EOperation getPrimitivesFacade__CreateVector__Point3d_Point3d();
+	EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateVector__Vector();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createVector(double, double, double, double) <em>Create Vector</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createVector(javax.vecmath.Point3d, javax.vecmath.Point3d) <em>Create Vector</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Vector</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createVector(double, double, double, double)
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createVector(javax.vecmath.Point3d, javax.vecmath.Point3d)
 	 * @generated
 	 */
-	EOperation getPrimitivesFacade__CreateVector__double_double_double_double();
+	EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateVector__Point3d_Point3d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createPlane(javax.vecmath.Vector3d, javax.vecmath.Vector3d, double, double) <em>Create Plane</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createVector(double, double, double, double) <em>Create Vector</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Vector</em>' operation.
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createVector(double, double, double, double)
+	 * @generated
+	 */
+	EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateVector__double_double_double_double();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createPlane(javax.vecmath.Vector3d, javax.vecmath.Vector3d, double, double) <em>Create Plane</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Plane</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createPlane(javax.vecmath.Vector3d, javax.vecmath.Vector3d, double, double)
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createPlane(javax.vecmath.Vector3d, javax.vecmath.Vector3d, double, double)
 	 * @generated
 	 */
-	EOperation getPrimitivesFacade__CreatePlane__Vector3d_Vector3d_double_double();
+	EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePlane__Vector3d_Vector3d_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createAmbientLight(org.eclipse.symphony.common.math.Tuple3d) <em>Create Ambient Light</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createAmbientLight(org.eclipse.symphony.common.math.Tuple3d) <em>Create Ambient Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Ambient Light</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createAmbientLight(org.eclipse.symphony.common.math.Tuple3d)
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createAmbientLight(org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
-	EOperation getPrimitivesFacade__CreateAmbientLight__Tuple3d();
+	EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateAmbientLight__Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createAmbientLight(boolean, org.eclipse.symphony.common.math.Tuple3d) <em>Create Ambient Light</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createAmbientLight(boolean, org.eclipse.symphony.common.math.Tuple3d) <em>Create Ambient Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Ambient Light</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createAmbientLight(boolean, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createAmbientLight(boolean, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
-	EOperation getPrimitivesFacade__CreateAmbientLight__boolean_Tuple3d();
+	EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateAmbientLight__boolean_Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createDirectionalLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Create Directional Light</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createDirectionalLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Create Directional Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Directional Light</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createDirectionalLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createDirectionalLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
-	EOperation getPrimitivesFacade__CreateDirectionalLight__Tuple3d_Tuple3d();
+	EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateDirectionalLight__Tuple3d_Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createDirectionalLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Create Directional Light</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createDirectionalLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Create Directional Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Directional Light</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createDirectionalLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createDirectionalLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
-	EOperation getPrimitivesFacade__CreateDirectionalLight__boolean_Tuple3d_Tuple3d();
+	EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateDirectionalLight__boolean_Tuple3d_Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d) <em>Create Point Light</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d) <em>Create Point Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Point Light</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d)
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
-	EOperation getPrimitivesFacade__CreatePointLight__Tuple3d();
+	EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Create Point Light</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Create Point Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Point Light</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
-	EOperation getPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d();
+	EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Create Point Light</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Create Point Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Point Light</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createPointLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
-	EOperation getPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d_Tuple3d();
+	EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d_Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createPointLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Create Point Light</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createPointLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Create Point Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Point Light</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createPointLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createPointLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
-	EOperation getPrimitivesFacade__CreatePointLight__boolean_Tuple3d_Tuple3d_Tuple3d();
+	EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__boolean_Tuple3d_Tuple3d_Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createSpotLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, float, float) <em>Create Spot Light</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createSpotLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, float, float) <em>Create Spot Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Spot Light</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createSpotLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, float, float)
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createSpotLight(org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, float, float)
 	 * @generated
 	 */
-	EOperation getPrimitivesFacade__CreateSpotLight__Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float();
+	EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateSpotLight__Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createSpotLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, float, float) <em>Create Spot Light</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createSpotLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, float, float) <em>Create Spot Light</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Spot Light</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade#createSpotLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, float, float)
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade#createSpotLight(boolean, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d, float, float)
 	 * @generated
 	 */
-	EOperation getPrimitivesFacade__CreateSpotLight__boolean_Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float();
+	EOperation getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateSpotLight__boolean_Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float();
 
 	/**
 	 * Returns the meta object for data type '{@link javax.vecmath.Point3d <em>Point3d</em>}'.
@@ -2227,14 +2227,14 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 		EReference SPOT_LIGHT__DIRECTION = eINSTANCE.getSpotLight_Direction();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.primitives.impl.PrimitivesFacadeImpl <em>Primitives Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.addons.primitives.impl.Symphony__CommonTopologyAddonsPrimitivesFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.addons.primitives.impl.PrimitivesFacadeImpl
-		 * @see org.eclipse.symphony.common.topology.addons.primitives.impl.Symphony__CommonTopologyAddonsPrimitivesPackageImpl#getPrimitivesFacade()
+		 * @see org.eclipse.symphony.common.topology.addons.primitives.impl.Symphony__CommonTopologyAddonsPrimitivesFacadeImpl
+		 * @see org.eclipse.symphony.common.topology.addons.primitives.impl.Symphony__CommonTopologyAddonsPrimitivesPackageImpl#getSymphony__CommonTopologyAddonsPrimitivesFacade()
 		 * @generated
 		 */
-		EClass PRIMITIVES_FACADE = eINSTANCE.getPrimitivesFacade();
+		EClass SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE = eINSTANCE.getSymphony__CommonTopologyAddonsPrimitivesFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Vector</b></em>' operation.
@@ -2242,7 +2242,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PRIMITIVES_FACADE___CREATE_VECTOR__VECTOR = eINSTANCE.getPrimitivesFacade__CreateVector__Vector();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_VECTOR__VECTOR = eINSTANCE.getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateVector__Vector();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Vector</b></em>' operation.
@@ -2250,7 +2250,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PRIMITIVES_FACADE___CREATE_VECTOR__POINT3D_POINT3D = eINSTANCE.getPrimitivesFacade__CreateVector__Point3d_Point3d();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_VECTOR__POINT3D_POINT3D = eINSTANCE.getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateVector__Point3d_Point3d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Vector</b></em>' operation.
@@ -2258,7 +2258,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PRIMITIVES_FACADE___CREATE_VECTOR__DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getPrimitivesFacade__CreateVector__double_double_double_double();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_VECTOR__DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateVector__double_double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Plane</b></em>' operation.
@@ -2266,7 +2266,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PRIMITIVES_FACADE___CREATE_PLANE__VECTOR3D_VECTOR3D_DOUBLE_DOUBLE = eINSTANCE.getPrimitivesFacade__CreatePlane__Vector3d_Vector3d_double_double();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_PLANE__VECTOR3D_VECTOR3D_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePlane__Vector3d_Vector3d_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Ambient Light</b></em>' operation.
@@ -2274,7 +2274,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__TUPLE3D = eINSTANCE.getPrimitivesFacade__CreateAmbientLight__Tuple3d();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__TUPLE3D = eINSTANCE.getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateAmbientLight__Tuple3d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Ambient Light</b></em>' operation.
@@ -2282,7 +2282,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__BOOLEAN_TUPLE3D = eINSTANCE.getPrimitivesFacade__CreateAmbientLight__boolean_Tuple3d();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__BOOLEAN_TUPLE3D = eINSTANCE.getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateAmbientLight__boolean_Tuple3d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Directional Light</b></em>' operation.
@@ -2290,7 +2290,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__TUPLE3D_TUPLE3D = eINSTANCE.getPrimitivesFacade__CreateDirectionalLight__Tuple3d_Tuple3d();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__TUPLE3D_TUPLE3D = eINSTANCE.getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateDirectionalLight__Tuple3d_Tuple3d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Directional Light</b></em>' operation.
@@ -2298,7 +2298,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D = eINSTANCE.getPrimitivesFacade__CreateDirectionalLight__boolean_Tuple3d_Tuple3d();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D = eINSTANCE.getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateDirectionalLight__boolean_Tuple3d_Tuple3d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Point Light</b></em>' operation.
@@ -2306,7 +2306,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D = eINSTANCE.getPrimitivesFacade__CreatePointLight__Tuple3d();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D = eINSTANCE.getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__Tuple3d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Point Light</b></em>' operation.
@@ -2314,7 +2314,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D = eINSTANCE.getPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D = eINSTANCE.getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Point Light</b></em>' operation.
@@ -2322,7 +2322,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D = eINSTANCE.getPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d_Tuple3d();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D = eINSTANCE.getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__Tuple3d_Tuple3d_Tuple3d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Point Light</b></em>' operation.
@@ -2330,7 +2330,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PRIMITIVES_FACADE___CREATE_POINT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D = eINSTANCE.getPrimitivesFacade__CreatePointLight__boolean_Tuple3d_Tuple3d_Tuple3d();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_POINT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D = eINSTANCE.getSymphony__CommonTopologyAddonsPrimitivesFacade__CreatePointLight__boolean_Tuple3d_Tuple3d_Tuple3d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Spot Light</b></em>' operation.
@@ -2338,7 +2338,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT = eINSTANCE.getPrimitivesFacade__CreateSpotLight__Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT = eINSTANCE.getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateSpotLight__Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Spot Light</b></em>' operation.
@@ -2346,7 +2346,7 @@ public interface Symphony__CommonTopologyAddonsPrimitivesPackage extends EPackag
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT = eINSTANCE.getPrimitivesFacade__CreateSpotLight__boolean_Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT = eINSTANCE.getSymphony__CommonTopologyAddonsPrimitivesFacade__CreateSpotLight__boolean_Tuple3d_Tuple3d_Tuple3d_Tuple3d_float_float();
 
 		/**
 		 * The meta object literal for the '<em>Point3d</em>' data type.

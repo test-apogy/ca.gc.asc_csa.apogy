@@ -37,10 +37,10 @@ import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFactory;
@@ -676,7 +676,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 			rotation.mul(yRot);
 			
 			// Updates rotation matrix.
-			getVectorTransformNode().setRotationMatrix(MathFacade.INSTANCE.createMatrix3x3(rotation));
+			getVectorTransformNode().setRotationMatrix(Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(rotation));
 			
 			// Force update of vector.
 			vector.setLength(100);
@@ -687,7 +687,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 				Matrix4d m = new Matrix4d();
 				m.setIdentity();
 				m.set(new Vector3d(vector.getAbsoluteIntersectionPosition()));	
-				Matrix4x4 pose = MathFacade.INSTANCE.createMatrix4x4(m);
+				Matrix4x4 pose = Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(m);
 				setPoseTransform(pose);			
 			}
 			else
@@ -752,7 +752,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 			Vector3d position = new Vector3d(0,0,0.01);
 			m.set(position);
 			
-			vectorTransformNode = TopologyFacade.INSTANCE.createTransformNode(m);
+			vectorTransformNode = Symphony__CommonTopologyFacade.INSTANCE.createTransformNode(m);
 			vectorTransformNode.setDescription("PointerCamera Vector Transform");						
 			vectorTransformNode.getChildren().add(getVector());
 		}

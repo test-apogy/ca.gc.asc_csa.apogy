@@ -9,7 +9,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.Data3DIO;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
 import org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter;
@@ -60,7 +60,7 @@ public class GraphicsContextXYZAdapter implements GraphicsContextAdapter {
 				GroupNode root = Symphony__CommonTopologyFactory.eINSTANCE
 						.createAggregateGroupNode();
 
-				ContentNode<CartesianCoordinatesSet> content = TopologyFacade.INSTANCE
+				ContentNode<CartesianCoordinatesSet> content = Symphony__CommonTopologyFacade.INSTANCE
 						.createContentNode(points);
 
 				root.getChildren().add(content);

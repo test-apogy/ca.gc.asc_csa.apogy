@@ -130,8 +130,8 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 				return createPickAndPlaceNodeAdapter();
 			}
 			@Override
-			public Adapter caseTopologyFacade(TopologyFacade object) {
-				return createTopologyFacadeAdapter();
+			public Adapter caseSymphony__CommonTopologyFacade(Symphony__CommonTopologyFacade object) {
+				return createSymphony__CommonTopologyFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -378,16 +378,16 @@ public class Symphony__CommonTopologyAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.TopologyFacade <em>Topology Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.TopologyFacade
+	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade
 	 * @generated
 	 */
-	public Adapter createTopologyFacadeAdapter() {
+	public Adapter createSymphony__CommonTopologyFacadeAdapter() {
 		return null;
 	}
 

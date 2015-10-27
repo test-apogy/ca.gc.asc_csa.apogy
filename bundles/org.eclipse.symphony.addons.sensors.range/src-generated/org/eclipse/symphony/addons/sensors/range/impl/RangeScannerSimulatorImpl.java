@@ -39,7 +39,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 
 import com.sun.j3d.utils.geometry.GeometryInfo;
 import com.sun.j3d.utils.geometry.NormalGenerator;
@@ -355,7 +355,7 @@ public abstract class RangeScannerSimulatorImpl<InputType> extends RangeScannerI
 		}
 		
 		// Computes the transform between the scanner and the mesh.
-		Matrix4d scannerToMeshTransform = TopologyFacade.INSTANCE.expressInFrame(this, getMeshNode());	
+		Matrix4d scannerToMeshTransform = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(this, getMeshNode());	
 		
 		// Gets the cropped terrain.
 		Date start = new Date();

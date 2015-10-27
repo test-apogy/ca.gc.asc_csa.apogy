@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
 import org.eclipse.symphony.addons.mobility.pathplanners.ExclusionZone;
 import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.PathPlannersFacade;
+import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade;
 import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
 import org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner;
 import org.eclipse.symphony.common.geometry.data.Coordinates;
@@ -98,8 +98,8 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 				return createCircularExclusionZoneAdapter();
 			}
 			@Override
-			public Adapter casePathPlannersFacade(PathPlannersFacade object) {
-				return createPathPlannersFacadeAdapter();
+			public Adapter caseSymphony__AddonsMobilityPathplannersFacade(Symphony__AddonsMobilityPathplannersFacade object) {
+				return createSymphony__AddonsMobilityPathplannersFacadeAdapter();
 			}
 			@Override
 			public Adapter caseMonitorable(Monitorable object) {
@@ -202,16 +202,16 @@ public class Symphony__AddonsMobilityPathplannersAdapterFactory extends AdapterF
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.PathPlannersFacade <em>Path Planners Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.mobility.pathplanners.PathPlannersFacade
+	 * @see org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade
 	 * @generated
 	 */
-	public Adapter createPathPlannersFacadeAdapter() {
+	public Adapter createSymphony__AddonsMobilityPathplannersFacadeAdapter() {
 		return null;
 	}
 

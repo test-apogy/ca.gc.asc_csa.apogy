@@ -14,7 +14,7 @@ import org.eclipse.symphony.common.topology.ui.PositionNodePresentation;
 import org.eclipse.symphony.common.topology.ui.RotationNodePresentation;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
 import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
 import org.eclipse.symphony.common.topology.ui.URLNodePresentation;
@@ -112,8 +112,8 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 				return createURLNodePresentationAdapter();
 			}
 			@Override
-			public Adapter caseTopologyUIFacade(TopologyUIFacade object) {
-				return createTopologyUIFacadeAdapter();
+			public Adapter caseSymphony__CommonTopologyUIFacade(Symphony__CommonTopologyUIFacade object) {
+				return createSymphony__CommonTopologyUIFacadeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -262,16 +262,16 @@ public class Symphony__CommonTopologyUIAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade <em>Topology UI Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIFacade
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade
 	 * @generated
 	 */
-	public Adapter createTopologyUIFacadeAdapter() {
+	public Adapter createSymphony__CommonTopologyUIFacadeAdapter() {
 		return null;
 	}
 

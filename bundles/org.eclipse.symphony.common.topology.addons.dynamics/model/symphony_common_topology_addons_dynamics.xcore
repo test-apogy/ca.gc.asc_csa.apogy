@@ -388,7 +388,7 @@ class SphereGeometry extends Geometry
 /*
  * Helper class containing a variety of dynamic topology utilities methods.
  */
-class DynamicsFacade
+class Symphony__CommonTopologyAddonsDynamicsFacade
 {
 	/*
 	 * Given a node in a topology, traverse the tree and computes the location of the center of mass of the tree.

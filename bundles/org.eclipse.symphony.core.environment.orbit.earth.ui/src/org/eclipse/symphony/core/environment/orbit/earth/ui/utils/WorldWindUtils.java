@@ -14,7 +14,7 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
 import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
 import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
 
 public class WorldWindUtils 
@@ -87,7 +87,7 @@ public class WorldWindUtils
 			if(ss instanceof OreKitBackedSpacecraftState)
 			{
 				// Gets the geographical coordinates of the spacecraft state.
-				GeographicCoordinates coord = EarthOrbitFacade.INSTANCE.convertToGeographicCoordinates((OreKitBackedSpacecraftState) ss);
+				GeographicCoordinates coord = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.convertToGeographicCoordinates((OreKitBackedSpacecraftState) ss);
 					            
 	            // Creates and adds a position in the linked list.
 	            Position position = convertToPosition(coord);
@@ -115,7 +115,7 @@ public class WorldWindUtils
 			if(ss instanceof OreKitBackedSpacecraftState)
 			{
 				// Gets the geographical coordinates of the spacecraft state.
-				GeographicCoordinates coord = EarthOrbitFacade.INSTANCE.convertToGeographicCoordinates((OreKitBackedSpacecraftState) ss);
+				GeographicCoordinates coord = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.convertToGeographicCoordinates((OreKitBackedSpacecraftState) ss);
 
 	            // Creates and adds a position in the linked list.
 	            Position position = convertToPosition(coord);

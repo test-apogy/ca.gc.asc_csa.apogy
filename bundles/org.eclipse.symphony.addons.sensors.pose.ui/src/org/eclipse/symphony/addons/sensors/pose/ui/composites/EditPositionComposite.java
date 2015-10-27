@@ -9,7 +9,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 
 public class EditPositionComposite extends Composite
 {
@@ -69,14 +69,14 @@ public class EditPositionComposite extends Composite
 	
 	public CartesianPositionCoordinates getNewValues()
 	{		
-		CartesianPositionCoordinates position = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(positionSensor.getPositionCoordinates());	
+		CartesianPositionCoordinates position = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(positionSensor.getPositionCoordinates());	
 		try
 		{
 			double x = Double.parseDouble(xValueText.getText());
 			double y = Double.parseDouble(yValueText.getText());
 			double z = Double.parseDouble(zValueText.getText());
 			
-			position = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(x,y,z);		
+			position = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x,y,z);		
 		}
 		catch(Exception e)
 		{			

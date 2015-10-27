@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
+import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
 import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFactory;
 import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsPackage;
 
@@ -61,7 +61,7 @@ public class Symphony__CommonEMFEditUtilsFactoryImpl extends EFactoryImpl implem
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonEMFEditUtilsPackage.EMF_ECORE_EDIT_UTILS_FACADE: return createEMFEcoreEditUtilsFacade();
+			case Symphony__CommonEMFEditUtilsPackage.SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE: return createSymphony__CommonEMFEditUtilsFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -101,16 +101,15 @@ public class Symphony__CommonEMFEditUtilsFactoryImpl extends EFactoryImpl implem
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EMFEcoreEditUtilsFacade createEMFEcoreEditUtilsFacade()
-  {
-		EMFEcoreEditUtilsFacadeImpl emfEcoreEditUtilsFacade = new EMFEcoreEditUtilsFacadeImpl();
-		return emfEcoreEditUtilsFacade;
+	public Symphony__CommonEMFEditUtilsFacade createSymphony__CommonEMFEditUtilsFacade() {
+		Symphony__CommonEMFEditUtilsFacadeImpl symphony__CommonEMFEditUtilsFacade = new Symphony__CommonEMFEditUtilsFacadeImpl();
+		return symphony__CommonEMFEditUtilsFacade;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

@@ -22,7 +22,7 @@ import org.eclipse.symphony.addons.mobility.controllers.WaypointPathRecorder;
 import org.eclipse.symphony.addons.sensors.pose.PoseSensor;
 import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
@@ -138,7 +138,7 @@ public class WaypointPathRecorderImpl extends PathRecorderImpl<WayPointPath> imp
 						{
 							if(getRecordedPath() != null)
 							{
-								getRecordedPath().getPoints().add(Data3dFacade.INSTANCE.createCartesianPositionCoordinates(newPoint));							
+								getRecordedPath().getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(newPoint));							
 							}							
 						}												
 					}
@@ -166,13 +166,13 @@ public class WaypointPathRecorderImpl extends PathRecorderImpl<WayPointPath> imp
 				if(newPoint.asPoint3d().distance(previousPosition.asPoint3d()) >= getMinimumDistanceDelta())
 				{									
 					sampleRequired =  true;
-					previousPosition = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(newPoint);
+					previousPosition = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(newPoint);
 				}			
 			}
 			else
 			{								
 				sampleRequired =  true;
-				previousPosition = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(newPoint);
+				previousPosition = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(newPoint);
 			}			
 		}
 		
@@ -207,7 +207,7 @@ public class WaypointPathRecorderImpl extends PathRecorderImpl<WayPointPath> imp
 					{				
 						if(getRecordedPath() != null)
 						{
-							getRecordedPath().getPoints().add(Data3dFacade.INSTANCE.createCartesianPositionCoordinates(getPositionSensor().getPositionCoordinates()));							
+							getRecordedPath().getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(getPositionSensor().getPositionCoordinates()));							
 						}
 					}
 					long delay = Math.round(getMinimumTimeDelta() * 1000);									

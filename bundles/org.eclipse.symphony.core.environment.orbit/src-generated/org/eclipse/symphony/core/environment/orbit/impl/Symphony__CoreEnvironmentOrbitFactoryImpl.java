@@ -64,7 +64,7 @@ public class Symphony__CoreEnvironmentOrbitFactoryImpl extends EFactoryImpl impl
 			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_ATTITUDE: return createSpacecraftAttitude();
 			case Symphony__CoreEnvironmentOrbitPackage.SPACECRAFT_STATE: return createSpacecraftState();
 			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_MODEL: return createOrbitModel();
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_FACADE: return createOrbitFacade();
+			case Symphony__CoreEnvironmentOrbitPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE: return createSymphony__CoreEnvironmentOrbitFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -179,9 +179,9 @@ public class Symphony__CoreEnvironmentOrbitFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrbitFacade createOrbitFacade() {
-		OrbitFacadeImpl orbitFacade = new OrbitFacadeImpl();
-		return orbitFacade;
+	public Symphony__CoreEnvironmentOrbitFacade createSymphony__CoreEnvironmentOrbitFacade() {
+		Symphony__CoreEnvironmentOrbitFacadeImpl symphony__CoreEnvironmentOrbitFacade = new Symphony__CoreEnvironmentOrbitFacadeImpl();
+		return symphony__CoreEnvironmentOrbitFacade;
 	}
 
 	/**

@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
@@ -175,13 +175,13 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 			Tuple3d relativePosition = null;
 			if(nodeSelection.getRelativeIntersectionPoint() != null)
 			{
-				relativePosition = MathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
+				relativePosition = Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
 			}
 			
 			Tuple3d normal = null;
 			if(nodeSelection.getAbsoluteIntersectionNormal() != null)
 			{				
-				normal = MathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z);
+				normal = Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z);
 			}
 			
 			// Always update to Node. From node is the vehicle.
@@ -215,7 +215,7 @@ public class VehiclePathPlannerToolImpl extends PathPlannerToolImpl implements V
 					Vector3d v = new Vector3d();
 					m.get(v);
 					
-					return MathFacade.INSTANCE.createTuple3d(v);
+					return Symphony__CommonMathFacade.INSTANCE.createTuple3d(v);
 				}
 			}
 			catch(Throwable t)

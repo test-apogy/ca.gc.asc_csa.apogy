@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.geometry.data3d.ui.TriangularMeshPresentation
 import org.eclipse.symphony.common.geometry.data3d.ui.preferences.MRTData3DUIPreferencesConstants;
 import org.eclipse.symphony.common.geometry.data3d.ui.scene_objects.TriangularMeshSceneObject;
 import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.ui.MeshPresentationMode;
@@ -592,10 +592,10 @@ public class TriangularMeshPresentationImpl extends NodePresentationImpl impleme
 	@Override
 	public Tuple3d basicGetCentroid() 
 	{
-		Tuple3d centroid = MathFacade.INSTANCE.createTuple3d(0.0, 0.0, 0.0);
+		Tuple3d centroid = Symphony__CommonMathFacade.INSTANCE.createTuple3d(0.0, 0.0, 0.0);
 
 		if (getSceneObject() != null) {
-			centroid = MathFacade.INSTANCE.createTuple3d(getSceneObject()
+			centroid = Symphony__CommonMathFacade.INSTANCE.createTuple3d(getSceneObject()
 					.getCentroid());
 		}
 		return centroid;

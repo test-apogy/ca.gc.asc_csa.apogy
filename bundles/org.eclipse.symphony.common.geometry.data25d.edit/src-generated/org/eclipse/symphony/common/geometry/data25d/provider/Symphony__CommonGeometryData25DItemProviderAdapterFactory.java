@@ -232,26 +232,26 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data25d.DataFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DataFacadeItemProvider dataFacadeItemProvider;
+	protected Symphony__CommonGeometryData25DFacadeItemProvider symphony__CommonGeometryData25DFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data25d.DataFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDataFacadeAdapter() {
-		if (dataFacadeItemProvider == null) {
-			dataFacadeItemProvider = new DataFacadeItemProvider(this);
+	public Adapter createSymphony__CommonGeometryData25DFacadeAdapter() {
+		if (symphony__CommonGeometryData25DFacadeItemProvider == null) {
+			symphony__CommonGeometryData25DFacadeItemProvider = new Symphony__CommonGeometryData25DFacadeItemProvider(this);
 		}
 
-		return dataFacadeItemProvider;
+		return symphony__CommonGeometryData25DFacadeItemProvider;
 	}
 
 	/**
@@ -409,7 +409,7 @@ public class Symphony__CommonGeometryData25DItemProviderAdapterFactory extends S
 		if (polygon25DItemProvider != null) polygon25DItemProvider.dispose();
 		if (mesh25DItemProvider != null) mesh25DItemProvider.dispose();
 		if (volumetricMesh25DItemProvider != null) volumetricMesh25DItemProvider.dispose();
-		if (dataFacadeItemProvider != null) dataFacadeItemProvider.dispose();
+		if (symphony__CommonGeometryData25DFacadeItemProvider != null) symphony__CommonGeometryData25DFacadeItemProvider.dispose();
 		if (data25DIOItemProvider != null) data25DIOItemProvider.dispose();
 	}
 

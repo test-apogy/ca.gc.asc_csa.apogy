@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
 
@@ -100,7 +100,7 @@ public class TypeMemberImplementationItemProvider
 			@Override
 			protected Collection<?> getComboBoxObjects(Object object) {
 				TypeMemberImplementation implementation = (TypeMemberImplementation) object;				
-				return EMFEcoreFacade.INSTANCE.getAllSubEClasses(implementation.getTypeMember().getMemberType().getInterfaceClass());
+				return Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(implementation.getTypeMember().getMemberType().getInterfaceClass());
 			}
 		});
   }

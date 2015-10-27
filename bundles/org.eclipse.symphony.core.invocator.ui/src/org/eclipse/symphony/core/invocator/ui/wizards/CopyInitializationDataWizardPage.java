@@ -7,7 +7,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.ui.Activator;
 import org.eclipse.symphony.core.invocator.ui.composites.SourceDestinationContextsComposite;
@@ -44,7 +44,7 @@ public class CopyInitializationDataWizardPage extends WizardPage {
 		};
 		setControl(contextsComposite);
 		
-		InvocatorSession invocatorSession = EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		InvocatorSession invocatorSession = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 
 		if (invocatorSession == null){
 			Logger.INSTANCE.log(Activator.ID, this, "There is no active session.", EventSeverity.ERROR);
@@ -63,7 +63,7 @@ public class CopyInitializationDataWizardPage extends WizardPage {
 
 	protected void validate(){
 		String message = null;
-		if (EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null){
+		if (Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession() == null){
 			message = "There is no active session.";
 		} else if (getSourceContext() == null){
 			message = "The context source is not defined.";

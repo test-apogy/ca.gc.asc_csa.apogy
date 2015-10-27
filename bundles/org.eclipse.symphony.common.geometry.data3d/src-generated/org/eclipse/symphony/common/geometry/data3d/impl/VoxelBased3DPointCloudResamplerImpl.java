@@ -17,10 +17,10 @@ import org.eclipse.symphony.common.geometry.data3d.Activator;
 import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 import org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
@@ -432,13 +432,13 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 	{
 		double bounds[]={0.0,0.0,0.0,0.0,0.0,0.0};
 		
-		CartesianPositionCoordinates minX = Geometry3dUtilities.getMinimumPosition(CartesianAxis.X, pointCloud.getPoints());
-		CartesianPositionCoordinates minY = Geometry3dUtilities.getMinimumPosition(CartesianAxis.Y, pointCloud.getPoints());		
-		CartesianPositionCoordinates minZ = Geometry3dUtilities.getMinimumPosition(CartesianAxis.Z, pointCloud.getPoints());
+		CartesianPositionCoordinates minX = Geometry3DUtilities.getMinimumPosition(CartesianAxis.X, pointCloud.getPoints());
+		CartesianPositionCoordinates minY = Geometry3DUtilities.getMinimumPosition(CartesianAxis.Y, pointCloud.getPoints());		
+		CartesianPositionCoordinates minZ = Geometry3DUtilities.getMinimumPosition(CartesianAxis.Z, pointCloud.getPoints());
 		
-		CartesianPositionCoordinates maxX = Geometry3dUtilities.getMaximumPosition(CartesianAxis.X, pointCloud.getPoints());			
-		CartesianPositionCoordinates maxY = Geometry3dUtilities.getMaximumPosition(CartesianAxis.Y, pointCloud.getPoints());
-		CartesianPositionCoordinates maxZ = Geometry3dUtilities.getMaximumPosition(CartesianAxis.Z, pointCloud.getPoints());
+		CartesianPositionCoordinates maxX = Geometry3DUtilities.getMaximumPosition(CartesianAxis.X, pointCloud.getPoints());			
+		CartesianPositionCoordinates maxY = Geometry3DUtilities.getMaximumPosition(CartesianAxis.Y, pointCloud.getPoints());
+		CartesianPositionCoordinates maxZ = Geometry3DUtilities.getMaximumPosition(CartesianAxis.Z, pointCloud.getPoints());
 		
 		bounds[0] = minX.getX();
 		bounds[1] = maxX.getX();
@@ -516,7 +516,7 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 					minpoints, patch);
 			// Update the output VTKPolyData
 			for (j = 0; j < outputpatch.size(); j++) {
-				CartesianPositionCoordinates newPoint = Data3dFacade.INSTANCE
+				CartesianPositionCoordinates newPoint = Symphony__CommonGeometryData3DFacade.INSTANCE
 						.createCartesianPositionCoordinates(
 								outputpatch.get(j).x, outputpatch.get(j).y,
 								outputpatch.get(j).z);

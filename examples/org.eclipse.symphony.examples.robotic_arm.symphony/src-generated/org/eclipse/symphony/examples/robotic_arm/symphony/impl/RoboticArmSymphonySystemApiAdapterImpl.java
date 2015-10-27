@@ -6,10 +6,10 @@ package org.eclipse.symphony.examples.robotic_arm.symphony.impl;
 import javax.vecmath.Matrix4d;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.OperationCall;
@@ -83,19 +83,19 @@ public class RoboticArmSymphonySystemApiAdapterImpl extends
 				Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM___MOVE_TO__DOUBLE_DOUBLE_DOUBLE_DOUBLE)
 		{
 			// Get the topology node at the tip of the robotic arm's hand
-			Node tip = TopologyFacade.INSTANCE.findNodesByID("ROBOTIC_ARM_SYM_SYS_HAND_TIP",
+			Node tip = Symphony__CommonTopologyFacade.INSTANCE.findNodesByID("ROBOTIC_ARM_SYM_SYS_HAND_TIP",
 								 this.getSymphonySystem().getTopologyRoot().getOriginNode()).get(0);
 			
 			// Get the topology node at the root of the robotic arm
-			Node root = TopologyFacade.INSTANCE.findNodesByID("ROBOTIC_ARM_SYM_SYS_ROOT",
+			Node root = Symphony__CommonTopologyFacade.INSTANCE.findNodesByID("ROBOTIC_ARM_SYM_SYS_ROOT",
 							  this.getSymphonySystem().getTopologyRoot().getOriginNode()).get(0);
 			
 			// Get a composite transformation which encompasses all
 			// of the transformations between those two nodes
-			Matrix4d matrix4d = TopologyFacade.INSTANCE.expressInFrame(tip,	root);
+			Matrix4d matrix4d = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(tip,	root);
 			
 			// Create a EObject wrapper for the matrix and return it
-			return MathFacade.INSTANCE.createMatrix4x4(matrix4d);
+			return Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(matrix4d);
 		}
 		// Otherwise, this is some other operation
 		else

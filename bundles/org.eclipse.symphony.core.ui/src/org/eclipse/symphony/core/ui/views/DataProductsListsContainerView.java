@@ -11,7 +11,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.invocator.DataProductsListsContainer;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.ui.composites.DataProductsListsContainerComposite;
 
@@ -21,7 +21,7 @@ public class DataProductsListsContainerView extends AbstractView implements IEdi
 	private Adapter activeSessionAdapter;
 
 	public DataProductsListsContainerView() {
-		EMFEcoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
+		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
 	}
 	
 	@Override
@@ -60,14 +60,14 @@ public class DataProductsListsContainerView extends AbstractView implements IEdi
 	@Override
 	public void dispose() {
 		super.dispose();
-		EMFEcoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
+		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
 	}
 
 	/**
 	 * Sets the Data Products Lists Container of the composite.
 	 */
 	private void setCompositeDataProductsListsContainer() {
-		InvocatorSession session = EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 		DataProductsListsContainer dataProductsListsContainer = 
 				session == null ?
 					null :
@@ -78,6 +78,6 @@ public class DataProductsListsContainerView extends AbstractView implements IEdi
 
 	@Override
 	public EditingDomain getEditingDomain() {
-		return AdapterFactoryEditingDomain.getEditingDomainFor(EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+		return AdapterFactoryEditingDomain.getEditingDomainFor(Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 	}
 }

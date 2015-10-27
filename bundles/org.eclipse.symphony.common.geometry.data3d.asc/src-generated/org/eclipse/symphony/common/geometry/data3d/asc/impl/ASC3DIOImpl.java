@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
 import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher;
@@ -331,7 +331,7 @@ public class ASC3DIOImpl extends MinimalEObjectImpl.Container implements ASC3DIO
 				double y = j * header.getCellSize();
 				double z = correctedHeights[i][j];
 				
-				CartesianPositionCoordinates position = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z);
+				CartesianPositionCoordinates position = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z);
 				points.add(position);
 			}
 		}

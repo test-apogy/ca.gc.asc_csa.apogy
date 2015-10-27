@@ -8,7 +8,7 @@ package org.eclipse.symphony.common.math.util;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.MathIO;
 import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.common.math.Matrix3x3;
@@ -98,9 +98,9 @@ public class Symphony__CommonMathSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonMathPackage.MATH_FACADE: {
-				MathFacade mathFacade = (MathFacade)theEObject;
-				T result = caseMathFacade(mathFacade);
+			case Symphony__CommonMathPackage.SYMPHONY_COMMON_MATH_FACADE: {
+				Symphony__CommonMathFacade symphony__CommonMathFacade = (Symphony__CommonMathFacade)theEObject;
+				T result = caseSymphony__CommonMathFacade(symphony__CommonMathFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -126,21 +126,6 @@ public class Symphony__CommonMathSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMatrix4x4(Matrix4x4 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Math Facade</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Math Facade</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMathFacade(MathFacade object) {
 		return null;
 	}
 
@@ -186,6 +171,21 @@ public class Symphony__CommonMathSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePolynomial(Polynomial object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSymphony__CommonMathFacade(Symphony__CommonMathFacade object) {
 		return null;
 	}
 

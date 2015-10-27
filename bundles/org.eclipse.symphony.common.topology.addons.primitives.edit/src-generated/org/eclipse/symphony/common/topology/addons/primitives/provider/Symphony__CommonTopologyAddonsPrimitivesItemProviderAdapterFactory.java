@@ -333,26 +333,26 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PrimitivesFacadeItemProvider primitivesFacadeItemProvider;
+	protected Symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPrimitivesFacadeAdapter() {
-		if (primitivesFacadeItemProvider == null) {
-			primitivesFacadeItemProvider = new PrimitivesFacadeItemProvider(this);
+	public Adapter createSymphony__CommonTopologyAddonsPrimitivesFacadeAdapter() {
+		if (symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider == null) {
+			symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider = new Symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider(this);
 		}
 
-		return primitivesFacadeItemProvider;
+		return symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider;
 	}
 
 	/**
@@ -491,7 +491,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 		if (directionalLightItemProvider != null) directionalLightItemProvider.dispose();
 		if (pointLightItemProvider != null) pointLightItemProvider.dispose();
 		if (spotLightItemProvider != null) spotLightItemProvider.dispose();
-		if (primitivesFacadeItemProvider != null) primitivesFacadeItemProvider.dispose();
+		if (symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider != null) symphony__CommonTopologyAddonsPrimitivesFacadeItemProvider.dispose();
 	}
 
 	/**
@@ -594,7 +594,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPrimitivesFacade()));
+						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSymphony__CommonTopologyAddonsPrimitivesFacade()));
 
 				return null;
 			}
@@ -659,7 +659,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory 
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPrimitivesFacade()));
+						 Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSymphony__CommonTopologyAddonsPrimitivesFacade()));
 
 				return null;
 			}

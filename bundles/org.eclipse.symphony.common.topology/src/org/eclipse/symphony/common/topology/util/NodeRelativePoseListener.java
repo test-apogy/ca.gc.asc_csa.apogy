@@ -11,7 +11,7 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.PositionNode;
 import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.TransformNode;
 
@@ -186,7 +186,7 @@ public class NodeRelativePoseListener
 	{
 		if(fromNode != null && toNode != null)
 		{
-			return TopologyFacade.INSTANCE.expressInFrame(fromNode, toNode);
+			return Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(fromNode, toNode);
 		}
 		else
 		{

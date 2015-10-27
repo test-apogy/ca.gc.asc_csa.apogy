@@ -164,9 +164,9 @@ public class Symphony__CommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE: {
-				PrimitivesFacade primitivesFacade = (PrimitivesFacade)theEObject;
-				T result = casePrimitivesFacade(primitivesFacade);
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SYMPHONY_COMMON_TOPOLOGY_ADDONS_PRIMITIVES_FACADE: {
+				Symphony__CommonTopologyAddonsPrimitivesFacade symphony__CommonTopologyAddonsPrimitivesFacade = (Symphony__CommonTopologyAddonsPrimitivesFacade)theEObject;
+				T result = caseSymphony__CommonTopologyAddonsPrimitivesFacade(symphony__CommonTopologyAddonsPrimitivesFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -340,17 +340,17 @@ public class Symphony__CommonTopologyAddonsPrimitivesSwitch<T> extends Switch<T>
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Primitives Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Primitives Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePrimitivesFacade(PrimitivesFacade object) {
+	public T caseSymphony__CommonTopologyAddonsPrimitivesFacade(Symphony__CommonTopologyAddonsPrimitivesFacade object) {
 		return null;
 	}
 

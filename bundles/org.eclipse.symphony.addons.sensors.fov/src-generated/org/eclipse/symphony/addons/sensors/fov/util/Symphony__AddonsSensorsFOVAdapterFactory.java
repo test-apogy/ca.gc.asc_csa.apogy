@@ -107,8 +107,8 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 				return createRectangularFrustrumFieldOfViewSamplingShapeAdapter();
 			}
 			@Override
-			public Adapter caseFOVFacade(FOVFacade object) {
-				return createFOVFacadeAdapter();
+			public Adapter caseSymphony__AddonsSensorsFOVFacade(Symphony__AddonsSensorsFOVFacade object) {
+				return createSymphony__AddonsSensorsFOVFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
@@ -245,16 +245,16 @@ public class Symphony__AddonsSensorsFOVAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.FOVFacade <em>FOV Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FOVFacade
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade
 	 * @generated
 	 */
-	public Adapter createFOVFacadeAdapter() {
+	public Adapter createSymphony__AddonsSensorsFOVFacadeAdapter() {
 		return null;
 	}
 

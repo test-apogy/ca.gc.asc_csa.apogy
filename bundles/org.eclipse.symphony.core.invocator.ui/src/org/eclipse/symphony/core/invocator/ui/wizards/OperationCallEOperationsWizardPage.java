@@ -10,7 +10,7 @@ import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.emf.ui.composites.EOperationsComposite;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
@@ -57,7 +57,7 @@ public class OperationCallEOperationsWizardPage extends WizardPage {
 					case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
 						operationCall.setFeatureRoot(null);
 					case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:						
-						EClass eClass = EMFEcoreInvocatorFacade.INSTANCE.getInstanceClass(operationCall);	
+						EClass eClass = Symphony__CoreInvocatorFacade.INSTANCE.getInstanceClass(operationCall);	
 						eOperationsComposite.setEClass(eClass);						
 						break;
 

@@ -899,23 +899,23 @@ public interface Symphony__AddonsSensorsGPSPackage extends EPackage {
 	int GPS_REPOSITORY_OPERATION_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSFacadeImpl <em>GPS Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.gps.impl.Symphony__AddonsSensorsGPSFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.gps.impl.GPSFacadeImpl
-	 * @see org.eclipse.symphony.addons.sensors.gps.impl.Symphony__AddonsSensorsGPSPackageImpl#getGPSFacade()
+	 * @see org.eclipse.symphony.addons.sensors.gps.impl.Symphony__AddonsSensorsGPSFacadeImpl
+	 * @see org.eclipse.symphony.addons.sensors.gps.impl.Symphony__AddonsSensorsGPSPackageImpl#getSymphony__AddonsSensorsGPSFacade()
 	 * @generated
 	 */
-	int GPS_FACADE = 7;
+	int SYMPHONY_ADDONS_SENSORS_GPS_FACADE = 7;
 
 	/**
-	 * The number of structural features of the '<em>GPS Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GPS_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_ADDONS_SENSORS_GPS_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create GPS Pose Sensor</em>' operation.
@@ -924,7 +924,7 @@ public interface Symphony__AddonsSensorsGPSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GPS_FACADE___CREATE_GPS_POSE_SENSOR__DOUBLE_DOUBLE = 0;
+	int SYMPHONY_ADDONS_SENSORS_GPS_FACADE___CREATE_GPS_POSE_SENSOR__DOUBLE_DOUBLE = 0;
 
 	/**
 	 * The operation id for the '<em>Create Marked GPS</em>' operation.
@@ -933,16 +933,16 @@ public interface Symphony__AddonsSensorsGPSPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GPS_FACADE___CREATE_MARKED_GPS__POSITIONMARKER = 1;
+	int SYMPHONY_ADDONS_SENSORS_GPS_FACADE___CREATE_MARKED_GPS__POSITIONMARKER = 1;
 
 	/**
-	 * The number of operations of the '<em>GPS Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GPS_FACADE_OPERATION_COUNT = 2;
+	int SYMPHONY_ADDONS_SENSORS_GPS_FACADE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.gps.GPSStatus <em>GPS Status</em>}' enum.
@@ -1485,34 +1485,34 @@ public interface Symphony__AddonsSensorsGPSPackage extends EPackage {
 	EOperation getGPSRepository__GetGPSById__String();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.gps.GPSFacade <em>GPS Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>GPS Facade</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GPSFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFacade
 	 * @generated
 	 */
-	EClass getGPSFacade();
+	EClass getSymphony__AddonsSensorsGPSFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.gps.GPSFacade#createGPSPoseSensor(double, double) <em>Create GPS Pose Sensor</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFacade#createGPSPoseSensor(double, double) <em>Create GPS Pose Sensor</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create GPS Pose Sensor</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GPSFacade#createGPSPoseSensor(double, double)
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFacade#createGPSPoseSensor(double, double)
 	 * @generated
 	 */
-	EOperation getGPSFacade__CreateGPSPoseSensor__double_double();
+	EOperation getSymphony__AddonsSensorsGPSFacade__CreateGPSPoseSensor__double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.gps.GPSFacade#createMarkedGPS(org.eclipse.symphony.common.geometry.data3d.PositionMarker) <em>Create Marked GPS</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFacade#createMarkedGPS(org.eclipse.symphony.common.geometry.data3d.PositionMarker) <em>Create Marked GPS</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Marked GPS</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.gps.GPSFacade#createMarkedGPS(org.eclipse.symphony.common.geometry.data3d.PositionMarker)
+	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSFacade#createMarkedGPS(org.eclipse.symphony.common.geometry.data3d.PositionMarker)
 	 * @generated
 	 */
-	EOperation getGPSFacade__CreateMarkedGPS__PositionMarker();
+	EOperation getSymphony__AddonsSensorsGPSFacade__CreateMarkedGPS__PositionMarker();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.symphony.addons.sensors.gps.GPSStatus <em>GPS Status</em>}'.
@@ -1979,14 +1979,14 @@ public interface Symphony__AddonsSensorsGPSPackage extends EPackage {
 		EOperation GPS_REPOSITORY___GET_GPS_BY_ID__STRING = eINSTANCE.getGPSRepository__GetGPSById__String();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.gps.impl.GPSFacadeImpl <em>GPS Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.gps.impl.Symphony__AddonsSensorsGPSFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.gps.impl.GPSFacadeImpl
-		 * @see org.eclipse.symphony.addons.sensors.gps.impl.Symphony__AddonsSensorsGPSPackageImpl#getGPSFacade()
+		 * @see org.eclipse.symphony.addons.sensors.gps.impl.Symphony__AddonsSensorsGPSFacadeImpl
+		 * @see org.eclipse.symphony.addons.sensors.gps.impl.Symphony__AddonsSensorsGPSPackageImpl#getSymphony__AddonsSensorsGPSFacade()
 		 * @generated
 		 */
-		EClass GPS_FACADE = eINSTANCE.getGPSFacade();
+		EClass SYMPHONY_ADDONS_SENSORS_GPS_FACADE = eINSTANCE.getSymphony__AddonsSensorsGPSFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create GPS Pose Sensor</b></em>' operation.
@@ -1994,7 +1994,7 @@ public interface Symphony__AddonsSensorsGPSPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GPS_FACADE___CREATE_GPS_POSE_SENSOR__DOUBLE_DOUBLE = eINSTANCE.getGPSFacade__CreateGPSPoseSensor__double_double();
+		EOperation SYMPHONY_ADDONS_SENSORS_GPS_FACADE___CREATE_GPS_POSE_SENSOR__DOUBLE_DOUBLE = eINSTANCE.getSymphony__AddonsSensorsGPSFacade__CreateGPSPoseSensor__double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Marked GPS</b></em>' operation.
@@ -2002,7 +2002,7 @@ public interface Symphony__AddonsSensorsGPSPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation GPS_FACADE___CREATE_MARKED_GPS__POSITIONMARKER = eINSTANCE.getGPSFacade__CreateMarkedGPS__PositionMarker();
+		EOperation SYMPHONY_ADDONS_SENSORS_GPS_FACADE___CREATE_MARKED_GPS__POSITIONMARKER = eINSTANCE.getSymphony__AddonsSensorsGPSFacade__CreateMarkedGPS__PositionMarker();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.gps.GPSStatus <em>GPS Status</em>}' enum.

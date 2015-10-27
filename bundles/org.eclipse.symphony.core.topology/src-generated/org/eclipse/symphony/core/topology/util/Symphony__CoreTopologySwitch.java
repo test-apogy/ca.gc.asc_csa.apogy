@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ReferencedGroupNode;
 import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
 import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
-import org.eclipse.symphony.core.topology.SymphonyTopologyFacade;
+import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade;
 import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
 import org.eclipse.symphony.core.topology.SystemsTopologyAdapter;
 
@@ -100,9 +100,9 @@ public class Symphony__CoreTopologySwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreTopologyPackage.SYMPHONY_TOPOLOGY_FACADE: {
-				SymphonyTopologyFacade symphonyTopologyFacade = (SymphonyTopologyFacade)theEObject;
-				T result = caseSymphonyTopologyFacade(symphonyTopologyFacade);
+			case Symphony__CoreTopologyPackage.SYMPHONY_CORE_TOPOLOGY_FACADE: {
+				Symphony__CoreTopologyFacade symphony__CoreTopologyFacade = (Symphony__CoreTopologyFacade)theEObject;
+				T result = caseSymphony__CoreTopologyFacade(symphony__CoreTopologyFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -159,22 +159,21 @@ public class Symphony__CoreTopologySwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Symphony Topology Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Symphony Topology Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseSymphonyTopologyFacade(SymphonyTopologyFacade object)
-  {
+	public T caseSymphony__CoreTopologyFacade(Symphony__CoreTopologyFacade object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

@@ -104,13 +104,13 @@ public interface Symphony__CommonTopologyUIFactory extends EFactory {
 	URLNodePresentation createURLNodePresentation();
 
 	/**
-	 * Returns a new object of class '<em>Topology UI Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Topology UI Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	TopologyUIFacade createTopologyUIFacade();
+	Symphony__CommonTopologyUIFacade createSymphony__CommonTopologyUIFacade();
 
 	/**
 	 * Returns the package supported by this factory.

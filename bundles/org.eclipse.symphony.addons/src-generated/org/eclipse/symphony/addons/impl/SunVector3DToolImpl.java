@@ -18,7 +18,7 @@ import org.eclipse.symphony.addons.SunVector3DTool;
 import org.eclipse.symphony.addons.SunVector3DToolNode;
 import org.eclipse.symphony.addons.Symphony__AddonsFactory;
 import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
@@ -588,7 +588,7 @@ public class SunVector3DToolImpl extends AbstractTwoPoints3DToolImpl implements 
 			Tuple3d relativePosition = null;
 			if(nodeSelection.getRelativeIntersectionPoint() != null)
 			{
-				relativePosition = MathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
+				relativePosition = Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
 			}
 			
 			if(!isToNodeLock())

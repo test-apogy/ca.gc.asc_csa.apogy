@@ -11,7 +11,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.impl.OperationCallImpl;
 import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding;
@@ -202,7 +202,7 @@ public class OperationCallControllerBindingImpl extends OperationCallImpl implem
    */
   public void update()
   {
-	  EMFEcoreInvocatorFacade.INSTANCE.exec(this, isCreateResult());
+	  Symphony__CoreInvocatorFacade.INSTANCE.exec(this, isCreateResult());
   }
 
   /**

@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 
 import org.eclipse.emf.ecore.util.Diagnostician;
 
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
@@ -61,7 +61,7 @@ public class Symphony__CoreInvocatorExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.sym"));
-				EMFEcoreInvocatorFacade root = Symphony__CoreInvocatorFactory.eINSTANCE.createEMFEcoreInvocatorFacade();
+				Symphony__CoreInvocatorFacade root = Symphony__CoreInvocatorFactory.eINSTANCE.createSymphony__CoreInvocatorFacade();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

@@ -7,7 +7,7 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.IHandler;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.ui.handlers.HandlerUtil;
 
@@ -23,7 +23,7 @@ public class SetActiveInvocatorSessionCommand extends AbstractHandler implements
 			Object selection = selections.next();
 
 			if (selection instanceof InvocatorSession) {
-				EMFEcoreInvocatorFacade.INSTANCE
+				Symphony__CoreInvocatorFacade.INSTANCE
 						.setActiveInvocatorSession((InvocatorSession) selection);
 			}
 		}

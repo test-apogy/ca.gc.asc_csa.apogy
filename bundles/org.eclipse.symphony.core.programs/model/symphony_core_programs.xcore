@@ -34,7 +34,7 @@ abstract class AbstractProgramRuntime
 /*
  * The program runtimes must use this to interact with the EMF invocator Singleton.
  */
-class ProgramFacade
+class Symphony__CoreProgramsFacade
 {
 	refers transient readonly volatile InvocatorSession session
 	refers transient readonly volatile Variable[0..*] variables	

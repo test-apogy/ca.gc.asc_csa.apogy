@@ -24,15 +24,15 @@ public interface Symphony__CoreProgramsControllersFactory extends EFactory
   Symphony__CoreProgramsControllersFactory eINSTANCE = org.eclipse.symphony.core.programs.controllers.impl.Symphony__CoreProgramsControllersFactoryImpl.init();
 
   /**
-	 * Returns a new object of class '<em>Controller Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Controller Facade</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-  ControllerFacade createControllerFacade();
+	Symphony__CoreProgramsControllersFacade createSymphony__CoreProgramsControllersFacade();
 
-  /**
+		/**
 	 * Returns a new object of class '<em>Controllers Configuration</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

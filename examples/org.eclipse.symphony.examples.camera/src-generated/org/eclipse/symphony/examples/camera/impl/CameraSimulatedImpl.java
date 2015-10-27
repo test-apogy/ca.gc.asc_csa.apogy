@@ -16,7 +16,7 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.sensors.SensorStatus;
-import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
 import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingFactory;
@@ -226,7 +226,7 @@ public class CameraSimulatedImpl extends CameraImpl implements CameraSimulated
 		if(tmp == null)
 		{
 			// Create one with certain default parameters
-			tmp = FOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(FOV_DEF_MINIMUM_RANGE,
+			tmp = Symphony__AddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(FOV_DEF_MINIMUM_RANGE,
 																		  FOV_DEF_MAXIMUM_RANGE,
 																		  calculateHorizontalFOVAngle(),
 																		  calculateVerticalFOVAngle());
@@ -518,7 +518,7 @@ public class CameraSimulatedImpl extends CameraImpl implements CameraSimulated
 			imageSnapshot.setTime(new Date());
 					
 			// Save a copy of the current field of view
-			imageSnapshot.setFieldOfView(FOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(getFieldOfView()));
+			imageSnapshot.setFieldOfView(Symphony__AddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(getFieldOfView()));
 						
 			// Save the image in the snapshot
 			imageSnapshot.setImage(image);

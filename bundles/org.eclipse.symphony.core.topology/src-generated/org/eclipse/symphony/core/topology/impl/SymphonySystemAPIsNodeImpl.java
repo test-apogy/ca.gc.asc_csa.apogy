@@ -22,11 +22,11 @@ import org.eclipse.symphony.common.emf.ListFeatureNode;
 import org.eclipse.symphony.common.emf.ListRootNode;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.ReferencedGroupNode;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
@@ -392,7 +392,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 							  }
 						  }
 						  
-						  TransformNode poseTransform = TopologyFacade.INSTANCE.createTransformNode(matrix);						  
+						  TransformNode poseTransform = Symphony__CommonTopologyFacade.INSTANCE.createTransformNode(matrix);						  
 						  poseTransform.setNodeId(variable.getName() + "_poseTransform");						 
 						  
 						  // If the system defines a pose provider.
@@ -479,7 +479,7 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 							  }
 							  
 							  // Attaches the sub-system to the system.
-							  TransformNode linkTransformNode = TopologyFacade.INSTANCE.createTransformNode(transform);
+							  TransformNode linkTransformNode = Symphony__CommonTopologyFacade.INSTANCE.createTransformNode(transform);
 							  linkTransformNode.setDescription("Transform representing link <" + link.getName() + ">");
 							  
 							  // Get the node in the parent to which the link is attached.
@@ -487,8 +487,8 @@ public class SymphonySystemAPIsNodeImpl extends ReferencedGroupNodeImpl implemen
 							  parentNode.getChildren().add(linkTransformNode);						
 							  						  
 							  // Adds a transform node used to effect the poseTransform.						  
-							  Matrix4x4 matrix = MathFacade.INSTANCE.createIdentityMatrix4x4();						  						  						  
-							  TransformNode poseTransform = TopologyFacade.INSTANCE.createTransformNode(matrix.asMatrix4d());						  
+							  Matrix4x4 matrix = Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4();						  						  						  
+							  TransformNode poseTransform = Symphony__CommonTopologyFacade.INSTANCE.createTransformNode(matrix.asMatrix4d());						  
 							  poseTransform.setNodeId(subSystem.getName() + "_poseTransform");								  											 
 							  
 							  // Is the API is not null, binds the Pose to the poseTransform.

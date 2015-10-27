@@ -510,32 +510,23 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	int COORDINATES_SET25_DFILTER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.DataFacadeImpl <em>Data Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.DataFacadeImpl
-	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getDataFacade()
+	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DFacadeImpl
+	 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getSymphony__CommonGeometryData25DFacade()
 	 * @generated
 	 */
-	int DATA_FACADE = 7;
+	int SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE = 7;
 
 	/**
-	 * The number of structural features of the '<em>Data Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FACADE_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Create Coordinates25 D</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_FACADE___CREATE_COORDINATES25_D__COORDINATES25D = 0;
+	int SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Coordinates25 D</em>' operation.
@@ -544,7 +535,16 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE = 1;
+	int SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__COORDINATES25D = 0;
+
+	/**
+	 * The operation id for the '<em>Create Coordinates25 D</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE = 1;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Coordinates Set</em>' operation.
@@ -553,16 +553,16 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D = 2;
+	int SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D = 2;
 
 	/**
-	 * The number of operations of the '<em>Data Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FACADE_OPERATION_COUNT = 3;
+	int SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE_OPERATION_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.Data25DIOImpl <em>Data25 DIO</em>}' class.
@@ -756,44 +756,44 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 	EOperation getCoordinatesSet25DFilter__CreateCoordinatesSet25D();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data25d.DataFacade <em>Data Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Data Facade</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data25d.DataFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade
 	 * @generated
 	 */
-	EClass getDataFacade();
+	EClass getSymphony__CommonGeometryData25DFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data25d.DataFacade#createCoordinates25D(org.eclipse.symphony.common.geometry.data25d.Coordinates25D) <em>Create Coordinates25 D</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Coordinates25 D</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data25d.DataFacade#createCoordinates25D(org.eclipse.symphony.common.geometry.data25d.Coordinates25D)
-	 * @generated
-	 */
-	EOperation getDataFacade__CreateCoordinates25D__Coordinates25D();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data25d.DataFacade#createCoordinates25D(double, double, double) <em>Create Coordinates25 D</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade#createCoordinates25D(org.eclipse.symphony.common.geometry.data25d.Coordinates25D) <em>Create Coordinates25 D</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Coordinates25 D</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data25d.DataFacade#createCoordinates25D(double, double, double)
+	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade#createCoordinates25D(org.eclipse.symphony.common.geometry.data25d.Coordinates25D)
 	 * @generated
 	 */
-	EOperation getDataFacade__CreateCoordinates25D__double_double_double();
+	EOperation getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__Coordinates25D();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data25d.DataFacade#createCartesianCoordinatesSet(org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D) <em>Create Cartesian Coordinates Set</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade#createCoordinates25D(double, double, double) <em>Create Coordinates25 D</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Coordinates25 D</em>' operation.
+	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade#createCoordinates25D(double, double, double)
+	 * @generated
+	 */
+	EOperation getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__double_double_double();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade#createCartesianCoordinatesSet(org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D) <em>Create Cartesian Coordinates Set</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Coordinates Set</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data25d.DataFacade#createCartesianCoordinatesSet(org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D)
+	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade#createCartesianCoordinatesSet(org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D)
 	 * @generated
 	 */
-	EOperation getDataFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D();
+	EOperation getSymphony__CommonGeometryData25DFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data25d.Data25DIO <em>Data25 DIO</em>}'.
@@ -978,14 +978,14 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 		EOperation COORDINATES_SET25_DFILTER___CREATE_COORDINATES_SET25_D = eINSTANCE.getCoordinatesSet25DFilter__CreateCoordinatesSet25D();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.DataFacadeImpl <em>Data Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.DataFacadeImpl
-		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getDataFacade()
+		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DFacadeImpl
+		 * @see org.eclipse.symphony.common.geometry.data25d.impl.Symphony__CommonGeometryData25DPackageImpl#getSymphony__CommonGeometryData25DFacade()
 		 * @generated
 		 */
-		EClass DATA_FACADE = eINSTANCE.getDataFacade();
+		EClass SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE = eINSTANCE.getSymphony__CommonGeometryData25DFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Coordinates25 D</b></em>' operation.
@@ -993,7 +993,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA_FACADE___CREATE_COORDINATES25_D__COORDINATES25D = eINSTANCE.getDataFacade__CreateCoordinates25D__Coordinates25D();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__COORDINATES25D = eINSTANCE.getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__Coordinates25D();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Coordinates25 D</b></em>' operation.
@@ -1001,7 +1001,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA_FACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getDataFacade__CreateCoordinates25D__double_double_double();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Coordinates Set</b></em>' operation.
@@ -1009,7 +1009,7 @@ public interface Symphony__CommonGeometryData25DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation DATA_FACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D = eINSTANCE.getDataFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D = eINSTANCE.getSymphony__CommonGeometryData25DFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data25d.impl.Data25DIOImpl <em>Data25 DIO</em>}' class.

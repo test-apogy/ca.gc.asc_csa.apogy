@@ -15,7 +15,7 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.common.math.Matrix4x4;
@@ -109,12 +109,12 @@ public class TransformMatrixComposite extends Composite {
 		disableEvent = true;
 		
 		/** Update Position Tuples. */
-		Tuple3d result = MathFacade.INSTANCE.extractPosition(matrix);
+		Tuple3d result = Symphony__CommonMathFacade.INSTANCE.extractPosition(matrix);
 		position.setX(result.getX());
 		position.setY(result.getY());
 		position.setZ(result.getZ());
 		
-		result = MathFacade.INSTANCE.extractOrientation(matrix);
+		result = Symphony__CommonMathFacade.INSTANCE.extractOrientation(matrix);
 		orientation.setX(Math.toDegrees(result.getX()));
 		orientation.setY(Math.toDegrees(result.getY()));
 		orientation.setZ(Math.toDegrees(result.getZ()));
@@ -217,7 +217,7 @@ public class TransformMatrixComposite extends Composite {
 									Math.toRadians(getOrientationTuple3d().getY()),
 									Math.toRadians(getOrientationTuple3d().getZ()));
 										
-							MathEditUtils.updateOrientation(getMatrix(), MathFacade.INSTANCE.createMatrix3x3(matrix3d), editingDomain);								
+							MathEditUtils.updateOrientation(getMatrix(), Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(matrix3d), editingDomain);								
 						}
 						
 						/** Re-enable Matrix Events. */

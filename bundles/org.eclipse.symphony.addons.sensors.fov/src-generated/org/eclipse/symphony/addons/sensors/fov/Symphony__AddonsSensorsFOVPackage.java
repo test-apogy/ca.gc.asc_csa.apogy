@@ -611,32 +611,23 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	int RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SAMPLING_SHAPE_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.FOVFacadeImpl <em>FOV Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.FOVFacadeImpl
-	 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getFOVFacade()
+	 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVFacadeImpl
+	 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getSymphony__AddonsSensorsFOVFacade()
 	 * @generated
 	 */
-	int FOV_FACADE = 7;
+	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE = 7;
 
 	/**
-	 * The number of structural features of the '<em>FOV Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOV_FACADE_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Create Distance Range</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FOV_FACADE___CREATE_DISTANCE_RANGE__DOUBLE_DOUBLE = 0;
+	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Distance Range</em>' operation.
@@ -645,7 +636,16 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOV_FACADE___CREATE_DISTANCE_RANGE__DISTANCERANGE = 1;
+	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DOUBLE_DOUBLE = 0;
+
+	/**
+	 * The operation id for the '<em>Create Distance Range</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DISTANCERANGE = 1;
 
 	/**
 	 * The operation id for the '<em>Create Angular Span</em>' operation.
@@ -654,7 +654,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOV_FACADE___CREATE_ANGULAR_SPAN__DOUBLE_DOUBLE = 2;
+	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__DOUBLE_DOUBLE = 2;
 
 	/**
 	 * The operation id for the '<em>Create Angular Span</em>' operation.
@@ -663,7 +663,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOV_FACADE___CREATE_ANGULAR_SPAN__ANGULARSPAN = 3;
+	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__ANGULARSPAN = 3;
 
 	/**
 	 * The operation id for the '<em>Create Rectangular Frustrum Field Of View</em>' operation.
@@ -672,7 +672,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = 4;
+	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = 4;
 
 	/**
 	 * The operation id for the '<em>Create Rectangular Frustrum Field Of View</em>' operation.
@@ -681,7 +681,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RECTANGULARFRUSTRUMFIELDOFVIEW = 5;
+	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RECTANGULARFRUSTRUMFIELDOFVIEW = 5;
 
 	/**
 	 * The operation id for the '<em>Create Conical Field Of View</em>' operation.
@@ -690,7 +690,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE = 6;
+	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE = 6;
 
 	/**
 	 * The operation id for the '<em>Create Conical Field Of View</em>' operation.
@@ -699,7 +699,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__CONICALFIELDOFVIEW = 7;
+	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__CONICALFIELDOFVIEW = 7;
 
 	/**
 	 * The operation id for the '<em>Create Circular Sector Field Of View</em>' operation.
@@ -708,7 +708,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = 8;
+	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = 8;
 
 	/**
 	 * The operation id for the '<em>Create Circular Sector Field Of View</em>' operation.
@@ -717,17 +717,16 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__CIRCULARSECTORFIELDOFVIEW = 9;
+	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__CIRCULARSECTORFIELDOFVIEW = 9;
 
 	/**
-	 * The number of operations of the '<em>FOV Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FOV_FACADE_OPERATION_COUNT = 10;
-
+	int SYMPHONY_ADDONS_SENSORS_FOV_FACADE_OPERATION_COUNT = 10;
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.fov.FieldOfView <em>Field Of View</em>}'.
@@ -1029,114 +1028,114 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 	EReference getRectangularFrustrumFieldOfViewSamplingShape_RectangularFrustrumFieldOfView();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.fov.FOVFacade <em>FOV Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>FOV Facade</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FOVFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade
 	 * @generated
 	 */
-	EClass getFOVFacade();
+	EClass getSymphony__AddonsSensorsFOVFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.FOVFacade#createDistanceRange(double, double) <em>Create Distance Range</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createDistanceRange(double, double) <em>Create Distance Range</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Distance Range</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FOVFacade#createDistanceRange(double, double)
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createDistanceRange(double, double)
 	 * @generated
 	 */
-	EOperation getFOVFacade__CreateDistanceRange__double_double();
+	EOperation getSymphony__AddonsSensorsFOVFacade__CreateDistanceRange__double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.FOVFacade#createDistanceRange(org.eclipse.symphony.addons.sensors.fov.DistanceRange) <em>Create Distance Range</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createDistanceRange(org.eclipse.symphony.addons.sensors.fov.DistanceRange) <em>Create Distance Range</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Distance Range</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FOVFacade#createDistanceRange(org.eclipse.symphony.addons.sensors.fov.DistanceRange)
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createDistanceRange(org.eclipse.symphony.addons.sensors.fov.DistanceRange)
 	 * @generated
 	 */
-	EOperation getFOVFacade__CreateDistanceRange__DistanceRange();
+	EOperation getSymphony__AddonsSensorsFOVFacade__CreateDistanceRange__DistanceRange();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.FOVFacade#createAngularSpan(double, double) <em>Create Angular Span</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createAngularSpan(double, double) <em>Create Angular Span</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Angular Span</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FOVFacade#createAngularSpan(double, double)
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createAngularSpan(double, double)
 	 * @generated
 	 */
-	EOperation getFOVFacade__CreateAngularSpan__double_double();
+	EOperation getSymphony__AddonsSensorsFOVFacade__CreateAngularSpan__double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.FOVFacade#createAngularSpan(org.eclipse.symphony.addons.sensors.fov.AngularSpan) <em>Create Angular Span</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createAngularSpan(org.eclipse.symphony.addons.sensors.fov.AngularSpan) <em>Create Angular Span</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Angular Span</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FOVFacade#createAngularSpan(org.eclipse.symphony.addons.sensors.fov.AngularSpan)
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createAngularSpan(org.eclipse.symphony.addons.sensors.fov.AngularSpan)
 	 * @generated
 	 */
-	EOperation getFOVFacade__CreateAngularSpan__AngularSpan();
+	EOperation getSymphony__AddonsSensorsFOVFacade__CreateAngularSpan__AngularSpan();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.FOVFacade#createRectangularFrustrumFieldOfView(double, double, double, double) <em>Create Rectangular Frustrum Field Of View</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createRectangularFrustrumFieldOfView(double, double, double, double) <em>Create Rectangular Frustrum Field Of View</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Rectangular Frustrum Field Of View</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FOVFacade#createRectangularFrustrumFieldOfView(double, double, double, double)
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createRectangularFrustrumFieldOfView(double, double, double, double)
 	 * @generated
 	 */
-	EOperation getFOVFacade__CreateRectangularFrustrumFieldOfView__double_double_double_double();
+	EOperation getSymphony__AddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__double_double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.FOVFacade#createRectangularFrustrumFieldOfView(org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView) <em>Create Rectangular Frustrum Field Of View</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createRectangularFrustrumFieldOfView(org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView) <em>Create Rectangular Frustrum Field Of View</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Rectangular Frustrum Field Of View</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FOVFacade#createRectangularFrustrumFieldOfView(org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView)
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createRectangularFrustrumFieldOfView(org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView)
 	 * @generated
 	 */
-	EOperation getFOVFacade__CreateRectangularFrustrumFieldOfView__RectangularFrustrumFieldOfView();
+	EOperation getSymphony__AddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__RectangularFrustrumFieldOfView();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.FOVFacade#createConicalFieldOfView(double, double, double) <em>Create Conical Field Of View</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createConicalFieldOfView(double, double, double) <em>Create Conical Field Of View</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Conical Field Of View</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FOVFacade#createConicalFieldOfView(double, double, double)
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createConicalFieldOfView(double, double, double)
 	 * @generated
 	 */
-	EOperation getFOVFacade__CreateConicalFieldOfView__double_double_double();
+	EOperation getSymphony__AddonsSensorsFOVFacade__CreateConicalFieldOfView__double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.FOVFacade#createConicalFieldOfView(org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView) <em>Create Conical Field Of View</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createConicalFieldOfView(org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView) <em>Create Conical Field Of View</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Conical Field Of View</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FOVFacade#createConicalFieldOfView(org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView)
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createConicalFieldOfView(org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView)
 	 * @generated
 	 */
-	EOperation getFOVFacade__CreateConicalFieldOfView__ConicalFieldOfView();
+	EOperation getSymphony__AddonsSensorsFOVFacade__CreateConicalFieldOfView__ConicalFieldOfView();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.FOVFacade#createCircularSectorFieldOfView(double, double, double, double) <em>Create Circular Sector Field Of View</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createCircularSectorFieldOfView(double, double, double, double) <em>Create Circular Sector Field Of View</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Circular Sector Field Of View</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FOVFacade#createCircularSectorFieldOfView(double, double, double, double)
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createCircularSectorFieldOfView(double, double, double, double)
 	 * @generated
 	 */
-	EOperation getFOVFacade__CreateCircularSectorFieldOfView__double_double_double_double();
+	EOperation getSymphony__AddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__double_double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.FOVFacade#createCircularSectorFieldOfView(org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView) <em>Create Circular Sector Field Of View</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createCircularSectorFieldOfView(org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView) <em>Create Circular Sector Field Of View</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Circular Sector Field Of View</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.fov.FOVFacade#createCircularSectorFieldOfView(org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView)
+	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade#createCircularSectorFieldOfView(org.eclipse.symphony.addons.sensors.fov.CircularSectorFieldOfView)
 	 * @generated
 	 */
-	EOperation getFOVFacade__CreateCircularSectorFieldOfView__CircularSectorFieldOfView();
+	EOperation getSymphony__AddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__CircularSectorFieldOfView();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1400,14 +1399,14 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		EReference RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE__RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW = eINSTANCE.getRectangularFrustrumFieldOfViewSamplingShape_RectangularFrustrumFieldOfView();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.FOVFacadeImpl <em>FOV Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.FOVFacadeImpl
-		 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getFOVFacade()
+		 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVFacadeImpl
+		 * @see org.eclipse.symphony.addons.sensors.fov.impl.Symphony__AddonsSensorsFOVPackageImpl#getSymphony__AddonsSensorsFOVFacade()
 		 * @generated
 		 */
-		EClass FOV_FACADE = eINSTANCE.getFOVFacade();
+		EClass SYMPHONY_ADDONS_SENSORS_FOV_FACADE = eINSTANCE.getSymphony__AddonsSensorsFOVFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Distance Range</b></em>' operation.
@@ -1415,7 +1414,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation FOV_FACADE___CREATE_DISTANCE_RANGE__DOUBLE_DOUBLE = eINSTANCE.getFOVFacade__CreateDistanceRange__double_double();
+		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DOUBLE_DOUBLE = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateDistanceRange__double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Distance Range</b></em>' operation.
@@ -1423,7 +1422,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation FOV_FACADE___CREATE_DISTANCE_RANGE__DISTANCERANGE = eINSTANCE.getFOVFacade__CreateDistanceRange__DistanceRange();
+		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_DISTANCE_RANGE__DISTANCERANGE = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateDistanceRange__DistanceRange();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Angular Span</b></em>' operation.
@@ -1431,7 +1430,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation FOV_FACADE___CREATE_ANGULAR_SPAN__DOUBLE_DOUBLE = eINSTANCE.getFOVFacade__CreateAngularSpan__double_double();
+		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__DOUBLE_DOUBLE = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateAngularSpan__double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Angular Span</b></em>' operation.
@@ -1439,7 +1438,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation FOV_FACADE___CREATE_ANGULAR_SPAN__ANGULARSPAN = eINSTANCE.getFOVFacade__CreateAngularSpan__AngularSpan();
+		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_ANGULAR_SPAN__ANGULARSPAN = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateAngularSpan__AngularSpan();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Rectangular Frustrum Field Of View</b></em>' operation.
@@ -1447,7 +1446,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getFOVFacade__CreateRectangularFrustrumFieldOfView__double_double_double_double();
+		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__double_double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Rectangular Frustrum Field Of View</b></em>' operation.
@@ -1455,7 +1454,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RECTANGULARFRUSTRUMFIELDOFVIEW = eINSTANCE.getFOVFacade__CreateRectangularFrustrumFieldOfView__RectangularFrustrumFieldOfView();
+		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW__RECTANGULARFRUSTRUMFIELDOFVIEW = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateRectangularFrustrumFieldOfView__RectangularFrustrumFieldOfView();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Conical Field Of View</b></em>' operation.
@@ -1463,7 +1462,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getFOVFacade__CreateConicalFieldOfView__double_double_double();
+		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateConicalFieldOfView__double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Conical Field Of View</b></em>' operation.
@@ -1471,7 +1470,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__CONICALFIELDOFVIEW = eINSTANCE.getFOVFacade__CreateConicalFieldOfView__ConicalFieldOfView();
+		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CONICAL_FIELD_OF_VIEW__CONICALFIELDOFVIEW = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateConicalFieldOfView__ConicalFieldOfView();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Circular Sector Field Of View</b></em>' operation.
@@ -1479,7 +1478,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getFOVFacade__CreateCircularSectorFieldOfView__double_double_double_double();
+		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__DOUBLE_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__double_double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Circular Sector Field Of View</b></em>' operation.
@@ -1487,7 +1486,7 @@ public interface Symphony__AddonsSensorsFOVPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__CIRCULARSECTORFIELDOFVIEW = eINSTANCE.getFOVFacade__CreateCircularSectorFieldOfView__CircularSectorFieldOfView();
+		EOperation SYMPHONY_ADDONS_SENSORS_FOV_FACADE___CREATE_CIRCULAR_SECTOR_FIELD_OF_VIEW__CIRCULARSECTORFIELDOFVIEW = eINSTANCE.getSymphony__AddonsSensorsFOVFacade__CreateCircularSectorFieldOfView__CircularSectorFieldOfView();
 
 	}
 

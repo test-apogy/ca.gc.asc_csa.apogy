@@ -7,7 +7,7 @@ package org.eclipse.symphony.common.emf.edit.utils
 
 type CollectionObject wraps java.util.Collection<Object>
 
-class EMFEcoreEditUtilsFacade
+class Symphony__CommonEMFEditUtilsFacade
 {
 	op String getText(Object object)
 	op void removeChildDescriptor(CollectionObject newChildDescriptors, Object feature)

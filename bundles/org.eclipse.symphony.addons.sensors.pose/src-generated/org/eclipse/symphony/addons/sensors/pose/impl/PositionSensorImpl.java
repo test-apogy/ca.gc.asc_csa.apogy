@@ -22,8 +22,6 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.PositionNode;
-import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.impl.PositionNodeImpl;
 
@@ -44,8 +42,6 @@ import org.eclipse.symphony.common.topology.impl.PositionNodeImpl;
 public class PositionSensorImpl extends PositionNodeImpl implements PositionSensor {
 
 	private Adapter positionAdapter = null;	
-	
-	protected TopologyFacade topologyFacade = Symphony__CommonTopologyFactory.eINSTANCE.createTopologyFacade();
 	
 	/**
 	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.

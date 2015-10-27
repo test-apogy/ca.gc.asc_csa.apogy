@@ -48,7 +48,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
@@ -472,7 +472,7 @@ public class VariableImplementationsComposite extends Composite {
 						EClass interfaceClass = variableImplementation
 								.getVariable().getVariableType()
 								.getInterfaceClass();
-						elements = EMFEcoreFacade.INSTANCE.getAllSubEClasses(
+						elements = Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(
 								interfaceClass).toArray();
 					}
 				}
@@ -484,7 +484,7 @@ public class VariableImplementationsComposite extends Composite {
 						EClass interfaceClass = typeMemberImplementation
 								.getTypeMember().getMemberType()
 								.getInterfaceClass();
-						elements = EMFEcoreFacade.INSTANCE.getAllSubEClasses(
+						elements = Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(
 								interfaceClass).toArray();
 					}
 				}

@@ -5,7 +5,7 @@ import javax.vecmath.Vector3d;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.converters.IConverter;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.core.Positioned;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
@@ -57,7 +57,7 @@ public class PositionedToGeographicalCoordinatesConverter implements IConverter{
 			matrix.get(position);
 						
 			EarthSurfaceWorksite worksite = getEarthSurfaceWorksite(positioned);						
-			return worksite.convertToGeographicCoordinates(MathFacade.INSTANCE.createTuple3d(position));
+			return worksite.convertToGeographicCoordinates(Symphony__CommonMathFacade.INSTANCE.createTuple3d(position));
 		}
 		else
 		{

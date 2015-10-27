@@ -20,8 +20,8 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.EMFFeatureOverlay;
 import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 import org.eclipse.symphony.core.invocator.Variable;
@@ -373,11 +373,11 @@ public class EMFFeatureOverlayImpl extends AbstractTextOverlayImpl implements EM
 				Variable variable = variableFeatureReference.getVariable();
 				if (variableFeatureReference.getTypeMemberReferenceListElement() != null) 
 				{
-					rootEObject = EMFEcoreInvocatorFacade.INSTANCE.getTypeMemberInstance(variableFeatureReference);
+					rootEObject = Symphony__CoreInvocatorFacade.INSTANCE.getTypeMemberInstance(variableFeatureReference);
 				} 
 				else 
 				{
-					rootEObject = EMFEcoreInvocatorFacade.INSTANCE.getInstance(variable);
+					rootEObject = Symphony__CoreInvocatorFacade.INSTANCE.getInstance(variable);
 				}				
 		  }
 		  		  		 
@@ -388,7 +388,7 @@ public class EMFFeatureOverlayImpl extends AbstractTextOverlayImpl implements EM
 			  AbstractFeatureListNode node = variableFeatureReference.getFeatureRoot().getChild();
 			  while(node != null)
 			  {				  
-				  Object object = EMFEcoreFacade.INSTANCE.resolve(rootEObject, node);
+				  Object object = Symphony__CommonEMFFacade.INSTANCE.resolve(rootEObject, node);
 				  				  				  
 				  if(object instanceof EObject)
 				  {
@@ -402,12 +402,12 @@ public class EMFFeatureOverlayImpl extends AbstractTextOverlayImpl implements EM
 			  }			  
 		  }
 		  		  
-		  Object featureValue = EMFEcoreInvocatorFacade.INSTANCE.getEMFFeatureValue(variableFeatureReference);
+		  Object featureValue = Symphony__CoreInvocatorFacade.INSTANCE.getEMFFeatureValue(variableFeatureReference);
 		  
 		  // Try to get the Item Provider associated with the feature for the eObject.
 		  if(featureValue != null)
 		  {
-			  AbstractFeatureListNode afln = EMFEcoreFacade.INSTANCE.getLeaf(variableFeatureReference.getFeatureRoot());
+			  AbstractFeatureListNode afln = Symphony__CommonEMFFacade.INSTANCE.getLeaf(variableFeatureReference.getFeatureRoot());
 			  
 			  if(afln instanceof AbstractFeatureSpecifier)
 			  {

@@ -85,7 +85,7 @@ class Polynomial
 	readonly transient derived EDoubleArray imaginaryRoots
 }
 
-class MathFacade
+class Symphony__CommonMathFacade
 {
 	op Matrix4x4 createMatrix4x4(Matrix4d matrix)
 	

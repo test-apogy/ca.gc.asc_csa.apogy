@@ -149,13 +149,13 @@ public interface Symphony__CommonTopologyFactory extends EFactory {
 	PickAndPlaceNode createPickAndPlaceNode();
 
 	/**
-	 * Returns a new object of class '<em>Topology Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Topology Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	TopologyFacade createTopologyFacade();
+	Symphony__CommonTopologyFacade createSymphony__CommonTopologyFacade();
 
 	/**
 	 * Returns the package supported by this factory.

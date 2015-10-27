@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 import org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularMeshFilter;
 
 /**
@@ -190,7 +190,7 @@ public class TriangleEdgeLengthTriangularMeshFilterImpl extends MinimalEObjectIm
 		identity.setIdentity();
 		
 		// Makes a copy of the input mesh.
-		CartesianTriangularMesh output = Geometry3dUtilities.createTransformedCartesianTriangularMesh(identity, input);
+		CartesianTriangularMesh output = Geometry3DUtilities.createTransformedCartesianTriangularMesh(identity, input);
 		
 		// Go through the list of triangles.
 		List<CartesianTriangle> trianglesToRemove = new ArrayList<CartesianTriangle>();

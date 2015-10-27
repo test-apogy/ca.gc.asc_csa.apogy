@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.addons.sensors.pose.SimulatedPoseSensor;
 import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.math.Tuple3d;
 
@@ -210,7 +210,7 @@ public class SimulatedPoseSensorImpl extends PoseSensorImpl implements Simulated
 																	  getUpdatePeriod() * getZAngularVelocity());							
 												
 						oldRotation.mul(newRotation);						
-						setRotationMatrix(MathFacade.INSTANCE.createMatrix3x3(oldRotation));
+						setRotationMatrix(Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(oldRotation));
 												
 						// Update position.
 						Tuple3d oldPosition = getPosition();

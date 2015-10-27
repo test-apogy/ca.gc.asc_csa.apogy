@@ -10,7 +10,7 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.ui.views.AbstractView;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.ui.composites.ContextsDefinitionComposite;
@@ -33,11 +33,11 @@ public class ContextsDefinitionView extends AbstractView implements	IEditingDoma
 				getSelectionProvider().setSelection(selection);
 			}
 		};
-		InvocatorSession activeSession = EMFEcoreInvocatorFacade.INSTANCE
+		InvocatorSession activeSession = Symphony__CoreInvocatorFacade.INSTANCE
 				.getActiveInvocatorSession();
 		contextsDefinitionComposite.setEnvironment(activeSession == null ? null
 				: activeSession.getEnvironment());
-		EMFEcoreInvocatorFacade.INSTANCE.eAdapters().add(
+		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(
 				getEMFEcoreInvocatorFacadeAdapter());
 	}
 
@@ -46,8 +46,8 @@ public class ContextsDefinitionView extends AbstractView implements	IEditingDoma
 			adapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(EMFEcoreInvocatorFacade.class) == Symphony__CoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION) {
-						InvocatorSession activeSession = EMFEcoreInvocatorFacade.INSTANCE
+					if (msg.getFeatureID(Symphony__CoreInvocatorFacade.class) == Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION) {
+						InvocatorSession activeSession = Symphony__CoreInvocatorFacade.INSTANCE
 								.getActiveInvocatorSession();
 						contextsDefinitionComposite
 								.setEnvironment(activeSession == null ? null
@@ -62,7 +62,7 @@ public class ContextsDefinitionView extends AbstractView implements	IEditingDoma
 	@Override
 	public void dispose() {
 		super.dispose();
-		EMFEcoreInvocatorFacade.INSTANCE.eAdapters().remove(
+		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(
 				getEMFEcoreInvocatorFacadeAdapter());
 	}
 
@@ -72,6 +72,6 @@ public class ContextsDefinitionView extends AbstractView implements	IEditingDoma
 
 	@Override
 	public EditingDomain getEditingDomain() {
-		return AdapterFactoryEditingDomain.getEditingDomainFor(EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
+		return AdapterFactoryEditingDomain.getEditingDomainFor(Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession());
 	}
 }

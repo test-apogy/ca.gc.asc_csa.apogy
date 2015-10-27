@@ -72,7 +72,7 @@ abstract class CoordinatesSet25DFilter <T extends CoordinatesSet25D> extends Pro
 	op T createCoordinatesSet25D()
 }
 
-class DataFacade
+class Symphony__CommonGeometryData25DFacade
 {
 	op Coordinates25D createCoordinates25D(Coordinates25D coordinates25D)
 	

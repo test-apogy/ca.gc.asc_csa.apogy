@@ -20,13 +20,11 @@ import org.eclipse.symphony.addons.sensors.pose.OrientationSensor;
 import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
 import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.impl.RotationNodeImpl;
 
@@ -47,8 +45,6 @@ import org.eclipse.symphony.common.topology.impl.RotationNodeImpl;
 public class OrientationSensorImpl extends RotationNodeImpl implements OrientationSensor
 {
 	private Adapter orientationAdapter = null;		
-	protected TopologyFacade topologyFacade = Symphony__CommonTopologyFactory.eINSTANCE.createTopologyFacade();
-
 	
 	/**
 	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
@@ -166,7 +162,7 @@ public class OrientationSensorImpl extends RotationNodeImpl implements Orientati
 	public CartesianOrientationCoordinates extractOrientationFromMatrix(Matrix3x3 matrix)
 	{		
 		Vector3d rotation = GeometricUtils.extractRotationFromXYZRotMatrix(matrix.asMatrix3d());		
-		CartesianOrientationCoordinates orientation = Data3dFacade.INSTANCE.createCartesianOrientationCoordinates(rotation.x, rotation.y, rotation.z);
+		CartesianOrientationCoordinates orientation = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianOrientationCoordinates(rotation.x, rotation.y, rotation.z);
 		return orientation;
 	}
 

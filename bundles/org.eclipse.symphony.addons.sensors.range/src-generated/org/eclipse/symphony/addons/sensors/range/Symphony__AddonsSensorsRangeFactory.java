@@ -140,13 +140,13 @@ public interface Symphony__AddonsSensorsRangeFactory extends EFactory {
 	RasterScanData createRasterScanData();
 
 	/**
-	 * Returns a new object of class '<em>Sensors Range Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sensors Range Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	SensorsRangeFacade createSensorsRangeFacade();
+	Symphony__AddonsSensorsRangeFacade createSymphony__AddonsSensorsRangeFacade();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -4,7 +4,7 @@
 package org.eclipse.symphony.core.environment.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade;
 import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.ui.TrajectoryPickingTool;
 import org.jfree.data.xy.XYDataItem;
@@ -82,7 +82,7 @@ public class TrajectoryPickingToolImpl extends AbstractTrajectoryToolImpl implem
   protected void updateTrajectoryPickingTool()
   {
 	  // Update the trajectory length.
-	  double length = EnvironmentUiFacade.INSTANCE.getTrajectoryLength(getXYSeries());
+	  double length = Symphony__CoreEnvironmentUIFacade.INSTANCE.getTrajectoryLength(getXYSeries());
 	  setTrajectoryLength(length);	  	  
   }
 } //TrajectoryPickingToolImpl

@@ -8,7 +8,7 @@ import javax.vecmath.Vector3d;
 
 import org.eclipse.symphony.addons.sensors.fov.ui.jme3.scene_objects.ProjectorData;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 
@@ -174,7 +174,7 @@ public abstract class ImageProjectorControl <T extends Node> extends AbstractCon
 	
 	protected Quaternion getProjectorRotation()
 	{
-		Matrix4d m = TopologyFacade.INSTANCE.expressNodeInRootFrame(fieldOfView);
+		Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(fieldOfView);
 		Matrix3d rot = new Matrix3d();
 		m.get(rot);
 		
@@ -185,7 +185,7 @@ public abstract class ImageProjectorControl <T extends Node> extends AbstractCon
 	protected Vector3f getProjectorLocation()
 	{
 		
-		Matrix4d m =TopologyFacade.INSTANCE.expressNodeInRootFrame(fieldOfView);
+		Matrix4d m =Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(fieldOfView);
 		Vector3d v = new Vector3d();
 		m.get(v);
 				

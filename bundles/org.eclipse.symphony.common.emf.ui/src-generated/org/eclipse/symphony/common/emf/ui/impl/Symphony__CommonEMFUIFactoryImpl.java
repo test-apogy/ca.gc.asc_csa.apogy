@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.swt.graphics.Color;
-import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
+import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade;
 import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFactory;
 import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIPackage;
 
@@ -62,7 +62,7 @@ public class Symphony__CommonEMFUIFactoryImpl extends EFactoryImpl implements Sy
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonEMFUIPackage.EMF_ECORE_UI_FACADE: return createEMFEcoreUIFacade();
+			case Symphony__CommonEMFUIPackage.SYMPHONY_COMMON_EMFUI_FACADE: return createSymphony__CommonEMFUIFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -106,16 +106,15 @@ public class Symphony__CommonEMFUIFactoryImpl extends EFactoryImpl implements Sy
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EMFEcoreUIFacade createEMFEcoreUIFacade()
-  {
-		EMFEcoreUIFacadeImpl emfEcoreUIFacade = new EMFEcoreUIFacadeImpl();
-		return emfEcoreUIFacade;
+	public Symphony__CommonEMFUIFacade createSymphony__CommonEMFUIFacade() {
+		Symphony__CommonEMFUIFacadeImpl symphony__CommonEMFUIFacade = new Symphony__CommonEMFUIFacadeImpl();
+		return symphony__CommonEMFUIFacade;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

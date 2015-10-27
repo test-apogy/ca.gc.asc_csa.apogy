@@ -8,9 +8,9 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.symphony.common.databinding.converters.AbstractNumberConverter;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.ui.Activator;
-import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
+import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 
@@ -77,7 +77,7 @@ public class AbstractNativeToDisplayConverter extends AbstractNumberConverter im
 	{
 		if(displayUnit == null)
 		{
-			displayUnit = EMFEcoreUIFacade.INSTANCE.getDisplayUnits(eStructuralFeature);
+			displayUnit = Symphony__CommonEMFUIFacade.INSTANCE.getDisplayUnits(eStructuralFeature);
 		}
 		return displayUnit;
 	}
@@ -86,7 +86,7 @@ public class AbstractNativeToDisplayConverter extends AbstractNumberConverter im
 	{				
 		if(nativeUnit == null)
 		{
-			nativeUnit = EMFEcoreFacade.INSTANCE.getEngineeringUnits(eStructuralFeature);
+			nativeUnit = Symphony__CommonEMFFacade.INSTANCE.getEngineeringUnits(eStructuralFeature);
 		}
 		return nativeUnit;
 	}

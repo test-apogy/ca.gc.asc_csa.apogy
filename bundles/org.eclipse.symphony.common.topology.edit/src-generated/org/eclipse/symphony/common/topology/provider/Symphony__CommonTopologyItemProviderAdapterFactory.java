@@ -407,26 +407,26 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.TopologyFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TopologyFacadeItemProvider topologyFacadeItemProvider;
+	protected Symphony__CommonTopologyFacadeItemProvider symphony__CommonTopologyFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.TopologyFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createTopologyFacadeAdapter() {
-		if (topologyFacadeItemProvider == null) {
-			topologyFacadeItemProvider = new TopologyFacadeItemProvider(this);
+	public Adapter createSymphony__CommonTopologyFacadeAdapter() {
+		if (symphony__CommonTopologyFacadeItemProvider == null) {
+			symphony__CommonTopologyFacadeItemProvider = new Symphony__CommonTopologyFacadeItemProvider(this);
 		}
 
-		return topologyFacadeItemProvider;
+		return symphony__CommonTopologyFacadeItemProvider;
 	}
 
 	/**
@@ -569,7 +569,7 @@ public class Symphony__CommonTopologyItemProviderAdapterFactory extends Symphony
 		if (rotationNodeItemProvider != null) rotationNodeItemProvider.dispose();
 		if (transformNodeItemProvider != null) transformNodeItemProvider.dispose();
 		if (pickAndPlaceNodeItemProvider != null) pickAndPlaceNodeItemProvider.dispose();
-		if (topologyFacadeItemProvider != null) topologyFacadeItemProvider.dispose();
+		if (symphony__CommonTopologyFacadeItemProvider != null) symphony__CommonTopologyFacadeItemProvider.dispose();
 	}
 
 }

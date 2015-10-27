@@ -31,7 +31,7 @@ import org.eclipse.symphony.common.topology.ui.SceneObject;
 import org.eclipse.symphony.common.topology.ui.ShadowMode;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
 import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
@@ -112,7 +112,7 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass topologyUIFacadeEClass = null;
+	private EClass symphony__CommonTopologyUIFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -698,8 +698,8 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTopologyUIFacade() {
-		return topologyUIFacadeEClass;
+	public EClass getSymphony__CommonTopologyUIFacade() {
+		return symphony__CommonTopologyUIFacadeEClass;
 	}
 
 	/**
@@ -707,8 +707,8 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyUIFacade__CreateGraphicsContext__Node() {
-		return topologyUIFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__CommonTopologyUIFacade__CreateGraphicsContext__Node() {
+		return symphony__CommonTopologyUIFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -716,8 +716,8 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d() {
-		return topologyUIFacadeEClass.getEOperations().get(1);
+	public EOperation getSymphony__CommonTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d() {
+		return symphony__CommonTopologyUIFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -725,8 +725,8 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d() {
-		return topologyUIFacadeEClass.getEOperations().get(2);
+	public EOperation getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d() {
+		return symphony__CommonTopologyUIFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -734,8 +734,8 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f() {
-		return topologyUIFacadeEClass.getEOperations().get(3);
+	public EOperation getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f() {
+		return symphony__CommonTopologyUIFacadeEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -898,11 +898,11 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 		createEAttribute(urlNodePresentationEClass, URL_NODE_PRESENTATION__AXIS_LENGHT);
 		createEAttribute(urlNodePresentationEClass, URL_NODE_PRESENTATION__PRESENTATION_MODE);
 
-		topologyUIFacadeEClass = createEClass(TOPOLOGY_UI_FACADE);
-		createEOperation(topologyUIFacadeEClass, TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE);
-		createEOperation(topologyUIFacadeEClass, TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D);
-		createEOperation(topologyUIFacadeEClass, TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D);
-		createEOperation(topologyUIFacadeEClass, TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F);
+		symphony__CommonTopologyUIFacadeEClass = createEClass(SYMPHONY_COMMON_TOPOLOGY_UI_FACADE);
+		createEOperation(symphony__CommonTopologyUIFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE);
+		createEOperation(symphony__CommonTopologyUIFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D);
+		createEOperation(symphony__CommonTopologyUIFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D);
+		createEOperation(symphony__CommonTopologyUIFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F);
 
 		// Create enums
 		shadowModeEEnum = createEEnum(SHADOW_MODE);
@@ -1031,23 +1031,23 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 		initEAttribute(getURLNodePresentation_AxisLenght(), theEcorePackage.getEDouble(), "axisLenght", "1.0", 0, 1, URLNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getURLNodePresentation_PresentationMode(), this.getMeshPresentationMode(), "presentationMode", "SURFACE", 0, 1, URLNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(topologyUIFacadeEClass, TopologyUIFacade.class, "TopologyUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CommonTopologyUIFacadeEClass, Symphony__CommonTopologyUIFacade.class, "Symphony__CommonTopologyUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getTopologyUIFacade__CreateGraphicsContext__Node(), this.getGraphicsContext(), "createGraphicsContext", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyUIFacade__CreateGraphicsContext__Node(), this.getGraphicsContext(), "createGraphicsContext", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "topologyRoot", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d(), null, "findExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d(), null, "findExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTopologyPresentationSet(), "topologyPresentationSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "min", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonMathPackage.getTuple3d(), "max", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d(), this.getNodeSelection(), "createNodeSelection", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d(), this.getNodeSelection(), "createNodeSelection", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTopologyPresentationSet(), "topologyPresentationSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getNodePresentation(), "nodePresentation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPoint3d(), "relativePosition", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f(), this.getNodeSelection(), "createNodeSelection", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f(), this.getNodeSelection(), "createNodeSelection", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTopologyPresentationSet(), "topologyPresentationSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "node", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPoint3d(), "relativePosition", 0, 1, !IS_UNIQUE, IS_ORDERED);

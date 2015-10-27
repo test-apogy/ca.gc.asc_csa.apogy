@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
 import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 
 /**
@@ -142,7 +142,7 @@ public class NewSymphonyProjectSettingsImpl extends MinimalEObjectImpl.Container
 		String result = null;
 		int index = 0;
 		IWorkspaceRoot workspace = ResourcesPlugin.getWorkspace().getRoot();		
-		String name = SymphonyCoreUiFacade.INSTANCE.getDefaultSymphonyProjectNamePrefix();
+		String name = Symphony__CoreUIFacade.INSTANCE.getDefaultSymphonyProjectNamePrefix();
 				
 		while (result == null){
 			IProject project = workspace.getProject(name);
@@ -150,7 +150,7 @@ public class NewSymphonyProjectSettingsImpl extends MinimalEObjectImpl.Container
 				result = name;
 			}
 			index++;
-			name = SymphonyCoreUiFacade.INSTANCE.getDefaultSymphonyProjectNamePrefix() + "_" + index;
+			name = Symphony__CoreUIFacade.INSTANCE.getDefaultSymphonyProjectNamePrefix() + "_" + index;
 		}
 		return result;
 	}

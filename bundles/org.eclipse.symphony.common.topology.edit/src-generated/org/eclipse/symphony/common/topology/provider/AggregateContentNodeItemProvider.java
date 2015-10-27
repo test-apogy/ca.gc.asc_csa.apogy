@@ -222,7 +222,7 @@ public class AggregateContentNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createTopologyFacade()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createSymphony__CommonTopologyFacade()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -322,7 +322,7 @@ public class AggregateContentNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-				 Symphony__CommonMathFactory.eINSTANCE.createMathFacade()));
+				 Symphony__CommonMathFactory.eINSTANCE.createSymphony__CommonMathFacade()));
 
 		newChildDescriptors.add
 			(createChildParameter

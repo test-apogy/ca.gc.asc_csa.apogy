@@ -23,7 +23,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.symphony.common.emf.ui.composites.EOperationsComposite;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.ui.forms.widgets.FormToolkit;
@@ -166,7 +166,7 @@ public class OperationCallComposite extends Composite {
 				.getEditingDomainFor(getOperationCall());
 		
 		if (getOperationCall().getVariable()!=null){		
-			eOperationsComposite.setEClass(EMFEcoreInvocatorFacade.INSTANCE.getInstanceClass(getOperationCall()), getOperationCall().getEOperation());
+			eOperationsComposite.setEClass(Symphony__CoreInvocatorFacade.INSTANCE.getInstanceClass(getOperationCall()), getOperationCall().getEOperation());
 			argumentsComposite.setOperationCall(getOperationCall());
 		}else{
 			eOperationsComposite.setEClass(null);

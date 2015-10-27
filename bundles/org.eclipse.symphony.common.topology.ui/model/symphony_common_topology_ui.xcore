@@ -197,7 +197,6 @@ class NodePresentation
 	transient SceneObject sceneObject
 }
 
-
 class TransformNodePresentation extends NodePresentation
 {
 	@GenModel(notify="true", property="Editable", propertyCategory="VISUAL_INFORMATION")
@@ -237,7 +236,7 @@ class URLNodePresentation extends NodePresentation
 	MeshPresentationMode presentationMode = "SURFACE"
 }
 
-class TopologyUIFacade
+class Symphony__CommonTopologyUIFacade
 {
 	op GraphicsContext createGraphicsContext(Node topologyRoot)
 	

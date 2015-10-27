@@ -105,27 +105,26 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 
 	/**
 	 * This keeps track of the one adapter used for all
-	 * {@link org.eclipse.symphony.core.SymphonyCoreFacade} instances. <!--
+	 * {@link org.eclipse.symphony.core.Symphony__CoreFacade} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
-	protected SymphonyCoreFacadeItemProvider symphonyCoreFacadeItemProvider;
+	protected Symphony__CoreFacadeItemProvider symphony__CoreFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a
-	 * {@link org.eclipse.symphony.core.SymphonyCoreFacade}. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * This creates an adapter for a {@link org.eclipse.symphony.core.Symphony__CoreFacade}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphonyCoreFacadeAdapter() {
-		if (symphonyCoreFacadeItemProvider == null) {
-			symphonyCoreFacadeItemProvider = new SymphonyCoreFacadeItemProvider(this);
+	public Adapter createSymphony__CoreFacadeAdapter() {
+		if (symphony__CoreFacadeItemProvider == null) {
+			symphony__CoreFacadeItemProvider = new Symphony__CoreFacadeItemProvider(this);
 		}
 
-		return symphonyCoreFacadeItemProvider;
+		return symphony__CoreFacadeItemProvider;
 	}
 
 	/**
@@ -818,7 +817,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	 * @generated
 	 */
 	public void dispose() {
-		if (symphonyCoreFacadeItemProvider != null) symphonyCoreFacadeItemProvider.dispose();
+		if (symphony__CoreFacadeItemProvider != null) symphony__CoreFacadeItemProvider.dispose();
 		if (symphonyEnvironmentItemProvider != null) symphonyEnvironmentItemProvider.dispose();
 		if (symphonyTopologyItemProvider != null) symphonyTopologyItemProvider.dispose();
 		if (symphonySystemItemProvider != null) symphonySystemItemProvider.dispose();
@@ -1012,7 +1011,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createSymphonyCoreFacade()));
+						 Symphony__CoreFactory.eINSTANCE.createSymphony__CoreFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1147,7 +1146,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreFactory.eINSTANCE.createSymphonyCoreFacade()));
+						 Symphony__CoreFactory.eINSTANCE.createSymphony__CoreFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter

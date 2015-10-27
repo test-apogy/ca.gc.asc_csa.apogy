@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
 import org.eclipse.symphony.addons.sensors.fov.DistanceRange;
-import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
 import org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBinding;
 import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
@@ -231,7 +231,7 @@ public class ConicalFieldOfViewBindingImpl extends AbstractTopologyBindingImpl i
 		  // Updates Range.
 		  if(sourceFOV.getRange() != null)
 		  {
-			  DistanceRange newRange = FOVFacade.INSTANCE.createDistanceRange(sourceFOV.getRange());
+			  DistanceRange newRange = Symphony__AddonsSensorsFOVFacade.INSTANCE.createDistanceRange(sourceFOV.getRange());
 			  getFov().setRange(newRange);
 		  }
 		  else

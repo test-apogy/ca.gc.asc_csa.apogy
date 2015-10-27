@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 
@@ -180,10 +180,10 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 	  if(newSourceObject != null && getFeatureNode() != null)
 	  {
 		  // Updates the resolved status.
-		  boolean newResolved = EMFEcoreFacade.INSTANCE.isResolved(newSourceObject, getFeatureNode());
+		  boolean newResolved = Symphony__CommonEMFFacade.INSTANCE.isResolved(newSourceObject, getFeatureNode());
 		  setResolved(newResolved);
 		 
-		  if(newResolved) setCurrentValue(EMFEcoreFacade.INSTANCE.resolve(newSourceObject, getFeatureNode()));
+		  if(newResolved) setCurrentValue(Symphony__CommonEMFFacade.INSTANCE.resolve(newSourceObject, getFeatureNode()));
 	  }	  
 	  
 	  // Register adapter.
@@ -263,10 +263,10 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 	  if(getSourceObject() != null && newFeatureNode != null)
 	  {
 		  // Updates the resolved status.
-		  boolean newResolved = EMFEcoreFacade.INSTANCE.isResolved(getSourceObject(), newFeatureNode);
+		  boolean newResolved = Symphony__CommonEMFFacade.INSTANCE.isResolved(getSourceObject(), newFeatureNode);
 		  setResolved(newResolved);
 		 
-		  if(newResolved) setCurrentValue(EMFEcoreFacade.INSTANCE.resolve(getSourceObject(), newFeatureNode));
+		  if(newResolved) setCurrentValue(Symphony__CommonEMFFacade.INSTANCE.resolve(getSourceObject(), newFeatureNode));
 	  }
 	  	  
 	  // Register adapter.
@@ -463,7 +463,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 		  source.eAdapters().add(getAdapter());
 		  eObjects.add(source);
 		  
-		  List<AbstractFeatureNode> nodes = EMFEcoreFacade.INSTANCE.getAncestries(node);		  		  		  
+		  List<AbstractFeatureNode> nodes = Symphony__CommonEMFFacade.INSTANCE.getAncestries(node);		  		  		  
 		  Iterator<AbstractFeatureNode> it = nodes.iterator();
 		  
 		  EObject eObject = source;
@@ -509,7 +509,7 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
   
   protected void initializeFeatureOfInterest(AbstractFeatureNode featureNode)
   {
-	  List<AbstractFeatureNode> nodes = EMFEcoreFacade.INSTANCE.getAncestries(featureNode);		  		  		  
+	  List<AbstractFeatureNode> nodes = Symphony__CommonEMFFacade.INSTANCE.getAncestries(featureNode);		  		  		  
 	  Iterator<AbstractFeatureNode> it = nodes.iterator();
 	  
 	  while(it.hasNext())
@@ -582,10 +582,10 @@ public class FeatureNodeAdapterImpl extends MinimalEObjectImpl.Container impleme
 										if(getSourceObject() != null && getFeatureNode() != null)
 										{
 											// Updates the resolved status.
-											setResolved(EMFEcoreFacade.INSTANCE.isResolved(getSourceObject(), getFeatureNode()));
+											setResolved(Symphony__CommonEMFFacade.INSTANCE.isResolved(getSourceObject(), getFeatureNode()));
 											
 											// Attemps to resolve the new value.
-											setCurrentValue(EMFEcoreFacade.INSTANCE.resolve(getSourceObject(), getFeatureNode()));  
+											setCurrentValue(Symphony__CommonEMFFacade.INSTANCE.resolve(getSourceObject(), getFeatureNode()));  
 										}
 									}
 								}

@@ -33,10 +33,10 @@ import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage;
 import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
@@ -638,13 +638,13 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 			Tuple3d relativePosition = null;
 			if(nodeSelection.getRelativeIntersectionPoint() != null)
 			{
-				relativePosition = MathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
+				relativePosition = Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
 			}
 			
 			Tuple3d normal = null;
 			if(nodeSelection.getAbsoluteIntersectionNormal() != null)
 			{				
-				normal = MathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z);
+				normal = Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z);
 			}
 				
 			if(nextNode == TO_NODE_INDEX)
@@ -813,7 +813,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 			Vector3d fromVector = new Vector3d(getFromAbsolutePosition().asTuple3d());
 			meshToWorld.transform(fromVector);
 			
-			from = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(fromVector.x, fromVector.y, fromVector.z);
+			from = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(fromVector.x, fromVector.y, fromVector.z);
 		}
 		
 		return from;
@@ -829,7 +829,7 @@ public class PathPlannerToolImpl extends AbstractTwoPoints3DToolImpl implements 
 			Vector3d toVector = new Vector3d(getToAbsolutePosition().asTuple3d());
 			meshToWorld.transform(toVector);
 			
-			to = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(toVector.x, toVector.y, toVector.z);
+			to = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(toVector.x, toVector.y, toVector.z);
 		}
 		
 		return to;

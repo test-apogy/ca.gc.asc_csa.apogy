@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
@@ -121,8 +121,8 @@ public class TypeItemProvider
          null){
 			@Override
 			protected Collection<?> getComboBoxObjects(Object object) {
-				List<EClass> list = EMFEcoreFacade.INSTANCE.getAllAvailableEClasses();
-				SortedSet<EClass> classes = EMFEcoreFacade.INSTANCE.sortAlphabetically(list);
+				List<EClass> list = Symphony__CommonEMFFacade.INSTANCE.getAllAvailableEClasses();
+				SortedSet<EClass> classes = Symphony__CommonEMFFacade.INSTANCE.sortAlphabetically(list);
 				return classes;
 			}
 		});
@@ -151,8 +151,8 @@ public class TypeItemProvider
          null){
 			@Override
 			protected Collection<?> getComboBoxObjects(Object object) {
-				List<EClass> list = EMFEcoreFacade.INSTANCE.getAllSubEClasses(Symphony__CoreInvocatorPackage.Literals.TYPE_API_ADAPTER);				
-				SortedSet<EClass> classes = EMFEcoreFacade.INSTANCE.sortAlphabetically(list);
+				List<EClass> list = Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(Symphony__CoreInvocatorPackage.Literals.TYPE_API_ADAPTER);				
+				SortedSet<EClass> classes = Symphony__CommonEMFFacade.INSTANCE.sortAlphabetically(list);
 				return classes;
 			}
 		});

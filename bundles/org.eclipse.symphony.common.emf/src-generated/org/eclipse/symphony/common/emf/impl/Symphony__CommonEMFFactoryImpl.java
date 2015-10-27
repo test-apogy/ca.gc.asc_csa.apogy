@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.emf.BrowseableTimeSource;
 import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
 import org.eclipse.symphony.common.emf.CurrentTimeSource;
 import org.eclipse.symphony.common.emf.EClassFilter;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
@@ -84,7 +84,7 @@ public class Symphony__CommonEMFFactoryImpl extends EFactoryImpl implements Symp
   public EObject create(EClass eClass)
   {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CommonEMFPackage.EMF_ECORE_FACADE: return createEMFEcoreFacade();
+			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE: return createSymphony__CommonEMFFacade();
 			case Symphony__CommonEMFPackage.SERVER: return createServer();
 			case Symphony__CommonEMFPackage.STARTABLE: return createStartable();
 			case Symphony__CommonEMFPackage.TIME_SOURCES_LIST: return createTimeSourcesList();
@@ -189,16 +189,15 @@ public class Symphony__CommonEMFFactoryImpl extends EFactoryImpl implements Symp
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EMFEcoreFacade createEMFEcoreFacade()
-  {
-		EMFEcoreFacadeImpl emfEcoreFacade = new EMFEcoreFacadeImpl();
-		return emfEcoreFacade;
+	public Symphony__CommonEMFFacade createSymphony__CommonEMFFacade() {
+		Symphony__CommonEMFFacadeImpl symphony__CommonEMFFacade = new Symphony__CommonEMFFacadeImpl();
+		return symphony__CommonEMFFacade;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

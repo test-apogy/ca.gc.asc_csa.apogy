@@ -131,8 +131,8 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 				return createRasterScanDataAdapter();
 			}
 			@Override
-			public Adapter caseSensorsRangeFacade(SensorsRangeFacade object) {
-				return createSensorsRangeFacadeAdapter();
+			public Adapter caseSymphony__AddonsSensorsRangeFacade(Symphony__AddonsSensorsRangeFacade object) {
+				return createSymphony__AddonsSensorsRangeFacadeAdapter();
 			}
 			@Override
 			public Adapter caseNode(Node object) {
@@ -387,16 +387,16 @@ public class Symphony__AddonsSensorsRangeAdapterFactory extends AdapterFactoryIm
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade <em>Sensors Range Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade
 	 * @generated
 	 */
-	public Adapter createSensorsRangeFacadeAdapter() {
+	public Adapter createSymphony__AddonsSensorsRangeFacadeAdapter() {
 		return null;
 	}
 

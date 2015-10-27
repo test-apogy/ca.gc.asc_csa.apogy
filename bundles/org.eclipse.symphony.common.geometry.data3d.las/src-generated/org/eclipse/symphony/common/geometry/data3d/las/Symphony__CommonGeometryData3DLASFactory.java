@@ -59,13 +59,13 @@ public interface Symphony__CommonGeometryData3DLASFactory extends EFactory {
 	LASPoint createLASPoint();
 
 	/**
-	 * Returns a new object of class '<em>LAS Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>LAS Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	LASFacade createLASFacade();
+	Symphony__CommonGeometryData3DLASFacade createSymphony__CommonGeometryData3DLASFacade();
 
 	/**
 	 * Returns a new object of class '<em>LAS Writer</em>'.

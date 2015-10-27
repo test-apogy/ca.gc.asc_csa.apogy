@@ -88,13 +88,13 @@ public interface Symphony__AddonsSensorsFOVFactory extends EFactory {
 	<PolygonType extends CartesianPolygon> RectangularFrustrumFieldOfViewSamplingShape<PolygonType> createRectangularFrustrumFieldOfViewSamplingShape();
 
 	/**
-	 * Returns a new object of class '<em>FOV Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>FOV Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	FOVFacade createFOVFacade();
+	Symphony__AddonsSensorsFOVFacade createSymphony__AddonsSensorsFOVFacade();
 
 	/**
 	 * Returns the package supported by this factory.

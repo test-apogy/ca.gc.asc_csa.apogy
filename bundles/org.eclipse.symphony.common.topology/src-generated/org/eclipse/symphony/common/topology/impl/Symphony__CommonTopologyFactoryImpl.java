@@ -71,7 +71,7 @@ public class Symphony__CommonTopologyFactoryImpl extends EFactoryImpl implements
 			case Symphony__CommonTopologyPackage.ROTATION_NODE: return createRotationNode();
 			case Symphony__CommonTopologyPackage.TRANSFORM_NODE: return createTransformNode();
 			case Symphony__CommonTopologyPackage.PICK_AND_PLACE_NODE: return createPickAndPlaceNode();
-			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE: return createTopologyFacade();
+			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE: return createSymphony__CommonTopologyFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -260,9 +260,9 @@ public class Symphony__CommonTopologyFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TopologyFacade createTopologyFacade() {
-		TopologyFacadeImpl topologyFacade = new TopologyFacadeImpl();
-		return topologyFacade;
+	public Symphony__CommonTopologyFacade createSymphony__CommonTopologyFacade() {
+		Symphony__CommonTopologyFacadeImpl symphony__CommonTopologyFacade = new Symphony__CommonTopologyFacadeImpl();
+		return symphony__CommonTopologyFacade;
 	}
 
 	/**

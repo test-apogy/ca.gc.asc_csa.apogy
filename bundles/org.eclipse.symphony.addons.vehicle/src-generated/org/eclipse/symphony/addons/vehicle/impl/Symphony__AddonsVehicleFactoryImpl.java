@@ -34,7 +34,7 @@ import org.eclipse.symphony.addons.vehicle.Thruster;
 import org.eclipse.symphony.addons.vehicle.ThrusterBinding;
 import org.eclipse.symphony.addons.vehicle.VehiclePathPlannerTool;
 import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
-import org.eclipse.symphony.addons.vehicle.VehicleToolsFacade;
+import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFacade;
 import org.eclipse.symphony.addons.vehicle.Wheel;
 import org.eclipse.symphony.addons.vehicle.WheelContactMode;
 import org.eclipse.symphony.addons.vehicle.WheelContactProvider;
@@ -97,7 +97,7 @@ public class Symphony__AddonsVehicleFactoryImpl extends EFactoryImpl implements 
 			case Symphony__AddonsVehiclePackage.WHEEL_CONTACT_PROVIDER: return createWheelContactProvider();
 			case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT: return createLanderSphericalFoot();
 			case Symphony__AddonsVehiclePackage.LANDER_SPHERICAL_FOOT_CONTACT_PROVIDER: return createLanderSphericalFootContactProvider();
-			case Symphony__AddonsVehiclePackage.VEHICLE_TOOLS_FACADE: return createVehicleToolsFacade();
+			case Symphony__AddonsVehiclePackage.SYMPHONY_ADDONS_VEHICLE_FACADE: return createSymphony__AddonsVehicleFacade();
 			case Symphony__AddonsVehiclePackage.WHEEL_VEHICLE_UTILITIES: return createWheelVehicleUtilities();
 			case Symphony__AddonsVehiclePackage.MESH_EXTENT2_D: return createMeshExtent2D();
 			case Symphony__AddonsVehiclePackage.PATH_PLANNER_TOOL: return createPathPlannerTool();
@@ -285,16 +285,15 @@ public class Symphony__AddonsVehicleFactoryImpl extends EFactoryImpl implements 
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public VehicleToolsFacade createVehicleToolsFacade()
-  {
-		VehicleToolsFacadeImpl vehicleToolsFacade = new VehicleToolsFacadeImpl();
-		return vehicleToolsFacade;
+	public Symphony__AddonsVehicleFacade createSymphony__AddonsVehicleFacade() {
+		Symphony__AddonsVehicleFacadeImpl symphony__AddonsVehicleFacade = new Symphony__AddonsVehicleFacadeImpl();
+		return symphony__AddonsVehicleFacade;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated

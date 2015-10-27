@@ -794,32 +794,23 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	int UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR_OPERATION_COUNT = WAY_POINT_PATH_FILTER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.geometry.paths.impl.PathsFacadeImpl <em>Paths Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.addons.geometry.paths.impl.Symphony__AddonsGeometryPathsFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.geometry.paths.impl.PathsFacadeImpl
-	 * @see org.eclipse.symphony.addons.geometry.paths.impl.Symphony__AddonsGeometryPathsPackageImpl#getPathsFacade()
+	 * @see org.eclipse.symphony.addons.geometry.paths.impl.Symphony__AddonsGeometryPathsFacadeImpl
+	 * @see org.eclipse.symphony.addons.geometry.paths.impl.Symphony__AddonsGeometryPathsPackageImpl#getSymphony__AddonsGeometryPathsFacade()
 	 * @generated
 	 */
-	int PATHS_FACADE = 9;
+	int SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE = 9;
 
 	/**
-	 * The number of structural features of the '<em>Paths Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATHS_FACADE_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Create Way Point Path</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATHS_FACADE___CREATE_WAY_POINT_PATH__WAYPOINTPATH = 0;
+	int SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Way Point Path</em>' operation.
@@ -828,16 +819,25 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PATHS_FACADE___CREATE_WAY_POINT_PATH__LIST = 1;
+	int SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__WAYPOINTPATH = 0;
 
 	/**
-	 * The number of operations of the '<em>Paths Facade</em>' class.
+	 * The operation id for the '<em>Create Way Point Path</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATHS_FACADE_OPERATION_COUNT = 2;
+	int SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__LIST = 1;
+
+	/**
+	 * The number of operations of the '<em>Facade</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.geometry.paths.SplineEndControlPointGenerationMode <em>Spline End Control Point Generation Mode</em>}' enum.
@@ -1048,34 +1048,34 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 	EAttribute getUniformDistanceWayPointPathInterpolator_DistanceInterval();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.geometry.paths.PathsFacade <em>Paths Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Paths Facade</em>'.
-	 * @see org.eclipse.symphony.addons.geometry.paths.PathsFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade
 	 * @generated
 	 */
-	EClass getPathsFacade();
+	EClass getSymphony__AddonsGeometryPathsFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.geometry.paths.PathsFacade#createWayPointPath(org.eclipse.symphony.addons.geometry.paths.WayPointPath) <em>Create Way Point Path</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade#createWayPointPath(org.eclipse.symphony.addons.geometry.paths.WayPointPath) <em>Create Way Point Path</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Way Point Path</em>' operation.
-	 * @see org.eclipse.symphony.addons.geometry.paths.PathsFacade#createWayPointPath(org.eclipse.symphony.addons.geometry.paths.WayPointPath)
+	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade#createWayPointPath(org.eclipse.symphony.addons.geometry.paths.WayPointPath)
 	 * @generated
 	 */
-	EOperation getPathsFacade__CreateWayPointPath__WayPointPath();
+	EOperation getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__WayPointPath();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.geometry.paths.PathsFacade#createWayPointPath(java.util.List) <em>Create Way Point Path</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade#createWayPointPath(java.util.List) <em>Create Way Point Path</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Way Point Path</em>' operation.
-	 * @see org.eclipse.symphony.addons.geometry.paths.PathsFacade#createWayPointPath(java.util.List)
+	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade#createWayPointPath(java.util.List)
 	 * @generated
 	 */
-	EOperation getPathsFacade__CreateWayPointPath__List();
+	EOperation getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__List();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.symphony.addons.geometry.paths.SplineEndControlPointGenerationMode <em>Spline End Control Point Generation Mode</em>}'.
@@ -1284,14 +1284,14 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 		EAttribute UNIFORM_DISTANCE_WAY_POINT_PATH_INTERPOLATOR__DISTANCE_INTERVAL = eINSTANCE.getUniformDistanceWayPointPathInterpolator_DistanceInterval();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.geometry.paths.impl.PathsFacadeImpl <em>Paths Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.geometry.paths.impl.Symphony__AddonsGeometryPathsFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.geometry.paths.impl.PathsFacadeImpl
-		 * @see org.eclipse.symphony.addons.geometry.paths.impl.Symphony__AddonsGeometryPathsPackageImpl#getPathsFacade()
+		 * @see org.eclipse.symphony.addons.geometry.paths.impl.Symphony__AddonsGeometryPathsFacadeImpl
+		 * @see org.eclipse.symphony.addons.geometry.paths.impl.Symphony__AddonsGeometryPathsPackageImpl#getSymphony__AddonsGeometryPathsFacade()
 		 * @generated
 		 */
-		EClass PATHS_FACADE = eINSTANCE.getPathsFacade();
+		EClass SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE = eINSTANCE.getSymphony__AddonsGeometryPathsFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Way Point Path</b></em>' operation.
@@ -1299,7 +1299,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PATHS_FACADE___CREATE_WAY_POINT_PATH__WAYPOINTPATH = eINSTANCE.getPathsFacade__CreateWayPointPath__WayPointPath();
+		EOperation SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__WAYPOINTPATH = eINSTANCE.getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__WayPointPath();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Way Point Path</b></em>' operation.
@@ -1307,7 +1307,7 @@ public interface Symphony__AddonsGeometryPathsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PATHS_FACADE___CREATE_WAY_POINT_PATH__LIST = eINSTANCE.getPathsFacade__CreateWayPointPath__List();
+		EOperation SYMPHONY_ADDONS_GEOMETRY_PATHS_FACADE___CREATE_WAY_POINT_PATH__LIST = eINSTANCE.getSymphony__AddonsGeometryPathsFacade__CreateWayPointPath__List();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.addons.geometry.paths.SplineEndControlPointGenerationMode <em>Spline End Control Point Generation Mode</em>}' enum.

@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.RotationNode;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.bindings.AngleUnits;
 import org.eclipse.symphony.common.topology.bindings.Axis;
 import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
@@ -341,22 +341,22 @@ public class RotationBindingImpl extends AbstractTopologyBindingImpl implements 
 		switch(getRotationAxis().getValue())
 		{
 			case Axis.XAXIS_VALUE:
-				getRotationNode().setRotationMatrix(TopologyFacade.INSTANCE.createRotationNodeXYZ(value, 0, 0).getRotationMatrix());
+				getRotationNode().setRotationMatrix(Symphony__CommonTopologyFacade.INSTANCE.createRotationNodeXYZ(value, 0, 0).getRotationMatrix());
 				break;
 			case Axis.MINUS_XAXIS_VALUE:
-				getRotationNode().setRotationMatrix(TopologyFacade.INSTANCE.createRotationNodeXYZ(-value, 0, 0).getRotationMatrix());
+				getRotationNode().setRotationMatrix(Symphony__CommonTopologyFacade.INSTANCE.createRotationNodeXYZ(-value, 0, 0).getRotationMatrix());
 				break;
 			case Axis.YAXIS_VALUE:
-				getRotationNode().setRotationMatrix(TopologyFacade.INSTANCE.createRotationNodeXYZ(0, value, 0).getRotationMatrix());
+				getRotationNode().setRotationMatrix(Symphony__CommonTopologyFacade.INSTANCE.createRotationNodeXYZ(0, value, 0).getRotationMatrix());
 				break;
 			case Axis.MINUS_YAXIS_VALUE:
-				getRotationNode().setRotationMatrix(TopologyFacade.INSTANCE.createRotationNodeXYZ(0, -value, 0).getRotationMatrix());
+				getRotationNode().setRotationMatrix(Symphony__CommonTopologyFacade.INSTANCE.createRotationNodeXYZ(0, -value, 0).getRotationMatrix());
 				break;
 			case Axis.ZAXIS_VALUE:
-				getRotationNode().setRotationMatrix(TopologyFacade.INSTANCE.createRotationNodeXYZ(0, 0,value).getRotationMatrix());
+				getRotationNode().setRotationMatrix(Symphony__CommonTopologyFacade.INSTANCE.createRotationNodeXYZ(0, 0,value).getRotationMatrix());
 				break;
 			case Axis.MINUS_ZAXIS_VALUE:
-				getRotationNode().setRotationMatrix(TopologyFacade.INSTANCE.createRotationNodeXYZ(0, 0,-value).getRotationMatrix());
+				getRotationNode().setRotationMatrix(Symphony__CommonTopologyFacade.INSTANCE.createRotationNodeXYZ(0, 0,-value).getRotationMatrix());
 				break;
 		}	
   }

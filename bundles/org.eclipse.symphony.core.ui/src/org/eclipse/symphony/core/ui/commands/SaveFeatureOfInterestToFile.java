@@ -12,7 +12,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.symphony.core.FeatureOfInterestList;
-import org.eclipse.symphony.core.SymphonyCoreFacade;
+import org.eclipse.symphony.core.Symphony__CoreFacade;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 
@@ -46,7 +46,7 @@ public class SaveFeatureOfInterestToFile extends AbstractHandler implements IHan
 				{
 					try
 					{		
-						SymphonyCoreFacade.INSTANCE.saveFeatureOfInterestToFile(filePath, featureOfInterestList.getFeaturesOfInterest());												
+						Symphony__CoreFacade.INSTANCE.saveFeatureOfInterestToFile(filePath, featureOfInterestList.getFeaturesOfInterest());												
 						path = filePath.substring(0, filePath.lastIndexOf(File.separator));						
 					}
 					catch(Throwable t)

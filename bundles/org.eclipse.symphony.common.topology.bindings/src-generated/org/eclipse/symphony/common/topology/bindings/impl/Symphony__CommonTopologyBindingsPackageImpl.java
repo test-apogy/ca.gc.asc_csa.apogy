@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
 import org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding;
 import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
 import org.eclipse.symphony.common.topology.bindings.RotationBinding;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade;
 import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
 import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 import org.eclipse.symphony.common.topology.bindings.TransformMatrixBinding;
@@ -105,12 +105,12 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass topologyBindingsFacadeEClass = null;
+	private EClass symphony__CommonTopologyBindingsFacadeEClass = null;
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -550,25 +550,23 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EClass getTopologyBindingsFacade()
-  {
-		return topologyBindingsFacadeEClass;
+	public EClass getSymphony__CommonTopologyBindingsFacade() {
+		return symphony__CommonTopologyBindingsFacadeEClass;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EOperation getTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map()
-  {
-		return topologyBindingsFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__CommonTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map() {
+		return symphony__CommonTopologyBindingsFacadeEClass.getEOperations().get(0);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -669,8 +667,8 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 		createEOperation(bindingsSetEClass, BINDINGS_SET___BIND);
 		createEOperation(bindingsSetEClass, BINDINGS_SET___UNBIND);
 
-		topologyBindingsFacadeEClass = createEClass(TOPOLOGY_BINDINGS_FACADE);
-		createEOperation(topologyBindingsFacadeEClass, TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP);
+		symphony__CommonTopologyBindingsFacadeEClass = createEClass(SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE);
+		createEOperation(symphony__CommonTopologyBindingsFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_BINDINGS_FACADE___COPY__ABSTRACTTOPOLOGYBINDING_MAP);
 
 		// Create enums
 		axisEEnum = createEEnum(AXIS);
@@ -777,9 +775,9 @@ public class Symphony__CommonTopologyBindingsPackageImpl extends EPackageImpl im
 
 		initEOperation(getBindingsSet__Unbind(), null, "unbind", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(topologyBindingsFacadeEClass, TopologyBindingsFacade.class, "TopologyBindingsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CommonTopologyBindingsFacadeEClass, Symphony__CommonTopologyBindingsFacade.class, "Symphony__CommonTopologyBindingsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map(), this.getAbstractTopologyBinding(), "copy", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyBindingsFacade__Copy__AbstractTopologyBinding_Map(), this.getAbstractTopologyBinding(), "copy", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAbstractTopologyBinding(), "originalBinding", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getMap());
 		g2 = createEGenericType(theSymphony__CommonTopologyPackage.getNode());

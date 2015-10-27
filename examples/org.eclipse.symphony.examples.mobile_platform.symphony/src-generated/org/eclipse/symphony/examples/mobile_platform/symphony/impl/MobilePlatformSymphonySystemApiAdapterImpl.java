@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
 import org.eclipse.symphony.addons.vehicle.VehiclePoseCorrector;
 import org.eclipse.symphony.common.math.GeometricUtils;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
@@ -211,8 +211,8 @@ public class MobilePlatformSymphonySystemApiAdapterImpl extends SymphonySystemAp
 				// Note: The angles in the orientation are NOT unique; 
 				//       an infinite number of solutions (e.g. +- 2*Pi)
 				//		 could be match the given matrix.  
-				Tuple3d position = MathFacade.INSTANCE.extractPosition(matrix);
-				Tuple3d orientation = MathFacade.INSTANCE.extractOrientation(matrix);
+				Tuple3d position = Symphony__CommonMathFacade.INSTANCE.extractPosition(matrix);
+				Tuple3d orientation = Symphony__CommonMathFacade.INSTANCE.extractOrientation(matrix);
 
 				// Create a new position object filled with that extracted information
 				Position newPlatformPosition = Symphony__ExamplesMobilePlatformFactory.eINSTANCE.createPosition();
@@ -389,7 +389,7 @@ class PositionAdapter extends AdapterImpl
 											position.getTheta());
 		
 		// Create a EObject wrapper for the matrix
-		Matrix4x4 matrix = MathFacade.INSTANCE.createMatrix4x4(m);
+		Matrix4x4 matrix = Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(m);
 		
 		// Update the API Adapter's pose transform accordingly,
 		// which is ultimately the transform at the root of the

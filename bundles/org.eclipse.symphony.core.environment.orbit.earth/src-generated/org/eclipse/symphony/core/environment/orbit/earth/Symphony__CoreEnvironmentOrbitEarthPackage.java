@@ -2657,23 +2657,23 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	int SPACECRAFT_SWATH_CORRIDOR_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthOrbitFacadeImpl <em>Earth Orbit Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.EarthOrbitFacadeImpl
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getEarthOrbitFacade()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthFacadeImpl
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getSymphony__CoreEnvironmentOrbitEarthFacade()
 	 * @generated
 	 */
-	int EARTH_ORBIT_FACADE = 27;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE = 27;
 
 	/**
-	 * The number of structural features of the '<em>Earth Orbit Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Get Mu</em>' operation.
@@ -2682,7 +2682,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___GET_MU = 0;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_MU = 0;
 
 	/**
 	 * The operation id for the '<em>Create Absolute Date</em>' operation.
@@ -2691,7 +2691,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CREATE_ABSOLUTE_DATE__DATE = 1;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ABSOLUTE_DATE__DATE = 1;
 
 	/**
 	 * The operation id for the '<em>Create Date</em>' operation.
@@ -2700,7 +2700,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CREATE_DATE__ABSOLUTEDATE = 2;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_DATE__ABSOLUTEDATE = 2;
 
 	/**
 	 * The operation id for the '<em>Create Earth Surface Location</em>' operation.
@@ -2709,7 +2709,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CREATE_EARTH_SURFACE_LOCATION__STRING_STRING_DOUBLE_DOUBLE_DOUBLE = 3;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_EARTH_SURFACE_LOCATION__STRING_STRING_DOUBLE_DOUBLE_DOUBLE = 3;
 
 	/**
 	 * The operation id for the '<em>Create Ore Kit Backed Frame</em>' operation.
@@ -2718,7 +2718,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CREATE_ORE_KIT_BACKED_FRAME__FRAME = 4;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ORE_KIT_BACKED_FRAME__FRAME = 4;
 
 	/**
 	 * The operation id for the '<em>Get Spacecraft Earth Sub Point</em>' operation.
@@ -2727,7 +2727,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___GET_SPACECRAFT_EARTH_SUB_POINT__OREKITBACKEDSPACECRAFTSTATE = 5;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_EARTH_SUB_POINT__OREKITBACKEDSPACECRAFTSTATE = 5;
 
 	/**
 	 * The operation id for the '<em>Get Spacecraft Elevation Angle</em>' operation.
@@ -2736,7 +2736,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___GET_SPACECRAFT_ELEVATION_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION = 6;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_ELEVATION_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION = 6;
 
 	/**
 	 * The operation id for the '<em>Get Spacecraft Azimuth Angle</em>' operation.
@@ -2745,7 +2745,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___GET_SPACECRAFT_AZIMUTH_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION = 7;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_AZIMUTH_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION = 7;
 
 	/**
 	 * The operation id for the '<em>Get Range</em>' operation.
@@ -2754,7 +2754,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___GET_RANGE__SPACECRAFTSTATE_EARTHSURFACELOCATION = 8;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_RANGE__SPACECRAFTSTATE_EARTHSURFACELOCATION = 8;
 
 	/**
 	 * The operation id for the '<em>Create Spacecraft State</em>' operation.
@@ -2763,7 +2763,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CREATE_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE = 9;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE = 9;
 
 	/**
 	 * The operation id for the '<em>Create Ore Kit Backed Spacecraft State</em>' operation.
@@ -2772,7 +2772,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CREATE_ORE_KIT_BACKED_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE = 10;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ORE_KIT_BACKED_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE = 10;
 
 	/**
 	 * The operation id for the '<em>Create Timed Stamped PVA Coordinates</em>' operation.
@@ -2781,7 +2781,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CREATE_TIMED_STAMPED_PVA_COORDINATES__TIMESTAMPEDPVCOORDINATES = 11;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TIMED_STAMPED_PVA_COORDINATES__TIMESTAMPEDPVCOORDINATES = 11;
 
 	/**
 	 * The operation id for the '<em>Create Timed Stamped Angular Coordinates</em>' operation.
@@ -2790,7 +2790,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CREATE_TIMED_STAMPED_ANGULAR_COORDINATES__TIMESTAMPEDANGULARCOORDINATES = 12;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TIMED_STAMPED_ANGULAR_COORDINATES__TIMESTAMPEDANGULARCOORDINATES = 12;
 
 	/**
 	 * The operation id for the '<em>Create Matrix3x3</em>' operation.
@@ -2799,7 +2799,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CREATE_MATRIX3X3__ROTATION = 13;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_MATRIX3X3__ROTATION = 13;
 
 	/**
 	 * The operation id for the '<em>Create Rotation</em>' operation.
@@ -2808,7 +2808,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CREATE_ROTATION__MATRIX3X3 = 14;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ROTATION__MATRIX3X3 = 14;
 
 	/**
 	 * The operation id for the '<em>Create Keplerian Orbit</em>' operation.
@@ -2817,7 +2817,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CREATE_KEPLERIAN_ORBIT__EARTHORBITPROPAGATOR = 15;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_KEPLERIAN_ORBIT__EARTHORBITPROPAGATOR = 15;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Earth Orbit</em>' operation.
@@ -2826,7 +2826,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__EARTHORBITPROPAGATOR = 16;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__EARTHORBITPROPAGATOR = 16;
 
 	/**
 	 * The operation id for the '<em>Create Keplerian Orbit</em>' operation.
@@ -2835,7 +2835,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CREATE_KEPLERIAN_ORBIT__KEPLERIANORBIT = 17;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_KEPLERIAN_ORBIT__KEPLERIANORBIT = 17;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Earth Orbit</em>' operation.
@@ -2844,7 +2844,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__CARTESIANORBIT = 18;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__CARTESIANORBIT = 18;
 
 	/**
 	 * The operation id for the '<em>Convert To Geographic Coordinates</em>' operation.
@@ -2853,7 +2853,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CONVERT_TO_GEOGRAPHIC_COORDINATES__OREKITBACKEDSPACECRAFTSTATE = 19;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CONVERT_TO_GEOGRAPHIC_COORDINATES__OREKITBACKEDSPACECRAFTSTATE = 19;
 
 	/**
 	 * The operation id for the '<em>Get Visibility Pass Sorted By Start Date</em>' operation.
@@ -2862,7 +2862,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___GET_VISIBILITY_PASS_SORTED_BY_START_DATE__LIST = 20;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_START_DATE__LIST = 20;
 
 	/**
 	 * The operation id for the '<em>Get Visibility Pass Sorted By Duration</em>' operation.
@@ -2871,7 +2871,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___GET_VISIBILITY_PASS_SORTED_BY_DURATION__LIST = 21;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_DURATION__LIST = 21;
 
 	/**
 	 * The operation id for the '<em>Get Visibility Pass Spacecraft Position Sorted By Elevation</em>' operation.
@@ -2880,7 +2880,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_ELEVATION__LIST = 22;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_ELEVATION__LIST = 22;
 
 	/**
 	 * The operation id for the '<em>Get Visibility Pass Spacecraft Position Sorted By Spacecraft Cross Track Angle</em>' operation.
@@ -2889,7 +2889,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_SPACECRAFT_CROSS_TRACK_ANGLE__LIST = 23;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_SPACECRAFT_CROSS_TRACK_ANGLE__LIST = 23;
 
 	/**
 	 * The operation id for the '<em>Load TLE</em>' operation.
@@ -2898,7 +2898,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___LOAD_TLE__STRING = 24;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___LOAD_TLE__STRING = 24;
 
 	/**
 	 * The operation id for the '<em>Create TLE Earth Orbit Propagator</em>' operation.
@@ -2907,16 +2907,16 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE = 25;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE = 25;
 
 	/**
-	 * The number of operations of the '<em>Earth Orbit Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EARTH_ORBIT_FACADE_OPERATION_COUNT = 26;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE_OPERATION_COUNT = 26;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EphemerisType <em>Ephemeris Type</em>}' enum.
@@ -4381,274 +4381,274 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	EReference getSpacecraftSwathCorridor_Corridor();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade <em>Earth Orbit Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Earth Orbit Facade</em>'.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade
 	 * @generated
 	 */
-	EClass getEarthOrbitFacade();
+	EClass getSymphony__CoreEnvironmentOrbitEarthFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getMu() <em>Get Mu</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getMu() <em>Get Mu</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Mu</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getMu()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getMu()
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__GetMu();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetMu();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createAbsoluteDate(java.util.Date) <em>Create Absolute Date</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createAbsoluteDate(java.util.Date) <em>Create Absolute Date</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Absolute Date</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createAbsoluteDate(java.util.Date)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createAbsoluteDate(java.util.Date)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__CreateAbsoluteDate__Date();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateAbsoluteDate__Date();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createDate(org.orekit.time.AbsoluteDate) <em>Create Date</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createDate(org.orekit.time.AbsoluteDate) <em>Create Date</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Date</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createDate(org.orekit.time.AbsoluteDate)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createDate(org.orekit.time.AbsoluteDate)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__CreateDate__AbsoluteDate();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateDate__AbsoluteDate();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createEarthSurfaceLocation(java.lang.String, java.lang.String, double, double, double) <em>Create Earth Surface Location</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createEarthSurfaceLocation(java.lang.String, java.lang.String, double, double, double) <em>Create Earth Surface Location</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Earth Surface Location</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createEarthSurfaceLocation(java.lang.String, java.lang.String, double, double, double)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createEarthSurfaceLocation(java.lang.String, java.lang.String, double, double, double)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__CreateEarthSurfaceLocation__String_String_double_double_double();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createOreKitBackedFrame(org.orekit.frames.Frame) <em>Create Ore Kit Backed Frame</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createOreKitBackedFrame(org.orekit.frames.Frame) <em>Create Ore Kit Backed Frame</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Ore Kit Backed Frame</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createOreKitBackedFrame(org.orekit.frames.Frame)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createOreKitBackedFrame(org.orekit.frames.Frame)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__CreateOreKitBackedFrame__Frame();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateOreKitBackedFrame__Frame();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getSpacecraftEarthSubPoint(org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState) <em>Get Spacecraft Earth Sub Point</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getSpacecraftEarthSubPoint(org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState) <em>Get Spacecraft Earth Sub Point</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Spacecraft Earth Sub Point</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getSpacecraftEarthSubPoint(org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getSpacecraftEarthSubPoint(org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__GetSpacecraftEarthSubPoint__OreKitBackedSpacecraftState();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftEarthSubPoint__OreKitBackedSpacecraftState();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getSpacecraftElevationAngle(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation) <em>Get Spacecraft Elevation Angle</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getSpacecraftElevationAngle(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation) <em>Get Spacecraft Elevation Angle</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Spacecraft Elevation Angle</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getSpacecraftElevationAngle(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getSpacecraftElevationAngle(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__GetSpacecraftElevationAngle__SpacecraftState_EarthSurfaceLocation();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftElevationAngle__SpacecraftState_EarthSurfaceLocation();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getSpacecraftAzimuthAngle(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation) <em>Get Spacecraft Azimuth Angle</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getSpacecraftAzimuthAngle(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation) <em>Get Spacecraft Azimuth Angle</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Spacecraft Azimuth Angle</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getSpacecraftAzimuthAngle(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getSpacecraftAzimuthAngle(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__GetSpacecraftAzimuthAngle__SpacecraftState_EarthSurfaceLocation();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftAzimuthAngle__SpacecraftState_EarthSurfaceLocation();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getRange(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation) <em>Get Range</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getRange(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation) <em>Get Range</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Range</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getRange(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getRange(org.eclipse.symphony.core.environment.orbit.SpacecraftState, org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__GetRange__SpacecraftState_EarthSurfaceLocation();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetRange__SpacecraftState_EarthSurfaceLocation();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createSpacecraftState(org.eclipse.symphony.core.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState) <em>Create Spacecraft State</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createSpacecraftState(org.eclipse.symphony.core.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState) <em>Create Spacecraft State</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Spacecraft State</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createSpacecraftState(org.eclipse.symphony.core.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createSpacecraftState(org.eclipse.symphony.core.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__CreateSpacecraftState__Orbit_SpacecraftState();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateSpacecraftState__Orbit_SpacecraftState();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createOreKitBackedSpacecraftState(org.eclipse.symphony.core.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState) <em>Create Ore Kit Backed Spacecraft State</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createOreKitBackedSpacecraftState(org.eclipse.symphony.core.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState) <em>Create Ore Kit Backed Spacecraft State</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Ore Kit Backed Spacecraft State</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createOreKitBackedSpacecraftState(org.eclipse.symphony.core.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createOreKitBackedSpacecraftState(org.eclipse.symphony.core.environment.orbit.Orbit, org.orekit.propagation.SpacecraftState)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__CreateOreKitBackedSpacecraftState__Orbit_SpacecraftState();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateOreKitBackedSpacecraftState__Orbit_SpacecraftState();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createTimedStampedPVACoordinates(org.orekit.utils.TimeStampedPVCoordinates) <em>Create Timed Stamped PVA Coordinates</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createTimedStampedPVACoordinates(org.orekit.utils.TimeStampedPVCoordinates) <em>Create Timed Stamped PVA Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Timed Stamped PVA Coordinates</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createTimedStampedPVACoordinates(org.orekit.utils.TimeStampedPVCoordinates)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createTimedStampedPVACoordinates(org.orekit.utils.TimeStampedPVCoordinates)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__CreateTimedStampedPVACoordinates__TimeStampedPVCoordinates();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateTimedStampedPVACoordinates__TimeStampedPVCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createTimedStampedAngularCoordinates(org.orekit.utils.TimeStampedAngularCoordinates) <em>Create Timed Stamped Angular Coordinates</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createTimedStampedAngularCoordinates(org.orekit.utils.TimeStampedAngularCoordinates) <em>Create Timed Stamped Angular Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Timed Stamped Angular Coordinates</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createTimedStampedAngularCoordinates(org.orekit.utils.TimeStampedAngularCoordinates)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createTimedStampedAngularCoordinates(org.orekit.utils.TimeStampedAngularCoordinates)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__CreateTimedStampedAngularCoordinates__TimeStampedAngularCoordinates();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateTimedStampedAngularCoordinates__TimeStampedAngularCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createMatrix3x3(org.apache.commons.math3.geometry.euclidean.threed.Rotation) <em>Create Matrix3x3</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createMatrix3x3(org.apache.commons.math3.geometry.euclidean.threed.Rotation) <em>Create Matrix3x3</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Matrix3x3</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createMatrix3x3(org.apache.commons.math3.geometry.euclidean.threed.Rotation)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createMatrix3x3(org.apache.commons.math3.geometry.euclidean.threed.Rotation)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__CreateMatrix3x3__Rotation();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateMatrix3x3__Rotation();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createRotation(org.eclipse.symphony.common.math.Matrix3x3) <em>Create Rotation</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createRotation(org.eclipse.symphony.common.math.Matrix3x3) <em>Create Rotation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Rotation</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createRotation(org.eclipse.symphony.common.math.Matrix3x3)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createRotation(org.eclipse.symphony.common.math.Matrix3x3)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__CreateRotation__Matrix3x3();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateRotation__Matrix3x3();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createKeplerianOrbit(org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator) <em>Create Keplerian Orbit</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createKeplerianOrbit(org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator) <em>Create Keplerian Orbit</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Keplerian Orbit</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createKeplerianOrbit(org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createKeplerianOrbit(org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__CreateKeplerianOrbit__EarthOrbitPropagator();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateKeplerianOrbit__EarthOrbitPropagator();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createCartesianEarthOrbit(org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator) <em>Create Cartesian Earth Orbit</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createCartesianEarthOrbit(org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator) <em>Create Cartesian Earth Orbit</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Earth Orbit</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createCartesianEarthOrbit(org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createCartesianEarthOrbit(org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__CreateCartesianEarthOrbit__EarthOrbitPropagator();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateCartesianEarthOrbit__EarthOrbitPropagator();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createKeplerianOrbit(org.orekit.orbits.KeplerianOrbit) <em>Create Keplerian Orbit</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createKeplerianOrbit(org.orekit.orbits.KeplerianOrbit) <em>Create Keplerian Orbit</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Keplerian Orbit</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createKeplerianOrbit(org.orekit.orbits.KeplerianOrbit)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createKeplerianOrbit(org.orekit.orbits.KeplerianOrbit)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__CreateKeplerianOrbit__KeplerianOrbit();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateKeplerianOrbit__KeplerianOrbit();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createCartesianEarthOrbit(org.orekit.orbits.CartesianOrbit) <em>Create Cartesian Earth Orbit</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createCartesianEarthOrbit(org.orekit.orbits.CartesianOrbit) <em>Create Cartesian Earth Orbit</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Cartesian Earth Orbit</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createCartesianEarthOrbit(org.orekit.orbits.CartesianOrbit)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createCartesianEarthOrbit(org.orekit.orbits.CartesianOrbit)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__CreateCartesianEarthOrbit__CartesianOrbit();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateCartesianEarthOrbit__CartesianOrbit();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#convertToGeographicCoordinates(org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState) <em>Convert To Geographic Coordinates</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#convertToGeographicCoordinates(org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState) <em>Convert To Geographic Coordinates</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Convert To Geographic Coordinates</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#convertToGeographicCoordinates(org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#convertToGeographicCoordinates(org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__ConvertToGeographicCoordinates__OreKitBackedSpacecraftState();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__ConvertToGeographicCoordinates__OreKitBackedSpacecraftState();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getVisibilityPassSortedByStartDate(java.util.List) <em>Get Visibility Pass Sorted By Start Date</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getVisibilityPassSortedByStartDate(java.util.List) <em>Get Visibility Pass Sorted By Start Date</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Visibility Pass Sorted By Start Date</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getVisibilityPassSortedByStartDate(java.util.List)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getVisibilityPassSortedByStartDate(java.util.List)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__GetVisibilityPassSortedByStartDate__List();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByStartDate__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getVisibilityPassSortedByDuration(java.util.List) <em>Get Visibility Pass Sorted By Duration</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getVisibilityPassSortedByDuration(java.util.List) <em>Get Visibility Pass Sorted By Duration</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Visibility Pass Sorted By Duration</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getVisibilityPassSortedByDuration(java.util.List)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getVisibilityPassSortedByDuration(java.util.List)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__GetVisibilityPassSortedByDuration__List();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByDuration__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getVisibilityPassSpacecraftPositionSortedByElevation(java.util.List) <em>Get Visibility Pass Spacecraft Position Sorted By Elevation</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getVisibilityPassSpacecraftPositionSortedByElevation(java.util.List) <em>Get Visibility Pass Spacecraft Position Sorted By Elevation</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Visibility Pass Spacecraft Position Sorted By Elevation</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getVisibilityPassSpacecraftPositionSortedByElevation(java.util.List)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getVisibilityPassSpacecraftPositionSortedByElevation(java.util.List)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__GetVisibilityPassSpacecraftPositionSortedByElevation__List();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedByElevation__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle(java.util.List) <em>Get Visibility Pass Spacecraft Position Sorted By Spacecraft Cross Track Angle</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle(java.util.List) <em>Get Visibility Pass Spacecraft Position Sorted By Spacecraft Cross Track Angle</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Visibility Pass Spacecraft Position Sorted By Spacecraft Cross Track Angle</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#getVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle(java.util.List)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#getVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle(java.util.List)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__GetVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle__List();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#loadTLE(java.lang.String) <em>Load TLE</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#loadTLE(java.lang.String) <em>Load TLE</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load TLE</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#loadTLE(java.lang.String)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#loadTLE(java.lang.String)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__LoadTLE__String();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__LoadTLE__String();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createTLEEarthOrbitPropagator(org.eclipse.symphony.core.environment.orbit.earth.TLE) <em>Create TLE Earth Orbit Propagator</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createTLEEarthOrbitPropagator(org.eclipse.symphony.core.environment.orbit.earth.TLE) <em>Create TLE Earth Orbit Propagator</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create TLE Earth Orbit Propagator</em>' operation.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade#createTLEEarthOrbitPropagator(org.eclipse.symphony.core.environment.orbit.earth.TLE)
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade#createTLEEarthOrbitPropagator(org.eclipse.symphony.core.environment.orbit.earth.TLE)
 	 * @generated
 	 */
-	EOperation getEarthOrbitFacade__CreateTLEEarthOrbitPropagator__TLE();
+	EOperation getSymphony__CoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitPropagator__TLE();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.symphony.core.environment.orbit.earth.EphemerisType <em>Ephemeris Type</em>}'.
@@ -5911,14 +5911,14 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		EReference SPACECRAFT_SWATH_CORRIDOR__CORRIDOR = eINSTANCE.getSpacecraftSwathCorridor_Corridor();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.EarthOrbitFacadeImpl <em>Earth Orbit Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.EarthOrbitFacadeImpl
-		 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getEarthOrbitFacade()
+		 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthFacadeImpl
+		 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getSymphony__CoreEnvironmentOrbitEarthFacade()
 		 * @generated
 		 */
-		EClass EARTH_ORBIT_FACADE = eINSTANCE.getEarthOrbitFacade();
+		EClass SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Mu</b></em>' operation.
@@ -5926,7 +5926,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___GET_MU = eINSTANCE.getEarthOrbitFacade__GetMu();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_MU = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__GetMu();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Absolute Date</b></em>' operation.
@@ -5934,7 +5934,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CREATE_ABSOLUTE_DATE__DATE = eINSTANCE.getEarthOrbitFacade__CreateAbsoluteDate__Date();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ABSOLUTE_DATE__DATE = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__CreateAbsoluteDate__Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Date</b></em>' operation.
@@ -5942,7 +5942,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CREATE_DATE__ABSOLUTEDATE = eINSTANCE.getEarthOrbitFacade__CreateDate__AbsoluteDate();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_DATE__ABSOLUTEDATE = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__CreateDate__AbsoluteDate();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Earth Surface Location</b></em>' operation.
@@ -5950,7 +5950,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CREATE_EARTH_SURFACE_LOCATION__STRING_STRING_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getEarthOrbitFacade__CreateEarthSurfaceLocation__String_String_double_double_double();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_EARTH_SURFACE_LOCATION__STRING_STRING_DOUBLE_DOUBLE_DOUBLE = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Ore Kit Backed Frame</b></em>' operation.
@@ -5958,7 +5958,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CREATE_ORE_KIT_BACKED_FRAME__FRAME = eINSTANCE.getEarthOrbitFacade__CreateOreKitBackedFrame__Frame();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ORE_KIT_BACKED_FRAME__FRAME = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__CreateOreKitBackedFrame__Frame();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Spacecraft Earth Sub Point</b></em>' operation.
@@ -5966,7 +5966,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___GET_SPACECRAFT_EARTH_SUB_POINT__OREKITBACKEDSPACECRAFTSTATE = eINSTANCE.getEarthOrbitFacade__GetSpacecraftEarthSubPoint__OreKitBackedSpacecraftState();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_EARTH_SUB_POINT__OREKITBACKEDSPACECRAFTSTATE = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftEarthSubPoint__OreKitBackedSpacecraftState();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Spacecraft Elevation Angle</b></em>' operation.
@@ -5974,7 +5974,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___GET_SPACECRAFT_ELEVATION_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION = eINSTANCE.getEarthOrbitFacade__GetSpacecraftElevationAngle__SpacecraftState_EarthSurfaceLocation();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_ELEVATION_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftElevationAngle__SpacecraftState_EarthSurfaceLocation();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Spacecraft Azimuth Angle</b></em>' operation.
@@ -5982,7 +5982,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___GET_SPACECRAFT_AZIMUTH_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION = eINSTANCE.getEarthOrbitFacade__GetSpacecraftAzimuthAngle__SpacecraftState_EarthSurfaceLocation();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_SPACECRAFT_AZIMUTH_ANGLE__SPACECRAFTSTATE_EARTHSURFACELOCATION = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftAzimuthAngle__SpacecraftState_EarthSurfaceLocation();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Range</b></em>' operation.
@@ -5990,7 +5990,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___GET_RANGE__SPACECRAFTSTATE_EARTHSURFACELOCATION = eINSTANCE.getEarthOrbitFacade__GetRange__SpacecraftState_EarthSurfaceLocation();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_RANGE__SPACECRAFTSTATE_EARTHSURFACELOCATION = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__GetRange__SpacecraftState_EarthSurfaceLocation();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Spacecraft State</b></em>' operation.
@@ -5998,7 +5998,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CREATE_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE = eINSTANCE.getEarthOrbitFacade__CreateSpacecraftState__Orbit_SpacecraftState();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__CreateSpacecraftState__Orbit_SpacecraftState();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Ore Kit Backed Spacecraft State</b></em>' operation.
@@ -6006,7 +6006,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CREATE_ORE_KIT_BACKED_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE = eINSTANCE.getEarthOrbitFacade__CreateOreKitBackedSpacecraftState__Orbit_SpacecraftState();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ORE_KIT_BACKED_SPACECRAFT_STATE__ORBIT_SPACECRAFTSTATE = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__CreateOreKitBackedSpacecraftState__Orbit_SpacecraftState();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Timed Stamped PVA Coordinates</b></em>' operation.
@@ -6014,7 +6014,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CREATE_TIMED_STAMPED_PVA_COORDINATES__TIMESTAMPEDPVCOORDINATES = eINSTANCE.getEarthOrbitFacade__CreateTimedStampedPVACoordinates__TimeStampedPVCoordinates();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TIMED_STAMPED_PVA_COORDINATES__TIMESTAMPEDPVCOORDINATES = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__CreateTimedStampedPVACoordinates__TimeStampedPVCoordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Timed Stamped Angular Coordinates</b></em>' operation.
@@ -6022,7 +6022,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CREATE_TIMED_STAMPED_ANGULAR_COORDINATES__TIMESTAMPEDANGULARCOORDINATES = eINSTANCE.getEarthOrbitFacade__CreateTimedStampedAngularCoordinates__TimeStampedAngularCoordinates();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TIMED_STAMPED_ANGULAR_COORDINATES__TIMESTAMPEDANGULARCOORDINATES = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__CreateTimedStampedAngularCoordinates__TimeStampedAngularCoordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Matrix3x3</b></em>' operation.
@@ -6030,7 +6030,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CREATE_MATRIX3X3__ROTATION = eINSTANCE.getEarthOrbitFacade__CreateMatrix3x3__Rotation();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_MATRIX3X3__ROTATION = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__CreateMatrix3x3__Rotation();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Rotation</b></em>' operation.
@@ -6038,7 +6038,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CREATE_ROTATION__MATRIX3X3 = eINSTANCE.getEarthOrbitFacade__CreateRotation__Matrix3x3();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_ROTATION__MATRIX3X3 = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__CreateRotation__Matrix3x3();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Keplerian Orbit</b></em>' operation.
@@ -6046,7 +6046,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CREATE_KEPLERIAN_ORBIT__EARTHORBITPROPAGATOR = eINSTANCE.getEarthOrbitFacade__CreateKeplerianOrbit__EarthOrbitPropagator();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_KEPLERIAN_ORBIT__EARTHORBITPROPAGATOR = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__CreateKeplerianOrbit__EarthOrbitPropagator();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Earth Orbit</b></em>' operation.
@@ -6054,7 +6054,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__EARTHORBITPROPAGATOR = eINSTANCE.getEarthOrbitFacade__CreateCartesianEarthOrbit__EarthOrbitPropagator();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__EARTHORBITPROPAGATOR = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__CreateCartesianEarthOrbit__EarthOrbitPropagator();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Keplerian Orbit</b></em>' operation.
@@ -6062,7 +6062,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CREATE_KEPLERIAN_ORBIT__KEPLERIANORBIT = eINSTANCE.getEarthOrbitFacade__CreateKeplerianOrbit__KeplerianOrbit();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_KEPLERIAN_ORBIT__KEPLERIANORBIT = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__CreateKeplerianOrbit__KeplerianOrbit();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Cartesian Earth Orbit</b></em>' operation.
@@ -6070,7 +6070,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__CARTESIANORBIT = eINSTANCE.getEarthOrbitFacade__CreateCartesianEarthOrbit__CartesianOrbit();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_CARTESIAN_EARTH_ORBIT__CARTESIANORBIT = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__CreateCartesianEarthOrbit__CartesianOrbit();
 
 		/**
 		 * The meta object literal for the '<em><b>Convert To Geographic Coordinates</b></em>' operation.
@@ -6078,7 +6078,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CONVERT_TO_GEOGRAPHIC_COORDINATES__OREKITBACKEDSPACECRAFTSTATE = eINSTANCE.getEarthOrbitFacade__ConvertToGeographicCoordinates__OreKitBackedSpacecraftState();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CONVERT_TO_GEOGRAPHIC_COORDINATES__OREKITBACKEDSPACECRAFTSTATE = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__ConvertToGeographicCoordinates__OreKitBackedSpacecraftState();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Visibility Pass Sorted By Start Date</b></em>' operation.
@@ -6086,7 +6086,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___GET_VISIBILITY_PASS_SORTED_BY_START_DATE__LIST = eINSTANCE.getEarthOrbitFacade__GetVisibilityPassSortedByStartDate__List();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_START_DATE__LIST = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByStartDate__List();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Visibility Pass Sorted By Duration</b></em>' operation.
@@ -6094,7 +6094,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___GET_VISIBILITY_PASS_SORTED_BY_DURATION__LIST = eINSTANCE.getEarthOrbitFacade__GetVisibilityPassSortedByDuration__List();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SORTED_BY_DURATION__LIST = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSortedByDuration__List();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Visibility Pass Spacecraft Position Sorted By Elevation</b></em>' operation.
@@ -6102,7 +6102,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_ELEVATION__LIST = eINSTANCE.getEarthOrbitFacade__GetVisibilityPassSpacecraftPositionSortedByElevation__List();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_ELEVATION__LIST = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedByElevation__List();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Visibility Pass Spacecraft Position Sorted By Spacecraft Cross Track Angle</b></em>' operation.
@@ -6110,7 +6110,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_SPACECRAFT_CROSS_TRACK_ANGLE__LIST = eINSTANCE.getEarthOrbitFacade__GetVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle__List();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___GET_VISIBILITY_PASS_SPACECRAFT_POSITION_SORTED_BY_SPACECRAFT_CROSS_TRACK_ANGLE__LIST = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__GetVisibilityPassSpacecraftPositionSortedBySpacecraftCrossTrackAngle__List();
 
 		/**
 		 * The meta object literal for the '<em><b>Load TLE</b></em>' operation.
@@ -6118,7 +6118,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___LOAD_TLE__STRING = eINSTANCE.getEarthOrbitFacade__LoadTLE__String();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___LOAD_TLE__STRING = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__LoadTLE__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Create TLE Earth Orbit Propagator</b></em>' operation.
@@ -6126,7 +6126,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EARTH_ORBIT_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE = eINSTANCE.getEarthOrbitFacade__CreateTLEEarthOrbitPropagator__TLE();
+		EOperation SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE___CREATE_TLE_EARTH_ORBIT_PROPAGATOR__TLE = eINSTANCE.getSymphony__CoreEnvironmentOrbitEarthFacade__CreateTLEEarthOrbitPropagator__TLE();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.earth.EphemerisType <em>Ephemeris Type</em>}' enum.

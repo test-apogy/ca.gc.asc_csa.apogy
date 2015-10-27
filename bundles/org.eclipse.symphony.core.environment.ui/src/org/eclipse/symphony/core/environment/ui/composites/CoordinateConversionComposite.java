@@ -22,7 +22,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.Positioned;
@@ -507,7 +507,7 @@ public class CoordinateConversionComposite extends Composite
 							double zVal = Double.parseDouble(zStrVal);
 						
 							// Create a Tuple3d in order to facilitate conversion
-							Tuple3d tuple = MathFacade.INSTANCE.createTuple3d(xVal, yVal, zVal);
+							Tuple3d tuple = Symphony__CommonMathFacade.INSTANCE.createTuple3d(xVal, yVal, zVal);
 						
 							// Perform the actual conversion from the XYZ to Geographic Coordinates
 							GeographicCoordinates coords = earthSurfaceWorksite.convertToGeographicCoordinates(tuple);

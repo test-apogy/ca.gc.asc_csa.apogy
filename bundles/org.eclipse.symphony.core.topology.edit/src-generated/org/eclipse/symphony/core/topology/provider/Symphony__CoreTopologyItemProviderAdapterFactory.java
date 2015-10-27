@@ -183,26 +183,26 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.topology.SymphonyTopologyFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SymphonyTopologyFacadeItemProvider symphonyTopologyFacadeItemProvider;
+	protected Symphony__CoreTopologyFacadeItemProvider symphony__CoreTopologyFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.topology.SymphonyTopologyFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSymphonyTopologyFacadeAdapter() {
-		if (symphonyTopologyFacadeItemProvider == null) {
-			symphonyTopologyFacadeItemProvider = new SymphonyTopologyFacadeItemProvider(this);
+	public Adapter createSymphony__CoreTopologyFacadeAdapter() {
+		if (symphony__CoreTopologyFacadeItemProvider == null) {
+			symphony__CoreTopologyFacadeItemProvider = new Symphony__CoreTopologyFacadeItemProvider(this);
 		}
 
-		return symphonyTopologyFacadeItemProvider;
+		return symphony__CoreTopologyFacadeItemProvider;
 	}
 
 	/**
@@ -334,7 +334,7 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 		if (systemsTopologyAdapterItemProvider != null) systemsTopologyAdapterItemProvider.dispose();
 		if (symphonyEnvironmentNodeItemProvider != null) symphonyEnvironmentNodeItemProvider.dispose();
 		if (symphonySystemAPIsNodeItemProvider != null) symphonySystemAPIsNodeItemProvider.dispose();
-		if (symphonyTopologyFacadeItemProvider != null) symphonyTopologyFacadeItemProvider.dispose();
+		if (symphony__CoreTopologyFacadeItemProvider != null) symphony__CoreTopologyFacadeItemProvider.dispose();
 	}
 
 	/**
@@ -514,7 +514,7 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphonyTopologyFacade()));
+						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphony__CoreTopologyFacade()));
 
 				return null;
 			}
@@ -544,7 +544,7 @@ public class Symphony__CoreTopologyItemProviderAdapterFactory extends Symphony__
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphonyTopologyFacade()));
+						 Symphony__CoreTopologyFactory.eINSTANCE.createSymphony__CoreTopologyFacade()));
 
 				return null;
 			}

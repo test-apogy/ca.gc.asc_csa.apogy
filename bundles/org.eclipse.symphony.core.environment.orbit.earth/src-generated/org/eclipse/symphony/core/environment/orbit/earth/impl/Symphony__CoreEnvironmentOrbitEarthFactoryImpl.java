@@ -17,7 +17,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit;
 import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
 import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
@@ -125,7 +125,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl
 			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT: return createCorridorPoint();
 			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR: return createCorridor();
 			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR: return createSpacecraftSwathCorridor();
-			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_FACADE: return createEarthOrbitFacade();
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE: return createSymphony__CoreEnvironmentOrbitEarthFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -488,9 +488,9 @@ public class Symphony__CoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EarthOrbitFacade createEarthOrbitFacade() {
-		EarthOrbitFacadeImpl earthOrbitFacade = new EarthOrbitFacadeImpl();
-		return earthOrbitFacade;
+	public Symphony__CoreEnvironmentOrbitEarthFacade createSymphony__CoreEnvironmentOrbitEarthFacade() {
+		Symphony__CoreEnvironmentOrbitEarthFacadeImpl symphony__CoreEnvironmentOrbitEarthFacade = new Symphony__CoreEnvironmentOrbitEarthFacadeImpl();
+		return symphony__CoreEnvironmentOrbitEarthFacade;
 	}
 
 	/**

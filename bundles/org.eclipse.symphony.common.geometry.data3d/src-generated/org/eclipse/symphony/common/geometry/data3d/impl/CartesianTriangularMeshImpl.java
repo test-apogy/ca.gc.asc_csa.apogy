@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -66,7 +66,7 @@ public class CartesianTriangularMeshImpl extends MeshImpl<CartesianPositionCoord
 	 */
 	public CartesianCoordinatesSetExtent getExtent() 
 	{
-		return Geometry3dUtilities.getCartesianCoordinatesSetExtent(getPoints());
+		return Geometry3DUtilities.getCartesianCoordinatesSetExtent(getPoints());
 	}
 
 	/**

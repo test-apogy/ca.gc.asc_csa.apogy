@@ -41,7 +41,7 @@ import org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode;
 import org.eclipse.symphony.core.environment.EclipticCoordinates;
 import org.eclipse.symphony.core.environment.EllipseShapeImageLayer;
 import org.eclipse.symphony.core.environment.Environment;
-import org.eclipse.symphony.core.environment.EnvironmentFacade;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
 import org.eclipse.symphony.core.environment.EnvironmentUtilities;
 import org.eclipse.symphony.core.environment.EquatorialCoordinates;
 import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
@@ -213,8 +213,8 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 				return createEnvironmentUtilitiesAdapter();
 			}
 			@Override
-			public Adapter caseEnvironmentFacade(EnvironmentFacade object) {
-				return createEnvironmentFacadeAdapter();
+			public Adapter caseSymphony__CoreEnvironmentFacade(Symphony__CoreEnvironmentFacade object) {
+				return createSymphony__CoreEnvironmentFacadeAdapter();
 			}
 			@Override
 			public Adapter caseStar(Star object) {
@@ -719,21 +719,20 @@ public class Symphony__CoreEnvironmentAdapterFactory extends AdapterFactoryImpl
 	}
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.EnvironmentFacade <em>Environment Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.EnvironmentFacade
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade
 	 * @generated
 	 */
-  public Adapter createEnvironmentFacadeAdapter()
-  {
+	public Adapter createSymphony__CoreEnvironmentFacadeAdapter() {
 		return null;
 	}
 
-  /**
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.Star <em>Star</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;

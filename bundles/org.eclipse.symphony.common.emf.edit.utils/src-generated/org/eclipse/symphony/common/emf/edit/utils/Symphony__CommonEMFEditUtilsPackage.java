@@ -59,53 +59,52 @@ public interface Symphony__CommonEMFEditUtilsPackage extends EPackage
   Symphony__CommonEMFEditUtilsPackage eINSTANCE = org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.emf.edit.utils.impl.EMFEcoreEditUtilsFacadeImpl <em>EMF Ecore Edit Utils Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.emf.edit.utils.impl.EMFEcoreEditUtilsFacadeImpl
-	 * @see org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsPackageImpl#getEMFEcoreEditUtilsFacade()
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsFacadeImpl
+	 * @see org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsPackageImpl#getSymphony__CommonEMFEditUtilsFacade()
 	 * @generated
 	 */
-  int EMF_ECORE_EDIT_UTILS_FACADE = 0;
+	int SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE = 0;
 
-  /**
-	 * The number of structural features of the '<em>EMF Ecore Edit Utils Facade</em>' class.
+		/**
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_EDIT_UTILS_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE_FEATURE_COUNT = 0;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Text</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_EDIT_UTILS_FACADE___GET_TEXT__OBJECT = 0;
+	int SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE___GET_TEXT__OBJECT = 0;
 
-  /**
+		/**
 	 * The operation id for the '<em>Remove Child Descriptor</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT = 1;
+	int SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT = 1;
 
-  /**
-	 * The number of operations of the '<em>EMF Ecore Edit Utils Facade</em>' class.
+		/**
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_EDIT_UTILS_FACADE_OPERATION_COUNT = 2;
+	int SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE_OPERATION_COUNT = 2;
 
-
-  /**
+		/**
 	 * The meta object id for the '<em>Collection Object</em>' data type.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -116,36 +115,36 @@ public interface Symphony__CommonEMFEditUtilsPackage extends EPackage
   int COLLECTION_OBJECT = 1;
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade <em>EMF Ecore Edit Utils Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EMF Ecore Edit Utils Facade</em>'.
-	 * @see org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade
 	 * @generated
 	 */
-  EClass getEMFEcoreEditUtilsFacade();
+	EClass getSymphony__CommonEMFEditUtilsFacade();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade#getText(java.lang.Object) <em>Get Text</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade#getText(java.lang.Object) <em>Get Text</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Text</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade#getText(java.lang.Object)
+	 * @see org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade#getText(java.lang.Object)
 	 * @generated
 	 */
-  EOperation getEMFEcoreEditUtilsFacade__GetText__Object();
+	EOperation getSymphony__CommonEMFEditUtilsFacade__GetText__Object();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade#removeChildDescriptor(java.util.Collection, java.lang.Object) <em>Remove Child Descriptor</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade#removeChildDescriptor(java.util.Collection, java.lang.Object) <em>Remove Child Descriptor</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Child Descriptor</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade#removeChildDescriptor(java.util.Collection, java.lang.Object)
+	 * @see org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade#removeChildDescriptor(java.util.Collection, java.lang.Object)
 	 * @generated
 	 */
-  EOperation getEMFEcoreEditUtilsFacade__RemoveChildDescriptor__Collection_Object();
+	EOperation getSymphony__CommonEMFEditUtilsFacade__RemoveChildDescriptor__Collection_Object();
 
-  /**
+		/**
 	 * Returns the meta object for data type '{@link java.util.Collection <em>Collection Object</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -181,32 +180,32 @@ public interface Symphony__CommonEMFEditUtilsPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.emf.edit.utils.impl.EMFEcoreEditUtilsFacadeImpl <em>EMF Ecore Edit Utils Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.emf.edit.utils.impl.EMFEcoreEditUtilsFacadeImpl
-		 * @see org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsPackageImpl#getEMFEcoreEditUtilsFacade()
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsFacadeImpl
+		 * @see org.eclipse.symphony.common.emf.edit.utils.impl.Symphony__CommonEMFEditUtilsPackageImpl#getSymphony__CommonEMFEditUtilsFacade()
 		 * @generated
 		 */
-    EClass EMF_ECORE_EDIT_UTILS_FACADE = eINSTANCE.getEMFEcoreEditUtilsFacade();
+		EClass SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE = eINSTANCE.getSymphony__CommonEMFEditUtilsFacade();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Text</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_EDIT_UTILS_FACADE___GET_TEXT__OBJECT = eINSTANCE.getEMFEcoreEditUtilsFacade__GetText__Object();
+		EOperation SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE___GET_TEXT__OBJECT = eINSTANCE.getSymphony__CommonEMFEditUtilsFacade__GetText__Object();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Remove Child Descriptor</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT = eINSTANCE.getEMFEcoreEditUtilsFacade__RemoveChildDescriptor__Collection_Object();
+		EOperation SYMPHONY_COMMON_EMF_EDIT_UTILS_FACADE___REMOVE_CHILD_DESCRIPTOR__COLLECTION_OBJECT = eINSTANCE.getSymphony__CommonEMFEditUtilsFacade__RemoveChildDescriptor__Collection_Object();
 
-    /**
+				/**
 		 * The meta object literal for the '<em>Collection Object</em>' data type.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

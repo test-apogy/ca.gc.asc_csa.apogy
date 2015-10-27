@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.math.Tuple3d;
@@ -459,8 +459,8 @@ public class Matrix4x4ItemProvider extends ItemProviderAdapter implements
 	{
 		Matrix4x4 matrix4x4 = (Matrix4x4) object;		
 
-		Tuple3d position = MathFacade.INSTANCE.extractPosition(matrix4x4);
-		Tuple3d orientation = MathFacade.INSTANCE.extractOrientation(matrix4x4);
+		Tuple3d position = Symphony__CommonMathFacade.INSTANCE.extractPosition(matrix4x4);
+		Tuple3d orientation = Symphony__CommonMathFacade.INSTANCE.extractOrientation(matrix4x4);
 		
 		StringBuffer buffer = new StringBuffer();
 

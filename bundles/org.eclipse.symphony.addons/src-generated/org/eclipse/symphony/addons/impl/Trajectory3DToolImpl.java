@@ -26,7 +26,7 @@ import org.eclipse.symphony.addons.Trajectory3DTool;
 import org.eclipse.symphony.addons.Trajectory3DToolNode;
 import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
@@ -35,7 +35,7 @@ import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Variable;
 
 /**
@@ -705,7 +705,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 		
 		 try
 		 {
-			  AbstractTypeImplementation abstractTypeImplementation = EMFEcoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());			  
+			  AbstractTypeImplementation abstractTypeImplementation = Symphony__CoreInvocatorFacade.INSTANCE.getTypeImplementation(getVariable());			  
 			  if(abstractTypeImplementation.getAdapterInstance() instanceof SymphonySystemApiAdapter)
 			  {
 				  SymphonySystemApiAdapter symphonySystemApiAdapter = (SymphonySystemApiAdapter) abstractTypeImplementation.getAdapterInstance();
@@ -784,7 +784,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 	private void addPoint(Point3d point)
 	{		
 		// Adds the point to the current WayPointPath		
-		getCurrentWayPointPath().getPoints().add(Data3dFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z));
+		getCurrentWayPointPath().getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z));
 		
 		// Update last pose.
 		lastPoseAdded = new Point3d(point);

@@ -185,13 +185,13 @@ public interface Symphony__CommonTopologyAddonsDynamicsFactory extends EFactory 
 	SphereGeometry createSphereGeometry();
 
 	/**
-	 * Returns a new object of class '<em>Dynamics Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Dynamics Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	DynamicsFacade createDynamicsFacade();
+	Symphony__CommonTopologyAddonsDynamicsFacade createSymphony__CommonTopologyAddonsDynamicsFacade();
 
 	/**
 	 * Returns the package supported by this factory.

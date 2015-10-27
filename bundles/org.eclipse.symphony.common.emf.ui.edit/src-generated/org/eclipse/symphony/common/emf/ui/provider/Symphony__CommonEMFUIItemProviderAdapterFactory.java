@@ -72,30 +72,29 @@ public class Symphony__CommonEMFUIItemProviderAdapterFactory extends Symphony__C
 	}
 
   /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade} instances.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EMFEcoreUIFacadeItemProvider emfEcoreUIFacadeItemProvider;
+	protected Symphony__CommonEMFUIFacadeItemProvider symphony__CommonEMFUIFacadeItemProvider;
 
-  /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade}.
+		/**
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEMFEcoreUIFacadeAdapter()
-  {
-		if (emfEcoreUIFacadeItemProvider == null) {
-			emfEcoreUIFacadeItemProvider = new EMFEcoreUIFacadeItemProvider(this);
+	@Override
+	public Adapter createSymphony__CommonEMFUIFacadeAdapter() {
+		if (symphony__CommonEMFUIFacadeItemProvider == null) {
+			symphony__CommonEMFUIFacadeItemProvider = new Symphony__CommonEMFUIFacadeItemProvider(this);
 		}
 
-		return emfEcoreUIFacadeItemProvider;
+		return symphony__CommonEMFUIFacadeItemProvider;
 	}
 
-  /**
+		/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -203,7 +202,7 @@ public class Symphony__CommonEMFUIItemProviderAdapterFactory extends Symphony__C
 	 */
   public void dispose()
   {
-		if (emfEcoreUIFacadeItemProvider != null) emfEcoreUIFacadeItemProvider.dispose();
+		if (symphony__CommonEMFUIFacadeItemProvider != null) symphony__CommonEMFUIFacadeItemProvider.dispose();
 	}
 
 }

@@ -14,8 +14,8 @@ import org.eclipse.jface.viewers.ILabelProviderListener;
 import org.eclipse.jface.viewers.ILightweightLabelDecorator;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.ui.Activator;
@@ -39,7 +39,7 @@ public class ActiveInvocatorSessionDecorator extends LabelProvider implements
 
 	public ActiveInvocatorSessionDecorator() {
 		super();
-		EMFEcoreInvocatorFacade.INSTANCE.eAdapters().add(
+		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(
 				getEMFEcoreInvocatorFacadeAdapter());
 	}
 
@@ -48,14 +48,14 @@ public class ActiveInvocatorSessionDecorator extends LabelProvider implements
 			emfEcoreInvocatorFacadeAdapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
-					if (msg.getFeatureID(EMFEcoreInvocatorFacade.class) == Symphony__CoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION) {
+					if (msg.getFeatureID(Symphony__CoreInvocatorFacade.class) == Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION) {
 						final ActiveInvocatorSessionDecorator decorator = getActiveInvocatorSessionDecorator();
 						if (decorator != null) {
 							Display.getDefault().asyncExec(new Runnable() {
 								public void run() {
-									activeSessionFile = EMFEcoreInvocatorFacade.INSTANCE
-											.getActiveInvocatorSession() != null ? EMFEcoreFacade.INSTANCE
-											.getFile(EMFEcoreInvocatorFacade.INSTANCE
+									activeSessionFile = Symphony__CoreInvocatorFacade.INSTANCE
+											.getActiveInvocatorSession() != null ? Symphony__CommonEMFFacade.INSTANCE
+											.getFile(Symphony__CoreInvocatorFacade.INSTANCE
 													.getActiveInvocatorSession()
 													.eResource())
 											: null;
@@ -86,7 +86,7 @@ public class ActiveInvocatorSessionDecorator extends LabelProvider implements
 
 	@Override
 	public void dispose() {
-		EMFEcoreInvocatorFacade.INSTANCE.eAdapters().remove(
+		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(
 				getEMFEcoreInvocatorFacadeAdapter());
 	}
 
@@ -102,7 +102,7 @@ public class ActiveInvocatorSessionDecorator extends LabelProvider implements
 	@Override
 	public void decorate(Object element, IDecoration decoration) {
 		
-		InvocatorSession activeSession = EMFEcoreInvocatorFacade.INSTANCE
+		InvocatorSession activeSession = Symphony__CoreInvocatorFacade.INSTANCE
 				.getActiveInvocatorSession();
 		
 		if (activeSession != null){

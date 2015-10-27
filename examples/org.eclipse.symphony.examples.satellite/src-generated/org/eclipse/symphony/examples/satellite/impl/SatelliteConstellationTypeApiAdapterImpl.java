@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.environment.orbit.OrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFacade;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
@@ -136,7 +136,7 @@ public class SatelliteConstellationTypeApiAdapterImpl extends TypeApiAdapterImpl
 	private void applySatelliteInitializationData(SatelliteInitializationData satelliteInitializationData)
 	{
 		Satellite satCopy = EcoreUtil.copy(satelliteInitializationData.getSatellite());		
-		OrbitModel orbitModelCopy = OrbitFacade.INSTANCE.createOrbitModelCopy(satelliteInitializationData.getOrbitModel());				
+		OrbitModel orbitModelCopy = Symphony__CoreEnvironmentOrbitFacade.INSTANCE.createOrbitModelCopy(satelliteInitializationData.getOrbitModel());				
 		
 		// Sets the satellite orbit model top the orbit model copied from the data.
 		satCopy.setOrbitModel(orbitModelCopy);
@@ -153,7 +153,7 @@ public class SatelliteConstellationTypeApiAdapterImpl extends TypeApiAdapterImpl
 		data.setSatellite(satCopy);
 		
 		// Makes a copy of the OrbitModel and save it to the SatelliteInitializationData.
-		OrbitModel orbitModelCopy = OrbitFacade.INSTANCE.createOrbitModelCopy(satellite.getOrbitModel());
+		OrbitModel orbitModelCopy = Symphony__CoreEnvironmentOrbitFacade.INSTANCE.createOrbitModelCopy(satellite.getOrbitModel());
 		data.setOrbitModel(orbitModelCopy);
 		
 		return data;

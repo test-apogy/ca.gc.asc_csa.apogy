@@ -27,8 +27,8 @@ import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.OperationCallPositionedResult;
 import org.eclipse.symphony.core.invocator.Context;
@@ -246,10 +246,10 @@ public class DataProductsListsContainerComposite extends Composite {
 			switch (columnIndex) {
 			case NAME_COLUMN_ID:
 				if (object instanceof Named) {
-					str = EMFEcoreEditUtilsFacade.INSTANCE.getText(object);
+					str = Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(object);
 				} else if (object instanceof OperationCallResult) {
 					OperationCallResult result = (OperationCallResult) object;
-					str = EMFEcoreEditUtilsFacade.INSTANCE.getText(result
+					str = Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(result
 							.getOperationCall());
 				}
 				break;
@@ -269,7 +269,7 @@ public class DataProductsListsContainerComposite extends Composite {
 				if (object instanceof OperationCallResult) {
 					Context context = ((OperationCallResult) object)
 							.getContext();
-					str = EMFEcoreEditUtilsFacade.INSTANCE.getText(context);
+					str = Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(context);
 				}
 				break;
 
@@ -281,9 +281,9 @@ public class DataProductsListsContainerComposite extends Composite {
 						if (result.getPose() == null) {
 							str = "Null";
 						} else {
-							Tuple3d position = MathFacade.INSTANCE
+							Tuple3d position = Symphony__CommonMathFacade.INSTANCE
 									.extractPosition(result.getPose());
-							str = EMFEcoreEditUtilsFacade.INSTANCE
+							str = Symphony__CommonEMFEditUtilsFacade.INSTANCE
 									.getText(position);
 						}
 					} else {
@@ -301,7 +301,7 @@ public class DataProductsListsContainerComposite extends Composite {
 							str = "Null";
 						} else {
 
-							Tuple3d orientation = MathFacade.INSTANCE
+							Tuple3d orientation = Symphony__CommonMathFacade.INSTANCE
 									.extractOrientation(result.getPose());
 							/** Convert in degrees. */
 							orientation
@@ -311,7 +311,7 @@ public class DataProductsListsContainerComposite extends Composite {
 							orientation
 									.setZ(Math.toDegrees(orientation.getZ()));
 
-							str = EMFEcoreEditUtilsFacade.INSTANCE
+							str = Symphony__CommonEMFEditUtilsFacade.INSTANCE
 									.getText(orientation);
 						}
 					} else {
@@ -331,7 +331,7 @@ public class DataProductsListsContainerComposite extends Composite {
 								.getMessage();
 					} else {
 						str = result.getResultValue() == null ? "Null"
-								: EMFEcoreEditUtilsFacade.INSTANCE
+								: Symphony__CommonEMFEditUtilsFacade.INSTANCE
 										.getText(result.getResultValue());
 					}
 				}

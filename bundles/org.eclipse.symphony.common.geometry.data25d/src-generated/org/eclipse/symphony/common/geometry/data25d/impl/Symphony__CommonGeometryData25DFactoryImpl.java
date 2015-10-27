@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25D;
 import org.eclipse.symphony.common.geometry.data25d.Data25DIO;
 import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFactory;
 import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
-import org.eclipse.symphony.common.geometry.data25d.DataFacade;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade;
 import org.eclipse.symphony.common.geometry.data25d.Mesh25D;
 import org.eclipse.symphony.common.geometry.data25d.Polygon25D;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
@@ -73,7 +73,7 @@ public class Symphony__CommonGeometryData25DFactoryImpl extends EFactoryImpl imp
 			case Symphony__CommonGeometryData25DPackage.POLYGON25_D: return createPolygon25D();
 			case Symphony__CommonGeometryData25DPackage.MESH25_D: return createMesh25D();
 			case Symphony__CommonGeometryData25DPackage.VOLUMETRIC_MESH25_D: return createVolumetricMesh25D();
-			case Symphony__CommonGeometryData25DPackage.DATA_FACADE: return createDataFacade();
+			case Symphony__CommonGeometryData25DPackage.SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE: return createSymphony__CommonGeometryData25DFacade();
 			case Symphony__CommonGeometryData25DPackage.DATA25_DIO: return createData25DIO();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -177,10 +177,9 @@ public class Symphony__CommonGeometryData25DFactoryImpl extends EFactoryImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataFacade createDataFacade()
-	{
-		DataFacadeImpl dataFacade = new DataFacadeImpl();
-		return dataFacade;
+	public Symphony__CommonGeometryData25DFacade createSymphony__CommonGeometryData25DFacade() {
+		Symphony__CommonGeometryData25DFacadeImpl symphony__CommonGeometryData25DFacade = new Symphony__CommonGeometryData25DFacadeImpl();
+		return symphony__CommonGeometryData25DFacade;
 	}
 
 	/**

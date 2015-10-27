@@ -6,12 +6,12 @@ import java.util.Map;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFacade;
 import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.ConnectionPoint;
@@ -299,7 +299,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 					AbstractType typeMember = original.getPoseProvider();							
 					
 					VariableImplementation vi = (VariableImplementation) abstractTypeImplementation;
-					AbstractTypeImplementation tmi = EMFEcoreInvocatorFacade.INSTANCE.getTypeImplementation(vi.getVariable(), typeMember);
+					AbstractTypeImplementation tmi = Symphony__CoreInvocatorFacade.INSTANCE.getTypeImplementation(vi.getVariable(), typeMember);
 					
 					
 					// If the implementation is itself a PoseProvider.
@@ -424,7 +424,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 					CartesianTriangularMesh originalMesh = (CartesianTriangularMesh) originalContentNode.getContent();
 					
 					// Copies the original mesh to the copied node.
-					CartesianTriangularMesh meshCopy = Data3dFacade.INSTANCE.createCartesianTriangularMesh(originalMesh);
+					CartesianTriangularMesh meshCopy = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangularMesh(originalMesh);
 					
 					@SuppressWarnings("unchecked")
 					ContentNode<CartesianTriangularMesh> copiedContentNode = (ContentNode<CartesianTriangularMesh>) copy;
@@ -517,7 +517,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 				for (AbstractTopologyBinding binding : source.getBindingSet().getBindingsList().getBindings()) 
 				{
 					// Copies the binding.
-					AbstractTopologyBinding bindingCopy = TopologyBindingsFacade.INSTANCE.copy(binding, originalToCopyMap);
+					AbstractTopologyBinding bindingCopy = Symphony__CommonTopologyBindingsFacade.INSTANCE.copy(binding, originalToCopyMap);
 
 					// Sets the source.
 					bindingCopy.setSource(bindingSource);

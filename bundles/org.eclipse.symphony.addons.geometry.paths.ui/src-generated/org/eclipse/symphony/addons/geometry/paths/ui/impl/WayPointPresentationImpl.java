@@ -10,7 +10,7 @@ import javax.vecmath.Point3d;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage;
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPresentation;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
@@ -54,7 +54,7 @@ public class WayPointPresentationImpl extends NodePresentationImpl implements Wa
 			point3d = sceneObject.getCentroid();
 		}
 		
-		return MathFacade.INSTANCE.createTuple3d(point3d);
+		return Symphony__CommonMathFacade.INSTANCE.createTuple3d(point3d);
 	}
 	
 } //WayPointPresentationImpl

@@ -96,15 +96,15 @@ public interface Symphony__AddonsVehicleFactory extends EFactory
   LanderSphericalFootContactProvider createLanderSphericalFootContactProvider();
 
   /**
-	 * Returns a new object of class '<em>Vehicle Tools Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Vehicle Tools Facade</em>'.
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-  VehicleToolsFacade createVehicleToolsFacade();
+	Symphony__AddonsVehicleFacade createSymphony__AddonsVehicleFacade();
 
-  /**
+		/**
 	 * Returns a new object of class '<em>Wheel Vehicle Utilities</em>'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

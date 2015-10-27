@@ -170,9 +170,9 @@ public class Symphony__CoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_FACADE: {
-				OrbitFacade orbitFacade = (OrbitFacade)theEObject;
-				T result = caseOrbitFacade(orbitFacade);
+			case Symphony__CoreEnvironmentOrbitPackage.SYMPHONY_CORE_ENVIRONMENT_ORBIT_FACADE: {
+				Symphony__CoreEnvironmentOrbitFacade symphony__CoreEnvironmentOrbitFacade = (Symphony__CoreEnvironmentOrbitFacade)theEObject;
+				T result = caseSymphony__CoreEnvironmentOrbitFacade(symphony__CoreEnvironmentOrbitFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -376,17 +376,17 @@ public class Symphony__CoreEnvironmentOrbitSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Orbit Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Orbit Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseOrbitFacade(OrbitFacade object) {
+	public T caseSymphony__CoreEnvironmentOrbitFacade(Symphony__CoreEnvironmentOrbitFacade object) {
 		return null;
 	}
 

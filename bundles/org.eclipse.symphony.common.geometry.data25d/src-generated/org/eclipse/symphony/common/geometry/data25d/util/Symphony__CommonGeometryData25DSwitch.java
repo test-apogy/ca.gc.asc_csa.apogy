@@ -125,9 +125,9 @@ public class Symphony__CommonGeometryData25DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData25DPackage.DATA_FACADE: {
-				DataFacade dataFacade = (DataFacade)theEObject;
-				T1 result = caseDataFacade(dataFacade);
+			case Symphony__CommonGeometryData25DPackage.SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE: {
+				Symphony__CommonGeometryData25DFacade symphony__CommonGeometryData25DFacade = (Symphony__CommonGeometryData25DFacade)theEObject;
+				T1 result = caseSymphony__CommonGeometryData25DFacade(symphony__CommonGeometryData25DFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -247,17 +247,17 @@ public class Symphony__CommonGeometryData25DSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Data Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Data Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseDataFacade(DataFacade object) {
+	public T1 caseSymphony__CommonGeometryData25DFacade(Symphony__CommonGeometryData25DFacade object) {
 		return null;
 	}
 

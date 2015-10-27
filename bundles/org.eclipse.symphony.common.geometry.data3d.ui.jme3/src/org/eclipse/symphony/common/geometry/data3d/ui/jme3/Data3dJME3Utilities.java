@@ -10,7 +10,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 
 import com.jme3.math.Vector2f;
@@ -48,12 +48,12 @@ public class Data3dJME3Utilities
 			Vector2f[] textureCoordArray = new Vector2f[cartesianTriangularMesh.getPoints().size()];
 			
 			// Gets the X and Y Extent of the mesh				
-			float minX = (float) Geometry3dUtilities.getMinimumPosition(CartesianAxis.X, cartesianTriangularMesh.getPoints()).getX();
-			float maxX = (float) Geometry3dUtilities.getMaximumPosition(CartesianAxis.X, cartesianTriangularMesh.getPoints()).getX();
+			float minX = (float) Geometry3DUtilities.getMinimumPosition(CartesianAxis.X, cartesianTriangularMesh.getPoints()).getX();
+			float maxX = (float) Geometry3DUtilities.getMaximumPosition(CartesianAxis.X, cartesianTriangularMesh.getPoints()).getX();
 			float xExtent = maxX - minX;
 			
-			float minY = (float) Geometry3dUtilities.getMinimumPosition(CartesianAxis.Y, cartesianTriangularMesh.getPoints()).getY();
-			float maxY = (float) Geometry3dUtilities.getMaximumPosition(CartesianAxis.Y, cartesianTriangularMesh.getPoints()).getY();				
+			float minY = (float) Geometry3DUtilities.getMinimumPosition(CartesianAxis.Y, cartesianTriangularMesh.getPoints()).getY();
+			float maxY = (float) Geometry3DUtilities.getMaximumPosition(CartesianAxis.Y, cartesianTriangularMesh.getPoints()).getY();				
 			float yExtent = maxY - minY;
 			
 			// First, fills in the vertices and text coord.			

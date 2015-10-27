@@ -111,7 +111,7 @@ class CSVDataLogger extends PoseDataLogger
 	
 }
 
-class PoseFacade
+class Symphony__AddonsSensorsPoseFacade
 {
 	op CSVDataLogger createCSVDataLogger(String fileName)
 }

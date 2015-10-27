@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.environment.EllipseShapeImageLayer;
 import org.eclipse.symphony.core.environment.RectangularRegion;
@@ -373,7 +373,7 @@ public class EllipseShapeImageLayerImpl extends AbstractShapeImageLayerImpl impl
 	public RectangularRegion getImageMapLayerRegion() 
 	{
 		RectangularRegion rectangularRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
- 		rectangularRegion.setTransformation(MathFacade.INSTANCE.createIdentityMatrix4x4());
+ 		rectangularRegion.setTransformation(Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4());
  		
  		if(getMap() != null && getMap().getTransformation() != null)
  		{ 		 			 			
@@ -386,7 +386,7 @@ public class EllipseShapeImageLayerImpl extends AbstractShapeImageLayerImpl impl
  			
  			m.mul(translation);
  			
- 			Matrix4x4 transform = MathFacade.INSTANCE.createMatrix4x4(m);
+ 			Matrix4x4 transform = Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(m);
  			rectangularRegion.setTransformation(transform); 			
  		} 		
  		

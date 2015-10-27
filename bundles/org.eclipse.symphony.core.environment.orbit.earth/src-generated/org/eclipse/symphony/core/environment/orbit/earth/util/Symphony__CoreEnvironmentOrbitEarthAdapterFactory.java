@@ -25,7 +25,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
 import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite;
@@ -215,8 +215,8 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 				return createSpacecraftSwathCorridorAdapter();
 			}
 			@Override
-			public Adapter caseEarthOrbitFacade(EarthOrbitFacade object) {
-				return createEarthOrbitFacadeAdapter();
+			public Adapter caseSymphony__CoreEnvironmentOrbitEarthFacade(Symphony__CoreEnvironmentOrbitEarthFacade object) {
+				return createSymphony__CoreEnvironmentOrbitEarthFacadeAdapter();
 			}
 			@Override
 			public Adapter caseTimed(Timed object) {
@@ -669,16 +669,16 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade <em>Earth Orbit Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade
 	 * @generated
 	 */
-	public Adapter createEarthOrbitFacadeAdapter() {
+	public Adapter createSymphony__CoreEnvironmentOrbitEarthFacadeAdapter() {
 		return null;
 	}
 

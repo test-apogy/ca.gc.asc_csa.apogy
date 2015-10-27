@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
 import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
@@ -442,7 +442,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 			TopocentricFrame loc = new TopocentricFrame(earth, location, "location");
 			
 			TimeScale utc = TimeScalesFactory.getUTC();
-			AbsoluteDate startAbsoluteDate = EarthOrbitFacade.INSTANCE.createAbsoluteDate(pass.getStartTime());
+			AbsoluteDate startAbsoluteDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(pass.getStartTime());
 			AbsoluteDate endAbsoluteDate = new AbsoluteDate(startAbsoluteDate, pass.getDuration());
 			AbsoluteDate extrapDate = startAbsoluteDate;
 			while (extrapDate.compareTo(endAbsoluteDate) <= 0)  
@@ -481,7 +481,7 @@ public class VisibilityPassSpacecraftPositionHistoryImpl extends MinimalEObjectI
 			    double scCrossTrackAngle = Math.atan(scToTargetProjectionOntoCrossTrack / scToTargetProjectionOntoNadir);
 			    
 			    VisibilityPassSpacecraftPosition position = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPassSpacecraftPosition();
-			    position.setTime(EarthOrbitFacade.INSTANCE.createDate(extrapDate));
+			    position.setTime(Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createDate(extrapDate));
 			    position.setRange(range);
 			    position.setRangeRate(rangeRate);
 			    position.setAzimuth(azimuth);

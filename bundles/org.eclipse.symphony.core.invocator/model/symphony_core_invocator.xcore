@@ -46,7 +46,7 @@ type TypeMembersArray wraps TypeMember[]
  * 
  * ------------------------------------------------------------------------- */
 
-class EMFEcoreInvocatorFacade
+class Symphony__CoreInvocatorFacade
 {
 	op void exec(OperationCall operationCall)
 	op void exec(OperationCall operationCall, boolean saveResult)
@@ -200,7 +200,8 @@ class EMFEcoreInvocatorFacade
  * 
  * ------------------------------------------------------------------------- */
 
-class InvocatorSession extends Named, Described{
+class InvocatorSession extends Named, Described
+{
 	contains Environment[0..1] environment opposite invocatorSession
 	contains ProgramsList[0..1] programsList opposite invocatorSession
 	contains DataProductsListsContainer[0..1] dataProductsListContainer opposite invocatorSession
@@ -213,13 +214,14 @@ class InvocatorSession extends Named, Described{
  class Environment extends Named, Described
  {	
    @GenModel(property="None")
- 		container InvocatorSession invocatorSession opposite environment
- 	 	contains TypesList[0..1] typesList
-		contains VariablesList[0..1] variablesList opposite environment
-		contains ContextsList[0..1] contextsList opposite environment
+ 	container InvocatorSession invocatorSession opposite environment
+ 	
+  	contains TypesList[0..1] typesList
+	contains VariablesList[0..1] variablesList opposite environment
+	contains ContextsList[0..1] contextsList opposite environment
 		
   	@GenModel(notify="true")
-		refers Context[1] activeContext		
+	refers Context[1] activeContext		
  }
 
 /* -------------------------------------------------------------------------
@@ -240,13 +242,20 @@ class InvocatorSession extends Named, Described{
  	contains RecordingResultsList [0..1] recordingResultsList opposite dataProductsList
  
     @GenModel(children="false", property="None")
-		refers local readonly volatile transient derived InvocatorSession invocatorSession get
+	refers local readonly volatile transient derived InvocatorSession invocatorSession get
+	{
+		if (dataProductsListsContainer == null)
 		{
-			if (dataProductsListsContainer == null) return null else return dataProductsListsContainer.invocatorSession
-		} 	 	
+			return null
+		}
+		else
+		{
+			return dataProductsListsContainer.invocatorSession
+		}
+	} 	 	
  }
  
- 
+
 /* -------------------------------------------------------------------------
  * ToolsList.
  * ------------------------------------------------------------------------- */

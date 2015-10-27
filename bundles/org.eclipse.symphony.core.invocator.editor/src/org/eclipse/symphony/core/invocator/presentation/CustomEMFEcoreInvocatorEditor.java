@@ -31,9 +31,9 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.ui.properties.ExtendedTabbedPropertySheetPage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
@@ -96,8 +96,8 @@ public class CustomEMFEcoreInvocatorEditor extends Symphony__CoreInvocatorEditor
 				@Override
 				public void partClosed(IWorkbenchPart part) {				
 					if (part == CustomEMFEcoreInvocatorEditor.this){
-						if (activeSession == EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession()){
-							EMFEcoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(null);
+						if (activeSession == Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession()){
+							Symphony__CoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(null);
 							activeSession = null;							
 						}											
 					}									
@@ -141,10 +141,10 @@ public class CustomEMFEcoreInvocatorEditor extends Symphony__CoreInvocatorEditor
 			activeSession = (InvocatorSession) content;			
 						
 			/** Load registered types. */
-			EMFEcoreInvocatorFacade.INSTANCE.loadRegisteredTypes(activeSession);
+			Symphony__CoreInvocatorFacade.INSTANCE.loadRegisteredTypes(activeSession);
 			
 			/** Set the active session. */
-			EMFEcoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(activeSession);
+			Symphony__CoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(activeSession);
 			
 			// Register this listener to set the session to null when the editor is closed.
 			getSite().getPage().addPartListener(getEditorListener());  
@@ -242,7 +242,7 @@ public class CustomEMFEcoreInvocatorEditor extends Symphony__CoreInvocatorEditor
 
 					/** Create a marker. */
 					try {
-						IMarker marker = EMFEcoreFacade.INSTANCE.getFile(
+						IMarker marker = Symphony__CommonEMFFacade.INSTANCE.getFile(
 								eObject.eResource()).createMarker(
 								IMarker.PROBLEM);
 

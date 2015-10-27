@@ -137,7 +137,7 @@ class SpotLight extends PointLight
 	contains Tuple3d direction
 }
 
-class PrimitivesFacade
+class Symphony__CommonTopologyAddonsPrimitivesFacade
 {
 	op Vector createVector(Vector vector)
 	

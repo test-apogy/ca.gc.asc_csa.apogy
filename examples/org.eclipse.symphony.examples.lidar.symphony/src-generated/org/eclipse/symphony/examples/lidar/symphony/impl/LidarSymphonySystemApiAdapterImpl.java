@@ -4,7 +4,7 @@
 package org.eclipse.symphony.examples.lidar.symphony.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
 import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.examples.lidar.Lidar;
@@ -101,7 +101,7 @@ public class LidarSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 				if (lidarData.getFov() != null)
 				{
 					// Get a copy of that FOV and set it accordingly
-					this.getLidar().setFov(FOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(lidarData.getFov()));
+					this.getLidar().setFov(Symphony__AddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(lidarData.getFov()));
 				}
 				// Otherwise
 				else
@@ -156,7 +156,7 @@ public class LidarSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 			if (this.getLidar().getFov() == null)
 			{
 				// Get a copy of the FOV and set it accordingly
-				lidarData.setFov(FOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(this.getLidar().getFov()));
+				lidarData.setFov(Symphony__AddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(this.getLidar().getFov()));
 			}
 			// Otherwise,
 			else

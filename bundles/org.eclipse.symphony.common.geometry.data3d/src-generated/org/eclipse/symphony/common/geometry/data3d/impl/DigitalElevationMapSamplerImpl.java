@@ -26,13 +26,13 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
 import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher;
 import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
@@ -246,7 +246,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 			for(int j = 0; j < yDim; j++)
 			{
 				y = minY + j * getTargetResolution();
-				result.add(Data3dFacade.INSTANCE.createCartesianPositionCoordinates(x, y, 0));
+				result.add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, 0));
 			}			
 		}				
 		
@@ -278,7 +278,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 				Point3d point = pixelsIntersectionPoints[i][j];						
 				if(point != null)
 				{							
-					CartesianPositionCoordinates p = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z);
+					CartesianPositionCoordinates p = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point.x, point.y, point.z);
 					result.getPoints().add(p);
 				}
 			}	
@@ -295,7 +295,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 //		DigitalElevationMap result = Symphony__CommonGeometryData3DFactory.eINSTANCE.createDigitalElevationMap();
 //		
 //		System.out.println("Getting projections....");
-//		CartesianPositionCoordinates[] projections = Geometry3dUtilities.getProjectionAlongAxisOnToPolygon(CartesianAxis.Z, samplingGrid, mesh.getPolygons());
+//		CartesianPositionCoordinates[] projections = Geometry3DUtilities.getProjectionAlongAxisOnToPolygon(CartesianAxis.Z, samplingGrid, mesh.getPolygons());
 //		System.out.println("Getting projections : Done.");
 //		
 //		List<CartesianPositionCoordinates> points = new ArrayList<CartesianPositionCoordinates>();
@@ -313,7 +313,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 //			{
 //				System.err.println("(projections[" +  i + "] is null ! " + x + " " + y );
 //			}
-//			points.add(Data3dFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z));					
+//			points.add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x, y, z));					
 //		}
 //		result.getPoints().addAll(points);
 //		result.setXDimension(getTargetDEMXDimension());
@@ -823,7 +823,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 					CartesianPositionCoordinates projection = null;
 					while(it.hasNext() && projection == null)
 					{						
-						projection = Geometry3dUtilities.getProjectionAlongAxisOnToPolygon(CartesianAxis.Z, point, it.next());
+						projection = Geometry3DUtilities.getProjectionAlongAxisOnToPolygon(CartesianAxis.Z, point, it.next());
 						if(projection != null)
 						{
 							intersectionPoints[i][j] = projection.asPoint3d();
@@ -916,7 +916,7 @@ public class DigitalElevationMapSamplerImpl extends ProcessorImpl<DigitalElevati
 						if(monitor.isCanceled()) return Status.CANCEL_STATUS;
 						
 						CartesianTriangle triangle = it.next();
-						projection = Geometry3dUtilities.getProjectionAlongAxisOnToPolygon(CartesianAxis.Z, point, triangle);
+						projection = Geometry3DUtilities.getProjectionAlongAxisOnToPolygon(CartesianAxis.Z, point, triangle);
 						if(projection != null)
 						{
 							intersectionTriangles[i][j] = triangle;

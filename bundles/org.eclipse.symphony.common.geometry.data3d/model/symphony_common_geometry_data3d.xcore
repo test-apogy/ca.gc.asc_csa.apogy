@@ -431,7 +431,7 @@ class PositionMarker extends CartesianPositionCoordinates
 	String identifier
 }
 
-class Data3dFacade
+class Symphony__CommonGeometryData3DFacade
 {	
 	op CartesianPositionCoordinates createCartesianPositionCoordinates(double x, double y, double z)
 	

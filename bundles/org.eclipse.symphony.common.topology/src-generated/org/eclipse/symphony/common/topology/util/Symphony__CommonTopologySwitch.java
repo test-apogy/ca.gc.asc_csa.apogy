@@ -198,9 +198,9 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonTopologyPackage.TOPOLOGY_FACADE: {
-				TopologyFacade topologyFacade = (TopologyFacade)theEObject;
-				T1 result = caseTopologyFacade(topologyFacade);
+			case Symphony__CommonTopologyPackage.SYMPHONY_COMMON_TOPOLOGY_FACADE: {
+				Symphony__CommonTopologyFacade symphony__CommonTopologyFacade = (Symphony__CommonTopologyFacade)theEObject;
+				T1 result = caseSymphony__CommonTopologyFacade(symphony__CommonTopologyFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -449,17 +449,17 @@ public class Symphony__CommonTopologySwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Topology Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Topology Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseTopologyFacade(TopologyFacade object) {
+	public T1 caseSymphony__CommonTopologyFacade(Symphony__CommonTopologyFacade object) {
 		return null;
 	}
 

@@ -59,52 +59,52 @@ public interface Symphony__CommonEMFUIPackage extends EPackage
   Symphony__CommonEMFUIPackage eINSTANCE = org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.emf.ui.impl.EMFEcoreUIFacadeImpl <em>EMF Ecore UI Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.emf.ui.impl.EMFEcoreUIFacadeImpl
-	 * @see org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIPackageImpl#getEMFEcoreUIFacade()
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIFacadeImpl
+	 * @see org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIPackageImpl#getSymphony__CommonEMFUIFacade()
 	 * @generated
 	 */
-  int EMF_ECORE_UI_FACADE = 0;
+	int SYMPHONY_COMMON_EMFUI_FACADE = 0;
 
-  /**
-	 * The number of structural features of the '<em>EMF Ecore UI Facade</em>' class.
+		/**
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_UI_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_COMMON_EMFUI_FACADE_FEATURE_COUNT = 0;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Color For Range</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_UI_FACADE___GET_COLOR_FOR_RANGE__RANGES = 0;
+	int SYMPHONY_COMMON_EMFUI_FACADE___GET_COLOR_FOR_RANGE__RANGES = 0;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Display Units</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_UI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT = 1;
+	int SYMPHONY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT = 1;
 
-  /**
-	 * The number of operations of the '<em>EMF Ecore UI Facade</em>' class.
+		/**
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_UI_FACADE_OPERATION_COUNT = 2;
+	int SYMPHONY_COMMON_EMFUI_FACADE_OPERATION_COUNT = 2;
 
-  /**
+		/**
 	 * The meta object id for the '<em>Color</em>' data type.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -127,36 +127,36 @@ public interface Symphony__CommonEMFUIPackage extends EPackage
 
 
   /**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade <em>EMF Ecore UI Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EMF Ecore UI Facade</em>'.
-	 * @see org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade
 	 * @generated
 	 */
-  EClass getEMFEcoreUIFacade();
+	EClass getSymphony__CommonEMFUIFacade();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade#getColorForRange(org.eclipse.symphony.common.emf.Ranges) <em>Get Color For Range</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade#getColorForRange(org.eclipse.symphony.common.emf.Ranges) <em>Get Color For Range</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Color For Range</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade#getColorForRange(org.eclipse.symphony.common.emf.Ranges)
+	 * @see org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade#getColorForRange(org.eclipse.symphony.common.emf.Ranges)
 	 * @generated
 	 */
-  EOperation getEMFEcoreUIFacade__GetColorForRange__Ranges();
+	EOperation getSymphony__CommonEMFUIFacade__GetColorForRange__Ranges();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade#getDisplayUnits(org.eclipse.emf.ecore.ETypedElement) <em>Get Display Units</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade#getDisplayUnits(org.eclipse.emf.ecore.ETypedElement) <em>Get Display Units</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Display Units</em>' operation.
-	 * @see org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade#getDisplayUnits(org.eclipse.emf.ecore.ETypedElement)
+	 * @see org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade#getDisplayUnits(org.eclipse.emf.ecore.ETypedElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreUIFacade__GetDisplayUnits__ETypedElement();
+	EOperation getSymphony__CommonEMFUIFacade__GetDisplayUnits__ETypedElement();
 
-  /**
+		/**
 	 * Returns the meta object for data type '{@link org.eclipse.swt.graphics.Color <em>Color</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -203,32 +203,32 @@ public interface Symphony__CommonEMFUIPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.emf.ui.impl.EMFEcoreUIFacadeImpl <em>EMF Ecore UI Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.emf.ui.impl.EMFEcoreUIFacadeImpl
-		 * @see org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIPackageImpl#getEMFEcoreUIFacade()
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIFacadeImpl
+		 * @see org.eclipse.symphony.common.emf.ui.impl.Symphony__CommonEMFUIPackageImpl#getSymphony__CommonEMFUIFacade()
 		 * @generated
 		 */
-    EClass EMF_ECORE_UI_FACADE = eINSTANCE.getEMFEcoreUIFacade();
+		EClass SYMPHONY_COMMON_EMFUI_FACADE = eINSTANCE.getSymphony__CommonEMFUIFacade();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Color For Range</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_UI_FACADE___GET_COLOR_FOR_RANGE__RANGES = eINSTANCE.getEMFEcoreUIFacade__GetColorForRange__Ranges();
+		EOperation SYMPHONY_COMMON_EMFUI_FACADE___GET_COLOR_FOR_RANGE__RANGES = eINSTANCE.getSymphony__CommonEMFUIFacade__GetColorForRange__Ranges();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Display Units</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_UI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT = eINSTANCE.getEMFEcoreUIFacade__GetDisplayUnits__ETypedElement();
+		EOperation SYMPHONY_COMMON_EMFUI_FACADE___GET_DISPLAY_UNITS__ETYPEDELEMENT = eINSTANCE.getSymphony__CommonEMFUIFacade__GetDisplayUnits__ETypedElement();
 
-    /**
+				/**
 		 * The meta object literal for the '<em>Color</em>' data type.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

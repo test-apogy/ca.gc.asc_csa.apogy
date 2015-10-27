@@ -40,7 +40,7 @@ import org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode;
 import org.eclipse.symphony.core.environment.EclipticCoordinates;
 import org.eclipse.symphony.core.environment.EllipseShapeImageLayer;
 import org.eclipse.symphony.core.environment.Environment;
-import org.eclipse.symphony.core.environment.EnvironmentFacade;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
 import org.eclipse.symphony.core.environment.EnvironmentUtilities;
 import org.eclipse.symphony.core.environment.EquatorialCoordinates;
 import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
@@ -282,9 +282,9 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CoreEnvironmentPackage.ENVIRONMENT_FACADE: {
-				EnvironmentFacade environmentFacade = (EnvironmentFacade)theEObject;
-				T result = caseEnvironmentFacade(environmentFacade);
+			case Symphony__CoreEnvironmentPackage.SYMPHONY_CORE_ENVIRONMENT_FACADE: {
+				Symphony__CoreEnvironmentFacade symphony__CoreEnvironmentFacade = (Symphony__CoreEnvironmentFacade)theEObject;
+				T result = caseSymphony__CoreEnvironmentFacade(symphony__CoreEnvironmentFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1001,22 +1001,21 @@ public class Symphony__CoreEnvironmentSwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>Environment Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Environment Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseEnvironmentFacade(EnvironmentFacade object)
-  {
+	public T caseSymphony__CoreEnvironmentFacade(Symphony__CoreEnvironmentFacade object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Star</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 import org.eclipse.symphony.core.Activator;
@@ -25,7 +25,7 @@ import org.eclipse.symphony.core.Positioned;
 import org.eclipse.symphony.core.PositionedResult;
 import org.eclipse.symphony.core.ResultNode;
 import org.eclipse.symphony.core.ResultsListNode;
-import org.eclipse.symphony.core.SymphonyCoreFacade;
+import org.eclipse.symphony.core.Symphony__CoreFacade;
 import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.invocator.AbstractResult;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
@@ -209,9 +209,9 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 			PositionedResult positionedResult = (PositionedResult) abstractResult;
 
 			// Creates a ResultNode.
-			ResultNode resultNode = SymphonyCoreFacade.INSTANCE.createResultNode(positionedResult);
+			ResultNode resultNode = Symphony__CoreFacade.INSTANCE.createResultNode(positionedResult);
 
-			TransformNode transform = TopologyFacade.INSTANCE.createTransformNode(positionedResult.getPose().asMatrix4d());
+			TransformNode transform = Symphony__CommonTopologyFacade.INSTANCE.createTransformNode(positionedResult.getPose().asMatrix4d());
 			if(positionedResult.getTime() != null)
 			{
 				String description = Long.toString(positionedResult.getTime().getTime());

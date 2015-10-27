@@ -9,7 +9,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit;
 import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.orekit.frames.Frame;
@@ -358,7 +358,7 @@ public class KeplerianEarthOrbitImpl extends EarthOrbitImpl implements Keplerian
 	 */
 	public KeplerianOrbit getOreKitKeplerianOrbit() 
 	{
-		AbsoluteDate initialDate = EarthOrbitFacade.INSTANCE.createAbsoluteDate(getTime());
+		AbsoluteDate initialDate = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createAbsoluteDate(getTime());
 		Frame inertialFrame = FramesFactory.getEME2000();
 		double mu = 3.986004415e+14;
 		

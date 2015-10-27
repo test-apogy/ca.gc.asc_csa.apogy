@@ -41,7 +41,7 @@ import org.eclipse.symphony.core.invocator.DisplaysListsContainer;
 import org.eclipse.symphony.core.invocator.EClassArgument;
 import org.eclipse.symphony.core.invocator.EDataTypeArgument;
 import org.eclipse.symphony.core.invocator.EEnumArgument;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
@@ -93,12 +93,12 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 {
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass emfEcoreInvocatorFacadeEClass = null;
+	private EClass symphony__CoreInvocatorFacadeEClass = null;
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -635,327 +635,11 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EClass getEMFEcoreInvocatorFacade()
-  {
-		return emfEcoreInvocatorFacadeEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEMFEcoreInvocatorFacade_ActiveInvocatorSession() {
-		return (EReference)emfEcoreInvocatorFacadeEClass.getEStructuralFeatures().get(0);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__Exec__OperationCall()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(0);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__Exec__OperationCall_boolean()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(1);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__Exec__OperationCallsList()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(2);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__CreateAbstractResultValue__Object()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(3);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__ResolveWatch__AbstractFeatureNode()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(4);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(5);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__GetValue__AbstractFeatureNode()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(6);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__GetInstance__Variable()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(7);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__GetInstanceClass__Variable()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(8);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEMFEcoreInvocatorFacade__GetTypeApiAdapter__VariableFeatureReference() {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(9);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__GetInstance__VariableFeatureReference()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(10);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__GetTypeMemberInstance__VariableFeatureReference()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(11);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__GetEMFFeatureValue__VariableFeatureReference()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(12);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEMFEcoreInvocatorFacade__GetInstanceClass__VariableFeatureReference() {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(13);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(14);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__GetTypeImplementation__OperationCall()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(15);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__GetTypeImplementation__Variable_AbstractType()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(16);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__GetTypeImplementation__Variable()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(17);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEMFEcoreInvocatorFacade__CreateTypeMemberReferences__TypeMember() {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(18);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__GetTypeImplementation__Environment_String()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(19);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(20);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(21);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__CreateTypeMemberImplementations__Type()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(22);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__InitVariableInstances__Environment()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(23);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__DisposeVariableInstances__Environment()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(24);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(25);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__ApplyInitializationData__Environment()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(26);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__CollectInitializationData__Environment()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(27);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__ApplyInitializationData__Variable()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(28);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getEMFEcoreInvocatorFacade__CollectInitializationData__Variable()
-  {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(29);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEMFEcoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession() {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(30);
+	public EClass getSymphony__CoreInvocatorFacade() {
+		return symphony__CoreInvocatorFacadeEClass;
 	}
 
 		/**
@@ -963,8 +647,296 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEMFEcoreInvocatorFacade__GetAllTypes__Environment() {
-		return emfEcoreInvocatorFacadeEClass.getEOperations().get(31);
+	public EReference getSymphony__CoreInvocatorFacade_ActiveInvocatorSession() {
+		return (EReference)symphony__CoreInvocatorFacadeEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__Exec__OperationCall() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__Exec__OperationCall_boolean() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__Exec__OperationCallsList() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__CreateAbstractResultValue__Object() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__ResolveWatch__AbstractFeatureNode() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(4);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(5);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetValue__AbstractFeatureNode() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(6);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetInstance__Variable() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(7);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetInstanceClass__Variable() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(8);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetTypeApiAdapter__VariableFeatureReference() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(9);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetInstance__VariableFeatureReference() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(10);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetTypeMemberInstance__VariableFeatureReference() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(11);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetEMFFeatureValue__VariableFeatureReference() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(12);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetInstanceClass__VariableFeatureReference() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(13);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(14);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetTypeImplementation__OperationCall() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(15);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetTypeImplementation__Variable_AbstractType() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(16);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetTypeImplementation__Variable() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(17);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__CreateTypeMemberReferences__TypeMember() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(18);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetTypeImplementation__Environment_String() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(19);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(20);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(21);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__CreateTypeMemberImplementations__Type() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(22);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__InitVariableInstances__Environment() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(23);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__DisposeVariableInstances__Environment() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(24);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(25);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__ApplyInitializationData__Environment() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(26);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__CollectInitializationData__Environment() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(27);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__ApplyInitializationData__Variable() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(28);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__CollectInitializationData__Variable() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(29);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(30);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetAllTypes__Environment() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(31);
 	}
 
 		/**
@@ -3121,40 +3093,40 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 		isCreated = true;
 
 		// Create classes and their features
-		emfEcoreInvocatorFacadeEClass = createEClass(EMF_ECORE_INVOCATOR_FACADE);
-		createEReference(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION);
-		createEOperation(emfEcoreInvocatorFacadeEClass, EMF_ECORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT);
+		symphony__CoreInvocatorFacadeEClass = createEClass(SYMPHONY_CORE_INVOCATOR_FACADE);
+		createEReference(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT);
 
 		invocatorSessionEClass = createEClass(INVOCATOR_SESSION);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__ENVIRONMENT);
@@ -3535,110 +3507,110 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 		operationCallResultsListTimeSourceEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getCollectionTimedTimeSource());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(emfEcoreInvocatorFacadeEClass, EMFEcoreInvocatorFacade.class, "EMFEcoreInvocatorFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEMFEcoreInvocatorFacade_ActiveInvocatorSession(), this.getInvocatorSession(), null, "activeInvocatorSession", null, 0, 1, EMFEcoreInvocatorFacade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(symphony__CoreInvocatorFacadeEClass, Symphony__CoreInvocatorFacade.class, "Symphony__CoreInvocatorFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSymphony__CoreInvocatorFacade_ActiveInvocatorSession(), this.getInvocatorSession(), null, "activeInvocatorSession", null, 0, 1, Symphony__CoreInvocatorFacade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getEMFEcoreInvocatorFacade__Exec__OperationCall(), null, "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getSymphony__CoreInvocatorFacade__Exec__OperationCall(), null, "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__Exec__OperationCall_boolean(), null, "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__Exec__OperationCall_boolean(), null, "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEBoolean(), "saveResult", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__Exec__OperationCallsList(), null, "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__Exec__OperationCallsList(), null, "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOperationCallsList(), "operationCallsList", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__CreateAbstractResultValue__Object(), this.getAbstractResultValue(), "createAbstractResultValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__CreateAbstractResultValue__Object(), this.getAbstractResultValue(), "createAbstractResultValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEJavaObject(), "value", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__ResolveWatch__AbstractFeatureNode(), this.getWatch(), "resolveWatch", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__ResolveWatch__AbstractFeatureNode(), this.getWatch(), "resolveWatch", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonEMFPackage.getAbstractFeatureNode(), "abstractFeatureNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement(), this.getWatch(), "resolveWatch", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement(), this.getWatch(), "resolveWatch", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTypeMemberReferenceTreeElement(), "typeMemberReferenceTreeElement", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetValue__AbstractFeatureNode(), theEcorePackage.getEJavaObject(), "getValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetValue__AbstractFeatureNode(), theEcorePackage.getEJavaObject(), "getValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonEMFPackage.getAbstractFeatureNode(), "abstractFeatureNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetInstance__Variable(), theEcorePackage.getEObject(), "getInstance", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetInstance__Variable(), theEcorePackage.getEObject(), "getInstance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetInstanceClass__Variable(), theEcorePackage.getEClass(), "getInstanceClass", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetInstanceClass__Variable(), theEcorePackage.getEClass(), "getInstanceClass", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetTypeApiAdapter__VariableFeatureReference(), this.getTypeApiAdapter(), "getTypeApiAdapter", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetTypeApiAdapter__VariableFeatureReference(), this.getTypeApiAdapter(), "getTypeApiAdapter", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariableFeatureReference(), "variableFeatureReference", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetInstance__VariableFeatureReference(), theEcorePackage.getEObject(), "getInstance", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetInstance__VariableFeatureReference(), theEcorePackage.getEObject(), "getInstance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariableFeatureReference(), "variableFeatureReference", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetTypeMemberInstance__VariableFeatureReference(), theEcorePackage.getEObject(), "getTypeMemberInstance", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetTypeMemberInstance__VariableFeatureReference(), theEcorePackage.getEObject(), "getTypeMemberInstance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariableFeatureReference(), "variableFeatureReference", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetEMFFeatureValue__VariableFeatureReference(), theEcorePackage.getEJavaObject(), "getEMFFeatureValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetEMFFeatureValue__VariableFeatureReference(), theEcorePackage.getEJavaObject(), "getEMFFeatureValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariableFeatureReference(), "variableFeatureReference", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetInstanceClass__VariableFeatureReference(), theEcorePackage.getEClass(), "getInstanceClass", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetInstanceClass__VariableFeatureReference(), theEcorePackage.getEClass(), "getInstanceClass", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariableFeatureReference(), "variableFeatureReference", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement(), theEcorePackage.getEObject(), "getInstance", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement(), theEcorePackage.getEObject(), "getInstance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTypeMemberReferenceTreeElement(), "typeMemberReferenceTreeElement", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetTypeImplementation__OperationCall(), this.getAbstractTypeImplementation(), "getTypeImplementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetTypeImplementation__OperationCall(), this.getAbstractTypeImplementation(), "getTypeImplementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getOperationCall(), "operationCall", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetTypeImplementation__Variable_AbstractType(), this.getAbstractTypeImplementation(), "getTypeImplementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetTypeImplementation__Variable_AbstractType(), this.getAbstractTypeImplementation(), "getTypeImplementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAbstractType(), "elementType", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetTypeImplementation__Variable(), this.getAbstractTypeImplementation(), "getTypeImplementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetTypeImplementation__Variable(), this.getAbstractTypeImplementation(), "getTypeImplementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__CreateTypeMemberReferences__TypeMember(), this.getTypeMemberReferenceListElement(), "createTypeMemberReferences", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__CreateTypeMemberReferences__TypeMember(), this.getTypeMemberReferenceListElement(), "createTypeMemberReferences", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTypeMembersArray(), "typeMembers", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetTypeImplementation__Environment_String(), this.getAbstractTypeImplementation(), "getTypeImplementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetTypeImplementation__Environment_String(), this.getAbstractTypeImplementation(), "getTypeImplementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEString(), "fullyQualifiedName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement(), theEcorePackage.getEString(), "getFullyQualifiedName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement(), theEcorePackage.getEString(), "getFullyQualifiedName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTypeMemberReferenceTreeElement(), "typeMemberReferenceTreeElement", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode(), theEcorePackage.getEString(), "getFullyQualifiedName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode(), theEcorePackage.getEString(), "getFullyQualifiedName", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonEMFPackage.getAbstractFeatureNode(), "abstractFeatureNode", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__CreateTypeMemberImplementations__Type(), null, "createTypeMemberImplementations", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__CreateTypeMemberImplementations__Type(), null, "createTypeMemberImplementations", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getType(), "variableType", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(theSymphony__CommonEMFPackage.getList());
 		EGenericType g2 = createEGenericType(this.getTypeMemberImplementation());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__InitVariableInstances__Environment(), null, "initVariableInstances", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__InitVariableInstances__Environment(), null, "initVariableInstances", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__DisposeVariableInstances__Environment(), null, "disposeVariableInstances", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__DisposeVariableInstances__Environment(), null, "disposeVariableInstances", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement(), this.getOperationCall(), "getOperationCallContainer", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement(), this.getOperationCall(), "getOperationCallContainer", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTypeMemberReferenceListElement(), "typeMemberReferenceListElement", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__ApplyInitializationData__Environment(), null, "applyInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__ApplyInitializationData__Environment(), null, "applyInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__CollectInitializationData__Environment(), null, "collectInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__CollectInitializationData__Environment(), null, "collectInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__ApplyInitializationData__Variable(), null, "applyInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__ApplyInitializationData__Variable(), null, "applyInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__CollectInitializationData__Variable(), null, "collectInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__CollectInitializationData__Variable(), null, "collectInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession(), null, "loadRegisteredTypes", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession(), null, "loadRegisteredTypes", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getInvocatorSession(), "session", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getEMFEcoreInvocatorFacade__GetAllTypes__Environment(), null, "getAllTypes", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetAllTypes__Environment(), null, "getAllTypes", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getEnvironment(), "environment", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(theSymphony__CommonEMFPackage.getList());
 		g2 = createEGenericType(this.getType());

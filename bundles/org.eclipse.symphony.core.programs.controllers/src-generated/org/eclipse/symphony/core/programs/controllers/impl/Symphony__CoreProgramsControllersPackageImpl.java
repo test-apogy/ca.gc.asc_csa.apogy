@@ -21,7 +21,7 @@ import org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument;
 import org.eclipse.symphony.core.programs.controllers.CenteredLinearInputConditioning;
 import org.eclipse.symphony.core.programs.controllers.CenteredParabolicInputConditioning;
 import org.eclipse.symphony.core.programs.controllers.ControllerEdgeTrigger;
-import org.eclipse.symphony.core.programs.controllers.ControllerFacade;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFacade;
 import org.eclipse.symphony.core.programs.controllers.ControllerStateTrigger;
 import org.eclipse.symphony.core.programs.controllers.ControllerTrigger;
 import org.eclipse.symphony.core.programs.controllers.ControllerValueSource;
@@ -52,12 +52,12 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 {
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  private EClass controllerFacadeEClass = null;
+	private EClass symphony__CoreProgramsControllersFacadeEClass = null;
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -280,31 +280,11 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EClass getControllerFacade()
-  {
-		return controllerFacadeEClass;
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  public EOperation getControllerFacade__CreateValue__EParameter_float()
-  {
-		return controllerFacadeEClass.getEOperations().get(0);
-	}
-
-  /**
-	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getControllerFacade__SortCustomInputConditioningPoint__List() {
-		return controllerFacadeEClass.getEOperations().get(1);
+	public EClass getSymphony__CoreProgramsControllersFacade() {
+		return symphony__CoreProgramsControllersFacadeEClass;
 	}
 
 		/**
@@ -312,8 +292,26 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getControllerFacade__CreateCustomInputConditioningPoint__double_double() {
-		return controllerFacadeEClass.getEOperations().get(2);
+	public EOperation getSymphony__CoreProgramsControllersFacade__CreateValue__EParameter_float() {
+		return symphony__CoreProgramsControllersFacadeEClass.getEOperations().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreProgramsControllersFacade__SortCustomInputConditioningPoint__List() {
+		return symphony__CoreProgramsControllersFacadeEClass.getEOperations().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreProgramsControllersFacade__CreateCustomInputConditioningPoint__double_double() {
+		return symphony__CoreProgramsControllersFacadeEClass.getEOperations().get(2);
 	}
 
 		/**
@@ -854,10 +852,10 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 		isCreated = true;
 
 		// Create classes and their features
-		controllerFacadeEClass = createEClass(CONTROLLER_FACADE);
-		createEOperation(controllerFacadeEClass, CONTROLLER_FACADE___CREATE_VALUE__EPARAMETER_FLOAT);
-		createEOperation(controllerFacadeEClass, CONTROLLER_FACADE___SORT_CUSTOM_INPUT_CONDITIONING_POINT__LIST);
-		createEOperation(controllerFacadeEClass, CONTROLLER_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE);
+		symphony__CoreProgramsControllersFacadeEClass = createEClass(SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE);
+		createEOperation(symphony__CoreProgramsControllersFacadeEClass, SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_VALUE__EPARAMETER_FLOAT);
+		createEOperation(symphony__CoreProgramsControllersFacadeEClass, SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE___SORT_CUSTOM_INPUT_CONDITIONING_POINT__LIST);
+		createEOperation(symphony__CoreProgramsControllersFacadeEClass, SYMPHONY_CORE_PROGRAMS_CONTROLLERS_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE);
 
 		controllersConfigurationEClass = createEClass(CONTROLLERS_CONFIGURATION);
 		createEAttribute(controllersConfigurationEClass, CONTROLLERS_CONFIGURATION__ACTIVE);
@@ -994,13 +992,13 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 		userDefinedInputConditioningEClass.getESuperTypes().add(this.getAbstractInputConditioning());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(controllerFacadeEClass, ControllerFacade.class, "ControllerFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CoreProgramsControllersFacadeEClass, Symphony__CoreProgramsControllersFacade.class, "Symphony__CoreProgramsControllersFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getControllerFacade__CreateValue__EParameter_float(), theEcorePackage.getEJavaObject(), "createValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getSymphony__CoreProgramsControllersFacade__CreateValue__EParameter_float(), theEcorePackage.getEJavaObject(), "createValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEParameter(), "eParameter", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEFloat(), "value", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getControllerFacade__SortCustomInputConditioningPoint__List(), null, "sortCustomInputConditioningPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreProgramsControllersFacade__SortCustomInputConditioningPoint__List(), null, "sortCustomInputConditioningPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(this.getList());
 		EGenericType g2 = createEGenericType(this.getCustomInputConditioningPoint());
 		g1.getETypeArguments().add(g2);
@@ -1010,7 +1008,7 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getControllerFacade__CreateCustomInputConditioningPoint__double_double(), this.getCustomInputConditioningPoint(), "createCustomInputConditioningPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreProgramsControllersFacade__CreateCustomInputConditioningPoint__double_double(), this.getCustomInputConditioningPoint(), "createCustomInputConditioningPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "inputValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "outputValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -1137,7 +1135,7 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 			 "documentation", " -------------------------------------------------------------------------\n\nDataTypes.\n\n-------------------------------------------------------------------------"
 		   });	
 		addAnnotation
-		  (controllerFacadeEClass, 
+		  (symphony__CoreProgramsControllersFacadeEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", " -------------------------------------------------------------------------\n\nUtilities\n\n-------------------------------------------------------------------------"

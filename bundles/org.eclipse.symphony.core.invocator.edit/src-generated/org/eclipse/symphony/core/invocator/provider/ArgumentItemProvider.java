@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
+import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
 import org.eclipse.symphony.core.invocator.Argument;
 
 /**
@@ -77,7 +77,7 @@ public class ArgumentItemProvider
 	  
 	  if(argument.getEParameter() != null)
 	  {		 
-		  label += EMFEcoreEditUtilsFacade.INSTANCE.getText(argument.getEParameter());
+		  label += Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(argument.getEParameter());
 	  }
 	  else
 	  {

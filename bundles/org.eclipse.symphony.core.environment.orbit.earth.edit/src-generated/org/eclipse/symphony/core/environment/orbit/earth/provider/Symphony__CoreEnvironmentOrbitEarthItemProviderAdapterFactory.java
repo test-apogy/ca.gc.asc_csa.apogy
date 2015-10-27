@@ -633,26 +633,26 @@ public class Symphony__CoreEnvironmentOrbitEarthItemProviderAdapterFactory exten
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EarthOrbitFacadeItemProvider earthOrbitFacadeItemProvider;
+	protected Symphony__CoreEnvironmentOrbitEarthFacadeItemProvider symphony__CoreEnvironmentOrbitEarthFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEarthOrbitFacadeAdapter() {
-		if (earthOrbitFacadeItemProvider == null) {
-			earthOrbitFacadeItemProvider = new EarthOrbitFacadeItemProvider(this);
+	public Adapter createSymphony__CoreEnvironmentOrbitEarthFacadeAdapter() {
+		if (symphony__CoreEnvironmentOrbitEarthFacadeItemProvider == null) {
+			symphony__CoreEnvironmentOrbitEarthFacadeItemProvider = new Symphony__CoreEnvironmentOrbitEarthFacadeItemProvider(this);
 		}
 
-		return earthOrbitFacadeItemProvider;
+		return symphony__CoreEnvironmentOrbitEarthFacadeItemProvider;
 	}
 
 	/**
@@ -804,7 +804,7 @@ public class Symphony__CoreEnvironmentOrbitEarthItemProviderAdapterFactory exten
 		if (corridorPointItemProvider != null) corridorPointItemProvider.dispose();
 		if (corridorItemProvider != null) corridorItemProvider.dispose();
 		if (spacecraftSwathCorridorItemProvider != null) spacecraftSwathCorridorItemProvider.dispose();
-		if (earthOrbitFacadeItemProvider != null) earthOrbitFacadeItemProvider.dispose();
+		if (symphony__CoreEnvironmentOrbitEarthFacadeItemProvider != null) symphony__CoreEnvironmentOrbitEarthFacadeItemProvider.dispose();
 	}
 
 	/**
@@ -1149,7 +1149,7 @@ public class Symphony__CoreEnvironmentOrbitEarthItemProviderAdapterFactory exten
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthOrbitFacade()));
+						 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createSymphony__CoreEnvironmentOrbitEarthFacade()));
 
 				return null;
 			}
@@ -1279,7 +1279,7 @@ public class Symphony__CoreEnvironmentOrbitEarthItemProviderAdapterFactory exten
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthOrbitFacade()));
+						 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createSymphony__CoreEnvironmentOrbitEarthFacade()));
 
 				return null;
 			}

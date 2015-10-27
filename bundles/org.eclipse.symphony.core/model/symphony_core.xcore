@@ -48,7 +48,7 @@ type Exception wraps java.lang.Exception
  * Symphony Core Facade.
  * 
  * ------------------------------------------------------------------------- */ 
-class SymphonyCoreFacade
+class Symphony__CoreFacade
 {
 	op Matrix4x4 computeAbsolutePoseMatrix(SymphonySystem symphonySystem, Matrix4x4 relativePose)
 	op ResultNode createResultNode(PositionedResult result)		

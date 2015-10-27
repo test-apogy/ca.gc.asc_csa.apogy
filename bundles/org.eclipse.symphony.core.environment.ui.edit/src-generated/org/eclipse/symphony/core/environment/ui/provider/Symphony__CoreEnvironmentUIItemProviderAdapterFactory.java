@@ -242,54 +242,52 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EnvironmentUiUtilitiesItemProvider environmentUiUtilitiesItemProvider;
+  protected EnvironmentUIUtilitiesItemProvider environmentUIUtilitiesItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.EnvironmentUiUtilities}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.EnvironmentUIUtilities}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEnvironmentUiUtilitiesAdapter()
-  {
-		if (environmentUiUtilitiesItemProvider == null) {
-			environmentUiUtilitiesItemProvider = new EnvironmentUiUtilitiesItemProvider(this);
+	@Override
+	public Adapter createEnvironmentUIUtilitiesAdapter() {
+		if (environmentUIUtilitiesItemProvider == null) {
+			environmentUIUtilitiesItemProvider = new EnvironmentUIUtilitiesItemProvider(this);
 		}
 
-		return environmentUiUtilitiesItemProvider;
+		return environmentUIUtilitiesItemProvider;
 	}
 
-  /**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade} instances.
+		/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected EnvironmentUiFacadeItemProvider environmentUiFacadeItemProvider;
+  protected Symphony__CoreEnvironmentUIFacadeItemProvider symphony__CoreEnvironmentUIFacadeItemProvider;
 
   /**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFacade}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
-  public Adapter createEnvironmentUiFacadeAdapter()
-  {
-		if (environmentUiFacadeItemProvider == null) {
-			environmentUiFacadeItemProvider = new EnvironmentUiFacadeItemProvider(this);
+	@Override
+	public Adapter createSymphony__CoreEnvironmentUIFacadeAdapter() {
+		if (symphony__CoreEnvironmentUIFacadeItemProvider == null) {
+			symphony__CoreEnvironmentUIFacadeItemProvider = new Symphony__CoreEnvironmentUIFacadeItemProvider(this);
 		}
 
-		return environmentUiFacadeItemProvider;
+		return symphony__CoreEnvironmentUIFacadeItemProvider;
 	}
 
-  /**
+		/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.ui.MapViewConfigurationList} instances.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -648,8 +646,8 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 		if (earthSkyPresentationItemProvider != null) earthSkyPresentationItemProvider.dispose();
 		if (moonPresentationItemProvider != null) moonPresentationItemProvider.dispose();
 		if (featureOfInterestNodePresentationItemProvider != null) featureOfInterestNodePresentationItemProvider.dispose();
-		if (environmentUiUtilitiesItemProvider != null) environmentUiUtilitiesItemProvider.dispose();
-		if (environmentUiFacadeItemProvider != null) environmentUiFacadeItemProvider.dispose();
+		if (environmentUIUtilitiesItemProvider != null) environmentUIUtilitiesItemProvider.dispose();
+		if (symphony__CoreEnvironmentUIFacadeItemProvider != null) symphony__CoreEnvironmentUIFacadeItemProvider.dispose();
 		if (mapViewConfigurationListItemProvider != null) mapViewConfigurationListItemProvider.dispose();
 		if (mapViewConfigurationItemProvider != null) mapViewConfigurationItemProvider.dispose();
 		if (mapRulerItemProvider != null) mapRulerItemProvider.dispose();
@@ -940,12 +938,12 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEnvironmentUiUtilities()));
+						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEnvironmentUIUtilities()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEnvironmentUiFacade()));
+						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createSymphony__CoreEnvironmentUIFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter
@@ -1035,12 +1033,12 @@ public class Symphony__CoreEnvironmentUIItemProviderAdapterFactory extends Symph
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEnvironmentUiUtilities()));
+						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEnvironmentUIUtilities()));
 
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createEnvironmentUiFacade()));
+						 Symphony__CoreEnvironmentUIFactory.eINSTANCE.createSymphony__CoreEnvironmentUIFacade()));
 
 				newChildDescriptors.add
 					(createChildParameter

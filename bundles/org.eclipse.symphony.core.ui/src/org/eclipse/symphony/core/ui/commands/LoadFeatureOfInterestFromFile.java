@@ -16,7 +16,7 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.FeatureOfInterestList;
-import org.eclipse.symphony.core.SymphonyCoreFacade;
+import org.eclipse.symphony.core.Symphony__CoreFacade;
 import org.eclipse.symphony.core.ui.Activator;
 import org.eclipse.ui.handlers.HandlerUtil;
 
@@ -56,7 +56,7 @@ public class LoadFeatureOfInterestFromFile extends AbstractHandler implements IH
 						
 						if(filePath.endsWith(".csv"))
 						{																																		
-							List<FeatureOfInterest> foiList = SymphonyCoreFacade.INSTANCE.loadFeatureOfInterestFromFile(urlString);
+							List<FeatureOfInterest> foiList = Symphony__CoreFacade.INSTANCE.loadFeatureOfInterestFromFile(urlString);
 																
 							if(foiList.size() > 0)
 							{

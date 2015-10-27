@@ -39,7 +39,7 @@ import org.eclipse.symphony.core.invocator.DisplaysListsContainer;
 import org.eclipse.symphony.core.invocator.EClassArgument;
 import org.eclipse.symphony.core.invocator.EDataTypeArgument;
 import org.eclipse.symphony.core.invocator.EEnumArgument;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.ExceptionContainer;
@@ -141,9 +141,9 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
   protected T doSwitch(int classifierID, EObject theEObject)
   {
 		switch (classifierID) {
-			case Symphony__CoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE: {
-				EMFEcoreInvocatorFacade emfEcoreInvocatorFacade = (EMFEcoreInvocatorFacade)theEObject;
-				T result = caseEMFEcoreInvocatorFacade(emfEcoreInvocatorFacade);
+			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE: {
+				Symphony__CoreInvocatorFacade symphony__CoreInvocatorFacade = (Symphony__CoreInvocatorFacade)theEObject;
+				T result = caseSymphony__CoreInvocatorFacade(symphony__CoreInvocatorFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -606,22 +606,21 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 	}
 
   /**
-	 * Returns the result of interpreting the object as an instance of '<em>EMF Ecore Invocator Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EMF Ecore Invocator Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-  public T caseEMFEcoreInvocatorFacade(EMFEcoreInvocatorFacade object)
-  {
+	public T caseSymphony__CoreInvocatorFacade(Symphony__CoreInvocatorFacade object) {
 		return null;
 	}
 
-  /**
+		/**
 	 * Returns the result of interpreting the object as an instance of '<em>Invocator Session</em>'.
 	 * <!-- begin-user-doc -->
    * This implementation returns null;

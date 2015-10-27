@@ -262,8 +262,8 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 				return createPositionMarkerAdapter();
 			}
 			@Override
-			public Adapter caseData3dFacade(Data3dFacade object) {
-				return createData3dFacadeAdapter();
+			public Adapter caseSymphony__CommonGeometryData3DFacade(Symphony__CommonGeometryData3DFacade object) {
+				return createSymphony__CommonGeometryData3DFacadeAdapter();
 			}
 			@Override
 			public Adapter caseData3DIO(Data3DIO object) {
@@ -986,16 +986,16 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.Data3dFacade <em>Data3d Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3dFacade
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade
 	 * @generated
 	 */
-	public Adapter createData3dFacadeAdapter() {
+	public Adapter createSymphony__CommonGeometryData3DFacadeAdapter() {
 		return null;
 	}
 

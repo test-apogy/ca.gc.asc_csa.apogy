@@ -9,9 +9,9 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.ui.Activator;
-import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
+import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 
@@ -167,7 +167,7 @@ public class AbstractUnitItemPropertyDescriptor extends ItemPropertyDescriptor
 	{
 		if(displayUnit == null)
 		{
-			displayUnit = EMFEcoreUIFacade.INSTANCE.getDisplayUnits(feature);
+			displayUnit = Symphony__CommonEMFUIFacade.INSTANCE.getDisplayUnits(feature);
 		}
 		return displayUnit;
 	}
@@ -176,7 +176,7 @@ public class AbstractUnitItemPropertyDescriptor extends ItemPropertyDescriptor
 	{				
 		if(nativeUnit == null)
 		{
-			nativeUnit = EMFEcoreFacade.INSTANCE.getEngineeringUnits(feature);
+			nativeUnit = Symphony__CommonEMFFacade.INSTANCE.getEngineeringUnits(feature);
 		}
 		return nativeUnit;
 	}

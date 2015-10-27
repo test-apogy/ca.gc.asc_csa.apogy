@@ -1160,23 +1160,23 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	int URL_NODE_PRESENTATION_OPERATION_COUNT = NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.impl.TopologyUIFacadeImpl <em>Topology UI Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.topology.ui.impl.TopologyUIFacadeImpl
-	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getTopologyUIFacade()
+	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIFacadeImpl
+	 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getSymphony__CommonTopologyUIFacade()
 	 * @generated
 	 */
-	int TOPOLOGY_UI_FACADE = 9;
+	int SYMPHONY_COMMON_TOPOLOGY_UI_FACADE = 9;
 
 	/**
-	 * The number of structural features of the '<em>Topology UI Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_UI_FACADE_FEATURE_COUNT = 0;
+	int SYMPHONY_COMMON_TOPOLOGY_UI_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Graphics Context</em>' operation.
@@ -1185,7 +1185,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE = 0;
+	int SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE = 0;
 
 	/**
 	 * The operation id for the '<em>Find Extent</em>' operation.
@@ -1194,7 +1194,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D = 1;
+	int SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D = 1;
 
 	/**
 	 * The operation id for the '<em>Create Node Selection</em>' operation.
@@ -1203,7 +1203,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D = 2;
+	int SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D = 2;
 
 	/**
 	 * The operation id for the '<em>Create Node Selection</em>' operation.
@@ -1212,16 +1212,16 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F = 3;
+	int SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F = 3;
 
 	/**
-	 * The number of operations of the '<em>Topology UI Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOPOLOGY_UI_FACADE_OPERATION_COUNT = 4;
+	int SYMPHONY_COMMON_TOPOLOGY_UI_FACADE_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.topology.ui.ShadowMode <em>Shadow Mode</em>}' enum.
@@ -1852,54 +1852,54 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	EAttribute getURLNodePresentation_PresentationMode();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade <em>Topology UI Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Topology UI Facade</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade
 	 * @generated
 	 */
-	EClass getTopologyUIFacade();
+	EClass getSymphony__CommonTopologyUIFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade#createGraphicsContext(org.eclipse.symphony.common.topology.Node) <em>Create Graphics Context</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#createGraphicsContext(org.eclipse.symphony.common.topology.Node) <em>Create Graphics Context</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Graphics Context</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIFacade#createGraphicsContext(org.eclipse.symphony.common.topology.Node)
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#createGraphicsContext(org.eclipse.symphony.common.topology.Node)
 	 * @generated
 	 */
-	EOperation getTopologyUIFacade__CreateGraphicsContext__Node();
+	EOperation getSymphony__CommonTopologyUIFacade__CreateGraphicsContext__Node();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade#findExtent(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Find Extent</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#findExtent(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d) <em>Find Extent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Extent</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIFacade#findExtent(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#findExtent(org.eclipse.symphony.common.topology.Node, org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.math.Tuple3d, org.eclipse.symphony.common.math.Tuple3d)
 	 * @generated
 	 */
-	EOperation getTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d();
+	EOperation getSymphony__CommonTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.ui.NodePresentation, javax.vecmath.Point3d) <em>Create Node Selection</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.ui.NodePresentation, javax.vecmath.Point3d) <em>Create Node Selection</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Node Selection</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.ui.NodePresentation, javax.vecmath.Point3d)
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.ui.NodePresentation, javax.vecmath.Point3d)
 	 * @generated
 	 */
-	EOperation getTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d();
+	EOperation getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.TopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.Node, javax.vecmath.Point3d, javax.vecmath.Vector3f) <em>Create Node Selection</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.Node, javax.vecmath.Point3d, javax.vecmath.Vector3f) <em>Create Node Selection</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Node Selection</em>' operation.
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.Node, javax.vecmath.Point3d, javax.vecmath.Vector3f)
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade#createNodeSelection(org.eclipse.symphony.common.topology.ui.TopologyPresentationSet, org.eclipse.symphony.common.topology.Node, javax.vecmath.Point3d, javax.vecmath.Vector3f)
 	 * @generated
 	 */
-	EOperation getTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f();
+	EOperation getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.symphony.common.topology.ui.ShadowMode <em>Shadow Mode</em>}'.
@@ -2437,14 +2437,14 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		EAttribute URL_NODE_PRESENTATION__PRESENTATION_MODE = eINSTANCE.getURLNodePresentation_PresentationMode();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.impl.TopologyUIFacadeImpl <em>Topology UI Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.topology.ui.impl.TopologyUIFacadeImpl
-		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getTopologyUIFacade()
+		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIFacadeImpl
+		 * @see org.eclipse.symphony.common.topology.ui.impl.Symphony__CommonTopologyUIPackageImpl#getSymphony__CommonTopologyUIFacade()
 		 * @generated
 		 */
-		EClass TOPOLOGY_UI_FACADE = eINSTANCE.getTopologyUIFacade();
+		EClass SYMPHONY_COMMON_TOPOLOGY_UI_FACADE = eINSTANCE.getSymphony__CommonTopologyUIFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Graphics Context</b></em>' operation.
@@ -2452,7 +2452,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE = eINSTANCE.getTopologyUIFacade__CreateGraphicsContext__Node();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE = eINSTANCE.getSymphony__CommonTopologyUIFacade__CreateGraphicsContext__Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Extent</b></em>' operation.
@@ -2460,7 +2460,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D = eINSTANCE.getTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D = eINSTANCE.getSymphony__CommonTopologyUIFacade__FindExtent__Node_TopologyPresentationSet_Tuple3d_Tuple3d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Node Selection</b></em>' operation.
@@ -2468,7 +2468,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D = eINSTANCE.getTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D = eINSTANCE.getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_NodePresentation_Point3d();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Node Selection</b></em>' operation.
@@ -2476,7 +2476,7 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F = eINSTANCE.getTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f();
+		EOperation SYMPHONY_COMMON_TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F = eINSTANCE.getSymphony__CommonTopologyUIFacade__CreateNodeSelection__TopologyPresentationSet_Node_Point3d_Vector3f();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.ShadowMode <em>Shadow Mode</em>}' enum.

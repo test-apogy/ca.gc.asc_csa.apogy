@@ -14,7 +14,7 @@ import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.addons.primitives.PickVector;
 import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.Vector;
@@ -255,7 +255,7 @@ public class PickVectorJME3SceneObject extends DefaultJME3SceneObject<PickVector
 			        		absoluteIntersectionPosition = new Point3d(JME3Utilities.convertToJavaxVector3f(contact));
 			        		
 				        	// Transform the pick position in the node frame.
-					        Matrix4d m = TopologyFacade.INSTANCE.expressNodeInRootFrame(node);
+					        Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(node);
 					        m.invert();				         
 					        Point3d relativePosition = new Point3d(absoluteIntersectionPosition);				         
 					        m.transform(relativePosition);			        					        		

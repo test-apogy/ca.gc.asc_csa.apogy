@@ -13,7 +13,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.ui.Activator;
@@ -56,14 +56,14 @@ public class SymphonyEnvironmentTimeSourcesView extends AbstractView
 		setSymphonyEnvironment(getActiveSymphonyEnvironment());
 				
 		// Register to the active session.
-		EMFEcoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
+		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
 	}
 	
 	@Override
 	public void dispose() 
 	{
 		// Un-Register to the active session.
-		EMFEcoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
+		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
 	
 		setSymphonyEnvironment(null);	
 		
@@ -113,7 +113,7 @@ public class SymphonyEnvironmentTimeSourcesView extends AbstractView
 	{
 		SymphonyEnvironment symphonyEnvironment = null;
 		
-		InvocatorSession session = EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 		if(session != null)
 		{
 			if(session.getEnvironment() instanceof SymphonyEnvironment)
@@ -134,12 +134,12 @@ public class SymphonyEnvironmentTimeSourcesView extends AbstractView
 				@Override
 				public void notifyChanged(Notification msg) 
 				{
-					if(msg.getNotifier() instanceof EMFEcoreInvocatorFacade)
+					if(msg.getNotifier() instanceof Symphony__CoreInvocatorFacade)
 					{
-						int featureId = msg.getFeatureID(EMFEcoreInvocatorFacade.class);
+						int featureId = msg.getFeatureID(Symphony__CoreInvocatorFacade.class);
 						switch (featureId) 
 						{
-							case Symphony__CoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
+							case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 								if(msg.getNewValue() instanceof InvocatorSession)
 								{																		
 									// Gets the current Active Session if one exists.

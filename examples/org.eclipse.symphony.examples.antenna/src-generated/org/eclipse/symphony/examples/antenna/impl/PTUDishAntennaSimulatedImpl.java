@@ -7,7 +7,7 @@ import javax.vecmath.GVector;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.antenna.Activator;
@@ -106,7 +106,7 @@ public class PTUDishAntennaSimulatedImpl extends PTUDishAntennaImpl implements P
 		if(tmp == null)
 		{
 			// Create a conical field of view using the defaults
-			tmp = FOVFacade.INSTANCE.createConicalFieldOfView(FOV_DEF_MINIMUM_RANGE,
+			tmp = Symphony__AddonsSensorsFOVFacade.INSTANCE.createConicalFieldOfView(FOV_DEF_MINIMUM_RANGE,
 															  FOV_DEF_MAXIMUM_RANGE,
 															  FOV_DEF_ANGLE);
 

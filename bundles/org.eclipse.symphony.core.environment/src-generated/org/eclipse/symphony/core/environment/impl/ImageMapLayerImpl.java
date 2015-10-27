@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.environment.ImageMapLayer;
 import org.eclipse.symphony.core.environment.RectangularRegion;
@@ -333,7 +333,7 @@ public class ImageMapLayerImpl extends AbstractMapLayerImpl implements ImageMapL
  	public RectangularRegion getImageMapLayerRegion() 
  	{
  		RectangularRegion rectangularRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
- 		rectangularRegion.setTransformation(MathFacade.INSTANCE.createIdentityMatrix4x4());
+ 		rectangularRegion.setTransformation(Symphony__CommonMathFacade.INSTANCE.createIdentityMatrix4x4());
  		
  		if(getMap() != null && getMap().getTransformation() != null)
  		{ 			 

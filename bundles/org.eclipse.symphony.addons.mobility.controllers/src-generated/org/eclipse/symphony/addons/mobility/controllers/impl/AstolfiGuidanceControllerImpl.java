@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.geometry.paths.CatmullRomWayPointPathInterpolator;
-import org.eclipse.symphony.addons.geometry.paths.PathsFacade;
+import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade;
 import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFactory;
 import org.eclipse.symphony.addons.geometry.paths.SplineEndControlPointGenerationMode;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
@@ -571,7 +571,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 		int indexLast = getSmoothedPath().getPoints().size()-1;
 		
 		List<CartesianPositionCoordinates> remainingPathPoints = getSmoothedPath().getPoints().subList(indexCurrent, indexLast);
-		WayPointPath remainingPathToDestination = PathsFacade.INSTANCE.createWayPointPath(remainingPathPoints);
+		WayPointPath remainingPathToDestination = Symphony__AddonsGeometryPathsFacade.INSTANCE.createWayPointPath(remainingPathPoints);
 		
 		double remainingPathToDestinationLength=remainingPathToDestination.getLength() + getRho();
 		
@@ -1230,7 +1230,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 					createSmoothedPath();
 				} else {
 					// Copies the path as is.
-					smoothedPath = PathsFacade.INSTANCE
+					smoothedPath = Symphony__AddonsGeometryPathsFacade.INSTANCE
 							.createWayPointPath(getPath());
 				}
 
@@ -1339,7 +1339,7 @@ public class AstolfiGuidanceControllerImpl extends SkidSteeredPlatformPathFollow
 					.setEndControlPointGenerationMode(SplineEndControlPointGenerationMode.AUTO_CTRL_POINTS_DUPLICATE_ENDNODES);
 			smoothedPath = interpolator.process(getPath());
 		} else {
-			smoothedPath = PathsFacade.INSTANCE.createWayPointPath(getPath());
+			smoothedPath = Symphony__AddonsGeometryPathsFacade.INSTANCE.createWayPointPath(getPath());
 		}
 	}
 

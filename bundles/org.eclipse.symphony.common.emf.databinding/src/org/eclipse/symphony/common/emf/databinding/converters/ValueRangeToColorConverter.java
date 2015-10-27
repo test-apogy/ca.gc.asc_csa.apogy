@@ -3,9 +3,9 @@ package org.eclipse.symphony.common.emf.databinding.converters;
 import org.eclipse.core.databinding.conversion.Converter;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.swt.graphics.Color;
-import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
+import org.eclipse.symphony.common.emf.ui.Symphony__CommonEMFUIFacade;
 
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.Ranges;
 
 
@@ -27,7 +27,7 @@ public class ValueRangeToColorConverter extends Converter
 	public Object convert(Object fromObject) 
 	{
 		Ranges range = getNewValueRange(fromObject);	
-		Color color = EMFEcoreUIFacade.INSTANCE.getColorForRange(range);
+		Color color = Symphony__CommonEMFUIFacade.INSTANCE.getColorForRange(range);
 		return color;
 	}
 	
@@ -40,7 +40,7 @@ public class ValueRangeToColorConverter extends Converter
 	{
 		try
 		{
-			return EMFEcoreFacade.INSTANCE.getRange(eStructuralFeature, value);
+			return Symphony__CommonEMFFacade.INSTANCE.getRange(eStructuralFeature, value);
 		}
 		catch(Exception e)
 		{

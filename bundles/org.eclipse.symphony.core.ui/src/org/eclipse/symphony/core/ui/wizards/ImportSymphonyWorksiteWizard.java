@@ -11,14 +11,14 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.AbstractWorksite;
 import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.WorksiteContributor;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.ui.Activator;
 import org.eclipse.ui.INewWizard;
@@ -65,11 +65,11 @@ public class ImportSymphonyWorksiteWizard extends Wizard implements INewWizard {
 		WorksiteContributor worksiteContributor = page.getWorksiteContributor();
 
 		try {
-			List<EObject> content = EMFEcoreFacade.INSTANCE
+			List<EObject> content = Symphony__CommonEMFFacade.INSTANCE
 					.getContent(worksiteContributor.uri);
 			AbstractWorksite worksite = (AbstractWorksite) content.get(0);
 
-			InvocatorSession session = EMFEcoreInvocatorFacade.INSTANCE
+			InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE
 					.getActiveInvocatorSession();
 			SymphonyEnvironment environment = (SymphonyEnvironment) session
 					.getEnvironment();

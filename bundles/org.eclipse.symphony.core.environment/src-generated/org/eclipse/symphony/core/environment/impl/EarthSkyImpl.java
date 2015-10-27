@@ -25,7 +25,7 @@ import org.eclipse.symphony.core.environment.AstronomyUtils;
 import org.eclipse.symphony.core.environment.EarthSky;
 import org.eclipse.symphony.core.environment.EarthSkyNode;
 import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.EnvironmentFacade;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.HorizontalCoordinates;
 import org.eclipse.symphony.core.environment.Moon;
@@ -235,7 +235,7 @@ public class EarthSkyImpl extends SkyImpl implements EarthSky
 	  	if(skyNode == null || !(skyNode instanceof EarthSkyNode))
 	  	{	  		
 	  		skyNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSkyNode();
-	  		EnvironmentFacade.INSTANCE.initializeEarthSkyNode(this, (EarthSkyNode) skyNode);							
+	  		Symphony__CoreEnvironmentFacade.INSTANCE.initializeEarthSkyNode(this, (EarthSkyNode) skyNode);							
 	  	}
 	  	
 	  	return getSkyNodeGen();

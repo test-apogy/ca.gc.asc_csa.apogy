@@ -85,26 +85,26 @@ public class Symphony__CoreProgramsItemProviderAdapterFactory extends Symphony__
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.ProgramFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ProgramFacadeItemProvider programFacadeItemProvider;
+	protected Symphony__CoreProgramsFacadeItemProvider symphony__CoreProgramsFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.ProgramFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createProgramFacadeAdapter() {
-		if (programFacadeItemProvider == null) {
-			programFacadeItemProvider = new ProgramFacadeItemProvider(this);
+	public Adapter createSymphony__CoreProgramsFacadeAdapter() {
+		if (symphony__CoreProgramsFacadeItemProvider == null) {
+			symphony__CoreProgramsFacadeItemProvider = new Symphony__CoreProgramsFacadeItemProvider(this);
 		}
 
-		return programFacadeItemProvider;
+		return symphony__CoreProgramsFacadeItemProvider;
 	}
 
 	/**
@@ -256,7 +256,7 @@ public class Symphony__CoreProgramsItemProviderAdapterFactory extends Symphony__
 	 * @generated
 	 */
 	public void dispose() {
-		if (programFacadeItemProvider != null) programFacadeItemProvider.dispose();
+		if (symphony__CoreProgramsFacadeItemProvider != null) symphony__CoreProgramsFacadeItemProvider.dispose();
 		if (timeIntervalItemProvider != null) timeIntervalItemProvider.dispose();
 	}
 

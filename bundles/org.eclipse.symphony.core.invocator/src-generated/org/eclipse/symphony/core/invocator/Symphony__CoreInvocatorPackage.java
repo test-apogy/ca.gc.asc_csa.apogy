@@ -63,311 +63,311 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   Symphony__CoreInvocatorPackage eINSTANCE = org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.EMFEcoreInvocatorFacadeImpl <em>EMF Ecore Invocator Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.invocator.impl.EMFEcoreInvocatorFacadeImpl
-	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getEMFEcoreInvocatorFacade()
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImpl
+	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getSymphony__CoreInvocatorFacade()
 	 * @generated
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE = 0;
+	int SYMPHONY_CORE_INVOCATOR_FACADE = 0;
 
-  /**
+		/**
 	 * The feature id for the '<em><b>Active Invocator Session</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION = 0;
+	int SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION = 0;
 
 		/**
-	 * The number of structural features of the '<em>EMF Ecore Invocator Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE_FEATURE_COUNT = 1;
+	int SYMPHONY_CORE_INVOCATOR_FACADE_FEATURE_COUNT = 1;
 
-  /**
+		/**
 	 * The operation id for the '<em>Exec</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL = 0;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL = 0;
 
-  /**
+		/**
 	 * The operation id for the '<em>Exec</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN = 1;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN = 1;
 
-  /**
+		/**
 	 * The operation id for the '<em>Exec</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST = 2;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST = 2;
 
-  /**
+		/**
 	 * The operation id for the '<em>Create Abstract Result Value</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT = 3;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT = 3;
 
-  /**
+		/**
 	 * The operation id for the '<em>Resolve Watch</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE = 4;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE = 4;
 
-  /**
+		/**
 	 * The operation id for the '<em>Resolve Watch</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT = 5;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT = 5;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Value</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE = 6;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE = 6;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Instance</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE = 7;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE = 7;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Instance Class</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE = 8;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE = 8;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Type Api Adapter</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE = 9;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE = 9;
 
 		/**
 	 * The operation id for the '<em>Get Instance</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE = 10;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE = 10;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Type Member Instance</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE = 11;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE = 11;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get EMF Feature Value</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE = 12;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE = 12;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Instance Class</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE = 13;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE = 13;
 
 		/**
 	 * The operation id for the '<em>Get Instance</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT = 14;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT = 14;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL = 15;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL = 15;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE = 16;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE = 16;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE = 17;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE = 17;
 
-  /**
+		/**
 	 * The operation id for the '<em>Create Type Member References</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_ECORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER = 18;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER = 18;
 
 		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING = 19;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING = 19;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Fully Qualified Name</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT = 20;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT = 20;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Fully Qualified Name</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE = 21;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE = 21;
 
-  /**
+		/**
 	 * The operation id for the '<em>Create Type Member Implementations</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE = 22;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE = 22;
 
-  /**
+		/**
 	 * The operation id for the '<em>Init Variable Instances</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = 23;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = 23;
 
-  /**
+		/**
 	 * The operation id for the '<em>Dispose Variable Instances</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = 24;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = 24;
 
-  /**
+		/**
 	 * The operation id for the '<em>Get Operation Call Container</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = 25;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = 25;
 
-  /**
+		/**
 	 * The operation id for the '<em>Apply Initialization Data</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = 26;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = 26;
 
-  /**
+		/**
 	 * The operation id for the '<em>Collect Initialization Data</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = 27;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = 27;
 
-  /**
+		/**
 	 * The operation id for the '<em>Apply Initialization Data</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = 28;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = 28;
 
-  /**
+		/**
 	 * The operation id for the '<em>Collect Initialization Data</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = 29;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = 29;
 
-  /**
+		/**
 	 * The operation id for the '<em>Load Registered Types</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_ECORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION = 30;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION = 30;
 
 		/**
 	 * The operation id for the '<em>Get All Types</em>' operation.
@@ -376,18 +376,18 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int EMF_ECORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT = 31;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT = 31;
 
 		/**
-	 * The number of operations of the '<em>EMF Ecore Invocator Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int EMF_ECORE_INVOCATOR_FACADE_OPERATION_COUNT = 32;
+	int SYMPHONY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 32;
 
-  /**
+		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4642,345 +4642,345 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade <em>EMF Ecore Invocator Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EMF Ecore Invocator Facade</em>'.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade
 	 * @generated
 	 */
-  EClass getEMFEcoreInvocatorFacade();
+	EClass getSymphony__CoreInvocatorFacade();
 
-  /**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getActiveInvocatorSession <em>Active Invocator Session</em>}'.
+		/**
+	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getActiveInvocatorSession <em>Active Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Active Invocator Session</em>'.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getActiveInvocatorSession()
-	 * @see #getEMFEcoreInvocatorFacade()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getActiveInvocatorSession()
+	 * @see #getSymphony__CoreInvocatorFacade()
 	 * @generated
 	 */
-	EReference getEMFEcoreInvocatorFacade_ActiveInvocatorSession();
+	EReference getSymphony__CoreInvocatorFacade_ActiveInvocatorSession();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCall) <em>Exec</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCall) <em>Exec</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Exec</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCall)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCall)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__Exec__OperationCall();
+	EOperation getSymphony__CoreInvocatorFacade__Exec__OperationCall();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCall, boolean) <em>Exec</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCall, boolean) <em>Exec</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Exec</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCall, boolean)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCall, boolean)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__Exec__OperationCall_boolean();
+	EOperation getSymphony__CoreInvocatorFacade__Exec__OperationCall_boolean();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCallsList) <em>Exec</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCallsList) <em>Exec</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Exec</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCallsList)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#exec(org.eclipse.symphony.core.invocator.OperationCallsList)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__Exec__OperationCallsList();
+	EOperation getSymphony__CoreInvocatorFacade__Exec__OperationCallsList();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#createAbstractResultValue(java.lang.Object) <em>Create Abstract Result Value</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#createAbstractResultValue(java.lang.Object) <em>Create Abstract Result Value</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Abstract Result Value</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#createAbstractResultValue(java.lang.Object)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#createAbstractResultValue(java.lang.Object)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__CreateAbstractResultValue__Object();
+	EOperation getSymphony__CoreInvocatorFacade__CreateAbstractResultValue__Object();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#resolveWatch(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Resolve Watch</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#resolveWatch(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Resolve Watch</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Resolve Watch</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#resolveWatch(org.eclipse.symphony.common.emf.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#resolveWatch(org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__ResolveWatch__AbstractFeatureNode();
+	EOperation getSymphony__CoreInvocatorFacade__ResolveWatch__AbstractFeatureNode();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#resolveWatch(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement) <em>Resolve Watch</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#resolveWatch(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement) <em>Resolve Watch</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Resolve Watch</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#resolveWatch(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#resolveWatch(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement();
+	EOperation getSymphony__CoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getValue(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Value</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getValue(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Value</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Value</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getValue(org.eclipse.symphony.common.emf.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getValue(org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__GetValue__AbstractFeatureNode();
+	EOperation getSymphony__CoreInvocatorFacade__GetValue__AbstractFeatureNode();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.Variable) <em>Get Instance</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.Variable) <em>Get Instance</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Instance</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.Variable)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.Variable)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__GetInstance__Variable();
+	EOperation getSymphony__CoreInvocatorFacade__GetInstance__Variable();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getInstanceClass(org.eclipse.symphony.core.invocator.Variable) <em>Get Instance Class</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstanceClass(org.eclipse.symphony.core.invocator.Variable) <em>Get Instance Class</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Instance Class</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getInstanceClass(org.eclipse.symphony.core.invocator.Variable)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstanceClass(org.eclipse.symphony.core.invocator.Variable)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__GetInstanceClass__Variable();
+	EOperation getSymphony__CoreInvocatorFacade__GetInstanceClass__Variable();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getTypeApiAdapter(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get Type Api Adapter</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeApiAdapter(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get Type Api Adapter</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Type Api Adapter</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getTypeApiAdapter(org.eclipse.symphony.core.invocator.VariableFeatureReference)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeApiAdapter(org.eclipse.symphony.core.invocator.VariableFeatureReference)
 	 * @generated
 	 */
-	EOperation getEMFEcoreInvocatorFacade__GetTypeApiAdapter__VariableFeatureReference();
+	EOperation getSymphony__CoreInvocatorFacade__GetTypeApiAdapter__VariableFeatureReference();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get Instance</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get Instance</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Instance</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.VariableFeatureReference)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.VariableFeatureReference)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__GetInstance__VariableFeatureReference();
+	EOperation getSymphony__CoreInvocatorFacade__GetInstance__VariableFeatureReference();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getTypeMemberInstance(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get Type Member Instance</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeMemberInstance(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get Type Member Instance</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Type Member Instance</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getTypeMemberInstance(org.eclipse.symphony.core.invocator.VariableFeatureReference)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeMemberInstance(org.eclipse.symphony.core.invocator.VariableFeatureReference)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__GetTypeMemberInstance__VariableFeatureReference();
+	EOperation getSymphony__CoreInvocatorFacade__GetTypeMemberInstance__VariableFeatureReference();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getEMFFeatureValue(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get EMF Feature Value</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getEMFFeatureValue(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get EMF Feature Value</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get EMF Feature Value</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getEMFFeatureValue(org.eclipse.symphony.core.invocator.VariableFeatureReference)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getEMFFeatureValue(org.eclipse.symphony.core.invocator.VariableFeatureReference)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__GetEMFFeatureValue__VariableFeatureReference();
+	EOperation getSymphony__CoreInvocatorFacade__GetEMFFeatureValue__VariableFeatureReference();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getInstanceClass(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get Instance Class</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstanceClass(org.eclipse.symphony.core.invocator.VariableFeatureReference) <em>Get Instance Class</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Instance Class</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getInstanceClass(org.eclipse.symphony.core.invocator.VariableFeatureReference)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstanceClass(org.eclipse.symphony.core.invocator.VariableFeatureReference)
 	 * @generated
 	 */
-	EOperation getEMFEcoreInvocatorFacade__GetInstanceClass__VariableFeatureReference();
+	EOperation getSymphony__CoreInvocatorFacade__GetInstanceClass__VariableFeatureReference();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement) <em>Get Instance</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement) <em>Get Instance</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Instance</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInstance(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement();
+	EOperation getSymphony__CoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.OperationCall) <em>Get Type Implementation</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.OperationCall) <em>Get Type Implementation</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Type Implementation</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.OperationCall)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.OperationCall)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__GetTypeImplementation__OperationCall();
+	EOperation getSymphony__CoreInvocatorFacade__GetTypeImplementation__OperationCall();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Variable, org.eclipse.symphony.core.invocator.AbstractType) <em>Get Type Implementation</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Variable, org.eclipse.symphony.core.invocator.AbstractType) <em>Get Type Implementation</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Type Implementation</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Variable, org.eclipse.symphony.core.invocator.AbstractType)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Variable, org.eclipse.symphony.core.invocator.AbstractType)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__GetTypeImplementation__Variable_AbstractType();
+	EOperation getSymphony__CoreInvocatorFacade__GetTypeImplementation__Variable_AbstractType();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Variable) <em>Get Type Implementation</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Variable) <em>Get Type Implementation</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Type Implementation</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Variable)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Variable)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__GetTypeImplementation__Variable();
+	EOperation getSymphony__CoreInvocatorFacade__GetTypeImplementation__Variable();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#createTypeMemberReferences(org.eclipse.symphony.core.invocator.TypeMember[]) <em>Create Type Member References</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#createTypeMemberReferences(org.eclipse.symphony.core.invocator.TypeMember[]) <em>Create Type Member References</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Type Member References</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#createTypeMemberReferences(org.eclipse.symphony.core.invocator.TypeMember[])
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#createTypeMemberReferences(org.eclipse.symphony.core.invocator.TypeMember[])
 	 * @generated
 	 */
-	EOperation getEMFEcoreInvocatorFacade__CreateTypeMemberReferences__TypeMember();
+	EOperation getSymphony__CoreInvocatorFacade__CreateTypeMemberReferences__TypeMember();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Environment, java.lang.String) <em>Get Type Implementation</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Environment, java.lang.String) <em>Get Type Implementation</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Type Implementation</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Environment, java.lang.String)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getTypeImplementation(org.eclipse.symphony.core.invocator.Environment, java.lang.String)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__GetTypeImplementation__Environment_String();
+	EOperation getSymphony__CoreInvocatorFacade__GetTypeImplementation__Environment_String();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement) <em>Get Fully Qualified Name</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement) <em>Get Fully Qualified Name</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Fully Qualified Name</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement();
+	EOperation getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Fully Qualified Name</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.common.emf.AbstractFeatureNode) <em>Get Fully Qualified Name</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Fully Qualified Name</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.common.emf.AbstractFeatureNode)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getFullyQualifiedName(org.eclipse.symphony.common.emf.AbstractFeatureNode)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode();
+	EOperation getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#createTypeMemberImplementations(org.eclipse.symphony.core.invocator.Type) <em>Create Type Member Implementations</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#createTypeMemberImplementations(org.eclipse.symphony.core.invocator.Type) <em>Create Type Member Implementations</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Type Member Implementations</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#createTypeMemberImplementations(org.eclipse.symphony.core.invocator.Type)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#createTypeMemberImplementations(org.eclipse.symphony.core.invocator.Type)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__CreateTypeMemberImplementations__Type();
+	EOperation getSymphony__CoreInvocatorFacade__CreateTypeMemberImplementations__Type();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#initVariableInstances(org.eclipse.symphony.core.invocator.Environment) <em>Init Variable Instances</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#initVariableInstances(org.eclipse.symphony.core.invocator.Environment) <em>Init Variable Instances</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Init Variable Instances</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#initVariableInstances(org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#initVariableInstances(org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__InitVariableInstances__Environment();
+	EOperation getSymphony__CoreInvocatorFacade__InitVariableInstances__Environment();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#disposeVariableInstances(org.eclipse.symphony.core.invocator.Environment) <em>Dispose Variable Instances</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#disposeVariableInstances(org.eclipse.symphony.core.invocator.Environment) <em>Dispose Variable Instances</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Dispose Variable Instances</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#disposeVariableInstances(org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#disposeVariableInstances(org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__DisposeVariableInstances__Environment();
+	EOperation getSymphony__CoreInvocatorFacade__DisposeVariableInstances__Environment();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getOperationCallContainer(org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement) <em>Get Operation Call Container</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getOperationCallContainer(org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement) <em>Get Operation Call Container</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Operation Call Container</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getOperationCallContainer(org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getOperationCallContainer(org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement();
+	EOperation getSymphony__CoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#applyInitializationData(org.eclipse.symphony.core.invocator.Environment) <em>Apply Initialization Data</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#applyInitializationData(org.eclipse.symphony.core.invocator.Environment) <em>Apply Initialization Data</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Initialization Data</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#applyInitializationData(org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#applyInitializationData(org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__ApplyInitializationData__Environment();
+	EOperation getSymphony__CoreInvocatorFacade__ApplyInitializationData__Environment();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#collectInitializationData(org.eclipse.symphony.core.invocator.Environment) <em>Collect Initialization Data</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#collectInitializationData(org.eclipse.symphony.core.invocator.Environment) <em>Collect Initialization Data</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Collect Initialization Data</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#collectInitializationData(org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#collectInitializationData(org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__CollectInitializationData__Environment();
+	EOperation getSymphony__CoreInvocatorFacade__CollectInitializationData__Environment();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#applyInitializationData(org.eclipse.symphony.core.invocator.Variable) <em>Apply Initialization Data</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#applyInitializationData(org.eclipse.symphony.core.invocator.Variable) <em>Apply Initialization Data</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Apply Initialization Data</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#applyInitializationData(org.eclipse.symphony.core.invocator.Variable)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#applyInitializationData(org.eclipse.symphony.core.invocator.Variable)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__ApplyInitializationData__Variable();
+	EOperation getSymphony__CoreInvocatorFacade__ApplyInitializationData__Variable();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#collectInitializationData(org.eclipse.symphony.core.invocator.Variable) <em>Collect Initialization Data</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#collectInitializationData(org.eclipse.symphony.core.invocator.Variable) <em>Collect Initialization Data</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Collect Initialization Data</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#collectInitializationData(org.eclipse.symphony.core.invocator.Variable)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#collectInitializationData(org.eclipse.symphony.core.invocator.Variable)
 	 * @generated
 	 */
-  EOperation getEMFEcoreInvocatorFacade__CollectInitializationData__Variable();
+	EOperation getSymphony__CoreInvocatorFacade__CollectInitializationData__Variable();
 
-  /**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#loadRegisteredTypes(org.eclipse.symphony.core.invocator.InvocatorSession) <em>Load Registered Types</em>}' operation.
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#loadRegisteredTypes(org.eclipse.symphony.core.invocator.InvocatorSession) <em>Load Registered Types</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Load Registered Types</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#loadRegisteredTypes(org.eclipse.symphony.core.invocator.InvocatorSession)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#loadRegisteredTypes(org.eclipse.symphony.core.invocator.InvocatorSession)
 	 * @generated
 	 */
-	EOperation getEMFEcoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession();
+	EOperation getSymphony__CoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getAllTypes(org.eclipse.symphony.core.invocator.Environment) <em>Get All Types</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getAllTypes(org.eclipse.symphony.core.invocator.Environment) <em>Get All Types</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get All Types</em>' operation.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getAllTypes(org.eclipse.symphony.core.invocator.Environment)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getAllTypes(org.eclipse.symphony.core.invocator.Environment)
 	 * @generated
 	 */
-	EOperation getEMFEcoreInvocatorFacade__GetAllTypes__Environment();
+	EOperation getSymphony__CoreInvocatorFacade__GetAllTypes__Environment();
 
 		/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.InvocatorSession <em>Invocator Session</em>}'.
@@ -7291,278 +7291,278 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.EMFEcoreInvocatorFacadeImpl <em>EMF Ecore Invocator Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.invocator.impl.EMFEcoreInvocatorFacadeImpl
-		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getEMFEcoreInvocatorFacade()
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImpl
+		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getSymphony__CoreInvocatorFacade()
 		 * @generated
 		 */
-    EClass EMF_ECORE_INVOCATOR_FACADE = eINSTANCE.getEMFEcoreInvocatorFacade();
+		EClass SYMPHONY_CORE_INVOCATOR_FACADE = eINSTANCE.getSymphony__CoreInvocatorFacade();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Active Invocator Session</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION = eINSTANCE.getEMFEcoreInvocatorFacade_ActiveInvocatorSession();
+		EReference SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION = eINSTANCE.getSymphony__CoreInvocatorFacade_ActiveInvocatorSession();
 
-				/**
+			/**
 		 * The meta object literal for the '<em><b>Exec</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL = eINSTANCE.getEMFEcoreInvocatorFacade__Exec__OperationCall();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL = eINSTANCE.getSymphony__CoreInvocatorFacade__Exec__OperationCall();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Exec</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN = eINSTANCE.getEMFEcoreInvocatorFacade__Exec__OperationCall_boolean();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN = eINSTANCE.getSymphony__CoreInvocatorFacade__Exec__OperationCall_boolean();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Exec</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST = eINSTANCE.getEMFEcoreInvocatorFacade__Exec__OperationCallsList();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALLSLIST = eINSTANCE.getSymphony__CoreInvocatorFacade__Exec__OperationCallsList();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Create Abstract Result Value</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT = eINSTANCE.getEMFEcoreInvocatorFacade__CreateAbstractResultValue__Object();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_ABSTRACT_RESULT_VALUE__OBJECT = eINSTANCE.getSymphony__CoreInvocatorFacade__CreateAbstractResultValue__Object();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Resolve Watch</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE = eINSTANCE.getEMFEcoreInvocatorFacade__ResolveWatch__AbstractFeatureNode();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__ABSTRACTFEATURENODE = eINSTANCE.getSymphony__CoreInvocatorFacade__ResolveWatch__AbstractFeatureNode();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Resolve Watch</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT = eINSTANCE.getEMFEcoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___RESOLVE_WATCH__TYPEMEMBERREFERENCETREEELEMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__ResolveWatch__TypeMemberReferenceTreeElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Value</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE = eINSTANCE.getEMFEcoreInvocatorFacade__GetValue__AbstractFeatureNode();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_VALUE__ABSTRACTFEATURENODE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetValue__AbstractFeatureNode();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Instance</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE = eINSTANCE.getEMFEcoreInvocatorFacade__GetInstance__Variable();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetInstance__Variable();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Instance Class</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE = eINSTANCE.getEMFEcoreInvocatorFacade__GetInstanceClass__Variable();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetInstanceClass__Variable();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Type Api Adapter</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE = eINSTANCE.getEMFEcoreInvocatorFacade__GetTypeApiAdapter__VariableFeatureReference();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_API_ADAPTER__VARIABLEFEATUREREFERENCE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetTypeApiAdapter__VariableFeatureReference();
 
-				/**
+			/**
 		 * The meta object literal for the '<em><b>Get Instance</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE = eINSTANCE.getEMFEcoreInvocatorFacade__GetInstance__VariableFeatureReference();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__VARIABLEFEATUREREFERENCE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetInstance__VariableFeatureReference();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Type Member Instance</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE = eINSTANCE.getEMFEcoreInvocatorFacade__GetTypeMemberInstance__VariableFeatureReference();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_MEMBER_INSTANCE__VARIABLEFEATUREREFERENCE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetTypeMemberInstance__VariableFeatureReference();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get EMF Feature Value</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE = eINSTANCE.getEMFEcoreInvocatorFacade__GetEMFFeatureValue__VariableFeatureReference();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_EMF_FEATURE_VALUE__VARIABLEFEATUREREFERENCE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetEMFFeatureValue__VariableFeatureReference();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Instance Class</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE = eINSTANCE.getEMFEcoreInvocatorFacade__GetInstanceClass__VariableFeatureReference();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE_CLASS__VARIABLEFEATUREREFERENCE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetInstanceClass__VariableFeatureReference();
 
-				/**
+			/**
 		 * The meta object literal for the '<em><b>Get Instance</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT = eINSTANCE.getEMFEcoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_INSTANCE__TYPEMEMBERREFERENCETREEELEMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__GetInstance__TypeMemberReferenceTreeElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Type Implementation</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL = eINSTANCE.getEMFEcoreInvocatorFacade__GetTypeImplementation__OperationCall();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL = eINSTANCE.getSymphony__CoreInvocatorFacade__GetTypeImplementation__OperationCall();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Type Implementation</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE = eINSTANCE.getEMFEcoreInvocatorFacade__GetTypeImplementation__Variable_AbstractType();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetTypeImplementation__Variable_AbstractType();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Type Implementation</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE = eINSTANCE.getEMFEcoreInvocatorFacade__GetTypeImplementation__Variable();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetTypeImplementation__Variable();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Create Type Member References</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMF_ECORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER = eINSTANCE.getEMFEcoreInvocatorFacade__CreateTypeMemberReferences__TypeMember();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER = eINSTANCE.getSymphony__CoreInvocatorFacade__CreateTypeMemberReferences__TypeMember();
 
-				/**
+			/**
 		 * The meta object literal for the '<em><b>Get Type Implementation</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING = eINSTANCE.getEMFEcoreInvocatorFacade__GetTypeImplementation__Environment_String();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING = eINSTANCE.getSymphony__CoreInvocatorFacade__GetTypeImplementation__Environment_String();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Fully Qualified Name</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT = eINSTANCE.getEMFEcoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Fully Qualified Name</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE = eINSTANCE.getEMFEcoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Create Type Member Implementations</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE = eINSTANCE.getEMFEcoreInvocatorFacade__CreateTypeMemberImplementations__Type();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE = eINSTANCE.getSymphony__CoreInvocatorFacade__CreateTypeMemberImplementations__Type();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Init Variable Instances</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = eINSTANCE.getEMFEcoreInvocatorFacade__InitVariableInstances__Environment();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__InitVariableInstances__Environment();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Dispose Variable Instances</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = eINSTANCE.getEMFEcoreInvocatorFacade__DisposeVariableInstances__Environment();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__DisposeVariableInstances__Environment();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Get Operation Call Container</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = eINSTANCE.getEMFEcoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Apply Initialization Data</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = eINSTANCE.getEMFEcoreInvocatorFacade__ApplyInitializationData__Environment();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__ApplyInitializationData__Environment();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Collect Initialization Data</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = eINSTANCE.getEMFEcoreInvocatorFacade__CollectInitializationData__Environment();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__CollectInitializationData__Environment();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Apply Initialization Data</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = eINSTANCE.getEMFEcoreInvocatorFacade__ApplyInitializationData__Variable();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = eINSTANCE.getSymphony__CoreInvocatorFacade__ApplyInitializationData__Variable();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Collect Initialization Data</b></em>' operation.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EOperation EMF_ECORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = eINSTANCE.getEMFEcoreInvocatorFacade__CollectInitializationData__Variable();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = eINSTANCE.getSymphony__CoreInvocatorFacade__CollectInitializationData__Variable();
 
-    /**
+			/**
 		 * The meta object literal for the '<em><b>Load Registered Types</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMF_ECORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION = eINSTANCE.getEMFEcoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION = eINSTANCE.getSymphony__CoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession();
 
-				/**
+			/**
 		 * The meta object literal for the '<em><b>Get All Types</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EMF_ECORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT = eINSTANCE.getEMFEcoreInvocatorFacade__GetAllTypes__Environment();
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__GetAllTypes__Environment();
 
 				/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.

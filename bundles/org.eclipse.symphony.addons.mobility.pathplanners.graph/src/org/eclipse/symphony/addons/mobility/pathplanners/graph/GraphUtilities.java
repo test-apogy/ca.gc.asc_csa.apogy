@@ -14,18 +14,15 @@ import org.eclipse.symphony.common.geometry.data.Mesh;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPlane;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 import org.jgrapht.EdgeFactory;
 import org.jgrapht.Graph;
 import org.jgrapht.alg.DijkstraShortestPath;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
-public class GraphUtilities {
-
-	private static Data3dFacade data3dFacade = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();
-	
+public class GraphUtilities
+{	
 	/**
 	 * Create a SimpleDirectedWeightedGraph that represents the connectivity of a CartesianCoordinatesMesh.
 	 * This method can be overiden to creates the graph differently.	 
@@ -78,7 +75,7 @@ public class GraphUtilities {
 			List<CartesianPolygon> edgeNeighbours = new ArrayList<CartesianPolygon>();
 			for(CartesianPolygon  neighbour : neighbours)	
 			{
-				if(Geometry3dUtilities.getSharedVertices(polygon, neighbour).size() > 1)
+				if(Geometry3DUtilities.getSharedVertices(polygon, neighbour).size() > 1)
 				{
 					edgeNeighbours.add(neighbour);
 				}
@@ -112,7 +109,7 @@ public class GraphUtilities {
 		while(it.hasNext())
 		{
 			CartesianPolygon polygon = it.next();
-			CartesianPositionCoordinates centroid = Geometry3dUtilities.getCentroid(polygon.getVertices());
+			CartesianPositionCoordinates centroid = Geometry3DUtilities.getCentroid(polygon.getVertices());
 			path.getPoints().add(centroid);
 		}
 		
@@ -140,7 +137,7 @@ public class GraphUtilities {
 		WayPointPath path = Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath();
 	
 		// Always add the start of the path to the path.
-		path.getPoints().add(data3dFacade.createCartesianPositionCoordinates(start));
+		path.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(start));
 				
 		// Simplify only if there are enough polygons to work with.
 		if(polygons.size() >= 2)
@@ -154,7 +151,7 @@ public class GraphUtilities {
 			polygonsSubPath.add(p1);
 			
 			// Initialize the segment start and end points.						
-			CartesianPositionCoordinates segmentStart = data3dFacade.createCartesianPositionCoordinates(start);
+			CartesianPositionCoordinates segmentStart = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(start);
 			CartesianPositionCoordinates segmentEnd = p1.getCentroid();				
 				
 			while(it.hasNext())
@@ -188,7 +185,7 @@ public class GraphUtilities {
 		}
 		
 		// Always adds the destination of the path to the path.
-		path.getPoints().add(data3dFacade.createCartesianPositionCoordinates(destination));
+		path.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(destination));
 		
 		return path;
 	}
@@ -226,7 +223,7 @@ public class GraphUtilities {
 	 */
 	private static <T extends CartesianPolygon> boolean isReacheable(CartesianPlane cartesianPlane, CartesianPositionCoordinates segmentStart, CartesianPositionCoordinates segmentEnd, List<T> polygons)
 	{
-		return Geometry3dUtilities.isLineIntersectsAllPolygons(cartesianPlane, segmentStart, segmentEnd, polygons);
+		return Geometry3DUtilities.isLineIntersectsAllPolygons(cartesianPlane, segmentStart, segmentEnd, polygons);
 	}
 	
 	/**

@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
 import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
@@ -265,7 +265,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 		// For each Satellite, find the target passes over the target.
 		try
 		{
-			EarthSurfaceLocation earthSurfaceLocation = EarthOrbitFacade.INSTANCE.createEarthSurfaceLocation(Integer.toString(imageOrder.getOrderId()), null, imageOrder.getImageCenter().getLongitude(), imageOrder.getImageCenter().getLatitude(), imageOrder.getImageCenter().getElevation());			
+			EarthSurfaceLocation earthSurfaceLocation = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.createEarthSurfaceLocation(Integer.toString(imageOrder.getOrderId()), null, imageOrder.getImageCenter().getLongitude(), imageOrder.getImageCenter().getLatitude(), imageOrder.getImageCenter().getElevation());			
 			Logger.INSTANCE.log(Activator.ID, this, "Finding passes for ImageOrder <" + imageOrder.getOrderId() + ">...", EventSeverity.INFO);
 			
 			// Do this in parallel to speed up !
@@ -335,7 +335,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 		}
 		
 		
-		SortedSet<VisibilityPass> sortedPasses = EarthOrbitFacade.INSTANCE.getVisibilityPassSortedByStartDate(passes);
+		SortedSet<VisibilityPass> sortedPasses = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.getVisibilityPassSortedByStartDate(passes);
 		return sortedPasses;
 	}
 
@@ -354,7 +354,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 		
 		visibilitySet.update();
 						
-		SortedSet<VisibilityPass> sortedPasses = EarthOrbitFacade.INSTANCE.getVisibilityPassSortedByStartDate(visibilitySet.getPasses());		
+		SortedSet<VisibilityPass> sortedPasses = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.getVisibilityPassSortedByStartDate(visibilitySet.getPasses());		
 		return sortedPasses;
 	}
 

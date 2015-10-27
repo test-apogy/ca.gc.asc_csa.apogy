@@ -40,7 +40,7 @@ import org.eclipse.symphony.core.invocator.DisplaysListsContainer;
 import org.eclipse.symphony.core.invocator.EClassArgument;
 import org.eclipse.symphony.core.invocator.EDataTypeArgument;
 import org.eclipse.symphony.core.invocator.EEnumArgument;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.ExceptionContainer;
@@ -141,8 +141,8 @@ public class Symphony__CoreInvocatorAdapterFactory extends AdapterFactoryImpl
   protected Symphony__CoreInvocatorSwitch<Adapter> modelSwitch =
     new Symphony__CoreInvocatorSwitch<Adapter>() {
 			@Override
-			public Adapter caseEMFEcoreInvocatorFacade(EMFEcoreInvocatorFacade object) {
-				return createEMFEcoreInvocatorFacadeAdapter();
+			public Adapter caseSymphony__CoreInvocatorFacade(Symphony__CoreInvocatorFacade object) {
+				return createSymphony__CoreInvocatorFacadeAdapter();
 			}
 			@Override
 			public Adapter caseInvocatorSession(InvocatorSession object) {
@@ -446,21 +446,20 @@ public class Symphony__CoreInvocatorAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade <em>EMF Ecore Invocator Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade
 	 * @generated
 	 */
-  public Adapter createEMFEcoreInvocatorFacadeAdapter()
-  {
+	public Adapter createSymphony__CoreInvocatorFacadeAdapter() {
 		return null;
 	}
 
-  /**
+		/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.InvocatorSession <em>Invocator Session</em>}'.
 	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;

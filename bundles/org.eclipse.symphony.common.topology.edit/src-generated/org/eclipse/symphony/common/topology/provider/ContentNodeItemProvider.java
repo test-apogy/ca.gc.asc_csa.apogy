@@ -223,7 +223,7 @@ public class ContentNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonTopologyFactory.eINSTANCE.createTopologyFacade()));
+				 Symphony__CommonTopologyFactory.eINSTANCE.createSymphony__CommonTopologyFacade()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -323,7 +323,7 @@ public class ContentNodeItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-				 Symphony__CommonMathFactory.eINSTANCE.createMathFacade()));
+				 Symphony__CommonMathFactory.eINSTANCE.createSymphony__CommonMathFacade()));
 
 		newChildDescriptors.add
 			(createChildParameter

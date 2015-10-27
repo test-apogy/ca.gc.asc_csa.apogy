@@ -13,9 +13,9 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguratio
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList;
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities;
 import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.ToolsList;
 
@@ -67,7 +67,7 @@ public class CameraViewUtilitiesImpl extends MinimalEObjectImpl.Container implem
 	{
 		if(cameraViewConfiguration != null)
 		{
-			return EMFEcoreFacade.INSTANCE.getID(cameraViewConfiguration);
+			return Symphony__CommonEMFFacade.INSTANCE.getID(cameraViewConfiguration);
 		}
 		else
 		{
@@ -113,7 +113,7 @@ public class CameraViewUtilitiesImpl extends MinimalEObjectImpl.Container implem
 	{
 		CameraViewConfigurationList cameraViewConfigurationList = null;
 		
-		InvocatorSession session = EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 		if(session != null)
 		{
 			ToolsList toolsList = session.getToolsList();

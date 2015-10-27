@@ -19,7 +19,7 @@ import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Device;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.Ranges;
 import org.eclipse.symphony.common.emf.TimeSource;
 import org.eclipse.symphony.common.emf.ui.preferences.PreferencesConstants;
@@ -129,7 +129,7 @@ public class Activator extends AbstractUIPlugin
 		// If no ETypedElement specific unit have been define, use the defaults. 
 		if(displayUnits == null)
 		{
-			Unit<?> nativeUnits = EMFEcoreFacade.INSTANCE.getEngineeringUnits(eTypedElement);
+			Unit<?> nativeUnits = Symphony__CommonEMFFacade.INSTANCE.getEngineeringUnits(eTypedElement);
 			displayUnits = getDefaultDisplayUnits(nativeUnits);
 		}
 	

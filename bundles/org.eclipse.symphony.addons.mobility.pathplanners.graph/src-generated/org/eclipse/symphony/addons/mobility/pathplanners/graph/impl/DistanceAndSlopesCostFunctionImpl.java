@@ -13,7 +13,7 @@ import org.eclipse.symphony.addons.mobility.pathplanners.graph.Symphony__AddonsM
 import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 
 /**
  * <!-- begin-user-doc -->
@@ -382,12 +382,12 @@ public class DistanceAndSlopesCostFunctionImpl extends MeshDisplacementCostFunct
 	@Override
 	public double getCost(CartesianPolygon from, CartesianPolygon to) {
 						
-		double distance = Geometry3dUtilities.getDistance(from.getCentroid(), to.getCentroid());			
+		double distance = Geometry3DUtilities.getDistance(from.getCentroid(), to.getCentroid());			
 		
 		CartesianPositionCoordinates fromCenter = from.getCentroid();
 		CartesianPositionCoordinates toCenter = to.getCentroid();
 		
-		double slope = Geometry3dUtilities.getAngle(Geometry3dUtilities.getPerpendicularPlane(getGravityAxis()), fromCenter, toCenter);
+		double slope = Geometry3DUtilities.getAngle(Geometry3DUtilities.getPerpendicularPlane(getGravityAxis()), fromCenter, toCenter);
 				
 		//TODO create a property with DistanceCostFactor instead of using a local variable
 		double DistanceCostFactor = 1.0;

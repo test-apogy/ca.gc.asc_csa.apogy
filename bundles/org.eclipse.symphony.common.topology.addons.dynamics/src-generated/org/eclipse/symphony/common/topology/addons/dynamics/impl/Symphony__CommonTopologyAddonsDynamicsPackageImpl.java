@@ -34,7 +34,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState;
 import org.eclipse.symphony.common.topology.addons.dynamics.CylinderGeometry;
 import org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint;
 import org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.DynamicsFacade;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFacade;
 import org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint;
 import org.eclipse.symphony.common.topology.addons.dynamics.Geometry;
 import org.eclipse.symphony.common.topology.addons.dynamics.HingeConstraint;
@@ -215,6 +215,13 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass symphony__CommonTopologyAddonsDynamicsFacadeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass abstractConstraintSimulationPropertiesEClass = null;
 
 	/**
@@ -230,13 +237,6 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 	 * @generated
 	 */
 	private EClass kinematicStateEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass dynamicsFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -944,6 +944,60 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSymphony__CommonTopologyAddonsDynamicsFacade() {
+		return symphony__CommonTopologyAddonsDynamicsFacadeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node() {
+		return symphony__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__FindTotalMass__Node() {
+		return symphony__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node() {
+		return symphony__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class() {
+		return symphony__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonTopologyAddonsDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class() {
+		return symphony__CommonTopologyAddonsDynamicsFacadeEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAbstractConstraintSimulationProperties() {
 		return abstractConstraintSimulationPropertiesEClass;
 	}
@@ -1036,60 +1090,6 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 	 */
 	public EReference getKinematicState_AngularAcceleration() {
 		return (EReference)kinematicStateEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDynamicsFacade() {
-		return dynamicsFacadeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getDynamicsFacade__FindCenterOfMass__Node() {
-		return dynamicsFacadeEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getDynamicsFacade__FindTotalMass__Node() {
-		return dynamicsFacadeEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class() {
-		return dynamicsFacadeEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class() {
-		return dynamicsFacadeEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getDynamicsFacade__GetPhysicalBodies__Node() {
-		return dynamicsFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -1235,12 +1235,12 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 		sphereGeometryEClass = createEClass(SPHERE_GEOMETRY);
 		createEAttribute(sphereGeometryEClass, SPHERE_GEOMETRY__RADIUS);
 
-		dynamicsFacadeEClass = createEClass(DYNAMICS_FACADE);
-		createEOperation(dynamicsFacadeEClass, DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE);
-		createEOperation(dynamicsFacadeEClass, DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE);
-		createEOperation(dynamicsFacadeEClass, DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE);
-		createEOperation(dynamicsFacadeEClass, DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS);
-		createEOperation(dynamicsFacadeEClass, DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS);
+		symphony__CommonTopologyAddonsDynamicsFacadeEClass = createEClass(SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE);
+		createEOperation(symphony__CommonTopologyAddonsDynamicsFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_CENTER_OF_MASS__NODE);
+		createEOperation(symphony__CommonTopologyAddonsDynamicsFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___FIND_TOTAL_MASS__NODE);
+		createEOperation(symphony__CommonTopologyAddonsDynamicsFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_BODIES__NODE);
+		createEOperation(symphony__CommonTopologyAddonsDynamicsFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_PHYSICAL_NODE_SIMULATION_PROPERTY__PHYSICALBODY_CLASS);
+		createEOperation(symphony__CommonTopologyAddonsDynamicsFacadeEClass, SYMPHONY_COMMON_TOPOLOGY_ADDONS_DYNAMICS_FACADE___GET_CONSTRAINT_SIMULATION_PROPERTY__ABSTRACTCONSTRAINT_CLASS);
 
 		// Create data types
 		setEDataType = createEDataType(SET);
@@ -1402,22 +1402,22 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 		initEClass(sphereGeometryEClass, SphereGeometry.class, "SphereGeometry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSphereGeometry_Radius(), theEcorePackage.getEDouble(), "radius", null, 0, 1, SphereGeometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(dynamicsFacadeEClass, DynamicsFacade.class, "DynamicsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CommonTopologyAddonsDynamicsFacadeEClass, Symphony__CommonTopologyAddonsDynamicsFacade.class, "Symphony__CommonTopologyAddonsDynamicsFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getDynamicsFacade__FindCenterOfMass__Node(), theSymphony__CommonMathPackage.getTuple3d(), "findCenterOfMass", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getSymphony__CommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node(), theSymphony__CommonMathPackage.getTuple3d(), "findCenterOfMass", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getDynamicsFacade__FindTotalMass__Node(), theEcorePackage.getEDouble(), "findTotalMass", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsDynamicsFacade__FindTotalMass__Node(), theEcorePackage.getEDouble(), "findTotalMass", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getDynamicsFacade__GetPhysicalBodies__Node(), null, "getPhysicalBodies", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node(), null, "getPhysicalBodies", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CommonTopologyPackage.getNode(), "root", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(this.getSet());
 		EGenericType g2 = createEGenericType(this.getPhysicalBody());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class(), null, "getPhysicalNodeSimulationProperty", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalNodeSimulationProperty__PhysicalBody_Class(), null, "getPhysicalNodeSimulationProperty", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		ETypeParameter t1 = addETypeParameter(op, "T");
 		g1 = createEGenericType(this.getAbstractPhysicalBodySimulationProperties());
 		t1.getEBounds().add(g1);
@@ -1429,7 +1429,7 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 		g1 = createEGenericType(t1);
 		initEOperation(op, g1);
 
-		op = initEOperation(getDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class(), null, "getConstraintSimulationProperty", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonTopologyAddonsDynamicsFacade__GetConstraintSimulationProperty__AbstractConstraint_Class(), null, "getConstraintSimulationProperty", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		t1 = addETypeParameter(op, "T");
 		g1 = createEGenericType(this.getAbstractConstraintSimulationProperties());
 		t1.getEBounds().add(g1);
@@ -1789,25 +1789,25 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 			 "documentation", "The sphere geometry is defined by its radius."
 		   });	
 		addAnnotation
-		  (dynamicsFacadeEClass, 
+		  (symphony__CommonTopologyAddonsDynamicsFacadeEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", "Helper class containing a variety of dynamic topology utilities methods."
 		   });	
 		addAnnotation
-		  (getDynamicsFacade__FindCenterOfMass__Node(), 
+		  (getSymphony__CommonTopologyAddonsDynamicsFacade__FindCenterOfMass__Node(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Given a node in a topology, traverse the tree and computes the location of the center of mass of the tree.\n@param root The root of the topology for which the position of the center of mass is to be computed."
 		   });	
 		addAnnotation
-		  (getDynamicsFacade__FindTotalMass__Node(), 
+		  (getSymphony__CommonTopologyAddonsDynamicsFacade__FindTotalMass__Node(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Given a node in a topology, traverse the tree and compute the mass of the tree.\n@param root The root of the topology for which the total mass is to be computed."
 		   });	
 		addAnnotation
-		  (getDynamicsFacade__GetPhysicalBodies__Node(), 
+		  (getSymphony__CommonTopologyAddonsDynamicsFacade__GetPhysicalBodies__Node(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Given a node in a topology, traverse the tree and extracts the Set of PhysicalBody defined in the topology."

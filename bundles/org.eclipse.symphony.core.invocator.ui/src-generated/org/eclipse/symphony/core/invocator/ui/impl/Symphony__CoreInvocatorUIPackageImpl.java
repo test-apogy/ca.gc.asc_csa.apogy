@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.ui.EMFEcoreInvocatorUIFacade;
+import org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFacade;
 import org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIFactory;
 import org.eclipse.symphony.core.invocator.ui.Symphony__CoreInvocatorUIPackage;
 
@@ -26,7 +26,7 @@ public class Symphony__CoreInvocatorUIPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass emfEcoreInvocatorUIFacadeEClass = null;
+	private EClass symphony__CoreInvocatorUIFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,8 +104,8 @@ public class Symphony__CoreInvocatorUIPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEMFEcoreInvocatorUIFacade() {
-		return emfEcoreInvocatorUIFacadeEClass;
+	public EClass getSymphony__CoreInvocatorUIFacade() {
+		return symphony__CoreInvocatorUIFacadeEClass;
 	}
 
 	/**
@@ -113,8 +113,8 @@ public class Symphony__CoreInvocatorUIPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEMFEcoreInvocatorUIFacade__CopyInitializationData__Context_Context() {
-		return emfEcoreInvocatorUIFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__CoreInvocatorUIFacade__CopyInitializationData__Context_Context() {
+		return symphony__CoreInvocatorUIFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -122,8 +122,8 @@ public class Symphony__CoreInvocatorUIPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEMFEcoreInvocatorUIFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand() {
-		return emfEcoreInvocatorUIFacadeEClass.getEOperations().get(1);
+	public EOperation getSymphony__CoreInvocatorUIFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand() {
+		return symphony__CoreInvocatorUIFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -163,9 +163,9 @@ public class Symphony__CoreInvocatorUIPackageImpl extends EPackageImpl implement
 		isCreated = true;
 
 		// Create classes and their features
-		emfEcoreInvocatorUIFacadeEClass = createEClass(EMF_ECORE_INVOCATOR_UI_FACADE);
-		createEOperation(emfEcoreInvocatorUIFacadeEClass, EMF_ECORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT);
-		createEOperation(emfEcoreInvocatorUIFacadeEClass, EMF_ECORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND);
+		symphony__CoreInvocatorUIFacadeEClass = createEClass(SYMPHONY_CORE_INVOCATOR_UI_FACADE);
+		createEOperation(symphony__CoreInvocatorUIFacadeEClass, SYMPHONY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__CONTEXT_CONTEXT);
+		createEOperation(symphony__CoreInvocatorUIFacadeEClass, SYMPHONY_CORE_INVOCATOR_UI_FACADE___COPY_INITIALIZATION_DATA__ABSTRACTTYPEIMPLEMENTATION_ABSTRACTTYPEIMPLEMENTATION_COMPOUNDCOMMAND);
 
 		// Create data types
 		compoundCommandEDataType = createEDataType(COMPOUND_COMMAND);
@@ -205,14 +205,14 @@ public class Symphony__CoreInvocatorUIPackageImpl extends EPackageImpl implement
 		// Add supertypes to classes
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(emfEcoreInvocatorUIFacadeEClass, EMFEcoreInvocatorUIFacade.class, "EMFEcoreInvocatorUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CoreInvocatorUIFacadeEClass, Symphony__CoreInvocatorUIFacade.class, "Symphony__CoreInvocatorUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		EOperation op = initEOperation(getEMFEcoreInvocatorUIFacade__CopyInitializationData__Context_Context(), null, "copyInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getSymphony__CoreInvocatorUIFacade__CopyInitializationData__Context_Context(), null, "copyInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreInvocatorPackage.getContext(), "source", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreInvocatorPackage.getContext(), "destination", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, theSymphony__CommonEMFPackage.getException());
 
-		op = initEOperation(getEMFEcoreInvocatorUIFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand(), null, "copyInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CoreInvocatorUIFacade__CopyInitializationData__AbstractTypeImplementation_AbstractTypeImplementation_CompoundCommand(), null, "copyInitializationData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreInvocatorPackage.getAbstractTypeImplementation(), "source", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theSymphony__CoreInvocatorPackage.getAbstractTypeImplementation(), "destination", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCompoundCommand(), "command", 0, 1, !IS_UNIQUE, IS_ORDERED);

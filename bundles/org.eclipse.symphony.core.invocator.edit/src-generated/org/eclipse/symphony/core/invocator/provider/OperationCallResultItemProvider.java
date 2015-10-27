@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
+import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
 import org.eclipse.symphony.core.invocator.OperationCallResult;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
@@ -146,13 +146,13 @@ public class OperationCallResultItemProvider
 	  String operation_call_str = "";
 	  if(result.getOperationCall() != null)
 	  {
-		  operation_call_str = EMFEcoreEditUtilsFacade.INSTANCE.getText(result.getOperationCall());
+		  operation_call_str = Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(result.getOperationCall());
 		  label += " : " + operation_call_str;
 	  }
 	  
 	  if(result.getResultValue() != null)
 	  {
-		  label += " -> " + EMFEcoreEditUtilsFacade.INSTANCE.getText(result.getResultValue());		  
+		  label += " -> " + Symphony__CommonEMFEditUtilsFacade.INSTANCE.getText(result.getResultValue());		  
 	  }
 	  	  	  
 	  return label;

@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.symphony.addons.mobility.pathplanners.CircularExclusionZone;
 import org.eclipse.symphony.addons.mobility.pathplanners.MeshWayPointPathPlanner;
-import org.eclipse.symphony.addons.mobility.pathplanners.PathPlannersFacade;
+import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFacade;
 import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersFactory;
 import org.eclipse.symphony.addons.mobility.pathplanners.Symphony__AddonsMobilityPathplannersPackage;
 import org.eclipse.symphony.addons.mobility.pathplanners.WayPointPathPlanner;
@@ -65,7 +65,7 @@ public class Symphony__AddonsMobilityPathplannersFactoryImpl extends EFactoryImp
 			case Symphony__AddonsMobilityPathplannersPackage.WAY_POINT_PATH_PLANNER: return createWayPointPathPlanner();
 			case Symphony__AddonsMobilityPathplannersPackage.MESH_WAY_POINT_PATH_PLANNER: return createMeshWayPointPathPlanner();
 			case Symphony__AddonsMobilityPathplannersPackage.CIRCULAR_EXCLUSION_ZONE: return createCircularExclusionZone();
-			case Symphony__AddonsMobilityPathplannersPackage.PATH_PLANNERS_FACADE: return createPathPlannersFacade();
+			case Symphony__AddonsMobilityPathplannersPackage.SYMPHONY_ADDONS_MOBILITY_PATHPLANNERS_FACADE: return createSymphony__AddonsMobilityPathplannersFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -106,9 +106,9 @@ public class Symphony__AddonsMobilityPathplannersFactoryImpl extends EFactoryImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PathPlannersFacade createPathPlannersFacade() {
-		PathPlannersFacadeImpl pathPlannersFacade = new PathPlannersFacadeImpl();
-		return pathPlannersFacade;
+	public Symphony__AddonsMobilityPathplannersFacade createSymphony__AddonsMobilityPathplannersFacade() {
+		Symphony__AddonsMobilityPathplannersFacadeImpl symphony__AddonsMobilityPathplannersFacade = new Symphony__AddonsMobilityPathplannersFacadeImpl();
+		return symphony__AddonsMobilityPathplannersFacade;
 	}
 
 	/**

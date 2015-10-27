@@ -32,7 +32,7 @@ public class Symphony__CoreInvocatorTests extends TestSuite {
 	 */
 	public static Test suite() {
 		TestSuite suite = new Symphony__CoreInvocatorTests("invocator Tests");
-		suite.addTestSuite(EMFEcoreInvocatorFacadeTest.class);
+		suite.addTestSuite(Symphony__CoreInvocatorFacadeTest.class);
 		suite.addTestSuite(DataProductsListTest.class);
 		suite.addTestSuite(RegisteredTypesListTest.class);
 		suite.addTestSuite(TypeApiAdapterTest.class);

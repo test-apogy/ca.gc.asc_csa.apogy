@@ -6,11 +6,11 @@ package org.eclipse.symphony.examples.camera.symphony.impl;
 import javax.vecmath.Matrix4d;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.OperationCall;
@@ -111,7 +111,7 @@ public class CameraSymphonySystemApiAdapterImpl extends
 				if (cameraData.getFov() != null)
 				{
 					// Update the camera with the a copy of the given FOV
-					this.getCamera().setFov(FOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(cameraData.getFov()));
+					this.getCamera().setFov(Symphony__AddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(cameraData.getFov()));
 				}
 				// Otherwise
 				else
@@ -168,7 +168,7 @@ public class CameraSymphonySystemApiAdapterImpl extends
 			{
 				// Store a copy of the camera's current field of
 				// view in the initialization object
-				cameraData.setFov(FOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(this.getCamera().getFov()));
+				cameraData.setFov(Symphony__AddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(this.getCamera().getFov()));
 			}
 			// Otherwise
 			else
@@ -203,16 +203,16 @@ public class CameraSymphonySystemApiAdapterImpl extends
 		if (operationCall.getEOperation().getOperationID() == Symphony__ExamplesCameraPackage.CAMERA___TAKE_SNAPSHOT)
 		{
 			// Extract the camera lens and root nodes
-			Node tip = TopologyFacade.INSTANCE.findNodesByID("CAMERA_SYM_SYS_BODY_TO_LENS",
+			Node tip = Symphony__CommonTopologyFacade.INSTANCE.findNodesByID("CAMERA_SYM_SYS_BODY_TO_LENS",
 															 getSymphonySystem().getTopologyRoot().getOriginNode()).get(0);
-			Node root = TopologyFacade.INSTANCE.findNodesByID("CAMERA_SYM_SYS_ROOT",
+			Node root = Symphony__CommonTopologyFacade.INSTANCE.findNodesByID("CAMERA_SYM_SYS_ROOT",
 															  getSymphonySystem().getTopologyRoot().getOriginNode()).get(0);
 			
 			// Determine the series of transformations that have taken place
-			Matrix4d matrix4d = TopologyFacade.INSTANCE.expressInFrame(tip,	root);
+			Matrix4d matrix4d = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(tip,	root);
 			
 			// Create a 4x4 Matrix with the transformation and return it
-			return MathFacade.INSTANCE.createMatrix4x4(matrix4d);
+			return Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(matrix4d);
 		}
 		// Otherwise, any other operation was called
 		else

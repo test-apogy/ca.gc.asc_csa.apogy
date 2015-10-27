@@ -18,7 +18,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix3x3;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.INodeVisitor;
@@ -132,7 +132,7 @@ public class TransformNodeImpl extends PositionNodeImpl implements
 		{
 			Matrix3d matrix = new Matrix3d();
 			matrix.setIdentity();
-			tmp = MathFacade.INSTANCE.createMatrix3x3(matrix);
+			tmp = Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(matrix);
 			setRotationMatrix(tmp);
 		}
 		return tmp;
@@ -220,8 +220,8 @@ public class TransformNodeImpl extends PositionNodeImpl implements
 		matrix.get(translation);
 		// matrix.get(rotation, translation);
 
-		Matrix3x3 rMat = MathFacade.INSTANCE.createMatrix3x3(rotation);
-		Tuple3d trans = MathFacade.INSTANCE.createTuple3d(translation);
+		Matrix3x3 rMat = Symphony__CommonMathFacade.INSTANCE.createMatrix3x3(rotation);
+		Tuple3d trans = Symphony__CommonMathFacade.INSTANCE.createTuple3d(translation);
 
 		this.setRotationMatrix(rMat);
 		this.setPosition(trans);

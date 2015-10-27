@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.geometry.data25d.CoordinatesSet25DFilter;
 import org.eclipse.symphony.common.geometry.data25d.Data25DIO;
 import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFactory;
 import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
-import org.eclipse.symphony.common.geometry.data25d.DataFacade;
+import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade;
 import org.eclipse.symphony.common.geometry.data25d.Mesh25D;
 import org.eclipse.symphony.common.geometry.data25d.Polygon25D;
 import org.eclipse.symphony.common.geometry.data25d.VolumetricCoordinatesSet25D;
@@ -84,14 +84,14 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass dataFacadeEClass = null;
+	private EClass coordinatesSet25DFilterEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass coordinatesSet25DFilterEClass = null;
+	private EClass symphony__CommonGeometryData25DFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -277,43 +277,6 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDataFacade()
-	{
-		return dataFacadeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getDataFacade__CreateCoordinates25D__Coordinates25D() {
-		return dataFacadeEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getDataFacade__CreateCoordinates25D__double_double_double() {
-		return dataFacadeEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getDataFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D() {
-		return dataFacadeEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getCoordinatesSet25DFilter()
 	{
 		return coordinatesSet25DFilterEClass;
@@ -326,6 +289,42 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 	 */
 	public EOperation getCoordinatesSet25DFilter__CreateCoordinatesSet25D() {
 		return coordinatesSet25DFilterEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSymphony__CommonGeometryData25DFacade() {
+		return symphony__CommonGeometryData25DFacadeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__Coordinates25D() {
+		return symphony__CommonGeometryData25DFacadeEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__double_double_double() {
+		return symphony__CommonGeometryData25DFacadeEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CommonGeometryData25DFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D() {
+		return symphony__CommonGeometryData25DFacadeEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -412,10 +411,10 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 		coordinatesSet25DFilterEClass = createEClass(COORDINATES_SET25_DFILTER);
 		createEOperation(coordinatesSet25DFilterEClass, COORDINATES_SET25_DFILTER___CREATE_COORDINATES_SET25_D);
 
-		dataFacadeEClass = createEClass(DATA_FACADE);
-		createEOperation(dataFacadeEClass, DATA_FACADE___CREATE_COORDINATES25_D__COORDINATES25D);
-		createEOperation(dataFacadeEClass, DATA_FACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE);
-		createEOperation(dataFacadeEClass, DATA_FACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D);
+		symphony__CommonGeometryData25DFacadeEClass = createEClass(SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE);
+		createEOperation(symphony__CommonGeometryData25DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__COORDINATES25D);
+		createEOperation(symphony__CommonGeometryData25DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_COORDINATES25_D__DOUBLE_DOUBLE_DOUBLE);
+		createEOperation(symphony__CommonGeometryData25DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA25_DFACADE___CREATE_CARTESIAN_COORDINATES_SET__VOLUMETRICCOORDINATESSET25D);
 
 		data25DIOEClass = createEClass(DATA25_DIO);
 		createEOperation(data25DIOEClass, DATA25_DIO___SAVE_XYZ__VOLUMETRICCOORDINATESSET25D_STRING);
@@ -512,17 +511,17 @@ public class Symphony__CommonGeometryData25DPackageImpl extends EPackageImpl imp
 		g1 = createEGenericType(coordinatesSet25DFilterEClass_T);
 		initEOperation(op, g1);
 
-		initEClass(dataFacadeEClass, DataFacade.class, "DataFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__CommonGeometryData25DFacadeEClass, Symphony__CommonGeometryData25DFacade.class, "Symphony__CommonGeometryData25DFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getDataFacade__CreateCoordinates25D__Coordinates25D(), this.getCoordinates25D(), "createCoordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__Coordinates25D(), this.getCoordinates25D(), "createCoordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCoordinates25D(), "coordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getDataFacade__CreateCoordinates25D__double_double_double(), this.getCoordinates25D(), "createCoordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData25DFacade__CreateCoordinates25D__double_double_double(), this.getCoordinates25D(), "createCoordinates25D", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "u", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "v", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "w", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getDataFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D(), theSymphony__CommonGeometryData3DPackage.getCartesianCoordinatesSet(), "createCartesianCoordinatesSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData25DFacade__CreateCartesianCoordinatesSet__VolumetricCoordinatesSet25D(), theSymphony__CommonGeometryData3DPackage.getCartesianCoordinatesSet(), "createCartesianCoordinatesSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		ETypeParameter t1 = addETypeParameter(op, "T");
 		g1 = createEGenericType(this.getVolumetricCoordinatesSet25D());
 		t1.getEBounds().add(g1);

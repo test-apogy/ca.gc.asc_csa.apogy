@@ -35,7 +35,7 @@ import org.eclipse.symphony.core.Positioned;
 import org.eclipse.symphony.core.PositionedResult;
 import org.eclipse.symphony.core.ResultNode;
 import org.eclipse.symphony.core.ResultsListNode;
-import org.eclipse.symphony.core.SymphonyCoreFacade;
+import org.eclipse.symphony.core.Symphony__CoreFacade;
 import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.SymphonyInitializationData;
@@ -110,8 +110,8 @@ public class Symphony__CoreAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected Symphony__CoreSwitch<Adapter> modelSwitch = new Symphony__CoreSwitch<Adapter>() {
 			@Override
-			public Adapter caseSymphonyCoreFacade(SymphonyCoreFacade object) {
-				return createSymphonyCoreFacadeAdapter();
+			public Adapter caseSymphony__CoreFacade(Symphony__CoreFacade object) {
+				return createSymphony__CoreFacadeAdapter();
 			}
 			@Override
 			public Adapter caseSymphonyEnvironment(SymphonyEnvironment object) {
@@ -314,6 +314,20 @@ public class Symphony__CoreAdapterFactory extends AdapterFactoryImpl {
 	@Override
 	public Adapter createAdapter(Notifier target) {
 		return modelSwitch.doSwitch((EObject)target);
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.Symphony__CoreFacade <em>Facade</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.core.Symphony__CoreFacade
+	 * @generated
+	 */
+	public Adapter createSymphony__CoreFacadeAdapter() {
+		return null;
 	}
 
 	/**
@@ -635,19 +649,6 @@ public class Symphony__CoreAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUserDefinedResultAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.SymphonyCoreFacade <em>Symphony Core Facade</em>}'.
-	 * <!-- begin-user-doc --> This default implementation returns null so that
-	 * we can easily ignore cases; it's useful to ignore a case when inheritance
-	 * will catch all the cases anyway. <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.SymphonyCoreFacade
-	 * @generated
-	 */
-	public Adapter createSymphonyCoreFacadeAdapter() {
 		return null;
 	}
 

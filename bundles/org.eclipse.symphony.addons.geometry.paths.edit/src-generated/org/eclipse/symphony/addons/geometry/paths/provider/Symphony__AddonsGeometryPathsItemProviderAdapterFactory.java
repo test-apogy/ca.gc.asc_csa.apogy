@@ -270,26 +270,26 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.geometry.paths.PathsFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PathsFacadeItemProvider pathsFacadeItemProvider;
+	protected Symphony__AddonsGeometryPathsFacadeItemProvider symphony__AddonsGeometryPathsFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.geometry.paths.PathsFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPathsFacadeAdapter() {
-		if (pathsFacadeItemProvider == null) {
-			pathsFacadeItemProvider = new PathsFacadeItemProvider(this);
+	public Adapter createSymphony__AddonsGeometryPathsFacadeAdapter() {
+		if (symphony__AddonsGeometryPathsFacadeItemProvider == null) {
+			symphony__AddonsGeometryPathsFacadeItemProvider = new Symphony__AddonsGeometryPathsFacadeItemProvider(this);
 		}
 
-		return pathsFacadeItemProvider;
+		return symphony__AddonsGeometryPathsFacadeItemProvider;
 	}
 
 	/**
@@ -425,7 +425,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 		if (segmentWayPointPathInterpolatorItemProvider != null) segmentWayPointPathInterpolatorItemProvider.dispose();
 		if (minimumDistanceFilterItemProvider != null) minimumDistanceFilterItemProvider.dispose();
 		if (uniformDistanceWayPointPathInterpolatorItemProvider != null) uniformDistanceWayPointPathInterpolatorItemProvider.dispose();
-		if (pathsFacadeItemProvider != null) pathsFacadeItemProvider.dispose();
+		if (symphony__AddonsGeometryPathsFacadeItemProvider != null) symphony__AddonsGeometryPathsFacadeItemProvider.dispose();
 	}
 
 	/**
@@ -513,7 +513,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createPathsFacade()));
+						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createSymphony__AddonsGeometryPathsFacade()));
 
 				return null;
 			}
@@ -563,7 +563,7 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createPathsFacade()));
+						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createSymphony__AddonsGeometryPathsFacade()));
 
 				return null;
 			}

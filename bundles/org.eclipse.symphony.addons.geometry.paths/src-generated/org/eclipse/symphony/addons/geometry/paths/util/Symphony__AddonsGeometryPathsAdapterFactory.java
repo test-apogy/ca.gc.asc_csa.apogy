@@ -117,8 +117,8 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 				return createUniformDistanceWayPointPathInterpolatorAdapter();
 			}
 			@Override
-			public Adapter casePathsFacade(PathsFacade object) {
-				return createPathsFacadeAdapter();
+			public Adapter caseSymphony__AddonsGeometryPathsFacade(Symphony__AddonsGeometryPathsFacade object) {
+				return createSymphony__AddonsGeometryPathsFacadeAdapter();
 			}
 			@Override
 			public Adapter caseCoordinates(Coordinates object) {
@@ -299,16 +299,16 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.geometry.paths.PathsFacade <em>Paths Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.geometry.paths.PathsFacade
+	 * @see org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsFacade
 	 * @generated
 	 */
-	public Adapter createPathsFacadeAdapter() {
+	public Adapter createSymphony__AddonsGeometryPathsFacadeAdapter() {
 		return null;
 	}
 

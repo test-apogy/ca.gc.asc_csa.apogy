@@ -22,8 +22,8 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
-import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
+import org.eclipse.symphony.common.emf.edit.utils.Symphony__CommonEMFEditUtilsFacade;
 import org.eclipse.symphony.core.invocator.EClassArgument;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
@@ -89,7 +89,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 				 * 
 				 * @see #createSetCommand
 				 */
-				List<EClass> eClasses = EMFEcoreFacade.INSTANCE
+				List<EClass> eClasses = Symphony__CommonEMFFacade.INSTANCE
 						.getAllSubEClasses((EClass) eClassArgument
 								.getEParameter().getEType());
 				return eClasses;
@@ -211,7 +211,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 		collectNewChildDescriptorsGen(newChildDescriptors, object);
 
 		/** Remove Default EObject. */
-		EMFEcoreEditUtilsFacade.INSTANCE
+		Symphony__CommonEMFEditUtilsFacade.INSTANCE
 		.removeChildDescriptor(
 				newChildDescriptors,
 				Symphony__CoreInvocatorPackage.Literals.ECLASS_ARGUMENT__VALUE);
@@ -219,7 +219,7 @@ public class EClassArgumentItemProvider extends ArgumentItemProvider {
 		EClassArgument eClassArgument = (EClassArgument) object;
 		EClassifier eClassifier = eClassArgument.getEParameter().getEType();
 		if (eClassifier instanceof EClass){
-			Iterator<EClass> eClasses = EMFEcoreFacade.INSTANCE.getAllSubEClasses((EClass) eClassifier).iterator();
+			Iterator<EClass> eClasses = Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses((EClass) eClassifier).iterator();
 			while (eClasses.hasNext()){
 				EClass currentEClass = eClasses.next();
 					newChildDescriptors.add

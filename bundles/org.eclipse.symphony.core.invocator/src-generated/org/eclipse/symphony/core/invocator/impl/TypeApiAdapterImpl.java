@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.AbstractResultValue;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.ExceptionContainer;
@@ -253,7 +253,7 @@ public class TypeApiAdapterImpl extends MinimalEObjectImpl.Container implements
 		OperationCallResult result = createResult(operationCallCopy);
 
 		// Creates the result value with the value returned.
-		AbstractResultValue resultValueContainer = EMFEcoreInvocatorFacade.INSTANCE
+		AbstractResultValue resultValueContainer = Symphony__CoreInvocatorFacade.INSTANCE
 				.createAbstractResultValue(resultValue);
 		result.setResultValue(resultValueContainer);
 		result.setTime(new Date(invocationTime));

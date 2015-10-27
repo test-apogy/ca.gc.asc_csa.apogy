@@ -84,7 +84,7 @@ class UniformDistanceWayPointPathInterpolator extends WayPointPathFilter
 	double distanceInterval
 }
 
-class PathsFacade
+class Symphony__AddonsGeometryPathsFacade
 {
 	/*
 	 * Creates a WayPointPath from a WayPointPath. The WayPointPath created

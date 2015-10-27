@@ -5,7 +5,7 @@ import javax.vecmath.Matrix3d;
 import javax.vecmath.Matrix4d;
 import javax.vecmath.Vector3d;
 
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Pose;
 import org.eclipse.symphony.common.math.GeometricUtils;
 
@@ -64,7 +64,7 @@ public class PoseUtils
 		Vector3d position = new Vector3d();
 		t.get(position);
 		
-		Pose pose = Data3dFacade.INSTANCE.createPose(position.x, position.y, position.z, rotation.x, rotation.y, rotation.z);
+		Pose pose = Symphony__CommonGeometryData3DFacade.INSTANCE.createPose(position.x, position.y, position.z, rotation.x, rotation.y, rotation.z);
 		
 		return pose;
 	}	

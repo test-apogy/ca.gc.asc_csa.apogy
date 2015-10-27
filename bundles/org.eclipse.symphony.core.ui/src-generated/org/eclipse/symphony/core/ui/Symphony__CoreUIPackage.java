@@ -62,11 +62,11 @@ public interface Symphony__CoreUIPackage extends EPackage
   Symphony__CoreUIPackage eINSTANCE = org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl.init();
 
   /**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl <em>Symphony Core Ui Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl
-	 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getSymphonyCoreUiFacade()
+	 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFacadeImpl
+	 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getSymphony__CoreUIFacade()
 	 * @generated
 	 */
   int SYMPHONY_CORE_UI_FACADE = 0;
@@ -108,7 +108,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	int SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME = 3;
 
 		/**
-	 * The number of structural features of the '<em>Symphony Core Ui Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -171,7 +171,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 	int SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS = 5;
 
 		/**
-	 * The number of operations of the '<em>Symphony Core Ui Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -666,118 +666,118 @@ public interface Symphony__CoreUIPackage extends EPackage
 	int IFOLDER = 9;
 
 		/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade <em>Symphony Core Ui Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Symphony Core Ui Facade</em>'.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiFacade
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade
 	 * @generated
 	 */
-  EClass getSymphonyCoreUiFacade();
+	EClass getSymphony__CoreUIFacade();
 
-  /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#getDefaultSymphonyProjectNamePrefix <em>Default Symphony Project Name Prefix</em>}'.
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonyProjectNamePrefix <em>Default Symphony Project Name Prefix</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Default Symphony Project Name Prefix</em>'.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#getDefaultSymphonyProjectNamePrefix()
-	 * @see #getSymphonyCoreUiFacade()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonyProjectNamePrefix()
+	 * @see #getSymphony__CoreUIFacade()
 	 * @generated
 	 */
-	EAttribute getSymphonyCoreUiFacade_DefaultSymphonyProjectNamePrefix();
+	EAttribute getSymphony__CoreUIFacade_DefaultSymphonyProjectNamePrefix();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#getDefaultSymphonySessionFilename <em>Default Symphony Session Filename</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonySessionFilename <em>Default Symphony Session Filename</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Default Symphony Session Filename</em>'.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#getDefaultSymphonySessionFilename()
-	 * @see #getSymphonyCoreUiFacade()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonySessionFilename()
+	 * @see #getSymphony__CoreUIFacade()
 	 * @generated
 	 */
-	EAttribute getSymphonyCoreUiFacade_DefaultSymphonySessionFilename();
+	EAttribute getSymphony__CoreUIFacade_DefaultSymphonySessionFilename();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#getDefaultSymphonySessionFilenameExtension <em>Default Symphony Session Filename Extension</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonySessionFilenameExtension <em>Default Symphony Session Filename Extension</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Default Symphony Session Filename Extension</em>'.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#getDefaultSymphonySessionFilenameExtension()
-	 * @see #getSymphonyCoreUiFacade()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonySessionFilenameExtension()
+	 * @see #getSymphony__CoreUIFacade()
 	 * @generated
 	 */
-	EAttribute getSymphonyCoreUiFacade_DefaultSymphonySessionFilenameExtension();
+	EAttribute getSymphony__CoreUIFacade_DefaultSymphonySessionFilenameExtension();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#getDefaultSymphonySessionFolderName <em>Default Symphony Session Folder Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonySessionFolderName <em>Default Symphony Session Folder Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Default Symphony Session Folder Name</em>'.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#getDefaultSymphonySessionFolderName()
-	 * @see #getSymphonyCoreUiFacade()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getDefaultSymphonySessionFolderName()
+	 * @see #getSymphony__CoreUIFacade()
 	 * @generated
 	 */
-	EAttribute getSymphonyCoreUiFacade_DefaultSymphonySessionFolderName();
+	EAttribute getSymphony__CoreUIFacade_DefaultSymphonySessionFolderName();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#createSymphonyProject(org.eclipse.symphony.core.ui.NewSymphonyProjectSettings) <em>Create Symphony Project</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonyProject(org.eclipse.symphony.core.ui.NewSymphonyProjectSettings) <em>Create Symphony Project</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Symphony Project</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#createSymphonyProject(org.eclipse.symphony.core.ui.NewSymphonyProjectSettings)
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonyProject(org.eclipse.symphony.core.ui.NewSymphonyProjectSettings)
 	 * @generated
 	 */
-	EOperation getSymphonyCoreUiFacade__CreateSymphonyProject__NewSymphonyProjectSettings();
+	EOperation getSymphony__CoreUIFacade__CreateSymphonyProject__NewSymphonyProjectSettings();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#createSymphonySessionFolder(org.eclipse.symphony.core.ui.NewSymphonyProjectSettings) <em>Create Symphony Session Folder</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySessionFolder(org.eclipse.symphony.core.ui.NewSymphonyProjectSettings) <em>Create Symphony Session Folder</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Symphony Session Folder</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#createSymphonySessionFolder(org.eclipse.symphony.core.ui.NewSymphonyProjectSettings)
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySessionFolder(org.eclipse.symphony.core.ui.NewSymphonyProjectSettings)
 	 * @generated
 	 */
-	EOperation getSymphonyCoreUiFacade__CreateSymphonySessionFolder__NewSymphonyProjectSettings();
+	EOperation getSymphony__CoreUIFacade__CreateSymphonySessionFolder__NewSymphonyProjectSettings();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#createSymphonySession(org.eclipse.symphony.core.ui.NewSymphonySessionSettings) <em>Create Symphony Session</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySession(org.eclipse.symphony.core.ui.NewSymphonySessionSettings) <em>Create Symphony Session</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Symphony Session</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#createSymphonySession(org.eclipse.symphony.core.ui.NewSymphonySessionSettings)
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySession(org.eclipse.symphony.core.ui.NewSymphonySessionSettings)
 	 * @generated
 	 */
-	EOperation getSymphonyCoreUiFacade__CreateSymphonySession__NewSymphonySessionSettings();
+	EOperation getSymphony__CoreUIFacade__CreateSymphonySession__NewSymphonySessionSettings();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#createSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String, org.eclipse.symphony.core.invocator.InvocatorSession) <em>Create Symphony Session File</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String, org.eclipse.symphony.core.invocator.InvocatorSession) <em>Create Symphony Session File</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Symphony Session File</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#createSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String, org.eclipse.symphony.core.invocator.InvocatorSession)
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String, org.eclipse.symphony.core.invocator.InvocatorSession)
 	 * @generated
 	 */
-	EOperation getSymphonyCoreUiFacade__CreateSymphonySessionFile__IContainer_String_InvocatorSession();
+	EOperation getSymphony__CoreUIFacade__CreateSymphonySessionFile__IContainer_String_InvocatorSession();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#getSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String) <em>Get Symphony Session File</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String) <em>Get Symphony Session File</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Symphony Session File</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#getSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String)
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#getSymphonySessionFile(org.eclipse.core.resources.IContainer, java.lang.String)
 	 * @generated
 	 */
-	EOperation getSymphonyCoreUiFacade__GetSymphonySessionFile__IContainer_String();
+	EOperation getSymphony__CoreUIFacade__GetSymphonySessionFile__IContainer_String();
 
 		/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#createSymphonySystem(org.eclipse.symphony.core.ui.NewSymphonySystemSettings) <em>Create Symphony System</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySystem(org.eclipse.symphony.core.ui.NewSymphonySystemSettings) <em>Create Symphony System</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Symphony System</em>' operation.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#createSymphonySystem(org.eclipse.symphony.core.ui.NewSymphonySystemSettings)
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIFacade#createSymphonySystem(org.eclipse.symphony.core.ui.NewSymphonySystemSettings)
 	 * @generated
 	 */
-	EOperation getSymphonyCoreUiFacade__CreateSymphonySystem__NewSymphonySystemSettings();
+	EOperation getSymphony__CoreUIFacade__CreateSymphonySystem__NewSymphonySystemSettings();
 
 		/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.core.ui.SymphonyResourceSettings <em>Symphony Resource Settings</em>}'.
@@ -1103,14 +1103,14 @@ public interface Symphony__CoreUIPackage extends EPackage
   interface Literals
   {
     /**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl <em>Symphony Core Ui Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl
-		 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getSymphonyCoreUiFacade()
+		 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIFacadeImpl
+		 * @see org.eclipse.symphony.core.ui.impl.Symphony__CoreUIPackageImpl#getSymphony__CoreUIFacade()
 		 * @generated
 		 */
-    EClass SYMPHONY_CORE_UI_FACADE = eINSTANCE.getSymphonyCoreUiFacade();
+    EClass SYMPHONY_CORE_UI_FACADE = eINSTANCE.getSymphony__CoreUIFacade();
 
     /**
 		 * The meta object literal for the '<em><b>Default Symphony Project Name Prefix</b></em>' attribute feature.
@@ -1118,7 +1118,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX = eINSTANCE.getSymphonyCoreUiFacade_DefaultSymphonyProjectNamePrefix();
+		EAttribute SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX = eINSTANCE.getSymphony__CoreUIFacade_DefaultSymphonyProjectNamePrefix();
 
 				/**
 		 * The meta object literal for the '<em><b>Default Symphony Session Filename</b></em>' attribute feature.
@@ -1126,7 +1126,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME = eINSTANCE.getSymphonyCoreUiFacade_DefaultSymphonySessionFilename();
+		EAttribute SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME = eINSTANCE.getSymphony__CoreUIFacade_DefaultSymphonySessionFilename();
 
 				/**
 		 * The meta object literal for the '<em><b>Default Symphony Session Filename Extension</b></em>' attribute feature.
@@ -1134,7 +1134,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION = eINSTANCE.getSymphonyCoreUiFacade_DefaultSymphonySessionFilenameExtension();
+		EAttribute SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION = eINSTANCE.getSymphony__CoreUIFacade_DefaultSymphonySessionFilenameExtension();
 
 				/**
 		 * The meta object literal for the '<em><b>Default Symphony Session Folder Name</b></em>' attribute feature.
@@ -1142,7 +1142,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME = eINSTANCE.getSymphonyCoreUiFacade_DefaultSymphonySessionFolderName();
+		EAttribute SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME = eINSTANCE.getSymphony__CoreUIFacade_DefaultSymphonySessionFolderName();
 
 				/**
 		 * The meta object literal for the '<em><b>Create Symphony Project</b></em>' operation.
@@ -1150,7 +1150,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_PROJECT__NEWSYMPHONYPROJECTSETTINGS = eINSTANCE.getSymphonyCoreUiFacade__CreateSymphonyProject__NewSymphonyProjectSettings();
+		EOperation SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_PROJECT__NEWSYMPHONYPROJECTSETTINGS = eINSTANCE.getSymphony__CoreUIFacade__CreateSymphonyProject__NewSymphonyProjectSettings();
 
 				/**
 		 * The meta object literal for the '<em><b>Create Symphony Session Folder</b></em>' operation.
@@ -1158,7 +1158,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS = eINSTANCE.getSymphonyCoreUiFacade__CreateSymphonySessionFolder__NewSymphonyProjectSettings();
+		EOperation SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS = eINSTANCE.getSymphony__CoreUIFacade__CreateSymphonySessionFolder__NewSymphonyProjectSettings();
 
 				/**
 		 * The meta object literal for the '<em><b>Create Symphony Session</b></em>' operation.
@@ -1166,7 +1166,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION__NEWSYMPHONYSESSIONSETTINGS = eINSTANCE.getSymphonyCoreUiFacade__CreateSymphonySession__NewSymphonySessionSettings();
+		EOperation SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION__NEWSYMPHONYSESSIONSETTINGS = eINSTANCE.getSymphony__CoreUIFacade__CreateSymphonySession__NewSymphonySessionSettings();
 
 				/**
 		 * The meta object literal for the '<em><b>Create Symphony Session File</b></em>' operation.
@@ -1174,7 +1174,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION = eINSTANCE.getSymphonyCoreUiFacade__CreateSymphonySessionFile__IContainer_String_InvocatorSession();
+		EOperation SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION = eINSTANCE.getSymphony__CoreUIFacade__CreateSymphonySessionFile__IContainer_String_InvocatorSession();
 
 				/**
 		 * The meta object literal for the '<em><b>Get Symphony Session File</b></em>' operation.
@@ -1182,7 +1182,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_UI_FACADE___GET_SYMPHONY_SESSION_FILE__ICONTAINER_STRING = eINSTANCE.getSymphonyCoreUiFacade__GetSymphonySessionFile__IContainer_String();
+		EOperation SYMPHONY_CORE_UI_FACADE___GET_SYMPHONY_SESSION_FILE__ICONTAINER_STRING = eINSTANCE.getSymphony__CoreUIFacade__GetSymphonySessionFile__IContainer_String();
 
 				/**
 		 * The meta object literal for the '<em><b>Create Symphony System</b></em>' operation.
@@ -1190,7 +1190,7 @@ public interface Symphony__CoreUIPackage extends EPackage
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS = eINSTANCE.getSymphonyCoreUiFacade__CreateSymphonySystem__NewSymphonySystemSettings();
+		EOperation SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS = eINSTANCE.getSymphony__CoreUIFacade__CreateSymphonySystem__NewSymphonySystemSettings();
 
 				/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.core.ui.impl.SymphonyResourceSettingsImpl <em>Symphony Resource Settings</em>}' class.

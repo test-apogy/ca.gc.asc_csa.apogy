@@ -138,7 +138,7 @@ class RectangularFrustrumFieldOfViewSamplingShape<PolygonType extends CartesianP
 	refers RectangularFrustrumFieldOfView rectangularFrustrumFieldOfView
 }
 
-class FOVFacade
+class Symphony__AddonsSensorsFOVFacade
 {
 	op DistanceRange createDistanceRange(double minimumDistance, double maximumDistance)
 	

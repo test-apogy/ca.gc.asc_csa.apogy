@@ -9,7 +9,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.MathIO;
 import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.common.math.Matrix3x3;
@@ -90,8 +90,8 @@ public class Symphony__CommonMathAdapterFactory extends AdapterFactoryImpl {
 				return createPolynomialAdapter();
 			}
 			@Override
-			public Adapter caseMathFacade(MathFacade object) {
-				return createMathFacadeAdapter();
+			public Adapter caseSymphony__CommonMathFacade(Symphony__CommonMathFacade object) {
+				return createSymphony__CommonMathFacadeAdapter();
 			}
 			@Override
 			public Adapter caseMathIO(MathIO object) {
@@ -128,20 +128,6 @@ public class Symphony__CommonMathAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMatrix4x4Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.math.MathFacade <em>Math Facade</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.math.MathFacade
-	 * @generated
-	 */
-	public Adapter createMathFacadeAdapter() {
 		return null;
 	}
 
@@ -184,6 +170,20 @@ public class Symphony__CommonMathAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPolynomialAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.math.Symphony__CommonMathFacade <em>Facade</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.common.math.Symphony__CommonMathFacade
+	 * @generated
+	 */
+	public Adapter createSymphony__CommonMathFacadeAdapter() {
 		return null;
 	}
 

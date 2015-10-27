@@ -66,7 +66,7 @@ public class Symphony__AddonsSensorsFOVFactoryImpl extends EFactoryImpl implemen
 			case Symphony__AddonsSensorsFOVPackage.CONICAL_FIELD_OF_VIEW: return createConicalFieldOfView();
 			case Symphony__AddonsSensorsFOVPackage.CIRCULAR_SECTOR_FIELD_OF_VIEW: return createCircularSectorFieldOfView();
 			case Symphony__AddonsSensorsFOVPackage.RECTANGULAR_FRUSTRUM_FIELD_OF_VIEW_SAMPLING_SHAPE: return createRectangularFrustrumFieldOfViewSamplingShape();
-			case Symphony__AddonsSensorsFOVPackage.FOV_FACADE: return createFOVFacade();
+			case Symphony__AddonsSensorsFOVPackage.SYMPHONY_ADDONS_SENSORS_FOV_FACADE: return createSymphony__AddonsSensorsFOVFacade();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -147,9 +147,9 @@ public class Symphony__AddonsSensorsFOVFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FOVFacade createFOVFacade() {
-		FOVFacadeImpl fovFacade = new FOVFacadeImpl();
-		return fovFacade;
+	public Symphony__AddonsSensorsFOVFacade createSymphony__AddonsSensorsFOVFacade() {
+		Symphony__AddonsSensorsFOVFacadeImpl symphony__AddonsSensorsFOVFacade = new Symphony__AddonsSensorsFOVFacadeImpl();
+		return symphony__AddonsSensorsFOVFacade;
 	}
 
 	/**

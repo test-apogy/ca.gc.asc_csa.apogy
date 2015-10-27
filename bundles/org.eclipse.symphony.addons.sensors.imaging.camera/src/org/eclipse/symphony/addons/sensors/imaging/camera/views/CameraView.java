@@ -20,7 +20,7 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.actions.NewCameraViewA
 import org.eclipse.symphony.addons.sensors.imaging.camera.composites.CameraViewConfigurationComposite;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.ISelectionListener;
@@ -61,8 +61,8 @@ public class CameraView extends AbstractView implements ISelectionListener
 		// Attempts to initialize the CameraViewConfiguration.				
 		setCameraViewConfiguration(CameraViewUtilities.INSTANCE.getActiveCameraViewConfiguration(cameraViewConfigurationId));
 				
-		// Register to EMFEcoreInvocatorFacade to listen for change on Active Session.
-		EMFEcoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
+		// Register to Symphony__CoreInvocatorFacade to listen for change on Active Session.
+		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
 	}
 	
 	@Override
@@ -157,8 +157,8 @@ public class CameraView extends AbstractView implements ISelectionListener
 	@Override
 	public void dispose() 
 	{
-		// Unregister to EMFEcoreInvocatorFacade.
-		EMFEcoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
+		// Unregister to Symphony__CoreInvocatorFacade.
+		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
 		
 		cameraComposite.dispose();		
 		super.dispose();
@@ -253,11 +253,11 @@ public class CameraView extends AbstractView implements ISelectionListener
 				@Override
 				public void notifyChanged(Notification msg) 
 				{				
-					if(msg.getNotifier() instanceof EMFEcoreInvocatorFacade)
+					if(msg.getNotifier() instanceof Symphony__CoreInvocatorFacade)
 					{
-						int featureId = msg.getFeatureID(EMFEcoreInvocatorFacade.class);
+						int featureId = msg.getFeatureID(Symphony__CoreInvocatorFacade.class);
 						
-						if(featureId == Symphony__CoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
+						if(featureId == Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
 						{
 							// Tries to update the CameraViewConfiguration being displayed.
 							setCameraViewConfiguration(CameraViewUtilities.INSTANCE.getActiveCameraViewConfiguration(cameraViewConfigurationId));

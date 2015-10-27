@@ -25,11 +25,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPlane;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
-import org.eclipse.symphony.common.topology.TopologyFacade;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 
 /**
  * <!-- begin-user-doc -->
@@ -47,8 +46,6 @@ import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
  */
 public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements CircularExclusionZone {
 
-	private static TopologyFacade topologyFacade = Symphony__CommonTopologyFactory.eINSTANCE.createTopologyFacade();
-	private static Data3dFacade data3dFacade = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();	
 	private static CartesianPositionCoordinates center = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates();
 	
 	/**
@@ -171,12 +168,12 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 		boolean inside = false;		
 		
 		// First checks if the center of the exclusion zones falls onto the polygon.
-		Matrix4d centerTransform = TopologyFacade.INSTANCE.expressNodeInRootFrame(this);
+		Matrix4d centerTransform = Symphony__CommonTopologyFacade.INSTANCE.expressNodeInRootFrame(this);
 		Vector3d centerPosition = new Vector3d();
 		centerTransform.get(centerPosition);						
 		
-		CartesianPositionCoordinates point = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(centerPosition.x, centerPosition.y, centerPosition.z);		
-		inside = Geometry3dUtilities.isInsidePolygon(point, polygon);
+		CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(centerPosition.x, centerPosition.y, centerPosition.z);		
+		inside = Geometry3DUtilities.isInsidePolygon(point, polygon);
 
 		if(!inside)
 		{
@@ -346,12 +343,12 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 	 */
 	private CartesianPositionCoordinates projectOntoExclusionZone(CartesianPositionCoordinates point)
 	{				
-		Matrix4d matrix = topologyFacade.expressRootInNodeFrame(this);							
+		Matrix4d matrix = Symphony__CommonTopologyFacade.INSTANCE.expressRootInNodeFrame(this);							
 		Point3d projected = new Point3d();
 		matrix.transform(point.asPoint3d(), projected);		
-		CartesianPositionCoordinates projectedPoint = data3dFacade.createCartesianPositionCoordinates(projected.x, projected.y, projected.z);
+		CartesianPositionCoordinates projectedPoint = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(projected.x, projected.y, projected.z);
 		
-		return Geometry3dUtilities.getFlattenCoordinate(CartesianPlane.XY, projectedPoint);		
+		return Geometry3DUtilities.getFlattenCoordinate(CartesianPlane.XY, projectedPoint);		
 	}
 	
 	@Override
@@ -360,7 +357,7 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 		// Gets the point's flattened coordinates.
 		CartesianPositionCoordinates projectedPoint = projectOntoExclusionZone(point);
 		
-		boolean inside = (Geometry3dUtilities.getDistance(projectedPoint, center) < getRadius());
+		boolean inside = (Geometry3DUtilities.getDistance(projectedPoint, center) < getRadius());
 		
 		if(isInvertSamplingShape())
 		{
@@ -390,17 +387,17 @@ public class CircularExclusionZoneImpl extends ExclusionZoneImpl implements Circ
 			CartesianPositionCoordinates flattenedTo = projectOntoExclusionZone(to);
 			
 			// Gets the centre projection on the from->to line.
-			CartesianPositionCoordinates intersect = Geometry3dUtilities.getProjection(flattenedCenter, flattenedFrom, flattenedTo);
+			CartesianPositionCoordinates intersect = Geometry3DUtilities.getProjection(flattenedCenter, flattenedFrom, flattenedTo);
 						
 			// Check if the distance between the projection and the centre is less than the radius
-			if(Geometry3dUtilities.getDistance(flattenedCenter, intersect) < getRadius())
+			if(Geometry3DUtilities.getDistance(flattenedCenter, intersect) < getRadius())
 			{				
-				double u1u2Distance = Geometry3dUtilities.getDistance(flattenedFrom, flattenedTo);
+				double u1u2Distance = Geometry3DUtilities.getDistance(flattenedFrom, flattenedTo);
 				
 				// Check if the projection falls between u1 and u2. This is to account for the case
 				// where the projection of the line passes through the circle.
-				if( (Geometry3dUtilities.getDistance(intersect,flattenedFrom) < u1u2Distance) && 
-						(Geometry3dUtilities.getDistance(intersect,flattenedTo) < u1u2Distance))
+				if( (Geometry3DUtilities.getDistance(intersect,flattenedFrom) < u1u2Distance) && 
+						(Geometry3DUtilities.getDistance(intersect,flattenedTo) < u1u2Distance))
 				{
 					return true;
 				}

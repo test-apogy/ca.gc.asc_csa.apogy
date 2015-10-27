@@ -437,13 +437,13 @@ public interface Symphony__CommonGeometryData3DFactory extends EFactory {
 	PositionMarker createPositionMarker();
 
 	/**
-	 * Returns a new object of class '<em>Data3d Facade</em>'.
+	 * Returns a new object of class '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Data3d Facade</em>'.
+	 * @return a new object of class '<em>Facade</em>'.
 	 * @generated
 	 */
-	Data3dFacade createData3dFacade();
+	Symphony__CommonGeometryData3DFacade createSymphony__CommonGeometryData3DFacade();
 
 	/**
 	 * Returns a new object of class '<em>Data3 DIO</em>'.

@@ -129,9 +129,9 @@ public class Symphony__AddonsSensorsFOVSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__AddonsSensorsFOVPackage.FOV_FACADE: {
-				FOVFacade fovFacade = (FOVFacade)theEObject;
-				T1 result = caseFOVFacade(fovFacade);
+			case Symphony__AddonsSensorsFOVPackage.SYMPHONY_ADDONS_SENSORS_FOV_FACADE: {
+				Symphony__AddonsSensorsFOVFacade symphony__AddonsSensorsFOVFacade = (Symphony__AddonsSensorsFOVFacade)theEObject;
+				T1 result = caseSymphony__AddonsSensorsFOVFacade(symphony__AddonsSensorsFOVFacade);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -245,17 +245,17 @@ public class Symphony__AddonsSensorsFOVSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>FOV Facade</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>FOV Facade</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Facade</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseFOVFacade(FOVFacade object) {
+	public T1 caseSymphony__AddonsSensorsFOVFacade(Symphony__AddonsSensorsFOVFacade object) {
 		return null;
 	}
 

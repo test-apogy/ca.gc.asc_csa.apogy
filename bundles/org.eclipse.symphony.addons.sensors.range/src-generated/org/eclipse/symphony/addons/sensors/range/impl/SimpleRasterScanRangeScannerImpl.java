@@ -10,11 +10,11 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangePackage;
 import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
-import org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade;
 import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScanner;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.TransformNode;
 
 /**
@@ -79,12 +79,12 @@ public class SimpleRasterScanRangeScannerImpl extends RasterScanRangeSensorImpl 
 	    	if(rasterScanSettings == null)
 	    	{
 	    		// Creates a transform node to position and orient the fov.
-	    		TransformNode transformNode = TopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, Math.toRadians(90), 0);
+	    		TransformNode transformNode = Symphony__CommonTopologyFacade.INSTANCE.createTransformNodeXYZ(0, 0, 0, 0, Math.toRadians(90), 0);
 	    		transformNode.setDescription("Field Of View Transform");
 	    		getChildren().add(transformNode);
 	    		
 	    		// Adds the rasterscan to the transform.
-	    		rasterScanSettings = SensorsRangeFacade.INSTANCE.createRasterScanSettings(0, 100.0, Math.toRadians(90), Math.toRadians(90), 100, 100);
+	    		rasterScanSettings = Symphony__AddonsSensorsRangeFacade.INSTANCE.createRasterScanSettings(0, 100.0, Math.toRadians(90), Math.toRadians(90), 100, 100);
 	    		transformNode.getChildren().add(rasterScanSettings);
 	    	}
 		}

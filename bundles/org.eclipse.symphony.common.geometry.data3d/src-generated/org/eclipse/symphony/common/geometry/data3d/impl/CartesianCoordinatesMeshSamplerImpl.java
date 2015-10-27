@@ -10,7 +10,7 @@ import org.eclipse.symphony.common.geometry.data.impl.MeshCoordinatesShapesSampl
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshSampler;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
@@ -23,8 +23,6 @@ import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3
  */
 public class CartesianCoordinatesMeshSamplerImpl extends MeshCoordinatesShapesSamplerImpl<CartesianPositionCoordinates, CartesianPolygon> implements CartesianCoordinatesMeshSampler {
 
-	private static Data3dFacade data3dFacade = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();
-	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,7 +45,7 @@ public class CartesianCoordinatesMeshSamplerImpl extends MeshCoordinatesShapesSa
 	@Override
 	protected CartesianPositionCoordinates copyCoordinates(CartesianPositionCoordinates point)
 	{
-		return data3dFacade.createCartesianPositionCoordinates(point);
+		return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
 	}
 
 	@Override

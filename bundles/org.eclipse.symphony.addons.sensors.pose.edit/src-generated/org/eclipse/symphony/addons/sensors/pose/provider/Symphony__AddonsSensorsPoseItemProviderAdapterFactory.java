@@ -310,26 +310,26 @@ public class Symphony__AddonsSensorsPoseItemProviderAdapterFactory extends Symph
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.pose.PoseFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PoseFacadeItemProvider poseFacadeItemProvider;
+	protected Symphony__AddonsSensorsPoseFacadeItemProvider symphony__AddonsSensorsPoseFacadeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.pose.PoseFacade}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPoseFacade}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPoseFacadeAdapter() {
-		if (poseFacadeItemProvider == null) {
-			poseFacadeItemProvider = new PoseFacadeItemProvider(this);
+	public Adapter createSymphony__AddonsSensorsPoseFacadeAdapter() {
+		if (symphony__AddonsSensorsPoseFacadeItemProvider == null) {
+			symphony__AddonsSensorsPoseFacadeItemProvider = new Symphony__AddonsSensorsPoseFacadeItemProvider(this);
 		}
 
-		return poseFacadeItemProvider;
+		return symphony__AddonsSensorsPoseFacadeItemProvider;
 	}
 
 	/**
@@ -467,7 +467,7 @@ public class Symphony__AddonsSensorsPoseItemProviderAdapterFactory extends Symph
 		if (poseSensorItemProvider != null) poseSensorItemProvider.dispose();
 		if (simulatedPoseSensorItemProvider != null) simulatedPoseSensorItemProvider.dispose();
 		if (csvDataLoggerItemProvider != null) csvDataLoggerItemProvider.dispose();
-		if (poseFacadeItemProvider != null) poseFacadeItemProvider.dispose();
+		if (symphony__AddonsSensorsPoseFacadeItemProvider != null) symphony__AddonsSensorsPoseFacadeItemProvider.dispose();
 	}
 
 	/**
@@ -565,7 +565,7 @@ public class Symphony__AddonsSensorsPoseItemProviderAdapterFactory extends Symph
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
-						 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createPoseFacade()));
+						 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createSymphony__AddonsSensorsPoseFacade()));
 
 				return null;
 			}
@@ -625,7 +625,7 @@ public class Symphony__AddonsSensorsPoseItemProviderAdapterFactory extends Symph
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createPoseFacade()));
+						 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createSymphony__AddonsSensorsPoseFacade()));
 
 				return null;
 			}

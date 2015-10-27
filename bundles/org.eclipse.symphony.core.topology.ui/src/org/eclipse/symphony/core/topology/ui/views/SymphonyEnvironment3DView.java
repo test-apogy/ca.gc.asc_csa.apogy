@@ -21,18 +21,18 @@ import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.core.ResultNode;
 import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
-import org.eclipse.symphony.core.topology.SymphonyTopologyFacade;
+import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFacade;
 import org.eclipse.symphony.core.topology.ui.Activator;
 import org.eclipse.symphony.core.ui.ResultNodePresentation;
 
@@ -54,7 +54,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 		setSymphonyEnvironment(getActiveSymphonyEnvironment());
 				
 		// Register to the active session.
-		EMFEcoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
+		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(getActiveSessionAdapter());
 	}
 	
 	@Override
@@ -134,7 +134,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 	public void dispose() 
 	{
 		// Un-Register to the active session.
-		EMFEcoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
+		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(getActiveSessionAdapter());
 		
 		if(symphonyEnvironment != null)
 		{
@@ -198,7 +198,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 	{
 		SymphonyEnvironment symphonyEnvironment = null;
 		
-		InvocatorSession session = EMFEcoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+		InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
 		if(session != null)
 		{
 			if(session.getEnvironment() instanceof SymphonyEnvironment)
@@ -251,17 +251,17 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 									root.setDescription("Root Node of the Symphony Environment");
 									
 									// Creates the SymphonyEnvironmentNode that represent the topology associated with the SymphonyEnvironment.
-									SymphonyEnvironmentNode symphonyEnvironmentNode = SymphonyTopologyFacade.INSTANCE.createSymphonyEnvironmentNode(newSymphonyEnvironment);									
+									SymphonyEnvironmentNode symphonyEnvironmentNode = Symphony__CoreTopologyFacade.INSTANCE.createSymphonyEnvironmentNode(newSymphonyEnvironment);									
 									root.getChildren().add(symphonyEnvironmentNode);
 																		
 									newSymphonyEnvironment.getSymphonyTopology().setRootNode(root);				
 									
-									GraphicsContext graphicsContext = TopologyUIFacade.INSTANCE.createGraphicsContext(newSymphonyEnvironment.getSymphonyTopology().getRootNode());
+									GraphicsContext graphicsContext = Symphony__CommonTopologyUIFacade.INSTANCE.createGraphicsContext(newSymphonyEnvironment.getSymphonyTopology().getRootNode());
 									if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
 								}
 								else
 								{																
-									GraphicsContext graphicsContext = TopologyUIFacade.INSTANCE.createGraphicsContext(newSymphonyEnvironment.getSymphonyTopology().getRootNode());
+									GraphicsContext graphicsContext = Symphony__CommonTopologyUIFacade.INSTANCE.createGraphicsContext(newSymphonyEnvironment.getSymphonyTopology().getRootNode());
 									if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
 								}														
 							}
@@ -270,7 +270,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 								TransformNode root = Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode();
 								root.setNodeId("UNIVERSE_ROOT");
 								root.setDescription("Root Node of the Symphony Environment");
-								GraphicsContext graphicsContext = TopologyUIFacade.INSTANCE.createGraphicsContext(root);
+								GraphicsContext graphicsContext = Symphony__CommonTopologyUIFacade.INSTANCE.createGraphicsContext(root);
 								if(topologyViewer != null) topologyViewer.setInput(graphicsContext);
 							}
 						}
@@ -332,12 +332,12 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 				@Override
 				public void notifyChanged(Notification msg) 
 				{
-					if(msg.getNotifier() instanceof EMFEcoreInvocatorFacade)
+					if(msg.getNotifier() instanceof Symphony__CoreInvocatorFacade)
 					{
-						int featureId = msg.getFeatureID(EMFEcoreInvocatorFacade.class);
+						int featureId = msg.getFeatureID(Symphony__CoreInvocatorFacade.class);
 						switch (featureId) 
 						{
-							case Symphony__CoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
+							case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 								if(msg.getNewValue() instanceof InvocatorSession)
 								{
 									// Gets the current Active Session if one exists.

@@ -10,10 +10,10 @@ import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
-import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.SymphonySystem;
-import org.eclipse.symphony.core.environment.EnvironmentFacade;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
 import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.Environment;
@@ -179,7 +179,7 @@ public class PTUDishAntennaSymphonySystemApiAdapterImpl extends SymphonySystemAp
 				if (ptuDishAntennaData.getFov() != null)
 				{
 					// Create a copy of that field of view object
-					ConicalFieldOfView fov = FOVFacade.INSTANCE.createConicalFieldOfView(ptuDishAntennaData.getFov());
+					ConicalFieldOfView fov = Symphony__AddonsSensorsFOVFacade.INSTANCE.createConicalFieldOfView(ptuDishAntennaData.getFov());
 					
 					// Update the FOV accordingly
 					this.getPTUDishAntenna().setFov(fov);
@@ -238,7 +238,7 @@ public class PTUDishAntennaSymphonySystemApiAdapterImpl extends SymphonySystemAp
 			if (this.getPTUDishAntenna().getFov() != null)
 			{
 				// Store a copy of it in the initialization data object
-				ptuDishAntennaData.setFov(FOVFacade.INSTANCE.createConicalFieldOfView(this.getPTUDishAntenna().getFov()));
+				ptuDishAntennaData.setFov(Symphony__AddonsSensorsFOVFacade.INSTANCE.createConicalFieldOfView(this.getPTUDishAntenna().getFov()));
 			}
 			// Otherwise
 			else
@@ -306,7 +306,7 @@ class SunTrackerJob extends Job
 				(this.apiAdapter.getPTUDishAntenna().isTrackingSun() == true))
 			{
 				// Get a vector pointing to the sun
-				Tuple3d sunVector = EnvironmentFacade.INSTANCE.getSunVector(this.apiAdapter.getSymphonySystem(),
+				Tuple3d sunVector = Symphony__CoreEnvironmentFacade.INSTANCE.getSunVector(this.apiAdapter.getSymphonySystem(),
 																	    	"PTU_DISH_ANTENNA_SYM_SYS_ROOT",
 																	    	this.apiAdapter.getEnvironment());
 			

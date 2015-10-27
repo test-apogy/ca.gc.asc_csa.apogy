@@ -13,9 +13,8 @@ import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsF
 import org.eclipse.symphony.addons.geometry.paths.Symphony__AddonsGeometryPathsPackage;
 import org.eclipse.symphony.addons.geometry.paths.WayPointPath;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,8 +30,6 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3dUtilities;
  * @generated
  */
 public class MinimumDistanceFilterImpl extends WayPointPathFilterImpl implements MinimumDistanceFilter {
-
-	protected static Data3dFacade data3dFacade = Symphony__CommonGeometryData3DFactory.eINSTANCE.createData3dFacade();
 	
 	
 	/**
@@ -184,7 +181,7 @@ public class MinimumDistanceFilterImpl extends WayPointPathFilterImpl implements
 			if(getProgressMonitor() != null) getProgressMonitor().beginTask("Filtering WayPointPath.", input.getPoints().size());
 			
 			// The first way point is always kept.
-			filtered.getPoints().add(data3dFacade.createCartesianPositionCoordinates(input.getPoints().get(0)));
+			filtered.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(input.getPoints().get(0)));
 			if(getProgressMonitor() != null) getProgressMonitor().worked(1);
 			
 			// Goes through the list of points and adds to the filtered list only those that are further apart then the specified minimum distance.
@@ -192,11 +189,11 @@ public class MinimumDistanceFilterImpl extends WayPointPathFilterImpl implements
 			for(int i = 1; i < input.getPoints().size(); i++)
 			{
 				CartesianPositionCoordinates nextPoint = input.getPoints().get(i);
-				double distance = Geometry3dUtilities.getDistance(previousPoint, nextPoint);								
+				double distance = Geometry3DUtilities.getDistance(previousPoint, nextPoint);								
 				
 				if(distance > getMinimumDistance())
 				{
-					filtered.getPoints().add(data3dFacade.createCartesianPositionCoordinates(nextPoint));
+					filtered.getPoints().add(Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(nextPoint));
 					previousPoint = nextPoint;
 				}
 				

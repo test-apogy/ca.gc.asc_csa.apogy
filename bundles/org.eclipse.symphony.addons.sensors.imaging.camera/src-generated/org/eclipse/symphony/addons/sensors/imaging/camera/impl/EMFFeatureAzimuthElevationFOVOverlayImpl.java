@@ -19,9 +19,9 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.OverlayAlignment;
 import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.EMFEcoreFacade;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 
 /**
@@ -283,15 +283,15 @@ public class EMFFeatureAzimuthElevationFOVOverlayImpl extends AzimuthElevationFO
 	
 	protected double getValue(VariableFeatureReference variableFeatureReference)
 	{
-		Number featureValue = (Number) EMFEcoreInvocatorFacade.INSTANCE.getEMFFeatureValue(variableFeatureReference);
+		Number featureValue = (Number) Symphony__CoreInvocatorFacade.INSTANCE.getEMFFeatureValue(variableFeatureReference);
 		
 		// Gets the feature associated with the azimuth.
-		AbstractFeatureListNode abstractFeatureListNode = EMFEcoreFacade.INSTANCE.getLeaf(variableFeatureReference.getFeatureRoot());
+		AbstractFeatureListNode abstractFeatureListNode = Symphony__CommonEMFFacade.INSTANCE.getLeaf(variableFeatureReference.getFeatureRoot());
 		AbstractFeatureSpecifier abstractFeatureSpecifier = (AbstractFeatureSpecifier) abstractFeatureListNode;
 		ETypedElement eTypedElement = abstractFeatureSpecifier.getStructuralFeature();
 				
 		// Gets the units associated with the feature
-		Unit<?> units = EMFEcoreFacade.INSTANCE.getEngineeringUnits(eTypedElement);
+		Unit<?> units = Symphony__CommonEMFFacade.INSTANCE.getEngineeringUnits(eTypedElement);
 		
 		double value = featureValue.doubleValue();				
 		if(units != null)

@@ -12,11 +12,11 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
+import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFacade;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
@@ -145,7 +145,7 @@ public class LidarSimulatedImpl extends LidarImpl implements LidarSimulated
 		if(tmp == null)
 		{
 			// Create a rectangular field of view with some default values
-			tmp = FOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(FOV_DEF_MINIMUM_RANGE,
+			tmp = Symphony__AddonsSensorsFOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(FOV_DEF_MINIMUM_RANGE,
 																		  FOV_DEF_MAXIMUM_RANGE,
 																		  FOV_DEF_HORIZONTAL_SPAN,
 																		  FOV_DEF_VERTICAL_SPAN);
@@ -389,7 +389,7 @@ public class LidarSimulatedImpl extends LidarImpl implements LidarSimulated
 				double z = range * Math.cos(elevationAngle) * Math.cos(azimuthAngle);
 
 				// Create a Cartesian coordinate with the calculated X, Y and Z.
-				CartesianPositionCoordinates point = Data3dFacade.INSTANCE.createCartesianPositionCoordinates(x,y,z);
+				CartesianPositionCoordinates point = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(x,y,z);
 				
 				// Add the point to the list of scan line points
 				scanLine.add(point);

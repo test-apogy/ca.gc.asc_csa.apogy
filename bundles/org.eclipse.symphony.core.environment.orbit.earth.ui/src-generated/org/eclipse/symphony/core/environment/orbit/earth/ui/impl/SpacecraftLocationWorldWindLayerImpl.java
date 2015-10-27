@@ -31,7 +31,7 @@ import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
@@ -528,7 +528,7 @@ public class SpacecraftLocationWorldWindLayerImpl extends AbstractWorldWindLayer
 						try 
 						{				
 							SpacecraftState ss = getOrbitModel().getPropagator().propagate( getTimeSource().getTime());								
-							GeographicCoordinates coord = EarthOrbitFacade.INSTANCE.convertToGeographicCoordinates((OreKitBackedSpacecraftState) ss);
+							GeographicCoordinates coord = Symphony__CoreEnvironmentOrbitEarthFacade.INSTANCE.convertToGeographicCoordinates((OreKitBackedSpacecraftState) ss);
 	
 							// Create latitude, longitude and elevation values.
 				            Angle latitude = Angle.fromRadiansLatitude(coord.getLatitude());

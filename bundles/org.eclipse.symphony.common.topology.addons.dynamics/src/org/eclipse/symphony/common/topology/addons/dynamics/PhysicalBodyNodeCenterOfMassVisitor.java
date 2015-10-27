@@ -10,10 +10,10 @@ import javax.vecmath.Matrix4d;
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 
 public class PhysicalBodyNodeCenterOfMassVisitor extends PhysicalBodyNodeMassVisitor 
 {
@@ -43,7 +43,7 @@ public class PhysicalBodyNodeCenterOfMassVisitor extends PhysicalBodyNodeMassVis
 	{			
 		Vector3d temp = new Vector3d(temporaryCenterOfMassPosition);
 		temp.scale(1.0 / getTotalMass());					
-		return MathFacade.INSTANCE.createTuple3d(temp);
+		return Symphony__CommonMathFacade.INSTANCE.createTuple3d(temp);
 	}
 	
 	@Override
@@ -60,7 +60,7 @@ public class PhysicalBodyNodeCenterOfMassVisitor extends PhysicalBodyNodeMassVis
 				if(physicalProperties.getMass() != 0.0)
 				{
 					// Gets the transform of the node with respect to the root.
-					Matrix4d m = TopologyFacade.INSTANCE.expressInFrame(physicalBodyNode, getRoot());
+					Matrix4d m = Symphony__CommonTopologyFacade.INSTANCE.expressInFrame(physicalBodyNode, getRoot());
 					
 					// Gets the position of the center of mass in the root node frame.
 					Point3d v = new Point3d();					

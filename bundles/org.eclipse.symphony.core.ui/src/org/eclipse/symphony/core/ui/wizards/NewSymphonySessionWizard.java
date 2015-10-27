@@ -16,7 +16,7 @@ import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.presentation.CustomEMFEcoreInvocatorEditor;
 import org.eclipse.symphony.core.ui.Activator;
 import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIFacade;
 import org.eclipse.symphony.core.ui.Symphony__CoreUIFactory;
 import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
 import org.eclipse.ui.INewWizard;
@@ -115,10 +115,10 @@ public class NewSymphonySessionWizard extends Wizard implements INewWizard {
 					throws CoreException, InvocationTargetException,
 					InterruptedException {
 				IContainer container = getResourceContainer(selection);
-				InvocatorSession session = SymphonyCoreUiFacade.INSTANCE
+				InvocatorSession session = Symphony__CoreUIFacade.INSTANCE
 						.createSymphonySession(getNewSymphonySessionSettings());
 				try {
-					SymphonyCoreUiFacade.INSTANCE
+					Symphony__CoreUIFacade.INSTANCE
 							.createSymphonySessionFile(container,
 									getNewSymphonySessionSettings().getFilename(), session);
 				} catch (Exception e) {
@@ -132,7 +132,7 @@ public class NewSymphonySessionWizard extends Wizard implements INewWizard {
 		try {
 			getContainer().run(false, false, operation);
 
-			IFile modelFile = SymphonyCoreUiFacade.INSTANCE.getSymphonySessionFile(getSymphonyResourceSettings().getResourceContainer(), getNewSymphonySessionSettings().getFilename()); 
+			IFile modelFile = Symphony__CoreUIFacade.INSTANCE.getSymphonySessionFile(getSymphonyResourceSettings().getResourceContainer(), getNewSymphonySessionSettings().getFilename()); 
 			
 			// Select the new file resource in the current view.
 			//

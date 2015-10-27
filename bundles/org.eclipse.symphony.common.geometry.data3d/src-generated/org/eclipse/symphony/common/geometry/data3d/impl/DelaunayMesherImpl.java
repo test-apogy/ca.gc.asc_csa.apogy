@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPlane;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.DelaunayMesher;
@@ -376,7 +376,7 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 			double y = point.getY();
 			double z = point.getZ();
 
-			CartesianPositionCoordinates copy = Data3dFacade.INSTANCE
+			CartesianPositionCoordinates copy = Symphony__CommonGeometryData3DFacade.INSTANCE
 					.createCartesianPositionCoordinates(x, y, z);
 
 			mesh.getPoints().add(copy);
@@ -392,7 +392,7 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 					CartesianPositionCoordinates p1 = mesh.getPoints().get(faces[i][1]);
 					CartesianPositionCoordinates p2 = mesh.getPoints().get(faces[i][2]);
 
-					CartesianTriangle triangle = Data3dFacade.INSTANCE.createCartesianTriangle(p2, p1, p0);
+					CartesianTriangle triangle = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianTriangle(p2, p1, p0);
 
 					mesh.getPolygons().add(triangle);
 				}

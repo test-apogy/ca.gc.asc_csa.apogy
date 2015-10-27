@@ -166,7 +166,7 @@ enum EdgeOfFlightLine
 	NOT_END = 0
 }
 
-class LASFacade
+class Symphony__CommonGeometryData3DLASFacade
 {
 	op LASPoint createPoint(int formatID , EByteArray data) throws IOException
 }

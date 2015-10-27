@@ -30,7 +30,7 @@ import org.eclipse.symphony.addons.sensors.pose.PositionSensor;
 import org.eclipse.symphony.addons.sensors.pose.SelfPlaceSensor;
 import org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Data3dFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Pose;
 import org.eclipse.symphony.common.log.EventSeverity;
@@ -310,7 +310,7 @@ public class PoseSensorImpl extends TransformNodeImpl implements PoseSensor {
 			Matrix3x3 matrix) {
 		Vector3d rotation = GeometricUtils
 				.extractRotationFromXYZRotMatrix(matrix.asMatrix3d());
-		CartesianOrientationCoordinates orientation = Data3dFacade.INSTANCE
+		CartesianOrientationCoordinates orientation = Symphony__CommonGeometryData3DFacade.INSTANCE
 				.createCartesianOrientationCoordinates(rotation.x, rotation.y,
 						rotation.z);
 		return orientation;

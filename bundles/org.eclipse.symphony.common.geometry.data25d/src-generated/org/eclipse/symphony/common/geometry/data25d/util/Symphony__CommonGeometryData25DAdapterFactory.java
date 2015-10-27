@@ -100,8 +100,8 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 				return createCoordinatesSet25DFilterAdapter();
 			}
 			@Override
-			public Adapter caseDataFacade(DataFacade object) {
-				return createDataFacadeAdapter();
+			public Adapter caseSymphony__CommonGeometryData25DFacade(Symphony__CommonGeometryData25DFacade object) {
+				return createSymphony__CommonGeometryData25DFacadeAdapter();
 			}
 			@Override
 			public Adapter caseData25DIO(Data25DIO object) {
@@ -250,16 +250,16 @@ public class Symphony__CommonGeometryData25DAdapterFactory extends AdapterFactor
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data25d.DataFacade <em>Data Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data25d.DataFacade
+	 * @see org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DFacade
 	 * @generated
 	 */
-	public Adapter createDataFacadeAdapter() {
+	public Adapter createSymphony__CommonGeometryData25DFacadeAdapter() {
 		return null;
 	}
 

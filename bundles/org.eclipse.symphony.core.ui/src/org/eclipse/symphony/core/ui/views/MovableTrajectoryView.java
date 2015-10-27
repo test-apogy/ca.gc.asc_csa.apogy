@@ -243,7 +243,7 @@ public class MovableTrajectoryView extends ViewPart implements ISelectionListene
 //					
 //					Vector3d position = new Vector3d(x,y,0);				
 //					matrix.set(position);										
-//					movable.setPoseTransform(MathFacade.INSTANCE.createMatrix4x4(matrix));
+//					movable.setPoseTransform(Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(matrix));
 //					
 //					try 
 //					{

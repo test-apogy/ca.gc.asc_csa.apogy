@@ -151,14 +151,14 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 	int ABSTRACT_PROGRAM_RUNTIME_OPERATION_COUNT = 6;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.core.programs.impl.ProgramFacadeImpl <em>Program Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.core.programs.impl.ProgramFacadeImpl
-	 * @see org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsPackageImpl#getProgramFacade()
+	 * @see org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsFacadeImpl
+	 * @see org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsPackageImpl#getSymphony__CoreProgramsFacade()
 	 * @generated
 	 */
-	int PROGRAM_FACADE = 1;
+	int SYMPHONY_CORE_PROGRAMS_FACADE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Session</b></em>' reference.
@@ -167,7 +167,7 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM_FACADE__SESSION = 0;
+	int SYMPHONY_CORE_PROGRAMS_FACADE__SESSION = 0;
 
 	/**
 	 * The feature id for the '<em><b>Variables</b></em>' reference list.
@@ -176,16 +176,16 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM_FACADE__VARIABLES = 1;
+	int SYMPHONY_CORE_PROGRAMS_FACADE__VARIABLES = 1;
 
 	/**
-	 * The number of structural features of the '<em>Program Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM_FACADE_FEATURE_COUNT = 2;
+	int SYMPHONY_CORE_PROGRAMS_FACADE_FEATURE_COUNT = 2;
 
 	/**
 	 * The operation id for the '<em>Exec</em>' operation.
@@ -194,16 +194,16 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM_FACADE___EXEC__OPERATIONCALL = 0;
+	int SYMPHONY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL = 0;
 
 	/**
-	 * The number of operations of the '<em>Program Facade</em>' class.
+	 * The number of operations of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM_FACADE_OPERATION_COUNT = 1;
+	int SYMPHONY_CORE_PROGRAMS_FACADE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.programs.impl.TimeIntervalImpl <em>Time Interval</em>}' class.
@@ -343,46 +343,46 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 	EOperation getAbstractProgramRuntime__StepReturn();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.core.programs.ProgramFacade <em>Program Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Program Facade</em>'.
-	 * @see org.eclipse.symphony.core.programs.ProgramFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade
 	 * @generated
 	 */
-	EClass getProgramFacade();
+	EClass getSymphony__CoreProgramsFacade();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.programs.ProgramFacade#getSession <em>Session</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade#getSession <em>Session</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Session</em>'.
-	 * @see org.eclipse.symphony.core.programs.ProgramFacade#getSession()
-	 * @see #getProgramFacade()
+	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade#getSession()
+	 * @see #getSymphony__CoreProgramsFacade()
 	 * @generated
 	 */
-	EReference getProgramFacade_Session();
+	EReference getSymphony__CoreProgramsFacade_Session();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.core.programs.ProgramFacade#getVariables <em>Variables</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade#getVariables <em>Variables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Variables</em>'.
-	 * @see org.eclipse.symphony.core.programs.ProgramFacade#getVariables()
-	 * @see #getProgramFacade()
+	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade#getVariables()
+	 * @see #getSymphony__CoreProgramsFacade()
 	 * @generated
 	 */
-	EReference getProgramFacade_Variables();
+	EReference getSymphony__CoreProgramsFacade_Variables();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.ProgramFacade#exec(org.eclipse.symphony.core.invocator.OperationCall) <em>Exec</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade#exec(org.eclipse.symphony.core.invocator.OperationCall) <em>Exec</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Exec</em>' operation.
-	 * @see org.eclipse.symphony.core.programs.ProgramFacade#exec(org.eclipse.symphony.core.invocator.OperationCall)
+	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsFacade#exec(org.eclipse.symphony.core.invocator.OperationCall)
 	 * @generated
 	 */
-	EOperation getProgramFacade__Exec__OperationCall();
+	EOperation getSymphony__CoreProgramsFacade__Exec__OperationCall();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.core.programs.TimeInterval <em>Time Interval</em>}'.
@@ -517,14 +517,14 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 		EOperation ABSTRACT_PROGRAM_RUNTIME___STEP_RETURN = eINSTANCE.getAbstractProgramRuntime__StepReturn();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.core.programs.impl.ProgramFacadeImpl <em>Program Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.core.programs.impl.ProgramFacadeImpl
-		 * @see org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsPackageImpl#getProgramFacade()
+		 * @see org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsFacadeImpl
+		 * @see org.eclipse.symphony.core.programs.impl.Symphony__CoreProgramsPackageImpl#getSymphony__CoreProgramsFacade()
 		 * @generated
 		 */
-		EClass PROGRAM_FACADE = eINSTANCE.getProgramFacade();
+		EClass SYMPHONY_CORE_PROGRAMS_FACADE = eINSTANCE.getSymphony__CoreProgramsFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Session</b></em>' reference feature.
@@ -532,7 +532,7 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROGRAM_FACADE__SESSION = eINSTANCE.getProgramFacade_Session();
+		EReference SYMPHONY_CORE_PROGRAMS_FACADE__SESSION = eINSTANCE.getSymphony__CoreProgramsFacade_Session();
 
 		/**
 		 * The meta object literal for the '<em><b>Variables</b></em>' reference list feature.
@@ -540,7 +540,7 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROGRAM_FACADE__VARIABLES = eINSTANCE.getProgramFacade_Variables();
+		EReference SYMPHONY_CORE_PROGRAMS_FACADE__VARIABLES = eINSTANCE.getSymphony__CoreProgramsFacade_Variables();
 
 		/**
 		 * The meta object literal for the '<em><b>Exec</b></em>' operation.
@@ -548,7 +548,7 @@ public interface Symphony__CoreProgramsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation PROGRAM_FACADE___EXEC__OPERATIONCALL = eINSTANCE.getProgramFacade__Exec__OperationCall();
+		EOperation SYMPHONY_CORE_PROGRAMS_FACADE___EXEC__OPERATIONCALL = eINSTANCE.getSymphony__CoreProgramsFacade__Exec__OperationCall();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.core.programs.impl.TimeIntervalImpl <em>Time Interval</em>}' class.

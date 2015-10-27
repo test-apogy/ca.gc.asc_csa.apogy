@@ -54,7 +54,7 @@ public class Symphony__CoreProgramsFactoryImpl extends EFactoryImpl implements S
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__CoreProgramsPackage.PROGRAM_FACADE: return createProgramFacade();
+			case Symphony__CoreProgramsPackage.SYMPHONY_CORE_PROGRAMS_FACADE: return createSymphony__CoreProgramsFacade();
 			case Symphony__CoreProgramsPackage.TIME_INTERVAL: return createTimeInterval();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -66,9 +66,9 @@ public class Symphony__CoreProgramsFactoryImpl extends EFactoryImpl implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProgramFacade createProgramFacade() {
-		ProgramFacadeImpl programFacade = new ProgramFacadeImpl();
-		return programFacade;
+	public Symphony__CoreProgramsFacade createSymphony__CoreProgramsFacade() {
+		Symphony__CoreProgramsFacadeImpl symphony__CoreProgramsFacade = new Symphony__CoreProgramsFacadeImpl();
+		return symphony__CoreProgramsFacade;
 	}
 
 	/**

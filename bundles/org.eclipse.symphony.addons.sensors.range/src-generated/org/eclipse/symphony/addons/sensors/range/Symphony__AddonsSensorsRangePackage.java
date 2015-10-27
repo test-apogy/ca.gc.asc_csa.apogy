@@ -1881,32 +1881,23 @@ public interface Symphony__AddonsSensorsRangePackage extends EPackage {
 	int RASTER_SCAN_DATA_OPERATION_COUNT = Symphony__CommonTopologyPackage.AGGREGATE_GROUP_NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.range.impl.SensorsRangeFacadeImpl <em>Sensors Range Facade</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.range.impl.Symphony__AddonsSensorsRangeFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.addons.sensors.range.impl.SensorsRangeFacadeImpl
-	 * @see org.eclipse.symphony.addons.sensors.range.impl.Symphony__AddonsSensorsRangePackageImpl#getSensorsRangeFacade()
+	 * @see org.eclipse.symphony.addons.sensors.range.impl.Symphony__AddonsSensorsRangeFacadeImpl
+	 * @see org.eclipse.symphony.addons.sensors.range.impl.Symphony__AddonsSensorsRangePackageImpl#getSymphony__AddonsSensorsRangeFacade()
 	 * @generated
 	 */
-	int SENSORS_RANGE_FACADE = 14;
+	int SYMPHONY_ADDONS_SENSORS_RANGE_FACADE = 14;
 
 	/**
-	 * The number of structural features of the '<em>Sensors Range Facade</em>' class.
+	 * The number of structural features of the '<em>Facade</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SENSORS_RANGE_FACADE_FEATURE_COUNT = 0;
-
-	/**
-	 * The operation id for the '<em>Create Raster Scan Settings</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__DOUBLE_DOUBLE_DOUBLE_DOUBLE_INT_INT = 0;
+	int SYMPHONY_ADDONS_SENSORS_RANGE_FACADE_FEATURE_COUNT = 0;
 
 	/**
 	 * The operation id for the '<em>Create Raster Scan Settings</em>' operation.
@@ -1915,16 +1906,25 @@ public interface Symphony__AddonsSensorsRangePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__RASTERSCANSETTINGS = 1;
+	int SYMPHONY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__DOUBLE_DOUBLE_DOUBLE_DOUBLE_INT_INT = 0;
 
 	/**
-	 * The number of operations of the '<em>Sensors Range Facade</em>' class.
+	 * The operation id for the '<em>Create Raster Scan Settings</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SENSORS_RANGE_FACADE_OPERATION_COUNT = 2;
+	int SYMPHONY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__RASTERSCANSETTINGS = 1;
+
+	/**
+	 * The number of operations of the '<em>Facade</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMPHONY_ADDONS_SENSORS_RANGE_FACADE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '<em>List</em>' data type.
@@ -2428,34 +2428,34 @@ public interface Symphony__AddonsSensorsRangePackage extends EPackage {
 	EReference getRasterScanData_ScanData();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade <em>Sensors Range Facade</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sensors Range Facade</em>'.
-	 * @see org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade
+	 * @return the meta object for class '<em>Facade</em>'.
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade
 	 * @generated
 	 */
-	EClass getSensorsRangeFacade();
+	EClass getSymphony__AddonsSensorsRangeFacade();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade#createRasterScanSettings(double, double, double, double, int, int) <em>Create Raster Scan Settings</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade#createRasterScanSettings(double, double, double, double, int, int) <em>Create Raster Scan Settings</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Raster Scan Settings</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade#createRasterScanSettings(double, double, double, double, int, int)
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade#createRasterScanSettings(double, double, double, double, int, int)
 	 * @generated
 	 */
-	EOperation getSensorsRangeFacade__CreateRasterScanSettings__double_double_double_double_int_int();
+	EOperation getSymphony__AddonsSensorsRangeFacade__CreateRasterScanSettings__double_double_double_double_int_int();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade#createRasterScanSettings(org.eclipse.symphony.addons.sensors.range.RasterScanSettings) <em>Create Raster Scan Settings</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade#createRasterScanSettings(org.eclipse.symphony.addons.sensors.range.RasterScanSettings) <em>Create Raster Scan Settings</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Create Raster Scan Settings</em>' operation.
-	 * @see org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade#createRasterScanSettings(org.eclipse.symphony.addons.sensors.range.RasterScanSettings)
+	 * @see org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade#createRasterScanSettings(org.eclipse.symphony.addons.sensors.range.RasterScanSettings)
 	 * @generated
 	 */
-	EOperation getSensorsRangeFacade__CreateRasterScanSettings__RasterScanSettings();
+	EOperation getSymphony__AddonsSensorsRangeFacade__CreateRasterScanSettings__RasterScanSettings();
 
 	/**
 	 * Returns the meta object for data type '{@link java.util.List <em>List</em>}'.
@@ -2905,14 +2905,14 @@ public interface Symphony__AddonsSensorsRangePackage extends EPackage {
 		EReference RASTER_SCAN_DATA__SCAN_DATA = eINSTANCE.getRasterScanData_ScanData();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.range.impl.SensorsRangeFacadeImpl <em>Sensors Range Facade</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.addons.sensors.range.impl.Symphony__AddonsSensorsRangeFacadeImpl <em>Facade</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.addons.sensors.range.impl.SensorsRangeFacadeImpl
-		 * @see org.eclipse.symphony.addons.sensors.range.impl.Symphony__AddonsSensorsRangePackageImpl#getSensorsRangeFacade()
+		 * @see org.eclipse.symphony.addons.sensors.range.impl.Symphony__AddonsSensorsRangeFacadeImpl
+		 * @see org.eclipse.symphony.addons.sensors.range.impl.Symphony__AddonsSensorsRangePackageImpl#getSymphony__AddonsSensorsRangeFacade()
 		 * @generated
 		 */
-		EClass SENSORS_RANGE_FACADE = eINSTANCE.getSensorsRangeFacade();
+		EClass SYMPHONY_ADDONS_SENSORS_RANGE_FACADE = eINSTANCE.getSymphony__AddonsSensorsRangeFacade();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Raster Scan Settings</b></em>' operation.
@@ -2920,7 +2920,7 @@ public interface Symphony__AddonsSensorsRangePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__DOUBLE_DOUBLE_DOUBLE_DOUBLE_INT_INT = eINSTANCE.getSensorsRangeFacade__CreateRasterScanSettings__double_double_double_double_int_int();
+		EOperation SYMPHONY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__DOUBLE_DOUBLE_DOUBLE_DOUBLE_INT_INT = eINSTANCE.getSymphony__AddonsSensorsRangeFacade__CreateRasterScanSettings__double_double_double_double_int_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Create Raster Scan Settings</b></em>' operation.
@@ -2928,7 +2928,7 @@ public interface Symphony__AddonsSensorsRangePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__RASTERSCANSETTINGS = eINSTANCE.getSensorsRangeFacade__CreateRasterScanSettings__RasterScanSettings();
+		EOperation SYMPHONY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__RASTERSCANSETTINGS = eINSTANCE.getSymphony__AddonsSensorsRangeFacade__CreateRasterScanSettings__RasterScanSettings();
 
 		/**
 		 * The meta object literal for the '<em>List</em>' data type.

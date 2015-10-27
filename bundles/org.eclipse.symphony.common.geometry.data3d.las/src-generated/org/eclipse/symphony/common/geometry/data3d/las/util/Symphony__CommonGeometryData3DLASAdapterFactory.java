@@ -85,8 +85,8 @@ public class Symphony__CommonGeometryData3DLASAdapterFactory extends AdapterFact
 				return createLASPointAdapter();
 			}
 			@Override
-			public Adapter caseLASFacade(LASFacade object) {
-				return createLASFacadeAdapter();
+			public Adapter caseSymphony__CommonGeometryData3DLASFacade(Symphony__CommonGeometryData3DLASFacade object) {
+				return createSymphony__CommonGeometryData3DLASFacadeAdapter();
 			}
 			@Override
 			public Adapter caseLASWriter(LASWriter object) {
@@ -169,16 +169,16 @@ public class Symphony__CommonGeometryData3DLASAdapterFactory extends AdapterFact
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.las.LASFacade <em>LAS Facade</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade <em>Facade</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.LASFacade
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASFacade
 	 * @generated
 	 */
-	public Adapter createLASFacadeAdapter() {
+	public Adapter createSymphony__CommonGeometryData3DLASFacadeAdapter() {
 		return null;
 	}
 

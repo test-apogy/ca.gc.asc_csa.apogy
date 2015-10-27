@@ -17,11 +17,11 @@ import org.eclipse.symphony.addons.Ruler3DTool;
 import org.eclipse.symphony.addons.Ruler3dToolNode;
 import org.eclipse.symphony.addons.Symphony__AddonsFactory;
 import org.eclipse.symphony.addons.Symphony__AddonsPackage;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.common.topology.TopologyFacade;
+import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
 
 /**
@@ -661,13 +661,13 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 			Tuple3d relativePosition = null;
 			if(nodeSelection.getRelativeIntersectionPoint() != null)
 			{
-				relativePosition = MathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
+				relativePosition = Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getRelativeIntersectionPoint());
 			}
 			
 			Tuple3d normal = null;
 			if(nodeSelection.getAbsoluteIntersectionNormal() != null)
 			{				
-				normal = MathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z);
+				normal = Symphony__CommonMathFacade.INSTANCE.createTuple3d(nodeSelection.getAbsoluteIntersectionNormal().x, nodeSelection.getAbsoluteIntersectionNormal().y, nodeSelection.getAbsoluteIntersectionNormal().z);
 			}
 			
 			if(nextNode == TO_NODE_INDEX)
@@ -772,7 +772,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		GroupNode root = null;
 		if(getFromNode() != null)
 		{
-			Node node = TopologyFacade.INSTANCE.findRoot(getFromNode());
+			Node node = Symphony__CommonTopologyFacade.INSTANCE.findRoot(getFromNode());
 			
 			if(node instanceof GroupNode)
 			{
@@ -782,7 +782,7 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		
 		if(root == null && getToNode() != null)
 		{
-			Node node = TopologyFacade.INSTANCE.findRoot(getToNode());
+			Node node = Symphony__CommonTopologyFacade.INSTANCE.findRoot(getToNode());
 			
 			if(node instanceof GroupNode)
 			{

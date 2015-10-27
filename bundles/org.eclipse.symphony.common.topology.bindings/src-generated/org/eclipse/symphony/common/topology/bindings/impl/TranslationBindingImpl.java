@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.common.math.MathFacade;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.PositionNode;
 import org.eclipse.symphony.common.topology.bindings.Axis;
@@ -274,37 +274,37 @@ public class TranslationBindingImpl extends AbstractTopologyBindingImpl implemen
 				double x = newValue;
 				double y = getPositionNode().getPosition().getY();
 				double z = getPositionNode().getPosition().getZ();								
-				getPositionNode().setPosition(MathFacade.INSTANCE.createTuple3d(x, y, z));
+				getPositionNode().setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
 			case Axis.MINUS_XAXIS_VALUE:
 				x = -newValue;
 				y = getPositionNode().getPosition().getY();
 				z = getPositionNode().getPosition().getZ();								
-				getPositionNode().setPosition(MathFacade.INSTANCE.createTuple3d(x, y, z));
+				getPositionNode().setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
 			case Axis.YAXIS_VALUE:
 				x = getPositionNode().getPosition().getX();
 				y = newValue;
 				z = getPositionNode().getPosition().getZ();
-				getPositionNode().setPosition(MathFacade.INSTANCE.createTuple3d(x, y, z));
+				getPositionNode().setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
 			case Axis.MINUS_YAXIS_VALUE:
 				x = getPositionNode().getPosition().getX();
 				y = -newValue;
 				z = getPositionNode().getPosition().getZ();
-				getPositionNode().setPosition(MathFacade.INSTANCE.createTuple3d(x, y, z));
+				getPositionNode().setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
 			case Axis.ZAXIS_VALUE:
 				x = getPositionNode().getPosition().getX();
 				y = getPositionNode().getPosition().getY();
 				z = newValue;
-				getPositionNode().setPosition(MathFacade.INSTANCE.createTuple3d(x, y, z));
+				getPositionNode().setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
 			case Axis.MINUS_ZAXIS_VALUE:
 				x = getPositionNode().getPosition().getX();
 				y = getPositionNode().getPosition().getY();
 				z = -newValue;
-				getPositionNode().setPosition(MathFacade.INSTANCE.createTuple3d(x, y, z));
+				getPositionNode().setPosition(Symphony__CommonMathFacade.INSTANCE.createTuple3d(x, y, z));
 				break;
 		}	
   }

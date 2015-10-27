@@ -29,12 +29,12 @@ import org.eclipse.symphony.addons.sensors.range.RasterScanData;
 import org.eclipse.symphony.addons.sensors.range.RasterScanRangeSensor;
 import org.eclipse.symphony.addons.sensors.range.RasterScanSettings;
 import org.eclipse.symphony.addons.sensors.range.RayData;
-import org.eclipse.symphony.addons.sensors.range.SensorsRangeFacade;
 import org.eclipse.symphony.addons.sensors.range.SimpleLineRangeScanner;
 import org.eclipse.symphony.addons.sensors.range.SimpleRangeSensor;
 import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScanner;
 import org.eclipse.symphony.addons.sensors.range.SimpleRasterScanRangeScannerSimulator;
 import org.eclipse.symphony.addons.sensors.range.SimpleSonar;
+import org.eclipse.symphony.addons.sensors.range.Symphony__AddonsSensorsRangeFacade;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData25DPackage;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
@@ -151,7 +151,7 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass sensorsRangeFacadeEClass = null;
+	private EClass symphony__AddonsSensorsRangeFacadeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -649,8 +649,8 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSensorsRangeFacade() {
-		return sensorsRangeFacadeEClass;
+	public EClass getSymphony__AddonsSensorsRangeFacade() {
+		return symphony__AddonsSensorsRangeFacadeEClass;
 	}
 
 	/**
@@ -658,8 +658,8 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSensorsRangeFacade__CreateRasterScanSettings__double_double_double_double_int_int() {
-		return sensorsRangeFacadeEClass.getEOperations().get(0);
+	public EOperation getSymphony__AddonsSensorsRangeFacade__CreateRasterScanSettings__double_double_double_double_int_int() {
+		return symphony__AddonsSensorsRangeFacadeEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -667,8 +667,8 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSensorsRangeFacade__CreateRasterScanSettings__RasterScanSettings() {
-		return sensorsRangeFacadeEClass.getEOperations().get(1);
+	public EOperation getSymphony__AddonsSensorsRangeFacade__CreateRasterScanSettings__RasterScanSettings() {
+		return symphony__AddonsSensorsRangeFacadeEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -793,9 +793,9 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		createEReference(rasterScanDataEClass, RASTER_SCAN_DATA__RASTER_SCAN_SETTINGS);
 		createEReference(rasterScanDataEClass, RASTER_SCAN_DATA__SCAN_DATA);
 
-		sensorsRangeFacadeEClass = createEClass(SENSORS_RANGE_FACADE);
-		createEOperation(sensorsRangeFacadeEClass, SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__DOUBLE_DOUBLE_DOUBLE_DOUBLE_INT_INT);
-		createEOperation(sensorsRangeFacadeEClass, SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__RASTERSCANSETTINGS);
+		symphony__AddonsSensorsRangeFacadeEClass = createEClass(SYMPHONY_ADDONS_SENSORS_RANGE_FACADE);
+		createEOperation(symphony__AddonsSensorsRangeFacadeEClass, SYMPHONY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__DOUBLE_DOUBLE_DOUBLE_DOUBLE_INT_INT);
+		createEOperation(symphony__AddonsSensorsRangeFacadeEClass, SYMPHONY_ADDONS_SENSORS_RANGE_FACADE___CREATE_RASTER_SCAN_SETTINGS__RASTERSCANSETTINGS);
 
 		// Create data types
 		listEDataType = createEDataType(LIST);
@@ -967,9 +967,9 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		initEReference(getRasterScanData_RasterScanSettings(), this.getRasterScanSettings(), null, "rasterScanSettings", null, 0, 1, RasterScanData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRasterScanData_ScanData(), theSymphony__CommonGeometryData25DPackage.getVolumetricCoordinatesSet25D(), null, "scanData", null, 0, 1, RasterScanData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(sensorsRangeFacadeEClass, SensorsRangeFacade.class, "SensorsRangeFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(symphony__AddonsSensorsRangeFacadeEClass, Symphony__AddonsSensorsRangeFacade.class, "Symphony__AddonsSensorsRangeFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getSensorsRangeFacade__CreateRasterScanSettings__double_double_double_double_int_int(), this.getRasterScanSettings(), "createRasterScanSettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__AddonsSensorsRangeFacade__CreateRasterScanSettings__double_double_double_double_int_int(), this.getRasterScanSettings(), "createRasterScanSettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "minimumDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "maximumDistance", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "horizontalFieldOfViewAngle", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -977,7 +977,7 @@ public class Symphony__AddonsSensorsRangePackageImpl extends EPackageImpl implem
 		addEParameter(op, theEcorePackage.getEInt(), "horizontalResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "verticalResolution", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSensorsRangeFacade__CreateRasterScanSettings__RasterScanSettings(), this.getRasterScanSettings(), "createRasterScanSettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__AddonsSensorsRangeFacade__CreateRasterScanSettings__RasterScanSettings(), this.getRasterScanSettings(), "createRasterScanSettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getRasterScanSettings(), "rasterScanSettings", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		// Initialize data types

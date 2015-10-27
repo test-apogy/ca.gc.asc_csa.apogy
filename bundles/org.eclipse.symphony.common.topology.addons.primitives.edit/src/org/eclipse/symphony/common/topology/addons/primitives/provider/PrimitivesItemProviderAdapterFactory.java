@@ -144,7 +144,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade} instances.
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -152,7 +152,7 @@ public class PrimitivesItemProviderAdapterFactory extends
 
 	/**
 	 * This creates an adapter for a
-	 * {@link org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade}. <!--
+	 * {@link org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFacade}. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
