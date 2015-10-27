@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.SlopeRange;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -121,7 +121,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color3f COLOR_EDEFAULT = (Color3f)SymphonyEnvironmentFactory.eINSTANCE.createFromString(SymphonyEnvironmentPackage.eINSTANCE.getColor3f(), "1.0,1.0,1.0");
+	protected static final Color3f COLOR_EDEFAULT = (Color3f)Symphony__CoreEnvironmentFactory.eINSTANCE.createFromString(Symphony__CoreEnvironmentPackage.eINSTANCE.getColor3f(), "1.0,1.0,1.0");
 
 	/**
 	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
@@ -149,7 +149,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.SLOPE_RANGE;
+		return Symphony__CoreEnvironmentPackage.Literals.SLOPE_RANGE;
 	}
 
 	/**
@@ -170,7 +170,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.SLOPE_RANGE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SLOPE_RANGE__NAME, oldName, name));
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.SLOPE_RANGE__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -212,7 +212,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 		double oldSlopeLowerBound = slopeLowerBound;
 		slopeLowerBound = newSlopeLowerBound;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND, oldSlopeLowerBound, slopeLowerBound));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND, oldSlopeLowerBound, slopeLowerBound));
 	}
 
 	/**
@@ -233,7 +233,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 		double oldSlopeUpperBound = slopeUpperBound;
 		slopeUpperBound = newSlopeUpperBound;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND, oldSlopeUpperBound, slopeUpperBound));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND, oldSlopeUpperBound, slopeUpperBound));
 	}
 
 	/**
@@ -254,7 +254,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 		Color3f oldColor = color;
 		color = newColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.SLOPE_RANGE__COLOR, oldColor, color));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SLOPE_RANGE__COLOR, oldColor, color));
 	}
 
 	/**
@@ -265,15 +265,15 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__NAME:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__NAME:
 				return getName();
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
 				return getDescription();
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
 				return getSlopeLowerBound();
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
 				return getSlopeUpperBound();
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__COLOR:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__COLOR:
 				return getColor();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -287,19 +287,19 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__NAME:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
 				setSlopeLowerBound((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
 				setSlopeUpperBound((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__COLOR:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__COLOR:
 				setColor((Color3f)newValue);
 				return;
 		}
@@ -314,19 +314,19 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__NAME:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
 				setSlopeLowerBound(SLOPE_LOWER_BOUND_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
 				setSlopeUpperBound(SLOPE_UPPER_BOUND_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__COLOR:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__COLOR:
 				setColor(COLOR_EDEFAULT);
 				return;
 		}
@@ -341,15 +341,15 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__NAME:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
 				return slopeLowerBound != SLOPE_LOWER_BOUND_EDEFAULT;
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
 				return slopeUpperBound != SLOPE_UPPER_BOUND_EDEFAULT;
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__COLOR:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__COLOR:
 				return COLOR_EDEFAULT == null ? color != null : !COLOR_EDEFAULT.equals(color);
 		}
 		return super.eIsSet(featureID);
@@ -364,7 +364,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEnvironmentPackage.SLOPE_RANGE__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -380,7 +380,7 @@ public class SlopeRangeImpl extends MinimalEObjectImpl.Container implements Slop
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyEnvironmentPackage.SLOPE_RANGE__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION;
 				default: return -1;
 			}
 		}

@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.ArgumentsList;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.symphony.core.invocator.OperationCallContainer;
 
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import com.google.common.base.Objects;
 
 
@@ -101,7 +101,7 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.OPERATION_CALL;
+		return Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL;
 	}
 
   /**
@@ -122,7 +122,7 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.OPERATION_CALL__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.OPERATION_CALL__DESCRIPTION, oldDescription, description));
 	}
 
 		/**
@@ -137,7 +137,7 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 			eOperation = (EOperation)eResolveProxy(oldEOperation);
 			if (eOperation != oldEOperation) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorPackage.OPERATION_CALL__EOPERATION, oldEOperation, eOperation));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.OPERATION_CALL__EOPERATION, oldEOperation, eOperation));
 			}
 		}
 		return eOperation;
@@ -163,7 +163,7 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 		EOperation oldEOperation = eOperation;
 		eOperation = newEOperation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.OPERATION_CALL__EOPERATION, oldEOperation, eOperation));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.OPERATION_CALL__EOPERATION, oldEOperation, eOperation));
 	}
 
   /**
@@ -186,7 +186,7 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 		ArgumentsList oldArgumentsList = argumentsList;
 		argumentsList = newArgumentsList;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST, oldArgumentsList, newArgumentsList);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST, oldArgumentsList, newArgumentsList);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -202,14 +202,14 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 		if (newArgumentsList != argumentsList) {
 			NotificationChain msgs = null;
 			if (argumentsList != null)
-				msgs = ((InternalEObject)argumentsList).eInverseRemove(this, EMFEcoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL, ArgumentsList.class, msgs);
+				msgs = ((InternalEObject)argumentsList).eInverseRemove(this, Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL, ArgumentsList.class, msgs);
 			if (newArgumentsList != null)
-				msgs = ((InternalEObject)newArgumentsList).eInverseAdd(this, EMFEcoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL, ArgumentsList.class, msgs);
+				msgs = ((InternalEObject)newArgumentsList).eInverseAdd(this, Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL, ArgumentsList.class, msgs);
 			msgs = basicSetArgumentsList(newArgumentsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST, newArgumentsList, newArgumentsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST, newArgumentsList, newArgumentsList));
 	}
 
   /**
@@ -219,7 +219,7 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 	 */
   public OperationCallContainer getOperationCallContainer()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER) return null;
 		return (OperationCallContainer)eContainer();
 	}
 
@@ -230,7 +230,7 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 	 */
   public OperationCallContainer basicGetOperationCallContainer()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER) return null;
 		return (OperationCallContainer)eInternalContainer();
 	}
 
@@ -241,7 +241,7 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 	 */
   public NotificationChain basicSetOperationCallContainer(OperationCallContainer newOperationCallContainer, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newOperationCallContainer, EMFEcoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOperationCallContainer, Symphony__CoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER, msgs);
 		return msgs;
 	}
 
@@ -252,19 +252,19 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 	 */
   public void setOperationCallContainer(OperationCallContainer newOperationCallContainer)
   {
-		if (newOperationCallContainer != eInternalContainer() || (eContainerFeatureID() != EMFEcoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER && newOperationCallContainer != null)) {
+		if (newOperationCallContainer != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER && newOperationCallContainer != null)) {
 			if (EcoreUtil.isAncestor(this, newOperationCallContainer))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOperationCallContainer != null)
-				msgs = ((InternalEObject)newOperationCallContainer).eInverseAdd(this, EMFEcoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS, OperationCallContainer.class, msgs);
+				msgs = ((InternalEObject)newOperationCallContainer).eInverseAdd(this, Symphony__CoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS, OperationCallContainer.class, msgs);
 			msgs = basicSetOperationCallContainer(newOperationCallContainer, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER, newOperationCallContainer, newOperationCallContainer));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER, newOperationCallContainer, newOperationCallContainer));
 	}
 
   /**
@@ -312,11 +312,11 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
 				if (argumentsList != null)
-					msgs = ((InternalEObject)argumentsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST, null, msgs);
+					msgs = ((InternalEObject)argumentsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST, null, msgs);
 				return basicSetArgumentsList((ArgumentsList)otherEnd, msgs);
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOperationCallContainer((OperationCallContainer)otherEnd, msgs);
@@ -333,9 +333,9 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
 				return basicSetArgumentsList(null, msgs);
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER:
 				return basicSetOperationCallContainer(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -350,8 +350,8 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS, OperationCallContainer.class, msgs);
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS, OperationCallContainer.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -365,19 +365,19 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
 				return getDescription();
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__EOPERATION:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__EOPERATION:
 				if (resolve) return getEOperation();
 				return basicGetEOperation();
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
 				return getArgumentsList();
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER:
 				if (resolve) return getOperationCallContainer();
 				return basicGetOperationCallContainer();
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__INVOCATOR_SESSION:
 				return getInvocatorSession();
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__ENVIRONMENT:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__ENVIRONMENT:
 				return getEnvironment();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -392,16 +392,16 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__EOPERATION:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__EOPERATION:
 				setEOperation((EOperation)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
 				setArgumentsList((ArgumentsList)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER:
 				setOperationCallContainer((OperationCallContainer)newValue);
 				return;
 		}
@@ -417,16 +417,16 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__EOPERATION:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__EOPERATION:
 				setEOperation((EOperation)null);
 				return;
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
 				setArgumentsList((ArgumentsList)null);
 				return;
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER:
 				setOperationCallContainer((OperationCallContainer)null);
 				return;
 		}
@@ -442,17 +442,17 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__EOPERATION:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__EOPERATION:
 				return eOperation != null;
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
 				return argumentsList != null;
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER:
 				return basicGetOperationCallContainer() != null;
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__INVOCATOR_SESSION:
 				return getInvocatorSession() != null;
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__ENVIRONMENT:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__ENVIRONMENT:
 				return getEnvironment() != null;
 		}
 		return super.eIsSet(featureID);
@@ -467,7 +467,7 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreInvocatorPackage.OPERATION_CALL__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreInvocatorPackage.OPERATION_CALL__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -483,7 +483,7 @@ public class OperationCallImpl extends VariableFeatureReferenceImpl implements O
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.OPERATION_CALL__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreInvocatorPackage.OPERATION_CALL__DESCRIPTION;
 				default: return -1;
 			}
 		}

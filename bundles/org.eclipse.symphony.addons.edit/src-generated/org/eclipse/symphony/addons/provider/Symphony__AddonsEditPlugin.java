@@ -11,10 +11,10 @@ import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeomet
 import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
 import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
-import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
+import org.eclipse.symphony.common.topology.bindings.provider.Symphony__CommonTopologyBindingsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
-import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
-import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
+import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorEditPlugin;
+import org.eclipse.symphony.core.provider.Symphony__CoreEditPlugin;
 
 /**
  * This is the central singleton for the Symphony__Addons edit plugin.
@@ -51,12 +51,12 @@ public final class Symphony__AddonsEditPlugin extends EMFPlugin
 		super
 		  (new ResourceLocator [] {
 		     Symphony__CommonEMFEditPlugin.INSTANCE,
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     Symphony__CoreInvocatorEditPlugin.INSTANCE,
 		     Symphony__CommonTopologyEditPlugin.INSTANCE,
 		     Symphony__CommonMathEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
+		     Symphony__CoreEditPlugin.INSTANCE,
 		     Symphony__AddonsGeometryPathsEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyBindingsEditPlugin.INSTANCE,
 		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
 		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
 		     Symphony__CommonProcessorsEditPlugin.INSTANCE,

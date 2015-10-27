@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.Environment;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -83,7 +83,7 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.ENVIRONMENT;
+		return Symphony__CoreEnvironmentPackage.Literals.ENVIRONMENT;
 	}
 
   /**
@@ -106,7 +106,7 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ENVIRONMENT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ENVIRONMENT__NAME, oldName, name));
 	}
 
   /**
@@ -129,7 +129,7 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ENVIRONMENT__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ENVIRONMENT__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -141,9 +141,9 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ENVIRONMENT__NAME:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT__NAME:
 				return getName();
-			case SymphonyEnvironmentPackage.ENVIRONMENT__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -158,10 +158,10 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ENVIRONMENT__NAME:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyEnvironmentPackage.ENVIRONMENT__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 		}
@@ -177,10 +177,10 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ENVIRONMENT__NAME:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.ENVIRONMENT__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
@@ -196,9 +196,9 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ENVIRONMENT__NAME:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyEnvironmentPackage.ENVIRONMENT__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
@@ -214,7 +214,7 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEnvironmentPackage.ENVIRONMENT__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreEnvironmentPackage.ENVIRONMENT__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -231,7 +231,7 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyEnvironmentPackage.ENVIRONMENT__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentPackage.ENVIRONMENT__DESCRIPTION;
 				default: return -1;
 			}
 		}

@@ -4,7 +4,7 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ReferencedGroupNode;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 public class ReferencedGroupNodePresentationAdapter implements
 		NodePresentationAdapter {
@@ -21,7 +21,7 @@ public class ReferencedGroupNodePresentationAdapter implements
 	public NodePresentation getAdapter(Node obj, Object context) {
 		NodePresentation nodePresentation = null;
 		if (isAdapterFor(obj)) {
-			nodePresentation = TopologyUIFactory.eINSTANCE.createNodePresentation();
+			nodePresentation = Symphony__CommonTopologyUIFactory.eINSTANCE.createNodePresentation();
 			nodePresentation.setNode((Node) obj);
 		}
 		return nodePresentation;

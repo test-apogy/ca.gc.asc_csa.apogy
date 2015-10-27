@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.Positioned;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.Positioned} object.
@@ -78,7 +78,7 @@ public class PositionedItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Positioned_pose_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Positioned_pose_feature", "_UI_Positioned_type"),
-				 SymphonyCorePackage.Literals.POSITIONED__POSE,
+				 Symphony__CorePackage.Literals.POSITIONED__POSE,
 				 true,
 				 false,
 				 false,
@@ -99,7 +99,7 @@ public class PositionedItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.POSITIONED__POSE);
+			childrenFeatures.add(Symphony__CorePackage.Literals.POSITIONED__POSE);
 		}
 		return childrenFeatures;
 	}
@@ -152,7 +152,7 @@ public class PositionedItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Positioned.class)) {
-			case SymphonyCorePackage.POSITIONED__POSE:
+			case Symphony__CorePackage.POSITIONED__POSE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -172,7 +172,7 @@ public class PositionedItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.POSITIONED__POSE,
+				(Symphony__CorePackage.Literals.POSITIONED__POSE,
 				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 

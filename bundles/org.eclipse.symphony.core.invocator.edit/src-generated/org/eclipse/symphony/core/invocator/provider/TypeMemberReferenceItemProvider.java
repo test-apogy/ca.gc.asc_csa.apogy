@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberReference;
 
 /**
@@ -80,7 +80,7 @@ public class TypeMemberReferenceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TypeMemberReference_typeMember_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TypeMemberReference_typeMember_feature", "_UI_TypeMemberReference_type"),
-				 EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE__TYPE_MEMBER,
+				 Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE__TYPE_MEMBER,
 				 true,
 				 false,
 				 true,
@@ -133,7 +133,7 @@ public class TypeMemberReferenceItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TypeMemberReference.class)) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE__TYPE_MEMBER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

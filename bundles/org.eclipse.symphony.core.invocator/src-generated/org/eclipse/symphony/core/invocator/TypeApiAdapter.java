@@ -11,8 +11,9 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * This class implements an adapter pattern that allows injection of specific behaviors when actions are realized on {@link Type} instance.
- * Developers may specialized certain methods to provide custom implementation to address specific {@link Type} needs.
+ * This class implements an adapter pattern that allows injection of specific behaviors
+ * when actions are realized on {@link Type} instance. Developers may specialized certain
+ * methods to provide custom implementation to address specific {@link Type} needs.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -24,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeApiAdapter#getElementType <em>Element Type</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeApiAdapter()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeApiAdapter()
  * @model
  * @generated
  */
@@ -41,7 +42,7 @@ public interface TypeApiAdapter extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environment</em>' reference.
 	 * @see #setEnvironment(Environment)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeApiAdapter_Environment()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeApiAdapter_Environment()
 	 * @model transient="true"
 	 * @generated
 	 */
@@ -67,7 +68,7 @@ public interface TypeApiAdapter extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Instance</em>' reference.
 	 * @see #setInstance(EObject)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeApiAdapter_Instance()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeApiAdapter_Instance()
 	 * @model transient="true"
 	 * @generated
 	 */
@@ -93,7 +94,7 @@ public interface TypeApiAdapter extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Element Type</em>' reference.
 	 * @see #setElementType(Type)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeApiAdapter_ElementType()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeApiAdapter_ElementType()
 	 * @model transient="true"
 	 * @generated
 	 */

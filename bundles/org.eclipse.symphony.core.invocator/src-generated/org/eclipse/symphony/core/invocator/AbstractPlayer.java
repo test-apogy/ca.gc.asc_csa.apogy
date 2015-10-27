@@ -25,7 +25,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractPlayer#getRecordingToolsContainer <em>Recording Tools Container</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractPlayer()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractPlayer()
  * @model abstract="true"
  * @generated
  */
@@ -42,7 +42,7 @@ public interface AbstractPlayer extends Named, Described
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Recording Tools Container</em>' container reference.
 	 * @see #setRecordingToolsContainer(RecordingToolsContainer)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractPlayer_RecordingToolsContainer()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractPlayer_RecordingToolsContainer()
 	 * @see org.eclipse.symphony.core.invocator.RecordingToolsContainer#getPlayer
 	 * @model opposite="player" transient="false"
 	 * @generated

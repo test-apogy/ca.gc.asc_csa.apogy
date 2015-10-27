@@ -5,7 +5,7 @@ package org.eclipse.symphony.core.invocator.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.core.invocator.BasicContext;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class BasicContextImpl extends ContextImpl implements BasicContext
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.BASIC_CONTEXT;
+		return Symphony__CoreInvocatorPackage.Literals.BASIC_CONTEXT;
 	}
 
 } //BasicContextImpl

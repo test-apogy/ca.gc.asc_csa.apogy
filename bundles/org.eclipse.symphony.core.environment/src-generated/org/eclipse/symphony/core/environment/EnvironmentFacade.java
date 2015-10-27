@@ -27,7 +27,7 @@ import org.eclipse.symphony.core.invocator.Environment;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEnvironmentFacade()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEnvironmentFacade()
  * @model
  * @generated
  */
@@ -107,7 +107,8 @@ public interface EnvironmentFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Creates a International Standard Atmosphere at see level. @see http://en.wikipedia.org/wiki/International_Standard_Atmosphere
+	 * Creates a International Standard Atmosphere at sea level.
+	 * @see http://en.wikipedia.org/wiki/International_Standard_Atmosphere
 	 * <!-- end-model-doc -->
 	 * @model unique="false"
 	 * @generated
@@ -182,7 +183,6 @@ public interface EnvironmentFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Assembles a list of ImageMapLayer into a single eImage reference to the Worksite frame.
 	 * Note that only X,Y and Rz are used in transformation applied between ImageMapLayer and the worksite
 	 * origin.
@@ -196,7 +196,6 @@ public interface EnvironmentFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Return a list containing the position of the 4 corners of the specified ImageMapLayer
 	 * @param imageMapLayer The specified ImageMapLayer.
 	 * @return List containing the position (in the worksite frame) of the four corners of the ImageMapLayer.
@@ -211,7 +210,6 @@ public interface EnvironmentFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the ImageMapLayer with the highest resolution (minimum meters/pixel).
 	 * @return The ImageMapLayer with the highest resolution (minimum meters/pixel)
 	 * <!-- end-model-doc -->
@@ -224,7 +222,6 @@ public interface EnvironmentFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the lower left and upper right corners of a specified RectangularRegionProvider.
 	 * @param rectangularRegionProvider The specified RectangularRegionProvider.
 	 * @param lowerLeftCorner The Tuple3d were to put the lower left coordinates.
@@ -239,7 +236,6 @@ public interface EnvironmentFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the lower left and upper right corners of a specified ImageMapLayer.
 	 * @param imageMapLayer The specified ImageMapLayer.
 	 * @param lowerLeftCorner The Tuple3d were to put the lower left coordinates.
@@ -255,7 +251,6 @@ public interface EnvironmentFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Return  the lower left and upper right corners of the region spanned by a list of RectangularRegionProviders.
 	 * @param rectangularRegionProviders The list of RectangularRegionProviders.
 	 * @param lowerLeftCorner The Tuple3d were to put the lower left coordinates.
@@ -270,7 +265,6 @@ public interface EnvironmentFacade extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Return  the lower left and upper right corners of the region spanned by a list of a ImageMapLayer.
 	 * @param The list of ImageMapLayer.
 	 * @param lowerLeftCorner The Tuple3d were to put the lower left coordinates.
@@ -333,7 +327,6 @@ public interface EnvironmentFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns an image representing the assembly of the specified list of ImageMapLayerPresentation.
 	 * @param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.
 	 * @return The image representing the specified list of ImageMapLayerPresentation.
@@ -347,7 +340,6 @@ public interface EnvironmentFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the ImageMapLayerPresentation with the highest resolution (minimum meters/pixel).
 	 * @return The ImageMapLayerPresentation with the highest resolution (minimum meters/pixel)
 	 * <!-- end-model-doc -->
@@ -360,7 +352,6 @@ public interface EnvironmentFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the list of visible ImageMapLayerPresentation from"" a specified imageMapLayerPresentations.
 	 * @param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.
 	 * @return The list of visible ImageMapLayerPresentation.
@@ -374,7 +365,6 @@ public interface EnvironmentFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the RectangularVolumeRegion bounding a triangular mesh.
 	 * @param mesh The triangular mesh.
 	 * @return The RectangularVolumeRegion.

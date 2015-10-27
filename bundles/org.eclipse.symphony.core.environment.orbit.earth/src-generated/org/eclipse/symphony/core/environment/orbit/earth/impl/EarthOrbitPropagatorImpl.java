@@ -24,8 +24,8 @@ import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
 import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
 import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
 import org.eclipse.symphony.core.environment.orbit.impl.AbstractOrbitPropagatorImpl;
 import org.orekit.bodies.BodyShape;
@@ -70,7 +70,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_ORBIT_PROPAGATOR;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_PROPAGATOR;
 	}
 
 	/**
@@ -225,7 +225,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 				{
 					if(lastPass == null)
 					{
-						lastPass = SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createVisibilityPass();						
+						lastPass = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPass();						
 						lastPass.setStartTime(EarthOrbitFacade.INSTANCE.createDate(s.getDate()));
 						lastPass.setSurfaceLocation(earthSurfaceLocation);						
 						
@@ -330,7 +330,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 				{
 					if(lastPass == null)
 					{
-						lastPass = SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createVisibilityPass();	
+						lastPass = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPass();	
 						lastPass.setSurfaceLocation(groundStation);
 						lastPass.setStartTime(EarthOrbitFacade.INSTANCE.createDate(s.getDate()));
 						
@@ -431,16 +431,16 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_PROPAGATOR:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_PROPAGATOR___GET_ORE_KIT_PROPAGATOR:
 				return getOreKitPropagator();
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_ORBIT_PROPAGATOR___GET_TARGET_PASSES__EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_PROPAGATOR___GET_TARGET_PASSES__EARTHSURFACELOCATION_DATE_DATE_ELEVATIONMASK:
 				try {
 					return getTargetPasses((EarthSurfaceLocation)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (ElevationMask)arguments.get(3));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT_PROPAGATOR___GET_GROUND_STATION_PASSES__GROUNDSTATION_DATE_DATE:
 				try {
 					return getGroundStationPasses((GroundStation)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
 				}

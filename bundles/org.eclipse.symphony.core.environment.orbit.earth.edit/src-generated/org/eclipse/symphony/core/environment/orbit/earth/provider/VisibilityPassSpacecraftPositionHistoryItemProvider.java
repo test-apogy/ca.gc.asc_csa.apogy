@@ -26,8 +26,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory;
 
 /**
@@ -84,7 +84,7 @@ public class VisibilityPassSpacecraftPositionHistoryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPositionHistory_timeInterval_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPassSpacecraftPositionHistory_timeInterval_feature", "_UI_VisibilityPassSpacecraftPositionHistory_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class VisibilityPassSpacecraftPositionHistoryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_VisibilityPassSpacecraftPositionHistory_positions_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VisibilityPassSpacecraftPositionHistory_positions_feature", "_UI_VisibilityPassSpacecraftPositionHistory_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS,
 				 false,
 				 false,
 				 false,
@@ -127,7 +127,7 @@ public class VisibilityPassSpacecraftPositionHistoryItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS);
 		}
 		return childrenFeatures;
 	}
@@ -181,11 +181,11 @@ public class VisibilityPassSpacecraftPositionHistoryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VisibilityPassSpacecraftPositionHistory.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL:
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__TIME_INTERVAL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__VISIBILITY_PASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -205,8 +205,8 @@ public class VisibilityPassSpacecraftPositionHistoryItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createVisibilityPassSpacecraftPosition()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY__POSITIONS,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createVisibilityPassSpacecraftPosition()));
 	}
 
 	/**

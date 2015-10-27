@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.addons.dynamics.KinematicState;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState} object.
@@ -78,12 +78,12 @@ public class KinematicStateItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__POSITION);
-			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__ORIENTATION);
-			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__LINEAR_VELOCITY);
-			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__ANGULAR_VELOCITY);
-			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__LINEAR_ACCELERATION);
-			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__ANGULAR_ACCELERATION);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__POSITION);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__ORIENTATION);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__LINEAR_VELOCITY);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__ANGULAR_VELOCITY);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__LINEAR_ACCELERATION);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__ANGULAR_ACCELERATION);
 		}
 		return childrenFeatures;
 	}
@@ -135,12 +135,12 @@ public class KinematicStateItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(KinematicState.class)) {
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__POSITION:
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
-			case Symphony__CommonTopologyDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__POSITION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ORIENTATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_VELOCITY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_VELOCITY:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__LINEAR_ACCELERATION:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.KINEMATIC_STATE__ANGULAR_ACCELERATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -160,32 +160,32 @@ public class KinematicStateItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__POSITION,
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__POSITION,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__ORIENTATION,
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__ORIENTATION,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__LINEAR_VELOCITY,
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__LINEAR_VELOCITY,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__ANGULAR_VELOCITY,
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__ANGULAR_VELOCITY,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__LINEAR_ACCELERATION,
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__LINEAR_ACCELERATION,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__ANGULAR_ACCELERATION,
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__ANGULAR_ACCELERATION,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
@@ -201,12 +201,12 @@ public class KinematicStateItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__POSITION ||
-			childFeature == Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__ORIENTATION ||
-			childFeature == Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__LINEAR_VELOCITY ||
-			childFeature == Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__ANGULAR_VELOCITY ||
-			childFeature == Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__LINEAR_ACCELERATION ||
-			childFeature == Symphony__CommonTopologyDynamicsPackage.Literals.KINEMATIC_STATE__ANGULAR_ACCELERATION;
+			childFeature == Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__POSITION ||
+			childFeature == Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__ORIENTATION ||
+			childFeature == Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__LINEAR_VELOCITY ||
+			childFeature == Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__ANGULAR_VELOCITY ||
+			childFeature == Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__LINEAR_ACCELERATION ||
+			childFeature == Symphony__CommonTopologyAddonsDynamicsPackage.Literals.KINEMATIC_STATE__ANGULAR_ACCELERATION;
 
 		if (qualify) {
 			return getString

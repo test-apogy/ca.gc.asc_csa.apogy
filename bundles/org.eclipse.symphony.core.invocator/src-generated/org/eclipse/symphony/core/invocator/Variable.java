@@ -25,7 +25,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.Variable#getEnvironment <em>Environment</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariable()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariable()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface Variable extends Named
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variables List</em>' container reference.
 	 * @see #setVariablesList(VariablesList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariable_VariablesList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariable_VariablesList()
 	 * @see org.eclipse.symphony.core.invocator.VariablesList#getVariables
 	 * @model opposite="variables" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -70,7 +70,7 @@ public interface Variable extends Named
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable Type</em>' reference.
 	 * @see #setVariableType(Type)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariable_VariableType()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariable_VariableType()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -95,7 +95,7 @@ public interface Variable extends Named
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environment</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariable_Environment()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariable_Environment()
 	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='None' get='<%org.eclipse.symphony.core.invocator.VariablesList%> _variablesList = this.getVariablesList();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_variablesList, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.VariablesList%> _variablesList_1 = this.getVariablesList();\n\treturn _variablesList_1.getEnvironment();\n}'"
 	 * @generated

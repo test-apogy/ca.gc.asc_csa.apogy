@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint} object.
@@ -83,7 +83,7 @@ public class CustomInputConditioningPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CustomInputConditioningPoint_inputValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CustomInputConditioningPoint_inputValue_feature", "_UI_CustomInputConditioningPoint_type"),
-				 EMFEcoreControllersPackage.Literals.CUSTOM_INPUT_CONDITIONING_POINT__INPUT_VALUE,
+				 Symphony__CoreProgramsControllersPackage.Literals.CUSTOM_INPUT_CONDITIONING_POINT__INPUT_VALUE,
 				 true,
 				 false,
 				 false,
@@ -105,7 +105,7 @@ public class CustomInputConditioningPointItemProvider
 				 getResourceLocator(),
 				 getString("_UI_CustomInputConditioningPoint_outputValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_CustomInputConditioningPoint_outputValue_feature", "_UI_CustomInputConditioningPoint_type"),
-				 EMFEcoreControllersPackage.Literals.CUSTOM_INPUT_CONDITIONING_POINT__OUTPUT_VALUE,
+				 Symphony__CoreProgramsControllersPackage.Literals.CUSTOM_INPUT_CONDITIONING_POINT__OUTPUT_VALUE,
 				 true,
 				 false,
 				 false,
@@ -157,8 +157,8 @@ public class CustomInputConditioningPointItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(CustomInputConditioningPoint.class)) {
-			case EMFEcoreControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__INPUT_VALUE:
-			case EMFEcoreControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__OUTPUT_VALUE:
+			case Symphony__CoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__INPUT_VALUE:
+			case Symphony__CoreProgramsControllersPackage.CUSTOM_INPUT_CONDITIONING_POINT__OUTPUT_VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

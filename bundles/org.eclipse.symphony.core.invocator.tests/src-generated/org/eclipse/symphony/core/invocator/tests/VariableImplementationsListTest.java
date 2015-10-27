@@ -6,8 +6,7 @@ package org.eclipse.symphony.core.invocator.tests;
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
-
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.VariableImplementationsList;
 
 /**
@@ -80,7 +79,7 @@ public class VariableImplementationsListTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createVariableImplementationsList());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createVariableImplementationsList());
 	}
 
 	/**

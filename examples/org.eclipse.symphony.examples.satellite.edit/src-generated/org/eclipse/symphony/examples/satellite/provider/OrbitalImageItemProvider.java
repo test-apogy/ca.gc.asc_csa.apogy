@@ -23,8 +23,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.OrbitalImage;
 
 /**
@@ -127,7 +127,7 @@ public class OrbitalImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_OrbitalImage_orderId_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitalImage_orderId_feature", "_UI_OrbitalImage_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.ORBITAL_IMAGE__ORDER_ID,
+				 Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__ORDER_ID,
 				 true,
 				 false,
 				 false,
@@ -149,7 +149,7 @@ public class OrbitalImageItemProvider
 				 getResourceLocator(),
 				 getString("_UI_OrbitalImage_downloadSize_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitalImage_downloadSize_feature", "_UI_OrbitalImage_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.ORBITAL_IMAGE__DOWNLOAD_SIZE,
+				 Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__DOWNLOAD_SIZE,
 				 true,
 				 false,
 				 false,
@@ -170,7 +170,7 @@ public class OrbitalImageItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreExampleSatellitePackage.Literals.ORBITAL_IMAGE__IMAGE_CENTER);
+			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__IMAGE_CENTER);
 		}
 		return childrenFeatures;
 	}
@@ -224,13 +224,13 @@ public class OrbitalImageItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OrbitalImage.class)) {
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__WIDTH:
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__HEIGHT:
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__ORDER_ID:
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__DOWNLOAD_SIZE:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__WIDTH:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__HEIGHT:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__ORDER_ID:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__DOWNLOAD_SIZE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -250,8 +250,8 @@ public class OrbitalImageItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.ORBITAL_IMAGE__IMAGE_CENTER,
-				 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+				(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__IMAGE_CENTER,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 	}
 
 	/**

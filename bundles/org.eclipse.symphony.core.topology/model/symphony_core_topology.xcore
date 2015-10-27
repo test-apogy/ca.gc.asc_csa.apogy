@@ -1,4 +1,9 @@
-@GenModel(prefix="SymphonyTopology", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)", modelName="SymphonyTopology")
+@GenModel(prefix="Symphony__CoreTopology",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="Symphony__CoreTopology")
 @GenModel(modelDirectory="/org.eclipse.symphony.core.topology/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.core.topology.edit/src-generated")
 
@@ -18,10 +23,14 @@ type SortedSet<T> wraps java.util.SortedSet
 
 class SystemsTopologyAdapter
 {
-	@GenModel(documentation="The Deployment to monitor.")
+	/*
+	 * The Deployment to monitor.
+	 */
 	refers transient SymphonyEnvironment deployment	
 	
-	@GenModel(documentation="The topology representing the Systems found in the Deployment.")
+	/*
+	 * The topology representing the Systems found in the Deployment.
+	 */
 	refers transient ReferencedGroupNode systemsGroup	
 }
 
@@ -30,7 +39,9 @@ class SystemsTopologyAdapter
  * Specialized Nodes.
  * ------------------------------------------------------------------------- */ 
 
-@GenModel(documentation="A specialized Topology node representing a Deployment.")
+/*
+ * A specialized Topology node representing a Deployment.
+ */
 class SymphonyEnvironmentNode extends ReferencedGroupNode
 {
 	refers transient SymphonyEnvironment symphonyEnvironment

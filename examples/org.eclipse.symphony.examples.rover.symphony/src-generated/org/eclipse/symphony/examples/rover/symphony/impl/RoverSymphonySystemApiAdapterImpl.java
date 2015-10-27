@@ -9,8 +9,8 @@ import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.examples.rover.Rover;
 import org.eclipse.symphony.examples.rover.symphony.RoverData;
 import org.eclipse.symphony.examples.rover.symphony.RoverSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.rover.symphony.SymphonyExampleRoverFactory;
-import org.eclipse.symphony.examples.rover.symphony.SymphonyExampleRoverPackage;
+import org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyFactory;
+import org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ public class RoverSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 	@Override
 	protected EClass eStaticClass()
 	{
-		return SymphonyExampleRoverPackage.Literals.ROVER_SYMPHONY_SYSTEM_API_ADAPTER;
+		return Symphony__ExamplesRoverSymphonyPackage.Literals.ROVER_SYMPHONY_SYSTEM_API_ADAPTER;
 	}
 	
 	/**
@@ -86,7 +86,7 @@ public class RoverSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 	{
 		// Call the appropriate factory method for this package to get
 		// a RoverData instance and then return it.
-		return SymphonyExampleRoverFactory.eINSTANCE.createRoverData();
+		return Symphony__ExamplesRoverSymphonyFactory.eINSTANCE.createRoverData();
 	}
 	
 	/**

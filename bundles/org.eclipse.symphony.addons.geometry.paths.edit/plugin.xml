@@ -31,14 +31,4 @@
             class="org.eclipse.symphony.addons.geometry.paths.provider.Symphony__AddonsGeometryPathsItemProviderAdapterFactory$Symphony__CommonGeometryDataChildCreationExtender"/>
    </extension>
 
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated paths -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.geometry.paths.provider.Symphony__AddonsGeometryPathsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.common.geometry.data"
-            class="org.eclipse.symphony.addons.geometry.paths.provider.Symphony__AddonsGeometryPathsItemProviderAdapterFactory$DataChildCreationExtender"/>
-   </extension>
-
 </plugin>

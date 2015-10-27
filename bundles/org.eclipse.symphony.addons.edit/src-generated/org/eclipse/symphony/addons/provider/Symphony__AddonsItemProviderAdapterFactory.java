@@ -37,16 +37,16 @@ import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.util.TopologyBindingsSwitch;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.util.Symphony__CommonTopologyBindingsSwitch;
 import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
 import org.eclipse.symphony.core.AssemblyLink;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.TopologyRoot;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ToolsList;
-import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorSwitch;
-import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
+import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorSwitch;
+import org.eclipse.symphony.core.util.Symphony__CoreSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -439,19 +439,19 @@ public class Symphony__AddonsItemProviderAdapterFactory extends Symphony__Addons
 	}
 
 		/**
-	 * A child creation extender for the {@link SymphonyCorePackage}.
+	 * A child creation extender for the {@link Symphony__CoreInvocatorPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class SymphonyCoreChildCreationExtender implements IChildCreationExtender {
+	public static class Symphony__CoreInvocatorChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends SymphonyCoreSwitch<Object> {
+		protected static class CreationSwitch extends Symphony__CoreInvocatorSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -484,46 +484,11 @@ public class Symphony__AddonsItemProviderAdapterFactory extends Symphony__Addons
 			 * @generated
 			 */
 			@Override
-			public Object caseAssemblyLink(AssemblyLink object) {
+			public Object caseToolsList(ToolsList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 Symphony__AddonsFactory.eINSTANCE.createRuler3dToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 Symphony__AddonsFactory.eINSTANCE.createSunVector3DToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
-						 Symphony__AddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseTopologyRoot(TopologyRoot object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 Symphony__AddonsFactory.eINSTANCE.createRuler3dToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 Symphony__AddonsFactory.eINSTANCE.createSunVector3DToolNode()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-						 Symphony__AddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
+						(Symphony__CoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
+						 Symphony__AddonsFactory.eINSTANCE.createSimpleToolList()));
 
 				return null;
 			}
@@ -658,19 +623,19 @@ public class Symphony__AddonsItemProviderAdapterFactory extends Symphony__Addons
 	}
 
 		/**
-	 * A child creation extender for the {@link EMFEcoreInvocatorPackage}.
+	 * A child creation extender for the {@link Symphony__CommonTopologyBindingsPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class EMFEcoreInvocatorChildCreationExtender implements IChildCreationExtender {
+	public static class Symphony__CommonTopologyBindingsChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends EMFEcoreInvocatorSwitch<Object> {
+		protected static class CreationSwitch extends Symphony__CommonTopologyBindingsSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -703,11 +668,21 @@ public class Symphony__AddonsItemProviderAdapterFactory extends Symphony__Addons
 			 * @generated
 			 */
 			@Override
-			public Object caseToolsList(ToolsList object) {
+			public Object caseEnumerationCase(EnumerationCase object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(EMFEcoreInvocatorPackage.Literals.TOOLS_LIST__TOOLS_LIST_CONTAINERS,
-						 Symphony__AddonsFactory.eINSTANCE.createSimpleToolList()));
+						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 Symphony__AddonsFactory.eINSTANCE.createRuler3dToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 Symphony__AddonsFactory.eINSTANCE.createSunVector3DToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						 Symphony__AddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
 
 				return null;
 			}
@@ -967,19 +942,19 @@ public class Symphony__AddonsItemProviderAdapterFactory extends Symphony__Addons
 	}
 
 		/**
-	 * A child creation extender for the {@link TopologyBindingsPackage}.
+	 * A child creation extender for the {@link Symphony__CorePackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class TopologyBindingsChildCreationExtender implements IChildCreationExtender {
+	public static class Symphony__CoreChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends TopologyBindingsSwitch<Object> {
+		protected static class CreationSwitch extends Symphony__CoreSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -1012,24 +987,50 @@ public class Symphony__AddonsItemProviderAdapterFactory extends Symphony__Addons
 			 * @generated
 			 */
 			@Override
-			public Object caseEnumerationCase(EnumerationCase object) {
+			public Object caseAssemblyLink(AssemblyLink object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
 						 Symphony__AddonsFactory.eINSTANCE.createRuler3dToolNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
 						 Symphony__AddonsFactory.eINSTANCE.createSunVector3DToolNode()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
 						 Symphony__AddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
 
 				return null;
 			}
+ 
+			/**
+			 * <!-- begin-user-doc -->
+			 * <!-- end-user-doc -->
+			 * @generated
+			 */
+			@Override
+			public Object caseTopologyRoot(TopologyRoot object) {
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 Symphony__AddonsFactory.eINSTANCE.createRuler3dToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 Symphony__AddonsFactory.eINSTANCE.createSunVector3DToolNode()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						 Symphony__AddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
+
+				return null;
+			}
+ 
 			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->

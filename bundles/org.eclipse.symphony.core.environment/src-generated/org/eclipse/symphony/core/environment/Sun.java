@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.GroupNode;
  *   <li>{@link org.eclipse.symphony.core.environment.Sun#getRadius <em>Radius</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSun()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSun()
  * @model
  * @generated
  */
@@ -34,11 +34,11 @@ public interface Sun extends GroupNode
    * </p>
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Sun radius, in meters.
+	 * Sun radius, in meters.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSun_Radius()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSun_Radius()
 	 * @model default="6.955E8" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated
@@ -59,7 +59,7 @@ public interface Sun extends GroupNode
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Returns the sun intensity a the specified radius.
+	 * Returns the sun intensity at the specified radius.
 	 * @param radius The distance from the sun center, in meters.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" radiusUnique="false"

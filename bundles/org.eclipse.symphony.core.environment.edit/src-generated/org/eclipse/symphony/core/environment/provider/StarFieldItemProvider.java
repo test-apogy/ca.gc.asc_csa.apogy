@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
 import org.eclipse.symphony.core.environment.StarField;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.StarField} object.
@@ -69,7 +69,7 @@ public class StarFieldItemProvider
 				 getResourceLocator(),
 				 getString("_UI_StarField_starFieldFileName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_StarField_starFieldFileName_feature", "_UI_StarField_type"),
-				 SymphonyEnvironmentPackage.Literals.STAR_FIELD__STAR_FIELD_FILE_NAME,
+				 Symphony__CoreEnvironmentPackage.Literals.STAR_FIELD__STAR_FIELD_FILE_NAME,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class StarFieldItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.STAR_FIELD__STARS);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.STAR_FIELD__STARS);
 		}
 		return childrenFeatures;
 	}
@@ -157,10 +157,10 @@ public class StarFieldItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(StarField.class)) {
-			case SymphonyEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
+			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STAR_FIELD_FILE_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEnvironmentPackage.STAR_FIELD__STARS:
+			case Symphony__CoreEnvironmentPackage.STAR_FIELD__STARS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

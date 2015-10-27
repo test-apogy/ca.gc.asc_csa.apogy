@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesConstants;
 
 /**
@@ -441,7 +441,7 @@ public class TopologyViewer implements ITopologyViewer
 						int featureId = msg.getFeatureID(TopologyPresentationSet.class);
 						switch (featureId) 
 						{
-							case TopologyUIPackage.TOPOLOGY_PRESENTATION_SET__NODE_PRESENTATION_LIST:
+							case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_SET__NODE_PRESENTATION_LIST:
 							{
 								int eventType = msg.getEventType();
 								

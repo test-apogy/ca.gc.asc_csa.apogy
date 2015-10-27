@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade} object.
@@ -79,7 +79,7 @@ public class SymphonyCoreUiFacadeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SymphonyCoreUiFacade_defaultSymphonyProjectNamePrefix_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyCoreUiFacade_defaultSymphonyProjectNamePrefix_feature", "_UI_SymphonyCoreUiFacade_type"),
-				 SymphonyCoreUiPackage.Literals.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX,
+				 Symphony__CoreUIPackage.Literals.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX,
 				 false,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class SymphonyCoreUiFacadeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SymphonyCoreUiFacade_defaultSymphonySessionFilename_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyCoreUiFacade_defaultSymphonySessionFilename_feature", "_UI_SymphonyCoreUiFacade_type"),
-				 SymphonyCoreUiPackage.Literals.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME,
+				 Symphony__CoreUIPackage.Literals.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME,
 				 false,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class SymphonyCoreUiFacadeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SymphonyCoreUiFacade_defaultSymphonySessionFilenameExtension_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyCoreUiFacade_defaultSymphonySessionFilenameExtension_feature", "_UI_SymphonyCoreUiFacade_type"),
-				 SymphonyCoreUiPackage.Literals.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION,
+				 Symphony__CoreUIPackage.Literals.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION,
 				 false,
 				 false,
 				 false,
@@ -145,7 +145,7 @@ public class SymphonyCoreUiFacadeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SymphonyCoreUiFacade_defaultSymphonySessionFolderName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyCoreUiFacade_defaultSymphonySessionFolderName_feature", "_UI_SymphonyCoreUiFacade_type"),
-				 SymphonyCoreUiPackage.Literals.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME,
+				 Symphony__CoreUIPackage.Literals.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME,
 				 false,
 				 false,
 				 false,
@@ -192,10 +192,10 @@ public class SymphonyCoreUiFacadeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SymphonyCoreUiFacade.class)) {
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX:
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME:
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION:
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -222,7 +222,7 @@ public class SymphonyCoreUiFacadeItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SymphonyCoreUiEditPlugin.INSTANCE;
+		return Symphony__CoreUIEditPlugin.INSTANCE;
 	}
 
 }

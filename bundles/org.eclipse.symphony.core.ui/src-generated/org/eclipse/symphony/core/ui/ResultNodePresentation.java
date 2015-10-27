@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
  *   <li>{@link org.eclipse.symphony.core.ui.ResultNodePresentation#isFlagVisible <em>Flag Visible</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getResultNodePresentation()
+ * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getResultNodePresentation()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface ResultNodePresentation extends TransformNodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pole Height</em>' attribute.
 	 * @see #setPoleHeight(float)
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getResultNodePresentation_PoleHeight()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getResultNodePresentation_PoleHeight()
 	 * @model default="1.0f" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Flag Visuals'"
 	 * @generated
@@ -63,7 +63,7 @@ public interface ResultNodePresentation extends TransformNodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Flag Visible</em>' attribute.
 	 * @see #setFlagVisible(boolean)
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getResultNodePresentation_FlagVisible()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getResultNodePresentation_FlagVisible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Flag Visuals'"
 	 * @generated

@@ -1,4 +1,10 @@
-@GenModel(prefix="TopologyUIPrimitives", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="TopologyUIPrimitives", complianceLevel="6.0")
+@GenModel(prefix="Symphony__CommonTopologyAddonsPrimitivesUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="Symphony__CommonTopologyAddonsPrimitivesUI",
+		  complianceLevel="6.0")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.topology.addons.primitives.ui/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.common.topology.addons.primitives.ui.edit/src-generated")
 
@@ -14,13 +20,16 @@ class VectorPresentation extends NodePresentation
 
 class WayPointPresentation extends NodePresentation
 {
+	
 }
 
 class LabelPresentation extends NodePresentation
 {
+	
 }
 
 class SpherePrimitivePresentation extends NodePresentation
 {
+	
 }
 

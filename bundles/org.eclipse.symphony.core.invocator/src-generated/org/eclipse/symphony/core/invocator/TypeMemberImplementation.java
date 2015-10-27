@@ -16,7 +16,7 @@ package org.eclipse.symphony.core.invocator;
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberImplementation#getTypeMember <em>Type Member</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberImplementation()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberImplementation()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface TypeMemberImplementation extends AbstractTypeImplementation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Member</em>' reference.
 	 * @see #setTypeMember(TypeMember)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberImplementation_TypeMember()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberImplementation_TypeMember()
 	 * @model required="true"
 	 * @generated
 	 */

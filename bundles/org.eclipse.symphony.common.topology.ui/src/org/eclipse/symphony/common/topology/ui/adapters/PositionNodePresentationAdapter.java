@@ -4,7 +4,7 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.PositionNode;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 public class PositionNodePresentationAdapter implements NodePresentationAdapter {
 
@@ -19,7 +19,7 @@ public class PositionNodePresentationAdapter implements NodePresentationAdapter 
 		NodePresentation nodePresentation = null;
 
 		if (isAdapterFor(obj)) {
-			nodePresentation = TopologyUIFactory.eINSTANCE
+			nodePresentation = Symphony__CommonTopologyUIFactory.eINSTANCE
 					.createPositionNodePresentation();
 			nodePresentation.setNode(obj);
 		}

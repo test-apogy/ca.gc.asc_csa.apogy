@@ -16,7 +16,7 @@ package org.eclipse.symphony.examples.satellite;
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage#getImageOrder <em>Image Order</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteCommandAcquireImage()
+ * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteCommandAcquireImage()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface SatelliteCommandAcquireImage extends SatelliteCommand {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Image Order</em>' containment reference.
 	 * @see #setImageOrder(ImageOrder)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteCommandAcquireImage_ImageOrder()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteCommandAcquireImage_ImageOrder()
 	 * @model containment="true"
 	 * @generated
 	 */

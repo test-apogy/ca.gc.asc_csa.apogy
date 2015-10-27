@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.core.programs.InvocatorProgramsPackage;
+import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.AbstractProgramRuntime} object.
@@ -74,7 +74,7 @@ public class AbstractProgramRuntimeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractProgramRuntime_program_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractProgramRuntime_program_feature", "_UI_AbstractProgramRuntime_type"),
-				 InvocatorProgramsPackage.Literals.ABSTRACT_PROGRAM_RUNTIME__PROGRAM,
+				 Symphony__CoreProgramsPackage.Literals.ABSTRACT_PROGRAM_RUNTIME__PROGRAM,
 				 true,
 				 false,
 				 true,

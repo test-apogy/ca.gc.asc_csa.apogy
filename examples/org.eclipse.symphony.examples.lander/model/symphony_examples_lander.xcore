@@ -1,6 +1,6 @@
-@GenModel(prefix="EMFEcoreExampleLander",
+@GenModel(prefix="Symphony__ExamplesLander",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-		  modelName="EMFEcoreExampleLander",
+		  modelName="Symphony__ExamplesLander",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  suppressGenModelAnnotations="false")

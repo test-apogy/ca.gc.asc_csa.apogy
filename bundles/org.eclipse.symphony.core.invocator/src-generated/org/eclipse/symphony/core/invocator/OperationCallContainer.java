@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCallContainer#getOperationCalls <em>Operation Calls</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCallContainer()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCallContainer()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -35,7 +35,7 @@ public interface OperationCallContainer extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operation Calls</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCallContainer_OperationCalls()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCallContainer_OperationCalls()
 	 * @see org.eclipse.symphony.core.invocator.OperationCall#getOperationCallContainer
 	 * @model opposite="operationCallContainer" containment="true"
 	 * @generated

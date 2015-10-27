@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.ValuesList#getValues <em>Values</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getValuesList()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getValuesList()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface ValuesList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Values</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getValuesList_Values()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getValuesList_Values()
 	 * @model containment="true"
 	 * @generated
 	 */

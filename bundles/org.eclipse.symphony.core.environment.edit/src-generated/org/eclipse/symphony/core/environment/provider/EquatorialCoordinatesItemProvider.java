@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.EquatorialCoordinates;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.EquatorialCoordinates} object.
@@ -83,7 +83,7 @@ public class EquatorialCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EquatorialCoordinates_rightAscension_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EquatorialCoordinates_rightAscension_feature", "_UI_EquatorialCoordinates_type"),
-				 SymphonyEnvironmentPackage.Literals.EQUATORIAL_COORDINATES__RIGHT_ASCENSION,
+				 Symphony__CoreEnvironmentPackage.Literals.EQUATORIAL_COORDINATES__RIGHT_ASCENSION,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class EquatorialCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EquatorialCoordinates_declination_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EquatorialCoordinates_declination_feature", "_UI_EquatorialCoordinates_type"),
-				 SymphonyEnvironmentPackage.Literals.EQUATORIAL_COORDINATES__DECLINATION,
+				 Symphony__CoreEnvironmentPackage.Literals.EQUATORIAL_COORDINATES__DECLINATION,
 				 true,
 				 false,
 				 false,
@@ -129,7 +129,7 @@ public class EquatorialCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EquatorialCoordinates_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EquatorialCoordinates_radius_feature", "_UI_EquatorialCoordinates_type"),
-				 SymphonyEnvironmentPackage.Literals.EQUATORIAL_COORDINATES__RADIUS,
+				 Symphony__CoreEnvironmentPackage.Literals.EQUATORIAL_COORDINATES__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -176,9 +176,9 @@ public class EquatorialCoordinatesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EquatorialCoordinates.class)) {
-			case SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__RIGHT_ASCENSION:
-			case SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__DECLINATION:
-			case SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__RADIUS:
+			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__RIGHT_ASCENSION:
+			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__DECLINATION:
+			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__RADIUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

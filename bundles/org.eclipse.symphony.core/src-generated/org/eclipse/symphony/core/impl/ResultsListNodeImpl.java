@@ -26,9 +26,9 @@ import org.eclipse.symphony.core.PositionedResult;
 import org.eclipse.symphony.core.ResultNode;
 import org.eclipse.symphony.core.ResultsListNode;
 import org.eclipse.symphony.core.SymphonyCoreFacade;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ResultsList;
 
 /**
@@ -72,7 +72,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.RESULTS_LIST_NODE;
+		return Symphony__CorePackage.Literals.RESULTS_LIST_NODE;
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 			resultsList = (ResultsList)eResolveProxy(oldResultsList);
 			if (resultsList != oldResultsList) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.RESULTS_LIST_NODE__RESULTS_LIST, oldResultsList, resultsList));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.RESULTS_LIST_NODE__RESULTS_LIST, oldResultsList, resultsList));
 			}
 		}
 		return resultsList;
@@ -121,7 +121,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 		ResultsList oldResultsList = resultsList;
 		resultsList = newResultsList;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.RESULTS_LIST_NODE__RESULTS_LIST, oldResultsList, resultsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.RESULTS_LIST_NODE__RESULTS_LIST, oldResultsList, resultsList));
 	}
 
 	/**
@@ -131,7 +131,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
+			case Symphony__CorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
 				if (resolve) return getResultsList();
 				return basicGetResultsList();
 		}
@@ -145,7 +145,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
+			case Symphony__CorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
 				setResultsList((ResultsList)newValue);
 				return;
 		}
@@ -159,7 +159,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
+			case Symphony__CorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
 				setResultsList((ResultsList)null);
 				return;
 		}
@@ -173,7 +173,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
+			case Symphony__CorePackage.RESULTS_LIST_NODE__RESULTS_LIST:
 				return resultsList != null;
 		}
 		return super.eIsSet(featureID);
@@ -283,7 +283,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 				public void notifyChanged(Notification msg) 
 				{
 					if (msg.getNotifier() instanceof ResultsList) {
-						if (msg.getFeatureID(ResultsList.class) == EMFEcoreInvocatorPackage.RESULTS_LIST__RESULTS) {
+						if (msg.getFeatureID(ResultsList.class) == Symphony__CoreInvocatorPackage.RESULTS_LIST__RESULTS) {
 							switch (msg.getEventType()) {
 							case Notification.ADD: {
 								AbstractResult resultAdded = (AbstractResult) msg
@@ -340,7 +340,7 @@ public class ResultsListNodeImpl extends AggregateGroupNodeImpl implements Resul
 						
 						int featureID = msg.getFeatureID(Positioned.class);
 						
-						if(featureID == SymphonyCorePackage.POSITIONED_RESULT__POSE)
+						if(featureID == Symphony__CorePackage.POSITIONED_RESULT__POSE)
 						{
 							// Unregister from previous pose.
 							if(msg.getOldValue() instanceof Matrix4x4)

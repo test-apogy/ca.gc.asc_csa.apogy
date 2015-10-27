@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyTopology;
 
 /**
@@ -72,7 +72,7 @@ public class SymphonyTopologyItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_SymphonyTopology_rootNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyTopology_rootNode_feature", "_UI_SymphonyTopology_type"),
-				 SymphonyCorePackage.Literals.SYMPHONY_TOPOLOGY__ROOT_NODE,
+				 Symphony__CorePackage.Literals.SYMPHONY_TOPOLOGY__ROOT_NODE,
 				 false,
 				 false,
 				 true,
@@ -93,7 +93,7 @@ public class SymphonyTopologyItemProvider extends ItemProviderAdapter implements
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.SYMPHONY_TOPOLOGY__ROOT_NODE);
+			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_TOPOLOGY__ROOT_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -144,7 +144,7 @@ public class SymphonyTopologyItemProvider extends ItemProviderAdapter implements
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SymphonyTopology.class)) {
-			case SymphonyCorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE:
+			case Symphony__CorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

@@ -10,7 +10,7 @@ package org.eclipse.symphony.core.environment;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSurfaceWorksiteNode()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSurfaceWorksiteNode()
  * @model
  * @generated
  */

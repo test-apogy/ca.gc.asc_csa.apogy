@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer} object.
@@ -64,7 +64,7 @@ public class GroundStationWorldWindLayerItemProvider extends EarthSurfaceLocatio
 				 getResourceLocator(),
 				 getString("_UI_GroundStationWorldWindLayer_groundStation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GroundStationWorldWindLayer_groundStation_feature", "_UI_GroundStationWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION,
 				 true,
 				 false,
 				 true,
@@ -86,7 +86,7 @@ public class GroundStationWorldWindLayerItemProvider extends EarthSurfaceLocatio
 				 getResourceLocator(),
 				 getString("_UI_GroundStationWorldWindLayer_referenceAltitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GroundStationWorldWindLayer_referenceAltitude_feature", "_UI_GroundStationWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE,
 				 true,
 				 false,
 				 false,
@@ -150,7 +150,7 @@ public class GroundStationWorldWindLayerItemProvider extends EarthSurfaceLocatio
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GroundStationWorldWindLayer.class)) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

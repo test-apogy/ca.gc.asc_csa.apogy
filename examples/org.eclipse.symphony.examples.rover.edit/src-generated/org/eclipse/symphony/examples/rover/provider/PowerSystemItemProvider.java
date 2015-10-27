@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage;
+import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
 import org.eclipse.symphony.examples.rover.PowerSystem;
 
 /**
@@ -80,7 +80,7 @@ public class PowerSystemItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PowerSystem_activeBattery_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PowerSystem_activeBattery_feature", "_UI_PowerSystem_type"),
-				 EMFEcoreExampleRoverPackage.Literals.POWER_SYSTEM__ACTIVE_BATTERY,
+				 Symphony__ExamplesRoverPackage.Literals.POWER_SYSTEM__ACTIVE_BATTERY,
 				 true,
 				 false,
 				 true,
@@ -102,7 +102,7 @@ public class PowerSystemItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PowerSystem_currentVoltage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PowerSystem_currentVoltage_feature", "_UI_PowerSystem_type"),
-				 EMFEcoreExampleRoverPackage.Literals.POWER_SYSTEM__CURRENT_VOLTAGE,
+				 Symphony__ExamplesRoverPackage.Literals.POWER_SYSTEM__CURRENT_VOLTAGE,
 				 false,
 				 false,
 				 false,
@@ -124,7 +124,7 @@ public class PowerSystemItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PowerSystem_currentCurrent_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PowerSystem_currentCurrent_feature", "_UI_PowerSystem_type"),
-				 EMFEcoreExampleRoverPackage.Literals.POWER_SYSTEM__CURRENT_CURRENT,
+				 Symphony__ExamplesRoverPackage.Literals.POWER_SYSTEM__CURRENT_CURRENT,
 				 false,
 				 false,
 				 false,
@@ -145,7 +145,7 @@ public class PowerSystemItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreExampleRoverPackage.Literals.POWER_SYSTEM__BATTERIES);
+			childrenFeatures.add(Symphony__ExamplesRoverPackage.Literals.POWER_SYSTEM__BATTERIES);
 		}
 		return childrenFeatures;
 	}
@@ -199,12 +199,12 @@ public class PowerSystemItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PowerSystem.class)) {
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__CURRENT_VOLTAGE:
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__CURRENT_CURRENT:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__ACTIVE_BATTERY:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__CURRENT_VOLTAGE:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__CURRENT_CURRENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreExampleRoverPackage.POWER_SYSTEM__BATTERIES:
+			case Symphony__ExamplesRoverPackage.POWER_SYSTEM__BATTERIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

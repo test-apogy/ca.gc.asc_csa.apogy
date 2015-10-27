@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask} object.
@@ -64,7 +64,7 @@ public class ConstantElevationMaskItemProvider extends ElevationMaskItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ConstantElevationMask_constantElevation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConstantElevationMask_constantElevation_feature", "_UI_ConstantElevationMask_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION,
 				 true,
 				 false,
 				 false,
@@ -109,7 +109,7 @@ public class ConstantElevationMaskItemProvider extends ElevationMaskItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConstantElevationMask.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CONSTANT_ELEVATION_MASK__CONSTANT_ELEVATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -23,7 +23,7 @@ import javax.vecmath.Color3f;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.PoseVariableAnnotation#isShowPose <em>Show Pose</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getPoseVariableAnnotation()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getPoseVariableAnnotation()
  * @model
  * @generated
  */
@@ -35,11 +35,11 @@ public interface PoseVariableAnnotation extends AbstractVariableAnnotation
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * The length of the vector.
+	 * The length of the vector.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vectorlength</em>' attribute.
 	 * @see #setVectorlength(double)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getPoseVariableAnnotation_Vectorlength()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getPoseVariableAnnotation_Vectorlength()
 	 * @model default="10.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VECTOR_PROPERTIES' csa_units='m'"
 	 * @generated
@@ -62,11 +62,11 @@ public interface PoseVariableAnnotation extends AbstractVariableAnnotation
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * The color of the vector.
+	 * The color of the vector.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vector Color</em>' attribute.
 	 * @see #setVectorColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getPoseVariableAnnotation_VectorColor()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getPoseVariableAnnotation_VectorColor()
 	 * @model default="0.0,0.0,1.0" unique="false" dataType="org.eclipse.symphony.core.environment.ui.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VECTOR_PROPERTIES'"
 	 * @generated
@@ -89,11 +89,11 @@ public interface PoseVariableAnnotation extends AbstractVariableAnnotation
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Whether to show the pose as text.
+	 * Whether to show the pose as text.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Show Pose</em>' attribute.
 	 * @see #setShowPose(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getPoseVariableAnnotation_ShowPose()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getPoseVariableAnnotation_ShowPose()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
@@ -113,7 +113,6 @@ public interface PoseVariableAnnotation extends AbstractVariableAnnotation
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Method called when the position or orientation of the variable changes.
 	 * @param x The x coordinates, in meters.
 	 * @param y The y coordinates, in meters.

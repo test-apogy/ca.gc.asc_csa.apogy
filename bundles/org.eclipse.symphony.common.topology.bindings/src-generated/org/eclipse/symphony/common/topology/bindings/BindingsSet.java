@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
- * Defines a set of bindings. The Biinding set can be binded and un-binded as a group.
+ * Defines a set of bindings. The Binding set can be bound
+ * and unbound as a group.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.BindingsSet#getBindingsList <em>Bindings List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getBindingsSet()
+ * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getBindingsSet()
  * @model
  * @generated
  */
@@ -39,12 +39,11 @@ public interface BindingsSet extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The list of features used in the Bindings definitions.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Roots List</em>' containment reference.
 	 * @see #setFeatureRootsList(FeatureRootsList)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getBindingsSet_FeatureRootsList()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getBindingsSet_FeatureRootsList()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -69,12 +68,11 @@ public interface BindingsSet extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The list of Bindings.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Bindings List</em>' containment reference.
 	 * @see #setBindingsList(BindingsList)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getBindingsSet_BindingsList()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getBindingsSet_BindingsList()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -94,7 +92,6 @@ public interface BindingsSet extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Binds all the Bindings contained in the bindingsList.
 	 * <!-- end-model-doc -->
 	 * @model
@@ -106,8 +103,7 @@ public interface BindingsSet extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
-	 * Un-binds all the Bindings contained in the bindingsList.
+	 * Unbinds all the Bindings contained in the bindingsList.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated

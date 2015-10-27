@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.telecoms.AntennaRadiationPatternImageMapLayer;
 import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsFactory;
 import org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.provider.LineOfSightImageMapLayerItemProvider;
 
 /**
@@ -260,8 +260,8 @@ public class AntennaRadiationPatternImageMapLayerItemProvider extends LineOfSigh
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
 
 		if (qualify) {
 			return getString

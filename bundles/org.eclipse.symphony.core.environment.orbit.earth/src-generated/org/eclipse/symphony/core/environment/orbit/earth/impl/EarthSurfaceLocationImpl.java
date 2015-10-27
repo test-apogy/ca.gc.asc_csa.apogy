@@ -12,9 +12,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -98,7 +98,7 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_SURFACE_LOCATION;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION;
 	}
 
 	/**
@@ -119,7 +119,7 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__NAME, oldName, name));
 	}
 
 	/**
@@ -140,7 +140,7 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 		
 		if(tmp == null)
 		{
-			tmp = SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
+			tmp = Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
 			setGeographicalCoordinates(tmp);
 		}
 		
@@ -179,7 +179,7 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 		GeographicCoordinates oldGeographicalCoordinates = geographicalCoordinates;
 		geographicalCoordinates = newGeographicalCoordinates;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, oldGeographicalCoordinates, newGeographicalCoordinates);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, oldGeographicalCoordinates, newGeographicalCoordinates);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -194,14 +194,14 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 		if (newGeographicalCoordinates != geographicalCoordinates) {
 			NotificationChain msgs = null;
 			if (geographicalCoordinates != null)
-				msgs = ((InternalEObject)geographicalCoordinates).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, null, msgs);
+				msgs = ((InternalEObject)geographicalCoordinates).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, null, msgs);
 			if (newGeographicalCoordinates != null)
-				msgs = ((InternalEObject)newGeographicalCoordinates).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, null, msgs);
+				msgs = ((InternalEObject)newGeographicalCoordinates).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, null, msgs);
 			msgs = basicSetGeographicalCoordinates(newGeographicalCoordinates, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, newGeographicalCoordinates, newGeographicalCoordinates));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES, newGeographicalCoordinates, newGeographicalCoordinates));
 	}
 
 	/**
@@ -212,7 +212,7 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
 				return basicSetGeographicalCoordinates(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -226,11 +226,11 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__NAME:
 				return getName();
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
 				return getDescription();
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
 				return getGeographicalCoordinates();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -244,13 +244,13 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
 				setGeographicalCoordinates((GeographicCoordinates)newValue);
 				return;
 		}
@@ -265,13 +265,13 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
 				setGeographicalCoordinates((GeographicCoordinates)null);
 				return;
 		}
@@ -286,11 +286,11 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
 				return geographicalCoordinates != null;
 		}
 		return super.eIsSet(featureID);
@@ -305,7 +305,7 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -321,7 +321,7 @@ public class EarthSurfaceLocationImpl extends MinimalEObjectImpl.Container imple
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION;
 				default: return -1;
 			}
 		}

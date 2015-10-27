@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.core.topology.SymphonyTopologyPackage;
+import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.topology.SystemsTopologyAdapter} object.
@@ -79,7 +79,7 @@ public class SystemsTopologyAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SystemsTopologyAdapter_deployment_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SystemsTopologyAdapter_deployment_feature", "_UI_SystemsTopologyAdapter_type"),
-				 SymphonyTopologyPackage.Literals.SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT,
+				 Symphony__CoreTopologyPackage.Literals.SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT,
 				 true,
 				 false,
 				 true,
@@ -102,7 +102,7 @@ public class SystemsTopologyAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SystemsTopologyAdapter_systemsGroup_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SystemsTopologyAdapter_systemsGroup_feature", "_UI_SystemsTopologyAdapter_type"),
-				 SymphonyTopologyPackage.Literals.SYSTEMS_TOPOLOGY_ADAPTER__SYSTEMS_GROUP,
+				 Symphony__CoreTopologyPackage.Literals.SYSTEMS_TOPOLOGY_ADAPTER__SYSTEMS_GROUP,
 				 true,
 				 false,
 				 true,

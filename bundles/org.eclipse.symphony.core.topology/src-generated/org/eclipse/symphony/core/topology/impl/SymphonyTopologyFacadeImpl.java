@@ -17,8 +17,8 @@ import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableImplementation;
 import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
 import org.eclipse.symphony.core.topology.SymphonyTopologyFacade;
-import org.eclipse.symphony.core.topology.SymphonyTopologyFactory;
-import org.eclipse.symphony.core.topology.SymphonyTopologyPackage;
+import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFactory;
+import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -59,7 +59,7 @@ public class SymphonyTopologyFacadeImpl extends MinimalEObjectImpl.Container imp
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyTopologyPackage.Literals.SYMPHONY_TOPOLOGY_FACADE;
+		return Symphony__CoreTopologyPackage.Literals.SYMPHONY_TOPOLOGY_FACADE;
 	}
 
 	/**
@@ -114,7 +114,7 @@ public class SymphonyTopologyFacadeImpl extends MinimalEObjectImpl.Container imp
 	 */
 	public SymphonyEnvironmentNode createSymphonyEnvironmentNode(SymphonyEnvironment symphonyEnvironment) 
 	{
-		SymphonyEnvironmentNode symphonyEnvironmentNode = SymphonyTopologyFactory.eINSTANCE.createSymphonyEnvironmentNode();						
+		SymphonyEnvironmentNode symphonyEnvironmentNode = Symphony__CoreTopologyFactory.eINSTANCE.createSymphonyEnvironmentNode();						
 		symphonyEnvironmentNode.setSymphonyEnvironment(symphonyEnvironment);										
 		
 		// Forces the update of the child nodes.
@@ -160,11 +160,11 @@ public class SymphonyTopologyFacadeImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyTopologyPackage.SYMPHONY_TOPOLOGY_FACADE___GET_VARIABLE_ORIGIN_NODE__VARIABLE:
+			case Symphony__CoreTopologyPackage.SYMPHONY_TOPOLOGY_FACADE___GET_VARIABLE_ORIGIN_NODE__VARIABLE:
 				return getVariableOriginNode((Variable)arguments.get(0));
-			case SymphonyTopologyPackage.SYMPHONY_TOPOLOGY_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_ORIGIN_NODE__ABSTRACTTYPEIMPLEMENTATION:
+			case Symphony__CoreTopologyPackage.SYMPHONY_TOPOLOGY_FACADE___GET_ABSTRACT_TYPE_IMPLEMENTATION_ORIGIN_NODE__ABSTRACTTYPEIMPLEMENTATION:
 				return getAbstractTypeImplementationOriginNode((AbstractTypeImplementation)arguments.get(0));
-			case SymphonyTopologyPackage.SYMPHONY_TOPOLOGY_FACADE___CREATE_SYMPHONY_ENVIRONMENT_NODE__SYMPHONYENVIRONMENT:
+			case Symphony__CoreTopologyPackage.SYMPHONY_TOPOLOGY_FACADE___CREATE_SYMPHONY_ENVIRONMENT_NODE__SYMPHONYENVIRONMENT:
 				return createSymphonyEnvironmentNode((SymphonyEnvironment)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

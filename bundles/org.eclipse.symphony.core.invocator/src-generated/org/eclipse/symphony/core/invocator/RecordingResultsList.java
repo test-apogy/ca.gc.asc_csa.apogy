@@ -17,7 +17,7 @@ package org.eclipse.symphony.core.invocator;
  *   <li>{@link org.eclipse.symphony.core.invocator.RecordingResultsList#getInvocatorSession <em>Invocator Session</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getRecordingResultsList()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getRecordingResultsList()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface RecordingResultsList extends ResultsList
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Products List</em>' container reference.
 	 * @see #setDataProductsList(DataProductsList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getRecordingResultsList_DataProductsList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getRecordingResultsList_DataProductsList()
 	 * @see org.eclipse.symphony.core.invocator.DataProductsList#getRecordingResultsList
 	 * @model opposite="recordingResultsList" transient="false"
 	 * @generated
@@ -61,7 +61,7 @@ public interface RecordingResultsList extends ResultsList
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Invocator Session</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getRecordingResultsList_InvocatorSession()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getRecordingResultsList_InvocatorSession()
 	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' property='None' get='<%org.eclipse.symphony.core.invocator.DataProductsList%> _dataProductsList = this.getDataProductsList();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_dataProductsList, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.DataProductsList%> _dataProductsList_1 = this.getDataProductsList();\n\treturn _dataProductsList_1.getInvocatorSession();\n}'"
 	 * @generated

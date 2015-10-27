@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.topology.ui.jme3.Activator;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.Vector;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorSceneObject;
 
@@ -189,10 +189,10 @@ public class VectorJME3SceneObject extends DefaultJME3SceneObject<Vector> implem
 						int featureId = msg.getFeatureID(Vector.class);
 						switch (featureId) 
 						{
-							case PrimitivesPackage.VECTOR__XROTATION:
-							case PrimitivesPackage.VECTOR__YROTATION:
-							case PrimitivesPackage.VECTOR__ZROTATION:
-							case PrimitivesPackage.VECTOR__LENGTH:		
+							case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION:
+							case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION:
+							case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION:
+							case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH:		
 									updateGeometry();							
 							break;
 

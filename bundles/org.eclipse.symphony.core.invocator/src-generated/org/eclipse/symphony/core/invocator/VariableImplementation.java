@@ -17,7 +17,7 @@ package org.eclipse.symphony.core.invocator;
  *   <li>{@link org.eclipse.symphony.core.invocator.VariableImplementation#getVariable <em>Variable</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariableImplementation()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariableImplementation()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface VariableImplementation extends AbstractTypeImplementation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable Implementations List</em>' container reference.
 	 * @see #setVariableImplementationsList(VariableImplementationsList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariableImplementation_VariableImplementationsList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariableImplementation_VariableImplementationsList()
 	 * @see org.eclipse.symphony.core.invocator.VariableImplementationsList#getVariableImplementations
 	 * @model opposite="variableImplementations" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -63,7 +63,7 @@ public interface VariableImplementation extends AbstractTypeImplementation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable</em>' reference.
 	 * @see #setVariable(Variable)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariableImplementation_Variable()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariableImplementation_Variable()
 	 * @model required="true"
 	 * @generated
 	 */

@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.AbstractResultValue} object.
@@ -78,7 +78,7 @@ public class AbstractResultValueItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractResultValue_result_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractResultValue_result_feature", "_UI_AbstractResultValue_type"),
-				 EMFEcoreInvocatorPackage.Literals.ABSTRACT_RESULT_VALUE__RESULT,
+				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_RESULT_VALUE__RESULT,
 				 true,
 				 false,
 				 true,

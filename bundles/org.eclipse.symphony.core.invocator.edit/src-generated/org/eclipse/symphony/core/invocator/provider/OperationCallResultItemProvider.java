@@ -14,9 +14,9 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.edit.utils.EMFEcoreEditUtilsFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCallResult;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.OperationCallResult} object.
@@ -69,7 +69,7 @@ public class OperationCallResultItemProvider
 				 getResourceLocator(),
 				 getString("_UI_OperationCallResult_exceptionContainer_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OperationCallResult_exceptionContainer_feature", "_UI_OperationCallResult_type"),
-				 EMFEcoreInvocatorPackage.Literals.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER,
+				 Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER,
 				 false,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class OperationCallResultItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
 		}
 		return childrenFeatures;
 	}
@@ -171,11 +171,11 @@ public class OperationCallResultItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OperationCallResult.class)) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALL:
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALL:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__EXCEPTION_CONTAINER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULT__OPERATION_CALLS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -196,8 +196,8 @@ public class OperationCallResultItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createOperationCall()));
+				(Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCall()));
 	}
 
 }

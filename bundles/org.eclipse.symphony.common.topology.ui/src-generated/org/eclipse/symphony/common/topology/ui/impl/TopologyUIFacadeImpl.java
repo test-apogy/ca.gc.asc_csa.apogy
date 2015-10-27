@@ -21,10 +21,10 @@ import org.eclipse.symphony.common.topology.ui.Activator;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
 import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -63,7 +63,7 @@ public class TopologyUIFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyUIPackage.Literals.TOPOLOGY_UI_FACADE;
+		return Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_UI_FACADE;
 	}
 
 	/**
@@ -73,7 +73,7 @@ public class TopologyUIFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public GraphicsContext createGraphicsContext(Node topologyRoot) 
 	{
-		GraphicsContext graphicsContext = TopologyUIFactory.eINSTANCE.createGraphicsContext();
+		GraphicsContext graphicsContext = Symphony__CommonTopologyUIFactory.eINSTANCE.createGraphicsContext();
 		graphicsContext.setTopology(topologyRoot);
 		
 		TopologyPresentationSet topologyPresentationSet = Activator.getTopologyPresentationRegistry().createTopologyPresentationSet(topologyRoot);
@@ -173,7 +173,7 @@ public class TopologyUIFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public NodeSelection createNodeSelection(TopologyPresentationSet topologyPresentationSet, NodePresentation nodePresentation, Point3d relativePosition) 
 	{
-		NodeSelection nodeSelection = TopologyUIFactory.eINSTANCE.createNodeSelection();
+		NodeSelection nodeSelection = Symphony__CommonTopologyUIFactory.eINSTANCE.createNodeSelection();
 		
 		nodeSelection.setTopologyPresentationSet(topologyPresentationSet);
 		nodeSelection.setSelectedNode(nodePresentation.getNode());
@@ -191,7 +191,7 @@ public class TopologyUIFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public NodeSelection createNodeSelection(TopologyPresentationSet topologyPresentationSet, Node node, Point3d relativePosition, Vector3f relativeNormal) 
 	{
-		NodeSelection nodeSelection = TopologyUIFactory.eINSTANCE.createNodeSelection();
+		NodeSelection nodeSelection = Symphony__CommonTopologyUIFactory.eINSTANCE.createNodeSelection();
 		
 		nodeSelection.setTopologyPresentationSet(topologyPresentationSet);
 		nodeSelection.setSelectedNode(node);
@@ -209,14 +209,14 @@ public class TopologyUIFacadeImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case TopologyUIPackage.TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_UI_FACADE___CREATE_GRAPHICS_CONTEXT__NODE:
 				return createGraphicsContext((Node)arguments.get(0));
-			case TopologyUIPackage.TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_UI_FACADE___FIND_EXTENT__NODE_TOPOLOGYPRESENTATIONSET_TUPLE3D_TUPLE3D:
 				findExtent((Node)arguments.get(0), (TopologyPresentationSet)arguments.get(1), (Tuple3d)arguments.get(2), (Tuple3d)arguments.get(3));
 				return null;
-			case TopologyUIPackage.TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODEPRESENTATION_POINT3D:
 				return createNodeSelection((TopologyPresentationSet)arguments.get(0), (NodePresentation)arguments.get(1), (Point3d)arguments.get(2));
-			case TopologyUIPackage.TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_UI_FACADE___CREATE_NODE_SELECTION__TOPOLOGYPRESENTATIONSET_NODE_POINT3D_VECTOR3F:
 				return createNodeSelection((TopologyPresentationSet)arguments.get(0), (Node)arguments.get(1), (Point3d)arguments.get(2), (Vector3f)arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);

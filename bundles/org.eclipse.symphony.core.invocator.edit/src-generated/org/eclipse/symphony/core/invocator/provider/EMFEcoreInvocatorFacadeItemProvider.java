@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade} object.
@@ -77,7 +77,7 @@ public class EMFEcoreInvocatorFacadeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EMFEcoreInvocatorFacade_activeInvocatorSession_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EMFEcoreInvocatorFacade_activeInvocatorSession_feature", "_UI_EMFEcoreInvocatorFacade_type"),
-				 EMFEcoreInvocatorPackage.Literals.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION,
+				 Symphony__CoreInvocatorPackage.Literals.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION,
 				 true,
 				 false,
 				 true,

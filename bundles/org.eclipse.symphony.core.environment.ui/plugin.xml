@@ -105,7 +105,7 @@
       <!-- @generated symphony_environment_ui -->
       <package
             uri="org.eclipse.symphony.core.environment.ui"
-            class="org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage"
+            class="org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage"
             genModel="model/symphony_core_environment_ui.xcore"/>
    </extension>
    <extension

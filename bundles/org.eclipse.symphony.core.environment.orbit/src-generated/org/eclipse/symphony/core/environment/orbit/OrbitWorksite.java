@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.environment.Worksite;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.OrbitWorksite#getActiveOrbitModel <em>Active Orbit Model</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getOrbitWorksite()
+ * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getOrbitWorksite()
  * @model abstract="true"
  * @generated
  */
@@ -33,12 +33,11 @@ public interface OrbitWorksite extends Worksite {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The active OrbitModel to use to update the orbit worksite.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Active Orbit Model</em>' reference.
 	 * @see #setActiveOrbitModel(AbstractOrbitModel)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getOrbitWorksite_ActiveOrbitModel()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getOrbitWorksite_ActiveOrbitModel()
 	 * @model
 	 * @generated
 	 */

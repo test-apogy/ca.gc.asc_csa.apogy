@@ -16,13 +16,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.FeatureOfInterestList;
 import org.eclipse.symphony.core.FeatureOfInterestListNode;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
 import org.eclipse.symphony.core.environment.AbstractMapLayerNode;
 import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
 import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.RectangularRegionProvider;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,7 +66,7 @@ public class FeaturesOfInterestMapLayerImpl extends AbstractMapLayerImpl impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER;
+		return Symphony__CoreEnvironmentPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER;
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class FeaturesOfInterestMapLayerImpl extends AbstractMapLayerImpl impleme
 //		
 //		if(tmp == null)
 //		{
-//			tmp = SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestList();
+//			tmp = Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestList();
 //			setFeatures(tmp);
 //		}
 		
@@ -106,7 +106,7 @@ public class FeaturesOfInterestMapLayerImpl extends AbstractMapLayerImpl impleme
 		FeatureOfInterestList oldFeatures = features;
 		features = newFeatures;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES, oldFeatures, newFeatures);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES, oldFeatures, newFeatures);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -133,14 +133,14 @@ public class FeaturesOfInterestMapLayerImpl extends AbstractMapLayerImpl impleme
 		if (newFeatures != features) {
 			NotificationChain msgs = null;
 			if (features != null)
-				msgs = ((InternalEObject)features).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES, null, msgs);
+				msgs = ((InternalEObject)features).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES, null, msgs);
 			if (newFeatures != null)
-				msgs = ((InternalEObject)newFeatures).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES, null, msgs);
+				msgs = ((InternalEObject)newFeatures).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES, null, msgs);
 			msgs = basicSetFeatures(newFeatures, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES, newFeatures, newFeatures));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES, newFeatures, newFeatures));
 	}
 
 	/**
@@ -150,7 +150,7 @@ public class FeaturesOfInterestMapLayerImpl extends AbstractMapLayerImpl impleme
 	 */
 	public RectangularRegion getRegion() 
 	{
-		RectangularRegion region = SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion();
+		RectangularRegion region = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
 		
 		if(getFeatures().getFeaturesOfInterest().size() > 0)
 		{
@@ -188,7 +188,7 @@ public class FeaturesOfInterestMapLayerImpl extends AbstractMapLayerImpl impleme
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES:
+			case Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES:
 				return basicSetFeatures(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -202,7 +202,7 @@ public class FeaturesOfInterestMapLayerImpl extends AbstractMapLayerImpl impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES:
+			case Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES:
 				return getFeatures();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -216,7 +216,7 @@ public class FeaturesOfInterestMapLayerImpl extends AbstractMapLayerImpl impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES:
+			case Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES:
 				setFeatures((FeatureOfInterestList)newValue);
 				return;
 		}
@@ -231,7 +231,7 @@ public class FeaturesOfInterestMapLayerImpl extends AbstractMapLayerImpl impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES:
+			case Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES:
 				setFeatures((FeatureOfInterestList)null);
 				return;
 		}
@@ -246,7 +246,7 @@ public class FeaturesOfInterestMapLayerImpl extends AbstractMapLayerImpl impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES:
+			case Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES:
 				return features != null;
 		}
 		return super.eIsSet(featureID);
@@ -261,7 +261,7 @@ public class FeaturesOfInterestMapLayerImpl extends AbstractMapLayerImpl impleme
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == RectangularRegionProvider.class) {
 			switch (baseOperationID) {
-				case SymphonyEnvironmentPackage.RECTANGULAR_REGION_PROVIDER___GET_REGION: return SymphonyEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER___GET_REGION;
+				case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION_PROVIDER___GET_REGION: return Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER___GET_REGION;
 				default: return -1;
 			}
 		}
@@ -276,7 +276,7 @@ public class FeaturesOfInterestMapLayerImpl extends AbstractMapLayerImpl impleme
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER___GET_REGION:
+			case Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER___GET_REGION:
 				return getRegion();
 		}
 		return super.eInvoke(operationID, arguments);
@@ -297,7 +297,7 @@ public class FeaturesOfInterestMapLayerImpl extends AbstractMapLayerImpl impleme
 	{
 		if(featureOfInterestListNode == null)
 		{
-			featureOfInterestListNode = SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode();
+			featureOfInterestListNode = Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode();
 			featureOfInterestListNode.setFeatureOfInterestList(getFeatures());
 			getAbstractMapLayerNode().getChildren().add(featureOfInterestListNode);
 		}

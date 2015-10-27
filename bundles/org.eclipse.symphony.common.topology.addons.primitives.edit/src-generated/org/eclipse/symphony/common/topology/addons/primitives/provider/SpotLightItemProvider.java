@@ -18,7 +18,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.SpotLight;
 
 /**
@@ -69,7 +69,7 @@ public class SpotLightItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpotLight_concentration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpotLight_concentration_feature", "_UI_SpotLight_type"),
-				 PrimitivesPackage.Literals.SPOT_LIGHT__CONCENTRATION,
+				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.SPOT_LIGHT__CONCENTRATION,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class SpotLightItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpotLight_spreadAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpotLight_spreadAngle_feature", "_UI_SpotLight_type"),
-				 PrimitivesPackage.Literals.SPOT_LIGHT__SPREAD_ANGLE,
+				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.SPOT_LIGHT__SPREAD_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class SpotLightItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PrimitivesPackage.Literals.SPOT_LIGHT__DIRECTION);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.SPOT_LIGHT__DIRECTION);
 		}
 		return childrenFeatures;
 	}
@@ -167,11 +167,11 @@ public class SpotLightItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SpotLight.class)) {
-			case PrimitivesPackage.SPOT_LIGHT__CONCENTRATION:
-			case PrimitivesPackage.SPOT_LIGHT__SPREAD_ANGLE:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__CONCENTRATION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__SPREAD_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case PrimitivesPackage.SPOT_LIGHT__DIRECTION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.SPOT_LIGHT__DIRECTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -191,7 +191,7 @@ public class SpotLightItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(PrimitivesPackage.Literals.SPOT_LIGHT__DIRECTION,
+				(Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.SPOT_LIGHT__DIRECTION,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
@@ -207,10 +207,10 @@ public class SpotLightItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == PrimitivesPackage.Literals.LIGHT__COLOR ||
-			childFeature == PrimitivesPackage.Literals.POINT_LIGHT__POSITION ||
-			childFeature == PrimitivesPackage.Literals.POINT_LIGHT__ATTENUATION ||
-			childFeature == PrimitivesPackage.Literals.SPOT_LIGHT__DIRECTION;
+			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.LIGHT__COLOR ||
+			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__POSITION ||
+			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.POINT_LIGHT__ATTENUATION ||
+			childFeature == Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.SPOT_LIGHT__DIRECTION;
 
 		if (qualify) {
 			return getString

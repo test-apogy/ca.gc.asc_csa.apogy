@@ -16,7 +16,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage.Literals;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage.Literals;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.DegreeStringToRadiansConverter;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.RadiansToDegreesStringConverter;
 

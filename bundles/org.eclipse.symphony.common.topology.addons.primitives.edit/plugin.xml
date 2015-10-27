@@ -13,7 +13,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.common.topology.addons.primitives"
-            class="org.eclipse.symphony.common.topology.addons.primitives.provider.PrimitivesItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.topology.addons.primitives.provider.Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -26,13 +26,7 @@
       <!-- @generated symphony_common_topology_addons_primitives -->
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.common.topology.addons.primitives.provider.PrimitivesItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <extender
-            uri="org.eclipse.symphony.common.topology.addons.primitives"
-            class="org.eclipse.symphony.common.topology.addons.primitives.provider.PrimitivesItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.common.topology.addons.primitives.provider.Symphony__CommonTopologyAddonsPrimitivesItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

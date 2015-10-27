@@ -23,7 +23,7 @@ import org.eclipse.symphony.core.PoseProvider;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider#getPoseProvider <em>Pose Provider</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getVariableTrajectoryProvider()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVariableTrajectoryProvider()
  * @model abstract="true"
  * @generated
  */
@@ -40,7 +40,7 @@ public interface VariableTrajectoryProvider extends TrajectoryProvider
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable Annotation</em>' container reference.
 	 * @see #setVariableAnnotation(VariableTrajectoryAnnotation)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getVariableTrajectoryProvider_VariableAnnotation()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVariableTrajectoryProvider_VariableAnnotation()
 	 * @see org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation#getTrajectoryProvider
 	 * @model opposite="trajectoryProvider" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -63,11 +63,11 @@ public interface VariableTrajectoryProvider extends TrajectoryProvider
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * The Symphony System being displayed. This is automatically updated.
+	 *  The Symphony System being displayed. This is automatically updated.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Pose Provider</em>' reference.
 	 * @see #setPoseProvider(PoseProvider)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getVariableTrajectoryProvider_PoseProvider()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVariableTrajectoryProvider_PoseProvider()
 	 * @model required="true" transient="true"
 	 * @generated
 	 */

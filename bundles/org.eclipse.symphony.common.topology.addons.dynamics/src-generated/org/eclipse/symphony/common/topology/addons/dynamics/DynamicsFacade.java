@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.impl.DynamicsFacadeI
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getDynamicsFacade()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getDynamicsFacade()
  * @model
  * @generated
  */

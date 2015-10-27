@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.ui.NewSymphonyProjectSettings} object.
@@ -77,7 +77,7 @@ public class NewSymphonyProjectSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NewSymphonyProjectSettings_name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonyProjectSettings_name_feature", "_UI_NewSymphonyProjectSettings_type"),
-				 SymphonyCoreUiPackage.Literals.NEW_SYMPHONY_PROJECT_SETTINGS__NAME,
+				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_PROJECT_SETTINGS__NAME,
 				 true,
 				 false,
 				 false,
@@ -99,7 +99,7 @@ public class NewSymphonyProjectSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NewSymphonyProjectSettings_importRegisteredProject_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonyProjectSettings_importRegisteredProject_feature", "_UI_NewSymphonyProjectSettings_type"),
-				 SymphonyCoreUiPackage.Literals.NEW_SYMPHONY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT,
+				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT,
 				 true,
 				 false,
 				 false,
@@ -146,8 +146,8 @@ public class NewSymphonyProjectSettingsItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(NewSymphonyProjectSettings.class)) {
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_PROJECT_SETTINGS__NAME:
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS__NAME:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_PROJECT_SETTINGS__IMPORT_REGISTERED_PROJECT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -174,7 +174,7 @@ public class NewSymphonyProjectSettingsItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SymphonyCoreUiEditPlugin.INSTANCE;
+		return Symphony__CoreUIEditPlugin.INSTANCE;
 	}
 
 }

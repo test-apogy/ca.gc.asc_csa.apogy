@@ -11,7 +11,6 @@ import org.eclipse.symphony.common.topology.PositionNode;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Binding that binds a PositionNode translation along one axis to the feature value.
  * <!-- end-model-doc -->
  *
@@ -23,7 +22,7 @@ import org.eclipse.symphony.common.topology.PositionNode;
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.TranslationBinding#getTranslationAxis <em>Translation Axis</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getTranslationBinding()
+ * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getTranslationBinding()
  * @model
  * @generated
  */
@@ -32,7 +31,7 @@ public interface TranslationBinding extends AbstractTopologyBinding
   /**
 	 * Returns the value of the '<em><b>Translation Axis</b></em>' attribute.
 	 * The default value is <code>"X_AXIS"</code>.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.common.topology.bindings.AXIS}.
+	 * The literals are from the enumeration {@link org.eclipse.symphony.common.topology.bindings.Axis}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Translation Axis</em>' attribute isn't clear,
@@ -43,25 +42,25 @@ public interface TranslationBinding extends AbstractTopologyBinding
 	 * The axis along which the translation occurs.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Translation Axis</em>' attribute.
-	 * @see org.eclipse.symphony.common.topology.bindings.AXIS
-	 * @see #setTranslationAxis(AXIS)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getTranslationBinding_TranslationAxis()
+	 * @see org.eclipse.symphony.common.topology.bindings.Axis
+	 * @see #setTranslationAxis(Axis)
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getTranslationBinding_TranslationAxis()
 	 * @model default="X_AXIS" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DESTINATION'"
 	 * @generated
 	 */
-  AXIS getTranslationAxis();
+  Axis getTranslationAxis();
 
   /**
 	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.bindings.TranslationBinding#getTranslationAxis <em>Translation Axis</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Translation Axis</em>' attribute.
-	 * @see org.eclipse.symphony.common.topology.bindings.AXIS
+	 * @see org.eclipse.symphony.common.topology.bindings.Axis
 	 * @see #getTranslationAxis()
 	 * @generated
 	 */
-  void setTranslationAxis(AXIS value);
+  void setTranslationAxis(Axis value);
 
   /**
 	 * Returns the value of the '<em><b>Position Node</b></em>' reference.
@@ -76,7 +75,7 @@ public interface TranslationBinding extends AbstractTopologyBinding
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Position Node</em>' reference.
 	 * @see #setPositionNode(PositionNode)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getTranslationBinding_PositionNode()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getTranslationBinding_PositionNode()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DESTINATION'"
 	 * @generated
 	 */

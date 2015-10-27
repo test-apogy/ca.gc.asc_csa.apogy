@@ -13,9 +13,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.common.emf.impl.CollectionTimedTimeSourceImpl;
 import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCallResultsList;
 import org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,7 +57,7 @@ public class OperationCallResultsListTimeSourceImpl extends CollectionTimedTimeS
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreInvocatorPackage.Literals.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE;
+		return Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE;
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class OperationCallResultsListTimeSourceImpl extends CollectionTimedTimeS
 			opsCallList = (OperationCallResultsList)eResolveProxy(oldOpsCallList);
 			if (opsCallList != oldOpsCallList) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST, oldOpsCallList, opsCallList));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST, oldOpsCallList, opsCallList));
 			}
 		}
 		return opsCallList;
@@ -123,7 +123,7 @@ public class OperationCallResultsListTimeSourceImpl extends CollectionTimedTimeS
 		OperationCallResultsList oldOpsCallList = opsCallList;
 		opsCallList = newOpsCallList;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST, oldOpsCallList, opsCallList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST, oldOpsCallList, opsCallList));
 	}
 
 	/**
@@ -134,7 +134,7 @@ public class OperationCallResultsListTimeSourceImpl extends CollectionTimedTimeS
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
 				if (resolve) return getOpsCallList();
 				return basicGetOpsCallList();
 		}
@@ -149,7 +149,7 @@ public class OperationCallResultsListTimeSourceImpl extends CollectionTimedTimeS
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
 				setOpsCallList((OperationCallResultsList)newValue);
 				return;
 		}
@@ -164,7 +164,7 @@ public class OperationCallResultsListTimeSourceImpl extends CollectionTimedTimeS
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
 				setOpsCallList((OperationCallResultsList)null);
 				return;
 		}
@@ -179,7 +179,7 @@ public class OperationCallResultsListTimeSourceImpl extends CollectionTimedTimeS
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST:
 				return opsCallList != null;
 		}
 		return super.eIsSet(featureID);

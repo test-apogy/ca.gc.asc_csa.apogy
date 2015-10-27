@@ -13,11 +13,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.provider.ProgramItemProvider;
 import org.eclipse.symphony.core.programs.controllers.ControllersConfiguration;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersFactory;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFactory;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.ControllersConfiguration} object.
@@ -70,7 +70,7 @@ public class ControllersConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ControllersConfiguration_active_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ControllersConfiguration_active_feature", "_UI_ControllersConfiguration_type"),
-				 EMFEcoreControllersPackage.Literals.CONTROLLERS_CONFIGURATION__ACTIVE,
+				 Symphony__CoreProgramsControllersPackage.Literals.CONTROLLERS_CONFIGURATION__ACTIVE,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class ControllersConfigurationItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
 		}
 		return childrenFeatures;
 	}
@@ -157,10 +157,10 @@ public class ControllersConfigurationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ControllersConfiguration.class)) {
-			case EMFEcoreControllersPackage.CONTROLLERS_CONFIGURATION__ACTIVE:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__ACTIVE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLERS_CONFIGURATION__OPERATION_CALLS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -181,8 +181,8 @@ public class ControllersConfigurationItemProvider
 
     newChildDescriptors.add
       (createChildParameter
-        (EMFEcoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
-         EMFEcoreControllersFactory.eINSTANCE.createOperationCallControllerBinding()));
+        (Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
+         Symphony__CoreProgramsControllersFactory.eINSTANCE.createOperationCallControllerBinding()));
   }
 
 }

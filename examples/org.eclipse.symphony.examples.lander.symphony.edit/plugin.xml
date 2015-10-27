@@ -11,7 +11,7 @@
       <!-- @generated symphony_examples_lander -->
       <factory
             uri="org.eclipse.symphony.examples.lander.symphony"
-            class="org.eclipse.symphony.examples.lander.symphony.provider.SymphonyExampleLanderItemProviderAdapterFactory"
+            class="org.eclipse.symphony.examples.lander.symphony.provider.Symphony__ExamplesLanderSymphonyItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

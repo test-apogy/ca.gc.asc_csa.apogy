@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.examples.antenna.Antenna#isInitialized <em>Initialized</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage#getAntenna()
+ * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getAntenna()
  * @model abstract="true"
  * @generated
  */
@@ -40,7 +40,7 @@ public interface Antenna extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage#getAntenna_Initialized()
+	 * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getAntenna_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated

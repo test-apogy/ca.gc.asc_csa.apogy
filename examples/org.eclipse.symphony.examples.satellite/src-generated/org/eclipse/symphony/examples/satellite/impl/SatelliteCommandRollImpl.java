@@ -6,7 +6,7 @@ package org.eclipse.symphony.examples.satellite.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.SatelliteCommandRoll;
 
 /**
@@ -59,7 +59,7 @@ public class SatelliteCommandRollImpl extends SatelliteCommandImpl implements Sa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleSatellitePackage.Literals.SATELLITE_COMMAND_ROLL;
+		return Symphony__ExamplesSatellitePackage.Literals.SATELLITE_COMMAND_ROLL;
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class SatelliteCommandRollImpl extends SatelliteCommandImpl implements Sa
 		double oldTargetRollAngle = targetRollAngle;
 		targetRollAngle = newTargetRollAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE, oldTargetRollAngle, targetRollAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE, oldTargetRollAngle, targetRollAngle));
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class SatelliteCommandRollImpl extends SatelliteCommandImpl implements Sa
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE:
 				return getTargetRollAngle();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -105,7 +105,7 @@ public class SatelliteCommandRollImpl extends SatelliteCommandImpl implements Sa
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE:
 				setTargetRollAngle((Double)newValue);
 				return;
 		}
@@ -120,7 +120,7 @@ public class SatelliteCommandRollImpl extends SatelliteCommandImpl implements Sa
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE:
 				setTargetRollAngle(TARGET_ROLL_ANGLE_EDEFAULT);
 				return;
 		}
@@ -135,7 +135,7 @@ public class SatelliteCommandRollImpl extends SatelliteCommandImpl implements Sa
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE:
 				return targetRollAngle != TARGET_ROLL_ANGLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

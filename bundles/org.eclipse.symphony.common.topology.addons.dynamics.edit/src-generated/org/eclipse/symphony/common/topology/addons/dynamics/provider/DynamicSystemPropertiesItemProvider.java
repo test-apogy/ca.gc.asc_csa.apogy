@@ -17,8 +17,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.addons.dynamics.DynamicSystemProperties;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFactory;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
 import org.eclipse.symphony.common.topology.provider.AggregateGroupNodeItemProvider;
 
 /**
@@ -66,8 +66,8 @@ public class DynamicSystemPropertiesItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS);
-			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS);
 		}
 		return childrenFeatures;
 	}
@@ -122,8 +122,8 @@ public class DynamicSystemPropertiesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DynamicSystemProperties.class)) {
-			case Symphony__CommonTopologyDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS:
-			case Symphony__CommonTopologyDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.DYNAMIC_SYSTEM_PROPERTIES__MATERIALS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -144,52 +144,52 @@ public class DynamicSystemPropertiesItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createPhysicalBody()));
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createPhysicalBody()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createDynamicSystemProperties()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createPhysicalBody()));
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createPhysicalBody()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createCylindricalConstraint()));
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createCylindricalConstraint()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createGearRatioConstraint()));
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createGearRatioConstraint()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createHingeConstraint()));
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createHingeConstraint()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createPrismaticConstraint()));
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createPrismaticConstraint()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createRPROConstraint()));
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createRPROConstraint()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createUniversalConstraint()));
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.DYNAMIC_SYSTEM_PROPERTIES__CONSTRAINTS,
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createUniversalConstraint()));
 	}
 
 	/**

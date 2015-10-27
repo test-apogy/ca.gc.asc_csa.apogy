@@ -23,9 +23,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.utils.MultiEObjectsAdapter;
 
 /**
@@ -91,7 +91,7 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentUIPackage.Literals.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER;
+		return Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER;
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 			earthSurfaceLocation = (EarthSurfaceLocation)eResolveProxy(oldEarthSurfaceLocation);
 			if (earthSurfaceLocation != oldEarthSurfaceLocation) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEarthOrbitEnvironmentUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION, oldEarthSurfaceLocation, earthSurfaceLocation));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION, oldEarthSurfaceLocation, earthSurfaceLocation));
 			}
 		}
 		return earthSurfaceLocation;
@@ -152,7 +152,7 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 		EarthSurfaceLocation oldEarthSurfaceLocation = earthSurfaceLocation;
 		earthSurfaceLocation = newEarthSurfaceLocation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION, oldEarthSurfaceLocation, earthSurfaceLocation));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION, oldEarthSurfaceLocation, earthSurfaceLocation));
 	}
 
 	/**
@@ -185,7 +185,7 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 		double oldTargetRadius = targetRadius;
 		targetRadius = newTargetRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS, oldTargetRadius, targetRadius));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS, oldTargetRadius, targetRadius));
 	}
 
 	@Override
@@ -201,10 +201,10 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION:
 				if (resolve) return getEarthSurfaceLocation();
 				return basicGetEarthSurfaceLocation();
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS:
 				return getTargetRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -218,10 +218,10 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION:
 				setEarthSurfaceLocation((EarthSurfaceLocation)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS:
 				setTargetRadius((Double)newValue);
 				return;
 		}
@@ -236,10 +236,10 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION:
 				setEarthSurfaceLocation((EarthSurfaceLocation)null);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS:
 				setTargetRadius(TARGET_RADIUS_EDEFAULT);
 				return;
 		}
@@ -254,9 +254,9 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__EARTH_SURFACE_LOCATION:
 				return earthSurfaceLocation != null;
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_SURFACE_LOCATION_WORLD_WIND_LAYER__TARGET_RADIUS:
 				return targetRadius != TARGET_RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -378,10 +378,10 @@ public class EarthSurfaceLocationWorldWindLayerImpl extends AbstractWorldWindLay
 						int featureId = msg.getFeatureID(EarthSurfaceLocation.class);
 						switch (featureId) 
 						{
-							case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__NAME:
+							case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__NAME:
 								if(isAutoUpdateEnabled()) updateRenderableLayer();
 							break;
-							case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
+							case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
 								
 								if(msg.getOldValue() instanceof GeographicCoordinates)
 								{

@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.AbstractShapeImageLayer;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.AbstractShapeImageLayer} object.
@@ -64,7 +64,7 @@ public class AbstractShapeImageLayerItemProvider extends ImageMapLayerItemProvid
 				 getResourceLocator(),
 				 getString("_UI_AbstractShapeImageLayer_shapedFilled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractShapeImageLayer_shapedFilled_feature", "_UI_AbstractShapeImageLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.ABSTRACT_SHAPE_IMAGE_LAYER__SHAPED_FILLED,
+				 Symphony__CoreEnvironmentPackage.Literals.ABSTRACT_SHAPE_IMAGE_LAYER__SHAPED_FILLED,
 				 true,
 				 false,
 				 false,
@@ -86,7 +86,7 @@ public class AbstractShapeImageLayerItemProvider extends ImageMapLayerItemProvid
 				 getResourceLocator(),
 				 getString("_UI_AbstractShapeImageLayer_color_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractShapeImageLayer_color_feature", "_UI_AbstractShapeImageLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.ABSTRACT_SHAPE_IMAGE_LAYER__COLOR,
+				 Symphony__CoreEnvironmentPackage.Literals.ABSTRACT_SHAPE_IMAGE_LAYER__COLOR,
 				 true,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class AbstractShapeImageLayerItemProvider extends ImageMapLayerItemProvid
 				 getResourceLocator(),
 				 getString("_UI_AbstractShapeImageLayer_requiredResolution_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractShapeImageLayer_requiredResolution_feature", "_UI_AbstractShapeImageLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.ABSTRACT_SHAPE_IMAGE_LAYER__REQUIRED_RESOLUTION,
+				 Symphony__CoreEnvironmentPackage.Literals.ABSTRACT_SHAPE_IMAGE_LAYER__REQUIRED_RESOLUTION,
 				 true,
 				 false,
 				 false,
@@ -144,9 +144,9 @@ public class AbstractShapeImageLayerItemProvider extends ImageMapLayerItemProvid
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractShapeImageLayer.class)) {
-			case SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__SHAPED_FILLED:
-			case SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__COLOR:
-			case SymphonyEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__REQUIRED_RESOLUTION:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__SHAPED_FILLED:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__COLOR:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_SHAPE_IMAGE_LAYER__REQUIRED_RESOLUTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -177,8 +177,8 @@ public class AbstractShapeImageLayerItemProvider extends ImageMapLayerItemProvid
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
 
 		if (qualify) {
 			return getString

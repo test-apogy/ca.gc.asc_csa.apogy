@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.environment.Star#getEquatorialCoordinates <em>Equatorial Coordinates</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getStar()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getStar()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface Star extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Magnitude</em>' attribute.
 	 * @see #setMagnitude(float)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getStar_Magnitude()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getStar_Magnitude()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -64,7 +64,7 @@ public interface Star extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Equatorial Coordinates</em>' reference.
 	 * @see #setEquatorialCoordinates(EquatorialCoordinates)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getStar_EquatorialCoordinates()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getStar_EquatorialCoordinates()
 	 * @model transient="true"
 	 * @generated
 	 */

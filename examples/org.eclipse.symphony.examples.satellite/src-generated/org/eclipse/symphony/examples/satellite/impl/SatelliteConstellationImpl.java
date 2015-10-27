@@ -32,12 +32,12 @@ import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
 import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
 import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
 import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
 import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPosition;
 import org.eclipse.symphony.examples.satellite.Activator;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.ImageOrder;
 import org.eclipse.symphony.examples.satellite.Satellite;
 import org.eclipse.symphony.examples.satellite.SatelliteCommand;
@@ -151,7 +151,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION;
+		return Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION;
 	}
 
 	/**
@@ -161,7 +161,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 	 */
 	public EList<Satellite> getSatellites() {
 		if (satellites == null) {
-			satellites = new EObjectResolvingEList<Satellite>(Satellite.class, this, EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__SATELLITES);
+			satellites = new EObjectResolvingEList<Satellite>(Satellite.class, this, Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__SATELLITES);
 		}
 		return satellites;
 	}
@@ -173,7 +173,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 	 */
 	public EList<GroundStation> getGroundStations() {
 		if (groundStations == null) {
-			groundStations = new EObjectResolvingEList<GroundStation>(GroundStation.class, this, EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__GROUND_STATIONS);
+			groundStations = new EObjectResolvingEList<GroundStation>(GroundStation.class, this, Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__GROUND_STATIONS);
 		}
 		return groundStations;
 	}
@@ -185,7 +185,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 	 */
 	public EList<ImageOrder> getPendingImageOrders() {
 		if (pendingImageOrders == null) {
-			pendingImageOrders = new EObjectResolvingEList<ImageOrder>(ImageOrder.class, this, EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS);
+			pendingImageOrders = new EObjectResolvingEList<ImageOrder>(ImageOrder.class, this, Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS);
 		}
 		return pendingImageOrders;
 	}
@@ -208,7 +208,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 		Date oldStartDate = startDate;
 		startDate = newStartDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__START_DATE, oldStartDate, startDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__START_DATE, oldStartDate, startDate));
 	}
 
 	/**
@@ -229,7 +229,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 		Date oldEndDate = endDate;
 		endDate = newEndDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__END_DATE, oldEndDate, endDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__END_DATE, oldEndDate, endDate));
 	}
 
 	/**
@@ -346,7 +346,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 	 */
 	public SortedSet<VisibilityPass> getGroundStationPasses(Satellite satellite, Date startDate, Date endDate, ElevationMask elevationMask) throws Exception 
 	{	
-		SpacecraftsVisibilitySet visibilitySet = SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createSpacecraftsVisibilitySet();
+		SpacecraftsVisibilitySet visibilitySet = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createSpacecraftsVisibilitySet();
 		visibilitySet.getGroundStations().addAll(getGroundStations());
 		visibilitySet.getOrbitModels().add(satellite.getOrbitModel());		
 		visibilitySet.setStartTime(startDate);
@@ -384,7 +384,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 	 */
 	private SatelliteCommandList serialPlan(List<ImageOrder> imageOrders, Date startDate, Date endDate)
 	{
-		SatelliteCommandList commandList = EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandList();
+		SatelliteCommandList commandList = Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteCommandList();
 		
 		List<ImageOrder> plannedOrders = new ArrayList<ImageOrder>();
 		List<ImageOrder> unPlannedOrders = new ArrayList<ImageOrder>();
@@ -393,7 +393,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 		SortedSet<ImageOrder> sortedImageOrders  = SatelliteUtils.INSTANCE.sortImageOrderByPriority(imageOrders);
 		
 		// Creates a target elevation mask of 85 degrees (09 deg - max roll angle).
-		ConstantElevationMask elevationMask = SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createConstantElevationMask();
+		ConstantElevationMask elevationMask = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createConstantElevationMask();
 		elevationMask.setConstantElevation(Math.toRadians(85.0));
 		
 		long start = System.currentTimeMillis();
@@ -520,7 +520,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 	 */
 	private SatelliteCommandList parallelPlan(List<ImageOrder> imageOrders, Date startDate, Date endDate)
 	{
-		SatelliteCommandList commandList = EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandList();
+		SatelliteCommandList commandList = Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteCommandList();
 		
 		List<ImageOrder> plannedOrders = new ArrayList<ImageOrder>();
 		List<ImageOrder> unPlannedOrders = new ArrayList<ImageOrder>();
@@ -529,7 +529,7 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 		SortedSet<ImageOrder> sortedImageOrders  = SatelliteUtils.INSTANCE.sortImageOrderByPriority(imageOrders);
 		
 		// Creates a target elevation mask of 85 degrees (09 deg - max roll angle).
-		ConstantElevationMask elevationMask = SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createConstantElevationMask();
+		ConstantElevationMask elevationMask = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createConstantElevationMask();
 		elevationMask.setConstantElevation(Math.toRadians(85.0));
 		
 		// Parallelisation 
@@ -709,15 +709,15 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__SATELLITES:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__SATELLITES:
 				return getSatellites();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__GROUND_STATIONS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__GROUND_STATIONS:
 				return getGroundStations();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS:
 				return getPendingImageOrders();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__START_DATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__START_DATE:
 				return getStartDate();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__END_DATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__END_DATE:
 				return getEndDate();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -732,22 +732,22 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__SATELLITES:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__SATELLITES:
 				getSatellites().clear();
 				getSatellites().addAll((Collection<? extends Satellite>)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__GROUND_STATIONS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__GROUND_STATIONS:
 				getGroundStations().clear();
 				getGroundStations().addAll((Collection<? extends GroundStation>)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS:
 				getPendingImageOrders().clear();
 				getPendingImageOrders().addAll((Collection<? extends ImageOrder>)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__START_DATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__START_DATE:
 				setStartDate((Date)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__END_DATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__END_DATE:
 				setEndDate((Date)newValue);
 				return;
 		}
@@ -762,19 +762,19 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__SATELLITES:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__SATELLITES:
 				getSatellites().clear();
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__GROUND_STATIONS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__GROUND_STATIONS:
 				getGroundStations().clear();
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS:
 				getPendingImageOrders().clear();
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__START_DATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__START_DATE:
 				setStartDate(START_DATE_EDEFAULT);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__END_DATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__END_DATE:
 				setEndDate(END_DATE_EDEFAULT);
 				return;
 		}
@@ -789,15 +789,15 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__SATELLITES:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__SATELLITES:
 				return satellites != null && !satellites.isEmpty();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__GROUND_STATIONS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__GROUND_STATIONS:
 				return groundStations != null && !groundStations.isEmpty();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS:
 				return pendingImageOrders != null && !pendingImageOrders.isEmpty();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__START_DATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__START_DATE:
 				return START_DATE_EDEFAULT == null ? startDate != null : !START_DATE_EDEFAULT.equals(startDate);
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION__END_DATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION__END_DATE:
 				return END_DATE_EDEFAULT == null ? endDate != null : !END_DATE_EDEFAULT.equals(endDate);
 		}
 		return super.eIsSet(featureID);
@@ -812,27 +812,27 @@ public class SatelliteConstellationImpl extends MinimalEObjectImpl.Container imp
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION___GET_SATELLITE__ORBITMODEL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION___GET_SATELLITE__ORBITMODEL:
 				return getSatellite((OrbitModel)arguments.get(0));
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION___GET_TARGET_PASSES__IMAGEORDER_DATE_DATE_ELEVATIONMASK:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION___GET_TARGET_PASSES__IMAGEORDER_DATE_DATE_ELEVATIONMASK:
 				try {
 					return getTargetPasses((ImageOrder)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (ElevationMask)arguments.get(3));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION___GET_GROUND_STATION_PASSES__SATELLITE_DATE_DATE_ELEVATIONMASK:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION___GET_GROUND_STATION_PASSES__SATELLITE_DATE_DATE_ELEVATIONMASK:
 				try {
 					return getGroundStationPasses((Satellite)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2), (ElevationMask)arguments.get(3));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION___PLAN__LIST_DATE_DATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION___PLAN__LIST_DATE_DATE:
 				return plan((List<ImageOrder>)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION___PLAN__DATE_DATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION___PLAN__DATE_DATE:
 				return plan((Date)arguments.get(0), (Date)arguments.get(1));
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION___PLAN:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION___PLAN:
 				return plan();
 		}
 		return super.eInvoke(operationID, arguments);

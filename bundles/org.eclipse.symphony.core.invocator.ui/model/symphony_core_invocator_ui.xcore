@@ -1,4 +1,6 @@
-@GenModel(prefix="EMFEcoreInvocatorUi", childCreationExtenders="true", modelName="EMFEcoreInvocatorUi")
+@GenModel(prefix="Symphony__CoreInvocatorUI",
+		  childCreationExtenders="true",
+		  modelName="Symphony__CoreInvocatorUI")
 @GenModel(modelDirectory="/org.eclipse.symphony.core.invocator.ui/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.core.invocator.ui.edit/src-generated")
 
@@ -10,7 +12,7 @@ import org.eclipse.symphony.core.invocator.AbstractTypeImplementation
 
 type CompoundCommand wraps org.eclipse.emf.common.command.CompoundCommand
 
-class EMFEcoreInvocatorUiFacade
+class EMFEcoreInvocatorUIFacade
 {
 	/*  
 	 * Copies the Initialization Data.

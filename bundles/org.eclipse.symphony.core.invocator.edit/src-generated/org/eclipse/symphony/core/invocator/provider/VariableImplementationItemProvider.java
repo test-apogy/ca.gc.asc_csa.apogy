@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableImplementation;
@@ -70,7 +70,7 @@ public class VariableImplementationItemProvider extends AbstractTypeImplementati
 				 getResourceLocator(),
 				 getString("_UI_VariableImplementation_variable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_VariableImplementation_variable_feature", "_UI_VariableImplementation_type"),
-				 EMFEcoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATION__VARIABLE,
+				 Symphony__CoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATION__VARIABLE,
 				 true,
 				 false,
 				 true,
@@ -93,7 +93,7 @@ public class VariableImplementationItemProvider extends AbstractTypeImplementati
          getResourceLocator(),
          getString("_UI_VariableImplementation_implementationClass_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_VariableImplementation_implementationClass_feature", "_UI_VariableImplementation_type"),
-         EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
+         Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
          true,
          false,
          true,
@@ -185,7 +185,7 @@ public class VariableImplementationItemProvider extends AbstractTypeImplementati
 		compoundCommand.append(new SetCommand(domain, owner, feature, value,
 				index));
 
-		if (feature == EMFEcoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATION__VARIABLE) {
+		if (feature == Symphony__CoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATION__VARIABLE) {
 			Variable variable = (Variable) value;
 
 			if (variable.getVariableType() != null) {
@@ -201,14 +201,14 @@ public class VariableImplementationItemProvider extends AbstractTypeImplementati
 							.append(new SetCommand(
 									domain,
 									owner,
-									EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS,
+									Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS,
 									implementations));
 
 					compoundCommand
 							.append(new AddCommand(
 									domain,
 									owner,
-									EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS,
+									Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__TYPE_MEMBER_IMPLEMENTATIONS,
 									implementations));
 				}
 			}

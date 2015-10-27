@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.SurfaceWorksite} object.
@@ -65,8 +65,8 @@ public class SurfaceWorksiteItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.SURFACE_WORKSITE__SKY);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.SURFACE_WORKSITE__MAPS_LIST);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.SURFACE_WORKSITE__SKY);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.SURFACE_WORKSITE__MAPS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -113,8 +113,8 @@ public class SurfaceWorksiteItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SurfaceWorksite.class)) {
-			case SymphonyEnvironmentPackage.SURFACE_WORKSITE__SKY:
-			case SymphonyEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
+			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__SKY:
+			case Symphony__CoreEnvironmentPackage.SURFACE_WORKSITE__MAPS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -135,18 +135,18 @@ public class SurfaceWorksiteItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.SURFACE_WORKSITE__SKY,
-				 SymphonyEnvironmentFactory.eINSTANCE.createSky()));
+				(Symphony__CoreEnvironmentPackage.Literals.SURFACE_WORKSITE__SKY,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSky()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.SURFACE_WORKSITE__SKY,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEarthSky()));
+				(Symphony__CoreEnvironmentPackage.Literals.SURFACE_WORKSITE__SKY,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSky()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.SURFACE_WORKSITE__MAPS_LIST,
-				 SymphonyEnvironmentFactory.eINSTANCE.createMapsList()));
+				(Symphony__CoreEnvironmentPackage.Literals.SURFACE_WORKSITE__MAPS_LIST,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createMapsList()));
 	}
 
 }

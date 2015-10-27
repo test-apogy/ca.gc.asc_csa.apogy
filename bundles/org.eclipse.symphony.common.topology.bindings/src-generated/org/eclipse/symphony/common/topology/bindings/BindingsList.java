@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Defines a list of Bindings.
  * <!-- end-model-doc -->
  *
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.BindingsList#getBindings <em>Bindings</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getBindingsList()
+ * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getBindingsList()
  * @model
  * @generated
  */
@@ -39,7 +38,7 @@ public interface BindingsList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bindings</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getBindingsList_Bindings()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getBindingsList_Bindings()
 	 * @model containment="true"
 	 * @generated
 	 */

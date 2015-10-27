@@ -7,7 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedSpacecraftState;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.impl.SpacecraftStateImpl;
 import org.orekit.propagation.SpacecraftState;
 
@@ -60,7 +60,7 @@ public class OreKitBackedSpacecraftStateImpl extends SpacecraftStateImpl impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.ORE_KIT_BACKED_SPACECRAFT_STATE;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.ORE_KIT_BACKED_SPACECRAFT_STATE;
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class OreKitBackedSpacecraftStateImpl extends SpacecraftStateImpl impleme
 		SpacecraftState oldOreKitSpacecraftState = oreKitSpacecraftState;
 		oreKitSpacecraftState = newOreKitSpacecraftState;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE, oldOreKitSpacecraftState, oreKitSpacecraftState));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE, oldOreKitSpacecraftState, oreKitSpacecraftState));
 	}
 
 	/**
@@ -92,7 +92,7 @@ public class OreKitBackedSpacecraftStateImpl extends SpacecraftStateImpl impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE:
 				return getOreKitSpacecraftState();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -106,7 +106,7 @@ public class OreKitBackedSpacecraftStateImpl extends SpacecraftStateImpl impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE:
 				setOreKitSpacecraftState((SpacecraftState)newValue);
 				return;
 		}
@@ -121,7 +121,7 @@ public class OreKitBackedSpacecraftStateImpl extends SpacecraftStateImpl impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE:
 				setOreKitSpacecraftState(ORE_KIT_SPACECRAFT_STATE_EDEFAULT);
 				return;
 		}
@@ -136,7 +136,7 @@ public class OreKitBackedSpacecraftStateImpl extends SpacecraftStateImpl impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_SPACECRAFT_STATE__ORE_KIT_SPACECRAFT_STATE:
 				return ORE_KIT_SPACECRAFT_STATE_EDEFAULT == null ? oreKitSpacecraftState != null : !ORE_KIT_SPACECRAFT_STATE_EDEFAULT.equals(oreKitSpacecraftState);
 		}
 		return super.eIsSet(featureID);

@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.examples.camera.PTUCamera;
 import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
 import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
-import org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverFactory;
-import org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage;
+import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverFactory;
+import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
 import org.eclipse.symphony.examples.rover.PowerSystem;
 import org.eclipse.symphony.examples.rover.Rover;
 
@@ -162,7 +162,7 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	protected EClass eStaticClass()
 	{
-		return EMFEcoreExampleRoverPackage.Literals.ROVER;
+		return Symphony__ExamplesRoverPackage.Literals.ROVER;
 	}
 
 	/**
@@ -177,7 +177,7 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 			roboticArm = (RoboticArm)eResolveProxy(oldRoboticArm);
 			if (roboticArm != oldRoboticArm) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreExampleRoverPackage.ROVER__ROBOTIC_ARM, oldRoboticArm, roboticArm));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__ExamplesRoverPackage.ROVER__ROBOTIC_ARM, oldRoboticArm, roboticArm));
 			}
 		}
 		return roboticArm;
@@ -203,7 +203,7 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 		RoboticArm oldRoboticArm = roboticArm;
 		roboticArm = newRoboticArm;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoverPackage.ROVER__ROBOTIC_ARM, oldRoboticArm, roboticArm));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.ROVER__ROBOTIC_ARM, oldRoboticArm, roboticArm));
 	}
 
 	/**
@@ -218,7 +218,7 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 			mobilePlatform = (MobilePlatform)eResolveProxy(oldMobilePlatform);
 			if (mobilePlatform != oldMobilePlatform) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreExampleRoverPackage.ROVER__MOBILE_PLATFORM, oldMobilePlatform, mobilePlatform));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__ExamplesRoverPackage.ROVER__MOBILE_PLATFORM, oldMobilePlatform, mobilePlatform));
 			}
 		}
 		return mobilePlatform;
@@ -244,7 +244,7 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 		MobilePlatform oldMobilePlatform = mobilePlatform;
 		mobilePlatform = newMobilePlatform;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoverPackage.ROVER__MOBILE_PLATFORM, oldMobilePlatform, mobilePlatform));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.ROVER__MOBILE_PLATFORM, oldMobilePlatform, mobilePlatform));
 	}
 
 	/**
@@ -258,7 +258,7 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 			armCamera = (PTUCamera)eResolveProxy(oldArmCamera);
 			if (armCamera != oldArmCamera) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreExampleRoverPackage.ROVER__ARM_CAMERA, oldArmCamera, armCamera));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__ExamplesRoverPackage.ROVER__ARM_CAMERA, oldArmCamera, armCamera));
 			}
 		}
 		return armCamera;
@@ -282,7 +282,7 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 		PTUCamera oldArmCamera = armCamera;
 		armCamera = newArmCamera;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoverPackage.ROVER__ARM_CAMERA, oldArmCamera, armCamera));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.ROVER__ARM_CAMERA, oldArmCamera, armCamera));
 	}
 
 	/**
@@ -296,7 +296,7 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 			centerCamera = (PTUCamera)eResolveProxy(oldCenterCamera);
 			if (centerCamera != oldCenterCamera) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreExampleRoverPackage.ROVER__CENTER_CAMERA, oldCenterCamera, centerCamera));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__ExamplesRoverPackage.ROVER__CENTER_CAMERA, oldCenterCamera, centerCamera));
 			}
 		}
 		return centerCamera;
@@ -320,7 +320,7 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 		PTUCamera oldCenterCamera = centerCamera;
 		centerCamera = newCenterCamera;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoverPackage.ROVER__CENTER_CAMERA, oldCenterCamera, centerCamera));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.ROVER__CENTER_CAMERA, oldCenterCamera, centerCamera));
 	}
 
 	/**
@@ -332,15 +332,15 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 	{
 		if (powerSystem == null)
 		{
-			PowerSystem newPowerSystem = EMFEcoreExampleRoverFactory.eINSTANCE.createPowerSystem();
+			PowerSystem newPowerSystem = Symphony__ExamplesRoverFactory.eINSTANCE.createPowerSystem();
 			
 			// Add six batteries
-			newPowerSystem.getBatteries().add(EMFEcoreExampleRoverFactory.eINSTANCE.createBattery());
-			newPowerSystem.getBatteries().add(EMFEcoreExampleRoverFactory.eINSTANCE.createBattery());
-			newPowerSystem.getBatteries().add(EMFEcoreExampleRoverFactory.eINSTANCE.createBattery());
-			newPowerSystem.getBatteries().add(EMFEcoreExampleRoverFactory.eINSTANCE.createBattery());
-			newPowerSystem.getBatteries().add(EMFEcoreExampleRoverFactory.eINSTANCE.createBattery());
-			newPowerSystem.getBatteries().add(EMFEcoreExampleRoverFactory.eINSTANCE.createBattery());
+			newPowerSystem.getBatteries().add(Symphony__ExamplesRoverFactory.eINSTANCE.createBattery());
+			newPowerSystem.getBatteries().add(Symphony__ExamplesRoverFactory.eINSTANCE.createBattery());
+			newPowerSystem.getBatteries().add(Symphony__ExamplesRoverFactory.eINSTANCE.createBattery());
+			newPowerSystem.getBatteries().add(Symphony__ExamplesRoverFactory.eINSTANCE.createBattery());
+			newPowerSystem.getBatteries().add(Symphony__ExamplesRoverFactory.eINSTANCE.createBattery());
+			newPowerSystem.getBatteries().add(Symphony__ExamplesRoverFactory.eINSTANCE.createBattery());
 			
 			// Set the active one to the first one
 			newPowerSystem.changeActiveBatteryTo(0);
@@ -360,7 +360,7 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 		PowerSystem oldPowerSystem = powerSystem;
 		powerSystem = newPowerSystem;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoverPackage.ROVER__POWER_SYSTEM, oldPowerSystem, newPowerSystem);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.ROVER__POWER_SYSTEM, oldPowerSystem, newPowerSystem);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -375,14 +375,14 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 		if (newPowerSystem != powerSystem) {
 			NotificationChain msgs = null;
 			if (powerSystem != null)
-				msgs = ((InternalEObject)powerSystem).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleRoverPackage.ROVER__POWER_SYSTEM, null, msgs);
+				msgs = ((InternalEObject)powerSystem).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesRoverPackage.ROVER__POWER_SYSTEM, null, msgs);
 			if (newPowerSystem != null)
-				msgs = ((InternalEObject)newPowerSystem).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleRoverPackage.ROVER__POWER_SYSTEM, null, msgs);
+				msgs = ((InternalEObject)newPowerSystem).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesRoverPackage.ROVER__POWER_SYSTEM, null, msgs);
 			msgs = basicSetPowerSystem(newPowerSystem, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoverPackage.ROVER__POWER_SYSTEM, newPowerSystem, newPowerSystem));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.ROVER__POWER_SYSTEM, newPowerSystem, newPowerSystem));
 	}
 
 	/**
@@ -437,7 +437,7 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoverPackage.ROVER__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.ROVER__INITIALIZED, oldInitialized, initialized));
 	}
 
 	/**
@@ -458,7 +458,7 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 		boolean oldDisposed = disposed;
 		disposed = newDisposed;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleRoverPackage.ROVER__DISPOSED, oldDisposed, disposed));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverPackage.ROVER__DISPOSED, oldDisposed, disposed));
 	}
 
 	/**
@@ -486,7 +486,7 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreExampleRoverPackage.ROVER__POWER_SYSTEM:
+			case Symphony__ExamplesRoverPackage.ROVER__POWER_SYSTEM:
 				return basicSetPowerSystem(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -559,27 +559,27 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleRoverPackage.ROVER__ROBOTIC_ARM:
+			case Symphony__ExamplesRoverPackage.ROVER__ROBOTIC_ARM:
 				if (resolve) return getRoboticArm();
 				return basicGetRoboticArm();
-			case EMFEcoreExampleRoverPackage.ROVER__MOBILE_PLATFORM:
+			case Symphony__ExamplesRoverPackage.ROVER__MOBILE_PLATFORM:
 				if (resolve) return getMobilePlatform();
 				return basicGetMobilePlatform();
-			case EMFEcoreExampleRoverPackage.ROVER__ARM_CAMERA:
+			case Symphony__ExamplesRoverPackage.ROVER__ARM_CAMERA:
 				if (resolve) return getArmCamera();
 				return basicGetArmCamera();
-			case EMFEcoreExampleRoverPackage.ROVER__CENTER_CAMERA:
+			case Symphony__ExamplesRoverPackage.ROVER__CENTER_CAMERA:
 				if (resolve) return getCenterCamera();
 				return basicGetCenterCamera();
-			case EMFEcoreExampleRoverPackage.ROVER__POWER_SYSTEM:
+			case Symphony__ExamplesRoverPackage.ROVER__POWER_SYSTEM:
 				return getPowerSystem();
-			case EMFEcoreExampleRoverPackage.ROVER__LINEAR_VELOCITY:
+			case Symphony__ExamplesRoverPackage.ROVER__LINEAR_VELOCITY:
 				return getLinearVelocity();
-			case EMFEcoreExampleRoverPackage.ROVER__ANGULAR_VELOCITY:
+			case Symphony__ExamplesRoverPackage.ROVER__ANGULAR_VELOCITY:
 				return getAngularVelocity();
-			case EMFEcoreExampleRoverPackage.ROVER__INITIALIZED:
+			case Symphony__ExamplesRoverPackage.ROVER__INITIALIZED:
 				return isInitialized();
-			case EMFEcoreExampleRoverPackage.ROVER__DISPOSED:
+			case Symphony__ExamplesRoverPackage.ROVER__DISPOSED:
 				return isDisposed();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -594,25 +594,25 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleRoverPackage.ROVER__ROBOTIC_ARM:
+			case Symphony__ExamplesRoverPackage.ROVER__ROBOTIC_ARM:
 				setRoboticArm((RoboticArm)newValue);
 				return;
-			case EMFEcoreExampleRoverPackage.ROVER__MOBILE_PLATFORM:
+			case Symphony__ExamplesRoverPackage.ROVER__MOBILE_PLATFORM:
 				setMobilePlatform((MobilePlatform)newValue);
 				return;
-			case EMFEcoreExampleRoverPackage.ROVER__ARM_CAMERA:
+			case Symphony__ExamplesRoverPackage.ROVER__ARM_CAMERA:
 				setArmCamera((PTUCamera)newValue);
 				return;
-			case EMFEcoreExampleRoverPackage.ROVER__CENTER_CAMERA:
+			case Symphony__ExamplesRoverPackage.ROVER__CENTER_CAMERA:
 				setCenterCamera((PTUCamera)newValue);
 				return;
-			case EMFEcoreExampleRoverPackage.ROVER__POWER_SYSTEM:
+			case Symphony__ExamplesRoverPackage.ROVER__POWER_SYSTEM:
 				setPowerSystem((PowerSystem)newValue);
 				return;
-			case EMFEcoreExampleRoverPackage.ROVER__INITIALIZED:
+			case Symphony__ExamplesRoverPackage.ROVER__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
-			case EMFEcoreExampleRoverPackage.ROVER__DISPOSED:
+			case Symphony__ExamplesRoverPackage.ROVER__DISPOSED:
 				setDisposed((Boolean)newValue);
 				return;
 		}
@@ -628,25 +628,25 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleRoverPackage.ROVER__ROBOTIC_ARM:
+			case Symphony__ExamplesRoverPackage.ROVER__ROBOTIC_ARM:
 				setRoboticArm((RoboticArm)null);
 				return;
-			case EMFEcoreExampleRoverPackage.ROVER__MOBILE_PLATFORM:
+			case Symphony__ExamplesRoverPackage.ROVER__MOBILE_PLATFORM:
 				setMobilePlatform((MobilePlatform)null);
 				return;
-			case EMFEcoreExampleRoverPackage.ROVER__ARM_CAMERA:
+			case Symphony__ExamplesRoverPackage.ROVER__ARM_CAMERA:
 				setArmCamera((PTUCamera)null);
 				return;
-			case EMFEcoreExampleRoverPackage.ROVER__CENTER_CAMERA:
+			case Symphony__ExamplesRoverPackage.ROVER__CENTER_CAMERA:
 				setCenterCamera((PTUCamera)null);
 				return;
-			case EMFEcoreExampleRoverPackage.ROVER__POWER_SYSTEM:
+			case Symphony__ExamplesRoverPackage.ROVER__POWER_SYSTEM:
 				setPowerSystem((PowerSystem)null);
 				return;
-			case EMFEcoreExampleRoverPackage.ROVER__INITIALIZED:
+			case Symphony__ExamplesRoverPackage.ROVER__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
-			case EMFEcoreExampleRoverPackage.ROVER__DISPOSED:
+			case Symphony__ExamplesRoverPackage.ROVER__DISPOSED:
 				setDisposed(DISPOSED_EDEFAULT);
 				return;
 		}
@@ -662,23 +662,23 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleRoverPackage.ROVER__ROBOTIC_ARM:
+			case Symphony__ExamplesRoverPackage.ROVER__ROBOTIC_ARM:
 				return roboticArm != null;
-			case EMFEcoreExampleRoverPackage.ROVER__MOBILE_PLATFORM:
+			case Symphony__ExamplesRoverPackage.ROVER__MOBILE_PLATFORM:
 				return mobilePlatform != null;
-			case EMFEcoreExampleRoverPackage.ROVER__ARM_CAMERA:
+			case Symphony__ExamplesRoverPackage.ROVER__ARM_CAMERA:
 				return armCamera != null;
-			case EMFEcoreExampleRoverPackage.ROVER__CENTER_CAMERA:
+			case Symphony__ExamplesRoverPackage.ROVER__CENTER_CAMERA:
 				return centerCamera != null;
-			case EMFEcoreExampleRoverPackage.ROVER__POWER_SYSTEM:
+			case Symphony__ExamplesRoverPackage.ROVER__POWER_SYSTEM:
 				return powerSystem != null;
-			case EMFEcoreExampleRoverPackage.ROVER__LINEAR_VELOCITY:
+			case Symphony__ExamplesRoverPackage.ROVER__LINEAR_VELOCITY:
 				return getLinearVelocity() != LINEAR_VELOCITY_EDEFAULT;
-			case EMFEcoreExampleRoverPackage.ROVER__ANGULAR_VELOCITY:
+			case Symphony__ExamplesRoverPackage.ROVER__ANGULAR_VELOCITY:
 				return getAngularVelocity() != ANGULAR_VELOCITY_EDEFAULT;
-			case EMFEcoreExampleRoverPackage.ROVER__INITIALIZED:
+			case Symphony__ExamplesRoverPackage.ROVER__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
-			case EMFEcoreExampleRoverPackage.ROVER__DISPOSED:
+			case Symphony__ExamplesRoverPackage.ROVER__DISPOSED:
 				return disposed != DISPOSED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -693,18 +693,18 @@ public abstract class RoverImpl extends MinimalEObjectImpl.Container implements 
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
 		switch (operationID) {
-			case EMFEcoreExampleRoverPackage.ROVER___INIT:
+			case Symphony__ExamplesRoverPackage.ROVER___INIT:
 				return init();
-			case EMFEcoreExampleRoverPackage.ROVER___CMD_LINEAR_VELOCITY__DOUBLE:
+			case Symphony__ExamplesRoverPackage.ROVER___CMD_LINEAR_VELOCITY__DOUBLE:
 				cmdLinearVelocity((Double)arguments.get(0));
 				return null;
-			case EMFEcoreExampleRoverPackage.ROVER___CMD_ANGULAR_VELOCITY__DOUBLE:
+			case Symphony__ExamplesRoverPackage.ROVER___CMD_ANGULAR_VELOCITY__DOUBLE:
 				cmdAngularVelocity((Double)arguments.get(0));
 				return null;
-			case EMFEcoreExampleRoverPackage.ROVER___CMD_VELOCITIES__DOUBLE_DOUBLE:
+			case Symphony__ExamplesRoverPackage.ROVER___CMD_VELOCITIES__DOUBLE_DOUBLE:
 				cmdVelocities((Double)arguments.get(0), (Double)arguments.get(1));
 				return null;
-			case EMFEcoreExampleRoverPackage.ROVER___DISPOSE:
+			case Symphony__ExamplesRoverPackage.ROVER___DISPOSE:
 				dispose();
 				return null;
 		}

@@ -32,7 +32,7 @@ import org.eclipse.symphony.core.invocator.impl.EMFEcoreInvocatorFacadeImpl;
  *   <li>{@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade#getActiveInvocatorSession <em>Active Invocator Session</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEMFEcoreInvocatorFacade()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEMFEcoreInvocatorFacade()
  * @model
  * @generated
  */
@@ -43,12 +43,11 @@ public interface EMFEcoreInvocatorFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Refers to the active invocator session.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Active Invocator Session</em>' reference.
 	 * @see #setActiveInvocatorSession(InvocatorSession)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEMFEcoreInvocatorFacade_ActiveInvocatorSession()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEMFEcoreInvocatorFacade_ActiveInvocatorSession()
 	 * @model
 	 * @generated
 	 */
@@ -380,7 +379,6 @@ public interface EMFEcoreInvocatorFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Loads the registered types.
 	 * @param session Reference to the session.
 	 * <!-- end-model-doc -->
@@ -393,7 +391,6 @@ public interface EMFEcoreInvocatorFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the list of all the {@link Type} contained in the specified {@link Environment}.
 	 * @environment Reference to the environment.
 	 * <!-- end-model-doc -->

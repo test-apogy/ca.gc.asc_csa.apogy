@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- *  Defines a Two-Line Elements definition.
+ * Defines a Two-Line Elements definition.
  * @see http://en.wikipedia.org/wiki/Two-line_element_set
  * <!-- end-model-doc -->
  *
@@ -40,7 +40,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.TLE#getSatelliteNumber <em>Satellite Number</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE()
  * @model
  * @generated
  */
@@ -59,7 +59,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Line1</em>' attribute.
 	 * @see #setLine1(String)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_Line1()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_Line1()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='TLE_RAW_DATA' notify='true'"
 	 * @generated
@@ -89,7 +89,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Line2</em>' attribute.
 	 * @see #setLine2(String)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_Line2()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_Line2()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='TLE_RAW_DATA' notify='true'"
 	 * @generated
@@ -117,7 +117,7 @@ public interface TLE extends EObject {
 	 * @return the value of the '<em>Ephemeris Type</em>' attribute.
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.EphemerisType
 	 * @see #setEphemerisType(EphemerisType)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_EphemerisType()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_EphemerisType()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true'"
 	 * @generated
@@ -144,7 +144,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Inclination</em>' attribute.
 	 * @see #setInclination(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_Inclination()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_Inclination()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' csa_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
@@ -170,7 +170,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mean Anomaly</em>' attribute.
 	 * @see #setMeanAnomaly(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_MeanAnomaly()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_MeanAnomaly()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' csa_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
@@ -196,7 +196,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mean Motion</em>' attribute.
 	 * @see #setMeanMotion(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_MeanMotion()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_MeanMotion()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' csa_units='rad/s' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
@@ -222,7 +222,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Revolution Per Day</em>' attribute.
 	 * @see #setRevolutionPerDay(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_RevolutionPerDay()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_RevolutionPerDay()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' csa_units='rev/day' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
@@ -248,7 +248,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mean Motion First Derivative</em>' attribute.
 	 * @see #setMeanMotionFirstDerivative(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_MeanMotionFirstDerivative()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_MeanMotionFirstDerivative()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' csa_units='rad/s\262' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
@@ -274,7 +274,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mean Motion Second Derivative</em>' attribute.
 	 * @see #setMeanMotionSecondDerivative(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_MeanMotionSecondDerivative()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_MeanMotionSecondDerivative()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' csa_units='rad/s\263' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
@@ -300,7 +300,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Argument Of Perigee</em>' attribute.
 	 * @see #setArgumentOfPerigee(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_ArgumentOfPerigee()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_ArgumentOfPerigee()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' csa_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
@@ -326,7 +326,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Right Ascention Of Ascending Node</em>' attribute.
 	 * @see #setRightAscentionOfAscendingNode(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_RightAscentionOfAscendingNode()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_RightAscentionOfAscendingNode()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' csa_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
@@ -352,7 +352,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Revolution Number At Epoch</em>' attribute.
 	 * @see #setRevolutionNumberAtEpoch(int)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_RevolutionNumberAtEpoch()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_RevolutionNumberAtEpoch()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
@@ -378,7 +378,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Satellite Number</em>' attribute.
 	 * @see #setSatelliteNumber(int)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_SatelliteNumber()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_SatelliteNumber()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -404,7 +404,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>BStar</em>' attribute.
 	 * @see #setBStar(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_BStar()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_BStar()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
@@ -434,7 +434,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Epoch</em>' attribute.
 	 * @see #setEpoch(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_Epoch()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_Epoch()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true'"
 	 * @generated
@@ -464,7 +464,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Eccentricity</em>' attribute.
 	 * @see #setEccentricity(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_Eccentricity()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_Eccentricity()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
@@ -490,7 +490,7 @@ public interface TLE extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Element Number</em>' attribute.
 	 * @see #setElementNumber(int)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getTLE_ElementNumber()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_ElementNumber()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true'"
 	 * @generated
@@ -511,7 +511,6 @@ public interface TLE extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Return the OreKit implementation backing this TLE.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" dataType="org.eclipse.symphony.core.environment.orbit.earth.OreKitTLE" unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception"

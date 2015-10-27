@@ -19,7 +19,7 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.ContextsList;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 
@@ -144,12 +144,12 @@ public class SourceDestinationContextsComposite extends Composite {
 		
 		ViewerSupport.bind(sourceContextViewer, EMFObservables.observeList(
 				contextsList,
-				EMFEcoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS),
+				Symphony__CoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS),
 				EMFProperties.value(Symphony__CommonEMFPackage.Literals.NAMED__NAME));
 
 		ViewerSupport.bind(destinationContextViewer, EMFObservables.observeList(
 				contextsList,
-				EMFEcoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS),
+				Symphony__CoreInvocatorPackage.Literals.CONTEXTS_LIST__CONTEXTS),
 				EMFProperties.value(Symphony__CommonEMFPackage.Literals.NAMED__NAME));
 
 		return bindingContext;

@@ -12,7 +12,6 @@ import org.jfree.experimental.chart.swt.ChartComposite;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Base class of all map tools.
  * <!-- end-model-doc -->
  *
@@ -23,7 +22,7 @@ import org.jfree.experimental.chart.swt.ChartComposite;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.MapTool#isActive <em>Active</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapTool()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapTool()
  * @model abstract="true"
  * @generated
  */
@@ -35,11 +34,11 @@ public interface MapTool extends MapAnnotation
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Whether or not the tool is active.
+	 * Whether or not the tool is active.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Active</em>' attribute.
 	 * @see #setActive(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapTool_Active()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapTool_Active()
 	 * @model default="true" unique="false"
 	 * @generated
 	 */
@@ -59,7 +58,6 @@ public interface MapTool extends MapAnnotation
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Method that is called to give access to the underlying ChartComposite and JFreeChart used to display the map.
 	 * @param composite The ChartComposite used to display the map.
 	 * @param chart The JFreeChart used to display the map.
@@ -73,7 +71,6 @@ public interface MapTool extends MapAnnotation
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Method that is called to dispose of the tool.
 	 * <!-- end-model-doc -->
 	 * @model

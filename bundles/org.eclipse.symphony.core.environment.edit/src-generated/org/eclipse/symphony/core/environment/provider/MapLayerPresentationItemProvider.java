@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.MapLayerPresentation;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.MapLayerPresentation} object.
@@ -125,7 +125,7 @@ public class MapLayerPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapLayerPresentation_visible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapLayerPresentation_visible_feature", "_UI_MapLayerPresentation_type"),
-				 SymphonyEnvironmentPackage.Literals.MAP_LAYER_PRESENTATION__VISIBLE,
+				 Symphony__CoreEnvironmentPackage.Literals.MAP_LAYER_PRESENTATION__VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -147,7 +147,7 @@ public class MapLayerPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapLayerPresentation_mapLayer_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapLayerPresentation_mapLayer_feature", "_UI_MapLayerPresentation_type"),
-				 SymphonyEnvironmentPackage.Literals.MAP_LAYER_PRESENTATION__MAP_LAYER,
+				 Symphony__CoreEnvironmentPackage.Literals.MAP_LAYER_PRESENTATION__MAP_LAYER,
 				 true,
 				 false,
 				 true,
@@ -206,9 +206,9 @@ public class MapLayerPresentationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MapLayerPresentation.class)) {
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__NAME:
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION:
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__NAME:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

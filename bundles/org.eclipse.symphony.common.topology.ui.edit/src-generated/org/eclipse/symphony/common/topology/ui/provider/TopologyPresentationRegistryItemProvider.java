@@ -20,9 +20,9 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry} object.
@@ -75,8 +75,8 @@ public class TopologyPresentationRegistryItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST);
-			childrenFeatures.add(TopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST);
+			childrenFeatures.add(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST);
+			childrenFeatures.add(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -129,8 +129,8 @@ public class TopologyPresentationRegistryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TopologyPresentationRegistry.class)) {
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
-			case TopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST:
+			case Symphony__CommonTopologyUIPackage.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -150,33 +150,33 @@ public class TopologyPresentationRegistryItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST,
-				 TopologyUIFactory.eINSTANCE.createTopologyPresentationSet()));
+				(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__TOPOLOGY_PRESENTATION_SET_LIST,
+				 Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyPresentationSet()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-				 TopologyUIFactory.eINSTANCE.createNodePresentation()));
+				(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+				 Symphony__CommonTopologyUIFactory.eINSTANCE.createNodePresentation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-				 TopologyUIFactory.eINSTANCE.createTransformNodePresentation()));
+				(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+				 Symphony__CommonTopologyUIFactory.eINSTANCE.createTransformNodePresentation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-				 TopologyUIFactory.eINSTANCE.createRotationNodePresentation()));
+				(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+				 Symphony__CommonTopologyUIFactory.eINSTANCE.createRotationNodePresentation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-				 TopologyUIFactory.eINSTANCE.createPositionNodePresentation()));
+				(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+				 Symphony__CommonTopologyUIFactory.eINSTANCE.createPositionNodePresentation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
-				 TopologyUIFactory.eINSTANCE.createURLNodePresentation()));
+				(Symphony__CommonTopologyUIPackage.Literals.TOPOLOGY_PRESENTATION_REGISTRY__NODE_PRESENTATION_LIST,
+				 Symphony__CommonTopologyUIFactory.eINSTANCE.createURLNodePresentation()));
 	}
 
 	/**

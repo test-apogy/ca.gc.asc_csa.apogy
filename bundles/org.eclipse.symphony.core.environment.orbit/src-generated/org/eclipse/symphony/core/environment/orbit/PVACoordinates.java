@@ -12,7 +12,6 @@ import org.eclipse.symphony.common.math.Tuple3d;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Defines the triplet of Position, Velocity, Acceleration.
  * <!-- end-model-doc -->
  *
@@ -26,7 +25,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.PVACoordinates#getAngularVelocity <em>Angular Velocity</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getPVACoordinates()
+ * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getPVACoordinates()
  * @model
  * @generated
  */
@@ -44,7 +43,7 @@ public interface PVACoordinates extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Position</em>' containment reference.
 	 * @see #setPosition(Tuple3d)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getPVACoordinates_Position()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getPVACoordinates_Position()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated
@@ -74,7 +73,7 @@ public interface PVACoordinates extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Velocity</em>' containment reference.
 	 * @see #setVelocity(Tuple3d)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getPVACoordinates_Velocity()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getPVACoordinates_Velocity()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m/s'"
 	 * @generated
@@ -104,7 +103,7 @@ public interface PVACoordinates extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Acceleration</em>' containment reference.
 	 * @see #setAcceleration(Tuple3d)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getPVACoordinates_Acceleration()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getPVACoordinates_Acceleration()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m/s\262'"
 	 * @generated
@@ -134,7 +133,7 @@ public interface PVACoordinates extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Angular Velocity</em>' containment reference.
 	 * @see #setAngularVelocity(Tuple3d)
-	 * @see org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage#getPVACoordinates_AngularVelocity()
+	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getPVACoordinates_AngularVelocity()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad/s'"
 	 * @generated

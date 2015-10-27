@@ -13,7 +13,6 @@ import org.eclipse.symphony.core.invocator.AbstractInitializationData;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Initialization Data representing the state of of a SatelliteConstellation.
  * <!-- end-model-doc -->
  *
@@ -26,7 +25,7 @@ import org.eclipse.symphony.core.invocator.AbstractInitializationData;
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData#getPendingImageOrders <em>Pending Image Orders</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteConstellationInitializationData()
+ * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteConstellationInitializationData()
  * @model
  * @generated
  */
@@ -42,7 +41,7 @@ public interface SatelliteConstellationInitializationData extends AbstractInitia
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Satellite Data</em>' containment reference list.
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteConstellationInitializationData_SatelliteData()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteConstellationInitializationData_SatelliteData()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' child='true' createChild='true'"
 	 * @generated
@@ -59,7 +58,7 @@ public interface SatelliteConstellationInitializationData extends AbstractInitia
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ground Stations</em>' containment reference list.
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteConstellationInitializationData_GroundStations()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteConstellationInitializationData_GroundStations()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' child='true' createChild='true'"
 	 * @generated
@@ -76,7 +75,7 @@ public interface SatelliteConstellationInitializationData extends AbstractInitia
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pending Image Orders</em>' containment reference list.
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteConstellationInitializationData_PendingImageOrders()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteConstellationInitializationData_PendingImageOrders()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' child='true' createChild='true'"
 	 * @generated

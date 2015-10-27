@@ -28,11 +28,11 @@ import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.bindings.BindingsSet;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
 import org.eclipse.symphony.core.Activator;
 import org.eclipse.symphony.core.ConnectionPointsList;
 import org.eclipse.symphony.core.SymphonyCoreFacade;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.TopologyRoot;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
@@ -40,7 +40,7 @@ import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
 import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
 import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 import org.eclipse.symphony.core.ui.natures.SymphonyProjectNature;
 
 /**
@@ -166,7 +166,7 @@ public class SymphonyCoreUiFacadeImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCoreUiPackage.Literals.SYMPHONY_CORE_UI_FACADE;
+		return Symphony__CoreUIPackage.Literals.SYMPHONY_CORE_UI_FACADE;
 	}
 
 	/**
@@ -336,24 +336,24 @@ public class SymphonyCoreUiFacadeImpl extends MinimalEObjectImpl.Container
 	 */
 	public SymphonySystem createSymphonySystem(
 			NewSymphonySystemSettings systemSettings) {
-		SymphonySystem symphonySystem = SymphonyCoreFactory.eINSTANCE
+		SymphonySystem symphonySystem = Symphony__CoreFactory.eINSTANCE
 				.createSymphonySystem();
 
 		// Adds an empty TopologyRoot
 		AggregateGroupNode rootNode = Symphony__CommonTopologyFactory.eINSTANCE
 				.createAggregateGroupNode();
-		TopologyRoot topologyRoot = SymphonyCoreFactory.eINSTANCE
+		TopologyRoot topologyRoot = Symphony__CoreFactory.eINSTANCE
 				.createTopologyRoot();
 		topologyRoot.setOriginNode(rootNode);
 		symphonySystem.setTopologyRoot(topologyRoot);
 
 		// Adds an empty BindingSet
-		BindingsSet bindingsSet = TopologyBindingsFactory.eINSTANCE
+		BindingsSet bindingsSet = Symphony__CommonTopologyBindingsFactory.eINSTANCE
 				.createBindingsSet();
 		symphonySystem.setBindingSet(bindingsSet);
 
 		// Adds an empty Connection Points List
-		ConnectionPointsList connectionPointsList = SymphonyCoreFactory.eINSTANCE
+		ConnectionPointsList connectionPointsList = Symphony__CoreFactory.eINSTANCE
 				.createConnectionPointsList();
 		symphonySystem.setConnectionPointsList(connectionPointsList);
 
@@ -367,13 +367,13 @@ public class SymphonyCoreUiFacadeImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX:
 				return getDefaultSymphonyProjectNamePrefix();
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME:
 				return getDefaultSymphonySessionFilename();
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION:
 				return getDefaultSymphonySessionFilenameExtension();
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME:
 				return getDefaultSymphonySessionFolderName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -386,13 +386,13 @@ public class SymphonyCoreUiFacadeImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX:
 				return DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX_EDEFAULT == null ? defaultSymphonyProjectNamePrefix != null : !DEFAULT_SYMPHONY_PROJECT_NAME_PREFIX_EDEFAULT.equals(defaultSymphonyProjectNamePrefix);
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME:
 				return DEFAULT_SYMPHONY_SESSION_FILENAME_EDEFAULT == null ? defaultSymphonySessionFilename != null : !DEFAULT_SYMPHONY_SESSION_FILENAME_EDEFAULT.equals(defaultSymphonySessionFilename);
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION:
 				return DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION_EDEFAULT == null ? defaultSymphonySessionFilenameExtension != null : !DEFAULT_SYMPHONY_SESSION_FILENAME_EXTENSION_EDEFAULT.equals(defaultSymphonySessionFilenameExtension);
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE__DEFAULT_SYMPHONY_SESSION_FOLDER_NAME:
 				return DEFAULT_SYMPHONY_SESSION_FOLDER_NAME_EDEFAULT == null ? defaultSymphonySessionFolderName != null : !DEFAULT_SYMPHONY_SESSION_FOLDER_NAME_EDEFAULT.equals(defaultSymphonySessionFolderName);
 		}
 		return super.eIsSet(featureID);
@@ -406,22 +406,22 @@ public class SymphonyCoreUiFacadeImpl extends MinimalEObjectImpl.Container
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_PROJECT__NEWSYMPHONYPROJECTSETTINGS:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_PROJECT__NEWSYMPHONYPROJECTSETTINGS:
 				return createSymphonyProject((NewSymphonyProjectSettings)arguments.get(0));
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FOLDER__NEWSYMPHONYPROJECTSETTINGS:
 				return createSymphonySessionFolder((NewSymphonyProjectSettings)arguments.get(0));
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION__NEWSYMPHONYSESSIONSETTINGS:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION__NEWSYMPHONYSESSIONSETTINGS:
 				return createSymphonySession((NewSymphonySessionSettings)arguments.get(0));
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SESSION_FILE__ICONTAINER_STRING_INVOCATORSESSION:
 				try {
 					return createSymphonySessionFile((IContainer)arguments.get(0), (String)arguments.get(1), (InvocatorSession)arguments.get(2));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___GET_SYMPHONY_SESSION_FILE__ICONTAINER_STRING:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE___GET_SYMPHONY_SESSION_FILE__ICONTAINER_STRING:
 				return getSymphonySessionFile((IContainer)arguments.get(0), (String)arguments.get(1));
-			case SymphonyCoreUiPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS:
+			case Symphony__CoreUIPackage.SYMPHONY_CORE_UI_FACADE___CREATE_SYMPHONY_SYSTEM__NEWSYMPHONYSYSTEMSETTINGS:
 				return createSymphonySystem((NewSymphonySystemSettings)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

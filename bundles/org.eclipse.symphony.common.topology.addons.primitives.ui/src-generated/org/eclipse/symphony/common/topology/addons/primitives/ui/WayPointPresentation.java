@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage#getWayPointPresentation()
+ * @see org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage#getWayPointPresentation()
  * @model
  * @generated
  */

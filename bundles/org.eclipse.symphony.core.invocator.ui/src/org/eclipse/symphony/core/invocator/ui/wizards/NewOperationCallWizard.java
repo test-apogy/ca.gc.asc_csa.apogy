@@ -7,8 +7,8 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.symphony.core.invocator.OperationCallsList;
@@ -131,7 +131,7 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 			AddCommand command = new AddCommand(
 					editingDomain,
 					operationCallsList,
-					EMFEcoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
+					Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
 					getOperationCall());
 			editingDomain.getCommandStack().execute(command);			
 		}
@@ -157,7 +157,7 @@ public class NewOperationCallWizard extends Wizard implements INewWizard {
 	 */
 	protected OperationCall getOperationCall(){
 		if (operationCall == null){		
-			operationCall = EMFEcoreInvocatorFactory.eINSTANCE.createOperationCall();
+			operationCall = Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCall();
 			operationCall.setName("New Operation Call");
 		}
 		return operationCall;

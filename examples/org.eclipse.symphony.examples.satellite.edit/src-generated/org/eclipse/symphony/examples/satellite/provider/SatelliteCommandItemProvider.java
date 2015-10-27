@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.SatelliteCommand;
 
 /**
@@ -79,7 +79,7 @@ public class SatelliteCommandItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SatelliteCommand_satellite_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SatelliteCommand_satellite_feature", "_UI_SatelliteCommand_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.SATELLITE_COMMAND__SATELLITE,
+				 Symphony__ExamplesSatellitePackage.Literals.SATELLITE_COMMAND__SATELLITE,
 				 true,
 				 false,
 				 true,
@@ -101,7 +101,7 @@ public class SatelliteCommandItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SatelliteCommand_commandStartTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SatelliteCommand_commandStartTime_feature", "_UI_SatelliteCommand_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.SATELLITE_COMMAND__COMMAND_START_TIME,
+				 Symphony__ExamplesSatellitePackage.Literals.SATELLITE_COMMAND__COMMAND_START_TIME,
 				 true,
 				 false,
 				 false,
@@ -149,7 +149,7 @@ public class SatelliteCommandItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SatelliteCommand.class)) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND__COMMAND_START_TIME:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND__COMMAND_START_TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

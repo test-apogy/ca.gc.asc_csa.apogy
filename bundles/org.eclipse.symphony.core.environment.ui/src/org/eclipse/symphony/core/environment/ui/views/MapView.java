@@ -24,7 +24,7 @@ import org.eclipse.symphony.core.environment.ui.actions.UpdateMapAction;
 import org.eclipse.symphony.core.environment.ui.actions.ZoomFitMapAction;
 import org.eclipse.symphony.core.environment.ui.composites.MapComposite;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
@@ -280,7 +280,7 @@ public class MapView extends AbstractView
 					{
 						int featureId = msg.getFeatureID(EMFEcoreInvocatorFacade.class);
 						
-						if(featureId == EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
+						if(featureId == Symphony__CoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION)
 						{
 							// Tries to update the MapViewConfiguration being displayed.
 							setMapViewConfiguration(EnvironmentUiFacade.INSTANCE.getActiveMapViewConfiguration(mapViewConfigurationId));

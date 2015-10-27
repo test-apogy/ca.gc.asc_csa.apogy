@@ -21,7 +21,7 @@ import org.eclipse.symphony.core.FeatureOfInterestList;
  *   <li>{@link org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer#getFeatures <em>Features</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getFeaturesOfInterestMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getFeaturesOfInterestMapLayer()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface FeaturesOfInterestMapLayer extends AbstractMapLayer, Rectangula
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Features</em>' containment reference.
 	 * @see #setFeatures(FeatureOfInterestList)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getFeaturesOfInterestMapLayer_Features()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getFeaturesOfInterestMapLayer_Features()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

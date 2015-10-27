@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.SatelliteCommandRoll;
 
 /**
@@ -64,7 +64,7 @@ public class SatelliteCommandRollItemProvider extends SatelliteCommandItemProvid
 				 getResourceLocator(),
 				 getString("_UI_SatelliteCommandRoll_targetRollAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SatelliteCommandRoll_targetRollAngle_feature", "_UI_SatelliteCommandRoll_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE,
+				 Symphony__ExamplesSatellitePackage.Literals.SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -112,7 +112,7 @@ public class SatelliteCommandRollItemProvider extends SatelliteCommandItemProvid
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SatelliteCommandRoll.class)) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

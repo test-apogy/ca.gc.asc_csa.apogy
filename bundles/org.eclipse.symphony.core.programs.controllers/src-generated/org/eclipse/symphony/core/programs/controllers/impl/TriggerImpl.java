@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.OperationCallControllerBinding;
 import org.eclipse.symphony.core.programs.controllers.Trigger;
 
@@ -88,7 +88,7 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreControllersPackage.Literals.TRIGGER;
+		return Symphony__CoreProgramsControllersPackage.Literals.TRIGGER;
 	}
 
   /**
@@ -109,7 +109,7 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreControllersPackage.TRIGGER__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.TRIGGER__NAME, oldName, name));
 	}
 
 		/**
@@ -130,7 +130,7 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreControllersPackage.TRIGGER__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.TRIGGER__DESCRIPTION, oldDescription, description));
 	}
 
 		/**
@@ -140,7 +140,7 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
 	 */
   public OperationCallControllerBinding getOperationCallControllerBinding()
   {
-		if (eContainerFeatureID() != EMFEcoreControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING) return null;
+		if (eContainerFeatureID() != Symphony__CoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING) return null;
 		return (OperationCallControllerBinding)eContainer();
 	}
 
@@ -151,7 +151,7 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
 	 */
   public OperationCallControllerBinding basicGetOperationCallControllerBinding()
   {
-		if (eContainerFeatureID() != EMFEcoreControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING) return null;
+		if (eContainerFeatureID() != Symphony__CoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING) return null;
 		return (OperationCallControllerBinding)eInternalContainer();
 	}
 
@@ -162,7 +162,7 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
 	 */
   public NotificationChain basicSetOperationCallControllerBinding(OperationCallControllerBinding newOperationCallControllerBinding, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newOperationCallControllerBinding, EMFEcoreControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOperationCallControllerBinding, Symphony__CoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING, msgs);
 		return msgs;
 	}
 
@@ -173,19 +173,19 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
 	 */
   public void setOperationCallControllerBinding(OperationCallControllerBinding newOperationCallControllerBinding)
   {
-		if (newOperationCallControllerBinding != eInternalContainer() || (eContainerFeatureID() != EMFEcoreControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING && newOperationCallControllerBinding != null)) {
+		if (newOperationCallControllerBinding != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING && newOperationCallControllerBinding != null)) {
 			if (EcoreUtil.isAncestor(this, newOperationCallControllerBinding))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOperationCallControllerBinding != null)
-				msgs = ((InternalEObject)newOperationCallControllerBinding).eInverseAdd(this, EMFEcoreControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER, OperationCallControllerBinding.class, msgs);
+				msgs = ((InternalEObject)newOperationCallControllerBinding).eInverseAdd(this, Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER, OperationCallControllerBinding.class, msgs);
 			msgs = basicSetOperationCallControllerBinding(newOperationCallControllerBinding, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING, newOperationCallControllerBinding, newOperationCallControllerBinding));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING, newOperationCallControllerBinding, newOperationCallControllerBinding));
 	}
 
   /**
@@ -197,7 +197,7 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOperationCallControllerBinding((OperationCallControllerBinding)otherEnd, msgs);
@@ -214,7 +214,7 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING:
 				return basicSetOperationCallControllerBinding(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -229,8 +229,8 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER, OperationCallControllerBinding.class, msgs);
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreProgramsControllersPackage.OPERATION_CALL_CONTROLLER_BINDING__TRIGGER, OperationCallControllerBinding.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -244,11 +244,11 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.TRIGGER__NAME:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__NAME:
 				return getName();
-			case EMFEcoreControllersPackage.TRIGGER__DESCRIPTION:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__DESCRIPTION:
 				return getDescription();
-			case EMFEcoreControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING:
 				if (resolve) return getOperationCallControllerBinding();
 				return basicGetOperationCallControllerBinding();
 		}
@@ -264,13 +264,13 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.TRIGGER__NAME:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__NAME:
 				setName((String)newValue);
 				return;
-			case EMFEcoreControllersPackage.TRIGGER__DESCRIPTION:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case EMFEcoreControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING:
 				setOperationCallControllerBinding((OperationCallControllerBinding)newValue);
 				return;
 		}
@@ -286,13 +286,13 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.TRIGGER__NAME:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EMFEcoreControllersPackage.TRIGGER__DESCRIPTION:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case EMFEcoreControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING:
 				setOperationCallControllerBinding((OperationCallControllerBinding)null);
 				return;
 		}
@@ -308,11 +308,11 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.TRIGGER__NAME:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EMFEcoreControllersPackage.TRIGGER__DESCRIPTION:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case EMFEcoreControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING:
+			case Symphony__CoreProgramsControllersPackage.TRIGGER__OPERATION_CALL_CONTROLLER_BINDING:
 				return basicGetOperationCallControllerBinding() != null;
 		}
 		return super.eIsSet(featureID);
@@ -327,7 +327,7 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreControllersPackage.TRIGGER__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreProgramsControllersPackage.TRIGGER__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -343,7 +343,7 @@ public abstract class TriggerImpl extends MinimalEObjectImpl.Container implement
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return EMFEcoreControllersPackage.TRIGGER__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreProgramsControllersPackage.TRIGGER__DESCRIPTION;
 				default: return -1;
 			}
 		}

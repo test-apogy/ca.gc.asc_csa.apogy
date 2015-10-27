@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.symphony.examples.antenna.symphony.edit;singleton:=true
 Bundle-Version: 0.5.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: org.eclipse.symphony.examples.antenna.symphony.provider.SymphonyExampleAntennaEditPlugin$Implementation
+Bundle-Activator: org.eclipse.symphony.examples.antenna.symphony.provider.Symphony__ExamplesAntennaSymphonyEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

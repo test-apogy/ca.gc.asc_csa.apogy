@@ -21,7 +21,7 @@ package org.eclipse.symphony.common.topology.addons.dynamics;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.CylindricalConstraint#getLinearCurrentState <em>Linear Current State</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCylindricalConstraint()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getCylindricalConstraint()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface CylindricalConstraint extends AbstractConstraint {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Angular Current State</em>' containment reference.
 	 * @see #setAngularCurrentState(ConstraintState)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCylindricalConstraint_AngularCurrentState()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getCylindricalConstraint_AngularCurrentState()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface CylindricalConstraint extends AbstractConstraint {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Linear Current State</em>' containment reference.
 	 * @see #setLinearCurrentState(ConstraintState)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getCylindricalConstraint_LinearCurrentState()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getCylindricalConstraint_LinearCurrentState()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

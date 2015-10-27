@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.core.programs.controllers"
-            class="org.eclipse.symphony.core.programs.controllers.provider.EMFEcoreControllersItemProviderAdapterFactory"
+            class="org.eclipse.symphony.core.programs.controllers.provider.Symphony__CoreProgramsControllersItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -20,9 +20,10 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_core_programs_controllers -->
       <extender
             uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.core.programs.controllers.provider.EMFEcoreControllersItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+            class="org.eclipse.symphony.core.programs.controllers.provider.Symphony__CoreProgramsControllersItemProviderAdapterFactory$Symphony__CoreInvocatorChildCreationExtender"/>
    </extension>
 
 </plugin>

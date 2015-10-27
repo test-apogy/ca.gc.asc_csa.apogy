@@ -12,11 +12,11 @@ import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
 import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFacade;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.ConnectionPoint;
 import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.TopologyRoot;
@@ -54,7 +54,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 		 * Map the referred Type and the SymphonySystemInstance. The instance if use in runtime.
 		 */
 		SymphonySystem symphonySystem = (SymphonySystem) typeImplementation.getHandlingType();
-		SymphonySystem symphonySystemInstance = SymphonyCoreFactory.eINSTANCE.createSymphonySystem();
+		SymphonySystem symphonySystemInstance = Symphony__CoreFactory.eINSTANCE.createSymphonySystem();
 
 		// Binds the SymphonySystemApiAdapter with its copy of the SymphonySystem instance.
 		symphonySystemApiAdapter.setSymphonySystem(symphonySystemInstance);
@@ -184,7 +184,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 							.getCopy();
 
 					// Creates a link
-					AssemblyLink linkCopy = SymphonyCoreFactory.eINSTANCE
+					AssemblyLink linkCopy = Symphony__CoreFactory.eINSTANCE
 							.createAssemblyLink();
 					if (linkSuffix != null)
 						linkCopy.setName(link.getName() + linkSuffix);
@@ -219,7 +219,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 					// Adds the link copy to the destination Symphony System.
 					if (initializer.getCopy().getAssemblyLinksList() == null)
 						initializer.getCopy().setAssemblyLinksList(
-								SymphonyCoreFactory.eINSTANCE
+								Symphony__CoreFactory.eINSTANCE
 										.createAssemblyLinksList());
 					initializer.getCopy().getAssemblyLinksList()
 							.getAssemblyLinks().add(linkCopy);
@@ -268,7 +268,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 
 			// Copies the topology
 			if (copy.getTopologyRoot() == null)
-				copy.setTopologyRoot(SymphonyCoreFactory.eINSTANCE
+				copy.setTopologyRoot(Symphony__CoreFactory.eINSTANCE
 						.createTopologyRoot());
 			Map<Node, Node> nodesMap = copyTopology(original.getTopologyRoot(),
 					copy.getTopologyRoot());
@@ -276,7 +276,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 
 			// Copies the Connection Points.
 			if (copy.getConnectionPointsList() == null)
-				copy.setConnectionPointsList(SymphonyCoreFactory.eINSTANCE
+				copy.setConnectionPointsList(Symphony__CoreFactory.eINSTANCE
 						.createConnectionPointsList());
 			
 			// Map<ConnectionPoint, ConnectionPoint> pointsMap = copyConnectionPoints(original, copy, originalToCopyNodesMap, suffix);
@@ -286,7 +286,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 			// Copies Bindings
 			if (copy.getBindingSet() == null)
 			{
-				copy.setBindingSet(TopologyBindingsFactory.eINSTANCE.createBindingsSet());
+				copy.setBindingSet(Symphony__CommonTopologyBindingsFactory.eINSTANCE.createBindingsSet());
 			}
 			
 			// Copies the Pose Provider
@@ -458,7 +458,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 			if (source.getConnectionPointsList() != null) {
 				// Ensure a list of connection points is present in the target
 				if (target.getConnectionPointsList() == null)
-					target.setConnectionPointsList(SymphonyCoreFactory.eINSTANCE
+					target.setConnectionPointsList(Symphony__CoreFactory.eINSTANCE
 							.createConnectionPointsList());
 
 				for (ConnectionPoint connectionPoint : source
@@ -511,7 +511,7 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 				// Ensure targets has a BindingSet
 				if (target.getBindingSet() == null)
 				{
-					target.setBindingSet(TopologyBindingsFactory.eINSTANCE.createBindingsSet());
+					target.setBindingSet(Symphony__CommonTopologyBindingsFactory.eINSTANCE.createBindingsSet());
 				}
 				
 				for (AbstractTopologyBinding binding : source.getBindingSet().getBindingsList().getBindings()) 
@@ -532,6 +532,6 @@ public class SymphonyInvocatorDelegate extends DefaultInvocatorDelegate {
 	@Override
 	public TypeApiAdapter newDefaultTypeApiAdapter() 
 	{
-		return SymphonyCoreFactory.eINSTANCE.createSymphonySystemApiAdapter();
+		return Symphony__CoreFactory.eINSTANCE.createSymphonySystemApiAdapter();
 	}
 }

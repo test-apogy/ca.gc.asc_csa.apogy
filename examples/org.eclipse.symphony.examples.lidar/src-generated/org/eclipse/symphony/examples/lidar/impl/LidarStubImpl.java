@@ -8,7 +8,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.lidar.Activator;
-import org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage;
+import org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage;
 import org.eclipse.symphony.examples.lidar.LidarStub;
 
 /**
@@ -43,7 +43,7 @@ public class LidarStubImpl extends LidarImpl implements LidarStub
 	@Override
 	protected EClass eStaticClass()
 	{
-		return EMFEcoreExampleLidarPackage.Literals.LIDAR_STUB;
+		return Symphony__ExamplesLidarPackage.Literals.LIDAR_STUB;
 	}
 
 	/*

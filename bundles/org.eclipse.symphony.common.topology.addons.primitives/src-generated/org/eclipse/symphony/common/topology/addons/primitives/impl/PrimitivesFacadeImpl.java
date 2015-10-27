@@ -21,8 +21,8 @@ import org.eclipse.symphony.common.topology.addons.primitives.DirectionalLight;
 import org.eclipse.symphony.common.topology.addons.primitives.Plane;
 import org.eclipse.symphony.common.topology.addons.primitives.PointLight;
 import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFacade;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesFactory;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesFactory;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.SpotLight;
 import org.eclipse.symphony.common.topology.addons.primitives.Vector;
 
@@ -61,7 +61,7 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PrimitivesPackage.Literals.PRIMITIVES_FACADE;
+		return Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.PRIMITIVES_FACADE;
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	public Vector createVector(Vector vector) {
-		Vector result = PrimitivesFactory.eINSTANCE.createVector();
+		Vector result = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createVector();
 
 		result.setXRotation(vector.getXRotation());
 		result.setYRotation(vector.getYRotation());
@@ -88,7 +88,7 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	public Vector createVector(Point3d p0, Point3d p1) {
-		Vector result = PrimitivesFactory.eINSTANCE.createVector();
+		Vector result = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createVector();
 
 		double length = p0.distance(p1);
 		result.setLength(length);
@@ -114,7 +114,7 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	public Vector createVector(double rotationX, double rotationY, double rotationZ, double length) {
-		Vector result = PrimitivesFactory.eINSTANCE.createVector();
+		Vector result = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createVector();
 
 		result.setLength(length);
 		result.setXRotation(rotationX);
@@ -135,7 +135,7 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 		Tuple3d v0Tuple = MathFacade.INSTANCE.createTuple3d(v0);
 		Tuple3d v1Tuple = MathFacade.INSTANCE.createTuple3d(v1);
 
-		Plane plane = PrimitivesFactory.eINSTANCE.createPlane();
+		Plane plane = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPlane();
 		plane.setV0(v0Tuple);
 		plane.setV1(v1Tuple);
 		plane.setWidth(width);
@@ -151,7 +151,7 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	public AmbientLight createAmbientLight(Tuple3d color) {
-		AmbientLight light = PrimitivesFactory.eINSTANCE.createAmbientLight();
+		AmbientLight light = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createAmbientLight();
 		light.setColor(color);
 
 		return light;
@@ -164,7 +164,7 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	public AmbientLight createAmbientLight(boolean lightOn, Tuple3d color) {
-		AmbientLight light = PrimitivesFactory.eINSTANCE.createAmbientLight();
+		AmbientLight light = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createAmbientLight();
 
 		light.setEnabled(lightOn);
 		light.setColor(color);
@@ -180,7 +180,7 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public DirectionalLight createDirectionalLight(boolean lightOn,
 			Tuple3d color, Tuple3d direction) {
-		DirectionalLight light = PrimitivesFactory.eINSTANCE
+		DirectionalLight light = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE
 				.createDirectionalLight();
 
 		light.setEnabled(lightOn);
@@ -197,7 +197,7 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	public PointLight createPointLight(Tuple3d color, Tuple3d position) {
-		PointLight light = PrimitivesFactory.eINSTANCE.createPointLight();
+		PointLight light = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPointLight();
 		light.setColor(color);
 		light.setPosition(position);
 
@@ -212,7 +212,7 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public DirectionalLight createDirectionalLight(Tuple3d color,
 			Tuple3d direction) {
-		DirectionalLight light = PrimitivesFactory.eINSTANCE
+		DirectionalLight light = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE
 				.createDirectionalLight();
 		light.setColor(color);
 		light.setDirection(direction);
@@ -227,7 +227,7 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	public PointLight createPointLight(Tuple3d position) {
-		PointLight light = PrimitivesFactory.eINSTANCE.createPointLight();
+		PointLight light = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPointLight();
 		light.setPosition(position);
 
 		return light;
@@ -240,7 +240,7 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	public PointLight createPointLight(boolean lightOn, Tuple3d color, Tuple3d position, Tuple3d attenuation) {
-		PointLight light = PrimitivesFactory.eINSTANCE.createPointLight();
+		PointLight light = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPointLight();
 
 		light.setEnabled(lightOn);
 		light.setColor(color);
@@ -257,7 +257,7 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	public PointLight createPointLight(Tuple3d color, Tuple3d position,	Tuple3d attenuation) {
-		PointLight light = PrimitivesFactory.eINSTANCE.createPointLight();
+		PointLight light = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPointLight();
 
 		light.setColor(color);
 		light.setPosition(position);
@@ -275,7 +275,7 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 	public SpotLight createSpotLight(boolean lightOn, Tuple3d color,
 									 Tuple3d position, Tuple3d attenuation, Tuple3d direction,
 									 float spreadAngle, float concentration) {
-		SpotLight light = PrimitivesFactory.eINSTANCE.createSpotLight();
+		SpotLight light = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpotLight();
 
 		light.setEnabled(lightOn);
 		light.setColor(color);
@@ -297,7 +297,7 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 	public SpotLight createSpotLight(Tuple3d color, Tuple3d position,
 									 Tuple3d attenuation, Tuple3d direction, float spreadAngle,
 									 float concentration) {
-		SpotLight light = PrimitivesFactory.eINSTANCE.createSpotLight();
+		SpotLight light = Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createSpotLight();
 
 		light.setColor(color);
 		light.setPosition(position);
@@ -317,33 +317,33 @@ public class PrimitivesFacadeImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case PrimitivesPackage.PRIMITIVES_FACADE___CREATE_VECTOR__VECTOR:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE___CREATE_VECTOR__VECTOR:
 				return createVector((Vector)arguments.get(0));
-			case PrimitivesPackage.PRIMITIVES_FACADE___CREATE_VECTOR__POINT3D_POINT3D:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE___CREATE_VECTOR__POINT3D_POINT3D:
 				return createVector((Point3d)arguments.get(0), (Point3d)arguments.get(1));
-			case PrimitivesPackage.PRIMITIVES_FACADE___CREATE_VECTOR__DOUBLE_DOUBLE_DOUBLE_DOUBLE:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE___CREATE_VECTOR__DOUBLE_DOUBLE_DOUBLE_DOUBLE:
 				return createVector((Double)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3));
-			case PrimitivesPackage.PRIMITIVES_FACADE___CREATE_PLANE__VECTOR3D_VECTOR3D_DOUBLE_DOUBLE:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE___CREATE_PLANE__VECTOR3D_VECTOR3D_DOUBLE_DOUBLE:
 				return createPlane((Vector3d)arguments.get(0), (Vector3d)arguments.get(1), (Double)arguments.get(2), (Double)arguments.get(3));
-			case PrimitivesPackage.PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__TUPLE3D:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__TUPLE3D:
 				return createAmbientLight((Tuple3d)arguments.get(0));
-			case PrimitivesPackage.PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__BOOLEAN_TUPLE3D:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE___CREATE_AMBIENT_LIGHT__BOOLEAN_TUPLE3D:
 				return createAmbientLight((Boolean)arguments.get(0), (Tuple3d)arguments.get(1));
-			case PrimitivesPackage.PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__TUPLE3D_TUPLE3D:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__TUPLE3D_TUPLE3D:
 				return createDirectionalLight((Tuple3d)arguments.get(0), (Tuple3d)arguments.get(1));
-			case PrimitivesPackage.PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE___CREATE_DIRECTIONAL_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D:
 				return createDirectionalLight((Boolean)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2));
-			case PrimitivesPackage.PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D:
 				return createPointLight((Tuple3d)arguments.get(0));
-			case PrimitivesPackage.PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D:
 				return createPointLight((Tuple3d)arguments.get(0), (Tuple3d)arguments.get(1));
-			case PrimitivesPackage.PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE___CREATE_POINT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D:
 				return createPointLight((Tuple3d)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2));
-			case PrimitivesPackage.PRIMITIVES_FACADE___CREATE_POINT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE___CREATE_POINT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D:
 				return createPointLight((Boolean)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2), (Tuple3d)arguments.get(3));
-			case PrimitivesPackage.PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT:
 				return createSpotLight((Tuple3d)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2), (Tuple3d)arguments.get(3), (Float)arguments.get(4), (Float)arguments.get(5));
-			case PrimitivesPackage.PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.PRIMITIVES_FACADE___CREATE_SPOT_LIGHT__BOOLEAN_TUPLE3D_TUPLE3D_TUPLE3D_TUPLE3D_FLOAT_FLOAT:
 				return createSpotLight((Boolean)arguments.get(0), (Tuple3d)arguments.get(1), (Tuple3d)arguments.get(2), (Tuple3d)arguments.get(3), (Tuple3d)arguments.get(4), (Float)arguments.get(5), (Float)arguments.get(6));
 		}
 		return super.eInvoke(operationID, arguments);

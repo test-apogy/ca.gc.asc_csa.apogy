@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.symphony.core.invocator.OperationCallContainer;
 import org.eclipse.symphony.core.invocator.OperationCallsList;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -59,7 +59,7 @@ public class OperationCallsListImpl extends ProgramImpl implements OperationCall
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.OPERATION_CALLS_LIST;
+		return Symphony__CoreInvocatorPackage.Literals.OPERATION_CALLS_LIST;
 	}
 
   /**
@@ -70,7 +70,7 @@ public class OperationCallsListImpl extends ProgramImpl implements OperationCall
   public EList<OperationCall> getOperationCalls()
   {
 		if (operationCalls == null) {
-			operationCalls = new EObjectContainmentWithInverseEList<OperationCall>(OperationCall.class, this, EMFEcoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS, EMFEcoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER);
+			operationCalls = new EObjectContainmentWithInverseEList<OperationCall>(OperationCall.class, this, Symphony__CoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS, Symphony__CoreInvocatorPackage.OPERATION_CALL__OPERATION_CALL_CONTAINER);
 		}
 		return operationCalls;
 	}
@@ -85,7 +85,7 @@ public class OperationCallsListImpl extends ProgramImpl implements OperationCall
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperationCalls()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -100,7 +100,7 @@ public class OperationCallsListImpl extends ProgramImpl implements OperationCall
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
 				return ((InternalEList<?>)getOperationCalls()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -115,7 +115,7 @@ public class OperationCallsListImpl extends ProgramImpl implements OperationCall
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
 				return getOperationCalls();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -131,7 +131,7 @@ public class OperationCallsListImpl extends ProgramImpl implements OperationCall
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
 				getOperationCalls().clear();
 				getOperationCalls().addAll((Collection<? extends OperationCall>)newValue);
 				return;
@@ -148,7 +148,7 @@ public class OperationCallsListImpl extends ProgramImpl implements OperationCall
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
 				getOperationCalls().clear();
 				return;
 		}
@@ -164,7 +164,7 @@ public class OperationCallsListImpl extends ProgramImpl implements OperationCall
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS:
 				return operationCalls != null && !operationCalls.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -180,7 +180,7 @@ public class OperationCallsListImpl extends ProgramImpl implements OperationCall
   {
 		if (baseClass == OperationCallContainer.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS: return EMFEcoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS;
+				case Symphony__CoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS: return Symphony__CoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS;
 				default: return -1;
 			}
 		}
@@ -197,7 +197,7 @@ public class OperationCallsListImpl extends ProgramImpl implements OperationCall
   {
 		if (baseClass == OperationCallContainer.class) {
 			switch (baseFeatureID) {
-				case EMFEcoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS: return EMFEcoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS;
+				case Symphony__CoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS: return Symphony__CoreInvocatorPackage.OPERATION_CALLS_LIST__OPERATION_CALLS;
 				default: return -1;
 			}
 		}

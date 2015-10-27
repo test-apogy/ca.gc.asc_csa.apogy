@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
  *   <li>{@link org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer#getMesh <em>Mesh</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getBasicCartesianTriangularMeshMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getBasicCartesianTriangularMeshMapLayer()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface BasicCartesianTriangularMeshMapLayer extends CartesianTriangula
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mesh</em>' containment reference.
 	 * @see #setMesh(CartesianTriangularMesh)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getBasicCartesianTriangularMeshMapLayer_Mesh()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getBasicCartesianTriangularMeshMapLayer_Mesh()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='TRIANGULAR_MESH'"
 	 * @generated

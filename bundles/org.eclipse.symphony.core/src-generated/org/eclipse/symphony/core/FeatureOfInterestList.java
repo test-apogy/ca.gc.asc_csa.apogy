@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.emf.Named;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- *  List of Feature Of Interest
+ * List of Feature Of Interest
  * <!-- end-model-doc -->
  *
  * <p>
@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.FeatureOfInterestList#getFeaturesOfInterest <em>Features Of Interest</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getFeatureOfInterestList()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getFeatureOfInterestList()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface FeatureOfInterestList extends Named, Described {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Features Of Interest</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getFeatureOfInterestList_FeaturesOfInterest()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getFeatureOfInterestList_FeaturesOfInterest()
 	 * @model containment="true"
 	 * @generated
 	 */

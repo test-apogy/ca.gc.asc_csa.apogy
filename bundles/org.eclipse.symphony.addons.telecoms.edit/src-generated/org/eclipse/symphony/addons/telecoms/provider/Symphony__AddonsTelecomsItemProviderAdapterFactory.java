@@ -41,16 +41,16 @@ import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.util.TopologyBindingsSwitch;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.util.Symphony__CommonTopologyBindingsSwitch;
 import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
 import org.eclipse.symphony.core.AssemblyLink;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.TopologyRoot;
 import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
-import org.eclipse.symphony.core.environment.util.SymphonyEnvironmentSwitch;
-import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
+import org.eclipse.symphony.core.environment.util.Symphony__CoreEnvironmentSwitch;
+import org.eclipse.symphony.core.util.Symphony__CoreSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -836,19 +836,19 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * A child creation extender for the {@link SymphonyEnvironmentPackage}.
+	 * A child creation extender for the {@link Symphony__CoreEnvironmentPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class SymphonyEnvironmentChildCreationExtender implements IChildCreationExtender {
+	public static class Symphony__CoreEnvironmentChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends SymphonyEnvironmentSwitch<Object> {
+		protected static class CreationSwitch extends Symphony__CoreEnvironmentSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -884,7 +884,7 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 			public Object caseMap(Map object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
+						(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createAntennaRadiationPatternImageMapLayer()));
 
 				return null;
@@ -923,19 +923,19 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * A child creation extender for the {@link SymphonyCorePackage}.
+	 * A child creation extender for the {@link Symphony__CorePackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class SymphonyCoreChildCreationExtender implements IChildCreationExtender {
+	public static class Symphony__CoreChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends SymphonyCoreSwitch<Object> {
+		protected static class CreationSwitch extends Symphony__CoreSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -971,32 +971,32 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 			public Object caseAssemblyLink(AssemblyLink object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
 
 				return null;
@@ -1011,32 +1011,32 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 			public Object caseTopologyRoot(TopologyRoot object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
 
 				return null;
@@ -1187,19 +1187,19 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 	}
 
 	/**
-	 * A child creation extender for the {@link TopologyBindingsPackage}.
+	 * A child creation extender for the {@link Symphony__CommonTopologyBindingsPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static class TopologyBindingsChildCreationExtender implements IChildCreationExtender {
+	public static class Symphony__CommonTopologyBindingsChildCreationExtender implements IChildCreationExtender {
 		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		protected static class CreationSwitch extends TopologyBindingsSwitch<Object> {
+		protected static class CreationSwitch extends Symphony__CommonTopologyBindingsSwitch<Object> {
 			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
@@ -1235,32 +1235,32 @@ public class Symphony__AddonsTelecomsItemProviderAdapterFactory extends Symphony
 			public Object caseEnumerationCase(EnumerationCase object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createIsotropicAntenna()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createHalfWaveDipoleAntennaRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleConicalRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createSimpleRectangularFrustumRadiationPattern()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 Symphony__AddonsTelecomsFactory.eINSTANCE.createURlBasedAntennaRadiationPattern()));
 
 				return null;

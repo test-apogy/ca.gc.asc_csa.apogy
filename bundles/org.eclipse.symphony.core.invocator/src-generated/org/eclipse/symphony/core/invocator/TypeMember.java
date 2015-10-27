@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.emf.TreeRootNode;
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMember#getTypeFeatureRootNode <em>Type Feature Root Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMember()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMember()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface TypeMember extends Named, AbstractType
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Member Type</em>' reference.
 	 * @see #setMemberType(Type)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMember_MemberType()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMember_MemberType()
 	 * @model
 	 * @generated
 	 */
@@ -62,7 +62,7 @@ public interface TypeMember extends Named, AbstractType
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Feature Root Node</em>' containment reference.
 	 * @see #setTypeFeatureRootNode(TreeRootNode)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMember_TypeFeatureRootNode()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMember_TypeFeatureRootNode()
 	 * @model containment="true"
 	 * @generated
 	 */

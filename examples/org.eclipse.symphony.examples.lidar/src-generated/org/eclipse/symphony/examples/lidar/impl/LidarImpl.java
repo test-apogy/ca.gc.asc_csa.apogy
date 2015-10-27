@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage;
+import org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage;
 import org.eclipse.symphony.examples.lidar.Lidar;
 
 /**
@@ -80,7 +80,7 @@ public abstract class LidarImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	protected EClass eStaticClass()
 	{
-		return EMFEcoreExampleLidarPackage.Literals.LIDAR;
+		return Symphony__ExamplesLidarPackage.Literals.LIDAR;
 	}
 
 	/**
@@ -103,7 +103,7 @@ public abstract class LidarImpl extends MinimalEObjectImpl.Container implements 
 		RectangularFrustrumFieldOfView oldFov = fov;
 		fov = newFov;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreExampleLidarPackage.LIDAR__FOV, oldFov, newFov);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLidarPackage.LIDAR__FOV, oldFov, newFov);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -119,14 +119,14 @@ public abstract class LidarImpl extends MinimalEObjectImpl.Container implements 
 		if (newFov != fov) {
 			NotificationChain msgs = null;
 			if (fov != null)
-				msgs = ((InternalEObject)fov).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleLidarPackage.LIDAR__FOV, null, msgs);
+				msgs = ((InternalEObject)fov).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesLidarPackage.LIDAR__FOV, null, msgs);
 			if (newFov != null)
-				msgs = ((InternalEObject)newFov).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleLidarPackage.LIDAR__FOV, null, msgs);
+				msgs = ((InternalEObject)newFov).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesLidarPackage.LIDAR__FOV, null, msgs);
 			msgs = basicSetFov(newFov, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleLidarPackage.LIDAR__FOV, newFov, newFov));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLidarPackage.LIDAR__FOV, newFov, newFov));
 	}
 
 	/**
@@ -147,7 +147,7 @@ public abstract class LidarImpl extends MinimalEObjectImpl.Container implements 
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleLidarPackage.LIDAR__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLidarPackage.LIDAR__INITIALIZED, oldInitialized, initialized));
 	}
 
 	/**
@@ -197,7 +197,7 @@ public abstract class LidarImpl extends MinimalEObjectImpl.Container implements 
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleLidarPackage.LIDAR__FOV:
+			case Symphony__ExamplesLidarPackage.LIDAR__FOV:
 				return basicSetFov(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -212,9 +212,9 @@ public abstract class LidarImpl extends MinimalEObjectImpl.Container implements 
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleLidarPackage.LIDAR__FOV:
+			case Symphony__ExamplesLidarPackage.LIDAR__FOV:
 				return getFov();
-			case EMFEcoreExampleLidarPackage.LIDAR__INITIALIZED:
+			case Symphony__ExamplesLidarPackage.LIDAR__INITIALIZED:
 				return isInitialized();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -229,10 +229,10 @@ public abstract class LidarImpl extends MinimalEObjectImpl.Container implements 
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleLidarPackage.LIDAR__FOV:
+			case Symphony__ExamplesLidarPackage.LIDAR__FOV:
 				setFov((RectangularFrustrumFieldOfView)newValue);
 				return;
-			case EMFEcoreExampleLidarPackage.LIDAR__INITIALIZED:
+			case Symphony__ExamplesLidarPackage.LIDAR__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
 		}
@@ -248,10 +248,10 @@ public abstract class LidarImpl extends MinimalEObjectImpl.Container implements 
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleLidarPackage.LIDAR__FOV:
+			case Symphony__ExamplesLidarPackage.LIDAR__FOV:
 				setFov((RectangularFrustrumFieldOfView)null);
 				return;
-			case EMFEcoreExampleLidarPackage.LIDAR__INITIALIZED:
+			case Symphony__ExamplesLidarPackage.LIDAR__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
 		}
@@ -267,9 +267,9 @@ public abstract class LidarImpl extends MinimalEObjectImpl.Container implements 
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleLidarPackage.LIDAR__FOV:
+			case Symphony__ExamplesLidarPackage.LIDAR__FOV:
 				return fov != null;
-			case EMFEcoreExampleLidarPackage.LIDAR__INITIALIZED:
+			case Symphony__ExamplesLidarPackage.LIDAR__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -284,11 +284,11 @@ public abstract class LidarImpl extends MinimalEObjectImpl.Container implements 
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
 		switch (operationID) {
-			case EMFEcoreExampleLidarPackage.LIDAR___INIT:
+			case Symphony__ExamplesLidarPackage.LIDAR___INIT:
 				return init();
-			case EMFEcoreExampleLidarPackage.LIDAR___ACQUIRE_SCAN__DOUBLE_DOUBLE:
+			case Symphony__ExamplesLidarPackage.LIDAR___ACQUIRE_SCAN__DOUBLE_DOUBLE:
 				return acquireScan((Double)arguments.get(0), (Double)arguments.get(1));
-			case EMFEcoreExampleLidarPackage.LIDAR___ACQUIRE_SCAN_NON_BLOCKING__DOUBLE_DOUBLE:
+			case Symphony__ExamplesLidarPackage.LIDAR___ACQUIRE_SCAN_NON_BLOCKING__DOUBLE_DOUBLE:
 				return acquireScanNonBlocking((Double)arguments.get(0), (Double)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

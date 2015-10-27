@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *   <li>{@link org.eclipse.symphony.core.ResultNode#getResult <em>Result</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getResultNode()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getResultNode()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface ResultNode extends AggregateGroupNode {
 	 * 
 	 * @return the value of the '<em>Result</em>' reference.
 	 * @see #setResult(PositionedResult)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getResultNode_Result()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getResultNode_Result()
 	 * @model transient="true"
 	 * @generated
 	 */

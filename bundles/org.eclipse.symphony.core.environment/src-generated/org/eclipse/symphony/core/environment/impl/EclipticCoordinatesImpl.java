@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.environment.EclipticCoordinates;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -105,7 +105,7 @@ public class EclipticCoordinatesImpl extends MinimalEObjectImpl.Container implem
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.ECLIPTIC_COORDINATES;
+		return Symphony__CoreEnvironmentPackage.Literals.ECLIPTIC_COORDINATES;
 	}
 
   /**
@@ -128,7 +128,7 @@ public class EclipticCoordinatesImpl extends MinimalEObjectImpl.Container implem
 		double oldLongitude = longitude;
 		longitude = newLongitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__LONGITUDE, oldLongitude, longitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__LONGITUDE, oldLongitude, longitude));
 	}
 
   /**
@@ -151,7 +151,7 @@ public class EclipticCoordinatesImpl extends MinimalEObjectImpl.Container implem
 		double oldLatitude = latitude;
 		latitude = newLatitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__LATITUDE, oldLatitude, latitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__LATITUDE, oldLatitude, latitude));
 	}
 
   /**
@@ -174,7 +174,7 @@ public class EclipticCoordinatesImpl extends MinimalEObjectImpl.Container implem
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__RADIUS, oldRadius, radius));
 	}
 
   /**
@@ -186,11 +186,11 @@ public class EclipticCoordinatesImpl extends MinimalEObjectImpl.Container implem
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__LONGITUDE:
+			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__LONGITUDE:
 				return getLongitude();
-			case SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__LATITUDE:
+			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__LATITUDE:
 				return getLatitude();
-			case SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__RADIUS:
+			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__RADIUS:
 				return getRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -205,13 +205,13 @@ public class EclipticCoordinatesImpl extends MinimalEObjectImpl.Container implem
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__LONGITUDE:
+			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__LONGITUDE:
 				setLongitude((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__LATITUDE:
+			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__LATITUDE:
 				setLatitude((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__RADIUS:
+			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__RADIUS:
 				setRadius((Double)newValue);
 				return;
 		}
@@ -227,13 +227,13 @@ public class EclipticCoordinatesImpl extends MinimalEObjectImpl.Container implem
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__LONGITUDE:
+			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__LONGITUDE:
 				setLongitude(LONGITUDE_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__LATITUDE:
+			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__LATITUDE:
 				setLatitude(LATITUDE_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__RADIUS:
+			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
 		}
@@ -249,11 +249,11 @@ public class EclipticCoordinatesImpl extends MinimalEObjectImpl.Container implem
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__LONGITUDE:
+			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__LONGITUDE:
 				return longitude != LONGITUDE_EDEFAULT;
-			case SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__LATITUDE:
+			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__LATITUDE:
 				return latitude != LATITUDE_EDEFAULT;
-			case SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__RADIUS:
+			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__RADIUS:
 				return radius != RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

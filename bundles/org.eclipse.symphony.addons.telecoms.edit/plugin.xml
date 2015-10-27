@@ -30,38 +30,16 @@
             class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core.environment"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$Symphony__CoreEnvironmentChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.core"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$Symphony__CoreChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.addons.geometry.paths"
             class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$Symphony__AddonsGeometryPathsChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_tools_telecoms -->
-      <extender
-            uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$TopologyBindingsChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.core.environment"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$SymphonyEnvironmentChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.addons"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$SymphonyToolsCoreChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.core"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$SymphonyCoreChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.addons.geometry.paths"
-            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$PathsChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.telecoms.provider.Symphony__AddonsTelecomsItemProviderAdapterFactory$Symphony__CommonTopologyBindingsChildCreationExtender"/>
    </extension>
 
 </plugin>

@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
 import org.eclipse.symphony.common.topology.ui.viewer.Activator;
 import org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerPackage;
+import org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage;
 import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
 
 /**
@@ -99,7 +99,7 @@ public class TopologyViewerRegistryImpl extends MinimalEObjectImpl.Container imp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyViewerPackage.Literals.TOPOLOGY_VIEWER_REGISTRY;
+		return Symphony__CommonTopologyUIViewerPackage.Literals.TOPOLOGY_VIEWER_REGISTRY;
 	}
 
 	/**
@@ -120,7 +120,7 @@ public class TopologyViewerRegistryImpl extends MinimalEObjectImpl.Container imp
 		boolean oldVerbose = verbose;
 		verbose = newVerbose;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__VERBOSE, oldVerbose, verbose));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__VERBOSE, oldVerbose, verbose));
 	}
 
 	/**
@@ -130,7 +130,7 @@ public class TopologyViewerRegistryImpl extends MinimalEObjectImpl.Container imp
 	 */
 	public EList<ITopologyViewer> getITopologyViewers() {
 		if (iTopologyViewers == null) {
-			iTopologyViewers = new EDataTypeEList<ITopologyViewer>(ITopologyViewer.class, this, TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS);
+			iTopologyViewers = new EDataTypeEList<ITopologyViewer>(ITopologyViewer.class, this, Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS);
 		}
 		return iTopologyViewers;
 	}
@@ -146,7 +146,7 @@ public class TopologyViewerRegistryImpl extends MinimalEObjectImpl.Container imp
 			latestNodeSelection = (NodeSelection)eResolveProxy(oldLatestNodeSelection);
 			if (latestNodeSelection != oldLatestNodeSelection) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION, oldLatestNodeSelection, latestNodeSelection));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION, oldLatestNodeSelection, latestNodeSelection));
 			}
 		}
 		return latestNodeSelection;
@@ -170,7 +170,7 @@ public class TopologyViewerRegistryImpl extends MinimalEObjectImpl.Container imp
 		NodeSelection oldLatestNodeSelection = latestNodeSelection;
 		latestNodeSelection = newLatestNodeSelection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION, oldLatestNodeSelection, latestNodeSelection));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION, oldLatestNodeSelection, latestNodeSelection));
 	}
 
 	/**
@@ -224,11 +224,11 @@ public class TopologyViewerRegistryImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__VERBOSE:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__VERBOSE:
 				return isVerbose();
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS:
 				return getITopologyViewers();
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION:
 				if (resolve) return getLatestNodeSelection();
 				return basicGetLatestNodeSelection();
 		}
@@ -244,14 +244,14 @@ public class TopologyViewerRegistryImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__VERBOSE:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__VERBOSE:
 				setVerbose((Boolean)newValue);
 				return;
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS:
 				getITopologyViewers().clear();
 				getITopologyViewers().addAll((Collection<? extends ITopologyViewer>)newValue);
 				return;
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION:
 				setLatestNodeSelection((NodeSelection)newValue);
 				return;
 		}
@@ -266,13 +266,13 @@ public class TopologyViewerRegistryImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__VERBOSE:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__VERBOSE:
 				setVerbose(VERBOSE_EDEFAULT);
 				return;
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS:
 				getITopologyViewers().clear();
 				return;
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION:
 				setLatestNodeSelection((NodeSelection)null);
 				return;
 		}
@@ -287,11 +287,11 @@ public class TopologyViewerRegistryImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__VERBOSE:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__VERBOSE:
 				return verbose != VERBOSE_EDEFAULT;
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__ITOPOLOGY_VIEWERS:
 				return iTopologyViewers != null && !iTopologyViewers.isEmpty();
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION:
 				return latestNodeSelection != null;
 		}
 		return super.eIsSet(featureID);
@@ -305,10 +305,10 @@ public class TopologyViewerRegistryImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY___REGISTER_ITOPOLOGY_VIEWER__ITOPOLOGYVIEWER:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY___REGISTER_ITOPOLOGY_VIEWER__ITOPOLOGYVIEWER:
 				registerITopologyViewer((ITopologyViewer)arguments.get(0));
 				return null;
-			case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY___UN_REGISTER_ITOPOLOGY_VIEWER__ITOPOLOGYVIEWER:
+			case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY___UN_REGISTER_ITOPOLOGY_VIEWER__ITOPOLOGYVIEWER:
 				unRegisterITopologyViewer((ITopologyViewer)arguments.get(0));
 				return null;
 		}

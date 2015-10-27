@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.UserDefinedResult;
 
 /**
@@ -111,7 +111,7 @@ public class UserDefinedResultItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(UserDefinedResult.class)) {
-			case SymphonyCorePackage.USER_DEFINED_RESULT__NAME:
+			case Symphony__CorePackage.USER_DEFINED_RESULT__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList#getEarthViewConfigurations <em>Earth View Configurations</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getEarthViewConfigurationList()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getEarthViewConfigurationList()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface EarthViewConfigurationList extends AbstractToolsListContainer {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Earth View Configurations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getEarthViewConfigurationList_EarthViewConfigurations()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getEarthViewConfigurationList_EarthViewConfigurations()
 	 * @model containment="true"
 	 * @generated
 	 */

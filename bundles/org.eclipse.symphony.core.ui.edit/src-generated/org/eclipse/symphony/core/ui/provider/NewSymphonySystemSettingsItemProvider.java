@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.ui.NewSymphonySystemSettings} object.
@@ -77,7 +77,7 @@ public class NewSymphonySystemSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NewSymphonySystemSettings_folder_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonySystemSettings_folder_feature", "_UI_NewSymphonySystemSettings_type"),
-				 SymphonyCoreUiPackage.Literals.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER,
+				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER,
 				 true,
 				 false,
 				 false,
@@ -99,7 +99,7 @@ public class NewSymphonySystemSettingsItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NewSymphonySystemSettings_filename_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NewSymphonySystemSettings_filename_feature", "_UI_NewSymphonySystemSettings_type"),
-				 SymphonyCoreUiPackage.Literals.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME,
+				 Symphony__CoreUIPackage.Literals.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME,
 				 true,
 				 false,
 				 false,
@@ -146,8 +146,8 @@ public class NewSymphonySystemSettingsItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(NewSymphonySystemSettings.class)) {
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER:
-			case SymphonyCoreUiPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FOLDER:
+			case Symphony__CoreUIPackage.NEW_SYMPHONY_SYSTEM_SETTINGS__FILENAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -174,7 +174,7 @@ public class NewSymphonySystemSettingsItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SymphonyCoreUiEditPlugin.INSTANCE;
+		return Symphony__CoreUIEditPlugin.INSTANCE;
 	}
 
 }

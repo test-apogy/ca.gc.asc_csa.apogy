@@ -13,7 +13,7 @@ import org.eclipse.symphony.core.environment.orbit.AbstractOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.Orbit;
 import org.eclipse.symphony.core.environment.orbit.OrbitFacade;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,7 +50,7 @@ public class OrbitFacadeImpl extends MinimalEObjectImpl.Container implements Orb
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyOrbitEnvironmentPackage.Literals.ORBIT_FACADE;
+		return Symphony__CoreEnvironmentOrbitPackage.Literals.ORBIT_FACADE;
 	}
 
 	/**
@@ -93,7 +93,7 @@ public class OrbitFacadeImpl extends MinimalEObjectImpl.Container implements Orb
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_FACADE___CREATE_ORBIT_MODEL_COPY__ORBITMODEL:
 				return createOrbitModelCopy((OrbitModel)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

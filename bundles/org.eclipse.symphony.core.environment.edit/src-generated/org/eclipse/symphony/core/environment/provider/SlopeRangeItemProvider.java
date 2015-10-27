@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.SlopeRange;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.SlopeRange} object.
@@ -130,7 +130,7 @@ public class SlopeRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SlopeRange_slopeLowerBound_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SlopeRange_slopeLowerBound_feature", "_UI_SlopeRange_type"),
-				 SymphonyEnvironmentPackage.Literals.SLOPE_RANGE__SLOPE_LOWER_BOUND,
+				 Symphony__CoreEnvironmentPackage.Literals.SLOPE_RANGE__SLOPE_LOWER_BOUND,
 				 true,
 				 false,
 				 false,
@@ -152,7 +152,7 @@ public class SlopeRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SlopeRange_slopeUpperBound_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SlopeRange_slopeUpperBound_feature", "_UI_SlopeRange_type"),
-				 SymphonyEnvironmentPackage.Literals.SLOPE_RANGE__SLOPE_UPPER_BOUND,
+				 Symphony__CoreEnvironmentPackage.Literals.SLOPE_RANGE__SLOPE_UPPER_BOUND,
 				 true,
 				 false,
 				 false,
@@ -174,7 +174,7 @@ public class SlopeRangeItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SlopeRange_color_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SlopeRange_color_feature", "_UI_SlopeRange_type"),
-				 SymphonyEnvironmentPackage.Literals.SLOPE_RANGE__COLOR,
+				 Symphony__CoreEnvironmentPackage.Literals.SLOPE_RANGE__COLOR,
 				 true,
 				 false,
 				 false,
@@ -228,11 +228,11 @@ public class SlopeRangeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SlopeRange.class)) {
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__NAME:
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
-			case SymphonyEnvironmentPackage.SLOPE_RANGE__COLOR:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__NAME:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_LOWER_BOUND:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__SLOPE_UPPER_BOUND:
+			case Symphony__CoreEnvironmentPackage.SLOPE_RANGE__COLOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -27,7 +27,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPointId <em>Point Id</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getConstraintAttachmentPoint()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface ConstraintAttachmentPoint extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Physical Body</em>' reference.
 	 * @see #setPhysicalBody(PhysicalBody)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getConstraintAttachmentPoint_PhysicalBody()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint_PhysicalBody()
 	 * @see org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getConstraintAttachmentPoints
 	 * @model opposite="constraintAttachmentPoints"
 	 * @generated
@@ -69,7 +69,7 @@ public interface ConstraintAttachmentPoint extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constraint</em>' container reference.
 	 * @see #setConstraint(AbstractConstraint)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getConstraintAttachmentPoint_Constraint()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint_Constraint()
 	 * @see org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#getAttachmentPoints
 	 * @model opposite="attachmentPoints" transient="false"
 	 * @generated
@@ -96,7 +96,7 @@ public interface ConstraintAttachmentPoint extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Transform</em>' containment reference.
 	 * @see #setTransform(Matrix4x4)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getConstraintAttachmentPoint_Transform()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint_Transform()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -121,7 +121,7 @@ public interface ConstraintAttachmentPoint extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getConstraintAttachmentPoint_Description()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint_Description()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -146,7 +146,7 @@ public interface ConstraintAttachmentPoint extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Point Id</em>' attribute.
 	 * @see #setPointId(String)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getConstraintAttachmentPoint_PointId()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintAttachmentPoint_PointId()
 	 * @model unique="false"
 	 * @generated
 	 */

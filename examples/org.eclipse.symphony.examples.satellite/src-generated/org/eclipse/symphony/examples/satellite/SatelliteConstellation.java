@@ -20,7 +20,6 @@ import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * A class representing a constellation of Satellites. It provides basic queries used to schedule
  * image acquisition and upload/downloads from the satellites.
  * <!-- end-model-doc -->
@@ -36,7 +35,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass;
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getEndDate <em>End Date</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteConstellation()
+ * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteConstellation()
  * @model
  * @generated
  */
@@ -51,11 +50,10 @@ public interface SatelliteConstellation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The list of satellite(s) available.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Satellites</em>' reference list.
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteConstellation_Satellites()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteConstellation_Satellites()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='true' createChild='true'"
 	 * @generated
@@ -72,11 +70,10 @@ public interface SatelliteConstellation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The list of GroundStation used to communicate with the satellite(s).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Ground Stations</em>' reference list.
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteConstellation_GroundStations()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteConstellation_GroundStations()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' child='true' createChild='true'"
 	 * @generated
@@ -93,7 +90,7 @@ public interface SatelliteConstellation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pending Image Orders</em>' reference list.
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteConstellation_PendingImageOrders()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteConstellation_PendingImageOrders()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' child='true' createChild='true'"
 	 * @generated
 	 */
@@ -109,7 +106,7 @@ public interface SatelliteConstellation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Start Date</em>' attribute.
 	 * @see #setStartDate(Date)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteConstellation_StartDate()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteConstellation_StartDate()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -135,7 +132,7 @@ public interface SatelliteConstellation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>End Date</em>' attribute.
 	 * @see #setEndDate(Date)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteConstellation_EndDate()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteConstellation_EndDate()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -155,7 +152,6 @@ public interface SatelliteConstellation extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the satellite associated with the specified OrbitModel.
 	 * @param orbitModel The specified OrbitModel.
 	 * @return The Satellite associated with the specified OrbitModel, null if none is found.
@@ -169,7 +165,6 @@ public interface SatelliteConstellation extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the visibility passes for a given ImageOrder.
 	 * @param imageOrder The ImageOrder that needs imaging.
 	 * @param startDate The start date of the period to be queried.
@@ -186,7 +181,6 @@ public interface SatelliteConstellation extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the Ground Station(s) visibility passes for a given Satellite.
 	 * @param satellite The Satellite.
 	 * @param startDate The start date of the period to be queried.
@@ -203,7 +197,6 @@ public interface SatelliteConstellation extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Using the pending orders and the current satellite(s) state, creates the list of commands that needs to be uploaded to the satellite(s).
 	 * <!-- end-model-doc -->
 	 * @model unique="false" imageOrdersDataType="org.eclipse.symphony.examples.satellite.List<org.eclipse.symphony.examples.satellite.ImageOrder>" imageOrdersUnique="false" imageOrdersMany="false" startDateUnique="false" endDateUnique="false"
@@ -215,7 +208,6 @@ public interface SatelliteConstellation extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Using the pending orders and the current satellite(s) state, creates the list of commands that needs to be uploaded to the satellite(s).
 	 * <!-- end-model-doc -->
 	 * @model unique="false" startDateUnique="false" endDateUnique="false"
@@ -227,7 +219,6 @@ public interface SatelliteConstellation extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Using the pending orders and the current satellite(s) state, creates the list of commands that needs to be uploaded to the satellite(s).
 	 * <!-- end-model-doc -->
 	 * @model unique="false"

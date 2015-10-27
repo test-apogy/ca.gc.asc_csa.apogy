@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocationList#getEarthSurfaceLocations <em>Earth Surface Locations</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthSurfaceLocationList()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getEarthSurfaceLocationList()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface EarthSurfaceLocationList extends Named, Described {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Earth Surface Locations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthSurfaceLocationList_EarthSurfaceLocations()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getEarthSurfaceLocationList_EarthSurfaceLocations()
 	 * @model containment="true"
 	 * @generated
 	 */

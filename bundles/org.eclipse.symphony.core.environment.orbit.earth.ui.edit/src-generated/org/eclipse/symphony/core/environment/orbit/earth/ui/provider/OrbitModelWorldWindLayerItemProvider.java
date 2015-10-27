@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer} object.
@@ -69,7 +69,7 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 				 getResourceLocator(),
 				 getString("_UI_OrbitModelWorldWindLayer_orbitModel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitModelWorldWindLayer_orbitModel_feature", "_UI_OrbitModelWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER__ORBIT_MODEL,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER__ORBIT_MODEL,
 				 true,
 				 false,
 				 true,
@@ -91,7 +91,7 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 				 getResourceLocator(),
 				 getString("_UI_OrbitModelWorldWindLayer_timeSource_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitModelWorldWindLayer_timeSource_feature", "_UI_OrbitModelWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_SOURCE,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_SOURCE,
 				 true,
 				 false,
 				 true,
@@ -113,7 +113,7 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 				 getResourceLocator(),
 				 getString("_UI_OrbitModelWorldWindLayer_timeInterval_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitModelWorldWindLayer_timeInterval_feature", "_UI_OrbitModelWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_INTERVAL,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_INTERVAL,
 				 true,
 				 false,
 				 false,
@@ -135,7 +135,7 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 				 getResourceLocator(),
 				 getString("_UI_OrbitModelWorldWindLayer_forwardPropagationDuration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitModelWorldWindLayer_forwardPropagationDuration_feature", "_UI_OrbitModelWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION,
 				 true,
 				 false,
 				 false,
@@ -157,7 +157,7 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 				 getResourceLocator(),
 				 getString("_UI_OrbitModelWorldWindLayer_backwardPropagationDuration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitModelWorldWindLayer_backwardPropagationDuration_feature", "_UI_OrbitModelWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION,
 				 true,
 				 false,
 				 false,
@@ -179,7 +179,7 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 				 getResourceLocator(),
 				 getString("_UI_OrbitModelWorldWindLayer_showGroundTrace_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitModelWorldWindLayer_showGroundTrace_feature", "_UI_OrbitModelWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_GROUND_TRACE,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_GROUND_TRACE,
 				 true,
 				 false,
 				 false,
@@ -201,7 +201,7 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 				 getResourceLocator(),
 				 getString("_UI_OrbitModelWorldWindLayer_showOrbit_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitModelWorldWindLayer_showOrbit_feature", "_UI_OrbitModelWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_ORBIT,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_ORBIT,
 				 true,
 				 false,
 				 false,
@@ -257,11 +257,11 @@ public class OrbitModelWorldWindLayerItemProvider extends AbstractWorldWindLayer
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OrbitModelWorldWindLayer.class)) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_INTERVAL:
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
-			case SymphonyEarthOrbitEnvironmentUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_ORBIT:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__TIME_INTERVAL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.ORBIT_MODEL_WORLD_WIND_LAYER__SHOW_ORBIT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

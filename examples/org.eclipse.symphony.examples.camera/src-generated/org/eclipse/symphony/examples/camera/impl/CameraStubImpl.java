@@ -10,7 +10,7 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.camera.Activator;
 import org.eclipse.symphony.examples.camera.CameraStub;
-import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
+import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +37,7 @@ public class CameraStubImpl extends CameraImpl implements CameraStub
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleCameraPackage.Literals.CAMERA_STUB;
+		return Symphony__ExamplesCameraPackage.Literals.CAMERA_STUB;
 	}
 
 	/**

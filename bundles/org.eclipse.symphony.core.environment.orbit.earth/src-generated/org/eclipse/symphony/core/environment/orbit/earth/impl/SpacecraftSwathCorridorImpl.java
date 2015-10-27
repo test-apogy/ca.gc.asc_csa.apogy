@@ -21,18 +21,18 @@ import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.Updatable;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 import org.eclipse.symphony.core.environment.orbit.OrbitModel;
 import org.eclipse.symphony.core.environment.orbit.earth.Activator;
 import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.orekit.bodies.BodyShape;
 import org.orekit.bodies.GeodeticPoint;
 import org.orekit.bodies.OneAxisEllipsoid;
@@ -287,7 +287,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.SPACECRAFT_SWATH_CORRIDOR;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.SPACECRAFT_SWATH_CORRIDOR;
 	}
 
 	/**
@@ -308,7 +308,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__NAME, oldName, name));
 	}
 
 	/**
@@ -329,7 +329,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -350,7 +350,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 		boolean oldUpdating = updating;
 		updating = newUpdating;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING, oldUpdating, updating));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING, oldUpdating, updating));
 	}
 
 	/**
@@ -371,7 +371,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 		boolean oldAutoUpdateEnabled = autoUpdateEnabled;
 		autoUpdateEnabled = newAutoUpdateEnabled;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED, oldAutoUpdateEnabled, autoUpdateEnabled));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED, oldAutoUpdateEnabled, autoUpdateEnabled));
 	}
 
 	/**
@@ -392,7 +392,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 		Date oldStartTime = startTime;
 		startTime = newStartTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__START_TIME, oldStartTime, startTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__START_TIME, oldStartTime, startTime));
 	}
 
 	/**
@@ -413,7 +413,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 		Date oldEndTime = endTime;
 		endTime = newEndTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__END_TIME, oldEndTime, endTime));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__END_TIME, oldEndTime, endTime));
 	}
 
 	/**
@@ -434,7 +434,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 		double oldTimeInterval = timeInterval;
 		timeInterval = newTimeInterval;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL, oldTimeInterval, timeInterval));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL, oldTimeInterval, timeInterval));
 	}
 
 	/**
@@ -448,7 +448,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 			orbitModel = (OrbitModel)eResolveProxy(oldOrbitModel);
 			if (orbitModel != oldOrbitModel) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL, oldOrbitModel, orbitModel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL, oldOrbitModel, orbitModel));
 			}
 		}
 		return orbitModel;
@@ -472,7 +472,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 		OrbitModel oldOrbitModel = orbitModel;
 		orbitModel = newOrbitModel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL, oldOrbitModel, orbitModel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL, oldOrbitModel, orbitModel));
 	}
 
 	/**
@@ -493,7 +493,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 		double oldLeftSwathAngle = leftSwathAngle;
 		leftSwathAngle = newLeftSwathAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE, oldLeftSwathAngle, leftSwathAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE, oldLeftSwathAngle, leftSwathAngle));
 	}
 
 	/**
@@ -514,7 +514,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 		double oldRightSwathAngle = rightSwathAngle;
 		rightSwathAngle = newRightSwathAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE, oldRightSwathAngle, rightSwathAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE, oldRightSwathAngle, rightSwathAngle));
 	}
 
 	/**
@@ -535,7 +535,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 		Corridor oldCorridor = corridor;
 		corridor = newCorridor;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR, oldCorridor, newCorridor);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR, oldCorridor, newCorridor);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -550,14 +550,14 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 		if (newCorridor != corridor) {
 			NotificationChain msgs = null;
 			if (corridor != null)
-				msgs = ((InternalEObject)corridor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR, null, msgs);
+				msgs = ((InternalEObject)corridor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR, null, msgs);
 			if (newCorridor != null)
-				msgs = ((InternalEObject)newCorridor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR, null, msgs);
+				msgs = ((InternalEObject)newCorridor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR, null, msgs);
 			msgs = basicSetCorridor(newCorridor, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR, newCorridor, newCorridor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR, newCorridor, newCorridor));
 	}
 
 	/**
@@ -578,28 +578,28 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__NAME:
 				return getName();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION:
 				return getDescription();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING:
 				return isUpdating();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED:
 				return isAutoUpdateEnabled();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__START_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__START_TIME:
 				return getStartTime();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__END_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__END_TIME:
 				return getEndTime();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL:
 				return getTimeInterval();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL:
 				if (resolve) return getOrbitModel();
 				return basicGetOrbitModel();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE:
 				return getLeftSwathAngle();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE:
 				return getRightSwathAngle();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR:
 				return getCorridor();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -613,37 +613,37 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING:
 				setUpdating((Boolean)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED:
 				setAutoUpdateEnabled((Boolean)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__START_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__START_TIME:
 				setStartTime((Date)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__END_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__END_TIME:
 				setEndTime((Date)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL:
 				setTimeInterval((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE:
 				setLeftSwathAngle((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE:
 				setRightSwathAngle((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR:
 				setCorridor((Corridor)newValue);
 				return;
 		}
@@ -658,37 +658,37 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING:
 				setUpdating(UPDATING_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED:
 				setAutoUpdateEnabled(AUTO_UPDATE_ENABLED_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__START_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__START_TIME:
 				setStartTime(START_TIME_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__END_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__END_TIME:
 				setEndTime(END_TIME_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL:
 				setTimeInterval(TIME_INTERVAL_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL:
 				setOrbitModel((OrbitModel)null);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE:
 				setLeftSwathAngle(LEFT_SWATH_ANGLE_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE:
 				setRightSwathAngle(RIGHT_SWATH_ANGLE_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR:
 				setCorridor((Corridor)null);
 				return;
 		}
@@ -703,27 +703,27 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING:
 				return updating != UPDATING_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED:
 				return autoUpdateEnabled != AUTO_UPDATE_ENABLED_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__START_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__START_TIME:
 				return START_TIME_EDEFAULT == null ? startTime != null : !START_TIME_EDEFAULT.equals(startTime);
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__END_TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__END_TIME:
 				return END_TIME_EDEFAULT == null ? endTime != null : !END_TIME_EDEFAULT.equals(endTime);
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__TIME_INTERVAL:
 				return timeInterval != TIME_INTERVAL_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__ORBIT_MODEL:
 				return orbitModel != null;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__LEFT_SWATH_ANGLE:
 				return leftSwathAngle != LEFT_SWATH_ANGLE_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__RIGHT_SWATH_ANGLE:
 				return rightSwathAngle != RIGHT_SWATH_ANGLE_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR:
 				return corridor != null;
 		}
 		return super.eIsSet(featureID);
@@ -738,14 +738,14 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
 		if (baseClass == Updatable.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING: return SymphonyCorePackage.UPDATABLE__UPDATING;
-				case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED: return SymphonyCorePackage.UPDATABLE__AUTO_UPDATE_ENABLED;
+				case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING: return Symphony__CorePackage.UPDATABLE__UPDATING;
+				case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED: return Symphony__CorePackage.UPDATABLE__AUTO_UPDATE_ENABLED;
 				default: return -1;
 			}
 		}
@@ -761,14 +761,14 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__DESCRIPTION;
 				default: return -1;
 			}
 		}
 		if (baseClass == Updatable.class) {
 			switch (baseFeatureID) {
-				case SymphonyCorePackage.UPDATABLE__UPDATING: return SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING;
-				case SymphonyCorePackage.UPDATABLE__AUTO_UPDATE_ENABLED: return SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED;
+				case Symphony__CorePackage.UPDATABLE__UPDATING: return Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__UPDATING;
+				case Symphony__CorePackage.UPDATABLE__AUTO_UPDATE_ENABLED: return Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__AUTO_UPDATE_ENABLED;
 				default: return -1;
 			}
 		}
@@ -789,8 +789,8 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 		}
 		if (baseClass == Updatable.class) {
 			switch (baseOperationID) {
-				case SymphonyCorePackage.UPDATABLE___GET_DEFAULT_AUTO_UPDATE_ENABLED: return SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR___GET_DEFAULT_AUTO_UPDATE_ENABLED;
-				case SymphonyCorePackage.UPDATABLE___UPDATE: return SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR___UPDATE;
+				case Symphony__CorePackage.UPDATABLE___GET_DEFAULT_AUTO_UPDATE_ENABLED: return Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR___GET_DEFAULT_AUTO_UPDATE_ENABLED;
+				case Symphony__CorePackage.UPDATABLE___UPDATE: return Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR___UPDATE;
 				default: return -1;
 			}
 		}
@@ -805,9 +805,9 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR___GET_DEFAULT_AUTO_UPDATE_ENABLED:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR___GET_DEFAULT_AUTO_UPDATE_ENABLED:
 				return getDefaultAutoUpdateEnabled();
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR___UPDATE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR___UPDATE:
 				try {
 					update();
 					return null;
@@ -863,7 +863,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 			EarthOrbitPropagator earthOrbitPropagator = (EarthOrbitPropagator) getOrbitModel().getPropagator();
 			Propagator propagator = earthOrbitPropagator.getOreKitPropagator();
 									
-			Corridor corridor = SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createCorridor();			
+			Corridor corridor = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createCorridor();			
 			
 			// Checks that the specified dates falls within the propagator valid interval.
 			if(!earthOrbitPropagator.isDateInValidRange(getStartTime()))
@@ -906,24 +906,24 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 					Date date = EarthOrbitFacade.INSTANCE.createDate(absoluteDate);
 					
 					GeodeticPoint left = point.getLeft();				
-					GeographicCoordinates leftCoord = SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
+					GeographicCoordinates leftCoord = Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
 					leftCoord.setElevation(left.getAltitude());
 					leftCoord.setLatitude(left.getLatitude());
 					leftCoord.setLongitude(left.getLongitude());					
 
 					GeodeticPoint center = point.getCenter();				
-					GeographicCoordinates centerCoord = SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
+					GeographicCoordinates centerCoord = Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
 					centerCoord.setElevation(center.getAltitude());
 					centerCoord.setLatitude(center.getLatitude());
 					centerCoord.setLongitude(center.getLongitude());					
 										
 					GeodeticPoint right = point.getRight();
-					GeographicCoordinates rightCoord = SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
+					GeographicCoordinates rightCoord = Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates();
 					rightCoord.setElevation(right.getAltitude());
 					rightCoord.setLatitude(right.getLatitude());
 					rightCoord.setLongitude(right.getLongitude());
 					
-					org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint newPoint = SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createCorridorPoint();
+					org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint newPoint = Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createCorridorPoint();
 					newPoint.setTime(date);
 					newPoint.setLeft(leftCoord);
 					newPoint.setCenter(centerCoord);
@@ -958,7 +958,7 @@ public class SpacecraftSwathCorridorImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.SPACECRAFT_SWATH_CORRIDOR__CORRIDOR:
 				return basicSetCorridor(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);

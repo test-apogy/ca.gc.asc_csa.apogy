@@ -16,7 +16,7 @@ package org.eclipse.symphony.core.environment.ui;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getTrajectoryPickingTool()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getTrajectoryPickingTool()
  * @model
  * @generated
  */

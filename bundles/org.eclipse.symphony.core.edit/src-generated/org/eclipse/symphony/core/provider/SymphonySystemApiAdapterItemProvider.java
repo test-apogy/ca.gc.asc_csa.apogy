@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.invocator.provider.TypeApiAdapterItemProvider;
 
@@ -69,7 +69,7 @@ public class SymphonySystemApiAdapterItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SymphonySystemApiAdapter_symphonySystem_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonySystemApiAdapter_symphonySystem_feature", "_UI_SymphonySystemApiAdapter_type"),
-				 SymphonyCorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM,
+				 Symphony__CorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM,
 				 true,
 				 false,
 				 true,
@@ -91,9 +91,9 @@ public class SymphonySystemApiAdapterItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
-			childrenFeatures.add(SymphonyCorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR);
-			childrenFeatures.add(SymphonyCorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM);
+			childrenFeatures.add(Symphony__CorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
+			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR);
+			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__SYMPHONY_SYSTEM);
 		}
 		return childrenFeatures;
 	}
@@ -149,8 +149,8 @@ public class SymphonySystemApiAdapterItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SymphonySystemApiAdapter.class)) {
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
-			case SymphonyCorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_TRANSFORM:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -171,7 +171,7 @@ public class SymphonySystemApiAdapterItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM,
+				(Symphony__CorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM,
 				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 

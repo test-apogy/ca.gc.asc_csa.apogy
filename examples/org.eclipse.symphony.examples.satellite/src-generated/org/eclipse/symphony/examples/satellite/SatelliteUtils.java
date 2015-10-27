@@ -16,12 +16,11 @@ import org.eclipse.symphony.examples.satellite.impl.SatelliteUtilsImpl;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Utilities class for the Satellite example.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteUtils()
+ * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteUtils()
  * @model
  * @generated
  */

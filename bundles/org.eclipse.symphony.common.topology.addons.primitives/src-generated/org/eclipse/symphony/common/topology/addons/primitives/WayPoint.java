@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getWayPoint()
+ * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getWayPoint()
  * @model
  * @generated
  */

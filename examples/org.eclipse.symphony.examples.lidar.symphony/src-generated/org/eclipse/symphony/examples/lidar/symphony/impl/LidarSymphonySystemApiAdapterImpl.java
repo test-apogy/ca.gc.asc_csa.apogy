@@ -10,8 +10,8 @@ import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.examples.lidar.Lidar;
 import org.eclipse.symphony.examples.lidar.symphony.LidarData;
 import org.eclipse.symphony.examples.lidar.symphony.LidarSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarFactory;
-import org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarPackage;
+import org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyFactory;
+import org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,7 +39,7 @@ public class LidarSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyExampleLidarPackage.Literals.LIDAR_SYMPHONY_SYSTEM_API_ADAPTER;
+		return Symphony__ExamplesLidarSymphonyPackage.Literals.LIDAR_SYMPHONY_SYSTEM_API_ADAPTER;
 	}
 	
 	/**
@@ -63,7 +63,7 @@ public class LidarSymphonySystemApiAdapterImpl extends SymphonySystemApiAdapterI
 	public AbstractInitializationData createInitializationData()
 	{
 		// Create a Lidar unit initialization data object and return it
-		return SymphonyExampleLidarFactory.eINSTANCE.createLidarData();
+		return Symphony__ExamplesLidarSymphonyFactory.eINSTANCE.createLidarData();
 	}
 	
 	/**

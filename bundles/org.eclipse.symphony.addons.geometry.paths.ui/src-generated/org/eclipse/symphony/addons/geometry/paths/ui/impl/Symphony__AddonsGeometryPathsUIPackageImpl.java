@@ -14,7 +14,7 @@ import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPat
 import org.eclipse.symphony.addons.geometry.paths.ui.Symphony__AddonsGeometryPathsUIPackage;
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPathPresentation;
 import org.eclipse.symphony.addons.geometry.paths.ui.WayPointPresentation;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -91,7 +91,7 @@ public class Symphony__AddonsGeometryPathsUIPackageImpl extends EPackageImpl imp
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyUIPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsGeometryPathsUIPackage.createPackageContents();
@@ -225,7 +225,7 @@ public class Symphony__AddonsGeometryPathsUIPackageImpl extends EPackageImpl imp
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyUIPackage theTopologyUIPackage = (TopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyUIPackage.eNS_URI);
+		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -233,8 +233,8 @@ public class Symphony__AddonsGeometryPathsUIPackageImpl extends EPackageImpl imp
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		wayPointPathPresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
-		wayPointPresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
+		wayPointPathPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		wayPointPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(wayPointPathPresentationEClass, WayPointPathPresentation.class, "WayPointPathPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

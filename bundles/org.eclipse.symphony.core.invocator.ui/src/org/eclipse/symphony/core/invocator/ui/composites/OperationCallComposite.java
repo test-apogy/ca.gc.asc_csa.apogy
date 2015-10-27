@@ -24,7 +24,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.symphony.common.emf.ui.composites.EOperationsComposite;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
@@ -79,7 +79,7 @@ public class OperationCallComposite extends Composite {
 			protected void newSelection(TreeSelection selection) {		
 				CommandParameter commandParameter = 
 						new CommandParameter(getOperationCall(), 
-											 EMFEcoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION, 
+											 Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION, 
 											 selection.getFirstElement());
 				IEditingDomainItemProvider editingDomainItemProvider = (IEditingDomainItemProvider) adapterFactory.adapt(getOperationCall(), IEditingDomainItemProvider.class);
 				Command command = editingDomainItemProvider.createCommand(getOperationCall(), editingDomain, SetCommand.class, commandParameter);
@@ -192,7 +192,7 @@ public class OperationCallComposite extends Composite {
 						 * feature is set.  
 						 * @see {link OperationCallItemProvider#createSetCommand}.
 						 */
-						case EMFEcoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
+						case Symphony__CoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
 							setOperationCall(operationCall);  // Unable to set bidirectional binding with Tree Selection.
 							break;					
 					}

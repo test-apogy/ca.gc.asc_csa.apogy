@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.topology.ui.provider.NodePresentationItemProvider;
 import org.eclipse.symphony.core.environment.ui.StarFieldPresentation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.StarFieldPresentation} object.
@@ -69,7 +69,7 @@ public class StarFieldPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_StarFieldPresentation_cutOffMagnitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_StarFieldPresentation_cutOffMagnitude_feature", "_UI_StarFieldPresentation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE,
+				 Symphony__CoreEnvironmentUIPackage.Literals.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class StarFieldPresentationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(StarFieldPresentation.class)) {
-			case SymphonyEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
+			case Symphony__CoreEnvironmentUIPackage.STAR_FIELD_PRESENTATION__CUT_OFF_MAGNITUDE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

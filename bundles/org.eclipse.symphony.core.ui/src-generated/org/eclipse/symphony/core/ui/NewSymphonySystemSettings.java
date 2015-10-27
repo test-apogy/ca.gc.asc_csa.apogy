@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.ui.NewSymphonySystemSettings#getFilename <em>Filename</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getNewSymphonySystemSettings()
+ * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getNewSymphonySystemSettings()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface NewSymphonySystemSettings extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Folder</em>' attribute.
 	 * @see #setFolder(String)
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getNewSymphonySystemSettings_Folder()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getNewSymphonySystemSettings_Folder()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -59,7 +59,7 @@ public interface NewSymphonySystemSettings extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Filename</em>' attribute.
 	 * @see #setFilename(String)
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getNewSymphonySystemSettings_Filename()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getNewSymphonySystemSettings_Filename()
 	 * @model unique="false"
 	 * @generated
 	 */

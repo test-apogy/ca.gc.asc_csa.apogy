@@ -23,8 +23,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehicleFactory;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderFactory;
-import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage;
+import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderFactory;
+import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
 import org.eclipse.symphony.examples.lander.Lander;
 
 /**
@@ -98,7 +98,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_Lander_legAPosition_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_Lander_legAPosition_feature", "_UI_Lander_type"),
-				EMFEcoreExampleLanderPackage.Literals.LANDER__LEG_APOSITION,
+				Symphony__ExamplesLanderPackage.Literals.LANDER__LEG_APOSITION,
 				false,
 				false,
 				false,
@@ -121,7 +121,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Lander_legAExtension_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_legAExtension_feature", "_UI_Lander_type"),
-				 EMFEcoreExampleLanderPackage.Literals.LANDER__LEG_AEXTENSION,
+				 Symphony__ExamplesLanderPackage.Literals.LANDER__LEG_AEXTENSION,
 				 true,
 				 false,
 				 false,
@@ -144,7 +144,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_Lander_legBPosition_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_Lander_legBPosition_feature", "_UI_Lander_type"),
-				EMFEcoreExampleLanderPackage.Literals.LANDER__LEG_BPOSITION,
+				Symphony__ExamplesLanderPackage.Literals.LANDER__LEG_BPOSITION,
 				false,
 				false,
 				false,
@@ -167,7 +167,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Lander_legBExtension_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_legBExtension_feature", "_UI_Lander_type"),
-				 EMFEcoreExampleLanderPackage.Literals.LANDER__LEG_BEXTENSION,
+				 Symphony__ExamplesLanderPackage.Literals.LANDER__LEG_BEXTENSION,
 				 true,
 				 false,
 				 false,
@@ -190,7 +190,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_Lander_legCPosition_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_Lander_legCPosition_feature", "_UI_Lander_type"),
-				EMFEcoreExampleLanderPackage.Literals.LANDER__LEG_CPOSITION,
+				Symphony__ExamplesLanderPackage.Literals.LANDER__LEG_CPOSITION,
 				false,
 				false,
 				false,
@@ -213,7 +213,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Lander_legCExtension_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_legCExtension_feature", "_UI_Lander_type"),
-				 EMFEcoreExampleLanderPackage.Literals.LANDER__LEG_CEXTENSION,
+				 Symphony__ExamplesLanderPackage.Literals.LANDER__LEG_CEXTENSION,
 				 true,
 				 false,
 				 false,
@@ -236,7 +236,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 						getResourceLocator(),
 						getString("_UI_Lander_xAngularVelocity_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Lander_xAngularVelocity_feature", "_UI_Lander_type"),
-						EMFEcoreExampleLanderPackage.Literals.LANDER__XANGULAR_VELOCITY,
+						Symphony__ExamplesLanderPackage.Literals.LANDER__XANGULAR_VELOCITY,
 						true,
 						false,
 						false,
@@ -259,7 +259,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 						getResourceLocator(),
 						getString("_UI_Lander_yAngularVelocity_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Lander_yAngularVelocity_feature", "_UI_Lander_type"),
-						EMFEcoreExampleLanderPackage.Literals.LANDER__YANGULAR_VELOCITY,
+						Symphony__ExamplesLanderPackage.Literals.LANDER__YANGULAR_VELOCITY,
 						true,
 						false,
 						false,
@@ -281,7 +281,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 						getResourceLocator(),
 						getString("_UI_Lander_mass_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Lander_mass_feature", "_UI_Lander_type"),
-						EMFEcoreExampleLanderPackage.Literals.LANDER__MASS,
+						Symphony__ExamplesLanderPackage.Literals.LANDER__MASS,
 						false,
 						false,
 						false,
@@ -303,7 +303,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 						getResourceLocator(),
 						getString("_UI_Lander_gravitationalPull_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Lander_gravitationalPull_feature", "_UI_Lander_type"),
-						EMFEcoreExampleLanderPackage.Literals.LANDER__GRAVITATIONAL_PULL,
+						Symphony__ExamplesLanderPackage.Literals.LANDER__GRAVITATIONAL_PULL,
 						false,
 						false,
 						false,
@@ -325,7 +325,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Lander_flyingEnabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_flyingEnabled_feature", "_UI_Lander_type"),
-				 EMFEcoreExampleLanderPackage.Literals.LANDER__FLYING_ENABLED,
+				 Symphony__ExamplesLanderPackage.Literals.LANDER__FLYING_ENABLED,
 				 false,
 				 false,
 				 false,
@@ -347,7 +347,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Lander_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_initialized_feature", "_UI_Lander_type"),
-				 EMFEcoreExampleLanderPackage.Literals.LANDER__INITIALIZED,
+				 Symphony__ExamplesLanderPackage.Literals.LANDER__INITIALIZED,
 				 false,
 				 false,
 				 false,
@@ -369,7 +369,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Lander_disposed_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_disposed_feature", "_UI_Lander_type"),
-				 EMFEcoreExampleLanderPackage.Literals.LANDER__DISPOSED,
+				 Symphony__ExamplesLanderPackage.Literals.LANDER__DISPOSED,
 				 false,
 				 false,
 				 false,
@@ -391,7 +391,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Lander_changingLegs_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_changingLegs_feature", "_UI_Lander_type"),
-				 EMFEcoreExampleLanderPackage.Literals.LANDER__CHANGING_LEGS,
+				 Symphony__ExamplesLanderPackage.Literals.LANDER__CHANGING_LEGS,
 				 false,
 				 false,
 				 false,
@@ -413,7 +413,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Lander_changingAttitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_changingAttitude_feature", "_UI_Lander_type"),
-				 EMFEcoreExampleLanderPackage.Literals.LANDER__CHANGING_ATTITUDE,
+				 Symphony__ExamplesLanderPackage.Literals.LANDER__CHANGING_ATTITUDE,
 				 false,
 				 false,
 				 false,
@@ -435,7 +435,7 @@ public class LanderItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Lander_changingLocation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Lander_changingLocation_feature", "_UI_Lander_type"),
-				 EMFEcoreExampleLanderPackage.Literals.LANDER__CHANGING_LOCATION,
+				 Symphony__ExamplesLanderPackage.Literals.LANDER__CHANGING_LOCATION,
 				 false,
 				 false,
 				 false,
@@ -457,8 +457,8 @@ public class LanderItemProvider extends ItemProviderAdapter
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreExampleLanderPackage.Literals.LANDER__POSITION);
-			childrenFeatures.add(EMFEcoreExampleLanderPackage.Literals.LANDER__THRUSTER);
+			childrenFeatures.add(Symphony__ExamplesLanderPackage.Literals.LANDER__POSITION);
+			childrenFeatures.add(Symphony__ExamplesLanderPackage.Literals.LANDER__THRUSTER);
 		}
 		return childrenFeatures;
 	}
@@ -539,26 +539,26 @@ public class LanderItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Lander.class)) {
-			case EMFEcoreExampleLanderPackage.LANDER__LEG_AEXTENSION:
-			case EMFEcoreExampleLanderPackage.LANDER__LEG_BEXTENSION:
-			case EMFEcoreExampleLanderPackage.LANDER__LEG_CEXTENSION:
-			case EMFEcoreExampleLanderPackage.LANDER__LEG_APOSITION:
-			case EMFEcoreExampleLanderPackage.LANDER__LEG_BPOSITION:
-			case EMFEcoreExampleLanderPackage.LANDER__LEG_CPOSITION:
-			case EMFEcoreExampleLanderPackage.LANDER__XANGULAR_VELOCITY:
-			case EMFEcoreExampleLanderPackage.LANDER__YANGULAR_VELOCITY:
-			case EMFEcoreExampleLanderPackage.LANDER__MASS:
-			case EMFEcoreExampleLanderPackage.LANDER__GRAVITATIONAL_PULL:
-			case EMFEcoreExampleLanderPackage.LANDER__CHANGING_LEGS:
-			case EMFEcoreExampleLanderPackage.LANDER__CHANGING_ATTITUDE:
-			case EMFEcoreExampleLanderPackage.LANDER__CHANGING_LOCATION:
-			case EMFEcoreExampleLanderPackage.LANDER__FLYING_ENABLED:
-			case EMFEcoreExampleLanderPackage.LANDER__INITIALIZED:
-			case EMFEcoreExampleLanderPackage.LANDER__DISPOSED:
+			case Symphony__ExamplesLanderPackage.LANDER__LEG_AEXTENSION:
+			case Symphony__ExamplesLanderPackage.LANDER__LEG_BEXTENSION:
+			case Symphony__ExamplesLanderPackage.LANDER__LEG_CEXTENSION:
+			case Symphony__ExamplesLanderPackage.LANDER__LEG_APOSITION:
+			case Symphony__ExamplesLanderPackage.LANDER__LEG_BPOSITION:
+			case Symphony__ExamplesLanderPackage.LANDER__LEG_CPOSITION:
+			case Symphony__ExamplesLanderPackage.LANDER__XANGULAR_VELOCITY:
+			case Symphony__ExamplesLanderPackage.LANDER__YANGULAR_VELOCITY:
+			case Symphony__ExamplesLanderPackage.LANDER__MASS:
+			case Symphony__ExamplesLanderPackage.LANDER__GRAVITATIONAL_PULL:
+			case Symphony__ExamplesLanderPackage.LANDER__CHANGING_LEGS:
+			case Symphony__ExamplesLanderPackage.LANDER__CHANGING_ATTITUDE:
+			case Symphony__ExamplesLanderPackage.LANDER__CHANGING_LOCATION:
+			case Symphony__ExamplesLanderPackage.LANDER__FLYING_ENABLED:
+			case Symphony__ExamplesLanderPackage.LANDER__INITIALIZED:
+			case Symphony__ExamplesLanderPackage.LANDER__DISPOSED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreExampleLanderPackage.LANDER__POSITION:
-			case EMFEcoreExampleLanderPackage.LANDER__THRUSTER:
+			case Symphony__ExamplesLanderPackage.LANDER__POSITION:
+			case Symphony__ExamplesLanderPackage.LANDER__THRUSTER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -579,12 +579,12 @@ public class LanderItemProvider extends ItemProviderAdapter
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleLanderPackage.Literals.LANDER__POSITION,
-				 EMFEcoreExampleLanderFactory.eINSTANCE.createPosition()));
+				(Symphony__ExamplesLanderPackage.Literals.LANDER__POSITION,
+				 Symphony__ExamplesLanderFactory.eINSTANCE.createPosition()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleLanderPackage.Literals.LANDER__THRUSTER,
+				(Symphony__ExamplesLanderPackage.Literals.LANDER__THRUSTER,
 				 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
 	}
 

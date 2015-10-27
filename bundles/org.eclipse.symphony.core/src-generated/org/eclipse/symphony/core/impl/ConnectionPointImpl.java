@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.core.ConnectionPoint;
 import org.eclipse.symphony.core.ConnectionPointsList;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -93,7 +93,7 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.CONNECTION_POINT;
+		return Symphony__CorePackage.Literals.CONNECTION_POINT;
 	}
 
 	/**
@@ -112,7 +112,7 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.CONNECTION_POINT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.CONNECTION_POINT__NAME, oldName, name));
 	}
 
 	/**
@@ -131,7 +131,7 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.CONNECTION_POINT__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.CONNECTION_POINT__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -139,7 +139,7 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public ConnectionPointsList getPointsList() {
-		if (eContainerFeatureID() != SymphonyCorePackage.CONNECTION_POINT__POINTS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CorePackage.CONNECTION_POINT__POINTS_LIST) return null;
 		return (ConnectionPointsList)eContainer();
 	}
 
@@ -148,7 +148,7 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public ConnectionPointsList basicGetPointsList() {
-		if (eContainerFeatureID() != SymphonyCorePackage.CONNECTION_POINT__POINTS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CorePackage.CONNECTION_POINT__POINTS_LIST) return null;
 		return (ConnectionPointsList)eInternalContainer();
 	}
 
@@ -158,7 +158,7 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public NotificationChain basicSetPointsList(
 			ConnectionPointsList newPointsList, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newPointsList, SymphonyCorePackage.CONNECTION_POINT__POINTS_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newPointsList, Symphony__CorePackage.CONNECTION_POINT__POINTS_LIST, msgs);
 		return msgs;
 	}
 
@@ -167,19 +167,19 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public void setPointsList(ConnectionPointsList newPointsList) {
-		if (newPointsList != eInternalContainer() || (eContainerFeatureID() != SymphonyCorePackage.CONNECTION_POINT__POINTS_LIST && newPointsList != null)) {
+		if (newPointsList != eInternalContainer() || (eContainerFeatureID() != Symphony__CorePackage.CONNECTION_POINT__POINTS_LIST && newPointsList != null)) {
 			if (EcoreUtil.isAncestor(this, newPointsList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newPointsList != null)
-				msgs = ((InternalEObject)newPointsList).eInverseAdd(this, SymphonyCorePackage.CONNECTION_POINTS_LIST__CONNECTION_POINTS, ConnectionPointsList.class, msgs);
+				msgs = ((InternalEObject)newPointsList).eInverseAdd(this, Symphony__CorePackage.CONNECTION_POINTS_LIST__CONNECTION_POINTS, ConnectionPointsList.class, msgs);
 			msgs = basicSetPointsList(newPointsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.CONNECTION_POINT__POINTS_LIST, newPointsList, newPointsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.CONNECTION_POINT__POINTS_LIST, newPointsList, newPointsList));
 	}
 
 	/**
@@ -192,7 +192,7 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 			node = (GroupNode)eResolveProxy(oldNode);
 			if (node != oldNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.CONNECTION_POINT__NODE, oldNode, node));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.CONNECTION_POINT__NODE, oldNode, node));
 			}
 		}
 		return node;
@@ -214,7 +214,7 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 		GroupNode oldNode = node;
 		node = newNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.CONNECTION_POINT__NODE, oldNode, node));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.CONNECTION_POINT__NODE, oldNode, node));
 	}
 
 	/**
@@ -225,7 +225,7 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 	public NotificationChain eInverseAdd(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCorePackage.CONNECTION_POINT__POINTS_LIST:
+			case Symphony__CorePackage.CONNECTION_POINT__POINTS_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetPointsList((ConnectionPointsList)otherEnd, msgs);
@@ -241,7 +241,7 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCorePackage.CONNECTION_POINT__POINTS_LIST:
+			case Symphony__CorePackage.CONNECTION_POINT__POINTS_LIST:
 				return basicSetPointsList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -255,8 +255,8 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 	public NotificationChain eBasicRemoveFromContainerFeature(
 			NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case SymphonyCorePackage.CONNECTION_POINT__POINTS_LIST:
-				return eInternalContainer().eInverseRemove(this, SymphonyCorePackage.CONNECTION_POINTS_LIST__CONNECTION_POINTS, ConnectionPointsList.class, msgs);
+			case Symphony__CorePackage.CONNECTION_POINT__POINTS_LIST:
+				return eInternalContainer().eInverseRemove(this, Symphony__CorePackage.CONNECTION_POINTS_LIST__CONNECTION_POINTS, ConnectionPointsList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -268,14 +268,14 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.CONNECTION_POINT__NAME:
+			case Symphony__CorePackage.CONNECTION_POINT__NAME:
 				return getName();
-			case SymphonyCorePackage.CONNECTION_POINT__DESCRIPTION:
+			case Symphony__CorePackage.CONNECTION_POINT__DESCRIPTION:
 				return getDescription();
-			case SymphonyCorePackage.CONNECTION_POINT__POINTS_LIST:
+			case Symphony__CorePackage.CONNECTION_POINT__POINTS_LIST:
 				if (resolve) return getPointsList();
 				return basicGetPointsList();
-			case SymphonyCorePackage.CONNECTION_POINT__NODE:
+			case Symphony__CorePackage.CONNECTION_POINT__NODE:
 				if (resolve) return getNode();
 				return basicGetNode();
 		}
@@ -289,16 +289,16 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.CONNECTION_POINT__NAME:
+			case Symphony__CorePackage.CONNECTION_POINT__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyCorePackage.CONNECTION_POINT__DESCRIPTION:
+			case Symphony__CorePackage.CONNECTION_POINT__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyCorePackage.CONNECTION_POINT__POINTS_LIST:
+			case Symphony__CorePackage.CONNECTION_POINT__POINTS_LIST:
 				setPointsList((ConnectionPointsList)newValue);
 				return;
-			case SymphonyCorePackage.CONNECTION_POINT__NODE:
+			case Symphony__CorePackage.CONNECTION_POINT__NODE:
 				setNode((GroupNode)newValue);
 				return;
 		}
@@ -312,16 +312,16 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.CONNECTION_POINT__NAME:
+			case Symphony__CorePackage.CONNECTION_POINT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyCorePackage.CONNECTION_POINT__DESCRIPTION:
+			case Symphony__CorePackage.CONNECTION_POINT__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyCorePackage.CONNECTION_POINT__POINTS_LIST:
+			case Symphony__CorePackage.CONNECTION_POINT__POINTS_LIST:
 				setPointsList((ConnectionPointsList)null);
 				return;
-			case SymphonyCorePackage.CONNECTION_POINT__NODE:
+			case Symphony__CorePackage.CONNECTION_POINT__NODE:
 				setNode((GroupNode)null);
 				return;
 		}
@@ -335,13 +335,13 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.CONNECTION_POINT__NAME:
+			case Symphony__CorePackage.CONNECTION_POINT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyCorePackage.CONNECTION_POINT__DESCRIPTION:
+			case Symphony__CorePackage.CONNECTION_POINT__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyCorePackage.CONNECTION_POINT__POINTS_LIST:
+			case Symphony__CorePackage.CONNECTION_POINT__POINTS_LIST:
 				return basicGetPointsList() != null;
-			case SymphonyCorePackage.CONNECTION_POINT__NODE:
+			case Symphony__CorePackage.CONNECTION_POINT__NODE:
 				return node != null;
 		}
 		return super.eIsSet(featureID);
@@ -355,7 +355,7 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyCorePackage.CONNECTION_POINT__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CorePackage.CONNECTION_POINT__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -370,7 +370,7 @@ public class ConnectionPointImpl extends MinimalEObjectImpl.Container implements
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyCorePackage.CONNECTION_POINT__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CorePackage.CONNECTION_POINT__DESCRIPTION;
 				default: return -1;
 			}
 		}

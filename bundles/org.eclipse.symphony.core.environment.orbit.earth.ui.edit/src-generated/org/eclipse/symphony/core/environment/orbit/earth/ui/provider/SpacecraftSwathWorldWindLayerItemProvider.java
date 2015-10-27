@@ -15,9 +15,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftSwathWorldWindLayer} object.
@@ -72,7 +72,7 @@ public class SpacecraftSwathWorldWindLayerItemProvider extends AbstractWorldWind
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftSwathWorldWindLayer_orbitModel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftSwathWorldWindLayer_orbitModel_feature", "_UI_SpacecraftSwathWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__ORBIT_MODEL,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__ORBIT_MODEL,
 				 true,
 				 false,
 				 true,
@@ -94,7 +94,7 @@ public class SpacecraftSwathWorldWindLayerItemProvider extends AbstractWorldWind
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftSwathWorldWindLayer_timeSource_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftSwathWorldWindLayer_timeSource_feature", "_UI_SpacecraftSwathWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_SOURCE,
 				 true,
 				 false,
 				 true,
@@ -116,7 +116,7 @@ public class SpacecraftSwathWorldWindLayerItemProvider extends AbstractWorldWind
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftSwathWorldWindLayer_forwardPropagationDuration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftSwathWorldWindLayer_forwardPropagationDuration_feature", "_UI_SpacecraftSwathWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION,
 				 true,
 				 false,
 				 false,
@@ -138,7 +138,7 @@ public class SpacecraftSwathWorldWindLayerItemProvider extends AbstractWorldWind
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftSwathWorldWindLayer_backwardPropagationDuration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftSwathWorldWindLayer_backwardPropagationDuration_feature", "_UI_SpacecraftSwathWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION,
 				 true,
 				 false,
 				 false,
@@ -160,7 +160,7 @@ public class SpacecraftSwathWorldWindLayerItemProvider extends AbstractWorldWind
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftSwathWorldWindLayer_timeInterval_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftSwathWorldWindLayer_timeInterval_feature", "_UI_SpacecraftSwathWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_INTERVAL,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_INTERVAL,
 				 true,
 				 false,
 				 false,
@@ -182,7 +182,7 @@ public class SpacecraftSwathWorldWindLayerItemProvider extends AbstractWorldWind
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftSwathWorldWindLayer_leftSwathAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftSwathWorldWindLayer_leftSwathAngle_feature", "_UI_SpacecraftSwathWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__LEFT_SWATH_ANGLE,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__LEFT_SWATH_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -204,7 +204,7 @@ public class SpacecraftSwathWorldWindLayerItemProvider extends AbstractWorldWind
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftSwathWorldWindLayer_rightSwathAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftSwathWorldWindLayer_rightSwathAngle_feature", "_UI_SpacecraftSwathWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__RIGHT_SWATH_ANGLE,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__RIGHT_SWATH_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -226,7 +226,7 @@ public class SpacecraftSwathWorldWindLayerItemProvider extends AbstractWorldWind
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftSwathWorldWindLayer_showGroundTrace_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftSwathWorldWindLayer_showGroundTrace_feature", "_UI_SpacecraftSwathWorldWindLayer_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__SHOW_GROUND_TRACE,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__SHOW_GROUND_TRACE,
 				 true,
 				 false,
 				 false,
@@ -247,8 +247,8 @@ public class SpacecraftSwathWorldWindLayerItemProvider extends AbstractWorldWind
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR);
 		}
 		return childrenFeatures;
 	}
@@ -313,16 +313,16 @@ public class SpacecraftSwathWorldWindLayerItemProvider extends AbstractWorldWind
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SpacecraftSwathWorldWindLayer.class)) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_INTERVAL:
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__LEFT_SWATH_ANGLE:
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__RIGHT_SWATH_ANGLE:
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_PROPAGATION_DURATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__TIME_INTERVAL:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__LEFT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__RIGHT_SWATH_ANGLE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__SHOW_GROUND_TRACE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR:
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -342,13 +342,13 @@ public class SpacecraftSwathWorldWindLayerItemProvider extends AbstractWorldWind
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createSpacecraftSwathCorridor()));
+				(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createSpacecraftSwathCorridor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createSpacecraftSwathCorridor()));
+				(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createSpacecraftSwathCorridor()));
 	}
 
 	/**
@@ -363,8 +363,8 @@ public class SpacecraftSwathWorldWindLayerItemProvider extends AbstractWorldWind
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR ||
-			childFeature == SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR;
+			childFeature == Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__FORWARD_SPACECRAFT_SWATH_CORRIDOR ||
+			childFeature == Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_SWATH_WORLD_WIND_LAYER__BACKWARD_SPACECRAFT_SWATH_CORRIDOR;
 
 		if (qualify) {
 			return getString

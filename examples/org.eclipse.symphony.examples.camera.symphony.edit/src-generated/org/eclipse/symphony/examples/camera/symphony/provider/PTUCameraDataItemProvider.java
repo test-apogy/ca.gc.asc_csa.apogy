@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.examples.camera.symphony.PTUCameraData;
-import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage;
+import org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.camera.symphony.PTUCameraData} object.
@@ -68,7 +68,7 @@ public class PTUCameraDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PTUCameraData_panAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PTUCameraData_panAngle_feature", "_UI_PTUCameraData_type"),
-				 SymphonyExampleCameraPackage.Literals.PTU_CAMERA_DATA__PAN_ANGLE,
+				 Symphony__ExamplesCameraSymphonyPackage.Literals.PTU_CAMERA_DATA__PAN_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ public class PTUCameraDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PTUCameraData_tiltAngle_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PTUCameraData_tiltAngle_feature", "_UI_PTUCameraData_type"),
-				 SymphonyExampleCameraPackage.Literals.PTU_CAMERA_DATA__TILT_ANGLE,
+				 Symphony__ExamplesCameraSymphonyPackage.Literals.PTU_CAMERA_DATA__TILT_ANGLE,
 				 true,
 				 false,
 				 false,
@@ -137,8 +137,8 @@ public class PTUCameraDataItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PTUCameraData.class)) {
-			case SymphonyExampleCameraPackage.PTU_CAMERA_DATA__PAN_ANGLE:
-			case SymphonyExampleCameraPackage.PTU_CAMERA_DATA__TILT_ANGLE:
+			case Symphony__ExamplesCameraSymphonyPackage.PTU_CAMERA_DATA__PAN_ANGLE:
+			case Symphony__ExamplesCameraSymphonyPackage.PTU_CAMERA_DATA__TILT_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

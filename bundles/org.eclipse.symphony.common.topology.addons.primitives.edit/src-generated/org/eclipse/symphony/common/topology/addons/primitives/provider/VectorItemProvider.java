@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.Vector;
 import org.eclipse.symphony.common.topology.provider.NodeItemProvider;
 
@@ -75,7 +75,7 @@ public class VectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Vector_xRotation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Vector_xRotation_feature", "_UI_Vector_type"),
-				 PrimitivesPackage.Literals.VECTOR__XROTATION,
+				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.VECTOR__XROTATION,
 				 true,
 				 false,
 				 false,
@@ -98,7 +98,7 @@ public class VectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Vector_yRotation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Vector_yRotation_feature", "_UI_Vector_type"),
-				 PrimitivesPackage.Literals.VECTOR__YROTATION,
+				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.VECTOR__YROTATION,
 				 true,
 				 false,
 				 false,
@@ -121,7 +121,7 @@ public class VectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Vector_zRotation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Vector_zRotation_feature", "_UI_Vector_type"),
-				 PrimitivesPackage.Literals.VECTOR__ZROTATION,
+				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.VECTOR__ZROTATION,
 				 true,
 				 false,
 				 false,
@@ -144,7 +144,7 @@ public class VectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Vector_length_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Vector_length_feature", "_UI_Vector_type"),
-				 PrimitivesPackage.Literals.VECTOR__LENGTH,
+				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.VECTOR__LENGTH,
 				 true,
 				 false,
 				 false,
@@ -167,7 +167,7 @@ public class VectorItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Vector_endPoint_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Vector_endPoint_feature", "_UI_Vector_type"),
-				 PrimitivesPackage.Literals.VECTOR__END_POINT,
+				 Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.VECTOR__END_POINT,
 				 false,
 				 false,
 				 false,
@@ -218,11 +218,11 @@ public class VectorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Vector.class)) {
-			case PrimitivesPackage.VECTOR__XROTATION:
-			case PrimitivesPackage.VECTOR__YROTATION:
-			case PrimitivesPackage.VECTOR__ZROTATION:
-			case PrimitivesPackage.VECTOR__LENGTH:
-			case PrimitivesPackage.VECTOR__END_POINT:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH:
+			case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__END_POINT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

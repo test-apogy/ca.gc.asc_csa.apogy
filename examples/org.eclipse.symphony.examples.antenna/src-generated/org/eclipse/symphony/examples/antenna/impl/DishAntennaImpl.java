@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
 import org.eclipse.symphony.examples.antenna.DishAntenna;
-import org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage;
+import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +55,7 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 	@Override
 	protected EClass eStaticClass()
 	{
-		return EMFEcoreExampleAntennaPackage.Literals.DISH_ANTENNA;
+		return Symphony__ExamplesAntennaPackage.Literals.DISH_ANTENNA;
 	}
 
 	/**
@@ -78,7 +78,7 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 		ConicalFieldOfView oldFov = fov;
 		fov = newFov;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreExampleAntennaPackage.DISH_ANTENNA__FOV, oldFov, newFov);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV, oldFov, newFov);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -94,14 +94,14 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 		if (newFov != fov) {
 			NotificationChain msgs = null;
 			if (fov != null)
-				msgs = ((InternalEObject)fov).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleAntennaPackage.DISH_ANTENNA__FOV, null, msgs);
+				msgs = ((InternalEObject)fov).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV, null, msgs);
 			if (newFov != null)
-				msgs = ((InternalEObject)newFov).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleAntennaPackage.DISH_ANTENNA__FOV, null, msgs);
+				msgs = ((InternalEObject)newFov).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV, null, msgs);
 			msgs = basicSetFov(newFov, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleAntennaPackage.DISH_ANTENNA__FOV, newFov, newFov));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV, newFov, newFov));
 	}
 
 	/**
@@ -113,7 +113,7 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleAntennaPackage.DISH_ANTENNA__FOV:
+			case Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV:
 				return basicSetFov(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -128,7 +128,7 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleAntennaPackage.DISH_ANTENNA__FOV:
+			case Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV:
 				return getFov();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -143,7 +143,7 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleAntennaPackage.DISH_ANTENNA__FOV:
+			case Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV:
 				setFov((ConicalFieldOfView)newValue);
 				return;
 		}
@@ -159,7 +159,7 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleAntennaPackage.DISH_ANTENNA__FOV:
+			case Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV:
 				setFov((ConicalFieldOfView)null);
 				return;
 		}
@@ -175,7 +175,7 @@ public abstract class DishAntennaImpl extends AntennaImpl implements DishAntenna
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleAntennaPackage.DISH_ANTENNA__FOV:
+			case Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV:
 				return fov != null;
 		}
 		return super.eIsSet(featureID);

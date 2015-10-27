@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.EnumerationCase} object.
@@ -84,7 +84,7 @@ public class EnumerationCaseItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EnumerationCase_enumerationLiterals_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EnumerationCase_enumerationLiterals_feature", "_UI_EnumerationCase_type"),
-				 TopologyBindingsPackage.Literals.ENUMERATION_CASE__ENUMERATION_LITERALS,
+				 Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__ENUMERATION_LITERALS,
 				 true,
 				 false,
 				 true,
@@ -106,7 +106,7 @@ public class EnumerationCaseItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT);
+			childrenFeatures.add(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT);
 		}
 		return childrenFeatures;
 	}
@@ -179,7 +179,7 @@ public class EnumerationCaseItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EnumerationCase.class)) {
-			case TopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
+			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_CASE__TOPOLOGY_ROOT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -200,72 +200,72 @@ public class EnumerationCaseItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createLeaf()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createURLNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createCADNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createPositionNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createRotationNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+				(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 	}
 

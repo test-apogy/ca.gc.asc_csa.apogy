@@ -16,7 +16,7 @@ package org.eclipse.symphony.core.programs.controllers;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.TimeTrigger#getRefreshPeriod <em>Refresh Period</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getTimeTrigger()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getTimeTrigger()
  * @model
  * @generated
  */
@@ -31,9 +31,12 @@ public interface TimeTrigger extends Trigger
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The refresh period, in millisecond, at which the operation should be called.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Refresh Period</em>' attribute.
 	 * @see #setRefreshPeriod(long)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getTimeTrigger_RefreshPeriod()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getTimeTrigger_RefreshPeriod()
 	 * @model default="100" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='ms'"
 	 * @generated

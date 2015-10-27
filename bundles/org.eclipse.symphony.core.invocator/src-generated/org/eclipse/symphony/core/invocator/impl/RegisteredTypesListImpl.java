@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.RegisteredTypesList;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Type;
 import org.eclipse.symphony.core.invocator.TypeContributorsRegistry;
 
@@ -61,7 +61,7 @@ public class RegisteredTypesListImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreInvocatorPackage.Literals.REGISTERED_TYPES_LIST;
+		return Symphony__CoreInvocatorPackage.Literals.REGISTERED_TYPES_LIST;
 	}
 
 	/**
@@ -116,7 +116,7 @@ public class RegisteredTypesListImpl extends MinimalEObjectImpl.Container
 			}
 			
 			types = new EObjectResolvingEList<Type>(Type.class, this,
-					EMFEcoreInvocatorPackage.REGISTERED_TYPES_LIST__TYPES);			
+					Symphony__CoreInvocatorPackage.REGISTERED_TYPES_LIST__TYPES);			
 			types.addAll(list);
 		}
 		return types;
@@ -129,7 +129,7 @@ public class RegisteredTypesListImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.REGISTERED_TYPES_LIST__TYPES:
+			case Symphony__CoreInvocatorPackage.REGISTERED_TYPES_LIST__TYPES:
 				return getTypes();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -142,7 +142,7 @@ public class RegisteredTypesListImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.REGISTERED_TYPES_LIST__TYPES:
+			case Symphony__CoreInvocatorPackage.REGISTERED_TYPES_LIST__TYPES:
 				return types != null && !types.isEmpty();
 		}
 		return super.eIsSet(featureID);

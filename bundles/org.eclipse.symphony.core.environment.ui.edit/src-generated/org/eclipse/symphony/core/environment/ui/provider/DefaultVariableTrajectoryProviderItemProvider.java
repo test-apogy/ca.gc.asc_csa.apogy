@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.ui.DefaultVariableTrajectoryProvider;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.jfree.data.xy.XYDataItem;
 
 /**
@@ -69,7 +69,7 @@ public class DefaultVariableTrajectoryProviderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DefaultVariableTrajectoryProvider_distanceThreshold_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DefaultVariableTrajectoryProvider_distanceThreshold_feature", "_UI_DefaultVariableTrajectoryProvider_type"),
-				 SymphonyEnvironmentUIPackage.Literals.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD,
+				 Symphony__CoreEnvironmentUIPackage.Literals.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class DefaultVariableTrajectoryProviderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DefaultVariableTrajectoryProvider_azimuthThreshold_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DefaultVariableTrajectoryProvider_azimuthThreshold_feature", "_UI_DefaultVariableTrajectoryProvider_type"),
-				 SymphonyEnvironmentUIPackage.Literals.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD,
+				 Symphony__CoreEnvironmentUIPackage.Literals.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD,
 				 true,
 				 false,
 				 false,
@@ -142,8 +142,8 @@ public class DefaultVariableTrajectoryProviderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DefaultVariableTrajectoryProvider.class)) {
-			case SymphonyEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
-			case SymphonyEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
+			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__DISTANCE_THRESHOLD:
+			case Symphony__CoreEnvironmentUIPackage.DEFAULT_VARIABLE_TRAJECTORY_PROVIDER__AZIMUTH_THRESHOLD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

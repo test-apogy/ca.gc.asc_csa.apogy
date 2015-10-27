@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.invocator.EDataTypeArgument;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.edit.descriptors.ENumberDataTypeArgumentItemPropertyDescriptor;
 
 /**
@@ -75,7 +75,7 @@ public class EDataTypeArgumentItemProvider extends ArgumentItemProvider {
 							getString("_UI_PropertyDescriptor_description",
 									"_UI_EDataTypeArgument_value_feature",
 									"_UI_EDataTypeArgument_type"),
-							EMFEcoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
+							Symphony__CoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
 							true, false, false,
 							ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
 							null){
@@ -110,7 +110,7 @@ public class EDataTypeArgumentItemProvider extends ArgumentItemProvider {
 							getString("_UI_PropertyDescriptor_description",
 									"_UI_EDataTypeArgument_value_feature",
 									"_UI_EDataTypeArgument_type"),
-							EMFEcoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
+							Symphony__CoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
 							true, false, false,
 							ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
 							null));
@@ -129,7 +129,7 @@ public class EDataTypeArgumentItemProvider extends ArgumentItemProvider {
 					getString("_UI_PropertyDescriptor_description",
 							"_UI_EDataTypeArgument_value_feature",
 							"_UI_EDataTypeArgument_type"),
-					EMFEcoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
+					Symphony__CoreInvocatorPackage.Literals.EDATA_TYPE_ARGUMENT__VALUE,
 					true, false, false,
 					ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null,
 					null));
@@ -175,7 +175,7 @@ public class EDataTypeArgumentItemProvider extends ArgumentItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EDataTypeArgument.class)) {
-			case EMFEcoreInvocatorPackage.EDATA_TYPE_ARGUMENT__VALUE:
+			case Symphony__CoreInvocatorPackage.EDATA_TYPE_ARGUMENT__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

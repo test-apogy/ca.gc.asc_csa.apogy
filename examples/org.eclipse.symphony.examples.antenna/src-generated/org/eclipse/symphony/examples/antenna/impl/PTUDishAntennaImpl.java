@@ -9,7 +9,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage;
+import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
 import org.eclipse.symphony.examples.antenna.PTUDishAntenna;
 
 /**
@@ -107,7 +107,7 @@ public abstract class PTUDishAntennaImpl extends DishAntennaImpl implements PTUD
 	@Override
 	protected EClass eStaticClass()
 	{
-		return EMFEcoreExampleAntennaPackage.Literals.PTU_DISH_ANTENNA;
+		return Symphony__ExamplesAntennaPackage.Literals.PTU_DISH_ANTENNA;
 	}
 
 	/**
@@ -130,7 +130,7 @@ public abstract class PTUDishAntennaImpl extends DishAntennaImpl implements PTUD
 		double oldPanAngle = panAngle;
 		panAngle = newPanAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__PAN_ANGLE, oldPanAngle, panAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__PAN_ANGLE, oldPanAngle, panAngle));
 	}
 
 	/**
@@ -153,7 +153,7 @@ public abstract class PTUDishAntennaImpl extends DishAntennaImpl implements PTUD
 		double oldTiltAngle = tiltAngle;
 		tiltAngle = newTiltAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__TILT_ANGLE, oldTiltAngle, tiltAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__TILT_ANGLE, oldTiltAngle, tiltAngle));
 	}
 
 	/**
@@ -174,7 +174,7 @@ public abstract class PTUDishAntennaImpl extends DishAntennaImpl implements PTUD
 		boolean oldTrackingSun = trackingSun;
 		trackingSun = newTrackingSun;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__TRACKING_SUN, oldTrackingSun, trackingSun));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__TRACKING_SUN, oldTrackingSun, trackingSun));
 	}
 
 	/**
@@ -206,11 +206,11 @@ public abstract class PTUDishAntennaImpl extends DishAntennaImpl implements PTUD
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__PAN_ANGLE:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__PAN_ANGLE:
 				return getPanAngle();
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__TILT_ANGLE:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__TILT_ANGLE:
 				return getTiltAngle();
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__TRACKING_SUN:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__TRACKING_SUN:
 				return isTrackingSun();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -225,13 +225,13 @@ public abstract class PTUDishAntennaImpl extends DishAntennaImpl implements PTUD
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__PAN_ANGLE:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__PAN_ANGLE:
 				setPanAngle((Double)newValue);
 				return;
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__TILT_ANGLE:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__TILT_ANGLE:
 				setTiltAngle((Double)newValue);
 				return;
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__TRACKING_SUN:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__TRACKING_SUN:
 				setTrackingSun((Boolean)newValue);
 				return;
 		}
@@ -247,13 +247,13 @@ public abstract class PTUDishAntennaImpl extends DishAntennaImpl implements PTUD
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__PAN_ANGLE:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__PAN_ANGLE:
 				setPanAngle(PAN_ANGLE_EDEFAULT);
 				return;
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__TILT_ANGLE:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__TILT_ANGLE:
 				setTiltAngle(TILT_ANGLE_EDEFAULT);
 				return;
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__TRACKING_SUN:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__TRACKING_SUN:
 				setTrackingSun(TRACKING_SUN_EDEFAULT);
 				return;
 		}
@@ -269,11 +269,11 @@ public abstract class PTUDishAntennaImpl extends DishAntennaImpl implements PTUD
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__PAN_ANGLE:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__PAN_ANGLE:
 				return panAngle != PAN_ANGLE_EDEFAULT;
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__TILT_ANGLE:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__TILT_ANGLE:
 				return tiltAngle != TILT_ANGLE_EDEFAULT;
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA__TRACKING_SUN:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA__TRACKING_SUN:
 				return trackingSun != TRACKING_SUN_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -288,10 +288,10 @@ public abstract class PTUDishAntennaImpl extends DishAntennaImpl implements PTUD
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
 	{
 		switch (operationID) {
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA___MOVE_TO__DOUBLE_DOUBLE:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA___MOVE_TO__DOUBLE_DOUBLE:
 				moveTo((Double)arguments.get(0), (Double)arguments.get(1));
 				return null;
-			case EMFEcoreExampleAntennaPackage.PTU_DISH_ANTENNA___TRACK_SUN__BOOLEAN:
+			case Symphony__ExamplesAntennaPackage.PTU_DISH_ANTENNA___TRACK_SUN__BOOLEAN:
 				trackSun((Boolean)arguments.get(0));
 				return null;
 		}

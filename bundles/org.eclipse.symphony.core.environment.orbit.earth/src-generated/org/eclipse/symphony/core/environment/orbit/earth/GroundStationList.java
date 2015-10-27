@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.GroundStationList#getGroundStations <em>Ground Stations</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getGroundStationList()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getGroundStationList()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface GroundStationList extends Named, Described {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ground Stations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getGroundStationList_GroundStations()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getGroundStationList_GroundStations()
 	 * @model containment="true"
 	 * @generated
 	 */

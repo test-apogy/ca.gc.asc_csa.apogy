@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.antenna.Activator;
-import org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage;
+import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
 import org.eclipse.symphony.examples.antenna.PTUDishAntennaStub;
 
 /**
@@ -34,7 +34,7 @@ public class PTUDishAntennaStubImpl extends PTUDishAntennaImpl implements PTUDis
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_STUB;
+		return Symphony__ExamplesAntennaPackage.Literals.PTU_DISH_ANTENNA_STUB;
 	}
 
 	/**

@@ -17,7 +17,7 @@ package org.eclipse.symphony.core.programs.controllers;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.LinearInputConditioning#getMaximum <em>Maximum</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getLinearInputConditioning()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getLinearInputConditioning()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface LinearInputConditioning extends AbstractInputConditioning {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Minimum</em>' attribute.
 	 * @see #setMinimum(float)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getLinearInputConditioning_Minimum()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getLinearInputConditioning_Minimum()
 	 * @model default="-1.0" unique="false"
 	 * @generated
 	 */
@@ -60,7 +60,7 @@ public interface LinearInputConditioning extends AbstractInputConditioning {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maximum</em>' attribute.
 	 * @see #setMaximum(float)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getLinearInputConditioning_Maximum()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getLinearInputConditioning_Maximum()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */

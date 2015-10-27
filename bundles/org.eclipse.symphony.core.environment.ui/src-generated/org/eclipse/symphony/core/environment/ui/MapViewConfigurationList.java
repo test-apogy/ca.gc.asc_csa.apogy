@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewConfigurationList#getMapViewConfigurations <em>Map View Configurations</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewConfigurationList()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfigurationList()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface MapViewConfigurationList extends AbstractToolsListContainer
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map View Configurations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewConfigurationList_MapViewConfigurations()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfigurationList_MapViewConfigurations()
 	 * @model containment="true"
 	 * @generated
 	 */

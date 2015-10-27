@@ -21,7 +21,7 @@ package org.eclipse.symphony.core.invocator;
  *   <li>{@link org.eclipse.symphony.core.invocator.OperationCallResult#getExceptionContainer <em>Exception Container</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCallResult()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCallResult()
  * @model
  * @generated
  */
@@ -36,11 +36,10 @@ public interface OperationCallResult extends AbstractResult, OperationCallContai
    * </p>
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * In this case, operationCall refers to the OperationCall stored in the OperationCallContainer.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Operation Call</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCallResult_OperationCall()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCallResult_OperationCall()
 	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' children='false' notify='true' get='<%org.eclipse.emf.common.util.EList%><<%org.eclipse.symphony.core.invocator.OperationCall%>> _operationCalls = this.getOperationCalls();\nint _size = _operationCalls.size();\nboolean _equals = (_size == 0);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.emf.common.util.EList%><<%org.eclipse.symphony.core.invocator.OperationCall%>> _operationCalls_1 = this.getOperationCalls();\n\treturn _operationCalls_1.get(0);\n}'"
 	 * @generated
@@ -57,7 +56,7 @@ public interface OperationCallResult extends AbstractResult, OperationCallContai
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exception Container</em>' containment reference.
 	 * @see #setExceptionContainer(ExceptionContainer)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getOperationCallResult_ExceptionContainer()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getOperationCallResult_ExceptionContainer()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' createChild='false' property='Readonly'"
 	 * @generated

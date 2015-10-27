@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -56,7 +56,7 @@ public class CartesianCoordinatesPolygonShapeImageMapLayerImpl extends PolygonSh
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER;
+		return Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER;
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class CartesianCoordinatesPolygonShapeImageMapLayerImpl extends PolygonSh
 	 */
 	public EList<Tuple3d> getPolygonVertices() {
 		if (polygonVertices == null) {
-			polygonVertices = new EObjectContainmentEList<Tuple3d>(Tuple3d.class, this, SymphonyEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES);
+			polygonVertices = new EObjectContainmentEList<Tuple3d>(Tuple3d.class, this, Symphony__CoreEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES);
 		}
 		return polygonVertices;
 	}
@@ -79,7 +79,7 @@ public class CartesianCoordinatesPolygonShapeImageMapLayerImpl extends PolygonSh
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES:
 				return ((InternalEList<?>)getPolygonVertices()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -93,7 +93,7 @@ public class CartesianCoordinatesPolygonShapeImageMapLayerImpl extends PolygonSh
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES:
 				return getPolygonVertices();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class CartesianCoordinatesPolygonShapeImageMapLayerImpl extends PolygonSh
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES:
 				getPolygonVertices().clear();
 				getPolygonVertices().addAll((Collection<? extends Tuple3d>)newValue);
 				return;
@@ -124,7 +124,7 @@ public class CartesianCoordinatesPolygonShapeImageMapLayerImpl extends PolygonSh
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES:
 				getPolygonVertices().clear();
 				return;
 		}
@@ -139,7 +139,7 @@ public class CartesianCoordinatesPolygonShapeImageMapLayerImpl extends PolygonSh
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_COORDINATES_POLYGON_SHAPE_IMAGE_MAP_LAYER__POLYGON_VERTICES:
 				return polygonVertices != null && !polygonVertices.isEmpty();
 		}
 		return super.eIsSet(featureID);

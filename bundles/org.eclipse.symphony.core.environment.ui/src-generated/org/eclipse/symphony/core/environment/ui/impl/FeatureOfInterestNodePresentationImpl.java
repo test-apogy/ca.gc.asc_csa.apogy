@@ -10,7 +10,7 @@ import org.eclipse.swt.graphics.RGB;
 import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 import org.eclipse.symphony.core.environment.ui.FeatureOfInterestNodePresentation;
 import org.eclipse.symphony.core.environment.ui.FeatureOfInterestSceneObject;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -83,7 +83,7 @@ public class FeatureOfInterestNodePresentationImpl extends NodePresentationImpl 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentUIPackage.Literals.FEATURE_OF_INTEREST_NODE_PRESENTATION;
+		return Symphony__CoreEnvironmentUIPackage.Literals.FEATURE_OF_INTEREST_NODE_PRESENTATION;
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class FeatureOfInterestNodePresentationImpl extends NodePresentationImpl 
 		double oldPoleHeight = poleHeight;
 		poleHeight = newPoleHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT, oldPoleHeight, poleHeight));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT, oldPoleHeight, poleHeight));
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class FeatureOfInterestNodePresentationImpl extends NodePresentationImpl 
 		boolean oldFlagVisible = flagVisible;
 		flagVisible = newFlagVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE, oldFlagVisible, flagVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE, oldFlagVisible, flagVisible));
 	}
 
 	/**
@@ -162,9 +162,9 @@ public class FeatureOfInterestNodePresentationImpl extends NodePresentationImpl 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
+			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
 				return getPoleHeight();
-			case SymphonyEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
 				return isFlagVisible();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -178,10 +178,10 @@ public class FeatureOfInterestNodePresentationImpl extends NodePresentationImpl 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
+			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
 				setPoleHeight((Double)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
 				setFlagVisible((Boolean)newValue);
 				return;
 		}
@@ -196,10 +196,10 @@ public class FeatureOfInterestNodePresentationImpl extends NodePresentationImpl 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
+			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
 				setPoleHeight(POLE_HEIGHT_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
 				setFlagVisible(FLAG_VISIBLE_EDEFAULT);
 				return;
 		}
@@ -214,9 +214,9 @@ public class FeatureOfInterestNodePresentationImpl extends NodePresentationImpl 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
+			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__POLE_HEIGHT:
 				return poleHeight != POLE_HEIGHT_EDEFAULT;
-			case SymphonyEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.FEATURE_OF_INTEREST_NODE_PRESENTATION__FLAG_VISIBLE:
 				return flagVisible != FLAG_VISIBLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

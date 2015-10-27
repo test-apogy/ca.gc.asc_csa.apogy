@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
  *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer#getMesh <em>Mesh</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshURLMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshURLMapLayer()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface CartesianTriangularMeshURLMapLayer extends CartesianTriangularM
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mesh</em>' reference.
 	 * @see #setMesh(CartesianTriangularMesh)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshURLMapLayer_Mesh()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshURLMapLayer_Mesh()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='TRIANGULAR_MESH'"
 	 * @generated

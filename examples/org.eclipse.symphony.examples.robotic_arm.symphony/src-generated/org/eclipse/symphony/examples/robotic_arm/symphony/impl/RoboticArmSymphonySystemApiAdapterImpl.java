@@ -13,12 +13,12 @@ import org.eclipse.symphony.common.topology.TopologyFacade;
 import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.OperationCall;
-import org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage;
+import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage;
 import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
 import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmData;
 import org.eclipse.symphony.examples.robotic_arm.symphony.RoboticArmSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.robotic_arm.symphony.SymphonyExampleRoboticArmFactory;
-import org.eclipse.symphony.examples.robotic_arm.symphony.SymphonyExampleRoboticArmPackage;
+import org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyFactory;
+import org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -47,7 +47,7 @@ public class RoboticArmSymphonySystemApiAdapterImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyExampleRoboticArmPackage.Literals.ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER;
+		return Symphony__ExamplesRoboticArmSymphonyPackage.Literals.ROBOTIC_ARM_SYMPHONY_SYSTEM_API_ADAPTER;
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class RoboticArmSymphonySystemApiAdapterImpl extends
 	{
 		// If this is the moveTo() operation
 		if (operationCall.getEOperation().getOperationID() ==
-				EMFEcoreExampleRoboticArmPackage.ROBOTIC_ARM___MOVE_TO__DOUBLE_DOUBLE_DOUBLE_DOUBLE)
+				Symphony__ExamplesRoboticArmPackage.ROBOTIC_ARM___MOVE_TO__DOUBLE_DOUBLE_DOUBLE_DOUBLE)
 		{
 			// Get the topology node at the tip of the robotic arm's hand
 			Node tip = TopologyFacade.INSTANCE.findNodesByID("ROBOTIC_ARM_SYM_SYS_HAND_TIP",
@@ -117,7 +117,7 @@ public class RoboticArmSymphonySystemApiAdapterImpl extends
 	{
 		// Call the appropriate factory method for this package to get
 		// a RoboticArmData instance and then return it.
-		return SymphonyExampleRoboticArmFactory.eINSTANCE.createRoboticArmData();
+		return Symphony__ExamplesRoboticArmSymphonyFactory.eINSTANCE.createRoboticArmData();
 	}
 
 	/**

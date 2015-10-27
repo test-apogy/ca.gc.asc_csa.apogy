@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
 import org.eclipse.symphony.examples.lander.symphony.LanderData;
-import org.eclipse.symphony.examples.lander.symphony.SymphonyExampleLanderPackage;
+import org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.lander.symphony.LanderData} object.
@@ -75,7 +75,7 @@ public class LanderDataItemProvider extends SymphonyInitializationDataItemProvid
 				 getResourceLocator(),
 				 getString("_UI_LanderData_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LanderData_initialized_feature", "_UI_LanderData_type"),
-				 SymphonyExampleLanderPackage.Literals.LANDER_DATA__INITIALIZED,
+				 Symphony__ExamplesLanderSymphonyPackage.Literals.LANDER_DATA__INITIALIZED,
 				 true,
 				 false,
 				 false,
@@ -97,7 +97,7 @@ public class LanderDataItemProvider extends SymphonyInitializationDataItemProvid
 				 getResourceLocator(),
 				 getString("_UI_LanderData_disposed_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LanderData_disposed_feature", "_UI_LanderData_type"),
-				 SymphonyExampleLanderPackage.Literals.LANDER_DATA__DISPOSED,
+				 Symphony__ExamplesLanderSymphonyPackage.Literals.LANDER_DATA__DISPOSED,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class LanderDataItemProvider extends SymphonyInitializationDataItemProvid
 				 getResourceLocator(),
 				 getString("_UI_LanderData_flyingEnabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LanderData_flyingEnabled_feature", "_UI_LanderData_type"),
-				 SymphonyExampleLanderPackage.Literals.LANDER_DATA__FLYING_ENABLED,
+				 Symphony__ExamplesLanderSymphonyPackage.Literals.LANDER_DATA__FLYING_ENABLED,
 				 true,
 				 false,
 				 false,
@@ -141,7 +141,7 @@ public class LanderDataItemProvider extends SymphonyInitializationDataItemProvid
 				 getResourceLocator(),
 				 getString("_UI_LanderData_legAExtension_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LanderData_legAExtension_feature", "_UI_LanderData_type"),
-				 SymphonyExampleLanderPackage.Literals.LANDER_DATA__LEG_AEXTENSION,
+				 Symphony__ExamplesLanderSymphonyPackage.Literals.LANDER_DATA__LEG_AEXTENSION,
 				 true,
 				 false,
 				 false,
@@ -163,7 +163,7 @@ public class LanderDataItemProvider extends SymphonyInitializationDataItemProvid
 				 getResourceLocator(),
 				 getString("_UI_LanderData_legBExtension_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LanderData_legBExtension_feature", "_UI_LanderData_type"),
-				 SymphonyExampleLanderPackage.Literals.LANDER_DATA__LEG_BEXTENSION,
+				 Symphony__ExamplesLanderSymphonyPackage.Literals.LANDER_DATA__LEG_BEXTENSION,
 				 true,
 				 false,
 				 false,
@@ -185,7 +185,7 @@ public class LanderDataItemProvider extends SymphonyInitializationDataItemProvid
 				 getResourceLocator(),
 				 getString("_UI_LanderData_legCExtension_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LanderData_legCExtension_feature", "_UI_LanderData_type"),
-				 SymphonyExampleLanderPackage.Literals.LANDER_DATA__LEG_CEXTENSION,
+				 Symphony__ExamplesLanderSymphonyPackage.Literals.LANDER_DATA__LEG_CEXTENSION,
 				 true,
 				 false,
 				 false,
@@ -207,7 +207,7 @@ public class LanderDataItemProvider extends SymphonyInitializationDataItemProvid
 				 getResourceLocator(),
 				 getString("_UI_LanderData_currThrustLevel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LanderData_currThrustLevel_feature", "_UI_LanderData_type"),
-				 SymphonyExampleLanderPackage.Literals.LANDER_DATA__CURR_THRUST_LEVEL,
+				 Symphony__ExamplesLanderSymphonyPackage.Literals.LANDER_DATA__CURR_THRUST_LEVEL,
 				 true,
 				 false,
 				 false,
@@ -229,7 +229,7 @@ public class LanderDataItemProvider extends SymphonyInitializationDataItemProvid
 				 getResourceLocator(),
 				 getString("_UI_LanderData_minThrustLevel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LanderData_minThrustLevel_feature", "_UI_LanderData_type"),
-				 SymphonyExampleLanderPackage.Literals.LANDER_DATA__MIN_THRUST_LEVEL,
+				 Symphony__ExamplesLanderSymphonyPackage.Literals.LANDER_DATA__MIN_THRUST_LEVEL,
 				 true,
 				 false,
 				 false,
@@ -251,7 +251,7 @@ public class LanderDataItemProvider extends SymphonyInitializationDataItemProvid
 				 getResourceLocator(),
 				 getString("_UI_LanderData_maxThrustLevel_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LanderData_maxThrustLevel_feature", "_UI_LanderData_type"),
-				 SymphonyExampleLanderPackage.Literals.LANDER_DATA__MAX_THRUST_LEVEL,
+				 Symphony__ExamplesLanderSymphonyPackage.Literals.LANDER_DATA__MAX_THRUST_LEVEL,
 				 true,
 				 false,
 				 false,
@@ -273,7 +273,7 @@ public class LanderDataItemProvider extends SymphonyInitializationDataItemProvid
 				 getResourceLocator(),
 				 getString("_UI_LanderData_xAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LanderData_xAngularVelocity_feature", "_UI_LanderData_type"),
-				 SymphonyExampleLanderPackage.Literals.LANDER_DATA__XANGULAR_VELOCITY,
+				 Symphony__ExamplesLanderSymphonyPackage.Literals.LANDER_DATA__XANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -295,7 +295,7 @@ public class LanderDataItemProvider extends SymphonyInitializationDataItemProvid
 				 getResourceLocator(),
 				 getString("_UI_LanderData_yAngularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LanderData_yAngularVelocity_feature", "_UI_LanderData_type"),
-				 SymphonyExampleLanderPackage.Literals.LANDER_DATA__YANGULAR_VELOCITY,
+				 Symphony__ExamplesLanderSymphonyPackage.Literals.LANDER_DATA__YANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -340,17 +340,17 @@ public class LanderDataItemProvider extends SymphonyInitializationDataItemProvid
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LanderData.class)) {
-			case SymphonyExampleLanderPackage.LANDER_DATA__INITIALIZED:
-			case SymphonyExampleLanderPackage.LANDER_DATA__DISPOSED:
-			case SymphonyExampleLanderPackage.LANDER_DATA__FLYING_ENABLED:
-			case SymphonyExampleLanderPackage.LANDER_DATA__LEG_AEXTENSION:
-			case SymphonyExampleLanderPackage.LANDER_DATA__LEG_BEXTENSION:
-			case SymphonyExampleLanderPackage.LANDER_DATA__LEG_CEXTENSION:
-			case SymphonyExampleLanderPackage.LANDER_DATA__CURR_THRUST_LEVEL:
-			case SymphonyExampleLanderPackage.LANDER_DATA__MIN_THRUST_LEVEL:
-			case SymphonyExampleLanderPackage.LANDER_DATA__MAX_THRUST_LEVEL:
-			case SymphonyExampleLanderPackage.LANDER_DATA__XANGULAR_VELOCITY:
-			case SymphonyExampleLanderPackage.LANDER_DATA__YANGULAR_VELOCITY:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__INITIALIZED:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__DISPOSED:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__FLYING_ENABLED:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_AEXTENSION:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_BEXTENSION:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_CEXTENSION:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__CURR_THRUST_LEVEL:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__MIN_THRUST_LEVEL:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__MAX_THRUST_LEVEL:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__XANGULAR_VELOCITY:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__YANGULAR_VELOCITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -377,7 +377,7 @@ public class LanderDataItemProvider extends SymphonyInitializationDataItemProvid
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SymphonyExampleLanderEditPlugin.INSTANCE;
+		return Symphony__ExamplesLanderSymphonyEditPlugin.INSTANCE;
 	}
 
 }

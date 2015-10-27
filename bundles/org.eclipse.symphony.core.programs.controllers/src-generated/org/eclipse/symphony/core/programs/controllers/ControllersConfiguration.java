@@ -26,7 +26,7 @@ import org.eclipse.symphony.core.invocator.Program;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllersConfiguration#isActive <em>Active</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllersConfiguration()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllersConfiguration()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface ControllersConfiguration extends Program, OperationCallContaine
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Active</em>' attribute.
 	 * @see #setActive(boolean)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllersConfiguration_Active()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllersConfiguration_Active()
 	 * @model default="false" unique="false" transient="true"
 	 * @generated
 	 */

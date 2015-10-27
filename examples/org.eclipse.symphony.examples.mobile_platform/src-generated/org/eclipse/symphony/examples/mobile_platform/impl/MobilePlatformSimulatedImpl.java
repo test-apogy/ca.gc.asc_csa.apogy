@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.mobile_platform.Activator;
-import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformFactory;
-import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage;
+import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformFactory;
+import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
 import org.eclipse.symphony.examples.mobile_platform.MobilePlatformSimulated;
 import org.eclipse.symphony.examples.mobile_platform.Position;
 
@@ -108,7 +108,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 	@Override
 	protected EClass eStaticClass()
 	{
-		return EMFEcoreExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM_SIMULATED;
+		return Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM_SIMULATED;
 	}
 	
 	/**
@@ -974,7 +974,7 @@ class MobilePlatformSimulatedMoveJob extends Job
 				newRightWheelPos = newRightWheelPos + (DELTA_T * rightWheelAngVel);
 
 				// Create a new position and populate it with new values
-				Position newPosition = EMFEcoreExampleMobilePlatformFactory.eINSTANCE
+				Position newPosition = Symphony__ExamplesMobilePlatformFactory.eINSTANCE
 						.createPosition();
 				newPosition.setX(newX);
 				newPosition.setY(newY);

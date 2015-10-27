@@ -19,8 +19,8 @@ import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagin
 import org.eclipse.symphony.addons.sensors.imaging.provider.AbstractCameraItemProvider;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.examples.camera.Camera;
-import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraFactory;
-import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
+import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraFactory;
+import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.camera.Camera} object.
@@ -121,7 +121,7 @@ extends AbstractCameraItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Camera_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Camera_initialized_feature", "_UI_Camera_type"),
-				 EMFEcoreExampleCameraPackage.Literals.CAMERA__INITIALIZED,
+				 Symphony__ExamplesCameraPackage.Literals.CAMERA__INITIALIZED,
 				 false,
 				 false,
 				 false,
@@ -143,7 +143,7 @@ extends AbstractCameraItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Camera_streamingEnabled_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Camera_streamingEnabled_feature", "_UI_Camera_type"),
-				 EMFEcoreExampleCameraPackage.Literals.CAMERA__STREAMING_ENABLED,
+				 Symphony__ExamplesCameraPackage.Literals.CAMERA__STREAMING_ENABLED,
 				 false,
 				 false,
 				 false,
@@ -165,7 +165,7 @@ extends AbstractCameraItemProvider
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreExampleCameraPackage.Literals.CAMERA__FOV);
+			childrenFeatures.add(Symphony__ExamplesCameraPackage.Literals.CAMERA__FOV);
 		}
 		return childrenFeatures;
 	}
@@ -224,13 +224,13 @@ extends AbstractCameraItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Camera.class)) {
-			case EMFEcoreExampleCameraPackage.CAMERA__CURRENT_ZOOM:
-			case EMFEcoreExampleCameraPackage.CAMERA__COMMANDED_ZOOM:
-			case EMFEcoreExampleCameraPackage.CAMERA__INITIALIZED:
-			case EMFEcoreExampleCameraPackage.CAMERA__STREAMING_ENABLED:
+			case Symphony__ExamplesCameraPackage.CAMERA__CURRENT_ZOOM:
+			case Symphony__ExamplesCameraPackage.CAMERA__COMMANDED_ZOOM:
+			case Symphony__ExamplesCameraPackage.CAMERA__INITIALIZED:
+			case Symphony__ExamplesCameraPackage.CAMERA__STREAMING_ENABLED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreExampleCameraPackage.CAMERA__FOV:
+			case Symphony__ExamplesCameraPackage.CAMERA__FOV:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -252,46 +252,46 @@ extends AbstractCameraItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 EMFEcoreExampleCameraFactory.eINSTANCE.createCameraStub()));
+				 Symphony__ExamplesCameraFactory.eINSTANCE.createCameraStub()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 EMFEcoreExampleCameraFactory.eINSTANCE.createCameraSimulated()));
+				 Symphony__ExamplesCameraFactory.eINSTANCE.createCameraSimulated()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 EMFEcoreExampleCameraFactory.eINSTANCE.createPTUCameraStub()));
+				 Symphony__ExamplesCameraFactory.eINSTANCE.createPTUCameraStub()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 EMFEcoreExampleCameraFactory.eINSTANCE.createPTUCameraSimulated()));
+				 Symphony__ExamplesCameraFactory.eINSTANCE.createPTUCameraSimulated()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 EMFEcoreExampleCameraFactory.eINSTANCE.createCameraStub()));
+				 Symphony__ExamplesCameraFactory.eINSTANCE.createCameraStub()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 EMFEcoreExampleCameraFactory.eINSTANCE.createCameraSimulated()));
+				 Symphony__ExamplesCameraFactory.eINSTANCE.createCameraSimulated()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 EMFEcoreExampleCameraFactory.eINSTANCE.createPTUCameraStub()));
+				 Symphony__ExamplesCameraFactory.eINSTANCE.createPTUCameraStub()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
-				 EMFEcoreExampleCameraFactory.eINSTANCE.createPTUCameraSimulated()));
+				 Symphony__ExamplesCameraFactory.eINSTANCE.createPTUCameraSimulated()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleCameraPackage.Literals.CAMERA__FOV,
+				(Symphony__ExamplesCameraPackage.Literals.CAMERA__FOV,
 				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 	}
 
@@ -310,7 +310,7 @@ extends AbstractCameraItemProvider
 		boolean qualify =
 			childFeature == Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN ||
 			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
-			childFeature == EMFEcoreExampleCameraPackage.Literals.CAMERA__FOV;
+			childFeature == Symphony__ExamplesCameraPackage.Literals.CAMERA__FOV;
 
 		if (qualify) {
 			return getString

@@ -8,7 +8,7 @@ import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -56,7 +56,7 @@ import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
 public class EMFEcoreInvocatorFacadeTest extends TestCase {
 
 	/**
-	 * The fixture for this Facade test case.
+	 * The fixture for this EMF Ecore Invocator Facade test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -73,7 +73,7 @@ public class EMFEcoreInvocatorFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Constructs a new Facade test case with the given name.
+	 * Constructs a new EMF Ecore Invocator Facade test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -83,7 +83,7 @@ public class EMFEcoreInvocatorFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Facade test case.
+	 * Sets the fixture for this EMF Ecore Invocator Facade test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -93,7 +93,7 @@ public class EMFEcoreInvocatorFacadeTest extends TestCase {
 	}
 
 	/**
-	 * Returns the fixture for this Facade test case.
+	 * Returns the fixture for this EMF Ecore Invocator Facade test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -110,7 +110,7 @@ public class EMFEcoreInvocatorFacadeTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createEMFEcoreInvocatorFacade());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createEMFEcoreInvocatorFacade());
 	}
 
 	/**

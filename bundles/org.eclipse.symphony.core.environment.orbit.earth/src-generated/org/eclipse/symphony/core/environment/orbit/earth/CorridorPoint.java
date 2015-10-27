@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint#getRight <em>Right</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getCorridorPoint()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getCorridorPoint()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface CorridorPoint extends Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Left</em>' containment reference.
 	 * @see #setLeft(GeographicCoordinates)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getCorridorPoint_Left()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getCorridorPoint_Left()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface CorridorPoint extends Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Center</em>' containment reference.
 	 * @see #setCenter(GeographicCoordinates)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getCorridorPoint_Center()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getCorridorPoint_Center()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -87,7 +87,7 @@ public interface CorridorPoint extends Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Right</em>' containment reference.
 	 * @see #setRight(GeographicCoordinates)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getCorridorPoint_Right()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getCorridorPoint_Right()
 	 * @model containment="true"
 	 * @generated
 	 */

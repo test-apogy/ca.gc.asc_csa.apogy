@@ -27,7 +27,7 @@ import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
  *   <li>{@link org.eclipse.symphony.examples.camera.Camera#isStreamingEnabled <em>Streaming Enabled</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage#getCamera()
+ * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage#getCamera()
  * @model abstract="true"
  * @generated
  */
@@ -47,7 +47,7 @@ public interface Camera extends AbstractCamera, Zoomable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fov</em>' containment reference.
 	 * @see #setFov(RectangularFrustrumFieldOfView)
-	 * @see org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage#getCamera_Fov()
+	 * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage#getCamera_Fov()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Field Of View'"
 	 * @generated
@@ -76,7 +76,7 @@ public interface Camera extends AbstractCamera, Zoomable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage#getCamera_Initialized()
+	 * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage#getCamera_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -103,7 +103,7 @@ public interface Camera extends AbstractCamera, Zoomable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Streaming Enabled</em>' attribute.
 	 * @see #setStreamingEnabled(boolean)
-	 * @see org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage#getCamera_StreamingEnabled()
+	 * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage#getCamera_StreamingEnabled()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated

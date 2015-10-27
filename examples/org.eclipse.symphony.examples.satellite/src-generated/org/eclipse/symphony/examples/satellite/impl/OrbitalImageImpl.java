@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.OrbitalImage;
 
 /**
@@ -141,7 +141,7 @@ public class OrbitalImageImpl extends MinimalEObjectImpl.Container implements Or
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleSatellitePackage.Literals.ORBITAL_IMAGE;
+		return Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE;
 	}
 
 	/**
@@ -162,7 +162,7 @@ public class OrbitalImageImpl extends MinimalEObjectImpl.Container implements Or
 		int oldWidth = width;
 		width = newWidth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__WIDTH, oldWidth, width));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__WIDTH, oldWidth, width));
 	}
 
 	/**
@@ -183,7 +183,7 @@ public class OrbitalImageImpl extends MinimalEObjectImpl.Container implements Or
 		int oldHeight = height;
 		height = newHeight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__HEIGHT, oldHeight, height));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__HEIGHT, oldHeight, height));
 	}
 
 	/**
@@ -204,7 +204,7 @@ public class OrbitalImageImpl extends MinimalEObjectImpl.Container implements Or
 		int oldOrderId = orderId;
 		orderId = newOrderId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__ORDER_ID, oldOrderId, orderId));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__ORDER_ID, oldOrderId, orderId));
 	}
 
 	/**
@@ -225,7 +225,7 @@ public class OrbitalImageImpl extends MinimalEObjectImpl.Container implements Or
 		GeographicCoordinates oldImageCenter = imageCenter;
 		imageCenter = newImageCenter;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER, oldImageCenter, newImageCenter);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER, oldImageCenter, newImageCenter);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -240,14 +240,14 @@ public class OrbitalImageImpl extends MinimalEObjectImpl.Container implements Or
 		if (newImageCenter != imageCenter) {
 			NotificationChain msgs = null;
 			if (imageCenter != null)
-				msgs = ((InternalEObject)imageCenter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER, null, msgs);
+				msgs = ((InternalEObject)imageCenter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER, null, msgs);
 			if (newImageCenter != null)
-				msgs = ((InternalEObject)newImageCenter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER, null, msgs);
+				msgs = ((InternalEObject)newImageCenter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER, null, msgs);
 			msgs = basicSetImageCenter(newImageCenter, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER, newImageCenter, newImageCenter));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER, newImageCenter, newImageCenter));
 	}
 
 	/**
@@ -268,7 +268,7 @@ public class OrbitalImageImpl extends MinimalEObjectImpl.Container implements Or
 		int oldDownloadSize = downloadSize;
 		downloadSize = newDownloadSize;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__DOWNLOAD_SIZE, oldDownloadSize, downloadSize));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__DOWNLOAD_SIZE, oldDownloadSize, downloadSize));
 	}
 
 	/**
@@ -290,7 +290,7 @@ public class OrbitalImageImpl extends MinimalEObjectImpl.Container implements Or
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER:
 				return basicSetImageCenter(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -304,15 +304,15 @@ public class OrbitalImageImpl extends MinimalEObjectImpl.Container implements Or
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__WIDTH:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__WIDTH:
 				return getWidth();
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__HEIGHT:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__HEIGHT:
 				return getHeight();
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__ORDER_ID:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__ORDER_ID:
 				return getOrderId();
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER:
 				return getImageCenter();
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__DOWNLOAD_SIZE:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__DOWNLOAD_SIZE:
 				return getDownloadSize();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -326,19 +326,19 @@ public class OrbitalImageImpl extends MinimalEObjectImpl.Container implements Or
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__WIDTH:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__WIDTH:
 				setWidth((Integer)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__HEIGHT:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__HEIGHT:
 				setHeight((Integer)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__ORDER_ID:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__ORDER_ID:
 				setOrderId((Integer)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER:
 				setImageCenter((GeographicCoordinates)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__DOWNLOAD_SIZE:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__DOWNLOAD_SIZE:
 				setDownloadSize((Integer)newValue);
 				return;
 		}
@@ -353,19 +353,19 @@ public class OrbitalImageImpl extends MinimalEObjectImpl.Container implements Or
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__WIDTH:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__WIDTH:
 				setWidth(WIDTH_EDEFAULT);
 				return;
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__HEIGHT:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__HEIGHT:
 				setHeight(HEIGHT_EDEFAULT);
 				return;
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__ORDER_ID:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__ORDER_ID:
 				setOrderId(ORDER_ID_EDEFAULT);
 				return;
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER:
 				setImageCenter((GeographicCoordinates)null);
 				return;
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__DOWNLOAD_SIZE:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__DOWNLOAD_SIZE:
 				setDownloadSize(DOWNLOAD_SIZE_EDEFAULT);
 				return;
 		}
@@ -380,15 +380,15 @@ public class OrbitalImageImpl extends MinimalEObjectImpl.Container implements Or
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__WIDTH:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__WIDTH:
 				return width != WIDTH_EDEFAULT;
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__HEIGHT:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__HEIGHT:
 				return height != HEIGHT_EDEFAULT;
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__ORDER_ID:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__ORDER_ID:
 				return orderId != ORDER_ID_EDEFAULT;
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER:
 				return imageCenter != null;
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE__DOWNLOAD_SIZE:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__DOWNLOAD_SIZE:
 				return downloadSize != DOWNLOAD_SIZE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -402,7 +402,7 @@ public class OrbitalImageImpl extends MinimalEObjectImpl.Container implements Or
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EMFEcoreExampleSatellitePackage.ORBITAL_IMAGE___AS_BUFFERED_IMAGE:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE___AS_BUFFERED_IMAGE:
 				return asBufferedImage();
 		}
 		return super.eInvoke(operationID, arguments);

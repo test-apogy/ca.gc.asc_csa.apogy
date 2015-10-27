@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.rover.symphony.SymphonyExampleRoverPackage#getRoverSymphonySystemApiAdapter()
+ * @see org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage#getRoverSymphonySystemApiAdapter()
  * @model
  * @generated
  */

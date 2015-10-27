@@ -23,9 +23,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration} object.
@@ -126,7 +126,7 @@ public class SpacecraftVisibilityPassViewConfigurationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_SpacecraftVisibilityPassViewConfiguration_configurationsList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftVisibilityPassViewConfiguration_configurationsList_feature", "_UI_SpacecraftVisibilityPassViewConfiguration_type"),
-				 SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST,
+				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST,
 				 true,
 				 false,
 				 true,
@@ -147,7 +147,7 @@ public class SpacecraftVisibilityPassViewConfigurationItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET);
 		}
 		return childrenFeatures;
 	}
@@ -203,11 +203,11 @@ public class SpacecraftVisibilityPassViewConfigurationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SpacecraftVisibilityPassViewConfiguration.class)) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME:
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -227,8 +227,8 @@ public class SpacecraftVisibilityPassViewConfigurationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createSpacecraftsVisibilitySet()));
+				(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createSpacecraftsVisibilitySet()));
 	}
 
 	/**

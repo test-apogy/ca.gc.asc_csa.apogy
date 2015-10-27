@@ -26,8 +26,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Type;
 
 /**
@@ -112,7 +112,7 @@ public class TypeItemProvider
          getResourceLocator(),
          getString("_UI_Type_interfaceClass_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_Type_interfaceClass_feature", "_UI_Type_type"),
-         EMFEcoreInvocatorPackage.Literals.TYPE__INTERFACE_CLASS,
+         Symphony__CoreInvocatorPackage.Literals.TYPE__INTERFACE_CLASS,
          true,
          false,
          true,
@@ -142,7 +142,7 @@ public class TypeItemProvider
          getResourceLocator(),
          getString("_UI_Type_typeApiAdapterClass_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_Type_typeApiAdapterClass_feature", "_UI_Type_type"),
-         EMFEcoreInvocatorPackage.Literals.TYPE__TYPE_API_ADAPTER_CLASS,
+         Symphony__CoreInvocatorPackage.Literals.TYPE__TYPE_API_ADAPTER_CLASS,
          true,
          false,
          true,
@@ -151,7 +151,7 @@ public class TypeItemProvider
          null){
 			@Override
 			protected Collection<?> getComboBoxObjects(Object object) {
-				List<EClass> list = EMFEcoreFacade.INSTANCE.getAllSubEClasses(EMFEcoreInvocatorPackage.Literals.TYPE_API_ADAPTER);				
+				List<EClass> list = EMFEcoreFacade.INSTANCE.getAllSubEClasses(Symphony__CoreInvocatorPackage.Literals.TYPE_API_ADAPTER);				
 				SortedSet<EClass> classes = EMFEcoreFacade.INSTANCE.sortAlphabetically(list);
 				return classes;
 			}
@@ -171,7 +171,7 @@ public class TypeItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.TYPE__MEMBERS);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TYPE__MEMBERS);
 		}
 		return childrenFeatures;
 	}
@@ -241,12 +241,12 @@ public class TypeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Type.class)) {
-			case EMFEcoreInvocatorPackage.TYPE__NAME:
-			case EMFEcoreInvocatorPackage.TYPE__INTERFACE_CLASS:
-			case EMFEcoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS:
+			case Symphony__CoreInvocatorPackage.TYPE__NAME:
+			case Symphony__CoreInvocatorPackage.TYPE__INTERFACE_CLASS:
+			case Symphony__CoreInvocatorPackage.TYPE__TYPE_API_ADAPTER_CLASS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.TYPE__MEMBERS:
+			case Symphony__CoreInvocatorPackage.TYPE__MEMBERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -267,8 +267,8 @@ public class TypeItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.TYPE__MEMBERS,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createTypeMember()));
+				(Symphony__CoreInvocatorPackage.Literals.TYPE__MEMBERS,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createTypeMember()));
 	}
 
   /**

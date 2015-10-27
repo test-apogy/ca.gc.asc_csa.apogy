@@ -11,7 +11,6 @@ import javax.vecmath.Color3f;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Base class of image map layer that represent a 2D shape.
  * <!-- end-model-doc -->
  *
@@ -24,7 +23,7 @@ import javax.vecmath.Color3f;
  *   <li>{@link org.eclipse.symphony.core.environment.AbstractShapeImageLayer#getRequiredResolution <em>Required Resolution</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAbstractShapeImageLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractShapeImageLayer()
  * @model abstract="true"
  * @generated
  */
@@ -35,11 +34,11 @@ public interface AbstractShapeImageLayer extends ImageMapLayer {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Wether or not the shape should be drawn as a filled polygon.
+	 * Whether or not the shape should be drawn as a filled polygon.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Shaped Filled</em>' attribute.
 	 * @see #setShapedFilled(boolean)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAbstractShapeImageLayer_ShapedFilled()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractShapeImageLayer_ShapedFilled()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS'"
 	 * @generated
@@ -66,7 +65,7 @@ public interface AbstractShapeImageLayer extends ImageMapLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Color</em>' attribute.
 	 * @see #setColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAbstractShapeImageLayer_Color()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractShapeImageLayer_Color()
 	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.core.environment.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS'"
 	 * @generated
@@ -89,11 +88,11 @@ public interface AbstractShapeImageLayer extends ImageMapLayer {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The required resolution, in meters / pixels
+	 * The required resolution, in meters / pixels
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Required Resolution</em>' attribute.
 	 * @see #setRequiredResolution(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAbstractShapeImageLayer_RequiredResolution()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractShapeImageLayer_RequiredResolution()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS' csa_units='m/pixel'"
 	 * @generated

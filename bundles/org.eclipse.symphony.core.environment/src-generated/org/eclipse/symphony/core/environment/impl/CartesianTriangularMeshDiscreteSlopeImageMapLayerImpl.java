@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer;
 import org.eclipse.symphony.core.environment.SlopeRange;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,7 +57,7 @@ public class CartesianTriangularMeshDiscreteSlopeImageMapLayerImpl extends Carte
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER;
+		return Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER;
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class CartesianTriangularMeshDiscreteSlopeImageMapLayerImpl extends Carte
 	 */
 	public EList<SlopeRange> getSlopeRanges() {
 		if (slopeRanges == null) {
-			slopeRanges = new EObjectContainmentEList<SlopeRange>(SlopeRange.class, this, SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER__SLOPE_RANGES);
+			slopeRanges = new EObjectContainmentEList<SlopeRange>(SlopeRange.class, this, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER__SLOPE_RANGES);
 		}
 		return slopeRanges;
 	}
@@ -80,7 +80,7 @@ public class CartesianTriangularMeshDiscreteSlopeImageMapLayerImpl extends Carte
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER__SLOPE_RANGES:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER__SLOPE_RANGES:
 				return ((InternalEList<?>)getSlopeRanges()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -94,7 +94,7 @@ public class CartesianTriangularMeshDiscreteSlopeImageMapLayerImpl extends Carte
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER__SLOPE_RANGES:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER__SLOPE_RANGES:
 				return getSlopeRanges();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -109,7 +109,7 @@ public class CartesianTriangularMeshDiscreteSlopeImageMapLayerImpl extends Carte
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER__SLOPE_RANGES:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER__SLOPE_RANGES:
 				getSlopeRanges().clear();
 				getSlopeRanges().addAll((Collection<? extends SlopeRange>)newValue);
 				return;
@@ -125,7 +125,7 @@ public class CartesianTriangularMeshDiscreteSlopeImageMapLayerImpl extends Carte
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER__SLOPE_RANGES:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER__SLOPE_RANGES:
 				getSlopeRanges().clear();
 				return;
 		}
@@ -140,7 +140,7 @@ public class CartesianTriangularMeshDiscreteSlopeImageMapLayerImpl extends Carte
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER__SLOPE_RANGES:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_DISCRETE_SLOPE_IMAGE_MAP_LAYER__SLOPE_RANGES:
 				return slopeRanges != null && !slopeRanges.isEmpty();
 		}
 		return super.eIsSet(featureID);

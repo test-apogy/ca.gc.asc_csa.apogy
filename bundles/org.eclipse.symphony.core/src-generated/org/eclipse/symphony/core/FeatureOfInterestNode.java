@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.TransformNode;
  *   <li>{@link org.eclipse.symphony.core.FeatureOfInterestNode#getFeatureOfInterest <em>Feature Of Interest</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getFeatureOfInterestNode()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getFeatureOfInterestNode()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface FeatureOfInterestNode extends TransformNode {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Of Interest</em>' reference.
 	 * @see #setFeatureOfInterest(FeatureOfInterest)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getFeatureOfInterestNode_FeatureOfInterest()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getFeatureOfInterestNode_FeatureOfInterest()
 	 * @model transient="true"
 	 * @generated
 	 */

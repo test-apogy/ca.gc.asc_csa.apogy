@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
 import org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 public class GraphicsContextLasAdapter implements GraphicsContextAdapter {
 	public static final String SUPPORTED_EXTENSION = "las";
@@ -111,7 +111,7 @@ public class GraphicsContextLasAdapter implements GraphicsContextAdapter {
 				root.getChildren().add(pointNode);
 
 				// We create a graphics context
-				grContext = TopologyUIFactory.eINSTANCE.createGraphicsContext();
+				grContext = Symphony__CommonTopologyUIFactory.eINSTANCE.createGraphicsContext();
 				grContext.setTopology(root);
 
 			} catch (IOException e) {

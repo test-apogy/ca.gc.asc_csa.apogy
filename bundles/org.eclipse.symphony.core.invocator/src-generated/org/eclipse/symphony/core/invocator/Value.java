@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.Value#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getValue()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getValue()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface Value extends Named
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' containment reference.
 	 * @see #setValue(EObject)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getValue_Value()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getValue_Value()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */

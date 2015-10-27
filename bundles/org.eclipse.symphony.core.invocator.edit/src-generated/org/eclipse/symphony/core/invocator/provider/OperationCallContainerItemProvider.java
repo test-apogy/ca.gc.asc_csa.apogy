@@ -20,8 +20,8 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCallContainer;
 
 /**
@@ -81,7 +81,7 @@ public class OperationCallContainerItemProvider
     if (childrenFeatures == null)
     {
       super.getChildrenFeatures(object);
-      childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
+      childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS);
     }
     return childrenFeatures;
   }
@@ -138,7 +138,7 @@ public class OperationCallContainerItemProvider
 
     switch (notification.getFeatureID(OperationCallContainer.class))
     {
-      case EMFEcoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS:
+      case Symphony__CoreInvocatorPackage.OPERATION_CALL_CONTAINER__OPERATION_CALLS:
         fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
         return;
     }
@@ -159,8 +159,8 @@ public class OperationCallContainerItemProvider
 
     newChildDescriptors.add
       (createChildParameter
-        (EMFEcoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
-         EMFEcoreInvocatorFactory.eINSTANCE.createOperationCall()));
+        (Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_CONTAINER__OPERATION_CALLS,
+         Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCall()));
   }
 
   /**

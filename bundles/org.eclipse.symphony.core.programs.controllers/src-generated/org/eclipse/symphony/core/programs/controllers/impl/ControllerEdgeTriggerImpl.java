@@ -7,7 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.core.programs.controllers.ControllerEdgeTrigger;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.EdgeType;
 
 /**
@@ -62,7 +62,7 @@ public class ControllerEdgeTriggerImpl extends ControllerTriggerImpl implements 
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreControllersPackage.Literals.CONTROLLER_EDGE_TRIGGER;
+		return Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_EDGE_TRIGGER;
 	}
 
   /**
@@ -85,7 +85,7 @@ public class ControllerEdgeTriggerImpl extends ControllerTriggerImpl implements 
 		EdgeType oldEdgeType = edgeType;
 		edgeType = newEdgeType == null ? EDGE_TYPE_EDEFAULT : newEdgeType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreControllersPackage.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE, oldEdgeType, edgeType));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE, oldEdgeType, edgeType));
 	}
 
   /**
@@ -97,7 +97,7 @@ public class ControllerEdgeTriggerImpl extends ControllerTriggerImpl implements 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE:
 				return getEdgeType();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -112,7 +112,7 @@ public class ControllerEdgeTriggerImpl extends ControllerTriggerImpl implements 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE:
 				setEdgeType((EdgeType)newValue);
 				return;
 		}
@@ -128,7 +128,7 @@ public class ControllerEdgeTriggerImpl extends ControllerTriggerImpl implements 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE:
 				setEdgeType(EDGE_TYPE_EDEFAULT);
 				return;
 		}
@@ -144,7 +144,7 @@ public class ControllerEdgeTriggerImpl extends ControllerTriggerImpl implements 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER__EDGE_TYPE:
 				return edgeType != EDGE_TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

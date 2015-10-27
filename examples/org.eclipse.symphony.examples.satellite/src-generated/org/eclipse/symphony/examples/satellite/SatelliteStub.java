@@ -10,7 +10,7 @@ package org.eclipse.symphony.examples.satellite;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteStub()
+ * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteStub()
  * @model
  * @generated
  */

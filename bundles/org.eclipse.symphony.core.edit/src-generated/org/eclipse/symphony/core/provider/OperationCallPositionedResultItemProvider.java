@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.OperationCallPositionedResult;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.invocator.provider.OperationCallResultItemProvider;
 
 /**
@@ -65,7 +65,7 @@ public class OperationCallPositionedResultItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Positioned_pose_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Positioned_pose_feature", "_UI_Positioned_type"),
-				 SymphonyCorePackage.Literals.POSITIONED__POSE,
+				 Symphony__CorePackage.Literals.POSITIONED__POSE,
 				 true,
 				 false,
 				 false,
@@ -87,7 +87,7 @@ public class OperationCallPositionedResultItemProvider
 				 getResourceLocator(),
 				 getString("_UI_OperationCallPositionedResult_relativePose_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OperationCallPositionedResult_relativePose_feature", "_UI_OperationCallPositionedResult_type"),
-				 SymphonyCorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE,
+				 Symphony__CorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE,
 				 false,
 				 false,
 				 false,
@@ -108,8 +108,8 @@ public class OperationCallPositionedResultItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.POSITIONED__POSE);
-			childrenFeatures.add(SymphonyCorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE);
+			childrenFeatures.add(Symphony__CorePackage.Literals.POSITIONED__POSE);
+			childrenFeatures.add(Symphony__CorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE);
 		}
 		return childrenFeatures;
 	}
@@ -212,8 +212,8 @@ public class OperationCallPositionedResultItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OperationCallPositionedResult.class)) {
-			case SymphonyCorePackage.OPERATION_CALL_POSITIONED_RESULT__POSE:
-			case SymphonyCorePackage.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE:
+			case Symphony__CorePackage.OPERATION_CALL_POSITIONED_RESULT__POSE:
+			case Symphony__CorePackage.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -233,12 +233,12 @@ public class OperationCallPositionedResultItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.POSITIONED__POSE,
+				(Symphony__CorePackage.Literals.POSITIONED__POSE,
 				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE,
+				(Symphony__CorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE,
 				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 
@@ -254,8 +254,8 @@ public class OperationCallPositionedResultItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyCorePackage.Literals.POSITIONED__POSE ||
-			childFeature == SymphonyCorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE;
+			childFeature == Symphony__CorePackage.Literals.POSITIONED__POSE ||
+			childFeature == Symphony__CorePackage.Literals.OPERATION_CALL_POSITIONED_RESULT__RELATIVE_POSE;
 
 		if (qualify) {
 			return getString

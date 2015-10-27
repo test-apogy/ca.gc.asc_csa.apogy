@@ -10,7 +10,7 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.environment.orbit.earth.Activator;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.TLE;
 import org.eclipse.symphony.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator;
 
@@ -65,7 +65,7 @@ public class URLBasedTLEEarthOrbitPropagatorImpl extends TLEEarthOrbitPropagator
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR;
 	}
 
 	/**
@@ -97,7 +97,7 @@ public class URLBasedTLEEarthOrbitPropagatorImpl extends TLEEarthOrbitPropagator
 		String oldTleURL = tleURL;
 		tleURL = newTleURL;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL, oldTleURL, tleURL));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL, oldTleURL, tleURL));
 	}
 
 	/**
@@ -108,7 +108,7 @@ public class URLBasedTLEEarthOrbitPropagatorImpl extends TLEEarthOrbitPropagator
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL:
 				return getTleURL();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -122,7 +122,7 @@ public class URLBasedTLEEarthOrbitPropagatorImpl extends TLEEarthOrbitPropagator
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL:
 				setTleURL((String)newValue);
 				return;
 		}
@@ -137,7 +137,7 @@ public class URLBasedTLEEarthOrbitPropagatorImpl extends TLEEarthOrbitPropagator
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL:
 				setTleURL(TLE_URL_EDEFAULT);
 				return;
 		}
@@ -152,7 +152,7 @@ public class URLBasedTLEEarthOrbitPropagatorImpl extends TLEEarthOrbitPropagator
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL:
 				return TLE_URL_EDEFAULT == null ? tleURL != null : !TLE_URL_EDEFAULT.equals(tleURL);
 		}
 		return super.eIsSet(featureID);

@@ -17,7 +17,7 @@ import org.eclipse.symphony.core.invocator.presentation.CustomEMFEcoreInvocatorE
 import org.eclipse.symphony.core.ui.Activator;
 import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiFactory;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIFactory;
 import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
@@ -71,7 +71,7 @@ public class NewSymphonySessionWizard extends Wizard implements INewWizard {
 	
 	private SymphonyResourceSettings getSymphonyResourceSettings() {		
 		if (symphonyResourceSettings == null) {
-			symphonyResourceSettings = SymphonyCoreUiFactory.eINSTANCE
+			symphonyResourceSettings = Symphony__CoreUIFactory.eINSTANCE
 					.createSymphonyResourceSettings();			
 			symphonyResourceSettings.setResourceContainer(getResourceContainer(this.selection));
 			symphonyResourceSettings.setResourceProject(getResourceContainer(this.selection).getProject());			
@@ -81,7 +81,7 @@ public class NewSymphonySessionWizard extends Wizard implements INewWizard {
 
 	private NewSymphonySessionSettings getNewSymphonySessionSettings() {
 		if (newSymphonySessionSettings == null) {
-			newSymphonySessionSettings = SymphonyCoreUiFactory.eINSTANCE
+			newSymphonySessionSettings = Symphony__CoreUIFactory.eINSTANCE
 					.createNewSymphonySessionSettings();
 			newSymphonySessionSettings.setDefaultValues(getResourceContainer(this.selection));
 		}

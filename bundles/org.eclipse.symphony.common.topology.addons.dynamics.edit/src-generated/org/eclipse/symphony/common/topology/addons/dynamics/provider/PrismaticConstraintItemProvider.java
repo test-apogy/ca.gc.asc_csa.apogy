@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFactory;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.PrismaticConstraint} object.
@@ -64,7 +64,7 @@ public class PrismaticConstraintItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE);
 		}
 		return childrenFeatures;
 	}
@@ -119,7 +119,7 @@ public class PrismaticConstraintItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PrismaticConstraint.class)) {
-			case Symphony__CommonTopologyDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,8 +139,8 @@ public class PrismaticConstraintItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createConstraintState()));
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.PRISMATIC_CONSTRAINT__LINEAR_CURRENT_STATE,
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createConstraintState()));
 	}
 
 }

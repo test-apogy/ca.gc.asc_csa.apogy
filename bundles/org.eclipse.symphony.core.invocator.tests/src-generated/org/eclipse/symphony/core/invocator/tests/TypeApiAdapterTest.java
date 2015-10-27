@@ -6,8 +6,7 @@ package org.eclipse.symphony.core.invocator.tests;
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
-
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 
 /**
@@ -86,7 +85,7 @@ public class TypeApiAdapterTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createTypeApiAdapter());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createTypeApiAdapter());
 	}
 
 	/**

@@ -23,9 +23,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation} object.
@@ -124,7 +124,7 @@ public class EarthSurfaceLocationItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES);
 		}
 		return childrenFeatures;
 	}
@@ -180,11 +180,11 @@ public class EarthSurfaceLocationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EarthSurfaceLocation.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__NAME:
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -204,8 +204,8 @@ public class EarthSurfaceLocationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES,
-				 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION__GEOGRAPHICAL_COORDINATES,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 	}
 
 	/**

@@ -13,7 +13,6 @@ import org.eclipse.symphony.core.environment.Sky;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Defines the Sky as seen from an EarthOrbitWorksite.
  * <!-- end-model-doc -->
  *
@@ -26,7 +25,7 @@ import org.eclipse.symphony.core.environment.Sky;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky#getEarth <em>Earth</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthOrbitSky()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getEarthOrbitSky()
  * @model
  * @generated
  */
@@ -41,7 +40,7 @@ public interface EarthOrbitSky extends Sky {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Earth Orbit Worksite</em>' container reference.
 	 * @see #setEarthOrbitWorksite(EarthOrbitWorksite)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthOrbitSky_EarthOrbitWorksite()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getEarthOrbitSky_EarthOrbitWorksite()
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitWorksite#getSky
 	 * @model opposite="sky" transient="false"
 	 * @generated
@@ -66,7 +65,7 @@ public interface EarthOrbitSky extends Sky {
 	 * The Moon in the sky.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Moon</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthOrbitSky_Moon()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getEarthOrbitSky_Moon()
 	 * @model transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='MOON'"
 	 * @generated
@@ -81,7 +80,7 @@ public interface EarthOrbitSky extends Sky {
 	 * The Earth in the sky.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Earth</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthOrbitSky_Earth()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getEarthOrbitSky_Earth()
 	 * @model transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EARTH'"
 	 * @generated

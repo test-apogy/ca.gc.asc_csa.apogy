@@ -18,7 +18,6 @@ import org.eclipse.symphony.core.environment.RectangularRegion;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Configuration used for the Map View.
  * <!-- end-model-doc -->
  *
@@ -35,7 +34,7 @@ import org.eclipse.symphony.core.environment.RectangularRegion;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.MapViewConfiguration#getExtent <em>Extent</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewConfiguration()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration()
  * @model
  * @generated
  */
@@ -47,10 +46,10 @@ public interface MapViewConfiguration extends Named, Described
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * List of Maps being displayed.
+	 * List of Maps being displayed.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Map Layers</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewConfiguration_MapLayers()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration_MapLayers()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='None'"
 	 * @generated
@@ -63,11 +62,11 @@ public interface MapViewConfiguration extends Named, Described
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Color of the map background.
+	 * Color of the map background.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Background Color</em>' attribute.
 	 * @see #setBackgroundColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewConfiguration_BackgroundColor()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration_BackgroundColor()
 	 * @model default="1.0,1.0,1.0" unique="false" dataType="org.eclipse.symphony.core.environment.ui.Color3f"
 	 * @generated
 	 */
@@ -89,10 +88,10 @@ public interface MapViewConfiguration extends Named, Described
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * List of Symphony System instances being tracked.
+	 * List of Symphony System instances being tracked.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Map Annotations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewConfiguration_MapAnnotations()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration_MapAnnotations()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='None'"
 	 * @generated
@@ -104,11 +103,11 @@ public interface MapViewConfiguration extends Named, Described
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Default region to use when none is covered by the map Layers
+	 * Default region to use when none is covered by the map Layers
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Default Rectangular Region</em>' reference.
 	 * @see #setDefaultRectangularRegion(RectangularRegion)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewConfiguration_DefaultRectangularRegion()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration_DefaultRectangularRegion()
 	 * @model required="true" transient="true"
 	 * @generated
 	 */
@@ -133,10 +132,10 @@ public interface MapViewConfiguration extends Named, Described
    * </p>
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * The image representing the active ImageMapLayers.
+	 * The image representing the active ImageMapLayers.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Map Image</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewConfiguration_MapImage()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration_MapImage()
 	 * @model transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='None'"
 	 * @generated
@@ -148,10 +147,10 @@ public interface MapViewConfiguration extends Named, Described
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The rectangular region covered by the image layers defined in the map.
+	 * The rectangular region covered by the image layers defined in the map.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Map Image Rectangular Region</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewConfiguration_MapImageRectangularRegion()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration_MapImageRectangularRegion()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly'"
 	 * @generated
@@ -167,11 +166,12 @@ public interface MapViewConfiguration extends Named, Described
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The rectangular region covered by the map (typically larger than mapImageRectangularRegion and contains mapImageRectangularRegion).
+	 * The rectangular region covered by the map (typically larger than
+	 * mapImageRectangularRegion and contains mapImageRectangularRegion).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Extent</em>' reference.
 	 * @see #setExtent(RectangularRegion)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getMapViewConfiguration_Extent()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getMapViewConfiguration_Extent()
 	 * @model required="true" transient="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly'"
 	 * @generated
@@ -192,7 +192,7 @@ public interface MapViewConfiguration extends Named, Described
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Forces the updates of all derived values.
+	 * Forces the updates of all derived values.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated

@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularRegionProvider()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegionProvider()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -24,7 +24,6 @@ public interface RectangularRegionProvider extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the RectangularRegion defined by the object.
 	 * @return The RectangularRegion defined by the object, never null.
 	 * <!-- end-model-doc -->

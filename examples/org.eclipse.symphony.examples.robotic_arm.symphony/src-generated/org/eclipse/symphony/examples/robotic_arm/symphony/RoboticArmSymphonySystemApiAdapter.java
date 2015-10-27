@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.robotic_arm.symphony.SymphonyExampleRoboticArmPackage#getRoboticArmSymphonySystemApiAdapter()
+ * @see org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyPackage#getRoboticArmSymphonySystemApiAdapter()
  * @model
  * @generated
  */

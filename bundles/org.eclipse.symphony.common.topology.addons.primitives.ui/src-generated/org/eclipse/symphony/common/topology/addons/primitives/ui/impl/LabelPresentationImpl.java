@@ -9,10 +9,10 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.addons.primitives.Label;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.LabelPresentation;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.LabelSceneObject;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage;
 import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
 /**
@@ -42,7 +42,7 @@ public class LabelPresentationImpl extends NodePresentationImpl implements Label
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyUIPrimitivesPackage.Literals.LABEL_PRESENTATION;
+		return Symphony__CommonTopologyAddonsPrimitivesUIPackage.Literals.LABEL_PRESENTATION;
 	}
 	
 	@Override
@@ -50,7 +50,7 @@ public class LabelPresentationImpl extends NodePresentationImpl implements Label
 		if (sceneObject != null) {
 			LabelSceneObject lableObject = (LabelSceneObject) sceneObject;
 
-			if (notification.getFeatureID(Label.class) == PrimitivesPackage.LABEL__DESCRIPTION) {
+			if (notification.getFeatureID(Label.class) == Symphony__CommonTopologyAddonsPrimitivesPackage.LABEL__DESCRIPTION) {
 				lableObject.setText(getNode().getDescription());
 			}
 		}

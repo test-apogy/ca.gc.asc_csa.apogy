@@ -17,7 +17,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.core.environment.ImageMapLayer;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ImageMapLayer} object.
@@ -73,7 +73,7 @@ public class ImageMapLayerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageMapLayer_width_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageMapLayer_width_feature", "_UI_ImageMapLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__WIDTH,
+				 Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__WIDTH,
 				 true,
 				 false,
 				 false,
@@ -96,7 +96,7 @@ public class ImageMapLayerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageMapLayer_height_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageMapLayer_height_feature", "_UI_ImageMapLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__HEIGHT,
+				 Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__HEIGHT,
 				 true,
 				 false,
 				 false,
@@ -119,7 +119,7 @@ public class ImageMapLayerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageMapLayer_opaque_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageMapLayer_opaque_feature", "_UI_ImageMapLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__OPAQUE,
+				 Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__OPAQUE,
 				 true,
 				 false,
 				 false,
@@ -142,7 +142,7 @@ public class ImageMapLayerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageMapLayer_resolution_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageMapLayer_resolution_feature", "_UI_ImageMapLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__RESOLUTION,
+				 Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__RESOLUTION,
 				 false,
 				 false,
 				 false,
@@ -164,8 +164,8 @@ public class ImageMapLayerItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND);
 		}
 		return childrenFeatures;
 	}
@@ -224,14 +224,14 @@ public class ImageMapLayerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageMapLayer.class)) {
-			case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH:
-			case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT:
-			case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER__OPAQUE:
-			case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER__RESOLUTION:
+			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH:
+			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT:
+			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__OPAQUE:
+			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__RESOLUTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
-			case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND:
+			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
+			case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__LEGEND:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -252,22 +252,22 @@ public class ImageMapLayerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE,
+				(Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE,
 				 Symphony__CommonImagesFactory.eINSTANCE.createEImage()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE,
+				(Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE,
 				 Symphony__CommonImagesFactory.eINSTANCE.createURLEImage()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND,
+				(Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND,
 				 Symphony__CommonImagesFactory.eINSTANCE.createEImage()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND,
+				(Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND,
 				 Symphony__CommonImagesFactory.eINSTANCE.createURLEImage()));
 	}
 
@@ -284,8 +284,8 @@ public class ImageMapLayerItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
 
 		if (qualify) {
 			return getString

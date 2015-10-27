@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.environment.EquatorialCoordinates;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -105,7 +105,7 @@ public class EquatorialCoordinatesImpl extends MinimalEObjectImpl.Container impl
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.EQUATORIAL_COORDINATES;
+		return Symphony__CoreEnvironmentPackage.Literals.EQUATORIAL_COORDINATES;
 	}
 
   /**
@@ -128,7 +128,7 @@ public class EquatorialCoordinatesImpl extends MinimalEObjectImpl.Container impl
 		double oldRightAscension = rightAscension;
 		rightAscension = newRightAscension;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__RIGHT_ASCENSION, oldRightAscension, rightAscension));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__RIGHT_ASCENSION, oldRightAscension, rightAscension));
 	}
 
   /**
@@ -151,7 +151,7 @@ public class EquatorialCoordinatesImpl extends MinimalEObjectImpl.Container impl
 		double oldDeclination = declination;
 		declination = newDeclination;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__DECLINATION, oldDeclination, declination));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__DECLINATION, oldDeclination, declination));
 	}
 
   /**
@@ -174,7 +174,7 @@ public class EquatorialCoordinatesImpl extends MinimalEObjectImpl.Container impl
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__RADIUS, oldRadius, radius));
 	}
 
   /**
@@ -186,11 +186,11 @@ public class EquatorialCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__RIGHT_ASCENSION:
+			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__RIGHT_ASCENSION:
 				return getRightAscension();
-			case SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__DECLINATION:
+			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__DECLINATION:
 				return getDeclination();
-			case SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__RADIUS:
+			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__RADIUS:
 				return getRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -205,13 +205,13 @@ public class EquatorialCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__RIGHT_ASCENSION:
+			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__RIGHT_ASCENSION:
 				setRightAscension((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__DECLINATION:
+			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__DECLINATION:
 				setDeclination((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__RADIUS:
+			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__RADIUS:
 				setRadius((Double)newValue);
 				return;
 		}
@@ -227,13 +227,13 @@ public class EquatorialCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__RIGHT_ASCENSION:
+			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__RIGHT_ASCENSION:
 				setRightAscension(RIGHT_ASCENSION_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__DECLINATION:
+			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__DECLINATION:
 				setDeclination(DECLINATION_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__RADIUS:
+			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
 		}
@@ -249,11 +249,11 @@ public class EquatorialCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__RIGHT_ASCENSION:
+			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__RIGHT_ASCENSION:
 				return rightAscension != RIGHT_ASCENSION_EDEFAULT;
-			case SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__DECLINATION:
+			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__DECLINATION:
 				return declination != DECLINATION_EDEFAULT;
-			case SymphonyEnvironmentPackage.EQUATORIAL_COORDINATES__RADIUS:
+			case Symphony__CoreEnvironmentPackage.EQUATORIAL_COORDINATES__RADIUS:
 				return radius != RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

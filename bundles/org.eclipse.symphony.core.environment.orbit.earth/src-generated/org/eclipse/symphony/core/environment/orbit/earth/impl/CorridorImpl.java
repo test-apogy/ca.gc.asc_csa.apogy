@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
 import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -102,7 +102,7 @@ public class CorridorImpl extends MinimalEObjectImpl.Container implements Corrid
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.CORRIDOR;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR;
 	}
 
 	/**
@@ -123,7 +123,7 @@ public class CorridorImpl extends MinimalEObjectImpl.Container implements Corrid
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__NAME, oldName, name));
 	}
 
 	/**
@@ -144,7 +144,7 @@ public class CorridorImpl extends MinimalEObjectImpl.Container implements Corrid
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class CorridorImpl extends MinimalEObjectImpl.Container implements Corrid
 	 */
 	public EList<CorridorPoint> getPoints() {
 		if (points == null) {
-			points = new EObjectContainmentEList<CorridorPoint>(CorridorPoint.class, this, SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__POINTS);
+			points = new EObjectContainmentEList<CorridorPoint>(CorridorPoint.class, this, Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__POINTS);
 		}
 		return points;
 	}
@@ -167,7 +167,7 @@ public class CorridorImpl extends MinimalEObjectImpl.Container implements Corrid
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__POINTS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__POINTS:
 				return ((InternalEList<?>)getPoints()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -181,11 +181,11 @@ public class CorridorImpl extends MinimalEObjectImpl.Container implements Corrid
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__NAME:
 				return getName();
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__DESCRIPTION:
 				return getDescription();
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__POINTS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__POINTS:
 				return getPoints();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -200,13 +200,13 @@ public class CorridorImpl extends MinimalEObjectImpl.Container implements Corrid
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__POINTS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__POINTS:
 				getPoints().clear();
 				getPoints().addAll((Collection<? extends CorridorPoint>)newValue);
 				return;
@@ -222,13 +222,13 @@ public class CorridorImpl extends MinimalEObjectImpl.Container implements Corrid
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__POINTS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__POINTS:
 				getPoints().clear();
 				return;
 		}
@@ -243,11 +243,11 @@ public class CorridorImpl extends MinimalEObjectImpl.Container implements Corrid
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__POINTS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__POINTS:
 				return points != null && !points.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -262,7 +262,7 @@ public class CorridorImpl extends MinimalEObjectImpl.Container implements Corrid
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -278,7 +278,7 @@ public class CorridorImpl extends MinimalEObjectImpl.Container implements Corrid
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyEarthOrbitEnvironmentPackage.CORRIDOR__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR__DESCRIPTION;
 				default: return -1;
 			}
 		}

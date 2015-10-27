@@ -12,10 +12,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
 import org.eclipse.symphony.core.invocator.provider.AbstractInitializationDataItemProvider;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData;
 
 /**
@@ -62,9 +62,9 @@ public class SatelliteConstellationInitializationDataItemProvider extends Abstra
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA);
-			childrenFeatures.add(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS);
-			childrenFeatures.add(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS);
+			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA);
+			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS);
+			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS);
 		}
 		return childrenFeatures;
 	}
@@ -117,9 +117,9 @@ public class SatelliteConstellationInitializationDataItemProvider extends Abstra
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SatelliteConstellationInitializationData.class)) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA:
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS:
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,18 +139,18 @@ public class SatelliteConstellationInitializationDataItemProvider extends Abstra
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA,
-				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteInitializationData()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteInitializationData()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createGroundStation()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS,
-				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createImageOrder()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createImageOrder()));
 	}
 
 }

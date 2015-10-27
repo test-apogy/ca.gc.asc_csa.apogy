@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.symphony.core.AbstractOrbitModel;
 import org.eclipse.symphony.core.environment.impl.WorksiteImpl;
 import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,7 +52,7 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyOrbitEnvironmentPackage.Literals.ORBIT_WORKSITE;
+		return Symphony__CoreEnvironmentOrbitPackage.Literals.ORBIT_WORKSITE;
 	}
 
 	/**
@@ -66,7 +66,7 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 			activeOrbitModel = (AbstractOrbitModel)eResolveProxy(oldActiveOrbitModel);
 			if (activeOrbitModel != oldActiveOrbitModel) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyOrbitEnvironmentPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL, oldActiveOrbitModel, activeOrbitModel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL, oldActiveOrbitModel, activeOrbitModel));
 			}
 		}
 		return activeOrbitModel;
@@ -90,7 +90,7 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 		AbstractOrbitModel oldActiveOrbitModel = activeOrbitModel;
 		activeOrbitModel = newActiveOrbitModel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyOrbitEnvironmentPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL, oldActiveOrbitModel, activeOrbitModel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL, oldActiveOrbitModel, activeOrbitModel));
 	}
 
 	/**
@@ -101,7 +101,7 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
 				if (resolve) return getActiveOrbitModel();
 				return basicGetActiveOrbitModel();
 		}
@@ -116,7 +116,7 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
 				setActiveOrbitModel((AbstractOrbitModel)newValue);
 				return;
 		}
@@ -131,7 +131,7 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
 				setActiveOrbitModel((AbstractOrbitModel)null);
 				return;
 		}
@@ -146,7 +146,7 @@ public abstract class OrbitWorksiteImpl extends WorksiteImpl implements OrbitWor
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT_WORKSITE__ACTIVE_ORBIT_MODEL:
 				return activeOrbitModel != null;
 		}
 		return super.eIsSet(featureID);

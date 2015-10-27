@@ -23,9 +23,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Program;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.Program} object.
@@ -129,7 +129,7 @@ public class ProgramItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.PROGRAM__VALUES_LIST);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.PROGRAM__VALUES_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -175,11 +175,11 @@ public class ProgramItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Program.class)) {
-			case EMFEcoreInvocatorPackage.PROGRAM__NAME:
-			case EMFEcoreInvocatorPackage.PROGRAM__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.PROGRAM__NAME:
+			case Symphony__CoreInvocatorPackage.PROGRAM__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.PROGRAM__VALUES_LIST:
+			case Symphony__CoreInvocatorPackage.PROGRAM__VALUES_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -200,8 +200,8 @@ public class ProgramItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.PROGRAM__VALUES_LIST,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createValuesList()));
+				(Symphony__CoreInvocatorPackage.Literals.PROGRAM__VALUES_LIST,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createValuesList()));
 	}
 
   /**

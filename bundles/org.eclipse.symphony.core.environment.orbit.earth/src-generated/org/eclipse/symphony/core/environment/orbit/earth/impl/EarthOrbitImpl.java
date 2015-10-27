@@ -8,7 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbit;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.impl.OrbitImpl;
 import org.orekit.orbits.Orbit;
 
@@ -36,7 +36,7 @@ public abstract class EarthOrbitImpl extends OrbitImpl implements EarthOrbit {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_ORBIT;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT;
 	}
 
 	/**
@@ -58,7 +58,7 @@ public abstract class EarthOrbitImpl extends OrbitImpl implements EarthOrbit {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_ORBIT___GET_ORE_KIT_ORBIT:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_ORBIT___GET_ORE_KIT_ORBIT:
 				return getOreKitOrbit();
 		}
 		return super.eInvoke(operationID, arguments);

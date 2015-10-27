@@ -11,7 +11,7 @@
       <!-- @generated topology_bindings -->
       <factory
             uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsItemProviderAdapterFactory"
+            class="org.eclipse.symphony.common.topology.bindings.provider.Symphony__CommonTopologyBindingsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -24,14 +24,7 @@
       <!-- @generated symphony_common_topology_bindings -->
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated topology_bindings -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.common.topology.bindings.provider.Symphony__CommonTopologyBindingsItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

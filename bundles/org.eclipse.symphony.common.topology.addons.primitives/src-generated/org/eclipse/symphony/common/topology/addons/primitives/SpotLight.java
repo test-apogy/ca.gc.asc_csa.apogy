@@ -29,7 +29,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.SpotLight#getDirection <em>Direction</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getSpotLight()
+ * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getSpotLight()
  * @model
  * @generated
  */
@@ -44,7 +44,7 @@ public interface SpotLight extends PointLight {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Concentration</em>' attribute.
 	 * @see #setConcentration(float)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getSpotLight_Concentration()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getSpotLight_Concentration()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -70,7 +70,7 @@ public interface SpotLight extends PointLight {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Spread Angle</em>' attribute.
 	 * @see #setSpreadAngle(float)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getSpotLight_SpreadAngle()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getSpotLight_SpreadAngle()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -96,7 +96,7 @@ public interface SpotLight extends PointLight {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Direction</em>' containment reference.
 	 * @see #setDirection(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getSpotLight_Direction()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getSpotLight_Direction()
 	 * @model containment="true"
 	 * @generated
 	 */

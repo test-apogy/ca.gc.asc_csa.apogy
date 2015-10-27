@@ -28,7 +28,7 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody#getCollisionGeometry <em>Collision Geometry</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPhysicalBody()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalBody()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface PhysicalBody extends AggregateGroupNode {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Physical Properties</em>' containment reference.
 	 * @see #setPhysicalProperties(PhysicalProperties)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPhysicalBody_PhysicalProperties()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalBody_PhysicalProperties()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -68,7 +68,7 @@ public interface PhysicalBody extends AggregateGroupNode {
 	 * The list of constraints associated with this body.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constraint Attachment Points</em>' reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPhysicalBody_ConstraintAttachmentPoints()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalBody_ConstraintAttachmentPoints()
 	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getPhysicalBody
 	 * @model opposite="physicalBody"
 	 * @generated
@@ -86,7 +86,7 @@ public interface PhysicalBody extends AggregateGroupNode {
 	 * Note that this list can contain items for different implementation of Dynamic Engine.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Simulation Properties</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPhysicalBody_SimulationProperties()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalBody_SimulationProperties()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -101,7 +101,7 @@ public interface PhysicalBody extends AggregateGroupNode {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Center Of Mass Kinematic State</em>' containment reference.
 	 * @see #setCenterOfMassKinematicState(KinematicState)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPhysicalBody_CenterOfMassKinematicState()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalBody_CenterOfMassKinematicState()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -126,7 +126,7 @@ public interface PhysicalBody extends AggregateGroupNode {
 	 * The list of PointOfInterest currently defined for the PhysicalBody.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Points Of Interest</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPhysicalBody_PointsOfInterest()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalBody_PointsOfInterest()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -141,7 +141,7 @@ public interface PhysicalBody extends AggregateGroupNode {
 	 * The list of collision geometries used to defined the collision volume of the PhysicalBody.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Collision Geometry</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getPhysicalBody_CollisionGeometry()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalBody_CollisionGeometry()
 	 * @model containment="true"
 	 * @generated
 	 */

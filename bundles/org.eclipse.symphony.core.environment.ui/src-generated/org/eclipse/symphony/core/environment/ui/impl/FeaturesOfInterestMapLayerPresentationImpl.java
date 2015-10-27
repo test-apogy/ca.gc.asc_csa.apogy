@@ -24,15 +24,15 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.FeatureOfInterestList;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
 import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.RectangularRegionProvider;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.chart.annotations.XYShapeAnnotation;
 import org.jfree.chart.annotations.XYTextAnnotation;
@@ -97,7 +97,7 @@ public class FeaturesOfInterestMapLayerPresentationImpl extends MapAnnotationImp
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color3f FEATURE_OF_INTEREST_COLOR_EDEFAULT = (Color3f)SymphonyEnvironmentUIFactory.eINSTANCE.createFromString(SymphonyEnvironmentUIPackage.eINSTANCE.getColor3f(), "0.0,0.0,1.0");
+	protected static final Color3f FEATURE_OF_INTEREST_COLOR_EDEFAULT = (Color3f)Symphony__CoreEnvironmentUIFactory.eINSTANCE.createFromString(Symphony__CoreEnvironmentUIPackage.eINSTANCE.getColor3f(), "0.0,0.0,1.0");
 
 	/**
 	 * The cached value of the '{@link #getFeatureOfInterestColor() <em>Feature Of Interest Color</em>}' attribute.
@@ -125,7 +125,7 @@ public class FeaturesOfInterestMapLayerPresentationImpl extends MapAnnotationImp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentUIPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION;
+		return Symphony__CoreEnvironmentUIPackage.Literals.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION;
 	}
 
 	/**
@@ -139,7 +139,7 @@ public class FeaturesOfInterestMapLayerPresentationImpl extends MapAnnotationImp
 			featuresOfInterestMapLayer = (FeaturesOfInterestMapLayer)eResolveProxy(oldFeaturesOfInterestMapLayer);
 			if (featuresOfInterestMapLayer != oldFeaturesOfInterestMapLayer) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER, oldFeaturesOfInterestMapLayer, featuresOfInterestMapLayer));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER, oldFeaturesOfInterestMapLayer, featuresOfInterestMapLayer));
 			}
 		}
 		return featuresOfInterestMapLayer;
@@ -187,7 +187,7 @@ public class FeaturesOfInterestMapLayerPresentationImpl extends MapAnnotationImp
 		FeaturesOfInterestMapLayer oldFeaturesOfInterestMapLayer = featuresOfInterestMapLayer;
 		featuresOfInterestMapLayer = newFeaturesOfInterestMapLayer;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER, oldFeaturesOfInterestMapLayer, featuresOfInterestMapLayer));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER, oldFeaturesOfInterestMapLayer, featuresOfInterestMapLayer));
 	}
 
 	/**
@@ -221,7 +221,7 @@ public class FeaturesOfInterestMapLayerPresentationImpl extends MapAnnotationImp
 		double oldFeatureOfInterestRadius = featureOfInterestRadius;
 		featureOfInterestRadius = newFeatureOfInterestRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_RADIUS, oldFeatureOfInterestRadius, featureOfInterestRadius));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_RADIUS, oldFeatureOfInterestRadius, featureOfInterestRadius));
 	}
 
 	/**
@@ -255,7 +255,7 @@ public class FeaturesOfInterestMapLayerPresentationImpl extends MapAnnotationImp
 		Color3f oldFeatureOfInterestColor = featureOfInterestColor;
 		featureOfInterestColor = newFeatureOfInterestColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_COLOR, oldFeatureOfInterestColor, featureOfInterestColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_COLOR, oldFeatureOfInterestColor, featureOfInterestColor));
 	}
 
 	/**
@@ -271,7 +271,7 @@ public class FeaturesOfInterestMapLayerPresentationImpl extends MapAnnotationImp
 		}
 		else
 		{
-			return SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion();
+			return Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
 		}
 	}
 
@@ -283,12 +283,12 @@ public class FeaturesOfInterestMapLayerPresentationImpl extends MapAnnotationImp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER:
+			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER:
 				if (resolve) return getFeaturesOfInterestMapLayer();
 				return basicGetFeaturesOfInterestMapLayer();
-			case SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_RADIUS:
+			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_RADIUS:
 				return getFeatureOfInterestRadius();
-			case SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_COLOR:
 				return getFeatureOfInterestColor();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -302,13 +302,13 @@ public class FeaturesOfInterestMapLayerPresentationImpl extends MapAnnotationImp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER:
+			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER:
 				setFeaturesOfInterestMapLayer((FeaturesOfInterestMapLayer)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_RADIUS:
+			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_RADIUS:
 				setFeatureOfInterestRadius((Double)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_COLOR:
 				setFeatureOfInterestColor((Color3f)newValue);
 				return;
 		}
@@ -323,13 +323,13 @@ public class FeaturesOfInterestMapLayerPresentationImpl extends MapAnnotationImp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER:
+			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER:
 				setFeaturesOfInterestMapLayer((FeaturesOfInterestMapLayer)null);
 				return;
-			case SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_RADIUS:
+			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_RADIUS:
 				setFeatureOfInterestRadius(FEATURE_OF_INTEREST_RADIUS_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_COLOR:
 				setFeatureOfInterestColor(FEATURE_OF_INTEREST_COLOR_EDEFAULT);
 				return;
 		}
@@ -344,11 +344,11 @@ public class FeaturesOfInterestMapLayerPresentationImpl extends MapAnnotationImp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER:
+			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURES_OF_INTEREST_MAP_LAYER:
 				return featuresOfInterestMapLayer != null;
-			case SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_RADIUS:
+			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_RADIUS:
 				return featureOfInterestRadius != FEATURE_OF_INTEREST_RADIUS_EDEFAULT;
-			case SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION__FEATURE_OF_INTEREST_COLOR:
 				return FEATURE_OF_INTEREST_COLOR_EDEFAULT == null ? featureOfInterestColor != null : !FEATURE_OF_INTEREST_COLOR_EDEFAULT.equals(featureOfInterestColor);
 		}
 		return super.eIsSet(featureID);
@@ -363,7 +363,7 @@ public class FeaturesOfInterestMapLayerPresentationImpl extends MapAnnotationImp
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == RectangularRegionProvider.class) {
 			switch (baseOperationID) {
-				case SymphonyEnvironmentPackage.RECTANGULAR_REGION_PROVIDER___GET_REGION: return SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION___GET_REGION;
+				case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION_PROVIDER___GET_REGION: return Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION___GET_REGION;
 				default: return -1;
 			}
 		}
@@ -378,7 +378,7 @@ public class FeaturesOfInterestMapLayerPresentationImpl extends MapAnnotationImp
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION___GET_REGION:
+			case Symphony__CoreEnvironmentUIPackage.FEATURES_OF_INTEREST_MAP_LAYER_PRESENTATION___GET_REGION:
 				return getRegion();
 		}
 		return super.eInvoke(operationID, arguments);
@@ -498,7 +498,7 @@ class FeaturesOfInterestMapLayerAdapter extends AdapterImpl
 		{
 			int featureID = msg.getFeatureID(FeaturesOfInterestMapLayer.class);
 			
-			if(featureID == SymphonyEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES)
+			if(featureID == Symphony__CoreEnvironmentPackage.FEATURES_OF_INTEREST_MAP_LAYER__FEATURES)
 			{
 				if(msg.getOldValue() instanceof FeatureOfInterestList)
 				{
@@ -563,7 +563,7 @@ class FeaturesOfInterestMapLayerAdapter extends AdapterImpl
 		{
 			int featureID = msg.getFeatureID(FeatureOfInterest.class);
 			
-			if(featureID == SymphonyCorePackage.FEATURE_OF_INTEREST__POSE)
+			if(featureID == Symphony__CorePackage.FEATURE_OF_INTEREST__POSE)
 			{
 				if(msg.getOldValue() instanceof Matrix4x4)
 				{

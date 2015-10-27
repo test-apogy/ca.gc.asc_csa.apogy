@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.sensors.imaging.ui.ImageSnapshotPresentation;
 import org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIFactory;
 import org.eclipse.symphony.addons.sensors.imaging.ui.Symphony__AddonsSensorsImagingUIPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -77,7 +77,7 @@ public class Symphony__AddonsSensorsImagingUIPackageImpl extends EPackageImpl im
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyUIPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsSensorsImagingUIPackage.createPackageContents();
@@ -204,7 +204,7 @@ public class Symphony__AddonsSensorsImagingUIPackageImpl extends EPackageImpl im
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyUIPackage theTopologyUIPackage = (TopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyUIPackage.eNS_URI);
+		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -212,11 +212,11 @@ public class Symphony__AddonsSensorsImagingUIPackageImpl extends EPackageImpl im
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		imageSnapshotPresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
+		imageSnapshotPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(imageSnapshotPresentationEClass, ImageSnapshotPresentation.class, "ImageSnapshotPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getImageSnapshotPresentation_PresentationMode(), theTopologyUIPackage.getMeshPresentationMode(), "presentationMode", null, 0, 1, ImageSnapshotPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImageSnapshotPresentation_PresentationMode(), theSymphony__CommonTopologyUIPackage.getMeshPresentationMode(), "presentationMode", null, 0, 1, ImageSnapshotPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImageSnapshotPresentation_Transparency(), theEcorePackage.getEFloat(), "transparency", null, 0, 1, ImageSnapshotPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImageSnapshotPresentation_ImageProjectionVisible(), theEcorePackage.getEBoolean(), "imageProjectionVisible", "false", 0, 1, ImageSnapshotPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImageSnapshotPresentation_ImageProjectionOnFOVVisible(), theEcorePackage.getEBoolean(), "imageProjectionOnFOVVisible", "false", 0, 1, ImageSnapshotPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

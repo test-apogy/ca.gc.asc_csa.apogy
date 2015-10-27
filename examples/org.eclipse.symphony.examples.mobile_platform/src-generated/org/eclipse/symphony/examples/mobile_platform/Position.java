@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.Position#getTheta <em>Theta</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage#getPosition()
+ * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPosition()
  * @model
  * @generated
  */
@@ -45,7 +45,7 @@ public interface Position extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
 	 * @see #setX(double)
-	 * @see org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage#getPosition_X()
+	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPosition_X()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='m'"
 	 * @generated
@@ -76,7 +76,7 @@ public interface Position extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
 	 * @see #setY(double)
-	 * @see org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage#getPosition_Y()
+	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPosition_Y()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='m'"
 	 * @generated
@@ -108,7 +108,7 @@ public interface Position extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Theta</em>' attribute.
 	 * @see #setTheta(double)
-	 * @see org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage#getPosition_Theta()
+	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPosition_Theta()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='rad'"
 	 * @generated

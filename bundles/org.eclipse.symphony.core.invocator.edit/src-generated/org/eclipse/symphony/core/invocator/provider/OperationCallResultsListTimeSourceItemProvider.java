@@ -11,8 +11,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.common.emf.provider.CollectionTimedTimeSourceItemProvider;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource} object.
@@ -60,7 +60,7 @@ public class OperationCallResultsListTimeSourceItemProvider extends CollectionTi
 				 getResourceLocator(),
 				 getString("_UI_OperationCallResultsListTimeSource_opsCallList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_OperationCallResultsListTimeSource_opsCallList_feature", "_UI_OperationCallResultsListTimeSource_type"),
-				 EMFEcoreInvocatorPackage.Literals.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST,
+				 Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST,
 				 true,
 				 false,
 				 true,

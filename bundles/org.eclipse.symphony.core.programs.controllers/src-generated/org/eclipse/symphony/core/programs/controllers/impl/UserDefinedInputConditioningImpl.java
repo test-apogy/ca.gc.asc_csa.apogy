@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.common.io.jinput.EComponent;
 import org.eclipse.symphony.core.programs.controllers.ControllerFacade;
 import org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning;
 
 /**
@@ -90,7 +90,7 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreControllersPackage.Literals.USER_DEFINED_INPUT_CONDITIONING;
+		return Symphony__CoreProgramsControllersPackage.Literals.USER_DEFINED_INPUT_CONDITIONING;
 	}
 
 	/**
@@ -111,7 +111,7 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 		String oldUnits = units;
 		units = newUnits;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS, oldUnits, units));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS, oldUnits, units));
 	}
 
 	/**
@@ -122,7 +122,7 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	public EList<CustomInputConditioningPoint> getTransferFunction() 
 	{
 		if (transferFunction == null) {
-			transferFunction = new EObjectContainmentEList<CustomInputConditioningPoint>(CustomInputConditioningPoint.class, this, EMFEcoreControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION);
+			transferFunction = new EObjectContainmentEList<CustomInputConditioningPoint>(CustomInputConditioningPoint.class, this, Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION);
 		}
 		return transferFunction;
 	}
@@ -135,7 +135,7 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
+			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
 				return ((InternalEList<?>)getTransferFunction()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -149,9 +149,9 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
+			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
 				return getUnits();
-			case EMFEcoreControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
+			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
 				return getTransferFunction();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -166,10 +166,10 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
+			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
 				setUnits((String)newValue);
 				return;
-			case EMFEcoreControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
+			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
 				getTransferFunction().clear();
 				getTransferFunction().addAll((Collection<? extends CustomInputConditioningPoint>)newValue);
 				return;
@@ -185,10 +185,10 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
+			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
 				setUnits(UNITS_EDEFAULT);
 				return;
-			case EMFEcoreControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
+			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
 				getTransferFunction().clear();
 				return;
 		}
@@ -203,9 +203,9 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
+			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__UNITS:
 				return UNITS_EDEFAULT == null ? units != null : !UNITS_EDEFAULT.equals(units);
-			case EMFEcoreControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
+			case Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION:
 				return transferFunction != null && !transferFunction.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -284,7 +284,7 @@ public class UserDefinedInputConditioningImpl extends AbstractInputConditioningI
 				@Override
 				public void notifyChanged(Notification msg) 
 				{			
-					if(msg.getFeatureID(UserDefinedInputConditioning.class) == EMFEcoreControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION)
+					if(msg.getFeatureID(UserDefinedInputConditioning.class) == Symphony__CoreProgramsControllersPackage.USER_DEFINED_INPUT_CONDITIONING__TRANSFER_FUNCTION)
 					{
 						sortedPoints = null;
 					}

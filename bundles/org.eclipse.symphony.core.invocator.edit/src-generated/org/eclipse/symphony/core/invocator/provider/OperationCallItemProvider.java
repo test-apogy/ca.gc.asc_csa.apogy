@@ -33,8 +33,8 @@ import org.eclipse.symphony.core.invocator.Argument;
 import org.eclipse.symphony.core.invocator.ArgumentsList;
 import org.eclipse.symphony.core.invocator.EDataTypeArgument;
 import org.eclipse.symphony.core.invocator.EEnumArgument;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
 import org.eclipse.symphony.core.invocator.Variable;
@@ -111,7 +111,7 @@ public class OperationCallItemProvider extends
 						"_UI_PropertyDescriptor_description",
 						"_UI_OperationCall_eOperation_feature",
 						"_UI_OperationCall_type"),
-				EMFEcoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
+				Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
 				true, false, true, null, null, null) {
 			@Override
 			protected Collection<?> getComboBoxObjects(Object object) {
@@ -170,7 +170,7 @@ public class OperationCallItemProvider extends
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -251,11 +251,11 @@ public class OperationCallItemProvider extends
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(OperationCall.class)) {
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__EOPERATION:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__EOPERATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
+			case Symphony__CoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -287,7 +287,7 @@ public class OperationCallItemProvider extends
 
 		CompoundCommand compoundCommand = (CompoundCommand) super.createSetCommand(domain, owner, feature, value, index);
 		
-		if (feature == EMFEcoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION) {
+		if (feature == Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION) {
 
 			EOperation eOperation = (EOperation) value;
 
@@ -297,7 +297,7 @@ public class OperationCallItemProvider extends
 				Argument argument = null;
 
 				if (parameter.getEType() instanceof EEnum) {
-					argument = EMFEcoreInvocatorFactory.eINSTANCE
+					argument = Symphony__CoreInvocatorFactory.eINSTANCE
 							.createEEnumArgument();
 					EEnum eEnum = (EEnum) parameter.getEType();
 					((EEnumArgument) argument).setEEnum(eEnum);
@@ -307,7 +307,7 @@ public class OperationCallItemProvider extends
 					((EEnumArgument) argument).setEEnumLiteral(eEnum
 							.getEEnumLiteral(defaultValue.name()));
 				} else if (parameter.getEType() instanceof EDataType) {
-					argument = EMFEcoreInvocatorFactory.eINSTANCE
+					argument = Symphony__CoreInvocatorFactory.eINSTANCE
 							.createEDataTypeArgument();
 					Object defaultValue = parameter.getEType()
 							.getDefaultValue();
@@ -317,7 +317,7 @@ public class OperationCallItemProvider extends
 								.valueOf(defaultValue));
 					}
 				} else {
-					argument = EMFEcoreInvocatorFactory.eINSTANCE
+					argument = Symphony__CoreInvocatorFactory.eINSTANCE
 							.createEClassArgument();
 				}
 				arguments.add(argument);
@@ -325,7 +325,7 @@ public class OperationCallItemProvider extends
 
 			/** Add arguments if there are parameters only. */
 			if (!arguments.isEmpty()) {
-				ArgumentsList argumentsList = EMFEcoreInvocatorFactory.eINSTANCE
+				ArgumentsList argumentsList = Symphony__CoreInvocatorFactory.eINSTANCE
 						.createArgumentsList();
 				argumentsList.getArguments().addAll(arguments);
 
@@ -333,7 +333,7 @@ public class OperationCallItemProvider extends
 						.append(new SetCommand(
 								domain,
 								owner,
-								EMFEcoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
+								Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
 								argumentsList));
 			} else {
 				// Clears the list.
@@ -341,17 +341,17 @@ public class OperationCallItemProvider extends
 						.append(new SetCommand(
 								domain,
 								owner,
-								EMFEcoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
+								Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
 								null));
 			}
-		} else if (feature == EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE) {
+		} else if (feature == Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__VARIABLE) {
 
 			// Clears the eOperation
 			compoundCommand
 					.append(new SetCommand(
 							domain,
 							owner,
-							EMFEcoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
+							Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
 							null));
 
 			// Clears the arguments
@@ -359,16 +359,16 @@ public class OperationCallItemProvider extends
 					.append(new SetCommand(
 							domain,
 							owner,
-							EMFEcoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
+							Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
 							null));
 						
-		} else if (feature == EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT) {
+		} else if (feature == Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT) {
 			// Clears the eOperation
 			compoundCommand
 					.append(new SetCommand(
 							domain,
 							owner,
-							EMFEcoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
+							Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
 							null));
 
 			// Clears the arguments
@@ -376,16 +376,16 @@ public class OperationCallItemProvider extends
 					.append(new SetCommand(
 							domain,
 							owner,
-							EMFEcoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
+							Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
 							null));
 
-		} else if (feature == EMFEcoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT) {
+		} else if (feature == Symphony__CoreInvocatorPackage.Literals.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT) {
 			// Clears the eOperation
 			compoundCommand
 					.append(new SetCommand(
 							domain,
 							owner,
-							EMFEcoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
+							Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__EOPERATION,
 							null));
 
 			// Clears the arguments
@@ -393,7 +393,7 @@ public class OperationCallItemProvider extends
 					.append(new SetCommand(
 							domain,
 							owner,
-							EMFEcoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
+							Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL__ARGUMENTS_LIST,
 							null));
 		}
 

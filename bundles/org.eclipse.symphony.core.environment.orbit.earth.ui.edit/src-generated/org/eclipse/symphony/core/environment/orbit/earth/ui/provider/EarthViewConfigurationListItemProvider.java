@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfigurationList;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 import org.eclipse.symphony.core.invocator.provider.AbstractToolsListContainerItemProvider;
 
 /**
@@ -61,7 +61,7 @@ public class EarthViewConfigurationListItemProvider extends AbstractToolsListCon
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentUIPackage.Literals.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -114,7 +114,7 @@ public class EarthViewConfigurationListItemProvider extends AbstractToolsListCon
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EarthViewConfigurationList.class)) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -134,8 +134,8 @@ public class EarthViewConfigurationListItemProvider extends AbstractToolsListCon
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentUIPackage.Literals.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS,
-				 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createEarthViewConfiguration()));
+				(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION_LIST__EARTH_VIEW_CONFIGURATIONS,
+				 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthViewConfiguration()));
 	}
 
 }

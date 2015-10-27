@@ -13,7 +13,7 @@ import org.eclipse.symphony.addons.sensors.fov.bindings.ConicalFieldOfViewBindin
 import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsFactory;
 import org.eclipse.symphony.addons.sensors.fov.bindings.Symphony__AddonsSensorsFOVBindingsPackage;
 import org.eclipse.symphony.addons.sensors.fov.bindings.RectangularFrustrumFieldOfViewBinding;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -91,7 +91,7 @@ public class Symphony__AddonsSensorsFOVBindingsPackageImpl extends EPackageImpl 
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyBindingsPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyBindingsPackage.eINSTANCE.eClass();
 		Symphony__AddonsSensorsFOVPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -233,7 +233,7 @@ public class Symphony__AddonsSensorsFOVBindingsPackageImpl extends EPackageImpl 
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyBindingsPackage theTopologyBindingsPackage = (TopologyBindingsPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyBindingsPackage.eNS_URI);
+		Symphony__CommonTopologyBindingsPackage theSymphony__CommonTopologyBindingsPackage = (Symphony__CommonTopologyBindingsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyBindingsPackage.eNS_URI);
 		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
 
 		// Create type parameters
@@ -241,9 +241,9 @@ public class Symphony__AddonsSensorsFOVBindingsPackageImpl extends EPackageImpl 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		circularSectorFieldOfViewBindingEClass.getESuperTypes().add(theTopologyBindingsPackage.getAbstractTopologyBinding());
-		conicalFieldOfViewBindingEClass.getESuperTypes().add(theTopologyBindingsPackage.getAbstractTopologyBinding());
-		rectangularFrustrumFieldOfViewBindingEClass.getESuperTypes().add(theTopologyBindingsPackage.getAbstractTopologyBinding());
+		circularSectorFieldOfViewBindingEClass.getESuperTypes().add(theSymphony__CommonTopologyBindingsPackage.getAbstractTopologyBinding());
+		conicalFieldOfViewBindingEClass.getESuperTypes().add(theSymphony__CommonTopologyBindingsPackage.getAbstractTopologyBinding());
+		rectangularFrustrumFieldOfViewBindingEClass.getESuperTypes().add(theSymphony__CommonTopologyBindingsPackage.getAbstractTopologyBinding());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(circularSectorFieldOfViewBindingEClass, CircularSectorFieldOfViewBinding.class, "CircularSectorFieldOfViewBinding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

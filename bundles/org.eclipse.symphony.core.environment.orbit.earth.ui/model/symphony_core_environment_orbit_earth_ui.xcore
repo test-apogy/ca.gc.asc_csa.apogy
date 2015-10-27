@@ -1,4 +1,11 @@
-@GenModel(prefix="SymphonyEarthOrbitEnvironmentUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)", modelName="SymphonyEarthOrbitEnvironmentUI", complianceLevel="8.0", suppressGenModelAnnotations="false")
+@GenModel(prefix="Symphony__CoreEnvironmentOrbitEarthUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="Symphony__CoreEnvironmentOrbitEarthUI",
+		  complianceLevel="8.0",
+		  suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.core.environment.orbit.earth.ui/src-generated")
 @GenModel(editDirectory= "/org.eclipse.symphony.core.environment.orbit.earth.ui.edit/src-generated")
 

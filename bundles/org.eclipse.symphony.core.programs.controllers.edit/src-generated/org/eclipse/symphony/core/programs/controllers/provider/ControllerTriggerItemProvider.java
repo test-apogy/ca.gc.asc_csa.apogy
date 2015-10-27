@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
 import org.eclipse.symphony.core.programs.controllers.ControllerTrigger;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.ControllerTrigger} object.
@@ -65,7 +65,7 @@ public class ControllerTriggerItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreControllersPackage.Literals.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER);
+			childrenFeatures.add(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER);
 		}
 		return childrenFeatures;
 	}
@@ -112,7 +112,7 @@ public class ControllerTriggerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ControllerTrigger.class)) {
-			case EMFEcoreControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -133,7 +133,7 @@ public class ControllerTriggerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreControllersPackage.Literals.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER,
+				(Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER,
 				 Symphony__CommonIOJInputFactory.eINSTANCE.createEComponentQualifier()));
 	}
 }

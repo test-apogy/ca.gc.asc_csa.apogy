@@ -25,7 +25,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.VariableFeatureReference#getFeatureRoot <em>Feature Root</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariableFeatureReference()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariableFeatureReference()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface VariableFeatureReference extends Named
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Variable</em>' reference.
 	 * @see #setVariable(Variable)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariableFeatureReference_Variable()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariableFeatureReference_Variable()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -66,7 +66,7 @@ public interface VariableFeatureReference extends Named
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Type Member Reference List Element</em>' containment reference.
 	 * @see #setTypeMemberReferenceListElement(TypeMemberReferenceListElement)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariableFeatureReference_TypeMemberReferenceListElement()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariableFeatureReference_TypeMemberReferenceListElement()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -92,7 +92,7 @@ public interface VariableFeatureReference extends Named
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Root</em>' containment reference.
 	 * @see #setFeatureRoot(ListRootNode)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariableFeatureReference_FeatureRoot()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariableFeatureReference_FeatureRoot()
 	 * @model containment="true"
 	 * @generated
 	 */

@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.core.environment.orbit.earth.CorridorPoint;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -98,7 +98,7 @@ public class CorridorPointImpl extends MinimalEObjectImpl.Container implements C
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.CORRIDOR_POINT;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.CORRIDOR_POINT;
 	}
 
 	/**
@@ -119,7 +119,7 @@ public class CorridorPointImpl extends MinimalEObjectImpl.Container implements C
 		Date oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__TIME, oldTime, time));
 	}
 
 	/**
@@ -140,7 +140,7 @@ public class CorridorPointImpl extends MinimalEObjectImpl.Container implements C
 		GeographicCoordinates oldLeft = left;
 		left = newLeft;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__LEFT, oldLeft, newLeft);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__LEFT, oldLeft, newLeft);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -155,14 +155,14 @@ public class CorridorPointImpl extends MinimalEObjectImpl.Container implements C
 		if (newLeft != left) {
 			NotificationChain msgs = null;
 			if (left != null)
-				msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__LEFT, null, msgs);
+				msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__LEFT, null, msgs);
 			if (newLeft != null)
-				msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__LEFT, null, msgs);
+				msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__LEFT, null, msgs);
 			msgs = basicSetLeft(newLeft, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__LEFT, newLeft, newLeft));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__LEFT, newLeft, newLeft));
 	}
 
 	/**
@@ -183,7 +183,7 @@ public class CorridorPointImpl extends MinimalEObjectImpl.Container implements C
 		GeographicCoordinates oldCenter = center;
 		center = newCenter;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__CENTER, oldCenter, newCenter);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__CENTER, oldCenter, newCenter);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -198,14 +198,14 @@ public class CorridorPointImpl extends MinimalEObjectImpl.Container implements C
 		if (newCenter != center) {
 			NotificationChain msgs = null;
 			if (center != null)
-				msgs = ((InternalEObject)center).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__CENTER, null, msgs);
+				msgs = ((InternalEObject)center).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__CENTER, null, msgs);
 			if (newCenter != null)
-				msgs = ((InternalEObject)newCenter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__CENTER, null, msgs);
+				msgs = ((InternalEObject)newCenter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__CENTER, null, msgs);
 			msgs = basicSetCenter(newCenter, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__CENTER, newCenter, newCenter));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__CENTER, newCenter, newCenter));
 	}
 
 	/**
@@ -226,7 +226,7 @@ public class CorridorPointImpl extends MinimalEObjectImpl.Container implements C
 		GeographicCoordinates oldRight = right;
 		right = newRight;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__RIGHT, oldRight, newRight);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__RIGHT, oldRight, newRight);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -241,14 +241,14 @@ public class CorridorPointImpl extends MinimalEObjectImpl.Container implements C
 		if (newRight != right) {
 			NotificationChain msgs = null;
 			if (right != null)
-				msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__RIGHT, null, msgs);
+				msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__RIGHT, null, msgs);
 			if (newRight != null)
-				msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__RIGHT, null, msgs);
+				msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__RIGHT, null, msgs);
 			msgs = basicSetRight(newRight, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__RIGHT, newRight, newRight));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__RIGHT, newRight, newRight));
 	}
 
 	/**
@@ -259,11 +259,11 @@ public class CorridorPointImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__LEFT:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__LEFT:
 				return basicSetLeft(null, msgs);
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__CENTER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__CENTER:
 				return basicSetCenter(null, msgs);
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__RIGHT:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__RIGHT:
 				return basicSetRight(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -277,13 +277,13 @@ public class CorridorPointImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__TIME:
 				return getTime();
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__LEFT:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__LEFT:
 				return getLeft();
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__CENTER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__CENTER:
 				return getCenter();
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__RIGHT:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__RIGHT:
 				return getRight();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -297,16 +297,16 @@ public class CorridorPointImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__TIME:
 				setTime((Date)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__LEFT:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__LEFT:
 				setLeft((GeographicCoordinates)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__CENTER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__CENTER:
 				setCenter((GeographicCoordinates)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__RIGHT:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__RIGHT:
 				setRight((GeographicCoordinates)newValue);
 				return;
 		}
@@ -321,16 +321,16 @@ public class CorridorPointImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__LEFT:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__LEFT:
 				setLeft((GeographicCoordinates)null);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__CENTER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__CENTER:
 				setCenter((GeographicCoordinates)null);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__RIGHT:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__RIGHT:
 				setRight((GeographicCoordinates)null);
 				return;
 		}
@@ -345,13 +345,13 @@ public class CorridorPointImpl extends MinimalEObjectImpl.Container implements C
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__TIME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__LEFT:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__LEFT:
 				return left != null;
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__CENTER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__CENTER:
 				return center != null;
-			case SymphonyEarthOrbitEnvironmentPackage.CORRIDOR_POINT__RIGHT:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.CORRIDOR_POINT__RIGHT:
 				return right != null;
 		}
 		return super.eIsSet(featureID);

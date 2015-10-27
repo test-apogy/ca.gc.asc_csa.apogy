@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.topology.ReferencedGroupNode;
 import org.eclipse.symphony.core.SymphonyEnvironment;
-import org.eclipse.symphony.core.topology.SymphonyTopologyPackage;
+import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
 import org.eclipse.symphony.core.topology.SystemsTopologyAdapter;
 
 /**
@@ -67,7 +67,7 @@ public class SystemsTopologyAdapterImpl extends MinimalEObjectImpl.Container imp
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyTopologyPackage.Literals.SYSTEMS_TOPOLOGY_ADAPTER;
+		return Symphony__CoreTopologyPackage.Literals.SYSTEMS_TOPOLOGY_ADAPTER;
 	}
 
   /**
@@ -82,7 +82,7 @@ public class SystemsTopologyAdapterImpl extends MinimalEObjectImpl.Container imp
 			deployment = (SymphonyEnvironment)eResolveProxy(oldDeployment);
 			if (deployment != oldDeployment) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT, oldDeployment, deployment));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT, oldDeployment, deployment));
 			}
 		}
 		return deployment;
@@ -108,7 +108,7 @@ public class SystemsTopologyAdapterImpl extends MinimalEObjectImpl.Container imp
 		SymphonyEnvironment oldDeployment = deployment;
 		deployment = newDeployment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT, oldDeployment, deployment));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT, oldDeployment, deployment));
 	}
 
   /**
@@ -123,7 +123,7 @@ public class SystemsTopologyAdapterImpl extends MinimalEObjectImpl.Container imp
 			systemsGroup = (ReferencedGroupNode)eResolveProxy(oldSystemsGroup);
 			if (systemsGroup != oldSystemsGroup) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__SYSTEMS_GROUP, oldSystemsGroup, systemsGroup));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__SYSTEMS_GROUP, oldSystemsGroup, systemsGroup));
 			}
 		}
 		return systemsGroup;
@@ -149,7 +149,7 @@ public class SystemsTopologyAdapterImpl extends MinimalEObjectImpl.Container imp
 		ReferencedGroupNode oldSystemsGroup = systemsGroup;
 		systemsGroup = newSystemsGroup;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__SYSTEMS_GROUP, oldSystemsGroup, systemsGroup));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__SYSTEMS_GROUP, oldSystemsGroup, systemsGroup));
 	}
 
   /**
@@ -161,10 +161,10 @@ public class SystemsTopologyAdapterImpl extends MinimalEObjectImpl.Container imp
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT:
+			case Symphony__CoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT:
 				if (resolve) return getDeployment();
 				return basicGetDeployment();
-			case SymphonyTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__SYSTEMS_GROUP:
+			case Symphony__CoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__SYSTEMS_GROUP:
 				if (resolve) return getSystemsGroup();
 				return basicGetSystemsGroup();
 		}
@@ -180,10 +180,10 @@ public class SystemsTopologyAdapterImpl extends MinimalEObjectImpl.Container imp
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT:
+			case Symphony__CoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT:
 				setDeployment((SymphonyEnvironment)newValue);
 				return;
-			case SymphonyTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__SYSTEMS_GROUP:
+			case Symphony__CoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__SYSTEMS_GROUP:
 				setSystemsGroup((ReferencedGroupNode)newValue);
 				return;
 		}
@@ -199,10 +199,10 @@ public class SystemsTopologyAdapterImpl extends MinimalEObjectImpl.Container imp
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT:
+			case Symphony__CoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT:
 				setDeployment((SymphonyEnvironment)null);
 				return;
-			case SymphonyTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__SYSTEMS_GROUP:
+			case Symphony__CoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__SYSTEMS_GROUP:
 				setSystemsGroup((ReferencedGroupNode)null);
 				return;
 		}
@@ -218,9 +218,9 @@ public class SystemsTopologyAdapterImpl extends MinimalEObjectImpl.Container imp
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT:
+			case Symphony__CoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__DEPLOYMENT:
 				return deployment != null;
-			case SymphonyTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__SYSTEMS_GROUP:
+			case Symphony__CoreTopologyPackage.SYSTEMS_TOPOLOGY_ADAPTER__SYSTEMS_GROUP:
 				return systemsGroup != null;
 		}
 		return super.eIsSet(featureID);

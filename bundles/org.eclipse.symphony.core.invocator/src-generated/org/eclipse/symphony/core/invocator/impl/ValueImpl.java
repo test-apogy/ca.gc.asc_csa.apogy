@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Value;
 
 /**
@@ -77,7 +77,7 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.VALUE;
+		return Symphony__CoreInvocatorPackage.Literals.VALUE;
 	}
 
   /**
@@ -100,7 +100,7 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.VALUE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.VALUE__NAME, oldName, name));
 	}
 
   /**
@@ -123,7 +123,7 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
 		EObject oldValue = value;
 		value = newValue;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.VALUE__VALUE, oldValue, newValue);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.VALUE__VALUE, oldValue, newValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -139,14 +139,14 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
 		if (newValue != value) {
 			NotificationChain msgs = null;
 			if (value != null)
-				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.VALUE__VALUE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.VALUE__VALUE, null, msgs);
 			if (newValue != null)
-				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.VALUE__VALUE, null, msgs);
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.VALUE__VALUE, null, msgs);
 			msgs = basicSetValue(newValue, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.VALUE__VALUE, newValue, newValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.VALUE__VALUE, newValue, newValue));
 	}
 
   /**
@@ -158,7 +158,7 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VALUE__VALUE:
+			case Symphony__CoreInvocatorPackage.VALUE__VALUE:
 				return basicSetValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -173,9 +173,9 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VALUE__NAME:
+			case Symphony__CoreInvocatorPackage.VALUE__NAME:
 				return getName();
-			case EMFEcoreInvocatorPackage.VALUE__VALUE:
+			case Symphony__CoreInvocatorPackage.VALUE__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -190,10 +190,10 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VALUE__NAME:
+			case Symphony__CoreInvocatorPackage.VALUE__NAME:
 				setName((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.VALUE__VALUE:
+			case Symphony__CoreInvocatorPackage.VALUE__VALUE:
 				setValue((EObject)newValue);
 				return;
 		}
@@ -209,10 +209,10 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VALUE__NAME:
+			case Symphony__CoreInvocatorPackage.VALUE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.VALUE__VALUE:
+			case Symphony__CoreInvocatorPackage.VALUE__VALUE:
 				setValue((EObject)null);
 				return;
 		}
@@ -228,9 +228,9 @@ public class ValueImpl extends MinimalEObjectImpl.Container implements Value
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VALUE__NAME:
+			case Symphony__CoreInvocatorPackage.VALUE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EMFEcoreInvocatorPackage.VALUE__VALUE:
+			case Symphony__CoreInvocatorPackage.VALUE__VALUE:
 				return value != null;
 		}
 		return super.eIsSet(featureID);

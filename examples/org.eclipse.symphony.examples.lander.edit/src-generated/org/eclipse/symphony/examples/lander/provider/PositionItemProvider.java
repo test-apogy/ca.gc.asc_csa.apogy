@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage;
+import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
 import org.eclipse.symphony.examples.lander.Position;
 
 /**
@@ -88,7 +88,7 @@ public class PositionItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_Position_x_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_Position_x_feature", "_UI_Position_type"),
-				EMFEcoreExampleLanderPackage.Literals.POSITION__X,
+				Symphony__ExamplesLanderPackage.Literals.POSITION__X,
 				false,
 				false,
 				false,
@@ -111,7 +111,7 @@ public class PositionItemProvider extends ItemProviderAdapter
 				getResourceLocator(),
 				getString("_UI_Position_y_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_Position_y_feature", "_UI_Position_type"),
-				EMFEcoreExampleLanderPackage.Literals.POSITION__Y,
+				Symphony__ExamplesLanderPackage.Literals.POSITION__Y,
 				false,
 				false,
 				false,
@@ -134,7 +134,7 @@ public class PositionItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Position_z_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Position_z_feature", "_UI_Position_type"),
-				 EMFEcoreExampleLanderPackage.Literals.POSITION__Z,
+				 Symphony__ExamplesLanderPackage.Literals.POSITION__Z,
 				 false,
 				 false,
 				 false,
@@ -157,7 +157,7 @@ public class PositionItemProvider extends ItemProviderAdapter
 				 getResourceLocator(),
 				 getString("_UI_Position_attitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Position_attitude_feature", "_UI_Position_type"),
-				 EMFEcoreExampleLanderPackage.Literals.POSITION__ATTITUDE,
+				 Symphony__ExamplesLanderPackage.Literals.POSITION__ATTITUDE,
 				 false,
 				 false,
 				 false,
@@ -215,10 +215,10 @@ public class PositionItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Position.class)) {
-			case EMFEcoreExampleLanderPackage.POSITION__X:
-			case EMFEcoreExampleLanderPackage.POSITION__Y:
-			case EMFEcoreExampleLanderPackage.POSITION__Z:
-			case EMFEcoreExampleLanderPackage.POSITION__ATTITUDE:
+			case Symphony__ExamplesLanderPackage.POSITION__X:
+			case Symphony__ExamplesLanderPackage.POSITION__Y:
+			case Symphony__ExamplesLanderPackage.POSITION__Z:
+			case Symphony__ExamplesLanderPackage.POSITION__ATTITUDE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

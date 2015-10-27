@@ -20,7 +20,7 @@ import org.eclipse.symphony.common.emf.Timed;
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPassPosition()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassPosition()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface VisibilityPassPosition extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Azimuth</em>' attribute.
 	 * @see #setAzimuth(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPassPosition_Azimuth()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassPosition_Azimuth()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' csa_units='rad'"
 	 * @generated
@@ -62,7 +62,7 @@ public interface VisibilityPassPosition extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Elevation</em>' attribute.
 	 * @see #setElevation(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPassPosition_Elevation()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassPosition_Elevation()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' csa_units='rad'"
 	 * @generated
@@ -89,7 +89,7 @@ public interface VisibilityPassPosition extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Range</em>' attribute.
 	 * @see #setRange(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPassPosition_Range()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassPosition_Range()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' csa_units='m'"
 	 * @generated
@@ -116,7 +116,7 @@ public interface VisibilityPassPosition extends Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Range Rate</em>' attribute.
 	 * @see #setRangeRate(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPassPosition_RangeRate()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassPosition_RangeRate()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' csa_units='m/s'"
 	 * @generated

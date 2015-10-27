@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.symphony.core.invocator.RecordingToolsContainer#getChannelsLists <em>Channels Lists</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getRecordingToolsContainer()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getRecordingToolsContainer()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface RecordingToolsContainer extends AbstractToolsListContainer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Recorder</em>' containment reference.
 	 * @see #setRecorder(AbstractRecorder)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getRecordingToolsContainer_Recorder()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getRecordingToolsContainer_Recorder()
 	 * @see org.eclipse.symphony.core.invocator.AbstractRecorder#getRecordingToolsContainer
 	 * @model opposite="recordingToolsContainer" containment="true" required="true"
 	 * @generated
@@ -69,7 +69,7 @@ public interface RecordingToolsContainer extends AbstractToolsListContainer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Player</em>' containment reference.
 	 * @see #setPlayer(AbstractPlayer)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getRecordingToolsContainer_Player()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getRecordingToolsContainer_Player()
 	 * @see org.eclipse.symphony.core.invocator.AbstractPlayer#getRecordingToolsContainer
 	 * @model opposite="recordingToolsContainer" containment="true" required="true"
 	 * @generated
@@ -97,7 +97,7 @@ public interface RecordingToolsContainer extends AbstractToolsListContainer {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Channels Lists</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getRecordingToolsContainer_ChannelsLists()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getRecordingToolsContainer_ChannelsLists()
 	 * @see org.eclipse.symphony.core.invocator.ChannelsList#getRecordingToolsContainer
 	 * @model opposite="recordingToolsContainer" containment="true"
 	 * @generated

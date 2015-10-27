@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.emf.Timed;
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractResult#getResultValue <em>Result Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractResult()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractResult()
  * @model abstract="true"
  * @generated
  */
@@ -43,7 +43,7 @@ public interface AbstractResult extends Timed, Described
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Results List</em>' container reference.
 	 * @see #setResultsList(ResultsList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractResult_ResultsList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractResult_ResultsList()
 	 * @see org.eclipse.symphony.core.invocator.ResultsList#getResults
 	 * @model opposite="results" transient="false"
 	 * @generated
@@ -69,7 +69,7 @@ public interface AbstractResult extends Timed, Described
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Invocator Session</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractResult_InvocatorSession()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractResult_InvocatorSession()
 	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' property='None' get='<%org.eclipse.symphony.core.invocator.ResultsList%> _resultsList = this.getResultsList();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_resultsList, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.ResultsList%> _resultsList_1 = this.getResultsList();\n\treturn _resultsList_1.getInvocatorSession();\n}'"
 	 * @generated
@@ -85,7 +85,7 @@ public interface AbstractResult extends Timed, Described
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Context</em>' reference.
 	 * @see #setContext(Context)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractResult_Context()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractResult_Context()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -111,7 +111,7 @@ public interface AbstractResult extends Timed, Described
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Result Value</em>' containment reference.
 	 * @see #setResultValue(AbstractResultValue)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractResult_ResultValue()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractResult_ResultValue()
 	 * @see org.eclipse.symphony.core.invocator.AbstractResultValue#getResult
 	 * @model opposite="result" containment="true"
 	 * @generated

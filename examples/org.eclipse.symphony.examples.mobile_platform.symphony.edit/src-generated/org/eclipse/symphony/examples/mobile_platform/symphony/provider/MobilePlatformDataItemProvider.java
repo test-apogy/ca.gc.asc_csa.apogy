@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
 import org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData;
-import org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformPackage;
+import org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData} object.
@@ -67,7 +67,7 @@ public class MobilePlatformDataItemProvider extends SymphonyInitializationDataIt
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatformData_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatformData_initialized_feature", "_UI_MobilePlatformData_type"),
-				 SymphonyExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM_DATA__INITIALIZED,
+				 Symphony__ExamplesMobilePlatformSymphonyPackage.Literals.MOBILE_PLATFORM_DATA__INITIALIZED,
 				 true,
 				 false,
 				 false,
@@ -89,7 +89,7 @@ public class MobilePlatformDataItemProvider extends SymphonyInitializationDataIt
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatformData_disposed_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatformData_disposed_feature", "_UI_MobilePlatformData_type"),
-				 SymphonyExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM_DATA__DISPOSED,
+				 Symphony__ExamplesMobilePlatformSymphonyPackage.Literals.MOBILE_PLATFORM_DATA__DISPOSED,
 				 true,
 				 false,
 				 false,
@@ -111,7 +111,7 @@ public class MobilePlatformDataItemProvider extends SymphonyInitializationDataIt
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatformData_linearVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatformData_linearVelocity_feature", "_UI_MobilePlatformData_type"),
-				 SymphonyExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY,
+				 Symphony__ExamplesMobilePlatformSymphonyPackage.Literals.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -133,7 +133,7 @@ public class MobilePlatformDataItemProvider extends SymphonyInitializationDataIt
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatformData_angularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatformData_angularVelocity_feature", "_UI_MobilePlatformData_type"),
-				 SymphonyExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY,
+				 Symphony__ExamplesMobilePlatformSymphonyPackage.Literals.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY,
 				 true,
 				 false,
 				 false,
@@ -178,10 +178,10 @@ public class MobilePlatformDataItemProvider extends SymphonyInitializationDataIt
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MobilePlatformData.class)) {
-			case SymphonyExampleMobilePlatformPackage.MOBILE_PLATFORM_DATA__INITIALIZED:
-			case SymphonyExampleMobilePlatformPackage.MOBILE_PLATFORM_DATA__DISPOSED:
-			case SymphonyExampleMobilePlatformPackage.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY:
-			case SymphonyExampleMobilePlatformPackage.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY:
+			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__INITIALIZED:
+			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__DISPOSED:
+			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__LINEAR_VELOCITY:
+			case Symphony__ExamplesMobilePlatformSymphonyPackage.MOBILE_PLATFORM_DATA__ANGULAR_VELOCITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.common.topology.impl.TransformNodeImpl;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.FeatureOfInterestNode;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.FEATURE_OF_INTEREST_NODE;
+		return Symphony__CorePackage.Literals.FEATURE_OF_INTEREST_NODE;
 	}
 
 	/**
@@ -74,7 +74,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 			featureOfInterest = (FeatureOfInterest)eResolveProxy(oldFeatureOfInterest);
 			if (featureOfInterest != oldFeatureOfInterest) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST, oldFeatureOfInterest, featureOfInterest));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST, oldFeatureOfInterest, featureOfInterest));
 			}
 		}
 		return featureOfInterest;
@@ -134,7 +134,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 		FeatureOfInterest oldFeatureOfInterest = featureOfInterest;
 		featureOfInterest = newFeatureOfInterest;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST, oldFeatureOfInterest, featureOfInterest));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST, oldFeatureOfInterest, featureOfInterest));
 	}
 
 	/**
@@ -145,7 +145,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
+			case Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
 				if (resolve) return getFeatureOfInterest();
 				return basicGetFeatureOfInterest();
 		}
@@ -160,7 +160,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
+			case Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
 				setFeatureOfInterest((FeatureOfInterest)newValue);
 				return;
 		}
@@ -175,7 +175,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
+			case Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
 				setFeatureOfInterest((FeatureOfInterest)null);
 				return;
 		}
@@ -190,7 +190,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
+			case Symphony__CorePackage.FEATURE_OF_INTEREST_NODE__FEATURE_OF_INTEREST:
 				return featureOfInterest != null;
 		}
 		return super.eIsSet(featureID);
@@ -223,7 +223,7 @@ public class FeatureOfInterestNodeImpl extends TransformNodeImpl implements Feat
 					if(notification.getNotifier() instanceof FeatureOfInterest)
 					{
 						int featureId = notification.getFeatureID(FeatureOfInterest.class);	
-						if(featureId == SymphonyCorePackage.FEATURE_OF_INTEREST__POSE)
+						if(featureId == Symphony__CorePackage.FEATURE_OF_INTEREST__POSE)
 						{
 							// Unregister from previous Pose
 							if(notification.getOldValue() instanceof Matrix4x4)

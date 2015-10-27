@@ -28,7 +28,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *   <li>{@link org.eclipse.symphony.core.environment.LineOfSightImageMapLayer#isUseHeightPerpendicularToGround <em>Use Height Perpendicular To Ground</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getLineOfSightImageMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getLineOfSightImageMapLayer()
  * @model
  * @generated
  */
@@ -47,7 +47,7 @@ public interface LineOfSightImageMapLayer extends CartesianTriangularMeshDerived
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Line Of Sight Available Color</em>' attribute.
 	 * @see #setLineOfSightAvailableColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getLineOfSightImageMapLayer_LineOfSightAvailableColor()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getLineOfSightImageMapLayer_LineOfSightAvailableColor()
 	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.core.environment.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS'"
 	 * @generated
@@ -78,7 +78,7 @@ public interface LineOfSightImageMapLayer extends CartesianTriangularMeshDerived
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Line Of Sight Not Available Color</em>' attribute.
 	 * @see #setLineOfSightNotAvailableColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getLineOfSightImageMapLayer_LineOfSightNotAvailableColor()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getLineOfSightImageMapLayer_LineOfSightNotAvailableColor()
 	 * @model default="1.0,0.0,0.0" unique="false" dataType="org.eclipse.symphony.core.environment.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS'"
 	 * @generated
@@ -104,7 +104,7 @@ public interface LineOfSightImageMapLayer extends CartesianTriangularMeshDerived
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Observer Pose</em>' containment reference.
 	 * @see #setObserverPose(Matrix4x4)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getLineOfSightImageMapLayer_ObserverPose()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getLineOfSightImageMapLayer_ObserverPose()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS'"
 	 * @generated
@@ -131,7 +131,7 @@ public interface LineOfSightImageMapLayer extends CartesianTriangularMeshDerived
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Target Height Above Ground</em>' attribute.
 	 * @see #setTargetHeightAboveGround(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getLineOfSightImageMapLayer_TargetHeightAboveGround()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getLineOfSightImageMapLayer_TargetHeightAboveGround()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS' csa_units='m'"
 	 * @generated
@@ -158,12 +158,12 @@ public interface LineOfSightImageMapLayer extends CartesianTriangularMeshDerived
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Wheter or not find each target position using the local normal.
+	 * Whether or not find each target position using the local normal.
 	 * Using the local normal requires more processing time.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Use Height Perpendicular To Ground</em>' attribute.
 	 * @see #setUseHeightPerpendicularToGround(boolean)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getLineOfSightImageMapLayer_UseHeightPerpendicularToGround()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getLineOfSightImageMapLayer_UseHeightPerpendicularToGround()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS'"
 	 * @generated

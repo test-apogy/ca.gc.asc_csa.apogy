@@ -20,9 +20,9 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.LocalTypesList;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.LocalTypesList} object.
@@ -79,7 +79,7 @@ public class LocalTypesListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.LOCAL_TYPES_LIST__TYPES);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.LOCAL_TYPES_LIST__TYPES);
 		}
 		return childrenFeatures;
 	}
@@ -135,7 +135,7 @@ public class LocalTypesListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LocalTypesList.class)) {
-			case EMFEcoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES:
+			case Symphony__CoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -156,8 +156,8 @@ public class LocalTypesListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.LOCAL_TYPES_LIST__TYPES,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createType()));
+				(Symphony__CoreInvocatorPackage.Literals.LOCAL_TYPES_LIST__TYPES,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createType()));
 	}
 
   /**

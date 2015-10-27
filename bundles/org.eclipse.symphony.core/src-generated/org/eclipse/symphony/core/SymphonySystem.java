@@ -31,7 +31,7 @@ import org.eclipse.symphony.core.invocator.Type;
  *   <li>{@link org.eclipse.symphony.core.SymphonySystem#getPoseProviderInstance <em>Pose Provider Instance</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonySystem()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonySystem()
  * @model
  * @generated
  */
@@ -46,7 +46,7 @@ public interface SymphonySystem extends Type {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Topology Root</em>' containment reference.
 	 * @see #setTopologyRoot(TopologyRoot)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonySystem_TopologyRoot()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonySystem_TopologyRoot()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' createChild='true' property='None'"
 	 * @generated
@@ -73,7 +73,7 @@ public interface SymphonySystem extends Type {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Binding Set</em>' containment reference.
 	 * @see #setBindingSet(BindingsSet)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonySystem_BindingSet()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonySystem_BindingSet()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -101,7 +101,7 @@ public interface SymphonySystem extends Type {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Connection Points List</em>' containment reference.
 	 * @see #setConnectionPointsList(ConnectionPointsList)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonySystem_ConnectionPointsList()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonySystem_ConnectionPointsList()
 	 * @see org.eclipse.symphony.core.ConnectionPointsList#getSymphonySystem
 	 * @model opposite="symphonySystem" containment="true"
 	 * @generated
@@ -133,7 +133,7 @@ public interface SymphonySystem extends Type {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Assembly Links List</em>' containment reference.
 	 * @see #setAssemblyLinksList(AssemblyLinksList)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonySystem_AssemblyLinksList()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonySystem_AssemblyLinksList()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -159,7 +159,7 @@ public interface SymphonySystem extends Type {
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pose Provider</em>' reference.
 	 * @see #setPoseProvider(AbstractType)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonySystem_PoseProvider()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonySystem_PoseProvider()
 	 * @model
 	 * @generated
 	 */
@@ -185,7 +185,7 @@ public interface SymphonySystem extends Type {
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pose Provider Instance</em>' reference.
 	 * @see #setPoseProviderInstance(PoseProvider)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonySystem_PoseProviderInstance()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonySystem_PoseProviderInstance()
 	 * @model transient="true"
 	 * @generated
 	 */

@@ -34,7 +34,7 @@ import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
  *   <li>{@link org.eclipse.symphony.examples.rover.Rover#isDisposed <em>Disposed</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getRover()
+ * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover()
  * @model abstract="true"
  * @generated
  */
@@ -55,7 +55,7 @@ public interface Rover extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Robotic Arm</em>' reference.
 	 * @see #setRoboticArm(RoboticArm)
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getRover_RoboticArm()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_RoboticArm()
 	 * @model required="true" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Subcomponents' children='true'"
 	 * @generated
@@ -86,7 +86,7 @@ public interface Rover extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mobile Platform</em>' reference.
 	 * @see #setMobilePlatform(MobilePlatform)
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getRover_MobilePlatform()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_MobilePlatform()
 	 * @model required="true" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Subcomponents' children='true'"
 	 * @generated
@@ -114,7 +114,7 @@ public interface Rover extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Arm Camera</em>' reference.
 	 * @see #setArmCamera(PTUCamera)
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getRover_ArmCamera()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_ArmCamera()
 	 * @model required="true" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Subcomponents' children='true'"
 	 * @generated
@@ -142,7 +142,7 @@ public interface Rover extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Center Camera</em>' reference.
 	 * @see #setCenterCamera(PTUCamera)
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getRover_CenterCamera()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_CenterCamera()
 	 * @model required="true" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Subcomponents' children='true'"
 	 * @generated
@@ -168,7 +168,7 @@ public interface Rover extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Power System</em>' containment reference.
 	 * @see #setPowerSystem(PowerSystem)
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getRover_PowerSystem()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_PowerSystem()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='Subcomponents'"
 	 * @generated
@@ -199,7 +199,7 @@ public interface Rover extends Disposable
 	 * is the speed backwards.  Zero means there is no movement.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Linear Velocity</em>' attribute.
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getRover_LinearVelocity()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_LinearVelocity()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='m/s' property='Readonly' propertyCategory='Velocities' get='<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getLinearVelocity();\n}\nelse\n{\n\treturn 0.0;\n}'"
 	 * @generated
@@ -222,7 +222,7 @@ public interface Rover extends Disposable
 	 * there is no rotation.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Angular Velocity</em>' attribute.
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getRover_AngularVelocity()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_AngularVelocity()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='rad/s' property='Readonly' propertyCategory='Velocities' get='<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getAngularVelocity();\n}\nelse\n{\n\treturn 0.0;\n}'"
 	 * @generated
@@ -241,7 +241,7 @@ public interface Rover extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getRover_Initialized()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated
@@ -270,7 +270,7 @@ public interface Rover extends Disposable
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Disposed</em>' attribute.
 	 * @see #setDisposed(boolean)
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getRover_Disposed()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_Disposed()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Status'"
 	 * @generated

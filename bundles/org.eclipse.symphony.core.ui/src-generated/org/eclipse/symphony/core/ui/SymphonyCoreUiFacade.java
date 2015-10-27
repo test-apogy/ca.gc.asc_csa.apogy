@@ -26,7 +26,7 @@ import org.eclipse.symphony.core.ui.impl.SymphonyCoreUiFacadeImpl;
  *   <li>{@link org.eclipse.symphony.core.ui.SymphonyCoreUiFacade#getDefaultSymphonySessionFolderName <em>Default Symphony Session Folder Name</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getSymphonyCoreUiFacade()
+ * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getSymphonyCoreUiFacade()
  * @model
  * @generated
  */
@@ -38,10 +38,10 @@ public interface SymphonyCoreUiFacade extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Default Symphony Project Name Prefix.
+	 * Default Symphony Project Name Prefix.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Default Symphony Project Name Prefix</em>' attribute.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getSymphonyCoreUiFacade_DefaultSymphonyProjectNamePrefix()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getSymphonyCoreUiFacade_DefaultSymphonyProjectNamePrefix()
 	 * @model default="Project" unique="false" changeable="false"
 	 * @generated
 	 */
@@ -53,10 +53,10 @@ public interface SymphonyCoreUiFacade extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Default Symphony Session Filename Prefix.
+	 * Default Symphony Session Filename Prefix.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Default Symphony Session Filename</em>' attribute.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getSymphonyCoreUiFacade_DefaultSymphonySessionFilename()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getSymphonyCoreUiFacade_DefaultSymphonySessionFilename()
 	 * @model default="session" unique="false" changeable="false"
 	 * @generated
 	 */
@@ -68,10 +68,10 @@ public interface SymphonyCoreUiFacade extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Default Symphony Session Filename Extension Prefix.
+	 * Default Symphony Session Filename Extension Prefix.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Default Symphony Session Filename Extension</em>' attribute.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getSymphonyCoreUiFacade_DefaultSymphonySessionFilenameExtension()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getSymphonyCoreUiFacade_DefaultSymphonySessionFilenameExtension()
 	 * @model default="sym" unique="false" changeable="false"
 	 * @generated
 	 */
@@ -83,10 +83,10 @@ public interface SymphonyCoreUiFacade extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Default Symphony Sessions Directory.
+	 * Default Symphony Sessions Directory.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Default Symphony Session Folder Name</em>' attribute.
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getSymphonyCoreUiFacade_DefaultSymphonySessionFolderName()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getSymphonyCoreUiFacade_DefaultSymphonySessionFolderName()
 	 * @model default="Sessions" unique="false" changeable="false"
 	 * @generated
 	 */

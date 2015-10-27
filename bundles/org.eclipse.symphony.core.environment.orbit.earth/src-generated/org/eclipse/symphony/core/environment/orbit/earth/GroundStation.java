@@ -11,7 +11,6 @@ import org.eclipse.symphony.common.math.Matrix3x3;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Defines a ground station and its associated Field Of View.
  * <!-- end-model-doc -->
  *
@@ -23,7 +22,7 @@ import org.eclipse.symphony.common.math.Matrix3x3;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation#getElevationMask <em>Elevation Mask</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getGroundStation()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getGroundStation()
  * @model
  * @generated
  */
@@ -37,11 +36,12 @@ public interface GroundStation extends EarthSurfaceLocation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The orientation of the field of view relative to the Ground Station frame.
+	 * The orientation of the field of view relative
+	 * to the Ground Station frame.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Field Of View Orientation</em>' containment reference.
 	 * @see #setFieldOfViewOrientation(Matrix3x3)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getGroundStation_FieldOfViewOrientation()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getGroundStation_FieldOfViewOrientation()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -67,7 +67,7 @@ public interface GroundStation extends EarthSurfaceLocation {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Elevation Mask</em>' containment reference.
 	 * @see #setElevationMask(ElevationMask)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getGroundStation_ElevationMask()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getGroundStation_ElevationMask()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated

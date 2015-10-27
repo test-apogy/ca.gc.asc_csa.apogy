@@ -15,7 +15,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.symphony.core.environment.EarthSky;
 import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.ui.databindings.converters.RadiansToDegreesStringConverter;
 
 import org.eclipse.symphony.common.databinding.converters.DoubleToStringConverter;
@@ -113,7 +113,7 @@ public class EarthSkyLocationComposite extends Composite
 		{		
 			// Longitude
 			IObservableValue lblLongitudeValueLabel = PojoProperties.value("text").observe(longitudeValueLabel);
-			IObservableValue longitudeObserveValue = EMFProperties.value(FeaturePath.fromList(SymphonyEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE)).observe(worksite);
+			IObservableValue longitudeObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LONGITUDE)).observe(worksite);
 			
 			UpdateValueStrategy longitudeValueStrategy = new UpdateValueStrategy();
 			longitudeValueStrategy.setConverter(new RadiansToDegreesStringConverter(new DecimalFormat(LONGITUDE_FORMAT_STRING)));
@@ -122,7 +122,7 @@ public class EarthSkyLocationComposite extends Composite
 	
 			// Latitude
 			IObservableValue lblLatitudeValueLabel = PojoProperties.value("text").observe(latitudeValueLabel);
-			IObservableValue laltitudeObserveValue = EMFProperties.value(FeaturePath.fromList(SymphonyEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE)).observe(worksite);
+			IObservableValue laltitudeObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__LATITUDE)).observe(worksite);
 			
 			UpdateValueStrategy latitudeValueStrategy = new UpdateValueStrategy();
 			latitudeValueStrategy.setConverter(new RadiansToDegreesStringConverter(new DecimalFormat(LATITUDE_FORMAT_STRING)));
@@ -131,7 +131,7 @@ public class EarthSkyLocationComposite extends Composite
 
 			// Altitude
 			IObservableValue lblaltitudeValueLabel = PojoProperties.value("text").observe(altitudeValueLabel);
-			IObservableValue altitudeObserveValue = EMFProperties.value(FeaturePath.fromList(SymphonyEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, SymphonyEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION)).observe(worksite);
+			IObservableValue altitudeObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CoreEnvironmentPackage.Literals.EARTH_SURFACE_WORKSITE__GEOGRAPHICAL_COORDINATES, Symphony__CoreEnvironmentPackage.Literals.GEOGRAPHIC_COORDINATES__ELEVATION)).observe(worksite);
 			
 			UpdateValueStrategy altitudeValueStrategy = new UpdateValueStrategy();
 			altitudeValueStrategy.setConverter(new DoubleToStringConverter(new DecimalFormat(ALTITUDE_FORMAT_STRING)));

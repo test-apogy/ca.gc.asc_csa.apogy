@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsFactory;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsFactory;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest} object.
@@ -79,8 +79,8 @@ public class PointOfInterestItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.POINT_OF_INTEREST__OFFSET);
-			childrenFeatures.add(Symphony__CommonTopologyDynamicsPackage.Literals.POINT_OF_INTEREST__KINEMATIC_STATE);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.POINT_OF_INTEREST__OFFSET);
+			childrenFeatures.add(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.POINT_OF_INTEREST__KINEMATIC_STATE);
 		}
 		return childrenFeatures;
 	}
@@ -132,8 +132,8 @@ public class PointOfInterestItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PointOfInterest.class)) {
-			case Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__OFFSET:
-			case Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__OFFSET:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -153,13 +153,13 @@ public class PointOfInterestItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.POINT_OF_INTEREST__OFFSET,
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.POINT_OF_INTEREST__OFFSET,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyDynamicsPackage.Literals.POINT_OF_INTEREST__KINEMATIC_STATE,
-				 Symphony__CommonTopologyDynamicsFactory.eINSTANCE.createKinematicState()));
+				(Symphony__CommonTopologyAddonsDynamicsPackage.Literals.POINT_OF_INTEREST__KINEMATIC_STATE,
+				 Symphony__CommonTopologyAddonsDynamicsFactory.eINSTANCE.createKinematicState()));
 	}
 
 	/**

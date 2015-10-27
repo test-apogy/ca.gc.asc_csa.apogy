@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.Atmosphere;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.Atmosphere} object.
@@ -86,7 +86,7 @@ public class AtmosphereItemProvider
          getResourceLocator(),
          getString("_UI_Atmosphere_windSpeed_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_Atmosphere_windSpeed_feature", "_UI_Atmosphere_type"),
-         SymphonyEnvironmentPackage.Literals.ATMOSPHERE__WIND_SPEED,
+         Symphony__CoreEnvironmentPackage.Literals.ATMOSPHERE__WIND_SPEED,
          true,
          false,
          false,
@@ -109,7 +109,7 @@ public class AtmosphereItemProvider
          getResourceLocator(),
          getString("_UI_Atmosphere_windDirection_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_Atmosphere_windDirection_feature", "_UI_Atmosphere_type"),
-         SymphonyEnvironmentPackage.Literals.ATMOSPHERE__WIND_DIRECTION,
+         Symphony__CoreEnvironmentPackage.Literals.ATMOSPHERE__WIND_DIRECTION,
          true,
          false,
          false,
@@ -132,7 +132,7 @@ public class AtmosphereItemProvider
          getResourceLocator(),
          getString("_UI_Atmosphere_temperature_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_Atmosphere_temperature_feature", "_UI_Atmosphere_type"),
-         SymphonyEnvironmentPackage.Literals.ATMOSPHERE__TEMPERATURE,
+         Symphony__CoreEnvironmentPackage.Literals.ATMOSPHERE__TEMPERATURE,
          true,
          false,
          false,
@@ -155,7 +155,7 @@ public class AtmosphereItemProvider
          getResourceLocator(),
          getString("_UI_Atmosphere_surfacePressure_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_Atmosphere_surfacePressure_feature", "_UI_Atmosphere_type"),
-         SymphonyEnvironmentPackage.Literals.ATMOSPHERE__SURFACE_PRESSURE,
+         Symphony__CoreEnvironmentPackage.Literals.ATMOSPHERE__SURFACE_PRESSURE,
          true,
          false,
          false,
@@ -178,7 +178,7 @@ public class AtmosphereItemProvider
          getResourceLocator(),
          getString("_UI_Atmosphere_surfaceDensity_feature"),
          getString("_UI_PropertyDescriptor_description", "_UI_Atmosphere_surfaceDensity_feature", "_UI_Atmosphere_type"),
-         SymphonyEnvironmentPackage.Literals.ATMOSPHERE__SURFACE_DENSITY,
+         Symphony__CoreEnvironmentPackage.Literals.ATMOSPHERE__SURFACE_DENSITY,
          true,
          false,
          false,
@@ -225,11 +225,11 @@ public class AtmosphereItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Atmosphere.class)) {
-			case SymphonyEnvironmentPackage.ATMOSPHERE__WIND_SPEED:
-			case SymphonyEnvironmentPackage.ATMOSPHERE__WIND_DIRECTION:
-			case SymphonyEnvironmentPackage.ATMOSPHERE__TEMPERATURE:
-			case SymphonyEnvironmentPackage.ATMOSPHERE__SURFACE_PRESSURE:
-			case SymphonyEnvironmentPackage.ATMOSPHERE__SURFACE_DENSITY:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__WIND_SPEED:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__WIND_DIRECTION:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__TEMPERATURE:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__SURFACE_PRESSURE:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE__SURFACE_DENSITY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

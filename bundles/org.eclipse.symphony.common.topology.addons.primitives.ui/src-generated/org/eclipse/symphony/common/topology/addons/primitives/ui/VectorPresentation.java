@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation#getLineWidth <em>Line Width</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage#getVectorPresentation()
+ * @see org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage#getVectorPresentation()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface VectorPresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Line Width</em>' attribute.
 	 * @see #setLineWidth(int)
-	 * @see org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage#getVectorPresentation_LineWidth()
+	 * @see org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage#getVectorPresentation_LineWidth()
 	 * @model default="1" unique="false"
 	 * @generated
 	 */

@@ -6,7 +6,7 @@ package org.eclipse.symphony.core.environment.ui.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 import org.eclipse.symphony.core.environment.ui.EarthSkyPresentation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public class EarthSkyPresentationImpl extends NodePresentationImpl implements Ea
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentUIPackage.Literals.EARTH_SKY_PRESENTATION;
+		return Symphony__CoreEnvironmentUIPackage.Literals.EARTH_SKY_PRESENTATION;
 	}
 
   @Override

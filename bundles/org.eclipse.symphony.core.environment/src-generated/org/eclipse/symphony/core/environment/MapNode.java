@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.TransformNode;
  *   <li>{@link org.eclipse.symphony.core.environment.MapNode#getMap <em>Map</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMapNode()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapNode()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface MapNode extends TransformNode
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map</em>' reference.
 	 * @see #setMap(Map)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMapNode_Map()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapNode_Map()
 	 * @model transient="true"
 	 * @generated
 	 */

@@ -22,8 +22,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.ImageOrder;
 
 /**
@@ -81,7 +81,7 @@ public class ImageOrderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageOrder_orderId_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageOrder_orderId_feature", "_UI_ImageOrder_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.IMAGE_ORDER__ORDER_ID,
+				 Symphony__ExamplesSatellitePackage.Literals.IMAGE_ORDER__ORDER_ID,
 				 true,
 				 false,
 				 false,
@@ -103,7 +103,7 @@ public class ImageOrderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageOrder_priority_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageOrder_priority_feature", "_UI_ImageOrder_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.IMAGE_ORDER__PRIORITY,
+				 Symphony__ExamplesSatellitePackage.Literals.IMAGE_ORDER__PRIORITY,
 				 true,
 				 false,
 				 false,
@@ -125,7 +125,7 @@ public class ImageOrderItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ImageOrder_commandedZoom_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ImageOrder_commandedZoom_feature", "_UI_ImageOrder_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.IMAGE_ORDER__COMMANDED_ZOOM,
+				 Symphony__ExamplesSatellitePackage.Literals.IMAGE_ORDER__COMMANDED_ZOOM,
 				 true,
 				 false,
 				 false,
@@ -146,7 +146,7 @@ public class ImageOrderItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreExampleSatellitePackage.Literals.IMAGE_ORDER__IMAGE_CENTER);
+			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.IMAGE_ORDER__IMAGE_CENTER);
 		}
 		return childrenFeatures;
 	}
@@ -200,12 +200,12 @@ public class ImageOrderItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ImageOrder.class)) {
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__ORDER_ID:
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__PRIORITY:
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__COMMANDED_ZOOM:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__ORDER_ID:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__PRIORITY:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__COMMANDED_ZOOM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__IMAGE_CENTER:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__IMAGE_CENTER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -225,8 +225,8 @@ public class ImageOrderItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.IMAGE_ORDER__IMAGE_CENTER,
-				 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
+				(Symphony__ExamplesSatellitePackage.Literals.IMAGE_ORDER__IMAGE_CENTER,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 	}
 
 	/**

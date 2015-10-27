@@ -21,8 +21,8 @@ import org.eclipse.symphony.core.invocator.Type;
 import org.eclipse.symphony.examples.antenna.PTUDishAntenna;
 import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData;
 import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaFactory;
-import org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage;
+import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyFactory;
+import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -67,7 +67,7 @@ public class PTUDishAntennaSymphonySystemApiAdapterImpl extends SymphonySystemAp
 	@Override
 	protected EClass eStaticClass()
 	{
-		return SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER;
+		return Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_SYMPHONY_SYSTEM_API_ADAPTER;
 	}
 
 	/**
@@ -133,7 +133,7 @@ public class PTUDishAntennaSymphonySystemApiAdapterImpl extends SymphonySystemAp
 		// Use the relevant factory method to create the desired
 		// initialization data object, which, in this case, is
 		// an instance of PTUDishAntennaData
-		return SymphonyExampleAntennaFactory.eINSTANCE.createPTUDishAntennaData();
+		return Symphony__ExamplesAntennaSymphonyFactory.eINSTANCE.createPTUDishAntennaData();
 	}
 	
 	/**

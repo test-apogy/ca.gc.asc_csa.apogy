@@ -30,7 +30,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.symphony.examples.robotic_arm.MoveSpeedLevel;
 import org.eclipse.symphony.examples.robotic_arm.RoboticArm;
-import org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage.Literals;
+import org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage.Literals;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Section;
 import org.eclipse.wb.swt.SWTResourceManager;

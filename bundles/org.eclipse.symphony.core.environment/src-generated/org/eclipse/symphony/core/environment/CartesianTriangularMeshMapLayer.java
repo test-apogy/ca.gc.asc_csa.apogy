@@ -13,7 +13,6 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Abstract base class of all Cartesian Triangular Mesh Map Layers
  * <!-- end-model-doc -->
  *
@@ -27,7 +26,7 @@ import org.eclipse.symphony.common.images.AbstractEImage;
  *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer#getCartesianTriangularMeshMapLayerNode <em>Cartesian Triangular Mesh Map Layer Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshMapLayer()
  * @model
  * @generated
  */
@@ -42,11 +41,11 @@ public interface CartesianTriangularMeshMapLayer extends AbstractMapLayer {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Wheter of not the current mesh needs to be refreshed.
+	 * Whether of not the current mesh needs to be refreshed.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mesh Is Dirty</em>' attribute.
 	 * @see #setMeshIsDirty(boolean)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshMapLayer_MeshIsDirty()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshMapLayer_MeshIsDirty()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' propertyCategory='TRIANGULAR_MESH'"
 	 * @generated
@@ -69,10 +68,10 @@ public interface CartesianTriangularMeshMapLayer extends AbstractMapLayer {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  A list of map layer presentation associated with this CartesianTriangularMeshMapLayer.
+	 * A list of map layer presentation associated with this CartesianTriangularMeshMapLayer.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Map Layer Presentations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshMapLayer_MapLayerPresentations()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshMapLayer_MapLayerPresentations()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -83,11 +82,11 @@ public interface CartesianTriangularMeshMapLayer extends AbstractMapLayer {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The texture currently displayed on top of the mesh layer.
+	 * The texture currently displayed on top of the mesh layer.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Texture Image</em>' reference.
 	 * @see #setTextureImage(AbstractEImage)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshMapLayer_TextureImage()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshMapLayer_TextureImage()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' property='None'"
 	 * @generated
@@ -109,11 +108,11 @@ public interface CartesianTriangularMeshMapLayer extends AbstractMapLayer {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The node representing this layer in the topology.
+	 * The node representing this layer in the topology.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Cartesian Triangular Mesh Map Layer Node</em>' reference.
 	 * @see #setCartesianTriangularMeshMapLayerNode(CartesianTriangularMeshMapLayerNode)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshMapLayer_CartesianTriangularMeshMapLayerNode()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshMapLayer_CartesianTriangularMeshMapLayerNode()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -134,7 +133,7 @@ public interface CartesianTriangularMeshMapLayer extends AbstractMapLayer {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Operation that returns the CartesianTriangularMesh associated with this layer.
+	 * Operation that returns the CartesianTriangularMesh associated with this layer.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
 	 * @generated
@@ -145,7 +144,7 @@ public interface CartesianTriangularMeshMapLayer extends AbstractMapLayer {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Forces the texture image projected onto the mesh to be updated.
+	 * Forces the texture image projected onto the mesh to be updated.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated

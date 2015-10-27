@@ -15,7 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.addons.dynamics.RPROConstraint} object.
@@ -65,7 +65,7 @@ public class RPROConstraintItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RPROConstraint_linearStrength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RPROConstraint_linearStrength_feature", "_UI_RPROConstraint_type"),
-				 Symphony__CommonTopologyDynamicsPackage.Literals.RPRO_CONSTRAINT__LINEAR_STRENGTH,
+				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.RPRO_CONSTRAINT__LINEAR_STRENGTH,
 				 true,
 				 false,
 				 true,
@@ -87,7 +87,7 @@ public class RPROConstraintItemProvider
 				 getResourceLocator(),
 				 getString("_UI_RPROConstraint_angularStrength_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RPROConstraint_angularStrength_feature", "_UI_RPROConstraint_type"),
-				 Symphony__CommonTopologyDynamicsPackage.Literals.RPRO_CONSTRAINT__ANGULAR_STRENGTH,
+				 Symphony__CommonTopologyAddonsDynamicsPackage.Literals.RPRO_CONSTRAINT__ANGULAR_STRENGTH,
 				 true,
 				 false,
 				 true,

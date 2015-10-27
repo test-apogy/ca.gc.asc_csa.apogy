@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.core.environment.ui.impl.PoseVariableAnnotationImpl;
 import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
 import org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformSymphonySystemAnnotation;
-import org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformPackage;
+import org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage;
 import org.jfree.chart.annotations.AbstractXYAnnotation;
 import org.jfree.chart.annotations.XYShapeAnnotation;
 
@@ -68,7 +68,7 @@ public class MobilePlatformSymphonySystemAnnotationImpl extends PoseVariableAnno
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM_SYMPHONY_SYSTEM_ANNOTATION;
+		return Symphony__ExamplesMobilePlatformSymphonyPackage.Literals.MOBILE_PLATFORM_SYMPHONY_SYSTEM_ANNOTATION;
 	}
 
 	/**

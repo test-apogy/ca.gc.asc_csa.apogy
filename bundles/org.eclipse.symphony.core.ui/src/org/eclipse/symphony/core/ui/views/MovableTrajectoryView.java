@@ -14,7 +14,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
 import org.eclipse.symphony.core.invocator.VariableImplementation;
@@ -33,7 +33,7 @@ public class MovableTrajectoryView extends ViewPart implements ISelectionListene
 	private ISelection currentSelection = null;
 	private boolean pinned = false;
 	
-	private PoseProvider movable = SymphonyCoreFactory.eINSTANCE.createPoseProvider();
+	private PoseProvider movable = Symphony__CoreFactory.eINSTANCE.createPoseProvider();
 	
 	private TrajectoryComposite trajectoryComposite = null;
 	

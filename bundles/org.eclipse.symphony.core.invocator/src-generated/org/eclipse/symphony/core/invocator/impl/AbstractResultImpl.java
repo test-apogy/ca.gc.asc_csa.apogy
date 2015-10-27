@@ -17,10 +17,10 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.AbstractResult;
 import org.eclipse.symphony.core.invocator.AbstractResultValue;
 import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.ResultsList;
 
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import com.google.common.base.Objects;
 
 /**
@@ -121,7 +121,7 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.ABSTRACT_RESULT;
+		return Symphony__CoreInvocatorPackage.Literals.ABSTRACT_RESULT;
 	}
 
   /**
@@ -144,7 +144,7 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
 		Date oldTime = time;
 		time = newTime;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ABSTRACT_RESULT__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__TIME, oldTime, time));
 	}
 
   /**
@@ -165,7 +165,7 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION, oldDescription, description));
 	}
 
 		/**
@@ -174,7 +174,7 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	public ResultsList getResultsList() {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST) return null;
 		return (ResultsList)eContainer();
 	}
 
@@ -184,7 +184,7 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	public ResultsList basicGetResultsList() {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST) return null;
 		return (ResultsList)eInternalContainer();
 	}
 
@@ -194,7 +194,7 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	public NotificationChain basicSetResultsList(ResultsList newResultsList, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newResultsList, EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newResultsList, Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST, msgs);
 		return msgs;
 	}
 
@@ -204,19 +204,19 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	public void setResultsList(ResultsList newResultsList) {
-		if (newResultsList != eInternalContainer() || (eContainerFeatureID() != EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST && newResultsList != null)) {
+		if (newResultsList != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST && newResultsList != null)) {
 			if (EcoreUtil.isAncestor(this, newResultsList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newResultsList != null)
-				msgs = ((InternalEObject)newResultsList).eInverseAdd(this, EMFEcoreInvocatorPackage.RESULTS_LIST__RESULTS, ResultsList.class, msgs);
+				msgs = ((InternalEObject)newResultsList).eInverseAdd(this, Symphony__CoreInvocatorPackage.RESULTS_LIST__RESULTS, ResultsList.class, msgs);
 			msgs = basicSetResultsList(newResultsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST, newResultsList, newResultsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST, newResultsList, newResultsList));
 	}
 
 		/**
@@ -248,7 +248,7 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
 			context = (Context)eResolveProxy(oldContext);
 			if (context != oldContext) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorPackage.ABSTRACT_RESULT__CONTEXT, oldContext, context));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__CONTEXT, oldContext, context));
 			}
 		}
 		return context;
@@ -274,7 +274,7 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
 		Context oldContext = context;
 		context = newContext;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ABSTRACT_RESULT__CONTEXT, oldContext, context));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__CONTEXT, oldContext, context));
 	}
 
   /**
@@ -297,7 +297,7 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
 		AbstractResultValue oldResultValue = resultValue;
 		resultValue = newResultValue;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE, oldResultValue, newResultValue);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE, oldResultValue, newResultValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -313,14 +313,14 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
 		if (newResultValue != resultValue) {
 			NotificationChain msgs = null;
 			if (resultValue != null)
-				msgs = ((InternalEObject)resultValue).eInverseRemove(this, EMFEcoreInvocatorPackage.ABSTRACT_RESULT_VALUE__RESULT, AbstractResultValue.class, msgs);
+				msgs = ((InternalEObject)resultValue).eInverseRemove(this, Symphony__CoreInvocatorPackage.ABSTRACT_RESULT_VALUE__RESULT, AbstractResultValue.class, msgs);
 			if (newResultValue != null)
-				msgs = ((InternalEObject)newResultValue).eInverseAdd(this, EMFEcoreInvocatorPackage.ABSTRACT_RESULT_VALUE__RESULT, AbstractResultValue.class, msgs);
+				msgs = ((InternalEObject)newResultValue).eInverseAdd(this, Symphony__CoreInvocatorPackage.ABSTRACT_RESULT_VALUE__RESULT, AbstractResultValue.class, msgs);
 			msgs = basicSetResultValue(newResultValue, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE, newResultValue, newResultValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE, newResultValue, newResultValue));
 	}
 
   /**
@@ -332,13 +332,13 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetResultsList((ResultsList)otherEnd, msgs);
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
 				if (resultValue != null)
-					msgs = ((InternalEObject)resultValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE, null, msgs);
+					msgs = ((InternalEObject)resultValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE, null, msgs);
 				return basicSetResultValue((AbstractResultValue)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -353,9 +353,9 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST:
 				return basicSetResultsList(null, msgs);
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
 				return basicSetResultValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -369,8 +369,8 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreInvocatorPackage.RESULTS_LIST__RESULTS, ResultsList.class, msgs);
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.RESULTS_LIST__RESULTS, ResultsList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -384,19 +384,19 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__TIME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__TIME:
 				return getTime();
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION:
 				return getDescription();
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST:
 				if (resolve) return getResultsList();
 				return basicGetResultsList();
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__INVOCATOR_SESSION:
 				return getInvocatorSession();
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__CONTEXT:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__CONTEXT:
 				if (resolve) return getContext();
 				return basicGetContext();
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
 				return getResultValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -411,19 +411,19 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__TIME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__TIME:
 				setTime((Date)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST:
 				setResultsList((ResultsList)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__CONTEXT:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__CONTEXT:
 				setContext((Context)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
 				setResultValue((AbstractResultValue)newValue);
 				return;
 		}
@@ -439,19 +439,19 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__TIME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__TIME:
 				setTime(TIME_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST:
 				setResultsList((ResultsList)null);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__CONTEXT:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__CONTEXT:
 				setContext((Context)null);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
 				setResultValue((AbstractResultValue)null);
 				return;
 		}
@@ -467,17 +467,17 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__TIME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__TIME:
 				return TIME_EDEFAULT == null ? time != null : !TIME_EDEFAULT.equals(time);
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULTS_LIST:
 				return basicGetResultsList() != null;
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__INVOCATOR_SESSION:
 				return getInvocatorSession() != null;
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__CONTEXT:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__CONTEXT:
 				return context != null;
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
 				return resultValue != null;
 		}
 		return super.eIsSet(featureID);
@@ -492,7 +492,7 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -508,7 +508,7 @@ public abstract class AbstractResultImpl extends MinimalEObjectImpl.Container im
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION;
 				default: return -1;
 			}
 		}

@@ -13,8 +13,8 @@ import java.util.TreeSet;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.ImageOrder;
 import org.eclipse.symphony.examples.satellite.Satellite;
 import org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage;
@@ -59,7 +59,7 @@ public class SatelliteUtilsImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleSatellitePackage.Literals.SATELLITE_UTILS;
+		return Symphony__ExamplesSatellitePackage.Literals.SATELLITE_UTILS;
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class SatelliteUtilsImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public SatelliteCommandRoll createSatelliteCommandRoll(Satellite satellite, Date startTime, double rollAngle) 
 	{
-		SatelliteCommandRoll cmd = EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandRoll();
+		SatelliteCommandRoll cmd = Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteCommandRoll();
 		
 		cmd.setCommandStartTime(startTime);
 		cmd.setSatellite(satellite);
@@ -86,7 +86,7 @@ public class SatelliteUtilsImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public SatelliteCommandAcquireImage createSatelliteCommandAcquireImage(Satellite satellite, Date imageTime, ImageOrder imageOrder) 
 	{
-		SatelliteCommandAcquireImage cmd = EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteCommandAcquireImage();
+		SatelliteCommandAcquireImage cmd = Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteCommandAcquireImage();
 		
 		cmd.setCommandStartTime(imageTime);
 		cmd.setSatellite(satellite);
@@ -117,11 +117,11 @@ public class SatelliteUtilsImpl extends MinimalEObjectImpl.Container implements 
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_UTILS___CREATE_SATELLITE_COMMAND_ROLL__SATELLITE_DATE_DOUBLE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_UTILS___CREATE_SATELLITE_COMMAND_ROLL__SATELLITE_DATE_DOUBLE:
 				return createSatelliteCommandRoll((Satellite)arguments.get(0), (Date)arguments.get(1), (Double)arguments.get(2));
-			case EMFEcoreExampleSatellitePackage.SATELLITE_UTILS___CREATE_SATELLITE_COMMAND_ACQUIRE_IMAGE__SATELLITE_DATE_IMAGEORDER:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_UTILS___CREATE_SATELLITE_COMMAND_ACQUIRE_IMAGE__SATELLITE_DATE_IMAGEORDER:
 				return createSatelliteCommandAcquireImage((Satellite)arguments.get(0), (Date)arguments.get(1), (ImageOrder)arguments.get(2));
-			case EMFEcoreExampleSatellitePackage.SATELLITE_UTILS___SORT_IMAGE_ORDER_BY_PRIORITY__LIST:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_UTILS___SORT_IMAGE_ORDER_BY_PRIORITY__LIST:
 				return sortImageOrderByPriority((List<ImageOrder>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

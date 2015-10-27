@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
 import org.eclipse.symphony.common.topology.bindings.FeatureRootsList;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.bindings.FeatureRootsList} object.
@@ -79,7 +79,7 @@ public class FeatureRootsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(TopologyBindingsPackage.Literals.FEATURE_ROOTS_LIST__FEATURE_ROOTS);
+			childrenFeatures.add(Symphony__CommonTopologyBindingsPackage.Literals.FEATURE_ROOTS_LIST__FEATURE_ROOTS);
 		}
 		return childrenFeatures;
 	}
@@ -144,7 +144,7 @@ public class FeatureRootsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FeatureRootsList.class)) {
-			case TopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
+			case Symphony__CommonTopologyBindingsPackage.FEATURE_ROOTS_LIST__FEATURE_ROOTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -165,7 +165,7 @@ public class FeatureRootsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(TopologyBindingsPackage.Literals.FEATURE_ROOTS_LIST__FEATURE_ROOTS,
+				(Symphony__CommonTopologyBindingsPackage.Literals.FEATURE_ROOTS_LIST__FEATURE_ROOTS,
 				 Symphony__CommonEMFFactory.eINSTANCE.createTreeRootNode()));
 	}
 

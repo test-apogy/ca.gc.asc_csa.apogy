@@ -14,8 +14,8 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.invocator.provider.ArgumentItemProvider;
 import org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersFactory;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFactory;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.programs.controllers.BindedEDataTypeArgument} object.
@@ -66,7 +66,7 @@ public class BindedEDataTypeArgumentItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE);
+			childrenFeatures.add(Symphony__CoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE);
 		}
 		return childrenFeatures;
 	}
@@ -127,7 +127,7 @@ public class BindedEDataTypeArgumentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(BindedEDataTypeArgument.class)) {
-			case EMFEcoreControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
+			case Symphony__CoreProgramsControllersPackage.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -150,22 +150,22 @@ public class BindedEDataTypeArgumentItemProvider
     
     newChildDescriptors.add
       (createChildParameter
-        (EMFEcoreControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
-         EMFEcoreControllersFactory.eINSTANCE.createFixedValueSource()));
+        (Symphony__CoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
+         Symphony__CoreProgramsControllersFactory.eINSTANCE.createFixedValueSource()));
 
     // Check if the argument is boolean.
     if(arg.getEParameter().getEType().getInstanceClass().isAssignableFrom(boolean.class))
     {
 	    newChildDescriptors.add
 	      (createChildParameter
-	        (EMFEcoreControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
-	         EMFEcoreControllersFactory.eINSTANCE.createToggleValueSource()));
+	        (Symphony__CoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
+	         Symphony__CoreProgramsControllersFactory.eINSTANCE.createToggleValueSource()));
     }
     
     newChildDescriptors.add
       (createChildParameter
-        (EMFEcoreControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
-         EMFEcoreControllersFactory.eINSTANCE.createControllerValueSource()));
+        (Symphony__CoreProgramsControllersPackage.Literals.BINDED_EDATA_TYPE_ARGUMENT__VALUE_SOURCE,
+         Symphony__CoreProgramsControllersFactory.eINSTANCE.createControllerValueSource()));
   }
   
 }

@@ -17,7 +17,7 @@ import org.eclipse.symphony.core.invocator.TypeApiAdapter;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteConstellationTypeApiAdapter()
+ * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteConstellationTypeApiAdapter()
  * @model
  * @generated
  */

@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.DisplaysList#getDisplays <em>Displays</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getDisplaysList()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getDisplaysList()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface DisplaysList extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Displays Lists Container</em>' container reference.
 	 * @see #setDisplaysListsContainer(DisplaysListsContainer)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getDisplaysList_DisplaysListsContainer()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getDisplaysList_DisplaysListsContainer()
 	 * @see org.eclipse.symphony.core.invocator.DisplaysListsContainer#getDisplays
 	 * @model opposite="displays" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -72,7 +72,7 @@ public interface DisplaysList extends Named, Described
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Displays</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getDisplaysList_Displays()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getDisplaysList_Displays()
 	 * @see org.eclipse.symphony.core.invocator.AbstractDisplay#getDisplaysList
 	 * @model opposite="displaysList" containment="true"
 	 * @generated

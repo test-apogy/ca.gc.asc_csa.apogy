@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.symphony.common.topology.ui.Activator;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
 import org.eclipse.symphony.common.topology.ui.adapters.TransformNodeSceneObject;
 import org.eclipse.symphony.common.topology.ui.preferences.PreferencesConstants;
@@ -84,7 +84,7 @@ public class TransformNodePresentationImpl extends NodePresentationImpl implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyUIPackage.Literals.TRANSFORM_NODE_PRESENTATION;
+		return Symphony__CommonTopologyUIPackage.Literals.TRANSFORM_NODE_PRESENTATION;
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class TransformNodePresentationImpl extends NodePresentationImpl implemen
 		boolean oldAxisVisible = axisVisible;
 		axisVisible = newAxisVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE, oldAxisVisible, axisVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE, oldAxisVisible, axisVisible));
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class TransformNodePresentationImpl extends NodePresentationImpl implemen
 		double oldAxisLenght = axisLenght;
 		axisLenght = newAxisLenght;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT, oldAxisLenght, axisLenght));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT, oldAxisLenght, axisLenght));
 	}
 
 	/**
@@ -137,9 +137,9 @@ public class TransformNodePresentationImpl extends NodePresentationImpl implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE:
 				return isAxisVisible();
-			case TopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT:
 				return getAxisLenght();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -153,10 +153,10 @@ public class TransformNodePresentationImpl extends NodePresentationImpl implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE:
 				setAxisVisible((Boolean)newValue);
 				return;
-			case TopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT:
 				setAxisLenght((Double)newValue);
 				return;
 		}
@@ -171,10 +171,10 @@ public class TransformNodePresentationImpl extends NodePresentationImpl implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE:
 				setAxisVisible(AXIS_VISIBLE_EDEFAULT);
 				return;
-			case TopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT:
 				setAxisLenght(AXIS_LENGHT_EDEFAULT);
 				return;
 		}
@@ -189,9 +189,9 @@ public class TransformNodePresentationImpl extends NodePresentationImpl implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE:
 				return axisVisible != AXIS_VISIBLE_EDEFAULT;
-			case TopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT:
 				return axisLenght != AXIS_LENGHT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -232,11 +232,11 @@ public class TransformNodePresentationImpl extends NodePresentationImpl implemen
 		{
 			TransformNodeSceneObject object = (TransformNodeSceneObject) getSceneObject();
 
-			if (notification.getFeatureID(TransformNodePresentation.class) == TopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE) 
+			if (notification.getFeatureID(TransformNodePresentation.class) == Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE) 
 			{
 				object.setAxisVisible(isAxisVisible());
 			}
-			else if(notification.getFeatureID(TransformNodePresentation.class) == TopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT) 
+			else if(notification.getFeatureID(TransformNodePresentation.class) == Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT) 
 			{
 				object.setAxisLength(getAxisLenght());
 			}

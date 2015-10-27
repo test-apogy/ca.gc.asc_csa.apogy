@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
 import org.eclipse.symphony.common.topology.ui.GraphicsContextAdapter;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 public class TopoFileGraphicsContextAdapter implements GraphicsContextAdapter {
 
@@ -43,7 +43,7 @@ public class TopoFileGraphicsContextAdapter implements GraphicsContextAdapter {
 
 		if (isAdapterFor(obj)) {
 
-			ctx = TopologyUIFactory.eINSTANCE.createGraphicsContext();
+			ctx = Symphony__CommonTopologyUIFactory.eINSTANCE.createGraphicsContext();
 
 			IProgressMonitor monitor = new NullProgressMonitor();
 

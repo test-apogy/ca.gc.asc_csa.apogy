@@ -10,7 +10,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.core.environment.ui.MapTool;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.jfree.chart.JFreeChart;
 import org.jfree.experimental.chart.swt.ChartComposite;
 
@@ -65,7 +65,7 @@ public abstract class MapToolImpl extends MapAnnotationImpl implements MapTool
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentUIPackage.Literals.MAP_TOOL;
+		return Symphony__CoreEnvironmentUIPackage.Literals.MAP_TOOL;
 	}
 
   /**
@@ -88,7 +88,7 @@ public abstract class MapToolImpl extends MapAnnotationImpl implements MapTool
 		boolean oldActive = active;
 		active = newActive;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.MAP_TOOL__ACTIVE, oldActive, active));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE, oldActive, active));
 	}
 
   /**
@@ -134,7 +134,7 @@ public abstract class MapToolImpl extends MapAnnotationImpl implements MapTool
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.MAP_TOOL__ACTIVE:
+			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE:
 				return isActive();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -149,7 +149,7 @@ public abstract class MapToolImpl extends MapAnnotationImpl implements MapTool
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.MAP_TOOL__ACTIVE:
+			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE:
 				setActive((Boolean)newValue);
 				return;
 		}
@@ -165,7 +165,7 @@ public abstract class MapToolImpl extends MapAnnotationImpl implements MapTool
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.MAP_TOOL__ACTIVE:
+			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE:
 				setActive(ACTIVE_EDEFAULT);
 				return;
 		}
@@ -181,7 +181,7 @@ public abstract class MapToolImpl extends MapAnnotationImpl implements MapTool
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.MAP_TOOL__ACTIVE:
+			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL__ACTIVE:
 				return active != ACTIVE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -196,13 +196,13 @@ public abstract class MapToolImpl extends MapAnnotationImpl implements MapTool
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case SymphonyEnvironmentUIPackage.MAP_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART:
+			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL___INITIALIZE__CHARTCOMPOSITE_JFREECHART:
 				initialize((ChartComposite)arguments.get(0), (JFreeChart)arguments.get(1));
 				return null;
-			case SymphonyEnvironmentUIPackage.MAP_TOOL___DISPOSE:
+			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL___DISPOSE:
 				dispose();
 				return null;
-			case SymphonyEnvironmentUIPackage.MAP_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE:
+			case Symphony__CoreEnvironmentUIPackage.MAP_TOOL___POSITION_SELECTED__INT_DOUBLE_DOUBLE:
 				positionSelected((Integer)arguments.get(0), (Double)arguments.get(1), (Double)arguments.get(2));
 				return null;
 		}

@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Value;
 import org.eclipse.symphony.core.invocator.ValuesList;
 
@@ -59,7 +59,7 @@ public class ValuesListImpl extends MinimalEObjectImpl.Container implements Valu
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.VALUES_LIST;
+		return Symphony__CoreInvocatorPackage.Literals.VALUES_LIST;
 	}
 
   /**
@@ -70,7 +70,7 @@ public class ValuesListImpl extends MinimalEObjectImpl.Container implements Valu
   public EList<Value> getValues()
   {
 		if (values == null) {
-			values = new EObjectContainmentEList<Value>(Value.class, this, EMFEcoreInvocatorPackage.VALUES_LIST__VALUES);
+			values = new EObjectContainmentEList<Value>(Value.class, this, Symphony__CoreInvocatorPackage.VALUES_LIST__VALUES);
 		}
 		return values;
 	}
@@ -84,7 +84,7 @@ public class ValuesListImpl extends MinimalEObjectImpl.Container implements Valu
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VALUES_LIST__VALUES:
+			case Symphony__CoreInvocatorPackage.VALUES_LIST__VALUES:
 				return ((InternalEList<?>)getValues()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -99,7 +99,7 @@ public class ValuesListImpl extends MinimalEObjectImpl.Container implements Valu
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VALUES_LIST__VALUES:
+			case Symphony__CoreInvocatorPackage.VALUES_LIST__VALUES:
 				return getValues();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -115,7 +115,7 @@ public class ValuesListImpl extends MinimalEObjectImpl.Container implements Valu
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VALUES_LIST__VALUES:
+			case Symphony__CoreInvocatorPackage.VALUES_LIST__VALUES:
 				getValues().clear();
 				getValues().addAll((Collection<? extends Value>)newValue);
 				return;
@@ -132,7 +132,7 @@ public class ValuesListImpl extends MinimalEObjectImpl.Container implements Valu
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VALUES_LIST__VALUES:
+			case Symphony__CoreInvocatorPackage.VALUES_LIST__VALUES:
 				getValues().clear();
 				return;
 		}
@@ -148,7 +148,7 @@ public class ValuesListImpl extends MinimalEObjectImpl.Container implements Valu
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VALUES_LIST__VALUES:
+			case Symphony__CoreInvocatorPackage.VALUES_LIST__VALUES:
 				return values != null && !values.isEmpty();
 		}
 		return super.eIsSet(featureID);

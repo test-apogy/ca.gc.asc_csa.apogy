@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
 import org.eclipse.symphony.core.invocator.impl.AbstractInitializationDataImpl;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.ImageOrder;
 import org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData;
 import org.eclipse.symphony.examples.satellite.SatelliteInitializationData;
@@ -80,7 +80,7 @@ public class SatelliteConstellationInitializationDataImpl extends AbstractInitia
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleSatellitePackage.Literals.SATELLITE_CONSTELLATION_INITIALIZATION_DATA;
+		return Symphony__ExamplesSatellitePackage.Literals.SATELLITE_CONSTELLATION_INITIALIZATION_DATA;
 	}
 
 	/**
@@ -90,7 +90,7 @@ public class SatelliteConstellationInitializationDataImpl extends AbstractInitia
 	 */
 	public EList<SatelliteInitializationData> getSatelliteData() {
 		if (satelliteData == null) {
-			satelliteData = new EObjectContainmentEList<SatelliteInitializationData>(SatelliteInitializationData.class, this, EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA);
+			satelliteData = new EObjectContainmentEList<SatelliteInitializationData>(SatelliteInitializationData.class, this, Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA);
 		}
 		return satelliteData;
 	}
@@ -102,7 +102,7 @@ public class SatelliteConstellationInitializationDataImpl extends AbstractInitia
 	 */
 	public EList<GroundStation> getGroundStations() {
 		if (groundStations == null) {
-			groundStations = new EObjectContainmentEList<GroundStation>(GroundStation.class, this, EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS);
+			groundStations = new EObjectContainmentEList<GroundStation>(GroundStation.class, this, Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS);
 		}
 		return groundStations;
 	}
@@ -114,7 +114,7 @@ public class SatelliteConstellationInitializationDataImpl extends AbstractInitia
 	 */
 	public EList<ImageOrder> getPendingImageOrders() {
 		if (pendingImageOrders == null) {
-			pendingImageOrders = new EObjectContainmentEList<ImageOrder>(ImageOrder.class, this, EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS);
+			pendingImageOrders = new EObjectContainmentEList<ImageOrder>(ImageOrder.class, this, Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS);
 		}
 		return pendingImageOrders;
 	}
@@ -127,11 +127,11 @@ public class SatelliteConstellationInitializationDataImpl extends AbstractInitia
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA:
 				return ((InternalEList<?>)getSatelliteData()).basicRemove(otherEnd, msgs);
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS:
 				return ((InternalEList<?>)getGroundStations()).basicRemove(otherEnd, msgs);
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS:
 				return ((InternalEList<?>)getPendingImageOrders()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -145,11 +145,11 @@ public class SatelliteConstellationInitializationDataImpl extends AbstractInitia
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA:
 				return getSatelliteData();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS:
 				return getGroundStations();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS:
 				return getPendingImageOrders();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -164,15 +164,15 @@ public class SatelliteConstellationInitializationDataImpl extends AbstractInitia
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA:
 				getSatelliteData().clear();
 				getSatelliteData().addAll((Collection<? extends SatelliteInitializationData>)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS:
 				getGroundStations().clear();
 				getGroundStations().addAll((Collection<? extends GroundStation>)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS:
 				getPendingImageOrders().clear();
 				getPendingImageOrders().addAll((Collection<? extends ImageOrder>)newValue);
 				return;
@@ -188,13 +188,13 @@ public class SatelliteConstellationInitializationDataImpl extends AbstractInitia
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA:
 				getSatelliteData().clear();
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS:
 				getGroundStations().clear();
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS:
 				getPendingImageOrders().clear();
 				return;
 		}
@@ -209,11 +209,11 @@ public class SatelliteConstellationInitializationDataImpl extends AbstractInitia
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA:
 				return satelliteData != null && !satelliteData.isEmpty();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS:
 				return groundStations != null && !groundStations.isEmpty();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS:
 				return pendingImageOrders != null && !pendingImageOrders.isEmpty();
 		}
 		return super.eIsSet(featureID);

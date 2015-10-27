@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.AbsolutePoseProvider;
 import org.eclipse.symphony.core.FeatureOfInterest;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.environment.FeaturesOfInterestMapLayer;
 import org.eclipse.symphony.core.environment.ui.dialogs.FeatureOfInterestCreationDialog;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
@@ -64,7 +64,7 @@ public class CreateFOICommand extends AbstractHandler implements IHandler
 							EditingDomain editingDomain = org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain.getEditingDomainFor(featuresOfInterestMapLayer.getFeatures());
 							
 							// Creates an ADD command to add the FeatureOfInterest.
-							Command addCommand = AddCommand.create(editingDomain, featuresOfInterestMapLayer.getFeatures(), SymphonyCorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST, foi);
+							Command addCommand = AddCommand.create(editingDomain, featuresOfInterestMapLayer.getFeatures(), Symphony__CorePackage.Literals.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST, foi);
 							
 							// Executes the command.
 							editingDomain.getCommandStack().execute(addCommand);

@@ -26,7 +26,7 @@ import org.eclipse.symphony.core.environment.RectangularRegionProvider;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.FeaturesOfInterestMapLayerPresentation#getFeatureOfInterestColor <em>Feature Of Interest Color</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface FeaturesOfInterestMapLayerPresentation extends MapAnnotation, R
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Features Of Interest Map Layer</em>' reference.
 	 * @see #setFeaturesOfInterestMapLayer(FeaturesOfInterestMapLayer)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation_FeaturesOfInterestMapLayer()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation_FeaturesOfInterestMapLayer()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='FOI_PROPERTIES'"
 	 * @generated
 	 */
@@ -68,7 +68,7 @@ public interface FeaturesOfInterestMapLayerPresentation extends MapAnnotation, R
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Feature Of Interest Radius</em>' attribute.
 	 * @see #setFeatureOfInterestRadius(double)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestRadius()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestRadius()
 	 * @model default="0.25" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='FOI_PROPERTIES' csa_units='m'"
 	 * @generated
@@ -95,7 +95,7 @@ public interface FeaturesOfInterestMapLayerPresentation extends MapAnnotation, R
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Of Interest Color</em>' attribute.
 	 * @see #setFeatureOfInterestColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestColor()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestColor()
 	 * @model default="0.0,0.0,1.0" unique="false" dataType="org.eclipse.symphony.core.environment.ui.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FOI_PROPERTIES'"
 	 * @generated

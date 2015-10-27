@@ -12,7 +12,6 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * A specialization of AbstractEImage that includes the geographical coordinates of the center of the image.
  * <!-- end-model-doc -->
  *
@@ -25,7 +24,7 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
  *   <li>{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getDownloadSize <em>Download Size</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getOrbitalImage()
+ * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getOrbitalImage()
  * @model
  * @generated
  */
@@ -41,7 +40,7 @@ public interface OrbitalImage extends AbstractEImage {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Order Id</em>' attribute.
 	 * @see #setOrderId(int)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getOrbitalImage_OrderId()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getOrbitalImage_OrderId()
 	 * @model default="-1" unique="false"
 	 * @generated
 	 */
@@ -66,12 +65,11 @@ public interface OrbitalImage extends AbstractEImage {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The GeographicCoordinates of the center of the image.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Image Center</em>' containment reference.
 	 * @see #setImageCenter(GeographicCoordinates)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getOrbitalImage_ImageCenter()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getOrbitalImage_ImageCenter()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -93,12 +91,11 @@ public interface OrbitalImage extends AbstractEImage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The image download size, in bytes.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Download Size</em>' attribute.
 	 * @see #setDownloadSize(int)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getOrbitalImage_DownloadSize()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getOrbitalImage_DownloadSize()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */

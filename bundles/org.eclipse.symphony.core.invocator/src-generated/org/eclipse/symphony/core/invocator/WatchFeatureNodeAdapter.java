@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.emf.AbstractFeatureNode;
  *
  * <!-- begin-model-doc -->
  *  -------------------------------------------------------------------------
- * DsiplaysListsContainer
+ * WatchFeatureNodeAdapter
  * -------------------------------------------------------------------------
  * <!-- end-model-doc -->
  *
@@ -27,7 +27,7 @@ import org.eclipse.symphony.common.emf.AbstractFeatureNode;
  *   <li>{@link org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter#isResolved <em>Resolved</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatchFeatureNodeAdapter()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchFeatureNodeAdapter()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface WatchFeatureNodeAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Source Object</em>' reference.
 	 * @see #setSourceObject(EObject)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatchFeatureNodeAdapter_SourceObject()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchFeatureNodeAdapter_SourceObject()
 	 * @model
 	 * @generated
 	 */
@@ -67,7 +67,7 @@ public interface WatchFeatureNodeAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Node</em>' reference.
 	 * @see #setFeatureNode(AbstractFeatureNode)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatchFeatureNodeAdapter_FeatureNode()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchFeatureNodeAdapter_FeatureNode()
 	 * @model
 	 * @generated
 	 */
@@ -92,7 +92,7 @@ public interface WatchFeatureNodeAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Value</em>' attribute.
 	 * @see #setCurrentValue(Object)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatchFeatureNodeAdapter_CurrentValue()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchFeatureNodeAdapter_CurrentValue()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -118,7 +118,7 @@ public interface WatchFeatureNodeAdapter extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Resolved</em>' attribute.
 	 * @see #setResolved(boolean)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getWatchFeatureNodeAdapter_Resolved()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getWatchFeatureNodeAdapter_Resolved()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */

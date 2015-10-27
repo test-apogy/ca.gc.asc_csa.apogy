@@ -35,13 +35,13 @@ import org.eclipse.symphony.core.environment.EnvironmentFacade;
 import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
 import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.RectangularRegionProvider;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 import org.eclipse.symphony.core.environment.ui.Activator;
 import org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade;
 import org.eclipse.symphony.core.environment.ui.MapAnnotation;
 import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.ui.listeners.MapViewConfigurationListener;
 import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentUIPreferencesConstants;
 
@@ -131,7 +131,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 * @ordered
 	 */
-  protected static final Color3f BACKGROUND_COLOR_EDEFAULT = (Color3f)SymphonyEnvironmentUIFactory.eINSTANCE.createFromString(SymphonyEnvironmentUIPackage.eINSTANCE.getColor3f(), "1.0,1.0,1.0");
+  protected static final Color3f BACKGROUND_COLOR_EDEFAULT = (Color3f)Symphony__CoreEnvironmentUIFactory.eINSTANCE.createFromString(Symphony__CoreEnvironmentUIPackage.eINSTANCE.getColor3f(), "1.0,1.0,1.0");
   /**
 	 * The cached value of the '{@link #getBackgroundColor() <em>Background Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -207,7 +207,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION;
+		return Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION;
 	}
 
   /**
@@ -230,7 +230,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__NAME, oldName, name));
 	}
 
   /**
@@ -253,7 +253,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -264,7 +264,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
   public EList<ImageMapLayerPresentation> getMapLayers()
   {
 		if (mapLayers == null) {
-			mapLayers = new EObjectContainmentEList<ImageMapLayerPresentation>(ImageMapLayerPresentation.class, this, SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS);
+			mapLayers = new EObjectContainmentEList<ImageMapLayerPresentation>(ImageMapLayerPresentation.class, this, Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS);
 		}
 		return mapLayers;
 	}
@@ -289,7 +289,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 		Color3f oldBackgroundColor = backgroundColor;
 		backgroundColor = newBackgroundColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR, oldBackgroundColor, backgroundColor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR, oldBackgroundColor, backgroundColor));
 	}
 
   /**
@@ -300,7 +300,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
   public EList<MapAnnotation> getMapAnnotations()
   {
 		if (mapAnnotations == null) {
-			mapAnnotations = new EObjectContainmentEList<MapAnnotation>(MapAnnotation.class, this, SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS);
+			mapAnnotations = new EObjectContainmentEList<MapAnnotation>(MapAnnotation.class, this, Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS);
 		}
 		return mapAnnotations;
 	}
@@ -318,7 +318,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 		{			
 			IPreferenceStore store = Activator.getDefault().getPreferenceStore();
 			
-			tmp = SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion();			
+			tmp = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();			
 			tmp.setXMin(store.getDouble(SymphonyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_CONFIGURATION_X_MIN_ID));
 			tmp.setXMax(store.getDouble(SymphonyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_CONFIGURATION_X_MAX_ID));
 			tmp.setYMin(store.getDouble(SymphonyEnvironmentUIPreferencesConstants.DEFAULT_MAP_VIEW_CONFIGURATION_Y_MIN_ID));
@@ -342,7 +342,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 			defaultRectangularRegion = (RectangularRegion)eResolveProxy(oldDefaultRectangularRegion);
 			if (defaultRectangularRegion != oldDefaultRectangularRegion) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION, oldDefaultRectangularRegion, defaultRectangularRegion));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION, oldDefaultRectangularRegion, defaultRectangularRegion));
 			}
 		}
 		return defaultRectangularRegion;
@@ -366,7 +366,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 		RectangularRegion oldDefaultRectangularRegion = defaultRectangularRegion;
 		defaultRectangularRegion = newDefaultRectangularRegion;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION, oldDefaultRectangularRegion, defaultRectangularRegion));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION, oldDefaultRectangularRegion, defaultRectangularRegion));
 	}
 
 		/**
@@ -396,7 +396,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 			mapImage = (AbstractEImage)eResolveProxy(oldMapImage);
 			if (mapImage != oldMapImage) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE, oldMapImage, mapImage));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE, oldMapImage, mapImage));
 			}
 		}
 		return mapImage;
@@ -422,7 +422,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 		RectangularRegion tmp = getMapImageRectangularRegionGen();
 		if(tmp == null)
 		{
-		  tmp = SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion();
+		  tmp = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
 		  mapImageRectangularRegion = tmp;
 		}
 	
@@ -440,7 +440,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 			mapImageRectangularRegion = (RectangularRegion)eResolveProxy(oldMapImageRectangularRegion);
 			if (mapImageRectangularRegion != oldMapImageRectangularRegion) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION, oldMapImageRectangularRegion, mapImageRectangularRegion));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION, oldMapImageRectangularRegion, mapImageRectangularRegion));
 			}
 		}
 		return mapImageRectangularRegion;
@@ -466,7 +466,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 		
 		if(tmp == null)
 		{
-			tmp = SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion();
+			tmp = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
 			setExtent(tmp);
 		}
 		
@@ -484,7 +484,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 			extent = (RectangularRegion)eResolveProxy(oldExtent);
 			if (extent != oldExtent) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT, oldExtent, extent));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT, oldExtent, extent));
 			}
 		}
 		return extent;
@@ -508,7 +508,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 		RectangularRegion oldExtent = extent;
 		extent = newExtent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT, oldExtent, extent));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT, oldExtent, extent));
 	}
 
 		/**
@@ -531,9 +531,9 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
 				return ((InternalEList<?>)getMapLayers()).basicRemove(otherEnd, msgs);
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS:
 				return ((InternalEList<?>)getMapAnnotations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -548,26 +548,26 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__NAME:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__NAME:
 				return getName();
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION:
 				return getDescription();
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
 				return getMapLayers();
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
 				return getBackgroundColor();
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS:
 				return getMapAnnotations();
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION:
 				if (resolve) return getDefaultRectangularRegion();
 				return basicGetDefaultRectangularRegion();
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE:
 				if (resolve) return getMapImage();
 				return basicGetMapImage();
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION:
 				if (resolve) return getMapImageRectangularRegion();
 				return basicGetMapImageRectangularRegion();
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT:
 				if (resolve) return getExtent();
 				return basicGetExtent();
 		}
@@ -584,27 +584,27 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__NAME:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
 				getMapLayers().clear();
 				getMapLayers().addAll((Collection<? extends ImageMapLayerPresentation>)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
 				setBackgroundColor((Color3f)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS:
 				getMapAnnotations().clear();
 				getMapAnnotations().addAll((Collection<? extends MapAnnotation>)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION:
 				setDefaultRectangularRegion((RectangularRegion)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT:
 				setExtent((RectangularRegion)newValue);
 				return;
 		}
@@ -620,25 +620,25 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__NAME:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
 				getMapLayers().clear();
 				return;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
 				setBackgroundColor(BACKGROUND_COLOR_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS:
 				getMapAnnotations().clear();
 				return;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION:
 				setDefaultRectangularRegion((RectangularRegion)null);
 				return;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT:
 				setExtent((RectangularRegion)null);
 				return;
 		}
@@ -654,23 +654,23 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__NAME:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
 				return mapLayers != null && !mapLayers.isEmpty();
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
 				return BACKGROUND_COLOR_EDEFAULT == null ? backgroundColor != null : !BACKGROUND_COLOR_EDEFAULT.equals(backgroundColor);
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_ANNOTATIONS:
 				return mapAnnotations != null && !mapAnnotations.isEmpty();
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DEFAULT_RECTANGULAR_REGION:
 				return defaultRectangularRegion != null;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE:
 				return mapImage != null;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION:
 				return mapImageRectangularRegion != null;
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__EXTENT:
 				return extent != null;
 		}
 		return super.eIsSet(featureID);
@@ -686,7 +686,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -703,7 +703,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -718,7 +718,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION___FORCE_UPDATE:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION___FORCE_UPDATE:
 				forceUpdate();
 				return null;
 		}
@@ -784,7 +784,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 	  			  mapImage = EImagesUtilities.INSTANCE.superPoseImages(background, tmpEImage, false, ImageAlignment.CENTER);	  	  	  
 	  			  
 	  			  // Update Image Extent.
-	  			  RectangularRegion newRectangularRegion = SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion();
+	  			  RectangularRegion newRectangularRegion = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
 	  			  newRectangularRegion.setXMin(lowerLeftCorner.getX());
 	  			  newRectangularRegion.setYMin(lowerLeftCorner.getY());	  
 	  			  newRectangularRegion.setXMax(upperRightCorner.getX());
@@ -828,7 +828,7 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 	  				  mapUpperRightCorner.setY(upperRightCorner.getY());
 	  			  }
 	  			  
-	  			  RectangularRegion newExtent = SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion();
+	  			  RectangularRegion newExtent = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
 	  			  newExtent.setXMin(mapLowerLeftCorner.getX());
 	  			  newExtent.setXMax(mapUpperRightCorner.getX());
 	  			  newExtent.setYMin(mapLowerLeftCorner.getY());
@@ -845,8 +845,8 @@ public class MapViewConfigurationImpl extends MinimalEObjectImpl.Container imple
 	  			  if (eNotificationRequired()) 
 	  			  {
 	  					  InternalEObject source = MapViewConfigurationImpl.this;		  		  
-	  					  source.eNotify(new ENotificationImpl(source, Notification.SET,SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_IMAGE, oldMapImage, mapImage));
-	  					  if(extentChanged) source.eNotify(new ENotificationImpl(source, Notification.SET,SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION, oldRectangularRegion, newRectangularRegion));
+	  					  source.eNotify(new ENotificationImpl(source, Notification.SET,Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_IMAGE, oldMapImage, mapImage));
+	  					  if(extentChanged) source.eNotify(new ENotificationImpl(source, Notification.SET,Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION, oldRectangularRegion, newRectangularRegion));
 	  			  }	 	  			  
 	  			  return mapImage;
 	  		  }

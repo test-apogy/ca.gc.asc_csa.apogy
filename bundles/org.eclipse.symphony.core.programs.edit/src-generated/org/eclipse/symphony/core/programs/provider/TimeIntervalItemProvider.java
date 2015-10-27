@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.programs.InvocatorProgramsPackage;
+import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
 import org.eclipse.symphony.core.programs.TimeInterval;
 
 /**
@@ -79,7 +79,7 @@ public class TimeIntervalItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TimeInterval_startTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TimeInterval_startTime_feature", "_UI_TimeInterval_type"),
-				 InvocatorProgramsPackage.Literals.TIME_INTERVAL__START_TIME,
+				 Symphony__CoreProgramsPackage.Literals.TIME_INTERVAL__START_TIME,
 				 true,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class TimeIntervalItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TimeInterval_endTime_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TimeInterval_endTime_feature", "_UI_TimeInterval_type"),
-				 InvocatorProgramsPackage.Literals.TIME_INTERVAL__END_TIME,
+				 Symphony__CoreProgramsPackage.Literals.TIME_INTERVAL__END_TIME,
 				 true,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class TimeIntervalItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TimeInterval_duration_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TimeInterval_duration_feature", "_UI_TimeInterval_type"),
-				 InvocatorProgramsPackage.Literals.TIME_INTERVAL__DURATION,
+				 Symphony__CoreProgramsPackage.Literals.TIME_INTERVAL__DURATION,
 				 false,
 				 false,
 				 false,
@@ -168,9 +168,9 @@ public class TimeIntervalItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TimeInterval.class)) {
-			case InvocatorProgramsPackage.TIME_INTERVAL__START_TIME:
-			case InvocatorProgramsPackage.TIME_INTERVAL__END_TIME:
-			case InvocatorProgramsPackage.TIME_INTERVAL__DURATION:
+			case Symphony__CoreProgramsPackage.TIME_INTERVAL__START_TIME:
+			case Symphony__CoreProgramsPackage.TIME_INTERVAL__END_TIME:
+			case Symphony__CoreProgramsPackage.TIME_INTERVAL__DURATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.AbstractConstraint#isEnabled <em>Enabled</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getAbstractConstraint()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getAbstractConstraint()
  * @model abstract="true"
  * @generated
  */
@@ -43,7 +43,7 @@ public interface AbstractConstraint extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attachment Points</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getAbstractConstraint_AttachmentPoints()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getAbstractConstraint_AttachmentPoints()
 	 * @see org.eclipse.symphony.common.topology.addons.dynamics.ConstraintAttachmentPoint#getConstraint
 	 * @model opposite="constraint" containment="true"
 	 * @generated
@@ -61,7 +61,7 @@ public interface AbstractConstraint extends EObject {
 	 * Note that this list can contain items for different implementation of Dynamic Engine.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Simulation Properties</em>' reference list.
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getAbstractConstraint_SimulationProperties()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getAbstractConstraint_SimulationProperties()
 	 * @model
 	 * @generated
 	 */
@@ -76,7 +76,7 @@ public interface AbstractConstraint extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getAbstractConstraint_Description()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getAbstractConstraint_Description()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -101,7 +101,7 @@ public interface AbstractConstraint extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Constaint Id</em>' attribute.
 	 * @see #setConstaintId(String)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getAbstractConstraint_ConstaintId()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getAbstractConstraint_ConstaintId()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -128,7 +128,7 @@ public interface AbstractConstraint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Enabled</em>' attribute.
 	 * @see #setEnabled(boolean)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getAbstractConstraint_Enabled()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getAbstractConstraint_Enabled()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */

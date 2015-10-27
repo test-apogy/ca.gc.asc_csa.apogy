@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.examples.rover.Battery#getCurrent <em>Current</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getBattery()
+ * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getBattery()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface Battery extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Active</em>' attribute.
 	 * @see #setActive(boolean)
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getBattery_Active()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getBattery_Active()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' property='Readonly'"
 	 * @generated
@@ -67,7 +67,7 @@ public interface Battery extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Voltage</em>' attribute.
 	 * @see #setVoltage(double)
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getBattery_Voltage()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getBattery_Voltage()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='V' property='Readonly'"
 	 * @generated
@@ -95,7 +95,7 @@ public interface Battery extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current</em>' attribute.
 	 * @see #setCurrent(double)
-	 * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getBattery_Current()
+	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getBattery_Current()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='A' property='Readonly'"
 	 * @generated

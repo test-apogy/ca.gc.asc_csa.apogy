@@ -27,7 +27,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.OrbitModelsList#getOrbitModels <em>Orbit Models</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getOrbitModelsList()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getOrbitModelsList()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface OrbitModelsList extends Named, Described {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Orbit Models</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getOrbitModelsList_OrbitModels()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getOrbitModelsList_OrbitModels()
 	 * @see org.eclipse.symphony.core.AbstractOrbitModel#getOrbitModelsList
 	 * @model opposite="orbitModelsList" containment="true"
 	 * @generated

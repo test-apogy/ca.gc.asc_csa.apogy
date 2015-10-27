@@ -12,7 +12,7 @@ import org.eclipse.symphony.common.emf.ui.EMFEcoreUIFacade;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.invocator.EDataTypeArgument;
-import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
+import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorEditPlugin;
 
 public class ENumberDataTypeArgumentItemPropertyDescriptor extends
 		ItemPropertyDescriptor {
@@ -55,7 +55,7 @@ public class ENumberDataTypeArgumentItemPropertyDescriptor extends
 			} catch (Throwable t) {
 				String featureID = feature.getEContainingClass()
 						.getInstanceClassName() + "." + feature.getName();
-				Logger.INSTANCE.log(EMFEcoreInvocatorEditPlugin.ID, 
+				Logger.INSTANCE.log(Symphony__CoreInvocatorEditPlugin.ID, 
 								this,
 								featureID
 										+ " : Failed to convert from display units to native units !",
@@ -98,7 +98,7 @@ public class ENumberDataTypeArgumentItemPropertyDescriptor extends
 			} catch (Throwable t) {
 				String featureID = feature.getEContainingClass()
 						.getInstanceClassName() + "." + feature.getName();
-				Logger.INSTANCE.log(EMFEcoreInvocatorEditPlugin.ID, 
+				Logger.INSTANCE.log(Symphony__CoreInvocatorEditPlugin.ID, 
 								this,
 								featureID
 										+ " : Failed to convert from native units to display units !",
@@ -153,7 +153,7 @@ public class ENumberDataTypeArgumentItemPropertyDescriptor extends
 						+ "> is not compatible with Native Unit <"
 						+ getNativeUnit(argument).toString() + "> !";
 
-				Logger.INSTANCE.log(EMFEcoreInvocatorEditPlugin.ID, featureID
+				Logger.INSTANCE.log(Symphony__CoreInvocatorEditPlugin.ID, featureID
 						+ message, EventSeverity.ERROR, e);
 			}
 		}

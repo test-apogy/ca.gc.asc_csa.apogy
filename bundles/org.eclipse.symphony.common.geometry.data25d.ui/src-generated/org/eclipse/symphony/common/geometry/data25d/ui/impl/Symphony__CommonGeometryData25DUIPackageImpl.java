@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.geometry.data25d.Symphony__CommonGeometryData
 import org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIFactory;
 import org.eclipse.symphony.common.geometry.data25d.ui.Symphony__CommonGeometryData25DUIPackage;
 import org.eclipse.symphony.common.geometry.data25d.ui.VolumetricCoordinatesSet25DPresentation;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -74,7 +74,7 @@ public class Symphony__CommonGeometryData25DUIPackageImpl extends EPackageImpl i
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyUIPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
 		Symphony__CommonGeometryData25DPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -166,7 +166,7 @@ public class Symphony__CommonGeometryData25DUIPackageImpl extends EPackageImpl i
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyUIPackage theTopologyUIPackage = (TopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyUIPackage.eNS_URI);
+		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
 		Symphony__CommonGeometryData25DPackage theSymphony__CommonGeometryData25DPackage = (Symphony__CommonGeometryData25DPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonGeometryData25DPackage.eNS_URI);
 
 		// Create type parameters
@@ -174,7 +174,7 @@ public class Symphony__CommonGeometryData25DUIPackageImpl extends EPackageImpl i
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		volumetricCoordinatesSet25DPresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
+		volumetricCoordinatesSet25DPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(volumetricCoordinatesSet25DPresentationEClass, VolumetricCoordinatesSet25DPresentation.class, "VolumetricCoordinatesSet25DPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

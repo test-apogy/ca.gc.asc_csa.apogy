@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EEnumLiteral;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.core.invocator.EEnumArgument;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,7 +66,7 @@ public class EEnumArgumentImpl extends ArgumentImpl implements EEnumArgument
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.EENUM_ARGUMENT;
+		return Symphony__CoreInvocatorPackage.Literals.EENUM_ARGUMENT;
 	}
 
   /**
@@ -81,7 +81,7 @@ public class EEnumArgumentImpl extends ArgumentImpl implements EEnumArgument
 			eEnumLiteral = (EEnumLiteral)eResolveProxy(oldEEnumLiteral);
 			if (eEnumLiteral != oldEEnumLiteral) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorPackage.EENUM_ARGUMENT__EENUM_LITERAL, oldEEnumLiteral, eEnumLiteral));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.EENUM_ARGUMENT__EENUM_LITERAL, oldEEnumLiteral, eEnumLiteral));
 			}
 		}
 		return eEnumLiteral;
@@ -107,7 +107,7 @@ public class EEnumArgumentImpl extends ArgumentImpl implements EEnumArgument
 		EEnumLiteral oldEEnumLiteral = eEnumLiteral;
 		eEnumLiteral = newEEnumLiteral;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.EENUM_ARGUMENT__EENUM_LITERAL, oldEEnumLiteral, eEnumLiteral));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.EENUM_ARGUMENT__EENUM_LITERAL, oldEEnumLiteral, eEnumLiteral));
 	}
 
   /**
@@ -122,7 +122,7 @@ public class EEnumArgumentImpl extends ArgumentImpl implements EEnumArgument
 			eEnum = (EEnum)eResolveProxy(oldEEnum);
 			if (eEnum != oldEEnum) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorPackage.EENUM_ARGUMENT__EENUM, oldEEnum, eEnum));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.EENUM_ARGUMENT__EENUM, oldEEnum, eEnum));
 			}
 		}
 		return eEnum;
@@ -148,7 +148,7 @@ public class EEnumArgumentImpl extends ArgumentImpl implements EEnumArgument
 		EEnum oldEEnum = eEnum;
 		eEnum = newEEnum;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.EENUM_ARGUMENT__EENUM, oldEEnum, eEnum));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.EENUM_ARGUMENT__EENUM, oldEEnum, eEnum));
 	}
 
   /**
@@ -160,10 +160,10 @@ public class EEnumArgumentImpl extends ArgumentImpl implements EEnumArgument
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.EENUM_ARGUMENT__EENUM_LITERAL:
+			case Symphony__CoreInvocatorPackage.EENUM_ARGUMENT__EENUM_LITERAL:
 				if (resolve) return getEEnumLiteral();
 				return basicGetEEnumLiteral();
-			case EMFEcoreInvocatorPackage.EENUM_ARGUMENT__EENUM:
+			case Symphony__CoreInvocatorPackage.EENUM_ARGUMENT__EENUM:
 				if (resolve) return getEEnum();
 				return basicGetEEnum();
 		}
@@ -179,10 +179,10 @@ public class EEnumArgumentImpl extends ArgumentImpl implements EEnumArgument
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.EENUM_ARGUMENT__EENUM_LITERAL:
+			case Symphony__CoreInvocatorPackage.EENUM_ARGUMENT__EENUM_LITERAL:
 				setEEnumLiteral((EEnumLiteral)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.EENUM_ARGUMENT__EENUM:
+			case Symphony__CoreInvocatorPackage.EENUM_ARGUMENT__EENUM:
 				setEEnum((EEnum)newValue);
 				return;
 		}
@@ -198,10 +198,10 @@ public class EEnumArgumentImpl extends ArgumentImpl implements EEnumArgument
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.EENUM_ARGUMENT__EENUM_LITERAL:
+			case Symphony__CoreInvocatorPackage.EENUM_ARGUMENT__EENUM_LITERAL:
 				setEEnumLiteral((EEnumLiteral)null);
 				return;
-			case EMFEcoreInvocatorPackage.EENUM_ARGUMENT__EENUM:
+			case Symphony__CoreInvocatorPackage.EENUM_ARGUMENT__EENUM:
 				setEEnum((EEnum)null);
 				return;
 		}
@@ -217,9 +217,9 @@ public class EEnumArgumentImpl extends ArgumentImpl implements EEnumArgument
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.EENUM_ARGUMENT__EENUM_LITERAL:
+			case Symphony__CoreInvocatorPackage.EENUM_ARGUMENT__EENUM_LITERAL:
 				return eEnumLiteral != null;
-			case EMFEcoreInvocatorPackage.EENUM_ARGUMENT__EENUM:
+			case Symphony__CoreInvocatorPackage.EENUM_ARGUMENT__EENUM:
 				return eEnum != null;
 		}
 		return super.eIsSet(featureID);

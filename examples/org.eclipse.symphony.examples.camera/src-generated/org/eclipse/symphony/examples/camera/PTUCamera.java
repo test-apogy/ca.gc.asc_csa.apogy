@@ -15,7 +15,7 @@ import org.eclipse.symphony.addons.actuators.PanTiltUnit;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage#getPTUCamera()
+ * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage#getPTUCamera()
  * @model abstract="true"
  * @generated
  */

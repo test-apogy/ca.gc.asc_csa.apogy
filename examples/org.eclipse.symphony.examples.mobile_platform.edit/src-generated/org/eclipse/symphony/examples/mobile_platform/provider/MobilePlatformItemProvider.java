@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
-import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage;
+import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
 import org.eclipse.symphony.examples.mobile_platform.MobilePlatform;
 
 /**
@@ -88,7 +88,7 @@ IItemPropertySource
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_initialized_feature", "_UI_MobilePlatform_type"),
-				 EMFEcoreExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM__INITIALIZED,
+				 Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__INITIALIZED,
 				 false,
 				 false,
 				 false,
@@ -110,7 +110,7 @@ IItemPropertySource
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_disposed_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_disposed_feature", "_UI_MobilePlatform_type"),
-				 EMFEcoreExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM__DISPOSED,
+				 Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__DISPOSED,
 				 false,
 				 false,
 				 false,
@@ -133,7 +133,7 @@ IItemPropertySource
 				getResourceLocator(),
 				getString("_UI_MobilePlatform_positionError_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_positionError_feature", "_UI_MobilePlatform_type"),
-				EMFEcoreExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM__POSITION_ERROR,
+				Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__POSITION_ERROR,
 				false,
 				false,
 				false,
@@ -155,7 +155,7 @@ IItemPropertySource
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_linearVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_linearVelocity_feature", "_UI_MobilePlatform_type"),
-				 EMFEcoreExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM__LINEAR_VELOCITY,
+				 Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__LINEAR_VELOCITY,
 				 false,
 				 false,
 				 false,
@@ -177,7 +177,7 @@ IItemPropertySource
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_angularVelocity_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_angularVelocity_feature", "_UI_MobilePlatform_type"),
-				 EMFEcoreExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM__ANGULAR_VELOCITY,
+				 Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__ANGULAR_VELOCITY,
 				 false,
 				 false,
 				 false,
@@ -200,7 +200,7 @@ IItemPropertySource
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_leftWheelPosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_leftWheelPosition_feature", "_UI_MobilePlatform_type"),
-				 EMFEcoreExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM__LEFT_WHEEL_POSITION,
+				 Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__LEFT_WHEEL_POSITION,
 				 false,
 				 false,
 				 false,
@@ -223,7 +223,7 @@ IItemPropertySource
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_rightWheelPosition_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_rightWheelPosition_feature", "_UI_MobilePlatform_type"),
-				 EMFEcoreExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION,
+				 Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION,
 				 false,
 				 false,
 				 false,
@@ -245,7 +245,7 @@ IItemPropertySource
 				 getResourceLocator(),
 				 getString("_UI_MobilePlatform_position_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MobilePlatform_position_feature", "_UI_MobilePlatform_type"),
-				 EMFEcoreExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM__POSITION,
+				 Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM__POSITION,
 				 true,
 				 false,
 				 true,
@@ -301,14 +301,14 @@ IItemPropertySource
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MobilePlatform.class)) {
-			case EMFEcoreExampleMobilePlatformPackage.MOBILE_PLATFORM__INITIALIZED:
-			case EMFEcoreExampleMobilePlatformPackage.MOBILE_PLATFORM__DISPOSED:
-			case EMFEcoreExampleMobilePlatformPackage.MOBILE_PLATFORM__POSITION_ERROR:
-			case EMFEcoreExampleMobilePlatformPackage.MOBILE_PLATFORM__LINEAR_VELOCITY:
-			case EMFEcoreExampleMobilePlatformPackage.MOBILE_PLATFORM__ANGULAR_VELOCITY:
-			case EMFEcoreExampleMobilePlatformPackage.MOBILE_PLATFORM__LEFT_WHEEL_POSITION:
-			case EMFEcoreExampleMobilePlatformPackage.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION:
-			case EMFEcoreExampleMobilePlatformPackage.MOBILE_PLATFORM__POSITION:
+			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__INITIALIZED:
+			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__DISPOSED:
+			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION_ERROR:
+			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__LINEAR_VELOCITY:
+			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__ANGULAR_VELOCITY:
+			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__LEFT_WHEEL_POSITION:
+			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__RIGHT_WHEEL_POSITION:
+			case Symphony__ExamplesMobilePlatformPackage.MOBILE_PLATFORM__POSITION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -25,11 +25,11 @@ import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3Application;
 import org.eclipse.symphony.common.topology.ui.jme3.JME3RenderEngineDelegate;
 import org.eclipse.symphony.core.ResultNode;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.invocator.AbstractResult;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
 import org.eclipse.symphony.core.topology.SymphonyTopologyFacade;
@@ -310,7 +310,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 						// Events from Deployment
 						if(msg.getNotifier() instanceof SymphonyEnvironment)							
 						{							
-							if(msg.getFeatureID(SymphonyEnvironment.class) == SymphonyCorePackage.SYMPHONY_ENVIRONMENT__NAME)						
+							if(msg.getFeatureID(SymphonyEnvironment.class) == Symphony__CorePackage.SYMPHONY_ENVIRONMENT__NAME)						
 							{	
 								// Update the part name.
 								updatePartName();
@@ -337,7 +337,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 						int featureId = msg.getFeatureID(EMFEcoreInvocatorFacade.class);
 						switch (featureId) 
 						{
-							case EMFEcoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
+							case Symphony__CoreInvocatorPackage.EMF_ECORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 								if(msg.getNewValue() instanceof InvocatorSession)
 								{
 									// Gets the current Active Session if one exists.

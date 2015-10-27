@@ -16,7 +16,6 @@ import org.eclipse.symphony.common.topology.Node;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Abstract base class representing a binding relationship between a topology and a feature.
  * <!-- end-model-doc -->
  *
@@ -32,7 +31,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding#getFeatureNodeAdapter <em>Feature Node Adapter</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getAbstractTopologyBinding()
+ * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getAbstractTopologyBinding()
  * @model abstract="true"
  * @generated
  */
@@ -47,11 +46,11 @@ public interface AbstractTopologyBinding extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Whether or not the binding is binded.
+	 * Whether or not the binding is bound.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Binded</em>' attribute.
 	 * @see #setBinded(boolean)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getAbstractTopologyBinding_Binded()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getAbstractTopologyBinding_Binded()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='INFORMATION'"
 	 * @generated
@@ -81,7 +80,7 @@ public interface AbstractTopologyBinding extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getAbstractTopologyBinding_Description()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getAbstractTopologyBinding_Description()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='INFORMATION'"
 	 * @generated
@@ -111,7 +110,7 @@ public interface AbstractTopologyBinding extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getAbstractTopologyBinding_Name()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getAbstractTopologyBinding_Name()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='INFORMATION'"
 	 * @generated
@@ -141,7 +140,7 @@ public interface AbstractTopologyBinding extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
 	 * @see #setSource(EObject)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getAbstractTopologyBinding_Source()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getAbstractTopologyBinding_Source()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' propertyCategory='SOURCE'"
 	 * @generated
@@ -171,7 +170,7 @@ public interface AbstractTopologyBinding extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Node</em>' reference.
 	 * @see #setFeatureNode(AbstractFeatureNode)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getAbstractTopologyBinding_FeatureNode()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getAbstractTopologyBinding_FeatureNode()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SOURCE'"
 	 * @generated
 	 */
@@ -199,7 +198,7 @@ public interface AbstractTopologyBinding extends EObject
 	 * The adapter used to listens for changes of the feature value.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Feature Node Adapter</em>' reference.
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getAbstractTopologyBinding_FeatureNodeAdapter()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getAbstractTopologyBinding_FeatureNodeAdapter()
 	 * @model transient="true" changeable="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
@@ -210,7 +209,6 @@ public interface AbstractTopologyBinding extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Binds the binding to its feature. If successful, binded will change to true.
 	 * <!-- end-model-doc -->
 	 * @model
@@ -222,7 +220,6 @@ public interface AbstractTopologyBinding extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Un-binds the binding from its feature. If successful, binded will change to false.
 	 * <!-- end-model-doc -->
 	 * @model
@@ -234,9 +231,9 @@ public interface AbstractTopologyBinding extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
-	 * Clones the current Binding. This method must copy this Binding parameters and set the Binding copy associated Node(s)
-	 * to the Node(s) copy(ies) associated with this Binding.
+	 * Clones the current Binding. This method must copy this Binding parameters and set
+	 * the Binding copy associated Node(s) to the Node(s) copy(ies) associated with
+	 * this Binding.
 	 * @param originalToCopyNodeMap Maps original Nodes to copied ones.
 	 * @return A copy of this Binding.
 	 * <!-- end-model-doc -->

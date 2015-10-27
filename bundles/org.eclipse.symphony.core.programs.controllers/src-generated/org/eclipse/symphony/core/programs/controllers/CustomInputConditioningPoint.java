@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint#getOutputValue <em>Output Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getCustomInputConditioningPoint()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getCustomInputConditioningPoint()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface CustomInputConditioningPoint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input Value</em>' attribute.
 	 * @see #setInputValue(double)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getCustomInputConditioningPoint_InputValue()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getCustomInputConditioningPoint_InputValue()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface CustomInputConditioningPoint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output Value</em>' attribute.
 	 * @see #setOutputValue(double)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getCustomInputConditioningPoint_OutputValue()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getCustomInputConditioningPoint_OutputValue()
 	 * @model default="0" unique="false"
 	 * @generated
 	 */

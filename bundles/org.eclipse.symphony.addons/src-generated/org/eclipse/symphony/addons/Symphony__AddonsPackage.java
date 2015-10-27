@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -128,7 +128,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_TOOL_LIST__TOOLS_LIST = EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
+	int SIMPLE_TOOL_LIST__TOOLS_LIST = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST;
 
 		/**
 	 * The feature id for the '<em><b>Simple Tools</b></em>' containment reference list.
@@ -137,7 +137,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_TOOL_LIST__SIMPLE_TOOLS = EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
+	int SIMPLE_TOOL_LIST__SIMPLE_TOOLS = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 0;
 
 		/**
 	 * The number of structural features of the '<em>Simple Tool List</em>' class.
@@ -146,7 +146,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_TOOL_LIST_FEATURE_COUNT = EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
+	int SIMPLE_TOOL_LIST_FEATURE_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of operations of the '<em>Simple Tool List</em>' class.
@@ -155,7 +155,7 @@ public interface Symphony__AddonsPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_TOOL_LIST_OPERATION_COUNT = EMFEcoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
+	int SIMPLE_TOOL_LIST_OPERATION_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_TOOLS_LIST_CONTAINER_OPERATION_COUNT + 0;
 
 		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.impl.SimpleToolImpl <em>Simple Tool</em>}' class.

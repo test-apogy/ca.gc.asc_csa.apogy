@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.EclipticCoordinates;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.EclipticCoordinates} object.
@@ -83,7 +83,7 @@ public class EclipticCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EclipticCoordinates_longitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EclipticCoordinates_longitude_feature", "_UI_EclipticCoordinates_type"),
-				 SymphonyEnvironmentPackage.Literals.ECLIPTIC_COORDINATES__LONGITUDE,
+				 Symphony__CoreEnvironmentPackage.Literals.ECLIPTIC_COORDINATES__LONGITUDE,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class EclipticCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EclipticCoordinates_latitude_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EclipticCoordinates_latitude_feature", "_UI_EclipticCoordinates_type"),
-				 SymphonyEnvironmentPackage.Literals.ECLIPTIC_COORDINATES__LATITUDE,
+				 Symphony__CoreEnvironmentPackage.Literals.ECLIPTIC_COORDINATES__LATITUDE,
 				 true,
 				 false,
 				 false,
@@ -129,7 +129,7 @@ public class EclipticCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_EclipticCoordinates_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EclipticCoordinates_radius_feature", "_UI_EclipticCoordinates_type"),
-				 SymphonyEnvironmentPackage.Literals.ECLIPTIC_COORDINATES__RADIUS,
+				 Symphony__CoreEnvironmentPackage.Literals.ECLIPTIC_COORDINATES__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -176,9 +176,9 @@ public class EclipticCoordinatesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EclipticCoordinates.class)) {
-			case SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__LONGITUDE:
-			case SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__LATITUDE:
-			case SymphonyEnvironmentPackage.ECLIPTIC_COORDINATES__RADIUS:
+			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__LONGITUDE:
+			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__LATITUDE:
+			case Symphony__CoreEnvironmentPackage.ECLIPTIC_COORDINATES__RADIUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -25,7 +25,7 @@ import org.eclipse.symphony.core.Updatable;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer#getRenderableLayer <em>Renderable Layer</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getAbstractWorldWindLayer()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getAbstractWorldWindLayer()
  * @model abstract="true"
  * @generated
  */
@@ -44,7 +44,7 @@ public interface AbstractWorldWindLayer extends Updatable {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Visible</em>' attribute.
 	 * @see #setVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getAbstractWorldWindLayer_Visible()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getAbstractWorldWindLayer_Visible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable'"
 	 * @generated
@@ -70,7 +70,7 @@ public interface AbstractWorldWindLayer extends Updatable {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Renderable Layer</em>' attribute.
 	 * @see #setRenderableLayer(RenderableLayer)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getAbstractWorldWindLayer_RenderableLayer()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getAbstractWorldWindLayer_RenderableLayer()
 	 * @model unique="false" dataType="org.eclipse.symphony.core.environment.orbit.earth.ui.RenderableLayer" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='false' property='None'"
 	 * @generated

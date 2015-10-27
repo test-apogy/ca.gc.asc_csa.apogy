@@ -19,8 +19,8 @@ import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.DataProductsList;
 import org.eclipse.symphony.core.invocator.DataProductsListsContainer;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -108,7 +108,7 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.DATA_PRODUCTS_LISTS_CONTAINER;
+		return Symphony__CoreInvocatorPackage.Literals.DATA_PRODUCTS_LISTS_CONTAINER;
 	}
 
   /**
@@ -131,7 +131,7 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__NAME, oldName, name));
 	}
 
   /**
@@ -154,7 +154,7 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -164,7 +164,7 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
 	 */
   public InvocatorSession getInvocatorSession()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION) return null;
 		return (InvocatorSession)eContainer();
 	}
 
@@ -175,7 +175,7 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
 	 */
   public InvocatorSession basicGetInvocatorSession()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION) return null;
 		return (InvocatorSession)eInternalContainer();
 	}
 
@@ -186,7 +186,7 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
 	 */
   public NotificationChain basicSetInvocatorSession(InvocatorSession newInvocatorSession, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newInvocatorSession, EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newInvocatorSession, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION, msgs);
 		return msgs;
 	}
 
@@ -197,19 +197,19 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
 	 */
   public void setInvocatorSession(InvocatorSession newInvocatorSession)
   {
-		if (newInvocatorSession != eInternalContainer() || (eContainerFeatureID() != EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION && newInvocatorSession != null)) {
+		if (newInvocatorSession != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION && newInvocatorSession != null)) {
 			if (EcoreUtil.isAncestor(this, newInvocatorSession))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newInvocatorSession != null)
-				msgs = ((InternalEObject)newInvocatorSession).eInverseAdd(this, EMFEcoreInvocatorPackage.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER, InvocatorSession.class, msgs);
+				msgs = ((InternalEObject)newInvocatorSession).eInverseAdd(this, Symphony__CoreInvocatorPackage.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER, InvocatorSession.class, msgs);
 			msgs = basicSetInvocatorSession(newInvocatorSession, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION, newInvocatorSession, newInvocatorSession));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION, newInvocatorSession, newInvocatorSession));
 	}
 
   /**
@@ -220,7 +220,7 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
   public EList<DataProductsList> getDataProductsList()
   {
 		if (dataProductsList == null) {
-			dataProductsList = new EObjectContainmentWithInverseEList<DataProductsList>(DataProductsList.class, this, EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST, EMFEcoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER);
+			dataProductsList = new EObjectContainmentWithInverseEList<DataProductsList>(DataProductsList.class, this, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST, Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__DATA_PRODUCTS_LISTS_CONTAINER);
 		}
 		return dataProductsList;
 	}
@@ -235,11 +235,11 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetInvocatorSession((InvocatorSession)otherEnd, msgs);
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDataProductsList()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -254,9 +254,9 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION:
 				return basicSetInvocatorSession(null, msgs);
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST:
 				return ((InternalEList<?>)getDataProductsList()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -271,8 +271,8 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreInvocatorPackage.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER, InvocatorSession.class, msgs);
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.INVOCATOR_SESSION__DATA_PRODUCTS_LIST_CONTAINER, InvocatorSession.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -286,14 +286,14 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__NAME:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__NAME:
 				return getName();
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION:
 				return getDescription();
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION:
 				if (resolve) return getInvocatorSession();
 				return basicGetInvocatorSession();
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST:
 				return getDataProductsList();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -309,16 +309,16 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__NAME:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__NAME:
 				setName((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION:
 				setInvocatorSession((InvocatorSession)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST:
 				getDataProductsList().clear();
 				getDataProductsList().addAll((Collection<? extends DataProductsList>)newValue);
 				return;
@@ -335,16 +335,16 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__NAME:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION:
 				setInvocatorSession((InvocatorSession)null);
 				return;
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST:
 				getDataProductsList().clear();
 				return;
 		}
@@ -360,13 +360,13 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__NAME:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION:
 				return basicGetInvocatorSession() != null;
-			case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST:
+			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DATA_PRODUCTS_LIST:
 				return dataProductsList != null && !dataProductsList.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -382,7 +382,7 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -399,7 +399,7 @@ public class DataProductsListsContainerImpl extends MinimalEObjectImpl.Container
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LISTS_CONTAINER__DESCRIPTION;
 				default: return -1;
 			}
 		}

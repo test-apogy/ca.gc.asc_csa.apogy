@@ -10,7 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiPackage;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIPackage;
 import org.eclipse.symphony.core.ui.SymphonyResourceSettings;
 
 /**
@@ -105,7 +105,7 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCoreUiPackage.Literals.SYMPHONY_RESOURCE_SETTINGS;
+		return Symphony__CoreUIPackage.Literals.SYMPHONY_RESOURCE_SETTINGS;
 	}
 
 	/**
@@ -126,7 +126,7 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 		IProject oldResourceProject = resourceProject;
 		resourceProject = newResourceProject;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT, oldResourceProject, resourceProject));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT, oldResourceProject, resourceProject));
 	}
 
 	/**
@@ -147,7 +147,7 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 		IFile oldResourceFile = resourceFile;
 		resourceFile = newResourceFile;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE, oldResourceFile, resourceFile));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE, oldResourceFile, resourceFile));
 	}
 
 	/**
@@ -168,7 +168,7 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 		IContainer oldResourceContainer = resourceContainer;
 		resourceContainer = newResourceContainer;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER, oldResourceContainer, resourceContainer));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER, oldResourceContainer, resourceContainer));
 	}
 
 	/**
@@ -179,11 +179,11 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
+			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
 				return getResourceProject();
-			case SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE:
+			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE:
 				return getResourceFile();
-			case SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
+			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
 				return getResourceContainer();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -197,13 +197,13 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
+			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
 				setResourceProject((IProject)newValue);
 				return;
-			case SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE:
+			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE:
 				setResourceFile((IFile)newValue);
 				return;
-			case SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
+			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
 				setResourceContainer((IContainer)newValue);
 				return;
 		}
@@ -218,13 +218,13 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
+			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
 				setResourceProject(RESOURCE_PROJECT_EDEFAULT);
 				return;
-			case SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE:
+			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE:
 				setResourceFile(RESOURCE_FILE_EDEFAULT);
 				return;
-			case SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
+			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
 				setResourceContainer(RESOURCE_CONTAINER_EDEFAULT);
 				return;
 		}
@@ -239,11 +239,11 @@ public class SymphonyResourceSettingsImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
+			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_PROJECT:
 				return RESOURCE_PROJECT_EDEFAULT == null ? resourceProject != null : !RESOURCE_PROJECT_EDEFAULT.equals(resourceProject);
-			case SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE:
+			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_FILE:
 				return RESOURCE_FILE_EDEFAULT == null ? resourceFile != null : !RESOURCE_FILE_EDEFAULT.equals(resourceFile);
-			case SymphonyCoreUiPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
+			case Symphony__CoreUIPackage.SYMPHONY_RESOURCE_SETTINGS__RESOURCE_CONTAINER:
 				return RESOURCE_CONTAINER_EDEFAULT == null ? resourceContainer != null : !RESOURCE_CONTAINER_EDEFAULT.equals(resourceContainer);
 		}
 		return super.eIsSet(featureID);

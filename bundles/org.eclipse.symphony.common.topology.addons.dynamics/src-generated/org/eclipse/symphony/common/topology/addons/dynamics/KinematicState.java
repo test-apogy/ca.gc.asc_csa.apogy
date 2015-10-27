@@ -28,7 +28,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.KinematicState#getAngularAcceleration <em>Angular Acceleration</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getKinematicState()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getKinematicState()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface KinematicState extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position</em>' containment reference.
 	 * @see #setPosition(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getKinematicState_Position()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getKinematicState_Position()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -69,7 +69,7 @@ public interface KinematicState extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Orientation</em>' containment reference.
 	 * @see #setOrientation(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getKinematicState_Orientation()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getKinematicState_Orientation()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -95,7 +95,7 @@ public interface KinematicState extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Linear Velocity</em>' containment reference.
 	 * @see #setLinearVelocity(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getKinematicState_LinearVelocity()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getKinematicState_LinearVelocity()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -121,7 +121,7 @@ public interface KinematicState extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Angular Velocity</em>' containment reference.
 	 * @see #setAngularVelocity(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getKinematicState_AngularVelocity()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getKinematicState_AngularVelocity()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -147,7 +147,7 @@ public interface KinematicState extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Linear Acceleration</em>' containment reference.
 	 * @see #setLinearAcceleration(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getKinematicState_LinearAcceleration()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getKinematicState_LinearAcceleration()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -173,7 +173,7 @@ public interface KinematicState extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Angular Acceleration</em>' containment reference.
 	 * @see #setAngularAcceleration(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getKinematicState_AngularAcceleration()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getKinematicState_AngularAcceleration()
 	 * @model containment="true"
 	 * @generated
 	 */

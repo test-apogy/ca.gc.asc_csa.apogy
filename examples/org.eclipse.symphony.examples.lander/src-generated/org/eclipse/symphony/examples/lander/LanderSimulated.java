@@ -17,7 +17,7 @@ package org.eclipse.symphony.examples.lander;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getLanderSimulated()
+ * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLanderSimulated()
  * @model
  * @generated
  */

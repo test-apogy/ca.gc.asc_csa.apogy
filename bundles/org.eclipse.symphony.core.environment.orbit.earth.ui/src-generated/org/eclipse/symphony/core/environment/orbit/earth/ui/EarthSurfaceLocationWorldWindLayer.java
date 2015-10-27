@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthSurfaceLocationWorldWindLayer#getTargetRadius <em>Target Radius</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getEarthSurfaceLocationWorldWindLayer()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getEarthSurfaceLocationWorldWindLayer()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface EarthSurfaceLocationWorldWindLayer extends AbstractWorldWindLay
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Earth Surface Location</em>' reference.
 	 * @see #setEarthSurfaceLocation(EarthSurfaceLocation)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getEarthSurfaceLocationWorldWindLayer_EarthSurfaceLocation()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getEarthSurfaceLocationWorldWindLayer_EarthSurfaceLocation()
 	 * @model
 	 * @generated
 	 */
@@ -59,7 +59,7 @@ public interface EarthSurfaceLocationWorldWindLayer extends AbstractWorldWindLay
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Target Radius</em>' attribute.
 	 * @see #setTargetRadius(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getEarthSurfaceLocationWorldWindLayer_TargetRadius()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getEarthSurfaceLocationWorldWindLayer_TargetRadius()
 	 * @model default="50" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VISUALS' csa_units='km'"
 	 * @generated

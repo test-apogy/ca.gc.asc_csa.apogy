@@ -28,7 +28,7 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.SpacecraftSwathCorridor#getCorridor <em>Corridor</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftSwathCorridor()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftSwathCorridor()
  * @model
  * @generated
  */
@@ -38,11 +38,11 @@ public interface SpacecraftSwathCorridor extends Named, Described, Updatable {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * The start time of prediction period.
+	 * The start time of the prediction period.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Start Time</em>' attribute.
 	 * @see #setStartTime(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftSwathCorridor_StartTime()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftSwathCorridor_StartTime()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='TIME_PERIOD'"
 	 * @generated
@@ -68,7 +68,7 @@ public interface SpacecraftSwathCorridor extends Named, Described, Updatable {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>End Time</em>' attribute.
 	 * @see #setEndTime(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftSwathCorridor_EndTime()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftSwathCorridor_EndTime()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='TIME_PERIOD'"
 	 * @generated
@@ -96,7 +96,7 @@ public interface SpacecraftSwathCorridor extends Named, Described, Updatable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Time Interval</em>' attribute.
 	 * @see #setTimeInterval(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftSwathCorridor_TimeInterval()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftSwathCorridor_TimeInterval()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='TIME_PERIOD' csa_unit='s'"
 	 * @generated
@@ -126,7 +126,7 @@ public interface SpacecraftSwathCorridor extends Named, Described, Updatable {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orbit Model</em>' reference.
 	 * @see #setOrbitModel(OrbitModel)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftSwathCorridor_OrbitModel()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftSwathCorridor_OrbitModel()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='ORBIT_MODEL'"
 	 * @generated
 	 */
@@ -153,7 +153,7 @@ public interface SpacecraftSwathCorridor extends Named, Described, Updatable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Left Swath Angle</em>' attribute.
 	 * @see #setLeftSwathAngle(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftSwathCorridor_LeftSwathAngle()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftSwathCorridor_LeftSwathAngle()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='SWATH' csa_units='rad'"
 	 * @generated
@@ -181,7 +181,7 @@ public interface SpacecraftSwathCorridor extends Named, Described, Updatable {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Right Swath Angle</em>' attribute.
 	 * @see #setRightSwathAngle(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftSwathCorridor_RightSwathAngle()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftSwathCorridor_RightSwathAngle()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='SWATH' csa_units='rad'"
 	 * @generated
@@ -212,7 +212,7 @@ public interface SpacecraftSwathCorridor extends Named, Described, Updatable {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Corridor</em>' containment reference.
 	 * @see #setCorridor(Corridor)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getSpacecraftSwathCorridor_Corridor()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftSwathCorridor_Corridor()
 	 * @model containment="true"
 	 * @generated
 	 */

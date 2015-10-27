@@ -9,7 +9,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.environment.AtmosphereUtils;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,7 +50,7 @@ public class AtmosphereUtilsImpl extends MinimalEObjectImpl.Container implements
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.ATMOSPHERE_UTILS;
+		return Symphony__CoreEnvironmentPackage.Literals.ATMOSPHERE_UTILS;
 	}
 
   /**
@@ -197,13 +197,13 @@ public class AtmosphereUtilsImpl extends MinimalEObjectImpl.Container implements
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case SymphonyEnvironmentPackage.ATMOSPHERE_UTILS___GET_AIR_MASS__DOUBLE:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE_UTILS___GET_AIR_MASS__DOUBLE:
 				return getAirMass((Double)arguments.get(0));
-			case SymphonyEnvironmentPackage.ATMOSPHERE_UTILS___GET_DIRECT_SUN_INTENSITY__DOUBLE_DOUBLE:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE_UTILS___GET_DIRECT_SUN_INTENSITY__DOUBLE_DOUBLE:
 				return getDirectSunIntensity((Double)arguments.get(0), (Double)arguments.get(1));
-			case SymphonyEnvironmentPackage.ATMOSPHERE_UTILS___GET_DIFFUSE_SUN_INTENSITY__DOUBLE_DOUBLE:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE_UTILS___GET_DIFFUSE_SUN_INTENSITY__DOUBLE_DOUBLE:
 				return getDiffuseSunIntensity((Double)arguments.get(0), (Double)arguments.get(1));
-			case SymphonyEnvironmentPackage.ATMOSPHERE_UTILS___GET_ATMOSPHERE_REFRACTION_CORRECTION__DOUBLE:
+			case Symphony__CoreEnvironmentPackage.ATMOSPHERE_UTILS___GET_ATMOSPHERE_REFRACTION_CORRECTION__DOUBLE:
 				return getAtmosphereRefractionCorrection((Double)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

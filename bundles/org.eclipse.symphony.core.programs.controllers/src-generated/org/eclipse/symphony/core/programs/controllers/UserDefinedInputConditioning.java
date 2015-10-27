@@ -18,7 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.UserDefinedInputConditioning#getTransferFunction <em>Transfer Function</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getUserDefinedInputConditioning()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getUserDefinedInputConditioning()
  * @model
  * @generated
  */
@@ -33,11 +33,11 @@ public interface UserDefinedInputConditioning extends AbstractInputConditioning 
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The units of the values.
+	 * The units of the values.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Units</em>' attribute.
 	 * @see #setUnits(String)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getUserDefinedInputConditioning_Units()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getUserDefinedInputConditioning_Units()
 	 * @model default="" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -64,7 +64,7 @@ public interface UserDefinedInputConditioning extends AbstractInputConditioning 
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transfer Function</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getUserDefinedInputConditioning_TransferFunction()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getUserDefinedInputConditioning_TransferFunction()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated

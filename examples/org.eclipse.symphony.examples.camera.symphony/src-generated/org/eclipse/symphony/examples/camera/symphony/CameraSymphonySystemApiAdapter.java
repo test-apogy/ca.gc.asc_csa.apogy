@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage#getCameraSymphonySystemApiAdapter()
+ * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage#getCameraSymphonySystemApiAdapter()
  * @model
  * @generated
  */

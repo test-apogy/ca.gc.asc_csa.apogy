@@ -12,7 +12,6 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Defines a Region.
  * <!-- end-model-doc -->
  *
@@ -23,7 +22,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *   <li>{@link org.eclipse.symphony.core.environment.Region#getTransformation <em>Transformation</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRegion()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRegion()
  * @model abstract="true"
  * @generated
  */
@@ -35,12 +34,11 @@ public interface Region extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Transform that expresses the origin of the region relative to the worksite.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Transformation</em>' containment reference.
 	 * @see #setTransformation(Matrix4x4)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRegion_Transformation()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRegion_Transformation()
 	 * @model containment="true"
 	 * @generated
 	 */

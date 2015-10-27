@@ -31,7 +31,7 @@ import org.eclipse.symphony.core.invocator.Environment;
  *   <li>{@link org.eclipse.symphony.core.SymphonyEnvironment#getActiveTimeSource <em>Active Time Source</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonyEnvironment()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyEnvironment()
  * @model
  * @generated
  */
@@ -46,7 +46,7 @@ public interface SymphonyEnvironment extends Environment, Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Worksites List</em>' containment reference.
 	 * @see #setWorksitesList(WorksitesList)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonyEnvironment_WorksitesList()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyEnvironment_WorksitesList()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -71,12 +71,11 @@ public interface SymphonyEnvironment extends Environment, Timed {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The worksite currently active.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Active Worksite</em>' reference.
 	 * @see #setActiveWorksite(AbstractWorksite)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonyEnvironment_ActiveWorksite()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyEnvironment_ActiveWorksite()
 	 * @model
 	 * @generated
 	 */
@@ -102,7 +101,7 @@ public interface SymphonyEnvironment extends Environment, Timed {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Symphony Topology</em>' reference.
 	 * @see #setSymphonyTopology(SymphonyTopology)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonyEnvironment_SymphonyTopology()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyEnvironment_SymphonyTopology()
 	 * @model transient="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='None'"
 	 * @generated
@@ -128,7 +127,7 @@ public interface SymphonyEnvironment extends Environment, Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Sources List</em>' containment reference.
 	 * @see #setTimeSourcesList(TimeSourcesList)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonyEnvironment_TimeSourcesList()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyEnvironment_TimeSourcesList()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -153,7 +152,7 @@ public interface SymphonyEnvironment extends Environment, Timed {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Active Time Source</em>' reference.
 	 * @see #setActiveTimeSource(TimeSource)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonyEnvironment_ActiveTimeSource()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyEnvironment_ActiveTimeSource()
 	 * @model
 	 * @generated
 	 */

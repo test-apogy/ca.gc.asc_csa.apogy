@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.environment.SlopeRange#getColor <em>Color</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSlopeRange()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSlopeRange()
  * @model
  * @generated
  */
@@ -45,7 +45,7 @@ public interface SlopeRange extends Named, Described {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Slope Lower Bound</em>' attribute.
 	 * @see #setSlopeLowerBound(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSlopeRange_SlopeLowerBound()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSlopeRange_SlopeLowerBound()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' csa_units='deg'"
 	 * @generated
@@ -76,7 +76,7 @@ public interface SlopeRange extends Named, Described {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Slope Upper Bound</em>' attribute.
 	 * @see #setSlopeUpperBound(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSlopeRange_SlopeUpperBound()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSlopeRange_SlopeUpperBound()
 	 * @model default="10" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' csa_units='deg'"
 	 * @generated
@@ -107,7 +107,7 @@ public interface SlopeRange extends Named, Described {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Color</em>' attribute.
 	 * @see #setColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSlopeRange_Color()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSlopeRange_Color()
 	 * @model default="1.0,1.0,1.0" unique="false" dataType="org.eclipse.symphony.core.environment.Color3f"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable'"
 	 * @generated

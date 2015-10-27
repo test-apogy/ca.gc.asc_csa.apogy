@@ -12,7 +12,7 @@ import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.AbstractMapLayer;
 import org.eclipse.symphony.core.environment.MapLayerPresentation;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -117,7 +117,7 @@ public abstract class MapLayerPresentationImpl extends MinimalEObjectImpl.Contai
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.MAP_LAYER_PRESENTATION;
+		return Symphony__CoreEnvironmentPackage.Literals.MAP_LAYER_PRESENTATION;
 	}
 
 	/**
@@ -138,7 +138,7 @@ public abstract class MapLayerPresentationImpl extends MinimalEObjectImpl.Contai
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__NAME, oldName, name));
 	}
 
 	/**
@@ -159,7 +159,7 @@ public abstract class MapLayerPresentationImpl extends MinimalEObjectImpl.Contai
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -180,7 +180,7 @@ public abstract class MapLayerPresentationImpl extends MinimalEObjectImpl.Contai
 		boolean oldVisible = visible;
 		visible = newVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE, oldVisible, visible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE, oldVisible, visible));
 	}
 
 	/**
@@ -194,7 +194,7 @@ public abstract class MapLayerPresentationImpl extends MinimalEObjectImpl.Contai
 			mapLayer = (AbstractMapLayer)eResolveProxy(oldMapLayer);
 			if (mapLayer != oldMapLayer) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__MAP_LAYER, oldMapLayer, mapLayer));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__MAP_LAYER, oldMapLayer, mapLayer));
 			}
 		}
 		return mapLayer;
@@ -218,7 +218,7 @@ public abstract class MapLayerPresentationImpl extends MinimalEObjectImpl.Contai
 		AbstractMapLayer oldMapLayer = mapLayer;
 		mapLayer = newMapLayer;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__MAP_LAYER, oldMapLayer, mapLayer));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__MAP_LAYER, oldMapLayer, mapLayer));
 	}
 
 	/**
@@ -229,13 +229,13 @@ public abstract class MapLayerPresentationImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__NAME:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__NAME:
 				return getName();
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION:
 				return getDescription();
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE:
 				return isVisible();
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__MAP_LAYER:
 				if (resolve) return getMapLayer();
 				return basicGetMapLayer();
 		}
@@ -250,16 +250,16 @@ public abstract class MapLayerPresentationImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__NAME:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE:
 				setVisible((Boolean)newValue);
 				return;
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__MAP_LAYER:
 				setMapLayer((AbstractMapLayer)newValue);
 				return;
 		}
@@ -274,16 +274,16 @@ public abstract class MapLayerPresentationImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__NAME:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE:
 				setVisible(VISIBLE_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__MAP_LAYER:
 				setMapLayer((AbstractMapLayer)null);
 				return;
 		}
@@ -298,13 +298,13 @@ public abstract class MapLayerPresentationImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__NAME:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__VISIBLE:
 				return visible != VISIBLE_EDEFAULT;
-			case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__MAP_LAYER:
 				return mapLayer != null;
 		}
 		return super.eIsSet(featureID);
@@ -319,7 +319,7 @@ public abstract class MapLayerPresentationImpl extends MinimalEObjectImpl.Contai
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -335,7 +335,7 @@ public abstract class MapLayerPresentationImpl extends MinimalEObjectImpl.Contai
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentPackage.MAP_LAYER_PRESENTATION__DESCRIPTION;
 				default: return -1;
 			}
 		}

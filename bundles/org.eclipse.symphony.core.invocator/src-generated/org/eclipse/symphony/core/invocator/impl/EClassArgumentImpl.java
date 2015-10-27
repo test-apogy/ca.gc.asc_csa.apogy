@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.core.invocator.EClassArgument;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +55,7 @@ public class EClassArgumentImpl extends ArgumentImpl implements EClassArgument
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.ECLASS_ARGUMENT;
+		return Symphony__CoreInvocatorPackage.Literals.ECLASS_ARGUMENT;
 	}
 
   /**
@@ -78,7 +78,7 @@ public class EClassArgumentImpl extends ArgumentImpl implements EClassArgument
 		EObject oldValue = value;
 		value = newValue;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ECLASS_ARGUMENT__VALUE, oldValue, newValue);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ECLASS_ARGUMENT__VALUE, oldValue, newValue);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -94,14 +94,14 @@ public class EClassArgumentImpl extends ArgumentImpl implements EClassArgument
 		if (newValue != value) {
 			NotificationChain msgs = null;
 			if (value != null)
-				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.ECLASS_ARGUMENT__VALUE, null, msgs);
+				msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.ECLASS_ARGUMENT__VALUE, null, msgs);
 			if (newValue != null)
-				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.ECLASS_ARGUMENT__VALUE, null, msgs);
+				msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.ECLASS_ARGUMENT__VALUE, null, msgs);
 			msgs = basicSetValue(newValue, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ECLASS_ARGUMENT__VALUE, newValue, newValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ECLASS_ARGUMENT__VALUE, newValue, newValue));
 	}
 
   /**
@@ -113,7 +113,7 @@ public class EClassArgumentImpl extends ArgumentImpl implements EClassArgument
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ECLASS_ARGUMENT__VALUE:
+			case Symphony__CoreInvocatorPackage.ECLASS_ARGUMENT__VALUE:
 				return basicSetValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -128,7 +128,7 @@ public class EClassArgumentImpl extends ArgumentImpl implements EClassArgument
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ECLASS_ARGUMENT__VALUE:
+			case Symphony__CoreInvocatorPackage.ECLASS_ARGUMENT__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -143,7 +143,7 @@ public class EClassArgumentImpl extends ArgumentImpl implements EClassArgument
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ECLASS_ARGUMENT__VALUE:
+			case Symphony__CoreInvocatorPackage.ECLASS_ARGUMENT__VALUE:
 				setValue((EObject)newValue);
 				return;
 		}
@@ -159,7 +159,7 @@ public class EClassArgumentImpl extends ArgumentImpl implements EClassArgument
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ECLASS_ARGUMENT__VALUE:
+			case Symphony__CoreInvocatorPackage.ECLASS_ARGUMENT__VALUE:
 				setValue((EObject)null);
 				return;
 		}
@@ -175,7 +175,7 @@ public class EClassArgumentImpl extends ArgumentImpl implements EClassArgument
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ECLASS_ARGUMENT__VALUE:
+			case Symphony__CoreInvocatorPackage.ECLASS_ARGUMENT__VALUE:
 				return value != null;
 		}
 		return super.eIsSet(featureID);

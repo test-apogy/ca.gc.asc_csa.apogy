@@ -21,8 +21,8 @@ import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.FeatureOfInterestList;
 import org.eclipse.symphony.core.FeatureOfInterestListNode;
 import org.eclipse.symphony.core.FeatureOfInterestNode;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,7 +68,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.FEATURE_OF_INTEREST_LIST_NODE;
+		return Symphony__CorePackage.Literals.FEATURE_OF_INTEREST_LIST_NODE;
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 			featureOfInterestList = (FeatureOfInterestList)eResolveProxy(oldFeatureOfInterestList);
 			if (featureOfInterestList != oldFeatureOfInterestList) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
 			}
 		}
 		return featureOfInterestList;
@@ -120,7 +120,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 		FeatureOfInterestList oldFeatureOfInterestList = featureOfInterestList;
 		featureOfInterestList = newFeatureOfInterestList;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST, oldFeatureOfInterestList, featureOfInterestList));
 	}
 
 	/**
@@ -131,7 +131,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
+			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
 				if (resolve) return getFeatureOfInterestList();
 				return basicGetFeatureOfInterestList();
 		}
@@ -146,7 +146,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
+			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
 				setFeatureOfInterestList((FeatureOfInterestList)newValue);
 				return;
 		}
@@ -161,7 +161,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
+			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
 				setFeatureOfInterestList((FeatureOfInterestList)null);
 				return;
 		}
@@ -176,7 +176,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
+			case Symphony__CorePackage.FEATURE_OF_INTEREST_LIST_NODE__FEATURE_OF_INTEREST_LIST:
 				return featureOfInterestList != null;
 		}
 		return super.eIsSet(featureID);
@@ -185,7 +185,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 	protected void addFeatureOfInterest(FeatureOfInterest foi)
 	{				
 		// Created FeatureOfInterestNode.
-		FeatureOfInterestNode featureOfInterestNode = SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode(); 
+		FeatureOfInterestNode featureOfInterestNode = Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode(); 
 		featureOfInterestNode.setFeatureOfInterest(foi);
 			
 		// Adds node to the map.
@@ -252,7 +252,7 @@ public class FeatureOfInterestListNodeImpl extends AggregateGroupNodeImpl implem
 				{
 					if (msg.getNotifier() instanceof FeatureOfInterestList) 
 					{
-						if (msg.getFeatureID(FeatureOfInterestList.class) == SymphonyCorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST) 
+						if (msg.getFeatureID(FeatureOfInterestList.class) == Symphony__CorePackage.FEATURE_OF_INTEREST_LIST__FEATURES_OF_INTEREST) 
 						{
 							switch (msg.getEventType()) 
 							{

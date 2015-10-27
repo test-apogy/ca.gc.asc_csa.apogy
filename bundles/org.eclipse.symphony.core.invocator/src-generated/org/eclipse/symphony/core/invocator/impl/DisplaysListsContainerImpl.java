@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.core.invocator.DisplaysList;
 import org.eclipse.symphony.core.invocator.DisplaysListsContainer;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,7 +58,7 @@ public class DisplaysListsContainerImpl extends AbstractToolsListContainerImpl i
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.DISPLAYS_LISTS_CONTAINER;
+		return Symphony__CoreInvocatorPackage.Literals.DISPLAYS_LISTS_CONTAINER;
 	}
 
   /**
@@ -69,7 +69,7 @@ public class DisplaysListsContainerImpl extends AbstractToolsListContainerImpl i
   public EList<DisplaysList> getDisplays()
   {
 		if (displays == null) {
-			displays = new EObjectContainmentWithInverseEList<DisplaysList>(DisplaysList.class, this, EMFEcoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS, EMFEcoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER);
+			displays = new EObjectContainmentWithInverseEList<DisplaysList>(DisplaysList.class, this, Symphony__CoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS, Symphony__CoreInvocatorPackage.DISPLAYS_LIST__DISPLAYS_LISTS_CONTAINER);
 		}
 		return displays;
 	}
@@ -84,7 +84,7 @@ public class DisplaysListsContainerImpl extends AbstractToolsListContainerImpl i
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
+			case Symphony__CoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDisplays()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -99,7 +99,7 @@ public class DisplaysListsContainerImpl extends AbstractToolsListContainerImpl i
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
+			case Symphony__CoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
 				return ((InternalEList<?>)getDisplays()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -114,7 +114,7 @@ public class DisplaysListsContainerImpl extends AbstractToolsListContainerImpl i
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
+			case Symphony__CoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
 				return getDisplays();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -130,7 +130,7 @@ public class DisplaysListsContainerImpl extends AbstractToolsListContainerImpl i
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
+			case Symphony__CoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
 				getDisplays().clear();
 				getDisplays().addAll((Collection<? extends DisplaysList>)newValue);
 				return;
@@ -147,7 +147,7 @@ public class DisplaysListsContainerImpl extends AbstractToolsListContainerImpl i
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
+			case Symphony__CoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
 				getDisplays().clear();
 				return;
 		}
@@ -163,7 +163,7 @@ public class DisplaysListsContainerImpl extends AbstractToolsListContainerImpl i
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
+			case Symphony__CoreInvocatorPackage.DISPLAYS_LISTS_CONTAINER__DISPLAYS:
 				return displays != null && !displays.isEmpty();
 		}
 		return super.eIsSet(featureID);

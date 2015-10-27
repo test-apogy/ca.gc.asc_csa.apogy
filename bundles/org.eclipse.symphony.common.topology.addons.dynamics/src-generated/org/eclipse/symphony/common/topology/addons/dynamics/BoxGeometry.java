@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.BoxGeometry#getDimension <em>Dimension</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getBoxGeometry()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getBoxGeometry()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface BoxGeometry extends Geometry {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Dimension</em>' containment reference.
 	 * @see #setDimension(Tuple3d)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getBoxGeometry_Dimension()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getBoxGeometry_Dimension()
 	 * @model containment="true"
 	 * @generated
 	 */

@@ -19,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.AbstractToolsListContainer} object.
@@ -78,7 +78,7 @@ public class AbstractToolsListContainerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractToolsListContainer_toolsList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractToolsListContainer_toolsList_feature", "_UI_AbstractToolsListContainer_type"),
-				 EMFEcoreInvocatorPackage.Literals.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST,
+				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TOOLS_LIST_CONTAINER__TOOLS_LIST,
 				 true,
 				 false,
 				 true,

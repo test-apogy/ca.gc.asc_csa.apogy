@@ -23,13 +23,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_tools_camera -->
+      <!-- @generated symphony_addons_imaging_camera -->
       <extender
             uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory$EMFEcoreInvocatorChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory$Symphony__CoreInvocatorChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.imaging.camera.provider.Symphony__AddonsSensorsImagingCameraItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

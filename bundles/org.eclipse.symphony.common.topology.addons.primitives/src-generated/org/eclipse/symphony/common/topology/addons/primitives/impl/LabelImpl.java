@@ -8,7 +8,7 @@ package org.eclipse.symphony.common.topology.addons.primitives.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.topology.addons.primitives.Label;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 import org.eclipse.symphony.common.topology.impl.NodeImpl;
 
 /**
@@ -35,7 +35,7 @@ public class LabelImpl extends NodeImpl implements Label {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PrimitivesPackage.Literals.LABEL;
+		return Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.LABEL;
 	}
 
 } //LabelImpl

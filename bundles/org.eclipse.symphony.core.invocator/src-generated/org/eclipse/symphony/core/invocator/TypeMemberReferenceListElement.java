@@ -22,7 +22,7 @@ package org.eclipse.symphony.core.invocator;
  *   <li>{@link org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getSubSegmentsCount <em>Sub Segments Count</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceListElement()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceListElement()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface TypeMemberReferenceListElement extends TypeMemberReference
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Child</em>' containment reference.
 	 * @see #setChild(TypeMemberReferenceListElement)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceListElement_Child()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceListElement_Child()
 	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getParent
 	 * @model opposite="parent" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -69,7 +69,7 @@ public interface TypeMemberReferenceListElement extends TypeMemberReference
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent</em>' container reference.
 	 * @see #setParent(TypeMemberReferenceListElement)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceListElement_Parent()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceListElement_Parent()
 	 * @see org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement#getChild
 	 * @model opposite="child" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -96,7 +96,7 @@ public interface TypeMemberReferenceListElement extends TypeMemberReference
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Root</em>' attribute.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceListElement_Root()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceListElement_Root()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement%> _parent = this.getParent();\nreturn <%com.google.common.base.Objects%>.equal(_parent, null);'"
 	 * @generated
@@ -112,7 +112,7 @@ public interface TypeMemberReferenceListElement extends TypeMemberReference
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Root Element</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceListElement_RootElement()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceListElement_RootElement()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement%> _xifexpression = null;\nboolean _isRoot = this.isRoot();\nif (_isRoot)\n{\n\treturn this;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement%> _parent = this.getParent();\n\t_xifexpression = _parent.getRootElement();\n}\nreturn _xifexpression;'"
 	 * @generated
@@ -128,7 +128,7 @@ public interface TypeMemberReferenceListElement extends TypeMemberReference
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Leaf Element</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceListElement_LeafElement()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceListElement_LeafElement()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement%> _xifexpression = null;\nboolean _isLeaf = this.isLeaf();\nif (_isLeaf)\n{\n\treturn this;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement%> _child = this.getChild();\n\t_xifexpression = _child.getLeafElement();\n}\nreturn _xifexpression;'"
 	 * @generated
@@ -144,7 +144,7 @@ public interface TypeMemberReferenceListElement extends TypeMemberReference
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Leaf</em>' attribute.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceListElement_Leaf()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceListElement_Leaf()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' get='<%org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement%> _child = this.getChild();\nreturn <%com.google.common.base.Objects%>.equal(_child, null);'"
 	 * @generated
@@ -156,12 +156,11 @@ public interface TypeMemberReferenceListElement extends TypeMemberReference
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the number of sub-segments.
 	 * @return Number of segment under this element.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Sub Segments Count</em>' attribute.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMemberReferenceListElement_SubSegmentsCount()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMemberReferenceListElement_SubSegmentsCount()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

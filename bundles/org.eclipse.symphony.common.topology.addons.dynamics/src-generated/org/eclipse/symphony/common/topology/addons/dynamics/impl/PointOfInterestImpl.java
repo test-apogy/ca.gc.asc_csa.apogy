@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.addons.dynamics.KinematicState;
 import org.eclipse.symphony.common.topology.addons.dynamics.PointOfInterest;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,7 +68,7 @@ public class PointOfInterestImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyDynamicsPackage.Literals.POINT_OF_INTEREST;
+		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.POINT_OF_INTEREST;
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class PointOfInterestImpl extends MinimalEObjectImpl.Container implements
 		Tuple3d oldOffset = offset;
 		offset = newOffset;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__OFFSET, oldOffset, newOffset);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__OFFSET, oldOffset, newOffset);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -104,14 +104,14 @@ public class PointOfInterestImpl extends MinimalEObjectImpl.Container implements
 		if (newOffset != offset) {
 			NotificationChain msgs = null;
 			if (offset != null)
-				msgs = ((InternalEObject)offset).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__OFFSET, null, msgs);
+				msgs = ((InternalEObject)offset).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__OFFSET, null, msgs);
 			if (newOffset != null)
-				msgs = ((InternalEObject)newOffset).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__OFFSET, null, msgs);
+				msgs = ((InternalEObject)newOffset).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__OFFSET, null, msgs);
 			msgs = basicSetOffset(newOffset, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__OFFSET, newOffset, newOffset));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__OFFSET, newOffset, newOffset));
 	}
 
 	/**
@@ -132,7 +132,7 @@ public class PointOfInterestImpl extends MinimalEObjectImpl.Container implements
 		KinematicState oldKinematicState = kinematicState;
 		kinematicState = newKinematicState;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE, oldKinematicState, newKinematicState);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE, oldKinematicState, newKinematicState);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -147,14 +147,14 @@ public class PointOfInterestImpl extends MinimalEObjectImpl.Container implements
 		if (newKinematicState != kinematicState) {
 			NotificationChain msgs = null;
 			if (kinematicState != null)
-				msgs = ((InternalEObject)kinematicState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE, null, msgs);
+				msgs = ((InternalEObject)kinematicState).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE, null, msgs);
 			if (newKinematicState != null)
-				msgs = ((InternalEObject)newKinematicState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE, null, msgs);
+				msgs = ((InternalEObject)newKinematicState).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE, null, msgs);
 			msgs = basicSetKinematicState(newKinematicState, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE, newKinematicState, newKinematicState));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE, newKinematicState, newKinematicState));
 	}
 
 	/**
@@ -165,9 +165,9 @@ public class PointOfInterestImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__OFFSET:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__OFFSET:
 				return basicSetOffset(null, msgs);
-			case Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE:
 				return basicSetKinematicState(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -181,9 +181,9 @@ public class PointOfInterestImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__OFFSET:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__OFFSET:
 				return getOffset();
-			case Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE:
 				return getKinematicState();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -197,10 +197,10 @@ public class PointOfInterestImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__OFFSET:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__OFFSET:
 				setOffset((Tuple3d)newValue);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE:
 				setKinematicState((KinematicState)newValue);
 				return;
 		}
@@ -215,10 +215,10 @@ public class PointOfInterestImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__OFFSET:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__OFFSET:
 				setOffset((Tuple3d)null);
 				return;
-			case Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE:
 				setKinematicState((KinematicState)null);
 				return;
 		}
@@ -233,9 +233,9 @@ public class PointOfInterestImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__OFFSET:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__OFFSET:
 				return offset != null;
-			case Symphony__CommonTopologyDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE:
+			case Symphony__CommonTopologyAddonsDynamicsPackage.POINT_OF_INTEREST__KINEMATIC_STATE:
 				return kinematicState != null;
 		}
 		return super.eIsSet(featureID);

@@ -5,7 +5,7 @@ package org.eclipse.symphony.common.topology.ui.tests;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 import org.eclipse.symphony.common.topology.ui.URLNodePresentation;
 
 /**
@@ -54,7 +54,7 @@ public class URLNodePresentationTest extends NodePresentationTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(TopologyUIFactory.eINSTANCE.createURLNodePresentation());
+		setFixture(Symphony__CommonTopologyUIFactory.eINSTANCE.createURLNodePresentation());
 	}
 
 	/**

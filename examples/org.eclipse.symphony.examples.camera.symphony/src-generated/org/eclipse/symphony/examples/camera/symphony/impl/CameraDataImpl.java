@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.fov.RectangularFrustrumFieldOfView;
 import org.eclipse.symphony.core.impl.SymphonyInitializationDataImpl;
 import org.eclipse.symphony.examples.camera.symphony.CameraData;
-import org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage;
+import org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -93,7 +93,7 @@ public class CameraDataImpl extends SymphonyInitializationDataImpl implements Ca
 	@Override
 	protected EClass eStaticClass()
 	{
-		return SymphonyExampleCameraPackage.Literals.CAMERA_DATA;
+		return Symphony__ExamplesCameraSymphonyPackage.Literals.CAMERA_DATA;
 	}
 
 	/**
@@ -114,7 +114,7 @@ public class CameraDataImpl extends SymphonyInitializationDataImpl implements Ca
 		RectangularFrustrumFieldOfView oldFov = fov;
 		fov = newFov;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyExampleCameraPackage.CAMERA_DATA__FOV, oldFov, newFov);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__FOV, oldFov, newFov);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -129,14 +129,14 @@ public class CameraDataImpl extends SymphonyInitializationDataImpl implements Ca
 		if (newFov != fov) {
 			NotificationChain msgs = null;
 			if (fov != null)
-				msgs = ((InternalEObject)fov).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyExampleCameraPackage.CAMERA_DATA__FOV, null, msgs);
+				msgs = ((InternalEObject)fov).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__FOV, null, msgs);
 			if (newFov != null)
-				msgs = ((InternalEObject)newFov).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyExampleCameraPackage.CAMERA_DATA__FOV, null, msgs);
+				msgs = ((InternalEObject)newFov).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__FOV, null, msgs);
 			msgs = basicSetFov(newFov, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleCameraPackage.CAMERA_DATA__FOV, newFov, newFov));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__FOV, newFov, newFov));
 	}
 
 	/**
@@ -159,7 +159,7 @@ public class CameraDataImpl extends SymphonyInitializationDataImpl implements Ca
 		double oldZoom = zoom;
 		zoom = newZoom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleCameraPackage.CAMERA_DATA__ZOOM, oldZoom, zoom));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__ZOOM, oldZoom, zoom));
 	}
 
 	/**
@@ -180,7 +180,7 @@ public class CameraDataImpl extends SymphonyInitializationDataImpl implements Ca
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleCameraPackage.CAMERA_DATA__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__INITIALIZED, oldInitialized, initialized));
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class CameraDataImpl extends SymphonyInitializationDataImpl implements Ca
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyExampleCameraPackage.CAMERA_DATA__FOV:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__FOV:
 				return basicSetFov(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -206,11 +206,11 @@ public class CameraDataImpl extends SymphonyInitializationDataImpl implements Ca
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case SymphonyExampleCameraPackage.CAMERA_DATA__FOV:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__FOV:
 				return getFov();
-			case SymphonyExampleCameraPackage.CAMERA_DATA__ZOOM:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__ZOOM:
 				return getZoom();
-			case SymphonyExampleCameraPackage.CAMERA_DATA__INITIALIZED:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__INITIALIZED:
 				return isInitialized();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -225,13 +225,13 @@ public class CameraDataImpl extends SymphonyInitializationDataImpl implements Ca
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case SymphonyExampleCameraPackage.CAMERA_DATA__FOV:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__FOV:
 				setFov((RectangularFrustrumFieldOfView)newValue);
 				return;
-			case SymphonyExampleCameraPackage.CAMERA_DATA__ZOOM:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__ZOOM:
 				setZoom((Double)newValue);
 				return;
-			case SymphonyExampleCameraPackage.CAMERA_DATA__INITIALIZED:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
 		}
@@ -247,13 +247,13 @@ public class CameraDataImpl extends SymphonyInitializationDataImpl implements Ca
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case SymphonyExampleCameraPackage.CAMERA_DATA__FOV:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__FOV:
 				setFov((RectangularFrustrumFieldOfView)null);
 				return;
-			case SymphonyExampleCameraPackage.CAMERA_DATA__ZOOM:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__ZOOM:
 				setZoom(ZOOM_EDEFAULT);
 				return;
-			case SymphonyExampleCameraPackage.CAMERA_DATA__INITIALIZED:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
 		}
@@ -269,11 +269,11 @@ public class CameraDataImpl extends SymphonyInitializationDataImpl implements Ca
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case SymphonyExampleCameraPackage.CAMERA_DATA__FOV:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__FOV:
 				return fov != null;
-			case SymphonyExampleCameraPackage.CAMERA_DATA__ZOOM:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__ZOOM:
 				return zoom != ZOOM_EDEFAULT;
-			case SymphonyExampleCameraPackage.CAMERA_DATA__INITIALIZED:
+			case Symphony__ExamplesCameraSymphonyPackage.CAMERA_DATA__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

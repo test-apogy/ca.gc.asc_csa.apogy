@@ -10,7 +10,8 @@ package org.eclipse.symphony.core.environment;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A specialisation of the Sky for Earth use that adds the Moon. The position of the Moon is updated, along with the Sun and stars, when the time is changed.
+ * A specialisation of the Sky for Earth use that adds the Moon. The position of the Moon is
+ * updated, along with the Sun and stars, when the time is changed.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -21,7 +22,7 @@ package org.eclipse.symphony.core.environment;
  *   <li>{@link org.eclipse.symphony.core.environment.EarthSky#getMoonHorizontalCoordinates <em>Moon Horizontal Coordinates</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEarthSky()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSky()
  * @model
  * @generated
  */
@@ -40,7 +41,7 @@ public interface EarthSky extends Sky
 	 * The Moon in the sky.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Moon</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEarthSky_Moon()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSky_Moon()
 	 * @model transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='MOON'"
 	 * @generated
@@ -56,7 +57,7 @@ public interface EarthSky extends Sky
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Moon Horizontal Coordinates</em>' reference.
 	 * @see #setMoonHorizontalCoordinates(HorizontalCoordinates)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEarthSky_MoonHorizontalCoordinates()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSky_MoonHorizontalCoordinates()
 	 * @model transient="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='MOON'"
 	 * @generated

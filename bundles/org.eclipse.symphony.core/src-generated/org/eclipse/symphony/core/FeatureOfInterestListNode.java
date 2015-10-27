@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *   <li>{@link org.eclipse.symphony.core.FeatureOfInterestListNode#getFeatureOfInterestList <em>Feature Of Interest List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getFeatureOfInterestListNode()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getFeatureOfInterestListNode()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface FeatureOfInterestListNode extends AggregateGroupNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Feature Of Interest List</em>' reference.
 	 * @see #setFeatureOfInterestList(FeatureOfInterestList)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getFeatureOfInterestListNode_FeatureOfInterestList()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getFeatureOfInterestListNode_FeatureOfInterestList()
 	 * @model transient="true"
 	 * @generated
 	 */

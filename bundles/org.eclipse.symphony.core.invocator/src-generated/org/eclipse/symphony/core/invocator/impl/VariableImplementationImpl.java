@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Type;
 import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableImplementation;
@@ -58,7 +58,7 @@ public class VariableImplementationImpl extends AbstractTypeImplementationImpl i
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATION;
+		return Symphony__CoreInvocatorPackage.Literals.VARIABLE_IMPLEMENTATION;
 	}
 
   /**
@@ -68,7 +68,7 @@ public class VariableImplementationImpl extends AbstractTypeImplementationImpl i
 	 */
   public VariableImplementationsList getVariableImplementationsList()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST) return null;
 		return (VariableImplementationsList)eContainer();
 	}
 
@@ -79,7 +79,7 @@ public class VariableImplementationImpl extends AbstractTypeImplementationImpl i
 	 */
   public VariableImplementationsList basicGetVariableImplementationsList()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST) return null;
 		return (VariableImplementationsList)eInternalContainer();
 	}
 
@@ -90,7 +90,7 @@ public class VariableImplementationImpl extends AbstractTypeImplementationImpl i
 	 */
   public NotificationChain basicSetVariableImplementationsList(VariableImplementationsList newVariableImplementationsList, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newVariableImplementationsList, EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newVariableImplementationsList, Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST, msgs);
 		return msgs;
 	}
 
@@ -101,19 +101,19 @@ public class VariableImplementationImpl extends AbstractTypeImplementationImpl i
 	 */
   public void setVariableImplementationsList(VariableImplementationsList newVariableImplementationsList)
   {
-		if (newVariableImplementationsList != eInternalContainer() || (eContainerFeatureID() != EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST && newVariableImplementationsList != null)) {
+		if (newVariableImplementationsList != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST && newVariableImplementationsList != null)) {
 			if (EcoreUtil.isAncestor(this, newVariableImplementationsList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newVariableImplementationsList != null)
-				msgs = ((InternalEObject)newVariableImplementationsList).eInverseAdd(this, EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS, VariableImplementationsList.class, msgs);
+				msgs = ((InternalEObject)newVariableImplementationsList).eInverseAdd(this, Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS, VariableImplementationsList.class, msgs);
 			msgs = basicSetVariableImplementationsList(newVariableImplementationsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST, newVariableImplementationsList, newVariableImplementationsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST, newVariableImplementationsList, newVariableImplementationsList));
 	}
 
   /**
@@ -128,7 +128,7 @@ public class VariableImplementationImpl extends AbstractTypeImplementationImpl i
 			variable = (Variable)eResolveProxy(oldVariable);
 			if (variable != oldVariable) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE, oldVariable, variable));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE, oldVariable, variable));
 			}
 		}
 		return variable;
@@ -154,7 +154,7 @@ public class VariableImplementationImpl extends AbstractTypeImplementationImpl i
 		Variable oldVariable = variable;
 		variable = newVariable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE, oldVariable, variable));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE, oldVariable, variable));
 	}
 
   /**
@@ -176,7 +176,7 @@ public class VariableImplementationImpl extends AbstractTypeImplementationImpl i
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST:
+			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetVariableImplementationsList((VariableImplementationsList)otherEnd, msgs);
@@ -193,7 +193,7 @@ public class VariableImplementationImpl extends AbstractTypeImplementationImpl i
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST:
+			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST:
 				return basicSetVariableImplementationsList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -208,8 +208,8 @@ public class VariableImplementationImpl extends AbstractTypeImplementationImpl i
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS, VariableImplementationsList.class, msgs);
+			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS, VariableImplementationsList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -223,10 +223,10 @@ public class VariableImplementationImpl extends AbstractTypeImplementationImpl i
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST:
+			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST:
 				if (resolve) return getVariableImplementationsList();
 				return basicGetVariableImplementationsList();
-			case EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE:
+			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE:
 				if (resolve) return getVariable();
 				return basicGetVariable();
 		}
@@ -242,10 +242,10 @@ public class VariableImplementationImpl extends AbstractTypeImplementationImpl i
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST:
+			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST:
 				setVariableImplementationsList((VariableImplementationsList)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE:
+			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE:
 				setVariable((Variable)newValue);
 				return;
 		}
@@ -261,10 +261,10 @@ public class VariableImplementationImpl extends AbstractTypeImplementationImpl i
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST:
+			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST:
 				setVariableImplementationsList((VariableImplementationsList)null);
 				return;
-			case EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE:
+			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE:
 				setVariable((Variable)null);
 				return;
 		}
@@ -280,9 +280,9 @@ public class VariableImplementationImpl extends AbstractTypeImplementationImpl i
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST:
+			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE_IMPLEMENTATIONS_LIST:
 				return basicGetVariableImplementationsList() != null;
-			case EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE:
+			case Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATION__VARIABLE:
 				return variable != null;
 		}
 		return super.eIsSet(featureID);

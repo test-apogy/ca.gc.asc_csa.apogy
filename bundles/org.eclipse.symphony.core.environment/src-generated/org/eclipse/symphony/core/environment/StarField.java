@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.core.environment.StarField#getStarFieldFileName <em>Star Field File Name</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getStarField()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getStarField()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface StarField extends Node
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Stars</em>' reference list.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getStarField_Stars()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getStarField_Stars()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='None'"
 	 * @generated
@@ -58,7 +58,7 @@ public interface StarField extends Node
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Star Field File Name</em>' attribute.
 	 * @see #setStarFieldFileName(String)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getStarField_StarFieldFileName()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getStarField_StarFieldFileName()
 	 * @model default="bright_star_catalog_5.txt" unique="false"
 	 * @generated
 	 */

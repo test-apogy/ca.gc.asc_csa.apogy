@@ -31,7 +31,7 @@ import org.jfree.data.xy.XYSeries;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.TrajectoryProvider#getTrajectoryColor <em>Trajectory Color</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getTrajectoryProvider()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getTrajectoryProvider()
  * @model abstract="true"
  * @generated
  */
@@ -42,11 +42,11 @@ public interface TrajectoryProvider extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Latest x coordinates.
+	 * Latest x coordinates.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Latest Position</em>' attribute.
 	 * @see #setLatestPosition(XYDataItem)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getTrajectoryProvider_LatestPosition()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getTrajectoryProvider_LatestPosition()
 	 * @model unique="false" dataType="org.eclipse.symphony.core.environment.ui.XYDataItem" transient="true"
 	 * @generated
 	 */
@@ -68,11 +68,11 @@ public interface TrajectoryProvider extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The azimuth of the latest position, in radians, as measured relative to the x axis, positive clockwise.
+	 * The azimuth of the latest position, in radians, as measured relative to the x axis, positive clockwise.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Azimuth Angle</em>' attribute.
 	 * @see #setAzimuthAngle(double)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getTrajectoryProvider_AzimuthAngle()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getTrajectoryProvider_AzimuthAngle()
 	 * @model default="0.0" unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
@@ -95,11 +95,11 @@ public interface TrajectoryProvider extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The current length of the trajectory.
+	 * The current length of the trajectory.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Trajectory Length</em>' attribute.
 	 * @see #setTrajectoryLength(double)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getTrajectoryProvider_TrajectoryLength()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getTrajectoryProvider_TrajectoryLength()
 	 * @model default="0.0" unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated
@@ -122,11 +122,11 @@ public interface TrajectoryProvider extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The color of the ruler.
+	 * The color of the ruler.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Trajectory Color</em>' attribute.
 	 * @see #setTrajectoryColor(Color3f)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getTrajectoryProvider_TrajectoryColor()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getTrajectoryProvider_TrajectoryColor()
 	 * @model default="0.0,1.0,0.0" unique="false" dataType="org.eclipse.symphony.core.environment.ui.Color3f"
 	 * @generated
 	 */
@@ -146,7 +146,7 @@ public interface TrajectoryProvider extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Re-initialize the TrajectoryProvider.
+	 * Re-initialize the TrajectoryProvider.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
@@ -157,7 +157,7 @@ public interface TrajectoryProvider extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Clears the list of points and associated trajectory.
+	 * Clears the list of points and associated trajectory.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated
@@ -168,7 +168,7 @@ public interface TrajectoryProvider extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Returns the current trajectory as a list of Point2d.
+	 * Returns the current trajectory as a list of Point2d.
 	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.core.environment.ui.List<org.eclipse.symphony.core.environment.ui.Point2d>" unique="false" many="false"
 	 * @generated
@@ -179,7 +179,7 @@ public interface TrajectoryProvider extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The XYSeries containing the trajectory data to be displayed.
+	 * The XYSeries containing the trajectory data to be displayed.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" dataType="org.eclipse.symphony.core.environment.ui.XYSeries" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"

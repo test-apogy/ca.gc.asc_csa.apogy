@@ -10,7 +10,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="org.eclipse.symphony.examples.camera"
-            class="org.eclipse.symphony.examples.camera.provider.EMFEcoreExampleCameraItemProviderAdapterFactory"
+            class="org.eclipse.symphony.examples.camera.provider.Symphony__ExamplesCameraItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -23,14 +23,7 @@
       <!-- @generated symphony_examples_camera -->
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.camera.provider.EMFEcoreExampleCameraItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated emf_ecore.examples_camera -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.camera.provider.EMFEcoreExampleCameraItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.camera.provider.Symphony__ExamplesCameraItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

@@ -33,7 +33,7 @@ import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
 import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
 import org.eclipse.symphony.core.environment.MapLayerPresentation;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
@@ -335,7 +335,7 @@ public class MapLayerPresentationsListComposite extends Composite {
 			SetCommand command = new SetCommand(
 					editingDomain,
 					mapLayerPresentation,
-					SymphonyEnvironmentPackage.Literals.MAP_LAYER_PRESENTATION__VISIBLE,
+					Symphony__CoreEnvironmentPackage.Literals.MAP_LAYER_PRESENTATION__VISIBLE,
 					booleanValue);
 			editingDomain.getCommandStack().execute(command);
 
@@ -387,7 +387,7 @@ public class MapLayerPresentationsListComposite extends Composite {
 			SetCommand command = new SetCommand(
 					editingDomain,
 					mapLayerPresentation,
-					SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER_PRESENTATION__ALPHA,
+					Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER_PRESENTATION__ALPHA,
 					floatValue);
 			editingDomain.getCommandStack().execute(command);
 

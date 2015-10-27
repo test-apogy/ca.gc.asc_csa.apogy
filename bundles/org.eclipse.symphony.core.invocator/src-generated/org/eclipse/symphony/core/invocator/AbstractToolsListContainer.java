@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractToolsListContainer#getToolsList <em>Tools List</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractToolsListContainer()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractToolsListContainer()
  * @model abstract="true"
  * @generated
  */
@@ -35,7 +35,7 @@ public interface AbstractToolsListContainer extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tools List</em>' container reference.
 	 * @see #setToolsList(ToolsList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractToolsListContainer_ToolsList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractToolsListContainer_ToolsList()
 	 * @see org.eclipse.symphony.core.invocator.ToolsList#getToolsListContainers
 	 * @model opposite="toolsListContainers" transient="false"
 	 * @generated

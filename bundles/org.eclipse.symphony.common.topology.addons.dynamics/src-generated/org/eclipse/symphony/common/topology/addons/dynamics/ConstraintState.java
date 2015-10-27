@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.ConstraintState#getForce <em>Force</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getConstraintState()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintState()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface ConstraintState extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Position</em>' attribute.
 	 * @see #setPosition(double)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getConstraintState_Position()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintState_Position()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -68,7 +68,7 @@ public interface ConstraintState extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Velocity</em>' attribute.
 	 * @see #setVelocity(double)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getConstraintState_Velocity()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintState_Velocity()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -94,7 +94,7 @@ public interface ConstraintState extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Force</em>' attribute.
 	 * @see #setForce(double)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getConstraintState_Force()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getConstraintState_Force()
 	 * @model unique="false"
 	 * @generated
 	 */

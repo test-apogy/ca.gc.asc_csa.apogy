@@ -378,7 +378,7 @@ public class OperationCallArgumentsComposite extends Composite {
 //			SetCommand command = new SetCommand(
 //					editingDomain,
 //					implementation,
-//					EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
+//					Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
 //					eClass);
 //			editingDomain.getCommandStack().execute(command);
 

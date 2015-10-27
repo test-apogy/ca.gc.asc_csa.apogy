@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.io.jinput.EComponentQualifier;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.ControllerTrigger#getComponentQualifier <em>Component Qualifier</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerTrigger()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerTrigger()
  * @model abstract="true"
  * @generated
  */
@@ -33,7 +33,7 @@ public interface ControllerTrigger extends Trigger
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Component Qualifier</em>' containment reference.
 	 * @see #setComponentQualifier(EComponentQualifier)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerTrigger_ComponentQualifier()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerTrigger_ComponentQualifier()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated

@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.ToolsList#getToolsListContainers <em>Tools List Containers</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getToolsList()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getToolsList()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface ToolsList extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Invocator Session</em>' container reference.
 	 * @see #setInvocatorSession(InvocatorSession)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getToolsList_InvocatorSession()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getToolsList_InvocatorSession()
 	 * @see org.eclipse.symphony.core.invocator.InvocatorSession#getToolsList
 	 * @model opposite="toolsList" transient="false"
 	 * @generated
@@ -71,7 +71,7 @@ public interface ToolsList extends Named, Described
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tools List Containers</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getToolsList_ToolsListContainers()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getToolsList_ToolsListContainers()
 	 * @see org.eclipse.symphony.core.invocator.AbstractToolsListContainer#getToolsList
 	 * @model opposite="toolsList" containment="true"
 	 * @generated

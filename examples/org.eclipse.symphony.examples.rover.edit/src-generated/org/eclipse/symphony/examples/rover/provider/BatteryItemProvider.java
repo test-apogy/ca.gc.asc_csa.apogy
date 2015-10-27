@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.examples.rover.Battery;
-import org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage;
+import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.rover.Battery} object.
@@ -79,7 +79,7 @@ public class BatteryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Battery_active_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Battery_active_feature", "_UI_Battery_type"),
-				 EMFEcoreExampleRoverPackage.Literals.BATTERY__ACTIVE,
+				 Symphony__ExamplesRoverPackage.Literals.BATTERY__ACTIVE,
 				 false,
 				 false,
 				 false,
@@ -101,7 +101,7 @@ public class BatteryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Battery_voltage_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Battery_voltage_feature", "_UI_Battery_type"),
-				 EMFEcoreExampleRoverPackage.Literals.BATTERY__VOLTAGE,
+				 Symphony__ExamplesRoverPackage.Literals.BATTERY__VOLTAGE,
 				 false,
 				 false,
 				 false,
@@ -123,7 +123,7 @@ public class BatteryItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Battery_current_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Battery_current_feature", "_UI_Battery_type"),
-				 EMFEcoreExampleRoverPackage.Literals.BATTERY__CURRENT,
+				 Symphony__ExamplesRoverPackage.Literals.BATTERY__CURRENT,
 				 false,
 				 false,
 				 false,
@@ -168,9 +168,9 @@ public class BatteryItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Battery.class)) {
-			case EMFEcoreExampleRoverPackage.BATTERY__ACTIVE:
-			case EMFEcoreExampleRoverPackage.BATTERY__VOLTAGE:
-			case EMFEcoreExampleRoverPackage.BATTERY__CURRENT:
+			case Symphony__ExamplesRoverPackage.BATTERY__ACTIVE:
+			case Symphony__ExamplesRoverPackage.BATTERY__VOLTAGE:
+			case Symphony__ExamplesRoverPackage.BATTERY__CURRENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

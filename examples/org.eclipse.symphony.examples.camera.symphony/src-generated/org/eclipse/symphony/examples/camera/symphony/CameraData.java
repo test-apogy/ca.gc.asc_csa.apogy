@@ -28,7 +28,7 @@ import org.eclipse.symphony.core.SymphonyInitializationData;
  *   <li>{@link org.eclipse.symphony.examples.camera.symphony.CameraData#isInitialized <em>Initialized</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage#getCameraData()
+ * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage#getCameraData()
  * @model
  * @generated
  */
@@ -44,7 +44,7 @@ public interface CameraData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fov</em>' containment reference.
 	 * @see #setFov(RectangularFrustrumFieldOfView)
-	 * @see org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage#getCameraData_Fov()
+	 * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage#getCameraData_Fov()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertCategory='Camera'"
 	 * @generated
@@ -74,7 +74,7 @@ public interface CameraData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Zoom</em>' attribute.
 	 * @see #setZoom(double)
-	 * @see org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage#getCameraData_Zoom()
+	 * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage#getCameraData_Zoom()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='Camera'"
 	 * @generated
@@ -101,7 +101,7 @@ public interface CameraData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.camera.symphony.SymphonyExampleCameraPackage#getCameraData_Initialized()
+	 * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage#getCameraData_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated

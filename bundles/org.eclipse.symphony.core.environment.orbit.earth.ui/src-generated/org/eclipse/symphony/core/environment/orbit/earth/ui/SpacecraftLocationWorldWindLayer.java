@@ -22,7 +22,7 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftLocationWorldWindLayer#isShowLatLon <em>Show Lat Lon</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getSpacecraftLocationWorldWindLayer()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftLocationWorldWindLayer()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface SpacecraftLocationWorldWindLayer extends AbstractWorldWindLayer
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orbit Model</em>' reference.
 	 * @see #setOrbitModel(OrbitModel)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getSpacecraftLocationWorldWindLayer_OrbitModel()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftLocationWorldWindLayer_OrbitModel()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='ORBIT_MODEL'"
 	 * @generated
 	 */
@@ -69,7 +69,7 @@ public interface SpacecraftLocationWorldWindLayer extends AbstractWorldWindLayer
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Source</em>' reference.
 	 * @see #setTimeSource(Timed)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getSpacecraftLocationWorldWindLayer_TimeSource()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftLocationWorldWindLayer_TimeSource()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME'"
 	 * @generated
 	 */
@@ -95,7 +95,7 @@ public interface SpacecraftLocationWorldWindLayer extends AbstractWorldWindLayer
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Show Ground Projection</em>' attribute.
 	 * @see #setShowGroundProjection(boolean)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getSpacecraftLocationWorldWindLayer_ShowGroundProjection()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftLocationWorldWindLayer_ShowGroundProjection()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable'"
 	 * @generated
@@ -122,7 +122,7 @@ public interface SpacecraftLocationWorldWindLayer extends AbstractWorldWindLayer
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Show Lat Lon</em>' attribute.
 	 * @see #setShowLatLon(boolean)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getSpacecraftLocationWorldWindLayer_ShowLatLon()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftLocationWorldWindLayer_ShowLatLon()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable'"
 	 * @generated

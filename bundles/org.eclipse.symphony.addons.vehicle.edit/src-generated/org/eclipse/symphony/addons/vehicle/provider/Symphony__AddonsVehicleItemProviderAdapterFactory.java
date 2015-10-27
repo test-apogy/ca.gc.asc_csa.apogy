@@ -42,14 +42,14 @@ import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.bindings.BindingsList;
 import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
-import org.eclipse.symphony.common.topology.bindings.util.TopologyBindingsSwitch;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.util.Symphony__CommonTopologyBindingsSwitch;
 import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
 import org.eclipse.symphony.core.AssemblyLink;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.TopologyRoot;
-import org.eclipse.symphony.core.util.SymphonyCoreSwitch;
+import org.eclipse.symphony.core.util.Symphony__CoreSwitch;
 
 /**
  * This is the factory that is used to provide the interfaces needed to support Viewers.
@@ -596,65 +596,61 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
   /**
-	 * A child creation extender for the {@link SymphonyCorePackage}.
+	 * A child creation extender for the {@link Symphony__CorePackage}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static class SymphonyCoreChildCreationExtender implements IChildCreationExtender
-  {
-    /**
+	public static class Symphony__CoreChildCreationExtender implements IChildCreationExtender {
+		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    protected static class CreationSwitch extends SymphonyCoreSwitch<Object>
-    {
-      /**
+		protected static class CreationSwitch extends Symphony__CoreSwitch<Object> {
+			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      protected List<Object> newChildDescriptors;
+			protected List<Object> newChildDescriptors;
 
-      /**
+			/**
 			 * The domain in which to create the children.
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      protected EditingDomain editingDomain;
+			protected EditingDomain editingDomain;
 
-      /**
+			/**
 			 * Creates the a switch for populating child descriptors in the given domain.
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) 
-      {
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
 			}
-      /**
+			/**
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      @Override
-      public Object caseSymphonySystemApiAdapter(SymphonySystemApiAdapter object)
-      {
+			@Override
+			public Object caseSymphonySystemApiAdapter(SymphonySystemApiAdapter object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR,
+						(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM_API_ADAPTER__POSE_CORRECTOR,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createVehiclePoseCorrector()));
 
 				return null;
 			}
  
-      /**
+			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
 			 * @generated
@@ -663,27 +659,28 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 			public Object caseAssemblyLink(AssemblyLink object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
+						(Symphony__CorePackage.Literals.ASSEMBLY_LINK__GEOMETRY_NODE,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
 
 				return null;
 			}
-						/**
+ 
+			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
 			 * @generated
@@ -692,62 +689,60 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 			public Object caseTopologyRoot(TopologyRoot object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+						(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
 
 				return null;
 			}
-						/**
+ 
+			/**
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      protected CommandParameter createChildParameter(Object feature, Object child)
-      {
+			protected CommandParameter createChildParameter(Object feature, Object child) {
 				return new CommandParameter(null, feature, child);
 			}
 
-    }
+		}
 
-    /**
+		/**
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain)
-    {
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
 			ArrayList<Object> result = new ArrayList<Object>();
 			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
 			return result;
 		}
 
-    /**
+		/**
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    public ResourceLocator getResourceLocator()
-    {
+		public ResourceLocator getResourceLocator() {
 			return Symphony__AddonsVehicleEditPlugin.INSTANCE;
 		}
-  }
+	}
 
-  /**
+		/**
 	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1040,49 +1035,46 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 	}
 
 		/**
-	 * A child creation extender for the {@link TopologyBindingsPackage}.
+	 * A child creation extender for the {@link Symphony__CommonTopologyBindingsPackage}.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public static class TopologyBindingsChildCreationExtender implements IChildCreationExtender
-  {
-    /**
+	public static class Symphony__CommonTopologyBindingsChildCreationExtender implements IChildCreationExtender {
+		/**
 		 * The switch for creating child descriptors specific to each extended class.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    protected static class CreationSwitch extends TopologyBindingsSwitch<Object>
-    {
-      /**
+		protected static class CreationSwitch extends Symphony__CommonTopologyBindingsSwitch<Object> {
+			/**
 			 * The child descriptors being populated.
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      protected List<Object> newChildDescriptors;
+			protected List<Object> newChildDescriptors;
 
-      /**
+			/**
 			 * The domain in which to create the children.
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      protected EditingDomain editingDomain;
+			protected EditingDomain editingDomain;
 
-      /**
+			/**
 			 * Creates the a switch for populating child descriptors in the given domain.
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) 
-      {
+			CreationSwitch(List<Object> newChildDescriptors, EditingDomain editingDomain) {
 				this.newChildDescriptors = newChildDescriptors;
 				this.editingDomain = editingDomain;
 			}
-      /**
+			/**
 			 * <!-- begin-user-doc -->
 			 * <!-- end-user-doc -->
 			 * @generated
@@ -1091,77 +1083,75 @@ public class Symphony__AddonsVehicleItemProviderAdapterFactory extends Symphony_
 			public Object caseEnumerationCase(EnumerationCase object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createWheel()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createThruster()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createLanderSphericalFoot()));
 
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
+						(Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_CASE__TOPOLOGY_ROOT,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createPathPlannerToolNode()));
 
 				return null;
 			}
-						/**
+ 
+			/**
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      @Override
-      public Object caseBindingsList(BindingsList object)
-      {
+			@Override
+			public Object caseBindingsList(BindingsList object) {
 				newChildDescriptors.add
 					(createChildParameter
-						(TopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
+						(Symphony__CommonTopologyBindingsPackage.Literals.BINDINGS_LIST__BINDINGS,
 						 Symphony__AddonsVehicleFactory.eINSTANCE.createThrusterBinding()));
 
 				return null;
 			}
-      /**
+ 
+			/**
 			 * <!-- begin-user-doc -->
-       * <!-- end-user-doc -->
+			 * <!-- end-user-doc -->
 			 * @generated
 			 */
-      protected CommandParameter createChildParameter(Object feature, Object child)
-      {
+			protected CommandParameter createChildParameter(Object feature, Object child) {
 				return new CommandParameter(null, feature, child);
 			}
 
-    }
+		}
 
-    /**
+		/**
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain)
-    {
+		public Collection<Object> getNewChildDescriptors(Object object, EditingDomain editingDomain) {
 			ArrayList<Object> result = new ArrayList<Object>();
 			new CreationSwitch(result, editingDomain).doSwitch((EObject)object);
 			return result;
 		}
 
-    /**
+		/**
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    public ResourceLocator getResourceLocator()
-    {
+		public ResourceLocator getResourceLocator() {
 			return Symphony__AddonsVehicleEditPlugin.INSTANCE;
 		}
-  }
+	}
 
-  /**
+		/**
 	 * A child creation extender for the {@link Symphony__AddonsPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

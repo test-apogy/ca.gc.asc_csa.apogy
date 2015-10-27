@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeomet
 import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
 import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
-import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
+import org.eclipse.symphony.common.topology.bindings.provider.Symphony__CommonTopologyBindingsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
 
 /**
@@ -48,7 +48,7 @@ public final class Symphony__AddonsSensorsFOVBindingsEditPlugin extends EMFPlugi
   {
 		super
 		  (new ResourceLocator [] {
-		     TopologyBindingsEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyBindingsEditPlugin.INSTANCE,
 		     Symphony__AddonsSensorsFOVEditPlugin.INSTANCE,
 		     Symphony__CommonTopologyEditPlugin.INSTANCE,
 		     Symphony__CommonEMFEditPlugin.INSTANCE,

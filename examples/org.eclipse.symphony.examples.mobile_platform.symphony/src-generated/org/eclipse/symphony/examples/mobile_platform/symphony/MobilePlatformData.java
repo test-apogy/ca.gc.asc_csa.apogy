@@ -27,7 +27,7 @@ import org.eclipse.symphony.core.SymphonyInitializationData;
  *   <li>{@link org.eclipse.symphony.examples.mobile_platform.symphony.MobilePlatformData#getAngularVelocity <em>Angular Velocity</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformPackage#getMobilePlatformData()
+ * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage#getMobilePlatformData()
  * @model
  * @generated
  */
@@ -43,7 +43,7 @@ public interface MobilePlatformData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformPackage#getMobilePlatformData_Initialized()
+	 * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage#getMobilePlatformData_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated
@@ -71,7 +71,7 @@ public interface MobilePlatformData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Disposed</em>' attribute.
 	 * @see #setDisposed(boolean)
-	 * @see org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformPackage#getMobilePlatformData_Disposed()
+	 * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage#getMobilePlatformData_Disposed()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated
@@ -99,7 +99,7 @@ public interface MobilePlatformData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Linear Velocity</em>' attribute.
 	 * @see #setLinearVelocity(double)
-	 * @see org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformPackage#getMobilePlatformData_LinearVelocity()
+	 * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage#getMobilePlatformData_LinearVelocity()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
 	 * @generated
@@ -127,7 +127,7 @@ public interface MobilePlatformData extends SymphonyInitializationData {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Angular Velocity</em>' attribute.
 	 * @see #setAngularVelocity(double)
-	 * @see org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformPackage#getMobilePlatformData_AngularVelocity()
+	 * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage#getMobilePlatformData_AngularVelocity()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
 	 * @generated

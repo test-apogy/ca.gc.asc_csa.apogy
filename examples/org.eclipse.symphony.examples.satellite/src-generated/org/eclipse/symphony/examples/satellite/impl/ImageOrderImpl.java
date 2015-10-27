@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.ImageOrder;
 
 /**
@@ -116,7 +116,7 @@ public class ImageOrderImpl extends MinimalEObjectImpl.Container implements Imag
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleSatellitePackage.Literals.IMAGE_ORDER;
+		return Symphony__ExamplesSatellitePackage.Literals.IMAGE_ORDER;
 	}
 
 	/**
@@ -137,7 +137,7 @@ public class ImageOrderImpl extends MinimalEObjectImpl.Container implements Imag
 		int oldOrderId = orderId;
 		orderId = newOrderId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.IMAGE_ORDER__ORDER_ID, oldOrderId, orderId));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.IMAGE_ORDER__ORDER_ID, oldOrderId, orderId));
 	}
 
 	/**
@@ -158,7 +158,7 @@ public class ImageOrderImpl extends MinimalEObjectImpl.Container implements Imag
 		int oldPriority = priority;
 		priority = newPriority;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.IMAGE_ORDER__PRIORITY, oldPriority, priority));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.IMAGE_ORDER__PRIORITY, oldPriority, priority));
 	}
 
 	/**
@@ -179,7 +179,7 @@ public class ImageOrderImpl extends MinimalEObjectImpl.Container implements Imag
 		GeographicCoordinates oldImageCenter = imageCenter;
 		imageCenter = newImageCenter;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.IMAGE_ORDER__IMAGE_CENTER, oldImageCenter, newImageCenter);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.IMAGE_ORDER__IMAGE_CENTER, oldImageCenter, newImageCenter);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -194,14 +194,14 @@ public class ImageOrderImpl extends MinimalEObjectImpl.Container implements Imag
 		if (newImageCenter != imageCenter) {
 			NotificationChain msgs = null;
 			if (imageCenter != null)
-				msgs = ((InternalEObject)imageCenter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleSatellitePackage.IMAGE_ORDER__IMAGE_CENTER, null, msgs);
+				msgs = ((InternalEObject)imageCenter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.IMAGE_ORDER__IMAGE_CENTER, null, msgs);
 			if (newImageCenter != null)
-				msgs = ((InternalEObject)newImageCenter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreExampleSatellitePackage.IMAGE_ORDER__IMAGE_CENTER, null, msgs);
+				msgs = ((InternalEObject)newImageCenter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatellitePackage.IMAGE_ORDER__IMAGE_CENTER, null, msgs);
 			msgs = basicSetImageCenter(newImageCenter, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.IMAGE_ORDER__IMAGE_CENTER, newImageCenter, newImageCenter));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.IMAGE_ORDER__IMAGE_CENTER, newImageCenter, newImageCenter));
 	}
 
 	/**
@@ -222,7 +222,7 @@ public class ImageOrderImpl extends MinimalEObjectImpl.Container implements Imag
 		double oldCommandedZoom = commandedZoom;
 		commandedZoom = newCommandedZoom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.IMAGE_ORDER__COMMANDED_ZOOM, oldCommandedZoom, commandedZoom));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.IMAGE_ORDER__COMMANDED_ZOOM, oldCommandedZoom, commandedZoom));
 	}
 
 	/**
@@ -233,7 +233,7 @@ public class ImageOrderImpl extends MinimalEObjectImpl.Container implements Imag
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__IMAGE_CENTER:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__IMAGE_CENTER:
 				return basicSetImageCenter(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -247,13 +247,13 @@ public class ImageOrderImpl extends MinimalEObjectImpl.Container implements Imag
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__ORDER_ID:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__ORDER_ID:
 				return getOrderId();
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__PRIORITY:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__PRIORITY:
 				return getPriority();
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__IMAGE_CENTER:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__IMAGE_CENTER:
 				return getImageCenter();
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__COMMANDED_ZOOM:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__COMMANDED_ZOOM:
 				return getCommandedZoom();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -267,16 +267,16 @@ public class ImageOrderImpl extends MinimalEObjectImpl.Container implements Imag
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__ORDER_ID:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__ORDER_ID:
 				setOrderId((Integer)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__PRIORITY:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__PRIORITY:
 				setPriority((Integer)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__IMAGE_CENTER:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__IMAGE_CENTER:
 				setImageCenter((GeographicCoordinates)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__COMMANDED_ZOOM:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__COMMANDED_ZOOM:
 				setCommandedZoom((Double)newValue);
 				return;
 		}
@@ -291,16 +291,16 @@ public class ImageOrderImpl extends MinimalEObjectImpl.Container implements Imag
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__ORDER_ID:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__ORDER_ID:
 				setOrderId(ORDER_ID_EDEFAULT);
 				return;
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__PRIORITY:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__PRIORITY:
 				setPriority(PRIORITY_EDEFAULT);
 				return;
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__IMAGE_CENTER:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__IMAGE_CENTER:
 				setImageCenter((GeographicCoordinates)null);
 				return;
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__COMMANDED_ZOOM:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__COMMANDED_ZOOM:
 				setCommandedZoom(COMMANDED_ZOOM_EDEFAULT);
 				return;
 		}
@@ -315,13 +315,13 @@ public class ImageOrderImpl extends MinimalEObjectImpl.Container implements Imag
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__ORDER_ID:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__ORDER_ID:
 				return orderId != ORDER_ID_EDEFAULT;
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__PRIORITY:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__PRIORITY:
 				return priority != PRIORITY_EDEFAULT;
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__IMAGE_CENTER:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__IMAGE_CENTER:
 				return imageCenter != null;
-			case EMFEcoreExampleSatellitePackage.IMAGE_ORDER__COMMANDED_ZOOM:
+			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER__COMMANDED_ZOOM:
 				return commandedZoom != COMMANDED_ZOOM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

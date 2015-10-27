@@ -24,8 +24,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration} object.
@@ -124,7 +124,7 @@ public class EarthViewConfigurationItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentUIPackage.Literals.EARTH_VIEW_CONFIGURATION__LAYERS);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION__LAYERS);
 		}
 		return childrenFeatures;
 	}
@@ -180,11 +180,11 @@ public class EarthViewConfigurationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EarthViewConfiguration.class)) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__NAME:
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -204,28 +204,28 @@ public class EarthViewConfigurationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentUIPackage.Literals.EARTH_VIEW_CONFIGURATION__LAYERS,
-				 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftLocationWorldWindLayer()));
+				(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION__LAYERS,
+				 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftLocationWorldWindLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentUIPackage.Literals.EARTH_VIEW_CONFIGURATION__LAYERS,
-				 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createOrbitModelWorldWindLayer()));
+				(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION__LAYERS,
+				 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createOrbitModelWorldWindLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentUIPackage.Literals.EARTH_VIEW_CONFIGURATION__LAYERS,
-				 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftSwathWorldWindLayer()));
+				(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION__LAYERS,
+				 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftSwathWorldWindLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentUIPackage.Literals.EARTH_VIEW_CONFIGURATION__LAYERS,
-				 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createEarthSurfaceLocationWorldWindLayer()));
+				(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION__LAYERS,
+				 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createEarthSurfaceLocationWorldWindLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentUIPackage.Literals.EARTH_VIEW_CONFIGURATION__LAYERS,
-				 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createGroundStationWorldWindLayer()));
+				(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.EARTH_VIEW_CONFIGURATION__LAYERS,
+				 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createGroundStationWorldWindLayer()));
 	}
 
 	/**

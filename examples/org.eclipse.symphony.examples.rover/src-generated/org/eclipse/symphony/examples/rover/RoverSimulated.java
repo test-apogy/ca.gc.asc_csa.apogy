@@ -17,7 +17,7 @@ package org.eclipse.symphony.examples.rover;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage#getRoverSimulated()
+ * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRoverSimulated()
  * @model
  * @generated
  */

@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.MathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -181,7 +181,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.RECTANGULAR_REGION;
+		return Symphony__CoreEnvironmentPackage.Literals.RECTANGULAR_REGION;
 	}
 
   /**
@@ -204,7 +204,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
 		double oldXMin = xMin;
 		xMin = newXMin;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.RECTANGULAR_REGION__XMIN, oldXMin, xMin));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMIN, oldXMin, xMin));
 	}
 
   /**
@@ -227,7 +227,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
 		double oldXMax = xMax;
 		xMax = newXMax;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.RECTANGULAR_REGION__XMAX, oldXMax, xMax));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMAX, oldXMax, xMax));
 	}
 
   /**
@@ -250,7 +250,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
 		double oldYMin = yMin;
 		yMin = newYMin;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.RECTANGULAR_REGION__YMIN, oldYMin, yMin));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMIN, oldYMin, yMin));
 	}
 
   /**
@@ -273,7 +273,7 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
 		double oldYMax = yMax;
 		yMax = newYMax;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.RECTANGULAR_REGION__YMAX, oldYMax, yMax));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMAX, oldYMax, yMax));
 	}
 
   /**
@@ -403,28 +403,28 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__XMIN:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMIN:
 				return getXMin();
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__XMAX:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMAX:
 				return getXMax();
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__YMIN:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMIN:
 				return getYMin();
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__YMAX:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMAX:
 				return getYMax();
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__XDIMENSION:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XDIMENSION:
 				return getXDimension();
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__YDIMENSION:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YDIMENSION:
 				return getYDimension();
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__LOWER_LEFT_CORNER:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__LOWER_LEFT_CORNER:
 				if (resolve) return getLowerLeftCorner();
 				return basicGetLowerLeftCorner();
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__UPPER_LEFT_CORNER:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__UPPER_LEFT_CORNER:
 				if (resolve) return getUpperLeftCorner();
 				return basicGetUpperLeftCorner();
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__LOWER_RIGHT_CORNER:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__LOWER_RIGHT_CORNER:
 				if (resolve) return getLowerRightCorner();
 				return basicGetLowerRightCorner();
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__UPPER_RIGHT_CORNER:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__UPPER_RIGHT_CORNER:
 				if (resolve) return getUpperRightCorner();
 				return basicGetUpperRightCorner();
 		}
@@ -440,16 +440,16 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__XMIN:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMIN:
 				setXMin((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__XMAX:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMAX:
 				setXMax((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__YMIN:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMIN:
 				setYMin((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__YMAX:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMAX:
 				setYMax((Double)newValue);
 				return;
 		}
@@ -465,16 +465,16 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__XMIN:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMIN:
 				setXMin(XMIN_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__XMAX:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMAX:
 				setXMax(XMAX_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__YMIN:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMIN:
 				setYMin(YMIN_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__YMAX:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMAX:
 				setYMax(YMAX_EDEFAULT);
 				return;
 		}
@@ -490,25 +490,25 @@ public class RectangularRegionImpl extends RegionImpl implements RectangularRegi
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__XMIN:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMIN:
 				return xMin != XMIN_EDEFAULT;
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__XMAX:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XMAX:
 				return xMax != XMAX_EDEFAULT;
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__YMIN:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMIN:
 				return yMin != YMIN_EDEFAULT;
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__YMAX:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YMAX:
 				return yMax != YMAX_EDEFAULT;
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__XDIMENSION:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__XDIMENSION:
 				return getXDimension() != XDIMENSION_EDEFAULT;
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__YDIMENSION:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__YDIMENSION:
 				return getYDimension() != YDIMENSION_EDEFAULT;
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__LOWER_LEFT_CORNER:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__LOWER_LEFT_CORNER:
 				return lowerLeftCorner != null;
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__UPPER_LEFT_CORNER:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__UPPER_LEFT_CORNER:
 				return upperLeftCorner != null;
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__LOWER_RIGHT_CORNER:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__LOWER_RIGHT_CORNER:
 				return lowerRightCorner != null;
-			case SymphonyEnvironmentPackage.RECTANGULAR_REGION__UPPER_RIGHT_CORNER:
+			case Symphony__CoreEnvironmentPackage.RECTANGULAR_REGION__UPPER_RIGHT_CORNER:
 				return upperRightCorner != null;
 		}
 		return super.eIsSet(featureID);

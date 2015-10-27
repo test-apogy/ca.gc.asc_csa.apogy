@@ -1,8 +1,8 @@
-@GenModel(prefix="EMFEcoreExampleLidar",
+@GenModel(prefix="Symphony__ExamplesLidar",
 		  childCreationExtenders="true",
 		  extensibleProviderFactory="true",
 		  copyrightText="Canadian Space Agency / Agence spatiale canadienne - Copyright (c) 2015",
-		  modelName="EMFEcoreExampleLidar",
+		  modelName="Symphony__ExamplesLidar",
 		  suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.examples.lidar/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.examples.lidar.edit/src-generated")

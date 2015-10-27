@@ -32,7 +32,7 @@ import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
 import org.eclipse.symphony.core.PoseProvider;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
@@ -837,7 +837,7 @@ public class Trajectory3DToolImpl extends Simple3DToolImpl implements Trajectory
 			  @Override
 			  public void notifyChanged(Notification msg) 
 			  {
-				  if(msg.getFeatureID(PoseProvider.class) == SymphonyCorePackage.POSE_PROVIDER__POSE_TRANSFORM)
+				  if(msg.getFeatureID(PoseProvider.class) == Symphony__CorePackage.POSE_PROVIDER__POSE_TRANSFORM)
 				  {		
 					  if(isPenDown())
 					  {

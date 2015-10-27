@@ -16,7 +16,7 @@ import org.eclipse.symphony.core.environment.ui.impl.EnvironmentUiUtilitiesImpl;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getEnvironmentUiUtilities()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEnvironmentUiUtilities()
  * @model
  * @generated
  */
@@ -56,6 +56,7 @@ public interface EnvironmentUiUtilities extends EObject
 	 * @param sunAltitude The altitude above the horizon, in radians.
 	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.core.environment.ui.Color3f" unique="false" sunAltitudeUnique="false"
+	 *        sunAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
 	 */
   Color3f getSunLightColor(double sunAltitude);
@@ -64,10 +65,12 @@ public interface EnvironmentUiUtilities extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Return the transparency value (between no transparency 0 and full transparency 1.0) to be used for the blus sky as a function of the sun altitude angle.
+	 * Return the transparency value (between no transparency 0 and full transparency 1.0)
+	 * to be used for the blus sky as a function of the sun altitude angle.
 	 * @param sunAltitude The altitude above the horizon, in radians.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" sunAltitudeUnique="false"
+	 *        sunAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
 	 */
   double getSkyTransparency(double sunAltitude);
@@ -80,6 +83,7 @@ public interface EnvironmentUiUtilities extends EObject
 	 * @param sunAltitude The altitude above the horizon, in radians.
 	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.core.environment.ui.Color3f" unique="false" sunAltitudeUnique="false"
+	 *        sunAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
 	 */
   Color3f getSkyColor(double sunAltitude);

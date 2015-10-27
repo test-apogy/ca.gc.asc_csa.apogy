@@ -10,7 +10,6 @@ package org.eclipse.symphony.core.environment;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * An image map layer representing an ellipse.
  * <!-- end-model-doc -->
  *
@@ -23,7 +22,7 @@ package org.eclipse.symphony.core.environment;
  *   <li>{@link org.eclipse.symphony.core.environment.RectangleShapeImageLayer#isShowCenterLines <em>Show Center Lines</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangleShapeImageLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangleShapeImageLayer()
  * @model
  * @generated
  */
@@ -39,7 +38,7 @@ public interface RectangleShapeImageLayer extends AbstractShapeImageLayer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rectangle Width</em>' attribute.
 	 * @see #setRectangleWidth(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangleShapeImageLayer_RectangleWidth()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangleShapeImageLayer_RectangleWidth()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='RECTANGLE_SETTINGS' csa_units='m'"
 	 * @generated
@@ -67,7 +66,7 @@ public interface RectangleShapeImageLayer extends AbstractShapeImageLayer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rectangle Height</em>' attribute.
 	 * @see #setRectangleHeight(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangleShapeImageLayer_RectangleHeight()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangleShapeImageLayer_RectangleHeight()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='RECTANGLE_SETTINGS' csa_units='m'"
 	 * @generated
@@ -95,7 +94,7 @@ public interface RectangleShapeImageLayer extends AbstractShapeImageLayer {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Show Center Lines</em>' attribute.
 	 * @see #setShowCenterLines(boolean)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangleShapeImageLayer_ShowCenterLines()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangleShapeImageLayer_ShowCenterLines()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='RECTANGLE_SETTINGS'"
 	 * @generated

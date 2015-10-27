@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.math.Matrix4x4;
  *   <li>{@link org.eclipse.symphony.core.environment.Map#getMapNode <em>Map Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMap()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMap()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface Map extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transformation</em>' containment reference.
 	 * @see #setTransformation(Matrix4x4)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMap_Transformation()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMap_Transformation()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -65,7 +65,7 @@ public interface Map extends Named, Described
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Layers</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMap_Layers()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMap_Layers()
 	 * @see org.eclipse.symphony.core.environment.AbstractMapLayer#getMap
 	 * @model opposite="map" containment="true"
 	 * @generated
@@ -81,7 +81,7 @@ public interface Map extends Named, Described
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map Node</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMap_MapNode()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMap_MapNode()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 * @generated
 	 */

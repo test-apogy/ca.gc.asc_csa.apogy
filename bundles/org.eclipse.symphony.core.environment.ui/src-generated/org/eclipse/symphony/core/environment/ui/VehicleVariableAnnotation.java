@@ -21,7 +21,7 @@ package org.eclipse.symphony.core.environment.ui;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.VehicleVariableAnnotation#getVehicleWidth <em>Vehicle Width</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getVehicleVariableAnnotation()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVehicleVariableAnnotation()
  * @model
  * @generated
  */
@@ -33,11 +33,11 @@ public interface VehicleVariableAnnotation extends PoseVariableAnnotation
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * The length of the vehicle.
+	 * The length of the vehicle.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vehicle Length</em>' attribute.
 	 * @see #setVehicleLength(double)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getVehicleVariableAnnotation_VehicleLength()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVehicleVariableAnnotation_VehicleLength()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VEHICLE_DIMENSIONS' csa_units='m'"
 	 * @generated
@@ -60,11 +60,11 @@ public interface VehicleVariableAnnotation extends PoseVariableAnnotation
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * The width of the vehicle.
+	 * The width of the vehicle.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Vehicle Width</em>' attribute.
 	 * @see #setVehicleWidth(double)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getVehicleVariableAnnotation_VehicleWidth()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVehicleVariableAnnotation_VehicleWidth()
 	 * @model default="0.5" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VEHICLE_DIMENSIONS' csa_units='m'"
 	 * @generated

@@ -4,7 +4,7 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 public class TransformNodePresentationAdapter implements
 		NodePresentationAdapter {
@@ -25,7 +25,7 @@ public class TransformNodePresentationAdapter implements
 
 		if (isAdapterFor(obj)) 
 		{
-			nodePresentation = TopologyUIFactory.eINSTANCE.createTransformNodePresentation();
+			nodePresentation = Symphony__CommonTopologyUIFactory.eINSTANCE.createTransformNodePresentation();
 			nodePresentation.setNode(obj);
 		}
 		return nodePresentation;

@@ -15,18 +15,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.topology.impl.ReferencedGroupNodeImpl;
 import org.eclipse.symphony.core.AbstractWorksite;
 import org.eclipse.symphony.core.ResultsListNode;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.environment.Worksite;
 import org.eclipse.symphony.core.environment.WorksiteNode;
 import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ResultsList;
 import org.eclipse.symphony.core.topology.SymphonyEnvironmentNode;
 import org.eclipse.symphony.core.topology.SymphonySystemAPIsNode;
-import org.eclipse.symphony.core.topology.SymphonyTopologyFactory;
-import org.eclipse.symphony.core.topology.SymphonyTopologyPackage;
+import org.eclipse.symphony.core.topology.Symphony__CoreTopologyFactory;
+import org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -106,7 +106,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyTopologyPackage.Literals.SYMPHONY_ENVIRONMENT_NODE;
+		return Symphony__CoreTopologyPackage.Literals.SYMPHONY_ENVIRONMENT_NODE;
 	}
 
   /**
@@ -121,7 +121,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 			symphonyEnvironment = (SymphonyEnvironment)eResolveProxy(oldSymphonyEnvironment);
 			if (symphonyEnvironment != oldSymphonyEnvironment) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT, oldSymphonyEnvironment, symphonyEnvironment));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT, oldSymphonyEnvironment, symphonyEnvironment));
 			}
 		}
 		return symphonyEnvironment;
@@ -158,7 +158,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 		SymphonyEnvironment oldSymphonyEnvironment = symphonyEnvironment;
 		symphonyEnvironment = newSymphonyEnvironment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT, oldSymphonyEnvironment, symphonyEnvironment));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT, oldSymphonyEnvironment, symphonyEnvironment));
 	}
   
   /**
@@ -173,7 +173,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 			worksiteNode = (WorksiteNode)eResolveProxy(oldWorksiteNode);
 			if (worksiteNode != oldWorksiteNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
 			}
 		}
 		return worksiteNode;
@@ -191,7 +191,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 			worksiteNode = (WorksiteNode)eResolveProxy(oldWorksiteNode);
 			if (worksiteNode != oldWorksiteNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
 			}
 		}
 		return worksiteNode;
@@ -233,7 +233,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 		WorksiteNode oldWorksiteNode = worksiteNode;
 		worksiteNode = newWorksiteNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE, oldWorksiteNode, worksiteNode));
 	}
 
   /**
@@ -245,7 +245,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   {
 	  if(getResultsListNodeGen() == null)
 	  {
-		  resultsListNode = SymphonyCoreFactory.eINSTANCE.createResultsListNode();
+		  resultsListNode = Symphony__CoreFactory.eINSTANCE.createResultsListNode();
 		  resultsListNode.setDescription("Results" + getNodeId());
 		  resultsListNode.setNodeId("RESULTS");
 		    
@@ -269,7 +269,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 			resultsListNode = (ResultsListNode)eResolveProxy(oldResultsListNode);
 			if (resultsListNode != oldResultsListNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__RESULTS_LIST_NODE, oldResultsListNode, resultsListNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__RESULTS_LIST_NODE, oldResultsListNode, resultsListNode));
 			}
 		}
 		return resultsListNode;
@@ -294,7 +294,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   {
 	  if(getSymphonySystemAPIsNodeGen() == null)
 	  {
-		  symphonySystemAPIsNode = SymphonyTopologyFactory.eINSTANCE.createSymphonySystemAPIsNode();
+		  symphonySystemAPIsNode = Symphony__CoreTopologyFactory.eINSTANCE.createSymphonySystemAPIsNode();
 		  symphonySystemAPIsNode.setNodeId("SYSTEMS" + getNodeId());
 		  symphonySystemAPIsNode.setDescription("Systems");
 		  
@@ -319,7 +319,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 			symphonySystemAPIsNode = (SymphonySystemAPIsNode)eResolveProxy(oldSymphonySystemAPIsNode);
 			if (symphonySystemAPIsNode != oldSymphonySystemAPIsNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_SYSTEM_AP_IS_NODE, oldSymphonySystemAPIsNode, symphonySystemAPIsNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_SYSTEM_AP_IS_NODE, oldSymphonySystemAPIsNode, symphonySystemAPIsNode));
 			}
 		}
 		return symphonySystemAPIsNode;
@@ -364,16 +364,16 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT:
+			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT:
 				if (resolve) return getSymphonyEnvironment();
 				return basicGetSymphonyEnvironment();
-			case SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE:
+			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE:
 				if (resolve) return getWorksiteNode();
 				return basicGetWorksiteNode();
-			case SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__RESULTS_LIST_NODE:
+			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__RESULTS_LIST_NODE:
 				if (resolve) return getResultsListNode();
 				return basicGetResultsListNode();
-			case SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_SYSTEM_AP_IS_NODE:
+			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_SYSTEM_AP_IS_NODE:
 				if (resolve) return getSymphonySystemAPIsNode();
 				return basicGetSymphonySystemAPIsNode();
 		}
@@ -389,10 +389,10 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT:
+			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT:
 				setSymphonyEnvironment((SymphonyEnvironment)newValue);
 				return;
-			case SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE:
+			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE:
 				setWorksiteNode((WorksiteNode)newValue);
 				return;
 		}
@@ -408,10 +408,10 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT:
+			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT:
 				setSymphonyEnvironment((SymphonyEnvironment)null);
 				return;
-			case SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE:
+			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE:
 				setWorksiteNode((WorksiteNode)null);
 				return;
 		}
@@ -427,13 +427,13 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT:
+			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_ENVIRONMENT:
 				return symphonyEnvironment != null;
-			case SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE:
+			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__WORKSITE_NODE:
 				return worksiteNode != null;
-			case SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__RESULTS_LIST_NODE:
+			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__RESULTS_LIST_NODE:
 				return resultsListNode != null;
-			case SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_SYSTEM_AP_IS_NODE:
+			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE__SYMPHONY_SYSTEM_AP_IS_NODE:
 				return symphonySystemAPIsNode != null;
 		}
 		return super.eIsSet(featureID);
@@ -448,7 +448,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case SymphonyTopologyPackage.SYMPHONY_ENVIRONMENT_NODE___DISPOSE:
+			case Symphony__CoreTopologyPackage.SYMPHONY_ENVIRONMENT_NODE___DISPOSE:
 				dispose();
 				return null;
 		}
@@ -593,14 +593,14 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 					
 					if(msg.getNotifier() instanceof SymphonyEnvironment)
 					{
-						if(msg.getFeatureID(SymphonyEnvironment.class) == SymphonyCorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_CONTEXT)
+						if(msg.getFeatureID(SymphonyEnvironment.class) == Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_CONTEXT)
 						{
 							// Active Context has changed.
 							Context oldContext = (Context) msg.getOldValue();
 							Context newContext = (Context) msg.getOldValue();
 							updateContext(oldContext, newContext);							
 						}
-						else if(msg.getFeatureID(SymphonyEnvironment.class) == SymphonyCorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE)							
+						else if(msg.getFeatureID(SymphonyEnvironment.class) == Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE)							
 						{
 							System.out.println("Worksite has changed !");
 							
@@ -612,7 +612,7 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 					}
 					else if(msg.getNotifier() instanceof Context)
 					{
-						if(msg.getFeatureID(Context.class) == EMFEcoreInvocatorPackage.BASIC_CONTEXT__DATA_PRODUCTS_LIST)						
+						if(msg.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.BASIC_CONTEXT__DATA_PRODUCTS_LIST)						
 						{
 							// ResultsList has changed.								
 							ResultsList oldResultsList = (ResultsList) msg.getOldValue();

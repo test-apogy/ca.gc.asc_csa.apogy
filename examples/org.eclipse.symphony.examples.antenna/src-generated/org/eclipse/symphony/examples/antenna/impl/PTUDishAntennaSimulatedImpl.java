@@ -11,7 +11,7 @@ import org.eclipse.symphony.addons.sensors.fov.FOVFacade;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.antenna.Activator;
-import org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage;
+import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
 import org.eclipse.symphony.examples.antenna.PTUDishAntennaSimulated;
 
 /**
@@ -86,7 +86,7 @@ public class PTUDishAntennaSimulatedImpl extends PTUDishAntennaImpl implements P
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_SIMULATED;
+		return Symphony__ExamplesAntennaPackage.Literals.PTU_DISH_ANTENNA_SIMULATED;
 	}
 
 	/**

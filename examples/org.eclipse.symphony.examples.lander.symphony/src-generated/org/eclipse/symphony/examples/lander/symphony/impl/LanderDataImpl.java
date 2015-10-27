@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.core.impl.SymphonyInitializationDataImpl;
 import org.eclipse.symphony.examples.lander.LanderLegExtension;
 import org.eclipse.symphony.examples.lander.symphony.LanderData;
-import org.eclipse.symphony.examples.lander.symphony.SymphonyExampleLanderPackage;
+import org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -271,7 +271,7 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyExampleLanderPackage.Literals.LANDER_DATA;
+		return Symphony__ExamplesLanderSymphonyPackage.Literals.LANDER_DATA;
 	}
 
 	/**
@@ -292,7 +292,7 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleLanderPackage.LANDER_DATA__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__INITIALIZED, oldInitialized, initialized));
 	}
 
 	/**
@@ -313,7 +313,7 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 		boolean oldDisposed = disposed;
 		disposed = newDisposed;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleLanderPackage.LANDER_DATA__DISPOSED, oldDisposed, disposed));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__DISPOSED, oldDisposed, disposed));
 	}
 
 	/**
@@ -334,7 +334,7 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 		boolean oldFlyingEnabled = flyingEnabled;
 		flyingEnabled = newFlyingEnabled;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleLanderPackage.LANDER_DATA__FLYING_ENABLED, oldFlyingEnabled, flyingEnabled));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__FLYING_ENABLED, oldFlyingEnabled, flyingEnabled));
 	}
 
 	/**
@@ -355,7 +355,7 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 		LanderLegExtension oldLegAExtension = legAExtension;
 		legAExtension = newLegAExtension == null ? LEG_AEXTENSION_EDEFAULT : newLegAExtension;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleLanderPackage.LANDER_DATA__LEG_AEXTENSION, oldLegAExtension, legAExtension));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_AEXTENSION, oldLegAExtension, legAExtension));
 	}
 
 	/**
@@ -376,7 +376,7 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 		LanderLegExtension oldLegBExtension = legBExtension;
 		legBExtension = newLegBExtension == null ? LEG_BEXTENSION_EDEFAULT : newLegBExtension;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleLanderPackage.LANDER_DATA__LEG_BEXTENSION, oldLegBExtension, legBExtension));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_BEXTENSION, oldLegBExtension, legBExtension));
 	}
 
 	/**
@@ -397,7 +397,7 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 		LanderLegExtension oldLegCExtension = legCExtension;
 		legCExtension = newLegCExtension == null ? LEG_CEXTENSION_EDEFAULT : newLegCExtension;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleLanderPackage.LANDER_DATA__LEG_CEXTENSION, oldLegCExtension, legCExtension));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_CEXTENSION, oldLegCExtension, legCExtension));
 	}
 
 	/**
@@ -418,7 +418,7 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 		double oldCurrThrustLevel = currThrustLevel;
 		currThrustLevel = newCurrThrustLevel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleLanderPackage.LANDER_DATA__CURR_THRUST_LEVEL, oldCurrThrustLevel, currThrustLevel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__CURR_THRUST_LEVEL, oldCurrThrustLevel, currThrustLevel));
 	}
 
 	/**
@@ -439,7 +439,7 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 		double oldMinThrustLevel = minThrustLevel;
 		minThrustLevel = newMinThrustLevel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleLanderPackage.LANDER_DATA__MIN_THRUST_LEVEL, oldMinThrustLevel, minThrustLevel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__MIN_THRUST_LEVEL, oldMinThrustLevel, minThrustLevel));
 	}
 
 	/**
@@ -460,7 +460,7 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 		double oldMaxThrustLevel = maxThrustLevel;
 		maxThrustLevel = newMaxThrustLevel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleLanderPackage.LANDER_DATA__MAX_THRUST_LEVEL, oldMaxThrustLevel, maxThrustLevel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__MAX_THRUST_LEVEL, oldMaxThrustLevel, maxThrustLevel));
 	}
 
 	/**
@@ -481,7 +481,7 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 		double oldXAngularVelocity = xAngularVelocity;
 		xAngularVelocity = newXAngularVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleLanderPackage.LANDER_DATA__XANGULAR_VELOCITY, oldXAngularVelocity, xAngularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__XANGULAR_VELOCITY, oldXAngularVelocity, xAngularVelocity));
 	}
 
 	/**
@@ -502,7 +502,7 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 		double oldYAngularVelocity = yAngularVelocity;
 		yAngularVelocity = newYAngularVelocity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleLanderPackage.LANDER_DATA__YANGULAR_VELOCITY, oldYAngularVelocity, yAngularVelocity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__YANGULAR_VELOCITY, oldYAngularVelocity, yAngularVelocity));
 	}
 
 	/**
@@ -513,27 +513,27 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyExampleLanderPackage.LANDER_DATA__INITIALIZED:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__INITIALIZED:
 				return isInitialized();
-			case SymphonyExampleLanderPackage.LANDER_DATA__DISPOSED:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__DISPOSED:
 				return isDisposed();
-			case SymphonyExampleLanderPackage.LANDER_DATA__FLYING_ENABLED:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__FLYING_ENABLED:
 				return isFlyingEnabled();
-			case SymphonyExampleLanderPackage.LANDER_DATA__LEG_AEXTENSION:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_AEXTENSION:
 				return getLegAExtension();
-			case SymphonyExampleLanderPackage.LANDER_DATA__LEG_BEXTENSION:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_BEXTENSION:
 				return getLegBExtension();
-			case SymphonyExampleLanderPackage.LANDER_DATA__LEG_CEXTENSION:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_CEXTENSION:
 				return getLegCExtension();
-			case SymphonyExampleLanderPackage.LANDER_DATA__CURR_THRUST_LEVEL:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__CURR_THRUST_LEVEL:
 				return getCurrThrustLevel();
-			case SymphonyExampleLanderPackage.LANDER_DATA__MIN_THRUST_LEVEL:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__MIN_THRUST_LEVEL:
 				return getMinThrustLevel();
-			case SymphonyExampleLanderPackage.LANDER_DATA__MAX_THRUST_LEVEL:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__MAX_THRUST_LEVEL:
 				return getMaxThrustLevel();
-			case SymphonyExampleLanderPackage.LANDER_DATA__XANGULAR_VELOCITY:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__XANGULAR_VELOCITY:
 				return getXAngularVelocity();
-			case SymphonyExampleLanderPackage.LANDER_DATA__YANGULAR_VELOCITY:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__YANGULAR_VELOCITY:
 				return getYAngularVelocity();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -547,37 +547,37 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyExampleLanderPackage.LANDER_DATA__INITIALIZED:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__DISPOSED:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__DISPOSED:
 				setDisposed((Boolean)newValue);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__FLYING_ENABLED:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__FLYING_ENABLED:
 				setFlyingEnabled((Boolean)newValue);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__LEG_AEXTENSION:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_AEXTENSION:
 				setLegAExtension((LanderLegExtension)newValue);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__LEG_BEXTENSION:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_BEXTENSION:
 				setLegBExtension((LanderLegExtension)newValue);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__LEG_CEXTENSION:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_CEXTENSION:
 				setLegCExtension((LanderLegExtension)newValue);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__CURR_THRUST_LEVEL:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__CURR_THRUST_LEVEL:
 				setCurrThrustLevel((Double)newValue);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__MIN_THRUST_LEVEL:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__MIN_THRUST_LEVEL:
 				setMinThrustLevel((Double)newValue);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__MAX_THRUST_LEVEL:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__MAX_THRUST_LEVEL:
 				setMaxThrustLevel((Double)newValue);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__XANGULAR_VELOCITY:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__XANGULAR_VELOCITY:
 				setXAngularVelocity((Double)newValue);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__YANGULAR_VELOCITY:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__YANGULAR_VELOCITY:
 				setYAngularVelocity((Double)newValue);
 				return;
 		}
@@ -592,37 +592,37 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyExampleLanderPackage.LANDER_DATA__INITIALIZED:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__DISPOSED:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__DISPOSED:
 				setDisposed(DISPOSED_EDEFAULT);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__FLYING_ENABLED:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__FLYING_ENABLED:
 				setFlyingEnabled(FLYING_ENABLED_EDEFAULT);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__LEG_AEXTENSION:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_AEXTENSION:
 				setLegAExtension(LEG_AEXTENSION_EDEFAULT);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__LEG_BEXTENSION:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_BEXTENSION:
 				setLegBExtension(LEG_BEXTENSION_EDEFAULT);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__LEG_CEXTENSION:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_CEXTENSION:
 				setLegCExtension(LEG_CEXTENSION_EDEFAULT);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__CURR_THRUST_LEVEL:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__CURR_THRUST_LEVEL:
 				setCurrThrustLevel(CURR_THRUST_LEVEL_EDEFAULT);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__MIN_THRUST_LEVEL:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__MIN_THRUST_LEVEL:
 				setMinThrustLevel(MIN_THRUST_LEVEL_EDEFAULT);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__MAX_THRUST_LEVEL:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__MAX_THRUST_LEVEL:
 				setMaxThrustLevel(MAX_THRUST_LEVEL_EDEFAULT);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__XANGULAR_VELOCITY:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__XANGULAR_VELOCITY:
 				setXAngularVelocity(XANGULAR_VELOCITY_EDEFAULT);
 				return;
-			case SymphonyExampleLanderPackage.LANDER_DATA__YANGULAR_VELOCITY:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__YANGULAR_VELOCITY:
 				setYAngularVelocity(YANGULAR_VELOCITY_EDEFAULT);
 				return;
 		}
@@ -637,27 +637,27 @@ public class LanderDataImpl extends SymphonyInitializationDataImpl implements La
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyExampleLanderPackage.LANDER_DATA__INITIALIZED:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
-			case SymphonyExampleLanderPackage.LANDER_DATA__DISPOSED:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__DISPOSED:
 				return disposed != DISPOSED_EDEFAULT;
-			case SymphonyExampleLanderPackage.LANDER_DATA__FLYING_ENABLED:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__FLYING_ENABLED:
 				return flyingEnabled != FLYING_ENABLED_EDEFAULT;
-			case SymphonyExampleLanderPackage.LANDER_DATA__LEG_AEXTENSION:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_AEXTENSION:
 				return legAExtension != LEG_AEXTENSION_EDEFAULT;
-			case SymphonyExampleLanderPackage.LANDER_DATA__LEG_BEXTENSION:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_BEXTENSION:
 				return legBExtension != LEG_BEXTENSION_EDEFAULT;
-			case SymphonyExampleLanderPackage.LANDER_DATA__LEG_CEXTENSION:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__LEG_CEXTENSION:
 				return legCExtension != LEG_CEXTENSION_EDEFAULT;
-			case SymphonyExampleLanderPackage.LANDER_DATA__CURR_THRUST_LEVEL:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__CURR_THRUST_LEVEL:
 				return currThrustLevel != CURR_THRUST_LEVEL_EDEFAULT;
-			case SymphonyExampleLanderPackage.LANDER_DATA__MIN_THRUST_LEVEL:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__MIN_THRUST_LEVEL:
 				return minThrustLevel != MIN_THRUST_LEVEL_EDEFAULT;
-			case SymphonyExampleLanderPackage.LANDER_DATA__MAX_THRUST_LEVEL:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__MAX_THRUST_LEVEL:
 				return maxThrustLevel != MAX_THRUST_LEVEL_EDEFAULT;
-			case SymphonyExampleLanderPackage.LANDER_DATA__XANGULAR_VELOCITY:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__XANGULAR_VELOCITY:
 				return xAngularVelocity != XANGULAR_VELOCITY_EDEFAULT;
-			case SymphonyExampleLanderPackage.LANDER_DATA__YANGULAR_VELOCITY:
+			case Symphony__ExamplesLanderSymphonyPackage.LANDER_DATA__YANGULAR_VELOCITY:
 				return yAngularVelocity != YANGULAR_VELOCITY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -22,7 +22,7 @@ package org.eclipse.symphony.common.topology.addons.dynamics;
  *   <li>{@link org.eclipse.symphony.common.topology.addons.dynamics.GearRatioConstraint#getForce <em>Force</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getGearRatioConstraint()
+ * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getGearRatioConstraint()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface GearRatioConstraint extends AbstractConstraint {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Force</em>' attribute.
 	 * @see #setForce(double)
-	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage#getGearRatioConstraint_Force()
+	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getGearRatioConstraint_Force()
 	 * @model unique="false"
 	 * @generated
 	 */

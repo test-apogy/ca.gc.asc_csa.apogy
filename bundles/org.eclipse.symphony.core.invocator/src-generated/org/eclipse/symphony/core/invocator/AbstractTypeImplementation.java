@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractTypeImplementation#getHandlingType <em>Handling Type</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractTypeImplementation()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractTypeImplementation()
  * @model abstract="true"
  * @generated
  */
@@ -40,7 +40,7 @@ public interface AbstractTypeImplementation extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Member Implementations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractTypeImplementation_TypeMemberImplementations()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractTypeImplementation_TypeMemberImplementations()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -56,7 +56,7 @@ public interface AbstractTypeImplementation extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Implementation Class</em>' reference.
 	 * @see #setImplementationClass(EClass)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractTypeImplementation_ImplementationClass()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractTypeImplementation_ImplementationClass()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
 	 */
@@ -82,7 +82,7 @@ public interface AbstractTypeImplementation extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Abstract Initialization Data</em>' containment reference.
 	 * @see #setAbstractInitializationData(AbstractInitializationData)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractTypeImplementation_AbstractInitializationData()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractTypeImplementation_AbstractInitializationData()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true'"
 	 * @generated
@@ -109,7 +109,7 @@ public interface AbstractTypeImplementation extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Instance</em>' reference.
 	 * @see #setInstance(EObject)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractTypeImplementation_Instance()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractTypeImplementation_Instance()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true'"
 	 * @generated
@@ -136,7 +136,7 @@ public interface AbstractTypeImplementation extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Adapter Instance</em>' reference.
 	 * @see #setAdapterInstance(TypeApiAdapter)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractTypeImplementation_AdapterInstance()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractTypeImplementation_AdapterInstance()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true'"
 	 * @generated
@@ -162,7 +162,7 @@ public interface AbstractTypeImplementation extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Handling Type</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractTypeImplementation_HandlingType()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractTypeImplementation_HandlingType()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */

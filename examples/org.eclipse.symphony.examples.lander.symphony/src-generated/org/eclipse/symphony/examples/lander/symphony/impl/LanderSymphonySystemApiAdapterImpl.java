@@ -21,13 +21,13 @@ import org.eclipse.symphony.core.impl.SymphonySystemApiAdapterImpl;
 import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.Type;
-import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage;
+import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
 import org.eclipse.symphony.examples.lander.Lander;
 import org.eclipse.symphony.examples.lander.Position;
 import org.eclipse.symphony.examples.lander.symphony.LanderData;
 import org.eclipse.symphony.examples.lander.symphony.LanderSymphonySystemApiAdapter;
-import org.eclipse.symphony.examples.lander.symphony.SymphonyExampleLanderFactory;
-import org.eclipse.symphony.examples.lander.symphony.SymphonyExampleLanderPackage;
+import org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyFactory;
+import org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -64,7 +64,7 @@ implements LanderSymphonySystemApiAdapter
 	@Override
 	protected EClass eStaticClass()
 	{
-		return SymphonyExampleLanderPackage.Literals.LANDER_SYMPHONY_SYSTEM_API_ADAPTER;
+		return Symphony__ExamplesLanderSymphonyPackage.Literals.LANDER_SYMPHONY_SYSTEM_API_ADAPTER;
 	}
 
 	/**
@@ -153,7 +153,7 @@ implements LanderSymphonySystemApiAdapter
 		// Use the relevant factory method to create the desired
 		// initialization data object, which, in this case, is
 		// an instance of LanderData.
-		return SymphonyExampleLanderFactory.eINSTANCE.createLanderData();
+		return Symphony__ExamplesLanderSymphonyFactory.eINSTANCE.createLanderData();
 	}
 
 	/**
@@ -376,7 +376,7 @@ class PositionAdapter extends AdapterImpl
 			if (msg.getNotifier() instanceof Lander) 
 			{
 				// If the lander's feature being changes was the position
-				if (msg.getFeatureID(Lander.class) == EMFEcoreExampleLanderPackage.LANDER__POSITION) 
+				if (msg.getFeatureID(Lander.class) == Symphony__ExamplesLanderPackage.LANDER__POSITION) 
 				{
 					// If there was a previous position object being monitored
 					if (msg.getOldValue() instanceof Position) 

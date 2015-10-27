@@ -16,7 +16,7 @@ import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.TopologyFacade;
 import org.eclipse.symphony.common.topology.addons.primitives.PickVector;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.Vector;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorSceneObject;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.jme3.Activator;
@@ -293,10 +293,10 @@ public class PickVectorJME3SceneObject extends DefaultJME3SceneObject<PickVector
 						int featureId = msg.getFeatureID(Vector.class);
 						switch (featureId) 
 						{
-							case PrimitivesPackage.VECTOR__XROTATION:
-							case PrimitivesPackage.VECTOR__YROTATION:
-							case PrimitivesPackage.VECTOR__ZROTATION:
-							case PrimitivesPackage.VECTOR__LENGTH:		
+							case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__XROTATION:
+							case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__YROTATION:
+							case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__ZROTATION:
+							case Symphony__CommonTopologyAddonsPrimitivesPackage.VECTOR__LENGTH:		
 								updateGeometry();								
 							break;
 

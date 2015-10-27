@@ -15,7 +15,6 @@ import org.eclipse.symphony.common.topology.Node;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Class that represent the result of a selection in a topology.
  * <!-- end-model-doc -->
  *
@@ -32,7 +31,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.common.topology.ui.NodeSelection#getAbsoluteIntersectionNormal <em>Absolute Intersection Normal</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodeSelection()
+ * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection()
  * @model
  * @generated
  */
@@ -47,7 +46,7 @@ public interface NodeSelection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Topology Presentation Set</em>' reference.
 	 * @see #setTopologyPresentationSet(TopologyPresentationSet)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodeSelection_TopologyPresentationSet()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection_TopologyPresentationSet()
 	 * @model transient="true"
 	 * @generated
 	 */
@@ -73,7 +72,7 @@ public interface NodeSelection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Selected Node</em>' reference.
 	 * @see #setSelectedNode(Node)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodeSelection_SelectedNode()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection_SelectedNode()
 	 * @model transient="true"
 	 * @generated
 	 */
@@ -99,7 +98,7 @@ public interface NodeSelection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node Presentation</em>' reference.
 	 * @see #setNodePresentation(NodePresentation)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodeSelection_NodePresentation()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection_NodePresentation()
 	 * @model transient="true"
 	 * @generated
 	 */
@@ -125,7 +124,7 @@ public interface NodeSelection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Relative Intersection Point</em>' attribute.
 	 * @see #setRelativeIntersectionPoint(Point3d)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodeSelection_RelativeIntersectionPoint()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection_RelativeIntersectionPoint()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.topology.ui.Point3d"
 	 * @generated
 	 */
@@ -151,7 +150,7 @@ public interface NodeSelection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Absolute Intersection Point</em>' attribute.
 	 * @see #setAbsoluteIntersectionPoint(Point3d)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodeSelection_AbsoluteIntersectionPoint()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection_AbsoluteIntersectionPoint()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.topology.ui.Point3d"
 	 * @generated
 	 */
@@ -177,7 +176,7 @@ public interface NodeSelection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Relative Intersection Normal</em>' attribute.
 	 * @see #setRelativeIntersectionNormal(Vector3f)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodeSelection_RelativeIntersectionNormal()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection_RelativeIntersectionNormal()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.topology.ui.Vector3f"
 	 * @generated
 	 */
@@ -203,7 +202,7 @@ public interface NodeSelection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Absolute Intersection Normal</em>' attribute.
 	 * @see #setAbsoluteIntersectionNormal(Vector3f)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getNodeSelection_AbsoluteIntersectionNormal()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getNodeSelection_AbsoluteIntersectionNormal()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.topology.ui.Vector3f"
 	 * @generated
 	 */

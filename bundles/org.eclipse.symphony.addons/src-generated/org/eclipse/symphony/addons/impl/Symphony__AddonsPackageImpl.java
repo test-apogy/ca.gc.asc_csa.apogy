@@ -32,8 +32,8 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.math.Symphony__CommonMathPackage;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.core.SymphonyCorePackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -187,7 +187,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		isInited = true;
 
 		// Initialize simple dependencies
-		SymphonyCorePackage.eINSTANCE.eClass();
+		Symphony__CorePackage.eINSTANCE.eClass();
 		Symphony__AddonsGeometryPathsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -913,11 +913,11 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 
 		// Obtain other dependent packages
 		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
-		EMFEcoreInvocatorPackage theEMFEcoreInvocatorPackage = (EMFEcoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreInvocatorPackage.eNS_URI);
+		Symphony__CoreInvocatorPackage theSymphony__CoreInvocatorPackage = (Symphony__CoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreInvocatorPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 		Symphony__CommonTopologyPackage theSymphony__CommonTopologyPackage = (Symphony__CommonTopologyPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyPackage.eNS_URI);
 		Symphony__CommonMathPackage theSymphony__CommonMathPackage = (Symphony__CommonMathPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonMathPackage.eNS_URI);
-		SymphonyCorePackage theSymphonyCorePackage = (SymphonyCorePackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyCorePackage.eNS_URI);
+		Symphony__CorePackage theSymphony__CorePackage = (Symphony__CorePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CorePackage.eNS_URI);
 		Symphony__AddonsGeometryPathsPackage theSymphony__AddonsGeometryPathsPackage = (Symphony__AddonsGeometryPathsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsGeometryPathsPackage.eNS_URI);
 
 		// Create type parameters
@@ -927,7 +927,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		// Add supertypes to classes
 		abstractToolEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
 		abstractToolEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
-		simpleToolListEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getAbstractToolsListContainer());
+		simpleToolListEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getAbstractToolsListContainer());
 		simpleToolEClass.getESuperTypes().add(this.getAbstractTool());
 		simple3DToolEClass.getESuperTypes().add(this.getSimpleTool());
 		abstractTwoPoints3DToolEClass.getESuperTypes().add(this.getSimple3DTool());
@@ -988,7 +988,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		initEReference(getRuler3dToolNode_Ruler3DTool(), this.getRuler3DTool(), this.getRuler3DTool_Ruler3dToolNode(), "ruler3DTool", null, 0, 1, Ruler3dToolNode.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(featureOfInterestPickingToolEClass, FeatureOfInterestPickingTool.class, "FeatureOfInterestPickingTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFeatureOfInterestPickingTool_FeatureOfInterestList(), theSymphonyCorePackage.getFeatureOfInterestList(), null, "featureOfInterestList", null, 0, 1, FeatureOfInterestPickingTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFeatureOfInterestPickingTool_FeatureOfInterestList(), theSymphony__CorePackage.getFeatureOfInterestList(), null, "featureOfInterestList", null, 0, 1, FeatureOfInterestPickingTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFeatureOfInterestPickingTool_PickAbsolutePosition(), theSymphony__CommonMathPackage.getTuple3d(), null, "pickAbsolutePosition", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFeatureOfInterestPickingTool_PickRelativePosition(), theSymphony__CommonMathPackage.getTuple3d(), null, "pickRelativePosition", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFeatureOfInterestPickingTool_PickedNode(), theSymphony__CommonTopologyPackage.getNode(), null, "pickedNode", null, 0, 1, FeatureOfInterestPickingTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1009,11 +1009,11 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 
 		initEClass(trajectory3DToolEClass, Trajectory3DTool.class, "Trajectory3DTool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTrajectory3DTool_PenDown(), theEcorePackage.getEBoolean(), "penDown", "true", 0, 1, Trajectory3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTrajectory3DTool_Variable(), theEMFEcoreInvocatorPackage.getVariable(), null, "variable", null, 1, 1, Trajectory3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTrajectory3DTool_Variable(), theSymphony__CoreInvocatorPackage.getVariable(), null, "variable", null, 1, 1, Trajectory3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTrajectory3DTool_DistanceThreshold(), theEcorePackage.getEDouble(), "distanceThreshold", "0.01", 0, 1, Trajectory3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTrajectory3DTool_TotalDistance(), theEcorePackage.getEDouble(), "totalDistance", "0.0", 0, 1, Trajectory3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTrajectory3DTool_Paths(), theSymphony__AddonsGeometryPathsPackage.getWayPointPath(), null, "paths", null, 0, -1, Trajectory3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTrajectory3DTool_PoseProvider(), theSymphonyCorePackage.getPoseProvider(), null, "poseProvider", null, 0, 1, Trajectory3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTrajectory3DTool_PoseProvider(), theSymphony__CorePackage.getPoseProvider(), null, "poseProvider", null, 0, 1, Trajectory3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTrajectory3DTool_Trajectory3DToolNode(), this.getTrajectory3DToolNode(), this.getTrajectory3DToolNode_Trajectory3DTool(), "trajectory3DToolNode", null, 0, 1, Trajectory3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(trajectory3DToolNodeEClass, Trajectory3DToolNode.class, "Trajectory3DToolNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

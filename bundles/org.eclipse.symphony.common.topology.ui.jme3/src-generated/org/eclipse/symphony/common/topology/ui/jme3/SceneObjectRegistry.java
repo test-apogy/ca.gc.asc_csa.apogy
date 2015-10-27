@@ -15,7 +15,7 @@ import com.jme3.scene.Geometry;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.ui.jme3.JME3Package#getSceneObjectRegistry()
+ * @see org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package#getSceneObjectRegistry()
  * @model
  * @generated
  */

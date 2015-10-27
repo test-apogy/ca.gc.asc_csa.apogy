@@ -16,7 +16,7 @@ package org.eclipse.symphony.core.programs.controllers;
  *   <li>{@link org.eclipse.symphony.core.programs.controllers.CenteredParabolicInputConditioning#getDeadBand <em>Dead Band</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getCenteredParabolicInputConditioning()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getCenteredParabolicInputConditioning()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface CenteredParabolicInputConditioning extends ParabolicInputCondit
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Dead Band</em>' attribute.
 	 * @see #setDeadBand(float)
-	 * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getCenteredParabolicInputConditioning_DeadBand()
+	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getCenteredParabolicInputConditioning_DeadBand()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */

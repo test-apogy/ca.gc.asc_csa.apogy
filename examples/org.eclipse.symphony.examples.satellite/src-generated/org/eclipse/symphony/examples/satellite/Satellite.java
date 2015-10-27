@@ -14,7 +14,6 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * An example satellite. The satellite is nadir looking, and can roll back and forth (+- 5.0 deg) along its trajectory.
  * An imager is mounted on its nadir axis and can take images of the Earth below.
  * <!-- end-model-doc -->
@@ -29,7 +28,7 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  *   <li>{@link org.eclipse.symphony.examples.satellite.Satellite#getImager <em>Imager</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatellite()
+ * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatellite()
  * @model abstract="true"
  * @generated
  */
@@ -41,12 +40,11 @@ public interface Satellite extends Named {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The satellite maximum roll rate.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Maximum Roll Rate</em>' attribute.
 	 * @see #setMaximumRollRate(double)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatellite_MaximumRollRate()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatellite_MaximumRollRate()
 	 * @model default="0.017452778" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad/s'"
 	 * @generated
@@ -69,12 +67,11 @@ public interface Satellite extends Named {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The satellite maximum roll.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Maximum Roll</em>' attribute.
 	 * @see #setMaximumRoll(double)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatellite_MaximumRoll()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatellite_MaximumRoll()
 	 * @model default="0.087" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
@@ -96,12 +93,11 @@ public interface Satellite extends Named {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The Orbit Model defining this satellite orbit around the Earth.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orbit Model</em>' containment reference.
 	 * @see #setOrbitModel(OrbitModel)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatellite_OrbitModel()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatellite_OrbitModel()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -127,12 +123,11 @@ public interface Satellite extends Named {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The imager on-board the satellite.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Imager</em>' containment reference.
 	 * @see #setImager(SatelliteImager)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatellite_Imager()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatellite_Imager()
 	 * @see org.eclipse.symphony.examples.satellite.SatelliteImager#getSatellite
 	 * @model opposite="satellite" containment="true"
 	 * @generated
@@ -153,7 +148,6 @@ public interface Satellite extends Named {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Commands the spacecraft to roll to the specified roll angle, in radians.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" targetRollAngleUnique="false"
@@ -165,7 +159,6 @@ public interface Satellite extends Named {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Commands the spacecraft to acquire an image with a given zoom.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" zoomUnique="false"
@@ -177,7 +170,6 @@ public interface Satellite extends Named {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Commands the spacecraft to download a number of OrbitalImage.
 	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.examples.satellite.List<org.eclipse.symphony.examples.satellite.OrbitalImage>" unique="false" many="false" maximumNumberOfImagesUnique="false"
@@ -189,7 +181,6 @@ public interface Satellite extends Named {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Enqueues a command for future execution.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" commandUnique="false"

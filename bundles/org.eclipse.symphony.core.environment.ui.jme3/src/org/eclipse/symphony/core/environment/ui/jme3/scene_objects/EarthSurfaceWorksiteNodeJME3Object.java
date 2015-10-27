@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 import org.eclipse.symphony.core.environment.EarthSurfaceWorksite;
 import org.eclipse.symphony.core.environment.EarthSurfaceWorksiteNode;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.Worksite;
 import org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksiteSceneObject;
 import org.eclipse.symphony.core.environment.ui.jme3.Activator;
@@ -894,7 +894,7 @@ public class EarthSurfaceWorksiteNodeJME3Object extends DefaultJME3SceneObject<E
 					if(msg.getNotifier() instanceof EarthSurfaceWorksiteNode)
 					{
 						// Worksite has changed.
-						if(msg.getFeatureID(EarthSurfaceWorksiteNode.class) == SymphonyEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE__WORKSITE)
+						if(msg.getFeatureID(EarthSurfaceWorksiteNode.class) == Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE_NODE__WORKSITE)
 						{
 							// Unregister from old Worksite.
 							if(msg.getOldValue() instanceof Worksite)
@@ -918,7 +918,7 @@ public class EarthSurfaceWorksiteNodeJME3Object extends DefaultJME3SceneObject<E
 					}
 					else if(msg.getNotifier() instanceof EarthSurfaceWorksite)
 					{
-						if(msg.getFeatureID(EarthSurfaceWorksite.class) == SymphonyEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH)
+						if(msg.getFeatureID(EarthSurfaceWorksite.class) == Symphony__CoreEnvironmentPackage.EARTH_SURFACE_WORKSITE__XAXIS_AZIMUTH)
 						{
 							double newXAxisAzimuthDegrees = msg.getNewDoubleValue();
 							updateSkyTransform(newXAxisAzimuthDegrees);

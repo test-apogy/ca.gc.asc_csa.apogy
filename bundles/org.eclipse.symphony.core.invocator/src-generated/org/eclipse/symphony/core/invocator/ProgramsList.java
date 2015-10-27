@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.ProgramsList#getPrograms <em>Programs</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getProgramsList()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getProgramsList()
  * @model
  * @generated
  */
@@ -44,7 +44,7 @@ public interface ProgramsList extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Invocator Session</em>' container reference.
 	 * @see #setInvocatorSession(InvocatorSession)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getProgramsList_InvocatorSession()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getProgramsList_InvocatorSession()
 	 * @see org.eclipse.symphony.core.invocator.InvocatorSession#getProgramsList
 	 * @model opposite="programsList" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -73,7 +73,7 @@ public interface ProgramsList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Programs</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getProgramsList_Programs()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getProgramsList_Programs()
 	 * @see org.eclipse.symphony.core.invocator.Program#getProgramsList
 	 * @model opposite="programsList" containment="true"
 	 * @generated

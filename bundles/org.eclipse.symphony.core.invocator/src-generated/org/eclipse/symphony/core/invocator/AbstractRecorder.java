@@ -25,7 +25,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.AbstractRecorder#getRecordingToolsContainer <em>Recording Tools Container</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractRecorder()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractRecorder()
  * @model abstract="true"
  * @generated
  */
@@ -42,7 +42,7 @@ public interface AbstractRecorder extends Named, Described
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Recording Tools Container</em>' container reference.
 	 * @see #setRecordingToolsContainer(RecordingToolsContainer)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getAbstractRecorder_RecordingToolsContainer()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractRecorder_RecordingToolsContainer()
 	 * @see org.eclipse.symphony.core.invocator.RecordingToolsContainer#getRecorder
 	 * @model opposite="recorder" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"

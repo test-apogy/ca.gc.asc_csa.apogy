@@ -23,7 +23,7 @@ import org.eclipse.symphony.core.invocator.AbstractToolsListContainer;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList#getConfigurations <em>Configurations</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getSpacecraftVisibilityPassViewConfigurationList()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftVisibilityPassViewConfigurationList()
  * @model
  * @generated
  */
@@ -39,7 +39,7 @@ public interface SpacecraftVisibilityPassViewConfigurationList extends AbstractT
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Configurations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getSpacecraftVisibilityPassViewConfigurationList_Configurations()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftVisibilityPassViewConfigurationList_Configurations()
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getConfigurationsList
 	 * @model opposite="configurationsList" containment="true"
 	 * @generated

@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.topology.impl.GroupNodeImpl;
 import org.eclipse.symphony.core.environment.Earth;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class EarthImpl extends GroupNodeImpl implements Earth {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.EARTH;
+		return Symphony__CoreEnvironmentPackage.Literals.EARTH;
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class EarthImpl extends GroupNodeImpl implements Earth {
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.EARTH__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.EARTH__RADIUS, oldRadius, radius));
 	}
 
 	/**
@@ -92,7 +92,7 @@ public class EarthImpl extends GroupNodeImpl implements Earth {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.EARTH__RADIUS:
+			case Symphony__CoreEnvironmentPackage.EARTH__RADIUS:
 				return getRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -106,7 +106,7 @@ public class EarthImpl extends GroupNodeImpl implements Earth {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.EARTH__RADIUS:
+			case Symphony__CoreEnvironmentPackage.EARTH__RADIUS:
 				setRadius((Double)newValue);
 				return;
 		}
@@ -121,7 +121,7 @@ public class EarthImpl extends GroupNodeImpl implements Earth {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.EARTH__RADIUS:
+			case Symphony__CoreEnvironmentPackage.EARTH__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
 		}
@@ -136,7 +136,7 @@ public class EarthImpl extends GroupNodeImpl implements Earth {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.EARTH__RADIUS:
+			case Symphony__CoreEnvironmentPackage.EARTH__RADIUS:
 				return radius != RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

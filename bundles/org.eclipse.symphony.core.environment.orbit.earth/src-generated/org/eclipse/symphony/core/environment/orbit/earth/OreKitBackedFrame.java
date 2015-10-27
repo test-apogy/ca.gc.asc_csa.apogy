@@ -12,7 +12,7 @@ import org.orekit.frames.Frame;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getOreKitBackedFrame()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getOreKitBackedFrame()
  * @model
  * @generated
  */

@@ -5,7 +5,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
 import org.eclipse.symphony.core.environment.Moon;
 import org.eclipse.symphony.core.environment.ui.MoonPresentation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIFactory;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
 
 public class MoonPresentationAdapter implements NodePresentationAdapter
 {
@@ -34,7 +34,7 @@ public class MoonPresentationAdapter implements NodePresentationAdapter
 			throw new IllegalArgumentException();
 		}
 
-		MoonPresentation presentationNode = SymphonyEnvironmentUIFactory.eINSTANCE.createMoonPresentation();
+		MoonPresentation presentationNode = Symphony__CoreEnvironmentUIFactory.eINSTANCE.createMoonPresentation();
 		presentationNode.setNode(obj);			
 						
 		return presentationNode;

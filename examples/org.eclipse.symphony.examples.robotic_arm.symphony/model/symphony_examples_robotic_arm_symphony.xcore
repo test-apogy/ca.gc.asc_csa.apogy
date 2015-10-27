@@ -1,4 +1,6 @@
-@GenModel(prefix="SymphonyExampleRoboticArm", copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015", modelName="SymphonyExampleRoboticArm")
+@GenModel(prefix="Symphony__ExamplesRoboticArmSymphony",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015",
+		  modelName="Symphony__ExamplesRoboticArmSymphony")
 @GenModel(modelDirectory="/org.eclipse.symphony.examples.robotic_arm.symphony/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.examples.robotic_arm.symphony.edit/src-generated")
 
@@ -57,7 +59,7 @@ class RoboticArmData extends SymphonyInitializationData
 	/*
 	 * This is the angle (in degrees) that the robotic arm's turret joint should be at.
 	 */
-	@GenModel(csa_units="�",
+	@GenModel(csa_units="deg",
 			  children="false",
 			  notify="true",
 			  property="Editable",
@@ -67,7 +69,7 @@ class RoboticArmData extends SymphonyInitializationData
 	/*
 	 * This is the angle (in degrees) that the robotic arm's shoulder joint should be at.
 	 */
-	@GenModel(csa_units="�",
+	@GenModel(csa_units="deg",
 			  children="false",
 			  notify="true",
 			  property="Editable",
@@ -77,7 +79,7 @@ class RoboticArmData extends SymphonyInitializationData
 	/*
 	 * This is the angle (in degrees) that the robotic arm's elbow joint should be at.
 	 */
-	@GenModel(csa_units="�",
+	@GenModel(csa_units="deg",
 			  children="false",
 			  notify="true",
 			  property="Editable",
@@ -87,7 +89,7 @@ class RoboticArmData extends SymphonyInitializationData
 	/*
 	 * This is the angle (in degrees) that the robotic arm's wrist joint should be at.
 	 */
-	@GenModel(csa_units="�",
+	@GenModel(csa_units="deg",
 			  children="false",
 			  notify="true",
 			  property="Editable",

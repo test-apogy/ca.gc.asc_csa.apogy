@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 import org.eclipse.symphony.core.invocator.Variable;
@@ -137,7 +137,7 @@ public class AbstractTypeImplementationListener
 				{					
 					if(msg.getNotifier() instanceof Environment)
 					{
-						if(msg.getFeatureID(Environment.class) == EMFEcoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT)
+						if(msg.getFeatureID(Environment.class) == Symphony__CoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT)
 						{
 							// Active Context has changed.
 							
@@ -161,13 +161,13 @@ public class AbstractTypeImplementationListener
 					}
 					else if(msg.getNotifier() instanceof Context)
 					{
-						if(msg.getFeatureID(Context.class) == EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE)
+						if(msg.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE)
 						{
 							// Instances have been created							
 							// Update instances and TypeApiAdapter
 							update();
 						}
-						else if(msg.getFeatureID(Context.class) == EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE)
+						else if(msg.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE)
 						{
 							// Instances have been disposed
 							

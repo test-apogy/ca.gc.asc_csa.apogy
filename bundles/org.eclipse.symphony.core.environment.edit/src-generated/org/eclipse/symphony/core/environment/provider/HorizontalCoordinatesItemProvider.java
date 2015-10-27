@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.HorizontalCoordinates;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.HorizontalCoordinates} object.
@@ -87,7 +87,7 @@ public class HorizontalCoordinatesItemProvider
 				getResourceLocator(),
 				getString("_UI_HorizontalCoordinates_altitude_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_HorizontalCoordinates_altitude_feature", "_UI_HorizontalCoordinates_type"),
-				SymphonyEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__ALTITUDE,
+				Symphony__CoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__ALTITUDE,
 				true, 
 				false,
 				false, 
@@ -104,7 +104,7 @@ public class HorizontalCoordinatesItemProvider
 //         getResourceLocator(),
 //         getString("_UI_HorizontalCoordinates_altitude_feature"),
 //         getString("_UI_PropertyDescriptor_description", "_UI_HorizontalCoordinates_altitude_feature", "_UI_HorizontalCoordinates_type"),
-//         SymphonyEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__ALTITUDE,
+//         Symphony__CoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__ALTITUDE,
 //         true,
 //         false,
 //         false,
@@ -126,7 +126,7 @@ public class HorizontalCoordinatesItemProvider
 				getResourceLocator(),
 				getString("_UI_HorizontalCoordinates_azimuth_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_HorizontalCoordinates_azimuth_feature", "_UI_HorizontalCoordinates_type"),
-				SymphonyEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__AZIMUTH,
+				Symphony__CoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__AZIMUTH,
 				true, 
 				false,
 				false, 
@@ -143,7 +143,7 @@ public class HorizontalCoordinatesItemProvider
 //         getResourceLocator(),
 //         getString("_UI_HorizontalCoordinates_azimuth_feature"),
 //         getString("_UI_PropertyDescriptor_description", "_UI_HorizontalCoordinates_azimuth_feature", "_UI_HorizontalCoordinates_type"),
-//         SymphonyEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__AZIMUTH,
+//         Symphony__CoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__AZIMUTH,
 //         true,
 //         false,
 //         false,
@@ -166,7 +166,7 @@ public class HorizontalCoordinatesItemProvider
 				 getResourceLocator(),
 				 getString("_UI_HorizontalCoordinates_radius_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_HorizontalCoordinates_radius_feature", "_UI_HorizontalCoordinates_type"),
-				 SymphonyEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__RADIUS,
+				 Symphony__CoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES__RADIUS,
 				 true,
 				 false,
 				 false,
@@ -215,9 +215,9 @@ public class HorizontalCoordinatesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(HorizontalCoordinates.class)) {
-			case SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
-			case SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
-			case SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
+			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
+			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
+			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

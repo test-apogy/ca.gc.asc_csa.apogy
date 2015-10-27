@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteCommand#getCommandStartTime <em>Command Start Time</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteCommand()
+ * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteCommand()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface SatelliteCommand extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Satellite</em>' reference.
 	 * @see #setSatellite(Satellite)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteCommand_Satellite()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteCommand_Satellite()
 	 * @model
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface SatelliteCommand extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Command Start Time</em>' attribute.
 	 * @see #setCommandStartTime(Date)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteCommand_CommandStartTime()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteCommand_CommandStartTime()
 	 * @model unique="false"
 	 * @generated
 	 */

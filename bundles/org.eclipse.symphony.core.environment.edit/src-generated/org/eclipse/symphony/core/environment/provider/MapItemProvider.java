@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.environment.Map;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.Map} object.
@@ -133,7 +133,7 @@ public class MapItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Map_mapNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Map_mapNode_feature", "_UI_Map_type"),
-				 SymphonyEnvironmentPackage.Literals.MAP__MAP_NODE,
+				 Symphony__CoreEnvironmentPackage.Literals.MAP__MAP_NODE,
 				 false,
 				 false,
 				 false,
@@ -155,8 +155,8 @@ public class MapItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.MAP__TRANSFORMATION);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.MAP__LAYERS);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.MAP__TRANSFORMATION);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS);
 		}
 		return childrenFeatures;
 	}
@@ -229,12 +229,12 @@ public class MapItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Map.class)) {
-			case SymphonyEnvironmentPackage.MAP__NAME:
-			case SymphonyEnvironmentPackage.MAP__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.MAP__NAME:
+			case Symphony__CoreEnvironmentPackage.MAP__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEnvironmentPackage.MAP__TRANSFORMATION:
-			case SymphonyEnvironmentPackage.MAP__LAYERS:
+			case Symphony__CoreEnvironmentPackage.MAP__TRANSFORMATION:
+			case Symphony__CoreEnvironmentPackage.MAP__LAYERS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -255,83 +255,83 @@ public class MapItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__TRANSFORMATION,
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__TRANSFORMATION,
 				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createImageMapLayer()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createURLImageMapLayer()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createURLImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayer()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayer()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshSlopeImageMapLayer()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshSlopeImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshDiscreteSlopeImageMapLayer()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshDiscreteSlopeImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshHeightImageMapLayer()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshHeightImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createEllipseShapeImageLayer()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEllipseShapeImageLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createRectangleShapeImageLayer()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangleShapeImageLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianCoordinatesPolygonShapeImageMapLayer()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianCoordinatesPolygonShapeImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createGeographicCoordinatesPolygonShapeImageMapLayer()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinatesPolygonShapeImageMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshURLMapLayer()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAP__LAYERS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createFeaturesOfInterestMapLayer()));
 	}
 
   /**

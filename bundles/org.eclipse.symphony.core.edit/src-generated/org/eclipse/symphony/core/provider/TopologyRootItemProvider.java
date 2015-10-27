@@ -20,8 +20,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFactory;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.TopologyRoot;
 
 /**
@@ -70,7 +70,7 @@ public class TopologyRootItemProvider extends ItemProviderAdapter implements
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE);
+			childrenFeatures.add(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -121,7 +121,7 @@ public class TopologyRootItemProvider extends ItemProviderAdapter implements
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TopologyRoot.class)) {
-			case SymphonyCorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
+			case Symphony__CorePackage.TOPOLOGY_ROOT__ORIGIN_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -142,92 +142,92 @@ public class TopologyRootItemProvider extends ItemProviderAdapter implements
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 SymphonyCoreFactory.eINSTANCE.createResultNode()));
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 Symphony__CoreFactory.eINSTANCE.createResultNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 SymphonyCoreFactory.eINSTANCE.createResultsListNode()));
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 Symphony__CoreFactory.eINSTANCE.createResultsListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestNode()));
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
-				 SymphonyCoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createLeaf()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createURLNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createCADNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateContentNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createReferencedGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createAggregateGroupNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createPositionNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createRotationNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createTransformNode()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
+				(Symphony__CorePackage.Literals.TOPOLOGY_ROOT__ORIGIN_NODE,
 				 Symphony__CommonTopologyFactory.eINSTANCE.createPickAndPlaceNode()));
 	}
 

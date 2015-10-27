@@ -29,7 +29,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.Environment#getActiveContext <em>Active Context</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEnvironment()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEnvironment()
  * @model
  * @generated
  */
@@ -46,7 +46,7 @@ public interface Environment extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Invocator Session</em>' container reference.
 	 * @see #setInvocatorSession(InvocatorSession)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEnvironment_InvocatorSession()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEnvironment_InvocatorSession()
 	 * @see org.eclipse.symphony.core.invocator.InvocatorSession#getEnvironment
 	 * @model opposite="environment" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -74,7 +74,7 @@ public interface Environment extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Types List</em>' containment reference.
 	 * @see #setTypesList(TypesList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEnvironment_TypesList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEnvironment_TypesList()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -101,7 +101,7 @@ public interface Environment extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variables List</em>' containment reference.
 	 * @see #setVariablesList(VariablesList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEnvironment_VariablesList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEnvironment_VariablesList()
 	 * @see org.eclipse.symphony.core.invocator.VariablesList#getEnvironment
 	 * @model opposite="environment" containment="true"
 	 * @generated
@@ -129,7 +129,7 @@ public interface Environment extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contexts List</em>' containment reference.
 	 * @see #setContextsList(ContextsList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEnvironment_ContextsList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEnvironment_ContextsList()
 	 * @see org.eclipse.symphony.core.invocator.ContextsList#getEnvironment
 	 * @model opposite="environment" containment="true"
 	 * @generated
@@ -156,7 +156,7 @@ public interface Environment extends Named, Described
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Active Context</em>' reference.
 	 * @see #setActiveContext(Context)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEnvironment_ActiveContext()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEnvironment_ActiveContext()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated

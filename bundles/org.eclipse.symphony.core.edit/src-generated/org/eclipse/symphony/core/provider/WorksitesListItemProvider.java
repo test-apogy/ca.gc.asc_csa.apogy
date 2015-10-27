@@ -22,8 +22,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.WorksitesList;
 
 /**
@@ -120,7 +120,7 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_WorksitesList_orbitsModels_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_WorksitesList_orbitsModels_feature", "_UI_WorksitesList_type"),
-				 SymphonyCorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS,
+				 Symphony__CorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS,
 				 true,
 				 false,
 				 false,
@@ -141,8 +141,8 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.WORKSITES_LIST__WORKSITES);
-			childrenFeatures.add(SymphonyCorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS);
+			childrenFeatures.add(Symphony__CorePackage.Literals.WORKSITES_LIST__WORKSITES);
+			childrenFeatures.add(Symphony__CorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS);
 		}
 		return childrenFeatures;
 	}
@@ -196,12 +196,12 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(WorksitesList.class)) {
-			case SymphonyCorePackage.WORKSITES_LIST__NAME:
-			case SymphonyCorePackage.WORKSITES_LIST__DESCRIPTION:
+			case Symphony__CorePackage.WORKSITES_LIST__NAME:
+			case Symphony__CorePackage.WORKSITES_LIST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyCorePackage.WORKSITES_LIST__WORKSITES:
-			case SymphonyCorePackage.WORKSITES_LIST__ORBITS_MODELS:
+			case Symphony__CorePackage.WORKSITES_LIST__WORKSITES:
+			case Symphony__CorePackage.WORKSITES_LIST__ORBITS_MODELS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -222,8 +222,8 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS,
-				 SymphonyCoreFactory.eINSTANCE.createOrbitModelsList()));
+				(Symphony__CorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS,
+				 Symphony__CoreFactory.eINSTANCE.createOrbitModelsList()));
 	}
 
 	/**

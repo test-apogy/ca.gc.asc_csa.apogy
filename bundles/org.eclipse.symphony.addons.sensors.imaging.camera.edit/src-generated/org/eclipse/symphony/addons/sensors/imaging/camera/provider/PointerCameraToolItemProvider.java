@@ -18,7 +18,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool;
 import org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.imaging.camera.PointerCameraTool} object.
@@ -137,7 +137,7 @@ public class PointerCameraToolItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
+			childrenFeatures.add(Symphony__CorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM);
 		}
 		return childrenFeatures;
 	}
@@ -246,7 +246,7 @@ public class PointerCameraToolItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM,
+				(Symphony__CorePackage.Literals.POSE_PROVIDER__POSE_TRANSFORM,
 				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 

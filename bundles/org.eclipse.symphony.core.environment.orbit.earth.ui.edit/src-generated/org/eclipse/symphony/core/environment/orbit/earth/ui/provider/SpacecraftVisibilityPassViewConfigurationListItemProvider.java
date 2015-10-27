@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 import org.eclipse.symphony.core.invocator.provider.AbstractToolsListContainerItemProvider;
 
 /**
@@ -61,7 +61,7 @@ public class SpacecraftVisibilityPassViewConfigurationListItemProvider extends A
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__CONFIGURATIONS);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__CONFIGURATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -114,7 +114,7 @@ public class SpacecraftVisibilityPassViewConfigurationListItemProvider extends A
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SpacecraftVisibilityPassViewConfigurationList.class)) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__CONFIGURATIONS:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__CONFIGURATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -134,8 +134,8 @@ public class SpacecraftVisibilityPassViewConfigurationListItemProvider extends A
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__CONFIGURATIONS,
-				 SymphonyEarthOrbitEnvironmentUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfiguration()));
+				(Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__CONFIGURATIONS,
+				 Symphony__CoreEnvironmentOrbitEarthUIFactory.eINSTANCE.createSpacecraftVisibilityPassViewConfiguration()));
 	}
 
 }

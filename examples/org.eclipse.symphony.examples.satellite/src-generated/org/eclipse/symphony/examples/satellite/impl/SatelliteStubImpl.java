@@ -4,7 +4,7 @@
 package org.eclipse.symphony.examples.satellite.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.SatelliteStub;
 
 /**
@@ -31,7 +31,7 @@ public class SatelliteStubImpl extends SatelliteImpl implements SatelliteStub {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleSatellitePackage.Literals.SATELLITE_STUB;
+		return Symphony__ExamplesSatellitePackage.Literals.SATELLITE_STUB;
 	}
 
 } //SatelliteStubImpl

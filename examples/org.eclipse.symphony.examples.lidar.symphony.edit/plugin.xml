@@ -11,7 +11,7 @@
       <!-- @generated symphony_examples_lidar -->
       <factory
             uri="org.eclipse.symphony.examples.lidar.symphony"
-            class="org.eclipse.symphony.examples.lidar.symphony.provider.SymphonyExampleLidarItemProviderAdapterFactory"
+            class="org.eclipse.symphony.examples.lidar.symphony.provider.Symphony__ExamplesLidarSymphonyItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

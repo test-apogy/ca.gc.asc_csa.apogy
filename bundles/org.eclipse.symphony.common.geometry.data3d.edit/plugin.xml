@@ -26,10 +26,4 @@
             class="org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DItemProviderAdapterFactory$Symphony__CommonGeometryDataChildCreationExtender"/>
    </extension>
 
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <extender
-            uri="org.eclipse.symphony.common.geometry.data"
-            class="org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DItemProviderAdapterFactory$DataChildCreationExtender"/>
-   </extension>
-
 </plugin>

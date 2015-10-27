@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.invocator.AttributeValue;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -63,7 +63,7 @@ public class AttributeValueImpl extends MinimalEObjectImpl.Container implements 
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.ATTRIBUTE_VALUE;
+		return Symphony__CoreInvocatorPackage.Literals.ATTRIBUTE_VALUE;
 	}
 
   /**
@@ -86,7 +86,7 @@ public class AttributeValueImpl extends MinimalEObjectImpl.Container implements 
 		Object oldObject = object;
 		object = newObject;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT, oldObject, object));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT, oldObject, object));
 	}
 
   /**
@@ -98,7 +98,7 @@ public class AttributeValueImpl extends MinimalEObjectImpl.Container implements 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
+			case Symphony__CoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
 				return getObject();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -113,7 +113,7 @@ public class AttributeValueImpl extends MinimalEObjectImpl.Container implements 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
+			case Symphony__CoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
 				setObject(newValue);
 				return;
 		}
@@ -129,7 +129,7 @@ public class AttributeValueImpl extends MinimalEObjectImpl.Container implements 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
+			case Symphony__CoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
 				setObject(OBJECT_EDEFAULT);
 				return;
 		}
@@ -145,7 +145,7 @@ public class AttributeValueImpl extends MinimalEObjectImpl.Container implements 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
+			case Symphony__CoreInvocatorPackage.ATTRIBUTE_VALUE__OBJECT:
 				return OBJECT_EDEFAULT == null ? object != null : !OBJECT_EDEFAULT.equals(object);
 		}
 		return super.eIsSet(featureID);

@@ -15,7 +15,7 @@ package org.eclipse.symphony.core;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getAbsolutePoseProvider()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getAbsolutePoseProvider()
  * @model
  * @generated
  */

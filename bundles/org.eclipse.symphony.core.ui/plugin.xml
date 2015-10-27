@@ -86,7 +86,7 @@
       <!-- @generated symphony_core_ui -->
       <package
             uri="org.eclipse.symphony.core.ui"
-            class="org.eclipse.symphony.core.ui.SymphonyCoreUiPackage"
+            class="org.eclipse.symphony.core.ui.Symphony__CoreUIPackage"
             genModel="model/symphony_core_ui.xcore"/>
    </extension>
    <extension

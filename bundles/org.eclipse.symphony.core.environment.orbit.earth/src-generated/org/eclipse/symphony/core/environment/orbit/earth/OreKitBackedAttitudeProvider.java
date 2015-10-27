@@ -11,12 +11,11 @@ import org.eclipse.symphony.core.environment.orbit.AttitudeProvider;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * A specialization of AttitudeProvider that uses an OreKit org.orekit.attitudes.AttitudeProvider.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getOreKitBackedAttitudeProvider()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getOreKitBackedAttitudeProvider()
  * @model abstract="true"
  * @generated
  */

@@ -23,9 +23,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentFactory;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.Satellite;
 
 /**
@@ -105,7 +105,7 @@ public class SatelliteItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Satellite_maximumRollRate_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Satellite_maximumRollRate_feature", "_UI_Satellite_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.SATELLITE__MAXIMUM_ROLL_RATE,
+				 Symphony__ExamplesSatellitePackage.Literals.SATELLITE__MAXIMUM_ROLL_RATE,
 				 true,
 				 false,
 				 false,
@@ -127,7 +127,7 @@ public class SatelliteItemProvider
 				 getResourceLocator(),
 				 getString("_UI_Satellite_maximumRoll_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Satellite_maximumRoll_feature", "_UI_Satellite_type"),
-				 EMFEcoreExampleSatellitePackage.Literals.SATELLITE__MAXIMUM_ROLL,
+				 Symphony__ExamplesSatellitePackage.Literals.SATELLITE__MAXIMUM_ROLL,
 				 true,
 				 false,
 				 false,
@@ -148,8 +148,8 @@ public class SatelliteItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreExampleSatellitePackage.Literals.SATELLITE__ORBIT_MODEL);
-			childrenFeatures.add(EMFEcoreExampleSatellitePackage.Literals.SATELLITE__IMAGER);
+			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.SATELLITE__ORBIT_MODEL);
+			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.SATELLITE__IMAGER);
 		}
 		return childrenFeatures;
 	}
@@ -194,13 +194,13 @@ public class SatelliteItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Satellite.class)) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE__NAME:
-			case EMFEcoreExampleSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
-			case EMFEcoreExampleSatellitePackage.SATELLITE__MAXIMUM_ROLL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__NAME:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL_RATE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE__ORBIT_MODEL:
-			case EMFEcoreExampleSatellitePackage.SATELLITE__IMAGER:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
+			case Symphony__ExamplesSatellitePackage.SATELLITE__IMAGER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -220,13 +220,13 @@ public class SatelliteItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE__ORBIT_MODEL,
-				 SymphonyOrbitEnvironmentFactory.eINSTANCE.createOrbitModel()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE__ORBIT_MODEL,
+				 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createOrbitModel()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleSatellitePackage.Literals.SATELLITE__IMAGER,
-				 EMFEcoreExampleSatelliteFactory.eINSTANCE.createSatelliteImager()));
+				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE__IMAGER,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteImager()));
 	}
 
 	/**

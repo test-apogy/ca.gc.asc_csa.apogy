@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMember;
 
 /**
@@ -108,7 +108,7 @@ public class TypeMemberItemProvider
 				 getResourceLocator(),
 				 getString("_UI_TypeMember_memberType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_TypeMember_memberType_feature", "_UI_TypeMember_type"),
-				 EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER__MEMBER_TYPE,
+				 Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER__MEMBER_TYPE,
 				 true,
 				 false,
 				 true,
@@ -130,7 +130,7 @@ public class TypeMemberItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -200,10 +200,10 @@ public class TypeMemberItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TypeMember.class)) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER__NAME:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -224,7 +224,7 @@ public class TypeMemberItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE,
+				(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE,
 				 Symphony__CommonEMFFactory.eINSTANCE.createTreeRootNode()));
 	}
 

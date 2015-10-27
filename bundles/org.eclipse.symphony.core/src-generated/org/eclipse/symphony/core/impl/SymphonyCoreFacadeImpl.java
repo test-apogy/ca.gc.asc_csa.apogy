@@ -41,8 +41,8 @@ import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.PositionedResult;
 import org.eclipse.symphony.core.ResultNode;
 import org.eclipse.symphony.core.SymphonyCoreFacade;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
@@ -53,7 +53,7 @@ import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.DataProductsList;
 import org.eclipse.symphony.core.invocator.DataProductsListsContainer;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.OperationCallResultsList;
@@ -92,7 +92,7 @@ public class SymphonyCoreFacadeImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.SYMPHONY_CORE_FACADE;
+		return Symphony__CorePackage.Literals.SYMPHONY_CORE_FACADE;
 	}
 
 	/**
@@ -130,7 +130,7 @@ public class SymphonyCoreFacadeImpl extends MinimalEObjectImpl.Container
 	public ResultNode createResultNode(PositionedResult result) 
 	{
 		// Creates the ResultNode.
-		ResultNode resultNode = SymphonyCoreFactory.eINSTANCE
+		ResultNode resultNode = Symphony__CoreFactory.eINSTANCE
 				.createResultNode();
 		resultNode.setResult(result);
 
@@ -182,28 +182,28 @@ public class SymphonyCoreFacadeImpl extends MinimalEObjectImpl.Container
 	public InvocatorSession createSymphonySession(boolean createEnvironment,
 			boolean createPrograms, boolean createDataProducts,
 			boolean createTools) {
-		InvocatorSession session = EMFEcoreInvocatorFactory.eINSTANCE
+		InvocatorSession session = Symphony__CoreInvocatorFactory.eINSTANCE
 				.createInvocatorSession();
 		Context context = null;
 
 		if (createEnvironment) {
-			SymphonyEnvironment environment = SymphonyCoreFactory.eINSTANCE
+			SymphonyEnvironment environment = Symphony__CoreFactory.eINSTANCE
 					.createSymphonyEnvironment();
-			environment.setTypesList(EMFEcoreInvocatorFactory.eINSTANCE
+			environment.setTypesList(Symphony__CoreInvocatorFactory.eINSTANCE
 					.createTypesList());
-			environment.setVariablesList(EMFEcoreInvocatorFactory.eINSTANCE
+			environment.setVariablesList(Symphony__CoreInvocatorFactory.eINSTANCE
 					.createVariablesList());
-			environment.setContextsList(EMFEcoreInvocatorFactory.eINSTANCE
+			environment.setContextsList(Symphony__CoreInvocatorFactory.eINSTANCE
 					.createContextsList());
 
 			/** Create a default Context */
-			context = EMFEcoreInvocatorFactory.eINSTANCE.createBasicContext();
+			context = Symphony__CoreInvocatorFactory.eINSTANCE.createBasicContext();
 			context.setName("Default");
 			environment.getContextsList().getContexts().add(context);
 			environment.setActiveContext(context);
 			
 			/** Creates the Worksites List */
-			WorksitesList worksitesList =  SymphonyCoreFactory.eINSTANCE.createWorksitesList();
+			WorksitesList worksitesList =  Symphony__CoreFactory.eINSTANCE.createWorksitesList();
 			environment.setWorksitesList(worksitesList);
 						
 			/** Creates the Timesource.*/
@@ -220,19 +220,19 @@ public class SymphonyCoreFacadeImpl extends MinimalEObjectImpl.Container
 		}
 
 		if (createPrograms) {
-			session.setProgramsList(EMFEcoreInvocatorFactory.eINSTANCE
+			session.setProgramsList(Symphony__CoreInvocatorFactory.eINSTANCE
 					.createProgramsList());
 		}
 
 		if (createDataProducts) {
-			DataProductsListsContainer listsContainer = EMFEcoreInvocatorFactory.eINSTANCE
+			DataProductsListsContainer listsContainer = Symphony__CoreInvocatorFactory.eINSTANCE
 					.createDataProductsListsContainer();
-			DataProductsList dataProductsList = EMFEcoreInvocatorFactory.eINSTANCE
+			DataProductsList dataProductsList = Symphony__CoreInvocatorFactory.eINSTANCE
 					.createDataProductsList();
 			listsContainer.getDataProductsList().add(dataProductsList);
 			session.setDataProductsListContainer(listsContainer);
 			
-			OperationCallResultsList operationCallResultsList = EMFEcoreInvocatorFactory.eINSTANCE.createOperationCallResultsList();
+			OperationCallResultsList operationCallResultsList = Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCallResultsList();
 			dataProductsList.setOperationCallResultsList(operationCallResultsList);			
 
 			if (context != null) {
@@ -241,7 +241,7 @@ public class SymphonyCoreFacadeImpl extends MinimalEObjectImpl.Container
 		}
 
 		if (createTools) {
-			ToolsList toolsList = EMFEcoreInvocatorFactory.eINSTANCE
+			ToolsList toolsList = Symphony__CoreInvocatorFactory.eINSTANCE
 					.createToolsList();
 			session.setToolsList(toolsList);
 		}
@@ -322,7 +322,7 @@ public class SymphonyCoreFacadeImpl extends MinimalEObjectImpl.Container
 		double ry = Double.parseDouble(entries[6]);
 		double rz = Double.parseDouble(entries[7]);
 		
-		foi = SymphonyCoreFactory.eINSTANCE.createFeatureOfInterest();
+		foi = Symphony__CoreFactory.eINSTANCE.createFeatureOfInterest();
 		foi.setName(name);
 		foi.setDescription(description);
 		
@@ -401,22 +401,22 @@ public class SymphonyCoreFacadeImpl extends MinimalEObjectImpl.Container
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyCorePackage.SYMPHONY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__SYMPHONYSYSTEM_MATRIX4X4:
+			case Symphony__CorePackage.SYMPHONY_CORE_FACADE___COMPUTE_ABSOLUTE_POSE_MATRIX__SYMPHONYSYSTEM_MATRIX4X4:
 				return computeAbsolutePoseMatrix((SymphonySystem)arguments.get(0), (Matrix4x4)arguments.get(1));
-			case SymphonyCorePackage.SYMPHONY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT:
+			case Symphony__CorePackage.SYMPHONY_CORE_FACADE___CREATE_RESULT_NODE__POSITIONEDRESULT:
 				return createResultNode((PositionedResult)arguments.get(0));
-			case SymphonyCorePackage.SYMPHONY_CORE_FACADE___CREATE_SYMPHONY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN:
+			case Symphony__CorePackage.SYMPHONY_CORE_FACADE___CREATE_SYMPHONY_SESSION__BOOLEAN_BOOLEAN_BOOLEAN_BOOLEAN:
 				return createSymphonySession((Boolean)arguments.get(0), (Boolean)arguments.get(1), (Boolean)arguments.get(2), (Boolean)arguments.get(3));
-			case SymphonyCorePackage.SYMPHONY_CORE_FACADE___GET_SYMPHONY_SYSTEM__ENVIRONMENT_STRING:
+			case Symphony__CorePackage.SYMPHONY_CORE_FACADE___GET_SYMPHONY_SYSTEM__ENVIRONMENT_STRING:
 				return getSymphonySystem((Environment)arguments.get(0), (String)arguments.get(1));
-			case SymphonyCorePackage.SYMPHONY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING:
+			case Symphony__CorePackage.SYMPHONY_CORE_FACADE___LOAD_FEATURE_OF_INTEREST_FROM_FILE__STRING:
 				try {
 					return loadFeatureOfInterestFromFile((String)arguments.get(0));
 				}
 				catch (Throwable throwable) {
 					throw new InvocationTargetException(throwable);
 				}
-			case SymphonyCorePackage.SYMPHONY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST:
+			case Symphony__CorePackage.SYMPHONY_CORE_FACADE___SAVE_FEATURE_OF_INTEREST_TO_FILE__STRING_LIST:
 				try {
 					saveFeatureOfInterestToFile((String)arguments.get(0), (List<FeatureOfInterest>)arguments.get(1));
 					return null;

@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -164,7 +164,7 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyUIPackage.Literals.NODE_SELECTION;
+		return Symphony__CommonTopologyUIPackage.Literals.NODE_SELECTION;
 	}
 
 	/**
@@ -178,7 +178,7 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 			topologyPresentationSet = (TopologyPresentationSet)eResolveProxy(oldTopologyPresentationSet);
 			if (topologyPresentationSet != oldTopologyPresentationSet) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyUIPackage.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET, oldTopologyPresentationSet, topologyPresentationSet));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyUIPackage.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET, oldTopologyPresentationSet, topologyPresentationSet));
 			}
 		}
 		return topologyPresentationSet;
@@ -202,7 +202,7 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 		TopologyPresentationSet oldTopologyPresentationSet = topologyPresentationSet;
 		topologyPresentationSet = newTopologyPresentationSet;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET, oldTopologyPresentationSet, topologyPresentationSet));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET, oldTopologyPresentationSet, topologyPresentationSet));
 	}
 
 	/**
@@ -216,7 +216,7 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 			selectedNode = (Node)eResolveProxy(oldSelectedNode);
 			if (selectedNode != oldSelectedNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyUIPackage.NODE_SELECTION__SELECTED_NODE, oldSelectedNode, selectedNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyUIPackage.NODE_SELECTION__SELECTED_NODE, oldSelectedNode, selectedNode));
 			}
 		}
 		return selectedNode;
@@ -240,7 +240,7 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 		Node oldSelectedNode = selectedNode;
 		selectedNode = newSelectedNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.NODE_SELECTION__SELECTED_NODE, oldSelectedNode, selectedNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.NODE_SELECTION__SELECTED_NODE, oldSelectedNode, selectedNode));
 	}
 
 	/**
@@ -254,7 +254,7 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 			nodePresentation = (NodePresentation)eResolveProxy(oldNodePresentation);
 			if (nodePresentation != oldNodePresentation) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyUIPackage.NODE_SELECTION__NODE_PRESENTATION, oldNodePresentation, nodePresentation));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyUIPackage.NODE_SELECTION__NODE_PRESENTATION, oldNodePresentation, nodePresentation));
 			}
 		}
 		return nodePresentation;
@@ -278,7 +278,7 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 		NodePresentation oldNodePresentation = nodePresentation;
 		nodePresentation = newNodePresentation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.NODE_SELECTION__NODE_PRESENTATION, oldNodePresentation, nodePresentation));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.NODE_SELECTION__NODE_PRESENTATION, oldNodePresentation, nodePresentation));
 	}
 
 	/**
@@ -299,7 +299,7 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 		Point3d oldRelativeIntersectionPoint = relativeIntersectionPoint;
 		relativeIntersectionPoint = newRelativeIntersectionPoint;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_POINT, oldRelativeIntersectionPoint, relativeIntersectionPoint));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_POINT, oldRelativeIntersectionPoint, relativeIntersectionPoint));
 	}
 
 	/**
@@ -333,7 +333,7 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 		Point3d oldAbsoluteIntersectionPoint = absoluteIntersectionPoint;
 		absoluteIntersectionPoint = newAbsoluteIntersectionPoint;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT, oldAbsoluteIntersectionPoint, absoluteIntersectionPoint));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT, oldAbsoluteIntersectionPoint, absoluteIntersectionPoint));
 	}
 
 	/**
@@ -354,7 +354,7 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 		Vector3f oldRelativeIntersectionNormal = relativeIntersectionNormal;
 		relativeIntersectionNormal = newRelativeIntersectionNormal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL, oldRelativeIntersectionNormal, relativeIntersectionNormal));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL, oldRelativeIntersectionNormal, relativeIntersectionNormal));
 	}
 
 	/**
@@ -387,7 +387,7 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 		Vector3f oldAbsoluteIntersectionNormal = absoluteIntersectionNormal;
 		absoluteIntersectionNormal = newAbsoluteIntersectionNormal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL, oldAbsoluteIntersectionNormal, absoluteIntersectionNormal));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL, oldAbsoluteIntersectionNormal, absoluteIntersectionNormal));
 	}
 
 	/**
@@ -398,22 +398,22 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyUIPackage.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET:
 				if (resolve) return getTopologyPresentationSet();
 				return basicGetTopologyPresentationSet();
-			case TopologyUIPackage.NODE_SELECTION__SELECTED_NODE:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__SELECTED_NODE:
 				if (resolve) return getSelectedNode();
 				return basicGetSelectedNode();
-			case TopologyUIPackage.NODE_SELECTION__NODE_PRESENTATION:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__NODE_PRESENTATION:
 				if (resolve) return getNodePresentation();
 				return basicGetNodePresentation();
-			case TopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_POINT:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_POINT:
 				return getRelativeIntersectionPoint();
-			case TopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT:
 				return getAbsoluteIntersectionPoint();
-			case TopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL:
 				return getRelativeIntersectionNormal();
-			case TopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL:
 				return getAbsoluteIntersectionNormal();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -427,25 +427,25 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyUIPackage.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET:
 				setTopologyPresentationSet((TopologyPresentationSet)newValue);
 				return;
-			case TopologyUIPackage.NODE_SELECTION__SELECTED_NODE:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__SELECTED_NODE:
 				setSelectedNode((Node)newValue);
 				return;
-			case TopologyUIPackage.NODE_SELECTION__NODE_PRESENTATION:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__NODE_PRESENTATION:
 				setNodePresentation((NodePresentation)newValue);
 				return;
-			case TopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_POINT:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_POINT:
 				setRelativeIntersectionPoint((Point3d)newValue);
 				return;
-			case TopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT:
 				setAbsoluteIntersectionPoint((Point3d)newValue);
 				return;
-			case TopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL:
 				setRelativeIntersectionNormal((Vector3f)newValue);
 				return;
-			case TopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL:
 				setAbsoluteIntersectionNormal((Vector3f)newValue);
 				return;
 		}
@@ -460,25 +460,25 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyUIPackage.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET:
 				setTopologyPresentationSet((TopologyPresentationSet)null);
 				return;
-			case TopologyUIPackage.NODE_SELECTION__SELECTED_NODE:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__SELECTED_NODE:
 				setSelectedNode((Node)null);
 				return;
-			case TopologyUIPackage.NODE_SELECTION__NODE_PRESENTATION:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__NODE_PRESENTATION:
 				setNodePresentation((NodePresentation)null);
 				return;
-			case TopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_POINT:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_POINT:
 				setRelativeIntersectionPoint(RELATIVE_INTERSECTION_POINT_EDEFAULT);
 				return;
-			case TopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT:
 				setAbsoluteIntersectionPoint(ABSOLUTE_INTERSECTION_POINT_EDEFAULT);
 				return;
-			case TopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL:
 				setRelativeIntersectionNormal(RELATIVE_INTERSECTION_NORMAL_EDEFAULT);
 				return;
-			case TopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL:
 				setAbsoluteIntersectionNormal(ABSOLUTE_INTERSECTION_NORMAL_EDEFAULT);
 				return;
 		}
@@ -493,19 +493,19 @@ public class NodeSelectionImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyUIPackage.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET:
 				return topologyPresentationSet != null;
-			case TopologyUIPackage.NODE_SELECTION__SELECTED_NODE:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__SELECTED_NODE:
 				return selectedNode != null;
-			case TopologyUIPackage.NODE_SELECTION__NODE_PRESENTATION:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__NODE_PRESENTATION:
 				return nodePresentation != null;
-			case TopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_POINT:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_POINT:
 				return RELATIVE_INTERSECTION_POINT_EDEFAULT == null ? relativeIntersectionPoint != null : !RELATIVE_INTERSECTION_POINT_EDEFAULT.equals(relativeIntersectionPoint);
-			case TopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT:
 				return ABSOLUTE_INTERSECTION_POINT_EDEFAULT == null ? absoluteIntersectionPoint != null : !ABSOLUTE_INTERSECTION_POINT_EDEFAULT.equals(absoluteIntersectionPoint);
-			case TopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL:
 				return RELATIVE_INTERSECTION_NORMAL_EDEFAULT == null ? relativeIntersectionNormal != null : !RELATIVE_INTERSECTION_NORMAL_EDEFAULT.equals(relativeIntersectionNormal);
-			case TopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL:
 				return ABSOLUTE_INTERSECTION_NORMAL_EDEFAULT == null ? absoluteIntersectionNormal != null : !ABSOLUTE_INTERSECTION_NORMAL_EDEFAULT.equals(absoluteIntersectionNormal);
 		}
 		return super.eIsSet(featureID);

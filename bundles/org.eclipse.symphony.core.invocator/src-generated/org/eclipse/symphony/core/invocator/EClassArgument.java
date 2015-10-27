@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.EClassArgument#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEClassArgument()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEClassArgument()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface EClassArgument extends Argument
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' containment reference.
 	 * @see #setValue(EObject)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getEClassArgument_Value()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getEClassArgument_Value()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable'"
 	 * @generated

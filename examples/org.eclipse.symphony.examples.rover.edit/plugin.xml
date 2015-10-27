@@ -11,7 +11,7 @@
       <!-- @generated emf_ecore_examples_rover -->
       <factory
             uri="org.eclipse.symphony.examples.rover"
-            class="org.eclipse.symphony.examples.rover.provider.EMFEcoreExampleRoverItemProviderAdapterFactory"
+            class="org.eclipse.symphony.examples.rover.provider.Symphony__ExamplesRoverItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -24,14 +24,7 @@
       <!-- @generated symphony_examples_rover -->
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.rover.provider.EMFEcoreExampleRoverItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated emf_ecore_examples_rover -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.rover.provider.EMFEcoreExampleRoverItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.examples.rover.provider.Symphony__ExamplesRoverItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

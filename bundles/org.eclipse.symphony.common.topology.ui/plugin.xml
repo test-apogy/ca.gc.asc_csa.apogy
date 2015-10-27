@@ -161,14 +161,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.common.topology.ui.TopologyUIPackage"
+            class="org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage"
             genModel="model/symphony_common_topology_ui.xcore"/>
    </extension>
-   <extension
-         point="org.eclipse.symphony.common.converters">
-      <new_element
-            Class="org.eclipse.symphony.common.topology.ui.converters.NodeToNodePresentationConverter">
-      </new_element>
-   </extension>
-
 </plugin>

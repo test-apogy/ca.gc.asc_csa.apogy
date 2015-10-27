@@ -11,7 +11,7 @@ import org.eclipse.symphony.addons.ui.SunVector3DToolNodePresentation;
 import org.eclipse.symphony.addons.ui.Symphony__AddonsUIFactory;
 import org.eclipse.symphony.addons.ui.Symphony__AddonsUIPackage;
 import org.eclipse.symphony.addons.ui.Trajectory3DToolNodePresentation;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -88,7 +88,7 @@ public class Symphony__AddonsUIPackageImpl extends EPackageImpl implements Symph
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyUIPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsUIPackage.createPackageContents();
@@ -191,16 +191,16 @@ public class Symphony__AddonsUIPackageImpl extends EPackageImpl implements Symph
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyUIPackage theTopologyUIPackage = (TopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyUIPackage.eNS_URI);
+		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		ruler3dToolNodePresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
-		sunVector3DToolNodePresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
-		trajectory3DToolNodePresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
+		ruler3dToolNodePresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		sunVector3DToolNodePresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
+		trajectory3DToolNodePresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(ruler3dToolNodePresentationEClass, Ruler3dToolNodePresentation.class, "Ruler3dToolNodePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

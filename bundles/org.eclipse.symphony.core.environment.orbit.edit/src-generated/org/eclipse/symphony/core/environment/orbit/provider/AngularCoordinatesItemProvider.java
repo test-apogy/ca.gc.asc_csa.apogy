@@ -21,7 +21,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.environment.orbit.AngularCoordinates;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.AngularCoordinates} object.
@@ -74,9 +74,9 @@ public class AngularCoordinatesItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyOrbitEnvironmentPackage.Literals.ANGULAR_COORDINATES__ROTATION);
-			childrenFeatures.add(SymphonyOrbitEnvironmentPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE);
-			childrenFeatures.add(SymphonyOrbitEnvironmentPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ROTATION);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION);
 		}
 		return childrenFeatures;
 	}
@@ -129,9 +129,9 @@ public class AngularCoordinatesItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AngularCoordinates.class)) {
-			case SymphonyOrbitEnvironmentPackage.ANGULAR_COORDINATES__ROTATION:
-			case SymphonyOrbitEnvironmentPackage.ANGULAR_COORDINATES__ANGULAR_RATE:
-			case SymphonyOrbitEnvironmentPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION:
+			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ROTATION:
+			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_RATE:
+			case Symphony__CoreEnvironmentOrbitPackage.ANGULAR_COORDINATES__ANGULAR_ACCELERATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -151,17 +151,17 @@ public class AngularCoordinatesItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyOrbitEnvironmentPackage.Literals.ANGULAR_COORDINATES__ROTATION,
+				(Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ROTATION,
 				 Symphony__CommonMathFactory.eINSTANCE.createMatrix3x3()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyOrbitEnvironmentPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE,
+				(Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyOrbitEnvironmentPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION,
+				(Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION,
 				 Symphony__CommonMathFactory.eINSTANCE.createTuple3d()));
 	}
 
@@ -177,8 +177,8 @@ public class AngularCoordinatesItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyOrbitEnvironmentPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE ||
-			childFeature == SymphonyOrbitEnvironmentPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION;
+			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_RATE ||
+			childFeature == Symphony__CoreEnvironmentOrbitPackage.Literals.ANGULAR_COORDINATES__ANGULAR_ACCELERATION;
 
 		if (qualify) {
 			return getString

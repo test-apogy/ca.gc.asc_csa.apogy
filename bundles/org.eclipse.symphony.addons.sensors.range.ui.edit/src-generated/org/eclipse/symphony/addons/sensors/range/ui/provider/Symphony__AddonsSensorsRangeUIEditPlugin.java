@@ -7,7 +7,7 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
 import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
-import org.eclipse.symphony.common.topology.ui.provider.TopologyUIEditPlugin;
+import org.eclipse.symphony.common.topology.ui.provider.Symphony__CommonTopologyUIEditPlugin;
 
 /**
  * This is the central singleton for the Symphony__AddonsSensorsRangeUI edit plugin.
@@ -41,7 +41,7 @@ public final class Symphony__AddonsSensorsRangeUIEditPlugin extends EMFPlugin {
 	public Symphony__AddonsSensorsRangeUIEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     TopologyUIEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyUIEditPlugin.INSTANCE,
 		     Symphony__CommonTopologyEditPlugin.INSTANCE,
 		     Symphony__CommonMathEditPlugin.INSTANCE,
 		   });

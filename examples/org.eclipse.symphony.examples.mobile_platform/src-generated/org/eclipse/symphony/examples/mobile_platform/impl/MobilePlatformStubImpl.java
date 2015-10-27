@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.mobile_platform.Activator;
-import org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage;
+import org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage;
 import org.eclipse.symphony.examples.mobile_platform.MobilePlatformStub;
 import org.eclipse.symphony.examples.mobile_platform.Position;
 
@@ -42,7 +42,7 @@ public class MobilePlatformStubImpl extends MobilePlatformImpl implements Mobile
 	@Override
 	protected EClass eStaticClass()
 	{
-		return EMFEcoreExampleMobilePlatformPackage.Literals.MOBILE_PLATFORM_STUB;
+		return Symphony__ExamplesMobilePlatformPackage.Literals.MOBILE_PLATFORM_STUB;
 	}
 
 	/**

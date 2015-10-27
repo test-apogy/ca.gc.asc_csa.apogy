@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLayer;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,7 +52,7 @@ public class BasicCartesianTriangularMeshMapLayerImpl extends CartesianTriangula
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER;
+		return Symphony__CoreEnvironmentPackage.Literals.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER;
 	}
 
 	/**
@@ -73,7 +73,7 @@ public class BasicCartesianTriangularMeshMapLayerImpl extends CartesianTriangula
 		CartesianTriangularMesh oldMesh = mesh;
 		mesh = newMesh;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH, oldMesh, newMesh);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH, oldMesh, newMesh);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -88,14 +88,14 @@ public class BasicCartesianTriangularMeshMapLayerImpl extends CartesianTriangula
 		if (newMesh != mesh) {
 			NotificationChain msgs = null;
 			if (mesh != null)
-				msgs = ((InternalEObject)mesh).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH, null, msgs);
+				msgs = ((InternalEObject)mesh).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH, null, msgs);
 			if (newMesh != null)
-				msgs = ((InternalEObject)newMesh).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH, null, msgs);
+				msgs = ((InternalEObject)newMesh).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH, null, msgs);
 			msgs = basicSetMesh(newMesh, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH, newMesh, newMesh));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH, newMesh, newMesh));
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class BasicCartesianTriangularMeshMapLayerImpl extends CartesianTriangula
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH:
+			case Symphony__CoreEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH:
 				return basicSetMesh(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -120,7 +120,7 @@ public class BasicCartesianTriangularMeshMapLayerImpl extends CartesianTriangula
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH:
+			case Symphony__CoreEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH:
 				return getMesh();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -134,7 +134,7 @@ public class BasicCartesianTriangularMeshMapLayerImpl extends CartesianTriangula
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH:
+			case Symphony__CoreEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH:
 				setMesh((CartesianTriangularMesh)newValue);
 				return;
 		}
@@ -149,7 +149,7 @@ public class BasicCartesianTriangularMeshMapLayerImpl extends CartesianTriangula
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH:
+			case Symphony__CoreEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH:
 				setMesh((CartesianTriangularMesh)null);
 				return;
 		}
@@ -164,7 +164,7 @@ public class BasicCartesianTriangularMeshMapLayerImpl extends CartesianTriangula
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH:
+			case Symphony__CoreEnvironmentPackage.BASIC_CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH:
 				return mesh != null;
 		}
 		return super.eIsSet(featureID);

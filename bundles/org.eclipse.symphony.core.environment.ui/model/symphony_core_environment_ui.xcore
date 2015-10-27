@@ -1,4 +1,11 @@
-@GenModel(prefix="SymphonyEnvironmentUI", childCreationExtenders="true", extensibleProviderFactory="true", multipleEditorPages="false", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)", modelName="SymphonyEnvironmentUI", complianceLevel="6.0", suppressGenModelAnnotations="false")
+@GenModel(prefix="Symphony__CoreEnvironmentUI",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="Symphony__CoreEnvironmentUI",
+		  complianceLevel="6.0",
+		  suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.core.environment.ui/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.core.environment.ui.edit/src-generated")
 
@@ -40,14 +47,14 @@ type JFreeChart wraps org.jfree.chart.JFreeChart
 
 // Classes
 
-
 class StarFieldPresentation extends NodePresentation
 {	
 	float cutOffMagnitude = "6.0"
 }
 
 class SunPresentation extends NodePresentation
-{	
+{
+	
 }
 
 
@@ -79,11 +86,13 @@ class EarthSurfaceWorksitePresentation extends NodePresentation
 }
 
 class EarthSkyPresentation extends NodePresentation
-{	
+{
+	
 }
 
 class MoonPresentation extends NodePresentation
-{	
+{
+	
 }
 
 class FeatureOfInterestNodePresentation extends NodePresentation
@@ -100,14 +109,24 @@ class EnvironmentUiUtilities
 	
 	op float getPointSizeForMagnitude(float magnitude, float magnitudeRangeMinimum, float magnitudeRangeMaximum, float minimumPointSize, float maximumPointSize)
 	
-	@GenModel(documentation="Return the sun color for a given altitude above the horizon.")
-	op Color3f getSunLightColor(@GenModel(documentation="The altitude above the horizon, in radians.") double sunAltitude)
+	/*
+	 * Return the sun color for a given altitude above the horizon.
+	 * @param sunAltitude The altitude above the horizon, in radians.
+	 */
+	op Color3f getSunLightColor(@GenModel(csa_units="rad") double sunAltitude)
 	
-	@GenModel(documentation="Return the transparency value (between no transparency 0 and full transparency 1.0) to be used for the blus sky as a function of the sun altitude angle.")
-	op double getSkyTransparency(@GenModel(documentation="The altitude above the horizon, in radians.") double sunAltitude)
+	/*
+	 * Return the transparency value (between no transparency 0 and full transparency 1.0)
+	 * to be used for the blus sky as a function of the sun altitude angle.
+	 * @param sunAltitude The altitude above the horizon, in radians.
+	 */
+	op double getSkyTransparency(@GenModel(csa_units="rad") double sunAltitude)
 	
-	@GenModel(documentation="Return the sky color for a given altitude above the horizon.")
-	op Color3f getSkyColor(@GenModel(documentation="The altitude above the horizon, in radians.") double sunAltitude)
+	/*
+	 * Return the sky color for a given altitude above the horizon.
+	 * @param sunAltitude The altitude above the horizon, in radians.
+	 */
+	op Color3f getSkyColor(@GenModel(csa_units="rad") double sunAltitude)
 }
 
 class EnvironmentUiFacade
@@ -116,20 +135,20 @@ class EnvironmentUiFacade
 	
 	//op void getImageMapLayerPresentationExtent(List<ImageMapLayerPresentation> imageMapLayerPresentations, Tuple3d lowerLeftCorner, Tuple3d upperRightCorner)
 	
-	/**
+	/*
 	 * Returns an image representing the assembly of the specified list of ImageMapLayerPresentation. 
 	 * @param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.
 	 * @return The image representing the specified list of ImageMapLayerPresentation.
 	 */
 	//op AbstractEImage getImageMapLayerPresentationImage(List<ImageMapLayerPresentation> imageMapLayerPresentations)
 	
-	/**
+	/*
 	 * Returns the ImageMapLayerPresentation with the highest resolution (minimum meters/pixel).
 	 * @return The ImageMapLayerPresentation with the highest resolution (minimum meters/pixel)
 	 */
 	//op ImageMapLayerPresentation getBestResolutionMapLayer(List<ImageMapLayerPresentation> imageMapLayerPresentations)
 	
-	/**
+	/*
 	 * Returns the list of visible ImageMapLayerPresentation from"" a specified imageMapLayerPresentations.
 	 * @param imageMapLayerPresentations The specified list of ImageMapLayerPresentation.
 	 * @return The list of visible ImageMapLayerPresentation.
@@ -139,7 +158,7 @@ class EnvironmentUiFacade
 				
 	op List<RectangularRegionProvider> getVisibleRectangularRegionProvider(MapViewConfiguration mapViewConfiguration)
 				
-	/**
+	/*
 	 * Returns an image representing the specified MapViewExtent using a specified MapViewConfiguration.
 	 * If the MapViewExtent is larger than the area covered by the MapViewConfiguration, transparent pixels will be added.
 	 * @param mapViewConfiguration The specified MapViewConfiguration.
@@ -156,21 +175,21 @@ class EnvironmentUiFacade
 	 */
 	op double getTrajectoryLength(XYSeries xySeries)
 	
-		/**
+	/*
 	 * Return the identifier associated with a given MapViewConfiguration.
 	 * @param mapViewConfiguration The given MapViewConfiguration.
 	 * @return The identifier, null if none is found.
 	 */
 	op String getMapViewConfigurationIdentifier(MapViewConfiguration mapViewConfiguration)
 	
-	/**
+	/*
 	 * Return the MapViewConfiguration (in the Active Session) with the specified identifier.
 	 * @param identifier The MapViewConfiguration identifier.
 	 * @return The MapViewConfiguration with the specified identifier, null if non is found.
 	 */
 	op MapViewConfiguration getActiveMapViewConfiguration(String identifier)
 	
-	/**
+	/*
 	 * Return the MapViewConfigurationList in the Active Session.
 	 * @return The MapViewConfigurationList in the Active Session, null if none is found.
 	 */
@@ -187,53 +206,72 @@ class MapViewConfigurationList extends AbstractToolsListContainer
 }
 
 
-/**
+/*
  * Configuration used for the Map View.
  */
 class MapViewConfiguration extends Named, Described
 {		
-	/** List of Maps being displayed.*/
+	/*
+	 * List of Maps being displayed.
+	 */
 	@GenModel(children="true", notify="true", property="None")
 	contains ImageMapLayerPresentation[0..*] mapLayers
 
-	/** Color of the map background.*/
+	/*
+	 * Color of the map background.
+	 */
 	Color3f backgroundColor = "1.0,1.0,1.0"
 
-	/** List of Symphony System instances being tracked.*/
+	/*
+	 * List of Symphony System instances being tracked.
+	 */
 	@GenModel(children="true", notify="true", property="None")
 	contains MapAnnotation[0..*] mapAnnotations		
 	
-	/* Default region to use when none is covered by the map Layers*/
+	/*
+	 * Default region to use when none is covered by the map Layers
+	 */
 	refers transient RectangularRegion[1] defaultRectangularRegion
 	
-	/** The image representing the active ImageMapLayers.  */
+	/*
+	 * The image representing the active ImageMapLayers.
+	 */
 	@GenModel(children="false", notify="true", property="None")
 	refers derived transient readonly AbstractEImage mapImage			
 	
-	/* The rectangular region covered by the image layers defined in the map. */
+	/* 
+	 * The rectangular region covered by the image layers defined in the map.
+	 */
 	@GenModel(children="false", notify="true", property="Readonly")
 	refers derived transient readonly RectangularRegion[1] mapImageRectangularRegion
 	
-	/* The rectangular region covered by the map (typically larger than mapImageRectangularRegion and contains mapImageRectangularRegion). */
+	/* 
+	 * The rectangular region covered by the map (typically larger than
+	 * mapImageRectangularRegion and contains mapImageRectangularRegion).
+	 */
 	@GenModel(children="false", notify="true", property="Readonly")
 	refers derived transient RectangularRegion[1] extent
 	
-	/* Forces the updates of all derived values. */
+	/* 
+	 * Forces the updates of all derived values.
+	 */
 	op void forceUpdate()
 }
 
-/**
+/*
  * Presentation properties for an item displayed 
  * on the MapView.
  */
 abstract class MapViewItemPresentation
 {
-	/** Visibility */
+	/*
+	 * Visibility
+	 */
 	boolean visible = "true"
 }
 
 
-/**
+/*
  * Presentation properties for an ImageMapLayer displayed on the MapView.
  */
 //class ImageMapLayerPresentation extends MapViewItemPresentation, RectangularRegionImage
@@ -248,31 +286,35 @@ abstract class MapViewItemPresentation
 //}
 
 
-/**
+/*
  * Presentation properties for an object shown on top of the maps.
  */
 abstract class MapAnnotation extends MapViewItemPresentation
 {
-	/** TheXYPlot being used by MapView.*/
+	/*
+	 *  TheXYPlot being used by MapView.
+	 */
 	op List<AbstractXYAnnotation> getXYShapeAnnotation()
 }
 
-/**
+/*
  * Base class of all map tools.
  */
 abstract class MapTool extends MapAnnotation
 {
-	/* Whether or not the tool is active. */	
+	/*
+	 * Whether or not the tool is active.
+	 */	
 	boolean active = "true"
 	
-	/**
+	/*
 	 * Method that is called to give access to the underlying ChartComposite and JFreeChart used to display the map.
 	 * @param composite The ChartComposite used to display the map.
 	 * @param chart The JFreeChart used to display the map.
 	 */
 	op void initialize(ChartComposite composite, JFreeChart chart)
 	
-	/**
+	/*
 	 * Method that is called to dispose of the tool.
 	 */
 	op void dispose()
@@ -292,7 +334,9 @@ abstract class MapTool extends MapAnnotation
  */
 class MapRuler extends MapTool
 {	
-	/** The color of the ruler. */
+	/*
+	 * The color of the ruler.
+	 */
 	Color3f rulerColor	= "0.0,1.0,0.0"
 }
 
@@ -319,31 +363,47 @@ class FeaturesOfInterestMapLayerPresentation extends MapAnnotation, RectangularR
  */
 abstract class TrajectoryProvider
 {
-	/* Re-initialize the TrajectoryProvider.*/
+	/*
+	 * Re-initialize the TrajectoryProvider.
+	 */
 	op void initialize()
 	
-	/* Clears the list of points and associated trajectory. */
+	/*
+	 * Clears the list of points and associated trajectory.
+	 */
 	op void clear()
 	
-	/* Returns the current trajectory as a list of Point2d. */
+	/* 
+	 * Returns the current trajectory as a list of Point2d.
+	 */
 	op List<Point2d> asListOfPoint2d()		
 	
-	/* The XYSeries containing the trajectory data to be displayed. */
+	/*
+	 * The XYSeries containing the trajectory data to be displayed.
+	 */
 	@GenModel(property="None")
 	op XYSeries getXYSeries()
 	
-	/* Latest x coordinates. */	
+	/*
+	 * Latest x coordinates.
+	 */	
 	transient XYDataItem latestPosition
 	
-	/* The azimuth of the latest position, in radians, as measured relative to the x axis, positive clockwise. */
+	/*
+	 * The azimuth of the latest position, in radians, as measured relative to the x axis, positive clockwise.
+	 */
 	@GenModel(csa_units="rad")
 	transient double azimuthAngle = "0.0"		
 	
-	/* The current length of the trajectory. */
+	/*
+	 * The current length of the trajectory.
+	 */
 	@GenModel(csa_units="m")
 	transient double trajectoryLength = "0.0"
 	
-	/* The color of the ruler. */
+	/*
+	 * The color of the ruler.
+	 */
 	Color3f trajectoryColor	= "0.0,1.0,0.0"
 }
 
@@ -352,6 +412,7 @@ abstract class TrajectoryProvider
  */
 abstract class AbstractTrajectoryTool extends TrajectoryProvider, MapTool
 {
+	
 }
 
 /*
@@ -360,7 +421,8 @@ abstract class AbstractTrajectoryTool extends TrajectoryProvider, MapTool
  * the right mouse button removes the last point of the trajectory.
  */
 class TrajectoryPickingTool extends AbstractTrajectoryTool
-{	
+{
+	
 }
 
 /*
@@ -371,7 +433,9 @@ abstract class VariableTrajectoryProvider extends TrajectoryProvider
 	@GenModel(property="None")
 	container VariableTrajectoryAnnotation variableAnnotation opposite trajectoryProvider
 	
-	/** The Symphony System being displayed. This is automatically updated.*/
+	/*
+	 *  The Symphony System being displayed. This is automatically updated.
+	 */
 	refers transient PoseProvider[1] poseProvider
 }
 
@@ -381,11 +445,15 @@ abstract class VariableTrajectoryProvider extends TrajectoryProvider
  */
 class DefaultVariableTrajectoryProvider extends VariableTrajectoryProvider
 {
-	/** Minimum distance to keep between points added to the XYSeries.*/
+	/*
+	 *  Minimum distance to keep between points added to the XYSeries.
+	 */
 	@GenModel(propertyCategory="THRESHOLDS", csa_units="m")
 	double distanceThreshold = "0.5"
 	
-	/** Minimum azimuth change that will trigger an azimuthAngle change.*/
+	/*
+	 *  Minimum azimuth change that will trigger an azimuthAngle change.
+	 */
 	@GenModel(propertyCategory="THRESHOLDS", csa_units="rad")
 	double azimuthThreshold = "0.017"
 }
@@ -397,16 +465,22 @@ class DefaultVariableTrajectoryProvider extends VariableTrajectoryProvider
  */
 abstract class AbstractVariableAnnotation extends MapAnnotation
 {		
-	/* The Symphony System being displayed.*/
+	/*
+	 * The Symphony System being displayed.
+	 */
 	refers Variable[1] variable
 	
-	/* The instance of the object adapted by the Symphony System.*/
+	/*
+	 * The instance of the object adapted by the Symphony System.
+	 */
 	refers transient EObject[0..1] variableInstance	
 	
-	/* The current instance of  SymphonySystemApiAdapter handling the variable.*/
+	/*
+	 * The current instance of  SymphonySystemApiAdapter handling the variable.
+	 */
 	refers transient SymphonySystemApiAdapter[0..1] symphonySystemApiAdapter
 	
-	/**
+	/*
 	 * Method called when the pose of the variable changes.
 	 * @param newPose The new pose matrix.
 	 */
@@ -418,18 +492,24 @@ abstract class AbstractVariableAnnotation extends MapAnnotation
  */
 class PoseVariableAnnotation extends AbstractVariableAnnotation
 {
-	/** The length of the vector. */
+	/*
+	 * The length of the vector.
+	 */
 	@GenModel(propertyCategory="VECTOR_PROPERTIES", csa_units="m")
 	double vectorlength = "10.0"
 	
-	/** The color of the vector. */
+	/*
+	 * The color of the vector.
+	 */
 	@GenModel(propertyCategory="VECTOR_PROPERTIES")
 	Color3f vectorColor = "0.0,0.0,1.0"
 	
-	/** Whether to show the pose as text. */
+	/*
+	 * Whether to show the pose as text.
+	 */
 	boolean showPose = "true"	
 		
-	/**
+	/*
 	 * Method called when the position or orientation of the variable changes.
 	 * @param x The x coordinates, in meters.
 	 * @param y The y coordinates, in meters.
@@ -443,7 +523,9 @@ class PoseVariableAnnotation extends AbstractVariableAnnotation
  */
 class VariableTrajectoryAnnotation extends AbstractVariableAnnotation, TrajectoryProvider
 {	
-	/** The trajectory provider. */
+	/*
+	 * The trajectory provider.
+	 */
 	contains VariableTrajectoryProvider[1] trajectoryProvider opposite variableAnnotation
 }
 
@@ -452,11 +534,15 @@ class VariableTrajectoryAnnotation extends AbstractVariableAnnotation, Trajector
  */
 class VehicleVariableAnnotation extends PoseVariableAnnotation
 {
-	/** The length of the vehicle. */
+	/*
+	 * The length of the vehicle.
+	 */
 	@GenModel(propertyCategory="VEHICLE_DIMENSIONS",csa_units="m")
 	double vehicleLength = "1.0"
 	
-	/** The width of the vehicle. */
+	/*
+	 * The width of the vehicle.
+	 */
 	@GenModel(propertyCategory="VEHICLE_DIMENSIONS",csa_units="m")
 	double vehicleWidth = "0.5"
 }

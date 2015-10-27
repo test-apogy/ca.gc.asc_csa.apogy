@@ -6,7 +6,7 @@ package org.eclipse.symphony.common.topology.addons.primitives.ui.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorPresentation;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.VectorSceneObject;
 import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
@@ -61,7 +61,7 @@ public class VectorPresentationImpl extends NodePresentationImpl implements Vect
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyUIPrimitivesPackage.Literals.VECTOR_PRESENTATION;
+		return Symphony__CommonTopologyAddonsPrimitivesUIPackage.Literals.VECTOR_PRESENTATION;
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class VectorPresentationImpl extends NodePresentationImpl implements Vect
 		int oldLineWidth = lineWidth;
 		lineWidth = newLineWidth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyUIPrimitivesPackage.VECTOR_PRESENTATION__LINE_WIDTH, oldLineWidth, lineWidth));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyAddonsPrimitivesUIPackage.VECTOR_PRESENTATION__LINE_WIDTH, oldLineWidth, lineWidth));
 	}
 
 	/**
@@ -93,7 +93,7 @@ public class VectorPresentationImpl extends NodePresentationImpl implements Vect
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case TopologyUIPrimitivesPackage.VECTOR_PRESENTATION__LINE_WIDTH:
+			case Symphony__CommonTopologyAddonsPrimitivesUIPackage.VECTOR_PRESENTATION__LINE_WIDTH:
 				return getLineWidth();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -107,7 +107,7 @@ public class VectorPresentationImpl extends NodePresentationImpl implements Vect
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case TopologyUIPrimitivesPackage.VECTOR_PRESENTATION__LINE_WIDTH:
+			case Symphony__CommonTopologyAddonsPrimitivesUIPackage.VECTOR_PRESENTATION__LINE_WIDTH:
 				setLineWidth((Integer)newValue);
 				return;
 		}
@@ -122,7 +122,7 @@ public class VectorPresentationImpl extends NodePresentationImpl implements Vect
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case TopologyUIPrimitivesPackage.VECTOR_PRESENTATION__LINE_WIDTH:
+			case Symphony__CommonTopologyAddonsPrimitivesUIPackage.VECTOR_PRESENTATION__LINE_WIDTH:
 				setLineWidth(LINE_WIDTH_EDEFAULT);
 				return;
 		}
@@ -137,7 +137,7 @@ public class VectorPresentationImpl extends NodePresentationImpl implements Vect
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case TopologyUIPrimitivesPackage.VECTOR_PRESENTATION__LINE_WIDTH:
+			case Symphony__CommonTopologyAddonsPrimitivesUIPackage.VECTOR_PRESENTATION__LINE_WIDTH:
 				return lineWidth != LINE_WIDTH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.ConnectionPoint;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 
 /**
  * This is the item provider adapter for a
@@ -120,7 +120,7 @@ public class ConnectionPointItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_ConnectionPoint_pointsList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionPoint_pointsList_feature", "_UI_ConnectionPoint_type"),
-				 SymphonyCorePackage.Literals.CONNECTION_POINT__POINTS_LIST,
+				 Symphony__CorePackage.Literals.CONNECTION_POINT__POINTS_LIST,
 				 true,
 				 false,
 				 true,
@@ -142,7 +142,7 @@ public class ConnectionPointItemProvider extends ItemProviderAdapter implements
 				 getResourceLocator(),
 				 getString("_UI_ConnectionPoint_node_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ConnectionPoint_node_feature", "_UI_ConnectionPoint_type"),
-				 SymphonyCorePackage.Literals.CONNECTION_POINT__NODE,
+				 Symphony__CorePackage.Literals.CONNECTION_POINT__NODE,
 				 true,
 				 false,
 				 true,
@@ -193,8 +193,8 @@ public class ConnectionPointItemProvider extends ItemProviderAdapter implements
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ConnectionPoint.class)) {
-			case SymphonyCorePackage.CONNECTION_POINT__NAME:
-			case SymphonyCorePackage.CONNECTION_POINT__DESCRIPTION:
+			case Symphony__CorePackage.CONNECTION_POINT__NAME:
+			case Symphony__CorePackage.CONNECTION_POINT__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

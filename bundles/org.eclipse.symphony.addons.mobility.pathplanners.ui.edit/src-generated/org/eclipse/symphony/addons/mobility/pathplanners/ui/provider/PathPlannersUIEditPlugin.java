@@ -7,7 +7,7 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
 import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
-import org.eclipse.symphony.common.topology.ui.provider.TopologyUIEditPlugin;
+import org.eclipse.symphony.common.topology.ui.provider.Symphony__CommonTopologyUIEditPlugin;
 
 /**
  * This is the central singleton for the PathPlannersUI edit plugin.
@@ -42,7 +42,7 @@ public final class PathPlannersUIEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     Symphony__CommonTopologyEditPlugin.INSTANCE,
-		     TopologyUIEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyUIEditPlugin.INSTANCE,
 		     Symphony__CommonMathEditPlugin.INSTANCE,
 		   });
 	}

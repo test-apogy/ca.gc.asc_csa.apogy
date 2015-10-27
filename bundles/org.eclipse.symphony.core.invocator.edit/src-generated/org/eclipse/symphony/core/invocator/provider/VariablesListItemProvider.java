@@ -19,8 +19,8 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.VariablesList;
 
 /**
@@ -78,7 +78,7 @@ public class VariablesListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES);
 		}
 		return childrenFeatures;
 	}
@@ -134,7 +134,7 @@ public class VariablesListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(VariablesList.class)) {
-			case EMFEcoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
+			case Symphony__CoreInvocatorPackage.VARIABLES_LIST__VARIABLES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -155,8 +155,8 @@ public class VariablesListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createVariable()));
+				(Symphony__CoreInvocatorPackage.Literals.VARIABLES_LIST__VARIABLES,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createVariable()));
 	}
 
   /**

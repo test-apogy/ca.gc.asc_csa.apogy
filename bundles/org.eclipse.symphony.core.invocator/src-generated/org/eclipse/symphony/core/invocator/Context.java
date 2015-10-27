@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.Context#getInstancesDisposalDate <em>Instances Disposal Date</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getContext()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContext()
  * @model abstract="true"
  * @generated
  */
@@ -41,7 +41,7 @@ public interface Context extends Named
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contexts List</em>' container reference.
 	 * @see #setContextsList(ContextsList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getContext_ContextsList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContext_ContextsList()
 	 * @see org.eclipse.symphony.core.invocator.ContextsList#getContexts
 	 * @model opposite="contexts" transient="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
@@ -69,7 +69,7 @@ public interface Context extends Named
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable Implementations List</em>' containment reference.
 	 * @see #setVariableImplementationsList(VariableImplementationsList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getContext_VariableImplementationsList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContext_VariableImplementationsList()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -94,7 +94,7 @@ public interface Context extends Named
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environment</em>' reference.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getContext_Environment()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContext_Environment()
 	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' property='None' get='<%org.eclipse.symphony.core.invocator.ContextsList%> _contextsList = this.getContextsList();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_contextsList, null);\nif (_equals)\n{\n\treturn null;\n}\nelse\n{\n\t<%org.eclipse.symphony.core.invocator.ContextsList%> _contextsList_1 = this.getContextsList();\n\treturn _contextsList_1.getEnvironment();\n}'"
 	 * @generated
@@ -111,7 +111,7 @@ public interface Context extends Named
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data Products List</em>' reference.
 	 * @see #setDataProductsList(DataProductsList)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getContext_DataProductsList()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContext_DataProductsList()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true'"
 	 * @generated
@@ -138,7 +138,7 @@ public interface Context extends Named
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Instances Creation Date</em>' attribute.
 	 * @see #setInstancesCreationDate(Date)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getContext_InstancesCreationDate()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContext_InstancesCreationDate()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated
@@ -165,7 +165,7 @@ public interface Context extends Named
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Instances Disposal Date</em>' attribute.
 	 * @see #setInstancesDisposalDate(Date)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getContext_InstancesDisposalDate()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getContext_InstancesDisposalDate()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated

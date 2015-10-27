@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.environment.Activator;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.URLMapLayer;
 
 /**
@@ -80,7 +80,7 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER;
+		return Symphony__CoreEnvironmentPackage.Literals.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER;
 	}
 
   /**
@@ -112,7 +112,7 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL, oldUrl, url));
 	}
 		
   /**
@@ -149,7 +149,7 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 		CartesianTriangularMesh oldMesh = mesh;
 		mesh = newMesh;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH, oldMesh, mesh));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH, oldMesh, mesh));
 	}
 
     /**
@@ -171,9 +171,9 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
 				return getUrl();
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
 				if (resolve) return getMesh();
 				return basicGetMesh();
 		}
@@ -189,10 +189,10 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
 				setUrl((String)newValue);
 				return;
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
 				setMesh((CartesianTriangularMesh)newValue);
 				return;
 		}
@@ -208,10 +208,10 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
 				setUrl(URL_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
 				setMesh((CartesianTriangularMesh)null);
 				return;
 		}
@@ -227,9 +227,9 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL:
 				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-			case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
+			case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__MESH:
 				return mesh != null;
 		}
 		return super.eIsSet(featureID);
@@ -244,7 +244,7 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == URLMapLayer.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL: return SymphonyEnvironmentPackage.URL_MAP_LAYER__URL;
+				case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL: return Symphony__CoreEnvironmentPackage.URL_MAP_LAYER__URL;
 				default: return -1;
 			}
 		}
@@ -260,7 +260,7 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == URLMapLayer.class) {
 			switch (baseFeatureID) {
-				case SymphonyEnvironmentPackage.URL_MAP_LAYER__URL: return SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL;
+				case Symphony__CoreEnvironmentPackage.URL_MAP_LAYER__URL: return Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_URL_MAP_LAYER__URL;
 				default: return -1;
 			}
 		}

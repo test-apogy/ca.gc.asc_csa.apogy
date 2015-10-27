@@ -22,7 +22,7 @@ import org.eclipse.symphony.core.topology.impl.SymphonyTopologyFacadeImpl;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getSymphonyTopologyFacade()
+ * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getSymphonyTopologyFacade()
  * @model
  * @generated
  */

@@ -12,9 +12,9 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsFactory;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsFactory;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.invocator.provider.TypeItemProvider;
 
@@ -67,7 +67,7 @@ public class SymphonySystemItemProvider extends TypeItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_SymphonySystem_poseProvider_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonySystem_poseProvider_feature", "_UI_SymphonySystem_type"),
-				 SymphonyCorePackage.Literals.SYMPHONY_SYSTEM__POSE_PROVIDER,
+				 Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__POSE_PROVIDER,
 				 true,
 				 false,
 				 true,
@@ -90,7 +90,7 @@ public class SymphonySystemItemProvider extends TypeItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_SymphonySystem_poseProviderInstance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonySystem_poseProviderInstance_feature", "_UI_SymphonySystem_type"),
-				 SymphonyCorePackage.Literals.SYMPHONY_SYSTEM__POSE_PROVIDER_INSTANCE,
+				 Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__POSE_PROVIDER_INSTANCE,
 				 true,
 				 false,
 				 true,
@@ -111,10 +111,10 @@ public class SymphonySystemItemProvider extends TypeItemProvider {
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.SYMPHONY_SYSTEM__TOPOLOGY_ROOT);
-			childrenFeatures.add(SymphonyCorePackage.Literals.SYMPHONY_SYSTEM__BINDING_SET);
-			childrenFeatures.add(SymphonyCorePackage.Literals.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST);
-			childrenFeatures.add(SymphonyCorePackage.Literals.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST);
+			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__TOPOLOGY_ROOT);
+			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__BINDING_SET);
+			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST);
+			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -172,10 +172,10 @@ public class SymphonySystemItemProvider extends TypeItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SymphonySystem.class)) {
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__BINDING_SET:
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST:
-			case SymphonyCorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__TOPOLOGY_ROOT:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__BINDING_SET:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST:
+			case Symphony__CorePackage.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -196,23 +196,23 @@ public class SymphonySystemItemProvider extends TypeItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.SYMPHONY_SYSTEM__TOPOLOGY_ROOT,
-				 SymphonyCoreFactory.eINSTANCE.createTopologyRoot()));
+				(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__TOPOLOGY_ROOT,
+				 Symphony__CoreFactory.eINSTANCE.createTopologyRoot()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.SYMPHONY_SYSTEM__BINDING_SET,
-				 TopologyBindingsFactory.eINSTANCE.createBindingsSet()));
+				(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__BINDING_SET,
+				 Symphony__CommonTopologyBindingsFactory.eINSTANCE.createBindingsSet()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST,
-				 SymphonyCoreFactory.eINSTANCE.createConnectionPointsList()));
+				(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__CONNECTION_POINTS_LIST,
+				 Symphony__CoreFactory.eINSTANCE.createConnectionPointsList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST,
-				 SymphonyCoreFactory.eINSTANCE.createAssemblyLinksList()));
+				(Symphony__CorePackage.Literals.SYMPHONY_SYSTEM__ASSEMBLY_LINKS_LIST,
+				 Symphony__CoreFactory.eINSTANCE.createAssemblyLinksList()));
 	}
 
 }

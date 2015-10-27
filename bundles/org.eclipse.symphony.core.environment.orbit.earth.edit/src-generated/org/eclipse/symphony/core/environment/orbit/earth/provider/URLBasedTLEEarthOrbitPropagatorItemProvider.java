@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.URLBasedTLEEarthOrbitPropagator;
 
 /**
@@ -64,7 +64,7 @@ public class URLBasedTLEEarthOrbitPropagatorItemProvider extends TLEEarthOrbitPr
 				 getResourceLocator(),
 				 getString("_UI_URLBasedTLEEarthOrbitPropagator_tleURL_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLBasedTLEEarthOrbitPropagator_tleURL_feature", "_UI_URLBasedTLEEarthOrbitPropagator_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL,
 				 true,
 				 false,
 				 false,
@@ -111,7 +111,7 @@ public class URLBasedTLEEarthOrbitPropagatorItemProvider extends TLEEarthOrbitPr
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(URLBasedTLEEarthOrbitPropagator.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.URL_BASED_TLE_EARTH_ORBIT_PROPAGATOR__TLE_URL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -11,8 +11,9 @@
       <!-- @generated symphony_environment_orbit -->
       <package
             uri="org.eclipse.symphony.core.environment.orbit"
-            class="org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage"
+            class="org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage"
             genModel="model/symphony_core_environment_orbit.xcore"/>
    </extension>
 
+null
 </plugin>

@@ -22,8 +22,8 @@ import org.eclipse.symphony.common.math.Matrix4x4;
 import org.eclipse.symphony.core.environment.AbstractMapLayer;
 import org.eclipse.symphony.core.environment.Map;
 import org.eclipse.symphony.core.environment.MapNode;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -131,7 +131,7 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.MAP;
+		return Symphony__CoreEnvironmentPackage.Literals.MAP;
 	}
 
   /**
@@ -154,7 +154,7 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.MAP__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.MAP__NAME, oldName, name));
 	}
 
   /**
@@ -177,7 +177,7 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.MAP__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.MAP__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -200,7 +200,7 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
 		Matrix4x4 oldTransformation = transformation;
 		transformation = newTransformation;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.MAP__TRANSFORMATION, oldTransformation, newTransformation);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.MAP__TRANSFORMATION, oldTransformation, newTransformation);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -216,14 +216,14 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
 		if (newTransformation != transformation) {
 			NotificationChain msgs = null;
 			if (transformation != null)
-				msgs = ((InternalEObject)transformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEnvironmentPackage.MAP__TRANSFORMATION, null, msgs);
+				msgs = ((InternalEObject)transformation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.MAP__TRANSFORMATION, null, msgs);
 			if (newTransformation != null)
-				msgs = ((InternalEObject)newTransformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyEnvironmentPackage.MAP__TRANSFORMATION, null, msgs);
+				msgs = ((InternalEObject)newTransformation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentPackage.MAP__TRANSFORMATION, null, msgs);
 			msgs = basicSetTransformation(newTransformation, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.MAP__TRANSFORMATION, newTransformation, newTransformation));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.MAP__TRANSFORMATION, newTransformation, newTransformation));
 	}
 
   /**
@@ -234,7 +234,7 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
   public EList<AbstractMapLayer> getLayers()
   {
 		if (layers == null) {
-			layers = new EObjectContainmentWithInverseEList<AbstractMapLayer>(AbstractMapLayer.class, this, SymphonyEnvironmentPackage.MAP__LAYERS, SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP);
+			layers = new EObjectContainmentWithInverseEList<AbstractMapLayer>(AbstractMapLayer.class, this, Symphony__CoreEnvironmentPackage.MAP__LAYERS, Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__MAP);
 		}
 		return layers;
 	}
@@ -248,7 +248,7 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
   {
 	  if(getMapNodeGen() == null)
 	  {
-		  mapNode = SymphonyEnvironmentFactory.eINSTANCE.createMapNode();
+		  mapNode = Symphony__CoreEnvironmentFactory.eINSTANCE.createMapNode();
 		  mapNode.setDescription("Map Node for Map");
 		  mapNode.setNodeId("MAPNODE");
 		  		  
@@ -274,7 +274,7 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
 			mapNode = (MapNode)eResolveProxy(oldMapNode);
 			if (mapNode != oldMapNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentPackage.MAP__MAP_NODE, oldMapNode, mapNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.MAP__MAP_NODE, oldMapNode, mapNode));
 			}
 		}
 		return mapNode;
@@ -300,7 +300,7 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAP__LAYERS:
+			case Symphony__CoreEnvironmentPackage.MAP__LAYERS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLayers()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -315,9 +315,9 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAP__TRANSFORMATION:
+			case Symphony__CoreEnvironmentPackage.MAP__TRANSFORMATION:
 				return basicSetTransformation(null, msgs);
-			case SymphonyEnvironmentPackage.MAP__LAYERS:
+			case Symphony__CoreEnvironmentPackage.MAP__LAYERS:
 				return ((InternalEList<?>)getLayers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -332,15 +332,15 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAP__NAME:
+			case Symphony__CoreEnvironmentPackage.MAP__NAME:
 				return getName();
-			case SymphonyEnvironmentPackage.MAP__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.MAP__DESCRIPTION:
 				return getDescription();
-			case SymphonyEnvironmentPackage.MAP__TRANSFORMATION:
+			case Symphony__CoreEnvironmentPackage.MAP__TRANSFORMATION:
 				return getTransformation();
-			case SymphonyEnvironmentPackage.MAP__LAYERS:
+			case Symphony__CoreEnvironmentPackage.MAP__LAYERS:
 				return getLayers();
-			case SymphonyEnvironmentPackage.MAP__MAP_NODE:
+			case Symphony__CoreEnvironmentPackage.MAP__MAP_NODE:
 				if (resolve) return getMapNode();
 				return basicGetMapNode();
 		}
@@ -357,16 +357,16 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAP__NAME:
+			case Symphony__CoreEnvironmentPackage.MAP__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyEnvironmentPackage.MAP__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.MAP__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyEnvironmentPackage.MAP__TRANSFORMATION:
+			case Symphony__CoreEnvironmentPackage.MAP__TRANSFORMATION:
 				setTransformation((Matrix4x4)newValue);
 				return;
-			case SymphonyEnvironmentPackage.MAP__LAYERS:
+			case Symphony__CoreEnvironmentPackage.MAP__LAYERS:
 				getLayers().clear();
 				getLayers().addAll((Collection<? extends AbstractMapLayer>)newValue);
 				return;
@@ -383,16 +383,16 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAP__NAME:
+			case Symphony__CoreEnvironmentPackage.MAP__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.MAP__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.MAP__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.MAP__TRANSFORMATION:
+			case Symphony__CoreEnvironmentPackage.MAP__TRANSFORMATION:
 				setTransformation((Matrix4x4)null);
 				return;
-			case SymphonyEnvironmentPackage.MAP__LAYERS:
+			case Symphony__CoreEnvironmentPackage.MAP__LAYERS:
 				getLayers().clear();
 				return;
 		}
@@ -408,15 +408,15 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAP__NAME:
+			case Symphony__CoreEnvironmentPackage.MAP__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyEnvironmentPackage.MAP__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.MAP__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyEnvironmentPackage.MAP__TRANSFORMATION:
+			case Symphony__CoreEnvironmentPackage.MAP__TRANSFORMATION:
 				return transformation != null;
-			case SymphonyEnvironmentPackage.MAP__LAYERS:
+			case Symphony__CoreEnvironmentPackage.MAP__LAYERS:
 				return layers != null && !layers.isEmpty();
-			case SymphonyEnvironmentPackage.MAP__MAP_NODE:
+			case Symphony__CoreEnvironmentPackage.MAP__MAP_NODE:
 				return mapNode != null;
 		}
 		return super.eIsSet(featureID);
@@ -432,7 +432,7 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEnvironmentPackage.MAP__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreEnvironmentPackage.MAP__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -449,7 +449,7 @@ public class MapImpl extends MinimalEObjectImpl.Container implements Map
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyEnvironmentPackage.MAP__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentPackage.MAP__DESCRIPTION;
 				default: return -1;
 			}
 		}

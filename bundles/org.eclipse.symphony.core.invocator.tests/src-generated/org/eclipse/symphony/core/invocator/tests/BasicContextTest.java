@@ -6,7 +6,7 @@ package org.eclipse.symphony.core.invocator.tests;
 import junit.textui.TestRunner;
 
 import org.eclipse.symphony.core.invocator.BasicContext;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class BasicContextTest extends ContextTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createBasicContext());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createBasicContext());
 	}
 
 	/**

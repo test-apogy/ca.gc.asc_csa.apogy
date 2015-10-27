@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.emf.ListFeatureNode;
 import org.eclipse.symphony.common.emf.ListRootNode;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceListElement;
@@ -340,13 +340,13 @@ public class AbstractVariableFeatureReferenceListener
 				{	
 					if(verbose) System.out.println("----->ContextAdapter " + msg);
 					
-					if(msg.getFeatureID(Context.class) == EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE)
+					if(msg.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_CREATION_DATE)
 					{
 						// Instances have been created							
 						// Update instances and TypeApiAdapter
 						update();
 					}
-					else if(msg.getFeatureID(Context.class) == EMFEcoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE)
+					else if(msg.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.CONTEXT__INSTANCES_DISPOSAL_DATE)
 					{
 						// Instances have been disposed						
 						// Update instances and TypeApiAdapter
@@ -373,7 +373,7 @@ public class AbstractVariableFeatureReferenceListener
 				{	
 					if(verbose) System.out.println("----->EnvironmentAdapter " + msg);
 					
-					if(msg.getFeatureID(Environment.class) == EMFEcoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT)
+					if(msg.getFeatureID(Environment.class) == Symphony__CoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT)
 					{
 						// Active Context has changed.
 						Context oldContext = null;
@@ -495,7 +495,7 @@ public class AbstractVariableFeatureReferenceListener
 						
 						switch (featureId) 
 						{
-							case EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:
+							case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__FEATURE_ROOT:
 							{
 								unRegisterFrom((ListRootNode) msg.getOldValue());
 								registerTo((ListRootNode) msg.getNewValue());
@@ -505,7 +505,7 @@ public class AbstractVariableFeatureReferenceListener
 							}
 							break;
 
-							case EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
+							case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__TYPE_MEMBER_REFERENCE_LIST_ELEMENT:
 								unRegisterFrom((TypeMemberReferenceListElement) msg.getOldValue(), this);
 								registerTo((TypeMemberReferenceListElement) msg.getNewValue(), this);
 								
@@ -513,7 +513,7 @@ public class AbstractVariableFeatureReferenceListener
 								updateTypeApiAdapter(newTypeApiAdapter);
 							break;
 							
-							case EMFEcoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
+							case Symphony__CoreInvocatorPackage.VARIABLE_FEATURE_REFERENCE__VARIABLE:
 								Variable oldVariable = null;
 								Variable newVariable = null;
 								

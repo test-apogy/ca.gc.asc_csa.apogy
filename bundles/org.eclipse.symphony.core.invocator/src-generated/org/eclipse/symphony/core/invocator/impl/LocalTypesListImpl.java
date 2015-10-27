@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.LocalTypesList;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Type;
 
 /**
@@ -59,7 +59,7 @@ public class LocalTypesListImpl extends MinimalEObjectImpl.Container implements 
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.LOCAL_TYPES_LIST;
+		return Symphony__CoreInvocatorPackage.Literals.LOCAL_TYPES_LIST;
 	}
 
   /**
@@ -70,7 +70,7 @@ public class LocalTypesListImpl extends MinimalEObjectImpl.Container implements 
   public EList<Type> getTypes()
   {
 		if (types == null) {
-			types = new EObjectContainmentEList<Type>(Type.class, this, EMFEcoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES);
+			types = new EObjectContainmentEList<Type>(Type.class, this, Symphony__CoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES);
 		}
 		return types;
 	}
@@ -84,7 +84,7 @@ public class LocalTypesListImpl extends MinimalEObjectImpl.Container implements 
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES:
+			case Symphony__CoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES:
 				return ((InternalEList<?>)getTypes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -99,7 +99,7 @@ public class LocalTypesListImpl extends MinimalEObjectImpl.Container implements 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES:
+			case Symphony__CoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES:
 				return getTypes();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -115,7 +115,7 @@ public class LocalTypesListImpl extends MinimalEObjectImpl.Container implements 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES:
+			case Symphony__CoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES:
 				getTypes().clear();
 				getTypes().addAll((Collection<? extends Type>)newValue);
 				return;
@@ -132,7 +132,7 @@ public class LocalTypesListImpl extends MinimalEObjectImpl.Container implements 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES:
+			case Symphony__CoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES:
 				getTypes().clear();
 				return;
 		}
@@ -148,7 +148,7 @@ public class LocalTypesListImpl extends MinimalEObjectImpl.Container implements 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES:
+			case Symphony__CoreInvocatorPackage.LOCAL_TYPES_LIST__TYPES:
 				return types != null && !types.isEmpty();
 		}
 		return super.eIsSet(featureID);

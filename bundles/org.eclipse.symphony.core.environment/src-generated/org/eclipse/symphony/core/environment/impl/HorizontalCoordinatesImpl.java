@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.environment.HorizontalCoordinates;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -100,7 +100,7 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.HORIZONTAL_COORDINATES;
+		return Symphony__CoreEnvironmentPackage.Literals.HORIZONTAL_COORDINATES;
 	}
 
   /**
@@ -123,7 +123,7 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
 		double oldAltitude = altitude;
 		altitude = newAltitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE, oldAltitude, altitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE, oldAltitude, altitude));
 	}
 
   /**
@@ -146,7 +146,7 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
 		double oldAzimuth = azimuth;
 		azimuth = newAzimuth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH, oldAzimuth, azimuth));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH, oldAzimuth, azimuth));
 	}
 
   /**
@@ -169,7 +169,7 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
 		double oldRadius = radius;
 		radius = newRadius;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS, oldRadius, radius));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS, oldRadius, radius));
 	}
 
   /**
@@ -181,11 +181,11 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
+			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
 				return getAltitude();
-			case SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
+			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
 				return getAzimuth();
-			case SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
+			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
 				return getRadius();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -200,13 +200,13 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
+			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
 				setAltitude((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
+			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
 				setAzimuth((Double)newValue);
 				return;
-			case SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
+			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
 				setRadius((Double)newValue);
 				return;
 		}
@@ -222,13 +222,13 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
+			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
 				setAltitude(ALTITUDE_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
+			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
 				setAzimuth(AZIMUTH_EDEFAULT);
 				return;
-			case SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
+			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
 		}
@@ -244,11 +244,11 @@ public class HorizontalCoordinatesImpl extends MinimalEObjectImpl.Container impl
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
+			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__ALTITUDE:
 				return altitude != ALTITUDE_EDEFAULT;
-			case SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
+			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__AZIMUTH:
 				return azimuth != AZIMUTH_EDEFAULT;
-			case SymphonyEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
+			case Symphony__CoreEnvironmentPackage.HORIZONTAL_COORDINATES__RADIUS:
 				return radius != RADIUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

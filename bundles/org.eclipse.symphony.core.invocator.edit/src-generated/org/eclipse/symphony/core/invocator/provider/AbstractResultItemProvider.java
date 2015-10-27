@@ -25,8 +25,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.AbstractResult;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.AbstractResult} object.
@@ -132,7 +132,7 @@ public class AbstractResultItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractResult_resultsList_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractResult_resultsList_feature", "_UI_AbstractResult_type"),
-				 EMFEcoreInvocatorPackage.Literals.ABSTRACT_RESULT__RESULTS_LIST,
+				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_RESULT__RESULTS_LIST,
 				 true,
 				 false,
 				 true,
@@ -155,7 +155,7 @@ public class AbstractResultItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractResult_context_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractResult_context_feature", "_UI_AbstractResult_type"),
-				 EMFEcoreInvocatorPackage.Literals.ABSTRACT_RESULT__CONTEXT,
+				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_RESULT__CONTEXT,
 				 true,
 				 false,
 				 true,
@@ -177,7 +177,7 @@ public class AbstractResultItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.ABSTRACT_RESULT__RESULT_VALUE);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_RESULT__RESULT_VALUE);
 		}
 		return childrenFeatures;
 	}
@@ -225,11 +225,11 @@ public class AbstractResultItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractResult.class)) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__TIME:
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__TIME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_RESULT__RESULT_VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -250,13 +250,13 @@ public class AbstractResultItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.ABSTRACT_RESULT__RESULT_VALUE,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createAttributeResultValue()));
+				(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_RESULT__RESULT_VALUE,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createAttributeResultValue()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.ABSTRACT_RESULT__RESULT_VALUE,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createReferenceResultValue()));
+				(Symphony__CoreInvocatorPackage.Literals.ABSTRACT_RESULT__RESULT_VALUE,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createReferenceResultValue()));
 	}
 
   /**

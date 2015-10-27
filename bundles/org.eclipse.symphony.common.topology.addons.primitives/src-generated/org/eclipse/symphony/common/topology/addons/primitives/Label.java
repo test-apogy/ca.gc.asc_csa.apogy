@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.topology.Node;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage#getLabel()
+ * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getLabel()
  * @model
  * @generated
  */

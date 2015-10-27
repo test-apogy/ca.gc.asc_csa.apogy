@@ -27,7 +27,7 @@
       <!-- @generated jme3 -->
       <package
             uri="org.eclipse.symphony.common.topology.ui.jme3"
-            class="org.eclipse.symphony.common.topology.ui.jme3.JME3Package"
+            class="org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package"
             genModel="model/symphony_common_topology_ui_jme3.xcore"/>
    </extension>
    <extension

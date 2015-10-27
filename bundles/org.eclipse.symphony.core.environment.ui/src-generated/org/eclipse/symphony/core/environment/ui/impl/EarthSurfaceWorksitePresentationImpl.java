@@ -13,7 +13,7 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 import org.eclipse.symphony.core.environment.ui.Activator;
 import org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation;
 import org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksiteSceneObject;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentUIPreferencesConstants;
 
 /**
@@ -224,7 +224,7 @@ public class EarthSurfaceWorksitePresentationImpl extends NodePresentationImpl i
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION;
+		return Symphony__CoreEnvironmentUIPackage.Literals.EARTH_SURFACE_WORKSITE_PRESENTATION;
 	}
 
   /**
@@ -248,7 +248,7 @@ public class EarthSurfaceWorksitePresentationImpl extends NodePresentationImpl i
 		boolean oldAxisVisible = axisVisible;
 		axisVisible = newAxisVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE, oldAxisVisible, axisVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE, oldAxisVisible, axisVisible));
 	}
 
   /**
@@ -271,7 +271,7 @@ public class EarthSurfaceWorksitePresentationImpl extends NodePresentationImpl i
 		double oldAxisLength = axisLength;
 		axisLength = newAxisLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH, oldAxisLength, axisLength));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH, oldAxisLength, axisLength));
 	}
 
   /**
@@ -294,7 +294,7 @@ public class EarthSurfaceWorksitePresentationImpl extends NodePresentationImpl i
 		boolean oldAzimuthVisible = azimuthVisible;
 		azimuthVisible = newAzimuthVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE, oldAzimuthVisible, azimuthVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE, oldAzimuthVisible, azimuthVisible));
 	}
 
   /**
@@ -317,7 +317,7 @@ public class EarthSurfaceWorksitePresentationImpl extends NodePresentationImpl i
 		boolean oldElevationLinesVisible = elevationLinesVisible;
 		elevationLinesVisible = newElevationLinesVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE, oldElevationLinesVisible, elevationLinesVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE, oldElevationLinesVisible, elevationLinesVisible));
 	}
 
   /**
@@ -340,7 +340,7 @@ public class EarthSurfaceWorksitePresentationImpl extends NodePresentationImpl i
 		boolean oldAzimuthLinesVisible = azimuthLinesVisible;
 		azimuthLinesVisible = newAzimuthLinesVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE, oldAzimuthLinesVisible, azimuthLinesVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE, oldAzimuthLinesVisible, azimuthLinesVisible));
 	}
 
   /**
@@ -363,7 +363,7 @@ public class EarthSurfaceWorksitePresentationImpl extends NodePresentationImpl i
 		boolean oldPlaneVisible = planeVisible;
 		planeVisible = newPlaneVisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE, oldPlaneVisible, planeVisible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE, oldPlaneVisible, planeVisible));
 	}
 
   /**
@@ -386,7 +386,7 @@ public class EarthSurfaceWorksitePresentationImpl extends NodePresentationImpl i
 		double oldPlaneGridSize = planeGridSize;
 		planeGridSize = newPlaneGridSize;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE, oldPlaneGridSize, planeGridSize));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE, oldPlaneGridSize, planeGridSize));
 	}
 
   /**
@@ -409,7 +409,7 @@ public class EarthSurfaceWorksitePresentationImpl extends NodePresentationImpl i
 		double oldPlaneSize = planeSize;
 		planeSize = newPlaneSize;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE, oldPlaneSize, planeSize));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE, oldPlaneSize, planeSize));
 	}
 
   /**
@@ -421,21 +421,21 @@ public class EarthSurfaceWorksitePresentationImpl extends NodePresentationImpl i
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE:
 				return isAxisVisible();
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH:
 				return getAxisLength();
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE:
 				return isAzimuthVisible();
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE:
 				return isElevationLinesVisible();
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE:
 				return isAzimuthLinesVisible();
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE:
 				return isPlaneVisible();
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE:
 				return getPlaneGridSize();
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE:
 				return getPlaneSize();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -450,28 +450,28 @@ public class EarthSurfaceWorksitePresentationImpl extends NodePresentationImpl i
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE:
 				setAxisVisible((Boolean)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH:
 				setAxisLength((Double)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE:
 				setAzimuthVisible((Boolean)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE:
 				setElevationLinesVisible((Boolean)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE:
 				setAzimuthLinesVisible((Boolean)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE:
 				setPlaneVisible((Boolean)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE:
 				setPlaneGridSize((Double)newValue);
 				return;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE:
 				setPlaneSize((Double)newValue);
 				return;
 		}
@@ -487,28 +487,28 @@ public class EarthSurfaceWorksitePresentationImpl extends NodePresentationImpl i
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE:
 				setAxisVisible(AXIS_VISIBLE_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH:
 				setAxisLength(AXIS_LENGTH_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE:
 				setAzimuthVisible(AZIMUTH_VISIBLE_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE:
 				setElevationLinesVisible(ELEVATION_LINES_VISIBLE_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE:
 				setAzimuthLinesVisible(AZIMUTH_LINES_VISIBLE_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE:
 				setPlaneVisible(PLANE_VISIBLE_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE:
 				setPlaneGridSize(PLANE_GRID_SIZE_EDEFAULT);
 				return;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE:
 				setPlaneSize(PLANE_SIZE_EDEFAULT);
 				return;
 		}
@@ -524,21 +524,21 @@ public class EarthSurfaceWorksitePresentationImpl extends NodePresentationImpl i
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE:
 				return axisVisible != AXIS_VISIBLE_EDEFAULT;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH:
 				return axisLength != AXIS_LENGTH_EDEFAULT;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE:
 				return azimuthVisible != AZIMUTH_VISIBLE_EDEFAULT;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE:
 				return elevationLinesVisible != ELEVATION_LINES_VISIBLE_EDEFAULT;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE:
 				return azimuthLinesVisible != AZIMUTH_LINES_VISIBLE_EDEFAULT;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE:
 				return planeVisible != PLANE_VISIBLE_EDEFAULT;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE:
 				return planeGridSize != PLANE_GRID_SIZE_EDEFAULT;
-			case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE:
+			case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE:
 				return planeSize != PLANE_SIZE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -592,35 +592,35 @@ public class EarthSurfaceWorksitePresentationImpl extends NodePresentationImpl i
 			
 			switch (featureID) 
 			{
-				case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE:
+				case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_VISIBLE:
 					earthSurfaceWorksiteSceneObject.setAxisVisible(notification.getNewBooleanValue());
 				break;
 				
-				case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH:
+				case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AXIS_LENGTH:
 					earthSurfaceWorksiteSceneObject.setAxisLength(notification.getNewDoubleValue());
 				break;
 				
-				case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE:
+				case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_VISIBLE:
 					earthSurfaceWorksiteSceneObject.setAzimuthVisible(notification.getNewBooleanValue());
 				break;
 				
-				case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE:
+				case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__AZIMUTH_LINES_VISIBLE:
 					earthSurfaceWorksiteSceneObject.setAzimuthLinesVisible(notification.getNewBooleanValue());
 				break;
 				
-				case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE:
+				case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__ELEVATION_LINES_VISIBLE:
 					earthSurfaceWorksiteSceneObject.setElevationLinesVisible(notification.getNewBooleanValue());
 				break;
 				
-				case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE:
+				case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_VISIBLE:
 					earthSurfaceWorksiteSceneObject.setPlaneVisible(notification.getNewBooleanValue());
 				break;
 				
-				case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE:
+				case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_SIZE:
 					earthSurfaceWorksiteSceneObject.setPlaneParameters(getPlaneGridSize(), notification.getNewDoubleValue());
 				break;
 				
-				case SymphonyEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE:
+				case Symphony__CoreEnvironmentUIPackage.EARTH_SURFACE_WORKSITE_PRESENTATION__PLANE_GRID_SIZE:
 					earthSurfaceWorksiteSceneObject.setPlaneParameters(notification.getNewDoubleValue(), getPlaneSize());
 				break;
 				

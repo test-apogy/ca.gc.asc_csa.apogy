@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.AggregateGroupNode;
  *   <li>{@link org.eclipse.symphony.core.environment.AbstractMapLayerNode#getAbstractMapLayer <em>Abstract Map Layer</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAbstractMapLayerNode()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractMapLayerNode()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface AbstractMapLayerNode extends AggregateGroupNode
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Abstract Map Layer</em>' reference.
 	 * @see #setAbstractMapLayer(AbstractMapLayer)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getAbstractMapLayerNode_AbstractMapLayer()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAbstractMapLayerNode_AbstractMapLayer()
 	 * @model transient="true"
 	 * @generated
 	 */

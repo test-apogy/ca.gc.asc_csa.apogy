@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode#getTransientParent <em>Transient Parent</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getTopologyTreeMapLayerNode()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getTopologyTreeMapLayerNode()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface TopologyTreeMapLayerNode extends AggregateGroupNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Topology Tree Map Layer</em>' container reference.
 	 * @see #setTopologyTreeMapLayer(TopologyTreeMapLayer)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getTopologyTreeMapLayerNode_TopologyTreeMapLayer()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getTopologyTreeMapLayerNode_TopologyTreeMapLayer()
 	 * @see org.eclipse.symphony.core.environment.TopologyTreeMapLayer#getTopologyTreeRoot
 	 * @model opposite="topologyTreeRoot" transient="false"
 	 * @generated
@@ -67,7 +67,7 @@ public interface TopologyTreeMapLayerNode extends AggregateGroupNode {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Transient Parent</em>' reference.
 	 * @see #setTransientParent(Node)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getTopologyTreeMapLayerNode_TransientParent()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getTopologyTreeMapLayerNode_TransientParent()
 	 * @model transient="true"
 	 * @generated
 	 */

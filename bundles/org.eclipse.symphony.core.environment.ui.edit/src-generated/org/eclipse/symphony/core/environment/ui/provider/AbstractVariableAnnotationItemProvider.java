@@ -12,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.AbstractVariableAnnotation} object.
@@ -67,7 +67,7 @@ public class AbstractVariableAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractVariableAnnotation_variable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractVariableAnnotation_variable_feature", "_UI_AbstractVariableAnnotation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE,
+				 Symphony__CoreEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE,
 				 true,
 				 false,
 				 true,
@@ -90,7 +90,7 @@ public class AbstractVariableAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractVariableAnnotation_variableInstance_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractVariableAnnotation_variableInstance_feature", "_UI_AbstractVariableAnnotation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE,
+				 Symphony__CoreEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION__VARIABLE_INSTANCE,
 				 true,
 				 false,
 				 true,
@@ -113,7 +113,7 @@ public class AbstractVariableAnnotationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_AbstractVariableAnnotation_symphonySystemApiAdapter_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractVariableAnnotation_symphonySystemApiAdapter_feature", "_UI_AbstractVariableAnnotation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER,
+				 Symphony__CoreEnvironmentUIPackage.Literals.ABSTRACT_VARIABLE_ANNOTATION__SYMPHONY_SYSTEM_API_ADAPTER,
 				 true,
 				 false,
 				 true,

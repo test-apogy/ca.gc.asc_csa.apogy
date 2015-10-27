@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.topology.GroupNode;
  *   <li>{@link org.eclipse.symphony.core.environment.WorksiteNode#getWorksite <em>Worksite</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getWorksiteNode()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getWorksiteNode()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface WorksiteNode extends GroupNode
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Worksite</em>' reference.
 	 * @see #setWorksite(Worksite)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getWorksiteNode_Worksite()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getWorksiteNode_Worksite()
 	 * @model transient="true"
 	 * @generated
 	 */

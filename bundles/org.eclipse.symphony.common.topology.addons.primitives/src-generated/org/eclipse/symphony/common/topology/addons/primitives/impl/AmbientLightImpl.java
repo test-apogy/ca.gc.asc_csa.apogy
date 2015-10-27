@@ -8,7 +8,7 @@ package org.eclipse.symphony.common.topology.addons.primitives.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.topology.addons.primitives.AmbientLight;
-import org.eclipse.symphony.common.topology.addons.primitives.PrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class AmbientLightImpl extends LightImpl implements AmbientLight {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PrimitivesPackage.Literals.AMBIENT_LIGHT;
+		return Symphony__CommonTopologyAddonsPrimitivesPackage.Literals.AMBIENT_LIGHT;
 	}
 
 } //AmbientLightImpl

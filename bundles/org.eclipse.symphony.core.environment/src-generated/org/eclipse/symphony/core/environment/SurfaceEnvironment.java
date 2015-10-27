@@ -18,7 +18,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.core.environment.SurfaceEnvironment#getGravity <em>Gravity</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSurfaceEnvironment()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSurfaceEnvironment()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface SurfaceEnvironment extends Environment
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Atmosphere</em>' containment reference.
 	 * @see #setAtmosphere(Atmosphere)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSurfaceEnvironment_Atmosphere()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSurfaceEnvironment_Atmosphere()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -61,7 +61,7 @@ public interface SurfaceEnvironment extends Environment
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Gravity</em>' containment reference.
 	 * @see #setGravity(Tuple3d)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getSurfaceEnvironment_Gravity()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSurfaceEnvironment_Gravity()
 	 * @model containment="true"
 	 * @generated
 	 */

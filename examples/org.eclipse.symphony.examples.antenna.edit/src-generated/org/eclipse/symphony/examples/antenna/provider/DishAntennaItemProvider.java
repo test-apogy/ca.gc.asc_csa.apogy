@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
 import org.eclipse.symphony.examples.antenna.DishAntenna;
-import org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage;
+import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.antenna.DishAntenna} object.
@@ -68,7 +68,7 @@ extends AntennaItemProvider
 				 getResourceLocator(),
 				 getString("_UI_DishAntenna_fov_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DishAntenna_fov_feature", "_UI_DishAntenna_type"),
-				 EMFEcoreExampleAntennaPackage.Literals.DISH_ANTENNA__FOV,
+				 Symphony__ExamplesAntennaPackage.Literals.DISH_ANTENNA__FOV,
 				 false,
 				 false,
 				 false,
@@ -90,7 +90,7 @@ extends AntennaItemProvider
 	{
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreExampleAntennaPackage.Literals.DISH_ANTENNA__FOV);
+			childrenFeatures.add(Symphony__ExamplesAntennaPackage.Literals.DISH_ANTENNA__FOV);
 		}
 		return childrenFeatures;
 	}
@@ -147,7 +147,7 @@ extends AntennaItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DishAntenna.class)) {
-			case EMFEcoreExampleAntennaPackage.DISH_ANTENNA__FOV:
+			case Symphony__ExamplesAntennaPackage.DISH_ANTENNA__FOV:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -168,7 +168,7 @@ extends AntennaItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreExampleAntennaPackage.Literals.DISH_ANTENNA__FOV,
+				(Symphony__ExamplesAntennaPackage.Literals.DISH_ANTENNA__FOV,
 				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 	}
 

@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformPackage#getMobilePlatformSymphonySystemApiAdapter()
+ * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage#getMobilePlatformSymphonySystemApiAdapter()
  * @model
  * @generated
  */

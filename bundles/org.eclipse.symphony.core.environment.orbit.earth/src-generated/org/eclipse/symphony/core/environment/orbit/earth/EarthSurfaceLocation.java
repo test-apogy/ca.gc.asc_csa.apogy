@@ -13,7 +13,6 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Defines a location on the surface of the Earth.
  * <!-- end-model-doc -->
  *
@@ -24,7 +23,7 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation#getGeographicalCoordinates <em>Geographical Coordinates</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthSurfaceLocation()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getEarthSurfaceLocation()
  * @model
  * @generated
  */
@@ -39,7 +38,7 @@ public interface EarthSurfaceLocation extends Named, Described {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Geographical Coordinates</em>' containment reference.
 	 * @see #setGeographicalCoordinates(GeographicCoordinates)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEarthSurfaceLocation_GeographicalCoordinates()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getEarthSurfaceLocation_GeographicalCoordinates()
 	 * @model containment="true"
 	 * @generated
 	 */

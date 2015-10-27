@@ -15,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
 import org.eclipse.symphony.core.PositionedResult;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.invocator.provider.AbstractResultItemProvider;
 
 /**
@@ -66,7 +66,7 @@ public class PositionedResultItemProvider extends
 				 getResourceLocator(),
 				 getString("_UI_Positioned_pose_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Positioned_pose_feature", "_UI_Positioned_type"),
-				 SymphonyCorePackage.Literals.POSITIONED__POSE,
+				 Symphony__CorePackage.Literals.POSITIONED__POSE,
 				 true,
 				 false,
 				 false,
@@ -87,7 +87,7 @@ public class PositionedResultItemProvider extends
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.POSITIONED__POSE);
+			childrenFeatures.add(Symphony__CorePackage.Literals.POSITIONED__POSE);
 		}
 		return childrenFeatures;
 	}
@@ -142,7 +142,7 @@ public class PositionedResultItemProvider extends
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PositionedResult.class)) {
-			case SymphonyCorePackage.POSITIONED_RESULT__POSE:
+			case Symphony__CorePackage.POSITIONED_RESULT__POSE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -163,7 +163,7 @@ public class PositionedResultItemProvider extends
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.POSITIONED__POSE,
+				(Symphony__CorePackage.Literals.POSITIONED__POSE,
 				 Symphony__CommonMathFactory.eINSTANCE.createMatrix4x4()));
 	}
 

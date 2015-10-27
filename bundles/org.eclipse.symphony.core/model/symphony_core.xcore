@@ -1,4 +1,10 @@
-@GenModel(prefix="SymphonyCore", childCreationExtenders="true", extensibleProviderFactory="true", copyrightText="Agence spatiale canadienne / Canadian Space Agency 2012 Copyrights (c)", modelName="SymphonyCore", multipleEditorPages="false", fileExtensions="sym") 
+@GenModel(prefix="Symphony__Core",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  copyrightText="Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
+		  modelName="Symphony__Core",
+		  multipleEditorPages="false",
+		  fileExtensions="sym") 
 @GenModel(modelDirectory="/org.eclipse.symphony.core/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.core.edit/src-generated")
 //@GenModel(editorDirectory="/org.eclipse.symphony.core.editor/src-generated")
@@ -56,7 +62,7 @@ class SymphonyCoreFacade
 	 */
 	op SymphonySystem getSymphonySystem(Environment environment, String fullyQualifiedName)	
 	
-	/**
+	/*
 	 * Loads FeatureOfInterest from file.
 	 * @param url The URL locating the file.
 	 * @return The list of loaded FeatureOfInterest.
@@ -64,7 +70,7 @@ class SymphonyCoreFacade
 	 */
 	op List<FeatureOfInterest> loadFeatureOfInterestFromFile(String url) throws Exception
 	
-    /**
+    /*
 	 * Saves a list of FeatureOfInterest to file (in CSV format).
 	 * @param path The path to the file.	
 	 * @param foiList The list of FeatureOfInterest.
@@ -82,7 +88,7 @@ class SymphonyEnvironment extends Environment, Timed
 {
 	contains WorksitesList[0..1] worksitesList
 	
-	/**
+	/*
 	 * The worksite currently active.
 	 */
 	refers AbstractWorksite activeWorksite
@@ -148,21 +154,38 @@ class ConnectionPoint extends Named, Described
 
 class AssemblyLink extends Named, Described 
 {
-	@GenModel(documentation="The parent type member of the link.", propertyCategory="LINK_PARENT")
+	/*
+	 * The parent type member of the link.
+	 */
+	@GenModel(propertyCategory="LINK_PARENT")
 	refers TypeMember [0..1] parentTypeMember
 
-	@GenModel(documentation="The destination type member of the link.", propertyCategory="LINK_CHILD")
+	/*
+	 * The destination type member of the link.
+	 */
+	@GenModel(propertyCategory="LINK_CHILD")
 	refers TypeMember [1] subSystemTypeMember
 
-	@GenModel(documentation="The connection on the parent member of the link.", propertyCategory="LINK_PARENT")
+	/*
+	 * The connection on the parent member of the link.
+	 */
+	@GenModel(propertyCategory="LINK_PARENT")
 	refers ConnectionPoint [1] parentConnectionPoint
 	
-	@GenModel(documentation="The transformation to position the subSystem relative to the connection point.", propertyCategory="LINK_TOPOLOGY")
+	/*
+	 * The transformation to position the subsystem
+	 * relative to the connection point.
+	 */
+	@GenModel(propertyCategory="LINK_TOPOLOGY")
 	contains Matrix4x4 [0..1] transformationMatrix
 
-	@GenModel(documentation="Any geometry topology used to represent interface hardware. This topology will be attached to the connection point.", propertyCategory="LINK_TOPOLOGY")
+	/*
+	 * Any geometry topology used to represent interface hardware.
+	 * This topology will be attached to the connection point.
+	 */
+	@GenModel(propertyCategory="LINK_TOPOLOGY")
 	contains Node [0..1] geometryNode
-		
+	
  	@GenModel(property="Readonly", propertyCategory="LINK_PARENT")
 	refers transient SymphonySystem [0..1] parentInstance
 		
@@ -201,7 +224,9 @@ abstract class PoseCorrector
 	refers SymphonySystemApiAdapter symphonySystemApiAdapter opposite poseCorrector
 	op Matrix4x4 applyCorrection(Matrix4x4 originalPose)
 	
-	/* Whether the Pose Predictor is enabled. */
+	/*
+	 * Whether the Pose Predictor is enabled.
+	 */
 	@GenModel(notify="true", propertyCategory="SETTINGS_INFO")
 	boolean enabled = "false"
 }
@@ -261,12 +286,16 @@ class Positioned
 	contains Matrix4x4[1] pose
 }
 
-/* A feature of interest. */
+/*
+ * A feature of interest.
+ */
 class FeatureOfInterest extends Positioned, Named, Described
 {	
 }
 
-/* List of Feature Of Interest */
+/*
+ * List of Feature Of Interest
+ */
 class FeatureOfInterestList extends Named, Described
 {
 	contains FeatureOfInterest[0..*] featuresOfInterest	
@@ -282,7 +311,7 @@ class TopologyRoot
 	contains Node originNode	
 }
 
-/* --------------------------------------------value-----------------------------
+/* -------------------------------------------------------------------------
  * 
  * Positioned Results.
  * 
@@ -294,12 +323,16 @@ class PositionedResult extends AbstractResult, Positioned
  
 class OperationCallPositionedResult extends OperationCallResult, PositionedResult
 {	
-	/* Pose relative to the system that produced the result.*/
+	/*
+	 * Pose relative to the system that produced the result. 
+	 * */
 	@GenModel(children="true", notify="true", property="Readonly", propertyCategory="POSITION_INFO")
 	contains Matrix4x4[1] relativePose	
 }
 
-/* Class representing a result that is no related to an ops call. */
+/*
+ * Class representing a result that is no related to an ops call.
+ */
 class UserDefinedResult extends PositionedResult, Named, Described
 {	
 }
@@ -308,15 +341,22 @@ class UserDefinedResult extends PositionedResult, Named, Described
  * 
  * Specialized Nodes.
  * 
- * ------------------------------------------------------------------------- */ 
-@GenModel(documentation="A specialized Topology node representing a SymphonyResult.")
+ * ------------------------------------------------------------------------- */
+ 
+/*
+ * A specialized Topology node representing a SymphonyResult.
+ */
 class ResultNode extends AggregateGroupNode
 {
-	@GenModel(documentation="The SymphonyResult represented by this node.")
+	/*
+	 * The SymphonyResult represented by this node.
+	 */
 	refers transient PositionedResult result
 }
 
-@GenModel(documentation="A specialized Topology node representing a ResultsList.")
+/*
+ * A specialized Topology node representing a ResultsList.
+ */
 class ResultsListNode extends AggregateGroupNode
 {
 	refers transient ResultsList resultsList	
@@ -324,7 +364,9 @@ class ResultsListNode extends AggregateGroupNode
 
 class FeatureOfInterestNode extends TransformNode
 {
-	@GenModel(documentation="The Feature Of Interest represented by this node.")
+	/*
+	 * The Feature Of Interest represented by this node.
+	 */
 	refers transient FeatureOfInterest featureOfInterest
 }
 
@@ -339,23 +381,31 @@ class FeatureOfInterestListNode extends AggregateGroupNode
  * 
  * ------------------------------------------------------------------------- */ 
 
-/**
+/*
  * Represent an Object for which some attrbutes needs update to be done either automatically or 
  * manually triggered.
  */
 abstract class Updatable
 {
-	@GenModel(documentation="Whether or not the object is busy updating.", property="Readonly", propertyCategory="UPDATABLE")
+	/*
+	 * Whether or not the object is busy updating.
+	 */
+	@GenModel(property="Readonly", propertyCategory="UPDATABLE")
 	transient boolean updating = "false"
 	
-	@GenModel(documentation="Whether or not the object auto update is enabled.", propertyCategory="UPDATABLE")
+	/*
+	 * Whether or not the object auto update is enabled.
+	 */
+	@GenModel(propertyCategory="UPDATABLE")
 	boolean autoUpdateEnabled
 	
-	/**
+	/*
 	 * Returns the default value of autoUpdateEnabled;
 	 */
 	op boolean getDefaultAutoUpdateEnabled()
 	
-	/** Update method. */
+	/*
+	 * Update method.
+	 */
 	op void update() throws Exception
 }

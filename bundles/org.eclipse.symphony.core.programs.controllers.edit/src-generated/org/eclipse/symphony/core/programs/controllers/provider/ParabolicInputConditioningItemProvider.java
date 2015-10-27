@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.ParabolicInputConditioning;
 
 /**
@@ -70,7 +70,7 @@ public class ParabolicInputConditioningItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ParabolicInputConditioning_minimum_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ParabolicInputConditioning_minimum_feature", "_UI_ParabolicInputConditioning_type"),
-				 EMFEcoreControllersPackage.Literals.PARABOLIC_INPUT_CONDITIONING__MINIMUM,
+				 Symphony__CoreProgramsControllersPackage.Literals.PARABOLIC_INPUT_CONDITIONING__MINIMUM,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class ParabolicInputConditioningItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ParabolicInputConditioning_maximum_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ParabolicInputConditioning_maximum_feature", "_UI_ParabolicInputConditioning_type"),
-				 EMFEcoreControllersPackage.Literals.PARABOLIC_INPUT_CONDITIONING__MAXIMUM,
+				 Symphony__CoreProgramsControllersPackage.Literals.PARABOLIC_INPUT_CONDITIONING__MAXIMUM,
 				 true,
 				 false,
 				 false,
@@ -146,8 +146,8 @@ public class ParabolicInputConditioningItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ParabolicInputConditioning.class)) {
-			case EMFEcoreControllersPackage.PARABOLIC_INPUT_CONDITIONING__MINIMUM:
-			case EMFEcoreControllersPackage.PARABOLIC_INPUT_CONDITIONING__MAXIMUM:
+			case Symphony__CoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING__MINIMUM:
+			case Symphony__CoreProgramsControllersPackage.PARABOLIC_INPUT_CONDITIONING__MAXIMUM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

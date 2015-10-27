@@ -4,8 +4,8 @@
 package org.eclipse.symphony.core.invocator.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.InitializationData;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class InitializationDataImpl extends AbstractInitializationDataImpl imple
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.INITIALIZATION_DATA;
+		return Symphony__CoreInvocatorPackage.Literals.INITIALIZATION_DATA;
 	}
 
 } //InitializationDataImpl

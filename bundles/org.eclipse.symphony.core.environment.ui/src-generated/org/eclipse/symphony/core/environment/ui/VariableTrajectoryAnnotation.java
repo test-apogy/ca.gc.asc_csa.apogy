@@ -20,7 +20,7 @@ package org.eclipse.symphony.core.environment.ui;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.VariableTrajectoryAnnotation#getTrajectoryProvider <em>Trajectory Provider</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getVariableTrajectoryAnnotation()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVariableTrajectoryAnnotation()
  * @model
  * @generated
  */
@@ -32,11 +32,11 @@ public interface VariableTrajectoryAnnotation extends AbstractVariableAnnotation
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * The trajectory provider.
+	 * The trajectory provider.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Trajectory Provider</em>' containment reference.
 	 * @see #setTrajectoryProvider(VariableTrajectoryProvider)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getVariableTrajectoryAnnotation_TrajectoryProvider()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getVariableTrajectoryAnnotation_TrajectoryProvider()
 	 * @see org.eclipse.symphony.core.environment.ui.VariableTrajectoryProvider#getVariableAnnotation
 	 * @model opposite="variableAnnotation" containment="true" required="true"
 	 * @generated

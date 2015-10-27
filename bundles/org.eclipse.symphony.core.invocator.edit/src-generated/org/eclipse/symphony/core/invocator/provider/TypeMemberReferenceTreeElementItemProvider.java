@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
 
 /**
@@ -66,8 +66,8 @@ public class TypeMemberReferenceTreeElementItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__CHILD);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__FEATURE_ROOT_NODE);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__CHILD);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__FEATURE_ROOT_NODE);
 		}
 		return childrenFeatures;
 	}
@@ -134,12 +134,12 @@ public class TypeMemberReferenceTreeElementItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TypeMemberReferenceTreeElement.class)) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__ROOT:
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__LEAF:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__ROOT:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__LEAF:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__CHILD:
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__FEATURE_ROOT_NODE:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__CHILD:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__FEATURE_ROOT_NODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -160,12 +160,12 @@ public class TypeMemberReferenceTreeElementItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__CHILD,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceTreeElement()));
+				(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__CHILD,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createTypeMemberReferenceTreeElement()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__FEATURE_ROOT_NODE,
+				(Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER_REFERENCE_TREE_ELEMENT__FEATURE_ROOT_NODE,
 				 Symphony__CommonEMFFactory.eINSTANCE.createTreeRootNode()));
 	}
 

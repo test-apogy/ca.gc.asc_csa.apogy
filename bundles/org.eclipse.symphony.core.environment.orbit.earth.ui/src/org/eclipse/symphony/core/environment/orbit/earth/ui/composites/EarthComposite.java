@@ -22,7 +22,7 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.AbstractWorldWindLayer;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.EarthViewConfiguration;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 
 public class EarthComposite extends Composite 
 {
@@ -195,7 +195,7 @@ public class EarthComposite extends Composite
 						
 						switch(featureId)
 						{
-							case SymphonyEarthOrbitEnvironmentUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
+							case Symphony__CoreEnvironmentOrbitEarthUIPackage.EARTH_VIEW_CONFIGURATION__LAYERS:
 							{
 								int eventType = msg.getEventType();
 								switch(eventType)

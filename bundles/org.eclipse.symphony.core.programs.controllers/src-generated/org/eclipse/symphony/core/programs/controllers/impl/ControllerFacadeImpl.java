@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.EParameter;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.programs.controllers.ControllerFacade;
 import org.eclipse.symphony.core.programs.controllers.CustomInputConditioningPoint;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersFactory;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersFactory;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +55,7 @@ public class ControllerFacadeImpl extends MinimalEObjectImpl.Container implement
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreControllersPackage.Literals.CONTROLLER_FACADE;
+		return Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_FACADE;
 	}
 
   /**
@@ -126,7 +126,7 @@ public class ControllerFacadeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public CustomInputConditioningPoint createCustomInputConditioningPoint(double inputValue, double outputValue) 
 	{
-		CustomInputConditioningPoint point = EMFEcoreControllersFactory.eINSTANCE.createCustomInputConditioningPoint();
+		CustomInputConditioningPoint point = Symphony__CoreProgramsControllersFactory.eINSTANCE.createCustomInputConditioningPoint();
 		
 		point.setInputValue(inputValue);
 		point.setOutputValue(outputValue);
@@ -144,11 +144,11 @@ public class ControllerFacadeImpl extends MinimalEObjectImpl.Container implement
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case EMFEcoreControllersPackage.CONTROLLER_FACADE___CREATE_VALUE__EPARAMETER_FLOAT:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_FACADE___CREATE_VALUE__EPARAMETER_FLOAT:
 				return createValue((EParameter)arguments.get(0), (Float)arguments.get(1));
-			case EMFEcoreControllersPackage.CONTROLLER_FACADE___SORT_CUSTOM_INPUT_CONDITIONING_POINT__LIST:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_FACADE___SORT_CUSTOM_INPUT_CONDITIONING_POINT__LIST:
 				return sortCustomInputConditioningPoint((List<CustomInputConditioningPoint>)arguments.get(0));
-			case EMFEcoreControllersPackage.CONTROLLER_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_FACADE___CREATE_CUSTOM_INPUT_CONDITIONING_POINT__DOUBLE_DOUBLE:
 				return createCustomInputConditioningPoint((Double)arguments.get(0), (Double)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);

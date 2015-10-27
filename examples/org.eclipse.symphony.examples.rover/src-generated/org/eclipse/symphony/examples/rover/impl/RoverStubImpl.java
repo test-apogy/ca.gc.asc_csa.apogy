@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.examples.rover.Activator;
-import org.eclipse.symphony.examples.rover.EMFEcoreExampleRoverPackage;
+import org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage;
 import org.eclipse.symphony.examples.rover.RoverStub;
 
 /**
@@ -42,7 +42,7 @@ public class RoverStubImpl extends RoverImpl implements RoverStub
 	@Override
 	protected EClass eStaticClass()
 	{
-		return EMFEcoreExampleRoverPackage.Literals.ROVER_STUB;
+		return Symphony__ExamplesRoverPackage.Literals.ROVER_STUB;
 	}
 
 	/** 

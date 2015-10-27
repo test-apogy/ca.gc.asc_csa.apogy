@@ -4,7 +4,7 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.RotationNode;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 public class RotationNodePresentationAdapter implements NodePresentationAdapter {
 
@@ -21,7 +21,7 @@ public class RotationNodePresentationAdapter implements NodePresentationAdapter 
 		NodePresentation nodePresentation = null;
 
 		if (isAdapterFor(obj)) {
-			nodePresentation = TopologyUIFactory.eINSTANCE
+			nodePresentation = Symphony__CommonTopologyUIFactory.eINSTANCE
 					.createRotationNodePresentation();
 			nodePresentation.setNode(obj);
 		}

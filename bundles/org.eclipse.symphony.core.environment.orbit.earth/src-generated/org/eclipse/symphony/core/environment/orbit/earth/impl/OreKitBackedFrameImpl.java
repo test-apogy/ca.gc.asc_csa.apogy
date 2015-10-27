@@ -8,7 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.core.environment.orbit.earth.OreKitBackedFrame;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.impl.AbstractFrameImpl;
 import org.orekit.frames.Frame;
 
@@ -36,7 +36,7 @@ public class OreKitBackedFrameImpl extends AbstractFrameImpl implements OreKitBa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.ORE_KIT_BACKED_FRAME;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.ORE_KIT_BACKED_FRAME;
 	}
 
 	/**
@@ -58,7 +58,7 @@ public class OreKitBackedFrameImpl extends AbstractFrameImpl implements OreKitBa
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEarthOrbitEnvironmentPackage.ORE_KIT_BACKED_FRAME___GET_ORE_KIT_FRAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.ORE_KIT_BACKED_FRAME___GET_ORE_KIT_FRAME:
 				return getOreKitFrame();
 		}
 		return super.eInvoke(operationID, arguments);

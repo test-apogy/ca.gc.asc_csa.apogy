@@ -18,7 +18,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
 import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
 import org.eclipse.symphony.examples.lidar.symphony.LidarData;
-import org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarPackage;
+import org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.lidar.symphony.LidarData} object.
@@ -67,7 +67,7 @@ public class LidarDataItemProvider extends SymphonyInitializationDataItemProvide
 				 getResourceLocator(),
 				 getString("_UI_LidarData_fov_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LidarData_fov_feature", "_UI_LidarData_type"),
-				 SymphonyExampleLidarPackage.Literals.LIDAR_DATA__FOV,
+				 Symphony__ExamplesLidarSymphonyPackage.Literals.LIDAR_DATA__FOV,
 				 true,
 				 false,
 				 false,
@@ -89,7 +89,7 @@ public class LidarDataItemProvider extends SymphonyInitializationDataItemProvide
 				 getResourceLocator(),
 				 getString("_UI_LidarData_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LidarData_initialized_feature", "_UI_LidarData_type"),
-				 SymphonyExampleLidarPackage.Literals.LIDAR_DATA__INITIALIZED,
+				 Symphony__ExamplesLidarSymphonyPackage.Literals.LIDAR_DATA__INITIALIZED,
 				 true,
 				 false,
 				 false,
@@ -110,8 +110,8 @@ public class LidarDataItemProvider extends SymphonyInitializationDataItemProvide
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyExampleLidarPackage.Literals.LIDAR_DATA__FOV);
-			childrenFeatures.add(SymphonyExampleLidarPackage.Literals.LIDAR_DATA__INITIALIZED);
+			childrenFeatures.add(Symphony__ExamplesLidarSymphonyPackage.Literals.LIDAR_DATA__FOV);
+			childrenFeatures.add(Symphony__ExamplesLidarSymphonyPackage.Literals.LIDAR_DATA__INITIALIZED);
 		}
 		return childrenFeatures;
 	}
@@ -165,10 +165,10 @@ public class LidarDataItemProvider extends SymphonyInitializationDataItemProvide
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LidarData.class)) {
-			case SymphonyExampleLidarPackage.LIDAR_DATA__FOV:
+			case Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__FOV:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
-			case SymphonyExampleLidarPackage.LIDAR_DATA__INITIALIZED:
+			case Symphony__ExamplesLidarSymphonyPackage.LIDAR_DATA__INITIALIZED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, true));
 				return;
 		}
@@ -188,7 +188,7 @@ public class LidarDataItemProvider extends SymphonyInitializationDataItemProvide
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyExampleLidarPackage.Literals.LIDAR_DATA__FOV,
+				(Symphony__ExamplesLidarSymphonyPackage.Literals.LIDAR_DATA__FOV,
 				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 	}
 
@@ -200,7 +200,7 @@ public class LidarDataItemProvider extends SymphonyInitializationDataItemProvide
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SymphonyExampleLidarEditPlugin.INSTANCE;
+		return Symphony__ExamplesLidarSymphonyEditPlugin.INSTANCE;
 	}
 
 }

@@ -8,7 +8,7 @@ import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
 import org.eclipse.symphony.core.invocator.ContextsList;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -73,7 +73,7 @@ public class ContextsListTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createContextsList());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createContextsList());
 	}
 
 	/**

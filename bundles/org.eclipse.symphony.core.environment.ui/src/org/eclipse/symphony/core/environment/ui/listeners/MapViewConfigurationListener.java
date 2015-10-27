@@ -9,9 +9,9 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.core.environment.ImageMapLayer;
 import org.eclipse.symphony.core.environment.ImageMapLayerPresentation;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 
 public class MapViewConfigurationListener 
 {
@@ -93,7 +93,7 @@ public class MapViewConfigurationListener
 						
 						switch(featureID)
 						{
-							case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
+							case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_LAYERS:
 							{
 								if(msg.getEventType() == Notification.ADD)
 								{
@@ -149,7 +149,7 @@ public class MapViewConfigurationListener
 							}	
 							break;
 							
-							case SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
+							case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__BACKGROUND_COLOR:
 								mapViewConfigurationUpdate();
 							break;
 							
@@ -162,15 +162,15 @@ public class MapViewConfigurationListener
 						int featureID = msg.getFeatureID(ImageMapLayerPresentation.class); 
 						switch(featureID)
 						{
-							case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__VISIBLE:
+							case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__VISIBLE:
 								mapViewConfigurationUpdate();
 							break;
 							
-							case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
+							case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__ALPHA:
 								mapViewConfigurationUpdate();
 							break;
 							
-							case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__MAP_LAYER:
+							case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER_PRESENTATION__MAP_LAYER:
 								mapViewConfigurationUpdate();
 							break;
 							
@@ -183,15 +183,15 @@ public class MapViewConfigurationListener
 						int featureID = msg.getFeatureID(ImageMapLayer.class); 
 						switch(featureID)
 						{
-							case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT:
+							case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__HEIGHT:
 								mapViewConfigurationUpdate();
 							break;							
 							
-							case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH:
+							case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__WIDTH:
 								mapViewConfigurationUpdate();
 							break;		
 							
-							case SymphonyEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
+							case Symphony__CoreEnvironmentPackage.IMAGE_MAP_LAYER__IMAGE:
 								mapViewConfigurationUpdate();
 							break;		
 							

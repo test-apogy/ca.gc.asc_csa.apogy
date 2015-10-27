@@ -8,7 +8,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerPackage;
+import org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage;
 import org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry;
 
 public class TopologyViewerListenerManager
@@ -106,7 +106,7 @@ public class TopologyViewerListenerManager
 						
 						switch (featureId) 
 						{
-							case TopologyViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION:
+							case Symphony__CommonTopologyUIViewerPackage.TOPOLOGY_VIEWER_REGISTRY__LATEST_NODE_SELECTION:
 								
 								if(msg.getNewValue() instanceof NodeSelection)
 								{

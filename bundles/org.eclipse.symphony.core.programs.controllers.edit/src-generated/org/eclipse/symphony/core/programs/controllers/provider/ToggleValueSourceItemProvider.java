@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.ToggleValueSource;
 
 /**
@@ -68,7 +68,7 @@ public class ToggleValueSourceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ToggleValueSource_initialValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ToggleValueSource_initialValue_feature", "_UI_ToggleValueSource_type"),
-				 EMFEcoreControllersPackage.Literals.TOGGLE_VALUE_SOURCE__INITIAL_VALUE,
+				 Symphony__CoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE__INITIAL_VALUE,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class ToggleValueSourceItemProvider
 				 getResourceLocator(),
 				 getString("_UI_ToggleValueSource_currentValue_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ToggleValueSource_currentValue_feature", "_UI_ToggleValueSource_type"),
-				 EMFEcoreControllersPackage.Literals.TOGGLE_VALUE_SOURCE__CURRENT_VALUE,
+				 Symphony__CoreProgramsControllersPackage.Literals.TOGGLE_VALUE_SOURCE__CURRENT_VALUE,
 				 false,
 				 false,
 				 false,
@@ -139,8 +139,8 @@ public class ToggleValueSourceItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ToggleValueSource.class)) {
-			case EMFEcoreControllersPackage.TOGGLE_VALUE_SOURCE__INITIAL_VALUE:
-			case EMFEcoreControllersPackage.TOGGLE_VALUE_SOURCE__CURRENT_VALUE:
+			case Symphony__CoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__INITIAL_VALUE:
+			case Symphony__CoreProgramsControllersPackage.TOGGLE_VALUE_SOURCE__CURRENT_VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

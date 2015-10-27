@@ -32,7 +32,7 @@ import org.eclipse.symphony.common.topology.ui.jme3.JME3Utilities;
 import org.eclipse.symphony.common.topology.ui.jme3.scene_objects.DefaultJME3SceneObject;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayerNode;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.ui.jme3.Activator;
 
 import com.jme3.asset.AssetManager;
@@ -531,7 +531,7 @@ public class CartesianTriangularMeshMapLayerNodeJM3SceneObject extends DefaultJM
 	
 						switch(featureId)
 						{
-							case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY:	
+							case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__MESH_IS_DIRTY:	
 								try
 								{
 									// Remove adapters from old mesh
@@ -558,7 +558,7 @@ public class CartesianTriangularMeshMapLayerNodeJM3SceneObject extends DefaultJM
 								}
 							break;
 							
-							case SymphonyEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE:
+							case Symphony__CoreEnvironmentPackage.CARTESIAN_TRIANGULAR_MESH_MAP_LAYER__TEXTURE_IMAGE:
 								try
 								{
 									// Updates the texture.

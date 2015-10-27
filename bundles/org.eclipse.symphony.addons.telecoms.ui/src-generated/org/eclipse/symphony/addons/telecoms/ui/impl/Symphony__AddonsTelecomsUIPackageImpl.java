@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.addons.telecoms.ui.AbstractAntennaRadiationPatternPresentation;
 import org.eclipse.symphony.addons.telecoms.ui.Symphony__AddonsTelecomsUIFactory;
 import org.eclipse.symphony.addons.telecoms.ui.Symphony__AddonsTelecomsUIPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -71,7 +71,7 @@ public class Symphony__AddonsTelecomsUIPackageImpl extends EPackageImpl implemen
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyUIPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsTelecomsUIPackage.createPackageContents();
@@ -152,14 +152,14 @@ public class Symphony__AddonsTelecomsUIPackageImpl extends EPackageImpl implemen
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyUIPackage theTopologyUIPackage = (TopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyUIPackage.eNS_URI);
+		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		abstractAntennaRadiationPatternPresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
+		abstractAntennaRadiationPatternPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractAntennaRadiationPatternPresentationEClass, AbstractAntennaRadiationPatternPresentation.class, "AbstractAntennaRadiationPatternPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

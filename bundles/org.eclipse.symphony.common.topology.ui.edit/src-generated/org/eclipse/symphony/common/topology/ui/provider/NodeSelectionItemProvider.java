@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.topology.ui.NodeSelection;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.topology.ui.NodeSelection} object.
@@ -85,7 +85,7 @@ public class NodeSelectionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodeSelection_topologyPresentationSet_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodeSelection_topologyPresentationSet_feature", "_UI_NodeSelection_type"),
-				 TopologyUIPackage.Literals.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET,
+				 Symphony__CommonTopologyUIPackage.Literals.NODE_SELECTION__TOPOLOGY_PRESENTATION_SET,
 				 true,
 				 false,
 				 true,
@@ -107,7 +107,7 @@ public class NodeSelectionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodeSelection_selectedNode_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodeSelection_selectedNode_feature", "_UI_NodeSelection_type"),
-				 TopologyUIPackage.Literals.NODE_SELECTION__SELECTED_NODE,
+				 Symphony__CommonTopologyUIPackage.Literals.NODE_SELECTION__SELECTED_NODE,
 				 true,
 				 false,
 				 true,
@@ -129,7 +129,7 @@ public class NodeSelectionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodeSelection_nodePresentation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodeSelection_nodePresentation_feature", "_UI_NodeSelection_type"),
-				 TopologyUIPackage.Literals.NODE_SELECTION__NODE_PRESENTATION,
+				 Symphony__CommonTopologyUIPackage.Literals.NODE_SELECTION__NODE_PRESENTATION,
 				 true,
 				 false,
 				 true,
@@ -151,7 +151,7 @@ public class NodeSelectionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodeSelection_relativeIntersectionPoint_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodeSelection_relativeIntersectionPoint_feature", "_UI_NodeSelection_type"),
-				 TopologyUIPackage.Literals.NODE_SELECTION__RELATIVE_INTERSECTION_POINT,
+				 Symphony__CommonTopologyUIPackage.Literals.NODE_SELECTION__RELATIVE_INTERSECTION_POINT,
 				 true,
 				 false,
 				 false,
@@ -173,7 +173,7 @@ public class NodeSelectionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodeSelection_absoluteIntersectionPoint_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodeSelection_absoluteIntersectionPoint_feature", "_UI_NodeSelection_type"),
-				 TopologyUIPackage.Literals.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT,
+				 Symphony__CommonTopologyUIPackage.Literals.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT,
 				 true,
 				 false,
 				 false,
@@ -195,7 +195,7 @@ public class NodeSelectionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodeSelection_relativeIntersectionNormal_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodeSelection_relativeIntersectionNormal_feature", "_UI_NodeSelection_type"),
-				 TopologyUIPackage.Literals.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL,
+				 Symphony__CommonTopologyUIPackage.Literals.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL,
 				 true,
 				 false,
 				 false,
@@ -217,7 +217,7 @@ public class NodeSelectionItemProvider
 				 getResourceLocator(),
 				 getString("_UI_NodeSelection_absoluteIntersectionNormal_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_NodeSelection_absoluteIntersectionNormal_feature", "_UI_NodeSelection_type"),
-				 TopologyUIPackage.Literals.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL,
+				 Symphony__CommonTopologyUIPackage.Literals.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL,
 				 true,
 				 false,
 				 false,
@@ -265,10 +265,10 @@ public class NodeSelectionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(NodeSelection.class)) {
-			case TopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_POINT:
-			case TopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT:
-			case TopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL:
-			case TopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_POINT:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_POINT:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__RELATIVE_INTERSECTION_NORMAL:
+			case Symphony__CommonTopologyUIPackage.NODE_SELECTION__ABSOLUTE_INTERSECTION_NORMAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

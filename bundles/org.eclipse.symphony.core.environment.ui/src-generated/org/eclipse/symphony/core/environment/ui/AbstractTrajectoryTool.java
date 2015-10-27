@@ -14,7 +14,7 @@ package org.eclipse.symphony.core.environment.ui;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getAbstractTrajectoryTool()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getAbstractTrajectoryTool()
  * @model abstract="true"
  * @generated
  */

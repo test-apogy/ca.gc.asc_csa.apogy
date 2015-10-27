@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage#getPTUDishAntennaSymphonySystemApiAdapter()
+ * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#getPTUDishAntennaSymphonySystemApiAdapter()
  * @model
  * @generated
  */

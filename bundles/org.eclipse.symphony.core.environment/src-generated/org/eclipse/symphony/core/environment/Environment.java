@@ -12,7 +12,7 @@ import org.eclipse.symphony.common.emf.Named;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEnvironment()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEnvironment()
  * @model
  * @generated
  */

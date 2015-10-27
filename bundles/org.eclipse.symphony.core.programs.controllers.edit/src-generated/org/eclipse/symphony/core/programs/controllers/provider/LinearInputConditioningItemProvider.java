@@ -14,7 +14,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 import org.eclipse.symphony.core.programs.controllers.LinearInputConditioning;
 
 /**
@@ -69,7 +69,7 @@ public class LinearInputConditioningItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LinearInputConditioning_minimum_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LinearInputConditioning_minimum_feature", "_UI_LinearInputConditioning_type"),
-				 EMFEcoreControllersPackage.Literals.LINEAR_INPUT_CONDITIONING__MINIMUM,
+				 Symphony__CoreProgramsControllersPackage.Literals.LINEAR_INPUT_CONDITIONING__MINIMUM,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class LinearInputConditioningItemProvider
 				 getResourceLocator(),
 				 getString("_UI_LinearInputConditioning_maximum_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_LinearInputConditioning_maximum_feature", "_UI_LinearInputConditioning_type"),
-				 EMFEcoreControllersPackage.Literals.LINEAR_INPUT_CONDITIONING__MAXIMUM,
+				 Symphony__CoreProgramsControllersPackage.Literals.LINEAR_INPUT_CONDITIONING__MAXIMUM,
 				 true,
 				 false,
 				 false,
@@ -142,8 +142,8 @@ public class LinearInputConditioningItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(LinearInputConditioning.class)) {
-			case EMFEcoreControllersPackage.LINEAR_INPUT_CONDITIONING__MINIMUM:
-			case EMFEcoreControllersPackage.LINEAR_INPUT_CONDITIONING__MAXIMUM:
+			case Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MINIMUM:
+			case Symphony__CoreProgramsControllersPackage.LINEAR_INPUT_CONDITIONING__MAXIMUM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

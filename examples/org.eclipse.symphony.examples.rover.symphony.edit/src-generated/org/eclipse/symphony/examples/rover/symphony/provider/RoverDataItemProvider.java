@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
 import org.eclipse.symphony.examples.rover.symphony.RoverData;
-import org.eclipse.symphony.examples.rover.symphony.SymphonyExampleRoverPackage;
+import org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.rover.symphony.RoverData} object.
@@ -65,7 +65,7 @@ public class RoverDataItemProvider extends SymphonyInitializationDataItemProvide
 				 getResourceLocator(),
 				 getString("_UI_RoverData_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RoverData_initialized_feature", "_UI_RoverData_type"),
-				 SymphonyExampleRoverPackage.Literals.ROVER_DATA__INITIALIZED,
+				 Symphony__ExamplesRoverSymphonyPackage.Literals.ROVER_DATA__INITIALIZED,
 				 true,
 				 false,
 				 false,
@@ -87,7 +87,7 @@ public class RoverDataItemProvider extends SymphonyInitializationDataItemProvide
 				 getResourceLocator(),
 				 getString("_UI_RoverData_disposed_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_RoverData_disposed_feature", "_UI_RoverData_type"),
-				 SymphonyExampleRoverPackage.Literals.ROVER_DATA__DISPOSED,
+				 Symphony__ExamplesRoverSymphonyPackage.Literals.ROVER_DATA__DISPOSED,
 				 true,
 				 false,
 				 false,
@@ -132,8 +132,8 @@ public class RoverDataItemProvider extends SymphonyInitializationDataItemProvide
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RoverData.class)) {
-			case SymphonyExampleRoverPackage.ROVER_DATA__INITIALIZED:
-			case SymphonyExampleRoverPackage.ROVER_DATA__DISPOSED:
+			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__INITIALIZED:
+			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__DISPOSED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -160,7 +160,7 @@ public class RoverDataItemProvider extends SymphonyInitializationDataItemProvide
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return SymphonyExampleRoverEditPlugin.INSTANCE;
+		return Symphony__ExamplesRoverSymphonyEditPlugin.INSTANCE;
 	}
 
 }

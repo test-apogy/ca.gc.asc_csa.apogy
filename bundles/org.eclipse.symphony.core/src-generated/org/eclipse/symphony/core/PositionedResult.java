@@ -10,7 +10,7 @@ import org.eclipse.symphony.core.invocator.AbstractResult;
  * <em><b>Positioned Result</b></em>'. <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- *  --------------------------------------------value-----------------------------
+ *  -------------------------------------------------------------------------
  * 
  * Positioned Results.
  * 
@@ -18,7 +18,7 @@ import org.eclipse.symphony.core.invocator.AbstractResult;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getPositionedResult()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getPositionedResult()
  * @model
  * @generated
  */

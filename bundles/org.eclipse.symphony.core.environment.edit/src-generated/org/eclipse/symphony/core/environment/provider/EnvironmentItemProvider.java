@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.Environment;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.Environment} object.
@@ -155,8 +155,8 @@ public class EnvironmentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Environment.class)) {
-			case SymphonyEnvironmentPackage.ENVIRONMENT__NAME:
-			case SymphonyEnvironmentPackage.ENVIRONMENT__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT__NAME:
+			case Symphony__CoreEnvironmentPackage.ENVIRONMENT__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

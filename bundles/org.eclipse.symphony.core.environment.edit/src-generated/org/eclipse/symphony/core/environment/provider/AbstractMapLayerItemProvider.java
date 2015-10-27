@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.AbstractMapLayer;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.AbstractMapLayer} object.
@@ -143,8 +143,8 @@ public class AbstractMapLayerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(AbstractMapLayer.class)) {
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__NAME:
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__NAME:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

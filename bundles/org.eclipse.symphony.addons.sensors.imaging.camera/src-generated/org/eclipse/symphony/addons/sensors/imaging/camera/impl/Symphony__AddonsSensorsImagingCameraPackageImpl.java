@@ -59,8 +59,8 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.ToolTipTextProvider;
 import org.eclipse.symphony.addons.sensors.imaging.camera.URLImageOverlay;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
-import org.eclipse.symphony.core.SymphonyCorePackage;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -1635,12 +1635,12 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 
 		// Obtain other dependent packages
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
-		EMFEcoreInvocatorPackage theEMFEcoreInvocatorPackage = (EMFEcoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(EMFEcoreInvocatorPackage.eNS_URI);
+		Symphony__CoreInvocatorPackage theSymphony__CoreInvocatorPackage = (Symphony__CoreInvocatorPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CoreInvocatorPackage.eNS_URI);
 		Symphony__AddonsPackage theSymphony__AddonsPackage = (Symphony__AddonsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsPackage.eNS_URI);
 		Symphony__AddonsSensorsImagingPackage theSymphony__AddonsSensorsImagingPackage = (Symphony__AddonsSensorsImagingPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsImagingPackage.eNS_URI);
 		Symphony__CommonEMFPackage theSymphony__CommonEMFPackage = (Symphony__CommonEMFPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonEMFPackage.eNS_URI);
 		Symphony__CommonImagesPackage theSymphony__CommonImagesPackage = (Symphony__CommonImagesPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonImagesPackage.eNS_URI);
-		SymphonyCorePackage theSymphonyCorePackage = (SymphonyCorePackage)EPackage.Registry.INSTANCE.getEPackage(SymphonyCorePackage.eNS_URI);
+		Symphony__CorePackage theSymphony__CorePackage = (Symphony__CorePackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CorePackage.eNS_URI);
 		Symphony__AddonsSensorsFOVPackage theSymphony__AddonsSensorsFOVPackage = (Symphony__AddonsSensorsFOVPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__AddonsSensorsFOVPackage.eNS_URI);
 
 		// Create type parameters
@@ -1649,8 +1649,8 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		cameraViewConfigurationListEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getAbstractToolsListContainer());
-		cameraViewConfigurationEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getVariableFeatureReference());
+		cameraViewConfigurationListEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getAbstractToolsListContainer());
+		cameraViewConfigurationEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getVariableFeatureReference());
 		cameraViewConfigurationEClass.getESuperTypes().add(theSymphony__AddonsPackage.getAbstractTool());
 		imageFilterEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
 		imageFilterEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
@@ -1677,12 +1677,12 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		fovOverlayEClass.getESuperTypes().add(this.getToolTipTextProvider());
 		azimuthElevationFOVOverlayEClass.getESuperTypes().add(this.getFOVOverlay());
 		emfFeatureAzimuthElevationFOVOverlayEClass.getESuperTypes().add(this.getAzimuthElevationFOVOverlay());
-		azimuthFeatureReferenceEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getVariableFeatureReference());
-		elevationFeatureReferenceEClass.getESuperTypes().add(theEMFEcoreInvocatorPackage.getVariableFeatureReference());
+		azimuthFeatureReferenceEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getVariableFeatureReference());
+		elevationFeatureReferenceEClass.getESuperTypes().add(theSymphony__CoreInvocatorPackage.getVariableFeatureReference());
 		cameraToolEClass.getESuperTypes().add(this.getCameraImageAnnotation());
 		pointerCameraToolEClass.getESuperTypes().add(this.getCameraTool());
 		pointerCameraToolEClass.getESuperTypes().add(this.getToolTipTextProvider());
-		pointerCameraToolEClass.getESuperTypes().add(theSymphonyCorePackage.getAbsolutePoseProvider());
+		pointerCameraToolEClass.getESuperTypes().add(theSymphony__CorePackage.getAbsolutePoseProvider());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(cameraViewUtilitiesEClass, CameraViewUtilities.class, "CameraViewUtilities", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1783,7 +1783,7 @@ public class Symphony__AddonsSensorsImagingCameraPackageImpl extends EPackageImp
 		initEOperation(getAbstractTextOverlay__GetDisplayedString(), theEcorePackage.getEString(), "getDisplayedString", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(emfFeatureOverlayEClass, EMFFeatureOverlay.class, "EMFFeatureOverlay", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEMFFeatureOverlay_VariableFeatureReference(), theEMFEcoreInvocatorPackage.getVariableFeatureReference(), null, "variableFeatureReference", null, 1, 1, EMFFeatureOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEMFFeatureOverlay_VariableFeatureReference(), theSymphony__CoreInvocatorPackage.getVariableFeatureReference(), null, "variableFeatureReference", null, 1, 1, EMFFeatureOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEMFFeatureOverlay_NumberFormat(), theEcorePackage.getEString(), "numberFormat", "0.00", 0, 1, EMFFeatureOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEMFFeatureOverlay_VariableFeatureReferenceChangeCount(), theEcorePackage.getELong(), "variableFeatureReferenceChangeCount", "0", 0, 1, EMFFeatureOverlay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

@@ -17,7 +17,7 @@ package org.eclipse.symphony.examples.lidar;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage#getLidarStub()
+ * @see org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage#getLidarStub()
  * @model
  * @generated
  */

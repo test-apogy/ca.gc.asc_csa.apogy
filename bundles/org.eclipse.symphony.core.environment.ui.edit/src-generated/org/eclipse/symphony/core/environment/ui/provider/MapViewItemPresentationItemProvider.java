@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.ui.MapViewItemPresentation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.ui.MapViewItemPresentation} object.
@@ -81,7 +81,7 @@ public class MapViewItemPresentationItemProvider
 				 getResourceLocator(),
 				 getString("_UI_MapViewItemPresentation_visible_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_MapViewItemPresentation_visible_feature", "_UI_MapViewItemPresentation_type"),
-				 SymphonyEnvironmentUIPackage.Literals.MAP_VIEW_ITEM_PRESENTATION__VISIBLE,
+				 Symphony__CoreEnvironmentUIPackage.Literals.MAP_VIEW_ITEM_PRESENTATION__VISIBLE,
 				 true,
 				 false,
 				 false,
@@ -132,7 +132,7 @@ public class MapViewItemPresentationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MapViewItemPresentation.class)) {
-			case SymphonyEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE:
+			case Symphony__CoreEnvironmentUIPackage.MAP_VIEW_ITEM_PRESENTATION__VISIBLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -51,7 +51,7 @@ import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.symphony.common.emf.EMFEcoreFacade;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberImplementation;
 import org.eclipse.symphony.core.invocator.VariableImplementation;
 import org.eclipse.symphony.core.invocator.edit.EMFEcoreInvocatorEditUtilities;
@@ -528,7 +528,7 @@ public class VariableImplementationsComposite extends Composite {
 			SetCommand command = new SetCommand(
 					editingDomain,
 					implementation,
-					EMFEcoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
+					Symphony__CoreInvocatorPackage.Literals.ABSTRACT_TYPE_IMPLEMENTATION__IMPLEMENTATION_CLASS,
 					eClass);
 			editingDomain.getCommandStack().execute(command);
 

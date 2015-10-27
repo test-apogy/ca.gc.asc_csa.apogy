@@ -16,7 +16,7 @@ package org.eclipse.symphony.examples.satellite;
  *   <li>{@link org.eclipse.symphony.examples.satellite.SatelliteCommandRoll#getTargetRollAngle <em>Target Roll Angle</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteCommandRoll()
+ * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteCommandRoll()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface SatelliteCommandRoll extends SatelliteCommand {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Roll Angle</em>' attribute.
 	 * @see #setTargetRollAngle(double)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getSatelliteCommandRoll_TargetRollAngle()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteCommandRoll_TargetRollAngle()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated

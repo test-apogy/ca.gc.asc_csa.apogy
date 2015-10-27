@@ -11,7 +11,7 @@ import org.eclipse.symphony.core.invocator.AbstractInitializationData;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.Activator;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.symphony.core.invocator.Type;
@@ -274,6 +274,6 @@ public class DefaultInvocatorDelegate implements InvocatorDelegate {
 
 	@Override
 	public TypeApiAdapter newDefaultTypeApiAdapter() {
-		return EMFEcoreInvocatorFactory.eINSTANCE.createTypeApiAdapter();
+		return Symphony__CoreInvocatorFactory.eINSTANCE.createTypeApiAdapter();
 	}
 }

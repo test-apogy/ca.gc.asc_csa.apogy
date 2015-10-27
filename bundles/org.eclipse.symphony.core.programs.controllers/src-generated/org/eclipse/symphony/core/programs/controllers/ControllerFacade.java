@@ -24,7 +24,7 @@ import org.eclipse.symphony.core.programs.controllers.impl.ControllerFacadeImpl;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage#getControllerFacade()
+ * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getControllerFacade()
  * @model
  * @generated
  */

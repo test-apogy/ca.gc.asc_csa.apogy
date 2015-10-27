@@ -24,8 +24,8 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocationList;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentFactory;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthFactory;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocationList} object.
@@ -124,7 +124,7 @@ public class EarthSurfaceLocationListItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -180,11 +180,11 @@ public class EarthSurfaceLocationListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EarthSurfaceLocationList.class)) {
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__NAME:
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -204,13 +204,13 @@ public class EarthSurfaceLocationListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createEarthSurfaceLocation()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocation()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS,
-				 SymphonyEarthOrbitEnvironmentFactory.eINSTANCE.createGroundStation()));
+				(Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS,
+				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
 	}
 
 	/**

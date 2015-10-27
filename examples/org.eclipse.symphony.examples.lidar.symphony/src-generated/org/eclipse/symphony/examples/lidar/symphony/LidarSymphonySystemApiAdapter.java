@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.lidar.symphony.SymphonyExampleLidarPackage#getLidarSymphonySystemApiAdapter()
+ * @see org.eclipse.symphony.examples.lidar.symphony.Symphony__ExamplesLidarSymphonyPackage#getLidarSymphonySystemApiAdapter()
  * @model
  * @generated
  */

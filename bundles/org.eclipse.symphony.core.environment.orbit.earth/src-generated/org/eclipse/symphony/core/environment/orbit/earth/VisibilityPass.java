@@ -30,7 +30,7 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass#getDuration <em>Duration</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPass()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPass()
  * @model
  * @generated
  */
@@ -44,7 +44,7 @@ public interface VisibilityPass extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orbit Model</em>' reference.
 	 * @see #setOrbitModel(OrbitModel)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPass_OrbitModel()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPass_OrbitModel()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated
 	 */
@@ -73,7 +73,7 @@ public interface VisibilityPass extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Surface Location</em>' reference.
 	 * @see #setSurfaceLocation(EarthSurfaceLocation)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPass_SurfaceLocation()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPass_SurfaceLocation()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated
 	 */
@@ -98,7 +98,7 @@ public interface VisibilityPass extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Start Time</em>' attribute.
 	 * @see #setStartTime(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPass_StartTime()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPass_StartTime()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated
@@ -124,7 +124,7 @@ public interface VisibilityPass extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>End Time</em>' attribute.
 	 * @see #setEndTime(Date)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPass_EndTime()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPass_EndTime()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly'"
 	 * @generated
@@ -155,7 +155,7 @@ public interface VisibilityPass extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Position History</em>' containment reference.
 	 * @see #setPositionHistory(VisibilityPassSpacecraftPositionHistory)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPass_PositionHistory()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPass_PositionHistory()
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraftPositionHistory#getVisibilityPass
 	 * @model opposite="visibilityPass" containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' children='true'"
@@ -182,7 +182,7 @@ public interface VisibilityPass extends EObject {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Duration</em>' attribute.
 	 * @see #setDuration(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getVisibilityPass_Duration()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPass_Duration()
 	 * @model unique="false" transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_unit='s'"
 	 * @generated

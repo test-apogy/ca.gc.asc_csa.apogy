@@ -21,7 +21,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.invocator.Type#getTypeApiAdapterClass <em>Type Api Adapter Class</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getType()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getType()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface Type extends Named, AbstractType
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Members</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getType_Members()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getType_Members()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
@@ -54,7 +54,7 @@ public interface Type extends Named, AbstractType
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interface Class</em>' reference.
 	 * @see #setInterfaceClass(EClass)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getType_InterfaceClass()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getType_InterfaceClass()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
 	 */
@@ -80,7 +80,7 @@ public interface Type extends Named, AbstractType
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Api Adapter Class</em>' reference.
 	 * @see #setTypeApiAdapterClass(EClass)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getType_TypeApiAdapterClass()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getType_TypeApiAdapterClass()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel notify='true'"
 	 * @generated
 	 */

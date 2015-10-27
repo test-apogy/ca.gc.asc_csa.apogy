@@ -20,9 +20,9 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.ProgramsList;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.ProgramsList} object.
@@ -79,7 +79,7 @@ public class ProgramsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(EMFEcoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS);
+			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS);
 		}
 		return childrenFeatures;
 	}
@@ -135,7 +135,7 @@ public class ProgramsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ProgramsList.class)) {
-			case EMFEcoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
+			case Symphony__CoreInvocatorPackage.PROGRAMS_LIST__PROGRAMS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -156,8 +156,8 @@ public class ProgramsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(EMFEcoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS,
-				 EMFEcoreInvocatorFactory.eINSTANCE.createOperationCallsList()));
+				(Symphony__CoreInvocatorPackage.Literals.PROGRAMS_LIST__PROGRAMS,
+				 Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCallsList()));
 	}
 
   /**

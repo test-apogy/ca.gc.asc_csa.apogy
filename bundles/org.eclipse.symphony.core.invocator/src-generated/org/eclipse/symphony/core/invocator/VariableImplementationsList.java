@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.VariableImplementationsList#getVariableImplementations <em>Variable Implementations</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariableImplementationsList()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariableImplementationsList()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface VariableImplementationsList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable Implementations</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getVariableImplementationsList_VariableImplementations()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getVariableImplementationsList_VariableImplementations()
 	 * @see org.eclipse.symphony.core.invocator.VariableImplementation#getVariableImplementationsList
 	 * @model opposite="variableImplementationsList" containment="true"
 	 * @generated

@@ -19,7 +19,7 @@ import org.eclipse.symphony.core.PositionedResult;
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getDataProductsMarkerNode()
+ * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getDataProductsMarkerNode()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface DataProductsMarkerNode extends Node
    * <!-- end-user-doc -->
    * @return the value of the '<em>Visible</em>' attribute.
    * @see #setVisible(boolean)
-   * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getDataProductsMarkerNode_Visible()
+   * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getDataProductsMarkerNode_Visible()
    * @model unique="false"
    * @generated
    */
@@ -61,7 +61,7 @@ public interface DataProductsMarkerNode extends Node
    * <!-- end-user-doc -->
    * @return the value of the '<em>Result</em>' reference.
    * @see #setResult(PositionedResult)
-   * @see org.eclipse.symphony.core.topology.SymphonyTopologyPackage#getDataProductsMarkerNode_Result()
+   * @see org.eclipse.symphony.core.topology.Symphony__CoreTopologyPackage#getDataProductsMarkerNode_Result()
    * @model
    * @generated
    */

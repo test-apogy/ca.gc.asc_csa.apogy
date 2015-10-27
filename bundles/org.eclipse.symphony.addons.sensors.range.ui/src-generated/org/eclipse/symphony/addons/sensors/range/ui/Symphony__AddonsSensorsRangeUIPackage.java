@@ -6,7 +6,7 @@ package org.eclipse.symphony.addons.sensors.range.ui;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -75,7 +75,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__TOPOLOGY_PRESENTATION_SET = TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int RASTER_SCAN_DATA_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -84,7 +84,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__NODE = TopologyUIPackage.NODE_PRESENTATION__NODE;
+	int RASTER_SCAN_DATA_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -93,7 +93,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__COLOR = TopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int RASTER_SCAN_DATA_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -102,7 +102,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__VISIBLE = TopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int RASTER_SCAN_DATA_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -111,7 +111,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__SHADOW_MODE = TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int RASTER_SCAN_DATA_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -120,7 +120,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__USE_IN_BOUNDING_CALCULATION = TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int RASTER_SCAN_DATA_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -129,7 +129,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__CENTROID = TopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int RASTER_SCAN_DATA_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -138,7 +138,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__MIN = TopologyUIPackage.NODE_PRESENTATION__MIN;
+	int RASTER_SCAN_DATA_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -147,7 +147,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__MAX = TopologyUIPackage.NODE_PRESENTATION__MAX;
+	int RASTER_SCAN_DATA_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -156,7 +156,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__XRANGE = TopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int RASTER_SCAN_DATA_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -165,7 +165,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__YRANGE = TopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int RASTER_SCAN_DATA_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -174,7 +174,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__ZRANGE = TopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int RASTER_SCAN_DATA_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -183,7 +183,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__SCENE_OBJECT = TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int RASTER_SCAN_DATA_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Fov Presentation Mode</b></em>' attribute.
@@ -192,7 +192,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int RASTER_SCAN_DATA_PRESENTATION__FOV_PRESENTATION_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Fov Visible</b></em>' attribute.
@@ -201,7 +201,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int RASTER_SCAN_DATA_PRESENTATION__FOV_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Data Visible</b></em>' attribute.
@@ -210,7 +210,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
+	int RASTER_SCAN_DATA_PRESENTATION__DATA_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Raster Scan Data Presentation</em>' class.
@@ -219,7 +219,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION_FEATURE_COUNT = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 3;
+	int RASTER_SCAN_DATA_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Raster Scan Data Presentation</em>' class.
@@ -228,7 +228,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RASTER_SCAN_DATA_PRESENTATION_OPERATION_COUNT = TopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int RASTER_SCAN_DATA_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.addons.sensors.range.ui.impl.SimpleSonarPresentationImpl <em>Simple Sonar Presentation</em>}' class.
@@ -247,7 +247,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__TOPOLOGY_PRESENTATION_SET = TopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
+	int SIMPLE_SONAR_PRESENTATION__TOPOLOGY_PRESENTATION_SET = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__TOPOLOGY_PRESENTATION_SET;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' reference.
@@ -256,7 +256,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__NODE = TopologyUIPackage.NODE_PRESENTATION__NODE;
+	int SIMPLE_SONAR_PRESENTATION__NODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__NODE;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -265,7 +265,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__COLOR = TopologyUIPackage.NODE_PRESENTATION__COLOR;
+	int SIMPLE_SONAR_PRESENTATION__COLOR = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -274,7 +274,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__VISIBLE = TopologyUIPackage.NODE_PRESENTATION__VISIBLE;
+	int SIMPLE_SONAR_PRESENTATION__VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__VISIBLE;
 
 	/**
 	 * The feature id for the '<em><b>Shadow Mode</b></em>' attribute.
@@ -283,7 +283,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__SHADOW_MODE = TopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
+	int SIMPLE_SONAR_PRESENTATION__SHADOW_MODE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SHADOW_MODE;
 
 	/**
 	 * The feature id for the '<em><b>Use In Bounding Calculation</b></em>' attribute.
@@ -292,7 +292,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__USE_IN_BOUNDING_CALCULATION = TopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
+	int SIMPLE_SONAR_PRESENTATION__USE_IN_BOUNDING_CALCULATION = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__USE_IN_BOUNDING_CALCULATION;
 
 	/**
 	 * The feature id for the '<em><b>Centroid</b></em>' reference.
@@ -301,7 +301,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__CENTROID = TopologyUIPackage.NODE_PRESENTATION__CENTROID;
+	int SIMPLE_SONAR_PRESENTATION__CENTROID = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__CENTROID;
 
 	/**
 	 * The feature id for the '<em><b>Min</b></em>' reference.
@@ -310,7 +310,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__MIN = TopologyUIPackage.NODE_PRESENTATION__MIN;
+	int SIMPLE_SONAR_PRESENTATION__MIN = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MIN;
 
 	/**
 	 * The feature id for the '<em><b>Max</b></em>' reference.
@@ -319,7 +319,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__MAX = TopologyUIPackage.NODE_PRESENTATION__MAX;
+	int SIMPLE_SONAR_PRESENTATION__MAX = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__MAX;
 
 	/**
 	 * The feature id for the '<em><b>XRange</b></em>' attribute.
@@ -328,7 +328,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__XRANGE = TopologyUIPackage.NODE_PRESENTATION__XRANGE;
+	int SIMPLE_SONAR_PRESENTATION__XRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__XRANGE;
 
 	/**
 	 * The feature id for the '<em><b>YRange</b></em>' attribute.
@@ -337,7 +337,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__YRANGE = TopologyUIPackage.NODE_PRESENTATION__YRANGE;
+	int SIMPLE_SONAR_PRESENTATION__YRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__YRANGE;
 
 	/**
 	 * The feature id for the '<em><b>ZRange</b></em>' attribute.
@@ -346,7 +346,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__ZRANGE = TopologyUIPackage.NODE_PRESENTATION__ZRANGE;
+	int SIMPLE_SONAR_PRESENTATION__ZRANGE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__ZRANGE;
 
 	/**
 	 * The feature id for the '<em><b>Scene Object</b></em>' attribute.
@@ -355,7 +355,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__SCENE_OBJECT = TopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
+	int SIMPLE_SONAR_PRESENTATION__SCENE_OBJECT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION__SCENE_OBJECT;
 
 	/**
 	 * The feature id for the '<em><b>Detected Range Visible</b></em>' attribute.
@@ -364,7 +364,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
+	int SIMPLE_SONAR_PRESENTATION__DETECTED_RANGE_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Simple Sonar Presentation</em>' class.
@@ -373,7 +373,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION_FEATURE_COUNT = TopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int SIMPLE_SONAR_PRESENTATION_FEATURE_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Simple Sonar Presentation</em>' class.
@@ -382,7 +382,7 @@ public interface Symphony__AddonsSensorsRangeUIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_SONAR_PRESENTATION_OPERATION_COUNT = TopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
+	int SIMPLE_SONAR_PRESENTATION_OPERATION_COUNT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_OPERATION_COUNT + 0;
 
 
 	/**

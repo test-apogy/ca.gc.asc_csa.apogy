@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.topology.GroupNode;
  *   <li>{@link org.eclipse.symphony.core.ConnectionPoint#getNode <em>Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getConnectionPoint()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getConnectionPoint()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface ConnectionPoint extends Named, Described {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Points List</em>' container reference.
 	 * @see #setPointsList(ConnectionPointsList)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getConnectionPoint_PointsList()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getConnectionPoint_PointsList()
 	 * @see org.eclipse.symphony.core.ConnectionPointsList#getConnectionPoints
 	 * @model opposite="connectionPoints" required="true" transient="false"
 	 * @generated
@@ -63,7 +63,7 @@ public interface ConnectionPoint extends Named, Described {
 	 * 
 	 * @return the value of the '<em>Node</em>' reference.
 	 * @see #setNode(GroupNode)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getConnectionPoint_Node()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getConnectionPoint_Node()
 	 * @model
 	 * @generated
 	 */

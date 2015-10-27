@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.symphony.common.math.statistics.Population;
-import org.eclipse.symphony.common.math.statistics.StatisticsPackage;
+import org.eclipse.symphony.common.math.statistics.Symphony__CommonMathStatisticsPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -205,7 +205,7 @@ public class PopulationImpl extends MinimalEObjectImpl.Container implements Popu
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return StatisticsPackage.Literals.POPULATION;
+		return Symphony__CommonMathStatisticsPackage.Literals.POPULATION;
 	}
 
 	/**
@@ -217,7 +217,7 @@ public class PopulationImpl extends MinimalEObjectImpl.Container implements Popu
 	public EList<Double> getData() {
 		if (data == null) {
 			data = new EDataTypeEList<Double>(Double.class, this,
-					StatisticsPackage.POPULATION__DATA) {
+					Symphony__CommonMathStatisticsPackage.POPULATION__DATA) {
 				@Override
 				protected boolean isUnique() {
 					return false;
@@ -387,23 +387,23 @@ public class PopulationImpl extends MinimalEObjectImpl.Container implements Popu
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case StatisticsPackage.POPULATION__DATA:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__DATA:
 				return getData();
-			case StatisticsPackage.POPULATION__STANDARD_DEVIATION:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__STANDARD_DEVIATION:
 				return getStandardDeviation();
-			case StatisticsPackage.POPULATION__AVERAGE:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__AVERAGE:
 				return getAverage();
-			case StatisticsPackage.POPULATION__SUM:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__SUM:
 				return getSum();
-			case StatisticsPackage.POPULATION__MEDIAN:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__MEDIAN:
 				return getMedian();
-			case StatisticsPackage.POPULATION__SUM_SQUARED:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__SUM_SQUARED:
 				return getSumSquared();
-			case StatisticsPackage.POPULATION__VARIANCE:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__VARIANCE:
 				return getVariance();
-			case StatisticsPackage.POPULATION__MIN:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__MIN:
 				return getMin();
-			case StatisticsPackage.POPULATION__MAX:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__MAX:
 				return getMax();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -417,7 +417,7 @@ public class PopulationImpl extends MinimalEObjectImpl.Container implements Popu
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case StatisticsPackage.POPULATION__DATA:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__DATA:
 				getData().clear();
 				getData().addAll((Collection<? extends Double>)newValue);
 				return;
@@ -432,7 +432,7 @@ public class PopulationImpl extends MinimalEObjectImpl.Container implements Popu
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case StatisticsPackage.POPULATION__DATA:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__DATA:
 				getData().clear();
 				return;
 		}
@@ -446,23 +446,23 @@ public class PopulationImpl extends MinimalEObjectImpl.Container implements Popu
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case StatisticsPackage.POPULATION__DATA:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__DATA:
 				return data != null && !data.isEmpty();
-			case StatisticsPackage.POPULATION__STANDARD_DEVIATION:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__STANDARD_DEVIATION:
 				return standardDeviation != STANDARD_DEVIATION_EDEFAULT;
-			case StatisticsPackage.POPULATION__AVERAGE:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__AVERAGE:
 				return average != AVERAGE_EDEFAULT;
-			case StatisticsPackage.POPULATION__SUM:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__SUM:
 				return sum != SUM_EDEFAULT;
-			case StatisticsPackage.POPULATION__MEDIAN:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__MEDIAN:
 				return median != MEDIAN_EDEFAULT;
-			case StatisticsPackage.POPULATION__SUM_SQUARED:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__SUM_SQUARED:
 				return sumSquared != SUM_SQUARED_EDEFAULT;
-			case StatisticsPackage.POPULATION__VARIANCE:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__VARIANCE:
 				return variance != VARIANCE_EDEFAULT;
-			case StatisticsPackage.POPULATION__MIN:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__MIN:
 				return getMin() != MIN_EDEFAULT;
-			case StatisticsPackage.POPULATION__MAX:
+			case Symphony__CommonMathStatisticsPackage.POPULATION__MAX:
 				return getMax() != MAX_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -517,7 +517,7 @@ public class PopulationImpl extends MinimalEObjectImpl.Container implements Popu
 						int featureID = notification
 								.getFeatureID(Population.class);
 
-						if (featureID == StatisticsPackage.POPULATION__DATA) {
+						if (featureID == Symphony__CommonMathStatisticsPackage.POPULATION__DATA) {
 							if (!notification.isTouch()) {
 								averageDirty = true;
 								sumDirty = true;

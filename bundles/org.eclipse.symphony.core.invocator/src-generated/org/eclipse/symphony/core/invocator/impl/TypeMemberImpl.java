@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.emf.TreeRootNode;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Type;
 import org.eclipse.symphony.core.invocator.TypeMember;
 
@@ -89,7 +89,7 @@ public class TypeMemberImpl extends MinimalEObjectImpl.Container implements Type
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.TYPE_MEMBER;
+		return Symphony__CoreInvocatorPackage.Literals.TYPE_MEMBER;
 	}
 
   /**
@@ -112,7 +112,7 @@ public class TypeMemberImpl extends MinimalEObjectImpl.Container implements Type
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPE_MEMBER__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPE_MEMBER__NAME, oldName, name));
 	}
 
   /**
@@ -127,7 +127,7 @@ public class TypeMemberImpl extends MinimalEObjectImpl.Container implements Type
 			memberType = (Type)eResolveProxy(oldMemberType);
 			if (memberType != oldMemberType) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorPackage.TYPE_MEMBER__MEMBER_TYPE, oldMemberType, memberType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.TYPE_MEMBER__MEMBER_TYPE, oldMemberType, memberType));
 			}
 		}
 		return memberType;
@@ -153,7 +153,7 @@ public class TypeMemberImpl extends MinimalEObjectImpl.Container implements Type
 		Type oldMemberType = memberType;
 		memberType = newMemberType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPE_MEMBER__MEMBER_TYPE, oldMemberType, memberType));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPE_MEMBER__MEMBER_TYPE, oldMemberType, memberType));
 	}
 
   /**
@@ -175,7 +175,7 @@ public class TypeMemberImpl extends MinimalEObjectImpl.Container implements Type
 		TreeRootNode oldTypeFeatureRootNode = typeFeatureRootNode;
 		typeFeatureRootNode = newTypeFeatureRootNode;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE, oldTypeFeatureRootNode, newTypeFeatureRootNode);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE, oldTypeFeatureRootNode, newTypeFeatureRootNode);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -190,14 +190,14 @@ public class TypeMemberImpl extends MinimalEObjectImpl.Container implements Type
 		if (newTypeFeatureRootNode != typeFeatureRootNode) {
 			NotificationChain msgs = null;
 			if (typeFeatureRootNode != null)
-				msgs = ((InternalEObject)typeFeatureRootNode).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE, null, msgs);
+				msgs = ((InternalEObject)typeFeatureRootNode).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE, null, msgs);
 			if (newTypeFeatureRootNode != null)
-				msgs = ((InternalEObject)newTypeFeatureRootNode).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE, null, msgs);
+				msgs = ((InternalEObject)newTypeFeatureRootNode).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE, null, msgs);
 			msgs = basicSetTypeFeatureRootNode(newTypeFeatureRootNode, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE, newTypeFeatureRootNode, newTypeFeatureRootNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE, newTypeFeatureRootNode, newTypeFeatureRootNode));
 	}
 
 		/**
@@ -209,7 +209,7 @@ public class TypeMemberImpl extends MinimalEObjectImpl.Container implements Type
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE:
 				return basicSetTypeFeatureRootNode(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -224,12 +224,12 @@ public class TypeMemberImpl extends MinimalEObjectImpl.Container implements Type
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER__NAME:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__NAME:
 				return getName();
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER__MEMBER_TYPE:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__MEMBER_TYPE:
 				if (resolve) return getMemberType();
 				return basicGetMemberType();
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE:
 				return getTypeFeatureRootNode();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -244,13 +244,13 @@ public class TypeMemberImpl extends MinimalEObjectImpl.Container implements Type
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER__NAME:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__NAME:
 				setName((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER__MEMBER_TYPE:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__MEMBER_TYPE:
 				setMemberType((Type)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE:
 				setTypeFeatureRootNode((TreeRootNode)newValue);
 				return;
 		}
@@ -266,13 +266,13 @@ public class TypeMemberImpl extends MinimalEObjectImpl.Container implements Type
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER__NAME:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER__MEMBER_TYPE:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__MEMBER_TYPE:
 				setMemberType((Type)null);
 				return;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE:
 				setTypeFeatureRootNode((TreeRootNode)null);
 				return;
 		}
@@ -288,11 +288,11 @@ public class TypeMemberImpl extends MinimalEObjectImpl.Container implements Type
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER__NAME:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER__MEMBER_TYPE:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__MEMBER_TYPE:
 				return memberType != null;
-			case EMFEcoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE:
+			case Symphony__CoreInvocatorPackage.TYPE_MEMBER__TYPE_FEATURE_ROOT_NODE:
 				return typeFeatureRootNode != null;
 		}
 		return super.eIsSet(featureID);

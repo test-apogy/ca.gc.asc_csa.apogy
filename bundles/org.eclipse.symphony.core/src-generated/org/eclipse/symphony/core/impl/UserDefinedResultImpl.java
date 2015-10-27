@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.UserDefinedResult;
 
 /**
@@ -59,7 +59,7 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.USER_DEFINED_RESULT;
+		return Symphony__CorePackage.Literals.USER_DEFINED_RESULT;
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.USER_DEFINED_RESULT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.USER_DEFINED_RESULT__NAME, oldName, name));
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.USER_DEFINED_RESULT__NAME:
+			case Symphony__CorePackage.USER_DEFINED_RESULT__NAME:
 				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -105,7 +105,7 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.USER_DEFINED_RESULT__NAME:
+			case Symphony__CorePackage.USER_DEFINED_RESULT__NAME:
 				setName((String)newValue);
 				return;
 		}
@@ -120,7 +120,7 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.USER_DEFINED_RESULT__NAME:
+			case Symphony__CorePackage.USER_DEFINED_RESULT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 		}
@@ -135,7 +135,7 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.USER_DEFINED_RESULT__NAME:
+			case Symphony__CorePackage.USER_DEFINED_RESULT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
@@ -150,7 +150,7 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (derivedFeatureID) {
-				case SymphonyCorePackage.USER_DEFINED_RESULT__NAME: return Symphony__CommonEMFPackage.NAMED__NAME;
+				case Symphony__CorePackage.USER_DEFINED_RESULT__NAME: return Symphony__CommonEMFPackage.NAMED__NAME;
 				default: return -1;
 			}
 		}
@@ -166,7 +166,7 @@ public class UserDefinedResultImpl extends PositionedResultImpl implements UserD
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Named.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.NAMED__NAME: return SymphonyCorePackage.USER_DEFINED_RESULT__NAME;
+				case Symphony__CommonEMFPackage.NAMED__NAME: return Symphony__CorePackage.USER_DEFINED_RESULT__NAME;
 				default: return -1;
 			}
 		}

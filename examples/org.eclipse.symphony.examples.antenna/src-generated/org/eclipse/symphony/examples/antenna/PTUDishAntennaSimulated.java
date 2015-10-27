@@ -17,7 +17,7 @@ package org.eclipse.symphony.examples.antenna;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage#getPTUDishAntennaSimulated()
+ * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getPTUDishAntennaSimulated()
  * @model
  * @generated
  */

@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.AssemblyLinksList#getAssemblyLinks <em>Assembly Links</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getAssemblyLinksList()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getAssemblyLinksList()
  * @model
  * @generated
  */
@@ -32,7 +32,7 @@ public interface AssemblyLinksList extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Assembly Links</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getAssemblyLinksList_AssemblyLinks()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getAssemblyLinksList_AssemblyLinks()
 	 * @model containment="true"
 	 * @generated
 	 */

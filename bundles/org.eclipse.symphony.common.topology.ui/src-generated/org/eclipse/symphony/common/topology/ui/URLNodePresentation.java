@@ -18,7 +18,7 @@ package org.eclipse.symphony.common.topology.ui;
  *   <li>{@link org.eclipse.symphony.common.topology.ui.URLNodePresentation#getPresentationMode <em>Presentation Mode</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getURLNodePresentation()
+ * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getURLNodePresentation()
  * @model
  * @generated
  */
@@ -34,7 +34,7 @@ public interface URLNodePresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Axis Visible</em>' attribute.
 	 * @see #setAxisVisible(boolean)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getURLNodePresentation_AxisVisible()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getURLNodePresentation_AxisVisible()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated
@@ -62,7 +62,7 @@ public interface URLNodePresentation extends NodePresentation {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Axis Lenght</em>' attribute.
 	 * @see #setAxisLenght(double)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getURLNodePresentation_AxisLenght()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getURLNodePresentation_AxisLenght()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated
@@ -92,7 +92,7 @@ public interface URLNodePresentation extends NodePresentation {
 	 * @return the value of the '<em>Presentation Mode</em>' attribute.
 	 * @see org.eclipse.symphony.common.topology.ui.MeshPresentationMode
 	 * @see #setPresentationMode(MeshPresentationMode)
-	 * @see org.eclipse.symphony.common.topology.ui.TopologyUIPackage#getURLNodePresentation_PresentationMode()
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getURLNodePresentation_PresentationMode()
 	 * @model default="SURFACE" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated

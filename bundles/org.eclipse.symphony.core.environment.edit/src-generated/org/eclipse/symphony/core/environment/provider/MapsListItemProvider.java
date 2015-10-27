@@ -21,8 +21,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.core.environment.MapsList;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.MapsList} object.
@@ -79,7 +79,7 @@ public class MapsListItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyEnvironmentPackage.Literals.MAPS_LIST__MAPS);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.MAPS_LIST__MAPS);
 		}
 		return childrenFeatures;
 	}
@@ -144,7 +144,7 @@ public class MapsListItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MapsList.class)) {
-			case SymphonyEnvironmentPackage.MAPS_LIST__MAPS:
+			case Symphony__CoreEnvironmentPackage.MAPS_LIST__MAPS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -165,8 +165,8 @@ public class MapsListItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyEnvironmentPackage.Literals.MAPS_LIST__MAPS,
-				 SymphonyEnvironmentFactory.eINSTANCE.createMap()));
+				(Symphony__CoreEnvironmentPackage.Literals.MAPS_LIST__MAPS,
+				 Symphony__CoreEnvironmentFactory.eINSTANCE.createMap()));
 	}
 
   /**

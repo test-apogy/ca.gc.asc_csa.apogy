@@ -13,7 +13,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitSky;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.provider.SkyItemProvider;
 
 /**
@@ -64,7 +64,7 @@ public class EarthOrbitSkyItemProvider extends SkyItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_EarthOrbitSky_earthOrbitWorksite_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthOrbitSky_earthOrbitWorksite_feature", "_UI_EarthOrbitSky_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_SKY__EARTH_ORBIT_WORKSITE,
 				 true,
 				 false,
 				 true,
@@ -86,7 +86,7 @@ public class EarthOrbitSkyItemProvider extends SkyItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_EarthOrbitSky_moon_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthOrbitSky_moon_feature", "_UI_EarthOrbitSky_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_ORBIT_SKY__MOON,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_SKY__MOON,
 				 false,
 				 false,
 				 false,
@@ -108,7 +108,7 @@ public class EarthOrbitSkyItemProvider extends SkyItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_EarthOrbitSky_earth_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_EarthOrbitSky_earth_feature", "_UI_EarthOrbitSky_type"),
-				 SymphonyEarthOrbitEnvironmentPackage.Literals.EARTH_ORBIT_SKY__EARTH,
+				 Symphony__CoreEnvironmentOrbitEarthPackage.Literals.EARTH_ORBIT_SKY__EARTH,
 				 false,
 				 false,
 				 false,

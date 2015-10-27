@@ -17,7 +17,7 @@ package org.eclipse.symphony.examples.robotic_arm;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.robotic_arm.EMFEcoreExampleRoboticArmPackage#getRoboticArmSimulated()
+ * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArmSimulated()
  * @model
  * @generated
  */

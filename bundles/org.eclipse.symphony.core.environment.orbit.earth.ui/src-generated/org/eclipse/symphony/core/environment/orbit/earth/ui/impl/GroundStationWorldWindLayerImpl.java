@@ -31,9 +31,9 @@ import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthSurfaceLocation;
 import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.GroundStationWorldWindLayer;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.utils.MultiEObjectsAdapter;
 
 /**
@@ -100,7 +100,7 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentUIPackage.Literals.GROUND_STATION_WORLD_WIND_LAYER;
+		return Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.GROUND_STATION_WORLD_WIND_LAYER;
 	}
 
 	/**
@@ -114,7 +114,7 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 			groundStation = (GroundStation)eResolveProxy(oldGroundStation);
 			if (groundStation != oldGroundStation) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEarthOrbitEnvironmentUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION, oldGroundStation, groundStation));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION, oldGroundStation, groundStation));
 			}
 		}
 		return groundStation;
@@ -158,7 +158,7 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 		GroundStation oldGroundStation = groundStation;
 		groundStation = newGroundStation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION, oldGroundStation, groundStation));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION, oldGroundStation, groundStation));
 	}	
 	
 	/**
@@ -190,7 +190,7 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 		double oldReferenceAltitude = referenceAltitude;
 		referenceAltitude = newReferenceAltitude;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE, oldReferenceAltitude, referenceAltitude));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE, oldReferenceAltitude, referenceAltitude));
 	}
 
 	@Override
@@ -207,10 +207,10 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
 				if (resolve) return getGroundStation();
 				return basicGetGroundStation();
-			case SymphonyEarthOrbitEnvironmentUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
 				return getReferenceAltitude();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -224,10 +224,10 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
 				setGroundStation((GroundStation)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
 				setReferenceAltitude((Double)newValue);
 				return;
 		}
@@ -242,10 +242,10 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
 				setGroundStation((GroundStation)null);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
 				setReferenceAltitude(REFERENCE_ALTITUDE_EDEFAULT);
 				return;
 		}
@@ -260,9 +260,9 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__GROUND_STATION:
 				return groundStation != null;
-			case SymphonyEarthOrbitEnvironmentUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.GROUND_STATION_WORLD_WIND_LAYER__REFERENCE_ALTITUDE:
 				return referenceAltitude != REFERENCE_ALTITUDE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -410,11 +410,11 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 						int featureId = msg.getFeatureID(GroundStation.class);
 						switch (featureId) 
 						{
-							case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__NAME:
+							case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__NAME:
 								if(isAutoUpdateEnabled()) update();
 							break;
 
-							case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__ELEVATION_MASK:
+							case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__ELEVATION_MASK:
 								
 								if(msg.getOldValue() instanceof ElevationMask)
 								{								
@@ -428,7 +428,7 @@ public class GroundStationWorldWindLayerImpl extends EarthSurfaceLocationWorldWi
 								if(isAutoUpdateEnabled()) update();
 							break;
 							
-							case SymphonyEarthOrbitEnvironmentPackage.GROUND_STATION__GEOGRAPHICAL_COORDINATES:
+							case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION__GEOGRAPHICAL_COORDINATES:
 								if(msg.getOldValue() instanceof GeographicCoordinates)
 								{				
 									((GeographicCoordinates) msg.getOldValue()).eAdapters().remove(this);							

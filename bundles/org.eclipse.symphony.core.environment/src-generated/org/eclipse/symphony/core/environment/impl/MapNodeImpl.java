@@ -27,7 +27,7 @@ import org.eclipse.symphony.core.environment.AbstractMapLayerNode;
 import org.eclipse.symphony.core.environment.Activator;
 import org.eclipse.symphony.core.environment.Map;
 import org.eclipse.symphony.core.environment.MapNode;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -76,7 +76,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.MAP_NODE;
+		return Symphony__CoreEnvironmentPackage.Literals.MAP_NODE;
 	}
 
   /**
@@ -91,7 +91,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
 			map = (Map)eResolveProxy(oldMap);
 			if (map != oldMap) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentPackage.MAP_NODE__MAP, oldMap, map));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.MAP_NODE__MAP, oldMap, map));
 			}
 		}
 		return map;
@@ -117,7 +117,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
 		Map oldMap = map;
 		map = newMap;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.MAP_NODE__MAP, oldMap, map));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.MAP_NODE__MAP, oldMap, map));
 	}
 
   /**
@@ -129,7 +129,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAP_NODE__MAP:
+			case Symphony__CoreEnvironmentPackage.MAP_NODE__MAP:
 				if (resolve) return getMap();
 				return basicGetMap();
 		}
@@ -145,7 +145,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAP_NODE__MAP:
+			case Symphony__CoreEnvironmentPackage.MAP_NODE__MAP:
 				setMap((Map)newValue);
 				return;
 		}
@@ -161,7 +161,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAP_NODE__MAP:
+			case Symphony__CoreEnvironmentPackage.MAP_NODE__MAP:
 				setMap((Map)null);
 				return;
 		}
@@ -177,7 +177,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.MAP_NODE__MAP:
+			case Symphony__CoreEnvironmentPackage.MAP_NODE__MAP:
 				return map != null;
 		}
 		return super.eIsSet(featureID);
@@ -265,7 +265,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
 				{					
 					if(msg.getNotifier() instanceof MapNode)
 					{
-						if(msg.getFeatureID(MapNode.class) == SymphonyEnvironmentPackage.MAP_NODE__MAP)
+						if(msg.getFeatureID(MapNode.class) == Symphony__CoreEnvironmentPackage.MAP_NODE__MAP)
 						{
 							// Clear topology.
 							clearTopology();
@@ -283,7 +283,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
 					}
 					else if(msg.getNotifier() instanceof Map)
 					{						
-						if(msg.getFeatureID(Map.class) == SymphonyEnvironmentPackage.MAP__LAYERS)
+						if(msg.getFeatureID(Map.class) == Symphony__CoreEnvironmentPackage.MAP__LAYERS)
 						{
 							final Notification message = msg;
 							Job job = new Job("MapNode Modify Layers")
@@ -342,7 +342,7 @@ public class MapNodeImpl extends TransformNodeImpl implements MapNode
 							job.schedule();
 							
 						}
-						else if(msg.getFeatureID(Map.class)== SymphonyEnvironmentPackage.MAP__TRANSFORMATION)
+						else if(msg.getFeatureID(Map.class)== Symphony__CoreEnvironmentPackage.MAP__TRANSFORMATION)
 						{
 							Matrix4x4 matrix = (Matrix4x4) msg.getNewValue();
 							if(matrix != null)

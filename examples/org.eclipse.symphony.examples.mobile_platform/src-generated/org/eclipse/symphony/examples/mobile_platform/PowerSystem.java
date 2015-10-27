@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage#getPowerSystem()
+ * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPowerSystem()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface PowerSystem extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>Current Voltage</em>' attribute.
    * @see #setCurrentVoltage(double)
-   * @see org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage#getPowerSystem_CurrentVoltage()
+   * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPowerSystem_CurrentVoltage()
    * @model unique="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' csa_units='V'"
    * @generated
@@ -67,7 +67,7 @@ public interface PowerSystem extends EObject
    * <!-- end-model-doc -->
    * @return the value of the '<em>Current Current</em>' attribute.
    * @see #setCurrentCurrent(double)
-   * @see org.eclipse.symphony.examples.mobile_platform.EMFEcoreExampleMobilePlatformPackage#getPowerSystem_CurrentCurrent()
+   * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPowerSystem_CurrentCurrent()
    * @model unique="false"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' csa_units='V'"
    * @generated

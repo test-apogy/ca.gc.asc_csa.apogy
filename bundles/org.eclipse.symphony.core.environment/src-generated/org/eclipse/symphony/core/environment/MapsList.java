@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.environment.MapsList#getMapsListNode <em>Maps List Node</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMapsList()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapsList()
  * @model
  * @generated
  */
@@ -35,7 +35,7 @@ public interface MapsList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maps</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMapsList_Maps()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapsList_Maps()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -50,7 +50,7 @@ public interface MapsList extends EObject
    * </p>
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Maps List Node</em>' reference.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMapsList_MapsListNode()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapsList_MapsListNode()
 	 * @model required="true" transient="true" changeable="false" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated

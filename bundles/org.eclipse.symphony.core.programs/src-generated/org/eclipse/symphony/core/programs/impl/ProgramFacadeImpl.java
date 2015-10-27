@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.symphony.core.invocator.Variable;
-import org.eclipse.symphony.core.programs.InvocatorProgramsPackage;
+import org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage;
 import org.eclipse.symphony.core.programs.ProgramFacade;
 
 /**
@@ -46,7 +46,7 @@ public class ProgramFacadeImpl extends MinimalEObjectImpl.Container implements P
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return InvocatorProgramsPackage.Literals.PROGRAM_FACADE;
+		return Symphony__CoreProgramsPackage.Literals.PROGRAM_FACADE;
 	}
 
 	/**
@@ -103,10 +103,10 @@ public class ProgramFacadeImpl extends MinimalEObjectImpl.Container implements P
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case InvocatorProgramsPackage.PROGRAM_FACADE__SESSION:
+			case Symphony__CoreProgramsPackage.PROGRAM_FACADE__SESSION:
 				if (resolve) return getSession();
 				return basicGetSession();
-			case InvocatorProgramsPackage.PROGRAM_FACADE__VARIABLES:
+			case Symphony__CoreProgramsPackage.PROGRAM_FACADE__VARIABLES:
 				return getVariables();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -120,9 +120,9 @@ public class ProgramFacadeImpl extends MinimalEObjectImpl.Container implements P
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case InvocatorProgramsPackage.PROGRAM_FACADE__SESSION:
+			case Symphony__CoreProgramsPackage.PROGRAM_FACADE__SESSION:
 				return basicGetSession() != null;
-			case InvocatorProgramsPackage.PROGRAM_FACADE__VARIABLES:
+			case Symphony__CoreProgramsPackage.PROGRAM_FACADE__VARIABLES:
 				return !getVariables().isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -136,7 +136,7 @@ public class ProgramFacadeImpl extends MinimalEObjectImpl.Container implements P
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case InvocatorProgramsPackage.PROGRAM_FACADE___EXEC__OPERATIONCALL:
+			case Symphony__CoreProgramsPackage.PROGRAM_FACADE___EXEC__OPERATIONCALL:
 				try {
 					return exec((OperationCall)arguments.get(0));
 				}

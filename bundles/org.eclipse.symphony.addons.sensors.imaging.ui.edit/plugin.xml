@@ -24,22 +24,13 @@
    </extension>
 
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated sensors_imaging_ui -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.imaging.ui.provider.Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+      <!-- @generated symphony_addons_sensors_imaging_ui -->
       <extender
             uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.addons.sensors.imaging.ui.provider.Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <extender
-            uri="org.eclipse.symphony.common.topology.ui"
-            class="org.eclipse.symphony.addons.sensors.imaging.ui.provider.Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory$TopologyUIChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.imaging.ui.provider.Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory$Symphony__CommonTopologyUIChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.imaging.ui.provider.Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory$TopologyChildCreationExtender"/>
+            class="org.eclipse.symphony.addons.sensors.imaging.ui.provider.Symphony__AddonsSensorsImagingUIItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

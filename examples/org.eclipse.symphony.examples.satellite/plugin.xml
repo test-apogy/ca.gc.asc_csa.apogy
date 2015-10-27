@@ -11,7 +11,7 @@
       <!-- @generated emf_ecore_examples_satellite -->
       <package
             uri="org.eclipse.symphony.examples.satellite"
-            class="org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage"
+            class="org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage"
             genModel="model/symphony_examples_satellite.xcore"/>
    </extension>
    <extension

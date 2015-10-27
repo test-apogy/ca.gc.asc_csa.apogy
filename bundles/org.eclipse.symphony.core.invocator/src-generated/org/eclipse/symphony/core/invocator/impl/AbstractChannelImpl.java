@@ -14,7 +14,7 @@ import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.AbstractChannel;
 import org.eclipse.symphony.core.invocator.ChannelsList;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -88,7 +88,7 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreInvocatorPackage.Literals.ABSTRACT_CHANNEL;
+		return Symphony__CoreInvocatorPackage.Literals.ABSTRACT_CHANNEL;
 	}
 
 	/**
@@ -109,7 +109,7 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__NAME, oldName, name));
 	}
 
 	/**
@@ -130,7 +130,7 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -139,7 +139,7 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public ChannelsList getChannelsList() {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST) return null;
 		return (ChannelsList)eContainer();
 	}
 
@@ -149,7 +149,7 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public ChannelsList basicGetChannelsList() {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST) return null;
 		return (ChannelsList)eInternalContainer();
 	}
 
@@ -159,7 +159,7 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public NotificationChain basicSetChannelsList(ChannelsList newChannelsList, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newChannelsList, EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newChannelsList, Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST, msgs);
 		return msgs;
 	}
 
@@ -169,19 +169,19 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	public void setChannelsList(ChannelsList newChannelsList) {
-		if (newChannelsList != eInternalContainer() || (eContainerFeatureID() != EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST && newChannelsList != null)) {
+		if (newChannelsList != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST && newChannelsList != null)) {
 			if (EcoreUtil.isAncestor(this, newChannelsList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newChannelsList != null)
-				msgs = ((InternalEObject)newChannelsList).eInverseAdd(this, EMFEcoreInvocatorPackage.CHANNELS_LIST__CHANNELS, ChannelsList.class, msgs);
+				msgs = ((InternalEObject)newChannelsList).eInverseAdd(this, Symphony__CoreInvocatorPackage.CHANNELS_LIST__CHANNELS, ChannelsList.class, msgs);
 			msgs = basicSetChannelsList(newChannelsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST, newChannelsList, newChannelsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST, newChannelsList, newChannelsList));
 	}
 
 	/**
@@ -192,7 +192,7 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetChannelsList((ChannelsList)otherEnd, msgs);
@@ -208,7 +208,7 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST:
 				return basicSetChannelsList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -222,8 +222,8 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreInvocatorPackage.CHANNELS_LIST__CHANNELS, ChannelsList.class, msgs);
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.CHANNELS_LIST__CHANNELS, ChannelsList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -236,11 +236,11 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__NAME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__NAME:
 				return getName();
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION:
 				return getDescription();
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST:
 				if (resolve) return getChannelsList();
 				return basicGetChannelsList();
 		}
@@ -255,13 +255,13 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__NAME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__NAME:
 				setName((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST:
 				setChannelsList((ChannelsList)newValue);
 				return;
 		}
@@ -276,13 +276,13 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__NAME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST:
 				setChannelsList((ChannelsList)null);
 				return;
 		}
@@ -297,11 +297,11 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__NAME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__CHANNELS_LIST:
 				return basicGetChannelsList() != null;
 		}
 		return super.eIsSet(featureID);
@@ -316,7 +316,7 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -332,7 +332,7 @@ public abstract class AbstractChannelImpl extends MinimalEObjectImpl.Container i
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreInvocatorPackage.ABSTRACT_CHANNEL__DESCRIPTION;
 				default: return -1;
 			}
 		}

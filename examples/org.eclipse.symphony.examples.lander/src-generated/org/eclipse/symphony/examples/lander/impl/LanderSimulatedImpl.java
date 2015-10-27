@@ -20,8 +20,8 @@ import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.math.GeometricUtils;
 import org.eclipse.symphony.examples.lander.Activator;
-import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderFactory;
-import org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage;
+import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderFactory;
+import org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage;
 import org.eclipse.symphony.examples.lander.LanderLegExtension;
 import org.eclipse.symphony.examples.lander.LanderSimulated;
 import org.eclipse.symphony.examples.lander.Position;
@@ -200,7 +200,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 		if (position == null)
 		{
 			// Create one
-			position = EMFEcoreExampleLanderFactory.eINSTANCE.createPosition();
+			position = Symphony__ExamplesLanderFactory.eINSTANCE.createPosition();
 			
 			// Create an attitude matrix for it
 			Matrix3d newAttitude = new Matrix3d();
@@ -1154,7 +1154,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 			// updated; this is required in order to trigger the
 			// pose corrector.  This will allow the position to
 			// be adjusted appropriately (if it needs to be)
-			Position newPosition = EMFEcoreExampleLanderFactory.eINSTANCE.createPosition();
+			Position newPosition = Symphony__ExamplesLanderFactory.eINSTANCE.createPosition();
 			newPosition.setAttitude(this.getPosition().getAttitude());
 			newPosition.setX(this.getPosition().getX());
 			newPosition.setY(this.getPosition().getY());
@@ -1216,7 +1216,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 			// Create a new position object and update its values accordingly
 			// Note: This triggers the pose corrector, which if enabled, may
 			//       cause the position to be further refined and updated.
-			Position newPosition = EMFEcoreExampleLanderFactory.eINSTANCE.createPosition();
+			Position newPosition = Symphony__ExamplesLanderFactory.eINSTANCE.createPosition();
 			newPosition.setAttitude(this.getPosition().getAttitude());
 			newPosition.setX(interpolatedPosition.getElement(0));
 			newPosition.setY(interpolatedPosition.getElement(1));
@@ -1407,7 +1407,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 			// Create a new position object and update its values accordingly
 			// Note: This triggers the pose corrector, which if enabled, may
 			//       cause the position to be further refined and updated.
-			Position newPosition = EMFEcoreExampleLanderFactory.eINSTANCE.createPosition();
+			Position newPosition = Symphony__ExamplesLanderFactory.eINSTANCE.createPosition();
 			newPosition.setAttitude(newAttitude);
 			newPosition.setX(this.getPosition().getX());
 			newPosition.setY(this.getPosition().getY());
@@ -1527,7 +1527,7 @@ public class LanderSimulatedImpl extends LanderImpl implements LanderSimulated
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleLanderPackage.Literals.LANDER_SIMULATED;
+		return Symphony__ExamplesLanderPackage.Literals.LANDER_SIMULATED;
 	}
 
 } //LanderSimulatedImpl
@@ -1722,7 +1722,7 @@ final class LanderSimulatedFlyingJob extends Job
 				newAttitude.mul(yRot);		  
 
 				// Update the lander's coordinates and attitude
-				Position newPosition = EMFEcoreExampleLanderFactory.eINSTANCE.createPosition();
+				Position newPosition = Symphony__ExamplesLanderFactory.eINSTANCE.createPosition();
 				newPosition.setX(newCoords.getX());
 				newPosition.setY(newCoords.getY());
 				newPosition.setZ(newCoords.getZ());

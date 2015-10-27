@@ -28,11 +28,4 @@
             class="org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated sensors -->
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsItemProviderAdapterFactory$TopologyChildCreationExtender"/>
-   </extension>
-
 </plugin>

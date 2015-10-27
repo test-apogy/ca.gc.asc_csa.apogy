@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer;
  *   <li>{@link org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerRegistry#getLatestNodeSelection <em>Latest Node Selection</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerPackage#getTopologyViewerRegistry()
+ * @see org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage#getTopologyViewerRegistry()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface TopologyViewerRegistry extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Verbose</em>' attribute.
 	 * @see #setVerbose(boolean)
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerPackage#getTopologyViewerRegistry_Verbose()
+	 * @see org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage#getTopologyViewerRegistry_Verbose()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */
@@ -64,7 +64,7 @@ public interface TopologyViewerRegistry extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ITopology Viewers</em>' attribute list.
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerPackage#getTopologyViewerRegistry_ITopologyViewers()
+	 * @see org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage#getTopologyViewerRegistry_ITopologyViewers()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.topology.ui.viewer.ITopologyViewer"
 	 * @generated
 	 */
@@ -80,7 +80,7 @@ public interface TopologyViewerRegistry extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Latest Node Selection</em>' reference.
 	 * @see #setLatestNodeSelection(NodeSelection)
-	 * @see org.eclipse.symphony.common.topology.ui.viewer.TopologyViewerPackage#getTopologyViewerRegistry_LatestNodeSelection()
+	 * @see org.eclipse.symphony.common.topology.ui.viewer.Symphony__CommonTopologyUIViewerPackage#getTopologyViewerRegistry_LatestNodeSelection()
 	 * @model transient="true"
 	 * @generated
 	 */

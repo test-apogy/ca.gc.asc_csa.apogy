@@ -13,7 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.URLImageMapLayer;
 
 /**
@@ -68,7 +68,7 @@ public class URLImageMapLayerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_URLMapLayer_url_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLMapLayer_url_feature", "_UI_URLMapLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.URL_MAP_LAYER__URL,
+				 Symphony__CoreEnvironmentPackage.Literals.URL_MAP_LAYER__URL,
 				 true,
 				 false,
 				 false,
@@ -91,7 +91,7 @@ public class URLImageMapLayerItemProvider
 				 getResourceLocator(),
 				 getString("_UI_URLImageMapLayer_legendURL_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_URLImageMapLayer_legendURL_feature", "_UI_URLImageMapLayer_type"),
-				 SymphonyEnvironmentPackage.Literals.URL_IMAGE_MAP_LAYER__LEGEND_URL,
+				 Symphony__CoreEnvironmentPackage.Literals.URL_IMAGE_MAP_LAYER__LEGEND_URL,
 				 true,
 				 false,
 				 false,
@@ -139,8 +139,8 @@ public class URLImageMapLayerItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(URLImageMapLayer.class)) {
-			case SymphonyEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL:
-			case SymphonyEnvironmentPackage.URL_IMAGE_MAP_LAYER__LEGEND_URL:
+			case Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__URL:
+			case Symphony__CoreEnvironmentPackage.URL_IMAGE_MAP_LAYER__LEGEND_URL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -173,8 +173,8 @@ public class URLImageMapLayerItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
-			childFeature == SymphonyEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__IMAGE ||
+			childFeature == Symphony__CoreEnvironmentPackage.Literals.IMAGE_MAP_LAYER__LEGEND;
 
 		if (qualify) {
 			return getString

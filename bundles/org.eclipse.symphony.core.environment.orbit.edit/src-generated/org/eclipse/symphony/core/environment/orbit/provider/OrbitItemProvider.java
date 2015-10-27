@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.orbit.Orbit;
-import org.eclipse.symphony.core.environment.orbit.SymphonyOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.orbit.Orbit} object.
@@ -146,7 +146,7 @@ public class OrbitItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyOrbitEnvironmentPackage.Literals.ORBIT__REFERENCE_FRAME);
+			childrenFeatures.add(Symphony__CoreEnvironmentOrbitPackage.Literals.ORBIT__REFERENCE_FRAME);
 		}
 		return childrenFeatures;
 	}
@@ -191,12 +191,12 @@ public class OrbitItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Orbit.class)) {
-			case SymphonyOrbitEnvironmentPackage.ORBIT__NAME:
-			case SymphonyOrbitEnvironmentPackage.ORBIT__DESCRIPTION:
-			case SymphonyOrbitEnvironmentPackage.ORBIT__TIME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__NAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyOrbitEnvironmentPackage.ORBIT__REFERENCE_FRAME:
+			case Symphony__CoreEnvironmentOrbitPackage.ORBIT__REFERENCE_FRAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}

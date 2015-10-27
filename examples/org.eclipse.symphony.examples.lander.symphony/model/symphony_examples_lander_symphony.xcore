@@ -1,4 +1,6 @@
-@GenModel(prefix="SymphonyExampleLander", copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015", modelName="SymphonyExampleLander")
+@GenModel(prefix="Symphony__ExamplesLanderSymphony",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015",
+		  modelName="Symphony__ExamplesLanderSymphony")
 @GenModel(modelDirectory="/org.eclipse.symphony.examples.lander.symphony/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.examples.lander.symphony.edit/src-generated")
 

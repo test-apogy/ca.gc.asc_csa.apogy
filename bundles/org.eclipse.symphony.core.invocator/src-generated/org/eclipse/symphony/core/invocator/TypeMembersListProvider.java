@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMembersListProvider()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMembersListProvider()
  * @model interface="true" abstract="true"
  * @generated
  */
@@ -35,7 +35,7 @@ public interface TypeMembersListProvider extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Type Members</em>' reference list.
-   * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getTypeMembersListProvider_TypeMembers()
+   * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getTypeMembersListProvider_TypeMembers()
    * @model transient="true" volatile="true" derived="true"
    *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
    * @generated

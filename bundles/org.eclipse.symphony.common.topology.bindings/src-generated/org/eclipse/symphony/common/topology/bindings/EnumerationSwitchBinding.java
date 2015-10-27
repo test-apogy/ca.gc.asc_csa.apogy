@@ -12,8 +12,8 @@ import org.eclipse.symphony.common.topology.GroupNode;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
- * Binding that attached different sub-topology to a GroupNode based on the feature value. The feature must be an EENum.
+ * Binding that attached different sub-topology to a GroupNode based
+ * on the feature value. The feature must be an EEnum.
  * <!-- end-model-doc -->
  *
  * <p>
@@ -25,7 +25,7 @@ import org.eclipse.symphony.common.topology.GroupNode;
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding#getActiveCase <em>Active Case</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getEnumerationSwitchBinding()
+ * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getEnumerationSwitchBinding()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface EnumerationSwitchBinding extends AbstractTopologyBinding
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Parent Node</em>' reference.
 	 * @see #setParentNode(GroupNode)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getEnumerationSwitchBinding_ParentNode()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getEnumerationSwitchBinding_ParentNode()
 	 * @model required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DESTINATION'"
 	 * @generated
@@ -66,7 +66,7 @@ public interface EnumerationSwitchBinding extends AbstractTopologyBinding
 	 * The list of cases defined for the switch.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Cases</em>' containment reference list.
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getEnumerationSwitchBinding_Cases()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getEnumerationSwitchBinding_Cases()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='ENUMERATION'"
 	 * @generated
@@ -82,7 +82,7 @@ public interface EnumerationSwitchBinding extends AbstractTopologyBinding
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Active Case</em>' reference.
 	 * @see #setActiveCase(EnumerationCase)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getEnumerationSwitchBinding_ActiveCase()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getEnumerationSwitchBinding_ActiveCase()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='ENUMERATION'"
 	 * @generated

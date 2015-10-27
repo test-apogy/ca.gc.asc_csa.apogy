@@ -11,7 +11,7 @@
       <!-- @generated symphony_core_ui -->
       <factory
             uri="org.eclipse.symphony.core.ui"
-            class="org.eclipse.symphony.core.ui.provider.SymphonyCoreUiItemProviderAdapterFactory"
+            class="org.eclipse.symphony.core.ui.provider.Symphony__CoreUIItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

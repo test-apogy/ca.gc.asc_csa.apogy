@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.math.Matrix4x4;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyInitializationData;
 import org.eclipse.symphony.core.invocator.impl.InitializationDataImpl;
 
@@ -52,7 +52,7 @@ public class SymphonyInitializationDataImpl extends
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.SYMPHONY_INITIALIZATION_DATA;
+		return Symphony__CorePackage.Literals.SYMPHONY_INITIALIZATION_DATA;
 	}
 
 	/**
@@ -72,7 +72,7 @@ public class SymphonyInitializationDataImpl extends
 		Matrix4x4 oldInitialPoseTransform = initialPoseTransform;
 		initialPoseTransform = newInitialPoseTransform;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, oldInitialPoseTransform, newInitialPoseTransform);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, oldInitialPoseTransform, newInitialPoseTransform);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -86,14 +86,14 @@ public class SymphonyInitializationDataImpl extends
 		if (newInitialPoseTransform != initialPoseTransform) {
 			NotificationChain msgs = null;
 			if (initialPoseTransform != null)
-				msgs = ((InternalEObject)initialPoseTransform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)initialPoseTransform).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, null, msgs);
 			if (newInitialPoseTransform != null)
-				msgs = ((InternalEObject)newInitialPoseTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyCorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, null, msgs);
+				msgs = ((InternalEObject)newInitialPoseTransform).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, null, msgs);
 			msgs = basicSetInitialPoseTransform(newInitialPoseTransform, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, newInitialPoseTransform, newInitialPoseTransform));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM, newInitialPoseTransform, newInitialPoseTransform));
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class SymphonyInitializationDataImpl extends
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
+			case Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
 				return basicSetInitialPoseTransform(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -117,7 +117,7 @@ public class SymphonyInitializationDataImpl extends
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
+			case Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
 				return getInitialPoseTransform();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -130,7 +130,7 @@ public class SymphonyInitializationDataImpl extends
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
+			case Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
 				setInitialPoseTransform((Matrix4x4)newValue);
 				return;
 		}
@@ -144,7 +144,7 @@ public class SymphonyInitializationDataImpl extends
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
+			case Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
 				setInitialPoseTransform((Matrix4x4)null);
 				return;
 		}
@@ -158,7 +158,7 @@ public class SymphonyInitializationDataImpl extends
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
+			case Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA__INITIAL_POSE_TRANSFORM:
 				return initialPoseTransform != null;
 		}
 		return super.eIsSet(featureID);

@@ -10,7 +10,7 @@ package org.eclipse.symphony.core.environment;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEarthSkyNode()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSkyNode()
  * @model
  * @generated
  */

@@ -4,7 +4,7 @@
 package org.eclipse.symphony.common.topology.addons.primitives.ui.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage;
+import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.WayPointPresentation;
 import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
 
@@ -32,7 +32,7 @@ public class WayPointPresentationImpl extends NodePresentationImpl implements Wa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return TopologyUIPrimitivesPackage.Literals.WAY_POINT_PRESENTATION;
+		return Symphony__CommonTopologyAddonsPrimitivesUIPackage.Literals.WAY_POINT_PRESENTATION;
 	}
 
 } //WayPointPresentationImpl

@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.TopologyTreeMapLayer;
 import org.eclipse.symphony.core.environment.TopologyTreeMapLayerNode;
 
@@ -57,7 +57,7 @@ public class TopologyTreeMapLayerNodeImpl extends AggregateGroupNodeImpl impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEnvironmentPackage.Literals.TOPOLOGY_TREE_MAP_LAYER_NODE;
+		return Symphony__CoreEnvironmentPackage.Literals.TOPOLOGY_TREE_MAP_LAYER_NODE;
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class TopologyTreeMapLayerNodeImpl extends AggregateGroupNodeImpl impleme
 	 * @generated
 	 */
 	public TopologyTreeMapLayer getTopologyTreeMapLayer() {
-		if (eContainerFeatureID() != SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER) return null;
+		if (eContainerFeatureID() != Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER) return null;
 		return (TopologyTreeMapLayer)eContainer();
 	}
 
@@ -76,7 +76,7 @@ public class TopologyTreeMapLayerNodeImpl extends AggregateGroupNodeImpl impleme
 	 * @generated
 	 */
 	public TopologyTreeMapLayer basicGetTopologyTreeMapLayer() {
-		if (eContainerFeatureID() != SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER) return null;
+		if (eContainerFeatureID() != Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER) return null;
 		return (TopologyTreeMapLayer)eInternalContainer();
 	}
 
@@ -102,7 +102,7 @@ public class TopologyTreeMapLayerNodeImpl extends AggregateGroupNodeImpl impleme
 	 */
 	public NotificationChain basicSetTopologyTreeMapLayerGen(TopologyTreeMapLayer newTopologyTreeMapLayer, NotificationChain msgs) 
 	{
-		msgs = eBasicSetContainer((InternalEObject)newTopologyTreeMapLayer, SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newTopologyTreeMapLayer, Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER, msgs);
 		return msgs;
 	}
 	
@@ -113,19 +113,19 @@ public class TopologyTreeMapLayerNodeImpl extends AggregateGroupNodeImpl impleme
 	 */
 	public void setTopologyTreeMapLayer(TopologyTreeMapLayer newTopologyTreeMapLayer) 
 	{
-		if (newTopologyTreeMapLayer != eInternalContainer() || (eContainerFeatureID() != SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER && newTopologyTreeMapLayer != null)) {
+		if (newTopologyTreeMapLayer != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER && newTopologyTreeMapLayer != null)) {
 			if (EcoreUtil.isAncestor(this, newTopologyTreeMapLayer))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newTopologyTreeMapLayer != null)
-				msgs = ((InternalEObject)newTopologyTreeMapLayer).eInverseAdd(this, SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT, TopologyTreeMapLayer.class, msgs);
+				msgs = ((InternalEObject)newTopologyTreeMapLayer).eInverseAdd(this, Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT, TopologyTreeMapLayer.class, msgs);
 			msgs = basicSetTopologyTreeMapLayer(newTopologyTreeMapLayer, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER, newTopologyTreeMapLayer, newTopologyTreeMapLayer));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER, newTopologyTreeMapLayer, newTopologyTreeMapLayer));
 	}
 	
 	/**
@@ -134,19 +134,19 @@ public class TopologyTreeMapLayerNodeImpl extends AggregateGroupNodeImpl impleme
 	 * @generated
 	 */
 	public void setTopologyTreeMapLayerGen(TopologyTreeMapLayer newTopologyTreeMapLayer) {
-		if (newTopologyTreeMapLayer != eInternalContainer() || (eContainerFeatureID() != SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER && newTopologyTreeMapLayer != null)) {
+		if (newTopologyTreeMapLayer != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER && newTopologyTreeMapLayer != null)) {
 			if (EcoreUtil.isAncestor(this, newTopologyTreeMapLayer))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newTopologyTreeMapLayer != null)
-				msgs = ((InternalEObject)newTopologyTreeMapLayer).eInverseAdd(this, SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT, TopologyTreeMapLayer.class, msgs);
+				msgs = ((InternalEObject)newTopologyTreeMapLayer).eInverseAdd(this, Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT, TopologyTreeMapLayer.class, msgs);
 			msgs = basicSetTopologyTreeMapLayer(newTopologyTreeMapLayer, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER, newTopologyTreeMapLayer, newTopologyTreeMapLayer));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER, newTopologyTreeMapLayer, newTopologyTreeMapLayer));
 	}
 
 	/**
@@ -160,7 +160,7 @@ public class TopologyTreeMapLayerNodeImpl extends AggregateGroupNodeImpl impleme
 			transientParent = (Node)eResolveProxy(oldTransientParent);
 			if (transientParent != oldTransientParent) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TRANSIENT_PARENT, oldTransientParent, transientParent));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TRANSIENT_PARENT, oldTransientParent, transientParent));
 			}
 		}
 		return transientParent;
@@ -184,7 +184,7 @@ public class TopologyTreeMapLayerNodeImpl extends AggregateGroupNodeImpl impleme
 		Node oldTransientParent = transientParent;
 		transientParent = newTransientParent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TRANSIENT_PARENT, oldTransientParent, transientParent));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TRANSIENT_PARENT, oldTransientParent, transientParent));
 	}
 
 	/**
@@ -195,7 +195,7 @@ public class TopologyTreeMapLayerNodeImpl extends AggregateGroupNodeImpl impleme
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetTopologyTreeMapLayer((TopologyTreeMapLayer)otherEnd, msgs);
@@ -211,7 +211,7 @@ public class TopologyTreeMapLayerNodeImpl extends AggregateGroupNodeImpl impleme
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER:
 				return basicSetTopologyTreeMapLayer(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -225,8 +225,8 @@ public class TopologyTreeMapLayerNodeImpl extends AggregateGroupNodeImpl impleme
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER:
-				return eInternalContainer().eInverseRemove(this, SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT, TopologyTreeMapLayer.class, msgs);
+			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER__TOPOLOGY_TREE_ROOT, TopologyTreeMapLayer.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -239,10 +239,10 @@ public class TopologyTreeMapLayerNodeImpl extends AggregateGroupNodeImpl impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER:
 				if (resolve) return getTopologyTreeMapLayer();
 				return basicGetTopologyTreeMapLayer();
-			case SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TRANSIENT_PARENT:
+			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TRANSIENT_PARENT:
 				if (resolve) return getTransientParent();
 				return basicGetTransientParent();
 		}
@@ -257,10 +257,10 @@ public class TopologyTreeMapLayerNodeImpl extends AggregateGroupNodeImpl impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER:
 				setTopologyTreeMapLayer((TopologyTreeMapLayer)newValue);
 				return;
-			case SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TRANSIENT_PARENT:
+			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TRANSIENT_PARENT:
 				setTransientParent((Node)newValue);
 				return;
 		}
@@ -275,10 +275,10 @@ public class TopologyTreeMapLayerNodeImpl extends AggregateGroupNodeImpl impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER:
 				setTopologyTreeMapLayer((TopologyTreeMapLayer)null);
 				return;
-			case SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TRANSIENT_PARENT:
+			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TRANSIENT_PARENT:
 				setTransientParent((Node)null);
 				return;
 		}
@@ -293,9 +293,9 @@ public class TopologyTreeMapLayerNodeImpl extends AggregateGroupNodeImpl impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TOPOLOGY_TREE_MAP_LAYER:
 				return basicGetTopologyTreeMapLayer() != null;
-			case SymphonyEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TRANSIENT_PARENT:
+			case Symphony__CoreEnvironmentPackage.TOPOLOGY_TREE_MAP_LAYER_NODE__TRANSIENT_PARENT:
 				return transientParent != null;
 		}
 		return super.eIsSet(featureID);

@@ -20,7 +20,7 @@ package org.eclipse.symphony.core.environment;
  *   <li>{@link org.eclipse.symphony.core.environment.ImageMapLayerPresentation#getAlpha <em>Alpha</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getImageMapLayerPresentation()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getImageMapLayerPresentation()
  * @model
  * @generated
  */
@@ -31,12 +31,11 @@ public interface ImageMapLayerPresentation extends MapLayerPresentation, Rectang
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The alpha to use to display this layer, from fully opaque (1.0f) to fully transparent (0.0f).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Alpha</em>' attribute.
 	 * @see #setAlpha(float)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getImageMapLayerPresentation_Alpha()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getImageMapLayerPresentation_Alpha()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='PRESENTATION_SETTINGS'"
 	 * @generated

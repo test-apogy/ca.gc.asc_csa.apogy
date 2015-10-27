@@ -15,9 +15,9 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * <!-- begin-model-doc -->
- *  Ephemeris types defined for Two-Lines Elements
+ * Ephemeris types defined for Two-Lines Elements
  * <!-- end-model-doc -->
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getEphemerisType()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getEphemerisType()
  * @model
  * @generated
  */

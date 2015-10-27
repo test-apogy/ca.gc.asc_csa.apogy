@@ -11,7 +11,7 @@ package org.eclipse.symphony.common.topology.ui.jme3;
  * <!-- end-user-doc -->
  *
  *
- * @see org.eclipse.symphony.common.topology.ui.jme3.JME3Package#getJME3SceneObjectRegistry()
+ * @see org.eclipse.symphony.common.topology.ui.jme3.Symphony__CommonTopologyUIJME3Package#getJME3SceneObjectRegistry()
  * @model
  * @generated
  */

@@ -22,8 +22,8 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypeMemberReferenceTreeElement;
 import org.eclipse.symphony.core.invocator.VariableImplementationsList;
 import org.eclipse.symphony.core.invocator.Watch;
@@ -132,7 +132,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER;
+		return Symphony__CoreInvocatorPackage.Literals.WATCH_FEATURE_NODE_ADAPTER;
 	}
 
   /**
@@ -147,7 +147,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 			sourceObject = eResolveProxy(oldSourceObject);
 			if (sourceObject != oldSourceObject) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
 			}
 		}
 		return sourceObject;
@@ -189,7 +189,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 		EObject oldSourceObject = sourceObject;
 		sourceObject = newSourceObject;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT, oldSourceObject, sourceObject));
 	}
 
   /**
@@ -204,7 +204,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 			featureNode = (AbstractFeatureNode)eResolveProxy(oldFeatureNode);
 			if (featureNode != oldFeatureNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
 			}
 		}
 		return featureNode;
@@ -229,7 +229,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 		AbstractFeatureNode oldFeatureNode = featureNode;
 		featureNode = newFeatureNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE, oldFeatureNode, featureNode));
 	}
 
 		/**
@@ -277,7 +277,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 		Object oldCurrentValue = currentValue;
 		currentValue = newCurrentValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE, oldCurrentValue, currentValue));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE, oldCurrentValue, currentValue));
 	}
 
   /**
@@ -300,7 +300,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 		boolean oldResolved = resolved;
 		resolved = newResolved;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED, oldResolved, resolved));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED, oldResolved, resolved));
 	}
 
   /**
@@ -312,15 +312,15 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				if (resolve) return getSourceObject();
 				return basicGetSourceObject();
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				if (resolve) return getFeatureNode();
 				return basicGetFeatureNode();
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				return getCurrentValue();
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
 				return isResolved();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -335,16 +335,16 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				setSourceObject((EObject)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				setFeatureNode((AbstractFeatureNode)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				setCurrentValue(newValue);
 				return;
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
 				setResolved((Boolean)newValue);
 				return;
 		}
@@ -360,16 +360,16 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				setSourceObject((EObject)null);
 				return;
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				setFeatureNode((AbstractFeatureNode)null);
 				return;
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				setCurrentValue(CURRENT_VALUE_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
 				setResolved(RESOLVED_EDEFAULT);
 				return;
 		}
@@ -385,13 +385,13 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__SOURCE_OBJECT:
 				return sourceObject != null;
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__FEATURE_NODE:
 				return featureNode != null;
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__CURRENT_VALUE:
 				return CURRENT_VALUE_EDEFAULT == null ? currentValue != null : !CURRENT_VALUE_EDEFAULT.equals(currentValue);
-			case EMFEcoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
+			case Symphony__CoreInvocatorPackage.WATCH_FEATURE_NODE_ADAPTER__RESOLVED:
 				return resolved != RESOLVED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -534,7 +534,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 						if(notification.getNotifier() instanceof Environment)
 						{
 							// If the active context changes.
-							if(notification.getFeatureID(Environment.class) == EMFEcoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT)
+							if(notification.getFeatureID(Environment.class) == Symphony__CoreInvocatorPackage.ENVIRONMENT__ACTIVE_CONTEXT)
 							{																
 								Context oldContext = (Context) notification.getOldValue();
 								Context newContext = (Context) notification.getNewValue();
@@ -552,7 +552,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 						}
 						else if(notification.getNotifier() instanceof Context)
 						{
-							if(notification.getFeatureID(Context.class) == EMFEcoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST)
+							if(notification.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.CONTEXT__VARIABLE_IMPLEMENTATIONS_LIST)
 							{
 								VariableImplementationsList oldList = (VariableImplementationsList) notification.getOldValue();
 								VariableImplementationsList newList = (VariableImplementationsList) notification.getNewValue();
@@ -566,7 +566,7 @@ public class WatchFeatureNodeAdapterImpl extends MinimalEObjectImpl.Container im
 						}
 						else if(notification.getNotifier() instanceof VariableImplementationsList)							
 						{
-							if(notification.getFeatureID(Context.class) == EMFEcoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS)
+							if(notification.getFeatureID(Context.class) == Symphony__CoreInvocatorPackage.VARIABLE_IMPLEMENTATIONS_LIST__VARIABLE_IMPLEMENTATIONS)
 							{
 								switch(notification.getEventType())
 								{

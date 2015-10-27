@@ -22,7 +22,7 @@ import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.invocator.presentation.CustomEMFEcoreInvocatorEditor;
 import org.eclipse.symphony.core.ui.NewSymphonySystemSettings;
 import org.eclipse.symphony.core.ui.SymphonyCoreUiFacade;
-import org.eclipse.symphony.core.ui.SymphonyCoreUiFactory;
+import org.eclipse.symphony.core.ui.Symphony__CoreUIFactory;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPage;
@@ -69,7 +69,7 @@ public class NewSymphonySystemWizard extends Wizard implements INewWizard {
 
 	private NewSymphonySystemSettings getNewSymphonySystemSettings() {
 		if (this.newSymphonySystemSettings == null) {
-			this.newSymphonySystemSettings = SymphonyCoreUiFactory.eINSTANCE
+			this.newSymphonySystemSettings = Symphony__CoreUIFactory.eINSTANCE
 					.createNewSymphonySystemSettings();
 			IContainer container = getResourceContainer(this.selection);
 			if (container != null) {

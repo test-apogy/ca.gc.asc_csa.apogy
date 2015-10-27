@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  *   <li>{@link org.eclipse.symphony.core.AbstractOrbitModel#getVariableFeatureReference <em>Variable Feature Reference</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getAbstractOrbitModel()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getAbstractOrbitModel()
  * @model abstract="true"
  * @generated
  */
@@ -36,7 +36,7 @@ public interface AbstractOrbitModel extends Named, Described {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Orbit Models List</em>' container reference.
 	 * @see #setOrbitModelsList(OrbitModelsList)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getAbstractOrbitModel_OrbitModelsList()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getAbstractOrbitModel_OrbitModelsList()
 	 * @see org.eclipse.symphony.core.OrbitModelsList#getOrbitModels
 	 * @model opposite="orbitModels" transient="false"
 	 * @generated
@@ -63,7 +63,7 @@ public interface AbstractOrbitModel extends Named, Described {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variable Feature Reference</em>' reference.
 	 * @see #setVariableFeatureReference(VariableFeatureReference)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getAbstractOrbitModel_VariableFeatureReference()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getAbstractOrbitModel_VariableFeatureReference()
 	 * @model
 	 * @generated
 	 */

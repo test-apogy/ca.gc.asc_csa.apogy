@@ -30,8 +30,8 @@ import org.eclipse.symphony.core.environment.BasicCartesianTriangularMeshMapLaye
 import org.eclipse.symphony.core.environment.Map;
 import org.eclipse.symphony.core.environment.MapsList;
 import org.eclipse.symphony.core.environment.SurfaceWorksite;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.ui.Activator;
 import org.eclipse.symphony.core.environment.ui.dialogs.MapSelectionDialog;
 import org.eclipse.symphony.core.invocator.Context;
@@ -141,7 +141,7 @@ public class MoveToMapLayer extends AbstractHandler implements IHandler
 	protected void addToMap(final PositionedResult positionedResult, final Map map, final CartesianTriangularMesh mesh)
 	{
 		// Create a CartesianTriangularMeshMapLayer
-		BasicCartesianTriangularMeshMapLayer meshLayer = SymphonyEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer();
+		BasicCartesianTriangularMeshMapLayer meshLayer = Symphony__CoreEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer();
 		
 		// Sets Name
 		meshLayer.setName(getName(positionedResult));
@@ -166,7 +166,7 @@ public class MoveToMapLayer extends AbstractHandler implements IHandler
 	protected void addToMap(final PositionedResult positionedResult, final Map map, final CartesianCoordinatesSet coordinatesSet)
 	{
 		// Create a CartesianTriangularMeshMapLayer
-		BasicCartesianTriangularMeshMapLayer meshLayer = SymphonyEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer();
+		BasicCartesianTriangularMeshMapLayer meshLayer = Symphony__CoreEnvironmentFactory.eINSTANCE.createBasicCartesianTriangularMeshMapLayer();
 		
 		// Sets Name
 		meshLayer.setName(getName(positionedResult));
@@ -200,7 +200,7 @@ public class MoveToMapLayer extends AbstractHandler implements IHandler
 		EditingDomain editingDomain = org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain.getEditingDomainFor(map);
 		
 		// Creates an ADD command to add the meshLayer.
-		Command addCommand = AddCommand.create(editingDomain, map, SymphonyEnvironmentPackage.Literals.MAP__LAYERS, meshLayer);
+		Command addCommand = AddCommand.create(editingDomain, map, Symphony__CoreEnvironmentPackage.Literals.MAP__LAYERS, meshLayer);
 		
 		// Executes the command.
 		editingDomain.getCommandStack().execute(addCommand);

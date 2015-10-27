@@ -22,7 +22,7 @@ package org.eclipse.symphony.core.environment;
  *   <li>{@link org.eclipse.symphony.core.environment.CartesianTriangularMeshSlopeImageMapLayer#getMaximumSlope <em>Maximum Slope</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshSlopeImageMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshSlopeImageMapLayer()
  * @model
  * @generated
  */
@@ -38,11 +38,11 @@ public interface CartesianTriangularMeshSlopeImageMapLayer extends CartesianTria
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Wether or not to use autoscalling to generate the color scale.
+	 * Whether or not to use autoscalling to generate the color scale.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Auto Scale</em>' attribute.
 	 * @see #setAutoScale(boolean)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshSlopeImageMapLayer_AutoScale()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshSlopeImageMapLayer_AutoScale()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS'"
 	 * @generated
@@ -73,7 +73,7 @@ public interface CartesianTriangularMeshSlopeImageMapLayer extends CartesianTria
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Minimum Slope</em>' attribute.
 	 * @see #setMinimumSlope(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshSlopeImageMapLayer_MinimumSlope()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshSlopeImageMapLayer_MinimumSlope()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS' csa_units='deg'"
 	 * @generated
@@ -104,7 +104,7 @@ public interface CartesianTriangularMeshSlopeImageMapLayer extends CartesianTria
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Maximum Slope</em>' attribute.
 	 * @see #setMaximumSlope(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getCartesianTriangularMeshSlopeImageMapLayer_MaximumSlope()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshSlopeImageMapLayer_MaximumSlope()
 	 * @model default="50.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS' csa_units='deg'"
 	 * @generated

@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.invocator.ExceptionContainer#getException <em>Exception</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getExceptionContainer()
+ * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getExceptionContainer()
  * @model
  * @generated
  */
@@ -33,7 +33,7 @@ public interface ExceptionContainer extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Exception</em>' attribute.
 	 * @see #setException(Throwable)
-	 * @see org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage#getExceptionContainer_Exception()
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getExceptionContainer_Exception()
 	 * @model unique="false" dataType="org.eclipse.symphony.core.invocator.Throwable"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
 	 * @generated

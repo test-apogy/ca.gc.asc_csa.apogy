@@ -11,7 +11,21 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * The ecliptic coordinate system is a celestial coordinate system that uses the ecliptic for its fundamental plane. The ecliptic is the path that the sun appears to follow across the sky over the course of a year. It is also the projection of the Earth's orbital plane onto the celestial sphere. The latitudinal angle is called the ecliptic latitude or celestial latitude (denoted β), measured positive towards the north. The longitudinal angle is called the ecliptic longitude or celestial longitude (denoted λ), measured eastwards from 0° to 360°. Like right ascension in the equatorial coordinate system, 0° ecliptic longitude is pointing towards the Sun from the Earth at the Northern hemisphere vernal equinox. This choice makes the coordinates of the fixed stars subject to shifts due to the precession, so that always a reference epoch should be specified. Usually epoch J2000.0 is taken, but the instantaneous equinox of the day (called the epoch of date) is possible too. This coordinate system can be particularly useful for charting solar system objects. Most planets (except Mercury), and many small solar system bodies have orbits with small inclinations to the ecliptic plane, and therefore their ecliptic latitude β is always small. Because of the planets' small deviation from the plane of the ecliptic, ecliptic coordinates were used historically to compute their positions. (Aaboe 2001, 17-19)
+ * The ecliptic coordinate system is a celestial coordinate system that uses the ecliptic
+ * for its fundamental plane. The ecliptic is the path that the sun appears to follow across
+ * the sky over the course of a year. It is also the projection of the Earth's orbital plane
+ * onto the celestial sphere. The latitudinal angle is called the ecliptic latitude or celestial
+ * latitude (denoted β), measured positive towards the north. The longitudinal angle is called
+ * the ecliptic longitude or celestial longitude (denoted λ), measured eastwards from 0° to 360°.
+ * Like right ascension in the equatorial coordinate system, 0° ecliptic longitude is pointing
+ * towards the Sun from the Earth at the Northern hemisphere vernal equinox. This choice makes
+ * the coordinates of the fixed stars subject to shifts due to the precession, so that always a
+ * reference epoch should be specified. Usually epoch J2000.0 is taken, but the instantaneous
+ * equinox of the day (called the epoch of date) is possible too. This coordinate system can be
+ * particularly useful for charting solar system objects. Most planets (except Mercury), and many
+ * small solar system bodies have orbits with small inclinations to the ecliptic plane, and therefore
+ * their ecliptic latitude β is always small. Because of the planets' small deviation from the plane
+ * of the ecliptic, ecliptic coordinates were used historically to compute their positions. (Aaboe 2001, 17-19)
  * <!-- end-model-doc -->
  *
  * <p>
@@ -23,7 +37,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.environment.EclipticCoordinates#getRadius <em>Radius</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEclipticCoordinates()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEclipticCoordinates()
  * @model
  * @generated
  */
@@ -39,7 +53,7 @@ public interface EclipticCoordinates extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Longitude</em>' attribute.
 	 * @see #setLongitude(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEclipticCoordinates_Longitude()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEclipticCoordinates_Longitude()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -65,7 +79,7 @@ public interface EclipticCoordinates extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Latitude</em>' attribute.
 	 * @see #setLatitude(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEclipticCoordinates_Latitude()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEclipticCoordinates_Latitude()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -91,7 +105,7 @@ public interface EclipticCoordinates extends EObject
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEclipticCoordinates_Radius()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEclipticCoordinates_Radius()
 	 * @model unique="false"
 	 * @generated
 	 */

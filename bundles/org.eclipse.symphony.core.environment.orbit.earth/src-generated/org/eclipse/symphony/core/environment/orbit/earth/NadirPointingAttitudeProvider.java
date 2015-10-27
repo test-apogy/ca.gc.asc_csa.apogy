@@ -10,13 +10,12 @@ package org.eclipse.symphony.core.environment.orbit.earth;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * This class represents the attitude provider where the satellite z axis is pointing to the vertical of the ground point under satellite.
  * It is backed by a org.orekit.attitudes.NadirPointing AttitudeProvider.
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage#getNadirPointingAttitudeProvider()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getNadirPointingAttitudeProvider()
  * @model
  * @generated
  */

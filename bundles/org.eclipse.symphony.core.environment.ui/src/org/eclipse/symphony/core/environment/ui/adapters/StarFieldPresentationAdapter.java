@@ -5,7 +5,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
 import org.eclipse.symphony.core.environment.StarField;
 import org.eclipse.symphony.core.environment.ui.StarFieldPresentation;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIFactory;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIFactory;
 
 public class StarFieldPresentationAdapter implements NodePresentationAdapter
 {
@@ -36,7 +36,7 @@ public class StarFieldPresentationAdapter implements NodePresentationAdapter
 
 		StarField starField = (StarField) obj;
 		
-		StarFieldPresentation presentationNode = SymphonyEnvironmentUIFactory.eINSTANCE.createStarFieldPresentation();
+		StarFieldPresentation presentationNode = Symphony__CoreEnvironmentUIFactory.eINSTANCE.createStarFieldPresentation();
 		presentationNode.setNode(starField);			
 						
 		return presentationNode;

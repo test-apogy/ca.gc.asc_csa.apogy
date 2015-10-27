@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.examples.antenna.Antenna;
-import org.eclipse.symphony.examples.antenna.EMFEcoreExampleAntennaPackage;
+import org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.antenna.Antenna} object.
@@ -80,7 +80,7 @@ IItemPropertySource
 				 getResourceLocator(),
 				 getString("_UI_Antenna_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Antenna_initialized_feature", "_UI_Antenna_type"),
-				 EMFEcoreExampleAntennaPackage.Literals.ANTENNA__INITIALIZED,
+				 Symphony__ExamplesAntennaPackage.Literals.ANTENNA__INITIALIZED,
 				 false,
 				 false,
 				 false,
@@ -127,7 +127,7 @@ IItemPropertySource
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Antenna.class)) {
-			case EMFEcoreExampleAntennaPackage.ANTENNA__INITIALIZED:
+			case Symphony__ExamplesAntennaPackage.ANTENNA__INITIALIZED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

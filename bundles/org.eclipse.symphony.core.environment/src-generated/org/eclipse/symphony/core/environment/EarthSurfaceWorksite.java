@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.math.Tuple3d;
  *   <li>{@link org.eclipse.symphony.core.environment.EarthSurfaceWorksite#getEarthSky <em>Earth Sky</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEarthSurfaceWorksite()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSurfaceWorksite()
  * @model
  * @generated
  */
@@ -44,7 +44,7 @@ public interface EarthSurfaceWorksite extends SurfaceWorksite
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Geographical Coordinates</em>' containment reference.
 	 * @see #setGeographicalCoordinates(GeographicCoordinates)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEarthSurfaceWorksite_GeographicalCoordinates()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSurfaceWorksite_GeographicalCoordinates()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -66,12 +66,13 @@ public interface EarthSurfaceWorksite extends SurfaceWorksite
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Azimuth, relative to true North, of the X axis of the worksite coordinates system. Follows the right hand rule.
+	 * Azimuth, relative to true North, of the X axis of the worksite
+	 * coordinates system. Follows the right hand rule.
 	 * Note that the Z axis is pointing up (toward zenith).
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>XAxis Azimuth</em>' attribute.
 	 * @see #setXAxisAzimuth(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEarthSurfaceWorksite_XAxisAzimuth()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSurfaceWorksite_XAxisAzimuth()
 	 * @model default="0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
@@ -101,7 +102,7 @@ public interface EarthSurfaceWorksite extends SurfaceWorksite
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Earth Sky</em>' reference.
 	 * @see #setEarthSky(EarthSky)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getEarthSurfaceWorksite_EarthSky()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSurfaceWorksite_EarthSky()
 	 * @model required="true" transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
@@ -121,7 +122,8 @@ public interface EarthSurfaceWorksite extends SurfaceWorksite
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Converts a position expressed as XYZ in the EarthSurfaceWorksite frame to a WS84 GeographicCoordinates.
+	 * Converts a position expressed as XYZ in the EarthSurfaceWorksite frame
+	 * to a WS84 GeographicCoordinates.
 	 * @param position The position in the worksite coordinates system.
 	 * @return The GeographicCoordinates of the position, in the WS84 datum.
 	 * <!-- end-model-doc -->

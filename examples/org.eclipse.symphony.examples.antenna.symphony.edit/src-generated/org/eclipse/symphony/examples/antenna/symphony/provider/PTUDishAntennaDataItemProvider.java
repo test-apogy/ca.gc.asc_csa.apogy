@@ -18,7 +18,7 @@ import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.core.provider.SymphonyInitializationDataItemProvider;
 import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData;
-import org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage;
+import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData} object.
@@ -74,7 +74,7 @@ extends SymphonyInitializationDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PTUDishAntennaData_fov_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_fov_feature", "_UI_PTUDishAntennaData_type"),
-				 SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV,
+				 Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV,
 				 true,
 				 false,
 				 false,
@@ -97,7 +97,7 @@ extends SymphonyInitializationDataItemProvider
 				getResourceLocator(),
 				getString("_UI_PTUDishAntennaData_panAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_panAngle_feature", "_UI_PTUDishAntennaData_type"),
-				SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA__PAN_ANGLE,
+				Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_DATA__PAN_ANGLE,
 				true,
 				false,
 				false,
@@ -120,7 +120,7 @@ extends SymphonyInitializationDataItemProvider
 				getResourceLocator(),
 				getString("_UI_PTUDishAntennaData_tiltAngle_feature"),
 				getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_tiltAngle_feature", "_UI_PTUDishAntennaData_type"),
-				SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA__TILT_ANGLE,
+				Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_DATA__TILT_ANGLE,
 				true,
 				false,
 				false,
@@ -142,7 +142,7 @@ extends SymphonyInitializationDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PTUDishAntennaData_trackingSun_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_trackingSun_feature", "_UI_PTUDishAntennaData_type"),
-				 SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA__TRACKING_SUN,
+				 Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_DATA__TRACKING_SUN,
 				 true,
 				 false,
 				 false,
@@ -164,7 +164,7 @@ extends SymphonyInitializationDataItemProvider
 				 getResourceLocator(),
 				 getString("_UI_PTUDishAntennaData_initialized_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_PTUDishAntennaData_initialized_feature", "_UI_PTUDishAntennaData_type"),
-				 SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA__INITIALIZED,
+				 Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_DATA__INITIALIZED,
 				 true,
 				 false,
 				 false,
@@ -185,7 +185,7 @@ extends SymphonyInitializationDataItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV);
+			childrenFeatures.add(Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV);
 		}
 		return childrenFeatures;
 	}
@@ -241,13 +241,13 @@ extends SymphonyInitializationDataItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PTUDishAntennaData.class)) {
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE:
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE:
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN:
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__FOV:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__FOV:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -268,7 +268,7 @@ extends SymphonyInitializationDataItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV,
+				(Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_DATA__FOV,
 				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
 	}
 

@@ -16,7 +16,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.actuators.Symphony__AddonsActuatorsPackage;
 import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-import org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage;
+import org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage;
 import org.eclipse.symphony.examples.camera.PTUCameraSimulated;
 
 /**
@@ -249,12 +249,12 @@ public class PTUCameraSimulatedItemProvider extends CameraSimulatedItemProvider 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PTUCameraSimulated.class)) {
-			case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__MOVING:
-			case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS:
-			case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE:
-			case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE:
-			case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE:
-			case EMFEcoreExampleCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE:
+			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__MOVING:
+			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__ACTUATOR_STATUS:
+			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_PAN_ANGLE:
+			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__CURRENT_TILT_ANGLE:
+			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_PAN_ANGLE:
+			case Symphony__ExamplesCameraPackage.PTU_CAMERA_SIMULATED__COMMANDED_TILT_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
@@ -287,7 +287,7 @@ public class PTUCameraSimulatedItemProvider extends CameraSimulatedItemProvider 
 		boolean qualify =
 			childFeature == Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN ||
 			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
-			childFeature == EMFEcoreExampleCameraPackage.Literals.CAMERA__FOV;
+			childFeature == Symphony__ExamplesCameraPackage.Literals.CAMERA__FOV;
 
 		if (qualify) {
 			return getString

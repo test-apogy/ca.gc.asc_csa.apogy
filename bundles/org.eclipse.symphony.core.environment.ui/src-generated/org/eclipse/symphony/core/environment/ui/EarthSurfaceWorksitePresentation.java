@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  *   <li>{@link org.eclipse.symphony.core.environment.ui.EarthSurfaceWorksitePresentation#getPlaneSize <em>Plane Size</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getEarthSurfaceWorksitePresentation()
+ * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Axis Visible</em>' attribute.
 	 * @see #setAxisVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AxisVisible()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AxisVisible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='AXIS'"
 	 * @generated
@@ -69,7 +69,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Axis Length</em>' attribute.
 	 * @see #setAxisLength(double)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AxisLength()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AxisLength()
 	 * @model default="10.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='AXIS' csa_units='m'"
 	 * @generated
@@ -97,7 +97,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Azimuth Visible</em>' attribute.
 	 * @see #setAzimuthVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AzimuthVisible()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AzimuthVisible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SKY'"
 	 * @generated
@@ -125,7 +125,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Elevation Lines Visible</em>' attribute.
 	 * @see #setElevationLinesVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_ElevationLinesVisible()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_ElevationLinesVisible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SKY'"
 	 * @generated
@@ -153,7 +153,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Azimuth Lines Visible</em>' attribute.
 	 * @see #setAzimuthLinesVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AzimuthLinesVisible()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AzimuthLinesVisible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SKY'"
 	 * @generated
@@ -181,7 +181,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Plane Visible</em>' attribute.
 	 * @see #setPlaneVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_PlaneVisible()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_PlaneVisible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANE'"
 	 * @generated
@@ -209,7 +209,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Plane Grid Size</em>' attribute.
 	 * @see #setPlaneGridSize(double)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_PlaneGridSize()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_PlaneGridSize()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANE' csa_units='m'"
 	 * @generated
@@ -237,7 +237,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Plane Size</em>' attribute.
 	 * @see #setPlaneSize(double)
-	 * @see org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_PlaneSize()
+	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_PlaneSize()
 	 * @model default="10.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANE' csa_units='m'"
 	 * @generated

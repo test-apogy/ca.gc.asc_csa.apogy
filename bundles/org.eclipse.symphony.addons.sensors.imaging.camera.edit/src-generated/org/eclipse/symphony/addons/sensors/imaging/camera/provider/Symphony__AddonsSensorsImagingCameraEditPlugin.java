@@ -16,10 +16,10 @@ import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeom
 import org.eclipse.symphony.common.images.provider.Symphony__CommonImagesEditPlugin;
 import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
-import org.eclipse.symphony.common.topology.bindings.provider.TopologyBindingsEditPlugin;
+import org.eclipse.symphony.common.topology.bindings.provider.Symphony__CommonTopologyBindingsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
-import org.eclipse.symphony.core.invocator.provider.EMFEcoreInvocatorEditPlugin;
-import org.eclipse.symphony.core.provider.SymphonyCoreEditPlugin;
+import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorEditPlugin;
+import org.eclipse.symphony.core.provider.Symphony__CoreEditPlugin;
 
 /**
  * This is the central singleton for the Symphony__AddonsSensorsImagingCamera edit plugin.
@@ -55,18 +55,18 @@ public final class Symphony__AddonsSensorsImagingCameraEditPlugin extends EMFPlu
   {
 		super
 		  (new ResourceLocator [] {
-		     EMFEcoreInvocatorEditPlugin.INSTANCE,
+		     Symphony__CoreInvocatorEditPlugin.INSTANCE,
 		     Symphony__AddonsEditPlugin.INSTANCE,
 		     Symphony__CommonEMFEditPlugin.INSTANCE,
 		     Symphony__AddonsSensorsImagingEditPlugin.INSTANCE,
 		     Symphony__CommonImagesEditPlugin.INSTANCE,
-		     SymphonyCoreEditPlugin.INSTANCE,
+		     Symphony__CoreEditPlugin.INSTANCE,
 		     Symphony__AddonsSensorsFOVEditPlugin.INSTANCE,
 		     Symphony__CommonTopologyEditPlugin.INSTANCE,
 		     Symphony__CommonMathEditPlugin.INSTANCE,
 		     Symphony__AddonsGeometryPathsEditPlugin.INSTANCE,
 		     Symphony__AddonsSensorsEditPlugin.INSTANCE,
-		     TopologyBindingsEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyBindingsEditPlugin.INSTANCE,
 		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
 		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
 		     Symphony__CommonProcessorsEditPlugin.INSTANCE,

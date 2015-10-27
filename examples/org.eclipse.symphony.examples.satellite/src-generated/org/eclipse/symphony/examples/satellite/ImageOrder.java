@@ -21,7 +21,7 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
  *   <li>{@link org.eclipse.symphony.examples.satellite.ImageOrder#getCommandedZoom <em>Commanded Zoom</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getImageOrder()
+ * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getImageOrder()
  * @model
  * @generated
  */
@@ -37,7 +37,7 @@ public interface ImageOrder extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Order Id</em>' attribute.
 	 * @see #setOrderId(int)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getImageOrder_OrderId()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getImageOrder_OrderId()
 	 * @model default="-1" unique="false"
 	 * @generated
 	 */
@@ -64,7 +64,7 @@ public interface ImageOrder extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Priority</em>' attribute.
 	 * @see #setPriority(int)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getImageOrder_Priority()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getImageOrder_Priority()
 	 * @model default="1" unique="false"
 	 * @generated
 	 */
@@ -90,7 +90,7 @@ public interface ImageOrder extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Image Center</em>' containment reference.
 	 * @see #setImageCenter(GeographicCoordinates)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getImageOrder_ImageCenter()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getImageOrder_ImageCenter()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -117,7 +117,7 @@ public interface ImageOrder extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Commanded Zoom</em>' attribute.
 	 * @see #setCommandedZoom(double)
-	 * @see org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage#getImageOrder_CommandedZoom()
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getImageOrder_CommandedZoom()
 	 * @model default="1.0" unique="false"
 	 * @generated
 	 */

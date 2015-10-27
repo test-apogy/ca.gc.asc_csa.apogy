@@ -13,8 +13,8 @@ import org.eclipse.symphony.addons.sensors.fov.ui.ConicalFieldOfViewPresentation
 import org.eclipse.symphony.addons.sensors.fov.ui.FieldOfViewPresentation;
 import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIFactory;
 import org.eclipse.symphony.addons.sensors.fov.ui.Symphony__AddonsSensorsFOVUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 import org.eclipse.symphony.addons.sensors.fov.ui.RectangularFrustrumFieldOfViewPresentation;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -98,7 +98,7 @@ public class Symphony__AddonsSensorsFOVUIPackageImpl extends EPackageImpl implem
 		isInited = true;
 
 		// Initialize simple dependencies
-		TopologyUIPackage.eINSTANCE.eClass();
+		Symphony__CommonTopologyUIPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theSymphony__AddonsSensorsFOVUIPackage.createPackageContents();
@@ -262,7 +262,7 @@ public class Symphony__AddonsSensorsFOVUIPackageImpl extends EPackageImpl implem
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TopologyUIPackage theTopologyUIPackage = (TopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(TopologyUIPackage.eNS_URI);
+		Symphony__CommonTopologyUIPackage theSymphony__CommonTopologyUIPackage = (Symphony__CommonTopologyUIPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonTopologyUIPackage.eNS_URI);
 		EcorePackage theEcorePackage = (EcorePackage)EPackage.Registry.INSTANCE.getEPackage(EcorePackage.eNS_URI);
 
 		// Create type parameters
@@ -270,7 +270,7 @@ public class Symphony__AddonsSensorsFOVUIPackageImpl extends EPackageImpl implem
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		fieldOfViewPresentationEClass.getESuperTypes().add(theTopologyUIPackage.getNodePresentation());
+		fieldOfViewPresentationEClass.getESuperTypes().add(theSymphony__CommonTopologyUIPackage.getNodePresentation());
 		circularSectorFieldOfViewPresentationEClass.getESuperTypes().add(this.getFieldOfViewPresentation());
 		conicalFieldOfViewPresentationEClass.getESuperTypes().add(this.getFieldOfViewPresentation());
 		rectangularFrustrumFieldOfViewPresentationEClass.getESuperTypes().add(this.getFieldOfViewPresentation());
@@ -278,10 +278,10 @@ public class Symphony__AddonsSensorsFOVUIPackageImpl extends EPackageImpl implem
 		// Initialize classes, features, and operations; add parameters
 		initEClass(fieldOfViewPresentationEClass, FieldOfViewPresentation.class, "FieldOfViewPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFieldOfViewPresentation_Transparency(), theEcorePackage.getEFloat(), "transparency", null, 0, 1, FieldOfViewPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFieldOfViewPresentation_PresentationMode(), theTopologyUIPackage.getMeshPresentationMode(), "presentationMode", null, 0, 1, FieldOfViewPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFieldOfViewPresentation_PresentationMode(), theSymphony__CommonTopologyUIPackage.getMeshPresentationMode(), "presentationMode", null, 0, 1, FieldOfViewPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFieldOfViewPresentation_ShowOutlineOnly(), theEcorePackage.getEBoolean(), "showOutlineOnly", "true", 0, 1, FieldOfViewPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFieldOfViewPresentation_ShowProjection(), theEcorePackage.getEBoolean(), "showProjection", "false", 0, 1, FieldOfViewPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFieldOfViewPresentation_ProjectionColor(), theTopologyUIPackage.getRGB(), "projectionColor", null, 0, 1, FieldOfViewPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFieldOfViewPresentation_ProjectionColor(), theSymphony__CommonTopologyUIPackage.getRGB(), "projectionColor", null, 0, 1, FieldOfViewPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(circularSectorFieldOfViewPresentationEClass, CircularSectorFieldOfViewPresentation.class, "CircularSectorFieldOfViewPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

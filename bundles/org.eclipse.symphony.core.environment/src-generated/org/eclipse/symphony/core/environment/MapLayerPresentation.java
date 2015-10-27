@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.emf.Named;
  *   <li>{@link org.eclipse.symphony.core.environment.MapLayerPresentation#getMapLayer <em>Map Layer</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMapLayerPresentation()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapLayerPresentation()
  * @model abstract="true"
  * @generated
  */
@@ -34,11 +34,11 @@ public interface MapLayerPresentation extends Named, Described {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Visibility
+	 * Visibility
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Visible</em>' attribute.
 	 * @see #setVisible(boolean)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMapLayerPresentation_Visible()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapLayerPresentation_Visible()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='PRESENTATION_SETTINGS'"
 	 * @generated
@@ -65,7 +65,7 @@ public interface MapLayerPresentation extends Named, Described {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Map Layer</em>' reference.
 	 * @see #setMapLayer(AbstractMapLayer)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getMapLayerPresentation_MapLayer()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMapLayerPresentation_MapLayer()
 	 * @model
 	 * @generated
 	 */

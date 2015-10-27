@@ -11,7 +11,6 @@ import org.eclipse.symphony.common.topology.RotationNode;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * Binding that binds a RotationNode rotation around one axis to the feature value.
  * <!-- end-model-doc -->
  *
@@ -24,7 +23,7 @@ import org.eclipse.symphony.common.topology.RotationNode;
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.RotationBinding#getRotationUnits <em>Rotation Units</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getRotationBinding()
+ * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getRotationBinding()
  * @model
  * @generated
  */
@@ -43,7 +42,7 @@ public interface RotationBinding extends AbstractTopologyBinding
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Rotation Node</em>' reference.
 	 * @see #setRotationNode(RotationNode)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getRotationBinding_RotationNode()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getRotationBinding_RotationNode()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DESTINATION'"
 	 * @generated
 	 */
@@ -62,7 +61,7 @@ public interface RotationBinding extends AbstractTopologyBinding
   /**
 	 * Returns the value of the '<em><b>Rotation Axis</b></em>' attribute.
 	 * The default value is <code>"X_AXIS"</code>.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.common.topology.bindings.AXIS}.
+	 * The literals are from the enumeration {@link org.eclipse.symphony.common.topology.bindings.Axis}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Rotation Axis</em>' attribute isn't clear,
@@ -73,30 +72,30 @@ public interface RotationBinding extends AbstractTopologyBinding
 	 * The axis around which to revolve.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Rotation Axis</em>' attribute.
-	 * @see org.eclipse.symphony.common.topology.bindings.AXIS
-	 * @see #setRotationAxis(AXIS)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getRotationBinding_RotationAxis()
+	 * @see org.eclipse.symphony.common.topology.bindings.Axis
+	 * @see #setRotationAxis(Axis)
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getRotationBinding_RotationAxis()
 	 * @model default="X_AXIS" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DESTINATION'"
 	 * @generated
 	 */
-  AXIS getRotationAxis();
+  Axis getRotationAxis();
 
   /**
 	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.bindings.RotationBinding#getRotationAxis <em>Rotation Axis</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Rotation Axis</em>' attribute.
-	 * @see org.eclipse.symphony.common.topology.bindings.AXIS
+	 * @see org.eclipse.symphony.common.topology.bindings.Axis
 	 * @see #getRotationAxis()
 	 * @generated
 	 */
-  void setRotationAxis(AXIS value);
+  void setRotationAxis(Axis value);
 
   /**
 	 * Returns the value of the '<em><b>Rotation Units</b></em>' attribute.
 	 * The default value is <code>"DEGREES"</code>.
-	 * The literals are from the enumeration {@link org.eclipse.symphony.common.topology.bindings.ANGLE_UNITS}.
+	 * The literals are from the enumeration {@link org.eclipse.symphony.common.topology.bindings.AngleUnits}.
 	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Rotation Units</em>' attribute isn't clear,
@@ -107,24 +106,24 @@ public interface RotationBinding extends AbstractTopologyBinding
 	 * The angle unit associated with the feature.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Rotation Units</em>' attribute.
-	 * @see org.eclipse.symphony.common.topology.bindings.ANGLE_UNITS
-	 * @see #setRotationUnits(ANGLE_UNITS)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getRotationBinding_RotationUnits()
+	 * @see org.eclipse.symphony.common.topology.bindings.AngleUnits
+	 * @see #setRotationUnits(AngleUnits)
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getRotationBinding_RotationUnits()
 	 * @model default="DEGREES" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='DESTINATION'"
 	 * @generated
 	 */
-  ANGLE_UNITS getRotationUnits();
+  AngleUnits getRotationUnits();
 
   /**
 	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.bindings.RotationBinding#getRotationUnits <em>Rotation Units</em>}' attribute.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Rotation Units</em>' attribute.
-	 * @see org.eclipse.symphony.common.topology.bindings.ANGLE_UNITS
+	 * @see org.eclipse.symphony.common.topology.bindings.AngleUnits
 	 * @see #getRotationUnits()
 	 * @generated
 	 */
-  void setRotationUnits(ANGLE_UNITS value);
+  void setRotationUnits(AngleUnits value);
 
 } // RotationBinding

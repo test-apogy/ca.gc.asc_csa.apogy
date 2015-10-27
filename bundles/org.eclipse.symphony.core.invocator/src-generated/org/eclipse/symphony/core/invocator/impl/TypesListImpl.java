@@ -9,10 +9,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.LocalTypesList;
 import org.eclipse.symphony.core.invocator.RegisteredTypesList;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.TypesList;
 
 /**
@@ -68,7 +68,7 @@ public class TypesListImpl extends MinimalEObjectImpl.Container implements Types
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.TYPES_LIST;
+		return Symphony__CoreInvocatorPackage.Literals.TYPES_LIST;
 	}
 
   /**
@@ -85,7 +85,7 @@ public class TypesListImpl extends MinimalEObjectImpl.Container implements Types
   {
 	  LocalTypesList list = getLocalTypesGen();
 	  if (list == null){
-		  list = EMFEcoreInvocatorFactory.eINSTANCE.createLocalTypesList();
+		  list = Symphony__CoreInvocatorFactory.eINSTANCE.createLocalTypesList();
 		  setLocalTypes(list);
 	  }
 	  return localTypes;
@@ -101,7 +101,7 @@ public class TypesListImpl extends MinimalEObjectImpl.Container implements Types
 		LocalTypesList oldLocalTypes = localTypes;
 		localTypes = newLocalTypes;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES, oldLocalTypes, newLocalTypes);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES, oldLocalTypes, newLocalTypes);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -117,14 +117,14 @@ public class TypesListImpl extends MinimalEObjectImpl.Container implements Types
 		if (newLocalTypes != localTypes) {
 			NotificationChain msgs = null;
 			if (localTypes != null)
-				msgs = ((InternalEObject)localTypes).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES, null, msgs);
+				msgs = ((InternalEObject)localTypes).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES, null, msgs);
 			if (newLocalTypes != null)
-				msgs = ((InternalEObject)newLocalTypes).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES, null, msgs);
+				msgs = ((InternalEObject)newLocalTypes).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES, null, msgs);
 			msgs = basicSetLocalTypes(newLocalTypes, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES, newLocalTypes, newLocalTypes));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES, newLocalTypes, newLocalTypes));
 	}
 
   /**
@@ -141,7 +141,7 @@ public class TypesListImpl extends MinimalEObjectImpl.Container implements Types
   {
 	  RegisteredTypesList list = getRegisteredTypesGen();
 	  if (list == null){
-		  list = EMFEcoreInvocatorFactory.eINSTANCE.createRegisteredTypesList();
+		  list = Symphony__CoreInvocatorFactory.eINSTANCE.createRegisteredTypesList();
 		  setRegisteredTypes(list);
 	  }	  
 	  return registeredTypes;
@@ -158,7 +158,7 @@ public class TypesListImpl extends MinimalEObjectImpl.Container implements Types
 		RegisteredTypesList oldRegisteredTypes = registeredTypes;
 		registeredTypes = newRegisteredTypes;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES, oldRegisteredTypes, newRegisteredTypes);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES, oldRegisteredTypes, newRegisteredTypes);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -174,14 +174,14 @@ public class TypesListImpl extends MinimalEObjectImpl.Container implements Types
 		if (newRegisteredTypes != registeredTypes) {
 			NotificationChain msgs = null;
 			if (registeredTypes != null)
-				msgs = ((InternalEObject)registeredTypes).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES, null, msgs);
+				msgs = ((InternalEObject)registeredTypes).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES, null, msgs);
 			if (newRegisteredTypes != null)
-				msgs = ((InternalEObject)newRegisteredTypes).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES, null, msgs);
+				msgs = ((InternalEObject)newRegisteredTypes).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES, null, msgs);
 			msgs = basicSetRegisteredTypes(newRegisteredTypes, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES, newRegisteredTypes, newRegisteredTypes));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES, newRegisteredTypes, newRegisteredTypes));
 	}
 
   /**
@@ -193,9 +193,9 @@ public class TypesListImpl extends MinimalEObjectImpl.Container implements Types
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES:
+			case Symphony__CoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES:
 				return basicSetLocalTypes(null, msgs);
-			case EMFEcoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES:
+			case Symphony__CoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES:
 				return basicSetRegisteredTypes(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -210,9 +210,9 @@ public class TypesListImpl extends MinimalEObjectImpl.Container implements Types
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES:
+			case Symphony__CoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES:
 				return getLocalTypes();
-			case EMFEcoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES:
+			case Symphony__CoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES:
 				return getRegisteredTypes();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -227,10 +227,10 @@ public class TypesListImpl extends MinimalEObjectImpl.Container implements Types
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES:
+			case Symphony__CoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES:
 				setLocalTypes((LocalTypesList)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES:
+			case Symphony__CoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES:
 				setRegisteredTypes((RegisteredTypesList)newValue);
 				return;
 		}
@@ -246,10 +246,10 @@ public class TypesListImpl extends MinimalEObjectImpl.Container implements Types
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES:
+			case Symphony__CoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES:
 				setLocalTypes((LocalTypesList)null);
 				return;
-			case EMFEcoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES:
+			case Symphony__CoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES:
 				setRegisteredTypes((RegisteredTypesList)null);
 				return;
 		}
@@ -265,9 +265,9 @@ public class TypesListImpl extends MinimalEObjectImpl.Container implements Types
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES:
+			case Symphony__CoreInvocatorPackage.TYPES_LIST__LOCAL_TYPES:
 				return localTypes != null;
-			case EMFEcoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES:
+			case Symphony__CoreInvocatorPackage.TYPES_LIST__REGISTERED_TYPES:
 				return registeredTypes != null;
 		}
 		return super.eIsSet(featureID);

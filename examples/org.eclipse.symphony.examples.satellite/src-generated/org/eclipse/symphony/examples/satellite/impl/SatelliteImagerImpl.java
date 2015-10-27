@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
 import org.eclipse.symphony.addons.sensors.imaging.impl.AbstractCameraImpl;
-import org.eclipse.symphony.examples.satellite.EMFEcoreExampleSatellitePackage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 import org.eclipse.symphony.examples.satellite.OrbitalImage;
 import org.eclipse.symphony.examples.satellite.Satellite;
 import org.eclipse.symphony.examples.satellite.SatelliteImager;
@@ -103,7 +103,7 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreExampleSatellitePackage.Literals.SATELLITE_IMAGER;
+		return Symphony__ExamplesSatellitePackage.Literals.SATELLITE_IMAGER;
 	}
 
 	/**
@@ -124,7 +124,7 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 		double oldCurrentZoom = currentZoom;
 		currentZoom = newCurrentZoom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM, oldCurrentZoom, currentZoom));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM, oldCurrentZoom, currentZoom));
 	}
 
 	/**
@@ -145,7 +145,7 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 		double oldCommandedZoom = commandedZoom;
 		commandedZoom = newCommandedZoom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM, oldCommandedZoom, commandedZoom));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM, oldCommandedZoom, commandedZoom));
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	 * @generated
 	 */
 	public Satellite getSatellite() {
-		if (eContainerFeatureID() != EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__SATELLITE) return null;
+		if (eContainerFeatureID() != Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__SATELLITE) return null;
 		return (Satellite)eContainer();
 	}
 
@@ -164,7 +164,7 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	 * @generated
 	 */
 	public Satellite basicGetSatellite() {
-		if (eContainerFeatureID() != EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__SATELLITE) return null;
+		if (eContainerFeatureID() != Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__SATELLITE) return null;
 		return (Satellite)eInternalContainer();
 	}
 
@@ -174,7 +174,7 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	 * @generated
 	 */
 	public NotificationChain basicSetSatellite(Satellite newSatellite, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newSatellite, EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__SATELLITE, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newSatellite, Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__SATELLITE, msgs);
 		return msgs;
 	}
 
@@ -184,19 +184,19 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	 * @generated
 	 */
 	public void setSatellite(Satellite newSatellite) {
-		if (newSatellite != eInternalContainer() || (eContainerFeatureID() != EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__SATELLITE && newSatellite != null)) {
+		if (newSatellite != eInternalContainer() || (eContainerFeatureID() != Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__SATELLITE && newSatellite != null)) {
 			if (EcoreUtil.isAncestor(this, newSatellite))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newSatellite != null)
-				msgs = ((InternalEObject)newSatellite).eInverseAdd(this, EMFEcoreExampleSatellitePackage.SATELLITE__IMAGER, Satellite.class, msgs);
+				msgs = ((InternalEObject)newSatellite).eInverseAdd(this, Symphony__ExamplesSatellitePackage.SATELLITE__IMAGER, Satellite.class, msgs);
 			msgs = basicSetSatellite(newSatellite, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__SATELLITE, newSatellite, newSatellite));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__SATELLITE, newSatellite, newSatellite));
 	}
 
 	/**
@@ -206,7 +206,7 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	 */
 	public EList<OrbitalImage> getImagesAcquired() {
 		if (imagesAcquired == null) {
-			imagesAcquired = new EObjectContainmentEList<OrbitalImage>(OrbitalImage.class, this, EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__IMAGES_ACQUIRED);
+			imagesAcquired = new EObjectContainmentEList<OrbitalImage>(OrbitalImage.class, this, Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__IMAGES_ACQUIRED);
 		}
 		return imagesAcquired;
 	}
@@ -263,7 +263,7 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__SATELLITE:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetSatellite((Satellite)otherEnd, msgs);
@@ -279,9 +279,9 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__SATELLITE:
 				return basicSetSatellite(null, msgs);
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__IMAGES_ACQUIRED:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__IMAGES_ACQUIRED:
 				return ((InternalEList<?>)getImagesAcquired()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -295,8 +295,8 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__SATELLITE:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreExampleSatellitePackage.SATELLITE__IMAGER, Satellite.class, msgs);
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__SATELLITE:
+				return eInternalContainer().eInverseRemove(this, Symphony__ExamplesSatellitePackage.SATELLITE__IMAGER, Satellite.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -309,14 +309,14 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM:
 				return getCurrentZoom();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM:
 				return getCommandedZoom();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__SATELLITE:
 				if (resolve) return getSatellite();
 				return basicGetSatellite();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__IMAGES_ACQUIRED:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__IMAGES_ACQUIRED:
 				return getImagesAcquired();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -331,16 +331,16 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM:
 				setCurrentZoom((Double)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM:
 				setCommandedZoom((Double)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__SATELLITE:
 				setSatellite((Satellite)newValue);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__IMAGES_ACQUIRED:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__IMAGES_ACQUIRED:
 				getImagesAcquired().clear();
 				getImagesAcquired().addAll((Collection<? extends OrbitalImage>)newValue);
 				return;
@@ -356,16 +356,16 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM:
 				setCurrentZoom(CURRENT_ZOOM_EDEFAULT);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM:
 				setCommandedZoom(COMMANDED_ZOOM_EDEFAULT);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__SATELLITE:
 				setSatellite((Satellite)null);
 				return;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__IMAGES_ACQUIRED:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__IMAGES_ACQUIRED:
 				getImagesAcquired().clear();
 				return;
 		}
@@ -380,13 +380,13 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM:
 				return currentZoom != CURRENT_ZOOM_EDEFAULT;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM:
 				return commandedZoom != COMMANDED_ZOOM_EDEFAULT;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__SATELLITE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__SATELLITE:
 				return basicGetSatellite() != null;
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__IMAGES_ACQUIRED:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__IMAGES_ACQUIRED:
 				return imagesAcquired != null && !imagesAcquired.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -401,8 +401,8 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Zoomable.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM: return Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM;
-				case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM: return Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM;
+				case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM: return Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM;
+				case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM: return Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM;
 				default: return -1;
 			}
 		}
@@ -418,8 +418,8 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Zoomable.class) {
 			switch (baseFeatureID) {
-				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM: return EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM;
-				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM: return EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM;
+				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__CURRENT_ZOOM: return Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__CURRENT_ZOOM;
+				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE__COMMANDED_ZOOM: return Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER__COMMANDED_ZOOM;
 				default: return -1;
 			}
 		}
@@ -435,9 +435,9 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == Zoomable.class) {
 			switch (baseOperationID) {
-				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___COMMAND_ZOOM__DOUBLE: return EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER___COMMAND_ZOOM__DOUBLE;
-				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___GET_MINIMUM_ZOOM: return EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER___GET_MINIMUM_ZOOM;
-				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___GET_MAXIMUM_ZOOM: return EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER___GET_MAXIMUM_ZOOM;
+				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___COMMAND_ZOOM__DOUBLE: return Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER___COMMAND_ZOOM__DOUBLE;
+				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___GET_MINIMUM_ZOOM: return Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER___GET_MINIMUM_ZOOM;
+				case Symphony__AddonsSensorsImagingPackage.ZOOMABLE___GET_MAXIMUM_ZOOM: return Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER___GET_MAXIMUM_ZOOM;
 				default: return -1;
 			}
 		}
@@ -452,13 +452,13 @@ public class SatelliteImagerImpl extends AbstractCameraImpl implements Satellite
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER___DOWNLOAD_IMAGES__INT:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER___DOWNLOAD_IMAGES__INT:
 				return downloadImages((Integer)arguments.get(0));
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER___COMMAND_ZOOM__DOUBLE:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER___COMMAND_ZOOM__DOUBLE:
 				return commandZoom((Double)arguments.get(0));
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER___GET_MINIMUM_ZOOM:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER___GET_MINIMUM_ZOOM:
 				return getMinimumZoom();
-			case EMFEcoreExampleSatellitePackage.SATELLITE_IMAGER___GET_MAXIMUM_ZOOM:
+			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER___GET_MAXIMUM_ZOOM:
 				return getMaximumZoom();
 		}
 		return super.eInvoke(operationID, arguments);

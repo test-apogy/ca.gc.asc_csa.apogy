@@ -9,7 +9,7 @@ package org.eclipse.symphony.common.topology.addons.dynamics.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.topology.addons.dynamics.Geometry;
-import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyDynamicsPackage;
+import org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ public abstract class GeometryImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Symphony__CommonTopologyDynamicsPackage.Literals.GEOMETRY;
+		return Symphony__CommonTopologyAddonsDynamicsPackage.Literals.GEOMETRY;
 	}
 
 } //GeometryImpl

@@ -25,7 +25,7 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeSource;
 import org.eclipse.symphony.common.emf.ui.composites.AbstractTimeSourceComposite;
 import org.eclipse.symphony.common.emf.ui.composites.TimeSourcesListComposite;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 
 public class SymphonyEnvironmentTimeSourceComposite extends Composite 
@@ -260,7 +260,7 @@ public class SymphonyEnvironmentTimeSourceComposite extends Composite
 					{
 						int featureId = msg.getFeatureID(SymphonyEnvironment.class);
 						
-						if(featureId == SymphonyCorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE)
+						if(featureId == Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE)
 						{
 							TimeSource newActiveTimeSource = (TimeSource) msg.getNewValue();
 							setActiveTimeSource(newActiveTimeSource);

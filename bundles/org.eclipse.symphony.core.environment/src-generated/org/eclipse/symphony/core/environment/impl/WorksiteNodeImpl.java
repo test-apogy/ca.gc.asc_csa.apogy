@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.topology.INodeVisitor;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.impl.GroupNodeImpl;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 import org.eclipse.symphony.core.environment.Worksite;
 import org.eclipse.symphony.core.environment.WorksiteNode;
 
@@ -57,7 +57,7 @@ public class WorksiteNodeImpl extends GroupNodeImpl implements WorksiteNode
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.WORKSITE_NODE;
+		return Symphony__CoreEnvironmentPackage.Literals.WORKSITE_NODE;
 	}
 
   /**
@@ -72,7 +72,7 @@ public class WorksiteNodeImpl extends GroupNodeImpl implements WorksiteNode
 			worksite = (Worksite)eResolveProxy(oldWorksite);
 			if (worksite != oldWorksite) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentPackage.WORKSITE_NODE__WORKSITE, oldWorksite, worksite));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.WORKSITE_NODE__WORKSITE, oldWorksite, worksite));
 			}
 		}
 		return worksite;
@@ -98,7 +98,7 @@ public class WorksiteNodeImpl extends GroupNodeImpl implements WorksiteNode
 		Worksite oldWorksite = worksite;
 		worksite = newWorksite;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.WORKSITE_NODE__WORKSITE, oldWorksite, worksite));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.WORKSITE_NODE__WORKSITE, oldWorksite, worksite));
 	}
   
   /**
@@ -111,7 +111,7 @@ public class WorksiteNodeImpl extends GroupNodeImpl implements WorksiteNode
 		Worksite oldWorksite = worksite;
 		worksite = newWorksite;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.WORKSITE_NODE__WORKSITE, oldWorksite, worksite));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.WORKSITE_NODE__WORKSITE, oldWorksite, worksite));
 	}
 
   /**
@@ -123,7 +123,7 @@ public class WorksiteNodeImpl extends GroupNodeImpl implements WorksiteNode
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.WORKSITE_NODE__WORKSITE:
+			case Symphony__CoreEnvironmentPackage.WORKSITE_NODE__WORKSITE:
 				if (resolve) return getWorksite();
 				return basicGetWorksite();
 		}
@@ -139,7 +139,7 @@ public class WorksiteNodeImpl extends GroupNodeImpl implements WorksiteNode
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.WORKSITE_NODE__WORKSITE:
+			case Symphony__CoreEnvironmentPackage.WORKSITE_NODE__WORKSITE:
 				setWorksite((Worksite)newValue);
 				return;
 		}
@@ -155,7 +155,7 @@ public class WorksiteNodeImpl extends GroupNodeImpl implements WorksiteNode
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.WORKSITE_NODE__WORKSITE:
+			case Symphony__CoreEnvironmentPackage.WORKSITE_NODE__WORKSITE:
 				setWorksite((Worksite)null);
 				return;
 		}
@@ -171,7 +171,7 @@ public class WorksiteNodeImpl extends GroupNodeImpl implements WorksiteNode
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.WORKSITE_NODE__WORKSITE:
+			case Symphony__CoreEnvironmentPackage.WORKSITE_NODE__WORKSITE:
 				return worksite != null;
 		}
 		return super.eIsSet(featureID);

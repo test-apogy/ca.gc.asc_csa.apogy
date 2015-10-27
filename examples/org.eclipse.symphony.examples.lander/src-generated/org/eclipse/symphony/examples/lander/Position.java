@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.examples.lander.Position#getAttitude <em>Attitude</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getPosition()
+ * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getPosition()
  * @model
  * @generated
  */
@@ -50,7 +50,7 @@ public interface Position extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>X</em>' attribute.
 	 * @see #setX(double)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getPosition_X()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getPosition_X()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Location' csa_units='m'"
 	 * @generated
@@ -82,7 +82,7 @@ public interface Position extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Y</em>' attribute.
 	 * @see #setY(double)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getPosition_Y()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getPosition_Y()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Location' csa_units='m'"
 	 * @generated
@@ -114,7 +114,7 @@ public interface Position extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Z</em>' attribute.
 	 * @see #setZ(double)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getPosition_Z()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getPosition_Z()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Location' csa_units='m'"
 	 * @generated
@@ -145,7 +145,7 @@ public interface Position extends EObject
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Attitude</em>' attribute.
 	 * @see #setAttitude(Matrix3d)
-	 * @see org.eclipse.symphony.examples.lander.EMFEcoreExampleLanderPackage#getPosition_Attitude()
+	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getPosition_Attitude()
 	 * @model unique="false" dataType="org.eclipse.symphony.examples.lander.Matrix3d"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Attitude'"
 	 * @generated

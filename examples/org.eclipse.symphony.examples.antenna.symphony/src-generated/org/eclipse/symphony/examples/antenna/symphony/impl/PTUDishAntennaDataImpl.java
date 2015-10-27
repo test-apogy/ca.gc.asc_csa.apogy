@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.addons.sensors.fov.ConicalFieldOfView;
 import org.eclipse.symphony.core.impl.SymphonyInitializationDataImpl;
 import org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData;
-import org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage;
+import org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -140,7 +140,7 @@ public class PTUDishAntennaDataImpl extends SymphonyInitializationDataImpl imple
 	@Override
 	protected EClass eStaticClass()
 	{
-		return SymphonyExampleAntennaPackage.Literals.PTU_DISH_ANTENNA_DATA;
+		return Symphony__ExamplesAntennaSymphonyPackage.Literals.PTU_DISH_ANTENNA_DATA;
 	}
 
 	/**
@@ -161,7 +161,7 @@ public class PTUDishAntennaDataImpl extends SymphonyInitializationDataImpl imple
 		ConicalFieldOfView oldFov = fov;
 		fov = newFov;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__FOV, oldFov, newFov);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__FOV, oldFov, newFov);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -176,14 +176,14 @@ public class PTUDishAntennaDataImpl extends SymphonyInitializationDataImpl imple
 		if (newFov != fov) {
 			NotificationChain msgs = null;
 			if (fov != null)
-				msgs = ((InternalEObject)fov).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__FOV, null, msgs);
+				msgs = ((InternalEObject)fov).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__FOV, null, msgs);
 			if (newFov != null)
-				msgs = ((InternalEObject)newFov).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__FOV, null, msgs);
+				msgs = ((InternalEObject)newFov).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__FOV, null, msgs);
 			msgs = basicSetFov(newFov, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__FOV, newFov, newFov));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__FOV, newFov, newFov));
 	}
 
 	/**
@@ -206,7 +206,7 @@ public class PTUDishAntennaDataImpl extends SymphonyInitializationDataImpl imple
 		double oldPanAngle = panAngle;
 		panAngle = newPanAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE, oldPanAngle, panAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE, oldPanAngle, panAngle));
 	}
 
 	/**
@@ -229,7 +229,7 @@ public class PTUDishAntennaDataImpl extends SymphonyInitializationDataImpl imple
 		double oldTiltAngle = tiltAngle;
 		tiltAngle = newTiltAngle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE, oldTiltAngle, tiltAngle));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE, oldTiltAngle, tiltAngle));
 	}
 
 	/**
@@ -250,7 +250,7 @@ public class PTUDishAntennaDataImpl extends SymphonyInitializationDataImpl imple
 		boolean oldTrackingSun = trackingSun;
 		trackingSun = newTrackingSun;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN, oldTrackingSun, trackingSun));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN, oldTrackingSun, trackingSun));
 	}
 
 	/**
@@ -271,7 +271,7 @@ public class PTUDishAntennaDataImpl extends SymphonyInitializationDataImpl imple
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED, oldInitialized, initialized));
 	}
 
 	/**
@@ -282,7 +282,7 @@ public class PTUDishAntennaDataImpl extends SymphonyInitializationDataImpl imple
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__FOV:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__FOV:
 				return basicSetFov(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -297,15 +297,15 @@ public class PTUDishAntennaDataImpl extends SymphonyInitializationDataImpl imple
 	public Object eGet(int featureID, boolean resolve, boolean coreType)
 	{
 		switch (featureID) {
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__FOV:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__FOV:
 				return getFov();
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE:
 				return getPanAngle();
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE:
 				return getTiltAngle();
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN:
 				return isTrackingSun();
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED:
 				return isInitialized();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -320,19 +320,19 @@ public class PTUDishAntennaDataImpl extends SymphonyInitializationDataImpl imple
 	public void eSet(int featureID, Object newValue)
 	{
 		switch (featureID) {
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__FOV:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__FOV:
 				setFov((ConicalFieldOfView)newValue);
 				return;
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE:
 				setPanAngle((Double)newValue);
 				return;
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE:
 				setTiltAngle((Double)newValue);
 				return;
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN:
 				setTrackingSun((Boolean)newValue);
 				return;
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
 		}
@@ -348,19 +348,19 @@ public class PTUDishAntennaDataImpl extends SymphonyInitializationDataImpl imple
 	public void eUnset(int featureID)
 	{
 		switch (featureID) {
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__FOV:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__FOV:
 				setFov((ConicalFieldOfView)null);
 				return;
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE:
 				setPanAngle(PAN_ANGLE_EDEFAULT);
 				return;
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE:
 				setTiltAngle(TILT_ANGLE_EDEFAULT);
 				return;
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN:
 				setTrackingSun(TRACKING_SUN_EDEFAULT);
 				return;
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
 		}
@@ -376,15 +376,15 @@ public class PTUDishAntennaDataImpl extends SymphonyInitializationDataImpl imple
 	public boolean eIsSet(int featureID)
 	{
 		switch (featureID) {
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__FOV:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__FOV:
 				return fov != null;
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__PAN_ANGLE:
 				return panAngle != PAN_ANGLE_EDEFAULT;
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__TILT_ANGLE:
 				return tiltAngle != TILT_ANGLE_EDEFAULT;
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__TRACKING_SUN:
 				return trackingSun != TRACKING_SUN_EDEFAULT;
-			case SymphonyExampleAntennaPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED:
+			case Symphony__ExamplesAntennaSymphonyPackage.PTU_DISH_ANTENNA_DATA__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

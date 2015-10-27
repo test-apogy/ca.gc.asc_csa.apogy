@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList;
-import org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -100,7 +100,7 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentUIPackage.Literals.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION;
+		return Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION;
 	}
 
 	/**
@@ -121,7 +121,7 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME, oldName, name));
 	}
 
 	/**
@@ -142,7 +142,7 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 	 * @generated
 	 */
 	public SpacecraftVisibilityPassViewConfigurationList getConfigurationsList() {
-		if (eContainerFeatureID() != SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST) return null;
 		return (SpacecraftVisibilityPassViewConfigurationList)eContainer();
 	}
 
@@ -161,7 +161,7 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 	 * @generated
 	 */
 	public SpacecraftVisibilityPassViewConfigurationList basicGetConfigurationsList() {
-		if (eContainerFeatureID() != SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST) return null;
+		if (eContainerFeatureID() != Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST) return null;
 		return (SpacecraftVisibilityPassViewConfigurationList)eInternalContainer();
 	}
 
@@ -171,7 +171,7 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 	 * @generated
 	 */
 	public NotificationChain basicSetConfigurationsList(SpacecraftVisibilityPassViewConfigurationList newConfigurationsList, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newConfigurationsList, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newConfigurationsList, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST, msgs);
 		return msgs;
 	}
 
@@ -181,19 +181,19 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 	 * @generated
 	 */
 	public void setConfigurationsList(SpacecraftVisibilityPassViewConfigurationList newConfigurationsList) {
-		if (newConfigurationsList != eInternalContainer() || (eContainerFeatureID() != SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST && newConfigurationsList != null)) {
+		if (newConfigurationsList != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST && newConfigurationsList != null)) {
 			if (EcoreUtil.isAncestor(this, newConfigurationsList))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newConfigurationsList != null)
-				msgs = ((InternalEObject)newConfigurationsList).eInverseAdd(this, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__CONFIGURATIONS, SpacecraftVisibilityPassViewConfigurationList.class, msgs);
+				msgs = ((InternalEObject)newConfigurationsList).eInverseAdd(this, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__CONFIGURATIONS, SpacecraftVisibilityPassViewConfigurationList.class, msgs);
 			msgs = basicSetConfigurationsList(newConfigurationsList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST, newConfigurationsList, newConfigurationsList));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST, newConfigurationsList, newConfigurationsList));
 	}
 
 	/**
@@ -214,7 +214,7 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 		SpacecraftsVisibilitySet oldVisibilitySet = visibilitySet;
 		visibilitySet = newVisibilitySet;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET, oldVisibilitySet, newVisibilitySet);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET, oldVisibilitySet, newVisibilitySet);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -229,14 +229,14 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 		if (newVisibilitySet != visibilitySet) {
 			NotificationChain msgs = null;
 			if (visibilitySet != null)
-				msgs = ((InternalEObject)visibilitySet).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET, null, msgs);
+				msgs = ((InternalEObject)visibilitySet).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET, null, msgs);
 			if (newVisibilitySet != null)
-				msgs = ((InternalEObject)newVisibilitySet).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET, null, msgs);
+				msgs = ((InternalEObject)newVisibilitySet).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET, null, msgs);
 			msgs = basicSetVisibilitySet(newVisibilitySet, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET, newVisibilitySet, newVisibilitySet));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET, newVisibilitySet, newVisibilitySet));
 	}
 
 	/**
@@ -247,7 +247,7 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetConfigurationsList((SpacecraftVisibilityPassViewConfigurationList)otherEnd, msgs);
@@ -263,9 +263,9 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST:
 				return basicSetConfigurationsList(null, msgs);
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET:
 				return basicSetVisibilitySet(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -279,8 +279,8 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST:
-				return eInternalContainer().eInverseRemove(this, SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__CONFIGURATIONS, SpacecraftVisibilityPassViewConfigurationList.class, msgs);
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION_LIST__CONFIGURATIONS, SpacecraftVisibilityPassViewConfigurationList.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -293,14 +293,14 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME:
 				return getName();
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION:
 				return getDescription();
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST:
 				if (resolve) return getConfigurationsList();
 				return basicGetConfigurationsList();
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET:
 				return getVisibilitySet();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -314,16 +314,16 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME:
 				setName((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST:
 				setConfigurationsList((SpacecraftVisibilityPassViewConfigurationList)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET:
 				setVisibilitySet((SpacecraftsVisibilitySet)newValue);
 				return;
 		}
@@ -338,16 +338,16 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST:
 				setConfigurationsList((SpacecraftVisibilityPassViewConfigurationList)null);
 				return;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET:
 				setVisibilitySet((SpacecraftsVisibilitySet)null);
 				return;
 		}
@@ -362,13 +362,13 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST:
 				return basicGetConfigurationsList() != null;
-			case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET:
+			case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__VISIBILITY_SET:
 				return visibilitySet != null;
 		}
 		return super.eIsSet(featureID);
@@ -383,7 +383,7 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -399,7 +399,7 @@ public class SpacecraftVisibilityPassViewConfigurationImpl extends MinimalEObjec
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return SymphonyEarthOrbitEnvironmentUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreEnvironmentOrbitEarthUIPackage.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__DESCRIPTION;
 				default: return -1;
 			}
 		}

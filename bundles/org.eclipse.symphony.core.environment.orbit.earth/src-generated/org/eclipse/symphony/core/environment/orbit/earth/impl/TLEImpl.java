@@ -16,7 +16,7 @@ import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.environment.orbit.earth.Activator;
 import org.eclipse.symphony.core.environment.orbit.earth.EarthOrbitFacade;
 import org.eclipse.symphony.core.environment.orbit.earth.EphemerisType;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 import org.eclipse.symphony.core.environment.orbit.earth.TLE;
 
 /**
@@ -380,7 +380,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.TLE;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.TLE;
 	}
 
 	/**
@@ -413,7 +413,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		String oldLine1 = line1;
 		line1 = newLine1;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__LINE1, oldLine1, line1));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__LINE1, oldLine1, line1));
 	}
 
 	/**
@@ -446,7 +446,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		String oldLine2 = line2;
 		line2 = newLine2;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__LINE2, oldLine2, line2));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__LINE2, oldLine2, line2));
 	}
 
 	/**
@@ -467,7 +467,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		EphemerisType oldEphemerisType = ephemerisType;
 		ephemerisType = newEphemerisType == null ? EPHEMERIS_TYPE_EDEFAULT : newEphemerisType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__EPHEMERIS_TYPE, oldEphemerisType, ephemerisType));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__EPHEMERIS_TYPE, oldEphemerisType, ephemerisType));
 	}
 
 	/**
@@ -488,7 +488,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		double oldInclination = inclination;
 		inclination = newInclination;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__INCLINATION, oldInclination, inclination));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__INCLINATION, oldInclination, inclination));
 	}
 
 	/**
@@ -509,7 +509,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		double oldMeanAnomaly = meanAnomaly;
 		meanAnomaly = newMeanAnomaly;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_ANOMALY, oldMeanAnomaly, meanAnomaly));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_ANOMALY, oldMeanAnomaly, meanAnomaly));
 	}
 
 	/**
@@ -530,7 +530,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		double oldMeanMotion = meanMotion;
 		meanMotion = newMeanMotion;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION, oldMeanMotion, meanMotion));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION, oldMeanMotion, meanMotion));
 	}
 
 	/**
@@ -551,7 +551,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		double oldRevolutionPerDay = revolutionPerDay;
 		revolutionPerDay = newRevolutionPerDay;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__REVOLUTION_PER_DAY, oldRevolutionPerDay, revolutionPerDay));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__REVOLUTION_PER_DAY, oldRevolutionPerDay, revolutionPerDay));
 	}
 
 	/**
@@ -572,7 +572,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		double oldMeanMotionFirstDerivative = meanMotionFirstDerivative;
 		meanMotionFirstDerivative = newMeanMotionFirstDerivative;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION_FIRST_DERIVATIVE, oldMeanMotionFirstDerivative, meanMotionFirstDerivative));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION_FIRST_DERIVATIVE, oldMeanMotionFirstDerivative, meanMotionFirstDerivative));
 	}
 
 	/**
@@ -593,7 +593,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		double oldMeanMotionSecondDerivative = meanMotionSecondDerivative;
 		meanMotionSecondDerivative = newMeanMotionSecondDerivative;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION_SECOND_DERIVATIVE, oldMeanMotionSecondDerivative, meanMotionSecondDerivative));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION_SECOND_DERIVATIVE, oldMeanMotionSecondDerivative, meanMotionSecondDerivative));
 	}
 
 	/**
@@ -614,7 +614,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		double oldArgumentOfPerigee = argumentOfPerigee;
 		argumentOfPerigee = newArgumentOfPerigee;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__ARGUMENT_OF_PERIGEE, oldArgumentOfPerigee, argumentOfPerigee));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ARGUMENT_OF_PERIGEE, oldArgumentOfPerigee, argumentOfPerigee));
 	}
 
 	/**
@@ -635,7 +635,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		double oldRightAscentionOfAscendingNode = rightAscentionOfAscendingNode;
 		rightAscentionOfAscendingNode = newRightAscentionOfAscendingNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE, oldRightAscentionOfAscendingNode, rightAscentionOfAscendingNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE, oldRightAscentionOfAscendingNode, rightAscentionOfAscendingNode));
 	}
 
 	/**
@@ -656,7 +656,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		int oldRevolutionNumberAtEpoch = revolutionNumberAtEpoch;
 		revolutionNumberAtEpoch = newRevolutionNumberAtEpoch;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__REVOLUTION_NUMBER_AT_EPOCH, oldRevolutionNumberAtEpoch, revolutionNumberAtEpoch));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__REVOLUTION_NUMBER_AT_EPOCH, oldRevolutionNumberAtEpoch, revolutionNumberAtEpoch));
 	}
 
 	/**
@@ -677,7 +677,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		int oldSatelliteNumber = satelliteNumber;
 		satelliteNumber = newSatelliteNumber;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__SATELLITE_NUMBER, oldSatelliteNumber, satelliteNumber));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__SATELLITE_NUMBER, oldSatelliteNumber, satelliteNumber));
 	}
 
 	/**
@@ -698,7 +698,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		double oldBStar = bStar;
 		bStar = newBStar;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__BSTAR, oldBStar, bStar));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__BSTAR, oldBStar, bStar));
 	}
 
 	/**
@@ -719,7 +719,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		Date oldEpoch = epoch;
 		epoch = newEpoch;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__EPOCH, oldEpoch, epoch));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__EPOCH, oldEpoch, epoch));
 	}
 
 	/**
@@ -740,7 +740,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		double oldEccentricity = eccentricity;
 		eccentricity = newEccentricity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__ECCENTRICITY, oldEccentricity, eccentricity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ECCENTRICITY, oldEccentricity, eccentricity));
 	}
 
 	/**
@@ -761,7 +761,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 		int oldElementNumber = elementNumber;
 		elementNumber = newElementNumber;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEarthOrbitEnvironmentPackage.TLE__ELEMENT_NUMBER, oldElementNumber, elementNumber));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ELEMENT_NUMBER, oldElementNumber, elementNumber));
 	}
 
 	/**
@@ -783,39 +783,39 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__LINE1:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__LINE1:
 				return getLine1();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__LINE2:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__LINE2:
 				return getLine2();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__BSTAR:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__BSTAR:
 				return getBStar();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__EPOCH:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__EPOCH:
 				return getEpoch();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__ECCENTRICITY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ECCENTRICITY:
 				return getEccentricity();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__ELEMENT_NUMBER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ELEMENT_NUMBER:
 				return getElementNumber();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__EPHEMERIS_TYPE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__EPHEMERIS_TYPE:
 				return getEphemerisType();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__INCLINATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__INCLINATION:
 				return getInclination();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_ANOMALY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_ANOMALY:
 				return getMeanAnomaly();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION:
 				return getMeanMotion();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__REVOLUTION_PER_DAY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__REVOLUTION_PER_DAY:
 				return getRevolutionPerDay();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION_FIRST_DERIVATIVE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION_FIRST_DERIVATIVE:
 				return getMeanMotionFirstDerivative();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION_SECOND_DERIVATIVE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION_SECOND_DERIVATIVE:
 				return getMeanMotionSecondDerivative();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__ARGUMENT_OF_PERIGEE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ARGUMENT_OF_PERIGEE:
 				return getArgumentOfPerigee();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE:
 				return getRightAscentionOfAscendingNode();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__REVOLUTION_NUMBER_AT_EPOCH:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__REVOLUTION_NUMBER_AT_EPOCH:
 				return getRevolutionNumberAtEpoch();
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__SATELLITE_NUMBER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__SATELLITE_NUMBER:
 				return getSatelliteNumber();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -829,55 +829,55 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__LINE1:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__LINE1:
 				setLine1((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__LINE2:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__LINE2:
 				setLine2((String)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__BSTAR:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__BSTAR:
 				setBStar((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__EPOCH:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__EPOCH:
 				setEpoch((Date)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__ECCENTRICITY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ECCENTRICITY:
 				setEccentricity((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__ELEMENT_NUMBER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ELEMENT_NUMBER:
 				setElementNumber((Integer)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__EPHEMERIS_TYPE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__EPHEMERIS_TYPE:
 				setEphemerisType((EphemerisType)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__INCLINATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__INCLINATION:
 				setInclination((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_ANOMALY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_ANOMALY:
 				setMeanAnomaly((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION:
 				setMeanMotion((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__REVOLUTION_PER_DAY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__REVOLUTION_PER_DAY:
 				setRevolutionPerDay((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION_FIRST_DERIVATIVE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION_FIRST_DERIVATIVE:
 				setMeanMotionFirstDerivative((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION_SECOND_DERIVATIVE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION_SECOND_DERIVATIVE:
 				setMeanMotionSecondDerivative((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__ARGUMENT_OF_PERIGEE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ARGUMENT_OF_PERIGEE:
 				setArgumentOfPerigee((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE:
 				setRightAscentionOfAscendingNode((Double)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__REVOLUTION_NUMBER_AT_EPOCH:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__REVOLUTION_NUMBER_AT_EPOCH:
 				setRevolutionNumberAtEpoch((Integer)newValue);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__SATELLITE_NUMBER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__SATELLITE_NUMBER:
 				setSatelliteNumber((Integer)newValue);
 				return;
 		}
@@ -892,55 +892,55 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__LINE1:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__LINE1:
 				setLine1(LINE1_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__LINE2:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__LINE2:
 				setLine2(LINE2_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__BSTAR:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__BSTAR:
 				setBStar(BSTAR_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__EPOCH:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__EPOCH:
 				setEpoch(EPOCH_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__ECCENTRICITY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ECCENTRICITY:
 				setEccentricity(ECCENTRICITY_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__ELEMENT_NUMBER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ELEMENT_NUMBER:
 				setElementNumber(ELEMENT_NUMBER_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__EPHEMERIS_TYPE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__EPHEMERIS_TYPE:
 				setEphemerisType(EPHEMERIS_TYPE_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__INCLINATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__INCLINATION:
 				setInclination(INCLINATION_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_ANOMALY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_ANOMALY:
 				setMeanAnomaly(MEAN_ANOMALY_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION:
 				setMeanMotion(MEAN_MOTION_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__REVOLUTION_PER_DAY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__REVOLUTION_PER_DAY:
 				setRevolutionPerDay(REVOLUTION_PER_DAY_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION_FIRST_DERIVATIVE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION_FIRST_DERIVATIVE:
 				setMeanMotionFirstDerivative(MEAN_MOTION_FIRST_DERIVATIVE_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION_SECOND_DERIVATIVE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION_SECOND_DERIVATIVE:
 				setMeanMotionSecondDerivative(MEAN_MOTION_SECOND_DERIVATIVE_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__ARGUMENT_OF_PERIGEE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ARGUMENT_OF_PERIGEE:
 				setArgumentOfPerigee(ARGUMENT_OF_PERIGEE_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE:
 				setRightAscentionOfAscendingNode(RIGHT_ASCENTION_OF_ASCENDING_NODE_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__REVOLUTION_NUMBER_AT_EPOCH:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__REVOLUTION_NUMBER_AT_EPOCH:
 				setRevolutionNumberAtEpoch(REVOLUTION_NUMBER_AT_EPOCH_EDEFAULT);
 				return;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__SATELLITE_NUMBER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__SATELLITE_NUMBER:
 				setSatelliteNumber(SATELLITE_NUMBER_EDEFAULT);
 				return;
 		}
@@ -955,39 +955,39 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__LINE1:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__LINE1:
 				return LINE1_EDEFAULT == null ? line1 != null : !LINE1_EDEFAULT.equals(line1);
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__LINE2:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__LINE2:
 				return LINE2_EDEFAULT == null ? line2 != null : !LINE2_EDEFAULT.equals(line2);
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__BSTAR:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__BSTAR:
 				return bStar != BSTAR_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__EPOCH:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__EPOCH:
 				return EPOCH_EDEFAULT == null ? epoch != null : !EPOCH_EDEFAULT.equals(epoch);
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__ECCENTRICITY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ECCENTRICITY:
 				return eccentricity != ECCENTRICITY_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__ELEMENT_NUMBER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ELEMENT_NUMBER:
 				return elementNumber != ELEMENT_NUMBER_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__EPHEMERIS_TYPE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__EPHEMERIS_TYPE:
 				return ephemerisType != EPHEMERIS_TYPE_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__INCLINATION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__INCLINATION:
 				return inclination != INCLINATION_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_ANOMALY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_ANOMALY:
 				return meanAnomaly != MEAN_ANOMALY_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION:
 				return meanMotion != MEAN_MOTION_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__REVOLUTION_PER_DAY:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__REVOLUTION_PER_DAY:
 				return revolutionPerDay != REVOLUTION_PER_DAY_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION_FIRST_DERIVATIVE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION_FIRST_DERIVATIVE:
 				return meanMotionFirstDerivative != MEAN_MOTION_FIRST_DERIVATIVE_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__MEAN_MOTION_SECOND_DERIVATIVE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__MEAN_MOTION_SECOND_DERIVATIVE:
 				return meanMotionSecondDerivative != MEAN_MOTION_SECOND_DERIVATIVE_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__ARGUMENT_OF_PERIGEE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__ARGUMENT_OF_PERIGEE:
 				return argumentOfPerigee != ARGUMENT_OF_PERIGEE_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__RIGHT_ASCENTION_OF_ASCENDING_NODE:
 				return rightAscentionOfAscendingNode != RIGHT_ASCENTION_OF_ASCENDING_NODE_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__REVOLUTION_NUMBER_AT_EPOCH:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__REVOLUTION_NUMBER_AT_EPOCH:
 				return revolutionNumberAtEpoch != REVOLUTION_NUMBER_AT_EPOCH_EDEFAULT;
-			case SymphonyEarthOrbitEnvironmentPackage.TLE__SATELLITE_NUMBER:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE__SATELLITE_NUMBER:
 				return satelliteNumber != SATELLITE_NUMBER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -1001,7 +1001,7 @@ public class TLEImpl extends MinimalEObjectImpl.Container implements TLE {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case SymphonyEarthOrbitEnvironmentPackage.TLE___GET_ORE_KIT_TLE:
+			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE___GET_ORE_KIT_TLE:
 				try {
 					return getOreKitTLE();
 				}

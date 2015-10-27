@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyTopology;
 
 /**
@@ -50,7 +50,7 @@ public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyCorePackage.Literals.SYMPHONY_TOPOLOGY;
+		return Symphony__CorePackage.Literals.SYMPHONY_TOPOLOGY;
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
 			rootNode = (GroupNode)eResolveProxy(oldRootNode);
 			if (rootNode != oldRootNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyCorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE, oldRootNode, rootNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE, oldRootNode, rootNode));
 			}
 		}
 		return rootNode;
@@ -85,7 +85,7 @@ public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
 		GroupNode oldRootNode = rootNode;
 		rootNode = newRootNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyCorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE, oldRootNode, rootNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE, oldRootNode, rootNode));
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE:
+			case Symphony__CorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE:
 				if (resolve) return getRootNode();
 				return basicGetRootNode();
 		}
@@ -109,7 +109,7 @@ public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE:
+			case Symphony__CorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE:
 				setRootNode((GroupNode)newValue);
 				return;
 		}
@@ -123,7 +123,7 @@ public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE:
+			case Symphony__CorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE:
 				setRootNode((GroupNode)null);
 				return;
 		}
@@ -137,7 +137,7 @@ public class SymphonyTopologyImpl extends MinimalEObjectImpl.Container
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyCorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE:
+			case Symphony__CorePackage.SYMPHONY_TOPOLOGY__ROOT_NODE:
 				return rootNode != null;
 		}
 		return super.eIsSet(featureID);

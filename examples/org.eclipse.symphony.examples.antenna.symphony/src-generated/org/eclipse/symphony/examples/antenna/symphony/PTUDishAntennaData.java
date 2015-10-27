@@ -29,7 +29,7 @@ import org.eclipse.symphony.core.SymphonyInitializationData;
  *   <li>{@link org.eclipse.symphony.examples.antenna.symphony.PTUDishAntennaData#isInitialized <em>Initialized</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage#getPTUDishAntennaData()
+ * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#getPTUDishAntennaData()
  * @model
  * @generated
  */
@@ -44,7 +44,7 @@ public interface PTUDishAntennaData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Fov</em>' containment reference.
 	 * @see #setFov(ConicalFieldOfView)
-	 * @see org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage#getPTUDishAntennaData_Fov()
+	 * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#getPTUDishAntennaData_Fov()
 	 * @model containment="true" required="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='Field Of View'"
 	 * @generated
@@ -71,7 +71,7 @@ public interface PTUDishAntennaData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Pan Angle</em>' attribute.
 	 * @see #setPanAngle(double)
-	 * @see org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage#getPTUDishAntennaData_PanAngle()
+	 * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#getPTUDishAntennaData_PanAngle()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad' notify='true' property='Editable' propertyCategory='Pan-Tilt Unit'"
 	 * @generated
@@ -98,7 +98,7 @@ public interface PTUDishAntennaData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tilt Angle</em>' attribute.
 	 * @see #setTiltAngle(double)
-	 * @see org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage#getPTUDishAntennaData_TiltAngle()
+	 * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#getPTUDishAntennaData_TiltAngle()
 	 * @model unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad' notify='true' property='Editable' propertyCategory='Pan-Tilt Unit'"
 	 * @generated
@@ -126,7 +126,7 @@ public interface PTUDishAntennaData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Tracking Sun</em>' attribute.
 	 * @see #setTrackingSun(boolean)
-	 * @see org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage#getPTUDishAntennaData_TrackingSun()
+	 * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#getPTUDishAntennaData_TrackingSun()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated
@@ -153,7 +153,7 @@ public interface PTUDishAntennaData extends SymphonyInitializationData
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initialized</em>' attribute.
 	 * @see #setInitialized(boolean)
-	 * @see org.eclipse.symphony.examples.antenna.symphony.SymphonyExampleAntennaPackage#getPTUDishAntennaData_Initialized()
+	 * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#getPTUDishAntennaData_Initialized()
 	 * @model default="false" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='Status'"
 	 * @generated

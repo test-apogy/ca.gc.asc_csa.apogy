@@ -8,10 +8,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated emf_ecore_examples_robotic_arm -->
+      <!-- @generated symphony_examples_robotic_arm -->
       <factory
             uri="org.eclipse.symphony.examples.robotic_arm"
-            class="org.eclipse.symphony.examples.robotic_arm.provider.EMFEcoreExampleRoboticArmItemProviderAdapterFactory"
+            class="org.eclipse.symphony.examples.robotic_arm.provider.Symphony__ExamplesRoboticArmItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

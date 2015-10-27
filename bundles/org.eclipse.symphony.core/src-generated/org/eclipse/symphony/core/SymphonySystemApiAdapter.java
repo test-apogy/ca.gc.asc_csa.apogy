@@ -20,7 +20,7 @@ import org.eclipse.symphony.core.invocator.TypeApiAdapter;
  *   <li>{@link org.eclipse.symphony.core.SymphonySystemApiAdapter#getSymphonySystem <em>Symphony System</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonySystemApiAdapter()
+ * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonySystemApiAdapter()
  * @model
  * @generated
  */
@@ -38,7 +38,7 @@ public interface SymphonySystemApiAdapter extends TypeApiAdapter, PoseProvider
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pose Corrector</em>' containment reference.
 	 * @see #setPoseCorrector(PoseCorrector)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonySystemApiAdapter_PoseCorrector()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonySystemApiAdapter_PoseCorrector()
 	 * @see org.eclipse.symphony.core.PoseCorrector#getSymphonySystemApiAdapter
 	 * @model opposite="symphonySystemApiAdapter" containment="true"
 	 * @generated
@@ -65,7 +65,7 @@ public interface SymphonySystemApiAdapter extends TypeApiAdapter, PoseProvider
    * <!-- end-user-doc -->
 	 * @return the value of the '<em>Symphony System</em>' reference.
 	 * @see #setSymphonySystem(SymphonySystem)
-	 * @see org.eclipse.symphony.core.SymphonyCorePackage#getSymphonySystemApiAdapter_SymphonySystem()
+	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonySystemApiAdapter_SymphonySystem()
 	 * @model transient="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' createChild='false'"
 	 * @generated

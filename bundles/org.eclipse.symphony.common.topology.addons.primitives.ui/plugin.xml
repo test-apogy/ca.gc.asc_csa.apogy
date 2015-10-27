@@ -13,7 +13,7 @@
       <!-- @generated topology_primitives_ui -->
       <package
             uri="org.eclipse.symphony.common.topology.addons.primitives.ui"
-            class="org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesPackage"
+            class="org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIPackage"
             genModel="model/symphony_common_topology_addons_primitives_ui.xcore"/>
    </extension>
    <extension

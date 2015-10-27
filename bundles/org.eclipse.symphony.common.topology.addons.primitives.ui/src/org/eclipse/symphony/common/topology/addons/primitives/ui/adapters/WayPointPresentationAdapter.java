@@ -2,7 +2,7 @@ package org.eclipse.symphony.common.topology.addons.primitives.ui.adapters;
 
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.addons.primitives.WayPoint;
-import org.eclipse.symphony.common.topology.addons.primitives.ui.TopologyUIPrimitivesFactory;
+import org.eclipse.symphony.common.topology.addons.primitives.ui.Symphony__CommonTopologyAddonsPrimitivesUIFactory;
 import org.eclipse.symphony.common.topology.addons.primitives.ui.WayPointPresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.topology.ui.NodePresentationAdapter;
@@ -25,7 +25,7 @@ public class WayPointPresentationAdapter implements NodePresentationAdapter {
 
 		WayPoint WayPoint = (WayPoint) obj;
 
-		WayPointPresentation presentationNode = TopologyUIPrimitivesFactory.eINSTANCE
+		WayPointPresentation presentationNode = Symphony__CommonTopologyAddonsPrimitivesUIFactory.eINSTANCE
 				.createWayPointPresentation();
 		presentationNode.setNode(WayPoint);
 

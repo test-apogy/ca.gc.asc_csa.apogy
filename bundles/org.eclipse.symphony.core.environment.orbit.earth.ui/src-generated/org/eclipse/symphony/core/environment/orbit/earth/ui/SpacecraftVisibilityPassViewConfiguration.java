@@ -24,7 +24,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySe
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfiguration#getVisibilitySet <em>Visibility Set</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getSpacecraftVisibilityPassViewConfiguration()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftVisibilityPassViewConfiguration()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface SpacecraftVisibilityPassViewConfiguration extends Named, Descri
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Configurations List</em>' container reference.
 	 * @see #setConfigurationsList(SpacecraftVisibilityPassViewConfigurationList)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getSpacecraftVisibilityPassViewConfiguration_ConfigurationsList()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftVisibilityPassViewConfiguration_ConfigurationsList()
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList#getConfigurations
 	 * @model opposite="configurations" transient="false"
 	 * @generated
@@ -67,7 +67,7 @@ public interface SpacecraftVisibilityPassViewConfiguration extends Named, Descri
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Visibility Set</em>' containment reference.
 	 * @see #setVisibilitySet(SpacecraftsVisibilitySet)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getSpacecraftVisibilityPassViewConfiguration_VisibilitySet()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftVisibilityPassViewConfiguration_VisibilitySet()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' chilrend='true' property='None'"
 	 * @generated

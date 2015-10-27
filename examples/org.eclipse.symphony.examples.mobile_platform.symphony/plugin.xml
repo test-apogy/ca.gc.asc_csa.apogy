@@ -11,7 +11,7 @@
       <!-- @generated symphony_examples_mobile_platform -->
       <package
             uri="org.eclipse.symphony.examples.mobile_platform.symphony"
-            class="org.eclipse.symphony.examples.mobile_platform.symphony.SymphonyExampleMobilePlatformPackage"
+            class="org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage"
             genModel="model/symphony_examples_mobile_platform_symphony.xcore"/>
    </extension>
    <extension

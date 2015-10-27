@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.io.jinput.EComponent;
 import org.eclipse.symphony.core.programs.controllers.CenteredLinearInputConditioning;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class CenteredLinearInputConditioningImpl extends LinearInputConditioning
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EMFEcoreControllersPackage.Literals.CENTERED_LINEAR_INPUT_CONDITIONING;
+		return Symphony__CoreProgramsControllersPackage.Literals.CENTERED_LINEAR_INPUT_CONDITIONING;
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class CenteredLinearInputConditioningImpl extends LinearInputConditioning
 		float oldDeadBand = deadBand;
 		deadBand = newDeadBand;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreControllersPackage.CENTERED_LINEAR_INPUT_CONDITIONING__DEAD_BAND, oldDeadBand, deadBand));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CENTERED_LINEAR_INPUT_CONDITIONING__DEAD_BAND, oldDeadBand, deadBand));
 	}
 
 	/**
@@ -92,7 +92,7 @@ public class CenteredLinearInputConditioningImpl extends LinearInputConditioning
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CENTERED_LINEAR_INPUT_CONDITIONING__DEAD_BAND:
+			case Symphony__CoreProgramsControllersPackage.CENTERED_LINEAR_INPUT_CONDITIONING__DEAD_BAND:
 				return getDeadBand();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -106,7 +106,7 @@ public class CenteredLinearInputConditioningImpl extends LinearInputConditioning
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CENTERED_LINEAR_INPUT_CONDITIONING__DEAD_BAND:
+			case Symphony__CoreProgramsControllersPackage.CENTERED_LINEAR_INPUT_CONDITIONING__DEAD_BAND:
 				setDeadBand((Float)newValue);
 				return;
 		}
@@ -121,7 +121,7 @@ public class CenteredLinearInputConditioningImpl extends LinearInputConditioning
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CENTERED_LINEAR_INPUT_CONDITIONING__DEAD_BAND:
+			case Symphony__CoreProgramsControllersPackage.CENTERED_LINEAR_INPUT_CONDITIONING__DEAD_BAND:
 				setDeadBand(DEAD_BAND_EDEFAULT);
 				return;
 		}
@@ -136,7 +136,7 @@ public class CenteredLinearInputConditioningImpl extends LinearInputConditioning
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CENTERED_LINEAR_INPUT_CONDITIONING__DEAD_BAND:
+			case Symphony__CoreProgramsControllersPackage.CENTERED_LINEAR_INPUT_CONDITIONING__DEAD_BAND:
 				return deadBand != DEAD_BAND_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

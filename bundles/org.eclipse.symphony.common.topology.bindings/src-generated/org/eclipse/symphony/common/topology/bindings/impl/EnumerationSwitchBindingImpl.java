@@ -24,7 +24,7 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.bindings.AbstractTopologyBinding;
 import org.eclipse.symphony.common.topology.bindings.EnumerationCase;
 import org.eclipse.symphony.common.topology.bindings.EnumerationSwitchBinding;
-import org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage;
+import org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -94,7 +94,7 @@ public class EnumerationSwitchBindingImpl extends AbstractTopologyBindingImpl im
   @Override
   protected EClass eStaticClass()
   {
-		return TopologyBindingsPackage.Literals.ENUMERATION_SWITCH_BINDING;
+		return Symphony__CommonTopologyBindingsPackage.Literals.ENUMERATION_SWITCH_BINDING;
 	}
 
   /**
@@ -109,7 +109,7 @@ public class EnumerationSwitchBindingImpl extends AbstractTopologyBindingImpl im
 			parentNode = (GroupNode)eResolveProxy(oldParentNode);
 			if (parentNode != oldParentNode) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__PARENT_NODE, oldParentNode, parentNode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__PARENT_NODE, oldParentNode, parentNode));
 			}
 		}
 		return parentNode;
@@ -135,7 +135,7 @@ public class EnumerationSwitchBindingImpl extends AbstractTopologyBindingImpl im
 		GroupNode oldParentNode = parentNode;
 		parentNode = newParentNode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__PARENT_NODE, oldParentNode, parentNode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__PARENT_NODE, oldParentNode, parentNode));
 	}
 
   /**
@@ -146,7 +146,7 @@ public class EnumerationSwitchBindingImpl extends AbstractTopologyBindingImpl im
   public EList<EnumerationCase> getCases()
   {
 		if (cases == null) {
-			cases = new EObjectContainmentEList<EnumerationCase>(EnumerationCase.class, this, TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__CASES);
+			cases = new EObjectContainmentEList<EnumerationCase>(EnumerationCase.class, this, Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__CASES);
 		}
 		return cases;
 	}
@@ -163,7 +163,7 @@ public class EnumerationSwitchBindingImpl extends AbstractTopologyBindingImpl im
 			activeCase = (EnumerationCase)eResolveProxy(oldActiveCase);
 			if (activeCase != oldActiveCase) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__ACTIVE_CASE, oldActiveCase, activeCase));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__ACTIVE_CASE, oldActiveCase, activeCase));
 			}
 		}
 		return activeCase;
@@ -189,7 +189,7 @@ public class EnumerationSwitchBindingImpl extends AbstractTopologyBindingImpl im
 		EnumerationCase oldActiveCase = activeCase;
 		activeCase = newActiveCase;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__ACTIVE_CASE, oldActiveCase, activeCase));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__ACTIVE_CASE, oldActiveCase, activeCase));
 	}
 
   /**
@@ -201,7 +201,7 @@ public class EnumerationSwitchBindingImpl extends AbstractTopologyBindingImpl im
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__CASES:
+			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__CASES:
 				return ((InternalEList<?>)getCases()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -216,12 +216,12 @@ public class EnumerationSwitchBindingImpl extends AbstractTopologyBindingImpl im
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__PARENT_NODE:
+			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__PARENT_NODE:
 				if (resolve) return getParentNode();
 				return basicGetParentNode();
-			case TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__CASES:
+			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__CASES:
 				return getCases();
-			case TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__ACTIVE_CASE:
+			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__ACTIVE_CASE:
 				if (resolve) return getActiveCase();
 				return basicGetActiveCase();
 		}
@@ -238,14 +238,14 @@ public class EnumerationSwitchBindingImpl extends AbstractTopologyBindingImpl im
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__PARENT_NODE:
+			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__PARENT_NODE:
 				setParentNode((GroupNode)newValue);
 				return;
-			case TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__CASES:
+			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__CASES:
 				getCases().clear();
 				getCases().addAll((Collection<? extends EnumerationCase>)newValue);
 				return;
-			case TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__ACTIVE_CASE:
+			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__ACTIVE_CASE:
 				setActiveCase((EnumerationCase)newValue);
 				return;
 		}
@@ -261,13 +261,13 @@ public class EnumerationSwitchBindingImpl extends AbstractTopologyBindingImpl im
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__PARENT_NODE:
+			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__PARENT_NODE:
 				setParentNode((GroupNode)null);
 				return;
-			case TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__CASES:
+			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__CASES:
 				getCases().clear();
 				return;
-			case TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__ACTIVE_CASE:
+			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__ACTIVE_CASE:
 				setActiveCase((EnumerationCase)null);
 				return;
 		}
@@ -283,11 +283,11 @@ public class EnumerationSwitchBindingImpl extends AbstractTopologyBindingImpl im
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__PARENT_NODE:
+			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__PARENT_NODE:
 				return parentNode != null;
-			case TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__CASES:
+			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__CASES:
 				return cases != null && !cases.isEmpty();
-			case TopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__ACTIVE_CASE:
+			case Symphony__CommonTopologyBindingsPackage.ENUMERATION_SWITCH_BINDING__ACTIVE_CASE:
 				return activeCase != null;
 		}
 		return super.eIsSet(featureID);

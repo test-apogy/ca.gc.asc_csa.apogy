@@ -28,10 +28,4 @@
             class="org.eclipse.symphony.common.geometry.data25d.provider.Symphony__CommonGeometryData25DItemProviderAdapterFactory$Symphony__CommonGeometryDataChildCreationExtender"/>
    </extension>
 
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <extender
-            uri="org.eclipse.symphony.common.geometry.data"
-            class="org.eclipse.symphony.common.geometry.data25d.provider.Symphony__CommonGeometryData25DItemProviderAdapterFactory$DataChildCreationExtender"/>
-   </extension>
-
 </plugin>

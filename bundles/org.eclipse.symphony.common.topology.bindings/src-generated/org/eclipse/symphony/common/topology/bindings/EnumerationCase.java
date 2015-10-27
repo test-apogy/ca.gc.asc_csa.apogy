@@ -14,8 +14,8 @@ import org.eclipse.symphony.common.topology.Node;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
- * Class that defines Enumeration Case used by the EnumerationSwitchBinding. Its associates a sub-topology to an enumeration literal value(s).
+ * Class that defines Enumeration Case used by the EnumerationSwitchBinding.
+ * Its associates a sub-topology to an enumeration literal value(s).
  * <!-- end-model-doc -->
  *
  * <p>
@@ -26,7 +26,7 @@ import org.eclipse.symphony.common.topology.Node;
  *   <li>{@link org.eclipse.symphony.common.topology.bindings.EnumerationCase#getTopologyRoot <em>Topology Root</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getEnumerationCase()
+ * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getEnumerationCase()
  * @model
  * @generated
  */
@@ -41,7 +41,7 @@ public interface EnumerationCase extends EObject
 	 *  The enumeration value(s) for this case.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Enumeration Literals</em>' reference list.
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getEnumerationCase_EnumerationLiterals()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getEnumerationCase_EnumerationLiterals()
 	 * @model required="true"
 	 * @generated
 	 */
@@ -52,11 +52,12 @@ public interface EnumerationCase extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The root of the topology to add to the parent Node when this case is activated.
+	 * The root of the topology to add to the parent Node
+	 * when this case is activated.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Topology Root</em>' containment reference.
 	 * @see #setTopologyRoot(Node)
-	 * @see org.eclipse.symphony.common.topology.bindings.TopologyBindingsPackage#getEnumerationCase_TopologyRoot()
+	 * @see org.eclipse.symphony.common.topology.bindings.Symphony__CommonTopologyBindingsPackage#getEnumerationCase_TopologyRoot()
 	 * @model containment="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true'"
 	 * @generated

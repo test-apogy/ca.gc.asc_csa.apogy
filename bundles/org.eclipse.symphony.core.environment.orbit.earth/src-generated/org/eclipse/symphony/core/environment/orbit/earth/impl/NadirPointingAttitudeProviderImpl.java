@@ -5,7 +5,7 @@ package org.eclipse.symphony.core.environment.orbit.earth.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.symphony.core.environment.orbit.earth.NadirPointingAttitudeProvider;
-import org.eclipse.symphony.core.environment.orbit.earth.SymphonyEarthOrbitEnvironmentPackage;
+import org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class NadirPointingAttitudeProviderImpl extends OreKitBackedAttitudeProvi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyEarthOrbitEnvironmentPackage.Literals.NADIR_POINTING_ATTITUDE_PROVIDER;
+		return Symphony__CoreEnvironmentOrbitEarthPackage.Literals.NADIR_POINTING_ATTITUDE_PROVIDER;
 	}
 
 } //NadirPointingAttitudeProviderImpl

@@ -15,8 +15,8 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.SymphonyCoreFactory;
-import org.eclipse.symphony.core.SymphonyCorePackage;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.invocator.provider.EnvironmentItemProvider;
 
@@ -91,7 +91,7 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_SymphonyEnvironment_activeWorksite_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyEnvironment_activeWorksite_feature", "_UI_SymphonyEnvironment_type"),
-				 SymphonyCorePackage.Literals.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE,
+				 Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE,
 				 true,
 				 false,
 				 true,
@@ -113,7 +113,7 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 				 getResourceLocator(),
 				 getString("_UI_SymphonyEnvironment_activeTimeSource_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SymphonyEnvironment_activeTimeSource_feature", "_UI_SymphonyEnvironment_type"),
-				 SymphonyCorePackage.Literals.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE,
+				 Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE,
 				 true,
 				 false,
 				 true,
@@ -134,9 +134,9 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 			Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(SymphonyCorePackage.Literals.SYMPHONY_ENVIRONMENT__WORKSITES_LIST);
-			childrenFeatures.add(SymphonyCorePackage.Literals.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY);
-			childrenFeatures.add(SymphonyCorePackage.Literals.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST);
+			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__WORKSITES_LIST);
+			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY);
+			childrenFeatures.add(Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -190,12 +190,12 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SymphonyEnvironment.class)) {
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY:
-			case SymphonyCorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__WORKSITES_LIST:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__SYMPHONY_TOPOLOGY:
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -216,12 +216,12 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.SYMPHONY_ENVIRONMENT__WORKSITES_LIST,
-				 SymphonyCoreFactory.eINSTANCE.createWorksitesList()));
+				(Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__WORKSITES_LIST,
+				 Symphony__CoreFactory.eINSTANCE.createWorksitesList()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(SymphonyCorePackage.Literals.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST,
+				(Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST,
 				 Symphony__CommonEMFFactory.eINSTANCE.createTimeSourcesList()));
 	}
 

@@ -18,7 +18,7 @@ package org.eclipse.symphony.core.environment;
  *   <li>{@link org.eclipse.symphony.core.environment.RectangularVolumeRegion#getZDimension <em>ZDimension</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularVolumeRegion()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularVolumeRegion()
  * @model
  * @generated
  */
@@ -29,11 +29,11 @@ public interface RectangularVolumeRegion extends RectangularRegion {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Minimum Z coordinate on the Z axis.
+	 * Minimum Z coordinate on the Z axis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ZMin</em>' attribute.
 	 * @see #setZMin(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularVolumeRegion_ZMin()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularVolumeRegion_ZMin()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' csa_units='m'"
 	 * @generated
@@ -56,11 +56,11 @@ public interface RectangularVolumeRegion extends RectangularRegion {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Maximum Z coordinate on the Z axis.
+	 * Maximum Z coordinate on the Z axis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ZMax</em>' attribute.
 	 * @see #setZMax(double)
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularVolumeRegion_ZMax()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularVolumeRegion_ZMax()
 	 * @model default="0.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' csa_units='m'"
 	 * @generated
@@ -82,10 +82,10 @@ public interface RectangularVolumeRegion extends RectangularRegion {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Dimension along the Z axis.
+	 * Dimension along the Z axis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ZDimension</em>' attribute.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getRectangularVolumeRegion_ZDimension()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularVolumeRegion_ZDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES' csa_units='m'"
 	 * @generated

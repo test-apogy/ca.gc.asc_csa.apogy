@@ -12,7 +12,7 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.impl.GroupNodeImpl;
 import org.eclipse.symphony.core.environment.Sky;
 import org.eclipse.symphony.core.environment.SkyNode;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,7 +57,7 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.SKY_NODE;
+		return Symphony__CoreEnvironmentPackage.Literals.SKY_NODE;
 	}
 
   /**
@@ -72,7 +72,7 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
 			sky = (Sky)eResolveProxy(oldSky);
 			if (sky != oldSky) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentPackage.SKY_NODE__SKY, oldSky, sky));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.SKY_NODE__SKY, oldSky, sky));
 			}
 		}
 		return sky;
@@ -98,7 +98,7 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
 		Sky oldSky = sky;
 		sky = newSky;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.SKY_NODE__SKY, oldSky, sky));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.SKY_NODE__SKY, oldSky, sky));
 	}
 
   /**
@@ -110,7 +110,7 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SKY_NODE__SKY:
+			case Symphony__CoreEnvironmentPackage.SKY_NODE__SKY:
 				if (resolve) return getSky();
 				return basicGetSky();
 		}
@@ -126,7 +126,7 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SKY_NODE__SKY:
+			case Symphony__CoreEnvironmentPackage.SKY_NODE__SKY:
 				setSky((Sky)newValue);
 				return;
 		}
@@ -142,7 +142,7 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SKY_NODE__SKY:
+			case Symphony__CoreEnvironmentPackage.SKY_NODE__SKY:
 				setSky((Sky)null);
 				return;
 		}
@@ -158,7 +158,7 @@ public class SkyNodeImpl extends GroupNodeImpl implements SkyNode
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.SKY_NODE__SKY:
+			case Symphony__CoreEnvironmentPackage.SKY_NODE__SKY:
 				return sky != null;
 		}
 		return super.eIsSet(featureID);

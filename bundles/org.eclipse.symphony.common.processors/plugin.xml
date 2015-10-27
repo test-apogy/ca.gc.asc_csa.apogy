@@ -8,12 +8,7 @@
 -->
 
 <plugin>
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <package
-            uri="org.eclipse.symphony.common.processors"
-            class="org.eclipse.symphony.common.processors.ProcessorsPackage"
-            genModel="model/symphony_common_processors.xcore"/>
-   </extension>
+
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated symphony_common_processors -->
       <package

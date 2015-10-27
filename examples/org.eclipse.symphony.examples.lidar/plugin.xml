@@ -11,7 +11,7 @@
       <!-- @generated emf_ecore.examples_lidar -->
       <package
             uri="org.eclipse.symphony.examples.lidar"
-            class="org.eclipse.symphony.examples.lidar.EMFEcoreExampleLidarPackage"
+            class="org.eclipse.symphony.examples.lidar.Symphony__ExamplesLidarPackage"
             genModel="model/symphony_examples_lidar.xcore"/>
    </extension>
 

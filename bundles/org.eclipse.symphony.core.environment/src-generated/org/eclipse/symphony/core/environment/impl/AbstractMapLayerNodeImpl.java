@@ -12,7 +12,7 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.impl.AggregateGroupNodeImpl;
 import org.eclipse.symphony.core.environment.AbstractMapLayer;
 import org.eclipse.symphony.core.environment.AbstractMapLayerNode;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -57,7 +57,7 @@ public class AbstractMapLayerNodeImpl extends AggregateGroupNodeImpl implements 
   @Override
   protected EClass eStaticClass()
   {
-		return SymphonyEnvironmentPackage.Literals.ABSTRACT_MAP_LAYER_NODE;
+		return Symphony__CoreEnvironmentPackage.Literals.ABSTRACT_MAP_LAYER_NODE;
 	}
 
   /**
@@ -72,7 +72,7 @@ public class AbstractMapLayerNodeImpl extends AggregateGroupNodeImpl implements 
 			abstractMapLayer = (AbstractMapLayer)eResolveProxy(oldAbstractMapLayer);
 			if (abstractMapLayer != oldAbstractMapLayer) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER, oldAbstractMapLayer, abstractMapLayer));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER, oldAbstractMapLayer, abstractMapLayer));
 			}
 		}
 		return abstractMapLayer;
@@ -98,7 +98,7 @@ public class AbstractMapLayerNodeImpl extends AggregateGroupNodeImpl implements 
 		AbstractMapLayer oldAbstractMapLayer = abstractMapLayer;
 		abstractMapLayer = newAbstractMapLayer;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER, oldAbstractMapLayer, abstractMapLayer));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER, oldAbstractMapLayer, abstractMapLayer));
 	}
 
   /**
@@ -110,7 +110,7 @@ public class AbstractMapLayerNodeImpl extends AggregateGroupNodeImpl implements 
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
 				if (resolve) return getAbstractMapLayer();
 				return basicGetAbstractMapLayer();
 		}
@@ -126,7 +126,7 @@ public class AbstractMapLayerNodeImpl extends AggregateGroupNodeImpl implements 
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
 				setAbstractMapLayer((AbstractMapLayer)newValue);
 				return;
 		}
@@ -142,7 +142,7 @@ public class AbstractMapLayerNodeImpl extends AggregateGroupNodeImpl implements 
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
 				setAbstractMapLayer((AbstractMapLayer)null);
 				return;
 		}
@@ -158,7 +158,7 @@ public class AbstractMapLayerNodeImpl extends AggregateGroupNodeImpl implements 
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case SymphonyEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
+			case Symphony__CoreEnvironmentPackage.ABSTRACT_MAP_LAYER_NODE__ABSTRACT_MAP_LAYER:
 				return abstractMapLayer != null;
 		}
 		return super.eIsSet(featureID);

@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.core.impl.SymphonyInitializationDataImpl;
 import org.eclipse.symphony.examples.rover.symphony.RoverData;
-import org.eclipse.symphony.examples.rover.symphony.SymphonyExampleRoverPackage;
+import org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -79,7 +79,7 @@ public class RoverDataImpl extends SymphonyInitializationDataImpl implements Rov
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SymphonyExampleRoverPackage.Literals.ROVER_DATA;
+		return Symphony__ExamplesRoverSymphonyPackage.Literals.ROVER_DATA;
 	}
 
 	/**
@@ -100,7 +100,7 @@ public class RoverDataImpl extends SymphonyInitializationDataImpl implements Rov
 		boolean oldInitialized = initialized;
 		initialized = newInitialized;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleRoverPackage.ROVER_DATA__INITIALIZED, oldInitialized, initialized));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__INITIALIZED, oldInitialized, initialized));
 	}
 
 	/**
@@ -121,7 +121,7 @@ public class RoverDataImpl extends SymphonyInitializationDataImpl implements Rov
 		boolean oldDisposed = disposed;
 		disposed = newDisposed;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SymphonyExampleRoverPackage.ROVER_DATA__DISPOSED, oldDisposed, disposed));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__DISPOSED, oldDisposed, disposed));
 	}
 
 	/**
@@ -132,9 +132,9 @@ public class RoverDataImpl extends SymphonyInitializationDataImpl implements Rov
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SymphonyExampleRoverPackage.ROVER_DATA__INITIALIZED:
+			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__INITIALIZED:
 				return isInitialized();
-			case SymphonyExampleRoverPackage.ROVER_DATA__DISPOSED:
+			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__DISPOSED:
 				return isDisposed();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -148,10 +148,10 @@ public class RoverDataImpl extends SymphonyInitializationDataImpl implements Rov
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SymphonyExampleRoverPackage.ROVER_DATA__INITIALIZED:
+			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__INITIALIZED:
 				setInitialized((Boolean)newValue);
 				return;
-			case SymphonyExampleRoverPackage.ROVER_DATA__DISPOSED:
+			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__DISPOSED:
 				setDisposed((Boolean)newValue);
 				return;
 		}
@@ -166,10 +166,10 @@ public class RoverDataImpl extends SymphonyInitializationDataImpl implements Rov
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SymphonyExampleRoverPackage.ROVER_DATA__INITIALIZED:
+			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__INITIALIZED:
 				setInitialized(INITIALIZED_EDEFAULT);
 				return;
-			case SymphonyExampleRoverPackage.ROVER_DATA__DISPOSED:
+			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__DISPOSED:
 				setDisposed(DISPOSED_EDEFAULT);
 				return;
 		}
@@ -184,9 +184,9 @@ public class RoverDataImpl extends SymphonyInitializationDataImpl implements Rov
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SymphonyExampleRoverPackage.ROVER_DATA__INITIALIZED:
+			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__INITIALIZED:
 				return initialized != INITIALIZED_EDEFAULT;
-			case SymphonyExampleRoverPackage.ROVER_DATA__DISPOSED:
+			case Symphony__ExamplesRoverSymphonyPackage.ROVER_DATA__DISPOSED:
 				return disposed != DISPOSED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

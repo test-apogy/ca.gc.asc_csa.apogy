@@ -24,7 +24,7 @@ import org.eclipse.symphony.core.environment.orbit.OrbitModel;
  *   <li>{@link org.eclipse.symphony.core.environment.orbit.earth.ui.OrbitModelWorldWindLayer#isShowOrbit <em>Show Orbit</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getOrbitModelWorldWindLayer()
+ * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getOrbitModelWorldWindLayer()
  * @model
  * @generated
  */
@@ -42,7 +42,7 @@ public interface OrbitModelWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orbit Model</em>' reference.
 	 * @see #setOrbitModel(OrbitModel)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getOrbitModelWorldWindLayer_OrbitModel()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getOrbitModelWorldWindLayer_OrbitModel()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='ORBIT_MODEL'"
 	 * @generated
 	 */
@@ -71,7 +71,7 @@ public interface OrbitModelWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Source</em>' reference.
 	 * @see #setTimeSource(Timed)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getOrbitModelWorldWindLayer_TimeSource()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getOrbitModelWorldWindLayer_TimeSource()
 	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME'"
 	 * @generated
 	 */
@@ -101,7 +101,7 @@ public interface OrbitModelWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Time Interval</em>' attribute.
 	 * @see #setTimeInterval(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getOrbitModelWorldWindLayer_TimeInterval()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getOrbitModelWorldWindLayer_TimeInterval()
 	 * @model default="600.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME_PERIOD' csa_units='s'"
 	 * @generated
@@ -128,7 +128,7 @@ public interface OrbitModelWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Forward Propagation Duration</em>' attribute.
 	 * @see #setForwardPropagationDuration(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getOrbitModelWorldWindLayer_ForwardPropagationDuration()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getOrbitModelWorldWindLayer_ForwardPropagationDuration()
 	 * @model default="43200.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME_PERIOD' csa_units='s'"
 	 * @generated
@@ -155,7 +155,7 @@ public interface OrbitModelWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Backward Propagation Duration</em>' attribute.
 	 * @see #setBackwardPropagationDuration(double)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getOrbitModelWorldWindLayer_BackwardPropagationDuration()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getOrbitModelWorldWindLayer_BackwardPropagationDuration()
 	 * @model default="43200.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME_PERIOD' csa_units='s'"
 	 * @generated
@@ -182,7 +182,7 @@ public interface OrbitModelWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Show Ground Trace</em>' attribute.
 	 * @see #setShowGroundTrace(boolean)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getOrbitModelWorldWindLayer_ShowGroundTrace()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getOrbitModelWorldWindLayer_ShowGroundTrace()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VISUALS' notify='true' property='Editable'"
 	 * @generated
@@ -209,7 +209,7 @@ public interface OrbitModelWorldWindLayer extends AbstractWorldWindLayer {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Show Orbit</em>' attribute.
 	 * @see #setShowOrbit(boolean)
-	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SymphonyEarthOrbitEnvironmentUIPackage#getOrbitModelWorldWindLayer_ShowOrbit()
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getOrbitModelWorldWindLayer_ShowOrbit()
 	 * @model default="true" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='VISUALS' property='Editable'"
 	 * @generated

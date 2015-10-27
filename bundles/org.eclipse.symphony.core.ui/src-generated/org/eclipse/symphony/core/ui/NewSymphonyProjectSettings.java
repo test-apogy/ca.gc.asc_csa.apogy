@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.core.ui.NewSymphonyProjectSettings#isImportRegisteredProject <em>Import Registered Project</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getNewSymphonyProjectSettings()
+ * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getNewSymphonyProjectSettings()
  * @model
  * @generated
  */
@@ -32,11 +32,11 @@ public interface NewSymphonyProjectSettings extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Name of the project.
+	 * Name of the project.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getNewSymphonyProjectSettings_Name()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getNewSymphonyProjectSettings_Name()
 	 * @model unique="false"
 	 * @generated
 	 */
@@ -58,11 +58,11 @@ public interface NewSymphonyProjectSettings extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Import an existing registered project.
+	 * Import an existing registered project.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Import Registered Project</em>' attribute.
 	 * @see #setImportRegisteredProject(boolean)
-	 * @see org.eclipse.symphony.core.ui.SymphonyCoreUiPackage#getNewSymphonyProjectSettings_ImportRegisteredProject()
+	 * @see org.eclipse.symphony.core.ui.Symphony__CoreUIPackage#getNewSymphonyProjectSettings_ImportRegisteredProject()
 	 * @model default="false" unique="false"
 	 * @generated
 	 */
@@ -82,7 +82,7 @@ public interface NewSymphonyProjectSettings extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Returns an available project name.
+	 * Returns an available project name.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
 	 * @generated
@@ -93,7 +93,7 @@ public interface NewSymphonyProjectSettings extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * * Sets the default values of the instance.
+	 * Sets the default values of the instance.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated

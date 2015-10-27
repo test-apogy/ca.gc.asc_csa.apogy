@@ -21,8 +21,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.symphony.core.invocator.Argument;
 import org.eclipse.symphony.core.invocator.ArgumentsList;
 import org.eclipse.symphony.core.invocator.EClassArgument;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.OperationCall;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,7 +68,7 @@ public class ArgumentsListImpl extends MinimalEObjectImpl.Container implements A
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.ARGUMENTS_LIST;
+		return Symphony__CoreInvocatorPackage.Literals.ARGUMENTS_LIST;
 	}
 
   /**
@@ -78,7 +78,7 @@ public class ArgumentsListImpl extends MinimalEObjectImpl.Container implements A
 	 */
   public OperationCall getOperationCall()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL) return null;
 		return (OperationCall)eContainer();
 	}
 
@@ -89,7 +89,7 @@ public class ArgumentsListImpl extends MinimalEObjectImpl.Container implements A
 	 */
   public OperationCall basicGetOperationCall()
   {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL) return null;
 		return (OperationCall)eInternalContainer();
 	}
 
@@ -100,7 +100,7 @@ public class ArgumentsListImpl extends MinimalEObjectImpl.Container implements A
 	 */
   public NotificationChain basicSetOperationCall(OperationCall newOperationCall, NotificationChain msgs)
   {
-		msgs = eBasicSetContainer((InternalEObject)newOperationCall, EMFEcoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newOperationCall, Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL, msgs);
 		return msgs;
 	}
 
@@ -111,19 +111,19 @@ public class ArgumentsListImpl extends MinimalEObjectImpl.Container implements A
 	 */
   public void setOperationCall(OperationCall newOperationCall)
   {
-		if (newOperationCall != eInternalContainer() || (eContainerFeatureID() != EMFEcoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL && newOperationCall != null)) {
+		if (newOperationCall != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL && newOperationCall != null)) {
 			if (EcoreUtil.isAncestor(this, newOperationCall))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newOperationCall != null)
-				msgs = ((InternalEObject)newOperationCall).eInverseAdd(this, EMFEcoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST, OperationCall.class, msgs);
+				msgs = ((InternalEObject)newOperationCall).eInverseAdd(this, Symphony__CoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST, OperationCall.class, msgs);
 			msgs = basicSetOperationCall(newOperationCall, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL, newOperationCall, newOperationCall));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL, newOperationCall, newOperationCall));
 	}
 
   /**
@@ -134,7 +134,7 @@ public class ArgumentsListImpl extends MinimalEObjectImpl.Container implements A
   public EList<Argument> getArguments()
   {
 		if (arguments == null) {
-			arguments = new EObjectContainmentWithInverseEList<Argument>(Argument.class, this, EMFEcoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS, EMFEcoreInvocatorPackage.ARGUMENT__ARGUMENTS_LIST);
+			arguments = new EObjectContainmentWithInverseEList<Argument>(Argument.class, this, Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS, Symphony__CoreInvocatorPackage.ARGUMENT__ARGUMENTS_LIST);
 		}
 		return arguments;
 	}
@@ -172,11 +172,11 @@ public class ArgumentsListImpl extends MinimalEObjectImpl.Container implements A
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL:
+			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetOperationCall((OperationCall)otherEnd, msgs);
-			case EMFEcoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
+			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getArguments()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -191,9 +191,9 @@ public class ArgumentsListImpl extends MinimalEObjectImpl.Container implements A
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL:
+			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL:
 				return basicSetOperationCall(null, msgs);
-			case EMFEcoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
+			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
 				return ((InternalEList<?>)getArguments()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -208,8 +208,8 @@ public class ArgumentsListImpl extends MinimalEObjectImpl.Container implements A
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST, OperationCall.class, msgs);
+			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.OPERATION_CALL__ARGUMENTS_LIST, OperationCall.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -223,10 +223,10 @@ public class ArgumentsListImpl extends MinimalEObjectImpl.Container implements A
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL:
+			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL:
 				if (resolve) return getOperationCall();
 				return basicGetOperationCall();
-			case EMFEcoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
+			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
 				return getArguments();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -242,10 +242,10 @@ public class ArgumentsListImpl extends MinimalEObjectImpl.Container implements A
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL:
+			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL:
 				setOperationCall((OperationCall)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
+			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
 				getArguments().clear();
 				getArguments().addAll((Collection<? extends Argument>)newValue);
 				return;
@@ -262,10 +262,10 @@ public class ArgumentsListImpl extends MinimalEObjectImpl.Container implements A
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL:
+			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL:
 				setOperationCall((OperationCall)null);
 				return;
-			case EMFEcoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
+			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
 				getArguments().clear();
 				return;
 		}
@@ -281,9 +281,9 @@ public class ArgumentsListImpl extends MinimalEObjectImpl.Container implements A
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL:
+			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__OPERATION_CALL:
 				return basicGetOperationCall() != null;
-			case EMFEcoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
+			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST__ARGUMENTS:
 				return arguments != null && !arguments.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -298,7 +298,7 @@ public class ArgumentsListImpl extends MinimalEObjectImpl.Container implements A
   public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException
   {
 		switch (operationID) {
-			case EMFEcoreInvocatorPackage.ARGUMENTS_LIST___GET_ARGUMENT_VALUES:
+			case Symphony__CoreInvocatorPackage.ARGUMENTS_LIST___GET_ARGUMENT_VALUES:
 				return getArgumentValues();
 		}
 		return super.eInvoke(operationID, arguments);

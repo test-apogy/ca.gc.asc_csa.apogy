@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.invocator.AbstractPlayer;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.RecordingToolsContainer;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -91,7 +91,7 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreInvocatorPackage.Literals.ABSTRACT_PLAYER;
+		return Symphony__CoreInvocatorPackage.Literals.ABSTRACT_PLAYER;
 	}
 
   /**
@@ -114,7 +114,7 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__NAME, oldName, name));
 	}
 
   /**
@@ -137,7 +137,7 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION, oldDescription, description));
 	}
 
   /**
@@ -146,7 +146,7 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	public RecordingToolsContainer getRecordingToolsContainer() {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER) return null;
 		return (RecordingToolsContainer)eContainer();
 	}
 
@@ -156,7 +156,7 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	public RecordingToolsContainer basicGetRecordingToolsContainer() {
-		if (eContainerFeatureID() != EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER) return null;
+		if (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER) return null;
 		return (RecordingToolsContainer)eInternalContainer();
 	}
 
@@ -166,7 +166,7 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	public NotificationChain basicSetRecordingToolsContainer(RecordingToolsContainer newRecordingToolsContainer, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newRecordingToolsContainer, EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER, msgs);
+		msgs = eBasicSetContainer((InternalEObject)newRecordingToolsContainer, Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER, msgs);
 		return msgs;
 	}
 
@@ -176,19 +176,19 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	public void setRecordingToolsContainer(RecordingToolsContainer newRecordingToolsContainer) {
-		if (newRecordingToolsContainer != eInternalContainer() || (eContainerFeatureID() != EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER && newRecordingToolsContainer != null)) {
+		if (newRecordingToolsContainer != eInternalContainer() || (eContainerFeatureID() != Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER && newRecordingToolsContainer != null)) {
 			if (EcoreUtil.isAncestor(this, newRecordingToolsContainer))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newRecordingToolsContainer != null)
-				msgs = ((InternalEObject)newRecordingToolsContainer).eInverseAdd(this, EMFEcoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER, RecordingToolsContainer.class, msgs);
+				msgs = ((InternalEObject)newRecordingToolsContainer).eInverseAdd(this, Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER, RecordingToolsContainer.class, msgs);
 			msgs = basicSetRecordingToolsContainer(newRecordingToolsContainer, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER, newRecordingToolsContainer, newRecordingToolsContainer));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER, newRecordingToolsContainer, newRecordingToolsContainer));
 	}
 
 		/**
@@ -200,7 +200,7 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
   public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetRecordingToolsContainer((RecordingToolsContainer)otherEnd, msgs);
@@ -217,7 +217,7 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER:
 				return basicSetRecordingToolsContainer(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -232,8 +232,8 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
   public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
   {
 		switch (eContainerFeatureID()) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER:
-				return eInternalContainer().eInverseRemove(this, EMFEcoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER, RecordingToolsContainer.class, msgs);
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER:
+				return eInternalContainer().eInverseRemove(this, Symphony__CoreInvocatorPackage.RECORDING_TOOLS_CONTAINER__PLAYER, RecordingToolsContainer.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -247,11 +247,11 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__NAME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__NAME:
 				return getName();
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION:
 				return getDescription();
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER:
 				if (resolve) return getRecordingToolsContainer();
 				return basicGetRecordingToolsContainer();
 		}
@@ -267,13 +267,13 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__NAME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__NAME:
 				setName((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER:
 				setRecordingToolsContainer((RecordingToolsContainer)newValue);
 				return;
 		}
@@ -289,13 +289,13 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__NAME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER:
 				setRecordingToolsContainer((RecordingToolsContainer)null);
 				return;
 		}
@@ -311,11 +311,11 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__NAME:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER:
+			case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__RECORDING_TOOLS_CONTAINER:
 				return basicGetRecordingToolsContainer() != null;
 		}
 		return super.eIsSet(featureID);
@@ -331,7 +331,7 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
   {
 		if (baseClass == Described.class) {
 			switch (derivedFeatureID) {
-				case EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
+				case Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION: return Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION;
 				default: return -1;
 			}
 		}
@@ -348,7 +348,7 @@ public abstract class AbstractPlayerImpl extends MinimalEObjectImpl.Container im
   {
 		if (baseClass == Described.class) {
 			switch (baseFeatureID) {
-				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return EMFEcoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION;
+				case Symphony__CommonEMFPackage.DESCRIBED__DESCRIPTION: return Symphony__CoreInvocatorPackage.ABSTRACT_PLAYER__DESCRIPTION;
 				default: return -1;
 			}
 		}

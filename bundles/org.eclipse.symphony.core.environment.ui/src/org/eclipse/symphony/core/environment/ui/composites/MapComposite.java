@@ -33,14 +33,14 @@ import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.environment.RectangularRegion;
-import org.eclipse.symphony.core.environment.SymphonyEnvironmentFactory;
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 import org.eclipse.symphony.core.environment.ui.Activator;
 import org.eclipse.symphony.core.environment.ui.EnvironmentUiFacade;
 import org.eclipse.symphony.core.environment.ui.MapAnnotation;
 import org.eclipse.symphony.core.environment.ui.MapTool;
 import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
 import org.eclipse.symphony.core.environment.ui.MapViewExtent;
-import org.eclipse.symphony.core.environment.ui.SymphonyEnvironmentUIPackage;
+import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 import org.eclipse.symphony.core.environment.ui.TrajectoryProvider;
 import org.eclipse.symphony.core.environment.ui.preferences.SymphonyEnvironmentUIPreferencesConstants;
 import org.eclipse.ui.progress.UIJob;
@@ -612,7 +612,7 @@ public class MapComposite extends Composite
 				@Override
 				public void notifyChanged(Notification msg) 
 				{
-					if(msg.getFeatureID(MapViewConfiguration.class) == SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE)
+					if(msg.getFeatureID(MapViewConfiguration.class) == Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE)
 					{
 						// Image Map has changed.
 						if(msg.getNewValue() instanceof EImage)
@@ -635,7 +635,7 @@ public class MapComposite extends Composite
 							setBackgroundMapImage(null);
 						}
 					}
-					else if(msg.getFeatureID(MapViewConfiguration.class) == SymphonyEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION)
+					else if(msg.getFeatureID(MapViewConfiguration.class) == Symphony__CoreEnvironmentUIPackage.MAP_VIEW_CONFIGURATION__MAP_IMAGE_RECTANGULAR_REGION)
 					{									
 						if(msg.getNewValue() instanceof MapViewExtent)
 						{
@@ -654,7 +654,7 @@ public class MapComposite extends Composite
 	
 	protected void resizeBackgroundImage()
 	{
-		RectangularRegion mapExtent = SymphonyEnvironmentFactory.eINSTANCE.createRectangularRegion();
+		RectangularRegion mapExtent = Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangularRegion();
 		mapExtent.setXMin(getPlot().getDomainAxis().getLowerBound());
 		mapExtent.setXMax(getPlot().getDomainAxis().getUpperBound());
 		mapExtent.setYMin(getPlot().getRangeAxis().getLowerBound());

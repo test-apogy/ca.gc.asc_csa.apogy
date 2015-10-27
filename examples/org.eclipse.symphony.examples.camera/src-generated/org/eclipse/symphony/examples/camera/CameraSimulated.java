@@ -18,7 +18,7 @@ package org.eclipse.symphony.examples.camera;
  * <!-- end-model-doc -->
  *
  *
- * @see org.eclipse.symphony.examples.camera.EMFEcoreExampleCameraPackage#getCameraSimulated()
+ * @see org.eclipse.symphony.examples.camera.Symphony__ExamplesCameraPackage#getCameraSimulated()
  * @model
  * @generated
  */

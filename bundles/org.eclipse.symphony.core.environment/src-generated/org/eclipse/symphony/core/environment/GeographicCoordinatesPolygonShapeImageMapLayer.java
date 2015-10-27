@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.eclipse.symphony.core.environment.GeographicCoordinatesPolygonShapeImageMapLayer#getPolygonVerticesGeographicCoordinates <em>Polygon Vertices Geographic Coordinates</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getGeographicCoordinatesPolygonShapeImageMapLayer()
+ * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getGeographicCoordinatesPolygonShapeImageMapLayer()
  * @model
  * @generated
  */
@@ -36,7 +36,7 @@ public interface GeographicCoordinatesPolygonShapeImageMapLayer extends PolygonS
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polygon Vertices Geographic Coordinates</em>' containment reference list.
-	 * @see org.eclipse.symphony.core.environment.SymphonyEnvironmentPackage#getGeographicCoordinatesPolygonShapeImageMapLayer_PolygonVerticesGeographicCoordinates()
+	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getGeographicCoordinatesPolygonShapeImageMapLayer_PolygonVerticesGeographicCoordinates()
 	 * @model containment="true"
 	 * @generated
 	 */

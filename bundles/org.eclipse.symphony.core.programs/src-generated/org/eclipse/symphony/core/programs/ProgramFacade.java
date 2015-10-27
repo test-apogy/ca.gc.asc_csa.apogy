@@ -15,7 +15,6 @@ import org.eclipse.symphony.core.invocator.Variable;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * *
  * The program runtimes must use this to interact with the EMF invocator Singleton.
  * <!-- end-model-doc -->
  *
@@ -27,7 +26,7 @@ import org.eclipse.symphony.core.invocator.Variable;
  *   <li>{@link org.eclipse.symphony.core.programs.ProgramFacade#getVariables <em>Variables</em>}</li>
  * </ul>
  *
- * @see org.eclipse.symphony.core.programs.InvocatorProgramsPackage#getProgramFacade()
+ * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#getProgramFacade()
  * @model
  * @generated
  */
@@ -41,7 +40,7 @@ public interface ProgramFacade extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Session</em>' reference.
-	 * @see org.eclipse.symphony.core.programs.InvocatorProgramsPackage#getProgramFacade_Session()
+	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#getProgramFacade_Session()
 	 * @model transient="true" changeable="false" volatile="true"
 	 * @generated
 	 */
@@ -57,7 +56,7 @@ public interface ProgramFacade extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Variables</em>' reference list.
-	 * @see org.eclipse.symphony.core.programs.InvocatorProgramsPackage#getProgramFacade_Variables()
+	 * @see org.eclipse.symphony.core.programs.Symphony__CoreProgramsPackage#getProgramFacade_Variables()
 	 * @model transient="true" changeable="false" volatile="true"
 	 * @generated
 	 */

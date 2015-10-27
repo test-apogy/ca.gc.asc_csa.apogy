@@ -17,7 +17,7 @@ import org.eclipse.symphony.common.io.jinput.EControllerEnvironment;
 import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputFactory;
 import org.eclipse.symphony.common.io.jinput.Symphony__CommonIOJInputPackage;
 import org.eclipse.symphony.core.programs.controllers.ControllerTrigger;
-import org.eclipse.symphony.core.programs.controllers.EMFEcoreControllersPackage;
+import org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,7 +68,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
   @Override
   protected EClass eStaticClass()
   {
-		return EMFEcoreControllersPackage.Literals.CONTROLLER_TRIGGER;
+		return Symphony__CoreProgramsControllersPackage.Literals.CONTROLLER_TRIGGER;
 	}
 
   /**
@@ -109,7 +109,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
 		EComponentQualifier oldComponentQualifier = componentQualifier;
 		componentQualifier = newComponentQualifier;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFEcoreControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, oldComponentQualifier, newComponentQualifier);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, oldComponentQualifier, newComponentQualifier);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -145,14 +145,14 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
 		if (newComponentQualifier != componentQualifier) {
 			NotificationChain msgs = null;
 			if (componentQualifier != null)
-				msgs = ((InternalEObject)componentQualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFEcoreControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)componentQualifier).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, null, msgs);
 			if (newComponentQualifier != null)
-				msgs = ((InternalEObject)newComponentQualifier).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFEcoreControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, null, msgs);
+				msgs = ((InternalEObject)newComponentQualifier).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, null, msgs);
 			msgs = basicSetComponentQualifier(newComponentQualifier, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EMFEcoreControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, newComponentQualifier, newComponentQualifier));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER, newComponentQualifier, newComponentQualifier));
 	}
 
   /**
@@ -164,7 +164,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
 				return basicSetComponentQualifier(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -179,7 +179,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
 				return getComponentQualifier();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -194,7 +194,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
 				setComponentQualifier((EComponentQualifier)newValue);
 				return;
 		}
@@ -210,7 +210,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
 				setComponentQualifier((EComponentQualifier)null);
 				return;
 		}
@@ -226,7 +226,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case EMFEcoreControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
+			case Symphony__CoreProgramsControllersPackage.CONTROLLER_TRIGGER__COMPONENT_QUALIFIER:
 				return componentQualifier != null;
 		}
 		return super.eIsSet(featureID);
@@ -282,7 +282,7 @@ public abstract class ControllerTriggerImpl extends TriggerImpl implements Contr
 			@Override
 			public void notifyChanged(Notification notification) 
 			{
-				if(notification.getFeatureID(ControllerTrigger.class) == EMFEcoreControllersPackage.CONTROLLER_EDGE_TRIGGER__OPERATION_CALL_CONTROLLER_BINDING)					
+				if(notification.getFeatureID(ControllerTrigger.class) == Symphony__CoreProgramsControllersPackage.CONTROLLER_EDGE_TRIGGER__OPERATION_CALL_CONTROLLER_BINDING)					
 				{
 					if(notification.getNewValue() == null)
 					{
