@@ -15,7 +15,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.List;
 import org.eclipse.symphony.common.converters.graphs.ConverterEdge;
-import org.eclipse.symphony.common.converters.graphs.ConverterGraphUtilities;
+import org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsFacade;
 import org.eclipse.symphony.common.converters.ui.composites.ConvertersUIConstants.ClassNameDisplayMode;
 import org.eclipse.symphony.common.converters.ui.utils.FullyQualifiedTypesNameComparator;
 import org.eclipse.symphony.common.converters.ui.utils.ShortTypesNameComparator;
@@ -67,7 +67,7 @@ public class AvailableConversionComposite extends Composite
 	{
 		this.convertersGraph = convertersGraph;		
 	
-		conversionsMap = ConverterGraphUtilities.getAvailableDestinationTypeMap(convertersGraph);
+		conversionsMap = Symphony__CommonConvertersGraphsFacade.INSTANCE.getAvailableDestinationTypeMap(convertersGraph);
 		populateInputTypesList();		
 	}
 	
@@ -118,7 +118,7 @@ public class AvailableConversionComposite extends Composite
 			break;					
 		}
 		
-		sortedSet.addAll(ConverterGraphUtilities.getAllInputTypes(convertersGraph));
+		sortedSet.addAll(Symphony__CommonConvertersGraphsFacade.INSTANCE.getAllInputTypes(convertersGraph));
 		
 		inputTypesClassList = new ArrayList<Class<?>>();
 		inputTypesClassList.addAll(sortedSet);

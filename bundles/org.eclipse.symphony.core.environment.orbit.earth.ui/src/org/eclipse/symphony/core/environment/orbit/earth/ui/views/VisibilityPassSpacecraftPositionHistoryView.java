@@ -13,7 +13,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPassSpacecraf
 import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.VisibilityPassSpacecraftPositionHistoryAzElComposite;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.VisibilityPassSpacecraftPositionHistoryComposite;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.VisibilityPassSpacecraftPositionHistoryRangeComposite;
-
+import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
 import org.eclipse.symphony.common.ui.views.AbstractView;
 
 public class VisibilityPassSpacecraftPositionHistoryView extends AbstractView 
@@ -56,23 +56,24 @@ public class VisibilityPassSpacecraftPositionHistoryView extends AbstractView
 		});		
  	}
 
- 	@SuppressWarnings("unchecked")
 	@Override
  	public void updateSelection(ISelection selection) 
  	{ 		
-		List<VisibilityPassSpacecraftPositionHistory> visibilityPassSpacecraftPositionHistories = (List<VisibilityPassSpacecraftPositionHistory>) org.eclipse.symphony.common.converters.Activator.convert(selection, VisibilityPassSpacecraftPositionHistory.class);
+		List<Object> visibilityPassSpacecraftPositionHistories = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, VisibilityPassSpacecraftPositionHistory.class);
+		
 		if(!visibilityPassSpacecraftPositionHistories.isEmpty())
-		{				
-			VisibilityPassSpacecraftPositionHistory visibilityPassSpacecraftPositionHistory = visibilityPassSpacecraftPositionHistories.get(0);										
-			setVisibilityPassSpacecraftPositionHistory(visibilityPassSpacecraftPositionHistory);								
+		{
+			VisibilityPassSpacecraftPositionHistory visibilityPassSpacecraftPositionHistory = (VisibilityPassSpacecraftPositionHistory) visibilityPassSpacecraftPositionHistories.get(0);										
+			setVisibilityPassSpacecraftPositionHistory(visibilityPassSpacecraftPositionHistory);
 		} 		
 		else
 		{
-			List<VisibilityPass> passes = (List<VisibilityPass>) org.eclipse.symphony.common.converters.Activator.convert(selection, VisibilityPass.class);
+			List<Object> passes = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, VisibilityPass.class);
+			
 			if(!passes.isEmpty())
 			{
-				VisibilityPassSpacecraftPositionHistory visibilityPassSpacecraftPositionHistory = passes.get(0).getPositionHistory();
-				setVisibilityPassSpacecraftPositionHistory(visibilityPassSpacecraftPositionHistory);	
+				VisibilityPassSpacecraftPositionHistory visibilityPassSpacecraftPositionHistory = ((VisibilityPass) passes.get(0)).getPositionHistory();
+				setVisibilityPassSpacecraftPositionHistory(visibilityPassSpacecraftPositionHistory);
 			}
 		}
  	} 

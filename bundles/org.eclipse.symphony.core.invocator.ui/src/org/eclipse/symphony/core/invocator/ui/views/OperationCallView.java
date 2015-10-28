@@ -8,6 +8,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
 import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
@@ -42,17 +43,15 @@ public class OperationCallView extends AbstractView {
 		operationCallComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public void updateSelection(ISelection selection) {
-		List<OperationCall> operationCalls = (List<OperationCall>) org.eclipse.symphony.common.converters.Activator
-				.convert(selection, OperationCall.class);
-		if (!operationCalls.isEmpty()) {
-			InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE
-					.getActiveInvocatorSession();
-			VariablesList variables = session.getEnvironment()
-					.getVariablesList();
-			OperationCall operationCall = operationCalls.get(0);
+		List<Object> operationCalls = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, OperationCall.class);
+		
+		if (!operationCalls.isEmpty())
+		{
+			InvocatorSession session = Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession();
+			VariablesList variables = session.getEnvironment().getVariablesList();
+			OperationCall operationCall = (OperationCall) operationCalls.get(0);
 			variableFeatureReferenceComposite.set(variables, operationCall);
 			operationCallComposite.setOperationCall(operationCall);
 		}

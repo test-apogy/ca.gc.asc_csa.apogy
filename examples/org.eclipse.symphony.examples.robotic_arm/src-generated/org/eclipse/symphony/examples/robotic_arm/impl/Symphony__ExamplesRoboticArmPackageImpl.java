@@ -496,7 +496,7 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Joint Angles",
-			 "csa_units", "\u00b0"
+			 "csa_units", "deg"
 		   });	
 		addAnnotation
 		  (getRoboticArm_ShoulderAngle(), 
@@ -507,7 +507,7 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Joint Angles",
-			 "csa_units", "\u00b0"
+			 "csa_units", "deg"
 		   });	
 		addAnnotation
 		  (getRoboticArm_ElbowAngle(), 
@@ -518,7 +518,7 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Joint Angles",
-			 "csa_units", "\u00b0"
+			 "csa_units", "deg"
 		   });	
 		addAnnotation
 		  (getRoboticArm_WristAngle(), 
@@ -529,7 +529,7 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Joint Angles",
-			 "csa_units", "\u00b0"
+			 "csa_units", "deg"
 		   });	
 		addAnnotation
 		  (getRoboticArm_Initialized(), 

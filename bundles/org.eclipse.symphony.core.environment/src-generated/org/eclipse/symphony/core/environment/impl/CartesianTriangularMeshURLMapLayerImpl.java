@@ -8,6 +8,7 @@ import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
@@ -315,7 +316,8 @@ public class CartesianTriangularMeshURLMapLayerImpl extends CartesianTriangularM
 	  try
 	  {
 		  URL url = resolveURLString(urlString);
-		  loadedMesh = (CartesianTriangularMesh) org.eclipse.symphony.common.converters.Activator.convert(url, CartesianTriangularMesh.class);
+		  loadedMesh = (CartesianTriangularMesh) Symphony__CommonConvertersFacade.INSTANCE.convert(url, CartesianTriangularMesh.class);
+		  
 		  if(loadedMesh != null)
 		  {				
 			  Logger.INSTANCE.log(Activator.ID, this, "Sucesfully loaded Mesh from url " + url + ">. Mesh contains " + loadedMesh.getPolygons().size() + " triangles.", EventSeverity.OK);

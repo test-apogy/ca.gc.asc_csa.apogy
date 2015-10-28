@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
 import org.eclipse.symphony.common.topology.addons.dynamics.ui.actions.PinViewAction;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.IWorkbenchPart;
@@ -53,7 +54,7 @@ public abstract class AbstractPinableView<T> extends ViewPart implements ISelect
 				currentSelection = selection;
 				
 				@SuppressWarnings("rawtypes")
-				List list = org.eclipse.symphony.common.converters.Activator.convert(selection, getObjectClass());
+				List list = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, getObjectClass());
 
 				if(list.size() > 0) {
 					setObject((T) list.get(0));	

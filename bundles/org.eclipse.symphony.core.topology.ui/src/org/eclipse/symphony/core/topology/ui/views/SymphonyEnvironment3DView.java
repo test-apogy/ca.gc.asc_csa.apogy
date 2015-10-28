@@ -13,6 +13,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.topology.Node;
@@ -109,7 +110,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 		if(!isBusy())
 		{		
 			// Attempts to convert the selection to a Deployment.
-			List list = org.eclipse.symphony.common.converters.Activator.convert(selection, SymphonyEnvironment.class);
+			List<Object> list = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, SymphonyEnvironment.class);
 	
 			if(list.size() > 0) 
 			{
@@ -121,7 +122,7 @@ public class SymphonyEnvironment3DView extends AbstractSymphony3DView
 			}
 			
 			// Tries to see if the selection contains AbstractResult.
-			List results = org.eclipse.symphony.common.converters.Activator.convert(selection, AbstractResult.class);
+			List results = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, AbstractResult.class);
 			show(results);
 		}
 		else

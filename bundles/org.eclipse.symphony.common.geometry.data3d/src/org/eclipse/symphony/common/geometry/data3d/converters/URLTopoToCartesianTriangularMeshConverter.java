@@ -3,6 +3,7 @@ package org.eclipse.symphony.common.geometry.data3d.converters;
 import java.io.File;
 import java.net.URL;
 
+import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
 import org.eclipse.symphony.common.geometry.data3d.Activator;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.log.EventSeverity;
@@ -40,7 +41,7 @@ public class URLTopoToCartesianTriangularMeshConverter extends URLToCartesianTri
 			
 			if(tempFile != null)
 			{
-				 mesh = (CartesianTriangularMesh) org.eclipse.symphony.common.converters.Activator.convert(tempFile, CartesianTriangularMesh.class);				 				 
+				 mesh = (CartesianTriangularMesh) Symphony__CommonConvertersFacade.INSTANCE.convert(tempFile, CartesianTriangularMesh.class);				 				 
 			}
 			
 			if(mesh != null)

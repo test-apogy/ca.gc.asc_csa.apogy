@@ -84,7 +84,7 @@ abstract class RoboticArm
 			  notify="true",
 			  property="Readonly",
 			  propertyCategory="Joint Angles",
-			  csa_units="°")	
+			  csa_units="deg")	
 	double turretAngle = "0.0"
 	
 	/* 
@@ -95,7 +95,7 @@ abstract class RoboticArm
 			  notify="true",
 			  property="Readonly",
 			  propertyCategory="Joint Angles",
-			  csa_units="°")	
+			  csa_units="deg")	
 	double shoulderAngle = "90.0"
 	
 	/* 
@@ -106,7 +106,7 @@ abstract class RoboticArm
 			  notify="true",
 			  property="Readonly",
 			  propertyCategory="Joint Angles",
-			  csa_units="°")	
+			  csa_units="deg")	
 	double elbowAngle = "-180.0"
 	
 	/* 
@@ -117,7 +117,7 @@ abstract class RoboticArm
 			  notify="true",
 			  property="Readonly",
 			  propertyCategory="Joint Angles",
-			  csa_units="°")	
+			  csa_units="deg")	
 	double wristAngle = "0.0"
 
 	/*

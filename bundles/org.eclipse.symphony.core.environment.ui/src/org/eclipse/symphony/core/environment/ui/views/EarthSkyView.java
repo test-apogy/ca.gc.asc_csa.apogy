@@ -5,6 +5,7 @@ import java.util.List;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
 import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.environment.EarthSky;
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFacade;
@@ -38,15 +39,17 @@ public class EarthSkyView extends AbstractView
 		setPartName(PART_NAME);
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
-	public void updateSelection(ISelection selection) {		
+	public void updateSelection(ISelection selection)
+	{		
 		Activator.getDefault();
-		List<EarthSky> earthSkies = (List<EarthSky>) org.eclipse.symphony.common.converters.Activator.convert(selection, EarthSky.class);
+		
+		List<Object> earthSkies = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, EarthSky.class);
+		
 		if(!earthSkies.isEmpty())
 		{				
-				EarthSky sky = earthSkies.get(0);										
-				setEarthSky(sky);								
+			EarthSky sky = (EarthSky) earthSkies.get(0);										
+			setEarthSky(sky);								
 		}
 	}
 	

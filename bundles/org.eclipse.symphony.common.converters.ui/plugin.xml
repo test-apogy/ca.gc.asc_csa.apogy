@@ -16,4 +16,12 @@
       </view>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated symphony_common_converters_ui -->
+      <package
+            uri="org.eclipse.symphony.common.converters.ui"
+            class="org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIPackage"
+            genModel="model/symphony_common_converters_ui.xcore"/>
+   </extension>
+
 </plugin>

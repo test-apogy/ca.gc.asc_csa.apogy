@@ -12,6 +12,7 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
 import org.eclipse.symphony.common.emf.Named;
 import org.eclipse.symphony.core.PoseProvider;
 import org.eclipse.symphony.core.Symphony__CoreFactory;
@@ -103,7 +104,7 @@ public class MovableTrajectoryView extends ViewPart implements ISelectionListene
 				currentSelection = selection;
 				
 				// Attempts to convert the selection to a Deployment.				
-				List list = org.eclipse.symphony.common.converters.Activator.convert(selection, PoseProvider.class);
+				List list = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, PoseProvider.class);
 
 				if(list.size() > 0) 
 				{
@@ -115,7 +116,7 @@ public class MovableTrajectoryView extends ViewPart implements ISelectionListene
 				}
 				else
 				{
-					list = org.eclipse.symphony.common.converters.Activator.convert(selection, AbstractTypeImplementation.class);
+					list = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, AbstractTypeImplementation.class);
 					if(list.size() > 0)
 					{
 						AbstractTypeImplementation ati = (AbstractTypeImplementation) list.get(0);						

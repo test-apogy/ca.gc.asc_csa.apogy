@@ -3,8 +3,9 @@ package org.eclipse.symphony.common.converters.ui.views;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
 import org.eclipse.symphony.common.converters.graphs.ConverterEdge;
-import org.eclipse.symphony.common.converters.graphs.ConverterGraphUtilities;
+import org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsFacade;
 import org.eclipse.symphony.common.converters.ui.actions.SetClassNameDisplayModeAction;
 import org.eclipse.symphony.common.converters.ui.composites.AvailableConversionComposite;
 import org.eclipse.symphony.common.converters.ui.composites.ConverterGraphComposite;
@@ -22,14 +23,14 @@ public class ConvertersView extends ViewPart
 	@Override
 	public void createPartControl(Composite parent) {
 		
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph = org.eclipse.symphony.common.converters.Activator.getGraph();
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph = Symphony__CommonConvertersFacade.INSTANCE.getGraph();
 		parent.setLayout(new FillLayout(SWT.VERTICAL));
 		converterGraphComposite = new ConverterGraphComposite(parent, SWT.NONE, graph);
 		availableConversionComposite = new AvailableConversionComposite(parent, SWT.NONE, graph);		
 		
 		addActions();
 		
-		ConverterGraphUtilities.getAvailableDestinationTypeMap(graph);
+		Symphony__CommonConvertersGraphsFacade.INSTANCE.getAvailableDestinationTypeMap(graph);
 	}
 
 	@Override

@@ -6,4 +6,21 @@
             name="Converters"
             schema="schema/converters.exsd">
    </extension-point>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated symphony_common_converters -->
+      <package
+            uri="org.eclipse.symphony.common.converters"
+            class="org.eclipse.symphony.common.converters.Symphony__CommonConvertersPackage"
+            genModel="model/symphony_common_converters.xcore"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated symphony_common_converters_graphs -->
+      <package
+            uri="org.eclipse.symphony.common.converters.graphs"
+            class="org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsPackage"
+            genModel="model/symphony_common_converters_graphs.xcore"/>
+   </extension>
+
 </plugin>

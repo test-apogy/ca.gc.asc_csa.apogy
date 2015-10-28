@@ -1,5 +1,9 @@
-package org.eclipse.symphony.common.converters.graphs;
+/**
+ * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
+ */
+package org.eclipse.symphony.common.converters.graphs.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -11,22 +15,69 @@ import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.symphony.common.converters.ChainedConverter;
 import org.eclipse.symphony.common.converters.IConverter;
 import org.eclipse.symphony.common.converters.TypeCastConverter;
+import org.eclipse.symphony.common.converters.graphs.ConverterEdge;
+import org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsFacade;
+import org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsPackage;
 import org.jgrapht.GraphPath;
 import org.jgrapht.alg.KShortestPaths;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
-public class ConverterGraphUtilities 
-{
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Facade</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * @generated
+ */
+public class Symphony__CommonConvertersGraphsFacadeImpl extends MinimalEObjectImpl.Container implements Symphony__CommonConvertersGraphsFacade {
+	
+	private static Symphony__CommonConvertersGraphsFacade instance = null;
+	
+	public static Symphony__CommonConvertersGraphsFacade getInstance()
+	{
+		if (instance == null)
+		{
+			instance = new Symphony__CommonConvertersGraphsFacadeImpl();
+		}
+		
+		return instance;
+	}
+	
 	/**
-	 * Creates a converter graph where the vertex are the input and output types and the edges contains the converters.
-	 * @param converters The list of converter to include in the graph.
-	 * @return The converter graph.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
 	 */
-	@SuppressWarnings("serial")	
-	public synchronized static SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> createGraph(final List<IConverter> converters)
+	protected Symphony__CommonConvertersGraphsFacadeImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return Symphony__CommonConvertersGraphsPackage.Literals.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	@SuppressWarnings("serial")
+	@Override
+	public synchronized SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> createGraph(List<IConverter> converters)
 	{
 		// Creates a instance of SimpleDirectedWeightedGraph with the getEdgeWeight method overloaded.
 		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> simpleDirectedWeightedGraph = new SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>(ConverterEdge.class)
@@ -43,17 +94,20 @@ public class ConverterGraphUtilities
 					
 		return simpleDirectedWeightedGraph;
 	}
-	
+
 	/**
-	 * Adds a list of IConverter to an existing graph.
-	 * @param graph The graph to which converters will be added.
-	 * @param converters The list of IConverter to be added to the graph.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
-	public synchronized static void addConverters(final SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph, final List<IConverter> converters)
+	@Override
+	public synchronized void addConverters(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph,
+										   List<IConverter> converters)
 	{
 		// Adds the input and output types as vertices.
 		Iterator<IConverter> itConverters = converters.iterator();
 		Set<Class<?>> typeSet = new HashSet<Class<?>>();
+		
 		while(itConverters.hasNext())
 		{
 			IConverter converter = itConverters.next();
@@ -76,16 +130,17 @@ public class ConverterGraphUtilities
 			graph.addEdge(converter.getInputType(), converter.getOutputType(), edge);
 		}
 	}
-	
+
 	/**
-	 * Generate the list of IConverter between types that can bes type casted and that do not have yet a converter.
-	 * @param graph The graph of the conversion.
-	 * @return A list of IConverter that converts types that are compatible.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
-	public synchronized static List<IConverter> generateTypeCastConverters(final SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
+	@Override
+	public synchronized List<IConverter> generateTypeCastConverters(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
 	{
 		List<IConverter> castConverters = new ArrayList<IConverter>();
-			
+		
 		// Checks each vertex for compatible type (i.e. check if each vertex is a sub type of another vertex)
 		List<Class<?>> vertices = new ArrayList<Class<?>>();
 		vertices.addAll(graph.vertexSet());				
@@ -131,20 +186,21 @@ public class ConverterGraphUtilities
 			}		
 		}
 			
-		return castConverters;		
+		return castConverters;
 	}
-	
+
 	/**
-	 * Converts the input object to an object of the specified outputType.
-	 * @param graph The graph containing the converters.
-	 * @param input The input object.
-	 * @param outputType The output type.
-	 * @return The result of the conversion, null if no conversion was found.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
-	public synchronized static Object convert(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph, Object input, Class<?> outputType)
+	@Override
+	public synchronized Object convert(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph,
+						  			   Object input,
+						  			   Class<?> outputType)
 	{
 		Object result = null;
-			
+		
 		if(input != null)
 		{
 			List<Class<?>> potentialSources = getSourceVertex(graph, input.getClass());
@@ -179,17 +235,18 @@ public class ConverterGraphUtilities
 			}
 		}
 		
-		return result;		
+		return result;
 	}
-	
+
 	/**
-	 * Return the list of ChainedConverter that could convert from a source to a destination type.
-	 * @param graph The graph containing the converters.
-	 * @param inputType The input type.
-	 * @param outputType The output type.
-	 * @return The list of ChainedConverter. Never null, but can be empty.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
-	public synchronized static SortedSet<ChainedConverter> findAllConvertersBetweenVertices(final SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph, final Class<?> inputType, final Class<?> outputType)
+	@Override
+	public synchronized SortedSet<ChainedConverter> findAllConvertersBetweenVertices(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph,
+																					 Class<?> inputType,
+																					 Class<?> outputType)
 	{
 		SortedSet<ChainedConverter> convertersSet = new TreeSet<ChainedConverter>(createComparator());
 		
@@ -216,16 +273,17 @@ public class ConverterGraphUtilities
 		
 		return convertersSet;
 	}
-	
+
 	/**
-	 * Tries to find a converter between two types by searching a converter graph.
-	 * @param graph The converter graph.
-	 * @param inputType The input type.
-	 * @param outputType The output type.
-	 * @return The Chained converter that convert inputType to outputType, null if none was found.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
-	public synchronized static ChainedConverter findConverter(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph, Class<?> inputType, Class<?> outputType)
-	{		
+	@Override
+	public synchronized ChainedConverter findConverter(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph,
+													   Class<?> inputType,
+													   Class<?> outputType)
+	{
 		try
 		{
 			SortedSet<ChainedConverter> converters = findAllConvertersBetweenVertices(graph, inputType, outputType);
@@ -241,57 +299,62 @@ public class ConverterGraphUtilities
 		catch (Exception e) 
 		{			
 			return null;
-		}		
+		}
 	}
-	
+
 	/**
-	 * Given a graph, returns the list of all types that can be converted FROM (i.e. types with at least one outgoing converter).
-	 * @param graph The provided graph.
-	 * @return The list of all input types. 
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
-	public synchronized static Set<Class<?>> getAllInputTypes(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
+	@Override
+	public synchronized Set<Class<?>> getAllInputTypes(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
 	{
 		Set<Class<?>> inputTypes = new HashSet<Class<?>>();
-			
+		
 		Iterator<ConverterEdge> it = graph.edgeSet().iterator();
+		
 		while(it.hasNext())
 		{
 			ConverterEdge edge = it.next();
 			inputTypes.add(edge.getFrom());
 		}
 			
-		return inputTypes;		
+		return inputTypes;
 	}
-	
+
 	/**
-	 * Given a graph, returns the list of all types that can be converted TO (i.e. types with at least one ingoing converter).
-	 * @param graph The provided graph.
-	 * @return The list of all output types. 
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
-	public synchronized static Set<Class<?>> getAllOutputTypes(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
+	@Override
+	public synchronized Set<Class<?>> getAllOutputTypes(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
 	{
 		Set<Class<?>> inputTypes = new HashSet<Class<?>>();
-			
+		
 		Iterator<ConverterEdge> it = graph.edgeSet().iterator();
+		
 		while(it.hasNext())
 		{
 			ConverterEdge edge = it.next();
 			inputTypes.add(edge.getTo());
 		}
 			
-		return inputTypes;		
+		return inputTypes;
 	}
-	
+
 	/**
-	 * Return a sorted list (from most specific to least specific) of potential source vertex for a specified input type.
-	 * @param graph The graph of converters.
-	 * @param inputType The input type.
-	 * @return A sorted set of vertex.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
-	public synchronized static List<Class<?>> getSourceVertex(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph, Class<?> inputType)
+	@Override
+	public synchronized List<Class<?>> getSourceVertex(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph,
+													   Class<?> inputType)
 	{
 		List<Class<?>> potentialSourceVertices = new ArrayList<Class<?>>();
-			
+		
 		List<Class<?>> classes = new ArrayList<Class<?>>();
 		classes.addAll(getAllInputTypes(graph));	
 		boolean done = false;
@@ -312,17 +375,18 @@ public class ConverterGraphUtilities
 			
 		return potentialSourceVertices;
 	}
-	
+
 	/**
-	 * Return a sorted list (from most specific to least specific) of potential destination vertex for a specified input type.
-	 * @param graph The graph of converters.
-	 * @param inputType The output type.
-	 * @return A sorted set of vertex.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
-	public synchronized static List<Class<?>> getDestinationVertex(final SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph, final Class<?> outputType)
+	@Override
+	public synchronized List<Class<?>> getDestinationVertex(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph,
+															Class<?> outputType)
 	{
 		List<Class<?>> potentialDestinationVertices = new ArrayList<Class<?>>();
-			
+		
 		List<Class<?>> classes = new ArrayList<Class<?>>();
 		classes.addAll(getAllOutputTypes(graph));	
 				
@@ -341,19 +405,20 @@ public class ConverterGraphUtilities
 			}
 		}
 			
-		return potentialDestinationVertices;		
+		return potentialDestinationVertices;
 	}
-	
+
 	/**
-	 * Return the class from a list that is closest to a specified type.
-	 * @param classes The list of class to search.
-	 * @param targetType The specified type.
-	 * @return The closest type, null if none was found.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
-	public synchronized static Class<?> findClosestSuperType(List<Class<?>> classes, Class<?> targetType)
+	@Override
+	public synchronized Class<?> findClosestSuperType(List<Class<?>> classes,
+													  Class<?> targetType)
 	{
 		Class<?> closestMatch = null;
-			
+		
 		Iterator<Class<?>> iterator = classes.iterator();
 		while (iterator.hasNext()) 
 		{
@@ -371,19 +436,20 @@ public class ConverterGraphUtilities
 			}
 		}
 			
-		return closestMatch;		
+		return closestMatch;
 	}
-	
+
 	/**
-	 * Return the class from a list that is closest to a specified type.
-	 * @param classes The list of class to search.
-	 * @param targetType The specified type.
-	 * @return The closest type, null if none was found.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
-	public synchronized static Class<?> findClosestSubType(final List<Class<?>> classes, final Class<?> targetType)
+	@Override
+	public synchronized Class<?> findClosestSubType(List<Class<?>> classes,
+													Class<?> targetType)
 	{
 		Class<?> closestMatch = null;
-						
+		
 		Iterator<Class<?>> iterator = classes.iterator();
 		while (iterator.hasNext()) 
 		{
@@ -402,16 +468,17 @@ public class ConverterGraphUtilities
 			
 		return closestMatch;
 	}
-	
+
 	/**
-	 * Return the list of all converters, including type cast ones, contained in a given graph.
-	 * @param graph The graph.
-	 * @return The list of converters.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
-	public synchronized static List<IConverter> getAllConverters(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
+	@Override
+	public synchronized List<IConverter> getAllConverters(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
 	{
 		List<IConverter> converters = new ArrayList<IConverter>();
-			
+		
 		Iterator<ConverterEdge> it = graph.edgeSet().iterator();
 		while(it.hasNext())
 		{
@@ -421,16 +488,17 @@ public class ConverterGraphUtilities
 			
 		return converters;
 	}
-	
+
 	/**
-	 * Return the list of all converters, EXCLUDING type cast ones, contained in a given graph.
-	 * @param graph The graph.
-	 * @return The list of converters.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
-	public synchronized static List<IConverter> getAllNonTypeCastConverters(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
+	@Override
+	public synchronized List<IConverter> getAllNonTypeCastConverters(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
 	{
 		List<IConverter> converters = new ArrayList<IConverter>();
-			
+		
 		Iterator<ConverterEdge> it = graph.edgeSet().iterator();
 		while(it.hasNext())
 		{
@@ -441,20 +509,21 @@ public class ConverterGraphUtilities
 			}
 		}
 			
-		return converters;		
+		return converters;
 	}
-	
+
 	/**
-	 * Creates a map that maps input types to available destination types.
-	 * @param graph The specified graph.
-	 * @return A map mapping input types to available destination types.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
-	public synchronized static Map<Class<?>, List<Class<?>>> getAvailableDestinationTypeMap(final SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
+	public synchronized Map<Class<?>, List<Class<?>>> getAvailableDestinationTypeMap(SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph)
 	{
 		HashMap<Class<?>, List<Class<?>>> map = new HashMap<Class<?>, List<Class<?>>>();
-			
+		
 		Set<Class<?>> inputTypes = getAllInputTypes(graph);
 		Iterator<Class<?>> inputTypesIt = inputTypes.iterator();
+		
 		while(inputTypesIt.hasNext())
 		{
 			Class<?> inputType = inputTypesIt.next();
@@ -462,12 +531,15 @@ public class ConverterGraphUtilities
 				
 			Set<Class<?>> graphOutputTypes = getAllOutputTypes(graph);
 			Iterator<Class<?>> outputTypesIt = graphOutputTypes.iterator();
+			
 			while(outputTypesIt.hasNext())
 			{
 				Class<?> outputType = outputTypesIt.next();
+				
 				if(outputType != inputType)
 				{				
 					ChainedConverter c = findConverter(graph, inputType, outputType);
+					
 					if(c != null)
 					{
 						outputTypes.add(outputType);
@@ -478,14 +550,16 @@ public class ConverterGraphUtilities
 			map.put(inputType, outputTypes);
 		}						
 
-		return map;		
+		return map;
 	}
-	
+
 	/**
-	 * Creates a Comparator of ChainedConverter.
-	 * @return The Comparator.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
 	 */
-	public synchronized static Comparator<ChainedConverter> createComparator()
+	@Override
+	public synchronized Comparator<ChainedConverter> createComparator()
 	{
 		Comparator<ChainedConverter> comparator = new Comparator<ChainedConverter>() 
 		{
@@ -509,4 +583,51 @@ public class ConverterGraphUtilities
 		
 		return comparator;
 	}
-}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	@SuppressWarnings("unchecked")
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___CREATE_GRAPH__LIST:
+				return createGraph((List<IConverter>)arguments.get(0));
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___ADD_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH_LIST:
+				addConverters((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0), (List<IConverter>)arguments.get(1));
+				return null;
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GENERATE_TYPE_CAST_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH:
+				return generateTypeCastConverters((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0));
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___CONVERT__SIMPLEDIRECTEDWEIGHTEDGRAPH_OBJECT_CLASS:
+				return convert((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0), arguments.get(1), (Class<?>)arguments.get(2));
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_ALL_CONVERTERS_BETWEEN_VERTICES__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS_CLASS:
+				return findAllConvertersBetweenVertices((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0), (Class<?>)arguments.get(1), (Class<?>)arguments.get(2));
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_CONVERTER__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS_CLASS:
+				return findConverter((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0), (Class<?>)arguments.get(1), (Class<?>)arguments.get(2));
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_INPUT_TYPES__SIMPLEDIRECTEDWEIGHTEDGRAPH:
+				return getAllInputTypes((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0));
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_OUTPUT_TYPES__SIMPLEDIRECTEDWEIGHTEDGRAPH:
+				return getAllOutputTypes((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0));
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_SOURCE_VERTEX__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS:
+				return getSourceVertex((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0), (Class<?>)arguments.get(1));
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_DESTINATION_VERTEX__SIMPLEDIRECTEDWEIGHTEDGRAPH_CLASS:
+				return getDestinationVertex((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0), (Class<?>)arguments.get(1));
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_CLOSEST_SUPER_TYPE__LIST_CLASS:
+				return findClosestSuperType((List<Class<?>>)arguments.get(0), (Class<?>)arguments.get(1));
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___FIND_CLOSEST_SUB_TYPE__LIST_CLASS:
+				return findClosestSubType((List<Class<?>>)arguments.get(0), (Class<?>)arguments.get(1));
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH:
+				return getAllConverters((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0));
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_ALL_NON_TYPE_CAST_CONVERTERS__SIMPLEDIRECTEDWEIGHTEDGRAPH:
+				return getAllNonTypeCastConverters((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0));
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___GET_AVAILABLE_DESTINATION_TYPE_MAP__SIMPLEDIRECTEDWEIGHTEDGRAPH:
+				return getAvailableDestinationTypeMap((SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>)arguments.get(0));
+			case Symphony__CommonConvertersGraphsPackage.SYMPHONY_COMMON_CONVERTERS_GRAPHS_FACADE___CREATE_COMPARATOR:
+				return createComparator();
+		}
+		return super.eInvoke(operationID, arguments);
+	}
+
+} //Symphony__CommonConvertersGraphsFacadeImpl

@@ -31,5 +31,13 @@
             name="Toggle Mesh Layer Visibility">
       </command>
    </extension>
-null
+   <extension
+        point="org.eclipse.symphony.common.converters">
+      <new_element
+         Class="org.eclipse.symphony.core.environment.converters.GeographicalCoordinatesToPositionConverter">
+      </new_element>
+      <new_element
+         Class="org.eclipse.symphony.core.environment.converters.PositionedToGeographicalCoordinatesConverter">
+      </new_element>
+   </extension>
 </plugin>

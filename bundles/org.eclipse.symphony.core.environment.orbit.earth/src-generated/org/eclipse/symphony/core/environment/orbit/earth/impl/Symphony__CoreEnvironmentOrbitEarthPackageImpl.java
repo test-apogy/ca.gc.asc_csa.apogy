@@ -3126,7 +3126,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		   source, 
 		   new String[] {
 			 "documentation", "Pass duration, in seconds.",
-			 "csa_unit", "s"
+			 "csa_units", "s"
 		   });	
 		addAnnotation
 		  (getVisibilityPassSpacecraftPositionHistory__GetHighestElevationPosition(), 
@@ -3153,7 +3153,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "documentation", "The time interval separating positions.",
 			 "notify", "true",
 			 "property", "Editable",
-			 "csa_unit", "s"
+			 "csa_units", "s"
 		   });	
 		addAnnotation
 		  (getVisibilityPassSpacecraftPositionHistory_VisibilityPass(), 
@@ -3304,7 +3304,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "notify", "true",
 			 "property", "Editable",
 			 "propertyCategory", "TIME_PERIOD",
-			 "csa_unit", "s"
+			 "csa_units", "s"
 		   });	
 		addAnnotation
 		  (getSpacecraftSwathCorridor_OrbitModel(), 
@@ -3342,7 +3342,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the Earth gravitational constant from GRIM5C1 model: 3.986004415e14 m\u00b3/s\u00b2.",
-			 "csa_unit", "m\u00b3/s\u00b2"
+			 "csa_units", "m\u00b3/s\u00b2"
 		   });	
 		addAnnotation
 		  (getSymphony__CoreEnvironmentOrbitEarthFacade__CreateAbsoluteDate__Date(), 
@@ -3366,19 +3366,19 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		  ((getSymphony__CoreEnvironmentOrbitEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "csa_unit", "rad"
+			 "csa_units", "rad"
 		   });	
 		addAnnotation
 		  ((getSymphony__CoreEnvironmentOrbitEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double()).getEParameters().get(3), 
 		   source, 
 		   new String[] {
-			 "csa_unit", "rad"
+			 "csa_units", "rad"
 		   });	
 		addAnnotation
 		  ((getSymphony__CoreEnvironmentOrbitEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double()).getEParameters().get(4), 
 		   source, 
 		   new String[] {
-			 "csa_unit", "m"
+			 "csa_units", "m"
 		   });	
 		addAnnotation
 		  (getSymphony__CoreEnvironmentOrbitEarthFacade__CreateOreKitBackedFrame__Frame(), 
@@ -3397,21 +3397,21 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the elevation angle of a spacecraft relative\nto a Earth surface location.",
-			 "csa_unit", "rad"
+			 "csa_units", "rad"
 		   });	
 		addAnnotation
 		  (getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftAzimuthAngle__SpacecraftState_EarthSurfaceLocation(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the azimuth angle (relative to North) of a\nspacecraft at a Earth surface location.",
-			 "csa_unit", "rad"
+			 "csa_units", "rad"
 		   });	
 		addAnnotation
 		  (getSymphony__CoreEnvironmentOrbitEarthFacade__GetRange__SpacecraftState_EarthSurfaceLocation(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the distance between spacecraft and a specified target.",
-			 "csa_unit", "m"
+			 "csa_units", "m"
 		   });	
 		addAnnotation
 		  (getSymphony__CoreEnvironmentOrbitEarthFacade__CreateKeplerianOrbit__EarthOrbitPropagator(), 

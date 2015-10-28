@@ -44,7 +44,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * Returns the Earth gravitational constant from GRIM5C1 model: 3.986004415e14 m³/s².
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_unit='m\263/s\262'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m\263/s\262'"
 	 * @generated
 	 */
 	double getMu();
@@ -87,9 +87,9 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * @return The EarthSurfaceLocation.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" nameUnique="false" descriptionUnique="false" longitudeUnique="false"
-	 *        longitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_unit='rad'" latitudeUnique="false"
-	 *        latitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_unit='rad'" elevationUnique="false"
-	 *        elevationAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_unit='m'"
+	 *        longitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'" latitudeUnique="false"
+	 *        latitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'" elevationUnique="false"
+	 *        elevationAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated
 	 */
 	EarthSurfaceLocation createEarthSurfaceLocation(String name, String description, double longitude, double latitude, double elevation);
@@ -125,7 +125,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * to a Earth surface location.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" spacecraftStateUnique="false" earthSurfaceLocationUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_unit='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
 	 */
 	double getSpacecraftElevationAngle(SpacecraftState spacecraftState, EarthSurfaceLocation earthSurfaceLocation) throws Exception;
@@ -138,7 +138,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * spacecraft at a Earth surface location.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" spacecraftStateUnique="false" earthSurfaceLocationUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_unit='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
 	 * @generated
 	 */
 	double getSpacecraftAzimuthAngle(SpacecraftState spacecraftState, EarthSurfaceLocation earthSurfaceLocation) throws Exception;
@@ -150,7 +150,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthFacade extends EObject
 	 * Returns the distance between spacecraft and a specified target.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" exceptions="org.eclipse.symphony.core.environment.orbit.earth.Exception" spacecraftStateUnique="false" earthSurfaceLocationUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_unit='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
 	 * @generated
 	 */
 	double getRange(SpacecraftState spacecraftState, EarthSurfaceLocation earthSurfaceLocation) throws Exception;

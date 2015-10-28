@@ -3,15 +3,21 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.symphony.common.converters.ui;singleton:=true
 Bundle-Version: 0.5.0.qualifier
+Bundle-ClassPath: .
 Bundle-Activator: org.eclipse.symphony.common.converters.ui.Activator
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.eclipse.symphony.common.converters
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.symphony.common.converters;visibility:=reexport,
+ org.eclipse.emf.ecore.xcore.lib,
+ org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.symphony.common.converters.ui,
+ org.eclipse.symphony.common.converters.ui.impl,
+ org.eclipse.symphony.common.converters.ui.util,
  org.eclipse.symphony.common.converters.ui.actions,
  org.eclipse.symphony.common.converters.ui.composites,
  org.eclipse.symphony.common.converters.ui.utils,

@@ -18,6 +18,7 @@ import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfiguratio
 import org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewUtilities;
 import org.eclipse.symphony.addons.sensors.imaging.camera.actions.NewCameraViewAction;
 import org.eclipse.symphony.addons.sensors.imaging.camera.composites.CameraViewConfigurationComposite;
+import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
@@ -92,11 +93,11 @@ public class CameraView extends AbstractView implements ISelectionListener
 		});		
 	}
 
-	@SuppressWarnings("rawtypes")
 	@Override
 	public void updateSelection(ISelection selection) 
 	{		
-		List cameraViewConfigurations = org.eclipse.symphony.common.converters.Activator.convert(selection, CameraViewConfiguration.class);
+		List<Object> cameraViewConfigurations = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, CameraViewConfiguration.class);
+		
 		if(cameraViewConfigurations.size() > 0)
 		{
 			try

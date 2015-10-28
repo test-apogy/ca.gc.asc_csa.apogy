@@ -13,6 +13,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.common.ui.views.AbstractView;
@@ -135,16 +136,16 @@ public class MapView extends AbstractView
 		super.dispose();
 	}
 	
-	@SuppressWarnings("unchecked")
 	@Override
 	public void updateSelection(ISelection selection) 
-	{		
-		List<MapViewConfiguration> mapViewConfigurations = (List<MapViewConfiguration>) org.eclipse.symphony.common.converters.Activator.convert(selection, MapViewConfiguration.class);
+	{
+		List<Object> mapViewConfigurations = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, MapViewConfiguration.class);
+		
 		if(!mapViewConfigurations.isEmpty())
 		{				
-			MapViewConfiguration mapViewConfiguration = mapViewConfigurations.get(0);										
+			MapViewConfiguration mapViewConfiguration = (MapViewConfiguration) mapViewConfigurations.get(0);										
 			setMapViewConfiguration(mapViewConfiguration);						
-		}	
+		}
 	}
 	
 	public void updateMap()

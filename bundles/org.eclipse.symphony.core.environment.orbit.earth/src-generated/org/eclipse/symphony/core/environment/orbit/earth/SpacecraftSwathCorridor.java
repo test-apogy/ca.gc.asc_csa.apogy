@@ -98,7 +98,7 @@ public interface SpacecraftSwathCorridor extends Named, Described, Updatable {
 	 * @see #setTimeInterval(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getSpacecraftSwathCorridor_TimeInterval()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='TIME_PERIOD' csa_unit='s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='TIME_PERIOD' csa_units='s'"
 	 * @generated
 	 */
 	double getTimeInterval();

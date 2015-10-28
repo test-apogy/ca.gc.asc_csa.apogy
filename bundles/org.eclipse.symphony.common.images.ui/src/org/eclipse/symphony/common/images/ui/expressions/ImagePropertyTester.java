@@ -3,7 +3,7 @@ package org.eclipse.symphony.common.images.ui.expressions;
 import java.util.List;
 
 import org.eclipse.core.expressions.PropertyTester;
-import org.eclipse.symphony.common.converters.Activator;
+import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
 import org.eclipse.symphony.common.images.AbstractEImage;
 
 public class ImagePropertyTester extends PropertyTester {
@@ -20,7 +20,7 @@ public class ImagePropertyTester extends PropertyTester {
 			if (receiver instanceof List<?>){
 				List<?> list = (List<?>) receiver;
 				if (!list.isEmpty()){
-					result = Activator.convert(list.get(0), AbstractEImage.class) != null;		
+					result = Symphony__CommonConvertersFacade.INSTANCE.convert(list.get(0), AbstractEImage.class) != null;		
 				}
 			}
 		}	

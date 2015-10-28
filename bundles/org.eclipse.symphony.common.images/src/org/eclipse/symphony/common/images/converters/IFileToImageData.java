@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.converters.IConverter;
  */
 public class IFileToImageData implements IConverter {
 
-	public static String[] supportedFileExtensions = new String[]{"gif", "jpg", "jpeg", "png", "tiff", "tif", "bmp"};
+	public final static String[] supportedFileExtensions = new String[]{"gif", "jpg", "jpeg", "png", "tiff", "tif", "bmp"};
 	
 	public IFileToImageData() 
 	{		

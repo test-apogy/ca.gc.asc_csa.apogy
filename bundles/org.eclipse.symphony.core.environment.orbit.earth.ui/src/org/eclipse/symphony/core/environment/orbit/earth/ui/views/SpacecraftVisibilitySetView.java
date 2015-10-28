@@ -10,7 +10,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.symphony.core.environment.orbit.earth.SpacecraftsVisibilitySet;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.SpacecraftsVisibilitySetComposite;
-
+import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
 import org.eclipse.symphony.common.ui.views.AbstractView;
 
 public class SpacecraftVisibilitySetView extends AbstractView 
@@ -60,14 +60,14 @@ public class SpacecraftVisibilitySetView extends AbstractView
 		});		
  	}
 
- 	@SuppressWarnings("unchecked")
 	@Override
  	public void updateSelection(ISelection selection) 
  	{ 		
-		List<SpacecraftsVisibilitySet> spacecraftsVisibilitySets = (List<SpacecraftsVisibilitySet>) org.eclipse.symphony.common.converters.Activator.convert(selection, SpacecraftsVisibilitySet.class);
+		List<Object> spacecraftsVisibilitySets = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, SpacecraftsVisibilitySet.class);
+		
 		if(!spacecraftsVisibilitySets.isEmpty())
 		{				
-			SpacecraftsVisibilitySet spacecraftsVisibilitySet = spacecraftsVisibilitySets.get(0);										
+			SpacecraftsVisibilitySet spacecraftsVisibilitySet = (SpacecraftsVisibilitySet) spacecraftsVisibilitySets.get(0);										
 			setSpacecraftsVisibilitySet(spacecraftsVisibilitySet);								
 		} 		
  	} 

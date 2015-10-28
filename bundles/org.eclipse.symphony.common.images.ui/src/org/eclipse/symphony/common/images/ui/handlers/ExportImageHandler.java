@@ -7,6 +7,7 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.graphics.ImageData;
+import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.images.ui.Activator;
@@ -27,7 +28,7 @@ public class ExportImageHandler extends AbstractHandler {
 		/** Verifies if there is a selection associated to the event. */
 		ISelection selection = HandlerUtil.getActiveMenuSelection(event);
 		if (selection != null) {
-			List<?> list = org.eclipse.symphony.common.converters.Activator.convert(selection, AbstractEImage.class);
+			List<?> list = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, AbstractEImage.class);
 			if (list != null && !list.isEmpty()){
 				AbstractEImage image = (AbstractEImage) list.get(0);
 				ImageData imageData = EImagesUtilities.INSTANCE.convertToImageData(image.asBufferedImage());

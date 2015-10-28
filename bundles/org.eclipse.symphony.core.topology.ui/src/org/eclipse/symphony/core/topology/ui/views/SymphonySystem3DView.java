@@ -14,6 +14,7 @@ import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyFacade;
 import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
@@ -270,7 +271,7 @@ public class SymphonySystem3DView extends AbstractSymphony3DView implements IPro
 	@Override
 	public void updateSelection(ISelection selection) 
 	{	
-		List systems = org.eclipse.symphony.common.converters.Activator.convert(selection, SymphonySystem.class);
+		List systems = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, SymphonySystem.class);
 		if(systems.size() > 0)
 		{
 			SymphonySystem newSS = (SymphonySystem) systems.get(0);

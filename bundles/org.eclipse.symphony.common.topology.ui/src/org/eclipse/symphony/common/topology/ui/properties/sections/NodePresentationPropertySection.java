@@ -6,6 +6,7 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.symphony.common.ui.properties.ExtendedTabbedPropertySheetPage;
 import org.eclipse.ui.IWorkbenchPart;
@@ -36,7 +37,7 @@ public class NodePresentationPropertySection extends org.eclipse.ui.views.proper
 		{	
 			Object object = ((IStructuredSelection) selection).getFirstElement();
 						
-			NodePresentation nodePresentation = (NodePresentation) org.eclipse.symphony.common.converters.Activator.convert(object, NodePresentation.class);
+			NodePresentation nodePresentation = (NodePresentation) Symphony__CommonConvertersFacade.INSTANCE.convert(object, NodePresentation.class);
 			
 			if(nodePresentation != null)
 			{	
@@ -52,7 +53,7 @@ public class NodePresentationPropertySection extends org.eclipse.ui.views.proper
 	{
 		boolean result = false;
 		
-		result = org.eclipse.symphony.common.converters.Activator.convert(toTest, NodePresentation.class) != null;
+		result = (Symphony__CommonConvertersFacade.INSTANCE.convert(toTest, NodePresentation.class) != null);
 		
 		System.out.println("select(" + toTest + ") = " + result);
 		

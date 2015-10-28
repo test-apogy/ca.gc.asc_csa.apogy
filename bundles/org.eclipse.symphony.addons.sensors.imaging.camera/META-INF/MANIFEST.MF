@@ -44,6 +44,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.core.topology.ui,
  org.eclipse.symphony.common.topology.ui,
  org.eclipse.symphony.common.ui;bundle-version="0.3.0",
- org.eclipse.symphony.common.log;bundle-version="0.3.0"
+ org.eclipse.symphony.common.log;bundle-version="0.3.0",
+ org.eclipse.symphony.common.converters.ui
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.symphony.addons.sensors.imaging.camera.Activator

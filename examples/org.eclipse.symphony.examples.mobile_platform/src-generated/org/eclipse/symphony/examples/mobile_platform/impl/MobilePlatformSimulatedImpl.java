@@ -49,7 +49,7 @@ public class MobilePlatformSimulatedImpl extends MobilePlatformImpl implements M
 	 * This is the time (in milliseconds) between subsequent movement
 	 * steps of the mobile platform.
 	 */
-	protected static final int MOVE_WAIT_PERIOD = 75;
+	protected static final int MOVE_WAIT_PERIOD = 30;
 	
 	/**
 	 * This is the minimum linear velocity (in metres / second) that a

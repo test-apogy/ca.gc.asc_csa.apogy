@@ -57,6 +57,12 @@
       </Class>
    </extension>
    <extension
+         point="org.eclipse.symphony.common.converters">
+      <new_element
+         Class="org.eclipse.symphony.common.topology.ui.converters.NodeToNodePresentationConverter">
+      </new_element>
+   </extension>
+   <extension
          point="org.eclipse.ui.preferencePages">
       <page
             category="org.eclipse.symphony.common.topology.ui.viewer.preferences.TopologyViewerPreferencesPage"

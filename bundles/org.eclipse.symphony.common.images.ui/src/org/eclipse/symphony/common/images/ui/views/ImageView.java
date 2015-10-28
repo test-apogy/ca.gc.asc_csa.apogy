@@ -9,6 +9,7 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
 import org.eclipse.symphony.common.images.AbstractEImage;
 import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.images.ui.composites.SWTImageCanvas;
@@ -53,7 +54,8 @@ public class ImageView extends AbstractView {
 	@Override
 	public void updateSelection(ISelection selection) {
 
-		List<?> images = org.eclipse.symphony.common.converters.Activator.convert(selection, AbstractEImage.class);
+		List<?> images = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, AbstractEImage.class);
+		
 		if(!images.isEmpty())
 		{
 			abstractEImage = (AbstractEImage) images.get(0);			

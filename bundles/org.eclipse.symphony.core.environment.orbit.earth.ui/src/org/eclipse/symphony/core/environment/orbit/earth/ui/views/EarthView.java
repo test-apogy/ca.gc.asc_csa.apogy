@@ -15,7 +15,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.ui.commands.EarthViewSh
 import org.eclipse.symphony.core.environment.orbit.earth.ui.commands.EarthViewShowRoundEarthAction;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.EarthComposite;
 import org.eclipse.symphony.core.environment.orbit.earth.ui.composites.EarthComposite.EarthViewMode;
-
+import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
 import org.eclipse.symphony.common.ui.views.AbstractView;
 
 public class EarthView extends AbstractView 
@@ -68,14 +68,15 @@ public class EarthView extends AbstractView
 		});		
  	}
 
- 	@SuppressWarnings("unchecked")
 	@Override
  	public void updateSelection(ISelection selection) 
- 	{ 		
-		List<EarthViewConfiguration> earthViewConfigurations = (List<EarthViewConfiguration>) org.eclipse.symphony.common.converters.Activator.convert(selection, EarthViewConfiguration.class);
+ 	{
+		
+		List<Object> earthViewConfigurations = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, EarthViewConfiguration.class);
+		
 		if(!earthViewConfigurations.isEmpty())
 		{				
-			EarthViewConfiguration earthViewConfiguration = earthViewConfigurations.get(0);										
+			EarthViewConfiguration earthViewConfiguration = (EarthViewConfiguration) earthViewConfigurations.get(0);										
 			setEarthViewConfiguration(earthViewConfiguration);								
 		} 		
  	} 

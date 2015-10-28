@@ -7,6 +7,7 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.IHandler;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ui.NodePresentation;
 import org.eclipse.ui.handlers.HandlerUtil;
@@ -25,7 +26,8 @@ public class ToggleNodeVisibilityCommand extends AbstractHandler implements IHan
 			if(selection instanceof Node)
 			{
 				Node node = (Node) selection;								
-				NodePresentation nodePresentation = (NodePresentation) org.eclipse.symphony.common.converters.Activator.convert(node, NodePresentation.class);				
+				NodePresentation nodePresentation = (NodePresentation) Symphony__CommonConvertersFacade.INSTANCE.convert(node, NodePresentation.class);
+				
 				if(nodePresentation != null)
 				{
 					nodePresentation.setVisible(!nodePresentation.isVisible());

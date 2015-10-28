@@ -489,7 +489,7 @@ class VisibilityPass
 	/*
 	 * Pass duration, in seconds.
 	 */
-	@GenModel(csa_unit = "s")
+	@GenModel(csa_units = "s")
 	transient double duration
 }
 
@@ -498,7 +498,7 @@ class VisibilityPassSpacecraftPositionHistory
 	/*
 	 * The time interval separating positions.
 	 */
-	@GenModel(notify="true", property="Editable", csa_unit = "s")
+	@GenModel(notify="true", property="Editable", csa_units = "s")
 	double timeInterval = "30.0"
 	
 	/*
@@ -627,7 +627,7 @@ class SpacecraftSwathCorridor extends Named, Described, Updatable
 	@GenModel(notify="true", property="Editable", propertyCategory="TIME_PERIOD")
 	EDate endTime
 	
-	@GenModel(notify="true", property="Editable",  propertyCategory="TIME_PERIOD", csa_unit = "s")
+	@GenModel(notify="true", property="Editable",  propertyCategory="TIME_PERIOD", csa_units = "s")
 	double timeInterval = "1.0"
 	
 	/*
@@ -653,7 +653,7 @@ class Symphony__CoreEnvironmentOrbitEarthFacade
 	/*
 	 * Returns the Earth gravitational constant from GRIM5C1 model: 3.986004415e14 m³/s².
 	 */
-	@GenModel(csa_unit = "m³/s²")
+	@GenModel(csa_units = "m³/s²")
 	op double getMu()
 	
 	/*
@@ -677,7 +677,7 @@ class Symphony__CoreEnvironmentOrbitEarthFacade
 	 * @param elevation The elevation of the location, in meters.
 	 * @return The EarthSurfaceLocation.
 	 */
-	op EarthSurfaceLocation createEarthSurfaceLocation(String name, String description, @GenModel(csa_unit = "rad") double longitude, @GenModel(csa_unit = "rad") double latitude, @GenModel(csa_unit = "m") double elevation)
+	op EarthSurfaceLocation createEarthSurfaceLocation(String name, String description, @GenModel(csa_units = "rad") double longitude, @GenModel(csa_units = "rad") double latitude, @GenModel(csa_units = "m") double elevation)
 	
 	/*
 	 * Create an OreKitBackedFrame based on an OreKit frame.
@@ -693,20 +693,20 @@ class Symphony__CoreEnvironmentOrbitEarthFacade
 	 * Returns the elevation angle of a spacecraft relative
 	 * to a Earth surface location.
 	 */
-	@GenModel(csa_unit = "rad")
+	@GenModel(csa_units = "rad")
 	op double getSpacecraftElevationAngle(SpacecraftState spacecraftState, EarthSurfaceLocation earthSurfaceLocation) throws Exception 
 
 	/*
 	 * Returns the azimuth angle (relative to North) of a
 	 * spacecraft at a Earth surface location.
 	 */
-	@GenModel(csa_unit = "rad")
+	@GenModel(csa_units = "rad")
 	op double getSpacecraftAzimuthAngle(SpacecraftState spacecraftState, EarthSurfaceLocation earthSurfaceLocation) throws Exception 
 	
 	/*
 	 * Returns the distance between spacecraft and a specified target.
 	 */
-	@GenModel(csa_unit = "m")
+	@GenModel(csa_units = "m")
 	op double getRange(SpacecraftState spacecraftState, EarthSurfaceLocation earthSurfaceLocation)	throws Exception 
 	
 	op SpacecraftState createSpacecraftState(Orbit orbit, OreKitSpacecraftState oreKitSpacecraftState)

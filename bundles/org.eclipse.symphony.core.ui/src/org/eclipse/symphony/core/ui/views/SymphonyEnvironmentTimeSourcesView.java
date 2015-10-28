@@ -11,6 +11,7 @@ import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.symphony.common.converters.ui.Symphony__CommonConvertersUIFacade;
 import org.eclipse.symphony.common.ui.views.AbstractView;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
@@ -76,16 +77,16 @@ public class SymphonyEnvironmentTimeSourcesView extends AbstractView
 		setPartName(PART_NAME);
 	}
 
-	
-	@SuppressWarnings("unchecked")
 	@Override
 	public void updateSelection(ISelection selection) 
 	{		
 		Activator.getDefault();
-		List<SymphonyEnvironment> ses = (List<SymphonyEnvironment>) org.eclipse.symphony.common.converters.Activator.convert(selection, SymphonyEnvironment.class);
+		
+		List<Object> ses = Symphony__CommonConvertersUIFacade.INSTANCE.convert(selection, SymphonyEnvironment.class);
+		
 		if(!ses.isEmpty())
-		{							
-			SymphonyEnvironment se = ses.get(0);
+		{
+			SymphonyEnvironment se = (SymphonyEnvironment) ses.get(0);
 			
 			if(se != getSymphonyEnvironment())
 			{

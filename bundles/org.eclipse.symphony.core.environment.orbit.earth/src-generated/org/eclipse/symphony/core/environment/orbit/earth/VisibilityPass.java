@@ -184,7 +184,7 @@ public interface VisibilityPass extends EObject {
 	 * @see #setDuration(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPass_Duration()
 	 * @model unique="false" transient="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_unit='s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='s'"
 	 * @generated
 	 */
 	double getDuration();
