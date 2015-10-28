@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Variable;
 
 import junit.framework.TestCase;
@@ -78,7 +78,7 @@ public class VariableTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createVariable());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createVariable());
 	}
 
 	/**

@@ -14,7 +14,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class EMFEcoreInvocatorTests extends TestSuite {
+public class Symphony__CoreInvocatorTests extends TestSuite {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,8 +31,8 @@ public class EMFEcoreInvocatorTests extends TestSuite {
 	 * @generated
 	 */
 	public static Test suite() {
-		TestSuite suite = new EMFEcoreInvocatorTests("invocator Tests");
-		suite.addTestSuite(EMFEcoreInvocatorFacadeTest.class);
+		TestSuite suite = new Symphony__CoreInvocatorTests("invocator Tests");
+		suite.addTestSuite(Symphony__CoreInvocatorFacadeTest.class);
 		suite.addTestSuite(DataProductsListTest.class);
 		suite.addTestSuite(RegisteredTypesListTest.class);
 		suite.addTestSuite(TypeApiAdapterTest.class);
@@ -61,8 +61,8 @@ public class EMFEcoreInvocatorTests extends TestSuite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EMFEcoreInvocatorTests(String name) {
+	public Symphony__CoreInvocatorTests(String name) {
 		super(name);
 	}
 
-} //EMFEcoreInvocatorTests
+} //Symphony__CoreInvocatorTests

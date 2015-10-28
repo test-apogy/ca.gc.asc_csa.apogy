@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.OperationCallResult;
 
 import junit.textui.TestRunner;
@@ -60,7 +60,7 @@ public class OperationCallResultTest extends AbstractResultTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createOperationCallResult());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCallResult());
 	}
 
 	/**

@@ -8,7 +8,7 @@ import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -81,7 +81,7 @@ public class TopologyPresentationRegistryTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(TopologyUIFactory.eINSTANCE.createTopologyPresentationRegistry());
+		setFixture(Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyPresentationRegistry());
 	}
 
 	/**

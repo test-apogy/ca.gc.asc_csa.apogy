@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO;
-import org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCFactory;
-import org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCPackage;
+import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCFactory;
+import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,8 +46,8 @@ public class Data3DASCExample {
 		// Register the package to ensure it is available during loading.
 		//
 		resourceSet.getPackageRegistry().put
-			(Data3DASCPackage.eNS_URI, 
-			 Data3DASCPackage.eINSTANCE);
+			(Symphony__CommonGeometryData3DASCPackage.eNS_URI, 
+			 Symphony__CommonGeometryData3DASCPackage.eINSTANCE);
         
 		// If there are no arguments, emit an appropriate usage message.
 		//
@@ -55,7 +55,7 @@ public class Data3DASCExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.data3dasc"));
-				ASC3DIO root = Data3DASCFactory.eINSTANCE.createASC3DIO();
+				ASC3DIO root = Symphony__CommonGeometryData3DASCFactory.eINSTANCE.createASC3DIO();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

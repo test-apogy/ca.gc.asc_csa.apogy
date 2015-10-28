@@ -38,10 +38,10 @@ public class ContextsDefinitionView extends AbstractView implements	IEditingDoma
 		contextsDefinitionComposite.setEnvironment(activeSession == null ? null
 				: activeSession.getEnvironment());
 		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(
-				getEMFEcoreInvocatorFacadeAdapter());
+				getSymphony__CoreInvocatorFacadeAdapter());
 	}
 
-	private Adapter getEMFEcoreInvocatorFacadeAdapter() {
+	private Adapter getSymphony__CoreInvocatorFacadeAdapter() {
 		if (adapter == null) {
 			adapter = new AdapterImpl() {
 				@Override
@@ -63,7 +63,7 @@ public class ContextsDefinitionView extends AbstractView implements	IEditingDoma
 	public void dispose() {
 		super.dispose();
 		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(
-				getEMFEcoreInvocatorFacadeAdapter());
+				getSymphony__CoreInvocatorFacadeAdapter());
 	}
 
 	@Override

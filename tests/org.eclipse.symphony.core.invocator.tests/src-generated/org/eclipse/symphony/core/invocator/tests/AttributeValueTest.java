@@ -4,7 +4,7 @@
 package org.eclipse.symphony.core.invocator.tests;
 
 import org.eclipse.symphony.core.invocator.AttributeValue;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -72,7 +72,7 @@ public class AttributeValueTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createAttributeValue());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createAttributeValue());
 	}
 
 	/**

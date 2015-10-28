@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.EMFEcoreInvocatorUtilities} object.
+ * This is the item provider adapter for a {@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorUtilities} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -63,7 +63,7 @@ public class EMFEcoreInvocatorUtilitiesItemProvider
   }
 
   /**
-   * This returns EMFEcoreInvocatorUtilities.gif.
+   * This returns Symphony__CoreInvocatorUtilities.gif.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -71,7 +71,7 @@ public class EMFEcoreInvocatorUtilitiesItemProvider
   @Override
   public Object getImage(Object object)
   {
-    return overlayImage(object, getResourceLocator().getImage("full/obj16/EMFEcoreInvocatorUtilities"));
+    return overlayImage(object, getResourceLocator().getImage("full/obj16/Symphony__CoreInvocatorUtilities"));
   }
 
   /**
@@ -83,7 +83,7 @@ public class EMFEcoreInvocatorUtilitiesItemProvider
   @Override
   public String getText(Object object)
   {
-    return getString("_UI_EMFEcoreInvocatorUtilities_type");
+    return getString("_UI_Symphony__CoreInvocatorUtilities_type");
   }
 
   /**

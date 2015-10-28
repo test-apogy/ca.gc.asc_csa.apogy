@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.Diagnostician;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorPackage;
-import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorResourceFactoryImpl;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorResourceFactoryImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.eclipse.symphony.core.invocator.util.EMFEcoreInvocatorResourceFactory
  * <!-- end-user-doc -->
  * @generated
  */
-public class EMFEcoreInvocatorExample {
+public class Symphony__CoreInvocatorExample {
 	/**
 	 * <!-- begin-user-doc -->
 	 * Load all the argument file paths or URIs as instances of the model.
@@ -41,13 +41,13 @@ public class EMFEcoreInvocatorExample {
 		//
 		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put
 			(Resource.Factory.Registry.DEFAULT_EXTENSION, 
-			 new EMFEcoreInvocatorResourceFactoryImpl());
+			 new Symphony__CoreInvocatorResourceFactoryImpl());
 
 		// Register the package to ensure it is available during loading.
 		//
 		resourceSet.getPackageRegistry().put
-			(EMFEcoreInvocatorPackage.eNS_URI, 
-			 EMFEcoreInvocatorPackage.eINSTANCE);
+			(Symphony__CoreInvocatorPackage.eNS_URI, 
+			 Symphony__CoreInvocatorPackage.eINSTANCE);
         
 		// If there are no arguments, emit an appropriate usage message.
 		//
@@ -55,7 +55,7 @@ public class EMFEcoreInvocatorExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.sym"));
-				EMFEcoreInvocatorFacade root = EMFEcoreInvocatorFactory.eINSTANCE.createEMFEcoreInvocatorFacade();
+				Symphony__CoreInvocatorFacade root = Symphony__CoreInvocatorFactory.eINSTANCE.createSymphony__CoreInvocatorFacade();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}
@@ -113,4 +113,4 @@ public class EMFEcoreInvocatorExample {
 		}
 	}
 
-} //EMFEcoreInvocatorExample
+} //Symphony__CoreInvocatorExample

@@ -7,8 +7,8 @@ import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
-import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +33,7 @@ public class TopologyUIFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TopologyUIFacade fixture = null;
+	protected Symphony__CommonTopologyUIFacade fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class TopologyUIFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void setFixture(TopologyUIFacade fixture) {
+	protected void setFixture(Symphony__CommonTopologyUIFacade fixture) {
 		this.fixture = fixture;
 	}
 
@@ -70,7 +70,7 @@ public class TopologyUIFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TopologyUIFacade getFixture() {
+	protected Symphony__CommonTopologyUIFacade getFixture() {
 		return fixture;
 	}
 
@@ -82,7 +82,7 @@ public class TopologyUIFacadeTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(TopologyUIFactory.eINSTANCE.createTopologyUIFacade());
+		setFixture(Symphony__CommonTopologyUIFactory.eINSTANCE.createSymphony__CommonTopologyUIFacade());
 	}
 
 	/**

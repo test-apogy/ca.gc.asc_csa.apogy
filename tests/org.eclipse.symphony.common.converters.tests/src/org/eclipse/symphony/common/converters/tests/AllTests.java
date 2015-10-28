@@ -5,8 +5,9 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ ActivatorTest.class, ChainedConverterTest.class,
-		ConverterGraphUtilitiesTest.class })
+@SuiteClasses({ Symphony__CommonConvertersFacadeTest.class,
+			    ChainedConverterTest.class,
+			    Symphony__CommonConvertersGraphsFacadeTest.class })
 public class AllTests {
 
 }

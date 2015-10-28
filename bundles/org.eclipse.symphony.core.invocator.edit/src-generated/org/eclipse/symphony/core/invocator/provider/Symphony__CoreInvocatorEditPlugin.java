@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
 import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
 
 /**
- * This is the central singleton for the EMFEcoreInvocator edit plugin. <!--
+ * This is the central singleton for the Symphony__CoreInvocator edit plugin. <!--
  * begin-user-doc --> <!-- end-user-doc -->
  * 
  * @generated

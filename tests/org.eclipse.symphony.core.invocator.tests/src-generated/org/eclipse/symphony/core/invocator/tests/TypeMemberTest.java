@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.TypeMember;
 
 import junit.framework.TestCase;
@@ -72,7 +72,7 @@ public class TypeMemberTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createTypeMember());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createTypeMember());
 	}
 
 	/**

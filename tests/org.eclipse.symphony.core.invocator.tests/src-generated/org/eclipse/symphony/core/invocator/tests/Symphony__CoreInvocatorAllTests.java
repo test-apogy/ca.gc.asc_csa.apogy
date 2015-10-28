@@ -10,11 +10,11 @@ import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test suite for the '<em><b>EMFEcoreInvocator</b></em>' model.
+ * A test suite for the '<em><b>Symphony__CoreInvocator</b></em>' model.
  * <!-- end-user-doc -->
  * @generated
  */
-public class EMFEcoreInvocatorAllTests extends TestSuite {
+public class Symphony__CoreInvocatorAllTests extends TestSuite {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,8 +31,8 @@ public class EMFEcoreInvocatorAllTests extends TestSuite {
 	 * @generated
 	 */
 	public static Test suite() {
-		TestSuite suite = new EMFEcoreInvocatorAllTests("EMFEcoreInvocator Tests");
-		suite.addTest(EMFEcoreInvocatorTests.suite());
+		TestSuite suite = new Symphony__CoreInvocatorAllTests("Symphony__CoreInvocator Tests");
+		suite.addTest(Symphony__CoreInvocatorTests.suite());
 		return suite;
 	}
 
@@ -41,8 +41,8 @@ public class EMFEcoreInvocatorAllTests extends TestSuite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EMFEcoreInvocatorAllTests(String name) {
+	public Symphony__CoreInvocatorAllTests(String name) {
 		super(name);
 	}
 
-} //EMFEcoreInvocatorAllTests
+} //Symphony__CoreInvocatorAllTests

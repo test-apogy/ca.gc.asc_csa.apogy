@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.OperationCall;
 
 import junit.textui.TestRunner;
@@ -61,7 +61,7 @@ public class OperationCallTest extends VariableFeatureReferenceTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createOperationCall());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCall());
 	}
 
 	/**

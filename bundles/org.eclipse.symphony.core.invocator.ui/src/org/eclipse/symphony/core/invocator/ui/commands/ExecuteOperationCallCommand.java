@@ -26,7 +26,7 @@ public class ExecuteOperationCallCommand extends AbstractHandler implements
 	@Override
 	public Object execute(final ExecutionEvent event) throws ExecutionException {
 
-		new Job("EMFEcoreInvocator: Execute Operation Call") {
+		new Job("Symphony__CoreInvocator: Execute Operation Call") {
 			@Override
 			protected IStatus run(IProgressMonitor monitor) {
 				final Iterator<?> selections = ((IStructuredSelection) HandlerUtil

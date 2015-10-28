@@ -9,7 +9,7 @@ import junit.framework.TestCase;
 import org.eclipse.symphony.common.converters.ChainedConverter;
 import org.eclipse.symphony.common.converters.IConverter;
 import org.eclipse.symphony.common.converters.graphs.ConverterEdge;
-import org.eclipse.symphony.common.converters.graphs.ConverterGraphUtilities;
+import org.eclipse.symphony.common.converters.graphs.Symphony__CommonConvertersGraphsFacade;
 import org.eclipse.symphony.common.converters.tests.converters.ConverterAAtoA;
 import org.eclipse.symphony.common.converters.tests.converters.ConverterAAtoC;
 import org.eclipse.symphony.common.converters.tests.converters.ConverterAtoB;
@@ -30,7 +30,7 @@ import org.eclipse.symphony.common.converters.tests.types.D;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 import org.junit.Test;
 
-public class ConverterGraphUtilitiesTest extends TestCase 
+public class Symphony__CommonConvertersGraphsFacadeTest extends TestCase 
 {
 	@Test
 	public void testCreateGraph() 
@@ -38,7 +38,7 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		List<IConverter> converters = new ArrayList<IConverter>();
 		converters.add(new ConverterAtoB());
 		converters.add(new ConverterBtoC());
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ConverterGraphUtilities.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 		assertEquals(2, graph.edgeSet().size());
 		assertEquals(3, graph.vertexSet().size());	
 	}
@@ -50,10 +50,10 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		converters.add(new ConverterBtoD());
 		converters.add(new ConverterAtoB());
 		converters.add(new ConverterBtoC());		
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ConverterGraphUtilities.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 		
 		// Test a simple case where no chaining is required.
-		IConverter converter = ConverterGraphUtilities.findConverter(graph, A.class, B.class);
+		IConverter converter = Symphony__CommonConvertersGraphsFacade.INSTANCE.findConverter(graph, A.class, B.class);
 		assertNotNull(converter);
 		A a = new A();
 		a.setDescription("A");
@@ -71,7 +71,7 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		assertEquals("A->AtoB", b.getDescription());	
 		
 		// Test a case where chaining is required.
-		converter = ConverterGraphUtilities.findConverter(graph, A.class, C.class);
+		converter = Symphony__CommonConvertersGraphsFacade.INSTANCE.findConverter(graph, A.class, C.class);
 		C c = null;
 		try 
 		{
@@ -86,7 +86,7 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		assertEquals("A->AtoB->BtoC", c.getDescription());
 		
 		// Test a case where chaining is required.
-		converter = ConverterGraphUtilities.findConverter(graph, A.class, D.class);
+		converter = Symphony__CommonConvertersGraphsFacade.INSTANCE.findConverter(graph, A.class, D.class);
 		D d = null;
 		try 
 		{
@@ -117,12 +117,12 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		converters.add(new ConverterBtoD());
 			
 		// Creates the conversion graph 
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ConverterGraphUtilities.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge> graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 			
 		A a = new A();
 						
 		//IConverter converter = ConverterGraphUtilities.findConverterNEW(graph, A.class, C.class, a);
-		IConverter converter = ConverterGraphUtilities.findConverter(graph, A.class, C.class);
+		IConverter converter = Symphony__CommonConvertersGraphsFacade.INSTANCE.findConverter(graph, A.class, C.class);
 		assertNotNull(converter);
 		System.out.println("Converter : " + converter.toString());
 						
@@ -147,9 +147,9 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		converters.add(new ConverterBtoC());	
 
 		// Creates a graph that requires one typeCastConverter from AA to A
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ConverterGraphUtilities.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 		
-		List<IConverter> typeCastConverters = ConverterGraphUtilities.generateTypeCastConverters(graph);
+		List<IConverter> typeCastConverters = Symphony__CommonConvertersGraphsFacade.INSTANCE.generateTypeCastConverters(graph);
 		assertEquals(1, typeCastConverters.size());
 		IConverter converter = typeCastConverters.get(0);
 		assertNotNull(converter);
@@ -158,9 +158,9 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		
 		// Redo the test, but add a converter between A and AA. This should produce NO typeCastConverter.
 		converters.add(new ConverterAAtoA());	
-		graph = ConverterGraphUtilities.createGraph(converters);
+		graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 		
-		typeCastConverters = ConverterGraphUtilities.generateTypeCastConverters(graph);
+		typeCastConverters = Symphony__CommonConvertersGraphsFacade.INSTANCE.generateTypeCastConverters(graph);
 		assertEquals(0, typeCastConverters.size());
 	}
 	
@@ -172,25 +172,25 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		converters.add(new ConverterAtoB());
 			
 		// Creates the conversion graph 
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ConverterGraphUtilities.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 			
 		AA aa = new AA();
 		aa.setDescription("AA");
-		B b = (B) ConverterGraphUtilities.convert(graph, aa, B.class);
+		B b = (B) Symphony__CommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, B.class);
 		assertNotNull(b);
 		assertEquals("AA->AtoB", b.getDescription());
 						
 		// Adds another converter to the list and do the same test. This converter should not change anything
 		converters.add(new ConverterAAtoC());
-		graph = ConverterGraphUtilities.createGraph(converters);
-		b = (B) ConverterGraphUtilities.convert(graph, aa, B.class);
+		graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		b = (B) Symphony__CommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, B.class);
 		assertNotNull(b);
 		assertEquals("AA->AtoB", b.getDescription());
 			
 		// Adds a converter from AA to A. This converter should be used instead of the TypeCast one.
 		converters.add(new ConverterAAtoA());
-		graph = ConverterGraphUtilities.createGraph(converters);
-		b = (B) ConverterGraphUtilities.convert(graph, aa, B.class);
+		graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
+		b = (B) Symphony__CommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, B.class);
 		assertNotNull(b);	
 		assertNotNull(b.getDescription());				
 		assertEquals("AA->AAtoA->AtoB", b.getDescription());
@@ -205,12 +205,12 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		converters.add(new ConverterDtoB());
 		
 		// Creates the conversion graph 
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ConverterGraphUtilities.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 		
 		AA aa = new AA();
 		aa.setDescription("AA");
 				
-		B b = (B) ConverterGraphUtilities.convert(graph, aa, B.class);
+		B b = (B) Symphony__CommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, B.class);
 		assertNotNull(b);
 		String description = b.getDescription();
 		
@@ -228,12 +228,12 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		converters.add(new ConverterAtoB());
 		
 		// Creates the conversion graph 
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ConverterGraphUtilities.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 
 		AA aa = new AA();
 		aa.setDescription("AA");
 				
-		C c = (C) ConverterGraphUtilities.convert(graph, aa, C.class);
+		C c = (C) Symphony__CommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, C.class);
 		assertNotNull(c);
 		assertNotNull(c.getDescription());		
 		assertEquals("AA->AAtoC", c.getDescription());
@@ -244,12 +244,12 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		converters.add(new ConverterAAtoC());
 		converters.add(new ConverterAtoC());
 		
-		graph = ConverterGraphUtilities.createGraph(converters);
+		graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 
 		aa = new AA();
 		aa.setDescription("AA");
 				
-		c = (C) ConverterGraphUtilities.convert(graph, aa, C.class);
+		c = (C) Symphony__CommonConvertersGraphsFacade.INSTANCE.convert(graph, aa, C.class);
 		assertNotNull(c);
 		assertNotNull(c.getDescription());		
 		assertEquals("AA->AAtoC", c.getDescription());
@@ -265,20 +265,20 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		classes.add(B.class);
 		
 		// This should return A.class
-		Class<?> result = ConverterGraphUtilities.findClosestSuperType(classes, AA.class);
+		Class<?> result = Symphony__CommonConvertersGraphsFacade.INSTANCE.findClosestSuperType(classes, AA.class);
 		assertEquals(A.class, result);
 		
 		// This should return B
-		result = ConverterGraphUtilities.findClosestSuperType(classes, B.class);
+		result = Symphony__CommonConvertersGraphsFacade.INSTANCE.findClosestSuperType(classes, B.class);
 		assertEquals(B.class, result);
 		
 		// This should return null
-		result = ConverterGraphUtilities.findClosestSuperType(classes, D.class);
+		result = Symphony__CommonConvertersGraphsFacade.INSTANCE.findClosestSuperType(classes, D.class);
 		assertNull(result);
 				
 		// Adds AA to the list.
 		classes.add(AA.class);
-		result = ConverterGraphUtilities.findClosestSuperType(classes, AA.class);
+		result = Symphony__CommonConvertersGraphsFacade.INSTANCE.findClosestSuperType(classes, AA.class);
 		assertEquals(AA.class, result);
 	}
 	
@@ -292,13 +292,13 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		classes.add(B.class);
 		
 		// This should return BB.class
-		Class<?> result = ConverterGraphUtilities.findClosestSubType(classes, BB.class);
+		Class<?> result = Symphony__CommonConvertersGraphsFacade.INSTANCE.findClosestSubType(classes, BB.class);
 		assertEquals(BB.class, result);	
 		
-		result = ConverterGraphUtilities.findClosestSubType(classes, B.class);
+		result = Symphony__CommonConvertersGraphsFacade.INSTANCE.findClosestSubType(classes, B.class);
 		assertEquals(B.class, result);
 
-		result = ConverterGraphUtilities.findClosestSubType(classes, AA.class);
+		result = Symphony__CommonConvertersGraphsFacade.INSTANCE.findClosestSubType(classes, AA.class);
 		assertEquals(null, result);
 	}
 	
@@ -312,24 +312,24 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		converters.add(new ConverterAtoB());
 		
 		// Creates the conversion graph 
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ConverterGraphUtilities.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 
-		List<Class<?>> results = ConverterGraphUtilities.getSourceVertex(graph, AA.class);
+		List<Class<?>> results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getSourceVertex(graph, AA.class);
 		assertEquals(2, results.size());
 		assertEquals(AA.class, results.get(0));
 		assertEquals(A.class, results.get(1));
 		
-		results = ConverterGraphUtilities.getSourceVertex(graph, A.class);
+		results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getSourceVertex(graph, A.class);
 		assertEquals(1, results.size());		
 		assertEquals(A.class, results.get(0));
 		
-		results = ConverterGraphUtilities.getSourceVertex(graph, AAA.class);
+		results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getSourceVertex(graph, AAA.class);
 		assertEquals(2, results.size());
 		assertEquals(AA.class, results.get(0));
 		assertEquals(A.class, results.get(1));
 				
 		// No C as input, thus should return an empty list.
-		results = ConverterGraphUtilities.getSourceVertex(graph, C.class);		
+		results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getSourceVertex(graph, C.class);		
 		assertEquals(0, results.size());
 	}
 	
@@ -344,23 +344,23 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		converters.add(new ConverterAtoBB());
 			
 		// Creates the conversion graph 
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ConverterGraphUtilities.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 	
-		List<Class<?>> results = ConverterGraphUtilities.getDestinationVertex(graph, C.class);
+		List<Class<?>> results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getDestinationVertex(graph, C.class);
 		assertEquals(1, results.size());
 		assertEquals(C.class, results.get(0));		
 			
-		results = ConverterGraphUtilities.getDestinationVertex(graph, BB.class);
+		results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getDestinationVertex(graph, BB.class);
 		assertEquals(1, results.size());		
 		assertEquals(BB.class, results.get(0));
 			
-		results = ConverterGraphUtilities.getDestinationVertex(graph, B.class);
+		results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getDestinationVertex(graph, B.class);
 		assertEquals(2, results.size());
 		assertEquals(B.class, results.get(0));
 		assertEquals(BB.class, results.get(1));
 					
 		// No A as output, thus should return an empty list.
-		results = ConverterGraphUtilities.getDestinationVertex(graph,A.class);		
+		results = Symphony__CommonConvertersGraphsFacade.INSTANCE.getDestinationVertex(graph,A.class);		
 		assertEquals(0, results.size());
 	}
 	
@@ -378,9 +378,9 @@ public class ConverterGraphUtilitiesTest extends TestCase
 		converters.add(new ConverterBtoD());
 			
 		// Creates the conversion graph 
-		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = ConverterGraphUtilities.createGraph(converters);
+		SimpleDirectedWeightedGraph<Class<?>, ConverterEdge>  graph = Symphony__CommonConvertersGraphsFacade.INSTANCE.createGraph(converters);
 	
-		SortedSet<ChainedConverter> converterSet = ConverterGraphUtilities.findAllConvertersBetweenVertices(graph, A.class, C.class);			
+		SortedSet<ChainedConverter> converterSet = Symphony__CommonConvertersGraphsFacade.INSTANCE.findAllConvertersBetweenVertices(graph, A.class, C.class);			
 		assertNotNull(converterSet);
 		assertEquals(2, converterSet.size());
 			

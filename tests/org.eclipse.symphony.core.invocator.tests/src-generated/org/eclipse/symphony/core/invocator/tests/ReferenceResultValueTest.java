@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.ReferenceResultValue;
 
 import junit.textui.TestRunner;
@@ -54,7 +54,7 @@ public class ReferenceResultValueTest extends AbstractResultValueTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createReferenceResultValue());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createReferenceResultValue());
 	}
 
 	/**

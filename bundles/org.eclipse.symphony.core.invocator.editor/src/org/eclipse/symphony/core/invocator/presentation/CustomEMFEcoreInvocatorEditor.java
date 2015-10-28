@@ -49,7 +49,7 @@ import org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributo
 import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 
 /**
- * This is an example of a EMFEcoreInvocator model editor. <!-- begin-user-doc
+ * This is an example of a Symphony__CoreInvocator model editor. <!-- begin-user-doc
  * --> <!-- end-user-doc -->
  * 
  * @generated_NOT
@@ -57,7 +57,7 @@ import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
 public class CustomEMFEcoreInvocatorEditor extends Symphony__CoreInvocatorEditor
 		implements ITabbedPropertySheetPageContributor {
 
-	public static String ID = "org.eclipse.symphony.core.invocator.presentation.EMFEcoreInvocatorEditorID";
+	public static String ID = "org.eclipse.symphony.core.invocator.presentation.Symphony__CoreInvocatorEditorID";
 	private Map<Object, Diagnostic> diagnosticErrorsMap;
 	private Image errorOverlayImage;
 	protected TabbedPropertySheetPage propertySheetPage;

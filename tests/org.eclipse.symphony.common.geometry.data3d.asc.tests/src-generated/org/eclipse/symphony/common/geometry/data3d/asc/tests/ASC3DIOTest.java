@@ -4,7 +4,7 @@
 package org.eclipse.symphony.common.geometry.data3d.asc.tests;
 
 import org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO;
-import org.eclipse.symphony.common.geometry.data3d.asc.Data3DASCFactory;
+import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -85,7 +85,7 @@ public class ASC3DIOTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(Data3DASCFactory.eINSTANCE.createASC3DIO());
+		setFixture(Symphony__CommonGeometryData3DASCFactory.eINSTANCE.createASC3DIO());
 	}
 
 	/**

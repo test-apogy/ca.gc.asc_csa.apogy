@@ -8,7 +8,7 @@ import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
 import org.eclipse.symphony.common.topology.ui.GraphicsContext;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 /**
  * <!-- begin-user-doc -->
@@ -79,7 +79,7 @@ public class GraphicsContextTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(TopologyUIFactory.eINSTANCE.createGraphicsContext());
+		setFixture(Symphony__CommonTopologyUIFactory.eINSTANCE.createGraphicsContext());
 	}
 
 	/**

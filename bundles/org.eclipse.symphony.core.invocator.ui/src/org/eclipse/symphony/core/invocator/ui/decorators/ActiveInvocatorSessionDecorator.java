@@ -33,19 +33,19 @@ public class ActiveInvocatorSessionDecorator extends LabelProvider implements
 	
 	private boolean found = false;
 
-	private AdapterImpl emfEcoreInvocatorFacadeAdapter;
+	private AdapterImpl Symphony__CoreInvocatorFacadeAdapter;
 
 	private IFile activeSessionFile = null;
 
 	public ActiveInvocatorSessionDecorator() {
 		super();
 		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().add(
-				getEMFEcoreInvocatorFacadeAdapter());
+				getSymphony__CoreInvocatorFacadeAdapter());
 	}
 
-	private Adapter getEMFEcoreInvocatorFacadeAdapter() {
-		if (emfEcoreInvocatorFacadeAdapter == null) {
-			emfEcoreInvocatorFacadeAdapter = new AdapterImpl() {
+	private Adapter getSymphony__CoreInvocatorFacadeAdapter() {
+		if (Symphony__CoreInvocatorFacadeAdapter == null) {
+			Symphony__CoreInvocatorFacadeAdapter = new AdapterImpl() {
 				@Override
 				public void notifyChanged(Notification msg) {
 					if (msg.getFeatureID(Symphony__CoreInvocatorFacade.class) == Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION) {
@@ -70,7 +70,7 @@ public class ActiveInvocatorSessionDecorator extends LabelProvider implements
 				}
 			};
 		}
-		return emfEcoreInvocatorFacadeAdapter;
+		return Symphony__CoreInvocatorFacadeAdapter;
 	}
 
 	private static ActiveInvocatorSessionDecorator getActiveInvocatorSessionDecorator() {
@@ -87,7 +87,7 @@ public class ActiveInvocatorSessionDecorator extends LabelProvider implements
 	@Override
 	public void dispose() {
 		Symphony__CoreInvocatorFacade.INSTANCE.eAdapters().remove(
-				getEMFEcoreInvocatorFacadeAdapter());
+				getSymphony__CoreInvocatorFacadeAdapter());
 	}
 
 	@Override

@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.WatchesListsContainer;
 
 import junit.textui.TestRunner;
@@ -54,7 +54,7 @@ public class WatchesListsContainerTest extends AbstractToolsListContainerTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createWatchesListsContainer());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createWatchesListsContainer());
 	}
 
 	/**

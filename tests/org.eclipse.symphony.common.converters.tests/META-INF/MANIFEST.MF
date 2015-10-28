@@ -10,7 +10,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.junit,
  org.eclipse.symphony.common.converters,
- org.jgrapht;bundle-version="0.8.2"
+ org.jgrapht;bundle-version="0.8.2",
+ org.eclipse.symphony.common.converters.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.symphony.common.converters.tests,

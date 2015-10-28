@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.core.invocator.tests;
 
-import org.eclipse.symphony.core.invocator.EMFEcoreInvocatorFactory;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.WatchesList;
 
 import junit.framework.TestCase;
@@ -72,7 +72,7 @@ public class WatchesListTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(EMFEcoreInvocatorFactory.eINSTANCE.createWatchesList());
+		setFixture(Symphony__CoreInvocatorFactory.eINSTANCE.createWatchesList());
 	}
 
 	/**
