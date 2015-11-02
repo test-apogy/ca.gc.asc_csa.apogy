@@ -1,0 +1,100 @@
+= Symphony RCP Installation & Configuration=
+All Symphony RCP applications are based on the same foundation and are packaged the same way.  Symphony RCP applications are self-contained and are packaged in zip format.  Symphony supports the following platform:
+*Windows 32 bits
+*Windows 64 bits
+*Linux GTK 32 bits
+*Linux GTK 64 bits
+== Java Virtual Machine ==
+# Ensure a proper Java Runtime Environment (JRE) is installed on your system (1.8 or higher).  You can download JRE from [http://www.oracle.com/technetwork/java/javase/downloads/index.html http://www.oracle.com/technetwork/java/javase/downloads/index.html].  
+# The virtual machine must be accessible in the PATH.  Type the following commands in a system shell to verify the installed java version.<pre>java -version&#10;openjdk version "1.8.0_51"&#10;OpenJDK Runtime Environment (build 1.8.0_51-b16)&#10;OpenJDK 64-Bit Server VM (build 25.51-b03, mixed mode)</pre>
+== 3D Acceleration ==
+Symphony makes use of 3D.  It is important to install latest & stable version of graphics card 3D drivers.
+== Symphony Rich Client Platform Applications ==
+# Install Symphony RCP Application<pre>unzip symphony.product-linux.gtk.x86_64.zip</pre>
+# Launch Symphony RCP Application<pre>cd symphony&#10;./symphony (Symphony executable)</pre>
+== Select Workspace ==
+# The '''Workspace Launcher''' dialog will prompt.  Select the location of the new or the existing workspace.  The workspace will contain the information related to your Symphony session.
+
+= Symphony SDK Installation & Configuration=
+== Eclipse ==
+Symphony is based on Eclipse.  The first installation step is the proper installation and configuration of Eclipse.  Eclipse configuration details can be found on [https://www.eclipse.org https://www.eclipse.org].
+# Download Eclipse Classic (Luna 4.4 or newer) from [http://www.eclipse.org/downloads http://www.eclipse.org/downloads].
+## On the right bar, select Under More Downloads, '''Other Platforms'''.
+## Under '''Latest Downloads''', select the first element (e.g. 4.4.2).
+## Browse below and go to '''Eclipse SDK''', then select the appropriate platform.
+# Unzip eclipse package on your local drive.
+# Ensure a proper Java Runtime Environment (JRE) is installed on your system (1.8 or higher).  You can download JRE from [http://www.oracle.com/technetwork/java/javase/downloads/index.html http://www.oracle.com/technetwork/java/javase/downloads/index.html]
+# Copy <JRE_HOME> directory into <ECLIPSE_HOME> directory.<pre>eclipse&#10;  configuration&#10;  eclipse&#10;  eclipse.ini&#10;  features&#10;  plugins&#10;  jre (must include /bin/java)&#10;  ...</pre>
+# Open the file <ECLIPSE_HOME>/eclipse.ini with your favorite editor.
+# Set the Java Virtual Machine (VM) options.<pre>-vmargs&#10;-Xms1024m&#10;-Xmx4096m    <=== ENSURE TO SET THIS VALUE HIGHER THAN 2048m</pre>
+# Save your changes.
+# Launch the Eclipse executable.<pre>./eclipse</pre>
+# Select the workspace location.
+# Install XCore Feature.
+## Click on menu '''Help->Install New Software...'''
+## Select Luna - http://download.eclipse.org/releases/luna in the combo box identified as '''Work with'''.
+## Expand Modeling and check EMF - Eclipse Modeling Framework Xcore SDK.
+## Click on '''Next >''' button.
+## Review the install details and click on '''Next >''' button again.
+## Check '''I accept the terms of the license agreement''' and click on '''Finish''' button.
+## Wait until all required packages are downloaded.
+## On '''Security Warning''' dialog click on '''Ok''' and continue with the installation.
+## Wait for the completion of the installation.  
+## A dialog will then appear to request you to restart Eclipse.  Click on '''Yes''' button.
+
+== Repositories ==
+
+<pre>Please refer to section Symphony Updates for additional instructions related to deployment's updates on existing installation.</pre>
+
+=== Eclipse CSA Repository ===
+Symphony is composed of a series of Eclipse features.  The following steps present the way to install them.
+# Create a directory to store the Eclipse CSA Repository locally.<pre>cd ~; mkdir tmp</pre>
+# Copy a release of '''csa_eclipse_public_repository''' from [http://liberty.speng.space.gc.ca/eclipse/repository/builds CSA Eclipse Repository]<pre>cp csa_eclipse_public_repository_0_3.tgz ~/tmp</pre>
+# Extract the content <pre>tar -xvf csa_eclipse_public_repository_0_3.tgz</pre>
+# Launch the Eclipse executable.<pre>cd $ECLIPSE_HOME&#10;./eclipse</pre>
+# Select the workspace location.
+# Click on menu '''Help->Install New Software...'''
+# Click on '''Add''' button to enter a new Eclipse Repository entry.
+# Add Repository Dialog will appear.  Click on '''Local''' button.
+# Browse the file system and select the file '''~/tmp/latest'''
+# '''Select All''' and click on '''Next'''.
+# On '''Install Details''' click on '''Next'''.
+# On the '''Review Licenses''', check '''I accept the terms of the license agreements''' and click on '''Finish'''.
+# On '''Install Details''' click on '''Next'''.
+# On '''Review Licenses''', check '''I accept the terms of the license agreements''' and click on '''Finish'''.
+# When the '''Security Warning''' dialog appears, click on '''Ok'''.
+# At the end of the installation process, a dialog request you if '''you would like to restart now'''.  Click on '''Yes'''.
+
+=== Eclipse ESM Repository ===
+ESM repository contains all the ESM features (e.g. MESR, Juno, SMA etc).  The following steps present the way to install them.
+# Create a directory to store the ESM Repository locally.<pre>cd ~; mkdir tmp</pre>
+# Copy a release of '''csa_esm_repository''' from [http://liberty.speng.space.gc.ca/eclipse/repository/builds CSA Repository]on your local drive.<pre>cp csa_esm_repository_0_1.tgz ~/tmp</pre>
+# Extract the content <pre>tar -xvf csa_esm_repository_0_1.tgz</pre>
+# Launch the Eclipse executable.<pre>cd $ECLIPSE_HOME&#10;./eclipse</pre>
+# Select the workspace location.
+# Click on menu '''Help->Install New Software...'''
+# Click on '''Add''' button to enter a new Eclipse Repository entry.
+# Add Repository Dialog will appear.  Click on '''Local''' button.
+# Browse the file system and select the file ~/tmp/esm/latest
+# '''Select All''' and click on '''Next'''.
+# On '''Install Details''' click on '''Next'''.
+# On '''Review Licenses''', check '''I accept the terms of the license agreements''' and click on '''Finish'''.
+# When the '''Security Warning''' dialog appears, click on '''Ok'''.
+# At the end of the installation process, a dialog request you if '''you would like to restart now'''.  Click on '''Yes'''.
+
+=== Symphony Updates ===
+
+We have found some situation where the update process does not deploy properly the updated plugins.  We recommend to uninstall prior the deployment of new updates.
+# Go into '''Help->Install New Software…'''
+# Click on the link '''What is already installed?'''
+# Select the '''Installed Software''' tab.
+# Select all items with '''CSA''' or '''ESM''' in their name and then click '''Uninstall'''.
+# Follow the uninstall steps.
+# The install the new version. In the install procedure, only the Eclipse CSA Repository and Eclipse ESM Repository needs to be re-installed.
+
+= Issues =
+== Eclipse Luna GTK3 Problem ==
+If icons do not appear properly in the IDE you may need to specify the following environment variable prior launching Eclipse.
+<pre>
+export SWT_GTK3=0
+</pre>
