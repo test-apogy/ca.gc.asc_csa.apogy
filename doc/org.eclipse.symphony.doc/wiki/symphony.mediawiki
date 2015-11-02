@@ -1,17 +1,21 @@
 =Introduction=
+
 ==Overview==
 Symphony is a multi-mission software framework that simplifies the integration and operations of assemblies of modular systems in different environments. Symphony provides a single tool that supports the operation cycle (development, test, execution and monitoring). The framework only uses open-source and in particular the Eclipse platform. Symphony exploits modern model based software development tools and techniques such as the Eclipse Modeling Framework (EMF). This approach inherently promotes a highly modular and extendable software architecture that allows customization of functionalities with little effort. The usage of Eclipse provides state-of-the-art user interface experience that reflects today best user interface technologies.
 
 For each system used, Symphony provides a single model that defines: command, telemetry, engineering units, limits, documentation, 3D topology and representation. System assemblies can then be created from these models to build different spacecraft configurations. The mission target environment can also be defined that includes maps (2D and 3D), location, annotations as well as location specific and time dependent model of the sky (sun, moon and stars). The framework provides basic operational plan editors that allow, through context switching, the tests and execution of plans in a seemless process. Teleoperations is supported through flexible hand controller mapping, camera displays with customizable overlays and image filtering, real-time map displays (2D and 3D). Symphony maintains rigorously contexts information such as the command and parameter used to generate the plan execution product, timing information and localization. Symphony then make use of these informations to provide the overall context of the operations and their products to the engineers and scientists.
 
 In the last years, Symphony has been used in multiple deployments involving different types of rovers equipped with various sensors and instruments all operated through Symphony.
+
 ==Objectives==
 The objective is to develop a software framework for mission operations that allows to:
 #support mission planning,
 #perform feasibility assessment,
 #execute and monitor operations, and
 #support and facilitate scientific and engineering data analysis. 
+
 =Installation=
+
 ==SDK==
 
 
@@ -19,171 +23,329 @@ The objective is to develop a software framework for mission operations that all
 
 
 =Using Symphony=
+
 ==Eclipse Basics==
+
 ===Workspace===
+
+* Workspace:
+** Working environment of Eclipse;
+** Contains '''Project'''s;
+** Mapped to a folder
+
+* Project:
+** Groups together folder and files;
+** Mapped to a sub-folder of the ''Workspace'';
+
 ===Preferences===
-===Views===
-===Editors===
+
+* Used to persist settings between sessions;
+* Include UI settings, default values for various elements, data path, etc.
+
 ===Selection Providers & Listeners===
-===Action Contexts===
+
+* '''Selection Provider''':
+** UI component fires a selection upon user action;
+
+* '''Selection Listener''':
+** UI component intercepts a selection and reacts to it;
+
+===Views===
+
+* A window managed by the main window;
+* Can be detached;
+* Most are singleton;
+* Most Symphony views are ''Selection Listeners''
+
+===Editors===
+
+* Provides editing of resources;
+* Specific for types of resource;
+* Can be detached;
+* Most are '''Selection Providers''';
+* Most support ''Undo/Redo'';
+* Have an * when the resource is modified;
+
+===Menu Contributions===
+
+* Specific actions(s) available on a user-selected element;
+* Made available through a pull down;
+* Action(s) available are selection dependent;
+
 ==Symphony Concepts==
+
 ===Session & Environment===
-*Editors
+
+====Session====
+
+* Resource that Symphony is centered around;
+* Is the container for all Symphony session elements;
+
+====Symphony Environment====
+
+* Contains the definitions of the ''Worksite'', ''Time Sources'' and the registered ''Symphony Systems'';
+* Defines what you have to work with in a specific deployment;
+
 ===Worksites===
-*Topology
+
+* Defines the area that you are operating in;
+* Include a priori information about the area (e.g. DEM, orbital imagery, etc.);
+* Inherently generic concept that could be specialized as required (e.g. Earth surface);
+
 ====Surface Worksites====
+
+* Defines a ''Worksite'' that resides on the surface of a Celestial body (e.g. Earth)
+
+=====Reference Frame=====
+
 =====Maps=====
-=====Sky=====
-*Earth Sky View
+
+* A component of a ''Worksite'' that contains ''Map Layers'' sharing a common pose relative to the ''Worksite'' origin;
+* A '''''Map Layer''''' contains the actual data about the ''Worksite'' (e.g. DEM, Orbital Imagery, Slope, etc.);
+
+======MapLayer======
+
+* Currently support ''MapLayers'':
+** '''''Triangular Mesh Map Layer''''' (a meshed DEM);
+** '''''Features Of Interest Map Layer''''' (specific locations in the ''Worksite'');
+** '''''Image Map Layer''''' (Image and its physical size on the ''Worksite'');
+
+=====EarthSky=====
+
+* Contains the Celestial bodies of interest (Sun, Moon, Stars);
+* Ephemerides updates based on time and the ''Worksite'' location;
+* Represented in the ''Topology''
+
 ====Orbital Worksites====
+
+===Time Sources===
+
+* '''''Time Sources''''' are used to feed the time to the ''Session''.
+* This, in turn, updates the position of the sky elements (Sun, Moon, Stars);
+* The ''Time Sources'' element contains the available ''Time Sources'', only one of which is set as the ''Session Active Time Source'';
+* The ''Time Sources View'' can be used to access the various time source parameters.
+
+====Available Time Sources====
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>'''''Fixed Time Source'''''</td>
+		<td>A ''time source'' representing a fixed date and time.</td>
+	</tr>
+	<tr>
+		<td>'''''Current Time Source'''''</td>
+		<td>A ''time source'' that represents the current time, updated at a regular interval</td>
+	</tr>
+	<tr>
+		<td>'''''Selection-based Time Source'''''</td>
+		<td>A ''time source'' that updates its time upon the selection of any ''Timed'' element in the UI.</td>
+	</tr>
+	<tr>
+		<td>'''''Browseable Time Source'''''</td>
+		<td>A ''time source'' that can be browsed, reset, played forward or reset, and accelerated.</td>
+	</tr>
+	<tr>
+		<td>'''''OperationCalls Result List Time Source'''''</td>
+		<td>A specialized ''Browseable Time Source'' that allows browsing a list of ''OperationCalls''.</td>
+	</tr>
+</table>
+
 ===Types, Variables & Contexts===
-*Management of measurement units
+
 ====Types====
+
+* A '''''Type''''' defines an entity that can execute commands and provides telemetry:
+** Similar to an Interface Control Document (ICD);
+** Used to specify what a ''Variable'' represents;
+* Type can include ''Type Members'' in their definitions;
+* Types include an ''Adapter'' that acts as a bridge between Symphony and the ''Interface Class'';
+
+====Symphony System====
+
+* Is the "LEGO block" of Symphony;
+* A '''''Symphony System''''' is a specialization of ''Type'';
+* Adds functions to assemble systems together through Connection Points and Assembly Links
+
 =====Simple Types=====
 =====Complex Types=====
-====Variables====
-*API Adapters
-*Topology
-*Pose Corector
+
+====Variables & API Adapters====
+====Pose Corrector====
 ====Context====
+
 ===Data Products===
+
 ===Operation Calls & Programs===
+
 ====Simple Program====
 ====Controller Bindings====
 *Triggers
 *Input Values & Conditioning
+
 ===Tools===
+
 ====3D Viewer====
 ====Map View====
 ====Camera View====
+
 =====Overlays=====
 =====Image Filters=====
 =====Camera Tools=====
+
 ====Controllers View====
 ====Virtual Reality Tools====
-* Nodes Distance View
+=====Nodes Distance View=====
+
 ===Topology===
+
 ==Symphony UI==
+
 ===Preferences===
 ===Data Products View===
 			
 =Developing for Symphony=
 
 ==Symphony Concept==
-*EMF Reflectivity
+===EMF Reflectivity===
+
 ===Type Interfaces Modeling===
 ===Variable Initialization===
 ===Operation Call Invocation===
+
 ==Symphonyzing==
+
 ===Definition, High-Level Details & Guidelines===
-====Symphonyzing Steps====
-#Defining the EMF meta-model that represents the new type
-* Recommended class hierarchy.
-#Generate the code
-#Implement the operations
-#Create the topology (optional)
-#Test the type
-				<topic label="2. Creating the Symphony plugin">
-					<topic label="Definition &amp; Requirements"/>
-					<topic label="The Four Steps to making a Symphony plugin">
-						<topic label="i.   Creating the Symphony plugin itself">
-							<topic label="Example Exercise: Creating the PTU Camera's Symphony plugin"/>
-						</topic>
-						<topic label="ii.  Creating an Xcore model">
-							<topic label="Example Exercise: Developing the PTU Camera's xCore model"/>
-						</topic>
-						<topic label="iii. Defining a subclass of SymphonyInitializationData">
-							<topic label="Guidelines"/>
-							<topic label="Example Exercise: Specializing SymphonyInitializationData for the PTU Camera"/>
-						</topic>
-						<topic label="iv.  Defining a subclass of SymphonySystemApiAdapter">
-							<topic label="Localization"/>
-							<topic label="Guidelines &amp; Requirements"/>
-							<topic label="Example Exercise: Specializing SymphonySystemApiAdapter for the PTU Camera"/>
-						</topic>
-					</topic>
-				</topic>
-				<topic label="3. Creating the Symphony System Model (*.ss file)">
-					<topic label="Definition"/>
-					<topic label="The Six Steps to making a Symphony System Model">
-						<topic label="i.   Defining the Topology Root">
-							<topic label="Topology Guidelines"/>
-						</topic>
-						<topic label="ii.  Defining the Bindings">
-							<topic label="Currently available bindings in Symphony"/>
-							<topic label="Populating the Feature Roots List"/>
-							<topic label="Populating the Bindings List"/>
-						</topic>
-						<topic label="iii. Defining the Connection Points"/>
-						<topic label="iv.  Defining Type Members (Only for Composite Systems)"/>
-						<topic label="v.   Defining Assembly Links (Only for Composite Systems)"/>
-						<topic label="vi.  Registering your Symphony System Model with Symphony">
-							<topic label="Steps to register a Symphony System Model"/>
-						</topic>
-					</topic>
-					<topic label="Example Exercise: Creating a complete Symphony System Model for the PTU Camera">
-						<topic label="Creating the PTU Camera's Symphony System Model file"/>
-						<topic label="Specifying the PTU Camera's Topology">
-							<topic label="Creating the CAD folder"/>
-							<topic label="Populating the topology">
-								<topic label="Desired final topology">
-									<topic label="Node hierarchy"/>
-									<topic label="Transformations"/>
-								</topic>
-							</topic>
-						</topic>
-						<topic label="Making the PTU Camera's Bindings">
-							<topic label="Defining the Feature Nodes"/>
-							<topic label="Making the Bindings themselves"/>
-						</topic>
-						<topic label="Registering the PTU Camera's Symphony System Model"/>
-						<topic label="Testing the complete PTU Camera with Symphony"/>
-					</topic>
-				</topic>
-			</topic>
-		</topic>
-		<topic label="Symphony Examples">
-		</topic>
+===The Three Steps to Symphonyzing===
+
+====1. Defining the System in EMF====
+
+=====Creating an EMF Model of the System=====
+=====Recommended Class Hierarchy=====
+
+====2. Creating the Symphony plugin====
+
+=====Definition & Requirements=====
+=====The Four Steps to making a Symphony Plugin=====
+
+======i. Creating the Symphony Plugin Itself======
+======ii. Creating an Xcore (.xcore) Model======
+======iii. Defining a Subclass of SymphonyInitializationData======
+=======Guidelines=======
+
+======iv. Defining a Subclass of SymphonySystemApiAdapter======
+=======Localization=======
+=======Guidelines & Requirements=======
+
+====3. Creating the Symphony System Model (*.ss) file====
+
+=====Definition=====
+=====The Six Steps to making a Symphony System Model=====
+
+======i. Defining the Topology Root======
+=======Topology Guidelines=======
+
+======ii. Defining the Bindings======
+=======Currently Available Bindings in Symphony=======
+=======Populating the Feature Roots List=======
+=======Populating the Bindings List=======
+
+======iii. Defining the Connection Points======
+======iv. Defining Type Members (Only for Composite Systems)======
+======v. Defining Assembly Links (Only for Composite Systems)======
+======vi. Registering your Symphony System Model with Symphony======
+=======Steps to register a Symphony System Model=======  
+
 ==Advanced Topics==
+
 ===Specialized Topology Nodes===
 ===Currently available specialized topology nodes===
 ===Contributing new tools===
 
 =Examples=
-*PTU Dish Antenna
-*Camera
-*PTU Camera
-*Lander
-*Lidar
-*Mobile Platform
-*Robotic Arm
-*Rover (Complex Type)
+
+==PTU Dish Antenna==
+==Camera==
+==PTU Camera==
+==Lander==
+==Lidar==
+==Mobile Platform==
+==Robotic Arm==
+==Rover (Complex Type)==
 
 =Tutorials=
-==I'm hurry, I want to operate a rover!!!==
+
+==I'm in a hurry! I want to operate a rover!!!==
+
 ==Getting Started Exercises==
+
 ===Setting Up A Symphony Environment===
-#Creating A Symphony Session
-#Creating A Worksite
-#Creating Map Layers
-#Creating Variables & Contexts
-#Creating Data Products Sets
+
+====Creating A Symphony Session====
+====Creating A Worksite====
+====Creating Map Layers====
+====Creating Variables & Contexts====
+====Creating Data Products Sets====
+
 ===Issuing Commands===
-#Invoking Operations On A Simple System
-#Using The Pose Corrector
-#Using Operation Call Controller Bindings
+
+====Invoking Operations On A Simple System====
+====Using The Pose Corrector====
+====Using Operation Call Controller Bindings====
+
 ===Defining & Using Composite Types===
-#Defining A Composite System
-#Invoking Operation On Composite System Type Members
-#Invoking Operation On A Feature Of Composite Type Members
+
+====Defining A Composite System====
+====Invoking Operation On Composite System Type Members====
+====Invoking Operation On A Feature Of Composite Type Members====
+
 ===Setting Up & Using The Camera View===
-#Configuring A Camera View
-#Adding Overlays
+
+====Configuring A Camera View====
+====Adding Overlays====
+
 ===Setting Up & Using The Map View===
-#Displaying The Environment
-#Displaying The Variables
-==Create Symphony Types==
-===Create A Pan Tilt Unit (PTU) Camera===
-#Creat The PTU Camera's EMF Meta-Model
-#Implement The operations
-#Test The PTU
+
+====Displaying The Environment====
+
+====Displaying The Variables====
+
+==Developing Your Own Custom Symphony Types==
+
+===Creating & Symphonizing your own Pan Tilt Unit (PTU) Camera===
+
+====1. Creating the PTU Camera's EMF Meta-Model====
+
+=====i. Creating The Camera's EMF Model=====
+=====ii. Implementing the Required Methods=====
+=====iii. Testing the System=====
+
+====2. Creating the PTU Camera's Symphony Plugin====
+
+=====i. Creating The Camera's Plugin Project=====
+=====ii. Developing the Camera's Symphony Xcore (.xcore) model=====
+=====iii. Specializing SymphonyInitializationData for the Camera=====
+=====iv. Specializing SymphonySystemApiAdapter for the Camera=====
+
+====3. Creating the PTU Camera's complete Symphony System Model====
+
+=====i.Creating the Camera's Symphony System Model file=====
+=====ii. Specifying the Camera's Topology=====
+
+======Creating the CAD folder======
+======Populating the topology======
+
+=======Node hierarchy=======
+=======Transformations=======
+
+=====iii. Making the Camera's Bindings=====
+
+======Defining the Feature Nodes======
+======Making the Bindings themselves======
+
+=====iv. Registering the Camera's Symphony System Model=====
+
+====4. Testing the completed PTU Camera in Symphony====

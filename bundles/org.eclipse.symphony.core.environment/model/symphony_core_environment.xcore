@@ -290,8 +290,8 @@ class EclipticCoordinates
 
 /*
  * The base class defining a the Sky above a SurfaceWorksite. This basic sky includes the sun and
- * stars. The Sky is TimeDependant, which in this context means that the position of both the Sun
- * and the stars should be updated when the time is changed.
+ * stars. The Sky is Timed, which in this context means that the position of both the Sun and the
+ * stars should be updated when the time is changed.
  */
 class Sky extends Timed
 {
@@ -329,7 +329,7 @@ class Sky extends Timed
 }
 
 /*
- * A specialisation of the Sky for Earth use that adds the Moon. The position of the Moon is
+ * A specialization of the Sky for Earth use that adds the Moon. The position of the Moon is
  * updated, along with the Sun and stars, when the time is changed.
  */
 class EarthSky extends Sky
