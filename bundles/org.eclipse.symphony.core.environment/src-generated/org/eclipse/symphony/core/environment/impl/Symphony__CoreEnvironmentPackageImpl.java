@@ -4446,7 +4446,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  (skyEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "The base class defining a the Sky above a SurfaceWorksite. This basic sky includes the sun and\nstars. The Sky is TimeDependant, which in this context means that the position of both the Sun\nand the stars should be updated when the time is changed."
+			 "documentation", "The base class defining a the Sky above a SurfaceWorksite. This basic sky includes the sun and\nstars. The Sky is Timed, which in this context means that the position of both the Sun and the\nstars should be updated when the time is changed."
 		   });	
 		addAnnotation
 		  (getSky__GetSunAngularDiameter(), 
@@ -4495,7 +4495,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  (earthSkyEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "A specialisation of the Sky for Earth use that adds the Moon. The position of the Moon is\nupdated, along with the Sun and stars, when the time is changed."
+			 "documentation", "A specialization of the Sky for Earth use that adds the Moon. The position of the Moon is\nupdated, along with the Sun and stars, when the time is changed."
 		   });	
 		addAnnotation
 		  (getEarthSky__GetMoonAngularDiameter(), 

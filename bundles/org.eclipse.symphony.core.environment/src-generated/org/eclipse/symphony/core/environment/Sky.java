@@ -12,8 +12,8 @@ import org.eclipse.symphony.common.emf.Timed;
  *
  * <!-- begin-model-doc -->
  * The base class defining a the Sky above a SurfaceWorksite. This basic sky includes the sun and
- * stars. The Sky is TimeDependant, which in this context means that the position of both the Sun
- * and the stars should be updated when the time is changed.
+ * stars. The Sky is Timed, which in this context means that the position of both the Sun and the
+ * stars should be updated when the time is changed.
  * <!-- end-model-doc -->
  *
  * <p>

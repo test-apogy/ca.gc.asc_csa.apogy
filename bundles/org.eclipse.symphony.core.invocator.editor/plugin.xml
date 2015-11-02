@@ -33,31 +33,5 @@
       </editor>
    </extension>
 
-   <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated symphony_core_invocator -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="org.eclipse.symphony.core.invocator.presentation.Symphony__CoreInvocatorModelWizardID"
-            name="%_UI_Symphony__CoreInvocatorModelWizard_label"
-            class="org.eclipse.symphony.core.invocator.presentation.Symphony__CoreInvocatorModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/Symphony__CoreInvocatorModelFile.gif">
-         <description>%_UI_Symphony__CoreInvocatorModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
-   </extension>
-
-   <extension point="org.eclipse.ui.editors">
-      <!-- @generated symphony_core_invocator -->
-      <editor
-            id="org.eclipse.symphony.core.invocator.presentation.Symphony__CoreInvocatorEditorID"
-            name="%_UI_Symphony__CoreInvocatorEditor_label"
-            icon="icons/full/obj16/Symphony__CoreInvocatorModelFile.gif"
-            extensions="sym"
-            class="org.eclipse.symphony.core.invocator.presentation.Symphony__CoreInvocatorEditor"
-            contributorClass="org.eclipse.symphony.core.invocator.presentation.Symphony__CoreInvocatorActionBarContributor">
-      </editor>
-   </extension>
-</plugin>
+null
+null</plugin>

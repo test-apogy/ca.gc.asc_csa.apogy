@@ -10,7 +10,7 @@ package org.eclipse.symphony.core.environment;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A specialisation of the Sky for Earth use that adds the Moon. The position of the Moon is
+ * A specialization of the Sky for Earth use that adds the Moon. The position of the Moon is
  * updated, along with the Sun and stars, when the time is changed.
  * <!-- end-model-doc -->
  *
