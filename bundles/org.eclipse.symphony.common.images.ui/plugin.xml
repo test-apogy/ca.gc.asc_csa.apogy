@@ -154,7 +154,7 @@
             <visibleWhen
                   checkEnabled="false">
                <test
-                     forcePluginActivation="false"
+                     forcePluginActivation="true"
                      property="org.eclipse.symphony.common.images.ui.expressions.ImagePropertyTester.canConvertToAbstractEImage"
                      value="">
                </test>
