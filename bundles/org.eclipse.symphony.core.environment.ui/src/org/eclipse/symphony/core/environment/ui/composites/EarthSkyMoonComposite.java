@@ -110,7 +110,7 @@ public class EarthSkyMoonComposite extends Composite
 				IObservableValue moonAzimuthObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
 				
 				UpdateValueStrategy moonAzimuthValueStrategy = new UpdateValueStrategy();
-				moonAzimuthValueStrategy.setConverter(new DateToMoonHorizontalCoordinatesStringConverter(new DecimalFormat(AZIMUTH_FORMAT_STRING), geographicCoordinates, DateToMoonHorizontalCoordinatesStringConverter.COORDS.AZIMUTH));
+				moonAzimuthValueStrategy.setConverter(new DateToMoonHorizontalCoordinatesStringConverter(new DecimalFormat(AZIMUTH_FORMAT_STRING), geographicCoordinates, DateToMoonHorizontalCoordinatesStringConverter.Coords.AZIMUTH));
 				
 				bindingContext.bindValue(lblmoonAzimuthValueLabel, moonAzimuthObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), moonAzimuthValueStrategy);
 	
@@ -119,7 +119,7 @@ public class EarthSkyMoonComposite extends Composite
 				IObservableValue moonElevationObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
 				
 				UpdateValueStrategy moonElevationValueStrategy = new UpdateValueStrategy();
-				moonElevationValueStrategy.setConverter(new DateToMoonHorizontalCoordinatesStringConverter(new DecimalFormat(ELEVATION_FORMAT_STRING), geographicCoordinates, DateToMoonHorizontalCoordinatesStringConverter.COORDS.ALTITUDE));
+				moonElevationValueStrategy.setConverter(new DateToMoonHorizontalCoordinatesStringConverter(new DecimalFormat(ELEVATION_FORMAT_STRING), geographicCoordinates, DateToMoonHorizontalCoordinatesStringConverter.Coords.ALTITUDE));
 				
 				bindingContext.bindValue(lblmoonElevationValueLabel, moonElevationObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), moonElevationValueStrategy);
 			}

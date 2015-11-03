@@ -122,7 +122,7 @@ public class EarthSkySunComposite extends Composite
 				IObservableValue sunAzimuthObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
 				
 				UpdateValueStrategy sunAzimuthValueStrategy = new UpdateValueStrategy();
-				sunAzimuthValueStrategy.setConverter(new DateToSunHorizontalCoordinatesStringConverter(new DecimalFormat(AZIMUTH_FORMAT_STRING), geographicCoordinates, DateToSunHorizontalCoordinatesStringConverter.COORDS.AZIMUTH));
+				sunAzimuthValueStrategy.setConverter(new DateToSunHorizontalCoordinatesStringConverter(new DecimalFormat(AZIMUTH_FORMAT_STRING), geographicCoordinates, DateToSunHorizontalCoordinatesStringConverter.Coords.AZIMUTH));
 				
 				bindingContext.bindValue(lblsunAzimuthValueLabel, sunAzimuthObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), sunAzimuthValueStrategy);
 	
@@ -131,7 +131,7 @@ public class EarthSkySunComposite extends Composite
 				IObservableValue sunElevationObserveValue = EMFProperties.value(FeaturePath.fromList(Symphony__CommonEMFPackage.Literals.TIMED__TIME)).observe(getEarthSky());
 				
 				UpdateValueStrategy sunElevationValueStrategy = new UpdateValueStrategy();
-				sunElevationValueStrategy.setConverter(new DateToSunHorizontalCoordinatesStringConverter(new DecimalFormat(ELEVATION_FORMAT_STRING), geographicCoordinates, DateToSunHorizontalCoordinatesStringConverter.COORDS.ALTITUDE));
+				sunElevationValueStrategy.setConverter(new DateToSunHorizontalCoordinatesStringConverter(new DecimalFormat(ELEVATION_FORMAT_STRING), geographicCoordinates, DateToSunHorizontalCoordinatesStringConverter.Coords.ALTITUDE));
 				
 				bindingContext.bindValue(lblsunElevationValueLabel, sunElevationObserveValue, new UpdateValueStrategy(UpdateValueStrategy.POLICY_NEVER), sunElevationValueStrategy);
 				

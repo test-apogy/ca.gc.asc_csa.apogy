@@ -1,0 +1,219 @@
+=Examples=
+
+==PTU Dish Antenna==
+==Camera==
+==PTU Camera==
+==Lander==
+==Lidar==
+==Mobile Platform==
+==Robotic Arm==
+==Rover (Complex Type)==
+
+=Tutorials=
+
+==I'm in a hurry! I want to operate a rover!!!==
+
+==Getting Started Exercises==
+
+===Setting Up A Symphony Environment===
+
+====Creating A Symphony Session====
+
+# Create a new ''Symphony Project'' named '''SymphonyTraining''';
+# Create a new ''Symphony Session'' named '''MyFirstSession.'''
+
+====Creating A Worksite====
+
+# Under ''Symphony Environment'', create a new ''Worksites'';
+# Under ''Worksites'', create a new ''Earth Surface Worksite'' named '''TrainingSite''';
+# Delete the elements under ''Maps List'';
+# Sets the ''X Axis Azimth'' to '''179.4 degrees''';
+# Select the ''Symphony Environment'' and set its ''Active Worksite'' to '''TrainingSite''';
+# Open the ''Symphony 3D Viewer'' and select the ''Symphony Environment''; 
+
+====Creating Map Layers====
+
+# Add a map named '''myMap''' to the ''TrainingSite's Map List'';
+# Add a ''Cartesian Triangular Mesh URL Map Layer'' named '''myDEM''' to ''myMap'' with the following parameters:
+
+<table>
+	<tr>
+		<th>Parameter</th>
+		<th>Value</th>
+	</tr>
+	<tr>
+		<td>Url</td>
+		<td>platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri</td>
+	</tr>
+</table>
+
+# Add a ''URL Image Map Layer'' named '''myContours''' to ''myMap'' with the following parameters:
+
+<table>
+	<tr>
+		<th>Parameter</th>
+		<th>Value</th>
+	</tr>
+	<tr>
+		<td>Url</td>
+		<td>platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-contour-map-black-20cm-per-line.png</td>
+	</tr>
+	<tr>
+		<td>Height (m)</td>
+		<td>120.0</td>
+	</tr>
+	<tr>
+		<td>Width (m)</td>
+		<td>60.0</td>
+	</tr>
+</table>
+
+# Add a ''Feature Of Interest Map Layer'' named '''myFOI''' to ''myMap'';
+# Add a ''Feature Of Interest List'' as a child;
+# Add the following ''Features Of Interest'' to that list:
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Position</th>
+	</tr>
+	<tr>
+		<td>Olympus Mons</td>
+		<td>33.5, 9.5, 2.6</td>
+	</tr>
+	<tr>
+		<td>Hill 937</td>
+		<td>33.0, 43.0, 0.3</td>
+	</tr>
+</table>
+
+====Creating Variables & Contexts====
+
+# In Session ''My First Session'', define a ''Variable'' named '''myRover''' of type ''SymphonySystemMobilePlatform''.
+# Create two ''Contexts'':
+## Context '''Simulated'''
+## Context '''Real'''
+# Set ''myRover'' to be implemented using '''MobilePlatformStub''' in the ''Simulated'' ''Context'';
+# Set ''myRover'' to be implemented using '''MobilePlatformReal''' in the ''Real'' ''Context'';
+# Set the session's ''activeContext'' to '''Simulated''';
+# Instantiate the '''Variables''' (by using Symphony > Reset Instances.)
+
+====Creating Data Products Sets====
+
+# Set the name of the default ''Data Product Set'' to '''Simulated Data''';
+# Create a new ''Data Product Set'' named '''Real Data''';
+#* Create an ''Operation Call Results List'' under ''Real Data'';
+# Assign '''Simulated Data''' to the ''Simulated'' ''Context'';
+# Assign '''Real Data''' to the ''Real'' ''Context'';
+
+===Issuing Commands===
+
+====Invoking Operations On A Simple System====
+
+# Under ''Programs'', create an ''Operation Calls'' program called '''myRoverCalls'''
+# Create a call named '''Init''' to operation '''init()''' on ''myRover'';
+# Create a call named '''Move''' to operation '''cmdLinearVelocity()''' on ''myRover'' with ''Parameter'' '''speed''' set to '''0.25''';
+# Create a call named '''Stop''' to operation '''cmdLinearVelocity()''' on ''myRover'' with ''Parameter'' '''speed''' set to '''0.0''';
+# Invoke Init by selecting "Symphony > Invoke"
+# Invoke Move ("Symphony > Invoke") - the rover should start moving forward;
+# Invoke Stop ("Symphony > Invoke") when you want to stop the rover.
+
+====Using The Pose Corrector====
+
+# Create an ''Operation Call'' named '''CommandVel''' to '''cmdVelocities(...)''' on ''myRover'' with the following ''Parameters'':
+
+<table>
+	<tr>
+		<th>Parameter</th>
+		<th>Value</th>
+	</tr>
+	<tr>
+		<td>linearVelocity</td>
+		<td>1.5 (m/s)</td>
+	</tr>
+	<tr>
+		<td>angularVelocity</td>
+		<td>5.0 (deg/s)</td>
+	</tr>
+</table>
+
+# Create an ''Operation Call'' named '''AllStop''' to '''cmdVelocities(...)''' on ''myRover'' with the following ''Parameters'':
+
+<table>
+	<tr>
+		<th>Parameter</th>
+		<th>Value</th>
+	</tr>
+	<tr>
+		<td>linearVelocity</td>
+		<td>0.0 (m/s)</td>
+	</tr>
+	<tr>
+		<td>angularVelocity</td>
+		<td>0.0 (deg/s)</td>
+	</tr>
+</table>
+
+# In the ''Session Editor'', expand the ''Active Context'' (''Simulated'');
+# Expand the ''Variable Implementations'';
+# Expand ''myRover'';
+# Expand the ''API Adapter'' (''Mobile Platform Symphony System Api Adapter'');
+# Right-click on the ''Vehicle Pose Corrector'' and select "Symphony > Enable/Disable Pose Corrector";
+# Invoke ''CommandVel'' to move the rover
+# When ready, invoke ''AllStop'' to stop it.
+
+====Using Operation Call Controller Bindings====
+
+===Defining & Using Composite Types===
+
+====Defining A Composite System====
+====Invoking Operation On Composite System Type Members====
+====Invoking Operation On A Feature Of Composite Type Members====
+
+===Setting Up & Using The Camera View===
+
+====Configuring A Camera View====
+====Adding Overlays====
+
+===Setting Up & Using The Map View===
+
+====Displaying The Environment====
+
+====Displaying The Variables====
+
+==Developing Your Own Custom Symphony Types==
+
+===Creating & Symphonizing your own Pan Tilt Unit (PTU) Camera===
+
+====1. Creating the PTU Camera's EMF Meta-Model====
+
+=====i. Creating The Camera's EMF Model=====
+=====ii. Implementing the Required Methods=====
+=====iii. Testing the System=====
+
+====2. Creating the PTU Camera's Symphony Plugin====
+
+=====i. Creating The Camera's Plugin Project=====
+=====ii. Developing the Camera's Symphony Xcore (.xcore) model=====
+=====iii. Specializing SymphonyInitializationData for the Camera=====
+=====iv. Specializing SymphonySystemApiAdapter for the Camera=====
+
+====3. Creating the PTU Camera's complete Symphony System Model====
+
+=====i.Creating the Camera's Symphony System Model file=====
+=====ii. Specifying the Camera's Topology=====
+
+======Creating the CAD folder======
+======Populating the topology======
+
+=======Node hierarchy=======
+=======Transformations=======
+
+=====iii. Making the Camera's Bindings=====
+
+======Defining the Feature Nodes======
+======Making the Bindings themselves======
+
+=====iv. Registering the Camera's Symphony System Model=====
+
+====4. Testing the completed PTU Camera in Symphony====

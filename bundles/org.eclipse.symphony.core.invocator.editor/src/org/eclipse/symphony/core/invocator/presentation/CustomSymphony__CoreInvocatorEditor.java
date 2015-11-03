@@ -217,8 +217,8 @@ public class CustomSymphony__CoreInvocatorEditor extends Symphony__CoreInvocator
 	/**
 	 * @generated_NOT
 	 */
-	private void executeDiagnostician() {
-
+	private void executeDiagnostician()
+	{
 		/** Clear errors and markers. */
 		markerHelper.deleteMarkers(getEditingDomain().getResourceSet());
 		getDiagnosticErrorsMap().clear();
@@ -226,51 +226,53 @@ public class CustomSymphony__CoreInvocatorEditor extends Symphony__CoreInvocator
 
 		/** Validate. */
 		Diagnostic diagnostic = Diagnostician.INSTANCE
-				.validate(getEditingDomain().getResourceSet().getResources()
-						.get(0).getContents().get(0));
+									.validate(getEditingDomain().getResourceSet().getResources()
+											.get(0).getContents().get(0));
 
 		/** Create errors and markers if required. */
-		if (diagnostic.getSeverity() != Diagnostic.OK) {
-			Iterator<Diagnostic> diagnostics = diagnostic.getChildren()
-					.iterator();
-			while (diagnostics.hasNext()) {
+		if (diagnostic.getSeverity() != Diagnostic.OK)
+		{
+			Iterator<Diagnostic> diagnostics = diagnostic.getChildren().iterator();
+			
+			while (diagnostics.hasNext())
+			{
 				Diagnostic currentDiagnostic = diagnostics.next();
-				if (currentDiagnostic.getData() != null
-						&& !currentDiagnostic.getData().isEmpty()) {
-					EObject eObject = (EObject) currentDiagnostic.getData()
-							.get(0);
+				
+				if ((currentDiagnostic.getData() != null) && 
+					(currentDiagnostic.getData().isEmpty() == false))
+				{
+					EObject eObject = (EObject) currentDiagnostic.getData().get(0);
 
 					/** Create a marker. */
-					try {
-						IMarker marker = Symphony__CommonEMFFacade.INSTANCE.getFile(
-								eObject.eResource()).createMarker(
-								IMarker.PROBLEM);
+					try
+					{
+						IMarker marker = Symphony__CommonEMFFacade.INSTANCE.getFile(eObject.eResource()).createMarker(IMarker.PROBLEM);
 
-						marker.setAttribute(
-								IMarker.MESSAGE,
-								processMessage(currentDiagnostic.getMessage(),
-										eObject));
-						marker.setAttribute(IMarker.SEVERITY,
-								IMarker.SEVERITY_ERROR);
+						marker.setAttribute(IMarker.MESSAGE, processMessage(currentDiagnostic.getMessage(),	eObject));
+						marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
 						marker.setAttribute(IMarker.TRANSIENT, true);
 						getMarkerToEObjectMap().put(marker, eObject);
 
-					} catch (CoreException e) {
+					}
+					catch (CoreException e)
+					{
 						e.printStackTrace();
 					}
 
 					/**
 					 * Propagate the error to the parents.
 					 */
-					do {
-						getDiagnosticErrorsMap()
-								.put(eObject, currentDiagnostic);
+					do
+					{
+						getDiagnosticErrorsMap().put(eObject, currentDiagnostic);
 
-						if (eObject.eContainer() == null) {
-							getDiagnosticErrorsMap().put(eObject.eResource(),
-									currentDiagnostic);
+						if (eObject.eContainer() == null)
+						{
+							getDiagnosticErrorsMap().put(eObject.eResource(), currentDiagnostic);
 						}
+						
 						eObject = eObject.eContainer();
+						
 					} while (eObject != null);
 				}
 			}

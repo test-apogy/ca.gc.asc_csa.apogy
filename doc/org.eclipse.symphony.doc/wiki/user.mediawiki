@@ -679,7 +679,7 @@
 ** Relative orientation (rx, ry, rz), given in degrees;
 * Supports real-time update.
 
-====3D Viewer====
+===3D Viewer===
 
 * Selection based (''Symphony Environment'');
 
@@ -697,15 +697,30 @@
 ** All ''Data Products'' (marker + 3D representation are visible by default;
 ** Is ''Selection Listener'' for Data Products
 
-=====Node Presentation=====
+====Node Presentation====
 
 * Configuring 3D representations of topology ''Nodes'':
 ** Each ''Node'' in the topology is assigned a '''''Presentation''''' that contains its 3D representation attributes.
 ** ''Presentation'' attributes are accessible using the ''Properties View'', under the ''Presentation'' tab.
 ** Node visibility can be toggled by right-clicking on the ''Node'' and selecting ''"Symphony > Toggle Node Visibility."''
-** ''URL Nodes'' (''Nodes'' associated with a CAD model) have a  
+** ''URL Nodes'' (''Nodes'' associated with a CAD model) have an additional '''''Presentation Mode''''' attribute, which can be one of three values:
+**# '''''SURFACE''''': The CAD will be rendered as a surface (if possible)
+**# '''''WIREFRAME''''': Only the wireframe outline of the CAD surface will be rendered (if possible)
+**# '''''POINTS''''': Only the point cloud specified in the CAD will be rendered (if possible) 
+** The visibility, ''Presentation Mode'' and colour can be set for all FOV of a given type through the Preferences;
+** The visibility, and axis length can be set for all ''Node'' of a given basic type (''Position'', ''Rotation'', ''Transform'', ''URL'') through the Preferences; 
 
-=====Moving Using The Mouse=====
+====Managing Performance====
+
+* The maximum frame rate (in Hz) can be lowered (default is 15 Hz);
+* Under ''Field Of View'' and ''Image Snapshot'' preferences:
+** Disabiling Show Project;
+* Under ''Earth Sky'' preferences:
+** Disabling Sun And Moon Blooming;
+** Disabling Shadows;
+** Reducing the Shadow Map Size; 
+
+====Moving Using The Mouse====
 
 <table>
 	<tr>
@@ -758,7 +773,7 @@
 	</tr>
 </table>
 
-=====Keyboard Inputs=====
+====Keyboard Inputs====
 
 <table>
 	<tr>
@@ -779,20 +794,43 @@
 	</tr>
 </table>
 
+===Camera View===
+
+* Selection-based (''Camera View Configuration'');
+* Display latest image return by specified ''Camera'';
+* Display the ''Overlays'';
+* Applies the ''Image Filters'' before displaying the image
+* Supports interaction with ''Camera Tools''
+
 ====Map View====
-====Camera View====
 
-=====Overlays=====
-=====Image Filters=====
-=====Camera Tools=====
+* Selection-based (''Map View Configuration'');
+* Displays:
+** Selected ''Image Map Layers'';
+** Selected ''Feature Of Interest Map Layers'';
+** Various map annotations such as:
+*** Vehicle position and orientation;
+*** Trajectories;
 
-====Controllers View====
+====Earth Sky View====
+
+* Selection-based (''Earth Sky'');
+* Displays:
+** Sun and Moon ephemerides as well as Sun intensity;
+** The time at the ''Worksite'':
+*** Local time;
+*** Julian day;
+*** Sideral time;
+** The location of the ''Worksite'':
+*** Longitude;
+*** Latitude;
+*** Altitude;
+
+====Time Source View====
+TODO!
+
 ====Virtual Reality Tools====
-=====Nodes Distance View=====
-
-
-
-
-
+TODO!
 
 ===Data Products View===
+TODO!
