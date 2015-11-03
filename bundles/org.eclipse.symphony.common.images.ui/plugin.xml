@@ -161,7 +161,6 @@
             </visibleWhen>
          </command>
       </menuContribution>
-      
        
       <menuContribution
             allPopups="true"
@@ -334,7 +333,6 @@
             class="org.eclipse.symphony.common.images.ui.handlers.ImageCanvasShowOriginalHandler"
             commandId="org.eclipse.symphony.common.images.ui.commands.ImageCanvasShowOriginal">
       </handler>
-      
       <handler
             class="org.eclipse.symphony.common.images.ui.handlers.ExportImageHandler"
             commandId="org.eclipse.symphony.common.images.ui.commands.ExportImage">

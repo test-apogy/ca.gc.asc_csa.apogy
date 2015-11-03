@@ -54,7 +54,7 @@ import org.eclipse.ui.views.properties.tabbed.TabbedPropertySheetPage;
  * 
  * @generated_NOT
  */
-public class CustomEMFEcoreInvocatorEditor extends Symphony__CoreInvocatorEditor
+public class CustomSymphony__CoreInvocatorEditor extends Symphony__CoreInvocatorEditor
 		implements ITabbedPropertySheetPageContributor {
 
 	public static String ID = "org.eclipse.symphony.core.invocator.presentation.Symphony__CoreInvocatorEditorID";
@@ -73,7 +73,7 @@ public class CustomEMFEcoreInvocatorEditor extends Symphony__CoreInvocatorEditor
 	 * 
 	 * @generated
 	 */
-	public CustomEMFEcoreInvocatorEditor() {
+	public CustomSymphony__CoreInvocatorEditor() {
 		super();
 	}
 
@@ -95,7 +95,7 @@ public class CustomEMFEcoreInvocatorEditor extends Symphony__CoreInvocatorEditor
 
 				@Override
 				public void partClosed(IWorkbenchPart part) {				
-					if (part == CustomEMFEcoreInvocatorEditor.this){
+					if (part == CustomSymphony__CoreInvocatorEditor.this){
 						if (activeSession == Symphony__CoreInvocatorFacade.INSTANCE.getActiveInvocatorSession()){
 							Symphony__CoreInvocatorFacade.INSTANCE.setActiveInvocatorSession(null);
 							activeSession = null;							

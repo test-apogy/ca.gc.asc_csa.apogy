@@ -220,7 +220,7 @@
 =====Variable Implementations=====
 
 * A '''''Variable Implementation''''' is used to specify the particular implementation (i.e. an ''Interface Class'' subclass) that a ''Variable'' should be using.
-* Typically, used in ''Contexts''
+* Typically used in ''Contexts''
 
 ===Data Products===
 
@@ -262,15 +262,523 @@
 * Each ''Operation Call'' can be invoked individually, or
 * It can be executed as a whole;
 
-====Controller Bindings====
+===Controller Bindings & Configurations===
 
-* 
-*Triggers
-*Input Values & Conditioning
+====Controller Configuration====
+
+* A '''''Controller Configuration''''' is a set of ''Operation Call Controller Bindings'';
+* Used to map one or more joystick(s) / controller(s) to one or more ''Operation Calls'';
+* No more than '''ONE''' ''Controller Configuration'' is active at any given time in a given Symphony Session;
+
+====Operation Call Controller Binding====
+
+* A '''''Operation Call Controller Binding''''' is a specialization of ''Operation Call'';
+* Allows the ''Operation Call's Parameter'' to be mapped to joystick inputs;
+* It includes:
+** A name;
+** A ''Trigger'' that defines when to call this ''Operation Call'':
+*** Can be time-based or joystick state-/event-based;
+** An ''Input Value'' for each of the ''Parameters'' defined in this ''Operation Call''.
+** A ''boolean'' indicating whether or not to create a ''Data Product' when the ''Operation'' is called (false by default.)
+
+=====Trigger Types=====
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Icon</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>Time Trigger</td>
+		<td></td>
+		<td>Triggers at a fixed time interval (or only once if time < 0).</td>
+	</tr>
+	<tr>
+		<td rowspan="3>Controller Edge Trigger</td>
+		<td></td>
+		<td>Triggers when a rising edge is detected on the specified controller button state.</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Triggers when a falling edge is detected on the specified controller button state.</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Triggers when either a rising or falling edge is detected on the specified button state.</td>
+	</tr>
+	<tr>
+		<td>Controller State Trigger</td>
+		<td></td>
+		<td>Triggers at a fixed time interval (or only once if time < 0) if the specified controller button state (''boolean'') matches the target.</td>
+	</tr>
+</table>
+
+====Input Value====
+
+* An '''''Input Value''''' defines how to obtain the value of its associated ''Parameter'' in an ''Operation Call Controller Binding.''
+
+* Three types of ''Input Value'' are defined:
+*# '''''Fixed Value''''': A fixed value for the ''Parameter'';
+*# '''''Toggle Value''''': A ''boolean'' value that toggles each time the ''Operation'' is called; 
+*# '''''Controller Value''''': A value coming from a joystick input.
+
+====Controller Value====
+
+* A '''''Controller Value''''' includes:
+** the joystick / controller;
+** the specific input of the controller;
+** an '''''Input Conditioning''''' used to transform the raw joystick value into a value suittable for the ''Parameter'' being mapped:
+*** This can include input scalling, input offsetting, saturation, dead-band,etc;
+*** Various specializations of ''Input Conditioning'' are available to accommodate these needs. 
+
+=====Input Conditioning Types=====
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Icon</th>
+		<th>Description</th>
+		<th>Scaling Supported</th>
+		<th>Offset Supported</th>
+		<th>Dead Band Supported</th>
+	</tr>
+	<tr>
+		<td>Linear</td>
+		<td></td>
+		<td>Linear transfer function with end points specified</td>
+		<td>Yes</td>
+		<td>Yes</td>
+		<td>No</td>
+	</tr>
+	<tr>
+		<td>Centered Linear</td>
+		<td></td>
+		<td>Linear transfer function with constraints that output is zero (0) for input falling within dead band./n/nOutput linearly falls to zero at dead band limits.</td>
+		<td>Yes</td>
+		<td>No</td>
+		<td>Yes</td> 
+	</tr>
+	<tr>
+		<td>Parabolic</td>
+		<td></td>
+		<td>Second order transfer function with end points specified.</td>
+		<td>Yes</td>
+		<td>Yes</td>
+		<td>No</td>
+	</tr>
+	<tr>
+		<td>Centered Parabolic</td>
+		<td></td>
+		<td>Parabolic output with constraint that output is zero (0) for input falling within dead band./n/nSlope is made continuous at dead band limits.</td>
+		<td>Yes</td>
+		<td>No</td>
+		<td>Yes</td>
+	</tr>
+	<tr>
+		<td>User Defined</td>
+		<td></td>
+		<td>Piecewise linear interpolation based on user-provided list of points.</td>
+		<td>No</td>
+		<td>No</td>
+		<td>Dead Band Supported</td>
+	</tr>
+</table>
 
 ===Tools===
 
+* The '''''Tools''''' element of the ''Session'' contains the tools defined by the user;
+* Contains:
+** ''Watches List''
+** ''Displays''
+** ''Recording Tools Container''
+** ''Map View Configuration List''
+** ''Camera View Configuration List''
+** ''Simple Tool List''
+
+====Watches====
+
+* A '''''Watches''''' object is a list of objects of type ''Watch''
+* A '''''Watch''''' defines a telemetry item that the user is interested in (for either display or recording purposes)
+
+====Displays====
+
+* A '''''Displays''''' object:
+** is a list of ''Display'';
+** defines ''Display'' to be displayed together in the ''Telemetry View'';
+
+* A '''''Display''''' object:
+** defines presentation attributes;
+** is associated with a specific ''Feature'';
+
+=====Display Types=====
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Icon</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>Text Display</td>
+		<td></td>
+		<td>Show value as a string.  Descimal format can be specified for Numbers.</td>
+	</tr>
+	<tr>
+		<td>Boolean Display</td>
+		<td></td>
+		<td>Displays a ''boolean'' as check box</td>
+	</tr>
+	<tr>
+		<td>Number Vs. Time Plot Display</td>
+		<td></td>
+		<td>Displays a number in a plot as a function of time</td>
+	</tr>
+</table>
+
+======Number Vs. Time Plot Display Parameters======
+
+<table>
+	<tr>
+		<th>Parameter</th>
+		<th>Type</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>History Length</td>
+		<td>seconds</td>
+		<td>Specified the time period for which to display the data history.</td>
+	</tr>
+	<tr>
+		<td>Repeat Last Value</td>
+		<td>''boolean''</td>
+		<td>Enables the last value to be repeated every second to get the plot to "follow" the current time</td>
+	</tr>
+	<tr>
+		<td>use data Buffering</td>
+		<td>''boolean''</td>
+		<td>Enables data to be buffered until the next plot update (every second.)  Recommended for attributes having high update frequency</td>
+	</tr>	
+</table>
+
+====Map View Configurations====
+
+* A '''''Map View Configuration List''''':
+** contains ''Map View Configurations'';
+
+* A '''''Map View Configuration''''' object:
+** defines what the ''Symphony Map View'' will display;
+** defines the ''Map Layers'' to display;
+** defines annotation to show vehicle position, FOV, etc.;
+** defines map tools (e.g. ''Trajectory Picking Tool'');
+
+====Camera View Configuration====
+
+* A '''''Camera View Configuration List''''':
+** contains ''Camera View Configurations'';
+
+* A '''''Camera View Configuration''''' object:
+** defines what the ''Symphony Camera View'' will display;
+** defines the ''Overlays'' to display;
+** specifies image processing steps;
+* defines image tools (e.g. ''Pointer Camera Tool'');
+
+=====Overlays=====
+
+* An '''''Overlay''''' represents graphics overlaid on top of the camera image.
+* Symphony provides a list of basic, built-in ''Overlays'';
+* System-specific overlay can be contributed for a rover/instrument
+
+======Built-in Overlays======
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Icon</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>EMF Feature Overlay</td>
+		<td></td>
+		<td>Displays any numerical or string value of a selected ''Feature'' on screen.  The display includes the name of the ''Feature'', its units, and the value.</td>
+	</tr>
+	<tr>
+		<td>Camera Name Overlay</td>
+		<td></td>
+		<td>Displays the name of the camera, if applicable.</td>
+	</tr>
+	<tr>
+		<td>Symphony Logo Overlay</td>
+		<td></td>
+		<td>Displays the Symphony Logo.</td>
+	</tr>
+	<tr>
+		<td>FOV Overlay</td>
+		<td></td>
+		<td>Displays a cross hair with marks indicating degrees along the vertical and horizontal axes, centered on the FOV origin.  The values are binded to the current camera FOV.</td>
+	</tr>
+	<tr>
+		<td>EMF Feature Azimuth Elevation Overlay</td>
+		<td></td>
+		<td>Displays a cross hair with marks indicating degrees along the vertical and horizontal axes.  The '''ABSOLUTE''' orientation is displayed.  The values are bound to the current camera's Field of View (FOV) and the Azimuth and Elevation features selected.</td>
+	</tr>
+</table>
+
+=====Built-in Image Filters=====
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Icon</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>Edge Filter</td>
+		<td></td>
+		<td>Detects edges by looking at the gradient of each channel ands replaces the channel by a value determined by the gradient.</td>
+	</tr>
+	<tr>
+		<td>Gain Filter</td>
+		<td></td>
+		<td>Changes the contrast of the image by allowing the user to specify the gain and bias of the colors in the image.</td>
+	</tr>
+	<tr>
+		<td>Gray Scale Filter</td>
+		<td></td>
+		<td>Converts image to gray-scaled image.  The weighted used is:\n\t\t\t''luma'' = 77''R'' + 151''G'' + 28''B''</td>
+	</tr>
+	<tr>
+		<td>Invert Filter</td>
+		<td></td>
+		<td>Inverts all of the pixels in an image.  This is done by subtracting each colour component from 255.</td>
+	</tr>
+	<tr>
+		<td>Rescale Filter</td>
+		<td></td>
+		<td>Multiplies the input image by a scale factor.</td>
+	</tr>
+</table>
+
+=====Built-in Camera Tools=====
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Icon</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>Pointer Camera Tool</td>
+		<td></td>
+		<td>Allow the user to point in the camera image and then draws in the 3D environment, a ray showing where the selected position point projects into the 3D environment.</td>
+	</tr>
+</table>
+
+====Simple Tools====
+
+* Symphony provides a few ''Simple Tools'' that are used with the ''Symphony 3D Viewer'' and other views;
+* These tools act as a ''Selection Listener'' to the above views.
+** Tool responds only if active;
+** More than one tool can be active at the same time!
+
+=====Built-in Simple Tools=====
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Icon</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>Ruler 3D Tool</td>
+		<td></td>
+		<td>Shows a ruler between two points.</td>
+	</tr>
+	<tr>
+		<td>Sun Vector3D Tool</td>
+		<td></td>
+		<td>Shows the vector connecting the selected point to the current position of the Sun.</td>
+	</tr>
+	<tr>
+		<td>Feature Of Interest Picking Tool</td>
+		<td></td>
+		<td>Allows the user to point and click to create a new ''Feature Of Interest''.\nNote that the ''Feature Of Interest List'', where the ''Feature Of Interests'' are created, must be set for this tool to work.</td>
+	</tr>
+	<tr>
+		<td>Trajectory3D Tool</td>
+		<td></td>
+		<td>TODO!</td>
+	</tr>
+	<tr>
+		<td>Path Planner Tool</td>
+		<td></td>
+		<td>TODO!</td>
+	</tr>
+	<tr>
+		<td><Vehicle Path Planner Tool</td>
+		<td></td>
+		<td>TODO!</td>
+	</tr>
+	<tr>
+		<td>Telecom Status Monitor Tool</td>
+		<td></td>
+		<td>TODO!</td>
+	</tr>
+</table>
+
+===Topology===
+
+* The complete topology, including all that is present in the ''Symphony Environment'':
+** ''Variable'' instances;
+** ''Worksite'';
+** ''Data Products''; and
+** ''Tools''.
+
+==Symphony UI==
+
+===Preferences===
+
+====Range Preferences====
+
+* Types support definition of ranges for attributes and ''Operation Call Parameters'';
+* Colour used to highlight value ranges.
+* '''Currently, Symphony does not provide colouring to the Properties Page cells''';
+
+====UI Preferences====
+
+* Types supports definitions of units for attributes and ''Operation Call Parameters'';
+* Allows conversion between ''Native Units'' (units used by the ''System'') to ''Display Units'' (what you see);
+* Applies to:
+** values displayed in the ''Properties View'';
+** values entered in ''Operation Call Parameters'';
+
+===Session Editor===
+
+* It is an ''Editor''
+* Is used to explore and edit Symphony elements;
+* Presents the ''Symphony Session'' as an hierarchical tree of containment;
+* Opens ''.sym'' files;
+* Supports Undo/Redo
+* Is a ''Selection Provider''
+
+===Controllers View===
+
+* View is a singleton;
+* Used to monitor all Controllers (joysticks) connected to the host;
+* Shows all Controllers components including names, types and current values;
+* ''Controllers conntected after Symphony has started will not be recognized!''
+
+===Nodes Distance View===
+
+* Selection based (topology ''Node'');
+* Allows the selection of any two (2) nodes;
+* Displays:
+** Relative Euclidean distance;
+** Relative geodesic distance;
+** Relative position (x,y,z), given in metres;
+** Relative orientation (rx, ry, rz), given in degrees;
+* Supports real-time update.
+
 ====3D Viewer====
+
+* Selection based (''Symphony Environment'');
+
+* Displays in 3D, the following elements:
+** ''Variable'' instance
+** ''Field Of Views''
+** Reference frames;
+** The ''Earth Sky'' (Sun, Moon, Stars, grid)
+** ''Map Layers'' that can be rendered in 3D
+** ''Data Product'' marker for all products;
+** ''Data Product'' 3D representations (when applicable);
+** ''Tools'' 3D representations (when applicable).
+
+* Displaying ''Data Products'':
+** All ''Data Products'' (marker + 3D representation are visible by default;
+** Is ''Selection Listener'' for Data Products
+
+=====Node Presentation=====
+
+* Configuring 3D representations of topology ''Nodes'':
+** Each ''Node'' in the topology is assigned a '''''Presentation''''' that contains its 3D representation attributes.
+** ''Presentation'' attributes are accessible using the ''Properties View'', under the ''Presentation'' tab.
+** Node visibility can be toggled by right-clicking on the ''Node'' and selecting ''"Symphony > Toggle Node Visibility."''
+** ''URL Nodes'' (''Nodes'' associated with a CAD model) have a  
+
+=====Moving Using The Mouse=====
+
+<table>
+	<tr>
+		<th>Button</th>
+		<th>Mouse motion</th>
+		<th>Movement</th>
+	</tr>
+	<tr>
+		<td rowspan="2">Center</td>
+		<td>Forward</td>
+		<td>Move forwards</td>
+	</tr>
+	<tr>
+		<td>Back</td>
+		<td>Move backwards</td>
+	</tr>
+	<tr>
+		<td rowspan="4">Left</td>
+		<td>Forward</td>
+		<td>Rotate downwards</td>
+	</tr>
+	<tr>
+		<td>Back</td>
+		<td>Rotate upwards</td>
+	</tr>
+	<tr>
+		<td>Left</td>
+		<td>Rotate to the left</td>
+	</tr>
+	<tr>
+		<td>Right</td>
+		<td>Rotate to the right</td>
+	</tr>
+	<tr>
+		<td rowspan="4">Right</td>
+		<td>Forward</td>
+		<td>Translate downwards</td>
+	</tr>
+	<tr>
+		<td>Back</td>
+		<td>Translate upwards</td>
+	</tr>
+	<tr>
+		<td>Left</td>
+		<td>Translate to the right</td>
+	</tr>
+	<tr>
+		<td>Right</td>
+		<td>Translate to the left</td>
+	</tr>
+</table>
+
+=====Keyboard Inputs=====
+
+<table>
+	<tr>
+		<th>Key</th>
+		<th>Function</th>
+	</tr>
+	<tr>
+		<td>Q</td>
+		<td>'''Q'''uick: Accelerate translation</td>
+	</tr>
+	<tr>
+		<td>L</td>
+		<td>'''L'''evel: Set view point orientation so that the user line of sight is level (perpendicular to the Z axis.)</td>
+	</tr>
+	<tr>
+		<td>P</td>
+		<td>'''P'''icking: Enables the picking mode(used by some 3D tools.)  '''Picking Enabled''' shows up on the left hand side of the viewer when activated.</td>
+	</tr>
+</table>
+
 ====Map View====
 ====Camera View====
 
@@ -282,9 +790,9 @@
 ====Virtual Reality Tools====
 =====Nodes Distance View=====
 
-===Topology===
 
-==Symphony UI==
 
-===Preferences===
+
+
+
 ===Data Products View===

@@ -18,7 +18,7 @@ import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
-import org.eclipse.symphony.core.invocator.presentation.CustomEMFEcoreInvocatorEditor;
+import org.eclipse.symphony.core.invocator.presentation.CustomSymphony__CoreInvocatorEditor;
 import org.eclipse.symphony.core.ui.Activator;
 import org.eclipse.symphony.core.ui.NewSymphonyProjectSettings;
 import org.eclipse.symphony.core.ui.NewSymphonySessionSettings;
@@ -209,7 +209,7 @@ public class NewSymphonyProjectWizard extends Wizard implements INewWizard {
 			//
 			try {
 				page.openEditor(new FileEditorInput(modelFile),
-						CustomEMFEcoreInvocatorEditor.ID);
+						CustomSymphony__CoreInvocatorEditor.ID);
 			} catch (PartInitException exception) {
 				exception.printStackTrace();
 				return false;

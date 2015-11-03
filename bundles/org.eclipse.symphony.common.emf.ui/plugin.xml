@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
+
    <extension-point
          id="org.eclipse.symphony.common.emf.ui.timeSourceCompositeProvider"
          name="Time Source Composite Provider"
          schema="schema/timeSourceCompositeProvider.exsd">
    </extension-point>
+   
    <extension
          point="org.eclipse.ui.menus">
       <menuContribution

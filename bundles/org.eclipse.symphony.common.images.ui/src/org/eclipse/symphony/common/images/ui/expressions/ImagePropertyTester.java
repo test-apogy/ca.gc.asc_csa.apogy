@@ -6,24 +6,29 @@ import org.eclipse.core.expressions.PropertyTester;
 import org.eclipse.symphony.common.converters.Symphony__CommonConvertersFacade;
 import org.eclipse.symphony.common.images.AbstractEImage;
 
-public class ImagePropertyTester extends PropertyTester {
-
+public class ImagePropertyTester extends PropertyTester
+{
 	public static final String PROPERTY_NAMESPACE = "org.eclipse.symphony.common.images.ui.expressions.ImagePropertyTester";
 	public static final String PROPERTY_CAN_CONVERT_TO_ABSTRACT_EIMAGE = "canConvertToAbstractEImage";
 	
 	@Override
-	public boolean test(Object receiver, String property, Object[] args,
-			Object expectedValue) {
+	public boolean test(Object receiver, String property, Object[] args, Object expectedValue)
+	{	
+		boolean result = false;
 		
-		boolean result = false;		
-		if (PROPERTY_CAN_CONVERT_TO_ABSTRACT_EIMAGE.equals(property)){
-			if (receiver instanceof List<?>){
+		if (PROPERTY_CAN_CONVERT_TO_ABSTRACT_EIMAGE.equals(property))
+		{
+			if (receiver instanceof List<?>)
+			{
 				List<?> list = (List<?>) receiver;
-				if (!list.isEmpty()){
-					result = Symphony__CommonConvertersFacade.INSTANCE.convert(list.get(0), AbstractEImage.class) != null;		
+				
+				if (!list.isEmpty())
+				{
+					result = (Symphony__CommonConvertersFacade.INSTANCE.convert(list.get(0), AbstractEImage.class) != null);		
 				}
 			}
-		}	
+		}
+		
 		return result;
 	}
 }
