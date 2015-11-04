@@ -346,13 +346,131 @@ TODO!
 
 ==Developing Your Own Custom Symphony Types==
 
-===Creating & Symphonizing your own Pan Tilt Unit (PTU) Camera===
+===Creating & Symphonizing your own Pan Tilt Unit (PTU) Camera System===
+
+====An Overview Of The Desired System====
+TODO!
 
 ====1. Creating the PTU Camera's EMF Meta-Model====
 
 =====i. Creating The Camera's EMF Model=====
+
+# Create a new ''Xcore Project'' named '''<org_prefix>.ptu''', where <org_prefix> is replaced by an appropriate prefix for your organization.
+# In the '''/model''' folder, create an Xcore model named '''ptu.xcore'''
+# Copy the following to the start of the empty Xcore model, replacing <org_prefix> where required:
+
+ <nowiki>@GenModel(prefix="PTUCamera",
+ 				   modelName="PTUCamera",
+ 				   childCreationExtenders="true",
+				   extensibleProviderFactory="true",
+	      		   multipleEditorPages="false",
+	      		   operationReflection="true",
+	      		   suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/<org_prefix>.ptu/src-generated")
+@GenModel(editDirectory="/<org_prefix>.ptu.edit/src-generated")
+
+package <org_prefix>.ptu</nowiki>
+
+# Create the class hierarchy shown before (classes in blue);
+# Save the '''ptu.xcore''' file.  This will trigger the code generation in both the '''<org_prefix>.ptu''' and '''<org_prefix>.ptu.edit''' plugins.
+
 =====ii. Implementing the Required Methods=====
+
+# Implement the following methods in ''<org_prefix>.ptu.impl.CameraImpl'':
+
+{| class="wikitable"
+! Method
+! Description
+|-
+| ''RectangularFieldOfView()'' getFov()
+| Getter method for the ''fov'' attribute of the camera.  See the code provided.
+|-
+| ''boolean'' commandZoom(''double'' zoom)
+| Configures the current zoom; this needs to update the FOV as well!  See the code provided.
+|-
+| ''double'' getMinimumZoom()
+| Returns the minimum zoom factor.  Return '''1.0''';
+|-
+| ''double'' getMaximumZoom()
+| Returns the maximum zoom factor.  Return '''10.0''';
+|-
+| ''RectangularFrustrumFieldOfView'' getFieldOfView()
+| Method declared by ''AbstractCamera''.  Return getFov();
+|}
+
+# Implement the following methods in ''<org_prefix>.ptu.impl.CameraSimulatedImpl'':
+
+{| class="wikitable"
+! Method
+! Description
+|-
+| ''boolean'' initialize()
+| Initialize the camera.  Just return '''true''';
+|-
+| ''ImageSnapshot'' takeSnapshot()
+| Takes and returns an ''ImageSnapshot''. See the code provided.
+|}
+
+# Implement the following methods in ''<org_prefix>.ptu.impl.PTUCameraSimulatedImpl'':
+
+{| class="wikitable"
+! Method
+! Description
+|-
+| ''double'' getMaximumPanAngle()
+| Returns the maximum pan angle ('''in radians''').  Just return 170.0 degrees.
+|-
+| ''double'' getMinimumPanAngle()
+| Returns the minimum pan angle ('''in radians''').  Just return -170.0 degrees.
+|-
+| ''double'' getMaximumTiltAngle()
+| Returns the maximum tilt angle ('''in radians''').  Just return 90.0 degrees.
+|-
+| ''double'' getMinimumTiltAngle()
+| Returns the minimum tilt angle ('''in radians''').  Just return -45.0 degrees.
+|-
+| ''boolean'' moveToPan(''double'' panAngle)
+| Checks the commanded pan angle, which is in '''radians'''.  If it's within range, update '''currentPan''' to the commanded value and return true; otherwise, return false.
+|-
+| ''boolean'' moveToTilt(''double'' tiltAngle)
+| Checks the commanded tilt angle, which is in '''radians'''.  If it's within range, update '''currentTilt''' to the commanded value and return true; otherwise, return false. 
+|-
+| ''boolean'' moveToPanTilt(''double'' panAngle, ''double'' tiltAngle)
+| Checks the commanded pan and tilt angles, both of which are in '''radians'''.  If they are within range, update both '''currentPan''' and '''currentTilt''' to the commanded values and return true; otherwise, return false.
+|-
+| ''boolean'' moveByPan(''double'' panAngleDelta)
+| Checks the sum of '''currentPan''' and the commanded pan angle offset (given in '''radians''').  If the resulting pan angle is in range, update '''currentPan''' to the resultant value and return true; otherwise, return false. 
+|-
+| ''boolean'' moveByTilt(''double'' tiltAngleDelta)
+| Checks the sum of '''currentTilt'''and the commanded tilt angle offset (given in '''radians''').  If the resulting tilt angle is in range, update '''currentTilt''' to the resultant value and return true; otherwise, return false. 
+|-
+| ''boolean'' moveByPanTilt(''double'' panAngleDelta, ''double'' tiltAngleDelta)
+| Checks the sum of '''currentPan''' and the commanded pan angle offset (given in '''radians''') as well as the sum of '''currentTilt''' and the commanded tilt angle offset (given in '''radians''').  If both resulting angles are in range, update both '''currentPan''' and '''currentTilt''' to the resultant values and return true; otherwise, return false.
+|-
+| ''boolean'' stopMotion()
+| Stops all motion.  Just return true.
+|}
+
 =====iii. Testing the System=====
+
+# Create a new ''Eclipse Application'' under ''Run Configuration''. Name it '''TEST''';
+# Click ''Run'' to launch another instance of Eclipse with your plugins;
+# In the ''Project Explorer View'', create a new Symphony Project (by clicking on ''New > Other... > Symphony > New Symphony Project'').  Name it '''my_tests''';
+# Create a new Symphony Session named '''MySession.sym''' in the newly create project.
+# In the ''Types'', under ''Local'', create a ''Type'' named '''PTUCamera''';
+# Set the type's ''Interface Class'' to ''<org_prefix>.ptu.PTUCamera'';
+# Under ''Variables'', create a ''Variable'' named '''ptuCamera''' and specify its type as '''PTUCamera''';
+# In the '''Default''' ''Context'', add a ''Variable Implementation'' that maps variable '''ptuCamera''' to a ''<org_prefix>.ptu.SimulatedPTUCamera'' implementation;
+# Select the ''Symphony Environment'' and right-click, selecting ''Symphony > Reset Instances'' to initialize instances;
+# Under ''Programs'', create an ''Operation Call List'' named '''ptuCmd''';
+# Under ''ptuCmd'', create an ''Operation Call'' named '''Init'' referencing ''ptuCamera.initialize()'';
+# Invoke the '''Init''' ''Operation Call'' and verify that the command has been executed;
+# Under ''ptuCmd'', create an ''Operation Call'' named '''MoveTo''' referencing ''ptuCamera.moveToPanTilt(...)'', with a '''pan''' ''Parameter'' of '''45.0''' degrees and a '''tilt''' ''Parameter'' of '''-30.0''' degrees; 
+# Invoke the '''MoveTo''' ''Operation Call'' and verify that the command has been executed;
+# Under ''ptuCmd'', create an ''Operation Call'' named '''Zoom''' referencing ''ptuCamera.commandZoom(...)'', with a '''zoom''' ''Parameter'' of '''2.0''';
+# Invoke the '''Zoom''' ''Operation Call'' and verify that the command has been executed;
+# Under ''ptuCmd'', create an ''Operation Call'' named '''SnapShot''' referencing ''ptuCamera.takeSnapshot()''
+# Invoke the '''SnapShot''' ''Operation Call'' and verify that the command has been executed.
 
 ====2. Creating the PTU Camera's Symphony Plugin====
 

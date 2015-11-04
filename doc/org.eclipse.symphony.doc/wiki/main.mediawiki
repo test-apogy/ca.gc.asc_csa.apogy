@@ -1,7 +1,5 @@
 =Table Of Contents=
 __TOC__
-[[installation.mediawiki]]
-[[user.mediawiki]]
 
 =Introduction=
 
@@ -19,66 +17,16 @@ The objective is to develop a software framework for mission operations that all
 #execute and monitor operations, and
 #support and facilitate scientific and engineering data analysis. 
 
-=Installation=
+[[installation.mediawiki]]
 
+----
 
-			
-=Developing for Symphony=
+[[user.mediawiki]]
 
-==Symphony Concept==
-===EMF Reflectivity===
+----
+		
+[[dev.mediawiki]]
 
-===Type Interfaces Modeling===
-===Variable Initialization===
-===Operation Call Invocation===
-
-==Symphonyzing==
-
-===Definition, High-Level Details & Guidelines===
-===The Three Steps to Symphonyzing===
-
-====1. Defining the System in EMF====
-
-=====Creating an EMF Model of the System=====
-=====Recommended Class Hierarchy=====
-
-====2. Creating the Symphony plugin====
-
-=====Definition & Requirements=====
-=====The Four Steps to making a Symphony Plugin=====
-
-======i. Creating the Symphony Plugin Itself======
-======ii. Creating an Xcore (.xcore) Model======
-======iii. Defining a Subclass of SymphonyInitializationData======
-=======Guidelines=======
-
-======iv. Defining a Subclass of SymphonySystemApiAdapter======
-=======Localization=======
-=======Guidelines & Requirements=======
-
-====3. Creating the Symphony System Model (*.ss) file====
-
-=====Definition=====
-=====The Six Steps to making a Symphony System Model=====
-
-======i. Defining the Topology Root======
-=======Topology Guidelines=======
-
-======ii. Defining the Bindings======
-=======Currently Available Bindings in Symphony=======
-=======Populating the Feature Roots List=======
-=======Populating the Bindings List=======
-
-======iii. Defining the Connection Points======
-======iv. Defining Type Members (Only for Composite Systems)======
-======v. Defining Assembly Links (Only for Composite Systems)======
-======vi. Registering your Symphony System Model with Symphony======
-=======Steps to register a Symphony System Model=======  
-
-==Advanced Topics==
-
-===Specialized Topology Nodes===
-===Currently available specialized topology nodes===
-===Contributing new tools===
+----
 
 [[tutorial.mediawiki]]

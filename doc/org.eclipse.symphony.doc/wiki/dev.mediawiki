@@ -1,0 +1,191 @@
+=Developing for Symphony=
+
+==Symphony Architecture==
+
+* Based on the Eclipse Modelling Framework (EMF);
+* A basic custom framework (''EMFInvocator'') defines the ''Type'', ''Variable'', ''Context'', ''Operation Call'', and ''Operation Call Result'' concepts;
+* Symphony specializes a few concepts defined in ''EMFInvocator'' and adds new ones: 3D representation, ''Assembly Links'', ''Connection Points'' and ''Data Product'' geo-referencing; 
+
+===Type Interfaces Modeling===
+
+* Recall, that a ''System'' is a specialized ''Type'', which's use forms much of the backbone of Symphony.
+* The interface of the ''System'' is modeled in EMF (e.g. via Xcore) and ends up being transformed into an EClass
+* The commands of the ''System'' directly correspond the modeled system's operations.
+* The command's parameters and return value types correspond to ''EClasses'', ''EEnumerations'', and other built-in types (e.g. ''boolean'', ''float'', ''int'', etc.)
+* The states (telemetry) of the ''System'' directly corresponds to the modeled system's attributes.
+* The states's types of the ''System'' also correspond to ''EClasses'', ''EEnumerations'', and other built-in types.
+* The most important fact of the ''System'' is '''while there is only one interface, there many be any number of possible implementations.''' 
+
+===Variable Initialization===
+
+* ''Variable'' initialization done through the ''InvocatorDelegate'' (which is specialized in Symphony):
+*# Gets the ''SymphonySystemApiAdapter'' associated with the ''Variable'';
+*# Instantiate the ''System'';
+*# Copies its associated topology and sets it in the ''SymphonySystemApiAdapter'';
+*# For each ''TypeMember'':
+*## Gets the ''SymphonySystemApiAdapter'' associated with the ''Variable'';
+*## Instantiate the ''System'';
+*## Copies its associated topology and sets in the appropriate ''SymphonySystemApiAdapter'';
+*## Attaches the topology to the parent's ''Connection Point'';
+*## Recurse for each ''TypeMember'' of the current ''TypeMember''.    
+
+===Operation Call Invocation===
+
+* Method invocation is done through EMF reflection;
+* Actual invocation done through the invocator delegate, which in turn, delegates part of it to the ''SymphonySystemApiAdapter''.
+
+==Symphonyzing==
+
+===Definition===
+
+'''''Symphonizing''''': ''The process of creating EMF models of a System to expose its interface to Symphony.''
+
+Some of what you get in return:
+* Generic support for command call invocation and documentation;
+* Generic support for telemetry (display, recording and playback);
+* Command call result tracking (time, position, command parameters);
+* 3D ''System'' and ''Environment'' representation.
+
+===High-Level Steps===
+
+Defining a Symphony ''System'' involves 3 steps:
+# Defining the ''System'' in EMF;
+# Creating the Symphony plugin;
+# Creating the Symphony System Model (*.ss).
+
+===Guidelines===
+
+Symphonizing Guidelines:
+# Keep the ''System'' EMF model seperate from Symphony; this provides modularity and your system can be used before your Symphony plugin is done!
+# Attributes are '''NEVER''' changed directly by an operator; they are considered states that are changed in response to command calls and interaction with the environment.
+# Commands are used to change the settings of a ''System'' (e.g. operating mode, limits, etc.) as well as to to command actions. However, commands are '''NOT''' used to get the current status of the System; attributes are used instead to accomplish this. 
+
+====Suggested Plugin Nomenclature====
+
+{| class="wikitable"
+! Name
+! Description
+|-
+| ''<org_prefix>.<system_name>''
+| Core plugin that defines the ''System'' and its associated types.  This should be kept independently of Symphony.
+|-
+| ''<org_prefix>.<system_name>.edit''
+| Edit plugin providing basic GUI support for the ''System''.  Generated automatically by EMF.
+|-
+| ''<org_prefix>.<system_name>.ui''
+| Plugin providing ''System''-specific contributions to the Eclipse Workbench (e.g. Views, Commands, Menu Contributions, etc.).  This plugin may or may not be present.
+|-
+| ''<org_prefix>.<system_name>.symphony''
+| Plugin defining the Symphony System (*.ss), specialized ''SymphonyInitializationData'' and ''SymphonySystemApiAdapter''.
+|-
+| ''<org_prefix>.<system_name>.symphony.edit''
+| Edit plugin providing basic GUI support for the Symphony System.  Generated automatically by EMF.
+|}
+   
+===The Three Steps to Symphonyzing===
+
+====1. Defining The System In EMF====
+
+=====Creating An EMF Model Of The System=====
+
+# Create an Xcore Project named <org_prefix>.<system_name>;
+# Rename the '''''/src-gen''''' folder to '''''/src-generated''''';
+# Create your Xcore model in the '''''/model''''' folder;
+## Ensure that you change the '''''modelDirectory''''' @GenModel directive to point to the <org_prefix>.<system_name>'''''/src-generated''''' folder;
+## Ensure that you change the '''''editDirectory''''' @GenModel directive to point to the <org_prefix>.<system_name>.edit'''''/src-generated/''''' folder;
+# Define your ''System'' classes;
+# Implement the methods as required;
+#* Ensure that you either remove the methods' @generated annotations or change them to @generated_NOT; otherwise, your changes will be overwritten the next time the Xcore compiler runs!  
+# Override getters for attributes that have a cardinality of [1] (i.e. are required)
+# You are done!
+
+=====Recommended Class Hierarchy=====
+
+# Define an abstract class (''A'') representing your ''System''; this includes:
+## Defining the class itself;
+## Defining all the class attributes and their classes;
+## Defining all methods as well as their parameters and return values; this may involve specifying additional classes. 
+# Define a concrete ''AStub'' class that extends ''A''.  The methods for this implementation do nothing.  This class can be used in Symphony when playing data back.
+# Definte a concrete ''ASimulated'' class that extends ''A''. This implementation provides a simulated ''A'' for Symphony.
+# Define a concrete ''AReal'' class that extends ''A''.  This implementation provides an interface to the real (physical) system.
+
+TODO! 
+
+====2. Creating the Symphony plugin====
+
+=====Definition=====
+
+* The '''Symphony plugin''':
+** Is an EMF plugin (includes an Xcore file);
+** Defines the ''SymphonyInitializationData'' used to save and initialize your ''System''; it captures the state of the ''System'';
+** Allows for the definition of a ''SymphonySystemApiAdapter'', customizing the invocation of ''System'' commands 
+
+=====The Four Steps to making a Symphony Plugin=====
+
+* Creating the Symphony plugin involves four (4) steps:
+*# Creating the plugin;
+*# Creating an Xcore model;
+*# Defining a sub-class of ''SymphonyInitializationData'';
+*# Defining a sub-class of ''SymphonySystemApiAdapter''.
+
+======i. Creating the Symphony Plugin Itself======
+
+# Create a new ''Xcore Project'' named '''<org_prefix>.ptu.symphony''';
+# Open the '''MANIFEST.MF'''.  Go to the ''Dependencies'' tab;
+# In the ''Required Plug-ins'' section:
+## Add your ''<org_prefix>.ptu'' plugin to the dependencies;
+## Add the ''org.eclipse.symphony.core'' plugin to the dependencies;
+# Save the '''MANIFEST.MF'''
+
+======ii. Creating a Xcore (.xcore) Model======
+
+# Rename the '''/src-gen''' folder to '''/src-generated''';
+# In the '''/model''' folder, copy over the provided file '''ptu_symphony.xcore''';
+# Replace the <org_prefix> in the model with the appropriate name:
+## Ensure that you change the '''modelDirectory''' @GenModel directive to <org_prefix>.ptu.symphony'''/src-generated'''
+## Ensure that you change the '''editDirectory''' @GenModel directive to <org_prefix>.ptu.symphony.edit'''/src-generated'''
+
+======iii. Defining a Subclass of SymphonyInitializationData======
+
+The ''SymphonyInitializationData'' only includes the pose of your ''System'' in the ''Worksite'' frame.
+
+Your specialized ''SymphonyInitializationData'':
+* Defines the required initialization data for your ''System''.
+* Symphony persists the data for you.
+* Symphony delegates to your custom ''SymphonySystemApiAdapter'' sub-class, the responsibility to create, populate and apply the data; 
+
+=======Guidelines=======
+
+* All atttributes in your specialized SymphonyInitializationData must be:
+** Contained in the ''SymphonyInitializationData'' (or marked as '''transient''');
+** Serializable (or have the necessary methods implemented correctly in your Symphony plugin Factory implementation class);
+* Should contain all of the data required to bring your ''System'' back to a given state (e.g. modes, actuators, position, etc.)
+
+======iv. Defining a Subclass of SymphonySystemApiAdapter======
+=======Localization=======
+=======Guidelines & Requirements=======
+
+====3. Creating the Symphony System Model (*.ss) file====
+
+=====Definition=====
+=====The Six Steps to making a Symphony System Model=====
+
+======i. Defining the Topology Root======
+=======Topology Guidelines=======
+
+======ii. Defining the Bindings======
+=======Currently Available Bindings in Symphony=======
+=======Populating the Feature Roots List=======
+=======Populating the Bindings List=======
+
+======iii. Defining the Connection Points======
+======iv. Defining Type Members (Only for Composite Systems)======
+======v. Defining Assembly Links (Only for Composite Systems)======
+======vi. Registering your Symphony System Model with Symphony======
+=======Steps to register a Symphony System Model=======  
+
+==Advanced Topics==
+
+===Specialized Topology Nodes===
+===Currently available specialized topology nodes===
+===Contributing new tools===
