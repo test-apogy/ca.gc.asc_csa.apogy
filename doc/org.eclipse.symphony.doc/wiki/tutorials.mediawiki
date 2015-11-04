@@ -9,6 +9,8 @@
 ==Robotic Arm==
 ==Rover (Complex Type)==
 
+----
+
 =Tutorials=
 
 ==I'm in a hurry! I want to operate a rover!!!==
@@ -36,56 +38,44 @@
 # Add a map named '''myMap''' to the ''TrainingSite's Map List'';
 # Add a ''Cartesian Triangular Mesh URL Map Layer'' named '''myDEM''' to ''myMap'' with the following parameters:
 
-<table>
-	<tr>
-		<th>Parameter</th>
-		<th>Value</th>
-	</tr>
-	<tr>
-		<td>Url</td>
-		<td>platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri</td>
-	</tr>
-</table>
+{| class="wikitable"
+! Parameter
+! Value
+|-
+| Url
+| platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSAAnalogTerrainDEM100cm.tri
+|}
 
 # Add a ''URL Image Map Layer'' named '''myContours''' to ''myMap'' with the following parameters:
 
-<table>
-	<tr>
-		<th>Parameter</th>
-		<th>Value</th>
-	</tr>
-	<tr>
-		<td>Url</td>
-		<td>platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-contour-map-black-20cm-per-line.png</td>
-	</tr>
-	<tr>
-		<td>Height (m)</td>
-		<td>120.0</td>
-	</tr>
-	<tr>
-		<td>Width (m)</td>
-		<td>60.0</td>
-	</tr>
-</table>
+{| class="wikitable"
+! Parameter
+! Value
+|-
+| Url
+| platform:/plugin/org.eclipse.symphony.examples.worksites.surface/data/CSA-AT-contour-map-black-20cm-per-line.png
+|-
+| Height (m)
+| 120.0
+|-
+| Width (m)
+| 60.0
+|}
 
 # Add a ''Feature Of Interest Map Layer'' named '''myFOI''' to ''myMap'';
 # Add a ''Feature Of Interest List'' as a child;
 # Add the following ''Features Of Interest'' to that list:
 
-<table>
-	<tr>
-		<th>Name</th>
-		<th>Position</th>
-	</tr>
-	<tr>
-		<td>Olympus Mons</td>
-		<td>33.5, 9.5, 2.6</td>
-	</tr>
-	<tr>
-		<td>Hill 937</td>
-		<td>33.0, 43.0, 0.3</td>
-	</tr>
-</table>
+{| class="wikitable"
+! Name
+! Position
+|-
+| Olympus Mons
+| 33.5, 9.5, 2.6
+|-
+| Hill 937
+| 33.0, 43.0, 0.3
+|}
 
 ====Creating Variables & Contexts====
 
@@ -122,37 +112,29 @@
 
 # Create an ''Operation Call'' named '''CommandVel''' to '''cmdVelocities(...)''' on ''myRover'' with the following ''Parameters'':
 
-<table>
-	<tr>
-		<th>Parameter</th>
-		<th>Value</th>
-	</tr>
-	<tr>
-		<td>linearVelocity</td>
-		<td>1.5 (m/s)</td>
-	</tr>
-	<tr>
-		<td>angularVelocity</td>
-		<td>5.0 (deg/s)</td>
-	</tr>
-</table>
+{| class="wikitable"
+! Parameter
+! Value
+|-
+| linearVelocity
+| 1.5 (m/s)
+|-
+| angularVelocity
+| 5.0 (deg/s)
+|}
 
 # Create an ''Operation Call'' named '''AllStop''' to '''cmdVelocities(...)''' on ''myRover'' with the following ''Parameters'':
 
-<table>
-	<tr>
-		<th>Parameter</th>
-		<th>Value</th>
-	</tr>
-	<tr>
-		<td>linearVelocity</td>
-		<td>0.0 (m/s)</td>
-	</tr>
-	<tr>
-		<td>angularVelocity</td>
-		<td>0.0 (deg/s)</td>
-	</tr>
-</table>
+{| class="wikitable"
+! Parameter
+! Value
+|-
+| linearVelocity
+| 0.0 (m/s)
+|-
+| angularVelocity
+| 0.0 (deg/s)
+|}
 
 # In the ''Session Editor'', expand the ''Active Context'' (''Simulated'');
 # Expand the ''Variable Implementations'';
@@ -164,22 +146,203 @@
 
 ====Using Operation Call Controller Bindings====
 
+=====Binding A Controller To Move The Rover Around=====
+
+# Open the ''Controllers Status View'';
+# Under ''Programs'', create a ''Controllers Configuration'' named '''myFirstCtrlConfig''
+# Create an ''Operation Call Controller Binding'' named '''Velocity''' for the ''myRover'' ''Variable'' that binds the '''cmdVelocities(...)''' operation:
+#* Create a ''TimeTrigger'' to get a periodic call at 10 Hz (every 100 ms)
+# Map the ''linearVelocity'' parameter to a joystick input axis;
+## Add a ''Centered Linear Input Conditioning with the following values:
+
+{| class="wikitable"
+! Parameter
+! Value
+|-
+| Dead Band
+| 0.1
+|-
+| Maximum
+| -2.0
+|-
+| Minimum
+| 2.0
+|}
+
+## Map the ''angularVelocity'' ''Parameter'' to a joystick inpit axis;
+##* Add a ''Centered Linear Input Conditioning'' with the following values:
+
+{| class="wikitable"
+! Parameter
+! Value
+|-
+| Dead Band
+| 0.1
+|-
+| Maximum
+| -0.5
+|-
+| Minimum
+| 0.5
+|}
+
+# Activate the ''myFirstCtrlConfig'' and drive your rover around!
+
+=====Binding A Controller To Move The Rover Around, With An Enabled Button=====
+
+# Create another ''Controllers Configuration'' named '''mySecondCtrlConfig'''.
+# Create an ''Operation Call Controller Binding'' named '''Velocity''' for the ''myRover'' ''Variable'' that binds the '''cmdVelocities(...)''' operation:
+#* Create a ''State Trigger'' to get a periodic call at 10 Hz (every 100 ms) when a given joystick button is pressed (i.e. dead man's switch)
+# Map the ''angularVelocity'' parameter to a joystick input axis;
+## Add a ''Centered Linear Input Conditioning'' with the following values:
+
+{| class="wikitable"
+! Parameter
+! Value
+|-
+| Dead Band
+| 0.1
+|-
+| Maximum
+| -2.0
+|-
+| Minimum
+| 2.0
+|}
+
+## Map the ''linearVelocity'' parameter to a joystick input axis;
+##* Add a ''Centered Linear Input Conditioning'' with the following values:
+
+{| class="wikitable"
+! Parameter
+! Value
+|-
+| Dead Band
+| 0.1
+|-
+| Maximum
+| -0.5
+|-
+| Minimum
+| 0.5
+|}
+
+# Activate the ''mySecondCtrlConfig'' and drive your rover around. '''''Does it work as expected?'''''
+
 ===Defining & Using Composite Types===
 
+====The Target Assembly====
+TODO!
+
 ====Defining A Composite System====
+
+# Create a new ''Symphony System'' in ''Local Type'' named '''MyFirstAssembly'''
+# Add three (3) ''Type Members'':
+## '''rover''' of type ''SymphonySystemMobilePlatform'';
+## '''camera''' of type ''SymphonySystemPTUCamera'';
+## '''arm''' of type ''SymphonySystemRoboticArm''
+# Add a ''Topology Root'' with a ''Transform Node'' child with its ''Node Id'' set to '''myFirstAssemblyRoot'''
+# Under ''MyFirstAssembly'', create a ''Connection Points List''
+# Under the new ''Connection Points List'', create a ''Connection Point'' named '''origin''', referring to the ''myFirstAssemblyRoot'' node.
+# Under ''MyFirstAssembly'', create an ''Assembly Links List'';
+# Create a first ''Assembly Link'' named '''assemblyToRover''':
+## Set its ''Parent Connection Point'' to '''origin''';
+## Set its ''Sub System Type Member'' to '''rover''';
+# Create a second ''Assembly Link'' named ''roverToCamera'':
+## Set its ''Parent Type Member'' to '''rover''';
+## Set its ''Parent Connection Point'' to '''MOBILE_PLATFORM_SYM_SYS_CONNECT_MAST_CENTRE_PLATE''';
+## Set its ''Sub System Type Member'' to '''camera''';
+# Create a third ''Assembly Link'' named ''roverToArm'':
+## Set its ''Parent Type Member'' to '''rover''';
+## Set its ''Parent Connection Point'' to '''MOBILE_PLATFORM_SYM_SYS_CONNECT_ARM_MOUNT''';
+## Set its ''Sub System Type Member'' to '''arm''';
+# Set the ''Pose Provider'' of ''myFirstAssembly'' to '''rover''';
+# Create a ''Variable'' named '''myAssembly''' of type ''MyFirstAssembly'';
+# In the ''Active Context'', create a new ''Variable Implementation'':
+## Assign its ''Variable'' to '''myAssembly''';
+## Specify an implementation class for:
+### ''rover'' -> '''MobilePlatformStub'''
+### ''camera'' -> '''PTUCameraSimulated'''
+### ''arm'' -> '''RoboticArmSimulated'''
+# Reset Instances
+
 ====Invoking Operation On Composite System Type Members====
+
+# Create an ''Operation Calls'' program called '''myAssemblyCalls''';
+# Create a call named '''Init''' to operation ''init()'' on ''myAssembly:rover''
+# Create a call named '''Move''' to operation ''cmdLinearVelocity(...)'' on ''myAssembly:rover'' with ''Parameter'' '''speed''' set to '''0.25''';
+# Create a call named '''Stop''' to operation ''cmdLinearVelocity(...)'' on ''myAssembly:rover'' with ''Parameter'' '''speed''' set to '''0.0''';
+# Invoke ''Init'';
+# Invoke ''Move'' - the assembly should start moving forward;
+# invoke ''Stop'', when you want to stop your assembly.
+
 ====Invoking Operation On A Feature Of Composite Type Members====
+
+# Create a call named '''Power On''' to operation ''turnOn()'' on ''myAssembly:rover.powerSystem'';
+# Invoke ''Power On''. 
 
 ===Setting Up & Using The Camera View===
 
 ====Configuring A Camera View====
+
+# Create a ''Camera Configurations List'' under ''Tools'';
+# Create a ''Camera Configuration'' named '''myCameraViewConfig''';
+# Set the ''Variable'' and ''Camera'' to refer to the camera of ''myAssembly'' ('''myAssembly:camera''');
+# Open the ''Camera View'' and then select ''myCameraViewConfig'';
+# Create a call named '''acquireImage''' to operation ''takeSnapshot()'' on ''myAssembly:camera'';
+# Invoke ''acquireImage''.
+
 ====Adding Overlays====
+
+# Add an ''EMF Feature Overlay'' to display the current pan angle of the camera on the top left corner of the view:
+## Create a ''Variable Feature Reference'', set the ''Variable'' to '''myAssembly''';
+## Create a ''Type'' referring to ''camera'';
+## Create a ''Feature'' chain referring to ''currentPanAngle'';
+# Add a ''Gray Scale Filter'' to ''myCameraViewConfig'';
+# Create a call named '''moveToPanTilt''' to operation ''moveToPanTilt(...)'' on ''myAssembly:camera'';
+# Call ''acquireImage'' on ''camera'' to get the image to update;
+# Call ''moveToPanTilt'' on ''camera'' to change the camera orientation;
+# Call ''acquireImage'' again on ''camera'' to get the image to update. 
 
 ===Setting Up & Using The Map View===
 
 ====Displaying The Environment====
 
+# Create a ''Map View Configuration List'' under ''Tools'';
+# Create a ''Map View Configuration'' named '''myMapConfig''';
+# Create an ''Image Map Layer Presentation'' referring to '''myContours'';
+# Create a ''Feature Of Interest Map Layer Presentation'' referring to '''myFOI''';
+# Open the ''Map View'' and select '''myMapConfig'''.
+
 ====Displaying The Variables====
+
+# Create a ''Vehicle Variable Annotation'' referring to '''myRover''';
+# Create a ''Variable Trajectory Annotation'':
+## Create a ''Default Trajectory Provider'' as its child;
+## Assign its ''Variable'' to '''myRover'';
+## Close the Map View;
+## Open the Map View and select '''myMapConfig'''.
+
+===Setting Up & Using The Telemetry View===
+
+====Defining Watches====
+
+# Under ''Tools'', create a ''Watches List Container'';
+# Under ''Watches List Container'', create a ''Watches List'' named '''Test''';
+# Under '''Test''', create a ''Watch'' named '''armWatch''', assign its ''Variable'' to '''myAssembly'''
+# Under '''armWatch''', create a ''Type Member Reference Tree'' referring to '''arm''';
+# Under '''armWatch''', create a ''Type Root Node'' and set its ''Source Class'' to '''RoboticArm''';
+# Create a chain of ''Tree Feature Nodes'' to finally refer to '''elbowAngle''' 
+
+====Defining Displays====
+
+# Under ''Tools'', create a new ''Displays'';
+# Under ''Displays'', create a ''Display List'' named '''armDisplays''';
+# Under '''armDisplays''', create a ''Text Display'' with its ''Abstract Feature Node'' referring to '''elbowAngle''';
+# Under '''armDisplays''', create a ''Number Vs. Time Plot Display'' with its ''Abstract Feature Node'' referring to '''elbowAngle''', with its ''height'' set to '''200''' and its ''width'' set to '''200'''.
+# Open the ''Telemetry View'' and select '''armDisplays'''.  
+
+----
 
 ==Developing Your Own Custom Symphony Types==
 
