@@ -28,7 +28,7 @@ public interface WheelContactProvider extends ContactProvider
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The type of wheel to Mesh contact to use.
+	 * The type of wheel to Mesh contact to use.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Contact Mode</em>' attribute.
 	 * @see org.eclipse.symphony.addons.vehicle.WheelContactMode

@@ -1486,7 +1486,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getVehiclePoseCorrector__ReInitialize(), 
 		   source, 
 		   new String[] {
-			 "documentation", " Method that forces re-initialization of the pose corrector meshes contact geometries."
+			 "documentation", "Method that forces re-initialization of the pose corrector meshes contact geometries."
 		   });	
 		addAnnotation
 		  (getVehiclePoseCorrector__GetMeshExtent2D__CartesianTriangularMesh(), 
@@ -1504,7 +1504,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getVehiclePoseCorrector_Initializing(), 
 		   source, 
 		   new String[] {
-			 "documentation", " Whether or not the corrector is initializing.",
+			 "documentation", "Whether or not the corrector is initializing.",
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "INTERNAL_INFO"
@@ -1513,7 +1513,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getVehiclePoseCorrector_Meshes(), 
 		   source, 
 		   new String[] {
-			 "documentation", " The list of ContentNode containing the meshes being processed to find contact points.",
+			 "documentation", "The list of ContentNode containing the meshes being processed to find contact points.",
 			 "children", "true",
 			 "notify", "true",
 			 "propertyCategory", "INTERNAL_INFO"
@@ -1522,7 +1522,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getVehiclePoseCorrector_ContactBodies(), 
 		   source, 
 		   new String[] {
-			 "documentation", " The list of physical bodies being processed to find contact points.",
+			 "documentation", "The list of physical bodies being processed to find contact points.",
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "INTERNAL_INFO"
@@ -1531,7 +1531,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getVehiclePoseCorrector_ZCorrectionMode(), 
 		   source, 
 		   new String[] {
-			 "documentation", " The method used to compute the correction along the Z axis.",
+			 "documentation", "The method used to compute the correction along the Z axis.",
 			 "notify", "true",
 			 "propertyCategory", "SETTINGS_INFO"
 		   });	
@@ -1539,7 +1539,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getVehiclePoseCorrector_ZCorrection(), 
 		   source, 
 		   new String[] {
-			 "documentation", " The last value of the pose correction along z.",
+			 "documentation", "The last value of the pose correction along the Z axis.",
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "CORRECTION_INFO",
@@ -1557,7 +1557,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getVehiclePoseCorrector_OrientationCorrection(), 
 		   source, 
 		   new String[] {
-			 "documentation", " Orientation Correction.",
+			 "documentation", "Orientation Correction.",
 			 "notify", "true",
 			 "child", "true",
 			 "property", "Readonly",
@@ -1579,7 +1579,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (wheelEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", " Class that represent a physical wheel used to model Wheel to Mesh contact."
+			 "documentation", "Class that represent a physical wheel used to model Wheel to Mesh contact."
 		   });	
 		addAnnotation
 		  (getWheel_Radius(), 
@@ -1603,7 +1603,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getThruster_MinimumThrust(), 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nThe minimum thrust, in Newtons. Must be positive.",
+			 "documentation", "The minimum thrust, in Newtons. Must be positive.",
 			 "notify", "true",
 			 "csa_units", "N",
 			 "propertyCategory", "THRUST_INFO"
@@ -1612,7 +1612,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getThruster_MaximumThrust(), 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nThe maximum thrust, in Newtons. Must be positive.",
+			 "documentation", "The maximum thrust, in Newtons. Must be positive.",
 			 "notify", "true",
 			 "csa_units", "N",
 			 "propertyCategory", "THRUST_INFO"
@@ -1621,7 +1621,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getThruster_CurrentThrust(), 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nThe current thrust, in Newtons. Always between minimumThrust and maximumThrust.",
+			 "documentation", "The current thrust, in Newtons. Always between minimumThrust and maximumThrust.",
 			 "notify", "true",
 			 "csa_units", "N",
 			 "propertyCategory", "THRUST_INFO"
@@ -1630,7 +1630,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getThruster_ThrustLevel(), 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nThe current thrust level. Between 0.0 and 1.0",
+			 "documentation", "The current thrust level. Between 0.0 and 1.0",
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "THRUST_INFO"
@@ -1639,20 +1639,20 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getThruster_PlumeAngle(), 
 		   source, 
 		   new String[] {
-			 "documentation", " Plume angle, in radians",
+			 "documentation", "Plume angle, in radians",
 			 "csa_units", "rad"
 		   });	
 		addAnnotation
 		  (wheelContactModeEEnum, 
 		   source, 
 		   new String[] {
-			 "documentation", " Enumeration of available model of wheel to Mesh contact."
+			 "documentation", "Enumeration of available model of wheel to Mesh contact."
 		   });	
 		addAnnotation
 		  (getWheelContactProvider_ContactMode(), 
 		   source, 
 		   new String[] {
-			 "documentation", " The type of wheel to Mesh contact to use.",
+			 "documentation", "The type of wheel to Mesh contact to use.",
 			 "notify", "true",
 			 "propertyCategory", "SETTINGS_INFO"
 		   });	
@@ -1708,13 +1708,13 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getWheelVehicleUtilities__FindBestFitPlane__List(), 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nReturns the normal of the plane that best (least square errors) fits a set of points.\n@param points The list of points.\n@return The normal of the plane that best (least square errors) fits a set of points, null if it is not defined.\n@see D. Gingras, Memoire de maitrise, pp. 73-74."
+			 "documentation", "Returns the normal of the plane that best (least square errors) fits a set of points.\n@param points The list of points.\n@return The normal of the plane that best (least square errors) fits a set of points, null if it is not defined.\n@see D. Gingras, Memoire de maitrise, pp. 73-74."
 		   });	
 		addAnnotation
 		  (getPathPlannerTool__PlanPath(), 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nMethod that plan a path from the variable current location to the specified destination and updates\nthe planned path according to the result."
+			 "documentation", "Method that plan a path from the variable current location to the specified destination and updates\nthe planned path according to the result."
 		   });	
 		addAnnotation
 		  (getPathPlannerTool_Busy(), 
@@ -1727,7 +1727,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getPathPlannerTool_AutoPathPlanEnabled(), 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nWhether or not automatic path planning is enabled. When enabled, chnaging the destination will automatically\nstart a replan of the path.",
+			 "documentation", "Whether or not automatic path planning is enabled. When enabled, chnaging the destination will automatically\nstart a replan of the path.",
 			 "notify", "true",
 			 "property", "Editable"
 		   });	
@@ -1735,7 +1735,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getPathPlannerTool_MeshLayer(), 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nThe mesh layer to use to plan the path."
+			 "documentation", "The mesh layer to use to plan the path."
 		   });	
 		addAnnotation
 		  (getPathPlannerTool_PathPlanner(), 

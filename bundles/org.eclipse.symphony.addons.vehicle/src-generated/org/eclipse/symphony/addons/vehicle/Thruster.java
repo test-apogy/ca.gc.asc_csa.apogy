@@ -38,7 +38,6 @@ public interface Thruster extends Node
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The minimum thrust, in Newtons. Must be positive.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Minimum Thrust</em>' attribute.
@@ -66,7 +65,6 @@ public interface Thruster extends Node
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The maximum thrust, in Newtons. Must be positive.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Maximum Thrust</em>' attribute.
@@ -93,7 +91,6 @@ public interface Thruster extends Node
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The current thrust, in Newtons. Always between minimumThrust and maximumThrust.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Current Thrust</em>' attribute.
@@ -121,7 +118,7 @@ public interface Thruster extends Node
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Plume angle, in radians
+	 * Plume angle, in radians
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Plume Angle</em>' attribute.
 	 * @see #setPlumeAngle(double)
@@ -148,7 +145,6 @@ public interface Thruster extends Node
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The current thrust level. Between 0.0 and 1.0
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Thrust Level</em>' attribute.

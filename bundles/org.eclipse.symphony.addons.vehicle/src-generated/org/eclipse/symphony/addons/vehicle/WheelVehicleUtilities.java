@@ -136,7 +136,6 @@ public interface WheelVehicleUtilities extends EObject
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Returns the normal of the plane that best (least square errors) fits a set of points.
 	 * @param points The list of points.
 	 * @return The normal of the plane that best (least square errors) fits a set of points, null if it is not defined.

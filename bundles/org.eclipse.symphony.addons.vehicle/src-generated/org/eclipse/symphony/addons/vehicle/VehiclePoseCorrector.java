@@ -40,7 +40,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Whether or not the corrector is initializing.
+	 * Whether or not the corrector is initializing.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Initializing</em>' attribute.
 	 * @see #setInitializing(boolean)
@@ -67,7 +67,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The list of ContentNode containing the meshes being processed to find contact points.
+	 * The list of ContentNode containing the meshes being processed to find contact points.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Meshes</em>' reference list.
 	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_Meshes()
@@ -82,7 +82,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The list of physical bodies being processed to find contact points.
+	 * The list of physical bodies being processed to find contact points.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Contact Bodies</em>' reference list.
 	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_ContactBodies()
@@ -97,7 +97,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The method used to compute the correction along the Z axis.
+	 * The method used to compute the correction along the Z axis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ZCorrection Mode</em>' attribute.
 	 * @see org.eclipse.symphony.addons.vehicle.ZCorrectionMode
@@ -126,7 +126,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  The last value of the pose correction along z.
+	 * The last value of the pose correction along the Z axis.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>ZCorrection</em>' attribute.
 	 * @see #setZCorrection(double)
@@ -181,7 +181,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Orientation Correction.
+	 * Orientation Correction.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Orientation Correction</em>' reference.
 	 * @see #setOrientationCorrection(Matrix3x3)
@@ -233,7 +233,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 *  Method that forces re-initialization of the pose corrector meshes contact geometries.
+	 * Method that forces re-initialization of the pose corrector meshes contact geometries.
 	 * <!-- end-model-doc -->
 	 * @model
 	 * @generated

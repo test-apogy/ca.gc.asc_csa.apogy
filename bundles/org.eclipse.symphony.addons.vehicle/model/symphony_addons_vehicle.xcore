@@ -63,34 +63,50 @@ enum OrientationCorrectionMode
 
 class VehiclePoseCorrector extends PoseCorrector
 {	
-	/* Method that forces re-initialization of the pose corrector meshes contact geometries. */
+	/*
+	 * Method that forces re-initialization of the pose corrector meshes contact geometries.
+	 */
 	op void reInitialize()		
 			
-	/* Whether or not the corrector is initializing. */
+	/* 
+	 * Whether or not the corrector is initializing.
+	 */
 	@GenModel(notify="true", property="Readonly", propertyCategory="INTERNAL_INFO")
 	boolean initializing = "false"
 								
-	/* The list of ContentNode containing the meshes being processed to find contact points. */
+	/* 
+	 * The list of ContentNode containing the meshes being processed to find contact points.
+	 */
 	@GenModel(children="true", notify="true", propertyCategory="INTERNAL_INFO")
 	refers MeshNodeEntry[0..*] meshes 
 
-	/* The list of physical bodies being processed to find contact points. */
+	/* 
+	 * The list of physical bodies being processed to find contact points.
+	 */
 	@GenModel(notify="true", property="Readonly", propertyCategory="INTERNAL_INFO")
 	refers PhysicalBody[0..*] contactBodies
 
-	/* The method used to compute the correction along the Z axis. */
+	/* 
+	 * The method used to compute the correction along the Z axis.
+	 */
 	@GenModel(notify="true", propertyCategory="SETTINGS_INFO")
 	ZCorrectionMode zCorrectionMode
 	
-	/* The last value of the pose correction along z.*/
+	/* 
+	 * The last value of the pose correction along the Z axis.
+	 */
 	@GenModel(notify="true", property="Readonly", propertyCategory="CORRECTION_INFO", csa_units="m")
 	double zCorrection = "0"
 	
-	/* The method used to correct orientation. */
+	/* The method used to correct orientation.
+	 *
+	 */
 	@GenModel(notify="true", propertyCategory="SETTINGS_INFO")
 	OrientationCorrectionMode orientationCorrectionMode
 	
-	/* Orientation Correction.*/
+	/* 
+	 * Orientation Correction.
+	 */
 	@GenModel(notify="true", child = "true", property="Readonly", propertyCategory="CORRECTION_INFO")
 	refers transient Matrix3x3[0..1] orientationCorrection
 	
@@ -132,7 +148,9 @@ abstract class ContactProvider
 
 // Wheel Vehicle Specific 
 
-/* Class that represent a physical wheel used to model Wheel to Mesh contact.*/
+/* 
+ * Class that represent a physical wheel used to model Wheel to Mesh contact.
+ */
 class Wheel extends PhysicalBody
 {
 	@GenModel(csa_units="m")
@@ -148,34 +166,35 @@ class Wheel extends PhysicalBody
  */
 class Thruster extends Node
 {
-	/**
+	/*
 	 * The minimum thrust, in Newtons. Must be positive.
 	 */
 	@GenModel(notify="true", csa_units="N", propertyCategory="THRUST_INFO")
 	double minimumThrust = "0"
 	
-	/**
+	/*
 	 * The maximum thrust, in Newtons. Must be positive.
 	 */
 	@GenModel(notify="true", csa_units="N", propertyCategory="THRUST_INFO")
 	double maximumThrust = "100"
 	
-	/**
+	/*
 	 * The current thrust, in Newtons. Always between minimumThrust and maximumThrust.
 	 */
 	@GenModel(notify="true", csa_units="N", propertyCategory="THRUST_INFO")
 	transient double currentThrust
 	
-	/**
+	/*
 	 * The current thrust level. Between 0.0 and 1.0
 	 */
 	@GenModel(notify="true", property="Readonly", propertyCategory="THRUST_INFO") 
 	transient double thrustLevel = "0.0"
 	
-	/* Plume angle, in radians */
+	/*
+	 * Plume angle, in radians
+	 */
 	@GenModel(csa_units="rad")
 	double plumeAngle = "0.5"
-	
 }
 
 class ThrusterBinding extends AbstractTopologyBinding
@@ -183,7 +202,9 @@ class ThrusterBinding extends AbstractTopologyBinding
 	refers Thruster thruster
 }
 
-/* Enumeration of available model of wheel to Mesh contact. */
+/* 
+ * Enumeration of available model of wheel to Mesh contact.
+ */
 enum WheelContactMode
 {
 	PointWheelContact as "Point Wheel" = 0,
@@ -192,7 +213,9 @@ enum WheelContactMode
 
 class WheelContactProvider extends ContactProvider
 {
-	/* The type of wheel to Mesh contact to use. */
+	/* 
+	 * The type of wheel to Mesh contact to use.
+	 */
 	@GenModel(notify="true", propertyCategory="SETTINGS_INFO")
 	WheelContactMode contactMode
 }
@@ -208,12 +231,14 @@ class LanderSphericalFoot extends PhysicalBody
 
 class LanderSphericalFootContactProvider extends ContactProvider
 {
+	
 }
 
 // Others
 
 class Symphony__AddonsVehicleFacade
 {	
+	
 }
 
 class WheelVehicleUtilities
@@ -277,7 +302,7 @@ class WheelVehicleUtilities
 	 */
 	op boolean isWithin(Point3d point, MeshExtent2D meshExtent)
 	
-	/**
+	/*
 	 * Returns the normal of the plane that best (least square errors) fits a set of points.
 	 * @param points The list of points.
 	 * @return The normal of the plane that best (least square errors) fits a set of points, null if it is not defined.
@@ -299,7 +324,7 @@ class PathPlannerTool extends AbstractTwoPoints3DTool
 	@GenModel(notify="true", property="Readonly")
 	transient boolean busy = "false"
 	
-	/**
+	/*
 	 * Whether or not automatic path planning is enabled. When enabled, chnaging the destination will automatically
 	 * start a replan of the path.
 	 */
@@ -307,19 +332,19 @@ class PathPlannerTool extends AbstractTwoPoints3DTool
 	boolean autoPathPlanEnabled = "false"
 
 
-	/**
+	/*
 	 * Method that plan a path from the variable current location to the specified destination and updates
 	 * the planned path according to the result.
 	 */
 	op boolean planPath()
 	
-	/**
+	/*
 	 * The mesh layer to use to plan the path.
 	 */
 	refers CartesianTriangularMeshMapLayer meshLayer
 		
 	@GenModel(children="true", notify="true")
-	contains MeshWayPointPathPlanner[0..1] pathPlanner
+	contains MeshWayPointPathPlanner [0..1] pathPlanner
 	
 	@GenModel(children="true", notify="true", property="Readonly")
 	contains WayPointPath[0..1] plannedPath 	
@@ -335,7 +360,9 @@ class PathPlannerToolNode extends AggregateGroupNode
 
 class VehiclePathPlannerTool extends PathPlannerTool
 {
-	/* The Symphony System for which to plan a path.*/
+	/*
+	 *  The Symphony System for which to plan a path.
+	 */
  	@GenModel(propertyCategory="TRAJECTORY_3D_TOOL")
 	refers Variable[1] variable
 }

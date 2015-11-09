@@ -1,13 +1,80 @@
 =Examples=
 
+* Simple examples of simulated Systems
+* Examples include articulated and composite Systems and the use of the ''Environment'' for simulation
+* As recommended, the System's EMF models are separate and distinct from their Symphony (System) plugins;
+* Shows various aspects of ''Symphonyazation''
+
+* The following examples are currently available in Symphony:
+
+{| class="wikitable"
+! Symphony System
+! Description
+! Plugin
+|-
+| '''''PTUDishAntennaSymphonySystem'''''
+| A simulated antenna dish mount on a pan-tilt unit.  Antenna is made to track the Sun based on the worksite sky.
+| ''org.eclipse.symphony.examples.antenna''
+|-
+| '''''CameraSymphonySystem'''''
+| A simulated camera.
+| rowspan="2" | ''org.eclipse.symphony.examples.camera''
+|-
+| '''''PTUCameraSymphonySystem'''''
+| A simulated camera mounted on a pan-tilt unit.
+|-
+| '''''LanderSymphonySystem'''''
+| A simulated lander.
+| ''org.eclipse.symphony.examples.lander''
+|-
+| '''''LidarSymphonySystem'''''
+| A simulated raster scan LIDAR.
+| ''org.eclipse.symphony.examples.lidar''
+|-
+| '''''MobilePlatformSymphonySystem'''''
+| A simulated four-wheeled, skid-steered mobile platform.
+| ''org.eclipse.symphony.examples.mobile_platform''
+|-
+| '''''RoboticArmSymphonySystem'''''
+| A simulated robotic arm with four rotatable joints
+| ''org.eclipse.symphony.examples.robotic_arm''
+|-
+| '''''RoverSymphonySystem'''''
+| A simulated rover, which is a complex System, composed of a Mobile Platform, Robotic Arm and two Camera sub-Systems.
+| ''org.eclipse.symphony.examples.rover''
+|}
+
 ==PTU Dish Antenna==
+
+TODO!
+
 ==Camera==
+
+TODO!
+
 ==PTU Camera==
+
+TODO!
+
 ==Lander==
+
+TODO!
+
 ==Lidar==
+
+TODO!
+
 ==Mobile Platform==
+
+TODO!
+
 ==Robotic Arm==
+
+TODO!
+
 ==Rover (Complex Type)==
+
+TODO!
 
 ----
 
@@ -475,26 +542,186 @@ package <org_prefix>.ptu</nowiki>
 ====2. Creating the PTU Camera's Symphony Plugin====
 
 =====i. Creating The Camera's Plugin Project=====
+
+# Create a new ''Xcore Project'' named '''<org_prefix>.ptu.symphony''';
+# Open the '''MANIFEST.MF'''.  Go to the ''Dependencies'' tab;
+# In the ''Required Plug-ins'' section:
+## Add your ''<org_prefix>.ptu'' plugin to the dependencies;
+## Add the ''org.eclipse.symphony.core'' plugin to the dependencies;
+# Save the '''MANIFEST.MF'''
+
 =====ii. Developing the Camera's Symphony Xcore (.xcore) model=====
+
+# Rename the '''/src-gen''' folder to '''/src-generated''';
+# In the '''/model''' folder, copy over the provided file '''ptu_symphony.xcore''';
+# Replace the <org_prefix> in the model with the appropriate name:
+## Ensure that you change the '''modelDirectory''' @GenModel directive to <org_prefix>.ptu.symphony'''/src-generated'''
+## Ensure that you change the '''editDirectory''' @GenModel directive to <org_prefix>.ptu.symphony.edit'''/src-generated'''
+
 =====iii. Specializing SymphonyInitializationData for the Camera=====
+
+# Open the '''ptu_symphony.xcore''' model;
+# Define a new class named '''''PTUCameraSymphonyInitializationData''''' that extends ''SymphonyInitializationData'';
+# Add the required attributes:
+## ''double'' '''panAngle''';
+## ''double'' '''tiltAngle''';
+## ''double'' '''zoomFactor''' (with a default value of '''1.0''')
+# Save the '''ptu_symphony.xcore''' model.
+
 =====iv. Specializing SymphonySystemApiAdapter for the Camera=====
 
-====3. Creating the PTU Camera's complete Symphony System Model====
+# Open the '''ptu_symphony.xcore''' model;
+# Define a new class named '''''PTUCameraSymphonySystemApiAdapter''''' that extends ''SymphonySystemApiAdapter''';
+# Save the ''ptu_symphony.xcore'' model;
+# Override the following methods in '''''PTUCameraSymphonySystemApiAdapterImpl''''':
+
+{| class="wikitable"
+! Method
+! Description
+! Implementation
+|-
+| ''AbstractInitializationData'' '''createInitializationData'''()
+| Creates an instance of ''SymphonyInitializationData''.
+| Returns a new instance of ''PTUCameraSymphonyInitializationData''.
+|-
+| void '''collect'''(''AbstractInitializationData'')
+| Sets the attributes of the given ''SymphonyInitializationData'' object to match the System's state.
+| Gets the current value of '''pan''', '''tilt''', and '''zoom''' from the System instance and sets these in the provided ''PTUCameraSymphonyInitializationData''.
+|-
+| void '''apply'''(''AbstractInitializationData'')
+| Applies the given ''SymphonyInitializationData'' to the System instance.
+| Gets the '''pan''' and '''tilt''' from the given ''PTUCameraSymphonyInitializationData'' object and calls '''moveToPanTilt'''('''pan''', '''tilt'''); then gets the '''zoom'' and calls '''commandZoom'''('''zoom'''). 
+|-
+| ''Matrix4x4'' '''createResultMatrix'''(''OperationCall'')
+| Creates the ''Matrix4x4'' used to position the result of an ''Operation Call'' relative to the System's origin.
+| See the code provided.
+|}
+
+====3. Creating the PTU Camera's Complete Symphony System Model====
 
 =====i.Creating the Camera's Symphony System Model file=====
+
+# Launch the ''Run Configuration'' used for testing ''PTUCamera'' in the previous exercises;
+# In the ''Project Explorer'', right click and then select ''Import...'';
+# In the ''Import'' pop-up, select ''General -> Existing Projects into Workspace'', then click ''Next >'';
+# Select your workspace root directory; the ''Projects'' list will get populated with your plugins. ''De-select'' all of them, except '''<org_prefix>.ptu.symphony''';
+# Click ''Finish''.  You now have a reference to your Symphony plugin in your new Eclipse instance;
+# Create a Symphony System Model named '''MyPTUCameraSymphonySystem.ss''' in the '''/model''' folder of your '''<org_prefix>.ptu.symphony''' plugin (use the ''New Symphony System'' wizard plugin);
+# Set the name of the Symphony System Model to '''MyPTUCameraSymphonySystem''';
+# Set the ''Interface Class'' to '''<org_prefix>.ptu.PTUCamera''';
+# Set the ''Type Api Adapter Class'' to '''<org_prefix>.ptu.symphony.PTUCameraSymphonySystemApiAdapter''';
+# Save the model (*.ss) file.
+
 =====ii. Specifying the Camera's Topology=====
 
 ======Creating the CAD folder======
+
+# In your '''<org_prefix>.ptu.symphony''' plugin, create a folder '''/cadmodels'''.  This folder will hold the CAD files containing the geometry of your System;
+# Copy the CAD files provided to the '''/cadmodels''' folder
+# Open the '''MANIFEST.MF''' for your '''<org_prefix>.ptu.symphony''' plugin;
+# Go to the ''Build'' tab;
+# In the ''Binary Build'' section, select the '''/cadmodels''' folder; this will ensure that it will be included in the binary plugin when installed.
+# Save the '''MANIFEST.MF'''
+
 ======Populating the topology======
 
-=======Node hierarchy=======
-=======Transformations=======
+# Launch the ''Run Configuration'' used for testing the ''PTUCamera'' in the previous exercises;
+# Open your '''PTUCameraSymphonySystem.ss'' file with the editor;
+# Open the ''Symphony System 3D Viewer, then select the ''Symphony System'' in the editor;
+# Under ''Topology Root'', create the topology for the ''PTUCamera'', replicating the structure specified in '''Target Topology Hierarchy''' below;
+# For the relevant transformations in the new hierarchy, update their position and orientation to reflect those specified in '''Target Transformations''' below;
+# Save the file.
+
+=======Target Topology Hierarchy=======
+
+The desired final topology for ''MyPTUCameraSymphonySystem'' should be as follows:
+
+TODO!
+
+Note:
+* Create the nodes and set their ID / description right away; this makes it much easier to both understand and navigate the topology.
+* URLs in ''URLNodes'' should have the following format:
+: ''platform:/plugin/'''<org_prefix>.ptu.symphony/cadmodels'''/filename.ext'' 
+
+=======Target Transformations=======
+
+The desired final transformation for the components of ''MyPTUCameraSymphonySystem'' should be as follows:
+
+TODO!
 
 =====iii. Making the Camera's Bindings=====
 
 ======Defining the Feature Nodes======
+
+# Open your '''PTUCameraSymphonySystem.ss''' file with the editor 
+# Under ''Binding Sets -> Feature Roots List'', create a new ''Tree Root Node'', select it and set its ''Source Class'' to '''<org_prefix>.ptu.PTUCamera''';
+# Under the new ''Tree Root Node'', create three new ''Tree Feature Nodes'':
+## Set the ''Structural Feature'' for the first to '''currentPanAngle''';
+## Set the ''Structural Feature'' for the second to '''currentTiltAngle''';
+## Set the ''Structural Feature'' for the third to '''fov''';
+# Save the Symphony System Model (*.ss) file;
+
 ======Making the Bindings themselves======
+
+# Open your '''PTUCameraSymphonySystem.ss''' file with the editor
+# Under ''Binding Sets-> Bindings List'', create the following ''Rotation Bindings'':
+
+{| class="wikitable"
+! Name
+! Feature Node
+! Rotation Units
+! Rotation Node
+! Rotation Axis
+|-
+| Pan Angle
+| '''currentPanAngle'''
+| '''RADIANS'''
+| '''PTU_CAMERA_PAN_JOINT'''
+| '''Z_AXIS'''
+|- 
+| Rotation Angle
+| '''currentTiltAngle'''
+| '''RADIANS'''
+| '''PTU_CAMERA_TILT_JOINT'''
+| '''MINUS_Y_AXIS'''
+|}
+
+# Similarly, create the following ''Rectangular Frustrum Field Of View Binding'':
+
+{| class="wikitable"
+! Name
+! Feature Node
+! Field Of View (FOV) Node
+|-
+| FOV
+| '''fov'''
+| '''PTU_CAMERA_FOV'''
+|}
+
+# Save the .ss file
 
 =====iv. Registering the Camera's Symphony System Model=====
 
+# Open the '''MANIFEST.MF''' of your '''<org_prefix>.ptu.symphony''' plugin;
+# In the ''Extensions'' tab, click ''Add...'';
+# Ensure the ''Show only extension points from the required plug-ins'' is '''NOT''' selected;
+# Select the '''org.eclipse.symphony.core.invocator.typeContributor''';
+# Click ''Finish'';
+# Select the newly added extension and then click on ''Browse'' for the '''URI''' field;
+# Browse to your Symphony System Model ('''MyPTUCameraSymphonySystem.ss''') file and then click ''OK'';
+# Save the '''MANIFEST.MF'''
+
 ====4. Testing the completed PTU Camera in Symphony====
+
+# Launch the ''Run Configuration'' used for testing the ''PTUCamera'' in the previous exercises;
+# Open '''MySession.sym''';
+# Expand ''Session -> Symphony Environment -> Types -> Registered'': the '''MyPTUCameraSymphonySystem''' should be present;
+# Open the ''Symphony 3D Viewer'', then select the ''Symphony Environment''; this will make the 3D viewer display your environment;
+# Under ''Symphony Environment'', create a new ''Worksites'';
+# Under ''Worksites'', create a new ''Earth Surface Worksite'';
+# Set the '''Active Worksite''' of the ''Symphony Environment'' to the new ''Earth Surface Worksite'';
+# Select the '''ptuCamera''' ''Variable'' and set its ''Variable Type'' to ''MyPTUCameraSymphonySystem'';
+# Reset Instances: Your ''PTUCamera'' should appear in the 3D Viewer;
+# Invoke the ''Operation Calls'' defined in the previous exercises and confirm that the System responds correctly;
+# Done!
+

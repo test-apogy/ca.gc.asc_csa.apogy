@@ -65,7 +65,6 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Whether or not automatic path planning is enabled. When enabled, chnaging the destination will automatically
 	 * start a replan of the path.
 	 * <!-- end-model-doc -->
@@ -97,7 +96,6 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * The mesh layer to use to plan the path.
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Mesh Layer</em>' reference.
@@ -205,7 +203,6 @@ public interface PathPlannerTool extends AbstractTwoPoints3DTool {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * *
 	 * Method that plan a path from the variable current location to the specified destination and updates
 	 * the planned path according to the result.
 	 * <!-- end-model-doc -->

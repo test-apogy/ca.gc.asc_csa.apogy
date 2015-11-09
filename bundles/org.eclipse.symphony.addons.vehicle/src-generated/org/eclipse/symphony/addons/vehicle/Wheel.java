@@ -11,7 +11,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- *  Class that represent a physical wheel used to model Wheel to Mesh contact.
+ * Class that represent a physical wheel used to model Wheel to Mesh contact.
  * <!-- end-model-doc -->
  *
  * <p>

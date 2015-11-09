@@ -15,7 +15,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * <!-- begin-model-doc -->
- *  Enumeration of available model of wheel to Mesh contact.
+ * Enumeration of available model of wheel to Mesh contact.
  * <!-- end-model-doc -->
  * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheelContactMode()
  * @model
