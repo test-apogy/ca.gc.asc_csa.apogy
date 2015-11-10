@@ -17,16 +17,21 @@ The objective is to develop a software framework for mission operations that all
 #execute and monitor operations, and
 #support and facilitate scientific and engineering data analysis. 
 
+=== Installation ===
 [[installation.mediawiki]]
 
 ----
 
+=== User Guide ===
+
 [[user.mediawiki]]
 
 ----
-		
+
+=== Development Guide ===
 [[dev.mediawiki]]
 
 ----
 
+=== Tutorials & Examples ===
 [[tutorial.mediawiki]]
