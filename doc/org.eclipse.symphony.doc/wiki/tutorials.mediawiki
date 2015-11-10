@@ -1,13 +1,16 @@
-=Examples=
+= Table Of Contents =
+__TOC__
 
-* Simple examples of simulated Systems
-* Examples include articulated and composite Systems and the use of the ''Environment'' for simulation
-* As recommended, the System's EMF models are separate and distinct from their Symphony (System) plugins;
-* Shows various aspects of ''Symphonyazation''
+= Examples =
+
+* Simple examples of simulated ''Systems'';
+* Examples include articulated and composite ''Systems'' and the use of the ''Environment'' for simulation;
+* As recommended, the ''System'''s EMF models are separate and distinct from their Symphony (System) plugins;
+* Shows various aspects of ''Symphonyzation''
 
 * The following examples are currently available in Symphony:
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Symphony System
 ! Description
 ! Plugin
@@ -44,54 +47,55 @@
 | ''org.eclipse.symphony.examples.rover''
 |}
 
-==PTU Dish Antenna==
+== PTU Dish Antenna ==
 
 TODO!
 
-==Camera==
+== Camera ==
 
 TODO!
 
-==PTU Camera==
+== PTU Camera ==
 
 TODO!
 
-==Lander==
+== Lander ==
 
 TODO!
 
-==Lidar==
+== Lidar ==
 
 TODO!
 
-==Mobile Platform==
+== Mobile Platform ==
 
 TODO!
 
-==Robotic Arm==
+== Robotic Arm ==
 
 TODO!
 
-==Rover (Complex Type)==
+== Rover (Complex System) ==
 
 TODO!
 
 ----
 
-=Tutorials=
+= Tutorials =
 
-==I'm in a hurry! I want to operate a rover!!!==
+== I'm in a hurry! I want to operate a rover!!! ==
+TODO!
 
-==Getting Started Exercises==
+== Getting Started Exercises ==
 
-===Setting Up A Symphony Environment===
+=== Setting Up A <i>Symphony Environment</i> ===
 
-====Creating A Symphony Session====
+==== Creating A <i>Symphony Session</i> ====
 
 # Create a new ''Symphony Project'' named '''SymphonyTraining''';
 # Create a new ''Symphony Session'' named '''MyFirstSession.'''
 
-====Creating A Worksite====
+==== Creating A <i>Worksite</i> ====
 
 # Under ''Symphony Environment'', create a new ''Worksites'';
 # Under ''Worksites'', create a new ''Earth Surface Worksite'' named '''TrainingSite''';
@@ -100,12 +104,12 @@ TODO!
 # Select the ''Symphony Environment'' and set its ''Active Worksite'' to '''TrainingSite''';
 # Open the ''Symphony 3D Viewer'' and select the ''Symphony Environment''; 
 
-====Creating Map Layers====
+==== Creating <i>Map Layers</i> ====
 
 # Add a map named '''myMap''' to the ''TrainingSite's Map List'';
 # Add a ''Cartesian Triangular Mesh URL Map Layer'' named '''myDEM''' to ''myMap'' with the following parameters:
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Parameter
 ! Value
 |-
@@ -115,7 +119,7 @@ TODO!
 
 # Add a ''URL Image Map Layer'' named '''myContours''' to ''myMap'' with the following parameters:
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Parameter
 ! Value
 |-
@@ -133,7 +137,7 @@ TODO!
 # Add a ''Feature Of Interest List'' as a child;
 # Add the following ''Features Of Interest'' to that list:
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Name
 ! Position
 |-
@@ -144,7 +148,7 @@ TODO!
 | 33.0, 43.0, 0.3
 |}
 
-====Creating Variables & Contexts====
+==== Creating <i>Variables</i> & <i>Contexts</i> ====
 
 # In Session ''My First Session'', define a ''Variable'' named '''myRover''' of type ''SymphonySystemMobilePlatform''.
 # Create two ''Contexts'':
@@ -153,9 +157,9 @@ TODO!
 # Set ''myRover'' to be implemented using '''MobilePlatformStub''' in the ''Simulated'' ''Context'';
 # Set ''myRover'' to be implemented using '''MobilePlatformReal''' in the ''Real'' ''Context'';
 # Set the session's ''activeContext'' to '''Simulated''';
-# Instantiate the '''Variables''' (by using Symphony > Reset Instances.)
+# Instantiate the '''Variables''' (by using "Symphony > Reset Instances".)
 
-====Creating Data Products Sets====
+==== Creating <i>Data Products Sets</i> ====
 
 # Set the name of the default ''Data Product Set'' to '''Simulated Data''';
 # Create a new ''Data Product Set'' named '''Real Data''';
@@ -163,9 +167,9 @@ TODO!
 # Assign '''Simulated Data''' to the ''Simulated'' ''Context'';
 # Assign '''Real Data''' to the ''Real'' ''Context'';
 
-===Issuing Commands===
+=== Issuing Commands ===
 
-====Invoking Operations On A Simple System====
+==== Invoking Operations On A Simple System ====
 
 # Under ''Programs'', create an ''Operation Calls'' program called '''myRoverCalls'''
 # Create a call named '''Init''' to operation '''init()''' on ''myRover'';
@@ -175,11 +179,11 @@ TODO!
 # Invoke Move ("Symphony > Invoke") - the rover should start moving forward;
 # Invoke Stop ("Symphony > Invoke") when you want to stop the rover.
 
-====Using The Pose Corrector====
+==== Using The <i>Pose Corrector</i> ====
 
 # Create an ''Operation Call'' named '''CommandVel''' to '''cmdVelocities(...)''' on ''myRover'' with the following ''Parameters'':
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Parameter
 ! Value
 |-
@@ -192,7 +196,7 @@ TODO!
 
 # Create an ''Operation Call'' named '''AllStop''' to '''cmdVelocities(...)''' on ''myRover'' with the following ''Parameters'':
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Parameter
 ! Value
 |-
@@ -211,9 +215,9 @@ TODO!
 # Invoke ''CommandVel'' to move the rover
 # When ready, invoke ''AllStop'' to stop it.
 
-====Using Operation Call Controller Bindings====
+==== Using Operation Call Controller Bindings ====
 
-=====Binding A Controller To Move The Rover Around=====
+===== Binding A Controller To Move The Rover Around =====
 
 # Open the ''Controllers Status View'';
 # Under ''Programs'', create a ''Controllers Configuration'' named '''myFirstCtrlConfig''
@@ -222,7 +226,7 @@ TODO!
 # Map the ''linearVelocity'' parameter to a joystick input axis;
 ## Add a ''Centered Linear Input Conditioning with the following values:
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Parameter
 ! Value
 |-
@@ -239,7 +243,7 @@ TODO!
 ## Map the ''angularVelocity'' ''Parameter'' to a joystick inpit axis;
 ##* Add a ''Centered Linear Input Conditioning'' with the following values:
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Parameter
 ! Value
 |-
@@ -255,7 +259,7 @@ TODO!
 
 # Activate the ''myFirstCtrlConfig'' and drive your rover around!
 
-=====Binding A Controller To Move The Rover Around, With An Enabled Button=====
+===== Binding A Controller To Move The Rover Around, With An Enabled Button =====
 
 # Create another ''Controllers Configuration'' named '''mySecondCtrlConfig'''.
 # Create an ''Operation Call Controller Binding'' named '''Velocity''' for the ''myRover'' ''Variable'' that binds the '''cmdVelocities(...)''' operation:
@@ -263,7 +267,7 @@ TODO!
 # Map the ''angularVelocity'' parameter to a joystick input axis;
 ## Add a ''Centered Linear Input Conditioning'' with the following values:
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Parameter
 ! Value
 |-
@@ -280,7 +284,7 @@ TODO!
 ## Map the ''linearVelocity'' parameter to a joystick input axis;
 ##* Add a ''Centered Linear Input Conditioning'' with the following values:
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Parameter
 ! Value
 |-
@@ -296,12 +300,12 @@ TODO!
 
 # Activate the ''mySecondCtrlConfig'' and drive your rover around. '''''Does it work as expected?'''''
 
-===Defining & Using Composite Types===
+=== Defining & Using Composite <i>Types</i> ===
 
-====The Target Assembly====
+==== The Target Assembly ====
 TODO!
 
-====Defining A Composite System====
+==== Defining A Composite <i>System</i> ====
 
 # Create a new ''Symphony System'' in ''Local Type'' named '''MyFirstAssembly'''
 # Add three (3) ''Type Members'':
@@ -333,7 +337,7 @@ TODO!
 ### ''arm'' -> '''RoboticArmSimulated'''
 # Reset Instances
 
-====Invoking Operation On Composite System Type Members====
+==== Invoking Operation On Composite System <i>Type Members</i> ====
 
 # Create an ''Operation Calls'' program called '''myAssemblyCalls''';
 # Create a call named '''Init''' to operation ''init()'' on ''myAssembly:rover''
@@ -343,14 +347,14 @@ TODO!
 # Invoke ''Move'' - the assembly should start moving forward;
 # invoke ''Stop'', when you want to stop your assembly.
 
-====Invoking Operation On A Feature Of Composite Type Members====
+==== Invoking Operation On A Feature Of Composite System <i>Type Members</i> ====
 
 # Create a call named '''Power On''' to operation ''turnOn()'' on ''myAssembly:rover.powerSystem'';
 # Invoke ''Power On''. 
 
-===Setting Up & Using The Camera View===
+=== Setting Up & Using The <i>Camera View</i> ===
 
-====Configuring A Camera View====
+==== Configuring A <i>Camera View</i> ====
 
 # Create a ''Camera Configurations List'' under ''Tools'';
 # Create a ''Camera Configuration'' named '''myCameraViewConfig''';
@@ -359,7 +363,7 @@ TODO!
 # Create a call named '''acquireImage''' to operation ''takeSnapshot()'' on ''myAssembly:camera'';
 # Invoke ''acquireImage''.
 
-====Adding Overlays====
+==== Adding Overlays ====
 
 # Add an ''EMF Feature Overlay'' to display the current pan angle of the camera on the top left corner of the view:
 ## Create a ''Variable Feature Reference'', set the ''Variable'' to '''myAssembly''';
@@ -371,9 +375,9 @@ TODO!
 # Call ''moveToPanTilt'' on ''camera'' to change the camera orientation;
 # Call ''acquireImage'' again on ''camera'' to get the image to update. 
 
-===Setting Up & Using The Map View===
+=== Setting Up & Using The Map View ===
 
-====Displaying The Environment====
+==== Displaying The Environment ====
 
 # Create a ''Map View Configuration List'' under ''Tools'';
 # Create a ''Map View Configuration'' named '''myMapConfig''';
@@ -381,7 +385,7 @@ TODO!
 # Create a ''Feature Of Interest Map Layer Presentation'' referring to '''myFOI''';
 # Open the ''Map View'' and select '''myMapConfig'''.
 
-====Displaying The Variables====
+==== Displaying The Variables ====
 
 # Create a ''Vehicle Variable Annotation'' referring to '''myRover''';
 # Create a ''Variable Trajectory Annotation'':
@@ -390,9 +394,9 @@ TODO!
 ## Close the Map View;
 ## Open the Map View and select '''myMapConfig'''.
 
-===Setting Up & Using The Telemetry View===
+=== Setting Up & Using The ''Telemetry View'' ===
 
-====Defining Watches====
+==== Defining Watches ====
 
 # Under ''Tools'', create a ''Watches List Container'';
 # Under ''Watches List Container'', create a ''Watches List'' named '''Test''';
@@ -401,7 +405,7 @@ TODO!
 # Under '''armWatch''', create a ''Type Root Node'' and set its ''Source Class'' to '''RoboticArm''';
 # Create a chain of ''Tree Feature Nodes'' to finally refer to '''elbowAngle''' 
 
-====Defining Displays====
+==== Defining Displays ====
 
 # Under ''Tools'', create a new ''Displays'';
 # Under ''Displays'', create a ''Display List'' named '''armDisplays''';
@@ -411,114 +415,116 @@ TODO!
 
 ----
 
-==Developing Your Own Custom Symphony Types==
+== Developing Your Own Custom Symphony Types ==
 
-===Creating & Symphonizing your own Pan Tilt Unit (PTU) Camera System===
+=== Creating & Symphonyzing your own Pan-Tilt Unit (PTU) Camera <i>System</i> ===
 
-====An Overview Of The Desired System====
+==== An Overview Of The Desired System ====
 TODO!
 
-====1. Creating the PTU Camera's EMF Meta-Model====
+==== 1. Creating the PTU Camera's EMF Meta-Model ====
 
-=====i. Creating The Camera's EMF Model=====
+===== i. Creating The Camera's EMF Model =====
 
 # Create a new ''Xcore Project'' named '''<org_prefix>.ptu''', where <org_prefix> is replaced by an appropriate prefix for your organization.
 # In the '''/model''' folder, create an Xcore model named '''ptu.xcore'''
 # Copy the following to the start of the empty Xcore model, replacing <org_prefix> where required:
 
- <nowiki>@GenModel(prefix="PTUCamera",
- 				   modelName="PTUCamera",
- 				   childCreationExtenders="true",
-				   extensibleProviderFactory="true",
-	      		   multipleEditorPages="false",
-	      		   operationReflection="true",
-	      		   suppressGenModelAnnotations="false")
-@GenModel(modelDirectory="/<org_prefix>.ptu/src-generated")
-@GenModel(editDirectory="/<org_prefix>.ptu.edit/src-generated")
+<code>
+     @GenModel(prefix="PTUCamera",
+       	      modelName="PTUCamera",
+    	      childCreationExtenders="true",
+               extensibleProviderFactory="true",
+               multipleEditorPages="false",
+               operationReflection="true",
+               suppressGenModelAnnotations="false")
+     @GenModel(modelDirectory="/<org_prefix>.ptu/src-generated")
+     @GenModel(editDirectory="/<org_prefix>.ptu.edit/src-generated")
 
-package <org_prefix>.ptu</nowiki>
+     package <org_prefix>.ptu
+</code>
 
 # Create the class hierarchy shown before (classes in blue);
 # Save the '''ptu.xcore''' file.  This will trigger the code generation in both the '''<org_prefix>.ptu''' and '''<org_prefix>.ptu.edit''' plugins.
 
-=====ii. Implementing the Required Methods=====
+===== ii. Implementing the Required Methods =====
 
 # Implement the following methods in ''<org_prefix>.ptu.impl.CameraImpl'':
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Method
 ! Description
 |-
-| ''RectangularFieldOfView()'' getFov()
+| ''RectangularFieldOfView()'' '''getFov'''()
 | Getter method for the ''fov'' attribute of the camera.  See the code provided.
 |-
-| ''boolean'' commandZoom(''double'' zoom)
+| ''boolean'' '''commandZoom'''(''double'' zoom)
 | Configures the current zoom; this needs to update the FOV as well!  See the code provided.
 |-
-| ''double'' getMinimumZoom()
+| ''double'' '''getMinimumZoom'''()
 | Returns the minimum zoom factor.  Return '''1.0''';
 |-
-| ''double'' getMaximumZoom()
+| ''double'' '''getMaximumZoom'''()
 | Returns the maximum zoom factor.  Return '''10.0''';
 |-
-| ''RectangularFrustrumFieldOfView'' getFieldOfView()
-| Method declared by ''AbstractCamera''.  Return getFov();
+| ''RectangularFrustrumFieldOfView'' '''getFieldOfView'''()
+| Method declared by ''AbstractCamera''.  Return '''getFov()''';
 |}
 
 # Implement the following methods in ''<org_prefix>.ptu.impl.CameraSimulatedImpl'':
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Method
 ! Description
 |-
-| ''boolean'' initialize()
+| ''boolean'' '''initialize'''()
 | Initialize the camera.  Just return '''true''';
 |-
-| ''ImageSnapshot'' takeSnapshot()
+| ''ImageSnapshot'' '''takeSnapshot'''()
 | Takes and returns an ''ImageSnapshot''. See the code provided.
 |}
 
 # Implement the following methods in ''<org_prefix>.ptu.impl.PTUCameraSimulatedImpl'':
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Method
 ! Description
 |-
-| ''double'' getMaximumPanAngle()
-| Returns the maximum pan angle ('''in radians''').  Just return 170.0 degrees.
+| ''double'' '''getMaximumPanAngle'''()
+| Returns the maximum pan angle ('''in radians''').  Just return '''170.0 degrees'''.
 |-
-| ''double'' getMinimumPanAngle()
-| Returns the minimum pan angle ('''in radians''').  Just return -170.0 degrees.
+| ''double'' '''getMinimumPanAngle'''()
+| Returns the minimum pan angle ('''in radians''').  Just return '''-170.0 degrees'''.
 |-
-| ''double'' getMaximumTiltAngle()
-| Returns the maximum tilt angle ('''in radians''').  Just return 90.0 degrees.
+| ''double'' '''getMaximumTiltAngle'''()
+| Returns the maximum tilt angle ('''in radians''').  Just return '''90.0 degrees'''.
 |-
-| ''double'' getMinimumTiltAngle()
-| Returns the minimum tilt angle ('''in radians''').  Just return -45.0 degrees.
+| ''double'' '''getMinimumTiltAngle'''()
+| Returns the minimum tilt angle ('''in radians''').  Just return '''-45.0 degrees'''.
 |-
-| ''boolean'' moveToPan(''double'' panAngle)
+| ''boolean'' '''moveToPan'''(''double'' panAngle)
 | Checks the commanded pan angle, which is in '''radians'''.  If it's within range, update '''currentPan''' to the commanded value and return true; otherwise, return false.
 |-
-| ''boolean'' moveToTilt(''double'' tiltAngle)
+| ''boolean'' '''moveToTilt'''(''double'' tiltAngle)
 | Checks the commanded tilt angle, which is in '''radians'''.  If it's within range, update '''currentTilt''' to the commanded value and return true; otherwise, return false. 
 |-
-| ''boolean'' moveToPanTilt(''double'' panAngle, ''double'' tiltAngle)
+| ''boolean'' '''moveToPanTilt'''(''double'' panAngle, ''double'' tiltAngle)
 | Checks the commanded pan and tilt angles, both of which are in '''radians'''.  If they are within range, update both '''currentPan''' and '''currentTilt''' to the commanded values and return true; otherwise, return false.
 |-
-| ''boolean'' moveByPan(''double'' panAngleDelta)
+| ''boolean'' '''moveByPan'''(''double'' panAngleDelta)
 | Checks the sum of '''currentPan''' and the commanded pan angle offset (given in '''radians''').  If the resulting pan angle is in range, update '''currentPan''' to the resultant value and return true; otherwise, return false. 
 |-
-| ''boolean'' moveByTilt(''double'' tiltAngleDelta)
+| ''boolean'' '''moveByTilt'''(''double'' tiltAngleDelta)
 | Checks the sum of '''currentTilt'''and the commanded tilt angle offset (given in '''radians''').  If the resulting tilt angle is in range, update '''currentTilt''' to the resultant value and return true; otherwise, return false. 
 |-
-| ''boolean'' moveByPanTilt(''double'' panAngleDelta, ''double'' tiltAngleDelta)
+| ''boolean'' '''moveByPanTilt'''(''double'' panAngleDelta, ''double'' tiltAngleDelta)
 | Checks the sum of '''currentPan''' and the commanded pan angle offset (given in '''radians''') as well as the sum of '''currentTilt''' and the commanded tilt angle offset (given in '''radians''').  If both resulting angles are in range, update both '''currentPan''' and '''currentTilt''' to the resultant values and return true; otherwise, return false.
 |-
-| ''boolean'' stopMotion()
+| ''boolean'' '''stopMotion'''()
 | Stops all motion.  Just return true.
 |}
 
-=====iii. Testing the System=====
+===== iii. Testing the System =====
 
 # Create a new ''Eclipse Application'' under ''Run Configuration''. Name it '''TEST''';
 # Click ''Run'' to launch another instance of Eclipse with your plugins;
@@ -539,9 +545,9 @@ package <org_prefix>.ptu</nowiki>
 # Under ''ptuCmd'', create an ''Operation Call'' named '''SnapShot''' referencing ''ptuCamera.takeSnapshot()''
 # Invoke the '''SnapShot''' ''Operation Call'' and verify that the command has been executed.
 
-====2. Creating the PTU Camera's Symphony Plugin====
+==== 2. Creating the PTU Camera's Symphony Plugin ====
 
-=====i. Creating The Camera's Plugin Project=====
+===== i. Creating The Camera's Plugin Project =====
 
 # Create a new ''Xcore Project'' named '''<org_prefix>.ptu.symphony''';
 # Open the '''MANIFEST.MF'''.  Go to the ''Dependencies'' tab;
@@ -550,7 +556,7 @@ package <org_prefix>.ptu</nowiki>
 ## Add the ''org.eclipse.symphony.core'' plugin to the dependencies;
 # Save the '''MANIFEST.MF'''
 
-=====ii. Developing the Camera's Symphony Xcore (.xcore) model=====
+===== ii. Developing the Camera's Symphony Xcore (.xcore) model =====
 
 # Rename the '''/src-gen''' folder to '''/src-generated''';
 # In the '''/model''' folder, copy over the provided file '''ptu_symphony.xcore''';
@@ -558,7 +564,7 @@ package <org_prefix>.ptu</nowiki>
 ## Ensure that you change the '''modelDirectory''' @GenModel directive to <org_prefix>.ptu.symphony'''/src-generated'''
 ## Ensure that you change the '''editDirectory''' @GenModel directive to <org_prefix>.ptu.symphony.edit'''/src-generated'''
 
-=====iii. Specializing SymphonyInitializationData for the Camera=====
+===== iii. Specializing <i>SymphonyInitializationData</i> for the Camera =====
 
 # Open the '''ptu_symphony.xcore''' model;
 # Define a new class named '''''PTUCameraSymphonyInitializationData''''' that extends ''SymphonyInitializationData'';
@@ -568,14 +574,14 @@ package <org_prefix>.ptu</nowiki>
 ## ''double'' '''zoomFactor''' (with a default value of '''1.0''')
 # Save the '''ptu_symphony.xcore''' model.
 
-=====iv. Specializing SymphonySystemApiAdapter for the Camera=====
+===== iv. Specializing <i>SymphonySystemApiAdapter</i> for the Camera =====
 
 # Open the '''ptu_symphony.xcore''' model;
 # Define a new class named '''''PTUCameraSymphonySystemApiAdapter''''' that extends ''SymphonySystemApiAdapter''';
 # Save the ''ptu_symphony.xcore'' model;
 # Override the following methods in '''''PTUCameraSymphonySystemApiAdapterImpl''''':
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Method
 ! Description
 ! Implementation
@@ -597,9 +603,9 @@ package <org_prefix>.ptu</nowiki>
 | See the code provided.
 |}
 
-====3. Creating the PTU Camera's Complete Symphony System Model====
+==== 3. Creating the PTU Camera's Complete <i>Symphony System Model</i> ====
 
-=====i.Creating the Camera's Symphony System Model file=====
+===== i.Creating the Camera's <i>Symphony System Model</i> (.ss file) =====
 
 # Launch the ''Run Configuration'' used for testing ''PTUCamera'' in the previous exercises;
 # In the ''Project Explorer'', right click and then select ''Import...'';
@@ -612,27 +618,9 @@ package <org_prefix>.ptu</nowiki>
 # Set the ''Type Api Adapter Class'' to '''<org_prefix>.ptu.symphony.PTUCameraSymphonySystemApiAdapter''';
 # Save the model (*.ss) file.
 
-=====ii. Specifying the Camera's Topology=====
+===== ii. Specifying the Camera's Topology =====
 
-======Creating the CAD folder======
-
-# In your '''<org_prefix>.ptu.symphony''' plugin, create a folder '''/cadmodels'''.  This folder will hold the CAD files containing the geometry of your System;
-# Copy the CAD files provided to the '''/cadmodels''' folder
-# Open the '''MANIFEST.MF''' for your '''<org_prefix>.ptu.symphony''' plugin;
-# Go to the ''Build'' tab;
-# In the ''Binary Build'' section, select the '''/cadmodels''' folder; this will ensure that it will be included in the binary plugin when installed.
-# Save the '''MANIFEST.MF'''
-
-======Populating the topology======
-
-# Launch the ''Run Configuration'' used for testing the ''PTUCamera'' in the previous exercises;
-# Open your '''PTUCameraSymphonySystem.ss'' file with the editor;
-# Open the ''Symphony System 3D Viewer, then select the ''Symphony System'' in the editor;
-# Under ''Topology Root'', create the topology for the ''PTUCamera'', replicating the structure specified in '''Target Topology Hierarchy''' below;
-# For the relevant transformations in the new hierarchy, update their position and orientation to reflect those specified in '''Target Transformations''' below;
-# Save the file.
-
-=======Target Topology Hierarchy=======
+====== Target Topology Hierarchy ======
 
 The desired final topology for ''MyPTUCameraSymphonySystem'' should be as follows:
 
@@ -643,15 +631,33 @@ Note:
 * URLs in ''URLNodes'' should have the following format:
 : ''platform:/plugin/'''<org_prefix>.ptu.symphony/cadmodels'''/filename.ext'' 
 
-=======Target Transformations=======
+====== Target Transformations ======
 
 The desired final transformation for the components of ''MyPTUCameraSymphonySystem'' should be as follows:
 
 TODO!
 
-=====iii. Making the Camera's Bindings=====
+====== Creating the CAD folder ======
 
-======Defining the Feature Nodes======
+# In your '''<org_prefix>.ptu.symphony''' plugin, create a folder '''/cadmodels'''.  This folder will hold the CAD files containing the geometry of your System;
+# Copy the CAD files provided to the '''/cadmodels''' folder
+# Open the '''MANIFEST.MF''' for your '''<org_prefix>.ptu.symphony''' plugin;
+# Go to the ''Build'' tab;
+# In the ''Binary Build'' section, select the '''/cadmodels''' folder; this will ensure that it will be included in the binary plugin when installed.
+# Save the '''MANIFEST.MF'''
+
+====== Populating the topology ======
+
+# Launch the ''Run Configuration'' used for testing the ''PTUCamera'' in the previous exercises;
+# Open your '''PTUCameraSymphonySystem.ss'' file with the editor;
+# Open the ''Symphony System 3D Viewer, then select the ''Symphony System'' in the editor;
+# Under ''Topology Root'', create the topology for the ''PTUCamera'', replicating the structure specified in '''Target Topology Hierarchy''' above;
+# For the relevant transformations in the new hierarchy, update their position and orientation to reflect those specified in '''Target Transformations''' above;
+# Save the file.
+
+===== iii. Making the Camera's Bindings =====
+
+====== Defining the <i>Feature Nodes</i> ======
 
 # Open your '''PTUCameraSymphonySystem.ss''' file with the editor 
 # Under ''Binding Sets -> Feature Roots List'', create a new ''Tree Root Node'', select it and set its ''Source Class'' to '''<org_prefix>.ptu.PTUCamera''';
@@ -661,12 +667,12 @@ TODO!
 ## Set the ''Structural Feature'' for the third to '''fov''';
 # Save the Symphony System Model (*.ss) file;
 
-======Making the Bindings themselves======
+====== Making the Bindings themselves ======
 
 # Open your '''PTUCameraSymphonySystem.ss''' file with the editor
 # Under ''Binding Sets-> Bindings List'', create the following ''Rotation Bindings'':
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Name
 ! Feature Node
 ! Rotation Units
@@ -674,33 +680,33 @@ TODO!
 ! Rotation Axis
 |-
 | Pan Angle
-| '''currentPanAngle'''
-| '''RADIANS'''
-| '''PTU_CAMERA_PAN_JOINT'''
-| '''Z_AXIS'''
+| ''currentPanAngle''
+| ''RADIANS''
+| ''PTU_CAMERA_PAN_JOINT''
+| ''Z_AXIS''
 |- 
 | Rotation Angle
-| '''currentTiltAngle'''
-| '''RADIANS'''
-| '''PTU_CAMERA_TILT_JOINT'''
-| '''MINUS_Y_AXIS'''
+| ''currentTiltAngle''
+| ''RADIANS''
+| ''PTU_CAMERA_TILT_JOINT''
+| ''MINUS_Y_AXIS''
 |}
 
 # Similarly, create the following ''Rectangular Frustrum Field Of View Binding'':
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Name
 ! Feature Node
 ! Field Of View (FOV) Node
 |-
 | FOV
-| '''fov'''
-| '''PTU_CAMERA_FOV'''
+| ''fov''
+| ''PTU_CAMERA_FOV''
 |}
 
 # Save the .ss file
 
-=====iv. Registering the Camera's Symphony System Model=====
+===== iv. Registering the Camera's <i>Symphony System Model</i> =====
 
 # Open the '''MANIFEST.MF''' of your '''<org_prefix>.ptu.symphony''' plugin;
 # In the ''Extensions'' tab, click ''Add...'';
@@ -711,17 +717,17 @@ TODO!
 # Browse to your Symphony System Model ('''MyPTUCameraSymphonySystem.ss''') file and then click ''OK'';
 # Save the '''MANIFEST.MF'''
 
-====4. Testing the completed PTU Camera in Symphony====
+==== 4. Testing the completed PTU Camera in Symphony ====
 
 # Launch the ''Run Configuration'' used for testing the ''PTUCamera'' in the previous exercises;
 # Open '''MySession.sym''';
 # Expand ''Session -> Symphony Environment -> Types -> Registered'': the '''MyPTUCameraSymphonySystem''' should be present;
-# Open the ''Symphony 3D Viewer'', then select the ''Symphony Environment''; this will make the 3D viewer display your environment;
+# Open the ''Symphony 3D Viewer'', then select the ''Symphony Environment''; this will make the ''3D Viewer'' display your environment;
 # Under ''Symphony Environment'', create a new ''Worksites'';
 # Under ''Worksites'', create a new ''Earth Surface Worksite'';
 # Set the '''Active Worksite''' of the ''Symphony Environment'' to the new ''Earth Surface Worksite'';
 # Select the '''ptuCamera''' ''Variable'' and set its ''Variable Type'' to ''MyPTUCameraSymphonySystem'';
 # Reset Instances: Your ''PTUCamera'' should appear in the 3D Viewer;
-# Invoke the ''Operation Calls'' defined in the previous exercises and confirm that the System responds correctly;
+# Invoke the ''Operation Calls'' defined in the previous exercises and confirm that the ''System'' responds correctly;
 # Done!
 

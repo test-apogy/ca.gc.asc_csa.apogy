@@ -1,12 +1,15 @@
-=Developing for Symphony=
+= Developing for Symphony =
 
-==Symphony Architecture==
+== Table Of Contents ==
+__TOC__
 
-* Based on the Eclipse Modelling Framework (EMF);
+== Symphony Architecture ==
+
+* Based on the Eclipse Modeling Framework (EMF);
 * A basic custom framework (''EMFInvocator'') defines the ''Type'', ''Variable'', ''Context'', ''Operation Call'', and ''Operation Call Result'' concepts;
 * Symphony specializes a few concepts defined in ''EMFInvocator'' and adds new ones: 3D representation, ''Assembly Links'', ''Connection Points'' and ''Data Product'' geo-referencing; 
 
-===Type Interfaces Modeling===
+=== Type Interface Modeling ===
 
 * Recall, that a ''System'' is a specialized ''Type'', which's use forms much of the backbone of Symphony.
 * The interface of the ''System'' is modeled in EMF (e.g. via Xcore) and ends up being transformed into an EClass
@@ -16,9 +19,9 @@
 * The states's types of the ''System'' also correspond to ''EClasses'', ''EEnumerations'', and other built-in types.
 * The most important fact of the ''System'' is '''while there is only one interface, there many be any number of possible implementations.''' 
 
-===Variable Initialization===
+=== Variable Initialization ===
 
-* ''Variable'' initialization done through the ''InvocatorDelegate'' (which is specialized in Symphony):
+* ''Variable'' initialization is done through the ''InvocatorDelegate'' (which is specialized in Symphony):
 *# Gets the ''SymphonySystemApiAdapter'' associated with the ''Variable'';
 *# Instantiate the ''System'';
 *# Copies its associated topology and sets it in the ''SymphonySystemApiAdapter'';
@@ -29,16 +32,16 @@
 *## Attaches the topology to the parent's ''Connection Point'';
 *## Recurse for each ''TypeMember'' of the current ''TypeMember''.    
 
-===Operation Call Invocation===
+=== Operation Call Invocation ===
 
 * Method invocation is done through EMF reflection;
 * Actual invocation done through the invocator delegate, which in turn, delegates part of it to the ''SymphonySystemApiAdapter''.
 
-==Symphonyzing==
+== Symphonyzing ==
 
-===Definition===
+=== Definition ===
 
-'''''Symphonizing''''': ''The process of creating EMF models of a System to expose its interface to Symphony.''
+'''''Symphonyzing''''': ''The process of creating EMF models of a System to expose its interface to Symphony.''
 
 Some of what you get in return:
 * Generic support for command call invocation and documentation;
@@ -46,23 +49,23 @@ Some of what you get in return:
 * Command call result tracking (time, position, command parameters);
 * 3D ''System'' and ''Environment'' representation.
 
-===High-Level Steps===
+=== High-Level Steps ===
 
 Defining a Symphony ''System'' involves 3 steps:
 # Defining the ''System'' in EMF;
 # Creating the Symphony plugin;
 # Creating the Symphony System Model (*.ss).
 
-===Guidelines===
+=== Guidelines ===
 
 Symphonizing Guidelines:
 # Keep the ''System'' EMF model seperate from Symphony; this provides modularity and your system can be used before your Symphony plugin is done!
 # Attributes are '''NEVER''' changed directly by an operator; they are considered states that are changed in response to command calls and interaction with the environment.
 # Commands are used to change the settings of a ''System'' (e.g. operating mode, limits, etc.) as well as to to command actions. However, commands are '''NOT''' used to get the current status of the System; attributes are used instead to accomplish this. 
 
-====Suggested Plugin Nomenclature====
+==== Suggested Plugin Nomenclature ====
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Name
 ! Description
 |-
@@ -82,11 +85,11 @@ Symphonizing Guidelines:
 | Edit plugin providing basic GUI support for the Symphony System.  Generated automatically by EMF.
 |}
    
-===The Three Steps to Symphonyzing===
+=== The Three Steps to Symphonyzing ===
 
-====1. Defining The System In EMF====
+==== 1. Defining The System In EMF ====
 
-=====Creating An EMF Model Of The System=====
+===== Creating An EMF Model Of The System =====
 
 # Create an Xcore Project named <org_prefix>.<system_name>;
 # Rename the '''''/src-gen''''' folder to '''''/src-generated''''';
@@ -99,7 +102,7 @@ Symphonizing Guidelines:
 # Override getters for attributes that have a cardinality of [1] (i.e. are required)
 # You are done!
 
-=====Recommended Class Hierarchy=====
+===== Recommended Class Hierarchy =====
 
 # Define an abstract class (''A'') representing your ''System''; this includes:
 ## Defining the class itself;
@@ -111,16 +114,16 @@ Symphonizing Guidelines:
 
 TODO! 
 
-====2. Creating the Symphony plugin====
+==== 2. Creating the Symphony plugin ====
 
-=====Definition=====
+===== Definition =====
 
 * The '''Symphony plugin''':
 ** Is an EMF plugin (includes an Xcore file);
 ** Defines the ''SymphonyInitializationData'' used to save and initialize your ''System''; it captures the state of the ''System'';
 ** Allows for the definition of a ''SymphonySystemApiAdapter'', customizing the invocation of ''System'' commands 
 
-=====The Four Steps to making a Symphony Plugin=====
+===== The Four Steps to making a Symphony Plugin =====
 
 * Creating the Symphony plugin involves four (4) steps:
 *# Creating the plugin;
@@ -128,13 +131,13 @@ TODO!
 *# Defining a sub-class of ''SymphonyInitializationData'';
 *# Defining a sub-class of ''SymphonySystemApiAdapter''.
 
-======i. Creating the Symphony Plugin Itself======
+====== i. Creating the Symphony Plugin Itself ======
 TODO!
 
-======ii. Creating a Xcore (.xcore) Model======
+====== ii. Creating a Xcore (.xcore) Model ======
 TODO!
 
-======iii. Defining a Subclass of SymphonyInitializationData======
+====== iii. Defining a Subclass of <i>SymphonyInitializationData</i> ======
 
 The ''SymphonyInitializationData'' class only includes the pose of your ''System'' in the ''Worksite'' frame.
 
@@ -143,14 +146,14 @@ Your specialized ''SymphonyInitializationData'':
 * Symphony persists the data for you.
 * Symphony delegates to your custom ''SymphonySystemApiAdapter'' sub-class, the responsibility to create, populate and apply the data; 
 
-=======Rules & Guidelines=======
+======= Rules & Guidelines =======
 
 * All atttributes in your specialized SymphonyInitializationData must be:
 ** Contained in the ''SymphonyInitializationData'' (or marked as '''transient''');
 ** Serializable (or have the necessary methods implemented correctly in your Symphony plugin Factory implementation class);
 * Should contain all of the data required to bring your ''System'' back to a given state (e.g. modes, actuators, position, etc.)
 
-======iv. Defining a Subclass of SymphonySystemApiAdapter======
+====== iv. Defining a Subclass of <i>SymphonySystemApiAdapter</i> ======
 
 Providing a specialized ''SymphonySystemApiAdapter'':
 * Allows for the specialization of ''OperationCallPositionResult''';
@@ -158,9 +161,9 @@ Providing a specialized ''SymphonySystemApiAdapter'':
 * Provides support for custom ''InitializationData'' creation, collection and application;
 * Grants access to the ''Symphony Environment'' (which includes the worksite, sky, etc.) 
 
-=======Localization=======
+======= Localization =======
 
-* Symphony does '''NOT''' assume anything about the System class (apart from it being an EClass), so there is no way for Symphony to know where to get the pose information about your System.
+* Symphony does '''NOT''' assume anything about the ''System'''s ''Interface Class'' (apart from it being an EClass), so there is no way for Symphony to know where to get the pose information about your ''System''.
 
 * There are two ways to implement this:
 *# Through the ''SymphonySystemApiAdapter'':
@@ -168,67 +171,67 @@ Providing a specialized ''SymphonySystemApiAdapter'':
 *#** The ''MobilePlatform'' and ''Lander'' examples use this method;
 *# Have your System implement ''PoseProvider'' (''org.eclipse.symphony.core.PoseProvider''): The ''SymphonySystemApiAdapter'' will handle it for you. 
 
-=======Rules & Guidelines=======
+======= Rules & Guidelines =======
 
 * Your specialized ''SymphonySystemApiAdapter'' is:
 ** '''NOT PERSISTED''': it is instantiated every time you call ''Reset Instances'';
 ** Not shared between instances of your System;
-* While your specialized ''SymphonySystemApiAdapter'' can depend on your System's EMF model, the opposite is not true (would lead to a dependency cycle);
-* Just ovverride the methods you need: the SymphonySystemApiAdapter provides adequate default implementation for all methods
+* While your specialized ''SymphonySystemApiAdapter'' can depend on your ''System'''s EMF model, the opposite is not true (would lead to a dependency cycle);
+* Just override the methods you need: the ''SymphonySystemApiAdapter'' provides adequate default implementation for all methods
 
-=======''SymphonySystemApiAdapter'' Methods=======
+======= <i>SymphonySystemApiAdapter</i> Methods =======
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Method
 ! Description
 ! Default Implementation
-! Override must call super
+! scope="col" style="text-align:center;" | Override must call super
 |-
 | void '''init'''(''Environment'', ''Type'', ''EObject'')
 | Initialize the adapter with the ''Environment'', ''Type'', and the System instance (''EObject'').
 | Initialize the ''Environment'', ''Type'', and ''EObject'' (instance) of the adapter.
-| Yes
+| style="text-align:center;" | Yes
 |-
 | void '''apply'''(''AbstractInitializationData'')
 | Applies the specified initialization data to the System.
 | Sets the pose of the System relative to the worksite.
-| Yes
+| style="text-align:center;" | Yes
 |-
 | ''AbstractInitializationData'' '''createInitializationData'''()
 | Creates an instance of initialization data.
 | Creates an instance of ''SymphonyInitializationData''
-| No
+| style="text-align:center;" | No
 |-
 | void '''collect'''(''AbstractInitializationData'')
 | Collects the System's required initialization and stores in the ''AbstractInitializationData'' instance provided.
 | Collects the pose of the System relative to the worksite.
-| Yes
+| style="text-align:center;" | Yes
 |-
-| ''OperationCallResult'' '''createResult''(''OperationCall'')
+| ''OperationCallResult'' '''createResult'''(''OperationCall'')
 | Must create an ''OperationCallPositionedResult'' that will be used to store the result of invoking the specified command.
 | Creates an instance of ''OperationCallPositionedResult''
-| No
+| style="text-align:center;" | No
 |-
 | ''Matrix4x4'' '''createResultMatrix'''(''OperationCall'')
 | Creates the 4-by-4 matrix (''Matrix4x4'') that defines the pose of the specified result relative to the System's origin.
 | Return an instance of ''Matrix4x4'' that is the identity matrix.
-| No
+| style="text-align:center;" | No
 |}
 
-====3. Creating the Symphony System Model (*.ss) file====
+==== 3. Creating the <i>Symphony System Model</i> (*.ss) file ====
 
-=====Definition=====
+===== Definition =====
 
-Recall that the ''Symphony System'':
+Recall that the <i>Symphony System</i>:
 
 * Is the "LEGO block" of Symphony;
 * A '''''System''''' is a specialization of ''Type'';
 * Adds functions to assemble systems together through ''Connection Points'' and ''Assembly Links'';
 * Provdes a 3D representation of the System.
 
-=====The Six Steps to make a Symphony System Model=====
+===== The Six Steps to make a <i>Symphony System Model</i> =====
 
-Creating a Symphony System Model (*.ss file) involves:
+Creating a ''Symphony System Model'' (*.ss file) involves:
 # Defining the ''Topology Root'';
 # Defining the ''Bindings'';
 # Defining the ''Connection Points'';
@@ -240,19 +243,19 @@ Additionally, for Composite Systems:
 
 Finally:
 
-# Registering your Symphony System;
+# Registering your ''Symphony System'';
 
-======i. Defining the ''Topology Root''======
+====== i. Defining the <i>Topology Root</i> ======
 
-The steps to fully defining the Symphony System's topology are:
+The steps to fully defining the ''Symphony System'''s topology are:
 # Creating a root node (e.g ''AggregateGroupNode'')
 # Assembly a hierarchy of transforms (e.g ''TransformNode'', ''RotationNode'', ''PositionNode'') to defined how parts are relative in position to each other and allow support for animation;
 # Add nodes representing geometries (e.g ''URLNode'');
 # Add other specialized nodes (e.g. ''Wheel'', ''Thruster'', ''RectangularFrustrumFieldOfView'', etc.)
 
-=======Topology Guidelines=======
+======= Topology Guidelines =======
 
-* Be sure to specify the '''Node Id''' for every node.  The recommended naming pattern should include the name of the system as a prefix (e.g. a prefix like "'''<SYSTEM_NAME>_SYM_SYS'''"); 
+* Be sure to specify the '''Node Id''' for every node.  The recommended naming pattern should include the name of the ''System'' as a prefix (e.g. a prefix like "'''<SYSTEM_NAME>_SYM_SYS'''"); 
 * For ''TransformNodes'' that are intended to be used to affect DOF, include '''JOINT''' in the '''Node Id''';
 * Fill in the description with a meaningful explanation (it aids in clarity and long-term maintenance.);
 * Defining a joint (either revolution or linear) is typically done using a pair of ''TransformNodes'':
@@ -265,9 +268,9 @@ TODO!
 ** One file for the rover chassis, one for the wheel(s);
 ** One for the base of a PTU Camera, one for the tilt fork and one for the camera;
 
-======ii. Defining the Bindings======
+====== ii. Defining the Bindings ======
 
-Topology bindings are what Symphony uses to relate selected attributes in the System's ''Interface Class'' to behaviours of the topology.  This allows, for example:
+Topology bindings are what Symphony uses to relate selected attributes in the ''System'''s ''Interface Class'' to behaviours of the topology.  This allows, for example:
 * Binding the position of a certain ''TransformNode'' to a linear position atribute in the System's ''Interface Class'';
 * Binding the vertical and horizontal angles of a FOV in the topology to the FOV of a camera attribute in the System's ''Interface Class''  
 
@@ -275,27 +278,27 @@ Defining the bindings required the following steps:
 # Populating the ''Feature Roots List''
 # Populating the ''Bindings List''
 
-=======Populating the Feature Roots List=======
+======= Populating the <i>Feature Roots List</i> =======
 
-* The ''Feature Roots List'' is where all of the attributes of the System's ''Interface Class'' that will be used in bindings are specified
-* The list of available attributes is automatically populated, based on the System's specified ''Interface Class''.
+* The ''Feature Roots List'' is where all of the attributes of the ''System'''s ''Interface Class'' that will be used in bindings are specified
+* The list of available attributes is automatically populated, based on the ''System'''s specified ''Interface Class''.
 * Populating the ''Feature Roots List'' involves the following:
 *# Under ''Feature Roots List'', create a new ''Tree Root Node'';
-*# Set the ''Source Class'' of the ''Tree Root Node'' to the same class as the ''Interface Class'' of the Symphony System;
+*# Set the ''Source Class'' of the ''Tree Root Node'' to the same class as the ''Interface Class'' of the ''Symphony System'';
 *# Add the required child child under the ''Tree Root Node'' and its sub-nodes to specify the required attributes for the bindings.
 
-=======Populating the Bindings List=======
+======= Populating the <i>Bindings List</i> =======
 
 * Populating the ''Binding List'' involves:
 *# Under ''Binding List'', create a new ''Binding'' of the required type;
 *## It is recommended that the name of the binding include '''BIND''' 
 *# Set the attributes of the newly created ''Binding''
 
-=======Bindings Currently Available in Symphony=======
+======= Bindings Currently Available in Symphony =======
 
-The bindings currently available for generic topology nodes are:
+The bindings currently available for generic topology ''Nodes'' are:
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Binding
 ! Applicable Node(s)
 ! Function
@@ -317,9 +320,9 @@ The bindings currently available for generic topology nodes are:
 | Switches between sub-topology trees, based on an enumeratuve attribute.
 |}
 
-The bindings currently available for field of view (FOV) topology nodes:
+The bindings currently available for field of view (FOV) topology ''Nodes'':
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Binding
 ! Applicable Node(s)
 ! Function
@@ -337,9 +340,9 @@ The bindings currently available for field of view (FOV) topology nodes:
 | Maps the values of a ''RectangularFrustrumFieldOfView'' to another ''RectangularFrustrumFieldOfView'' attribute.
 |}
 
-The bindings currently available for vehicle topology nodes are:
+The bindings currently available for vehicle topology ''Nodes'' are:
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Binding
 ! Applicable Node(s)
 ! Function
@@ -349,53 +352,51 @@ The bindings currently available for vehicle topology nodes are:
 | Maps the values of a ''Thruster'' to another ''Thruster'' attribute.
 |}
 
-======iii. Defining the Connection Points======
+====== iii. Defining the <i>Connection Points</i> ======
 
-* Recall that, ''Connection Points'' are metaphorical hooks where sub-Systems can be attached.
-* A ''Connection Point'' typically defines a physical location where a system might expect other sub-Systems to be assembled. 
+* Recall that, ''Connection Points'' are metaphorical hooks where sub-''Systems'' can be attached.
+* A ''Connection Point'' typically defines a physical location where a ''System'' might expect other sub-''Systems'' to be assembled. 
 * Populating the ''Connections Points List'' involves the following:
 *# Under the ''Connection Points List'', create a new ''Connection Point'';
 *# Set the name and description of the ''Connection Point''; 
 *## It is recommended that the name of the ''Connection Point'' include '''CONNECT''';
 *# Set the ''Node'' of the ''Connection Point''.
 
-======iv. Defining Type Members (Only for Composite Systems)======
+====== iv. Defining <i>Type Members</i> (Only for Composite Systems) ======
 
 TODO!
 
-======v. Defining Assembly Links (Only for Composite Systems)======
+====== v. Defining <i>Assembly Links</i> (Only for Composite Systems) ======
 
 TODO!
 
-======vi. Registering your Symphony System Model with Symphony======
+====== vi. Registering your <i>Symphony System Model</i> with Symphony ======
 
-=======Steps to register a Symphony System Model=======  
-
-In order for ''Symphony'' to be made aware of your Symphony System Model, your model must be registered.
+In order for Symphony to be made aware of your ''Symphony System Model'', your model must be registered.
 Here are the steps to do so:
 
-# Open the '''MANIFEST.MF''' of the the plugin where your Symphony System Model is defined;
+# Open the '''MANIFEST.MF''' of the the plugin where your ''Symphony System Model'' is defined;
 # In the ''Extensions'' tab, click ''Add...''
-# Ensure the ''Show only the extension points from the required plug-ins'' is '''NOT''' selected.
+# Ensure the "''Show only the extension points from the required plug-ins''" checkbox is '''NOT''' checked.
 # Select the '''org.eclipse.symphony.core.invocator.typeContributor''' extension point;
 # Click ''Finish''
 # Select the newly added extension and then click on ''Browse'' for the '''URI''' field;
-# Browse to your Symphony System Model (*.ss) file and click ''OK'';
+# Browse to your ''Symphony System Model'' (*.ss) file and click ''OK'';
 # Save the '''MANIFEST.MF'''
 
-==Advanced Topics==
+== Advanced Topics ==
 
-===Specialized Topology Nodes===
+=== Specialized Topology <i>Nodes</i> ===
 
 The currently available specialized topology ''Nodes'' in Symphony are:
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Name
 ! Plugin / Package
 ! Description
 |-
 | '''''CircularSectorFieldOfView'''''
-| rowspan="3" | ''org.eclipse.symphony.addons.sensors.fov''
+| rowspan="3" style="text-align:center;" | ''org.eclipse.symphony.addons.sensors.fov''
 | Represents a field of view (FOV) that is a circular sector.  This is useful for representing the FOV for certain types of line scanner sensors (e.g. SICK Lidar)
 |-
 | '''''ConicalFieldOfView'''''
@@ -405,7 +406,7 @@ The currently available specialized topology ''Nodes'' in Symphony are:
 | Represents a field of view (FOV) that is rectangular.  This is used for representing the FOV for cameras and many range sensors.
 |-
 | '''''AbstractCamera'''''
-| rowspan="2" | ''org.eclipse.symphony.addons.sensors.imaging''
+| rowspan="2" style="text-align:center;" | ''org.eclipse.symphony.addons.sensors.imaging''
 | Represents a camera that includes a ''RectangularFrustrumFieldOfView and can take an ''ImageSnapshot''.  This is the class expected by the ''Symphony Camera View''.
 |-
 | '''''ImageSnapshot'''''
@@ -420,7 +421,7 @@ The currently available specialized topology ''Nodes'' in Symphony are:
 | Represents a trajectory as a list of way points.
 |-
 | '''''Wheel'''''
-| rowspan="3" | ''org.eclipse.symphony.addons.vehicle''
+| rowspan="3" style="text-align:center;" | ''org.eclipse.symphony.addons.vehicle''
 | Represents a wheel as a cylinder.  Used by the ''VehiclePoseCorrector''.  See the ''MobilePlatform'' Example.
 |-
 | '''''LanderSphericalFoot'''''
@@ -430,27 +431,27 @@ The currently available specialized topology ''Nodes'' in Symphony are:
 | Represents a thruster and its plume. See the ''Lander'' Example.
 |}
 
-===Extending the Tools===
+=== Extending the Tools ===
 
 * Extending the built-in tools in Symphony is done through EMF;
 * You simply extend the tool you want to customize in your meta-model and implement / override the required methods;
 * That's it!
 
-====Built-in Camera View Tools====
+==== Built-in <i>Camera View</i> Tools ====
 
 The following built-in ''Camera View'' tools (located in ''org.eclipse.symphony.addons.sensors.imaging.camera'') are available in Symphony: 
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Name
 ! ''Camera View Configuration'' Subsection
 ! Description
 |-
 | '''''ImageFilter'''''
-| ''Filters''
+| style="text-align:center;" | ''Filters''
 | Provides the facility to process or enhance features of a camera image (e.g. edge detection, etc.)
 |-
 | '''''DrawnCameraOverlay'''''
-| rowspan="3" | ''Overlays''
+| rowspan="3" style="text-align:center;" | ''Overlays''
 | Overlay that is drawn onto a camera image.
 |-
 | '''''AbstractTextOverlay'''''
@@ -460,25 +461,25 @@ The following built-in ''Camera View'' tools (located in ''org.eclipse.symphony.
 | Overlay that provides an ''Image'' with a transparent background that is superimposed onto a camera image.
 |-
 | '''''CameraTool'''''
-| ''Tools''
+| style="text-align:center;" | ''Tools''
 | Tool that provides interaction with mouse motion and selection in the ''Symphony Camera View''.
 |}
 
-====Built-in Map View Tools====
+==== Built-in <i>Map View</i> Tools ====
 
 The following built-in ''Map View'' tools (located in ''org.eclipse.symphony.core.environment.ui'') are available in Symphony:
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Name
 ! ''Map View Configuration'' Subsection
 ! Description
 |-
 | '''''ImageMapLayerPresentation'''''
-| ''Map Layers''
+| style="text-align:center;" | ''Map Layers''
 | Provides the image to be displayed for a given ''Image Map Layer'' in the ''Map View''
 |- 
 | '''''MapAnnotation''''' 
-| rowspan="7" | ''Annotations''
+| rowspan="7" style="text-align:center;" | ''Annotations''
 | Provides annotation (JFreeChart) that can be drawn on top of the map.
 |-
 | '''''AbstractVariableAnnotation'''''
@@ -500,7 +501,7 @@ The following built-in ''Map View'' tools (located in ''org.eclipse.symphony.cor
 | Specialization of ''MapTool'' that allows a user to define a list of 2D points by clicking on the map.
 |}
 
-====Units Management====
+==== Units Management ====
 
 * Recall, that an attribute's units (e.g. radians, metres, seconds, etc.) can be specified by using the '''csa_units="..."''' directive in the @GenModel annotations of one's xcore models.
 * This information can then be used to perform those ''Native Units'' to a ''Different Display'' unit (e.g. degrees <-> radians) 

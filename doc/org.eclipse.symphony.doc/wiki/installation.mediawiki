@@ -1,27 +1,32 @@
-= Symphony RCP Installation & Configuration=
+= Installing Symphony =
+
+== Table Of Contents ==
+__TOC__
+
+== Symphony RCP Installation & Configuration ==
 All Symphony RCP applications are based on the same foundation and are packaged the same way.  Symphony RCP applications are self-contained and are packaged in zip format.  Symphony supports the following platform:
 * 32-bit Windows
 * 64-bit Windows
 * 32-bit Linux (GTK)
 * 64-bit Linux (GTK) 
 
-== Java Virtual Machine ==
+=== Java Virtual Machine ===
 # Ensure a proper Java Runtime Environment (JRE) is installed on your system (1.8 or higher).  You can download JRE from [http://www.oracle.com/technetwork/java/javase/downloads/index.html http://www.oracle.com/technetwork/java/javase/downloads/index.html].  
 # The virtual machine must be accessible in the PATH.  Type the following commands in a system shell to verify the installed java version.<pre>java -version&#10;openjdk version "1.8.0_51"&#10;OpenJDK Runtime Environment (build 1.8.0_51-b16)&#10;OpenJDK 64-Bit Server VM (build 25.51-b03, mixed mode)</pre>
 
-== 3D Acceleration ==
+=== 3D Acceleration ===
 Symphony makes use of 3D.  It is important to install latest & stable version of graphics card 3D drivers.
 
-== Symphony Rich Client Platform Applications ==
+=== Symphony Rich Client Platform Applications ===
 # Install Symphony RCP Application<pre>unzip symphony.product-linux.gtk.x86_64.zip</pre>
 # Launch Symphony RCP Application<pre>cd symphony&#10;./symphony (Symphony executable)</pre>
 
-== Select Workspace ==
+=== Select Workspace ===
 # The '''Workspace Launcher''' dialog will prompt.  Select the location of the new or the existing workspace.  The workspace will contain the information related to your Symphony session.
 
-= Symphony SDK Installation & Configuration=
+== Symphony SDK Installation & Configuration ==
 
-== Eclipse ==
+=== Eclipse ===
 
 Symphony is based on Eclipse.  The first installation step is the proper installation and configuration of Eclipse.  Eclipse configuration details can be found on [https://www.eclipse.org https://www.eclipse.org].
 # Download Eclipse Classic (Luna 4.4 or newer) from [http://www.eclipse.org/downloads http://www.eclipse.org/downloads].
@@ -48,11 +53,11 @@ Symphony is based on Eclipse.  The first installation step is the proper install
 ## Wait for the completion of the installation.  
 ## A dialog will then appear to request you to restart Eclipse.  Click on '''Yes''' button.
 
-== Repositories ==
+=== Repositories ===
 
 <pre>Please refer to section Symphony Updates for additional instructions related to deployment's updates on existing installation.</pre>
 
-=== Eclipse CSA Repository ===
+==== Eclipse CSA Repository ====
 
 Symphony is composed of a series of Eclipse features.  The following steps present the way to install them:
 
@@ -73,7 +78,7 @@ Symphony is composed of a series of Eclipse features.  The following steps prese
 # When the '''Security Warning''' dialog appears, click on '''Ok'''.
 # At the end of the installation process, a dialog request you if '''you would like to restart now'''.  Click on '''Yes'''.
 
-=== Eclipse ESM Repository ===
+==== Eclipse ESM Repository ====
 
 ESM repository contains all the ESM features (e.g. MESR, Juno, SMA etc).  The following steps present the way to install them:
 
@@ -92,7 +97,7 @@ ESM repository contains all the ESM features (e.g. MESR, Juno, SMA etc).  The fo
 # When the '''Security Warning''' dialog appears, click on '''Ok'''.
 # At the end of the installation process, a dialog request you if '''you would like to restart now'''.  Click on '''Yes'''.
 
-=== Symphony Updates ===
+==== Symphony Updates ====
 
 We have found some situation where the update process does not deploy properly the updated plugins.  We recommend to uninstall prior the deployment of new updates.
 # Go into '''Help->Install New Software…'''
@@ -102,9 +107,9 @@ We have found some situation where the update process does not deploy properly t
 # Follow the uninstall steps.
 # The install the new version. In the install procedure, only the Eclipse CSA Repository and Eclipse ESM Repository needs to be re-installed.
 
-= Issues =
+== Issues ==
 
-== Eclipse Luna GTK3 Problem ==
+=== Eclipse Luna GTK3 Problem ===
 If icons do not appear properly in the IDE you may need to specify the following environment variable prior launching Eclipse:
 <pre>
 export SWT_GTK3=0

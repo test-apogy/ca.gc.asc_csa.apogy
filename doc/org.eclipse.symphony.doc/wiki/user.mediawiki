@@ -1,8 +1,11 @@
-=Using Symphony=
+= Using Symphony =
 
-==Eclipse Basics==
+== Table Of Contents ==
+__TOC__
 
-===Workspace===
+== Eclipse Basics ==
+
+=== Workspace ===
 
 * Workspace:
 ** Working environment of Eclipse;
@@ -13,12 +16,12 @@
 ** Groups together folder and files;
 ** Mapped to a sub-folder of the ''Workspace'';
 
-===Preferences===
+=== Preferences ===
 
 * Used to persist settings between sessions;
 * Include UI settings, default values for various elements, data path, etc.
 
-===Selection Providers & Listeners===
+=== Selection Providers & Listeners ===
 
 * '''Selection Provider''':
 ** UI component fires a selection upon user action;
@@ -26,26 +29,26 @@
 * '''Selection Listener''':
 ** UI component intercepts a selection and reacts to it;
 
-===Views===
+=== Views ===
 
 * A window managed by the main window;
 * Can be detached;
 * Most are singleton;
 * Most Symphony views are ''Selection Listeners''
 
-====Project Explorer View====
+==== Project Explorer View ====
 
 * Is a singleton;
 * Displays the content of the workspace;
 * Is a ''Selection Provider''
 
-====Properties View====
+==== Properties View ====
 
 * Displays and edits the selection's attributes;
 * It is a ''Selection Listener'';
 * Multiple tabbed;
 
-===Editors===
+=== Editors ===
 
 * Provides editing of resources;
 * Specific for types of resource;
@@ -54,68 +57,68 @@
 * Most support ''Undo/Redo'';
 * Have an * when the resource is modified;
 
-===Menu Contributions===
+=== Menu Contributions ===
 
 * Specific actions(s) available on a user-selected element;
 * Made available through a pull down;
 * Action(s) available are selection dependent;
 
-==Symphony Concepts==
+== Symphony Concepts ==
 
-===Session & Environment===
+=== Session & Environment ===
 
-====Session====
+==== Session ====
 
 * Resource that Symphony is centered around;
 * Is the container for all Symphony session elements;
 
-====Symphony Environment====
+==== Symphony Environment ====
 
 * Contains the definitions of the ''Worksite'', ''Time Sources'' and the registered ''Symphony Systems'';
 * Defines what you have to work with in a specific deployment;
 
-===Worksites===
+=== Worksites ===
 
 * Defines the area that you are operating in;
 * Include a priori information about the area (e.g. DEM, orbital imagery, etc.);
 * Inherently generic concept that could be specialized as required (e.g. Earth surface);
 
-====Surface Worksites====
+==== Surface Worksites ====
 
 * Defines a ''Worksite'' that resides on the surface of a Celestial body (e.g. Earth)
 
-=====Reference Frame=====
+===== Reference Frame =====
 
-=====Maps=====
+===== Maps =====
 
 * A component of a ''Worksite'' that contains ''Map Layers'' sharing a common pose relative to the ''Worksite'' origin;
 * A '''''Map Layer''''' contains the actual data about the ''Worksite'' (e.g. DEM, Orbital Imagery, Slope, etc.);
 
-======MapLayer======
+====== MapLayer ======
 
 * Currently support ''MapLayers'':
 ** '''''Triangular Mesh Map Layer''''' (a meshed DEM);
 ** '''''Features Of Interest Map Layer''''' (specific locations in the ''Worksite'');
 ** '''''Image Map Layer''''' (Image and its physical size on the ''Worksite'');
 
-=====EarthSky=====
+===== EarthSky =====
 
 * Contains the Celestial bodies of interest (Sun, Moon, Stars);
 * Ephemerides updates based on time and the ''Worksite'' location;
 * Represented in the ''Topology''
 
-====Orbital Worksites====
+==== Orbital Worksites ====
 
-===Time Sources===
+=== Time Sources ===
 
 * '''''Time Sources''''' are used to feed the time to the ''Session''.
 * This, in turn, updates the position of the sky elements (Sun, Moon, Stars);
 * The ''Time Sources'' element contains the available ''Time Sources'', only one of which is set as the ''Session Active Time Source'';
 * The ''Time Sources View'' can be used to access the various time source parameters.
 
-====Available Time Sources====
+==== Available Time Sources ====
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Name
 ! Description
 |-
@@ -135,9 +138,9 @@
 | A specialized ''Browseable Time Source'' that allows browsing a list of ''Operation Calls''.
 |}
 
-===Types, Variables & Contexts===
+=== Types, Variables & Contexts ===
 
-====Types====
+==== Types ====
 
 * A '''''Type''''' defines an entity that can execute commands and provides telemetry:
 ** Similar to an Interface Control Document (ICD);
@@ -145,11 +148,11 @@
 * Type can include ''Type Members'' in their definitions;
 * Types include an ''API Adapter'' that acts as a bridge between Symphony and the ''Interface Class'';
 
-=====Interface Class=====
+===== Interface Class =====
 
 * An '''''Interface Class''''' is the specific (i.e. real-world) Java type of the Symphony ''Type''
 
-====Symphony System====
+==== Symphony System ====
 
 * Is the "LEGO block" of Symphony;
 * A '''''System''''' is a specialization of ''Type'';
@@ -159,33 +162,33 @@
 * A given ''System'' may have multiple implementations (e.g. Stub, Simulated, etc.);
 * Implementation specific details transparent to Symphony: what matters is the interface.
 
-=====Connection Points & Assembly Links=====
+===== Connection Points & Assembly Links =====
 
 * A '''''Connection Point''''' represents a location in the ''System'' (as represented by a topology node) where another ''Type'' could connect to this System. 
 * An '''''Assembly Link''''' actually provides the link between a ''Connection Point'' and another Type.
 
 * In the diagram below, one could say that the ''Connection Points'' act like hooks while the ''Assembly Links'' act like strings.
 
-=====Simple Systems=====
+===== Simple Systems =====
 
 * It has no ''Type Member'' (i.e. it has no sub-systems);
 * It typically represents a "building block" (sub-system) that can be used in the assembly of more complex ''Systems'';
 
-=====Complex Types=====
+===== Complex Types =====
 
 * Has one or more ''Type Members'';
 * Represents an assembly of sub-systems into an integrated ''System'';
 * Complex Systems can also be nested;
 
-====Variables & API Adapters====
+==== Variables & API Adapters ====
 
-=====Variables=====
+===== Variables =====
 
 * A '''''Variable''''' is a reference to a ''Type (System)'' <u>instance</u>;
 * A ''Variable'' name should be unique;
 * Multiple ''Variables'' of the same ''Type'' can be defined;
 
-=====API Adapter=====
+===== API Adapter =====
 
 * An '''''API Adapter''''' is the object that acts as a brdige between the System (i.e. the ''Interface Class'') and Symphony;
 * Automatically managed by Symphony;
@@ -195,13 +198,13 @@
 ** A reference to the ''Variable / Type Member'' instance;
 ** A reference to the ''Symphony Environment'';
 
-====Pose Corrector====
+==== Pose Corrector ====
 
 * A '''''Pose Corrector''''' is used by the ''API Adapter'' to modify the ''System''-derived pose before updating;
 * Can be used to keep a vehicle on the ground;
 * Can be enabled/disabled on the fly;
 
-====Context====
+==== Context ====
 
 * A '''''Context''''' map ''Variables'' to an actual implementation through the ''Active Context'';
 * Used by Symphony to dispatch commands to System instances;
@@ -210,12 +213,12 @@
 ** Where the results from operation invocations will be stored (i.e. ''Data Product Set'');
 ** A hierarchy of ''Variable Implementation'';
 
-=====Variable Implementations=====
+===== Variable Implementations =====
 
 * A '''''Variable Implementation''''' is used to specify the particular implementation (i.e. an ''Interface Class'' subclass) that a ''Variable'' should be using.
 * Typically used in ''Contexts''
 
-===Data Products===
+=== Data Products ===
 
 * A '''''Data Product''''' represents the result of an ''Operation Call'';
 * Time-stamped;
@@ -223,15 +226,15 @@
 * Conserves the operational context in which ''Operation'' was called;
 * May have one or more 3D representations;
 
-====Data Products Set====
+==== Data Products Set ====
 
 * A '''''Data Products Set''''' contains all of the ''Data Products'' created with one or more ''Contexts'':
 ** Allows data generated using different ''Contexts'' to be stored separately (for example, separating simulated and real data.)
 ** Each ''Context'' refers to a ''Data Products Set''
 
-===Operation Calls & Programs===
+=== Operation Calls & Programs ===
 
-====Programs====
+==== Programs ====
 
 * A '''''Program''''' is an entity that invokes ''Operation Calls'' on ''Variables'';
 * A ''Program'' includes:
@@ -239,7 +242,7 @@
 ** A description; and
 ** A list of ''Operation Calls''
 
-====Operation Call====
+==== Operation Call ====
 
 * An '''''Operation Call''''' is a specific invocation of an ''Operation'' on a ''Variable'' using a set of ''Parameters''
 * It contains:
@@ -248,22 +251,22 @@
 ** An ''Operation'' to be called;
 ** A List of ''Parameters'' to use when calling the ''Operation'';
 
-====Simple Program====
+==== Simple Program ====
 
 * A ''Program'' in the form of a flat list of ''Operation Calls'';
 * Does not include execution flow control;
 * Each ''Operation Call'' can be invoked individually, or
 * It can be executed as a whole;
 
-===Controller Bindings & Configurations===
+=== Controller Bindings & Configurations ===
 
-====Controller Configuration====
+==== Controller Configuration ====
 
 * A '''''Controller Configuration''''' is a set of ''Operation Call Controller Bindings'';
 * Used to map one or more joystick(s) / controller(s) to one or more ''Operation Calls'';
 * No more than '''ONE''' ''Controller Configuration'' is active at any given time in a given Symphony Session;
 
-====Operation Call Controller Binding====
+==== Operation Call Controller Binding ====
 
 * A '''''Operation Call Controller Binding''''' is a specialization of ''Operation Call'';
 * Allows the ''Operation Call's Parameter'' to be mapped to joystick inputs;
@@ -274,18 +277,18 @@
 ** An ''Input Value'' for each of the ''Parameters'' defined in this ''Operation Call''.
 ** A ''boolean'' indicating whether or not to create a ''Data Product' when the ''Operation'' is called (false by default.)
 
-=====Trigger Types=====
+===== Trigger Types =====
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Name
 ! Icon
 ! Description
 |-
-| Time Trigger
+| '''''Time Trigger'''''
 | 
 | Triggers at a fixed time interval (or only once if time <= 0).
 |-
-| rowspan="3" | Controller Edge Trigger
+| rowspan="3" | '''''Controller Edge Trigger'''''
 |
 | Triggers when a rising edge is detected on the specified controller button state.
 |-
@@ -295,12 +298,12 @@
 |
 | Triggers when either a rising or falling edge is detected on the specified button state.
 |-
-| Controller State Trigger
+| '''''Controller State Trigger'''''
 | 
 | Triggers at a fixed time interval (or only once if time <= 0) if the specified controller button state (''boolean'') matches the target.
 |}
 
-====Input Value====
+==== Input Value ====
 
 * An '''''Input Value''''' defines how to obtain the value of its associated ''Parameter'' in an ''Operation Call Controller Binding.''
 
@@ -309,7 +312,7 @@
 *# '''''Toggle Value''''': A ''boolean'' value that toggles each time the ''Operation'' is called; 
 *# '''''Controller Value''''': A value coming from a joystick input.
 
-====Controller Value====
+==== Controller Value ====
 
 * A '''''Controller Value''''' includes:
 ** the joystick / controller;
@@ -318,9 +321,9 @@
 *** This can include input scalling, input offsetting, saturation, dead-band,etc;
 *** Various specializations of ''Input Conditioning'' are available to accommodate these needs. 
 
-=====Input Conditioning Types=====
+===== Input Conditioning Types =====
 
-{|
+{| border="1" cellpadding="2"
 ! Name
 ! Icon
 ! Description
@@ -328,43 +331,43 @@
 ! Offset Supported
 ! Dead Band Supported
 |-
-| Linear
+| '''''Linear'''''
 |
 | Linear transfer function with end points specified.
-| Yes
-| Yes
-| No
+| style="text-align:center;" | Yes
+| style="text-align:center;" | Yes
+| style="text-align:center;" | No
 |-
-| Centered Linear
+| '''''Centered Linear'''''
 | 
 | Linear transfer function with constraints that output is zero (0) for input falling within dead band./n/nOutput linearly falls to zero at dead band limits.
-| Yes
-| No
-| Yes
+| style="text-align:center;" | Yes
+| style="text-align:center;" | No
+| style="text-align:center;" | Yes
 |-
-| Parabolic
+| '''''Parabolic'''''
 | 
 | Second-order transfer function with end points specified.
-| Yes
-| Yes
-| No
+| style="text-align:center;" | Yes
+| style="text-align:center;" | Yes
+| style="text-align:center;" | No
 |-
-| Centered Parabolic
+| '''''Centered Parabolic'''''
 |
 | Parabolic output with constraint that output is zero (0) for input falling within dead band./n/nSlope is made continuous at dead band limits.
-| Yes
-| No
-| Yes
+| style="text-align:center;" | Yes
+| style="text-align:center;" | No
+| style="text-align:center;" | Yes
 |-
-| User Defined
+| '''''User Defined'''''
 |
 | Piecewise linear interpolation based on user-provided list of points.
-| No
-| No
-| No
+| style="text-align:center;" | No
+| style="text-align:center;" | No
+| style="text-align:center;" | No
 |}
 
-===Tools===
+=== Tools ===
 
 * The '''''Tools''''' element of the ''Session'' contains the tools defined by the user;
 * Contains:
@@ -375,12 +378,12 @@
 ** ''Camera View Configuration List''
 ** ''Simple Tool List''
 
-====Watches====
+==== Watches ====
 
 * A '''''Watches''''' object is a list of objects of type ''Watch''
 * A '''''Watch''''' defines a telemetry item that the user is interested in (for either display or recording purposes)
 
-====Displays====
+==== Displays ====
 
 * A '''''Displays''''' object:
 ** is a list of ''Display'';
@@ -390,47 +393,47 @@
 ** defines presentation attributes;
 ** is associated with a specific ''Feature'';
 
-=====Display Types=====
+===== Display Types =====
 
-{|
+{| border="1" cellpadding="2"
 ! Name
 ! Icon
 ! Description
 |-
-| Text Display
+| '''''Text Display'''''
 |
 | Show value as a string.  Descimal format can be specified for Numbers.
 |-
-| Boolean Display
+| '''''Boolean Display'''''
 |
 | Displays a ''boolean'' as a check box.
 |-
-| Number Vs. Time Plot Display
+| '''''Number Vs. Time Plot Display'''''
 |
 | Displays a number in a plot as a function of time.
 |}
 
-======Number Vs. Time Plot Display Parameters======
+====== Number Vs. Time Plot Display Parameters ======
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Parameter
 ! Type
 ! Description
 |-
-| History Length
+| ''History Length''
 | Seconds
 | Specified the time period for which to display the data history.
 |-
-| Repeat Last Value
+| ''Repeat Last Value''
 | ''boolean''
 | Enables the last value to be repeated every second to get the plot to "follow" the current time.
 |-
-| Use Data Buffering
+| ''Use Data Buffering''
 | ''boolean''
 | Enables data to be buffered until the next plot update (every second.)  Recommended for attributes having high update frequency.
 |}
 
-====Map View Configurations====
+==== Map View Configurations ====
 
 * A '''''Map View Configuration List''''':
 ** contains ''Map View Configurations'';
@@ -441,7 +444,7 @@
 ** defines annotation to show vehicle position, FOV, etc.;
 ** defines map tools (e.g. ''Trajectory Picking Tool'');
 
-====Camera View Configuration====
+==== Camera View Configuration ====
 
 * A '''''Camera View Configuration List''''':
 ** contains ''Camera View Configurations'';
@@ -452,15 +455,15 @@
 ** specifies image processing steps;
 * defines image tools (e.g. ''Pointer Camera Tool'');
 
-=====Overlays=====
+===== Overlays =====
 
 * An '''''Overlay''''' represents graphics overlaid on top of the camera image.
 * Symphony provides a list of basic, built-in ''Overlays'';
 * System-specific overlay can be contributed for a rover/instrument
 
-======Built-in Overlays======
+====== Built-in Overlays ======
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Name
 ! Icon
 ! Description
@@ -486,9 +489,9 @@
 | Displays a cross hair with marks indicating degrees along the vertical and horizontal axes.  The '''ABSOLUTE''' orientation is displayed.  The values are bound to the current camera's Field of View (FOV) and the Azimuth and Elevation features selected.
 |}
 
-=====Built-in Image Filters=====
+===== Built-in Image Filters =====
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Name
 ! Icon
 ! Description
@@ -514,9 +517,9 @@
 | Multiplies the input image by a scale factor.
 |}
 
-=====Built-in Camera Tools=====
+===== Built-in Camera Tools =====
 
-{|
+{| border="1" cellpadding="2"
 ! Name
 ! Icon
 ! Description
@@ -526,16 +529,16 @@
 | Allow the user to point in the camera image and then draws in the 3D environment, a ray showing where the selected position point projects into the 3D environment.
 |}
 
-====Simple Tools====
+==== Simple Tools ====
 
 * Symphony provides a few ''Simple Tools'' that are used with the ''Symphony 3D Viewer'' and other views;
 * These tools act as a ''Selection Listener'' to the above views.
 ** Tool responds only if active;
 ** More than one tool can be active at the same time!
 
-=====Built-in Simple Tools=====
+===== Built-in Simple Tools =====
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Name
 ! Icon
 ! Description
@@ -569,7 +572,7 @@
 | TODO!
 |}
 
-===Topology===
+=== Topology ===
 
 * The complete topology, including all that is present in the ''Symphony Environment'':
 ** ''Variable'' instances;
@@ -577,17 +580,17 @@
 ** ''Data Products''; and
 ** ''Tools''.
 
-==Symphony UI==
+== Symphony UI ==
 
-===Preferences===
+=== Preferences ===
 
-====Range Preferences====
+==== Range Preferences ====
 
 * Types support definition of ranges for attributes and ''Operation Call Parameters'';
 * Colour used to highlight value ranges.
 * '''Currently, Symphony does not provide colouring to the Properties Page cells''';
 
-====UI Preferences====
+==== UI Preferences ====
 
 * Types supports definitions of units for attributes and ''Operation Call Parameters'';
 * Allows conversion between ''Native Units'' (units used by the ''System'') to ''Display Units'' (what you see);
@@ -595,7 +598,7 @@
 ** values displayed in the ''Properties View'';
 ** values entered in ''Operation Call Parameters'';
 
-===Session Editor===
+=== Session Editor ===
 
 * It is an ''Editor''
 * Is used to explore and edit Symphony elements;
@@ -604,14 +607,14 @@
 * Supports Undo/Redo
 * Is a ''Selection Provider''
 
-===Controllers View===
+=== Controllers View ===
 
 * View is a singleton;
 * Used to monitor all Controllers (joysticks) connected to the host;
 * Shows all Controllers components including names, types and current values;
 * ''Controllers conntected after Symphony has started will not be recognized!''
 
-===Nodes Distance View===
+=== Nodes Distance View ===
 
 * Selection based (topology ''Node'');
 * Allows the selection of any two (2) nodes;
@@ -622,7 +625,7 @@
 ** Relative orientation (rx, ry, rz), given in degrees;
 * Supports real-time update.
 
-===3D Viewer===
+=== 3D Viewer ===
 
 * Selection based (''Symphony Environment'');
 
@@ -640,7 +643,7 @@
 ** All ''Data Products'' (marker + 3D representation are visible by default;
 ** Is ''Selection Listener'' for Data Products
 
-====Node Presentation====
+==== Node Presentation ====
 
 * Configuring 3D representations of topology ''Nodes'':
 ** Each ''Node'' in the topology is assigned a '''''Presentation''''' that contains its 3D representation attributes.
@@ -653,7 +656,7 @@
 ** The visibility, ''Presentation Mode'' and colour can be set for all FOV of a given type through the Preferences;
 ** The visibility, and axis length can be set for all ''Node'' of a given basic type (''Position'', ''Rotation'', ''Transform'', ''URL'') through the Preferences; 
 
-====Managing Performance====
+==== Managing Performance ====
 
 * The maximum frame rate (in Hz) can be lowered (default is 15 Hz);
 * Under ''Field Of View'' and ''Image Snapshot'' preferences:
@@ -663,9 +666,9 @@
 ** Disabling Shadows;
 ** Reducing the Shadow Map Size; 
 
-====Moving Using The Mouse====
+==== Moving Using The Mouse ====
 
-{| class="wikitable"
+{| border="1" cellpadding="2" style="text-align:center;"
 ! Button
 ! Mouse Motion
 ! Movement
@@ -704,23 +707,23 @@
 | Translate to the left
 |}
 
-====Keyboard Inputs====
+==== Keyboard Inputs ====
 
-{| class="wikitable"
+{| border="1" cellpadding="2"
 ! Key
 ! Function
 |-
-| Q
+| style="text-align:center;" | Q
 | '''Q'''uick: Accelerate translation
 |-
-| L
+| style="text-align:center;" | L
 | '''L'''evel: Set view point orientation so that the user line of sight is level (perpendicular to the Z axis.)
 |-
-| P
+| style="text-align:center;" | P
 | '''P'''icking: Enables the picking mode(used by some 3D tools.)  '''Picking Enabled''' shows up on the left hand side of the viewer when activated.
 |}
 
-===Camera View===
+=== Camera View ===
 
 * Selection-based (''Camera View Configuration'');
 * Display latest image return by specified ''Camera'';
@@ -728,7 +731,7 @@
 * Applies the ''Image Filters'' before displaying the image
 * Supports interaction with ''Camera Tools''
 
-====Map View====
+==== Map View ====
 
 * Selection-based (''Map View Configuration'');
 * Displays:
@@ -738,7 +741,7 @@
 *** Vehicle position and orientation;
 *** Trajectories;
 
-====Earth Sky View====
+==== Earth Sky View ====
 
 * Selection-based (''Earth Sky'');
 * Displays:
@@ -752,11 +755,11 @@
 *** Latitude;
 *** Altitude;
 
-====Time Source View====
+==== Time Source View ====
 TODO!
 
-====Virtual Reality Tools====
+==== Virtual Reality Tools ====
 TODO!
 
-====Data Products View====
+==== Data Products View ====
 TODO!
