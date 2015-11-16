@@ -10,7 +10,7 @@ package org.eclipse.symphony.core.environment;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Specialized Node used to represent a artesianTriangularMeshMapLayer in the topology.
+ * Specialized Node used to represent a CartesianTriangularMeshMapLayer in the topology.
  * <!-- end-model-doc -->
  *
  *

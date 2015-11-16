@@ -23,7 +23,6 @@ The objective is to develop a software framework for mission operations that all
 ----
 
 = User Guide =
-
 [[user.mediawiki]]
 
 ----

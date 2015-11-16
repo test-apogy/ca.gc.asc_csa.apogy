@@ -4247,7 +4247,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "childCreationExtenders", "true",
 			 "extensibleProviderFactory", "true",
 			 "multipleEditorPages", "false",
-			 "copyrightText", "Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)",
+			 "copyrightText", "Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)",
 			 "modelName", "Symphony__CoreEnvironment",
 			 "complianceLevel", "6.0",
 			 "suppressGenModelAnnotations", "false",
@@ -5628,7 +5628,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  (cartesianTriangularMeshMapLayerNodeEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "Specialized Node used to represent a artesianTriangularMeshMapLayer in the topology."
+			 "documentation", "Specialized Node used to represent a CartesianTriangularMeshMapLayer in the topology."
 		   });
 	}
 

@@ -5,20 +5,17 @@ __TOC__
 
 == Examples ==
 
-* Simple examples of simulated ''Systems'';
-* Examples include articulated and composite ''Systems'' and the use of the ''Environment'' for simulation;
-* As recommended, the ''System'''s EMF models are separate and distinct from their Symphony (System) plugins;
-* Shows various aspects of ''Symphonyzation''
+Symphony provides a series of built-in example ''Systems'' to illustrate and highlight its numerous capabilities and features.  These ''Systems'', while fairly basic simulations of their real-world counterparts, show at a high level to design a ''System'' and integrate it into Symphony.  There are a large amount of variety in the examples, which include articulated and composite ''Systems''.  In addition, the examples leverage their respective ''Environment'' to facilitate the simulation.  As suggested in the guidelines, each of the example ''Systems'' have their EMF meta-models separate and distinct from their Symphony (System) plug-ins.  More than anything else, the examples highlight the recommended way to ''symphonynize'' any new ''System''.
 
-* The following examples are currently available in Symphony:
+The following examples are currently available in Symphony:
 
-{| border="1" cellpadding="2" style="margin-left: 30px;"
+{| border="1" cellpadding="2"
 ! Symphony System
 ! Description
 ! Plugin
 |-
 | '''''PTUDishAntennaSymphonySystem'''''
-| A simulated antenna dish mount on a pan-tilt unit.  Antenna is made to track the Sun based on the worksite sky.
+| A simulated antenna dish mount on a pan-tilt unit (PTU).  Antenna is made to track the Sun based on the '''Worksite'' sky.
 | ''org.eclipse.symphony.examples.antenna''
 |-
 | '''''CameraSymphonySystem'''''
@@ -26,14 +23,14 @@ __TOC__
 | rowspan="2" | ''org.eclipse.symphony.examples.camera''
 |-
 | '''''PTUCameraSymphonySystem'''''
-| A simulated camera mounted on a pan-tilt unit.
+| A simulated camera mounted on a pan-tilt unit (PTU).
 |-
 | '''''LanderSymphonySystem'''''
 | A simulated lander.
 | ''org.eclipse.symphony.examples.lander''
 |-
 | '''''LidarSymphonySystem'''''
-| A simulated raster scan LIDAR.
+| A simulated raster scan Lidar.
 | ''org.eclipse.symphony.examples.lidar''
 |-
 | '''''MobilePlatformSymphonySystem'''''
@@ -45,57 +42,139 @@ __TOC__
 | ''org.eclipse.symphony.examples.robotic_arm''
 |-
 | '''''RoverSymphonySystem'''''
-| A simulated rover, which is a complex System, composed of a Mobile Platform, Robotic Arm and two Camera sub-Systems.
+| A simulated rover, which is a complex ''System'', composed of a ''Mobile Platform'', ''Robotic Arm'' and two ''Camera'' sub-''Systems''.
 | ''org.eclipse.symphony.examples.rover''
 |}
 
-=== PTU Dish Antenna ===
+=== Example Specifics === 
+
+Note: It is important to note that while all of the above example ''Systems'' only provide simulations, given Symphony's flexibility, it would be a simple matter to add a real-world implementation for all of them.
+
+==== <i>PTU Dish Antenna</i> ====
+
+This ''System'' refers to a conical antenna which is mounted on top of a pan-tilt unit (PTU).  The antenna has the capability to change the position that it is directed at, by manipulating the PTU's pan and tilt angles.  In fact, the antenna is capable to track and follow the position of the Sun in the sky.  
 
 TODO!
 
-=== Camera ===
+==== <i>Camera</i> ====
+
+This ''System'' refers to a basic camera.  This camera is only capable to changing its zoom level and taking snapshots of the environment.
 
 TODO!
 
-=== PTU Camera ===
+==== <i>PTU Camera</i> ====
+
+This ''System'' refers to a slightly more advanced ''Camera'', which is mounted on top of a pan-tilt unit (PTU).  In addition to the basic capabilities described for the '''Camera''' ''System'', it is also capable of change the direction in which it is facing, by changing its PTU unit's pan and tilt angles appropriately.
 
 TODO!
 
-=== Lander ===
+==== <i>Lander</i> ====
+
+This ''System'' refers to a three-legged lander, with a thruster mounted under the bottom center of it.  The lander's three legs can be extended or retracted individually, allowing a variety of possible configurations. The amount of thrust exerted by the lander's thruster is controllable (within a range) and as such, the lander IS capable of flight; it however, rather tricky to control, especially when dealing with angular velocity.
 
 TODO!
 
-=== Lidar ===
+==== <i>Lidar</i> ====
+
+This ''System'' refers to a raster scan Lidar unit.  This ''System'' has a fixed position and is only capable of acquiring Lidar scans. 
 
 TODO!
 
-=== Mobile Platform ===
+==== <i>Mobile Platform</i> ====
+
+This ''System'' refers to a four-wheeled, movable platform, upon which other ''Systems'' could be attached.  This ''System'' can control its linear and angular velocities, allowing it to move around the ''Environment''.
 
 TODO!
 
-=== Robotic Arm ===
+==== <i>Robotic Arm</i> ====
+
+This ''System'' refers to an articulated robotic arm with four different joints:
+# '''Turret'''
+# '''Shoulder'''
+# '''Elbow'''
+# '''Wrist'''
+By changing the angles of its various joints, it can change its configuration as specified.
 
 TODO!
 
-=== Rover (Complex System) ===
+==== <i>Rover</i> (Complex System) ====
+
+This ''System'' refers to a Composite or ''Complex System'' that contains four different sub-''Systems'':
+# ''Mobile Platform'' - To facilitate the rover's movement
+# ''Robotic Arm'' - To permit the rover to interact with the environment
+# Arm ''PTU Camera'' - To allow capture of images from the ''Robotic Arm''
+# Center ''PTU Camera'' - To allow capture of images from the center of the ''Mobile Platform''
+The ''Rover'' combines all of these ''Systems'' to leverage all of their capabilities into one multi-purpose ''System''.
 
 TODO!
+
+=== <i>Registered Symphony Projects</i> ===
+
+In order to make it simpler to get started, Symphony provide a '''Registered Symphony Project''' for each of the examples.  The primary component of each of these ''Symphony Projects'' is the '''session.sym''' file; this defines a sample ''Session'' that highlights the various features of that example.  Each of these ''Sessions'' is designed to be fully usable as is; this allowing one to literally use it and see the example in action without having to add or change anything.  In particular, they already have the following specified:
+
+* ''Variable(s)''
+* ''Contexts''
+* ''Worksites''
+* ''Time Sources''
+* ''Programs'' with sample ''Operation Calls''
+* ''Data Product Sets''
+* Any required ''Tools''
+
+These ''Projects'' not only make it easy to use the examples, they are also valuable references when developing and using new ''Systems''.
+
+==== Importing a <i>Symphony Project</i> ==== 
+
+In order to import a ''Registered Symphony Project'', one can simply:
+
+# Right-click on the ''Project Explorer'' and select "''New > Project...''";
+# Select "''Symphony > New Symphony Project''" and click "''Next >''";
+# In the wizard that appears:
+#* Enter the desired name for the new project ;
+#* Check the "'''Import Registered Symphony Project'''" check box;
+#* Click "''Next >''";
+# Select the desired ''Sample Registered Project'' (e.g. '''Mobile Platform Example''' to highlight the usage of the ''MobilePlatformSymphonySystem'');
+# Click "''Finish''" to complete the import process.
 
 ----
 
 == Tutorials ==
 
-=== I'm in a hurry! I want to operate a rover!!! ===
-TODO!
+The following tutorials provide hands-on training of Symphony.  The goal of the training is to give the first-hand experience of Symphony as both a user and a developer; this will give a far deeper grasp of how best Symphony can be applied in various scenarios. 
+
+=== Simplest Way To Start ===
+
+The examples are a simple way to get started interacting with Symphony and seeing what it can do.  As laid out in the ''Registered Symphony Projects'' section above, it's easy to start using Symphony ''Systems''; by doing so, one can gain a foundation for the material and better understanding for how Symphony and its various components operate.
 
 === Getting Started Exercises ===
 
+The following user-oriented exercises are geared towards providing a providing familiarity with Symphony ''Sessions''.  By the end of the session, one should be able to:
+
+* set up a complete ''Symphony Environment'';
+* issue commands to a ''System'';
+* work with Composite ''Types'';
+* set up the ''Camera View''
+* set up the ''Map View''
+
 ==== Setting Up A <i>Symphony Environment</i> ====
 
-===== Creating A <i>Symphony Session</i> =====
+The following exercises are focused on the creating and fully setting up a ''Session'' and in particular, the ''Symphony Environment''.  By the end of this session, one should be able to:
 
-# Create a new ''Symphony Project'' named '''SymphonyTraining''';
-# Create a new ''Symphony Session'' named '''MyFirstSession'''
+* create a Symphony ''Session''
+* create a ''Worksite''
+* create ''Map Layers''
+* create ''Variables'' & ''Contexts''
+* create ''Data Product Sets''
+
+===== Creating A Symphony <i>Session</i> =====
+
+# Right-click on the ''Project Explorer'' and select "''New > Project...''";
+# Select "''Symphony > New Symphony Project''" and click "''Next >''";
+# In the wizard that appears:
+#* Enter '''SymphonyTraining''' for the name of the new project ;
+#** Ensure that the "'''Import Registered Symphony Project'''" check box is '''not''' checked;
+#* Click "''Next >''";
+#* Uncheck all of the check boxes on the following screen;
+#* Enter '''MyFirstSession.sym''' for the name of the new ''Session''.
 
 ===== Creating A <i>Worksite</i> =====
 
@@ -181,15 +260,21 @@ TODO!
 
 ==== Issuing Commands ====
 
+The following exercises deal with issuing commands on a Symphony ''System''. By the end of the session, one should be able to:
+
+* invoke operations on simple ''Systems''
+* use ''Pose Correctors''
+* use ''Operation Call Controller Bindings''
+
 ===== Invoking Operations On A Simple <i>System</i> =====
 
 # Under ''Programs'', create an ''Operation Calls'' program called '''myRoverCalls'''
 # Create a call named '''Init''' to operation '''init()''' on ''myRover'';
 # Create a call named '''Move''' to operation '''cmdLinearVelocity'''() on ''myRover'' with ''Parameter'' '''speed''' set to '''0.25''';
 # Create a call named '''Stop''' to operation '''cmdLinearVelocity'''() on ''myRover'' with ''Parameter'' '''speed''' set to '''0.0''';
-# Invoke Init by selecting "Symphony > Invoke"
-# Invoke Move ("Symphony > Invoke") - the rover should start moving forward;
-# Invoke Stop ("Symphony > Invoke") when you want to stop the rover.
+# Invoke '''Init''' by selecting it, right clicking and choosing "''Symphony > Invoke''"
+# Invoke '''Move''' ("''Symphony > Invoke''") - the rover should start moving forward;
+# Invoke '''Stop''' ("''Symphony > Invoke''") when you want to stop the rover.
 
 ===== Using The <i>Pose Corrector</i> =====
 
@@ -228,12 +313,16 @@ TODO!
 	<li> Expand the ''Variable Implementations'';</li>
 	<li> Expand '''myRover''';</li>
 	<li> Expand the ''API Adapter'' (''MobilePlatformSymphonySystemApiAdapter'');</li>
-	<li> Right-click on the ''Vehicle Pose Corrector'' and select "Symphony > Enable / Disable Pose Corrector";</li>
+	<li> Right-click on the ''Vehicle Pose Corrector'' and select "''Symphony > Enable / Disable Pose Corrector''";</li>
 	<li> Invoke '''CommandVel''' to move the rover;</li>
 	<li> When ready, invoke '''AllStop''' to stop it.</li>
 </ol>
 
 ===== Using <i>Operation Call Controller Bindings</i> =====
+
+The following exercises investigate ''Operation Call Controller Bindings''.  By the end of this session, one should be able to:
+
+* Bind a controller to interact with a ''System'' in a variety of ways
 
 ====== Binding A Controller To Move The Rover Around ======
 
@@ -345,9 +434,15 @@ TODO!
 	<li> Activate the '''mySecondCtrlConfig''' and drive your rover around. '''''Does it work as expected?'''''</li>
 </ol>
 
-==== Defining & Using Composite <i>Types</i> ====
+==== Defining & Using Composite <i>System</i> ====
+
+The following exercises illustrated how to specify and use composite ''System''.  By the end of this session, one should be able to:
+
+* define an adhoc composite ''System''
+* invoke operations on a composite ''System'''s ''Type Members'' and ''Type Member'''s ''Features''
 
 ===== The Target Assembly =====
+
 TODO!
 
 ===== Defining A Composite <i>System</i> =====
@@ -396,7 +491,7 @@ TODO!
 	<li> Right click on the ''Symphony Environment'' and select "Symphony > Reset Instances".</li>
 </ol>
 
-===== Invoking Operation On Composite System <i>Type Members</i> =====
+===== Invoking <i>Operations</i> on Composite System <i>Type Members</i> =====
 
 # Create an ''Operation Calls'' program called '''myAssemblyCalls''';
 # Create a call named '''Init''' to operation '''init'''() on '''myAssembly:rover'''
@@ -406,12 +501,14 @@ TODO!
 # Invoke '''Move''' - the assembly should start moving forward;
 # invoke '''Stop''', when you want to stop your assembly.
 
-===== Invoking Operation On A Feature Of Composite System <i>Type Members</i> =====
+===== Invoking <i>Operations</i> on a <i>Feature</i> of Composite System <i>Type Members</i> =====
 
 # Create a call named '''Power On''' to operation '''turnOn'''() on '''myAssembly:rover.powerSystem''';
 # Invoke ''Power On''. 
 
 ==== Setting Up & Using The <i>Camera View</i> ====
+
+The goal of this exercise is to understand how the ''Camera View'' operates and how to use to it.  In particular,  
 
 ===== Configuring A <i>Camera View</i> =====
 
@@ -460,25 +557,6 @@ TODO!
 		<li> Open the Map View and select '''myMapConfig'''.</li>
 	</ol>
 </ol>
-
-==== Setting Up & Using The <i>Telemetry View</i> ====
-
-===== Defining <i>Watches</i> =====
-
-# Under ''Tools'', create a ''Watches List Container'';
-# Under ''Watches List Container'', create a ''Watches List'' named '''Test''';
-# Under '''Test''', create a ''Watch'' named '''armWatch''', assign its ''Variable'' to '''myAssembly'''
-# Under '''armWatch''', create a ''Type Member Reference Tree'' referring to '''arm''';
-# Under '''armWatch''', create a ''Type Root Node'' and set its ''Source Class'' to '''RoboticArm''';
-# Create a chain of ''Tree Feature Nodes'' to finally refer to '''elbowAngle''' 
-
-===== Defining <i>Displays</i> =====
-
-# Under ''Tools'', create a new ''Displays'';
-# Under ''Displays'', create a ''Display List'' named '''armDisplays''';
-# Under '''armDisplays''', create a ''Text Display'' with its ''Abstract Feature Node'' referring to '''elbowAngle''';
-# Under '''armDisplays''', create a ''Number Vs. Time Plot Display'' with its ''Abstract Feature Node'' referring to '''elbowAngle''', with its ''height'' set to '''200''' and its ''width'' set to '''200'''.
-# Open the ''Telemetry View'' and select '''armDisplays'''.  
 
 ----
 
@@ -696,7 +774,7 @@ TODO!
 
 # Launch the ''Run Configuration'' used for testing ''PTUCamera'' in the previous exercises;
 # In the ''Project Explorer'', right click and then select "''Import...''";
-# In the ''Import'' pop-up, select ''General -> Existing Projects into Workspace'', then click "''Next >''";
+# In the ''Import'' pop-up, select "''General -> Existing Projects into Workspace''", then click "''Next >''";
 # Select your workspace root directory; the ''Projects'' list will get populated with your plugins. ''De-select'' all of them, except '''<org_prefix>.ptu.symphony''';
 # Click ''Finish''.  You now have a reference to your Symphony plugin in your new Eclipse instance;
 # Create a Symphony System Model named '''MyPTUCameraSymphonySystem.ss''' in the '''/model''' folder of your '''<org_prefix>.ptu.symphony''' plugin (use the ''New Symphony System'' wizard plugin);
@@ -747,7 +825,7 @@ TODO!
 
 <ol>
 	<li> Open your '''PTUCameraSymphonySystem.ss''' file with the editor</li> 
-	<li> Under ''Binding Sets -> Feature Roots List'', create a new ''Tree Root Node'', select it and set its ''Source Class'' to '''<org_prefix>.ptu.PTUCamera''';</li>
+	<li> Under "''Binding Sets -> Feature Roots List''", create a new ''Tree Root Node'', select it and set its ''Source Class'' to '''<org_prefix>.ptu.PTUCamera''';</li>
 	<li> Under the new ''Tree Root Node'', create three new ''Tree Feature Nodes'':</li>
 	<ol type="i">
 		<li> Set the ''Structural Feature'' for the first to '''currentPanAngle''';</li>
@@ -761,7 +839,7 @@ TODO!
 
 <ol>
 	<li> Open your '''PTUCameraSymphonySystem.ss''' file with the editor</li>
-	<li> Under ''Binding Sets-> Bindings List'', create the following ''Rotation Bindings'':</li>
+	<li> Under "''Binding Sets-> Bindings List''", create the following ''Rotation Bindings'':</li>
 </ol>
 
 {| border="1" cellpadding="2" style="margin-left: 30px; text-align:center;"

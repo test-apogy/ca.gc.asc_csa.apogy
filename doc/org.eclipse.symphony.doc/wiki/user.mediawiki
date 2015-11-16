@@ -83,11 +83,13 @@ __TOC__
 * Include a priori information about the area (e.g. Digital Elevation Maps (DEMs), orbital imagery, etc.);
 * Inherently generic concept that could be specialized as required (e.g. Earth surface);
 
-==== Surface Worksites ====
+==== Surface <i>Worksites</i> ====
 
 * Defines a ''Worksite'' that resides on the surface of a Celestial body (e.g. Earth)
 
 ===== Reference Frame =====
+
+TODO!
 
 ===== <i>Maps</i> =====
 
@@ -640,7 +642,7 @@ __TOC__
 ** ''Tools'' 3D representations (when applicable).
 
 * Displaying ''Data Products'':
-** All ''Data Products'' (marker + 3D representation are visible by default;
+** All ''Data Products'' (marker + 3D representation) are visible by default;
 ** Is ''Selection Listener'' for Data Products
 
 ==== <i>Node Presentation</i> ====

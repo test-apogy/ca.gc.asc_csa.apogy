@@ -27,7 +27,7 @@ import org.eclipse.symphony.core.Symphony__CorePackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CoreEnvironment' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)' modelName='Symphony__CoreEnvironment' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.core.environment/src-generated' editDirectory='/org.eclipse.symphony.core.environment.edit/src-generated' basePackage='org.eclipse.symphony.core'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CoreEnvironment' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)' modelName='Symphony__CoreEnvironment' complianceLevel='6.0' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.core.environment/src-generated' editDirectory='/org.eclipse.symphony.core.environment.edit/src-generated' basePackage='org.eclipse.symphony.core'"
  * @generated
  */
 public interface Symphony__CoreEnvironmentPackage extends EPackage
