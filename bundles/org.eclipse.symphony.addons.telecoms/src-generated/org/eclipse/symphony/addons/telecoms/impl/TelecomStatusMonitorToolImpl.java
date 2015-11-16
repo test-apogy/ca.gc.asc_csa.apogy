@@ -10,6 +10,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -608,6 +609,12 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 		// What the amount to sleep between checks should be
 		private static final int SLEEP_DURATION = 500;
 		
+		// What the offset in the timeout should be to wait for the 
+		private static final int TIMEOUT_OFFSET = 30;
+		
+		// What the packet line error string is
+		private static final String PACKET_LINE_ERROR_STR = "errors";
+		
 		// The node associated with this job
 		private final TelecomNode node;
 		
@@ -667,12 +674,29 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 					
 					try
 					{
-						// Create the process and wait for it to finish
-						Process pingProcess = pingPB.start();
-						pingProcess.waitFor();
+						// Determine the amount of time to wait before interrupting
+						long waitForTimeout = (node.getPacketsToSend() * node.getConnectionTimeout()) + TIMEOUT_OFFSET;
 						
-						// Extract the appropriate values from the ping process output
-						extractValuesFromPingOutput(pingProcess);
+						// Create the process
+						Process pingProcess = pingPB.start();
+												
+						// Wait for the process to complete
+						boolean finished = pingProcess.waitFor(waitForTimeout,
+															   TimeUnit.MILLISECONDS);
+						
+						// If it finished (i.e. didn't time out)
+						if (finished == true)
+						{
+							// Extract the appropriate values from the ping process output
+							extractValuesFromPingOutput(pingProcess);
+						}
+						// Otherwise, it didn't finish
+						else
+						{
+							// Indicate that it's unreachable
+							node.setLatency(0.0);
+							node.setPacketLoss(100.0);
+						}
 					}
 					catch (IOException ex)
 					{
@@ -832,13 +856,23 @@ public class TelecomStatusMonitorToolImpl extends MinimalEObjectImpl.Container i
 									{
 										// Indicate that it has now been processed
 										packetStatLineFound = true;
-									
+										
 										// Split the line up by commas to get the various components
 										String[] packetStats = line.split(",");
-									
+										
+										// Use the third component, which is the packet loss (%)
+										int packetLossStatIndex = 2;
+										
+										// If there was an error line in the output
+										if (line.contains(PACKET_LINE_ERROR_STR) == true)
+										{
+											// The packet loss in the fourth component instead
+											packetLossStatIndex = 3;
+										}
+										
 										// Use the third component, which is the packet loss (%)
 										// and trim the result
-										String packetLossStat = packetStats[2].trim();
+										String packetLossStat = packetStats[packetLossStatIndex].trim();
 										
 										// Split on the % character, and extract the first value,
 										// which will give me the packet loss as desired.
