@@ -9,6 +9,8 @@ __TOC__
 * A basic custom framework (''EMFInvocator'') defines the ''Type'', ''Variable'', ''Context'', ''Operation Call'', and ''Operation Call Result'' concepts;
 * Symphony specializes a few concepts defined in ''EMFInvocator'' and adds new ones: 3D representation, ''Assembly Links'', ''Connection Points'' and ''Data Product'' geo-referencing; 
 
+[[File:../resources/dev/symphony_arch.svg|frame]]
+
 === Type Interface Modeling ===
 
 * Recall, that a ''System'' is a specialized ''Type'', which's use forms much of the backbone of Symphony.
