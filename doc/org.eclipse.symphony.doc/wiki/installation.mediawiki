@@ -39,20 +39,21 @@ To install Eclipse platform, we highly recommend to use Eclipse Installer also k
 # The '''Workspace Launcher''' dialog will prompt.  Select the location of a new or an existing workspace.  The workspace will contain the information related to your Symphony session.
 == Install Eclipse Features==
 === Eclipse Mars Packages ===
-# Install the following packages: N/A.
+# Install the following packages:
+#* EMF - Eclipse Modeling Framework Xcore SDK
 === Sirius Packages ===
-# Add the Sirius P2 Site [[http://download.eclipse.org/sirius/updates/releases/3.1.1/mars|http://download.eclipse.org/sirius/updates/releases/3.1.1/mars]].
+# Add the '''Sirius''' P2 Site [[http://download.eclipse.org/sirius/updates/releases/3.1.1/mars|http://download.eclipse.org/sirius/updates/releases/3.1.1/mars]].
 # Install the following packages:
 #* Sirius/Sirius Core Runtime
 #* Sirius/Sirius Runtime Support for Acceleo 3
 === Orbit Packages ===
-# Add the Orbit P2 Site [[http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/|http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/]
+# Add the '''Orbit''' P2 Site [[http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/|http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/]
 # Install the following packages:
-#* Orbit Bundles By Name: org.apache.*/org.apache.commons.net
 #* Orbit Bundles By Name: org.apache.*/org.apache.commons.collections (Be careful select the one that is not the source plugin)
+#* Orbit Bundles By Name: org.apache.*/org.apache.commons.net
 #* Orbit Bundles By Name: org.apache.*/org.apache.commons.pool
 === Nebula Packages ===
-# Add the Orbit P2 Site [[http://download.eclipse.org/technology/nebula/snapshot|http://download.eclipse.org/technology/nebula/snapshot]
+# Add the '''Nebula''' P2 Site [[http://download.eclipse.org/technology/nebula/snapshot|http://download.eclipse.org/technology/nebula/snapshot]
 # Install the following packages:
 #* Nebula Release Individual Widgets/Nebula Gallery Widget
 == Install Symphony ==
@@ -60,9 +61,20 @@ Symphony is composed of a series of Eclipse features.  The following steps prese
 === Third-Party Packages ===
 # Clone Symphony Third-Party repository <pre>git clone https://<user>@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.ots.git</pre>
 # Create a directory to store a backup of pre-compiled Symphony Third-Party Packages.<pre>cd ~; mkdir tmp</pre>
-# Copy a release of '''csa_eclipse_public_repository''' from [http://liberty.speng.space.gc.ca/eclipse/repository/builds CSA Eclipse Repository]<pre>cp csa_eclipse_public_repository_0_3.tgz ~/tmp</pre>
-# Extract the content <pre>tar -xvf csa_eclipse_public_repository_0_3.tgz</pre>
-# Launch the Eclipse executable.<pre>cd $ECLIPSE_HOME&#10;./eclipse</pre>
+# Make a temporary copy of '''symphony_ots_repository'''.<pre>cp git/org.eclipse.symphony.ots/symphony_ots_repository_0_1.tar.gz ~/tmp</pre>
+# Extract the content <pre>cd ~/tmp; &#10;tar -xvf symphony_ots_repository_0_1.tar.gz</pre>
+# Launch the Eclipse executable.<pre>cd <ECLIPSE_HOME>&#10;./eclipse</pre>
 # Select the workspace location.
+# Add the '''Symphony Third-Party''' Local P2 Site.
+# Select and install all the packages.
 === Symphony Packages ===
 # Clone Symphony repository <pre>git clone https://<user>@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git</pre>
+== Misc ==
+=== ESA Orekit ===
+Few '''org.orekit''' fixes are not included in the Symphony Third-Party packages.  
+# Import '''org.orekit''' project into the workspace.
+=== NASA World Wind ===
+The current packaging requires few little steps to ensure proper execution of NASA World Wind packages.
+# Import '''gov.nasa.worldwind''' project into the workspace.
+# Got into '''gov.nasa.worldwind''' and extract from '''jars/gluegen-rt-natives-<native_platform>.jar''' and  '''jars/jogl-all-natives-<native_platform>.jar''' the dynamic libraries and set the destination to ~/.
+When you launch a session using '''NASA World Wind''', ensure the Working Directory is set to /home/<user_name> in the Arguments panel of the Launch Configuration Dialog.
