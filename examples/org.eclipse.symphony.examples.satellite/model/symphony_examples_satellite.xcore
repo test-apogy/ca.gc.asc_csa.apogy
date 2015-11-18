@@ -282,5 +282,3 @@ class SatelliteInitializationData extends AbstractInitializationData
 	
 	contains OrbitModel orbitModel		
 }
-
-
