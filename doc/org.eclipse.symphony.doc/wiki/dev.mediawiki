@@ -45,6 +45,8 @@ __TOC__
 * Method invocation is done through EMF reflection;
 * Actual invocation done through the invocator delegate, which in turn, delegates part of it to the ''SymphonySystemApiAdapter''.
 
+[[File:../resources/dev/operation_call_invocation.svg]]
+
 == Symphonyzing ==
 
 === Definition ===
