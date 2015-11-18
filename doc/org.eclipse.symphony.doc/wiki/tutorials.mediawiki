@@ -42,7 +42,7 @@ The following examples are currently available in Symphony:
 | ''org.eclipse.symphony.examples.robotic_arm''
 |-
 | '''''RoverSymphonySystem'''''
-| A simulated rover, which is a complex ''System'', composed of a ''Mobile Platform'', ''Robotic Arm'' and two ''Camera'' sub-''Systems''.
+| A simulated rover, which is a complex ''System'', composed of a ''Mobile Platform'', ''Robotic Arm'' and two ''Camera'' sub-<i>Systems</i>.
 | ''org.eclipse.symphony.examples.rover''
 |}
 
@@ -167,14 +167,21 @@ The following exercises are focused on the creating and fully setting up a ''Ses
 
 ===== Creating A Symphony <i>Session</i> =====
 
-# Right-click on the ''Project Explorer'' and select "''New > Project...''";
-# Select "''Symphony > New Symphony Project''" and click "''Next >''";
-# In the wizard that appears:
-#* Enter '''SymphonyTraining''' for the name of the new project ;
-#** Ensure that the "'''Import Registered Symphony Project'''" check box is '''not''' checked;
-#* Click "''Next >''";
-#* Uncheck all of the check boxes on the following screen;
-#* Enter '''MyFirstSession.sym''' for the name of the new ''Session''.
+<ol>
+	<li> Right-click on the ''Project Explorer'' and select "''New > Project...''";</li>
+	<li> Select "''Symphony > New Symphony Project''" and click "''Next >''";</li>
+	<li> In the wizard that appears:</li>
+	<ol type="i">
+		<li> Enter '''SymphonyTraining''' for the name of the new project;</li>
+		<ul>
+			<li> Ensure that the "'''Import Registered Symphony Project'''" check box is '''not''' checked;</li>
+		</ul>
+		<li> Click "''Next >''";</li>
+		<li> Uncheck all of the check boxes on the following screen;</li>
+		<li> Enter '''MyFirstSession.sym''' for the name of the new ''Session''.</li>
+		<li> Click "''Finish''";</li>
+	</ol>
+</ol>
 
 ===== Creating A <i>Worksite</i> =====
 
@@ -439,10 +446,11 @@ The following exercises investigate ''Operation Call Controller Bindings''.  By 
 The following exercises illustrated how to specify and use composite ''System''.  By the end of this session, one should be able to:
 
 * define an adhoc composite ''System''
-* invoke operations on a composite ''System'''s ''Type Members'' and ''Type Member'''s ''Features''
+* invoke operations on a composite ''System'''s ''Type Members'' as well as on the ''Type Member'''s ''Features''
 
 ===== The Target Assembly =====
 
+[PTU_Topology.vsd]
 TODO!
 
 ===== Defining A Composite <i>System</i> =====
@@ -506,11 +514,14 @@ TODO!
 # Create a call named '''Power On''' to operation '''turnOn'''() on '''myAssembly:rover.powerSystem''';
 # Invoke ''Power On''. 
 
-==== Setting Up & Using The <i>Camera View</i> ====
+==== Setting Up & Using the <i>Camera View</i> ====
 
-The goal of this exercise is to understand how the ''Camera View'' operates and how to use to it.  In particular,  
+The goal of the following exercises is to understand how the ''Camera View'' operates and learn how to use to it.  By the end of this session, one should be able to:
 
-===== Configuring A <i>Camera View</i> =====
+* configure the ''Camera View''
+* add ''Overlays'' to the ''Camera View''
+
+===== Configuring the <i>Camera View</i> =====
 
 # Create a ''Camera Configurations List'' under ''Tools'';
 # Create a ''Camera Configuration'' named '''myCameraViewConfig''';
@@ -537,6 +548,11 @@ The goal of this exercise is to understand how the ''Camera View'' operates and 
 
 ==== Setting Up & Using The <i>Map View</i> ====
 
+The following exercises demonstrate how the ''Map View'' operates and how it is used.  By the end of this section, one should be able to:
+
+* configure the ''Map View'' to display the ''Environment''
+* display ''Variables'' in the ''Map View'' 
+
 ===== Displaying The <i>Environment</i> =====
 
 # Create a ''Map View Configuration List'' under ''Tools'';
@@ -560,14 +576,28 @@ The goal of this exercise is to understand how the ''Camera View'' operates and 
 
 ----
 
-=== Creating & Symphonyzing your own Pan-Tilt Unit (PTU) Camera <i>System</i> ===
+=== Creating & Symphonyzing A Pan-Tilt Unit (PTU) Camera <i>System</i> ===
+
+The following exercises go step-by-step through the process of creating a ''System'' for a camera mounted on a pan-tilt unit (PTU).  Through the process of creating the final '''''PTUCamera''''' ''System'', one should learn how to:
+
+* Create the Eclipse Modeling Framework (EMF) Model for the ''System''
+* Create the Symphony plug-in and required specialized subclasses
+* Create the appropriate ''Symphony System Model'' and register it with Symphony 
+* Test the ''System'' throughout the development process 
 
 ==== An Overview Of The Desired <i>System</i> ====
+
 TODO!
 
-==== 1. Creating the PTU Camera's EMF Meta-Model ====
+==== 1. Creating The <i>PTUCamera</i>'s EMF Meta-Model ====
 
-===== i. Creating The Camera's EMF Model =====
+The following exercises go through the process of creating the required EMF meta-model for the new ''PTUCamera'' System.  By the end of this section, one should be able to:
+
+* create the EMF meta-model for a given ''System'';
+* implement / override the required methods in the ''System'''s generated code;
+* test the fully implemented ''System''.
+
+===== i. Creating The <i>PTUCamera</i>'s EMF Model =====
 
 <ol>
 	<li> Create a new ''Xcore Project'' named '''<org_prefix>.ptu''', where ''<org_prefix>'' is replaced by an appropriate prefix for your organization.</li>
@@ -698,9 +728,15 @@ TODO!
 # Under ''ptuCmd'', create an ''Operation Call'' named '''SnapShot''' referencing '''ptuCamera.takeSnapshot'''()
 # Invoke the '''SnapShot''' ''Operation Call'' and verify that the command has been executed.
 
-==== 2. Creating the PTU Camera's Symphony Plugin ====
+==== 2. Creating the <i>PTUCamera</i>'s Symphony Plug-in ====
 
-===== i. Creating The Camera's Plugin Project =====
+The following exercises focus on creating the Symphony plugin for the new ''PTUCamera'' ''System''.  By the end of this section, one should be able to:
+
+* Create Symphony plug-in projects
+* Develop Symphony EMF meta-model for a ''System''
+* Specialize both ''SymphonyInitializationData'' and ''SymphonySystemApiAdapter'' classes for a given ''System''
+
+===== i. Creating The <i>PTUCamera</i>'s Plug-in Project =====
 
 <ol>
 	<li> Create a new ''Xcore Project'' named '''<org_prefix>.ptu.symphony''';</li>
@@ -713,7 +749,7 @@ TODO!
 	<li> Save the '''MANIFEST.MF'''</li>
 </ol>
 
-===== ii. Developing the Camera's Symphony Xcore (.xcore) model =====
+===== ii. Developing the <i>PTUCamera</i>'s Symphony Xcore (.xcore) model =====
 
 <ol>
 	<li> Rename the '''/src-gen''' folder to '''/src-generated''';</li>
@@ -725,7 +761,7 @@ TODO!
 	</ol>
 </ol>
 
-===== iii. Specializing <i>SymphonyInitializationData</i> for the Camera =====
+===== iii. Specializing <i>SymphonyInitializationData</i> for the <i>PTUCamera</i> =====
 
 <ol>
 	<li> Open the '''ptu_symphony.xcore''' model;</li>
@@ -739,7 +775,7 @@ TODO!
 	<li> Save the '''ptu_symphony.xcore''' model.</li>
 </ol>
 
-===== iv. Specializing <i>SymphonySystemApiAdapter</i> for the Camera =====
+===== iv. Specializing <i>SymphonySystemApiAdapter</i> for the <i>PTUCamera</i> =====
 
 # Open the '''ptu_symphony.xcore''' model;
 # Define a new class named '''''PTUCameraSymphonySystemApiAdapter''''' that extends ''SymphonySystemApiAdapter''';
@@ -768,9 +804,16 @@ TODO!
 | See the code provided.
 |}
 
-==== 3. Creating the PTU Camera's Complete <i>Symphony System Model</i> ====
+==== 3. Creating the <i>PTUCamera</i>'s Complete <i>Symphony System</i> Model ====
 
-===== i.Creating the Camera's <i>Symphony System Model</i> (.ss file) =====
+The following exercises highlight how to create the ''PTUCamera'' System's complete ''Symphony System'' model.  By the end of this section, one should be able to:
+ 
+* Create a ''Symphony System'' model (.ss file)
+* Specify the topology for a new ''Symphony System'' model
+* Create the bindings for a new ''Symphony System'' model
+* Register the new ''Symphony System'' model with Symphony 
+
+===== i.Creating the <i>PTUCamera</i>'s <i>Symphony System</i> Model (.ss file) =====
 
 # Launch the ''Run Configuration'' used for testing ''PTUCamera'' in the previous exercises;
 # In the ''Project Explorer'', right click and then select "''Import...''";
@@ -783,8 +826,13 @@ TODO!
 # Set the ''Type Api Adapter Class'' to '''<org_prefix>.ptu.symphony.PTUCameraSymphonySystemApiAdapter''';
 # Save the model (*.ss) file.
 
-===== ii. Specifying the Camera's Topology =====
+===== ii. Specifying the Topology for the <i>PTUCamera</i>'s <i>Symphony System</i> Model=====
 
+The following exercises show how to specify the topology for the ''PTUCamera'''s ''Symphony System'' model.  By the end of this section, one should be able to: 
+
+* Create any required subdirectories (and populate them)
+* Generate a topology to reflect a given target hierarchy
+ 
 ====== Target Topology Hierarchy ======
 
 The desired final topology for ''MyPTUCameraSymphonySystem'' should be as follows:
