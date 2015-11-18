@@ -118,6 +118,8 @@ Symphonizing Guidelines:
 
 ===== Recommended Class Hierarchy =====
 
+[[File:../resources/dev/recommended_class_hierarchy.svg]]
+
 <ol>
 	<li> Define an abstract class (''A'') representing your ''System''; this includes:</li>
 	<ol type="i">
@@ -126,28 +128,25 @@ Symphonizing Guidelines:
 		<li> Defining all methods as well as their parameters and return values; this may involve specifying additional classes.</li>
 	</ol> 
 	<li> Define a concrete ''AStub'' class that extends ''A''.  The methods for this implementation do nothing.  This class can be used in Symphony when playing data back.</li>
-	<li> Definte a concrete ''ASimulated'' class that extends ''A''. This implementation provides a simulated ''A'' for Symphony.</li>
+	<li> Define a concrete ''ASimulated'' class that extends ''A''. This implementation provides a simulated ''A'' for Symphony.</li>
 	<li> Define a concrete ''AReal'' class that extends ''A''.  This implementation provides an interface to the real (physical) system.</li>
 </ol>
-
-TODO! 
 
 ==== 2. Creating the Symphony plugin ====
 
 ===== Definition =====
 
-* The '''Symphony plugin''':
-** Is an EMF plugin (includes an Xcore file);
-** Defines the ''SymphonyInitializationData'' used to save and initialize your ''System''; it captures the state of the ''System'';
-** Allows for the definition of a ''SymphonySystemApiAdapter'', customizing the invocation of ''System'' commands 
+The '''Symphony plugin''' is an EMF (typically Xcore) plugin, which contains the required meta-model to specify the ''System'''s interface with Symphony.
+
+It typically defines a specialization of ''SymphonyInitializationData''; this allows Symphony to be able to both capture as well as restore the specific state of the ''System'', which is useful in a variety of circumstances.  The ''SymphonySystemApiAdapter'' is also typically subclassed, allowing one to customize the invocation of the ''System'''s operations.     
 
 ===== The Four Steps to making a Symphony Plugin =====
 
-* Creating the Symphony plugin involves four (4) steps:
-*# Creating the plugin;
-*# Creating an Xcore model;
-*# Defining a sub-class of ''SymphonyInitializationData'';
-*# Defining a sub-class of ''SymphonySystemApiAdapter''.
+Creating the Symphony plugin involves four (4) steps:
+# Creating the plugin;
+# Creating an Xcore model;
+# Defining a sub-class of ''SymphonyInitializationData'';
+# Defining a sub-class of ''SymphonySystemApiAdapter''.
 
 ====== i. Creating the Symphony Plugin Itself ======
 TODO!
