@@ -59,7 +59,7 @@ public class GeographicalCoordinatesToPositionConverter implements IConverter{
 		EarthSurfaceWorksite earthSurfaceWorksite = null;
 		EObject container = coordinates.eContainer();
 		
-		while(earthSurfaceWorksite == null && container != null)
+		while (earthSurfaceWorksite == null && container != null)
 		{
 			if(container instanceof EarthSurfaceWorksite)
 			{
@@ -68,12 +68,18 @@ public class GeographicalCoordinatesToPositionConverter implements IConverter{
 			else if(container instanceof InvocatorSession)
 			{
 				InvocatorSession session = (InvocatorSession) container;
+				
 				if(session.getEnvironment() instanceof SymphonyEnvironment)
 				{
 					SymphonyEnvironment se = (SymphonyEnvironment) session.getEnvironment();
-					if(se.getActiveWorksite() instanceof EarthSurfaceWorksite)
+					
+					if (se.getActiveWorksite() instanceof EarthSurfaceWorksite)
 					{
 						earthSurfaceWorksite = (EarthSurfaceWorksite) se.getActiveWorksite();
+					}
+					else
+					{
+						break;
 					}
 				}
 			}
