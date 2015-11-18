@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.symphony.core.invocator.sessionProvider">
+      <SessionProvider
+            Description="Session showing the use of the satellite example system."
+            Name="Satellite Example"
+            URI="model/satellite.sym">
+      </SessionProvider>
+   </extension>
+
+</plugin>
