@@ -38,4 +38,11 @@
             class="org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorResourceFactoryImpl"/>
    </extension>
 
-null</plugin>
+   <extension
+   		point="org.eclipse.symphony.core.invocator.invocatorDelegate">
+   		<element
+   			invocatorDelegateClass="org.eclipse.symphony.core.invocator.delegates.DefaultInvocatorDelegate">
+   		</element>
+   	</extension>
+   
+</plugin>
