@@ -295,6 +295,7 @@
 		<module>../../examples/org.eclipse.symphony.examples.satellite</module>
 		<module>../../examples/org.eclipse.symphony.examples.satellite.edit</module>
 		<module>../../examples/org.eclipse.symphony.examples.satellite.ui</module>
+		<module>../../examples/org.eclipse.symphony.examples.satellite.symphony</module>
 		
 		<module>../../examples/org.eclipse.symphony.examples.ui</module>
 		

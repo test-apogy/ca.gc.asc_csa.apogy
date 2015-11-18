@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invocator:InvocatorSession xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="org.eclipse.symphony.core" xmlns:earth="org.eclipse.symphony.core.environment.orbit.earth" xmlns:emf="org.eclipse.symphony.common.emf" xmlns:invocator="org.eclipse.symphony.core.invocator" xmlns:orbit="org.eclipse.symphony.core.environment.orbit" xmlns:ui="org.eclipse.symphony.core.environment.orbit.earth.ui" xmi:id="_On3JAI4JEeWbwNa_8hc7iw">
+  <environment xsi:type="core:SymphonyEnvironment" xmi:id="_On-dwI4JEeWbwNa_8hc7iw" activeContext="_RE1fwI4fEeWmzZ4Jc4-8vw" time="2015-11-18T11:25:01.728-0500" activeWorksite="_Zid1YI4JEeWbwNa_8hc7iw" activeTimeSource="_6jgwQI4QEeWOgeEX6Jo11w">
+    <typesList xmi:id="_On-dwY4JEeWbwNa_8hc7iw">
+      <localTypes xmi:id="_XtiUEI4JEeWbwNa_8hc7iw"/>
+      <registeredTypes xmi:id="_OwFQ4I4JEeWbwNa_8hc7iw"/>
+    </typesList>
+    <variablesList xmi:id="_On-dwo4JEeWbwNa_8hc7iw">
+      <variables xmi:id="_5e_34I4TEeWOgeEX6Jo11w" name="SatConstellation">
+        <variableType href="platform:/plugin/org.eclipse.symphony.examples.satellite/model/SatelliteConstellationExample.ei#/"/>
+      </variables>
+    </variablesList>
+    <contextsList xmi:id="_On-dw44JEeWbwNa_8hc7iw">
+      <contexts xsi:type="invocator:BasicContext" xmi:id="_RE1fwI4fEeWmzZ4Jc4-8vw" name="Default" dataProductsList="_On-dyY4JEeWbwNa_8hc7iw">
+        <variableImplementationsList xmi:id="_RGUtgI4fEeWmzZ4Jc4-8vw">
+          <variableImplementations xmi:id="_RGUtgY4fEeWmzZ4Jc4-8vw" variable="_5e_34I4TEeWOgeEX6Jo11w">
+            <implementationClass href="org.eclipse.symphony.examples.satellite#//SatelliteConstellation"/>
+          </variableImplementations>
+        </variableImplementationsList>
+      </contexts>
+    </contextsList>
+    <worksitesList xmi:id="_On-dxY4JEeWbwNa_8hc7iw">
+      <worksites xsi:type="earth:EarthOrbitWorksite" xmi:id="_Zid1YI4JEeWbwNa_8hc7iw" name="Earth Orbit Worksite Sample">
+        <earthLocations xmi:id="_foc00I4MEeWzN6EhyDyLVg" name="Surface Location Samples">
+          <earthSurfaceLocations xmi:id="_ir-QMI4MEeWzN6EhyDyLVg" name="Calgary">
+            <geographicalCoordinates xmi:id="_i3kcMI4MEeWzN6EhyDyLVg" longitude="-1.7453292519943295" latitude="0.8203047484373349" elevation="1000.0"/>
+          </earthSurfaceLocations>
+          <earthSurfaceLocations xmi:id="_jOZAwI4MEeWzN6EhyDyLVg" name="Fort McMurray">
+            <geographicalCoordinates xmi:id="_jOixwI4MEeWzN6EhyDyLVg" longitude="-1.9441877385500186" latitude="0.9901942426151294"/>
+          </earthSurfaceLocations>
+          <earthSurfaceLocations xsi:type="earth:GroundStation" xmi:id="_jouzYI4MEeWzN6EhyDyLVg" name="CSA">
+            <geographicalCoordinates xmi:id="_jo9c4I4MEeWzN6EhyDyLVg" longitude="-1.2809614359682817" latitude="0.7944677319488519"/>
+            <elevationMask xsi:type="earth:ConstantElevationMask" xmi:id="_MYNdwI4NEeWNXufGl-1rDQ" constantElevation="0.17453292519943295"/>
+          </earthSurfaceLocations>
+          <earthSurfaceLocations xsi:type="earth:GroundStation" xmi:id="_kB3FEI4MEeWzN6EhyDyLVg" name="ESA HQ">
+            <geographicalCoordinates xmi:id="_kB_A4I4MEeWzN6EhyDyLVg" longitude="0.04021762195370534" latitude="0.8525607717553878"/>
+            <elevationMask xsi:type="earth:ConstantElevationMask" xmi:id="_M9_EUI4NEeWNXufGl-1rDQ" constantElevation="0.17453292519943295"/>
+          </earthSurfaceLocations>
+        </earthLocations>
+      </worksites>
+      <orbitsModels xmi:id="_O5azEI4JEeWbwNa_8hc7iw">
+        <orbitModels xsi:type="orbit:OrbitModel" xmi:id="_YxedUI4JEeWbwNa_8hc7iw" name="Sat1">
+          <initialOrbit xsi:type="earth:KeplerianEarthOrbit" xmi:id="_DFnbkI4OEeWNXufGl-1rDQ" name="Sat1 Keplerian Orbit Model" time="2015-01-01T00:00:01.000-0500" semiMajorAxis="8378000.0" eccentricity="0.02" inclination="98.0" perigeeArgument="89.99935102245702" rightAscentionOfAscendingNode="180.0"/>
+          <propagator xsi:type="earth:KeplerianEarthOrbitPropagator" xmi:id="_QY854I4OEeWNXufGl-1rDQ" name="Sat1 Keplerian Orbit Propagator" initialOrbit="_DFnbkI4OEeWNXufGl-1rDQ"/>
+        </orbitModels>
+        <orbitModels xsi:type="orbit:OrbitModel" xmi:id="_2U7XUI4NEeWNXufGl-1rDQ" name="Sat2">
+          <initialOrbit xsi:type="earth:KeplerianEarthOrbit" xmi:id="_cNdCsI4OEeWNXufGl-1rDQ" name="Sat2 Keplerian Orbit Model" time="2015-01-01T00:00:01.000-0500" semiMajorAxis="8378000.0" eccentricity="0.02" inclination="45.0" perigeeArgument="89.99935102245702" rightAscentionOfAscendingNode="90.0"/>
+          <propagator xsi:type="earth:KeplerianEarthOrbitPropagator" xmi:id="_i566sI4OEeWNXufGl-1rDQ" name="Sat2 Keplerian Orbit Propagator" initialOrbit="_cNdCsI4OEeWNXufGl-1rDQ"/>
+        </orbitModels>
+        <orbitModels xsi:type="orbit:OrbitModel" xmi:id="_3ZgZwI4NEeWNXufGl-1rDQ" name="Radarsat 2">
+          <initialOrbit xsi:type="earth:KeplerianEarthOrbit" xmi:id="_pkvM4I4OEeWNXufGl-1rDQ" name="Radarsat 2 Keplerian Orbit" time="2014-03-22T08:48:36.000-0400" semiMajorAxis="7176070.0" eccentricity="0.001251477" inclination="98.574" perigeeArgument="80.728" rightAscentionOfAscendingNode="90.303" meanAnomaly="31.2132"/>
+          <propagator xsi:type="earth:KeplerianEarthOrbitPropagator" xmi:id="_qDx5UI4OEeWNXufGl-1rDQ" name="" initialOrbit="_pkvM4I4OEeWNXufGl-1rDQ"/>
+        </orbitModels>
+        <orbitModels xsi:type="orbit:OrbitModel" xmi:id="_30XJwI4NEeWNXufGl-1rDQ" name="Radarsat 2 (TLE)">
+          <propagator xsi:type="earth:TLEEarthOrbitPropagator" xmi:id="_9yRdMI4OEeWNXufGl-1rDQ" name="Radarsat 2 TLE Propagator" validFromDate="2014-03-22T08:48:36.871-0400" validToDate="2014-03-23T08:48:36.871-0400"/>
+        </orbitModels>
+      </orbitsModels>
+    </worksitesList>
+    <timeSourcesList xmi:id="_On-dxo4JEeWbwNa_8hc7iw">
+      <timeSources xsi:type="emf:CurrentTimeSource" xmi:id="_6jgwQI4QEeWOgeEX6Jo11w" time="2015-11-18T11:25:01.728-0500"/>
+      <timeSources xsi:type="emf:FixedTimeSource" xmi:id="_8XtRwI4QEeWOgeEX6Jo11w" time="2015-02-19T16:41:00.000-0500"/>
+    </timeSourcesList>
+  </environment>
+  <programsList xmi:id="_On-dx44JEeWbwNa_8hc7iw">
+    <programs xsi:type="invocator:OperationCallsList" xmi:id="_9SA2gI4TEeWOgeEX6Jo11w">
+      <operationCalls xmi:id="_99RaAI4TEeWOgeEX6Jo11w" name="test" variable="_5e_34I4TEeWOgeEX6Jo11w">
+        <eOperation href="org.eclipse.symphony.examples.satellite#//SatelliteConstellation/getGroundStationPasses"/>
+        <argumentsList xmi:id="_PTrsMI4UEeWOgeEX6Jo11w">
+          <arguments xsi:type="invocator:EClassArgument" xmi:id="_PTrsMY4UEeWOgeEX6Jo11w"/>
+          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_PTrsMo4UEeWOgeEX6Jo11w"/>
+          <arguments xsi:type="invocator:EDataTypeArgument" xmi:id="_PTrsM44UEeWOgeEX6Jo11w"/>
+          <arguments xsi:type="invocator:EClassArgument" xmi:id="_PTrsNI4UEeWOgeEX6Jo11w"/>
+        </argumentsList>
+      </operationCalls>
+    </programs>
+  </programsList>
+  <dataProductsListContainer xmi:id="_On-dyI4JEeWbwNa_8hc7iw">
+    <dataProductsList xmi:id="_On-dyY4JEeWbwNa_8hc7iw">
+      <operationCallResultsList xmi:id="_On-dyo4JEeWbwNa_8hc7iw" name="Default"/>
+    </dataProductsList>
+  </dataProductsListContainer>
+  <toolsList xmi:id="_On-dy44JEeWbwNa_8hc7iw">
+    <toolsListContainers xsi:type="ui:EarthViewConfigurationList" xmi:id="_IyzLYI4PEeWNXufGl-1rDQ">
+      <earthViewConfigurations xmi:id="_J5MywI4PEeWNXufGl-1rDQ" name="Default">
+        <layers xsi:type="ui:GroundStationWorldWindLayer" xmi:id="_P5qgYI4PEeWNXufGl-1rDQ" autoUpdateEnabled="true" groundStation="_jouzYI4MEeWzN6EhyDyLVg" referenceAltitude="787.0"/>
+        <layers xsi:type="ui:GroundStationWorldWindLayer" xmi:id="_mhM4gI4QEeWOgeEX6Jo11w" autoUpdateEnabled="true" groundStation="_kB3FEI4MEeWzN6EhyDyLVg"/>
+        <layers xsi:type="ui:EarthSurfaceLocationWorldWindLayer" xmi:id="_rX4TkI4QEeWOgeEX6Jo11w" autoUpdateEnabled="true" earthSurfaceLocation="_jOZAwI4MEeWzN6EhyDyLVg"/>
+        <layers xsi:type="ui:EarthSurfaceLocationWorldWindLayer" xmi:id="_tWOPkI4QEeWOgeEX6Jo11w" autoUpdateEnabled="true" visible="false" earthSurfaceLocation="_ir-QMI4MEeWzN6EhyDyLVg"/>
+        <layers xsi:type="ui:SpacecraftLocationWorldWindLayer" xmi:id="_x6RCgI4QEeWOgeEX6Jo11w" name="Radarsat 2" orbitModel="_3ZgZwI4NEeWNXufGl-1rDQ" timeSource="_6jgwQI4QEeWOgeEX6Jo11w"/>
+        <layers xsi:type="ui:OrbitModelWorldWindLayer" xmi:id="_Ekee4I4REeWOgeEX6Jo11w" orbitModel="_3ZgZwI4NEeWNXufGl-1rDQ" timeSource="_8XtRwI4QEeWOgeEX6Jo11w" forwardPropagationDuration="1800.0" backwardPropagationDuration="1800.0"/>
+        <layers xsi:type="ui:SpacecraftSwathWorldWindLayer" xmi:id="_NnHkEI4REeWOgeEX6Jo11w" autoUpdateEnabled="true" orbitModel="_3ZgZwI4NEeWNXufGl-1rDQ" timeSource="_8XtRwI4QEeWOgeEX6Jo11w" forwardPropagationDuration="4800.0" backwardPropagationDuration="300.0" timeInterval="20.0" leftSwathAngle="-0.06981317007977318" rightSwathAngle="0.17453292519943295">
+          <forwardSpacecraftSwathCorridor xmi:id="_twGxYI4fEeWmzZ4Jc4-8vw" startTime="2015-02-19T16:41:00.000-0500" endTime="2015-02-19T18:01:00.000-0500" timeInterval="20.0" orbitModel="_3ZgZwI4NEeWNXufGl-1rDQ" leftSwathAngle="-0.06981317007977318" rightSwathAngle="0.17453292519943295">
+            <corridor xmi:id="_twGxYY4fEeWmzZ4Jc4-8vw">
+              <points xmi:id="_twGxYo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:41:16.000-0500">
+                <left xmi:id="_twGxY44fEeWmzZ4Jc4-8vw" longitude="0.03023978149450323" latitude="-0.6233318457514937"/>
+                <center xmi:id="_twGxZI4fEeWmzZ4Jc4-8vw" longitude="0.03986187768519545" latitude="-0.6274797484592655"/>
+                <right xmi:id="_twGxZY4fEeWmzZ4Jc4-8vw" longitude="0.0156709246742568" latitude="-0.6169199391012538"/>
+              </points>
+              <points xmi:id="_twGxZo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:41:36.000-0500">
+                <left xmi:id="_twGxZ44fEeWmzZ4Jc4-8vw" longitude="0.016609286268405583" latitude="-0.6416568655491165"/>
+                <center xmi:id="_twGxaI4fEeWmzZ4Jc4-8vw" longitude="0.02633077461400142" latitude="-0.6458636223600229"/>
+                <right xmi:id="_twGxaY4fEeWmzZ4Jc4-8vw" longitude="0.0018960167568981782" latitude="-0.635152492189103"/>
+              </points>
+              <points xmi:id="_twGxao4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:41:56.000-0500">
+                <left xmi:id="_twGxa44fEeWmzZ4Jc4-8vw" longitude="0.002640910013627557" latitude="-0.6599017870592637"/>
+                <center xmi:id="_twGxbI4fEeWmzZ4Jc4-8vw" longitude="0.012464687068246579" latitude="-0.6641702082599599"/>
+                <right xmi:id="_twGxbY4fEeWmzZ4Jc4-8vw" longitude="-0.012220721834036694" latitude="-0.6533006745199552"/>
+              </points>
+              <points xmi:id="_twGxbo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:42:16.000-0500">
+                <left xmi:id="_twGxb44fEeWmzZ4Jc4-8vw" longitude="-0.011686536575419895" latitude="-0.6780616264495395"/>
+                <center xmi:id="_twGxcI4fEeWmzZ4Jc4-8vw" longitude="-0.0017577008065957141" latitude="-0.6823946361872715"/>
+                <right xmi:id="_twGxcY4fEeWmzZ4Jc4-8vw" longitude="-0.026700251393888378" latitude="-0.6713593348442949"/>
+              </points>
+              <points xmi:id="_twGxco4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:42:36.000-0500">
+                <left xmi:id="_twGxc44fEeWmzZ4Jc4-8vw" longitude="-0.026395618123198093" latitude="-0.6961310388082438"/>
+                <center xmi:id="_twGxdI4fEeWmzZ4Jc4-8vw" longitude="-0.016359113765055822" latitude="-0.700531680442304"/>
+                <right xmi:id="_twGxdY4fEeWmzZ4Jc4-8vw" longitude="-0.041564854059562645" latitude="-0.6893229536470394"/>
+              </points>
+              <points xmi:id="_twGxdo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:42:56.000-0500">
+                <left xmi:id="_twGxd44fEeWmzZ4Jc4-8vw" longitude="-0.04151037789502832" latitude="-0.7141042836181051"/>
+                <center xmi:id="_twGxeI4fEeWmzZ4Jc4-8vw" longitude="-0.03136379476273025" latitude="-0.7185757249930284"/>
+                <right xmi:id="_twGxeY4fEeWmzZ4Jc4-8vw" longitude="-0.05683822803224204" latitude="-0.7071856088635934"/>
+              </points>
+              <points xmi:id="_twGxeo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:43:16.000-0500">
+                <left xmi:id="_twGxe44fEeWmzZ4Jc4-8vw" longitude="-0.05705644709153659" latitude="-0.7319751867909454"/>
+                <center xmi:id="_twGxfI4fEeWmzZ4Jc4-8vw" longitude="-0.0467976211848988" latitude="-0.7365207253414278"/>
+                <right xmi:id="_twGxfY4fEeWmzZ4Jc4-8vw" longitude="-0.07254558637845494" latitude="-0.7249409383075378"/>
+              </points>
+              <points xmi:id="_twGxfo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:43:36.000-0500">
+                <left xmi:id="_twGxf44fEeWmzZ4Jc4-8vw" longitude="-0.07306115984917368" latitude="-0.7497370988953459"/>
+                <center xmi:id="_twGxgI4fEeWmzZ4Jc4-8vw" longitude="-0.06268822787834358" latitude="-0.7543601664686407"/>
+                <right xmi:id="_twGxgY4fEeWmzZ4Jc4-8vw" longitude="-0.08871375994772404" latitude="-0.7425820984796284"/>
+              </points>
+              <points xmi:id="_twGxgo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:43:56.000-0500">
+                <left xmi:id="_twGxg44fEeWmzZ4Jc4-8vw" longitude="-0.08955367352715995" latitude="-0.7673828492838515"/>
+                <center xmi:id="_twGxhI4fEeWmzZ4Jc4-8vw" longitude="-0.07906513672487189" latitude="-0.7720870165363602"/>
+                <right xmi:id="_twGxhY4fEeWmzZ4Jc4-8vw" longitude="-0.10537130377271436" latitude="-0.7601017195093192"/>
+              </points>
+              <points xmi:id="_twGxho4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:44:16.000-0500">
+                <left xmi:id="_twGxh44fEeWmzZ4Jc4-8vw" longitude="-0.10656509344399043" latitude="-0.7849046956621465"/>
+                <center xmi:id="_twGxiI4fEeWmzZ4Jc4-8vw" longitude="-0.09595989209554434" latitude="-0.7896936758510592"/>
+                <right xmi:id="_twGxiY4fEeWmzZ4Jc4-8vw" longitude="-0.12254860588052383" latitude="-0.7774918558258705"/>
+              </points>
+              <points xmi:id="_twGxio4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:44:36.000-0500">
+                <left xmi:id="_twGxi44fEeWmzZ4Jc4-8vw" longitude="-0.12412860095911825" latitude="-0.8022942687863205"/>
+                <center xmi:id="_twGxjI4fEeWmzZ4Jc4-8vw" longitude="-0.11340620127197013" latitude="-0.8071719207346313"/>
+                <right xmi:id="_twGxjY4fEeWmzZ4Jc4-8vw" longitude="-0.14027799716179837" latitude="-0.7947439323092884"/>
+              </points>
+              <points xmi:id="_twGxjo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:44:56.000-0500">
+                <left xmi:id="_twGxj44fEeWmzZ4Jc4-8vw" longitude="-0.14227958315019323" latitude="-0.8195425118050864"/>
+                <center xmi:id="_twGxkI4fEeWmzZ4Jc4-8vw" longitude="-0.13144007829026264" latitude="-0.8245128417664307"/>
+                <right xmi:id="_twGxkY4fEeWmzZ4Jc4-8vw" longitude="-0.15859386028712893" latitude="-0.8118486855154222"/>
+              </points>
+              <points xmi:id="_twGxko4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:45:16.000-0500">
+                <left xmi:id="_twGxk44fEeWmzZ4Jc4-8vw" longitude="-0.16105576182817619" latitude="-0.8366396139327469"/>
+                <center xmi:id="_twGxlI4fEeWmzZ4Jc4-8vw" longitude="-0.150099989162851" latitude="-0.8417067760213705"/>
+                <right xmi:id="_twGxlY4fEeWmzZ4Jc4-8vw" longitude="-0.17753273515216034" latitude="-0.8287960997512472"/>
+              </points>
+              <points xmi:id="_twGxlo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:45:36.000-0500">
+                <left xmi:id="_twGxl44fEeWmzZ4Jc4-8vw" longitude="-0.1804973186374231" latitude="-0.85357493797421"/>
+                <center xmi:id="_twGxmI4fEeWmzZ4Jc4-8vw" longitude="-0.16942699544018958" latitude="-0.8587432327518151"/>
+                <right xmi:id="_twGxmY4fEeWmzZ4Jc4-8vw" longitude="-0.19713341734828418" latitude="-0.845575337629066"/>
+              </points>
+              <points xmi:id="_twGxmo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:45:56.000-0500">
+                <left xmi:id="_twGxm44fEeWmzZ4Jc4-8vw" longitude="-0.2006470121311439" latitude="-0.870336941457995"/>
+                <center xmi:id="_twGxnI4fEeWmzZ4Jc4-8vw" longitude="-0.1894648922048668" latitude="-0.8756108121836085"/>
+                <right xmi:id="_twGxnY4fEeWmzZ4Jc4-8vw" longitude="-0.2174370453340671" latitude="-0.8621746649789005"/>
+              </points>
+              <points xmi:id="_twGxno4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:46:16.000-0500">
+                <left xmi:id="_twGxn44fEeWmzZ4Jc4-8vw" longitude="-0.22155028125211473" latitude="-0.8869130910314312"/>
+                <center xmi:id="_twGxoI4fEeWmzZ4Jc4-8vw" longitude="-0.21026033510115372" latitude="-0.8922971169794862"/>
+                <right xmi:id="_twGxoY4fEeWmzZ4Jc4-8vw" longitude="-0.23848717058326263" latitude="-0.8785813699168986"/>
+              </points>
+              <points xmi:id="_twGxoo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:46:36.000-0500">
+                <left xmi:id="_twGxo44fEeWmzZ4Jc4-8vw" longitude="-0.243255328178846" latitude="-0.9032897700090702"/>
+                <center xmi:id="_twGxpI4fEeWmzZ4Jc4-8vw" longitude="-0.23186294947551797" latitude="-0.9087886561450663"/>
+                <right xmi:id="_twGxpY4fEeWmzZ4Jc4-8vw" longitude="-0.26032980362130637" latitude="-0.8947816761229193"/>
+              </points>
+              <points xmi:id="_twGxpo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:46:56.000-0500">
+                <left xmi:id="_twGxp44fEeWmzZ4Jc4-8vw" longitude="-0.2658131714431818" latitude="-0.9194521790291398"/>
+                <center xmi:id="_twGxqI4fEeWmzZ4Jc4-8vw" longitude="-0.2543254125552146" latitude="-0.925070741199705"/>
+                <right xmi:id="_twGxqY4fEeWmzZ4Jc4-8vw" longitude="-0.2830134269685391" latitude="-0.9107606504645605"/>
+              </points>
+              <points xmi:id="_twGxqo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:47:16.000-0500">
+                <left xmi:id="_twGxq44fEeWmzZ4Jc4-8vw" longitude="-0.2892776580221611" latitude="-0.9353842301221981"/>
+                <center xmi:id="_twGxrI4fEeWmzZ4Jc4-8vw" longitude="-0.27770349724131205" latitude="-0.9411273747689454"/>
+                <right xmi:id="_twGxrY4fEeWmzZ4Jc4-8vw" longitude="-0.3065889640438654" latitude="-0.9265021054703728"/>
+              </points>
+              <points xmi:id="_twGxro4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:47:36.000-0500">
+                <left xmi:id="_twGxr44fEeWmzZ4Jc4-8vw" longitude="-0.31370542018361447" latitude="-0.9510684346909064"/>
+                <center xmi:id="_twGxsI4fEeWmzZ4Jc4-8vw" longitude="-0.3020560629533221" latitude="-0.9569411319355736"/>
+                <right xmi:id="_twGxsY4fEeWmzZ4Jc4-8vw" longitude="-0.33110969049509364" latitude="-0.9419884973639003"/>
+              </points>
+              <points xmi:id="_twGxso4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:47:56.000-0500">
+                <left xmi:id="_twGxs44fEeWmzZ4Jc4-8vw" longitude="-0.3391557597346122" latitude="-0.9664857864156822"/>
+                <center xmi:id="_twGxtI4fEeWmzZ4Jc4-8vw" longitude="-0.32744497552370033" latitude="-0.9724930351934963"/>
+                <right xmi:id="_twGxtY4fEeWmzZ4Jc4-8vw" longitude="-0.3566310717562179" latitude="-0.9572008208898001"/>
+              </points>
+              <points xmi:id="_twGxto4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:48:16.000-0500">
+                <left xmi:id="_twGxt44fEeWmzZ4Jc4-8vw" longitude="-0.3656904386715423" latitude="-0.9816156406683186"/>
+                <center xmi:id="_twGxuI4fEeWmzZ4Jc4-8vw" longitude="-0.35393493406595733" latitude="-0.9877624244147591"/>
+                <right xmi:id="_twGxuY4fEeWmzZ4Jc4-8vw" longitude="-0.38321050760155906" latitude="-0.9721185027217658"/>
+              </points>
+              <points xmi:id="_twGxuo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:48:36.000-0500">
+                <left xmi:id="_twGxu44fEeWmzZ4Jc4-8vw" longitude="-0.3933733511615843" latitude="-0.9964355927162095"/>
+                <center xmi:id="_twGxvI4fEeWmzZ4Jc4-8vw" longitude="-0.38159317810380355" latitude="-1.0027268239518443"/>
+                <right xmi:id="_twGxvY4fEeWmzZ4Jc4-8vw" longitude="-0.4109069612041087" latitude="-0.9867192959138458"/>
+              </points>
+              <points xmi:id="_twGxvo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:48:56.000-0500">
+                <left xmi:id="_twGxv44fEeWmzZ4Jc4-8vw" longitude="-0.42227004759308295" latitude="-1.0109213579537932"/>
+                <center xmi:id="_twGxwI4fEeWmzZ4Jc4-8vw" longitude="-0.41048904331956254" latitude="-1.0173618099823836"/>
+                <right xmi:id="_twGxwY4fEeWmzZ4Jc4-8vw" longitude="-0.43978044703187397" latitude="-1.0009791787519888"/>
+              </points>
+              <points xmi:id="_twGxwo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:49:16.000-0500">
+                <left xmi:id="_twGxw44fEeWmzZ4Jc4-8vw" longitude="-0.4524470774392428" latitude="-1.0250466586164966"/>
+                <center xmi:id="_twGxxI4fEeWmzZ4Jc4-8vw" longitude="-0.44069332936165895" latitude="-1.0316408824814858"/>
+                <right xmi:id="_twGxxY4fEeWmzZ4Jc4-8vw" longitude="-0.4698913491650504" latitude="-1.0148722624811517"/>
+              </points>
+              <points xmi:id="_twGxxo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:49:36.000-0500">
+                <left xmi:id="_twGxx44fEeWmzZ4Jc4-8vw" longitude="-0.4839711138291762" latitude="-1.0387831226712843"/>
+                <center xmi:id="_twGxyI4fEeWmzZ4Jc4-8vw" longitude="-0.47227743818275436" latitude="-1.0455353475409876"/>
+                <right xmi:id="_twGxyY4fEeWmzZ4Jc4-8vw" longitude="-0.5012995392189747" latitude="-1.0283707134715931"/>
+              </points>
+              <points xmi:id="_twGxyo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:49:56.000-0500">
+                <left xmi:id="_twGxy44fEeWmzZ4Jc4-8vw" longitude="-0.5169078208411544" latitude="-1.0521002024428634"/>
+                <center xmi:id="_twGxzI4fEeWmzZ4Jc4-8vw" longitude="-0.5053122382157891" latitude="-1.0590142177691633"/>
+                <right xmi:id="_twGxzY4fEeWmzZ4Jc4-8vw" longitude="-0.5340632627832453" latitude="-1.0414446970283397"/>
+              </points>
+              <points xmi:id="_twGxzo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:50:16.000-0500">
+                <left xmi:id="_twGxz44fEeWmzZ4Jc4-8vw" longitude="-0.5513204240537194" latitude="-1.0649651221738392"/>
+                <center xmi:id="_twGx0I4fEeWmzZ4Jc4-8vw" longitude="-0.5398666078377006" latitude="-1.072044140350916"/>
+                <right xmi:id="_twGx0Y4fEeWmzZ4Jc4-8vw" longitude="-0.5682377644406476" latitude="-1.05406235138747"/>
+              </points>
+              <points xmi:id="_twGx0o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:50:36.000-0500">
+                <left xmi:id="_twGx044fEeWmzZ4Jc4-8vw" longitude="-0.5872679487706365" latitude="-1.0773428659128097"/>
+                <center xmi:id="_twGx1I4fEeWmzZ4Jc4-8vw" longitude="-0.5760056141270361" latitude="-1.084589364829172"/>
+                <right xmi:id="_twGx1Y4fEeWmzZ4Jc4-8vw" longitude="-0.6038736267463197" latitude="-1.0661898022404617"/>
+              </points>
+              <points xmi:id="_twGx1o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:50:56.000-0500">
+                <left xmi:id="_twGx144fEeWmzZ4Jc4-8vw" longitude="-0.6248030985335757" latitude="-1.0891962189563291"/>
+                <center xmi:id="_twGx2I4fEeWmzZ4Jc4-8vw" longitude="-0.6137882900940735" latitude="-1.0966117648597848"/>
+                <right xmi:id="_twGx2Y4fEeWmzZ4Jc4-8vw" longitude="-0.6410148076465354" latitude="-1.0777912294750405"/>
+              </points>
+              <points xmi:id="_twGx2o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:51:16.000-0500">
+                <left xmi:id="_twGx244fEeWmzZ4Jc4-8vw" longitude="-0.6639697625051323" latitude="-1.1004858780417555"/>
+                <center xmi:id="_twGx3I4fEeWmzZ4Jc4-8vw" longitude="-0.6532649891770231" latitude="-1.1080709306012468"/>
+                <right xmi:id="_twGx3Y4fEeWmzZ4Jc4-8vw" longitude="-0.6796963766569171" latitude="-1.088828999222226"/>
+              </points>
+              <points xmi:id="_twGx3o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:51:36.000-0500">
+                <left xmi:id="_twGx344fEeWmzZ4Jc4-8vw" longitude="-0.7048001643025661" latitude="-1.1111706466281952"/>
+                <center xmi:id="_twGx4I4fEeWmzZ4Jc4-8vw" longitude="-0.6944743206069901" latitude="-1.1189243500263024"/>
+                <right xmi:id="_twGx4Y4fEeWmzZ4Jc4-8vw" longitude="-0.7199419723487223" latitude="-1.0992638748349368"/>
+              </points>
+              <points xmi:id="_twGx4o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:51:56.000-0500">
+                <left xmi:id="_twGx444fEeWmzZ4Jc4-8vw" longitude="-0.7473116995759597" latitude="-1.1212077319907192"/>
+                <center xmi:id="_twGx5I4fEeWmzZ4Jc4-8vw" longitude="-0.737439706539613" latitude="-1.1291276983217988"/>
+                <right xmi:id="_twGx5Y4fEeWmzZ4Jc4-8vw" longitude="-0.7617610342863094" latitude="-1.1090553202341928"/>
+              </points>
+              <points xmi:id="_twGx5o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:52:16.000-0500">
+                <left xmi:id="_twGx544fEeWmzZ4Jc4-8vw" longitude="-0.7915035548665199" latitude="-1.130553159687176"/>
+                <center xmi:id="_twGx6I4fEeWmzZ4Jc4-8vw" longitude="-0.7821656520606824" latitude="-1.1386352537892896"/>
+                <right xmi:id="_twGx6Y4fEeWmzZ4Jc4-8vw" longitude="-0.805145900679271" latitude="-1.118161907459352"/>
+              </points>
+              <points xmi:id="_twGx6o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:52:36.000-0500">
+                <left xmi:id="_twGx644fEeWmzZ4Jc4-8vw" longitude="-0.8373532547952613" latitude="-1.1391623177155923"/>
+                <center xmi:id="_twGx7I4fEeWmzZ4Jc4-8vw" longitude="-0.8286338815040525" latitude="-1.1474004556328725"/>
+                <right xmi:id="_twGx7Y4fEeWmzZ4Jc4-8vw" longitude="-0.8500689070102317" latitude="-1.1265418368777116"/>
+              </points>
+              <points xmi:id="_twGx7o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:52:56.000-0500">
+                <left xmi:id="_twGx744fEeWmzZ4Jc4-8vw" longitude="-0.8848133446545344" latitude="-1.1469906368830542"/>
+                <center xmi:id="_twGx8I4fEeWmzZ4Jc4-8vw" longitude="-0.876799565266503" latitude="-1.1553766130952807"/>
+                <right xmi:id="_twGx8Y4fEeWmzZ4Jc4-8vw" longitude="-0.8964796671780707" latitude="-1.134153573043412"/>
+              </points>
+              <points xmi:id="_twGx8o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:53:16.000-0500">
+                <left xmi:id="_twGx844fEeWmzZ4Jc4-8vw" longitude="-0.933808473881427" latitude="-1.1539944052117952"/>
+                <center xmi:id="_twGx9I4fEeWmzZ4Jc4-8vw" longitude="-0.9265879326806479" latitude="-1.1625177660797639"/>
+                <right xmi:id="_twGx9Y4fEeWmzZ4Jc4-8vw" longitude="-0.9443027612045737" latitude="-1.140956591479422"/>
+              </points>
+              <points xmi:id="_twGx9o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:53:36.000-0500">
+                <left xmi:id="_twGx944fEeWmzZ4Jc4-8vw" longitude="-0.9842331915138075" latitude="-1.1601317025589784"/>
+                <center xmi:id="_twGx-I4fEeWmzZ4Jc4-8vw" longitude="-0.9778916256663682" latitude="-1.1687796844914655"/>
+                <right xmi:id="_twGx-Y4fEeWmzZ4Jc4-8vw" longitude="-0.9934360833771082" latitude="-1.146912221758601"/>
+              </points>
+              <points xmi:id="_twGx-o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:53:56.000-0500">
+                <left xmi:id="_twGx-44fEeWmzZ4Jc4-8vw" longitude="-1.0359507848019343" latitude="-1.165363427749456"/>
+                <center xmi:id="_twGx_I4fEeWmzZ4Jc4-8vw" longitude="-1.0305691792865823" latitude="-1.174120977740014"/>
+                <right xmi:id="_twGx_Y4fEeWmzZ4Jc4-8vw" longitude="-1.0437501124980832" latitude="-1.1519845609064392"/>
+              </points>
+              <points xmi:id="_twGx_o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:54:16.000-0500">
+                <left xmi:id="_twGx_44fEeWmzZ4Jc4-8vw" longitude="-1.0887934728928732" latitude="-1.1696543756755544"/>
+                <center xmi:id="_twGyAI4fEeWmzZ4Jc4-8vw" longitude="-1.084445001595007" latitude="-1.1785042685387883"/>
+                <right xmi:id="_twGyAY4fEeWmzZ4Jc4-8vw" longitude="-1.0950883420985735" latitude="-1.1561414194176878"/>
+              </points>
+              <points xmi:id="_twGyAo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:54:36.000-0500">
+                <left xmi:id="_twGyA44fEeWmzZ4Jc4-8vw" longitude="-1.1425641982821642" latitude="-1.1729743080117456"/>
+                <center xmi:id="_twGyBI4fEeWmzZ4Jc4-8vw" longitude="-1.139311151979617" latitude="-1.1818973686306362"/>
+                <right xmi:id="_twGyBY4fEeWmzZ4Jc4-8vw" longitude="-1.1472690463989907" latitude="-1.159355251673558"/>
+              </points>
+              <points xmi:id="_twGyBo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:54:56.000-0500">
+                <left xmi:id="_twGyB44fEeWmzZ4Jc4-8vw" longitude="-1.1970401370349537" latitude="-1.1752989510029248"/>
+                <center xmi:id="_twGyCI4fEeWmzZ4Jc4-8vw" longitude="-1.1949310796253498" latitude="-1.1842743814384273"/>
+                <right xmi:id="_twGyCY4fEeWmzZ4Jc4-8vw" longitude="-1.2000884573151103" latitude="-1.1616040152356633"/>
+              </points>
+              <points xmi:id="_twGyCo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:55:16.000-0500">
+                <left xmi:id="_twGyC44fEeWmzZ4Jc4-8vw" longitude="-1.2519778835763735" latitude="-1.176610849765903"/>
+                <center xmi:id="_twGyDI4fEeWmzZ4Jc4-8vw" longitude="-1.2510452908490448" latitude="-1.1856166510340207"/>
+                <right xmi:id="_twGyDY4fEeWmzZ4Jc4-8vw" longitude="-1.2533252971450166" latitude="-1.16287190122933"/>
+              </points>
+              <points xmi:id="_twGyDo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:55:36.000-0500">
+                <left xmi:id="_twGyD44fEeWmzZ4Jc4-8vw" longitude="-1.3071200766826936" latitude="-1.1769000125581015"/>
+                <center xmi:id="_twGyEI4fEeWmzZ4Jc4-8vw" longitude="-1.3073786890415193" latitude="-1.1859134806505334"/>
+                <right xmi:id="_twGyEY4fEeWmzZ4Jc4-8vw" longitude="-1.306746465704839" latitude="-1.1631498820647177"/>
+              </points>
+              <points xmi:id="_twGyEo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:55:56.000-0500">
+                <left xmi:id="_twGyE44fEeWmzZ4Jc4-8vw" longitude="-1.362203053720755" latitude="-1.1761642913509318"/>
+                <center xmi:id="_twGyFI4fEeWmzZ4Jc4-8vw" longitude="-1.3636491143081189" latitude="-1.1851625583752763"/>
+                <right xmi:id="_twGyFY4fEeWmzZ4Jc4-8vw" longitude="-1.3601135449611192" latitude="-1.1624360335936161"/>
+              </points>
+              <points xmi:id="_twGyFo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:56:16.000-0500">
+                <left xmi:id="_twGyF44fEeWmzZ4Jc4-8vw" longitude="-1.416964982441189" latitude="-1.1744094656142279"/>
+                <center xmi:id="_twGyGI4fEeWmzZ4Jc4-8vw" longitude="-1.4195764424336168" latitude="-1.1833700513783925"/>
+                <right xmi:id="_twGyGY4fEeWmzZ4Jc4-8vw" longitude="-1.4131896812117533" latitude="-1.160735605425234"/>
+              </points>
+              <points xmi:id="_twGyGo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:56:36.000-0500">
+                <left xmi:id="_twGyG44fEeWmzZ4Jc4-8vw" longitude="-1.4711538530671218" latitude="-1.1716490218800617"/>
+                <center xmi:id="_twGyHI4fEeWmzZ4Jc4-8vw" longitude="-1.4748915214696572" latitude="-1.1805503599445348"/>
+                <right xmi:id="_twGyHY4fEeWmzZ4Jc4-8vw" longitude="-1.4657463554365187" latitude="-1.1580608335573979"/>
+              </points>
+              <points xmi:id="_twGyHo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:56:56.000-0500">
+                <left xmi:id="_twGyH44fEeWmzZ4Jc4-8vw" longitude="-1.5245347335190442" latitude="-1.1679036484611158"/>
+                <center xmi:id="_twGyII4fEeWmzZ4Jc4-8vw" longitude="-1.5293442485307531" latitude="-1.1767255538952153"/>
+                <right xmi:id="_twGyIY4fEeWmzZ4Jc4-8vw" longitude="-1.5175695676456227" latitude="-1.1544305107531365"/>
+              </points>
+              <points xmi:id="_twGyIo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:57:16.000-0500">
+                <left xmi:id="_twGyI44fEeWmzZ4Jc4-8vw" longitude="-1.5768957911225459" latitude="-1.1632004885027123"/>
+                <center xmi:id="_twGyJI4fEeWmzZ4Jc4-8vw" longitude="-1.5827102118453205" latitude="-1.1719245416553044"/>
+                <right xmi:id="_twGyJY4fEeWmzZ4Jc4-8vw" longitude="-1.5684650359759613" latitude="-1.1498693491228775"/>
+              </points>
+              <points xmi:id="_twGyJo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:57:36.000-0500">
+                <left xmi:id="_twGyJ44fEeWmzZ4Jc4-8vw" longitude="-1.6280527449267752" latitude="-1.1575722119163598"/>
+                <center xmi:id="_twGyKI4fEeWmzZ4Jc4-8vw" longitude="-1.6347955178195999" latitude="-1.1661820420736861"/>
+                <right xmi:id="_twGyKY4fEeWmzZ4Jc4-8vw" longitude="-1.6182621321946171" latitude="-1.1444071835784106"/>
+              </points>
+              <points xmi:id="_twGyKo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:57:56.000-0500">
+                <left xmi:id="_twGyK44fEeWmzZ4Jc4-8vw" longitude="-1.6778516013251816" latitude="-1.1510559756139884"/>
+                <center xmi:id="_twGyLI4fEeWmzZ4Jc4-8vw" longitude="-1.685439648952592" latitude="-1.159537438753402"/>
+                <right xmi:id="_twGyLY4fEeWmzZ4Jc4-8vw" longitude="-1.6668164190868133" latitude="-1.1380780725680903"/>
+              </points>
+              <points xmi:id="_twGyLo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:58:16.000-0500">
+                <left xmi:id="_twGyL44fEeWmzZ4Jc4-8vw" longitude="-1.7261697066922501" latitude="-1.1436923417521299"/>
+                <center xmi:id="_twGyMI4fEeWmzZ4Jc4-8vw" longitude="-1.7345164123990198" latitude="-1.152033596095515"/>
+                <right xmi:id="_twGyMY4fEeWmzZ4Jc4-8vw" longitude="-1.7140107959885207" latitude="-1.1309193536236763"/>
+              </points>
+              <points xmi:id="_twGyMo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:58:36.000-0500">
+                <left xmi:id="_twGyM44fEeWmzZ4Jc4-8vw" longitude="-1.7729152990415749" latitude="-1.1355242165468054"/>
+                <center xmi:id="_twGyNI4fEeWmzZ4Jc4-8vw" longitude="-1.7819332100648213" latitude="-1.1437157070855837"/>
+                <right xmi:id="_twGyNY4fEeWmzZ4Jc4-8vw" longitude="-1.7597553779541182" latitude="-1.1229707064255843"/>
+              </points>
+              <points xmi:id="_twGyNo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:58:56.000-0500">
+                <left xmi:id="_twGyN44fEeWmzZ4Jc4-8vw" longitude="-1.8180258388151824" latitude="-1.1265958601110415"/>
+                <center xmi:id="_twGyOI4fEeWmzZ4Jc4-8vw" longitude="-1.827628969781698" latitude="-1.1346302281258862"/>
+                <right xmi:id="_twGyOY4fEeWmzZ4Jc4-8vw" longitude="-1.803986317200441" latitude="-1.1142732671217979"/>
+              </points>
+              <points xmi:id="_twGyOo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:59:16.000-0500">
+                <left xmi:id="_twGyO44fEeWmzZ4Jc4-8vw" longitude="-1.861465445109572" latitude="-1.1169520031622768"/>
+                <center xmi:id="_twGyPI4fEeWmzZ4Jc4-8vw" longitude="-1.8715711227872798" latitude="-1.1248239389698886"/>
+                <right xmi:id="_twGyPY4fEeWmzZ4Jc4-8vw" longitude="-1.8466638199984806" latitude="-1.104868826308336"/>
+              </points>
+              <points xmi:id="_twGyPo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:59:36.000-0500">
+                <left xmi:id="_twGyP44fEeWmzZ4Jc4-8vw" longitude="-1.9032217634331996" latitude="-1.106637091875969"/>
+                <center xmi:id="_twGyQI4fEeWmzZ4Jc4-8vw" longitude="-1.9137520040588234" latitude="-1.1143431489992013"/>
+                <right xmi:id="_twGyQY4fEeWmzZ4Jc4-8vw" longitude="-1.8877696203776964" latitude="-1.0947991313947705"/>
+              </points>
+              <points xmi:id="_twGyQo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:59:56.000-0500">
+                <left xmi:id="_twGyQ44fEeWmzZ4Jc4-8vw" longitude="-1.9433025582316092" latitude="-1.0956946690870017"/>
+                <center xmi:id="_twGyRI4fEeWmzZ4Jc4-8vw" longitude="-1.954185006548228" latitude="-1.103233056376495"/>
+                <right xmi:id="_twGyRY4fEeWmzZ4Jc4-8vw" longitude="-1.9273041533774131" latitude="-1.08410530319983"/>
+              </points>
+              <points xmi:id="_twGyRo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:00:16.000-0500">
+                <left xmi:id="_twGyR44fEeWmzZ4Jc4-8vw" longitude="-1.981732270167823" latitude="-1.0841668897566576"/>
+                <center xmi:id="_twGySI4fEeWmzZ4Jc4-8vw" longitude="-1.9929007535859145" latitude="-1.0915372553531757"/>
+                <right xmi:id="_twGySY4fEeWmzZ4Jc4-8vw" longitude="-1.9652836334802466" latitude="-1.0728273677414553"/>
+              </points>
+              <points xmi:id="_twGySo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:00:36.000-0500">
+                <left xmi:id="_twGyS44fEeWmzZ4Jc4-8vw" longitude="-2.018548718177713" latitude="-1.0720941611896277"/>
+                <center xmi:id="_twGyTI4fEeWmzZ4Jc4-8vw" longitude="-2.029943481650817" latitude="-1.0792973791812586"/>
+                <right xmi:id="_twGyTY4fEeWmzZ4Jc4-8vw" longitude="-2.001737199007185" latitude="-1.061003897432823"/>
+              </points>
+              <points xmi:id="_twGyTo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:00:56.000-0500">
+                <left xmi:id="_twGyT44fEeWmzZ4Jc4-8vw" longitude="-2.0538000678709163" latitude="-1.059514893949674"/>
+                <center xmi:id="_twGyUI4fEeWmzZ4Jc4-8vw" longitude="-2.0653677577752023" latitude="-1.0665528615811988"/>
+                <right xmi:id="_twGyUY4fEeWmzZ4Jc4-8vw" longitude="-2.036704237187812" latitude="-1.048671751465311"/>
+              </points>
+              <points xmi:id="_twGyUo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:01:16.000-0500">
+                <left xmi:id="_twGyU44fEeWmzZ4Jc4-8vw" longitude="-2.087542137426046" latitude="-1.0464653471031944"/>
+                <center xmi:id="_twGyVI4fEeWmzZ4Jc4-8vw" longitude="-2.099235598895601" latitude="-1.0533407977111404"/>
+                <right xmi:id="_twGyVY4fEeWmzZ4Jc4-8vw" longitude="-2.07023196319814" latitude="-1.0358659025568109"/>
+              </points>
+              <points xmi:id="_twGyVo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:01:36.000-0500">
+                <left xmi:id="_twGyV44fEeWmzZ4Jc4-8vw" longitude="-2.1198360711508135" latitude="-1.03297955117"/>
+                <center xmi:id="_twGyWI4fEeWmzZ4Jc4-8vw" longitude="-2.1316140156152854" latitude="-1.0396958857908964"/>
+                <right xmi:id="_twGyWY4fEeWmzZ4Jc4-8vw" longitude="-2.1023732912263844" latitude="-1.0226193364821305"/>
+              </points>
+              <points xmi:id="_twGyWo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:01:56.000-0500">
+                <left xmi:id="_twGyW44fEeWmzZ4Jc4-8vw" longitude="-2.150746381635407" latitude="-1.019089292756364"/>
+                <center xmi:id="_twGyXI4fEeWmzZ4Jc4-8vw" longitude="-2.1625729718591296" latitude="-1.0256504316212904"/>
+                <right xmi:id="_twGyXY4fEeWmzZ4Jc4-8vw" longitude="-2.133185009394992" latitude="-1.0089630108050471"/>
+              </points>
+              <points xmi:id="_twGyXo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:02:16.000-0500">
+                <left xmi:id="_twGyX44fEeWmzZ4Jc4-8vw" longitude="-2.180339340759807" latitude="-1.0048241465744028"/>
+                <center xmi:id="_twGyYI4fEeWmzZ4Jc4-8vw" longitude="-2.192183730982262" latitude="-1.0112344004380036"/>
+                <right xmi:id="_twGyYY4fEeWmzZ4Jc4-8vw" longitude="-2.162726250687703" latitude="-0.9949258603639305"/>
+              </points>
+              <points xmi:id="_twGyYo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:02:36.000-0500">
+                <left xmi:id="_twGyY44fEeWmzZ4Jc4-8vw" longitude="-2.2086816878185442" latitude="-0.9902115424096021"/>
+                <center xmi:id="_twGyZI4fEeWmzZ4Jc4-8vw" longitude="-2.2205175475850156" latitude="-0.9964755027996391"/>
+                <right xmi:id="_twGyZY4fEeWmzZ4Jc4-8vw" longitude="-2.191057239656168" latitude="-0.9805348383888919"/>
+              </points>
+              <points xmi:id="_twGyZo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:02:56.000-0500">
+                <left xmi:id="_twGyZ44fEeWmzZ4Jc4-8vw" longitude="-2.235839616923584" latitude="-0.9752768566227992"/>
+                <center xmi:id="_twGyaI4fEeWmzZ4Jc4-8vw" longitude="-2.2476446593644415" latitude="-0.9813993035607159"/>
+                <right xmi:id="_twGyaY4fEeWmzZ4Jc4-8vw" longitude="-2.21823828740807" latitude="-0.965814983706362"/>
+              </points>
+              <points xmi:id="_twGyao4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:03:16.000-0500">
+                <left xmi:id="_twGya44fEeWmzZ4Jc4-8vw" longitude="-2.2618780040607733" latitude="-0.9600435197591622"/>
+                <center xmi:id="_twGybI4fEeWmzZ4Jc4-8vw" longitude="-2.2736335329093516" latitude="-0.9660293452164037"/>
+                <right xmi:id="_twGybY4fEeWmzZ4Jc4-8vw" longitude="-2.244329004049851" latitude="-0.9507895061195407"/>
+              </points>
+              <points xmi:id="_twGybo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:03:36.000-0500">
+                <left xmi:id="_twGyb44fEeWmzZ4Jc4-8vw" longitude="-2.286859835413542" latitude="-0.9445331335890607"/>
+                <center xmi:id="_twGycI4fEeWmzZ4Jc4-8vw" longitude="-2.298550319927676" latitude="-0.9503872788387261"/>
+                <right xmi:id="_twGycY4fEeWmzZ4Jc4-8vw" longitude="-2.269387697365045" latitude="-0.9354798835404465"/>
+              </points>
+              <points xmi:id="_twGyco4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:03:56.000-0500">
+                <left xmi:id="_twGyc44fEeWmzZ4Jc4-8vw" longitude="-2.310845801544851" latitude="-0.9287655924274335"/>
+                <center xmi:id="_twGydI4fEeWmzZ4Jc4-8vw" longitude="-2.322458484584843" latitude="-0.9344929974693977"/>
+                <right xmi:id="_twGydY4fEeWmzZ4Jc4-8vw" longitude="-2.293470927945779" latitude="-0.9199059657815922"/>
+              </points>
+              <points xmi:id="_twGydo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:04:16.000-0500">
+                <left xmi:id="_twGyd44fEeWmzZ4Jc4-8vw" longitude="-2.33389402585854" latitude="-0.9127592048954867"/>
+                <center xmi:id="_twGyeI4fEeWmzZ4Jc4-8vw" longitude="-2.3454185674938195" latitude="-0.9183647682310745"/>
+                <right xmi:id="_twGyeY4fEeWmzZ4Jc4-8vw" longitude="-2.3166331934664406" latitude="-0.9040860811042193"/>
+              </points>
+              <points xmi:id="_twGyeo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:04:36.000-0500">
+                <left xmi:id="_twGye44fEeWmzZ4Jc4-8vw" longitude="-2.3560599000054925" latitude="-0.8965308133176324"/>
+                <center xmi:id="_twGyfI4fEeWmzZ4Jc4-8vw" longitude="-2.3674880569810743" latitude="-0.9020193604934308"/>
+                <right xmi:id="_twGyfY4fEeWmzZ4Jc4-8vw" longitude="-2.3389267178924484" latitude="-0.8880371425692235"/>
+              </points>
+              <points xmi:id="_twGyfo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:04:56.000-0500">
+                <left xmi:id="_twGyf44fEeWmzZ4Jc4-8vw" longitude="-2.3773960029833714" latitude="-0.88009590883833"/>
+                <center xmi:id="_twGygI4fEeWmzZ4Jc4-8vw" longitude="-2.3887213429953715" latitude="-0.8854721683444795"/>
+                <right xmi:id="_twGygY4fEeWmzZ4Jc4-8vw" longitude="-2.3604013245791173" latitude="-0.8717747520832553"/>
+              </points>
+              <points xmi:id="_twGygo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:05:16.000-0500">
+                <left xmi:id="_twGyg44fEeWmzZ4Jc4-8vw" longitude="-2.3979520846844435" latitude="-0.8634687408960106"/>
+                <center xmi:id="_twGyhI4fEeWmzZ4Jc4-8vw" longitude="-2.4091697335328526" latitude="-0.8687373261749002"/>
+                <right xmi:id="_twGyhY4fEeWmzZ4Jc4-8vw" longitude="-2.381104375501808" latitude="-0.8553133005665065"/>
+              </points>
+              <points xmi:id="_twGyho4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:05:36.000-0500">
+                <left xmi:id="_twGyh44fEeWmzZ4Jc4-8vw" longitude="-2.4177750978854955" latitude="-0.8466624203776122"/>
+                <center xmi:id="_twGyiI4fEeWmzZ4Jc4-8vw" longitude="-2.4288815170629414" latitude="-0.8518278168658494"/>
+                <right xmi:id="_twGyiY4fEeWmzZ4Jc4-8vw" longitude="-2.4010807615490797" latitude="-0.8386660633504817"/>
+              </points>
+              <points xmi:id="_twGyio4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:05:56.000-0500">
+                <left xmi:id="_twGyi44fEeWmzZ4Jc4-8vw" longitude="-2.436909265957215" latitude="-0.8296890159460254"/>
+                <center xmi:id="_twGyjI4fEeWmzZ4Jc4-8vw" longitude="-2.447902057987451" latitude="-0.8347555722267953"/>
+                <right xmi:id="_twGyjY4fEeWmzZ4Jc4-8vw" longitude="-2.4203729316908347" latitude="-0.8218452900934827"/>
+              </points>
+              <points xmi:id="_twGyjo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:06:16.000-0500">
+                <left xmi:id="_twGyj44fEeWmzZ4Jc4-8vw" longitude="-2.45539617591037" latitude="-0.8125596435084735"/>
+                <center xmi:id="_twGykI4fEeWmzZ4Jc4-8vw" longitude="-2.4662739146908326" latitude="-0.8175315657924308"/>
+                <right xmi:id="_twGykY4fEeWmzZ4Jc4-8vw" longitude="-2.439020950880839" latitude="-0.8048622889900796"/>
+              </points>
+              <points xmi:id="_twGyko4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:06:36.000-0500">
+                <left xmi:id="_twGyk44fEeWmzZ4Jc4-8vw" longitude="-2.473274888751829" latitude="-0.7952845488183511"/>
+                <center xmi:id="_twGylI4fEeWmzZ4Jc4-8vw" longitude="-2.4840369722169906" latitude="-0.8001658980952798"/>
+                <right xmi:id="_twGylY4fEeWmzZ4Jc4-8vw" longitude="-2.4570625787079257" latitude="-0.7877275050952789"/>
+              </points>
+              <points xmi:id="_twGylo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:06:56.000-0500">
+                <left xmi:id="_twGyl44fEeWmzZ4Jc4-8vw" longitude="-2.4905820607088813" latitude="-0.7778731835283152"/>
+                <center xmi:id="_twGymI4fEeWmzZ4Jc4-8vw" longitude="-2.501228583272192" latitude="-0.782667874841154"/>
+                <right xmi:id="_twGymY4fEeWmzZ4Jc4-8vw" longitude="-2.4745333622586667" latitude="-0.7704505929270674"/>
+              </points>
+              <points xmi:id="_twGymo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:07:16.000-0500">
+                <left xmi:id="_twGym44fEeWmzZ4Jc4-8vw" longitude="-2.5073520705581105" latitude="-0.7603342748817465"/>
+                <center xmi:id="_twGynI4fEeWmzZ4Jc4-8vw" longitude="-2.5178837129746046" latitude="-0.7650460782676913"/>
+                <right xmi:id="_twGynY4fEeWmzZ4Jc4-8vw" longitude="-2.4914667382487647" latitude="-0.7530404834014539"/>
+              </points>
+              <points xmi:id="_twGyno4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:07:36.000-0500">
+                <left xmi:id="_twGyn44fEeWmzZ4Jc4-8vw" longitude="-2.5236171492401254" latitude="-0.7426758895204912"/>
+                <center xmi:id="_twGyoI4fEeWmzZ4Jc4-8vw" longitude="-2.5340350837393237" latitude="-0.7473084322445196"/>
+                <right xmi:id="_twGyoY4fEeWmzZ4Jc4-8vw" longitude="-2.5078941403739674" latitude="-0.7355054454611132"/>
+              </points>
+              <points xmi:id="_twGyoo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:07:56.000-0500">
+                <left xmi:id="_twGyo44fEeWmzZ4Jc4-8vw" longitude="-2.5394075090747803" latitude="-0.7249054917136517"/>
+                <center xmi:id="_twGypI4fEeWmzZ4Jc4-8vw" longitude="-2.5497133178257005" latitude="-0.7294622614870607"/>
+                <right xmi:id="_twGypY4fEeWmzZ4Jc4-8vw" longitude="-2.523845108942774" latitude="-0.7178531426038788"/>
+              </points>
+              <points xmi:id="_twGypo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:08:16.000-0500">
+                <left xmi:id="_twGyp44fEeWmzZ4Jc4-8vw" longitude="-2.5547514704897356" latitude="-0.7070299964847571"/>
+                <center xmi:id="_twGyqI4fEeWmzZ4Jc4-8vw" longitude="-2.5649470756687336" latitude="-0.7115143454185537"/>
+                <right xmi:id="_twGyqY4fEeWmzZ4Jc4-8vw" longitude="-2.539347400443738" latitude="-0.7000906847035547"/>
+              </points>
+              <points xmi:id="_twGyqo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:08:36.000-0500">
+                <left xmi:id="_twGyq44fEeWmzZ4Jc4-8vw" longitude="-2.569675584892729" latitude="-0.6890558179576385"/>
+                <center xmi:id="_twGyrI4fEeWmzZ4Jc4-8vw" longitude="-2.579763188822058" latitude="-0.6934709670477881"/>
+                <right xmi:id="_twGyrY4fEeWmzZ4Jc4-8vw" longitude="-2.5544270954245287" latitude="-0.6822246753727419"/>
+              </points>
+              <points xmi:id="_twGyro4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:08:56.000-0500">
+                <left xmi:id="_twGyr44fEeWmzZ4Jc4-8vw" longitude="-2.5842047526359835" latitude="-0.6709889133973713"/>
+                <center xmi:id="_twGysI4fEeWmzZ4Jc4-8vw" longitude="-2.5941867866447548" latitude="-0.6753379573787845"/>
+                <right xmi:id="_twGysY4fEeWmzZ4Jc4-8vw" longitude="-2.5691087033892557" latitude="-0.6642612552836942"/>
+              </points>
+              <points xmi:id="_twGyso4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:09:16.000-0500">
+                <left xmi:id="_twGys44fEeWmzZ4Jc4-8vw" longitude="-2.598362335504201" latitude="-0.6528348232426642"/>
+                <center xmi:id="_twGytI4fEeWmzZ4Jc4-8vw" longitude="-2.6082414163300385" latitude="-0.6571207356811688"/>
+                <right xmi:id="_twGytY4fEeWmzZ4Jc4-8vw" longitude="-2.583415263922043" latitude="-0.6462061416941318"/>
+              </points>
+              <points xmi:id="_twGyto4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:09:36.000-0500">
+                <left xmi:id="_twGyt44fEeWmzZ4Jc4-8vw" longitude="-2.612170263337637" latitude="-0.6345987075137249"/>
+                <center xmi:id="_twGyuI4fEeWmzZ4Jc4-8vw" longitude="-2.6219491560379256" latitude="-0.6388243460323505"/>
+                <right xmi:id="_twGyuY4fEeWmzZ4Jc4-8vw" longitude="-2.597368443443025" latitude="-0.6280646645202598"/>
+              </points>
+              <points xmi:id="_twGyuo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:09:56.000-0500">
+                <left xmi:id="_twGyu44fEeWmzZ4Jc4-8vw" longitude="-2.625649134623147" latitude="-0.6162853789383108"/>
+                <center xmi:id="_twGyvI4fEeWmzZ4Jc4-8vw" longitude="-2.635330721098958" latitude="-0.6204534904963648"/>
+                <right xmi:id="_twGyvY4fEeWmzZ4Jc4-8vw" longitude="-2.6109886272442875" latitude="-0.6098417992651877"/>
+              </points>
+              <points xmi:id="_twGyvo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:10:16.000-0500">
+                <left xmi:id="_twGyv44fEeWmzZ4Jc4-8vw" longitude="-2.6388183110734675" latitude="-0.5978993330600773"/>
+                <center xmi:id="_twGywI4fEeWmzZ4Jc4-8vw" longitude="-2.648405563427648" latitude="-0.6020125592214399"/>
+                <right xmi:id="_twGywY4fEeWmzZ4Jc4-8vw" longitude="-2.624295006660483" latitude="-0.5915421970386407"/>
+              </points>
+              <points xmi:id="_twGywo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:10:36.000-0500">
+                <left xmi:id="_twGyw44fEeWmzZ4Jc4-8vw" longitude="-2.6516960062730397" latitude="-0.5794447756426594"/>
+                <center xmi:id="_twGyxI4fEeWmzZ4Jc4-8vw" longitude="-2.6611919643284927" latitude="-0.5835056577845761"/>
+                <right xmi:id="_twGyxY4fEeWmzZ4Jc4-8vw" longitude="-2.637305661304786" latitude="-0.5731702119578026"/>
+              </points>
+              <points xmi:id="_twGyxo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:10:56.000-0500">
+                <left xmi:id="_twGyx44fEeWmzZ4Jc4-8vw" longitude="-2.664299368590306" latitude="-0.5609256475956383"/>
+                <center xmi:id="_twGyyI4fEeWmzZ4Jc4-8vw" longitude="-2.6737071209856573" latitude="-0.5649366320211611"/>
+                <right xmi:id="_twGyyY4fEeWmzZ4Jc4-8vw" longitude="-2.6500376364401643" latitude="-0.5547299261363872"/>
+              </points>
+              <points xmi:id="_twGyyo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:11:16.000-0500">
+                <left xmi:id="_twGyy44fEeWmzZ4Jc4-8vw" longitude="-2.676644558585734" latitude="-0.5423456476613902"/>
+                <center xmi:id="_twGyzI4fEeWmzZ4Jc4-8vw" longitude="-2.6859672269452366" latitude="-0.5463090905883258"/>
+                <right xmi:id="_twGyzY4fEeWmzZ4Jc4-8vw" longitude="-2.6625070156006885" latitude="-0.5362251724852031"/>
+              </points>
+              <points xmi:id="_twGyzo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:11:36.000-0500">
+                <left xmi:id="_twGyz44fEeWmzZ4Jc4-8vw" longitude="-2.6887468211665166" latitude="-0.5237082531040751"/>
+                <center xmi:id="_twGy0I4fEeWmzZ4Jc4-8vw" longitude="-2.697987546910407" latitude="-0.5276264255111677"/>
+                <right xmi:id="_twGy0Y4fEeWmzZ4Jc4-8vw" longitude="-2.6747289886133867" latitude="-0.5176595555525674"/>
+              </points>
+              <points xmi:id="_twGy0o4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:11:56.000-0500">
+                <left xmi:id="_twGy044fEeWmzZ4Jc4-8vw" longitude="-2.7006205528011313" latitude="-0.5050167385543538"/>
+                <center xmi:id="_twGy1I4fEeWmzZ4Jc4-8vw" longitude="-2.709782486222475" latitude="-0.5088918308715682"/>
+                <right xmi:id="_twGy1Y4fEeWmzZ4Jc4-8vw" longitude="-2.6867179152465406" latitude="-0.4990364705479478"/>
+              </points>
+              <points xmi:id="_twGy1o4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:12:16.000-0500">
+                <left xmi:id="_twGy144fEeWmzZ4Jc4-8vw" longitude="-2.712279364074659" latitude="-0.4862741932136122"/>
+                <center xmi:id="_twGy2I4fEeWmzZ4Jc4-8vw" longitude="-2.7213656553608017" latitude="-0.4901083198484452"/>
+                <right xmi:id="_twGy2Y4fEeWmzZ4Jc4-8vw" longitude="-2.69848738468886" latitude="-0.480359120744117"/>
+              </points>
+              <points xmi:id="_twGy2o4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:12:36.000-0500">
+                <left xmi:id="_twGy244fEeWmzZ4Jc4-8vw" longitude="-2.723736137910489" latitude="-0.46748353652979807"/>
+                <center xmi:id="_twGy3I4fEeWmzZ4Jc4-8vw" longitude="-2.7327499298319284" latitude="-0.4712787402253941"/>
+                <right xmi:id="_twGy3Y4fEeWmzZ4Jc4-8vw" longitude="-2.7100502711191297" latitude="-0.46163053336334064"/>
+              </points>
+              <points xmi:id="_twGy3o4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:12:56.000-0500">
+                <left xmi:id="_twGy344fEeWmzZ4Jc4-8vw" longitude="-2.7350030837077695" latitude="-0.4486475325732787"/>
+                <center xmi:id="_twGy4I4fEeWmzZ4Jc4-8vw" longitude="-2.743947505736343" latitude="-0.4524057885974182"/>
+                <right xmi:id="_twGy4Y4fEeWmzZ4Jc4-8vw" longitude="-2.7214187855576175" latitude="-0.4428535741703155"/>
+              </points>
+              <points xmi:id="_twGy4o4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:13:16.000-0500">
+                <left xmi:id="_twGy444fEeWmzZ4Jc4-8vw" longitude="-2.746091787738838" latitude="-0.42976880314019755"/>
+                <center xmi:id="_twGy5I4fEeWmzZ4Jc4-8vw" longitude="-2.7549699513901276" latitude="-0.43349202330642556"/>
+                <right xmi:id="_twGy5Y4fEeWmzZ4Jc4-8vw" longitude="-2.7326045242941674" latitude="-0.424030960795403"/>
+              </points>
+              <points xmi:id="_twGy5o4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:13:36.000-0500">
+                <left xmi:id="_twGy544fEeWmzZ4Jc4-8vw" longitude="-2.7570132600420543" latitude="-0.4108498397758291"/>
+                <center xmi:id="_twGy6I4fEeWmzZ4Jc4-8vw" longitude="-2.7658282552659874" latitude="-0.4145398763000321"/>
+                <right xmi:id="_twGy6Y4fEeWmzZ4Jc4-8vw" longitude="-2.743618514084742" latitude="-0.4051652749770109"/>
+              </points>
+              <points xmi:id="_twGy6o4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:13:56.000-0500">
+                <left xmi:id="_twGy644fEeWmzZ4Jc4-8vw" longitude="-2.7677779780900944" latitude="-0.39189301479745986"/>
+                <center xmi:id="_twGy7I4fEeWmzZ4Jc4-8vw" longitude="-2.7765328705584036" latitude="-0.39555166399455255"/>
+                <right xmi:id="_twGy7Y4fEeWmzZ4Jc4-8vw" longitude="-2.7544712543592014" latitude="-0.38625897380009905"/>
+              </points>
+              <points xmi:id="_twGy7o4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:14:16.000-0500">
+                <left xmi:id="_twGy744fEeWmzZ4Jc4-8vw" longitude="-2.778395927493812" latitude="-0.3729005913924207"/>
+                <center xmi:id="_twGy8I4fEeWmzZ4Jc4-8vw" longitude="-2.7870937566543" latitude="-0.3765295972188396"/>
+                <right xmi:id="_twGy8Y4fEeWmzZ4Jc4-8vw" longitude="-2.7651727566681585" latitude="-0.367314400004434"/>
+              </points>
+              <points xmi:id="_twGy8o4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:14:36.000-0500">
+                <left xmi:id="_twGy844fEeWmzZ4Jc4-8vw" longitude="-2.7888766399574663" latitude="-0.35387473292094407"/>
+                <center xmi:id="_twGy9I4fEeWmzZ4Jc4-8vw" longitude="-2.797520417743538" latitude="-0.3574757903694964"/>
+                <right xmi:id="_twGy9Y4fEeWmzZ4Jc4-8vw" longitude="-2.7757325815565124" latitude="-0.34833379149058624"/>
+              </points>
+              <points xmi:id="_twGy9o4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:14:56.000-0500">
+                <left xmi:id="_twGy944fEeWmzZ4Jc4-8vw" longitude="-2.7992292287186675" latitude="-0.3348175114824599"/>
+                <center xmi:id="_twGy-I4fEeWmzZ4Jc4-8vw" longitude="-2.8078219388183077" latitude="-0.33839226983657716"/>
+                <right xmi:id="_twGy-Y4fEeWmzZ4Jc4-8vw" longitude="-2.786159873072923" latitude="-0.3293192900811748"/>
+              </points>
+              <points xmi:id="_twGy-o4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:15:16.000-0500">
+                <left xmi:id="_twGy-44fEeWmzZ4Jc4-8vw" longitude="-2.8094624217048962" latitude="-0.31573091576617013"/>
+                <center xmi:id="_twGy_I4fEeWmzZ4Jc4-8vw" longitude="-2.8180070193067652" latitude="-0.31928098172091685"/>
+                <right xmi:id="_twGy_Y4fEeWmzZ4Jc4-8vw" longitude="-2.7964633911263723" latitude="-0.31027294955744567"/>
+              </points>
+              <points xmi:id="_twGy_o4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:15:36.000-0500">
+                <left xmi:id="_twGy_44fEeWmzZ4Jc4-8vw" longitude="-2.81958459254899" latitude="-0.29661685836391677"/>
+                <center xmi:id="_twGzAI4fEeWmzZ4Jc4-8vw" longitude="-2.828084004495304" latitude="-0.3001437990214915"/>
+                <right xmi:id="_twGzAY4fEeWmzZ4Jc4-8vw" longitude="-2.806651541813672" latitude="-0.29119674314833355"/>
+              </points>
+              <points xmi:id="_twGzAo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:15:56.000-0500">
+                <left xmi:id="_twGzA44fEeWmzZ4Jc4-8vw" longitude="-2.829603789701525" latitude="-0.27747718248712633"/>
+                <center xmi:id="_twGzBI4fEeWmzZ4Jc4-8vw" longitude="-2.8380609149871425" latitude="-0.28098252823453507"/>
+                <right xmi:id="_twGzBY4fEeWmzZ4Jc4-8vw" longitude="-2.8167324059407135" latitude="-0.27209257041364576"/>
+              </points>
+              <points xmi:id="_twGzBo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:16:16.000-0500">
+                <left xmi:id="_twGzB44fEeWmzZ4Jc4-8vw" longitude="-2.839527763780553" latitude="-0.2583136682045994"/>
+                <center xmi:id="_twGzCI4fEeWmzZ4Jc4-8vw" longitude="-2.8479454743465187" latitude="-0.2617989154813072"/>
+                <right xmi:id="_twGzCY4fEeWmzZ4Jc4-8vw" longitude="-2.826713765864163" latitude="-0.25296226363773316"/>
+              </points>
+              <points xmi:id="_twGzCo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:16:36.000-0500">
+                <left xmi:id="_twGzC44fEeWmzZ4Jc4-8vw" longitude="-2.8493639933160173" latitude="-0.239128038256704"/>
+                <center xmi:id="_twGzDI4fEeWmzZ4Jc4-8vw" longitude="-2.8577451350932614" latitude="-0.24259465222003324"/>
+                <right xmi:id="_twGzDY4fEeWmzZ4Jc4-8vw" longitude="-2.8366031307992996" latitude="-0.23380759378907057"/>
+              </points>
+              <points xmi:id="_twGzDo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:16:56.000-0500">
+                <left xmi:id="_twGzD44fEeWmzZ4Jc4-8vw" longitude="-2.859119709057264" latitude="-0.21992196344686712"/>
+                <center xmi:id="_twGzEI4fEeWmzZ4Jc4-8vw" longitude="-2.86746710322245" latitude="-0.2233713805427871"/>
+                <right xmi:id="_twGzEY4fEeWmzZ4Jc4-8vw" longitude="-2.846407760752475" latitude="-0.21463027604667756"/>
+              </points>
+              <points xmi:id="_twGzEo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:17:16.000-0500">
+                <left xmi:id="_twGzE44fEeWmzZ4Jc4-8vw" longitude="-2.868801916974842" latitude="-0.20069706766786757"/>
+                <center xmi:id="_twGzFI4fEeWmzZ4Jc4-8vw" longitude="-2.877118361385908" latitude="-0.2041306981147306"/>
+                <right xmi:id="_twGzFY4fEeWmzZ4Jc4-8vw" longitude="-2.8561346892006485" latitude="-0.19543197495085993"/>
+              </points>
+              <points xmi:id="_twGzFo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:17:36.000-0500">
+                <left xmi:id="_twGzF44fEeWmzZ4Jc4-8vw" longitude="-2.878417420070353" latitude="-0.1814549326409352"/>
+                <center xmi:id="_twGzGI4fEeWmzZ4Jc4-8vw" longitude="-2.886705690854065" latitude="-0.18487416283362068"/>
+                <right xmi:id="_twGzGY4fEeWmzZ4Jc4-8vw" longitude="-2.865790744624187" latitude="-0.17621430925629708"/>
+              </points>
+              <points xmi:id="_twGzGo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:17:56.000-0500">
+                <left xmi:id="_twGzG44fEeWmzZ4Jc4-8vw" longitude="-2.887972839146756" latitude="-0.16219710233157006"/>
+                <center xmi:id="_twGzHI4fEeWmzZ4Jc4-8vw" longitude="-2.896235692414507" latitude="-0.16560329717328506"/>
+                <right xmi:id="_twGzHY4fEeWmzZ4Jc4-8vw" longitude="-2.875382571039058" latitude="-0.15697885645159215"/>
+              </points>
+              <points xmi:id="_twGzHo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:18:16.000-0500">
+                <left xmi:id="_twGzH44fEeWmzZ4Jc4-8vw" longitude="-2.897474632625879" latitude="-0.1429250871415315"/>
+                <center xmi:id="_twGzII4fEeWmzZ4Jc4-8vw" longitude="-2.905714806297527" latitude="-0.14631959231043268"/>
+                <right xmi:id="_twGzIY4fEeWmzZ4Jc4-8vw" longitude="-2.884916647609462" latitude="-0.1377271570447629"/>
+              </points>
+              <points xmi:id="_twGzIo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:18:36.000-0500">
+                <left xmi:id="_twGzI44fEeWmzZ4Jc4-8vw" longitude="-2.9069291155432344" latitude="-0.12364036785624018"/>
+                <center xmi:id="_twGzJI4fEeWmzZ4Jc4-8vw" longitude="-2.9151493312616554" latitude="-0.12702451201384996"/>
+                <right xmi:id="_twGzJY4fEeWmzZ4Jc4-8vw" longitude="-2.8943993074663705" latitude="-0.11846071859411385"/>
+              </points>
+              <points xmi:id="_twGzJo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:18:56.000-0500">
+                <left xmi:id="_twGzJ44fEeWmzZ4Jc4-8vw" longitude="-2.9163424778114577" latitude="-0.10434439940241867"/>
+                <center xmi:id="_twGzKI4fEeWmzZ4Jc4-8vw" longitude="-2.9245454429330056" latitude="-0.10771949635069196"/>
+                <right xmi:id="_twGzKY4fEeWmzZ4Jc4-8vw" longitude="-2.9038367558191402" latitude="-0.09918101953941148"/>
+              </points>
+              <points xmi:id="_twGzKo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:19:16.000-0500">
+                <left xmi:id="_twGzK44fEeWmzZ4Jc4-8vw" longitude="-2.9257208018534984" latitude="-0.08503861443538797"/>
+                <center xmi:id="_twGzLI4fEeWmzZ4Jc4-8vw" longitude="-2.9339092115016796" latitude="-0.08840596522914841"/>
+                <right xmi:id="_twGzLY4fEeWmzZ4Jc4-8vw" longitude="-2.9132350874578976" latitude="-0.07988951285291246"/>
+              </points>
+              <points xmi:id="_twGzLo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:19:36.000-0500">
+                <left xmi:id="_twGzL44fEeWmzZ4Jc4-8vw" longitude="-2.935070079698744" latitude="-0.06572442678070888"/>
+                <center xmi:id="_twGzMI4fEeWmzZ4Jc4-8vw" longitude="-2.9432466188701696" latitude="-0.06908532180205426"/>
+                <right xmi:id="_twGzMY4fEeWmzZ4Jc4-8vw" longitude="-2.9226003037369432" latitude="-0.06058762953504742"/>
+              </points>
+              <points xmi:id="_twGzMo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:19:56.000-0500">
+                <left xmi:id="_twGzM44fEeWmzZ4Jc4-8vw" longitude="-2.944396229633496" latitude="-0.04640323475024663"/>
+                <center xmi:id="_twGzNI4fEeWmzZ4Jc4-8vw" longitude="-2.9525635753466255" latitude="-0.049758955751419316"/>
+                <right xmi:id="_twGzNY4fEeWmzZ4Jc4-8vw" longitude="-2.93193832912813" latitude="-0.04127678197493482"/>
+              </points>
+              <points xmi:id="_twGzNo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:20:16.000-0500">
+                <left xmi:id="_twGzN44fEeWmzZ4Jc4-8vw" longitude="-2.9537051124868965" latitude="-0.027076424368644925"/>
+                <center xmi:id="_twGzOI4fEeWmzZ4Jc4-8vw" longitude="-2.9618659359652906" latitude="-0.030428246489779858"/>
+                <right xmi:id="_twGzOY4fEeWmzZ4Jc4-8vw" longitude="-2.9412550274232907" latitude="-0.02195836721177917"/>
+              </points>
+              <points xmi:id="_twGzOo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:20:36.000-0500">
+                <left xmi:id="_twGzO44fEeWmzZ4Jc4-8vw" longitude="-2.963002547646394" latitude="-0.0077453725081237275"/>
+                <center xmi:id="_twGzPI4fEeWmzZ4Jc4-8vw" longitude="-2.9711595165290916" latitude="-0.011094566276209774"/>
+                <right xmi:id="_twGzPY4fEeWmzZ4Jc4-8vw" longitude="-2.950556217678171" latitude="-0.002633770095132916"/>
+              </points>
+              <points xmi:id="_twGzPo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:20:56.000-0500">
+                <left xmi:id="_twGzP44fEeWmzZ4Jc4-8vw" longitude="-2.9722943288738812" latitude="0.011588550020319352"/>
+                <center xmi:id="_twGzQI4fEeWmzZ4Jc4-8vw" longitude="-2.980450109446246" latitude="0.008240716704971117"/>
+                <right xmi:id="_twGzQY4fEeWmzZ4Jc4-8vw" longitude="-2.959847689967697" latitude="0.016695633607888578"/>
+              </points>
+              <points xmi:id="_twGzQo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:21:16.000-0500">
+                <left xmi:id="_twGzQ44fEeWmzZ4Jc4-8vw" longitude="-2.981586240019217" latitude="0.030923975436039853"/>
+                <center xmi:id="_twGzRI4fEeWmzZ4Jc4-8vw" longitude="-2.9897434994580667" latitude="0.027576235319562718"/>
+                <right xmi:id="_twGzRY4fEeWmzZ4Jc4-8vw" longitude="-2.96913522104835" latitude="0.036028474175163874"/>
+              </points>
+              <points xmi:id="_twGzRo4fEeWmzZ4Jc4-8vw" time="2015-02-19T17:21:36.000-0500">
+                <left xmi:id="_twHYcI4fEeWmzZ4Jc4-8vw" longitude="-2.9908840706865942" latitude="0.0502595359369499"/>
+                <center xmi:id="_twHYcY4fEeWmzZ4Jc4-8vw" longitude="-2.99904547931371" latitude="0.04691062043166879"/>
+                <right xmi:id="_twHYco4fEeWmzZ4Jc4-8vw" longitude="-2.978424589982462" latitude="0.0553633848806853"/>
+              </points>
+              <points xmi:id="_twHYc44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:21:56.000-0500">
+                <left xmi:id="_twHYdI4fEeWmzZ4Jc4-8vw" longitude="-3.0001936319660194" latitude="0.06959386068457522"/>
+                <center xmi:id="_twHYdY4fEeWmzZ4Jc4-8vw" longitude="-3.0083618655042086" latitude="0.06624249788247372"/>
+                <right xmi:id="_twHYdo4fEeWmzZ4Jc4-8vw" longitude="-2.9877215938363735" latitude="0.07469899899206943"/>
+              </points>
+              <points xmi:id="_twHYd44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:22:16.000-0500">
+                <left xmi:id="_twHYeI4fEeWmzZ4Jc4-8vw" longitude="-3.0095207722793424" latitude="0.08892557272779127"/>
+                <center xmi:id="_twHYeY4fEeWmzZ4Jc4-8vw" longitude="-3.017698514105096" latitude="0.08557048540140295"/>
+                <right xmi:id="_twHYeo4fEeWmzZ4Jc4-8vw" longitude="-2.9970320635018655" latitude="0.09403394671639298"/>
+              </points>
+              <points xmi:id="_twHYe44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:22:36.000-0500">
+                <left xmi:id="_twHYfI4fEeWmzZ4Jc4-8vw" longitude="-3.0188713934516134" latitude="0.1082532859159174"/>
+                <center xmi:id="_twHYfY4fEeWmzZ4Jc4-8vw" longitude="-3.0270613368380883" latitude="0.10489318950028953"/>
+                <right xmi:id="_twHYfo4fEeWmzZ4Jc4-8vw" longitude="-3.006361879751911" latitude="0.11336685214516057"/>
+              </points>
+              <points xmi:id="_twHYf44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:22:56.000-0500">
+                <left xmi:id="_twHYgI4fEeWmzZ4Jc4-8vw" longitude="-3.028251467065862" latitude="0.12757560171588642"/>
+                <center xmi:id="_twHYgY4fEeWmzZ4Jc4-8vw" longitude="-3.036456317409349" latitude="0.12420920226519425"/>
+                <right xmi:id="_twHYgo4fEeWmzZ4Jc4-8vw" longitude="-3.0157169895894635" latitude="0.1326963301132831"/>
+              </points>
+              <points xmi:id="_twHYg44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:23:16.000-0500">
+                <left xmi:id="_twHYhI4fEeWmzZ4Jc4-8vw" longitude="-3.0376670512106525" latitude="0.14689110596956242"/>
+                <center xmi:id="_twHYhY4fEeWmzZ4Jc4-8vw" longitude="-3.045889528232961" latitude="0.14351709808184793"/>
+                <right xmi:id="_twHYho4fEeWmzZ4Jc4-8vw" longitude="-3.0251034229995364" latitude="0.1520209830083472"/>
+              </points>
+              <points xmi:id="_twHYh44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:23:36.000-0500">
+                <left xmi:id="_twHYiI4fEeWmzZ4Jc4-8vw" longitude="-3.047124307690555" latitude="0.16619836552146874"/>
+                <center xmi:id="_twHYiY4fEeWmzZ4Jc4-8vw" longitude="-3.0553671476087034" latitude="0.16281543022487016"/>
+                <right xmi:id="_twHYio4fEeWmzZ4Jc4-8vw" longitude="-3.034527310176049" latitude="0.17133939746066074"/>
+              </points>
+              <points xmi:id="_twHYi44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:23:56.000-0500">
+                <left xmi:id="_twHYjI4fEeWmzZ4Jc4-8vw" longitude="-3.0566295198064006" latitude="0.185495924727468"/>
+                <center xmi:id="_twHYjY4fEeWmzZ4Jc4-8vw" longitude="-3.06489547745974" latitude="0.18210272732116298"/>
+                <right xmi:id="_twHYjo4fEeWmzZ4Jc4-8vw" longitude="-3.0439948993319716" latitude="0.1906501409248937"/>
+              </points>
+              <points xmi:id="_twHYj44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:24:16.000-0500">
+                <left xmi:id="_twHYkI4fEeWmzZ4Jc4-8vw" longitude="-3.0661891107926493" latitude="0.20478230179615972"/>
+                <center xmi:id="_twHYkY4fEeWmzZ4Jc4-8vw" longitude="-3.07448096171597" latitude="0.20137748963909788"/>
+                <right xmi:id="_twHYko4fEeWmzZ4Jc4-8vw" longitude="-3.0535125751822556" latitude="0.209951758105371"/>
+              </points>
+              <points xmi:id="_twHYk44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:24:36.000-0500">
+                <left xmi:id="_twHYlI4fEeWmzZ4Jc4-8vw" longitude="-3.075809663024827" latitude="0.22405598496067725"/>
+                <center xmi:id="_twHYlY4fEeWmzZ4Jc4-8vw" longitude="-3.0841302054541018" latitude="0.22063818520099698"/>
+                <right xmi:id="_twHYlo4fEeWmzZ4Jc4-8vw" longitude="-3.0630868782151013" latitude="0.22924276722304526"/>
+              </points>
+              <points xmi:id="_twHYl44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:24:56.000-0500">
+                <left xmi:id="_twHYmI4fEeWmzZ4Jc4-8vw" longitude="-3.085497938084915" latitude="0.24331542840590198"/>
+                <center xmi:id="_twHYmY4fEeWmzZ4Jc4-8vw" longitude="-3.0938499948799905" latitude="0.23988324564377034"/>
+                <right xmi:id="_twHYmo4fEeWmzZ4Jc4-8vw" longitude="-3.072724524842742" latitude="0.24852165604949028"/>
+              </points>
+              <points xmi:id="_twHYm44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:25:16.000-0500">
+                <left xmi:id="_twHYnI4fEeWmzZ4Jc4-8vw" longitude="-3.095260897840306" latitude="0.26255904801599095"/>
+                <center xmi:id="_twHYnY4fEeWmzZ4Jc4-8vw" longitude="-3.103647318306274" latitude="0.2591110618923466"/>
+                <right xmi:id="_twHYno4fEeWmzZ4Jc4-8vw" longitude="-3.0824324285909586" latitude="0.26778687777328536"/>
+              </points>
+              <points xmi:id="_twHYn44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:25:36.000-0500">
+                <left xmi:id="_twHYoI4fEeWmzZ4Jc4-8vw" longitude="-3.105105726612169" latitude="0.28178521679881197"/>
+                <center xmi:id="_twHYoY4fEeWmzZ4Jc4-8vw" longitude="-3.1135293881977812" latitude="0.27831997950235804"/>
+                <right xmi:id="_twHYoo4fEeWmzZ4Jc4-8vw" longitude="-3.092217722407989" latitude="0.28703684655569867"/>
+              </points>
+              <points xmi:id="_twHYo44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:25:56.000-0500">
+                <left xmi:id="_twHYpI4fEeWmzZ4Jc4-8vw" longitude="-3.1150398545838587" latitude="0.30099226000014495"/>
+                <center xmi:id="_twHYpY4fEeWmzZ4Jc4-8vw" longitude="-3.123503664431623" latitude="0.29750829368471055"/>
+                <right xmi:id="_twHYpo4fEeWmzZ4Jc4-8vw" longitude="-3.102087782248813" latitude="0.3062699327889855"/>
+              </points>
+              <points xmi:id="_twHYp44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:26:16.000-0500">
+                <left xmi:id="_twHYqI4fEeWmzZ4Jc4-8vw" longitude="-3.1250709826159575" latitude="0.32017844992734096"/>
+                <center xmi:id="_twHYqY4fEeWmzZ4Jc4-8vw" longitude="-3.1335778789342434" latitude="0.316674244031464"/>
+                <right xmi:id="_twHYqo4fEeWmzZ4Jc4-8vw" longitude="-3.1120502521075712" latitude="0.3254844580775146"/>
+              </points>
+              <points xmi:id="_twHYq44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:26:36.000-0500">
+                <left xmi:id="_twHYrI4fEeWmzZ4Jc4-8vw" longitude="-3.135207108569327" latitude="0.3393420003270573"/>
+                <center xmi:id="_twHYrY4fEeWmzZ4Jc4-8vw" longitude="3.1394252453881952" latitude="0.33581600878755324"/>
+                <right xmi:id="_twHYro4fEeWmzZ4Jc4-8vw" longitude="-3.1221130706074187" latitude="0.34467868978663757"/>
+              </points>
+              <points xmi:id="_twHYr44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:26:56.000-0500">
+                <left xmi:id="_twHYsI4fEeWmzZ4Jc4-8vw" longitude="3.137728751843686" latitude="0.3584810603566993"/>
+                <center xmi:id="_twHYsY4fEeWmzZ4Jc4-8vw" longitude="3.129126738154769" latitude="0.35493169870773195"/>
+                <right xmi:id="_twHYso4fEeWmzZ4Jc4-8vw" longitude="-3.132284499356136" latitude="0.3638508351994572"/>
+              </points>
+              <points xmi:id="_twHYs44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:27:16.000-0500">
+                <left xmi:id="_twHYtI4fEeWmzZ4Jc4-8vw" longitude="3.127357306424124" latitude="0.37759370810377063"/>
+                <center xmi:id="_twHYtY4fEeWmzZ4Jc4-8vw" longitude="3.1187031949727095" latitude="0.3740193504527832"/>
+                <right xmi:id="_twHYto4fEeWmzZ4Jc4-8vw" longitude="3.1406121539234566" latitude="0.38299903523612466"/>
+              </points>
+              <points xmi:id="_twHYt44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:27:36.000-0500">
+                <left xmi:id="_twHYuI4fEeWmzZ4Jc4-8vw" longitude="3.1168547976081977" latitude="0.39667794351886254"/>
+                <center xmi:id="_twHYuY4fEeWmzZ4Jc4-8vw" longitude="3.108145517122086" latitude="0.39307691939073097"/>
+                <right xmi:id="_twHYuo4fEeWmzZ4Jc4-8vw" longitude="3.130197274245232" latitude="0.40212135760161"/>
+              </points>
+              <points xmi:id="_twHYu44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:27:56.000-0500">
+                <left xmi:id="_twHYvI4fEeWmzZ4Jc4-8vw" longitude="3.1062117395013358" latitude="0.41573168080698586"/>
+                <center xmi:id="_twHYvY4fEeWmzZ4Jc4-8vw" longitude="3.097444184912583" latitude="0.41210227184760045"/>
+                <right xmi:id="_twHYvo4fEeWmzZ4Jc4-8vw" longitude="3.119646747620609" latitude="0.42121578940711"/>
+              </points>
+              <points xmi:id="_twHYv44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:28:16.000-0500">
+                <left xmi:id="_twHYwI4fEeWmzZ4Jc4-8vw" longitude="3.0954181883324536" latitude="0.43475274013468745"/>
+                <center xmi:id="_twHYwY4fEeWmzZ4Jc4-8vw" longitude="3.0865892214605015" latitude="0.43109317666532426"/>
+                <right xmi:id="_twHYwo4fEeWmzZ4Jc4-8vw" longitude="3.108950694933778" latitude="0.44028022912257797"/>
+              </points>
+              <points xmi:id="_twHYw44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:28:36.000-0500">
+                <left xmi:id="_twHYxI4fEeWmzZ4Jc4-8vw" longitude="3.0844637029997277" latitude="0.4537388386075281"/>
+                <center xmi:id="_twHYxY4fEeWmzZ4Jc4-8vw" longitude="3.0755701538275457" latitude="0.4500472960215208"/>
+                <right xmi:id="_twHYxo4fEeWmzZ4Jc4-8vw" longitude="3.098098738854286" latitude="0.4593124778150325"/>
+              </points>
+              <points xmi:id="_twHYx44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:28:56.000-0500">
+                <left xmi:id="_twHYyI4fEeWmzZ4Jc4-8vw" longitude="3.073337302629517" latitude="0.4726875804378305"/>
+                <center xmi:id="_twHYyY4fEeWmzZ4Jc4-8vw" longitude="3.0643759712788388" latitude="0.46896217543138874"/>
+                <right xmi:id="_twHYyo4fEeWmzZ4Jc4-8vw" longitude="3.0870799604283485" latitude="0.4783102295923907"/>
+              </points>
+              <points xmi:id="_twHYy44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:29:16.000-0500">
+                <left xmi:id="_twHYzI4fEeWmzZ4Jc4-8vw" longitude="3.0620274208522815" latitude="0.4915964462503011"/>
+                <center xmi:id="_twHYzY4fEeWmzZ4Jc4-8vw" longitude="3.0529950803818964" latitude="0.4878352328797826"/>
+                <right xmi:id="_twHYzo4fEeWmzZ4Jc4-8vw" longitude="3.0758828522054253" latitude="0.49727106120011566"/>
+              </points>
+              <points xmi:id="_twHYz44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:29:36.000-0500">
+                <left xmi:id="_twHY0I4fEeWmzZ4Jc4-8vw" longitude="3.0505218565527943" latitude="0.5104627813174524"/>
+                <center xmi:id="_twHY0Y4fEeWmzZ4Jc4-8vw" longitude="3.0414152567252204" latitude="0.5066637468763802"/>
+                <right xmi:id="_twHY0o4fEeWmzZ4Jc4-8vw" longitude="3.0644952676249044" latitude="0.5161924205615716"/>
+              </points>
+              <points xmi:id="_twHY044fEeWmzZ4Jc4-8vw" time="2015-02-19T17:29:56.000-0500">
+                <left xmi:id="_twHY1I4fEeWmzZ4Jc4-8vw" longitude="3.038807720695702" latitude="0.5292837827712059"/>
+                <center xmi:id="_twHY1Y4fEeWmzZ4Jc4-8vw" longitude="3.0296235928815247" latitude="0.5254448434811531"/>
+                <right xmi:id="_twHY1o4fEeWmzZ4Jc4-8vw" longitude="3.0529043662275535" latitude="0.5350716143076911"/>
+              </points>
+              <points xmi:id="_twHY144fEeWmzZ4Jc4-8vw" time="2015-02-19T17:30:16.000-0500">
+                <left xmi:id="_twHY2I4fEeWmzZ4Jc4-8vw" longitude="3.0268713789682358" latitude="0.5480564855099086"/>
+                <center xmi:id="_twHY2Y4fEeWmzZ4Jc4-8vw" longitude="3.017606442386533" latitude="0.5441754820211817"/>
+                <right xmi:id="_twHY2o4fEeWmzZ4Jc4-8vw" longitude="3.041096554388873" latitude="0.553905794013025"/>
+              </points>
+              <points xmi:id="_twHY244fEeWmzZ4Jc4-8vw" time="2015-02-19T17:30:36.000-0500">
+                <left xmi:id="_twHY3I4fEeWmzZ4Jc4-8vw" longitude="3.014698389798965" latitude="0.5667777468140092"/>
+                <center xmi:id="_twHY3Y4fEeWmzZ4Jc4-8vw" longitude="3.0053493593249985" latitude="0.5628524395137932"/>
+                <right xmi:id="_twHY3o4fEeWmzZ4Jc4-8vw" longitude="3.02905742108294" latitude="0.5726919411494137"/>
+              </points>
+              <points xmi:id="_twHY344fEeWmzZ4Jc4-8vw" time="2015-02-19T17:30:56.000-0500">
+                <left xmi:id="_twHY4I4fEeWmzZ4Jc4-8vw" longitude="3.0022734374543543" latitude="0.58544422936815"/>
+                <center xmi:id="_twHY4Y4fEeWmzZ4Jc4-8vw" longitude="2.992837033265154" latitude="0.5814722934967508"/>
+                <right xmi:id="_twHY4o4fEeWmzZ4Jc4-8vw" longitude="3.016771668317464" latitude="0.5914268504512481"/>
+              </points>
+              <points xmi:id="_twHY444fEeWmzZ4Jc4-8vw" time="2015-02-19T17:31:16.000-0500">
+                <left xmi:id="_twHY5I4fEeWmzZ4Jc4-8vw" longitude="2.98958025972176" latitude="0.6040523826863209"/>
+                <center xmi:id="_twHY5Y4fEeWmzZ4Jc4-8vw" longitude="2.980053219094739" latitude="0.6000314032652257"/>
+                <right xmi:id="_twHY5o4fEeWmzZ4Jc4-8vw" longitude="3.004223035679539" latitude="0.6101071116850769"/>
+              </points>
+              <points xmi:id="_twHY544fEeWmzZ4Jc4-8vw" time="2015-02-19T17:31:36.000-0500">
+                <left xmi:id="_twHY6I4fEeWmzZ4Jc4-8vw" longitude="2.9766015698573547" latitude="0.6225984225928267"/>
+                <center xmi:id="_twHY6Y4fEeWmzZ4Jc4-8vw" longitude="2.966980661490442" latitude="0.6185258891730866"/>
+                <right xmi:id="_twHY6o4fEeWmzZ4Jc4-8vw" longitude="2.991394218587159" latitude="0.6287290894699299"/>
+              </points>
+              <points xmi:id="_twHY644fEeWmzZ4Jc4-8vw" time="2015-02-19T17:31:56.000-0500">
+                <left xmi:id="_twHY7I4fEeWmzZ4Jc4-8vw" longitude="2.96331897230247" latitude="0.6410783086827259"/>
+                <center xmi:id="_twHY7Y4fEeWmzZ4Jc4-8vw" longitude="2.9536010135847888" latitude="0.6369516099274787"/>
+                <right xmi:id="_twHY7o4fEeWmzZ4Jc4-8vw" longitude="2.9782667796547533" latitude="0.6472889010649233"/>
+              </points>
+              <points xmi:id="_twHY744fEeWmzZ4Jc4-8vw" time="2015-02-19T17:32:16.000-0500">
+                <left xmi:id="_twHY8I4fEeWmzZ4Jc4-8vw" longitude="2.9497128718031953" latitude="0.6594877194367939"/>
+                <center xmi:id="_twHY8Y4fEeWmzZ4Jc4-8vw" longitude="2.9398947495367547" latitude="0.6553041375590931"/>
+                <right xmi:id="_twHY8o4fEeWmzZ4Jc4-8vw" longitude="2.96482105269451" latitude="0.6657823917891106"/>
+              </points>
+              <points xmi:id="_twHY844fEeWmzZ4Jc4-8vw" time="2015-02-19T17:32:36.000-0500">
+                <left xmi:id="_twHY9I4fEeWmzZ4Jc4-8vw" longitude="2.9357623754823012" latitude="0.6778220248039906"/>
+                <center xmi:id="_twHY9Y4fEeWmzZ4Jc4-8vw" longitude="2.9258410706369946" latitude="0.6735787298898533"/>
+                <right xmi:id="_twHY9o4fEeWmzZ4Jc4-8vw" longitude="2.9510360387720747" latitude="0.684205107874421"/>
+              </points>
+              <points xmi:id="_twHY944fEeWmzZ4Jc4-8vw" time="2015-02-19T17:32:56.000-0500">
+                <left xmi:id="_twHY-I4fEeWmzZ4Jc4-8vw" longitude="2.921445187521675" latitude="0.6960762559072863"/>
+                <center xmi:id="_twHY-Y4fEeWmzZ4Jc4-8vw" longitude="2.9114178047011663" latitude="0.6917703001652168"/>
+                <right xmi:id="_twHY-o4fEeWmzZ4Jc4-8vw" longitude="2.936889293821819" latitude="0.7025522663915379"/>
+              </points>
+              <points xmi:id="_twHY-44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:33:16.000-0500">
+                <left xmi:id="_twHY_I4fEeWmzZ4Jc4-8vw" longitude="2.906737496070313" latitude="0.7142450716378745"/>
+                <center xmi:id="_twHY_Y4fEeWmzZ4Jc4-8vw" longitude="2.8966012984752836" latitude="0.7098733836297675"/>
+                <right xmi:id="_twHY_o4fEeWmzZ4Jc4-8vw" longitude="2.9223568072603587" latitude="0.7208187219942805"/>
+              </points>
+              <points xmi:id="_twHY_44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:33:36.000-0500">
+                <left xmi:id="_twHZAI4fEeWmzZ4Jc4-8vw" longitude="2.8916138521809733" latitude="0.7323227217105142"/>
+                <center xmi:id="_twHZAY4fEeWmzZ4Jc4-8vw" longitude="2.881366302982085" latitude="0.7278821006363312"/>
+                <right xmi:id="_twHZAo4fEeWmzZ4Jc4-8vw" longitude="2.907412871195825" latitude="0.7389989300299866"/>
+              </points>
+              <points xmi:id="_twHZA44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:33:56.000-0500">
+                <left xmi:id="_twHZBI4fEeWmzZ4Jc4-8vw" longitude="2.876047040600093" latitude="0.7503030058579789"/>
+                <center xmi:id="_twHZBY4fEeWmzZ4Jc4-8vw" longitude="2.865685851775843" latitude="0.7457901159876557"/>
+                <right xmi:id="_twHZBo4fEeWmzZ4Jc4-8vw" longitude="2.892029939821823" latitude="0.7570869056630849"/>
+              </points>
+              <points xmi:id="_twHZB44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:34:16.000-0500">
+                <left xmi:id="_twHZCI4fEeWmzZ4Jc4-8vw" longitude="2.860007942461293" latitude="0.7681792287250858"/>
+                <center xmi:id="_twHZCY4fEeWmzZ4Jc4-8vw" longitude="2.8495311323184147" latitude="0.7635905940973695"/>
+                <right xmi:id="_twHZCo4fEeWmzZ4Jc4-8vw" longitude="2.8761784787753264" latitude="0.775076178533618"/>
+              </points>
+              <points xmi:id="_twHZC44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:34:36.000-0500">
+                <left xmi:id="_twHZDI4fEeWmzZ4Jc4-8vw" longitude="2.843465390107977" latitude="0.7859441500612442"/>
+                <center xmi:id="_twHZDY4fEeWmzZ4Jc4-8vw" longitude="2.83287135088439" latitude="0.7812761496009774"/>
+                <right xmi:id="_twHZDo4fEeWmzZ4Jc4-8vw" longitude="2.8598268043759365" latitude="0.7929597425021804"/>
+              </points>
+              <points xmi:id="_twHZD44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:34:56.000-0500">
+                <left xmi:id="_twHZEI4fEeWmzZ4Jc4-8vw" longitude="2.8263860146851947" latitude="0.8035899296552189"/>
+                <center xmi:id="_twHZEY4fEeWmzZ4Jc4-8vw" longitude="2.8156735918393077" latitude="0.7988387928999611"/>
+                <right xmi:id="_twHZEo4fEeWmzZ4Jc4-8vw" longitude="2.8429409130372116" latitude="0.8107299998656126"/>
+              </points>
+              <points xmi:id="_twHZE44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:35:16.000-0500">
+                <left xmi:id="_twHZFI4fEeWmzZ4Jc4-8vw" longitude="2.8087340874263043" latitude="0.8211080665986163"/>
+                <center xmi:id="_twHZFY4fEeWmzZ4Jc4-8vw" longitude="2.7979026724392564" latitude="0.8162698702725137"/>
+                <right xmi:id="_twHZFo4fEeWmzZ4Jc4-8vw" longitude="2.825484301386869" latitude="0.8283786995582999"/>
+              </points>
+              <points xmi:id="_twHZF44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:35:36.000-0500">
+                <left xmi:id="_twHZGI4fEeWmzZ4Jc4-8vw" longitude="2.790471356255804" latitude="0.8384893322754193"/>
+                <center xmi:id="_twHZGY4fEeWmzZ4Jc4-8vw" longitude="2.7795209950145976" latitude="0.833559998005873"/>
+                <right xmi:id="_twHZGo4fEeWmzZ4Jc4-8vw" longitude="2.8074177782869145" latitude="0.8458968686476641"/>
+              </points>
+              <points xmi:id="_twHZG44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:35:56.000-0500">
+                <left xmi:id="_twHZHI4fEeWmzZ4Jc4-8vw" longitude="2.771556879995583" latitude="0.8557236965531898"/>
+                <center xmi:id="_twHZHY4fEeWmzZ4Jc4-8vw" longitude="2.7604883990785014" latitude="0.8506989900947142"/>
+                <right xmi:id="_twHZHo4fEeWmzZ4Jc4-8vw" longitude="2.7886992705766502" latitude="0.8632747364922162"/>
+              </points>
+              <points xmi:id="_twHZH44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:36:16.000-0500">
+                <left xmi:id="_twHZII4fEeWmzZ4Jc4-8vw" longitude="2.7519468634028836" latitude="0.8728002466592136"/>
+                <center xmi:id="_twHZIY4fEeWmzZ4Jc4-8vw" longitude="2.740762016845688" latitude="0.8676757790710888"/>
+                <right xmi:id="_twHZIo4fEeWmzZ4Jc4-8vw" longitude="2.7692836252780166" latitude="0.8805016509159239"/>
+              </points>
+              <points xmi:id="_twHZI44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:36:36.000-0500">
+                <left xmi:id="_twHZJI4fEeWmzZ4Jc4-8vw" longitude="2.7315944975322397" latitude="0.8897070982074796"/>
+                <center xmi:id="_twHZJY4fEeWmzZ4Jc4-8vw" longitude="2.7202961369006395" latitude="0.8844783295294744"/>
+                <right xmi:id="_twHZJo4fEeWmzZ4Jc4-8vw" longitude="2.749122412259903" latitude="0.8975659857089238"/>
+              </points>
+              <points xmi:id="_twHZJ44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:36:56.000-0500">
+                <left xmi:id="_twHZKI4fEeWmzZ4Jc4-8vw" longitude="2.710449811495118" latitude="0.9064312978845974"/>
+                <center xmi:id="_twHZKY4fEeWmzZ4Jc4-8vw" longitude="2.6990420823040595" latitude="0.9010935439699462"/>
+                <right xmi:id="_twHZKo4fEeWmzZ4Jc4-8vw" longitude="2.7281637329629675" latitude="0.9144550387768976"/>
+              </points>
+              <points xmi:id="_twHZK44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:37:16.000-0500">
+                <left xmi:id="_twHZLI4fEeWmzZ4Jc4-8vw" longitude="2.688459543495566" latitude="0.9229587175394388"/>
+                <center xmi:id="_twHZLY4fEeWmzZ4Jc4-8vw" longitude="2.6769481111660833" latitude="0.9175071608368448"/>
+                <right xmi:id="_twHZLo4fEeWmzZ4Jc4-8vw" longitude="2.7063520426621386" latitude="0.9311549204661665"/>
+              </points>
+              <points xmi:id="_twHZL44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:37:36.000-0500">
+                <left xmi:id="_twHZMI4fEeWmzZ4Jc4-8vw" longitude="2.6655670416921358" latitude="0.9392739393736974"/>
+                <center xmi:id="_twHZMY4fEeWmzZ4Jc4-8vw" longitude="2.6539593502787384" latitude="0.9337036446033721"/>
+                <right xmi:id="_twHZMo4fEeWmzZ4Jc4-8vw" longitude="2.683627996551352" latitude="0.947650431506022"/>
+              </points>
+              <points xmi:id="_twHZM44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:37:56.000-0500">
+                <left xmi:id="_twHZNI4fEeWmzZ4Jc4-8vw" longitude="2.6417122082124944" latitude="0.9553601323721902"/>
+                <center xmi:id="_twHZNY4fEeWmzZ4Jc4-8vw" longitude="2.630017775002378" latitude="0.9496660682119873"/>
+                <right xmi:id="_twHZNo4fEeWmzZ4Jc4-8vw" longitude="2.659928332949169" latitude="0.9639249304158973"/>
+              </points>
+              <points xmi:id="_twHZN44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:38:16.000-0500">
+                <left xmi:id="_twHZOI4fEeWmzZ4Jc4-8vw" longitude="2.6168315033820964" latitude="0.9711989203653305"/>
+                <center xmi:id="_twHZOY4fEeWmzZ4Jc4-8vw" longitude="2.605062252078122" latitude="0.9653759884514064"/>
+                <right xmi:id="_twHZOo4fEeWmzZ4Jc4-8vw" longitude="2.635185811030385" latitude="0.9799601904416512"/>
+              </points>
+              <points xmi:id="_twHZO44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:38:36.000-0500">
+                <left xmi:id="_twHZPI4fEeWmzZ4Jc4-8vw" longitude="2.5908580315132954" latitude="0.9867702426361523"/>
+                <center xmi:id="_twHZPY4fEeWmzZ4Jc4-8vw" longitude="2.579028665951607" latitude="0.9808133153823415"/>
+                <right xmi:id="_twHZPo4fEeWmzZ4Jc4-8vw" longitude="2.6093292253330205" latitude="0.9957362465749153"/>
+              </points>
+              <points xmi:id="_twHZP44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:38:56.000-0500">
+                <left xmi:id="_twHZQI4fEeWmzZ4Jc4-8vw" longitude="2.5637217345634284" latitude="1.002052208688327"/>
+                <center xmi:id="_twHZQY4fEeWmzZ4Jc4-8vw" longitude="2.5518501536384073" latitude="0.9959561776298844"/>
+                <right xmi:id="_twHZQo4fEeWmzZ4Jc4-8vw" longitude="2.582283525057988" latitude="1.011231233895634"/>
+              </points>
+              <points xmi:id="_twHZQ44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:39:16.000-0500">
+                <left xmi:id="_twHZRI4fEeWmzZ4Jc4-8vw" longitude="2.535349725682628" latitude="1.0170209496444609"/>
+                <center xmi:id="_twHZRY4fEeWmzZ4Jc4-8vw" longitude="2.523457478176732" latitude="1.0107807861999296"/>
+                <right xmi:id="_twHZRo4fEeWmzZ4Jc4-8vw" longitude="2.553970073012167" latitude="1.0264212193338431"/>
+              </points>
+              <points xmi:id="_twHZR44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:39:36.000-0500">
+                <left xmi:id="_twHZSI4fEeWmzZ4Jc4-8vw" longitude="2.505666800737939" latitude="1.0316504699448483"/>
+                <center xmi:id="_twHZSY4fEeWmzZ4Jc4-8vw" longitude="2.4937795758672827" latitude="1.0252613006399924"/>
+                <right xmi:id="_twHZSo4fEeWmzZ4Jc4-8vw" longitude="2.5243070866232253" latitude="1.0412800301872192"/>
+              </points>
+              <points xmi:id="_twHZS44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:39:56.000-0500">
+                <left xmi:id="_twHZTI4fEeWmzZ4Jc4-8vw" longitude="2.4745961721833973" latitude="1.0459125044662918"/>
+                <center xmi:id="_twHZTY4fEeWmzZ4Jc4-8vw" longitude="2.462744317632846" latitude="1.0393697027421271"/>
+                <right xmi:id="_twHZTo4fEeWmzZ4Jc4-8vw" longitude="2.493210311705939" latitude="1.0557790842731298"/>
+              </points>
+              <points xmi:id="_twHZT44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:40:16.000-0500">
+                <left xmi:id="_twHZUI4fEeWmzZ4Jc4-8vw" longitude="2.4420604753560817" latitude="1.0597763880293436"/>
+                <center xmi:id="_twHZUY4fEeWmzZ4Jc4-8vw" longitude="2.430279529146951" latitude="1.0530756847139058"/>
+                <right xmi:id="_twHZUo4fEeWmzZ4Jc4-8vw" longitude="2.460593987836296" latitude="1.069887228613881"/>
+              </points>
+              <points xmi:id="_twHZU44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:40:36.000-0500">
+                <left xmi:id="_twHZVI4fEeWmzZ4Jc4-8vw" longitude="2.407983101580237" latitude="1.073208946446837"/>
+                <center xmi:id="_twHZVY4fEeWmzZ4Jc4-8vw" longitude="2.396314317082962" latitude="1.066346560744491"/>
+                <right xmi:id="_twHZVo4fEeWmzZ4Jc4-8vw" longitude="2.4263721714364097" latitude="1.083570596015734"/>
+              </points>
+              <points xmi:id="_twHZV44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:40:56.000-0500">
+                <left xmi:id="_twHZWI4fEeWmzZ4Jc4-8vw" longitude="2.3722899140181357" latitude="1.086174420755561"/>
+                <center xmi:id="_twHZWY4fEeWmzZ4Jc4-8vw" longitude="2.360780748687784" latitude="1.0791472131200277"/>
+                <right xmi:id="_twHZWo4fEeWmzZ4Jc4-8vw" longitude="2.3904604875272506" latitude="1.0967924918062513"/>
+              </points>
+              <points xmi:id="_twHZW44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:41:16.000-0500">
+                <left xmi:id="_twHZXI4fEeWmzZ4Jc4-8vw" longitude="2.334911398620165" latitude="1.098634439168618"/>
+                <center xmi:id="_twHZXY4fEeWmzZ4Jc4-8vw" longitude="2.3236159266964904" latitude="1.091440086582575"/>
+                <right xmi:id="_twHZXo4fEeWmzZ4Jc4-8vw" longitude="2.3527783808667895" latitude="1.1095133264771078"/>
+              </points>
+              <points xmi:id="_twHZX44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:41:36.000-0500">
+                <left xmi:id="_twHZYI4fEeWmzZ4Jc4-8vw" longitude="2.2957852923251068" latitude="1.1105480539982644"/>
+                <center xmi:id="_twHZYY4fEeWmzZ4Jc4-8vw" longitude="2.2847644902414608" latitude="1.1031852468887404"/>
+                <right xmi:id="_twHZYo4fEeWmzZ4Jc4-8vw" longitude="2.3132519298347582" latitude="1.1216906134641507"/>
+              </points>
+              <points xmi:id="_twHZY44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:41:56.000-0500">
+                <left xmi:id="_twHZZI4fEeWmzZ4Jc4-8vw" longitude="2.254859709592307" latitude="1.121871863586344"/>
+                <center xmi:id="_twHZZY4fEeWmzZ4Jc4-8vw" longitude="2.244181551132335" latitude="1.1143405217691373"/>
+                <right xmi:id="_twHZZo4fEeWmzZ4Jc4-8vw" longitude="2.2718172668071306" latitude="1.1332790550505638"/>
+              </points>
+              <points xmi:id="_twHZZ44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:42:16.000-0500">
+                <left xmi:id="_twHZaI4fEeWmzZ4Jc4-8vw" longitude="2.2120967544904877" latitude="1.1325602411939868"/>
+                <center xmi:id="_twHZaY4fEeWmzZ4Jc4-8vw" longitude="2.2018360424482113" latitude="1.1248617438097592"/>
+                <right xmi:id="_twHZao4fEeWmzZ4Jc4-8vw" longitude="2.2284246137047874" latitude="1.1442307424029432"/>
+              </points>
+              <points xmi:id="_twHZa44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:42:36.000-0500">
+                <left xmi:id="_twHZbI4fEeWmzZ4Jc4-8vw" longitude="2.16747655628402" latitude="1.1425656933516797"/>
+                <center xmi:id="_twHZbY4fEeWmzZ4Jc4-8vw" longitude="2.1577144109470385" latitude="1.1347031147478415"/>
+                <right xmi:id="_twHZbo4fEeWmzZ4Jc4-8vw" longitude="2.183042886679478" latitude="1.1544954974454267"/>
+              </points>
+              <points xmi:id="_twHZb44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:42:56.000-0500">
+                <left xmi:id="_twHZcI4fEeWmzZ4Jc4-8vw" longitude="2.1210015998360814" latitude="1.1518393687928978"/>
+                <center xmi:id="_twHZcY4fEeWmzZ4Jc4-8vw" longitude="2.1118245252358214" latitude="1.1438177088466044"/>
+                <right xmi:id="_twHZco4fEeWmzZ4Jc4-8vw" longitude="2.135664745892385" latitude="1.1640213838927687"/>
+              </points>
+              <points xmi:id="_twHZc44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:43:16.000-0500">
+                <left xmi:id="_twHZdI4fEeWmzZ4Jc4-8vw" longitude="2.0727011418010886" latitude="1.1603317344264437"/>
+                <center xmi:id="_twHZdY4fEeWmzZ4Jc4-8vw" longitude="2.064199602052954" latitude="1.1521581281913744"/>
+                <right xmi:id="_twHZdo4fEeWmzZ4Jc4-8vw" longitude="2.0863118673336247" latitude="1.1727554106316442"/>
+              </points>
+              <points xmi:id="_twHZd44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:43:36.000-0500">
+                <left xmi:id="_twHZeI4fEeWmzZ4Jc4-8vw" longitude="2.0226354142136365" latitude="1.1679934265045648"/>
+                <center xmi:id="_twHZeY4fEeWmzZ4Jc4-8vw" longitude="2.0149018779501717" latitude="1.159677314781714"/>
+                <right xmi:id="_twHZeo4fEeWmzZ4Jc4-8vw" longitude="2.0350400980647425" latitude="1.180644442053482"/>
+              </points>
+              <points xmi:id="_twHZe44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:43:56.000-0500">
+                <left xmi:id="_twHZfI4fEeWmzZ4Jc4-8vw" longitude="1.9708992321649725" latitude="1.174776272340627"/>
+                <center xmi:id="_twHZfY4fEeWmzZ4Jc4-8vw" longitude="1.9640256853218905" latitude="1.1663295125033672"/>
+                <right xmi:id="_twHZfo4fEeWmzZ4Jc4-8vw" longitude="1.9819440394311585" latitude="1.187636315613471"/>
+              </points>
+              <points xmi:id="_twHZf44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:44:16.000-0500">
+                <left xmi:id="_twHZgI4fEeWmzZ4Jc4-8vw" longitude="1.9176245589124785" latitude="1.1806344609772679"/>
+                <center xmi:id="_twHZgY4fEeWmzZ4Jc4-8vw" longitude="1.9116995445574896" latitude="1.1720713569299799"/>
+                <right xmi:id="_twHZgo4fEeWmzZ4Jc4-8vw" longitude="1.9271605065111317" latitude="1.1936811468658584"/>
+              </points>
+              <points xmi:id="_twHZg44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:44:36.000-0500">
+                <left xmi:id="_twHZhI4fEeWmzZ4Jc4-8vw" longitude="1.862981562070769" latitude="1.185525821138613"/>
+                <center xmi:id="_twHZhY4fEeWmzZ4Jc4-8vw" longitude="1.8580868760679994" latitude="1.1768630534457531"/>
+                <right xmi:id="_twHZho4fEeWmzZ4Jc4-8vw" longitude="1.8708702662916408" latitude="1.1987327774807648"/>
+              </points>
+              <points xmi:id="_twHZh44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:44:56.000-0500">
+                <left xmi:id="_twHZiI4fEeWmzZ4Jc4-8vw" longitude="1.8071777407265959" latitude="1.1894131438339086"/>
+                <center xmi:id="_twHZiY4fEeWmzZ4Jc4-8vw" longitude="1.8033849844095902" latitude="1.1806695863718233"/>
+                <right xmi:id="_twHZio4fEeWmzZ4Jc4-8vw" longitude="1.8132974940931732" latitude="1.2027502948693387"/>
+              </points>
+              <points xmi:id="_twHZi44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:45:16.000-0500">
+                <left xmi:id="_twHZjI4fEeWmzZ4Jc4-8vw" longitude="1.7504548286615542" latitude="1.192265468657208"/>
+                <center xmi:id="_twHZjY4fEeWmzZ4Jc4-8vw" longitude="1.747822080663089" latitude="1.1834618866607973"/>
+                <right xmi:id="_twHZjo4fEeWmzZ4Jc4-8vw" longitude="1.7547065303953409" latitude="1.2056995274892062"/>
+              </points>
+              <points xmi:id="_twHZj44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:45:36.000-0500">
+                <left xmi:id="_twHZkI4fEeWmzZ4Jc4-8vw" longitude="1.6930833840248813" latitude="1.1940592410223878"/>
+                <center xmi:id="_twHZkY4fEeWmzZ4Jc4-8vw" longitude="1.691652287418402" latitude="1.1852178764634718"/>
+                <right xmi:id="_twHZko4fEeWmzZ4Jc4-8vw" longitude="1.6953957742348986" latitude="1.207554402922511"/>
+              </points>
+              <points xmi:id="_twHZk44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:45:56.000-0500">
+                <left xmi:id="_twHZlI4fEeWmzZ4Jc4-8vw" longitude="1.6353552384339731" latitude="1.1947792461734494"/>
+                <center xmi:id="_twHZlY4fEeWmzZ4Jc4-8vw" longitude="1.6351487931342947" latitude="1.185923308595623"/>
+                <right xmi:id="_twHZlo4fEeWmzZ4Jc4-8vw" longitude="1.6356888890116976" latitude="1.2082980518637674"/>
+              </points>
+              <points xmi:id="_twHZl44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:46:16.000-0500">
+                <left xmi:id="_twHZmI4fEeWmzZ4Jc4-8vw" longitude="1.5775742580189351" latitude="1.1944192370645539"/>
+                <center xmi:id="_twHZmY4fEeWmzZ4Jc4-8vw" longitude="1.578595555751554" latitude="1.185572329320142"/>
+                <right xmi:id="_twHZmo4fEeWmzZ4Jc4-8vw" longitude="1.575923867674324" latitude="1.207923553701011"/>
+              </points>
+              <points xmi:id="_twHZm44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:46:36.000-0500">
+                <left xmi:id="_twHZnI4fEeWmzZ4Jc4-8vw" longitude="1.5200461098959932" latitude="1.1929821971052246"/>
+                <center xmi:id="_twHZnY4fEeWmzZ4Jc4-8vw" longitude="1.522278154312882" latitude="1.1841677137636877"/>
+                <right xmi:id="_twHZno4fEeWmzZ4Jc4-8vw" longitude="1.5164408297455227" latitude="1.2064342487917432"/>
+              </points>
+              <points xmi:id="_twHZn44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:46:56.000-0500">
+                <left xmi:id="_twHZoI4fEeWmzZ4Jc4-8vw" longitude="1.4630678774395542" latitude="1.1904802123392184"/>
+                <center xmi:id="_twHZoY4fEeWmzZ4Jc4-8vw" longitude="1.4664745103933845" latitude="1.1817207521607653"/>
+                <right xmi:id="_twHZoo4fEeWmzZ4Jc4-8vw" longitude="1.457569626933756" latitude="1.2038435850528644"/>
+              </points>
+              <points xmi:id="_twHZo44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:47:16.000-0500">
+                <left xmi:id="_twHZpI4fEeWmzZ4Jc4-8vw" longitude="1.406918390649866" latitude="1.1869339655193487"/>
+                <center xmi:id="_twHZpY4fEeWmzZ4Jc4-8vw" longitude="1.4114462199963682" latitude="1.1782507975388226"/>
+                <right xmi:id="_twHZpo4fEeWmzZ4Jc4-8vw" longitude="1.3996183652534955" latitude="1.2001745148901737"/>
+              </points>
+              <points xmi:id="_twHZp44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:47:36.000-0500">
+                <left xmi:id="_twHZqI4fEeWmzZ4Jc4-8vw" longitude="1.351850029690486" latitude="1.182371900327873"/>
+                <center xmi:id="_twHZqY4fEeWmzZ4Jc4-8vw" longitude="1.3574311481748145" latitude="1.1737845161656462"/>
+                <right xmi:id="_twHZqo4fEeWmzZ4Jc4-8vw" longitude="1.3428638029858408" latitude="1.1954585039904613"/>
+              </points>
+              <points xmi:id="_twHZq44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:47:56.000-0500">
+                <left xmi:id="_twHZrI4fEeWmzZ4Jc4-8vw" longitude="1.2980825439636388" latitude="1.1768291316947264"/>
+                <center xmi:id="_twHZrY4fEeWmzZ4Jc4-8vw" longitude="1.3046377611169682" latitude="1.1683549061440885"/>
+                <right xmi:id="_twHZro4fEeWmzZ4Jc4-8vw" longitude="1.287544291072698" latitude="1.1897342479983986"/>
+              </points>
+              <points xmi:id="_twHZr44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:48:16.000-0500">
+                <left xmi:id="_twHZsI4fEeWmzZ4Jc4-8vw" longitude="1.2457991566448705" latitude="1.1703461939378617"/>
+                <center xmi:id="_twHZsY4fEeWmzZ4Jc4-8vw" longitude="1.2532414442802688" latitude="1.1620001637252086"/>
+                <right xmi:id="_twHZso4fEeWmzZ4Jc4-8vw" longitude="1.233855558129133" latitude="1.183046211570638"/>
+              </points>
+              <points xmi:id="_twHZs44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:48:36.000-0500">
+                <left xmi:id="_twHZtI4fEeWmzZ4Jc4-8vw" longitude="1.195144950824698" latitude="1.1629677213048197"/>
+                <center xmi:id="_twHZtY4fEeWmzZ4Jc4-8vw" longitude="1.2033828247063463" latitude="1.154762480275869"/>
+                <right xmi:id="_twHZto4fEeWmzZ4Jc4-8vw" longitude="1.1819492845784396" latitude="1.1754431057602113"/>
+              </points>
+              <points xmi:id="_twHZt44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:48:56.000-0500">
+                <left xmi:id="_twHZuI4fEeWmzZ4Jc4-8vw" longitude="1.1462273045385636" latitude="1.1547411468814595"/>
+                <center xmi:id="_twHZuY4fEeWmzZ4Jc4-8vw" longitude="1.1551679186896382" latitude="1.1466868463824091"/>
+                <right xmi:id="_twHZuo4fEeWmzZ4Jc4-8vw" longitude="1.1319341224460397" latitude="1.1669764065823383"/>
+              </points>
+              <points xmi:id="_twHZu44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:49:16.000-0500">
+                <left xmi:id="_twHZvI4fEeWmzZ4Jc4-8vw" longitude="1.0991179883332314" latitude="1.1457154893143708"/>
+                <center xmi:id="_twHZvY4fEeWmzZ4Jc4-8vw" longitude="1.1086697888907788" latitude="1.137819926129873"/>
+                <right xmi:id="_twHZvo4fEeWmzZ4Jc4-8vw" longitude="1.083878636225093" latitude="1.1576989950282597"/>
+              </points>
+              <points xmi:id="_twHZv44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:49:36.000-0500">
+                <left xmi:id="_twHZwI4fEeWmzZ4Jc4-8vw" longitude="1.0538564665876167" latitude="1.1359402763203952"/>
+                <center xmi:id="_twHZwY4fEeWmzZ4Jc4-8vw" longitude="1.0639313244081012" latitude="1.1282090473712014"/>
+                <right xmi:id="_twHZwo4fEeWmzZ4Jc4-8vw" longitude="1.037815569203422" latitude="1.1476639721634188"/>
+              </points>
+              <points xmi:id="_twHZw44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:49:56.000-0500">
+                <left xmi:id="_twHZxI4fEeWmzZ4Jc4-8vw" longitude="1.01045394321715" latitude="1.1254646333058833"/>
+                <center xmi:id="_twHZxY4fEeWmzZ4Jc4-8vw" longitude="1.0209687475888258" latitude="1.1179013359855983"/>
+                <right xmi:id="_twHZxo4fEeWmzZ4Jc4-8vw" longitude="0.9937468607949798" latitude="1.1369236771353657"/>
+              </points>
+              <points xmi:id="_twHZx44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:50:16.000-0500">
+                <left xmi:id="_twHZyI4fEeWmzZ4Jc4-8vw" longitude="0.96889774278619" latitude="1.1143365471005042"/>
+                <center xmi:id="_twHZyY4fEeWmzZ4Jc4-8vw" longitude="0.9797754865181635" latitude="1.1069430059058252"/>
+                <right xmi:id="_twHZyo4fEeWmzZ4Jc4-8vw" longitude="0.9516489225916172" latitude="1.1255289139777818"/>
+              </points>
+              <points xmi:id="_twHZy44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:50:36.000-0500">
+                <left xmi:id="_twHZzI4fEeWmzZ4Jc4-8vw" longitude="0.929155698550281" latitude="1.1026023006729433"/>
+                <center xmi:id="_twHZzY4fEeWmzZ4Jc4-8vw" longitude="0.9403261157451297" latitude="1.0953788038267749"/>
+                <right xmi:id="_twHZzo4fEeWmzZ4Jc4-8vw" longitude="0.911477794389917" latitude="1.1135283769533255"/>
+              </points>
+              <points xmi:id="_twHZz44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:50:56.000-0500">
+                <left xmi:id="_twHZ0I4fEeWmzZ4Jc4-8vw" longitude="0.891180307797926" latitude="1.09030606472312"/>
+                <center xmi:id="_twHZ0Y4fEeWmzZ4Jc4-8vw" longitude="0.9025801413548772" latitude="1.0832515980735988"/>
+                <right xmi:id="_twHZ0o4fEeWmzZ4Jc4-8vw" longitude="0.8731739187696784" latitude="1.1009682535512095"/>
+              </points>
+              <points xmi:id="_twHZ044fEeWmzZ4Jc4-8vw" time="2015-02-19T17:51:16.000-0500">
+                <left xmi:id="_twHZ1I4fEeWmzZ4Jc4-8vw" longitude="0.854912499723337" latitude="1.0774896263033384"/>
+                <center xmi:id="_twHZ1Y4fEeWmzZ4Jc4-8vw" longitude="0.8664854793306015" latitude="1.070602095345747"/>
+                <right xmi:id="_twHZ1o4fEeWmzZ4Jc4-8vw" longitude="0.8366663789123976" latitude="1.087891978830229"/>
+              </points>
+              <points xmi:id="_twHZ144fEeWmzZ4Jc4-8vw" time="2015-02-19T17:51:36.000-0500">
+                <left xmi:id="_twHZ2I4fEeWmzZ4Jc4-8vw" longitude="0.820284932717244" latitude="1.0641922321870325"/>
+                <center xmi:id="_twHZ2Y4fEeWmzZ4Jc4-8vw" longitude="0.8319815395364265" latitude="1.0574686662448594"/>
+                <right xmi:id="_twHZ2o4fEeWmzZ4Jc4-8vw" longitude="0.8018765296891983" latitude="1.0743401132496284"/>
+              </points>
+              <points xmi:id="_twHZ244fEeWmzZ4Jc4-8vw" time="2015-02-19T17:51:56.000-0500">
+                <left xmi:id="_twHZ3I4fEeWmzZ4Jc4-8vw" longitude="0.7872247930730173" latitude="1.0504505246269773"/>
+                <center xmi:id="_twHZ3Y4fEeWmzZ4Jc4-8vw" longitude="0.799001877927197" latitude="1.0438872598643703"/>
+                <right xmi:id="_twHZ3o4fEeWmzZ4Jc4-8vw" longitude="0.7687210143683274" latitude="1.0603503171801918"/>
+              </points>
+              <points xmi:id="_twHZ344fEeWmzZ4Jc4-8vw" time="2015-02-19T17:52:16.000-0500">
+                <left xmi:id="_twHZ4I4fEeWmzZ4Jc4-8vw" longitude="0.7556561063028366" latitude="1.0362985487577656"/>
+                <center xmi:id="_twHZ4Y4fEeWmzZ4Jc4-8vw" longitude="0.7674764166584929" latitude="1.0298913887285417"/>
+                <right xmi:id="_twHZ4o4fEeWmzZ4Jc4-8vw" longitude="0.7371142008848853" latitude="1.0459573980448844"/>
+              </points>
+              <points xmi:id="_twHZ444fEeWmzZ4Jc4-8vw" time="2015-02-19T17:52:36.000-0500">
+                <left xmi:id="_twHZ5I4fEeWmzZ4Jc4-8vw" longitude="0.7255015971666066" latitude="1.0217678133541277"/>
+                <center xmi:id="_twHZ5Y4fEeWmzZ4Jc4-8vw" longitude="0.7373332564408625" latitude="1.0155121672591265"/>
+                <right xmi:id="_twHZ5o4fEeWmzZ4Jc4-8vw" longitude="0.7069700957637235" latitude="1.0311934095184256"/>
+              </points>
+              <points xmi:id="_twHZ544fEeWmzZ4Jc4-8vw" time="2015-02-19T17:52:56.000-0500">
+                <left xmi:id="_twHZ6I4fEeWmzZ4Jc4-8vw" longitude="0.6966841482752466" latitude="1.0068873895019876"/>
+                <center xmi:id="_twHZ6Y4fEeWmzZ4Jc4-8vw" longitude="0.7085001201638866" latitude="1.000778389307666"/>
+                <right xmi:id="_twHZ6o4fEeWmzZ4Jc4-8vw" longitude="0.6782038050196627" latitude="1.0160877859026893"/>
+              </points>
+              <points xmi:id="_twHZ644fEeWmzZ4Jc4-8vw" time="2015-02-19T17:53:16.000-0500">
+                <left xmi:id="_twHZ7I4fEeWmzZ4Jc4-8vw" longitude="0.6691279125474754" latitude="0.9916840345231968"/>
+                <center xmi:id="_twHZ7Y4fEeWmzZ4Jc4-8vw" longitude="0.6809054737471794" latitude="0.9857166326880852"/>
+                <right xmi:id="_twHZ7o4fEeWmzZ4Jc4-8vw" longitude="0.6507326134966647" latitude="1.0006674982257424"/>
+              </points>
+              <points xmi:id="_twHZ744fEeWmzZ4Jc4-8vw" time="2015-02-19T17:53:36.000-0500">
+                <left xmi:id="_twHZ8I4fEeWmzZ4Jc4-8vw" longitude="0.6427591349572543" latitude="0.9761823312374776"/>
+                <center xmi:id="_twHZ8Y4fEeWmzZ4Jc4-8vw" longitude="0.6544793720431535" latitude="0.9703513810933722"/>
+                <right xmi:id="_twHZ8o4fEeWmzZ4Jc4-8vw" longitude="0.624476750889143" latitude="0.9849572218258749"/>
+              </points>
+              <points xmi:id="_twHZ844fEeWmzZ4Jc4-8vw" time="2015-02-19T17:53:56.000-0500">
+                <left xmi:id="_twHZ9I4fEeWmzZ4Jc4-8vw" longitude="0.6175067352608037" latitude="0.9604048348306892"/>
+                <center xmi:id="_twHZ9Y4fEeWmzZ4Jc4-8vw" longitude="0.6291540755271522" latitude="0.9547051557588068"/>
+                <right xmi:id="_twHZ9o4fEeWmzZ4Jc4-8vw" longitude="0.5993599058444086" latitude="0.9689795076851804"/>
+              </points>
+              <points xmi:id="_twHZ944fEeWmzZ4Jc4-8vw" time="2015-02-19T17:54:16.000-0500">
+                <left xmi:id="_twHZ-I4fEeWmzZ4Jc4-8vw" longitude="0.5933026981914953" latitude="0.944372221642943"/>
+                <center xmi:id="_twHZ-Y4fEeWmzZ4Jc4-8vw" longitude="0.6048644797854331" latitude="0.9387986511381545"/>
+                <right xmi:id="_twHZ-o4fEeWmzZ4Jc4-8vw" longitude="0.5753095417042723" latitude="0.9527549520255574"/>
+              </points>
+              <points xmi:id="_twHZ-44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:54:36.000-0500">
+                <left xmi:id="_twHZ_I4fEeWmzZ4Jc4-8vw" longitude="0.5700823113333747" latitude="0.9281034357107865"/>
+                <center xmi:id="_twHZ_Y4fEeWmzZ4Jc4-8vw" longitude="0.5815483947706523" latitude="0.9226508702941097"/>
+                <right xmi:id="_twHZ_o4fEeWmzZ4Jc4-8vw" longitude="0.5522570590298554" latitude="0.9363023603151448"/>
+              </points>
+              <points xmi:id="_twHZ_44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:54:56.000-0500">
+                <left xmi:id="_twHaAI4fEeWmzZ4Jc4-8vw" longitude="0.5477842848239654" latitude="0.9116158302678853"/>
+                <center xmi:id="_twHaAY4fEeWmzZ4Jc4-8vw" longitude="0.5591467057265884" latitude="0.9062792570260755"/>
+                <right xmi:id="_twHaAo4fEeWmzZ4Jc4-8vw" longitude="0.5301378423331408" latitude="0.9196389032588018"/>
+              </points>
+              <points xmi:id="_twHaA44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:55:16.000-0500">
+                <left xmi:id="_twHaBI4fEeWmzZ4Jc4-8vw" longitude="0.526350780956434" latitude="0.8949253022182241"/>
+                <center xmi:id="_twHaBY4fEeWmzZ4Jc4-8vw" longitude="0.5376034423688468" latitude="0.8896998225489914"/>
+                <right xmi:id="_twHaBo4fEeWmzZ4Jc4-8vw" longitude="0.5088912211158794" latitude="0.9027802631668266"/>
+              </points>
+              <points xmi:id="_twHaB44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:55:36.000-0500">
+                <left xmi:id="_twHaCI4fEeWmzZ4Jc4-8vw" longitude="0.5057273768173465" latitude="0.8780464185643135"/>
+                <center xmi:id="_twHaCY4fEeWmzZ4Jc4-8vw" longitude="0.5168657785493885" latitude="0.8729272655015426"/>
+                <right xmi:id="_twHaCo4fEeWmzZ4Jc4-8vw" longitude="0.4884603694780832" latitude="0.8857407700543098"/>
+              </points>
+              <points xmi:id="_twHaC44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:55:56.000-0500">
+                <left xmi:id="_twHaDI4fEeWmzZ4Jc4-8vw" longitude="0.48586297830033826" latitude="0.8609925341474248"/>
+                <center xmi:id="_twHaDY4fEeWmzZ4Jc4-8vw" longitude="0.49688398025206626" latitude="0.8559750844471614"/>
+                <right xmi:id="_twHaDo4fEeWmzZ4Jc4-8vw" longitude="0.4687921631313434" latitude="0.8685335271681899"/>
+              </points>
+              <points xmi:id="_twHaD44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:56:16.000-0500">
+                <left xmi:id="_twHaEI4fEeWmzZ4Jc4-8vw" longitude="0.4667097000884267" latitude="0.8437759005284267"/>
+                <center xmi:id="_twHaEY4fEeWmzZ4Jc4-8vw" longitude="0.4776113163115453" latitude="0.8388556825178304"/>
+                <right xmi:id="_twHaEo4fEeWmzZ4Jc4-8vw" longitude="0.44983700847664204" latitude="0.851170526076348"/>
+              </points>
+              <points xmi:id="_twHaE44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:56:36.000-0500">
+                <left xmi:id="_twHaFI4fEeWmzZ4Jc4-8vw" longitude="0.4482227230428583" latitude="0.826407766170399"/>
+                <center xmi:id="_twHaFY4fEeWmzZ4Jc4-8vw" longitude="0.45900394329141037" latitude="0.82158046420176"/>
+                <right xmi:id="_twHaFo4fEeWmzZ4Jc4-8vw" longitude="0.4315486549757784" latitude="0.8336627517484602"/>
+              </points>
+              <points xmi:id="_twHaF44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:56:56.000-0500">
+                <left xmi:id="_twHaGI4fEeWmzZ4Jc4-8vw" longitude="0.43036013768358783" latitude="0.8088984681475045"/>
+                <center xmi:id="_twHaGY4fEeWmzZ4Jc4-8vw" longitude="0.4410207733312165" latitude="0.8041599243596498"/>
+                <right xmi:id="_twHaGo4fEeWmzZ4Jc4-8vw" longitude="0.4138839991289656" latitude="0.8160202780835688"/>
+              </points>
+              <points xmi:id="_twHaG44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:57:16.000-0500">
+                <left xmi:id="_twHaHI4fEeWmzZ4Jc4-8vw" longitude="0.41308278049316666" latitude="0.7912575158775775"/>
+                <center xmi:id="_twHaHY4fEeWmzZ4Jc4-8vw" longitude="0.4236233318966767" latitude="0.7866037298453832"/>
+                <right xmi:id="_twHaHo4fEeWmzZ4Jc4-8vw" longitude="0.3968028863279533" latitude="0.798252354579167"/>
+              </points>
+              <points xmi:id="_twHaH44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:57:36.000-0500">
+                <left xmi:id="_twHaII4fEeWmzZ4Jc4-8vw" longitude="0.3963540679685039" latitude="0.773493667331593"/>
+                <center xmi:id="_twHaIY4fEeWmzZ4Jc4-8vw" longitude="0.4067756105998199" latitude="0.768920794081127"/>
+                <right xmi:id="_twHaIo4fEeWmzZ4Jc4-8vw" longitude="0.380267915012413" latitude="0.7803674847601941"/>
+              </points>
+              <points xmi:id="_twHaI44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:57:56.000-0500">
+                <left xmi:id="_twHaJI4fEeWmzZ4Jc4-8vw" longitude="0.3801398320849302" latitude="0.7556149982784853"/>
+                <center xmi:id="_twHaJY4fEeWmzZ4Jc4-8vw" longitude="0.39044391901249165" latitude="0.7511193450577037"/>
+                <right xmi:id="_twHaJo4fEeWmzZ4Jc4-8vw" longitude="0.36424424629535473" latitude="0.7623734970648478"/>
+              </points>
+              <points xmi:id="_twHaJ44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:58:16.000-0500">
+                <left xmi:id="_twHaKI4fEeWmzZ4Jc4-8vw" longitude="0.36440815975655977" latitude="0.7376289650907218"/>
+                <center xmi:id="_twHaKY4fEeWmzZ4Jc4-8vw" longitude="0.3745967383155874" latitude="0.7332069872123707"/>
+                <right xmi:id="_twHaKo4fEeWmzZ4Jc4-8vw" longitude="0.3486994211638535" latitude="0.7442776088270519"/>
+              </points>
+              <points xmi:id="_twHaK44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:58:36.000-0500">
+                <left xmi:id="_twHaLI4fEeWmzZ4Jc4-8vw" longitude="0.34912923810434376" latitude="0.7195424616650454"/>
+                <center xmi:id="_twHaLY4fEeWmzZ4Jc4-8vw" longitude="0.35920457884347323" latitude="0.7151907576772293"/>
+                <right xmi:id="_twHaLo4fEeWmzZ4Jc4-8vw" longitude="0.3336031866213158" latitude="0.726086484004486"/>
+              </points>
+              <points xmi:id="_twHaL44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:58:56.000-0500">
+                <left xmi:id="_twHaMI4fEeWmzZ4Jc4-8vw" longitude="0.3342752067053472" latitude="0.7013618709711781"/>
+                <center xmi:id="_twHaMY4fEeWmzZ4Jc4-8vw" longitude="0.3442398429283807" latitude="0.6970771773604604"/>
+                <right xmi:id="_twHaMo4fEeWmzZ4Jc4-8vw" longitude="0.31892733153920744" latitude="0.7078062852422468"/>
+              </points>
+              <points xmi:id="_twHaM44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:59:16.000-0500">
+                <left xmi:id="_twHaNI4fEeWmzZ4Jc4-8vw" longitude="0.3198200174986826" latitude="0.683093111668601"/>
+                <center xmi:id="_twHaNY4fEeWmzZ4Jc4-8vw" longitude="0.3296766939314358" latitude="0.6788722972589577"/>
+                <right xmi:id="_twHaNo4fEeWmzZ4Jc4-8vw" longitude="0.3046455325299684" latitude="0.6894427207750439"/>
+              </points>
+              <points xmi:id="_twHaN44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:59:36.000-0500">
+                <left xmi:id="_twHaOI4fEeWmzZ4Jc4-8vw" longitude="0.30573930278716693" latitude="0.664741680355572"/>
+                <center xmi:id="_twHaOY4fEeWmzZ4Jc4-8vw" longitude="0.31549093209065326" latitude="0.6605817405318938"/>
+                <right xmi:id="_twHaOo4fEeWmzZ4Jc4-8vw" longitude="0.29073320995596486" latitude="0.671001086783871"/>
+              </points>
+              <points xmi:id="_twHaO44fEeWmzZ4Jc4-8vw" time="2015-02-19T17:59:56.000-0500">
+                <left xmi:id="_twHaPI4fEeWmzZ4Jc4-8vw" longitude="0.2920102513366461" latitude="0.6463126897390692"/>
+                <center xmi:id="_twHaPY4fEeWmzZ4Jc4-8vw" longitude="0.3016598773568797" latitude="0.642210740596438"/>
+                <right xmi:id="_twHaPo4fEeWmzZ4Jc4-8vw" longitude="0.27716739379355715" latitude="0.6524863055364797"/>
+              </points>
+              <points xmi:id="_twHaP44fEeWmzZ4Jc4-8vw" time="2015-02-19T18:00:16.000-0500">
+                <left xmi:id="_twHaQI4fEeWmzZ4Jc4-8vw" longitude="0.27861149257371276" latitude="0.6278109032349053"/>
+                <center xmi:id="_twHaQY4fEeWmzZ4Jc4-8vw" longitude="0.28816225936918877" latitude="0.6237641757316827"/>
+                <right xmi:id="_twHaQo4fEeWmzZ4Jc4-8vw" longitude="0.2639265991036639" latitude="0.6339029598548607"/>
+              </points>
+              <points xmi:id="_twHaQ44fEeWmzZ4Jc4-8vw" time="2015-02-19T18:00:36.000-0500">
+                <left xmi:id="_twHaRI4fEeWmzZ4Jc4-8vw" longitude="0.26552298859528606" latitude="0.6092407662565171"/>
+                <center xmi:id="_twHaRY4fEeWmzZ4Jc4-8vw" longitude="0.27497811441430575" latitude="0.6052466004311622"/>
+                <right xmi:id="_twHaRo4fEeWmzZ4Jc4-8vw" longitude="0.25099071060763534" latitude="0.6152553241944537"/>
+              </points>
+              <points xmi:id="_twHaR44fEeWmzZ4Jc4-8vw" time="2015-02-19T18:00:56.000-0500">
+                <left xmi:id="_twHaSI4fEeWmzZ4Jc4-8vw" longitude="0.25272593373907704" latitude="0.5906064346020259"/>
+                <center xmi:id="_twHaSY4fEeWmzZ4Jc4-8vw" longitude="0.2620886892344775" latitude="0.5866622738983888"/>
+                <right xmi:id="_twHaSo4fEeWmzZ4Jc4-8vw" longitude="0.2383408759302801" latitude="0.5965473927664059"/>
+              </points>
+            </corridor>
+          </forwardSpacecraftSwathCorridor>
+          <backwardSpacecraftSwathCorridor xmi:id="_r7KB8I4fEeWmzZ4Jc4-8vw" startTime="2015-02-19T16:36:00.000-0500" endTime="2015-02-19T16:41:00.000-0500" timeInterval="20.0" orbitModel="_3ZgZwI4NEeWNXufGl-1rDQ" leftSwathAngle="-0.06981317007977318" rightSwathAngle="0.17453292519943295">
+            <corridor xmi:id="_r7KB8Y4fEeWmzZ4Jc4-8vw">
+              <points xmi:id="_r7KB8o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:36:16.000-0500">
+                <left xmi:id="_r7KB844fEeWmzZ4Jc4-8vw" longitude="0.2053314361848394" latitude="-0.3414287497812655"/>
+                <center xmi:id="_r7KB9I4fEeWmzZ4Jc4-8vw" longitude="0.21383799728692177" latitude="-0.3449691518619966"/>
+                <right xmi:id="_r7KB9Y4fEeWmzZ4Jc4-8vw" longitude="0.1923940790404326" latitude="-0.3359833182611007"/>
+              </points>
+              <points xmi:id="_r7KB9o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:36:36.000-0500">
+                <left xmi:id="_r7KB944fEeWmzZ4Jc4-8vw" longitude="0.19491113972543944" latitude="-0.36052669514084434"/>
+                <center xmi:id="_r7KB-I4fEeWmzZ4Jc4-8vw" longitude="0.20347022667895803" latitude="-0.36409408204885757"/>
+                <right xmi:id="_r7KB-Y4fEeWmzZ4Jc4-8vw" longitude="0.1818968428735302" latitude="-0.3550375382481979"/>
+              </points>
+              <points xmi:id="_r7KB-o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:36:56.000-0500">
+                <left xmi:id="_r7KB-44fEeWmzZ4Jc4-8vw" longitude="0.18435908195453482" latitude="-0.3795919513118923"/>
+                <center xmi:id="_r7KB_I4fEeWmzZ4Jc4-8vw" longitude="0.19297372390354914" latitude="-0.38318800103206163"/>
+                <right xmi:id="_r7KB_Y4fEeWmzZ4Jc4-8vw" longitude="0.17126336954041246" latitude="-0.37405649398317364"/>
+              </points>
+              <points xmi:id="_r7KB_o4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:37:16.000-0500">
+                <left xmi:id="_r7KB_44fEeWmzZ4Jc4-8vw" longitude="0.1736659523665272" latitude="-0.39862237855134747"/>
+                <center xmi:id="_r7KCAI4fEeWmzZ4Jc4-8vw" longitude="0.18233920743170104" latitude="-0.4022488163446433"/>
+                <right xmi:id="_r7KCAY4fEeWmzZ4Jc4-8vw" longitude="0.16048431688177367" latitude="-0.3930379735768825"/>
+              </points>
+              <points xmi:id="_r7KCAo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:37:36.000-0500">
+                <left xmi:id="_r7KCA44fEeWmzZ4Jc4-8vw" longitude="0.16282200712459904" latitude="-0.41761574255992134"/>
+                <center xmi:id="_r7KCBI4fEeWmzZ4Jc4-8vw" longitude="0.17155696154104216" latitude="-0.4212743443063695"/>
+                <right xmi:id="_r7KCBY4fEeWmzZ4Jc4-8vw" longitude="0.1495499116092353" latitude="-0.4119796656367839"/>
+              </points>
+              <points xmi:id="_r7KCBo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:37:56.000-0500">
+                <left xmi:id="_r7KCB44fEeWmzZ4Jc4-8vw" longitude="0.15181703246391282" latitude="-0.4365697056449922"/>
+                <center xmi:id="_r7KCCI4fEeWmzZ4Jc4-8vw" longitude="0.16061679912578866" latitude="-0.4402623013321048"/>
+                <right xmi:id="_r7KCCY4fEeWmzZ4Jc4-8vw" longitude="0.1384499136932875" latitude="-0.4308791502283255"/>
+              </points>
+              <points xmi:id="_r7KCCo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:38:16.000-0500">
+                <left xmi:id="_r7KCC44fEeWmzZ4Jc4-8vw" longitude="0.14064030550771245" latitude="-0.45548181706302737"/>
+                <center xmi:id="_r7KCDI4fEeWmzZ4Jc4-8vw" longitude="0.14950802181755077" latitude="-0.45921029442668193"/>
+                <right xmi:id="_r7KCDY4fEeWmzZ4Jc4-8vw" longitude="0.12717357832505397" latitude="-0.44973388900792377"/>
+              </points>
+              <points xmi:id="_r7KCDo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:38:36.000-0500">
+                <left xmi:id="_r7KCD44fEeWmzZ4Jc4-8vw" longitude="0.12928055223281404" latitude="-0.4743495025296023"/>
+                <center xmi:id="_r7KCEI4fEeWmzZ4Jc4-8vw" longitude="0.1382193771368225" latitude="-0.47811581085383453"/>
+                <right xmi:id="_r7KCEY4fEeWmzZ4Jc4-8vw" longitude="0.11570961521382975" latitude="-0.4685412145167351"/>
+              </points>
+              <points xmi:id="_r7KCEo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:38:56.000-0500">
+                <left xmi:id="_r7KCE44fEeWmzZ4Jc4-8vw" longitude="0.1177259023607691" latitude="-0.4931700527666768"/>
+                <center xmi:id="_r7KCFI4fEeWmzZ4Jc4-8vw" longitude="0.12673901243170857" latitude="-0.49697620684790966"/>
+                <right xmi:id="_r7KCFY4fEeWmzZ4Jc4-8vw" longitude="0.10404614502669375" latitude="-0.48729831850672556"/>
+              </points>
+              <points xmi:id="_r7KCFo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:39:16.000-0500">
+                <left xmi:id="_r7KCF44fEeWmzZ4Jc4-8vw" longitude="0.10596384089345436" latitude="-0.5119406110333716"/>
+                <center xmi:id="_r7KCGI4fEeWmzZ4Jc4-8vw" longitude="0.11505442530004248" latitude="-0.5157886953135108"/>
+                <right xmi:id="_r7KCGY4fEeWmzZ4Jc4-8vw" longitude="0.09217065272319376" latitude="-0.5060022392473964"/>
+              </points>
+              <points xmi:id="_r7KCGo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:39:36.000-0500">
+                <left xmi:id="_r7KCG44fEeWmzZ4Jc4-8vw" longitude="0.09398115605678228" latitude="-0.530658159463659"/>
+                <center xmi:id="_r7KCHI4fEeWmzZ4Jc4-8vw" longitude="0.10315241023187798" latitude="-0.5345503323347651"/>
+                <right xmi:id="_r7KCHY4fEeWmzZ4Jc4-8vw" longitude="0.08006993758905116" latitude="-0.5246498476397111"/>
+              </points>
+              <points xmi:id="_r7KCHo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:39:56.000-0500">
+                <left xmi:id="_r7KCH44fEeWmzZ4Jc4-8vw" longitude="0.0817638833352598" latitude="-0.5493195041546496"/>
+                <center xmi:id="_r7KCII4fEeWmzZ4Jc4-8vw" longitude="0.09101900112461223" latitude="-0.5532580024359698"/>
+                <right xmi:id="_r7KCIY4fEeWmzZ4Jc4-8vw" longitude="0.06773005969732415" latitude="-0.5432378320844071"/>
+              </points>
+              <points xmi:id="_r7KCIo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:40:16.000-0500">
+                <left xmi:id="_r7KCI44fEeWmzZ4Jc4-8vw" longitude="0.06929724533343237" latitude="-0.5679212588176061"/>
+                <center xmi:id="_r7KCJI4fEeWmzZ4Jc4-8vw" longitude="0.07863940937090248" latitude="-0.5719084024029512"/>
+                <right xmi:id="_r7KCJY4fEeWmzZ4Jc4-8vw" longitude="0.055136282586580584" latitude="-0.5617626819217163"/>
+              </points>
+              <points xmi:id="_r7KCJo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:40:36.000-0500">
+                <left xmi:id="_r7KCJ44fEeWmzZ4Jc4-8vw" longitude="0.05656558714594162" latitude="-0.5864598268783562"/>
+                <center xmi:id="_r7KCKI4fEeWmzZ4Jc4-8vw" longitude="0.06599795715989881" latitude="-0.5904980235484685"/>
+                <right xmi:id="_r7KCKY4fEeWmzZ4Jc4-8vw" longitude="0.042273011898947006" latitude="-0.5802206693349381"/>
+              </points>
+              <points xmi:id="_r7KCKo4fEeWmzZ4Jc4-8vw" time="2015-02-19T16:40:56.000-0500">
+                <left xmi:id="_r7KCK44fEeWmzZ4Jc4-8vw" longitude="0.043552306948436065" latitude="-0.6049313818390597"/>
+                <center xmi:id="_r7KCLI4fEeWmzZ4Jc4-8vw" longitude="0.05307800565602371" latitude="-0.6090231322292252"/>
+                <right xmi:id="_r7KCLY4fEeWmzZ4Jc4-8vw" longitude="0.02912372976108237" latitude="-0.5986078295372966"/>
+              </points>
+            </corridor>
+          </backwardSpacecraftSwathCorridor>
+        </layers>
+      </earthViewConfigurations>
+    </toolsListContainers>
+    <toolsListContainers xsi:type="ui:SpacecraftVisibilityPassViewConfigurationList" xmi:id="_7SEp8I4REeWOgeEX6Jo11w">
+      <configurations xmi:id="_7xrXEI4REeWOgeEX6Jo11w" name="Default">
+        <visibilitySet xmi:id="_9z34UI4REeWOgeEX6Jo11w" name="CSA" startTime="2015-02-19T14:00:00.001-0500" endTime="2015-02-19T21:30:00.000-0500" orbitModels="_3ZgZwI4NEeWNXufGl-1rDQ _YxedUI4JEeWbwNa_8hc7iw _2U7XUI4NEeWNXufGl-1rDQ" groundStations="_jouzYI4MEeWzN6EhyDyLVg">
+          <passes xmi:id="_fHNr0I4TEeWOgeEX6Jo11w" orbitModel="_YxedUI4JEeWbwNa_8hc7iw" surfaceLocation="_jouzYI4MEeWzN6EhyDyLVg" startTime="2015-02-19T15:54:04.553-0500" endTime="2015-02-19T16:07:24.691-0500">
+            <positionHistory xmi:id="_fHNr0Y4TEeWOgeEX6Jo11w">
+              <positions xmi:id="_fHNr0o4TEeWOgeEX6Jo11w" time="2015-02-19T15:54:04.553-0500" azimuth="3.0463224683224577" elevation="0.1745330913859551" range="4421742.936249518" rangeRate="-3005.4082623631302" spacecraftCrossTrackAngle="-0.07382162226685404"/>
+              <positions xmi:id="_fHNr044TEeWOgeEX6Jo11w" time="2015-02-19T15:54:34.553-0500" azimuth="3.089681841655269" elevation="0.19355558994329322" range="4334286.1216430385" rangeRate="-2822.9759922121752" spacecraftCrossTrackAngle="-0.0728269810426909"/>
+              <positions xmi:id="_fHNr1I4TEeWOgeEX6Jo11w" time="2015-02-19T15:55:04.553-0500" azimuth="3.1350722122954005" elevation="0.21195447588507715" range="4252489.035144953" rangeRate="-2628.083111352569" spacecraftCrossTrackAngle="-0.07172435706402974"/>
+              <positions xmi:id="_fHNr1Y4TEeWOgeEX6Jo11w" time="2015-02-19T15:55:34.553-0500" azimuth="-3.1006705113292212" elevation="0.22958422079013868" range="4176725.5609868956" rangeRate="-2420.753851893084" spacecraftCrossTrackAngle="-0.07051530433865053"/>
+              <positions xmi:id="_fHNr1o4TEeWOgeEX6Jo11w" time="2015-02-19T15:56:04.553-0500" azimuth="-3.051182240391182" elevation="0.24628671926339285" range="4107366.1335293767" rangeRate="-2201.198785789701" spacecraftCrossTrackAngle="-0.06920182645421065"/>
+              <positions xmi:id="_fHNr144TEeWOgeEX6Jo11w" time="2015-02-19T15:56:34.553-0500" azimuth="-2.999688144391839" elevation="0.26189390190121714" range="4044771.7285117097" rangeRate="-1969.8421565114375" spacecraftCrossTrackAngle="-0.06778643475328769"/>
+              <positions xmi:id="_fHNr2I4TEeWOgeEX6Jo11w" time="2015-02-19T15:57:04.553-0500" azimuth="-2.946266653373554" elevation="0.27623153591213356" range="3989287.099281548" rangeRate="-1727.3444239577148" spacecraftCrossTrackAngle="-0.06627221247022709"/>
+              <positions xmi:id="_fHNr2Y4TEeWOgeEX6Jo11w" time="2015-02-19T15:57:34.553-0500" azimuth="-2.891039075132878" elevation="0.2891242315765631" range="3941233.443749923" rangeRate="-1474.6171927087075" spacecraftCrossTrackAngle="-0.0646628852284728"/>
+              <positions xmi:id="_fHNr2o4TEeWOgeEX6Jo11w" time="2015-02-19T15:58:04.553-0500" azimuth="-2.834172347312674" elevation="0.3004015365238737" range="3900900.7730395836" rangeRate="-1212.8277268230802" spacecraftCrossTrackAngle="-0.06296289827041861"/>
+              <positions xmi:id="_fHNr244TEeWOgeEX6Jo11w" time="2015-02-19T15:58:34.553-0500" azimuth="-2.775879589588943" elevation="0.30990483507336786" range="3868540.3313416336" rangeRate="-943.3906859800409" spacecraftCrossTrackAngle="-0.06117750074838441"/>
+              <positions xmi:id="_fHNr3I4TEeWOgeEX6Jo11w" time="2015-02-19T15:59:04.553-0500" azimuth="-2.716417917504548" elevation="0.31749459997576074" range="3844357.475443705" rangeRate="-667.9455926480633" spacecraftCrossTrackAngle="-0.05931283733923376"/>
+              <positions xmi:id="_fHNr3Y4TEeWOgeEX6Jo11w" time="2015-02-19T15:59:34.553-0500" azimuth="-2.6560832077763545" elevation="0.32305740260758486" range="3828505.448770434" rangeRate="-388.3198182725206" spacecraftCrossTrackAngle="-0.057376047347830354"/>
+              <positions xmi:id="_fHNr3o4TEeWOgeEX6Jo11w" time="2015-02-19T16:00:04.553-0500" azimuth="-2.5952018454507355" elevation="0.32651201272038155" range="3821080.4684499786" rangeRate="-106.47841824948935" spacecraftCrossTrackAngle="-0.055375371334464206"/>
+              <positions xmi:id="_fHNr344TEeWOgeEX6Jo11w" time="2015-02-19T16:00:34.553-0500" azimuth="-2.5341198874798043" elevation="0.32781394125379054" range="3822118.4801480197" rangeRate="175.53628149575084" spacecraftCrossTrackAngle="-0.05332026512474085"/>
+              <positions xmi:id="_fHNr4I4TEeWOgeEX6Jo11w" time="2015-02-19T16:01:04.553-0500" azimuth="-2.4731904666341418" elevation="0.3269579119105411" range="3831593.8274776484" rangeRate="455.671117546424" spacecraftCrossTrackAngle="-0.05122152083299732"/>
+              <positions xmi:id="_fHNr4Y4TEeWOgeEX6Jo11w" time="2015-02-19T16:01:34.553-0500" azimuth="-2.412760544731937" elevation="0.3239779751588094" range="3849419.9421150065" rangeRate="731.9294946718792" spacecraftCrossTrackAngle="-0.04909139423771739"/>
+              <positions xmi:id="_fHNr4o4TEeWOgeEX6Jo11w" time="2015-02-19T16:02:04.553-0500" azimuth="-2.353158233374887" elevation="0.31894526195804807" range="3875452.0054296725" rangeRate="1002.4345764388931" spacecraftCrossTrackAngle="-0.04694373748096482"/>
+              <positions xmi:id="_fHNr444TEeWOgeEX6Jo11w" time="2015-02-19T16:02:34.553-0500" azimuth="-2.294681805026933" elevation="0.3119636576110856" range="3909491.3836346674" rangeRate="1265.4836406501768" spacecraftCrossTrackAngle="-0.04479413560897388"/>
+              <positions xmi:id="_fHNr5I4TEeWOgeEX6Jo11w" time="2015-02-19T16:03:04.553-0500" azimuth="-2.2375912424342923" elevation="0.3031639028423408" range="3951291.5159970685" rangeRate="1519.5901369988358" spacecraftCrossTrackAngle="-0.042660044914983215"/>
+              <positions xmi:id="_fHNr5Y4TEeWOgeEX6Jo11w" time="2015-02-19T16:03:34.553-0500" azimuth="-2.1821027894584444" elevation="0.2926967601522243" range="4000564.853946217" rangeRate="1763.511499416027" spacecraftCrossTrackAngle="-0.04056093037438865"/>
+              <positions xmi:id="_fHNr5o4TEeWOgeEX6Jo11w" time="2015-02-19T16:04:04.553-0500" azimuth="-2.1283865603812764" elevation="0.280725905542741" range="4056990.414529352" rangeRate="1996.262357308691" spacecraftCrossTrackAngle="-0.03851839866162053"/>
+              <positions xmi:id="_fHNr544TEeWOgeEX6Jo11w" time="2015-02-19T16:04:34.553-0500" azimuth="-2.0765669178594726" elevation="0.2674211318704714" range="4120221.522866932" rangeRate="2217.114199914918" spacecraftCrossTrackAngle="-0.03655632229668122"/>
+              <positions xmi:id="_fHNr6I4TEeWOgeEX6Jo11w" time="2015-02-19T16:05:04.553-0500" azimuth="-2.0267250928259584" elevation="0.2529523113939906" range="4189893.366632686" rangeRate="2425.583595530831" spacecraftCrossTrackAngle="-0.03470094937784613"/>
+              <positions xmi:id="_fHNr6Y4TEeWOgeEX6Jo11w" time="2015-02-19T16:05:34.553-0500" azimuth="-1.9789034077191527" elevation="0.23748439880991726" range="4265630.058882996" rangeRate="2621.41167309923" spacecraftCrossTrackAngle="-0.03298099210696426"/>
+              <positions xmi:id="_fHNr6o4TEeWOgeEX6Jo11w" time="2015-02-19T16:06:04.553-0500" azimuth="-1.9331104628232751" elevation="0.22117359528393105" range="4347050.990410396" rangeRate="2804.5377518716227" spacecraftCrossTrackAngle="-0.03142768591342014"/>
+              <positions xmi:id="_fHNr644TEeWOgeEX6Jo11w" time="2015-02-19T16:06:34.553-0500" azimuth="-1.8893267222258179" elevation="0.20416466121125054" range="4433776.3376147235" rangeRate="2975.0698378547804" spacecraftCrossTrackAngle="-0.030074809439293786"/>
+              <positions xmi:id="_fHNr7I4TEeWOgeEX6Jo11w" time="2015-02-19T16:07:04.553-0500" azimuth="-1.8475100550698171" elevation="0.1865892712845347" range="4525431.667876276" rangeRate="3133.2543068329023" spacecraftCrossTrackAngle="-0.028958653993161065"/>
+            </positionHistory>
+          </passes>
+          <passes xmi:id="_fHNr7Y4TEeWOgeEX6Jo11w" orbitModel="_2U7XUI4NEeWNXufGl-1rDQ" surfaceLocation="_jouzYI4MEeWzN6EhyDyLVg" startTime="2015-02-19T21:12:26.754-0500" endTime="2015-02-19T21:25:27.149-0500">
+            <positionHistory xmi:id="_fHNr7o4TEeWOgeEX6Jo11w">
+              <positions xmi:id="_fHNr744TEeWOgeEX6Jo11w" time="2015-02-19T21:12:26.754-0500" azimuth="2.5040667832828687" elevation="0.1745328457861064" range="4454254.766273416" rangeRate="-2872.7397694950346" spacecraftCrossTrackAngle="-0.19270831575502997"/>
+              <positions xmi:id="_fHNr8I4TEeWOgeEX6Jo11w" time="2015-02-19T21:12:56.754-0500" azimuth="2.46612423136505" elevation="0.1903522635628084" range="4370211.839763953" rangeRate="-2728.379355954491" spacecraftCrossTrackAngle="-0.18436230436128104"/>
+              <positions xmi:id="_fHNr8Y4TEeWOgeEX6Jo11w" time="2015-02-19T21:13:26.754-0500" azimuth="2.4264570100361866" elevation="0.20563988743466918" range="4290657.747510591" rangeRate="-2573.447718698787" spacecraftCrossTrackAngle="-0.17572559280490438"/>
+              <positions xmi:id="_fHNr8o4TEeWOgeEX6Jo11w" time="2015-02-19T21:13:56.754-0500" azimuth="2.385038610269092" elevation="0.22028551889071613" range="4215912.422100852" rangeRate="-2407.775294508445" spacecraftCrossTrackAngle="-0.16680888600549024"/>
+              <positions xmi:id="_fHNr844TEeWOgeEX6Jo11w" time="2015-02-19T21:14:26.754-0500" azimuth="2.341861472562884" elevation="0.23416940823563462" range="4146299.2591374414" rangeRate="-2231.304436508107" spacecraftCrossTrackAngle="-0.1576251420413663"/>
+              <positions xmi:id="_fHNr9I4TEeWOgeEX6Jo11w" time="2015-02-19T21:14:56.754-0500" azimuth="2.296940972006324" elevation="0.2471636524428468" range="4082141.4303018725" rangeRate="-2044.1113442887076" spacecraftCrossTrackAngle="-0.14818968817415323"/>
+              <positions xmi:id="_fHNr9Y4TEeWOgeEX6Jo11w" time="2015-02-19T21:15:26.754-0500" azimuth="2.2503193399199413" elevation="0.2591343178253203" range="4023757.548232403" rangeRate="-1846.427109711884" spacecraftCrossTrackAngle="-0.13852031446296623"/>
+              <positions xmi:id="_fHNr9o4TEeWOgeEX6Jo11w" time="2015-02-19T21:15:56.754-0500" azimuth="2.2020692208825285" elevation="0.26994434174936477" range="3971456.7325801346" rangeRate="-1638.6563084496447" spacecraftCrossTrackAngle="-0.12863733971894695"/>
+              <positions xmi:id="_fHNr944TEeWOgeEX6Jo11w" time="2015-02-19T21:16:26.754-0500" azimuth="2.1522964993755505" elevation="0.2794572060910363" range="3925533.1774097215" rangeRate="-1421.3913399474307" spacecraftCrossTrackAngle="-0.1185636445720227"/>
+              <positions xmi:id="_fHNr-I4TEeWOgeEX6Jo11w" time="2015-02-19T21:16:56.754-0500" azimuth="2.1011419934411455" elevation="0.28754129266135775" range="3886260.375712048" rangeRate="-1195.4206371349983" spacecraftCrossTrackAngle="-0.1083246666620057"/>
+              <positions xmi:id="_fHNr-Y4TEeWOgeEX6Jo11w" time="2015-02-19T21:17:26.754-0500" azimuth="2.0487816220663166" elevation="0.2940747340351718" range="3853885.2118325178" rangeRate="-961.7289941006004" spacecraftCrossTrackAngle="-0.09794835345131846"/>
+              <positions xmi:id="_fHNr-o4TEeWOgeEX6Jo11w" time="2015-02-19T21:17:56.754-0500" azimuth="1.9954247239874956" elevation="0.29895047470898733" range="3828622.1801367435" rangeRate="-721.4886387857139" spacecraftCrossTrackAngle="-0.08746506890224169"/>
+              <positions xmi:id="_fHNr-44TEeWOgeEX6Jo11w" time="2015-02-19T21:18:26.754-0500" azimuth="1.9413103449699258" elevation="0.3020811749362312" range="3810648.0204914585" rangeRate="-476.04031654660247" spacecraftCrossTrackAngle="-0.076907451287609"/>
+              <positions xmi:id="_fHNr_I4TEeWOgeEX6Jo11w" time="2015-02-19T21:18:56.754-0500" azimuth="1.886701510344022" elevation="0.30340354263720465" range="3800097.0707466924" rangeRate="-226.86450630925296" spacecraftCrossTrackAngle="-0.06631022067083947"/>
+              <positions xmi:id="_fHNr_Y4TEeWOgeEX6Jo11w" time="2015-02-19T21:19:26.754-0500" azimuth="1.8318777346294042" elevation="0.3028816842159709" range="3797057.6182516403" rangeRate="24.456131903779603" spacecraftCrossTrackAngle="-0.05570993607946241"/>
+              <positions xmi:id="_fHNr_o4TEeWOgeEX6Jo11w" time="2015-02-19T21:19:56.754-0500" azimuth="1.7771262506810641" elevation="0.3005091312946258" range="3801569.484850798" rangeRate="276.2810206123533" spacecraftCrossTrackAngle="-0.04514470405539143"/>
+              <positions xmi:id="_fHNr_44TEeWOgeEX6Jo11w" time="2015-02-19T21:20:26.754-0500" azimuth="1.722732621007243" elevation="0.29630932302830304" range="3813623.0057102675" rangeRate="526.9597995805004" spacecraftCrossTrackAngle="-0.03465384200430128"/>
+              <positions xmi:id="_fHNsAI4TEeWOgeEX6Jo11w" time="2015-02-19T21:20:56.754-0500" azimuth="1.668971484407539" elevation="0.2903344850919528" range="3833159.469186439" rangeRate="774.8810243720405" spacecraftCrossTrackAngle="-0.024277501512149306"/>
+              <positions xmi:id="_fHNsAY4TEeWOgeEX6Jo11w" time="2015-02-19T21:21:26.754-0500" azimuth="1.6160981710720437" elevation="0.28266301896823554" range="3860072.9837108394" rangeRate="1018.5180573401251" spacecraftCrossTrackAngle="-0.014056258445688984"/>
+              <positions xmi:id="_fHNsAo4TEeWOgeEX6Jo11w" time="2015-02-19T21:21:56.754-0500" azimuth="1.5643417934184598" elevation="0.2733956681412749" range="3894213.640787142" rangeRate="1256.4691299962592" spacecraftCrossTrackAngle="-0.004030678108094044"/>
+              <positions xmi:id="_fHNsA44TEeWOgeEX6Jo11w" time="2015-02-19T21:22:26.754-0500" azimuth="1.513900216709777" elevation="0.26265083558278446" range="3935391.7623178917" rangeRate="1487.4892538800216" spacecraftCrossTrackAngle="0.005759135118099281"/>
+              <positions xmi:id="_fHNsBI4TEeWOgeEX6Jo11w" time="2015-02-19T21:22:56.754-0500" azimuth="1.4649370761855296" elevation="0.250559475200425" range="3983382.964182109" rangeRate="1710.5125751011265" spacecraftCrossTrackAngle="0.015273993400553642"/>
+              <positions xmi:id="_fHNsBY4TEeWOgeEX6Jo11w" time="2015-02-19T21:23:26.754-0500" azimuth="1.4175807809457435" elevation="0.23725996805574331" range="4037933.740644209" rangeRate="1924.6647506494219" spacecraftCrossTrackAngle="0.024476075744739968"/>
+              <positions xmi:id="_fHNsBo4TEeWOgeEX6Jo11w" time="2015-02-19T21:23:56.754-0500" azimuth="1.3719252645555042" elevation="0.22289333341549442" range="4098767.275357472" rangeRate="2129.265824422481" spacecraftCrossTrackAngle="0.03332936238202897"/>
+              <positions xmi:id="_fHNsB44TEeWOgeEX6Jo11w" time="2015-02-19T21:24:26.754-0500" azimuth="1.3280321271638105" elevation="0.20759903339326066" range="4165589.210271507" rangeRate="2323.8247881996904" spacecraftCrossTrackAngle="0.04180004321047424"/>
+              <positions xmi:id="_fHNsCI4TEeWOgeEX6Jo11w" time="2015-02-19T21:24:56.754-0500" azimuth="1.2859337661611017" elevation="0.19151152793845805" range="4238093.146801158" rangeRate="2508.02746923112" spacecraftCrossTrackAngle="0.04985689115139623"/>
+              <positions xmi:id="_fHNsCY4TEeWOgeEX6Jo11w" time="2015-02-19T21:25:26.754-0500" azimuth="1.2456371014955794" elevation="0.1747576410239224" range="4315965.70647517" rangeRate="2681.7195860267598" spacecraftCrossTrackAngle="0.05747159254702794"/>
+            </positionHistory>
+          </passes>
+        </visibilitySet>
+      </configurations>
+    </toolsListContainers>
+  </toolsList>
+</invocator:InvocatorSession>
