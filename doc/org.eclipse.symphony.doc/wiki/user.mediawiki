@@ -287,21 +287,21 @@ TODO!
 ! Description
 |-
 | '''''Time Trigger'''''
-| 
+| style="text-align:center;" | [[File:../resources/user/trigger_time.gif]]
 | Triggers at a fixed time interval (or only once if time <= 0).
 |-
 | rowspan="3" | '''''Controller Edge Trigger'''''
-|
+| style="text-align:center;" | [[File:../resources/user/trigger_controller_edge_rising.gif]] 
 | Triggers when a rising edge is detected on the specified controller button state.
 |-
-|
+| style="text-align:center;" | [[File:../resources/user/trigger_controller_edge_falling.gif]] 
 | Triggers when a falling edge is detected on the specified controller button state.
 |-
-|
+| style="text-align:center;" | [[File:../resources/user/trigger_controller_edge_both.gif]]
 | Triggers when either a rising or falling edge is detected on the specified button state.
 |-
 | '''''Controller State Trigger'''''
-| 
+| style="text-align:center;" | [[File:../resources/user/trigger_controller_state.gif]] 
 | Triggers at a fixed time interval (or only once if time <= 0) if the specified controller button state (''boolean'') matches the target.
 |}
 
@@ -334,35 +334,37 @@ TODO!
 ! Dead Band Supported
 |-
 | '''''Linear'''''
-|
+| style="text-align:center;" | [[File:../resources/user/input_conditioning_linear.gif]]
 | Linear transfer function with end points specified.
 | style="text-align:center;" | Yes
 | style="text-align:center;" | Yes
 | style="text-align:center;" | No
 |-
 | '''''Centered Linear'''''
-| 
-| Linear transfer function with constraints that output is zero (0) for input falling within dead band./n/nOutput linearly falls to zero at dead band limits.
+| style="text-align:center;" | [[File:../resources/user/input_conditioning_centered_linear.gif]]
+| Linear transfer function with constraints that output is zero (0) for input falling within dead band.
+Output linearly falls to zero at dead band limits.
 | style="text-align:center;" | Yes
 | style="text-align:center;" | No
 | style="text-align:center;" | Yes
 |-
 | '''''Parabolic'''''
-| 
+| style="text-align:center;" | [[File:../resources/user/input_conditioning_parabolic.gif]]
 | Second-order transfer function with end points specified.
 | style="text-align:center;" | Yes
 | style="text-align:center;" | Yes
 | style="text-align:center;" | No
 |-
 | '''''Centered Parabolic'''''
-|
-| Parabolic output with constraint that output is zero (0) for input falling within dead band./n/nSlope is made continuous at dead band limits.
+| style="text-align:center;" | [[File:../resources/user/input_conditioning_centered_parabolic.gif]]
+| Parabolic output with constraint that output is zero (0) for input falling within dead band.
+Slope is made continuous at dead band limits.
 | style="text-align:center;" | Yes
 | style="text-align:center;" | No
 | style="text-align:center;" | Yes
 |-
 | '''''User Defined'''''
-|
+| style="text-align:center;" | [[File:../resources/user/input_conditioning_user_defined.gif]]
 | Piecewise linear interpolation based on user-provided list of points.
 | style="text-align:center;" | No
 | style="text-align:center;" | No
@@ -373,67 +375,10 @@ TODO!
 
 * The '''''Tools''''' element of the ''Session'' contains the tools defined by the user;
 * Contains:
-** ''Watches List''
-** ''Displays''
-** ''Recording Tools Container''
 ** ''Map View Configuration List''
 ** ''Camera View Configuration List''
+** ''Recording Tools Container''
 ** ''Simple Tool List''
-
-==== <i>Watches</i> ====
-
-* A '''''Watches''''' object is a list of objects of type ''Watch''
-* A '''''Watch''''' defines a telemetry item that the user is interested in (for either display or recording purposes)
-
-==== <i>Displays</i> ====
-
-* A '''''Displays''''' object:
-** is a list of ''Display'';
-** defines ''Display'' to be displayed together in the ''Telemetry View'';
-
-* A '''''Display''''' object:
-** defines presentation attributes;
-** is associated with a specific ''Feature'';
-
-===== <i>Display</i> Types =====
-
-{| border="1" cellpadding="2"
-! Name
-! Icon
-! Description
-|-
-| '''''Text Display'''''
-|
-| Show value as a string.  Descimal format can be specified for Numbers.
-|-
-| '''''Boolean Display'''''
-|
-| Displays a ''boolean'' as a check box.
-|-
-| '''''Number Vs. Time Plot Display'''''
-|
-| Displays a number in a plot as a function of time.
-|}
-
-====== <i>Number Vs. Time Plot Display</i> Parameters ======
-
-{| border="1" cellpadding="2"
-! Parameter
-! Type
-! Description
-|-
-| ''History Length''
-| Seconds
-| Specified the time period for which to display the data history.
-|-
-| ''Repeat Last Value''
-| ''boolean''
-| Enables the last value to be repeated every second to get the plot to "follow" the current time.
-|-
-| ''Use Data Buffering''
-| ''boolean''
-| Enables data to be buffered until the next plot update (every second.)  Recommended for attributes having high update frequency.
-|}
 
 ==== <i>Map View Configurations</i> ====
 
@@ -471,23 +416,23 @@ TODO!
 ! Description
 |-
 | '''''EMF Feature Overlay'''''
-|
+| style="text-align:center;" | [[File:../resources/user/overlay_emf_feature.gif]]
 | Displays any numerical or string value of a selected ''Feature'' on screen.  The display includes the name of the ''Feature'', its units, and the value.
 |-
 | '''''Camera Name Overlay'''''
-|
+| style="text-align:center;" | [[File:../resources/user/overlay_camera_name.gif]] 
 | Displays the name of the camera, if applicable.
 |-
 | '''''Symphony Logo Overlay'''''
-|
+| style="text-align:center;" | [[File:../resources/user/overlay_symphony_logo.gif]] 
 | Displays the Symphony Logo.
 |-
 | '''''FOV Overlay'''''
-|
+| style="text-align:center;" | [[File:../resources/user/overlay_fov.gif]]
 | Displays a cross hair with marks indicating degrees along the vertical and horizontal axes, centered on the FOV origin.  The values are binded to the current camera FOV.
 |-
 | '''''EMF Feature Azimuth Elevation Overlay'''''
-|
+| style="text-align:center;" | [[File:../resources/user/overlay_emf_feature_azimuth_elevation.gif]]
 | Displays a cross hair with marks indicating degrees along the vertical and horizontal axes.  The '''ABSOLUTE''' orientation is displayed.  The values are bound to the current camera's Field of View (FOV) and the Azimuth and Elevation features selected.
 |}
 
@@ -499,23 +444,24 @@ TODO!
 ! Description
 |-
 | '''''Edge Filter'''''
-|
+| style="text-align:center;" | [[File:../resources/user/filter_edge.gif]] 
 | Detects edges by looking at the gradient of each channel ands replaces the channel by a value determined by the gradient.
 |-
 | '''''Gain Filter'''''
-|
+| style="text-align:center;" | [[File:../resources/user/filter_gain.gif]]
 | Changes the contrast of the image by allowing the user to specify the gain and bias of the colors in the image.
 |-
 | '''''Gray Scale Filter'''''
-|
-| Converts image to gray-scaled image.  The weighted used is:\n\t\t\t''luma'' = 77''R'' + 151''G'' + 28''B''
+| style="text-align:center;" | [[File:../resources/user/filter_gray_scale.gif]]
+| Converts image to gray-scaled image.  The formula used is:
+''luma'' = 77 ''R'' + 151 ''G'' + 28 ''B''
 |-
 | '''''Invert Filter'''''
-|
+| style="text-align:center;" | [[File:../resources/user/filter_invert.gif]] 
 | Inverts all of the pixels in an image.  This is done by subtracting each colour component from 255.
 |-
-| '''''Rescale Factor'''''
-|
+| '''''Rescale Filter'''''
+| style="text-align:center;" | [[File:../resources/user/filter_rescale.gif]]
 | Multiplies the input image by a scale factor.
 |}
 
@@ -527,9 +473,13 @@ TODO!
 ! Description
 |-
 | '''''Pointer Camera Tool'''''
-|
+| style="text-align:center;" | [[File:../resources/user/camera_tool_pointer.gif]] 
 | Allow the user to point in the camera image and then draws in the 3D environment, a ray showing where the selected position point projects into the 3D environment.
 |}
+
+==== <i>Recording Tools</i> ====
+
+TODO!
 
 ==== <i>Simple Tools</i> ====
 
@@ -546,16 +496,17 @@ TODO!
 ! Description
 |-
 | '''''Ruler 3D Tool'''''
-|
+| style="text-align:center;" | [[File:../resources/user/simple_tool_ruler_3d.gif]]
 | Shows a ruler between two points.
 |-
 | '''''Sun Vector 3D Tool'''''
-|
+| style="text-align:center;" | [[File:../resources/user/simple_tool_sun_vector_3d.gif]]
 | Shows the vector connecting the selected point to the current position of the Sun.
 |-
 | '''''Feature Of Interest Picking Tool'''''
-|
-| Allows the user to point and click to create a new ''Feature Of Interest''.\nNote that the ''Feature Of Interest List'', where the ''Feature Of Interests'' are created, must be set for this tool to work.
+| style="text-align:center;" | [[File:../resources/user/simple_tool_feature_of_interest_picking.gif]]
+| Allows the user to point and click to create a new ''Feature Of Interest''.
+Note that the ''Feature Of Interest List'', where the ''Feature Of Interests'' are created, must be set for this tool to work.
 |-
 | '''''Trajectory 3D Tool'''''
 |

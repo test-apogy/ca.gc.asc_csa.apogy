@@ -847,7 +847,11 @@ Note:
 
 The desired final transformation for the components of ''MyPTUCameraSymphonySystem'' should be as follows:
 
-TODO!
+[[File:../resources/tutorials/ptu_camera_transforms.svg]]
+
+Once all of the topology has been fully populated, the result should look like:
+
+[[File:../resources/tutorials/ptu_camera_transforms_result.png]]
 
 ====== Creating the CAD folder ======
 
@@ -864,7 +868,7 @@ TODO!
 # Open your '''PTUCameraSymphonySystem.ss''' file with the editor;
 # Open the ''Symphony System 3D Viewer'', then select the ''Symphony System'' in the editor;
 # Under ''Topology Root'', create the topology for the ''PTUCamera'', replicating the structure specified in '''Target Topology Hierarchy''' above;
-# For the relevant transformations in the new hierarchy, update their position and orientation to reflect those specified in '''Target Transformations''' above;
+# For the relevant transformations in the new hierarchy, update their position and orientation to reflect those specified in the '''Target Transformations''' section above;
 # Save the file.
 
 ===== iii. Making the Camera's Bindings =====
