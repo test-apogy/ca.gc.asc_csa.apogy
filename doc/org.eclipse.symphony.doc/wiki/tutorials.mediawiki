@@ -837,7 +837,7 @@ The following exercises show how to specify the topology for the ''PTUCamera'''s
 
 The desired final topology for ''MyPTUCameraSymphonySystem'' should be as follows:
 
-TODO!
+[[File:../resources/tutorials/ptu_camera_topology.svg]]
 
 Note:
 * Create the nodes and set their ID / description right away; this makes it much easier to both understand and navigate the topology.

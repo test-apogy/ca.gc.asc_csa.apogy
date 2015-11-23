@@ -38,7 +38,7 @@ __TOC__
 			<li> Recurse for each ''TypeMember'' of the current ''TypeMember''.</li>
 		</ol>
 	</ol>
-</ul>    
+</ul>
 
 === Operation Call Invocation ===
 
