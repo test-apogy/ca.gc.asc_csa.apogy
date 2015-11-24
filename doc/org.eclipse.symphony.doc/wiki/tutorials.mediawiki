@@ -614,8 +614,8 @@ The following exercises go through the process of creating the required EMF meta
 
 <code>
      @GenModel(prefix="PTUCamera",
-       	      modelName="PTUCamera",
-    	      childCreationExtenders="true",
+               modelName="PTUCamera",
+               childCreationExtenders="true",
                extensibleProviderFactory="true",
                multipleEditorPages="false",
                operationReflection="true",
@@ -634,9 +634,89 @@ The following exercises go through the process of creating the required EMF meta
 ===== ii. Implementing the Required Methods =====
 
 <ol>
-	<li> Implement the following methods in ''<org_prefix>.ptu.impl.CameraImpl'':</li>
+	<li> Provide the following implementation for ''<org_prefix>.ptu.impl.CameraImpl'':</li>
 </ol>
 
+ // The extent of the zoom capabilities for the camera 
+ protected static final double MIN_ZOOM = 1.0;
+ protected static final double MAX_ZOOM = 10.0;
+ 
+ // The appropriate extents of the camera's FOV
+ protected static final double MAX_HORIZ_FOV_DEGREES = 45.0;
+ protected static final double MAX_VERT_FOV_DEGREES = 33.75;
+ 
+ // The FOV's default range extents
+ protected static final double FOV_DEF_MIN_RANGE = 0.0;
+ protected static final double FOV_DEF_MAX_RANGE = 10.0;
+ 
+ /**
+  * This helper method is used to calculate the horizontal angle (in
+  * radians) of the field of view.  This calculation is based on both
+  * the current zoom level (which is in [getMinimumZoom(), getMaximumZoom()])
+  * as well as a constant specifying the FOV's maximum horizontal angle.
+  * 
+  * @return The horizontal field of view angle (in radians)
+  * @see #calculateVerticalFOVangle()
+  * @see #updateFov()
+  */
+ protected double calculateHorizontalFOVAngle()
+ {
+ 	// Calculate and return the horizontal FOV angle
+ 	double angle = MAXIMUM_HORIZONTAL_FOV_DEGREES / getCurrentZoom();
+ 	return Math.toRadians(angle);
+ }
+
+ /**
+  * This helper method is used to calculated the vertical angle (in
+  * radians) of the field of view.  This calculation is based on both
+  * the current zoom level (which is in [getMinimumZoom(), getMaximumZoom()])
+  * as well as a constant specifying the maximum vertical angle.
+  * 
+  * @return The vertical field of view angle (in radians)
+  * @see #calculateHorizontalFOVAngle()
+  * @see #updateFov()
+  */
+ protected double calculateVerticalFOVAngle()
+ {
+ 	// Calculate and return the vertical FOV angle
+ 	double angle =  MAXIMUM_VERTICAL_FOV_DEGREES / getCurrentZoom();
+ 	return Math.toRadians(angle);
+ }
+
+ /**
+  * This helper method is used to update the both the horizontal and
+  * vertical angles (in radians) of the rectangular frustrum field of view,
+  * based on the current level of zoom.
+  * 
+  * @see #calculateHorizontalFOVAngle()
+  * @see #calculateVerticalFOVAngle()
+  */
+ protected void updateFov()
+ {
+ 	// Calculate the new field of view (FOV) angles and
+ 	// update the FOV accordingly.
+ 	getFov().setHorizontalFieldOfViewAngle(calculateHorizontalFOVAngle());
+ 	getFov().setVerticalFieldOfViewAngle(calculateVerticalFOVAngle());
+ }
+
+ /**
+  *
+  
+
+ /**
+  * This method is used to get the field of view (FOV) associated with
+  * the camera.
+  * 
+  * @return The ''RectangularFrustrumFieldOfView'' that defines the camera's FOV
+  * @generated_NOT
+  */
+ @Override
+ public ''RectangularFrustrumFieldOfView'' getFieldOfView()
+ {
+ 	// Just return the field of view attribute
+ 	return getFov();
+ }
+  
 {| border="1" cellpadding="2" style="margin-left: 30px;"
 ! Method
 ! Description
@@ -747,6 +827,7 @@ The following exercises focus on creating the Symphony plugin for the new ''PTUC
 
 <ol>
 	<li> Create a new ''Xcore Project'' named '''<org_prefix>.ptu.symphony''';</li>
+	<li> Rename the '''/src-gen''' folder to '''/src-generated''';</li>
 	<li> Open the '''MANIFEST.MF'''.  Go to the ''Dependencies'' tab;</li>
 	<li> In the ''Required Plug-ins'' section:</li>
 	<ol type="i">
@@ -759,13 +840,24 @@ The following exercises focus on creating the Symphony plugin for the new ''PTUC
 ===== ii. Developing the <i>PTUCamera</i>'s Symphony Xcore (.xcore) model =====
 
 <ol>
-	<li> Rename the '''/src-gen''' folder to '''/src-generated''';</li>
-	<li> In the '''/model''' folder, copy over the provided file '''ptu_symphony.xcore''';</li>
-	<li> Replace the <org_prefix> in the model with the appropriate name:</li>
-	<ol type="i">
-		<li> Ensure that you change the '''modelDirectory''' @GenModel directive to <org_prefix>.ptu.symphony'''/src-generated'''</li>
-		<li> Ensure that you change the '''editDirectory''' @GenModel directive to <org_prefix>.ptu.symphony.edit'''/src-generated'''</li>
-	</ol>
+	<li>In the /model folder, create an Xcore model named '''ptu_symphony.xcore'''</li>
+	<li>Copy the following to the start of the empty Xcore model, replacing <org_prefix> where required:</li>
+</ol>
+
+     @GenModel(prefix="PTUCameraSymphony",
+               modelName="PTUCameraSymphony",
+               childCreationExtenders="true",
+               extensibleProviderFactory="true",
+               multipleEditorPages="false",
+               operationReflection="true",
+               suppressGenModelAnnotations="false")
+    @GenModel(modelDirectory="/<org_prefix>.ptu.symphony/src-generated")
+    @GenModel(editDirectory="/<org_prefix>.ptu.symphony.edit/src-generated")
+    
+    package <org_prefix>.ptu.symphony
+
+<ol start="3">
+	<li>Save '''ptu_symphony.xcore''' to trigger an initial build for both the ''<org_prefix>.ptu.symphony'' and ''<org_prefix>.ptu.symphony'' plug-ins.</li>
 </ol>
 
 ===== iii. Specializing <i>SymphonyInitializationData</i> for the <i>PTUCamera</i> =====
@@ -774,7 +866,7 @@ The following exercises focus on creating the Symphony plugin for the new ''PTUC
 	<li> Open the '''ptu_symphony.xcore''' model;</li>
 	<li> Define a new class named '''''PTUCameraSymphonyInitializationData''''' that extends ''SymphonyInitializationData'';</li>
 	<li> Add the required attributes:</li>
-	<ol type="i">
+	<ol type="i">required minimum / maximum value
 		<li> ''double'' '''panAngle''';</li>
 		<li> ''double'' '''tiltAngle''';</li>
 		<li> ''double'' '''zoomFactor''' (with a default value of '''1.0''')</li>
@@ -787,7 +879,7 @@ The following exercises focus on creating the Symphony plugin for the new ''PTUC
 # Open the '''ptu_symphony.xcore''' model;
 # Define a new class named '''''PTUCameraSymphonySystemApiAdapter''''' that extends ''SymphonySystemApiAdapter''';
 # Save the '''ptu_symphony.xcore''' model;
-# Implement the following methods in <org_prefix>.ptu.symphony.impl.'''''PTUCameraSymphonySystemApiAdapterImpl''''' as specified below:
+# Implement the following methods in ''<org_prefix>.ptu.symphony.impl.PTUCameraSymphonySystemApiAdapterImpl'' as specified below:
 
  	/**
  	 * Create a new instance of ''PTUCameraSymphonyInitializationData'',
