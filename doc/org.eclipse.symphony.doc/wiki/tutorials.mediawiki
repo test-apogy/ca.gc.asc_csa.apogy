@@ -786,30 +786,120 @@ The following exercises focus on creating the Symphony plugin for the new ''PTUC
 
 # Open the '''ptu_symphony.xcore''' model;
 # Define a new class named '''''PTUCameraSymphonySystemApiAdapter''''' that extends ''SymphonySystemApiAdapter''';
-# Save the ''ptu_symphony.xcore'' model;
-# Override the following methods in '''''PTUCameraSymphonySystemApiAdapterImpl''''':
+# Save the '''ptu_symphony.xcore''' model;
+# Implement the following methods in <org_prefix>.ptu.symphony.impl.'''''PTUCameraSymphonySystemApiAdapterImpl''''' as specified below:
 
-{| border="1" cellpadding="2" style="margin-left: 30px;"
-! Method
-! Description
-! Implementation
-|-
-| ''AbstractInitializationData'' '''createInitializationData'''()
-| Creates an instance of ''SymphonyInitializationData''.
-| Returns a new instance of ''PTUCameraSymphonyInitializationData''.
-|-
-| void '''collect'''(''AbstractInitializationData'')
-| Sets the attributes of the given ''SymphonyInitializationData'' object to match the System's state.
-| Gets the current value of '''pan''', '''tilt''', and '''zoom''' from the System instance and sets these in the provided ''PTUCameraSymphonyInitializationData''.
-|-
-| void '''apply'''(''AbstractInitializationData'')
-| Applies the given ''SymphonyInitializationData'' to the System instance.
-| Gets the '''pan''' and '''tilt''' from the given ''PTUCameraSymphonyInitializationData'' object and calls '''moveToPanTilt'''('''pan''', '''tilt'''); then gets the '''zoom''' and calls '''commandZoom'''('''zoom'''). 
-|-
-| ''Matrix4x4'' '''createResultMatrix'''(''OperationCall'')
-| Creates the ''Matrix4x4'' used to position the result of an ''Operation Call'' relative to the ''System'''s origin.
-| See the code provided.
-|}
+ 	/**
+ 	 * Create a new instance of ''PTUCameraSymphonyInitializationData'',
+ 	 * which is the relevant subclass of ''SymphonyInitializationData''
+ 	 * for the ''PTUCamera'' ''System''.
+ 	 * 
+ 	 * @return The newly created ''PTUCameraSymphonyInitializationData'' object
+ 	 * @generated_NOT
+ 	 */
+ 	@Override
+ 	public ''AbstractInitializationData'' createInitializationData()
+ 	{
+ 		// Create and return a ''PTUCameraSymphonyInitializationData'' 
+ 		return PTUCameraFactory.createPTUCameraSymphonyInitializationData();
+ 	}
+ 
+ 	/**
+ 	 * Sets the attributes of the given ''SymphonyInitializationData'' object
+ 	 * to the corresponding values of the ''PTUCamera'' ''System''' instance's
+ 	 * state.  In this case, it simply gets the values of '''pan''', '''tilt'''
+ 	 * and '''zoom''' from the ''System'' instance and stores them in the provided
+ 	 * ''SymphonyInitializationData'' object, given that it has the correct type.
+ 	 * 
+ 	 * @param initData The initialization data object that is supposed to collect the state of the ''System''
+ 	 * @generated_NOT
+ 	 */
+ 	@Override
+ 	public void collect(''AbstractInitializationData'' initData)
+ 	{
+ 		// Call the superclass' version of the method 
+ 		super.collect(initData);
+ 		
+ 		// If the initialization data object has the correct type
+ 		if (initData instanceof ''PTUCameraSymphonyInitializationData'')
+ 		{
+ 			// Cast down
+ 			''PTUCameraSymphonyInitializationData'' ptuCameraInitData = (''PTUCameraSymphonyInitializationData'') initData;
+ 			''PTUCamera'' ptuCamera = (''PTUCamera'') this.getInstance();
+ 		
+ 			// Store the ''System'' instance's state in the initialization data object
+ 			ptuCameraInitData.setPanAngle(ptuCamera.getPanAngle());
+ 			ptuCameraInitData.setTiltAngle(ptuCamera.getTiltAngle());
+ 			ptuCameraInitData.setZoomFactor(ptuCamera.getCurrentZoom());
+ 		}
+ 	}
+ 
+ 	/**
+ 	 * Applies the values in the provided ''SymphonyInitializationData'' to this
+ 	 * ''PTUCamera'' ''System'' instance.  In this case, it will call the appropriate
+ 	 * methods to set the instance's state correctly.
+ 	 *
+ 	 * @param initData The initialization data object that is supposed to apply its state to the given ''System'' instance.
+ 	 * @generated_NOT
+ 	 */
+ 	@Override
+ 	public void apply(''AbstractInitializationData'' initData)
+ 	{
+ 		// Call the superclass' version of this method
+ 		super.apply(initData);
+ 		
+ 		// If the initialization data object has the correct type
+ 		if (initData instanceof ''PTUCameraSymphonyInitializationData'')
+ 		{
+ 			// Cast down
+ 			''PTUCameraSymphonyInitializationData'' ptuCameraInitData = (''PTUCameraSymphonyInitializationData'') initData;
+ 			''PTUCamera'' ptuCamera = (''PTUCamera'') this.getInstance();
+ 		
+ 			// Apply the values
+ 			ptuCamera.commandZoom(ptuCameraInitData.getZoomFactor());
+ 			ptuCamera.moveToPanTilt(ptuCameraInitData.getPanAngle(),
+ 									   ptuCameraInitData.getTiltAngle());
+ 		}
+ 	}
+   
+ 	/**
+ 	 * Return a 4x4 matrix, whose components represent the transformation
+ 	 * (e.g. rotations, translations, etc.) from where the given operation
+ 	 * took place to the camera's root topology node; for example, for the
+ 	 * operation ''takeSnapshot''(), this describes the transformation from
+  	 * the camera's lens to its base (e.g. root). If no transformation
+ 	 * occurred, then the identity matrix should be returned; note that this,
+ 	 * in fact, is what is returned by the superclass' version of this method.
+ 	 * 
+ 	 * @param operationCall The operation which took place
+ 	 * @return The transformation from where the operation took place to the PTU camera's root
+ 	 * @generated_NOT
+ 	 */
+ 	@Override
+ 	public ''Matrix4x4'' createResultMatrix(''OperationCall'' operationCall) 
+ 	{
+ 		// If the takeSnapshot() method was called
+ 		if (operationCall.getEOperation().getOperationID() == PTUCameraPackage.CAMERA___TAKE_SNAPSHOT)
+ 		{
+ 			// Extract the camera lens and root nodes
+ 			''Node'' tip = TopologyFacade.INSTANCE.findNodesByID("PTU_CAMERA_FOV",
+ 			                                                 getSymphonySystem().getTopologyRoot().getOriginNode()).get(0);
+ 			''Node'' root = TopologyFacade.INSTANCE.findNodesByID("PTU_CAMERA_ROOT",
+ 			                                                  getSymphonySystem().getTopologyRoot().getOriginNode()).get(0);
+			
+ 			// Determine the series of transformations that have taken place
+ 			''Matrix4d'' matrix4d = TopologyFacade.INSTANCE.expressInFrame(tip,	root);
+			
+ 			// Create a 4x4 Matrix with the transformation and return it
+ 			return MathFacade.INSTANCE.createMatrix4x4(matrix4d);
+ 		}
+ 		// Otherwise, any other operation was called
+ 		else
+ 		{
+ 			// Just return the identity matrix
+ 			return super.createResultMatrix(operationCall);
+ 		}
+ 	}
 
 ==== 3. Creating the <i>PTUCamera</i>'s Complete <i>Symphony System</i> Model ====
 
@@ -855,6 +945,10 @@ Note:
 The desired final transformation for the components of ''MyPTUCameraSymphonySystem'' should be as follows:
 
 [[File:../resources/tutorials/ptu_camera_transforms.svg]]
+
+Recall that the ''RectangularFrustrumFieldOfView'' component of the ''MyPTUCamera'' ''System''   has following properties:
+
+[[File:../resources/tutorials/rectangular_frustrum_fov.svg]]
 
 Once all of the topology in '''MyPTUCameraSymphonySystem.ss''' has been fully populated, the result should look like:
 

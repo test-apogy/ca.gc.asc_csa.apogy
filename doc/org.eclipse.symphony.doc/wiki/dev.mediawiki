@@ -95,11 +95,9 @@ Symphonizing Guidelines:
 | Edit plugin providing basic GUI support for the Symphony System.  Generated automatically by EMF.
 |}
    
-=== The Three Steps to Symphonyzing ===
+=== Step 1. Defining The System In EMF ===
 
-==== 1. Defining The System In EMF ====
-
-===== Creating An EMF Model Of The System =====
+==== Creating An EMF Model Of The System ====
 
 <ol>
 	<li> Create an Xcore Project named '''<org_prefix>.<system_name>''', where '''<org_prefix>''' is a placeholder for a prefix appropriate for your organization;</li>
@@ -118,7 +116,7 @@ Symphonizing Guidelines:
 	<li> You are done!</li>
 </ol>
 
-===== Recommended Class Hierarchy =====
+==== Recommended Class Hierarchy ====
 
 [[File:../resources/dev/recommended_class_hierarchy.svg]]
 
@@ -134,15 +132,15 @@ Symphonizing Guidelines:
 	<li> Define a concrete ''AReal'' class that extends ''A''.  This implementation provides an interface to the real (physical) system.</li>
 </ol>
 
-==== 2. Creating the Symphony plugin ====
+=== Step 2. Creating the Symphony plugin ===
 
-===== Definition =====
+==== Definition ====
 
 The '''Symphony plugin''' is an EMF (typically Xcore) plugin, which contains the required meta-model to specify the ''System'''s interface with Symphony.
 
 It typically defines a specialization of ''SymphonyInitializationData''; this allows Symphony to be able to both capture as well as restore the specific state of the ''System'', which is useful in a variety of circumstances.  The ''SymphonySystemApiAdapter'' is also typically subclassed, allowing one to customize the invocation of the ''System'''s operations.     
 
-===== The Four Steps to making a Symphony Plugin =====
+==== The Four Steps to making a Symphony Plugin ====
 
 Creating the Symphony plugin involves four (4) steps:
 # Creating the plugin;
@@ -150,13 +148,13 @@ Creating the Symphony plugin involves four (4) steps:
 # Defining a sub-class of ''SymphonyInitializationData'';
 # Defining a sub-class of ''SymphonySystemApiAdapter''.
 
-====== i. Creating the Symphony Plugin Itself ======
+===== i. Creating the Symphony Plugin Itself =====
 TODO!
 
-====== ii. Creating a Xcore (.xcore) Model ======
+===== ii. Creating a Xcore (.xcore) Model =====
 TODO!
 
-====== iii. Defining a Subclass of <i>SymphonyInitializationData</i> ======
+===== iii. Defining a Subclass of <i>SymphonyInitializationData</i> =====
 
 The ''SymphonyInitializationData'' class only includes the pose of your ''System'' in the ''Worksite'' frame.
 
@@ -165,14 +163,14 @@ Your specialized ''SymphonyInitializationData'':
 * Symphony persists the data for you.
 * Symphony delegates to your custom ''SymphonySystemApiAdapter'' sub-class, the responsibility to create, populate and apply the data; 
 
-======= Rules & Guidelines =======
+====== Rules & Guidelines ======
 
 * All atttributes in your specialized SymphonyInitializationData must be:
 ** Contained in the ''SymphonyInitializationData'' (or marked as '''transient''');
 ** Serializable (or have the necessary methods implemented correctly in your Symphony plugin Factory implementation class);
 * Should contain all of the data required to bring your ''System'' back to a given state (e.g. modes, actuators, position, etc.)
 
-====== iv. Defining a Subclass of <i>SymphonySystemApiAdapter</i> ======
+===== iv. Defining a Subclass of <i>SymphonySystemApiAdapter</i> =====
 
 Providing a specialized ''SymphonySystemApiAdapter'':
 * Allows for the specialization of ''OperationCallPositionResult''';
@@ -180,7 +178,7 @@ Providing a specialized ''SymphonySystemApiAdapter'':
 * Provides support for custom ''InitializationData'' creation, collection and application;
 * Grants access to the ''Symphony Environment'' (which includes the worksite, sky, etc.) 
 
-======= Localization =======
+====== Localization ======
 
 * Symphony does '''NOT''' assume anything about the ''System'''s ''Interface Class'' (apart from it being an EClass), so there is no way for Symphony to know where to get the pose information about your ''System''.
 
@@ -190,7 +188,7 @@ Providing a specialized ''SymphonySystemApiAdapter'':
 *#** The ''MobilePlatform'' and ''Lander'' examples use this method;
 *# Have your System implement ''PoseProvider'' (''org.eclipse.symphony.core.PoseProvider''): The ''SymphonySystemApiAdapter'' will handle it for you. 
 
-======= Rules & Guidelines =======
+====== Rules & Guidelines ======
 
 * Your specialized ''SymphonySystemApiAdapter'' is:
 ** '''NOT PERSISTED''': it is instantiated every time you call ''Reset Instances'';
@@ -198,7 +196,7 @@ Providing a specialized ''SymphonySystemApiAdapter'':
 * While your specialized ''SymphonySystemApiAdapter'' can depend on your ''System'''s EMF model, the opposite is not true (would lead to a dependency cycle);
 * Just override the methods you need: the ''SymphonySystemApiAdapter'' provides adequate default implementation for all methods
 
-======= <i>SymphonySystemApiAdapter</i> Methods =======
+====== <i>SymphonySystemApiAdapter</i> Methods ======
 
 {| border="1" cellpadding="2"
 ! Method
@@ -237,9 +235,9 @@ Providing a specialized ''SymphonySystemApiAdapter'':
 | style="text-align:center;" | No
 |}
 
-==== 3. Creating the <i>Symphony System Model</i> (*.ss) file ====
+=== Step 3. Creating the <i>Symphony System Model</i> (*.ss) file ===
 
-===== Definition =====
+==== Definition ====
 
 Recall that the ''Symphony System'':
 
@@ -248,7 +246,7 @@ Recall that the ''Symphony System'':
 * Adds functions to assemble systems together through ''Connection Points'' and ''Assembly Links'';
 * Provdes a 3D representation of the System.
 
-===== The Six Steps to make a <i>Symphony System Model</i> =====
+==== The Six Steps to make a <i>Symphony System Model</i> ====
 
 Creating a ''Symphony System Model'' (*.ss file) involves:
 <ol>
@@ -270,7 +268,7 @@ Finally:
 	<li> Registering your ''Symphony System'';</li>
 </ol>
 
-====== i. Defining the <i>Topology Root</i> ======
+===== i. Defining the <i>Topology Root</i> =====
 
 The steps to fully defining the ''Symphony System'''s topology are:
 # Creating a root node (e.g ''AggregateGroupNode'')
@@ -278,7 +276,7 @@ The steps to fully defining the ''Symphony System'''s topology are:
 # Add nodes representing geometries (e.g ''URLNode'');
 # Add other specialized nodes (e.g. ''Wheel'', ''Thruster'', ''RectangularFrustrumFieldOfView'', etc.)
 
-======= Topology Guidelines =======
+====== Topology Guidelines ======
 
 * Be sure to specify the '''Node Id''' for every node.  The recommended naming pattern should include the name of the ''System'' as a prefix (e.g. a prefix like "'''<SYSTEM_NAME>_SYM_SYS'''"); 
 * For ''TransformNodes'' that are intended to be used to affect DOF, include '''JOINT''' in the '''Node Id''';
@@ -294,7 +292,7 @@ An example of the general structure given by these guidelines is:
 
 [[File:../resources/dev/topology_guidelines_example.svg]]
 
-====== ii. Defining the Bindings ======
+===== ii. Defining the Bindings =====
 
 Topology bindings are what Symphony uses to relate selected attributes in the ''System'''s ''Interface Class'' to behaviours of the topology.  This allows, for example:
 * Binding the position of a certain ''TransformNode'' to a linear position atribute in the System's ''Interface Class'';
@@ -304,7 +302,7 @@ Defining the bindings required the following steps:
 # Populating the ''Feature Roots List''
 # Populating the ''Bindings List''
 
-======= Populating the <i>Feature Roots List</i> =======
+====== Populating the <i>Feature Roots List</i> ======
 
 * The ''Feature Roots List'' is where all of the attributes of the ''System'''s ''Interface Class'' that will be used in bindings are specified
 * The list of available attributes is automatically populated, based on the ''System'''s specified ''Interface Class''.
@@ -313,14 +311,14 @@ Defining the bindings required the following steps:
 *# Set the ''Source Class'' of the ''Tree Root Node'' to the same class as the ''Interface Class'' of the ''Symphony System'';
 *# Add the required child child under the ''Tree Root Node'' and its sub-nodes to specify the required attributes for the bindings.
 
-======= Populating the <i>Bindings List</i> =======
+====== Populating the <i>Bindings List</i> ======
 
 * Populating the ''Binding List'' involves:
 *# Under ''Binding List'', create a new ''Binding'' of the required type;
 *#* It is recommended that the name of all binding elements include '''BIND''' 
 *# Set the attributes of the newly created ''Binding''
 
-======= Bindings Currently Available in Symphony =======
+====== Bindings Currently Available in Symphony ======
 
 The bindings currently available for generic topology ''Nodes'' are:
 
@@ -378,7 +376,7 @@ The bindings currently available for vehicle topology ''Nodes'' are:
 | Maps the values of a ''Thruster'' to another ''Thruster'' attribute.
 |}
 
-====== iii. Defining the <i>Connection Points</i> ======
+===== iii. Defining the <i>Connection Points</i> =====
 
 * Recall that, ''Connection Points'' are metaphorical hooks where sub-''Systems'' can be attached.
 * A ''Connection Point'' typically defines a physical location where a ''System'' might expect other sub-''Systems'' to be assembled. 
@@ -388,15 +386,15 @@ The bindings currently available for vehicle topology ''Nodes'' are:
 *#* It is recommended that the name of the ''Connection Point'' include '''CONNECT''';
 *# Set the ''Node'' of the ''Connection Point''.
 
-====== iv. Defining <i>Type Members</i> (Only for Composite <i>Systems</i>) ======
+===== iv. Defining <i>Type Members</i> (Only for Composite <i>Systems</i>) =====
 
 TODO!
 
-====== v. Defining <i>Assembly Links</i> (Only for Composite <i>Systems</i>) ======
+===== v. Defining <i>Assembly Links</i> (Only for Composite <i>Systems</i>) =====
 
 TODO!
 
-====== vi. Registering your <i>Symphony System Model</i> with Symphony ======
+===== vi. Registering your <i>Symphony System Model</i> with Symphony =====
 
 In order for Symphony to be made aware of your ''Symphony System Model'', your model must be registered.
 Here are the steps to do so:
@@ -537,4 +535,34 @@ The following built-in ''Map View'' tools (located in ''org.eclipse.symphony.cor
 **# Replace the '''createItemPropertyDescriptor()''' call with '''new ''AbstractUnitItemPropertyDescriptor''''';
 **# Mark the method as '''@generated_NOT''' to prevent your work from being overwritten;
 
-TODO!
+For a concrete example, the following block of code:
+
+ /**
+  * This adds a property descriptor to the Current Pan Angle feature
+  * @generated
+  */
+
+ protected void addCurrentPanAnglePropertyDescriptor(Object object)
+ {
+ 	itemPropertyDescriptor.add
+ 		('''createItemPropertyDescriptor'''
+ 			(((ComposableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+ 			 getResourceLocator(),
+ 			 ...
+ }
+
+should become:
+
+ /**
+  * This adds a property descriptor to the Current Pan Angle feature
+  * @generated<b>_NOT</b>
+  */
+
+ protected void addCurrentPanAnglePropertyDescriptor(Object object)
+ {
+ 	itemPropertyDescriptor.add
+ 		(<b>new AbstractUnitItemPropertyDescriptor</b>
+ 			(((ComposableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+ 			 getResourceLocator(),
+ 			 ...
+ }
