@@ -204,7 +204,7 @@ Providing a specialized ''SymphonySystemApiAdapter'':
 ! Method
 ! Description
 ! Default Implementation
-! scope="col" style="text-align:center;" | Override must call super
+! Override must call super
 |-
 | void '''init'''(''Environment'', ''Type'', ''EObject'')
 | Initialize the adapter with the ''Environment'', ''Type'', and the System instance (''EObject'').
@@ -241,7 +241,7 @@ Providing a specialized ''SymphonySystemApiAdapter'':
 
 ===== Definition =====
 
-Recall that the <i>Symphony System</i>:
+Recall that the ''Symphony System'':
 
 * Is the "LEGO block" of Symphony;
 * A '''''System''''' is a specialization of ''Type'';
@@ -257,7 +257,7 @@ Creating a ''Symphony System Model'' (*.ss file) involves:
 	<li> Defining the ''Connection Points'';</li>
 </ol>
 
-Additionally, for Composite Systems:
+Additionally, for Composite ''Systems'':
 
 <ol start="4">
 	<li> Defining ''Type Members'';</li>
@@ -286,12 +286,13 @@ The steps to fully defining the ''Symphony System'''s topology are:
 * Defining a joint (either revolution or linear) is typically done using a pair of ''TransformNodes'':
 ** The first ''TransformNode'' defines where the joint is and is not intended to change;
 ** The second ''TransformNode'' (the one with its '''Node Id''' containing '''JOINT''') is the one that will affect the motion;
-
-TODO!
- 
 * A geometry file (e.g. ''CAD'') is needed to specify each part that makes up an articulated system.  For example:
 ** One file for the rover chassis, one for the wheel(s);
 ** One for the base of a PTU Camera, one for the tilt fork and one for the camera;
+
+An example of the general structure given by these guidelines is:
+
+[[File:../resources/dev/topology_guidelines_example.svg]]
 
 ====== ii. Defining the Bindings ======
 
@@ -316,7 +317,7 @@ Defining the bindings required the following steps:
 
 * Populating the ''Binding List'' involves:
 *# Under ''Binding List'', create a new ''Binding'' of the required type;
-*#* It is recommended that the name of the binding include '''BIND''' 
+*#* It is recommended that the name of all binding elements include '''BIND''' 
 *# Set the attributes of the newly created ''Binding''
 
 ======= Bindings Currently Available in Symphony =======
@@ -387,11 +388,11 @@ The bindings currently available for vehicle topology ''Nodes'' are:
 *#* It is recommended that the name of the ''Connection Point'' include '''CONNECT''';
 *# Set the ''Node'' of the ''Connection Point''.
 
-====== iv. Defining <i>Type Members</i> (Only for Composite Systems) ======
+====== iv. Defining <i>Type Members</i> (Only for Composite <i>Systems</i>) ======
 
 TODO!
 
-====== v. Defining <i>Assembly Links</i> (Only for Composite Systems) ======
+====== v. Defining <i>Assembly Links</i> (Only for Composite <i>Systems</i>) ======
 
 TODO!
 

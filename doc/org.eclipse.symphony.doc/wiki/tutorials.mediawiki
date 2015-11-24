@@ -441,17 +441,22 @@ The following exercises investigate ''Operation Call Controller Bindings''.  By 
 	<li> Activate the '''mySecondCtrlConfig''' and drive your rover around. '''''Does it work as expected?'''''</li>
 </ol>
 
-==== Defining & Using Composite <i>System</i> ====
+==== Defining & Using A Composite <i>System</i> ====
 
-The following exercises illustrated how to specify and use composite ''System''.  By the end of this session, one should be able to:
+The following exercises illustrated how to specify and use composite ''Systems''.  By the end of this session, one should be able to:
 
 * define an adhoc composite ''System''
 * invoke operations on a composite ''System'''s ''Type Members'' as well as on the ''Type Member'''s ''Features''
 
 ===== The Target Assembly =====
 
-[PTU_Topology.vsd]
-TODO!
+The desired target assembly for this exercise is:
+
+[[File:../resources/tutorials/composite_system_target_assembly.svg]]
+
+This should yield a composite ''System'' that looks like this:
+
+[[File:../resources/tutorials/composite_system_target_assembly_visualized.png|400x400px]]
 
 ===== Defining A Composite <i>System</i> =====
 
@@ -459,39 +464,39 @@ TODO!
 	<li> Create a new ''Symphony System'' in ''Local Type'' named '''MyFirstAssembly'''</li>
 	<li> Add three (3) ''Type Members'':</li>
 	<ol type="i">
-		<li> '''rover''' of type ''SymphonySystemMobilePlatform'';</li>
-		<li> '''camera''' of type ''SymphonySystemPTUCamera'';</li>
-		<li> '''arm''' of type ''SymphonySystemRoboticArm''</li>
+		<li> '''rover''' of type ''MobilePlatformSymphonySystem'';</li>
+		<li> '''camera''' of type ''PTUCameraSymphonySystem'';</li>
+		<li> '''arm''' of type ''RoboticArmSymphonySystem''</li>
 	</ol>
 	<li> Add a ''Topology Root'' with a ''Transform Node'' child with its ''Node Id'' set to '''myFirstAssemblyRoot'''</li>
 	<li> Under '''MyFirstAssembly''', create a ''Connection Points List''</li>
-	<li> Under the new ''Connection Points List'', create a ''Connection Point'' named '''origin''', referring to the '''myFirstAssemblyRoot''' node.</li>
+	<li> Under the new ''Connection Points List'', create a ''Connection Point'' named '''ORIGIN''', referring to the '''myFirstAssemblyRoot''' node.</li>
 	<li> Under '''MyFirstAssembly''', create an ''Assembly Links List'';</li>
-	<li> Create a first ''Assembly Link'' named '''assemblyToRover''':</li>
+	<li> Create a first ''Assembly Link'' named '''AssemblyToRover''':</li>
 	<ol type="i">
-		<li> Set its ''Parent Connection Point'' to '''origin''';</li>
+		<li> Set its ''Parent Connection Point'' to '''ORIGIN''';</li>
 		<li> Set its ''Sub System Type Member'' to '''rover''';</li>
 	</ol>
-	<li> Create a second ''Assembly Link'' named '''roverToCamera''':</li>
+	<li> Create a second ''Assembly Link'' named '''RoverToCamera''':</li>
 	<ol type="i">
 		<li> Set its ''Parent Type Member'' to '''rover''';</li>
 		<li> Set its ''Parent Connection Point'' to '''MOBILE_PLATFORM_SYM_SYS_CONNECT_MAST_CENTRE_PLATE''';</li>
 		<li> Set its ''Sub System Type Member'' to '''camera''';</li>
 	</ol>
-	<li> Create a third ''Assembly Link'' named '''roverToArm''':</li>
+	<li> Create a third ''Assembly Link'' named '''RoverToArm''':</li>
 	<ol type="i">
 		<li> Set its ''Parent Type Member'' to '''rover''';</li>
 		<li> Set its ''Parent Connection Point'' to '''MOBILE_PLATFORM_SYM_SYS_CONNECT_ARM_MOUNT''';</li>
 		<li> Set its ''Sub System Type Member'' to '''arm''';</li>
 	</ol>
-	<li> Set the ''Pose Provider'' of '''myFirstAssembly''' to '''rover''';</li>
+	<li> Set the ''Pose Provider'' of '''MyFirstAssembly''' to '''rover''';</li>
 	<li> Create a ''Variable'' named '''myAssembly''' of type ''MyFirstAssembly'';</li>
 	<li> In the ''Active Context'', create a new ''Variable Implementation'':</li>
 	<ol type="i">
 		<li> Assign its ''Variable'' to '''myAssembly''';</li>
 		<li> Specify an implementation class for:</li>
 		<ul>
-			<li> '''rover''' -> '''MobilePlatformStub'''</li>
+			<li> '''rover''' -> '''MobilePlatformSimulated'''</li>
 			<li> '''camera''' -> '''PTUCameraSimulated'''</li>
 			<li> '''arm''' -> '''RoboticArmSimulated'''</li>
 		</ul>
@@ -587,7 +592,9 @@ The following exercises go step-by-step through the process of creating a ''Syst
 
 ==== An Overview Of The Desired <i>System</i> ====
 
-TODO!
+The class structure for the ''PTUCamera'''s ''System'' should be as follows:
+
+[[File:../resources/tutorials/ptu_camera_class_hierarchy.svg]]
 
 ==== 1. Creating The <i>PTUCamera</i>'s EMF Meta-Model ====
 
@@ -849,7 +856,7 @@ The desired final transformation for the components of ''MyPTUCameraSymphonySyst
 
 [[File:../resources/tutorials/ptu_camera_transforms.svg]]
 
-Once all of the topology has been fully populated, the result should look like:
+Once all of the topology in '''MyPTUCameraSymphonySystem.ss''' has been fully populated, the result should look like:
 
 [[File:../resources/tutorials/ptu_camera_transforms_result.png]]
 
