@@ -637,163 +637,467 @@ The following exercises go through the process of creating the required EMF meta
 	<li> Provide the following implementation for ''<org_prefix>.ptu.impl.CameraImpl'':</li>
 </ol>
 
- // The extent of the zoom capabilities for the camera 
- protected static final double MIN_ZOOM = 1.0;
- protected static final double MAX_ZOOM = 10.0;
+ 	// The extent of the zoom capabilities for the camera 
+ 	protected static final ''double'' MIN_ZOOM = 1.0;
+ 	protected static final ''double'' MAX_ZOOM = 10.0;
  
- // The appropriate extents of the camera's FOV
- protected static final double MAX_HORIZ_FOV_DEGREES = 45.0;
- protected static final double MAX_VERT_FOV_DEGREES = 33.75;
+ 	// The appropriate extents of the camera's FOV
+ 	protected static final ''double'' MAX_HORIZ_FOV_DEGREES = 45.0;
+ 	protected static final ''double'' MAX_VERT_FOV_DEGREES = 33.75;
  
- // The FOV's default range extents
- protected static final double FOV_DEF_MIN_RANGE = 0.0;
- protected static final double FOV_DEF_MAX_RANGE = 10.0;
+ 	// The FOV's default range extents
+ 	protected static final ''double'' FOV_DEF_MIN_RANGE = 0.0;
+ 	protected static final ''double'' FOV_DEF_MAX_RANGE = 10.0;
  
- /**
-  * This helper method is used to calculate the horizontal angle (in
-  * radians) of the field of view.  This calculation is based on both
-  * the current zoom level (which is in [getMinimumZoom(), getMaximumZoom()])
-  * as well as a constant specifying the FOV's maximum horizontal angle.
-  * 
-  * @return The horizontal field of view angle (in radians)
-  * @see #calculateVerticalFOVangle()
-  * @see #updateFov()
-  */
- protected double calculateHorizontalFOVAngle()
- {
- 	// Calculate and return the horizontal FOV angle
- 	double angle = MAXIMUM_HORIZONTAL_FOV_DEGREES / getCurrentZoom();
- 	return Math.toRadians(angle);
- }
+ 	/**
+ 	 * This helper method is used to calculate the horizontal angle (in
+ 	 * radians) of the field of view.  This calculation is based on both
+ 	 * the current zoom level (which is between getMinimumZoom() and
+ 	 * getMaximumZoom(), inclusively) as well as a constant specifying the
+ 	 * FOV's maximum horizontal angle.
+ 	 * 
+ 	 * @return The horizontal field of view angle (in radians)
+ 	 * @see #calculateVerticalFOVangle()
+ 	 * @see #updateFov()
+ 	 */
+ 	protected ''double'' calculateHorizontalFOVAngle()
+ 	{
+ 		// Calculate and return the horizontal FOV angle
+ 		''double'' angle = MAXIMUM_HORIZONTAL_FOV_DEGREES / getCurrentZoom();
+ 		return Math.toRadians(angle);
+ 	}
 
- /**
-  * This helper method is used to calculated the vertical angle (in
-  * radians) of the field of view.  This calculation is based on both
-  * the current zoom level (which is in [getMinimumZoom(), getMaximumZoom()])
-  * as well as a constant specifying the maximum vertical angle.
-  * 
-  * @return The vertical field of view angle (in radians)
-  * @see #calculateHorizontalFOVAngle()
-  * @see #updateFov()
-  */
- protected double calculateVerticalFOVAngle()
- {
- 	// Calculate and return the vertical FOV angle
- 	double angle =  MAXIMUM_VERTICAL_FOV_DEGREES / getCurrentZoom();
- 	return Math.toRadians(angle);
- }
+ 	/**
+ 	 * This helper method is used to calculated the vertical angle (in
+ 	 * radians) of the field of view.  This calculation is based on both
+ 	 * the current zoom level (which is between getMinimumZoom() and
+ 	 * getMaximumZoom(), inclusively) as well as a constant specifying the
+ 	 * maximum vertical angle.
+ 	 * 
+ 	 * @return The vertical field of view angle (in radians)
+ 	 * @see #calculateHorizontalFOVAngle()
+ 	 * @see #updateFov()
+ 	 */
+ 	protected ''double'' calculateVerticalFOVAngle()
+ 	{
+ 		// Calculate and return the vertical FOV angle
+ 		''double'' angle =  MAXIMUM_VERTICAL_FOV_DEGREES / getCurrentZoom();
+ 		return Math.toRadians(angle);
+ 	}
 
- /**
-  * This helper method is used to update the both the horizontal and
-  * vertical angles (in radians) of the rectangular frustrum field of view,
-  * based on the current level of zoom.
-  * 
-  * @see #calculateHorizontalFOVAngle()
-  * @see #calculateVerticalFOVAngle()
-  */
- protected void updateFov()
- {
- 	// Calculate the new field of view (FOV) angles and
- 	// update the FOV accordingly.
- 	getFov().setHorizontalFieldOfViewAngle(calculateHorizontalFOVAngle());
- 	getFov().setVerticalFieldOfViewAngle(calculateVerticalFOVAngle());
- }
+ 	/**
+ 	 * This helper method is used to update the both the horizontal and
+ 	 * vertical angles (in radians) of the rectangular frustrum field of view,
+ 	 * based on the current level of zoom.
+ 	 * 
+ 	 * @see #calculateHorizontalFOVAngle()
+ 	 * @see #calculateVerticalFOVAngle()
+ 	 */
+ 	protected void updateFov()
+ 	{
+ 		// Calculate the new field of view (FOV) angles and
+ 		// update the FOV accordingly.
+ 		getFov().setHorizontalFieldOfViewAngle(calculateHorizontalFOVAngle());
+ 		getFov().setVerticalFieldOfViewAngle(calculateVerticalFOVAngle());
+ 	}
 
- /**
-  *
-  
+ 	/**
+ 	 * This method is used to the FOV attribute associated with this camera.
+ 	 *
+ 	 * @return The ''RectangularFrustrumFieldOfView'' that corresponds to the camera's FOV attribute
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''RectangularFrustrumFieldOfView'' '''getFov'''() 
+ 	{
+ 		// If there currently is no FOV
+ 		if(fov == null)
+ 		{
+ 			// Create one with certain default parameters
+ 			fov = FOVFacade.INSTANCE.createRectangularFrustrumFieldOfView(FOV_DEF_MINIMUM_RANGE,
+ 			                                                              FOV_DEF_MAXIMUM_RANGE,
+ 			                                                              calculateHorizontalFOVAngle(),
+ 			                                                              calculateVerticalFOVAngle());
+ 			
+ 			// Set it as the camera's FOV
+ 			setFov(fov);
+ 		}
+ 		
+ 		// Return the camera's field of view
+ 		return fov;
+ 	}
 
- /**
-  * This method is used to get the field of view (FOV) associated with
-  * the camera.
-  * 
-  * @return The ''RectangularFrustrumFieldOfView'' that defines the camera's FOV
-  * @generated_NOT
-  */
- @Override
- public ''RectangularFrustrumFieldOfView'' getFieldOfView()
- {
- 	// Just return the field of view attribute
- 	return getFov();
- }
-  
-{| border="1" cellpadding="2" style="margin-left: 30px;"
-! Method
-! Description
-|-
-| ''RectangularFieldOfView()'' '''getFov'''()
-| Getter method for the ''fov'' attribute of the camera.  See the code provided.
-|-
-| ''boolean'' '''commandZoom'''(''double'' zoom)
-| Configures the current zoom; this needs to update the FOV as well!  See the code provided.
-|-
-| ''double'' '''getMinimumZoom'''()
-| Returns the minimum zoom factor.  Return '''1.0''';
-|-
-| ''double'' '''getMaximumZoom'''()
-| Returns the maximum zoom factor.  Return '''10.0''';
-|-
-| ''RectangularFrustrumFieldOfView'' '''getFieldOfView'''()
-| Method declared by ''AbstractCamera''.  Return '''getFov()''';
-|}
+ 	/**
+ 	 * This method is used to get the field of view (FOV) associated with
+ 	 * the camera.
+ 	 * 
+ 	 * @return The ''RectangularFrustrumFieldOfView'' that defines the camera's FOV
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''RectangularFrustrumFieldOfView'' '''getFieldOfView'''()
+ 	{
+ 		// Just return the field of view attribute
+ 		return getFov();
+ 	}
+ 	 
+ 	/**
+ 	 * This method is used to get the minimum zoom value for the camera.
+ 	 * 
+ 	 * @return The smallest allowed zoom value for this camera
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''double'' '''getMinimumZoom'''()
+ 	{
+ 		// Just return the predefined minimum zoom value
+ 		return MIN_ZOOM;
+ 	}
+ 
+ 	/**
+ 	 * This method is used to get the maximum zoom value for the camera.
+ 	 *
+ 	 * @return The largest allowed zoom value for this camera
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''double'' '''getMaximumZoom'''()
+ 	{
+ 		// Just return the predefined maximum zoom value
+ 		return MAX_ZOOM;
+ 	}
+ 
+ 	/**
+ 	 * This method is used to change the current zoom of the camera;
+ 	 * note as this affects the camera's field of view, it also needs
+ 	 * to be appropriately update.
+ 	 * 
+ 	 * @param zoom The camera's commanded zoom factor
+ 	 * @return Whether or not the camera's zoom was updated
+ 	 * '''generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''boolean'' '''commandZoom'''(''double'' zoom)
+ 	{
+ 		// Update the camera's commanded zoom factor; that is,
+ 		// the value that it was commanded to change to
+ 		setCommandedZoom(zoom);
+ 	
+ 		// If the commanded zoom value is in the required range
+ 		if ((zoom >= getMinimumZoom()) &&
+ 		    (zoom <= getMaximumZoom())
+ 		{
+ 			// Set the camera's current zoom to that value
+ 			setCurrentZoom(zoom);
+ 			
+ 			// Update the camera's FOV, given the new current zoom factor
+ 			updateFov();
+ 			
+ 			// Indicate that the zoom was updated
+ 			return true;
+ 		}
+ 		// Otherwise, it's not in range
+ 		else
+ 		{
+ 			// Just indicate that the zoom wasn't updated
+ 			return false;
+ 		}
+ 	}
 
 <ol start="2">
-	<li> Implement the following methods in ''<org_prefix>.ptu.impl.CameraSimulatedImpl'':</li>
+	<li> Provide the following implementation for ''<org_prefix>.ptu.impl.CameraSimulatedImpl'':</li>
 </ol>
 
-{| border="1" cellpadding="2" style="margin-left: 30px;"
-! Method
-! Description
-|-
-| ''boolean'' '''initialize'''()
-| Initialize the camera.  Just return '''true''';
-|-
-| ''ImageSnapshot'' '''takeSnapshot'''()
-| Takes and returns an ''ImageSnapshot''. See the code provided.
-|}
+ 	/**
+ 	 * This method is used to perform any required
+ 	 * initialization operations before the camera
+ 	 * can be used.
+ 	 *
+ 	 * @return Whether or not the camera was successfully initialized.
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''boolean'' '''initialize'''()
+ 	{
+ 		// Just return true
+ 		return true;
+ 	}
+
+ 	/**
+ 	 * This method is used to command the camera to
+ 	 * take an ''ImageSnapshot'' and then return it.
+ 	 *
+ 	 * @return The image snapshot captured by the camera
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''ImageSnapshot'' '''takeSnapshot'''()
+ 	{
+ 		// Create an image snapshot
+ 		''ImageSnapshot'' imageSnapshot = ''Symphony__AddonsSensorsImagingPackage''.eINSTANCE.createImageSnapshot();
+ 		
+ 		// Set the time of the snapshot
+ 		imageSnapshot.setTime(new Date());
+ 		
+ 		// Save a copy of the current field of view
+ 		imageSnapshot.setFieldOfView(''Symphony__AddonsSensorsFOVFacade''.INSTANCE.createRectangularFrustrumFieldOfView(getFieldOfView()));
+ 		
+ 		// Save the image in the snapshot
+ 		imageSnapshot.setImage(null);
+ 		
+ 		// Update the latest snapshot accordingly
+ 		setLatestImageSnapshot(imageSnapshot);
+ 		
+ 		// Return the generated snapshot
+ 		return imageSnapshot;
+ 	}
 
 <ol start="3">
-	<li> Implement the following methods in ''<org_prefix>.ptu.impl.PTUCameraSimulatedImpl'':</li>
+	<li> Provide the following implementation for ''<org_prefix>.ptu.impl.PTUCameraSimulatedImpl'':</li>
 </ol>
 
-{| border="1" cellpadding="2" style="margin-left: 30px;"
-! Method
-! Description
-|-
-| ''double'' '''getMaximumPanAngle'''()
-| Returns the maximum pan angle ('''in radians''').  Just return '''170.0 degrees'''.
-|-
-| ''double'' '''getMinimumPanAngle'''()
-| Returns the minimum pan angle ('''in radians''').  Just return '''-170.0 degrees'''.
-|-
-| ''double'' '''getMaximumTiltAngle'''()
-| Returns the maximum tilt angle ('''in radians''').  Just return '''90.0 degrees'''.
-|-
-| ''double'' '''getMinimumTiltAngle'''()
-| Returns the minimum tilt angle ('''in radians''').  Just return '''-45.0 degrees'''.
-|-
-| ''boolean'' '''moveToPan'''(''double'' panAngle)
-| Checks the commanded pan angle, which is in '''radians'''.  If it's within range, update '''currentPan''' to the commanded value and return true; otherwise, return false.
-|-
-| ''boolean'' '''moveToTilt'''(''double'' tiltAngle)
-| Checks the commanded tilt angle, which is in '''radians'''.  If it's within range, update '''currentTilt''' to the commanded value and return true; otherwise, return false. 
-|-
-| ''boolean'' '''moveToPanTilt'''(''double'' panAngle, ''double'' tiltAngle)
-| Checks the commanded pan and tilt angles, both of which are in '''radians'''.  If they are within range, update both '''currentPan''' and '''currentTilt''' to the commanded values and return true; otherwise, return false.
-|-
-| ''boolean'' '''moveByPan'''(''double'' panAngleDelta)
-| Checks the sum of '''currentPan''' and the commanded pan angle offset (given in '''radians''').  If the resulting pan angle is in range, update '''currentPan''' to the resultant value and return true; otherwise, return false. 
-|-
-| ''boolean'' '''moveByTilt'''(''double'' tiltAngleDelta)
-| Checks the sum of '''currentTilt'''and the commanded tilt angle offset (given in '''radians''').  If the resulting tilt angle is in range, update '''currentTilt''' to the resultant value and return true; otherwise, return false. 
-|-
-| ''boolean'' '''moveByPanTilt'''(''double'' panAngleDelta, ''double'' tiltAngleDelta)
-| Checks the sum of '''currentPan''' and the commanded pan angle offset (given in '''radians''') as well as the sum of '''currentTilt''' and the commanded tilt angle offset (given in '''radians''').  If both resulting angles are in range, update both '''currentPan''' and '''currentTilt''' to the resultant values and return true; otherwise, return false.
-|-
-| ''boolean'' '''stopMotion'''()
-| Stops all motion.  Just return true.
-|}
-
+ 	// The minimum and maximum pan angles (in radians)
+ 	// that the camera's PTU can move to
+ 	protected static final ''double'' MIN_PAN_ANGLE_RAD = ''Math''.toRadians(-170.0);
+ 	protected static final ''double'' MAX_PAN_ANGLE_RAD = ''Math''.toRadians(170.0);
+ 
+ 	// The minimum and maximum tilt angles (in radians)
+ 	// that the camera's PTU can move to
+ 	protected static final ''double'' MIN_TILT_ANGLE_RAD = ''Math''.toRadians(-45.0);
+ 	protected static final ''double'' MAX_TILT_ANGLE_RAD = ''Math''.toRadians(90.0);
+ 
+ 	/**
+ 	 * This method returns the minimum angle (in radians)
+ 	 * that the PTU camera can pan to.
+ 	 * 
+ 	 * @return The PTU camera's minimum pan angle (in radians)
+ 	 * '''generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''double'' '''getMinimumPanAngle'''()
+ 	{
+ 		// Just return the predefined min pan angle
+ 		return MIN_PAN_ANGLE_RAD;
+ 	}
+ 	
+ 	/**
+ 	 * This method returns the maximum angle (in radians)
+ 	 * that the PTU camera can pan to.
+ 	 * 
+ 	 * @return The PTU camera's maximum pan angle (in radians)
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''double'' '''getMaximumPanAngle'''()
+ 	{
+ 		// Just return the predefined max pan angle
+ 		return MAX_PAN_ANGLE_RAD;
+ 	}
+ 	
+ 	/**
+ 	 * This method returns the minimum angle (in radians)
+ 	 * that the PTU camera can tilt to.
+ 	 * 
+ 	 * @return The PTU camera's minimum tilt angle (in radians)
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''double'' '''getMinimumTiltAngle'''()
+ 	{
+ 		// Just return the predefined min tilt angle
+ 		return MIN_TILT_ANGLE_RAD;
+ 	}
+ 	
+ 	/**
+ 	 * This method returns the maximum angle (in radians)
+ 	 * that the PTU camera can tilt to.
+ 	 * 
+ 	 * @return The PTU camera's maximum tilt angle (in radians)
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''double'' '''getMaximumTiltAngle'''()
+ 	{
+ 		// Just return the predefined max tilt angle
+ 		return MAX_TILT_ANGLE_RAD;
+ 	}
+ 	
+ 	/**
+ 	 * This general purpose helper function is used to
+ 	 * implement the various pan and tilt functionality.
+ 	 * 
+ 	 * It will check to see if the commanded pan and tilt
+ 	 * angles (in radians) are in range. If this is so, it
+ 	 * will update the current pan and tilt values
+ 	 * appropriately and return true; otherwise, it will
+ 	 * return false
+ 	 
+ 	 * @param pan The commanded (i.e. desired) pan angle (in radians)
+ 	 * @param tilt The commanded (i.e. desired) tilt angle (in radians)
+ 	 * @return Whether or not the pan and tilt could be updated
+ 	 */
+ 	protected ''boolean'' moveTo(''double'' panAngle, ''double'' tiltAngle)
+ 	{
+ 		// Indicate that these are the commanded pan and tilt angles
+ 		setCommandedPanAngle(panAngle);
+ 		setCommandedTiltAngle(tiltAngle);
+ 	
+ 		// If the pan angle is in range
+ 		if ((panAngle >= getMinimumPanAngle()) &&
+ 		    (panAngle <= getMaximumPanAngle()))
+ 		{
+ 			// If the tilt angle is in range
+ 			if ((tiltAngle >= getMinimumTiltAngle()) &&
+ 			    (tiltAngle <= getMaximumTiltAngle()))
+ 			{
+ 				// Both angles are in range, update the current
+ 				// pan and tilt angles appropriately
+ 				setCurrentPanAngle(panAngle);
+ 				setCurrentTiltAngle(tiltAngle);
+ 				
+ 				// Indicate that the angles were updated
+ 				return true;
+ 			}
+ 		}
+ 		
+ 		// At least one of the provided angles aren't in range;
+ 		// indicate that the angles could be updated
+ 		return false;
+ 	}
+ 	
+ 	/**
+ 	 * This method checks the commanded pan angle, which is in
+ 	 * radians.  If it is within range, it will update the current
+ 	 * pan angle accordingly and then return true; otherwise, it
+ 	 * will return false.
+ 	 * 
+ 	 * @param panAngle The commanded (i.e. desired) pan angle (in radians)
+ 	 * @return Whether or not the pan angle can be changed to that value
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	''boolean'' '''moveToPan'''(''double'' panAngle)
+ 	{
+ 		// Just call moveTo() appropriately and return its result
+ 		return moveTo(panAngle, getCurrentTiltAngle());
+ 	}
+ 	
+ 	/**
+ 	 * This method checks the commanded tilt angle, which is in
+ 	 * radians.  If it is within range, it will update the current
+ 	 * tilt angle accordingly and then return true; otherwise, it
+ 	 * will return false.
+ 	 * 
+ 	 * @param tiltAngle The commanded (i.e. desired) tilt angle (in radians)
+ 	 * @return Whether or not the tilt angle can be changed to that value
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	''boolean'' '''moveToTilt'''(''double'' tiltAngle)
+ 	{
+ 		// Just call moveTo() appropriately and return its result
+ 		return moveTo(getCurrentPanAngle(), tiltAngle);
+ 	}
+ 	
+ 	/**
+ 	 * This method checks the commanded pan and tilt angles,
+ 	 * both of which are in radians.  If they are within their
+ 	 * respective ranges, it will will update the current pan
+ 	 * and tilt angles accordingly and then return true;
+ 	 * otherwise, it will return false.
+ 	 *
+ 	 * @param panAngle The commanded (i.e. desired) pan angle (in radians)
+ 	 * @param tiltAngle The commanded (i.e. desired) tilt angle (in radians)
+ 	 * @return Whether or not the pan and tilt angles can be changed to those values
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	''boolean'' '''moveToPanTilt'''(''double'' panAngle, ''double'' tiltAngle)
+ 	{
+ 		// Just call moveTo() appropriately and return its result
+ 		return moveTo(panAngle, tiltAngle);
+ 	}
+ 	
+ 	/**
+ 	 * This method checks the commanded pan angle, which
+ 	 * is the sum of the current pan angle plus the given pan
+ 	 * offset. If the resulting pan angle is within range, it will
+ 	 * update the current pan angle accordingly and then return
+ 	 * true; otherwise, it will return false.
+ 	 * 
+ 	 * @param panAngleOffset The amount (in radians) to change the current pan angle by
+ 	 * @return Whether or not the current pan angle can be changed by that offset
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''boolean'' '''moveByPan'''(''double'' panAngleOffset)
+ 	{
+ 		// Calculate the effective commanded pan angle
+ 		''double'' panAngle = getCurrentPanAngle() + panAngleOffset;
+ 		
+ 		// Call moveTo() appropriately and return its result
+ 		return moveTo(panAngle, getCurrentTiltAngle());
+ 	}
+ 	
+ 	/**
+ 	 * This method checks the commanded tilt angle, which
+ 	 * is the sum of the current tilt angle plus the given tilt
+ 	 * offset.  If the resulting tilt angle is within range, it will
+ 	 * update the current tilt angle accordingly and then return
+ 	 * true; otherwise, it will return false.
+ 	 *
+ 	 * @param tiltAngleOffset The amount (in radians) to change the current tilt angle by
+ 	 * @return Whether or not the current tilt angle can be changed by that offset
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''boolean'' '''moveByTilt'''(''double'' tiltAngleOffset)
+ 	{
+ 		// Calculate the effective commanded tilt angle
+ 		''double'' tiltAngle = getCurrentTiltAngle() + tiltAngleOffset;
+ 		
+ 		// Call moveTo() appropriately and return its result
+ 		return moveTo(getCurrentPanAngle(), tiltAngle);
+ 	}
+ 	
+ 	/**
+ 	 * This method checks the commanded pan and tilt angles, which
+ 	 * are the sum of the current pan angle plus the given pan offset
+ 	 * and the sum of the current tilt angle plus the given tilt offset,
+ 	 * respectively. If the resulting angles are within their respective
+ 	 * ranges, it will update the angles accordingly and then return true;
+ 	 * otherwise, it will return false.
+ 	 *
+ 	 * @param panAngleOffset The amount (in radians) to change the current pan angle by
+ 	 * @param tiltAngleOffset The amount (in radians) to change the current tilt angle by
+ 	 * @return Whether or not the current pan and tilt angles can be changed by those offsets
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''boolean'' '''moveByPanTilt'''(''double'' panAngleOffset, ''double'' tiltAngleOffset)
+ 	{
+ 		// Calculate the effective commanded pan and tilt angles
+ 		''double'' panAngle = getCurrentPanAngle() + panAngleOffset;
+ 		''double'' tiltAngle = getCurrentTiltAngle() + tiltAngleOffset;
+ 	
+ 		// Call moveTo() appropriately and return its result
+ 		return moveTo(panAngle, tiltAngle);
+ 	}
+ 	
+ 	/**
+ 	 * This is used to stop the PTU camera, if it is in the
+ 	 * process of moving to a given set of pan and tilt angles.
+ 	 * 
+ 	 * @return Whether or not the PTU camera's motion was stopped
+ 	 * '''@generated_NOT'''
+ 	 */
+ 	@Override
+ 	public ''boolean'' '''stopMotion'''()
+ 	{
+ 		// Just return true
+ 		return true;
+ 	}
+	
 ===== iii. Testing the <i>System</i> =====
 
 # Create a new ''Eclipse Application'' under ''Run Configuration''. Name it '''TEST''';
@@ -887,10 +1191,10 @@ The following exercises focus on creating the Symphony plugin for the new ''PTUC
  	 * for the ''PTUCamera'' ''System''.
  	 * 
  	 * @return The newly created ''PTUCameraSymphonyInitializationData'' object
- 	 * @generated_NOT
+ 	 * '''@generated_NOT'''
  	 */
  	@Override
- 	public ''AbstractInitializationData'' createInitializationData()
+ 	public ''AbstractInitializationData'' '''createInitializationData'''()
  	{
  		// Create and return a ''PTUCameraSymphonyInitializationData'' 
  		return PTUCameraFactory.createPTUCameraSymphonyInitializationData();
@@ -904,10 +1208,10 @@ The following exercises focus on creating the Symphony plugin for the new ''PTUC
  	 * ''SymphonyInitializationData'' object, given that it has the correct type.
  	 * 
  	 * @param initData The initialization data object that is supposed to collect the state of the ''System''
- 	 * @generated_NOT
+ 	 * '''@generated_NOT'''
  	 */
  	@Override
- 	public void collect(''AbstractInitializationData'' initData)
+ 	public void '''collect'''(''AbstractInitializationData'' initData)
  	{
  		// Call the superclass' version of the method 
  		super.collect(initData);
@@ -932,10 +1236,10 @@ The following exercises focus on creating the Symphony plugin for the new ''PTUC
  	 * methods to set the instance's state correctly.
  	 *
  	 * @param initData The initialization data object that is supposed to apply its state to the given ''System'' instance.
- 	 * @generated_NOT
+ 	 * '''@generated_NOT'''
  	 */
  	@Override
- 	public void apply(''AbstractInitializationData'' initData)
+ 	public void '''apply'''(''AbstractInitializationData'' initData)
  	{
  		// Call the superclass' version of this method
  		super.apply(initData);
@@ -965,10 +1269,10 @@ The following exercises focus on creating the Symphony plugin for the new ''PTUC
  	 * 
  	 * @param operationCall The operation which took place
  	 * @return The transformation from where the operation took place to the PTU camera's root
- 	 * @generated_NOT
+ 	 * '''@generated_NOT'''
  	 */
  	@Override
- 	public ''Matrix4x4'' createResultMatrix(''OperationCall'' operationCall) 
+ 	public ''Matrix4x4'' '''createResultMatrix'''(''OperationCall'' operationCall) 
  	{
  		// If the takeSnapshot() method was called
  		if (operationCall.getEOperation().getOperationID() == PTUCameraPackage.CAMERA___TAKE_SNAPSHOT)
