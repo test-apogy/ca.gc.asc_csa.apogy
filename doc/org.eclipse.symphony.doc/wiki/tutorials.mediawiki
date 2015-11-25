@@ -99,7 +99,7 @@ TODO!
 
 ==== <i>Rover</i> (Complex System) ====
 
-This ''System'' refers to a Composite or ''Complex System'' that contains four different sub-''Systems'':
+This ''System'' refers to a Composite or ''Complex System'' that contains four different sub-<i>Systems</i>:
 # ''Mobile Platform'' - To facilitate the rover's movement
 # ''Robotic Arm'' - To permit the rover to interact with the environment
 # Arm ''PTU Camera'' - To allow capture of images from the ''Robotic Arm''
@@ -1323,7 +1323,7 @@ The following exercises highlight how to create the ''PTUCamera'' System's compl
 
 The following exercises show how to specify the topology for the ''PTUCamera'''s ''Symphony System'' model.  By the end of this section, one should be able to: 
 
-* Understand basic geometries and incorporate them into Symphony
+* Understand basic geometry files and how to incorporate them into Symphony
 * Generate a topology to reflect a given target hierarchy
  
 ====== Target Topology Hierarchy ======
@@ -1682,7 +1682,7 @@ In the '''/cadmodels''' folder, add the following ten (10) files with the specif
 # Open the ''Symphony System 3D Viewer'', then select the ''Symphony System'' in the editor;
 # Under ''Topology Root'', create the topology for the ''PTUCamera'', replicating the structure specified in '''Target Topology Hierarchy''' above;
 # For the relevant transformations in the new hierarchy, update their position and orientation to reflect those specified in the '''Target Transformations''' section above;
-* URLs in ''URLNodes'' should have the following format: ''platform:/plugin/'''''<org_prefix>.ptu.symphony/cadmodels'''''/filename.ext''
+# For the ''URLNodes'' that are providing a link to the geometry file for their parent node, they should have a URL in the following format: ''platform:/plugin/'''''<org_prefix>.ptu.symphony/cadmodels'''''/filename.ext''
 # Save the file.
 
 ===== iii. Making the Camera's Bindings =====

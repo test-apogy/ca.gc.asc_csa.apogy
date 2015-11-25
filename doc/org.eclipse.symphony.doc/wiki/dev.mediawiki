@@ -66,6 +66,8 @@ Defining a Symphony ''System'' involves 3 steps:
 # Creating the Symphony plugin;
 # Creating the Symphony System Model (*.ss).
 
+[[File:../resources/dev/symphonyzing.svg]]
+
 === Guidelines ===
 
 Symphonizing Guidelines:
