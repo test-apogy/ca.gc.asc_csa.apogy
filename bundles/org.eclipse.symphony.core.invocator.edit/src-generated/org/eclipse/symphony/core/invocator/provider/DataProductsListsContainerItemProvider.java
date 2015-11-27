@@ -67,7 +67,6 @@ public class DataProductsListsContainerItemProvider
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addInvocatorSessionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -114,29 +113,6 @@ public class DataProductsListsContainerItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-  /**
-	 * This adds a property descriptor for the Invocator Session feature.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  protected void addInvocatorSessionPropertyDescriptor(Object object)
-  {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DataProductsListsContainer_invocatorSession_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DataProductsListsContainer_invocatorSession_feature", "_UI_DataProductsListsContainer_type"),
-				 Symphony__CoreInvocatorPackage.Literals.DATA_PRODUCTS_LISTS_CONTAINER__INVOCATOR_SESSION,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

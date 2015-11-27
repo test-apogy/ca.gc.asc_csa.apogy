@@ -68,7 +68,6 @@ public class AbstractResultItemProvider
 
 			addTimePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addResultsListPropertyDescriptor(object);
 			addContextPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -115,28 +114,6 @@ public class AbstractResultItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-		/**
-	 * This adds a property descriptor for the Results List feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addResultsListPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AbstractResult_resultsList_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractResult_resultsList_feature", "_UI_AbstractResult_type"),
-				 Symphony__CoreInvocatorPackage.Literals.ABSTRACT_RESULT__RESULTS_LIST,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

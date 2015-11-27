@@ -38,6 +38,7 @@ public interface AbstractToolsListContainer extends EObject
 	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractToolsListContainer_ToolsList()
 	 * @see org.eclipse.symphony.core.invocator.ToolsList#getToolsListContainers
 	 * @model opposite="toolsListContainers" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
   ToolsList getToolsList();

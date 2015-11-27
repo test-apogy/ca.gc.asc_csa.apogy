@@ -46,6 +46,7 @@ public interface ToolsList extends Named, Described
 	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getToolsList_InvocatorSession()
 	 * @see org.eclipse.symphony.core.invocator.InvocatorSession#getToolsList
 	 * @model opposite="toolsList" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
   InvocatorSession getInvocatorSession();

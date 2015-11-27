@@ -60,7 +60,6 @@ public class OperationCallResultsListItemProvider
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addDataProductsListPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -105,28 +104,6 @@ public class OperationCallResultsListItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-		/**
-	 * This adds a property descriptor for the Data Products List feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDataProductsListPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_OperationCallResultsList_dataProductsList_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OperationCallResultsList_dataProductsList_feature", "_UI_OperationCallResultsList_type"),
-				 Symphony__CoreInvocatorPackage.Literals.OPERATION_CALL_RESULTS_LIST__DATA_PRODUCTS_LIST,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}
