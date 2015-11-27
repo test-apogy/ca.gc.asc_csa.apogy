@@ -4,6 +4,9 @@ __TOC__
 = General = 
 == 3D Acceleration ==
 Symphony makes use of 3D.  It is important to install latest & stable version of graphics card 3D drivers.
+= Known Bugs =
+# export SWT_GTK3=0
+
 = Symphony RCP Installation & Configuration =
 All Symphony RCP applications are based on the same foundation and are packaged the same way.  Symphony RCP applications are self-contained and are packaged in zip format.  Symphony supports the following platform:
 * 32-bit Windows
@@ -23,15 +26,15 @@ All Symphony RCP applications are based on the same foundation and are packaged 
 Symphony is based on Eclipse.  The first installation step is the proper installation and configuration of Eclipse.  Eclipse configuration details can be found on [https://www.eclipse.org https://www.eclipse.org].  
 == Oomph ==
 To install Eclipse platform, we highly recommend to use Eclipse Installer also known as Oomph.
-# Get the Eclipse Installer from [[https://wiki.eclipse.org/Eclipse_Oomph_Installer|https://wiki.eclipse.org/Eclipse_Oomph_Installer]]
+# Get the Eclipse Installer from [https://wiki.eclipse.org/Eclipse_Oomph_Installer https://wiki.eclipse.org/Eclipse_Oomph_Installer]
 # Extract the archive under '''<ECLIPSE_INSTALLER_HOME>'''.
 # Ensure a proper Java Runtime Environment (JRE) is installed on your system (1.8 or higher).  You can download JRE from [http://www.oracle.com/technetwork/java/javase/downloads/index.html http://www.oracle.com/technetwork/java/javase/downloads/index.html]
 # Copy '''<JRE_HOME>''' directory into '''<ECLIPSE_INSTALLER_HOME>''' directory. You may also use a symbolic link.  <pre>eclipse&#10;  configuration&#10;  eclipse&#10;  eclipse.ini&#10;  features&#10;  plugins&#10;  jre      <<<< must include /bin/java&#10;  ...</pre>
 # Launch '''<ECLIPSE_INSTALLER_HOME>/eclipse'''
 # Select Eclipse Modeling Tools
-# Select **Latest Release (Mars)** as Product Version
+# Select '''Latest Release (Mars)''' as Product Version
 # Select a proper JRE 1.8+ 
-# Set the **Installation Folder** (e.g. '''<ECLIPSE_HOME>''')
+# Set the '''Installation Folder''' (e.g. '''<ECLIPSE_HOME>''')
 # Click on Install
 # Once completed, edit '''<ECLIPSE_HOME>/eclipse.ini''' and change the following lines that set VM memory parameters (see below).  <pre>-Xms256m                              <<<< Replace by -Xms2048m &#10;-Xmx1024m                             <<<< Replace by -Xmx2048m</pre>
 # Save your changes.
@@ -42,24 +45,24 @@ To install Eclipse platform, we highly recommend to use Eclipse Installer also k
 # Install the following packages:
 #* EMF - Eclipse Modeling Framework Xcore SDK
 === Sirius Packages ===
-# Add the '''Sirius''' P2 Site [[http://download.eclipse.org/sirius/updates/releases/3.1.1/mars|http://download.eclipse.org/sirius/updates/releases/3.1.1/mars]].
+# Add the '''Sirius''' P2 Site [http://download.eclipse.org/sirius/updates/releases/3.1.1/mars http://download.eclipse.org/sirius/updates/releases/3.1.1/mars].
 # Install the following packages:
 #* Sirius/Sirius Core Runtime
 #* Sirius/Sirius Runtime Support for Acceleo 3
 === Orbit Packages ===
-# Add the '''Orbit''' P2 Site [[http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/|http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/]
+# Add the '''Orbit''' P2 Site [http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/ http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/]
 # Install the following packages:
 #* Orbit Bundles By Name: org.apache.*/org.apache.commons.collections (Be careful select the one that is not the source plugin)
 #* Orbit Bundles By Name: org.apache.*/org.apache.commons.net
 #* Orbit Bundles By Name: org.apache.*/org.apache.commons.pool
 === Nebula Packages ===
-# Add the '''Nebula''' P2 Site [[http://download.eclipse.org/technology/nebula/snapshot|http://download.eclipse.org/technology/nebula/snapshot]
+# Add the '''Nebula''' P2 Site [http://download.eclipse.org/technology/nebula/snapshot http://download.eclipse.org/technology/nebula/snapshot]
 # Install the following packages:
 #* Nebula Release Individual Widgets/Nebula Gallery Widget
 == Install Symphony ==
 Symphony is composed of a series of Eclipse features.  The following steps present the way to install them.
 === Third-Party Packages ===
-# Clone Symphony Third-Party repository <pre>git clone https://<user>@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.ots.git</pre>
+# Clone Symphony Third-Party repository <pre>git clone [https://<user>@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.ots.git https://<user>@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.ots.git]</pre>
 # Create a directory to store a backup of pre-compiled Symphony Third-Party Packages.<pre>cd ~; mkdir tmp</pre>
 # Make a temporary copy of '''symphony_ots_repository'''.<pre>cp git/org.eclipse.symphony.ots/symphony_ots_repository_0_1.tar.gz ~/tmp</pre>
 # Extract the content <pre>cd ~/tmp; &#10;tar -xvf symphony_ots_repository_0_1.tar.gz</pre>
@@ -68,7 +71,7 @@ Symphony is composed of a series of Eclipse features.  The following steps prese
 # Add the '''Symphony Third-Party''' Local P2 Site.
 # Select and install all the packages.
 === Symphony Packages ===
-# Clone Symphony repository <pre>git clone https://<user>@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git</pre>
+# Clone Symphony repository <pre>git clone [https://<user>@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git https://<user>@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git]</pre>
 == Misc ==
 === ESA Orekit ===
 Few '''org.orekit''' fixes are not included in the Symphony Third-Party packages.  
