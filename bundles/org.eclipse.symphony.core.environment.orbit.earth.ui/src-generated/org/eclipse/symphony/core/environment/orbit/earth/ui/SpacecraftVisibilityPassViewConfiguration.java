@@ -44,6 +44,7 @@ public interface SpacecraftVisibilityPassViewConfiguration extends Named, Descri
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getSpacecraftVisibilityPassViewConfiguration_ConfigurationsList()
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.SpacecraftVisibilityPassViewConfigurationList#getConfigurations
 	 * @model opposite="configurations" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
 	SpacecraftVisibilityPassViewConfigurationList getConfigurationsList();
