@@ -5,9 +5,11 @@ __TOC__
 
 == Eclipse Basics ==
 
+As Symphony is set of functionality 
+
 === <i>Workspace</i> ===
 
-* '''''Workspace''''':
+ '''''Workspace''''':
 ** Working environment of Eclipse;
 ** Contains ''Projects'';
 ** Mapped to a folder
