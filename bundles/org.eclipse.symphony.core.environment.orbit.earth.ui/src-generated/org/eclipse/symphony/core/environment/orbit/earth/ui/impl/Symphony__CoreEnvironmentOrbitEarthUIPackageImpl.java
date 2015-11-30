@@ -1042,6 +1042,12 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 			 "documentation", "Defines the configuration for the view that shows the\nvisibility of spacecraft from ground stations."
 		   });	
 		addAnnotation
+		  (getSpacecraftVisibilityPassViewConfiguration_ConfigurationsList(), 
+		   source, 
+		   new String[] {
+			 "property", "None"
+		   });	
+		addAnnotation
 		  (getSpacecraftVisibilityPassViewConfiguration_VisibilitySet(), 
 		   source, 
 		   new String[] {

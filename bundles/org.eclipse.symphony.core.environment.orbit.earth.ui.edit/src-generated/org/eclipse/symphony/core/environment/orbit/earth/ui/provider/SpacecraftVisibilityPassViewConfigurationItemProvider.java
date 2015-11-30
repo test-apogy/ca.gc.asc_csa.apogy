@@ -64,7 +64,6 @@ public class SpacecraftVisibilityPassViewConfigurationItemProvider
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addConfigurationsListPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -109,28 +108,6 @@ public class SpacecraftVisibilityPassViewConfigurationItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Configurations List feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addConfigurationsListPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SpacecraftVisibilityPassViewConfiguration_configurationsList_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SpacecraftVisibilityPassViewConfiguration_configurationsList_feature", "_UI_SpacecraftVisibilityPassViewConfiguration_type"),
-				 Symphony__CoreEnvironmentOrbitEarthUIPackage.Literals.SPACECRAFT_VISIBILITY_PASS_VIEW_CONFIGURATION__CONFIGURATIONS_LIST,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

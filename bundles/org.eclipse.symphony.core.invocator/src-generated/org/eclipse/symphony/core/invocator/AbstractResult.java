@@ -46,6 +46,7 @@ public interface AbstractResult extends Timed, Described
 	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getAbstractResult_ResultsList()
 	 * @see org.eclipse.symphony.core.invocator.ResultsList#getResults
 	 * @model opposite="results" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
 	ResultsList getResultsList();

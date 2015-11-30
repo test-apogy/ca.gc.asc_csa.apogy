@@ -202,7 +202,7 @@ class Symphony__CoreInvocatorFacade
 class InvocatorSession extends Named, Described
 {
 	contains Environment[0..1] environment opposite invocatorSession
-	contains ProgramsList[0..1] programsList opposite invocatorSession
+	contains ProgramsList[0..1] programsList opposite invocatorSession	
 	contains DataProductsListsContainer[0..1] dataProductsListContainer opposite invocatorSession
 	contains ToolsList[0..1] toolsList opposite invocatorSession
 }
@@ -227,13 +227,15 @@ class InvocatorSession extends Named, Described
  * DataProducts.
  * ------------------------------------------------------------------------- */
  class DataProductsListsContainer extends Named, Described
- { 	
+ { 	 	
+    @GenModel(property="None")
  	container InvocatorSession invocatorSession opposite dataProductsListContainer
  	contains DataProductsList[0..*] dataProductsList opposite dataProductsListsContainer 	
  }
  
  class DataProductsList extends Named, Described
  { 	
+ 	@GenModel(property="None")
  	container DataProductsListsContainer dataProductsListsContainer opposite dataProductsList
  
  	contains OperationCallResultsList [1] operationCallResultsList opposite dataProductsList
@@ -260,13 +262,14 @@ class InvocatorSession extends Named, Described
  * ------------------------------------------------------------------------- */
  class ToolsList extends Named, Described
  {
+     @GenModel(property="None")
  	 container InvocatorSession invocatorSession opposite toolsList
  	 contains AbstractToolsListContainer[0..*] toolsListContainers opposite toolsList
-	  
  }
  
  abstract class AbstractToolsListContainer
  { 	
+ 	@GenModel(property="None")
  	container ToolsList toolsList opposite toolsListContainers
  }
 
@@ -803,6 +806,7 @@ interface ResultsList extends Named, Described
 
 class OperationCallResultsList extends ResultsList
 {	
+	@GenModel(property="None")
 	container DataProductsList dataProductsList opposite operationCallResultsList
 	
     @GenModel(children="false", property="None")
@@ -821,6 +825,7 @@ class OperationCallResultsList extends ResultsList
 
 class RecordingResultsList extends ResultsList
 {
+	@GenModel(property="None")
 	container DataProductsList dataProductsList opposite recordingResultsList
 	
     @GenModel(children="false", property="None")
@@ -842,6 +847,7 @@ class RecordingResultsList extends ResultsList
  */
 abstract class AbstractResult extends Timed, Described
 {
+	@GenModel(property="None")
 	container ResultsList resultsList opposite results
 	
     @GenModel(children="false", property="None")

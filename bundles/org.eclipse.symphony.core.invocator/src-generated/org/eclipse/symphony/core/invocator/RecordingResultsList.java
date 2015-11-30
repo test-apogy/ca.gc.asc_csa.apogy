@@ -38,6 +38,7 @@ public interface RecordingResultsList extends ResultsList
 	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getRecordingResultsList_DataProductsList()
 	 * @see org.eclipse.symphony.core.invocator.DataProductsList#getRecordingResultsList
 	 * @model opposite="recordingResultsList" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
 	DataProductsList getDataProductsList();

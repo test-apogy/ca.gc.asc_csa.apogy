@@ -42,6 +42,7 @@ public interface DataProductsList extends Named, Described
 	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getDataProductsList_DataProductsListsContainer()
 	 * @see org.eclipse.symphony.core.invocator.DataProductsListsContainer#getDataProductsList
 	 * @model opposite="dataProductsList" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
   DataProductsListsContainer getDataProductsListsContainer();

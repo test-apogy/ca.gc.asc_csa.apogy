@@ -235,7 +235,8 @@ class SpacecraftVisibilityPassViewConfigurationList extends AbstractToolsListCon
  * visibility of spacecraft from ground stations.
  */
 class SpacecraftVisibilityPassViewConfiguration extends Named, Described
-{				
+{			
+	@GenModel(property="None")	
 	container SpacecraftVisibilityPassViewConfigurationList configurationsList opposite configurations
 	
 	@GenModel(notify="true", chilrend = "true", property="None")
