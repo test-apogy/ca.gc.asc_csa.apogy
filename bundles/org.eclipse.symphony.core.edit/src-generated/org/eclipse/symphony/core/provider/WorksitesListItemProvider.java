@@ -58,7 +58,6 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addOrbitsModelsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -103,28 +102,6 @@ public class WorksitesListItemProvider extends ItemProviderAdapter implements
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Orbits Models feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOrbitsModelsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_WorksitesList_orbitsModels_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_WorksitesList_orbitsModels_feature", "_UI_WorksitesList_type"),
-				 Symphony__CorePackage.Literals.WORKSITES_LIST__ORBITS_MODELS,
-				 true,
-				 false,
-				 false,
-				 null,
 				 null,
 				 null));
 	}

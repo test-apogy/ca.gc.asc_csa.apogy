@@ -50,33 +50,9 @@ public class WorksiteItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addWorksiteNodePropertyDescriptor(object);
 			addOrbitsModelsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-  /**
-	 * This adds a property descriptor for the Worksite Node feature.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  protected void addWorksiteNodePropertyDescriptor(Object object)
-  {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Worksite_worksiteNode_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Worksite_worksiteNode_feature", "_UI_Worksite_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.WORKSITE__WORKSITE_NODE,
-				 false,
-				 false,
-				 false,
-				 null,
-				 null,
-				 null));
 	}
 
   /**
@@ -114,6 +90,7 @@ public class WorksiteItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.WORKSITE__WORKSITE_NODE);
 			childrenFeatures.add(Symphony__CoreEnvironmentPackage.Literals.WORKSITE__ENVIRONMENT);
 		}
 		return childrenFeatures;
@@ -161,6 +138,7 @@ public class WorksiteItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Worksite.class)) {
+			case Symphony__CoreEnvironmentPackage.WORKSITE__WORKSITE_NODE:
 			case Symphony__CoreEnvironmentPackage.WORKSITE__ENVIRONMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;

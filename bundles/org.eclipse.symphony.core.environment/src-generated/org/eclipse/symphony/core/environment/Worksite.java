@@ -39,6 +39,7 @@ public interface Worksite extends AbstractWorksite
 	 * @return the value of the '<em>Worksite Node</em>' reference.
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getWorksite_WorksiteNode()
 	 * @model required="true" transient="true" changeable="false" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None' children='true' notify='true'"
 	 * @generated
 	 */
   WorksiteNode getWorksiteNode();

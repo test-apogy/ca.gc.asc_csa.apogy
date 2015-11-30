@@ -37,6 +37,7 @@ public interface AbstractWorksite extends Named, Described, Timed {
 	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getAbstractWorksite_WorksitesList()
 	 * @see org.eclipse.symphony.core.WorksitesList#getWorksites
 	 * @model opposite="worksites" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
 	WorksitesList getWorksitesList();

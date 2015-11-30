@@ -62,7 +62,7 @@ public interface WorksitesList extends Named, Described {
 	 * @see #setOrbitsModels(OrbitModelsList)
 	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getWorksitesList_OrbitsModels()
 	 * @model containment="true" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='Editable'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='None'"
 	 * @generated
 	 */
 	OrbitModelsList getOrbitsModels();

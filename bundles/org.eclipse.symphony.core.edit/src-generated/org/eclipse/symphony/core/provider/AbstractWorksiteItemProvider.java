@@ -58,7 +58,6 @@ public class AbstractWorksiteItemProvider extends ItemProviderAdapter implements
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addTimePropertyDescriptor(object);
-			addWorksitesListPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -125,28 +124,6 @@ public class AbstractWorksiteItemProvider extends ItemProviderAdapter implements
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Worksites List feature. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
-	 */
-	protected void addWorksitesListPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AbstractWorksite_worksitesList_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractWorksite_worksitesList_feature", "_UI_AbstractWorksite_type"),
-				 Symphony__CorePackage.Literals.ABSTRACT_WORKSITE__WORKSITES_LIST,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

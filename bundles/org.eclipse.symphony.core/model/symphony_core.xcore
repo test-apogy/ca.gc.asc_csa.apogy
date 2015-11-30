@@ -246,12 +246,13 @@ class WorksitesList extends Named, Described
 {
 	contains AbstractWorksite[0..*] worksites opposite worksitesList
 	
-	@GenModel(children="true", notify="true", property="Editable")
+	@GenModel(children="true", notify="true", property="None")
 	contains OrbitModelsList[1] orbitsModels
 }
 
 abstract class AbstractWorksite extends Named, Described, Timed
-{	
+{		
+    @GenModel(property="None")
 	container WorksitesList worksitesList opposite worksites
 }
 
@@ -267,7 +268,8 @@ class OrbitModelsList extends Named, Described
 }
 
 abstract class AbstractOrbitModel extends Named, Described
-{	
+{		
+    @GenModel(property="None")
 	container OrbitModelsList orbitModelsList opposite orbitModels
 	refers VariableFeatureReference variableFeatureReference
 }

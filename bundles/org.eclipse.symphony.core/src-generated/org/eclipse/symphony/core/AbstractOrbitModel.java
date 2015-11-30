@@ -39,6 +39,7 @@ public interface AbstractOrbitModel extends Named, Described {
 	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getAbstractOrbitModel_OrbitModelsList()
 	 * @see org.eclipse.symphony.core.OrbitModelsList#getOrbitModels
 	 * @model opposite="orbitModels" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
 	OrbitModelsList getOrbitModelsList();

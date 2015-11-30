@@ -4256,6 +4256,14 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "basePackage", "org.eclipse.symphony.core"
 		   });	
 		addAnnotation
+		  (getWorksite_WorksiteNode(), 
+		   source, 
+		   new String[] {
+			 "property", "None",
+			 "children", "true",
+			 "notify", "true"
+		   });	
+		addAnnotation
 		  (getSurfaceWorksite_Sky(), 
 		   source, 
 		   new String[] {
