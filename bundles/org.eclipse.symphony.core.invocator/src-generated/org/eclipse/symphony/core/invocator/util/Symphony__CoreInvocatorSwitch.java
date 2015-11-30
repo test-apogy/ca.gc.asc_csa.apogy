@@ -596,6 +596,8 @@ public class Symphony__CoreInvocatorSwitch<T> extends Switch<T>
 				if (result == null) result = caseCollectionTimedTimeSource(operationCallResultsListTimeSource);
 				if (result == null) result = caseBrowseableTimeSource(operationCallResultsListTimeSource);
 				if (result == null) result = caseTimeSource(operationCallResultsListTimeSource);
+				if (result == null) result = caseNamed(operationCallResultsListTimeSource);
+				if (result == null) result = caseDescribed(operationCallResultsListTimeSource);
 				if (result == null) result = caseTimed(operationCallResultsListTimeSource);
 				if (result == null) result = caseDisposable(operationCallResultsListTimeSource);
 				if (result == null) result = defaultCase(theEObject);

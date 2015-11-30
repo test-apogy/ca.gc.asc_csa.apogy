@@ -664,13 +664,40 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	int TIME_SOURCE = 7;
 
 		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_SOURCE__NAME = NAMED__NAME;
+
+		/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_SOURCE__DESCRIPTION = NAMED_FEATURE_COUNT + 0;
+
+		/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_SOURCE__TIME = TIMED__TIME;
+	int TIME_SOURCE__TIME = NAMED_FEATURE_COUNT + 1;
+
+		/**
+	 * The feature id for the '<em><b>Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_SOURCE__OFFSET = NAMED_FEATURE_COUNT + 2;
 
 		/**
 	 * The number of structural features of the '<em>Time Source</em>' class.
@@ -679,7 +706,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_SOURCE_FEATURE_COUNT = TIMED_FEATURE_COUNT + 0;
+	int TIME_SOURCE_FEATURE_COUNT = NAMED_FEATURE_COUNT + 3;
 
 		/**
 	 * The operation id for the '<em>Dispose</em>' operation.
@@ -688,7 +715,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_SOURCE___DISPOSE = TIMED_OPERATION_COUNT + 0;
+	int TIME_SOURCE___DISPOSE = NAMED_OPERATION_COUNT + 0;
 
 		/**
 	 * The number of operations of the '<em>Time Source</em>' class.
@@ -697,7 +724,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int TIME_SOURCE_OPERATION_COUNT = TIMED_OPERATION_COUNT + 1;
+	int TIME_SOURCE_OPERATION_COUNT = NAMED_OPERATION_COUNT + 1;
 
 		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.emf.impl.FixedTimeSourceImpl <em>Fixed Time Source</em>}' class.
@@ -710,6 +737,24 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	int FIXED_TIME_SOURCE = 8;
 
 		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIXED_TIME_SOURCE__NAME = TIME_SOURCE__NAME;
+
+		/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIXED_TIME_SOURCE__DESCRIPTION = TIME_SOURCE__DESCRIPTION;
+
+		/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -717,6 +762,15 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @ordered
 	 */
 	int FIXED_TIME_SOURCE__TIME = TIME_SOURCE__TIME;
+
+		/**
+	 * The feature id for the '<em><b>Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIXED_TIME_SOURCE__OFFSET = TIME_SOURCE__OFFSET;
 
 		/**
 	 * The number of structural features of the '<em>Fixed Time Source</em>' class.
@@ -756,6 +810,24 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	int CURRENT_TIME_SOURCE = 9;
 
 		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_TIME_SOURCE__NAME = TIME_SOURCE__NAME;
+
+		/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_TIME_SOURCE__DESCRIPTION = TIME_SOURCE__DESCRIPTION;
+
+		/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -763,6 +835,15 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @ordered
 	 */
 	int CURRENT_TIME_SOURCE__TIME = TIME_SOURCE__TIME;
+
+		/**
+	 * The feature id for the '<em><b>Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CURRENT_TIME_SOURCE__OFFSET = TIME_SOURCE__OFFSET;
 
 		/**
 	 * The feature id for the '<em><b>Update Period</b></em>' attribute.
@@ -838,6 +919,24 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	int BROWSEABLE_TIME_SOURCE = 10;
 
 		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BROWSEABLE_TIME_SOURCE__NAME = TIME_SOURCE__NAME;
+
+		/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BROWSEABLE_TIME_SOURCE__DESCRIPTION = TIME_SOURCE__DESCRIPTION;
+
+		/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -845,6 +944,15 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @ordered
 	 */
 	int BROWSEABLE_TIME_SOURCE__TIME = TIME_SOURCE__TIME;
+
+		/**
+	 * The feature id for the '<em><b>Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BROWSEABLE_TIME_SOURCE__OFFSET = TIME_SOURCE__OFFSET;
 
 		/**
 	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
@@ -956,6 +1064,24 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	int SELECTION_BASED_TIME_SOURCE = 11;
 
 		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_BASED_TIME_SOURCE__NAME = TIME_SOURCE__NAME;
+
+		/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_BASED_TIME_SOURCE__DESCRIPTION = TIME_SOURCE__DESCRIPTION;
+
+		/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -963,6 +1089,15 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @ordered
 	 */
 	int SELECTION_BASED_TIME_SOURCE__TIME = TIME_SOURCE__TIME;
+
+		/**
+	 * The feature id for the '<em><b>Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_BASED_TIME_SOURCE__OFFSET = TIME_SOURCE__OFFSET;
 
 		/**
 	 * The number of structural features of the '<em>Selection Based Time Source</em>' class.
@@ -1011,6 +1146,24 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	int COLLECTION_TIMED_TIME_SOURCE = 12;
 
 		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_TIMED_TIME_SOURCE__NAME = BROWSEABLE_TIME_SOURCE__NAME;
+
+		/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_TIMED_TIME_SOURCE__DESCRIPTION = BROWSEABLE_TIME_SOURCE__DESCRIPTION;
+
+		/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1018,6 +1171,15 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @ordered
 	 */
 	int COLLECTION_TIMED_TIME_SOURCE__TIME = BROWSEABLE_TIME_SOURCE__TIME;
+
+		/**
+	 * The feature id for the '<em><b>Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLECTION_TIMED_TIME_SOURCE__OFFSET = BROWSEABLE_TIME_SOURCE__OFFSET;
 
 		/**
 	 * The feature id for the '<em><b>Start Time</b></em>' attribute.
@@ -2413,6 +2575,17 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	EClass getTimeSource();
 
 		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.emf.TimeSource#getOffset <em>Offset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Offset</em>'.
+	 * @see org.eclipse.symphony.common.emf.TimeSource#getOffset()
+	 * @see #getTimeSource()
+	 * @generated
+	 */
+	EAttribute getTimeSource_Offset();
+
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.emf.FixedTimeSource <em>Fixed Time Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3524,6 +3697,14 @@ public interface Symphony__CommonEMFPackage extends EPackage
 		 * @generated
 		 */
 		EClass TIME_SOURCE = eINSTANCE.getTimeSource();
+
+				/**
+		 * The meta object literal for the '<em><b>Offset</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TIME_SOURCE__OFFSET = eINSTANCE.getTimeSource_Offset();
 
 				/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.emf.impl.FixedTimeSourceImpl <em>Fixed Time Source</em>}' class.

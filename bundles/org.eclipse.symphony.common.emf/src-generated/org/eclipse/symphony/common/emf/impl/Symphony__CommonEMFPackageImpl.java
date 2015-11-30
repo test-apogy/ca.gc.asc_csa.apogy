@@ -862,6 +862,15 @@ public class Symphony__CommonEMFPackageImpl extends EPackageImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTimeSource_Offset() {
+		return (EAttribute)timeSourceEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFixedTimeSource() {
 		return fixedTimeSourceEClass;
 	}
@@ -1544,6 +1553,7 @@ public class Symphony__CommonEMFPackageImpl extends EPackageImpl implements Symp
 		createEReference(timeSourcesListEClass, TIME_SOURCES_LIST__TIME_SOURCES);
 
 		timeSourceEClass = createEClass(TIME_SOURCE);
+		createEAttribute(timeSourceEClass, TIME_SOURCE__OFFSET);
 
 		fixedTimeSourceEClass = createEClass(FIXED_TIME_SOURCE);
 
@@ -1666,6 +1676,8 @@ public class Symphony__CommonEMFPackageImpl extends EPackageImpl implements Symp
 
 		// Add supertypes to classes
 		serverEClass.getESuperTypes().add(this.getStartable());
+		timeSourceEClass.getESuperTypes().add(this.getNamed());
+		timeSourceEClass.getESuperTypes().add(this.getDescribed());
 		timeSourceEClass.getESuperTypes().add(this.getTimed());
 		timeSourceEClass.getESuperTypes().add(this.getDisposable());
 		fixedTimeSourceEClass.getESuperTypes().add(this.getTimeSource());
@@ -1892,6 +1904,7 @@ public class Symphony__CommonEMFPackageImpl extends EPackageImpl implements Symp
 		initEReference(getTimeSourcesList_TimeSources(), this.getTimeSource(), null, "timeSources", null, 0, -1, TimeSourcesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(timeSourceEClass, TimeSource.class, "TimeSource", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTimeSource_Offset(), theEcorePackage.getEInt(), "offset", "0", 0, 1, TimeSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fixedTimeSourceEClass, FixedTimeSource.class, "FixedTimeSource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

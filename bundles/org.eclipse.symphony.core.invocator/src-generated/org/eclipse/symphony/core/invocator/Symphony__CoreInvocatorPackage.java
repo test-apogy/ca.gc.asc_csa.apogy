@@ -4420,6 +4420,24 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE = 63;
 
 		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__NAME = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__NAME;
+
+		/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__DESCRIPTION = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__DESCRIPTION;
+
+		/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4427,6 +4445,15 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @ordered
 	 */
 	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__TIME = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__TIME;
+
+		/**
+	 * The feature id for the '<em><b>Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OFFSET = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE__OFFSET;
 
 		/**
 	 * The feature id for the '<em><b>Start Time</b></em>' attribute.

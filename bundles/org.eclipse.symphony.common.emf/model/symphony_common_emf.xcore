@@ -236,8 +236,13 @@ class TimeSourcesList
 /*
  * Defines a Timed element that provides time.
  */
-abstract class TimeSource extends Timed, Disposable
+abstract class TimeSource extends Named, Described, Timed, Disposable
 {
+	/**
+	 * Offset in milliseconds 
+	 */
+	@GenModel(csa_units="ms", notify="true", property="Editable")
+	int offset = "0"
 }
 
 /*
@@ -257,6 +262,7 @@ class CurrentTimeSource extends TimeSource
 	 */
 	@GenModel(csa_units="ms", notify="true", property="Editable")
 	int updatePeriod = "1000"
+	
 	
 	/*
 	 * Whether or not the time source has been paused.

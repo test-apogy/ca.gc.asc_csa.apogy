@@ -137,6 +137,8 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 			case Symphony__CommonEMFPackage.TIME_SOURCE: {
 				TimeSource timeSource = (TimeSource)theEObject;
 				T result = caseTimeSource(timeSource);
+				if (result == null) result = caseNamed(timeSource);
+				if (result == null) result = caseDescribed(timeSource);
 				if (result == null) result = caseTimed(timeSource);
 				if (result == null) result = caseDisposable(timeSource);
 				if (result == null) result = defaultCase(theEObject);
@@ -146,6 +148,8 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				FixedTimeSource fixedTimeSource = (FixedTimeSource)theEObject;
 				T result = caseFixedTimeSource(fixedTimeSource);
 				if (result == null) result = caseTimeSource(fixedTimeSource);
+				if (result == null) result = caseNamed(fixedTimeSource);
+				if (result == null) result = caseDescribed(fixedTimeSource);
 				if (result == null) result = caseTimed(fixedTimeSource);
 				if (result == null) result = caseDisposable(fixedTimeSource);
 				if (result == null) result = defaultCase(theEObject);
@@ -155,6 +159,8 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				CurrentTimeSource currentTimeSource = (CurrentTimeSource)theEObject;
 				T result = caseCurrentTimeSource(currentTimeSource);
 				if (result == null) result = caseTimeSource(currentTimeSource);
+				if (result == null) result = caseNamed(currentTimeSource);
+				if (result == null) result = caseDescribed(currentTimeSource);
 				if (result == null) result = caseTimed(currentTimeSource);
 				if (result == null) result = caseDisposable(currentTimeSource);
 				if (result == null) result = defaultCase(theEObject);
@@ -164,6 +170,8 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				BrowseableTimeSource browseableTimeSource = (BrowseableTimeSource)theEObject;
 				T result = caseBrowseableTimeSource(browseableTimeSource);
 				if (result == null) result = caseTimeSource(browseableTimeSource);
+				if (result == null) result = caseNamed(browseableTimeSource);
+				if (result == null) result = caseDescribed(browseableTimeSource);
 				if (result == null) result = caseTimed(browseableTimeSource);
 				if (result == null) result = caseDisposable(browseableTimeSource);
 				if (result == null) result = defaultCase(theEObject);
@@ -173,6 +181,8 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				SelectionBasedTimeSource selectionBasedTimeSource = (SelectionBasedTimeSource)theEObject;
 				T result = caseSelectionBasedTimeSource(selectionBasedTimeSource);
 				if (result == null) result = caseTimeSource(selectionBasedTimeSource);
+				if (result == null) result = caseNamed(selectionBasedTimeSource);
+				if (result == null) result = caseDescribed(selectionBasedTimeSource);
 				if (result == null) result = caseTimed(selectionBasedTimeSource);
 				if (result == null) result = caseDisposable(selectionBasedTimeSource);
 				if (result == null) result = defaultCase(theEObject);
@@ -183,6 +193,8 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				T result = caseCollectionTimedTimeSource(collectionTimedTimeSource);
 				if (result == null) result = caseBrowseableTimeSource(collectionTimedTimeSource);
 				if (result == null) result = caseTimeSource(collectionTimedTimeSource);
+				if (result == null) result = caseNamed(collectionTimedTimeSource);
+				if (result == null) result = caseDescribed(collectionTimedTimeSource);
 				if (result == null) result = caseTimed(collectionTimedTimeSource);
 				if (result == null) result = caseDisposable(collectionTimedTimeSource);
 				if (result == null) result = defaultCase(theEObject);
