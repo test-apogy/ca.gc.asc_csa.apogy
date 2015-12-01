@@ -314,14 +314,6 @@ public class CollectionTimedTimeSourceImpl extends BrowseableTimeSourceImpl impl
 			}
 		}
 	}
-
-	@Override
-	public void setTime(Date newTime) {
-	
-		System.out.println("TIME : " + newTime);
-		
-		super.setTime(newTime);
-	}
 	
 	/**
 	 * <!-- begin-user-doc -->

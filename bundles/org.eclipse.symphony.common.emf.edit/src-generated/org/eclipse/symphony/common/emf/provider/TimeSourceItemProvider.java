@@ -176,11 +176,11 @@ public class TimeSourceItemProvider
 	
 	protected String getTimeSourceText(TimeSource timeSource)
 	{
-		String text = "";
+		String text = timeSource.getName() == null ? "<unnamed>" : timeSource.getName();		
 		
 		if(timeSource.getTime() != null)
 		{
-			text = "(" + simpleDateFormat.format(timeSource.getTime()) + ")";
+			text = " (" + simpleDateFormat.format(timeSource.getTime()) + ")";
 		}
 		
 		return text;
