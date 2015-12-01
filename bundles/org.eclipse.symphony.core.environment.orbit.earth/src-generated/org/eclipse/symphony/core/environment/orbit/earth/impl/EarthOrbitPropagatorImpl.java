@@ -96,7 +96,7 @@ public abstract class EarthOrbitPropagatorImpl extends AbstractOrbitPropagatorIm
 		{
 			String message = "Start date is outside the validity range !";
 															
-			Logger.INSTANCE.log(Activator.ID, this, "Start date is outside the validity range !", EventSeverity.ERROR);
+			Logger.INSTANCE.log(Activator.ID, this, message, EventSeverity.ERROR);
 	
 			// Throw an exception.	
 			throw new Exception(message);

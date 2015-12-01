@@ -13,7 +13,6 @@ public class PoseSensorPresentationAdapter implements NodePresentationAdapter
 
 	public PoseSensorPresentationAdapter()
 	{
-		System.out.println("PoseSensorPresentationAdapter");
 	}
 
 

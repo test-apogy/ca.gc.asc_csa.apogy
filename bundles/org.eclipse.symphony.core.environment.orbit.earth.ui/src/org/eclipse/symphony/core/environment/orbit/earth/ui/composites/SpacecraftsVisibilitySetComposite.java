@@ -97,8 +97,6 @@ public class SpacecraftsVisibilitySetComposite extends Composite
 	{
 		if(spacecraftsVisibilitySet != null) spacecraftsVisibilitySet.eAdapters().remove(getSpacecraftsVisibilitySetAdapter());
 		
-		System.out.println("SpacecraftsVisibilitySetComposite.setSpacecraftsVisibilitySet(" + newSpacecraftsVisibilitySet + ")");
-		
 		this.spacecraftsVisibilitySet = newSpacecraftsVisibilitySet;
 		
 		if(newSpacecraftsVisibilitySet != null)

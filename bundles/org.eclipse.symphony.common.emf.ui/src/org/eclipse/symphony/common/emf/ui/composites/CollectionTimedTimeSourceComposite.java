@@ -395,8 +395,6 @@ public class CollectionTimedTimeSourceComposite extends BrowseableTimeSourceComp
 						 long delta = (long) Math.round((selection / 100.0) * (endTime - startTime));
 						 Date selectedTime = new Date(startTime + delta);
 						 
-						 System.out.println("selectedTime " + selectedTime);
-						 
 						 getCollectionTimedTimeSource().setTime(selectedTime);
 					 }
 				}

@@ -602,8 +602,6 @@ public class SymphonyEnvironmentNodeImpl extends ReferencedGroupNodeImpl impleme
 						}
 						else if(msg.getFeatureID(SymphonyEnvironment.class) == Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_WORKSITE)							
 						{
-							System.out.println("Worksite has changed !");
-							
 							// Active Worksite has changed.								
 							AbstractWorksite oldWorksite = (AbstractWorksite) msg.getOldValue();
 							AbstractWorksite newWorksite = (AbstractWorksite) msg.getNewValue();					
