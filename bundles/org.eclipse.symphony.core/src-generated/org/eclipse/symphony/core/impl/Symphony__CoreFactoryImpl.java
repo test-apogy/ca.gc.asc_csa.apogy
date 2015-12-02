@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.symphony.core.*;
 import org.eclipse.symphony.core.AbsolutePoseProvider;
 import org.eclipse.symphony.core.AssemblyLink;
 import org.eclipse.symphony.core.AssemblyLinksList;
@@ -85,6 +86,7 @@ public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
 		switch (eClass.getClassifierID()) {
 			case Symphony__CorePackage.SYMPHONY_CORE_FACADE: return createSymphony__CoreFacade();
 			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT: return createSymphonyEnvironment();
+			case Symphony__CorePackage.TIME_SOURCES_LIST: return createTimeSourcesList();
 			case Symphony__CorePackage.SYMPHONY_TOPOLOGY: return createSymphonyTopology();
 			case Symphony__CorePackage.SYMPHONY_SYSTEM: return createSymphonySystem();
 			case Symphony__CorePackage.SYMPHONY_SYSTEM_API_ADAPTER: return createSymphonySystemApiAdapter();
@@ -170,6 +172,16 @@ public class Symphony__CoreFactoryImpl extends EFactoryImpl implements
 	public SymphonyEnvironment createSymphonyEnvironment() {
 		SymphonyEnvironmentImpl symphonyEnvironment = new SymphonyEnvironmentImpl();
 		return symphonyEnvironment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimeSourcesList createTimeSourcesList() {
+		TimeSourcesListImpl timeSourcesList = new TimeSourcesListImpl();
+		return timeSourcesList;
 	}
 
 	/**

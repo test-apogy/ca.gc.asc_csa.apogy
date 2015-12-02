@@ -14,11 +14,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeSource;
-import org.eclipse.symphony.common.emf.TimeSourcesList;
 import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.AbstractWorksite;
 import org.eclipse.symphony.core.Symphony__CoreFactory;
 import org.eclipse.symphony.core.Symphony__CorePackage;
+import org.eclipse.symphony.core.TimeSourcesList;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.SymphonyTopology;
 import org.eclipse.symphony.core.WorksitesList;
@@ -328,9 +328,9 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 		if (newTimeSourcesList != timeSourcesList) {
 			NotificationChain msgs = null;
 			if (timeSourcesList != null)
-				msgs = ((InternalEObject)timeSourcesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST, null, msgs);
+				msgs = ((InternalEObject)timeSourcesList).eInverseRemove(this, Symphony__CorePackage.TIME_SOURCES_LIST__ENVIRONMENT, TimeSourcesList.class, msgs);
 			if (newTimeSourcesList != null)
-				msgs = ((InternalEObject)newTimeSourcesList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST, null, msgs);
+				msgs = ((InternalEObject)newTimeSourcesList).eInverseAdd(this, Symphony__CorePackage.TIME_SOURCES_LIST__ENVIRONMENT, TimeSourcesList.class, msgs);
 			msgs = basicSetTimeSourcesList(newTimeSourcesList, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -397,6 +397,22 @@ public class SymphonyEnvironmentImpl extends EnvironmentImpl implements
 			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE, oldActiveTimeSource, activeTimeSource));
 	}
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST:
+				if (timeSourcesList != null)
+					msgs = ((InternalEObject)timeSourcesList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__CorePackage.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST, null, msgs);
+				return basicSetTimeSourcesList((TimeSourcesList)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated

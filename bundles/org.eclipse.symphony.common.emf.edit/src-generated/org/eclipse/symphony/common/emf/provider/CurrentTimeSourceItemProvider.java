@@ -110,11 +110,8 @@ public class CurrentTimeSourceItemProvider extends TimeSourceItemProvider {
 	 * @generated_NOT
 	 */
 	@Override
-	public String getText(Object object) 
-	{
-		CurrentTimeSource timeSource = (CurrentTimeSource) object;
-		String label = getString("_UI_CurrentTimeSource_type") + " " + getTimeSourceText(timeSource);							
-		return label;			
+	public String getText(Object object) {
+		return super.getText(object);
 	}
 	
 

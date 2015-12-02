@@ -63,7 +63,7 @@
             <input
                   type="org.eclipse.emf.ecore.EObject">
             </input>
-         </propertySection>         
+         </propertySection>            
       </propertySections>
    </extension>
    <extension

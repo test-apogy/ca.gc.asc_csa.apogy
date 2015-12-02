@@ -16,7 +16,6 @@ import org.eclipse.symphony.common.emf.Described
 import org.eclipse.symphony.common.emf.Named
 import org.eclipse.symphony.common.emf.Timed
 import org.eclipse.symphony.common.emf.TimeSource
-import org.eclipse.symphony.common.emf.TimeSourcesList
 
 import org.eclipse.symphony.core.invocator.AbstractResult
 import org.eclipse.symphony.core.invocator.OperationCallResult
@@ -99,13 +98,21 @@ class SymphonyEnvironment extends Environment, Timed
 	/*
 	 * The list of available time sources.
 	 */
-	contains TimeSourcesList[0..1] timeSourcesList
+	contains TimeSourcesList[0..1] timeSourcesList opposite environment 
 	
 	/*
 	 * The time source currently providing time used to drive the environment.
 	 */
 	refers TimeSource activeTimeSource	
 }
+
+class TimeSourcesList
+{	
+    @GenModel(property="None")
+	container SymphonyEnvironment environment opposite timeSourcesList
+	contains TimeSource[0..*] timeSources 
+}
+
 
 class SymphonyTopology
 {

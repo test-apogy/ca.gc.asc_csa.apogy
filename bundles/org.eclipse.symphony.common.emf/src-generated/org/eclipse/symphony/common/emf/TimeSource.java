@@ -9,7 +9,11 @@ package org.eclipse.symphony.common.emf;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * Defines a Timed element that provides time.
+ *  -------------------------------------------------------------------------
+ * 
+ * Time Sources.
+ * 
+ * -------------------------------------------------------------------------
  * <!-- end-model-doc -->
  *
  * <p>

@@ -262,9 +262,12 @@ public class ContextsListComposite extends Composite {
 		 * Listens to selection changed.
 		 */
 		contextsListViewer
+		.removeSelectionChangedListener(getContextsListViewerSelectionListener());
+		contextsListViewer
 				.addSelectionChangedListener(getContextsListViewerSelectionListener());
 
 		/** Listens to changes to the environment. */
+		getEnvironment().eAdapters().remove(getEnvironmentAdapter());
 		getEnvironment().eAdapters().add(getEnvironmentAdapter());
 
 		return bindingContext;

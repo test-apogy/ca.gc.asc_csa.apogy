@@ -309,7 +309,8 @@
             <input
                   type="org.eclipse.symphony.core.invocator.TypeMember">
             </input>
-         </propertySection>    
+         </propertySection>
+         
       </propertySections>
 	</extension>
 
@@ -347,7 +348,7 @@
                label="Documentation">
          </propertyTab>
       </propertyTabs>
-   </extension>   
+   </extension>      
    
    <extension
          point="org.eclipse.ui.newWizards">

@@ -18,23 +18,6 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.symphony.common.emf.*;
-import org.eclipse.symphony.common.emf.BrowseableTimeSource;
-import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
-import org.eclipse.symphony.common.emf.CurrentTimeSource;
-import org.eclipse.symphony.common.emf.EClassFilter;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
-import org.eclipse.symphony.common.emf.FixedTimeSource;
-import org.eclipse.symphony.common.emf.ListFeatureNode;
-import org.eclipse.symphony.common.emf.ListRootNode;
-import org.eclipse.symphony.common.emf.Ranges;
-import org.eclipse.symphony.common.emf.SelectionBasedTimeSource;
-import org.eclipse.symphony.common.emf.TimeDirection;
-import org.eclipse.symphony.common.emf.TimeSourcesList;
-import org.eclipse.symphony.common.emf.TreeFeatureNode;
-import org.eclipse.symphony.common.emf.TreeRootNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -87,7 +70,6 @@ public class Symphony__CommonEMFFactoryImpl extends EFactoryImpl implements Symp
 			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE: return createSymphony__CommonEMFFacade();
 			case Symphony__CommonEMFPackage.SERVER: return createServer();
 			case Symphony__CommonEMFPackage.STARTABLE: return createStartable();
-			case Symphony__CommonEMFPackage.TIME_SOURCES_LIST: return createTimeSourcesList();
 			case Symphony__CommonEMFPackage.FIXED_TIME_SOURCE: return createFixedTimeSource();
 			case Symphony__CommonEMFPackage.CURRENT_TIME_SOURCE: return createCurrentTimeSource();
 			case Symphony__CommonEMFPackage.BROWSEABLE_TIME_SOURCE: return createBrowseableTimeSource();
@@ -215,16 +197,6 @@ public class Symphony__CommonEMFFactoryImpl extends EFactoryImpl implements Symp
 	public Startable createStartable() {
 		StartableImpl startable = new StartableImpl();
 		return startable;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TimeSourcesList createTimeSourcesList() {
-		TimeSourcesListImpl timeSourcesList = new TimeSourcesListImpl();
-		return timeSourcesList;
 	}
 
 		/**

@@ -50,15 +50,6 @@ public interface Symphony__CommonEMFFactory extends EFactory
 	Startable createStartable();
 
 		/**
-	 * Returns a new object of class '<em>Time Sources List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Time Sources List</em>'.
-	 * @generated
-	 */
-	TimeSourcesList createTimeSourcesList();
-
-		/**
 	 * Returns a new object of class '<em>Fixed Time Source</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

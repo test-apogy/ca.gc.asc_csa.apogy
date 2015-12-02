@@ -31,4 +31,10 @@
             invocatorDelegateClass="org.eclipse.symphony.core.invocator.SymphonyInvocatorDelegate">
       </element>
    </extension>
+   <extension
+         point="org.eclipse.symphony.common.converters">
+      <new_element
+            Class="org.eclipse.symphony.core.converters.SymphonyEnvironmentToTimeSourcesListConverter">
+      </new_element>
+   </extension>
 </plugin>

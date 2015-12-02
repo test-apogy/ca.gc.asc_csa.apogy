@@ -155,29 +155,6 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
 		/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.TimeSourcesList} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TimeSourcesListItemProvider timeSourcesListItemProvider;
-
-		/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.TimeSourcesList}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTimeSourcesListAdapter() {
-		if (timeSourcesListItemProvider == null) {
-			timeSourcesListItemProvider = new TimeSourcesListItemProvider(this);
-		}
-
-		return timeSourcesListItemProvider;
-	}
-
-		/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.FixedTimeSource} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -550,7 +527,6 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 		if (symphony__CommonEMFFacadeItemProvider != null) symphony__CommonEMFFacadeItemProvider.dispose();
 		if (serverItemProvider != null) serverItemProvider.dispose();
 		if (startableItemProvider != null) startableItemProvider.dispose();
-		if (timeSourcesListItemProvider != null) timeSourcesListItemProvider.dispose();
 		if (fixedTimeSourceItemProvider != null) fixedTimeSourceItemProvider.dispose();
 		if (currentTimeSourceItemProvider != null) currentTimeSourceItemProvider.dispose();
 		if (browseableTimeSourceItemProvider != null) browseableTimeSourceItemProvider.dispose();

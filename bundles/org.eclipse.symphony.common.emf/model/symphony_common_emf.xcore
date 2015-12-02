@@ -208,7 +208,7 @@ interface Described
  * Timed Element.
  */
 interface Timed
-{
+{	
 	EDate time
 }
 
@@ -227,11 +227,6 @@ class Startable
  * Time Sources.
  * 
  * ------------------------------------------------------------------------- */ 
-
-class TimeSourcesList
-{
-	contains TimeSource[0..*] timeSources
-}
 
 /*
  * Defines a Timed element that provides time.

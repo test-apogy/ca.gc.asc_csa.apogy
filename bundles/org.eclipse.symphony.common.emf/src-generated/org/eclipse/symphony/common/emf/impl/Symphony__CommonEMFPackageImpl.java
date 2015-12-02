@@ -47,7 +47,6 @@ import org.eclipse.symphony.common.emf.Server;
 import org.eclipse.symphony.common.emf.Startable;
 import org.eclipse.symphony.common.emf.TimeDirection;
 import org.eclipse.symphony.common.emf.TimeSource;
-import org.eclipse.symphony.common.emf.TimeSourcesList;
 import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.common.emf.TreeFeatureNode;
 import org.eclipse.symphony.common.emf.TreeRootNode;
@@ -101,13 +100,6 @@ public class Symphony__CommonEMFPackageImpl extends EPackageImpl implements Symp
 	 * @generated
 	 */
 	private EClass startableEClass = null;
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass timeSourcesListEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -835,24 +827,6 @@ public class Symphony__CommonEMFPackageImpl extends EPackageImpl implements Symp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTimeSourcesList() {
-		return timeSourcesListEClass;
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTimeSourcesList_TimeSources() {
-		return (EReference)timeSourcesListEClass.getEStructuralFeatures().get(0);
-	}
-
-		/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTimeSource() {
 		return timeSourceEClass;
 	}
@@ -1549,9 +1523,6 @@ public class Symphony__CommonEMFPackageImpl extends EPackageImpl implements Symp
 		startableEClass = createEClass(STARTABLE);
 		createEAttribute(startableEClass, STARTABLE__STARTED);
 
-		timeSourcesListEClass = createEClass(TIME_SOURCES_LIST);
-		createEReference(timeSourcesListEClass, TIME_SOURCES_LIST__TIME_SOURCES);
-
 		timeSourceEClass = createEClass(TIME_SOURCE);
 		createEAttribute(timeSourceEClass, TIME_SOURCE__OFFSET);
 
@@ -1899,9 +1870,6 @@ public class Symphony__CommonEMFPackageImpl extends EPackageImpl implements Symp
 
 		initEClass(startableEClass, Startable.class, "Startable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStartable_Started(), theEcorePackage.getEBoolean(), "started", "false", 0, 1, Startable.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(timeSourcesListEClass, TimeSourcesList.class, "TimeSourcesList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTimeSourcesList_TimeSources(), this.getTimeSource(), null, "timeSources", null, 0, -1, TimeSourcesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(timeSourceEClass, TimeSource.class, "TimeSource", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTimeSource_Offset(), theEcorePackage.getEInt(), "offset", "0", 0, 1, TimeSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -4,7 +4,6 @@
 package org.eclipse.symphony.core;
 
 import org.eclipse.symphony.common.emf.TimeSource;
-import org.eclipse.symphony.common.emf.TimeSourcesList;
 import org.eclipse.symphony.common.emf.Timed;
 import org.eclipse.symphony.core.invocator.Environment;
 
@@ -120,6 +119,7 @@ public interface SymphonyEnvironment extends Environment, Timed {
 
 	/**
 	 * Returns the value of the '<em><b>Time Sources List</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.symphony.core.TimeSourcesList#getEnvironment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -128,7 +128,8 @@ public interface SymphonyEnvironment extends Environment, Timed {
 	 * @return the value of the '<em>Time Sources List</em>' containment reference.
 	 * @see #setTimeSourcesList(TimeSourcesList)
 	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getSymphonyEnvironment_TimeSourcesList()
-	 * @model containment="true"
+	 * @see org.eclipse.symphony.core.TimeSourcesList#getEnvironment
+	 * @model opposite="environment" containment="true"
 	 * @generated
 	 */
 	TimeSourcesList getTimeSourcesList();

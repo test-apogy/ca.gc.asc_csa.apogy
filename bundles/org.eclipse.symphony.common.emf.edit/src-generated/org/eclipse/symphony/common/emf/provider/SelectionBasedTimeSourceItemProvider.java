@@ -5,10 +5,10 @@ package org.eclipse.symphony.common.emf.provider;
 
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.emf.SelectionBasedTimeSource;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.emf.SelectionBasedTimeSource} object.
@@ -62,9 +62,7 @@ public class SelectionBasedTimeSourceItemProvider extends TimeSourceItemProvider
 	@Override
 	public String getText(Object object) 
 	{
-		SelectionBasedTimeSource timeSource = (SelectionBasedTimeSource) object;
-		String label = getString("_UI_SelectionBasedTimeSource_type") + " " + getTimeSourceText(timeSource);							
-		return label;			
+		return super.getText(object);
 	}
 	
 

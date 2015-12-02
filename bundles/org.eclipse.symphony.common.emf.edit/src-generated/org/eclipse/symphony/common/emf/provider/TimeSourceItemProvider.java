@@ -170,22 +170,14 @@ public class TimeSourceItemProvider
 	public String getText(Object object) 
 	{
 		TimeSource timeSource = (TimeSource) object;
-		String label = getString("_UI_TimeSource_type") + " " + getTimeSourceText(timeSource);							
+		String label = timeSource.getName() == null ? "unnamed" : timeSource.getName();
+		label += "<" + timeSource.eClass().getInstanceClassName().substring(timeSource.eClass().getInstanceClassName().lastIndexOf(".")+1) + ">";
+		
+		if(timeSource.getTime() != null){
+			label += " (" + simpleDateFormat.format(timeSource.getTime()) + ")";
+		}
 		return label;		
 	}
-	
-	protected String getTimeSourceText(TimeSource timeSource)
-	{
-		String text = timeSource.getName() == null ? "<unnamed>" : timeSource.getName();		
-		
-		if(timeSource.getTime() != null)
-		{
-			text = " (" + simpleDateFormat.format(timeSource.getTime()) + ")";
-		}
-		
-		return text;
-	}
-
 	
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

@@ -7,29 +7,6 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.emf.*;
-import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
-import org.eclipse.symphony.common.emf.AbstractFeatureNode;
-import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.AbstractFeatureTreeNode;
-import org.eclipse.symphony.common.emf.AbstractRootNode;
-import org.eclipse.symphony.common.emf.BrowseableTimeSource;
-import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
-import org.eclipse.symphony.common.emf.CurrentTimeSource;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
-import org.eclipse.symphony.common.emf.FixedTimeSource;
-import org.eclipse.symphony.common.emf.ListFeatureNode;
-import org.eclipse.symphony.common.emf.ListRootNode;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.SelectionBasedTimeSource;
-import org.eclipse.symphony.common.emf.TimeSource;
-import org.eclipse.symphony.common.emf.TimeSourcesList;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.emf.TreeFeatureNode;
-import org.eclipse.symphony.common.emf.TreeRootNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -113,10 +90,6 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 			@Override
 			public Adapter caseStartable(Startable object) {
 				return createStartableAdapter();
-			}
-			@Override
-			public Adapter caseTimeSourcesList(TimeSourcesList object) {
-				return createTimeSourcesListAdapter();
 			}
 			@Override
 			public Adapter caseTimeSource(TimeSource object) {
@@ -291,20 +264,6 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createStartableAdapter() {
-		return null;
-	}
-
-		/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.TimeSourcesList <em>Time Sources List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.emf.TimeSourcesList
-	 * @generated
-	 */
-	public Adapter createTimeSourcesListAdapter() {
 		return null;
 	}
 
