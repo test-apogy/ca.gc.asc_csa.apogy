@@ -878,15 +878,6 @@ public interface Symphony__CoreEnvironmentOrbitPackage extends EPackage {
 	int ORBIT_MODEL__ORBIT_MODELS_LIST = Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST;
 
 	/**
-	 * The feature id for the '<em><b>Variable Feature Reference</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE = Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE;
-
-	/**
 	 * The feature id for the '<em><b>Initial Orbit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

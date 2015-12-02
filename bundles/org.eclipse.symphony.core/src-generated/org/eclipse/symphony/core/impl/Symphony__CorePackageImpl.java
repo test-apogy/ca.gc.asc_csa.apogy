@@ -901,15 +901,6 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAbstractOrbitModel_VariableFeatureReference() {
-		return (EReference)abstractOrbitModelEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPositioned() {
 		return positionedEClass;
 	}
@@ -1255,7 +1246,6 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 
 		abstractOrbitModelEClass = createEClass(ABSTRACT_ORBIT_MODEL);
 		createEReference(abstractOrbitModelEClass, ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST);
-		createEReference(abstractOrbitModelEClass, ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE);
 
 		positionedEClass = createEClass(POSITIONED);
 		createEReference(positionedEClass, POSITIONED__POSE);
@@ -1488,7 +1478,6 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 
 		initEClass(abstractOrbitModelEClass, AbstractOrbitModel.class, "AbstractOrbitModel", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAbstractOrbitModel_OrbitModelsList(), this.getOrbitModelsList(), this.getOrbitModelsList_OrbitModels(), "orbitModelsList", null, 0, 1, AbstractOrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractOrbitModel_VariableFeatureReference(), theSymphony__CoreInvocatorPackage.getVariableFeatureReference(), null, "variableFeatureReference", null, 0, 1, AbstractOrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(positionedEClass, Positioned.class, "Positioned", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPositioned_Pose(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "pose", null, 1, 1, Positioned.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -1297,22 +1297,13 @@ public interface Symphony__CorePackage extends EPackage {
 	int ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Variable Feature Reference</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>Abstract Orbit Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_MODEL_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+	int ABSTRACT_ORBIT_MODEL_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Abstract Orbit Model</em>' class.
@@ -3009,17 +3000,6 @@ public interface Symphony__CorePackage extends EPackage {
 	EReference getAbstractOrbitModel_OrbitModelsList();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.AbstractOrbitModel#getVariableFeatureReference <em>Variable Feature Reference</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Variable Feature Reference</em>'.
-	 * @see org.eclipse.symphony.core.AbstractOrbitModel#getVariableFeatureReference()
-	 * @see #getAbstractOrbitModel()
-	 * @generated
-	 */
-	EReference getAbstractOrbitModel_VariableFeatureReference();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.core.Positioned <em>Positioned</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3875,14 +3855,6 @@ public interface Symphony__CorePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST = eINSTANCE.getAbstractOrbitModel_OrbitModelsList();
-
-		/**
-		 * The meta object literal for the '<em><b>Variable Feature Reference</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE = eINSTANCE.getAbstractOrbitModel_VariableFeatureReference();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.core.impl.PositionedImpl <em>Positioned</em>}' class.

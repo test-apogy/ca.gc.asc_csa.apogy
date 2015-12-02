@@ -30,7 +30,6 @@ import org.eclipse.symphony.core.invocator.TypeApiAdapter
 import org.eclipse.symphony.core.invocator.OperationCall
 import org.eclipse.symphony.core.invocator.AbstractType
 import org.eclipse.symphony.core.invocator.InitializationData
-import org.eclipse.symphony.core.invocator.VariableFeatureReference
 import org.eclipse.symphony.common.topology.AggregateGroupNode
 import org.eclipse.symphony.common.topology.TransformNode
 import org.eclipse.symphony.common.topology.Node
@@ -278,7 +277,6 @@ abstract class AbstractOrbitModel extends Named, Described
 {		
     @GenModel(property="None")
 	container OrbitModelsList orbitModelsList opposite orbitModels
-	refers VariableFeatureReference variableFeatureReference
 }
 
 
