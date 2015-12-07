@@ -4,7 +4,7 @@
 package org.eclipse.symphony.common.topology.ui.tests;
 
 import org.eclipse.symphony.common.topology.ui.PositionNodePresentation;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 import junit.textui.TestRunner;
 
@@ -54,7 +54,7 @@ public class PositionNodePresentationTest extends NodePresentationTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(TopologyUIFactory.eINSTANCE.createPositionNodePresentation());
+		setFixture(Symphony__CommonTopologyUIFactory.eINSTANCE.createPositionNodePresentation());
 	}
 
 	/**
