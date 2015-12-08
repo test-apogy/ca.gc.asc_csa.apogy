@@ -5,7 +5,7 @@ Bundle-SymbolicName: org.eclipse.symphony.examples.robotic_arm.ui;singleton:=tru
 Bundle-Version: 0.5.0.qualifier
 Bundle-Activator: org.eclipse.symphony.examples.robotic_arm.ui.Activator
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,

@@ -27,4 +27,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.emf;bundle-version="0.5.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.symphony.addons.sensors.gps.Activator
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

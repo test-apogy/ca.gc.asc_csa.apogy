@@ -18,7 +18,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.symphony.common.emf;visibility:=reexport,
  org.eclipse.symphony.common.topology.bindings;bundle-version="0.1.0";visibility:=reexport
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin

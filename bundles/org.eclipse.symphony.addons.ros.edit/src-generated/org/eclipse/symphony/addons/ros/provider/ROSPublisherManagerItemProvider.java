@@ -221,7 +221,7 @@ public class ROSPublisherManagerItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.addons.ros.ROSPublisherManager.class)) {
+		switch (notification.getFeatureID(ROSPublisherManager.class)) {
 			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__PUBLISHERS:
 			case Symphony__AddonsROSPackage.ROS_PUBLISHER_MANAGER__RUNNING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

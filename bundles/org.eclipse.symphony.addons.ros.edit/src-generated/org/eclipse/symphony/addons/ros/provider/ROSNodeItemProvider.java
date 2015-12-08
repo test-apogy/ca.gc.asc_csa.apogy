@@ -437,7 +437,7 @@ public class ROSNodeItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.addons.ros.ROSNode.class)) {
+		switch (notification.getFeatureID(ROSNode.class)) {
 			case Symphony__AddonsROSPackage.ROS_NODE__CONNECTED_NODE:
 			case Symphony__AddonsROSPackage.ROS_NODE__INITIALIZED:
 			case Symphony__AddonsROSPackage.ROS_NODE__CONNECTED:

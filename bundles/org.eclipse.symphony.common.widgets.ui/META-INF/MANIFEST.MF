@@ -8,7 +8,7 @@ Bundle-Activator: org.eclipse.symphony.common.widgets.ui.Activator
 Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.symphony.common.widgets.ui
 Bundle-ClassPath: .

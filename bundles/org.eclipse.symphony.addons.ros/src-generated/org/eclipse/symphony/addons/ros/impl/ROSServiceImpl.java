@@ -455,7 +455,7 @@ public class ROSServiceImpl<Request extends Message, Response extends Message> e
 				if (f.getValue() instanceof Message)
 					generateParametersString(builder, (Message) f.getValue());
 				else
-					builder.append(f.getValue());
+					builder.append(f.getValue().toString());
 				builder.append(" } ");
 			}
 	}

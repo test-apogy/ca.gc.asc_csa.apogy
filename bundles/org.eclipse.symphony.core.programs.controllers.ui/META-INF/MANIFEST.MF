@@ -14,7 +14,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.symphony.common.emf.ui,
  org.eclipse.symphony.common.log;bundle-version="0.3.0",
  org.jfree.jfreechart;bundle-version="1.0.13"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.symphony.core.programs.controllers.ui,
  org.eclipse.symphony.core.programs.controllers.ui.commands,

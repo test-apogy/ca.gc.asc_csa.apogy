@@ -223,7 +223,7 @@ public class ROSTopicLauncherItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.addons.ros.ROSTopicLauncher.class)) {
+		switch (notification.getFeatureID(ROSTopicLauncher.class)) {
 			case Symphony__AddonsROSPackage.ROS_TOPIC_LAUNCHER__RUNNING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
