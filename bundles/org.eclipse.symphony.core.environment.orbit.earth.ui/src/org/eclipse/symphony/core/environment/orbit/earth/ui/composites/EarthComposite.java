@@ -3,7 +3,7 @@ package org.eclipse.symphony.core.environment.orbit.earth.ui.composites;
 import gov.nasa.worldwind.BasicModel;
 import gov.nasa.worldwind.Configuration;
 import gov.nasa.worldwind.avlist.AVKey;
-import gov.nasa.worldwind.awt.WorldWindowGLCanvas;
+import gov.nasa.worldwind.awt.WorldWindowGLJPanel;
 import gov.nasa.worldwind.globes.Earth;
 import gov.nasa.worldwind.globes.EarthFlat;
 import gov.nasa.worldwind.view.orbit.BasicOrbitView;
@@ -30,8 +30,8 @@ public class EarthComposite extends Composite
 	private EarthViewConfiguration earthViewConfiguration;
 	private Adapter earthViewConfigurationAdapter;	
 		
-	private List<AbstractWorldWindLayer> layers = new ArrayList<AbstractWorldWindLayer>();		
-	private WorldWindowGLCanvas worldWindowGLCanvas;
+	private List<AbstractWorldWindLayer> layers = new ArrayList<AbstractWorldWindLayer>();
+	private WorldWindowGLJPanel worldWindowGLJPanel;
 	
 	public enum EarthViewMode
 	{
@@ -49,7 +49,7 @@ public class EarthComposite extends Composite
 		java.awt.Frame worldFrame = SWT_AWT.new_Frame(top);
 		java.awt.Panel panel = new java.awt.Panel(new java.awt.BorderLayout());
 		worldFrame.add(panel);
-		panel.add(getWorldWindowGLCanvas(), BorderLayout.CENTER);
+		panel.add(getWorldWindowGLJPanel(), BorderLayout.CENTER);
 		worldFrame.requestFocus();						
 	}
 	
@@ -105,8 +105,8 @@ public class EarthComposite extends Composite
 			Configuration.setValue(AVKey.VIEW_CLASS_NAME, BasicOrbitView.class.getName());
 		}
 			
-		getWorldWindowGLCanvas().setModel(new BasicModel());		
-		getWorldWindowGLCanvas().redraw();
+		getWorldWindowGLJPanel().setModel(new BasicModel());		
+		getWorldWindowGLJPanel().redraw();
 		
 		// Re-initialize all layers.
 		initializeEarthViewConfiguration(getEarthViewConfiguration());
@@ -116,8 +116,8 @@ public class EarthComposite extends Composite
 	{				
 		if(abstractWorldWindLayer.getRenderableLayer() != null)
 		{
-			getWorldWindowGLCanvas().getModel().getLayers().add(abstractWorldWindLayer.getRenderableLayer());
-			getWorldWindowGLCanvas().redraw();
+			getWorldWindowGLJPanel().getModel().getLayers().add(abstractWorldWindLayer.getRenderableLayer());
+			getWorldWindowGLJPanel().redraw();
 		}
 		
 		layers.add(abstractWorldWindLayer);
@@ -127,7 +127,7 @@ public class EarthComposite extends Composite
 	{
 		if(abstractWorldWindLayer.getRenderableLayer() != null)
 		{
-			getWorldWindowGLCanvas().getModel().getLayers().remove(abstractWorldWindLayer.getRenderableLayer());
+			getWorldWindowGLJPanel().getModel().getLayers().remove(abstractWorldWindLayer.getRenderableLayer());
 		}
 	}			
 	
@@ -169,15 +169,15 @@ public class EarthComposite extends Composite
 		}
 	}
 	
-	protected WorldWindowGLCanvas getWorldWindowGLCanvas()
+	protected WorldWindowGLJPanel getWorldWindowGLJPanel()
 	{
-		if(worldWindowGLCanvas == null)
+		if(worldWindowGLJPanel == null)
 		{			
-			worldWindowGLCanvas = new WorldWindowGLCanvas();
-			worldWindowGLCanvas.setModel(new BasicModel());			
+			worldWindowGLJPanel = new WorldWindowGLJPanel();
+			worldWindowGLJPanel.setModel(new BasicModel());			
 		}
 		
-		return worldWindowGLCanvas;
+		return worldWindowGLJPanel;
 	}
 
 	protected Adapter getEarthViewConfigurationAdapter() 
