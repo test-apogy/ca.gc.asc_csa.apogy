@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="ca.gc.asc_csa.symphony.core.ui"
+            class="org.eclipse.symphony.addons.ros.ui.wizards.GenerateJavaClassForROSWizard"
+            id="org.eclipse.symphony.addons.ros.ui.wizards.GenerateJavaClassForROSWizard"
+            name="ROS Java Classes">
+      </wizard>
+   </extension>
+
+</plugin>
