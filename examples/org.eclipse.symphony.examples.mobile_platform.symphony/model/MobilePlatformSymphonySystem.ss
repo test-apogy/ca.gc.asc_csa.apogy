@@ -14,7 +14,7 @@
           <position xmi:id="_aD78yQrNEeW4-_ONWXXiAw"/>
           <rotationMatrix xmi:id="_aD78ygrNEeW4-_ONWXXiAw"/>
         </aggregatedChildren>
-        <aggregatedChildren xsi:type="vehicle:Wheel" xmi:id="_aD8j0ArNEeW4-_ONWXXiAw" parent="_aD78wwrNEeW4-_ONWXXiAw" description="The mobile platform's right front wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_RIGHT_FRONT_WHEEL" radius="0.38" lenght="0.17">
+        <aggregatedChildren xsi:type="vehicle:Wheel" xmi:id="_aD8j0ArNEeW4-_ONWXXiAw" parent="_aD78wwrNEeW4-_ONWXXiAw" description="The mobile platform's right front wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_RIGHT_FRONT_WHEEL" radius="0.38" length="0.17">
           <physicalProperties xmi:id="_aD8j0QrNEeW4-_ONWXXiAw">
             <inertiaMatrix xmi:id="_aD8j0grNEeW4-_ONWXXiAw"/>
             <centerOfMassLocation xmi:id="_aD8j0wrNEeW4-_ONWXXiAw"/>
@@ -30,7 +30,7 @@
           <position xmi:id="_aD8j2grNEeW4-_ONWXXiAw"/>
           <rotationMatrix xmi:id="_aD8j2wrNEeW4-_ONWXXiAw"/>
         </aggregatedChildren>
-        <aggregatedChildren xsi:type="vehicle:Wheel" xmi:id="_aD8j3ArNEeW4-_ONWXXiAw" parent="_aD8j1wrNEeW4-_ONWXXiAw" description="The mobile platform's left front wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_LEFT_FRONT_WHEEL" radius="0.38" lenght="0.17">
+        <aggregatedChildren xsi:type="vehicle:Wheel" xmi:id="_aD8j3ArNEeW4-_ONWXXiAw" parent="_aD8j1wrNEeW4-_ONWXXiAw" description="The mobile platform's left front wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_LEFT_FRONT_WHEEL" radius="0.38" length="0.17">
           <physicalProperties xmi:id="_aD8j3QrNEeW4-_ONWXXiAw">
             <inertiaMatrix xmi:id="_aD8j3grNEeW4-_ONWXXiAw"/>
             <centerOfMassLocation xmi:id="_aD8j3wrNEeW4-_ONWXXiAw"/>
@@ -50,7 +50,7 @@
           <position xmi:id="_aD8j6QrNEeW4-_ONWXXiAw"/>
           <rotationMatrix xmi:id="_aD8j6grNEeW4-_ONWXXiAw"/>
         </aggregatedChildren>
-        <aggregatedChildren xsi:type="vehicle:Wheel" xmi:id="_aD8j6wrNEeW4-_ONWXXiAw" parent="_aD8j4wrNEeW4-_ONWXXiAw" description="The mobile platform's right rear wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_RIGHT_REAR_WHEEL" radius="0.38" lenght="0.17">
+        <aggregatedChildren xsi:type="vehicle:Wheel" xmi:id="_aD8j6wrNEeW4-_ONWXXiAw" parent="_aD8j4wrNEeW4-_ONWXXiAw" description="The mobile platform's right rear wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_RIGHT_REAR_WHEEL" radius="0.38" length="0.17">
           <physicalProperties xmi:id="_aD8j7ArNEeW4-_ONWXXiAw">
             <inertiaMatrix xmi:id="_aD8j7QrNEeW4-_ONWXXiAw"/>
             <centerOfMassLocation xmi:id="_aD8j7grNEeW4-_ONWXXiAw"/>
@@ -66,7 +66,7 @@
           <position xmi:id="_aD8j9QrNEeW4-_ONWXXiAw"/>
           <rotationMatrix xmi:id="_aD8j9grNEeW4-_ONWXXiAw"/>
         </aggregatedChildren>
-        <aggregatedChildren xsi:type="vehicle:Wheel" xmi:id="_aD8j9wrNEeW4-_ONWXXiAw" parent="_aD8j8grNEeW4-_ONWXXiAw" description="The mobile platform's left rear wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_LEFT_REAR_WHEEL" radius="0.38" lenght="0.17">
+        <aggregatedChildren xsi:type="vehicle:Wheel" xmi:id="_aD8j9wrNEeW4-_ONWXXiAw" parent="_aD8j8grNEeW4-_ONWXXiAw" description="The mobile platform's left rear wheel" nodeId="MOBILE_PLATFORM_SYM_SYS_LEFT_REAR_WHEEL" radius="0.38" length="0.17">
           <physicalProperties xmi:id="_aD8j-ArNEeW4-_ONWXXiAw">
             <inertiaMatrix xmi:id="_aD8j-QrNEeW4-_ONWXXiAw"/>
             <centerOfMassLocation xmi:id="_aD8j-grNEeW4-_ONWXXiAw"/>

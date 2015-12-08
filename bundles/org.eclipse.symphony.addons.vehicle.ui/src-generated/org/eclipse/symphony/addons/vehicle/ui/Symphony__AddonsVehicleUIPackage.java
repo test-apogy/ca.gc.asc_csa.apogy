@@ -488,13 +488,13 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	int THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 		/**
-	 * The feature id for the '<em><b>Plume Envelope Lenght</b></em>' attribute.
+	 * The feature id for the '<em><b>Plume Envelope Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH = Symphony__CommonTopologyUIPackage.NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 		/**
 	 * The number of structural features of the '<em>Thruster Presentation</em>' class.
@@ -557,15 +557,15 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 	EAttribute getThrusterPresentation_PlumeEnvelopeVisible();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLenght <em>Plume Envelope Lenght</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLength <em>Plume Envelope Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Plume Envelope Lenght</em>'.
-	 * @see org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLenght()
+	 * @return the meta object for the attribute '<em>Plume Envelope Length</em>'.
+	 * @see org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLength()
 	 * @see #getThrusterPresentation()
 	 * @generated
 	 */
-	EAttribute getThrusterPresentation_PlumeEnvelopeLenght();
+	EAttribute getThrusterPresentation_PlumeEnvelopeLength();
 
 		/**
 	 * Returns the factory that creates the instances of the model.
@@ -626,12 +626,12 @@ public interface Symphony__AddonsVehicleUIPackage extends EPackage
 		 */
 		EAttribute THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE = eINSTANCE.getThrusterPresentation_PlumeEnvelopeVisible();
 				/**
-		 * The meta object literal for the '<em><b>Plume Envelope Lenght</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Plume Envelope Length</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT = eINSTANCE.getThrusterPresentation_PlumeEnvelopeLenght();
+		EAttribute THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH = eINSTANCE.getThrusterPresentation_PlumeEnvelopeLength();
 
   }
 

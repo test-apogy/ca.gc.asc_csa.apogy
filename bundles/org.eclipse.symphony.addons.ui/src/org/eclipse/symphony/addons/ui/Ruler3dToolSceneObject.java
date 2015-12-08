@@ -16,9 +16,9 @@ public interface Ruler3dToolSceneObject extends SceneObject
 
 	public void setMajorTickSpacing(float majorTickSpacing);
 		
-	public void setMinorTickLength(float minorTickLenght);
+	public void setMinorTickLength(float minorTickLength);
 	
-	public void setMajorTickLength(float minorTickLenght);
+	public void setMajorTickLength(float minorTickLength);
 	
 	public void setExtremitiesRadius(float newRadius);	
 }

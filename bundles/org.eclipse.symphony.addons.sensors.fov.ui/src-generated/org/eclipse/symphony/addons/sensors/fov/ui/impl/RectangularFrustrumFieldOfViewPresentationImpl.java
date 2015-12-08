@@ -87,7 +87,7 @@ public class RectangularFrustrumFieldOfViewPresentationImpl extends
 		RectangularFrustrumFieldOfView fov = (RectangularFrustrumFieldOfView) getNode();
 		if (fov != null) {
 			if (fov.getHorizontalFieldOfViewAngle() < Math.PI) {
-				// Compute the lenght of the segment, c = R * sqrt{2 -2
+				// Compute the length of the segment,c = R * sqrt{2 -2
 				// *cos(theta)
 				// @see http://en.wikipedia.org/wiki/Circular_segment
 				return fov.getRange().getMaximumDistance()
@@ -106,7 +106,7 @@ public class RectangularFrustrumFieldOfViewPresentationImpl extends
 		RectangularFrustrumFieldOfView fov = (RectangularFrustrumFieldOfView) getNode();
 		if (fov != null) {
 			if (fov.getVerticalFieldOfViewAngle() < Math.PI) {
-				// Compute the lenght of the segment, c = R * sqrt{2 -2 *
+				// Compute the length of the segment, c = R * sqrt{2 -2 *
 				// cos(theta)
 				// @see http://en.wikipedia.org/wiki/Circular_segment
 

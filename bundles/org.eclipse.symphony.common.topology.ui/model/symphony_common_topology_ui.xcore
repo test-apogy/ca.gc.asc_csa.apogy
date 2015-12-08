@@ -202,7 +202,7 @@ class TransformNodePresentation extends NodePresentation
 	boolean axisVisible = "false"
 
 	@GenModel(notify="true", property="Editable", propertyCategory="VISUAL_INFORMATION")
-	double axisLenght = "1.0"
+	double axisLength = "1.0"
 }
 
 class RotationNodePresentation extends NodePresentation
@@ -211,7 +211,7 @@ class RotationNodePresentation extends NodePresentation
 	boolean axisVisible = "false"
 
 	@GenModel(notify="true", property="Editable", propertyCategory="VISUAL_INFORMATION")
-	double axisLenght = "1.0"
+	double axisLength = "1.0"
 }
 
 class PositionNodePresentation extends NodePresentation
@@ -220,7 +220,7 @@ class PositionNodePresentation extends NodePresentation
 	boolean axisVisible = "false"
 
 	@GenModel(notify="true", property="Editable", propertyCategory="VISUAL_INFORMATION")
-	double axisLenght = "1.0"
+	double axisLength = "1.0"
 }
 
 class URLNodePresentation extends NodePresentation
@@ -229,7 +229,7 @@ class URLNodePresentation extends NodePresentation
 	boolean axisVisible = "false"
 
 	@GenModel(notify="true", property="Editable", propertyCategory="VISUAL_INFORMATION")
-	double axisLenght = "1.0"
+	double axisLength = "1.0"
 
 	@GenModel(notify="true", property="Editable", propertyCategory="VISUAL_INFORMATION")
 	MeshPresentationMode presentationMode = "SURFACE"

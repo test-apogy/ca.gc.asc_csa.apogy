@@ -35,8 +35,8 @@ public class SplinesUtilities {
 	// t : [0,1]
 	private static SortedMap<Integer, SortedMap<Double, Double>> segmentsArcLengths;
 
-	// Each segment chord length(the distance between each control points)
-	private static double segmentChordLenght[];
+	// Each segment chord length (the distance between each control points)
+	private static double segmentChordLength[];
 
 	/**
 	 * This generates the points of a CatMull-Rom spline with an uniform
@@ -143,7 +143,7 @@ public class SplinesUtilities {
 	}
 
 	/**
-	 * This generates the points of a Catmull-Rom spline with an ChordLenght
+	 * This generates the points of a Catmull-Rom spline with an chord length
 	 * parameterization. The points are distributed on each segments by looking
 	 * at the percentage of it chord length (Euclidean distance between each
 	 * control points) compared to the total chord length (chord length of all
@@ -171,7 +171,7 @@ public class SplinesUtilities {
 	 *            curvature, 0.5 is the default curvature for Catmull-Rom).
 	 * @return The list of points (Point3d) from the spline that we generated.
 	 */
-	public static List<Point3d> generateCatMullSplineChordLenghtParam(
+	public static List<Point3d> generateCatMullSplineChordLengthParam(
 			List<Point3d> controlPoints, int nbrOfPointsOnSpline,
 			SplineEndControlPointGenerationMode splineEndControlPointGenerationMode, 
 			double tension,
@@ -186,8 +186,8 @@ public class SplinesUtilities {
 		try
 		{
 			List<Point3d> modifiedControlPoints = new ArrayList<Point3d>();
-			double segmentChordLenght[];
-			double totalChordLenght = 0;
+			double segmentChordLength[];
+			double totalChordLength = 0;
 	
 			int nbrOfSegments;
 			int intermediatePointsTotal;
@@ -212,20 +212,22 @@ public class SplinesUtilities {
 			intermediatePointsTotal = nbrOfPointsOnSpline;
 	
 			// get each segments chord length.
-			segmentChordLenght = getEachSegmentsChordLength(modifiedControlPoints);
+			segmentChordLength = getEachSegmentsChordLength(modifiedControlPoints);
 	
 			// Total length of each segments.
-			totalChordLenght = getTotalChordLength(segmentChordLenght);
+			totalChordLength = getTotalChordLength(segmentChordLength);
 	
-			internalMonitor.beginTask(SplinesUtilities.class.getSimpleName() + ".generateCatMullSplineChordLenghtParam() : Generating points...", nbrOfPointsOnSpline);
-			for (int i = 0; i < nbrOfSegments; i++) {
+			internalMonitor.beginTask(SplinesUtilities.class.getSimpleName() + ".generateCatMullSplineChordLengthParam() : Generating points...", nbrOfPointsOnSpline);
+			
+			for (int i = 0; i < nbrOfSegments; i++)
+			{
 				// Number of points on this segment.
 				int nbrPointsSegment = (int) Math
-						.round((intermediatePointsTotal * (segmentChordLenght[i] / totalChordLenght)));
+						.round((intermediatePointsTotal * (segmentChordLength[i] / totalChordLength)));
 	
 				// System.out.println("Segment (" + i + ") "
 				// + "Nbr de points pour segment: " + nbrPointsSegment
-				// + " Lenght : " + segmentChordLenght[i]);
+				// + " Length : " + segmentChordLength[i]);
 	
 				Point3d p0 = modifiedControlPoints.get(i);
 				Point3d p1 = modifiedControlPoints.get(i + 1);
@@ -291,7 +293,7 @@ public class SplinesUtilities {
 	 *            curvature, 0.5 is the default curvature for CatMull-Rom).
 	 * @return The list of points (Point3d) from the spline that we generated.
 	 */
-	public static List<Point3d> generateCatMullSplineArcLenghtParam(
+	public static List<Point3d> generateCatMullSplineArcLengthParam(
 			List<Point3d> controlPoints, double distanceBetweenSplinePoints,
 			SplineEndControlPointGenerationMode splineEndControlPointGenerationMode, 
 			double tension,
@@ -315,20 +317,22 @@ public class SplinesUtilities {
 			}
 	
 			// Generation of new control points if asked.
-			modifiedControlPoints = generateExtraControlPoints(controlPoints, splineEndControlPointGenerationMode);
+			modifiedControlPoints = generateExtraControlPoints(controlPoints,
+															   splineEndControlPointGenerationMode);
 	
 			// Creation of the table that carry the relation between the arc length
 			// and the t parameter of each segments.
 			// Table (sort map) name : segmentsArcLengths
-			createCTMRArcLenghtTable(modifiedControlPoints, tension,
-					distanceBetweenSplinePoints);
+			createCTMRArcLengthTable(modifiedControlPoints,
+									 tension,
+									 distanceBetweenSplinePoints);
 	
 			double distance = 0;
 			double distanceRemaining = 0;
 	
-			int nbrOfSegments = segmentChordLenght.length;
+			int nbrOfSegments = segmentChordLength.length;
 	
-			internalMonitor.beginTask(SplinesUtilities.class.getSimpleName() + ".generateCatMullSplineArcLenghtParam() : Generating points...", nbrOfSegments);
+			internalMonitor.beginTask(SplinesUtilities.class.getSimpleName() + ".generateCatMullSplineArcLengthParam() : Generating points...", nbrOfSegments);
 			for (int i = 0; i < nbrOfSegments; i++) {
 				Point3d p0 = modifiedControlPoints.get(i);
 				Point3d p1 = modifiedControlPoints.get(i + 1);
@@ -339,19 +343,19 @@ public class SplinesUtilities {
 	
 				double arcLength = 0;
 	
-				SortedMap<Double, Double> segmentArcLenghtAndT = segmentsArcLengths
+				SortedMap<Double, Double> segmentArcLengthAndT = segmentsArcLengths
 						.get(i);
 	
 				// Get the arcLength of the present segment.
-				arcLength = segmentArcLenghtAndT.lastKey();
+				arcLength = segmentArcLengthAndT.lastKey();
 	
 				// The distanceRemaining is the distance remaining from the last
 				// point
 				// of the past segment to reach the arcLength of this past segment.
 				distance = 0 + distanceRemaining;
 	
-				do {
-	
+				do
+				{
 					double t = findAssociatedTvalue(i, distance);
 					
 					Point3d curveCurveDot = curvePositionCatmull(t, p0, p1, p2, p3,
@@ -402,11 +406,12 @@ public class SplinesUtilities {
 	 */
 	@SuppressWarnings("unused")
 	public static List<Point3d> generateCatMullSplineDegreeParam(
-			List<Point3d> controlPoints, double degreeBetweenSplinePoints,
-			SplineEndControlPointGenerationMode splineEndControlPointGenerationMode, 
+			List<Point3d> controlPoints,
+			double degreeBetweenSplinePoints,
+			SplineEndControlPointGenerationMode splineEndControlPointGenerationMode,
 			double tension,
-			IProgressMonitor monitor) {
-
+			IProgressMonitor monitor)
+	{
 		// Gets a valid IProgressMonitor.
 		IProgressMonitor internalMonitor = monitor;
 		if(internalMonitor == null) internalMonitor = new NullProgressMonitor();
@@ -630,8 +635,8 @@ public class SplinesUtilities {
 				double degree = Math.toDegrees(Math.atan2(speed.y, speed.x));
 				// Vector3d a = new Vector3d(speed);
 				// System.out.println("a vector: " + a);
-				// System.out.println("lenghth speed : " + a.length());
-				// System.out.println("lenghth speed squared : " +
+				// System.out.println("length speed : " + a.length());
+				// System.out.println("length speed squared : " +
 				// a.lengthSquared());
 				//			
 				// a.normalize();
@@ -681,7 +686,7 @@ public class SplinesUtilities {
 	 * 
 	 * @return The list of points (Point3d) from the spline that we generated.
 	 */
-	public static List<Point3d> generateBezierSplineArcLenghtParam(
+	public static List<Point3d> generateBezierSplineArcLengthParam(
 			Point3d point1, Point3d ctrl1, Point3d ctrl2, Point3d point2,
 			double distanceBetweenSplinePoints,
 			IProgressMonitor monitor) {
@@ -718,17 +723,17 @@ public class SplinesUtilities {
 			ctrlPoints.add(ctrl2);
 			ctrlPoints.add(point2);
 		
-			// createBezierArcLenghtTable
-			createBezierArcLenghtTable(ctrlPoints, distanceBetweenSplinePoints);
+			// createBezierArcLengthTable
+			createBezierArcLengthTable(ctrlPoints, distanceBetweenSplinePoints);
 		
 			double distance = 0;
 			double distanceRemaining = 0;
 		
-			int nbrOfSegments = segmentChordLenght.length;
+			int nbrOfSegments = segmentChordLength.length;
 		
-			internalMonitor.beginTask(SplinesUtilities.class.getSimpleName() + ".generateBezierSplineArcLenghtParam() : Generating points...", nbrOfSegments);
-			for (int i = 0; i < nbrOfSegments; i++) {
-		
+			internalMonitor.beginTask(SplinesUtilities.class.getSimpleName() + ".generateBezierSplineArcLengthParam() : Generating points...", nbrOfSegments);
+			for (int i = 0; i < nbrOfSegments; i++)
+			{
 				Point3d p1 = ctrlPoints.get(i * 3);
 				Point3d c1 = ctrlPoints.get(i * 3 + 1);
 				Point3d c2 = ctrlPoints.get(i * 3 + 2);
@@ -739,15 +744,15 @@ public class SplinesUtilities {
 				double arcLength = 0;
 				// segmentsArcLengths.get(i).get(1);
 		
-				SortedMap<Double, Double> segmentArcLenghtAndT = segmentsArcLengths
+				SortedMap<Double, Double> segmentArcLengthAndT = segmentsArcLengths
 						.get(i);
 		
-				arcLength = segmentArcLenghtAndT.lastKey();
+				arcLength = segmentArcLengthAndT.lastKey();
 		
 				distance = 0 + distanceRemaining;
 		
-				do {
-		
+				do
+				{
 					double t = findAssociatedTvalue(i, distance);
 					
 					Point3d curveCurveDot = curvePositionBezier(t, p1, c1, c2, p2);
@@ -816,8 +821,8 @@ public class SplinesUtilities {
 		}
 
 		// TODO not sure if this is valid.
-		if (splineEndControlPointGenerationMode == SplineEndControlPointGenerationMode.AUTO_CTRL_POINTS_REFLECTION) {
-
+		if (splineEndControlPointGenerationMode == SplineEndControlPointGenerationMode.AUTO_CTRL_POINTS_REFLECTION)
+		{
 			// Not sure about this implementation.
 
 			double x = 2 * (modifiedControlPoints.get(0).x - modifiedControlPoints
@@ -838,7 +843,6 @@ public class SplinesUtilities {
 					.get(last - 1).z);
 
 			modifiedControlPoints.add(new Point3d(x, y, z));
-
 		}
 
 		if (splineEndControlPointGenerationMode == SplineEndControlPointGenerationMode.AUTO_CTRL_POINTS_CLOSE_LOOPS) {
@@ -919,33 +923,34 @@ public class SplinesUtilities {
 	 * @param maximumDistanceBetweenPoints
 	 *            maximum distance wanted between each points
 	 */
-	private static void createCTMRArcLenghtTable(List<Point3d> controlPoints,
-			double tension, double maximumDistanceBetweenPoints) {
-
+	private static void createCTMRArcLengthTable(List<Point3d> controlPoints,
+												 double tension,
+												 double maximumDistanceBetweenPoints)
+	{
 		// The t value.
 		double t;
 		// The interval of t at which we will create points in the table
 		double tStepValue;
 		int numberOfStep;
 		int nbrOfSegments;
-		double chordLenght;
+		double chordLength;
 
-		segmentChordLenght = getEachSegmentsChordLength(controlPoints);
-		nbrOfSegments = segmentChordLenght.length;
+		segmentChordLength = getEachSegmentsChordLength(controlPoints);
+		nbrOfSegments = segmentChordLength.length;
 
-		// Get the total chordLenght
-		chordLenght = getTotalChordLength(segmentChordLenght);
+		// Get the total chordLength
+		chordLength = getTotalChordLength(segmentChordLength);
 
 		// We find an acceptable step value for t.
-		tStepValue = (maximumDistanceBetweenPoints / chordLenght)
+		tStepValue = (maximumDistanceBetweenPoints / chordLength)
 				* nbrOfSegments / 4;
 
 		// This is the number of step by segments.
 		numberOfStep = (int) Math.ceil((1 / tStepValue)) + 1;
 		// System.out.println("tStep Value = " + tStepValue
 		// + ", maximum Distance between points : "
-		// + maximumDistanceBetweenPoints + " ,chordLenght: "
-		// + chordLenght);
+		// + maximumDistanceBetweenPoints + " ,chordLength: "
+		// + chordLength);
 		// System.out.println("numberOfStep Value = " + numberOfStep);
 
 		segmentsArcLengths = new TreeMap<Integer, SortedMap<Double, Double>>();
@@ -963,29 +968,31 @@ public class SplinesUtilities {
 			t = 0;
 
 			int j;
-			double segmentArcLenght = 0;
+			double segmentArcLength = 0;
 
-			for (j = 0; j < numberOfStep; j++) {
-
+			for (j = 0; j < numberOfStep; j++)
+			{
 				Point3d p1 = curvePositionCatmull(t, controlPoints
 						.get(ctrlPtsIndex),
 						controlPoints.get(ctrlPtsIndex + 1), controlPoints
 								.get(ctrlPtsIndex + 2), controlPoints
 								.get(ctrlPtsIndex + 3), tension);
 
-				if (lastPoint == null) {
+				if (lastPoint == null)
+				{
 					// The first point so the distance = 0;
 
 					arcLengthUDistanceMap.put(new Double(0), new Double(0));
 
-				} else {
+				}
+				else
+				{
 					double distance = p1.distance(lastPoint);
 
-					segmentArcLenght = distance + segmentArcLenght;
+					segmentArcLength = distance + segmentArcLength;
 					// distance = distance + arcLengthUDistanceMap.lastKey();
 
-					arcLengthUDistanceMap.put(segmentArcLenght, t);
-
+					arcLengthUDistanceMap.put(segmentArcLength, t);
 				}
 
 				lastPoint = (Point3d) p1.clone();
@@ -994,14 +1001,12 @@ public class SplinesUtilities {
 
 				// t should never be bigger than 1.
 				if (t > 1)
+				{
 					t = 1;
-
+				}
 			}
 
 			segmentsArcLengths.put(i, arcLengthUDistanceMap);
-			// segmentsArcLengths.put(i, new TreeMap<Double,
-			// Double>(arcLengthUDistanceMap));
-
 		}
 
 	}
@@ -1018,50 +1023,50 @@ public class SplinesUtilities {
 	 *            maximum distance wanted between each points
 	 */
 
-	private static void createBezierArcLenghtTable(List<Point3d> controlPoints,
-			double maximumDistanceBetweenPoints) {
-
+	private static void createBezierArcLengthTable(List<Point3d> controlPoints,
+												   double maximumDistanceBetweenPoints)
+	{
 		// The t value.
 		double t;
 		// The interval of t at which we will create points in the table
 		double tStepValue;
 		int numberOfStep;
 		int nbrOfSegments;
-		double chordLenght;
+		double chordLength;
 
 		// How many segment there is here ???
 		// (NBROFCONTROLPTS-1)/ 3
 		nbrOfSegments = (controlPoints.size() - 1) / 3;
 
-		segmentChordLenght = new double[nbrOfSegments];
+		segmentChordLength = new double[nbrOfSegments];
 
 		for (int i = 0; i < nbrOfSegments; i++) {
 			// The first and the last control points of a series are the knots.
 			Point3d p1 = controlPoints.get(i * 3);
 			Point3d p2 = controlPoints.get(i * 3 + 3);
 
-			segmentChordLenght[i] = p1.distance(p2);
+			segmentChordLength[i] = p1.distance(p2);
 		}
 
-		// Get the total chordLenght
-		chordLenght = getTotalChordLength(segmentChordLenght);
+		// Get the total chordLength
+		chordLength = getTotalChordLength(segmentChordLength);
 
 		// We find an acceptable step value for t.
-		tStepValue = (maximumDistanceBetweenPoints / chordLenght)
-				* nbrOfSegments / 4;
+		tStepValue = (maximumDistanceBetweenPoints / chordLength)
+						* nbrOfSegments / 4;
 
 		// This is the number of step by segments.
 		numberOfStep = (int) Math.ceil((1 / tStepValue)) + 1;
 		// System.out.println("tStep Value = " + tStepValue
 		// + ", maximum Distance between points : "
-		// + maximumDistanceBetweenPoints + " ,chordLenght: "
-		// + chordLenght);
+		// + maximumDistanceBetweenPoints + " ,chordLength: "
+		// + chordLength);
 		// System.out.println("numberOfStep Value = " + numberOfStep);
 
 		segmentsArcLengths = new TreeMap<Integer, SortedMap<Double, Double>>();
 
-		for (int i = 0; i < nbrOfSegments; i++) {
-
+		for (int i = 0; i < nbrOfSegments; i++)
+		{
 			Point3d p1 = controlPoints.get(i * 3);
 			Point3d c1 = controlPoints.get(i * 3 + 1);
 			Point3d c2 = controlPoints.get(i * 3 + 2);
@@ -1069,18 +1074,16 @@ public class SplinesUtilities {
 
 			Point3d lastPoint = null;
 
-			// Map<Double, Double> arcLengthUDistanceMap = new HashMap<Double,
-			// Double>();
 			SortedMap<Double, Double> arcLengthUDistanceMap = new TreeMap<Double, Double>();
 
 			// t is set to 0 for the beginning of a segment.
 			t = 0;
 
 			int j;
-			double segmentArcLenght = 0;
+			double segmentArcLength = 0;
 
-			for (j = 0; j < numberOfStep; j++) {
-
+			for (j = 0; j < numberOfStep; j++)
+			{
 				Point3d curvePoint = curvePositionBezier(t, p1, c1, c2, p2);
 
 				if (lastPoint == null) {
@@ -1088,13 +1091,15 @@ public class SplinesUtilities {
 
 					arcLengthUDistanceMap.put(new Double(0), new Double(0));
 
-				} else {
+				}
+				else
+				{
 					double distance = curvePoint.distance(lastPoint);
 
-					segmentArcLenght = distance + segmentArcLenght;
+					segmentArcLength = distance + segmentArcLength;
 					// distance = distance + arcLengthUDistanceMap.lastKey();
 
-					arcLengthUDistanceMap.put(segmentArcLenght, t);
+					arcLengthUDistanceMap.put(segmentArcLength, t);
 
 				}
 
@@ -1104,16 +1109,13 @@ public class SplinesUtilities {
 
 				// t should never be bigger than 1.
 				if (t > 1)
+				{
 					t = 1;
-
+				}
 			}
 
 			segmentsArcLengths.put(i, arcLengthUDistanceMap);
-			// segmentsArcLengths.put(i, new TreeMap<Double,
-			// Double>(arcLengthUDistanceMap));
-
 		}
-
 	}
 
 	/**
@@ -1128,7 +1130,7 @@ public class SplinesUtilities {
 		double arcLength = 0;
 
 		for (int i = 0; i < segmentsArcLengths.size(); i++) {
-			arcLength = arcLength + getSegmentArcLenght(i);
+			arcLength = arcLength + getSegmentArcLength(i);
 		}
 
 		return arcLength;
@@ -1142,7 +1144,7 @@ public class SplinesUtilities {
 	 *            the index of the segment we want to know the arc length.
 	 * @return the arc length of the segment.
 	 */
-	private static double getSegmentArcLenght(int segmentIndex) {
+	private static double getSegmentArcLength(int segmentIndex) {
 		double arcLength = 0;
 		arcLength = segmentsArcLengths.get(segmentIndex).lastKey();
 
@@ -1160,40 +1162,42 @@ public class SplinesUtilities {
 	@SuppressWarnings("unused")
 	private static double getTotalChordLength(List<Point3d> controlPoints) {
 
-		double chordLenght = 0;
+		double chordLength = 0;
 
-		double segmentLenght[] = getEachSegmentsChordLength(controlPoints);
+		double segmentLength[] = getEachSegmentsChordLength(controlPoints);
 
-		int nbrOfSegments = segmentLenght.length;
+		int nbrOfSegments = segmentLength.length;
 
 		// Let's calculate the length of each segments.
-		for (int i = 0; i < nbrOfSegments; i++) {
-			chordLenght = chordLenght + segmentLenght[i];
+		for (int i = 0; i < nbrOfSegments; i++)
+		{
+			chordLength = chordLength + segmentLength[i];
 		}
 
-		return chordLenght;
+		return chordLength;
 	}
 
 	/**
 	 * This function returns the total chord length using a table of
 	 * segmentLength.
 	 * 
-	 * @param segmentLenght
-	 *            segmentLenght table.
+	 * @param segmentLength
+	 *            segmentLength table.
 	 * @return total chord length
 	 */
-	private static double getTotalChordLength(double segmentLenght[]) {
+	private static double getTotalChordLength(double segmentLength[])
+	{
+		double chordLength = 0;
 
-		double chordLenght = 0;
-
-		int nbrOfSegments = segmentLenght.length;
+		int nbrOfSegments = segmentLength.length;
 
 		// Let's calculate the length of each segments.
-		for (int i = 0; i < nbrOfSegments; i++) {
-			chordLenght = chordLenght + segmentLenght[i];
+		for (int i = 0; i < nbrOfSegments; i++)
+		{
+			chordLength = chordLength + segmentLength[i];
 		}
 
-		return chordLenght;
+		return chordLength;
 	}
 
 	/**
@@ -1202,9 +1206,8 @@ public class SplinesUtilities {
 	 * @param controlPoints
 	 * @return The array with all the segments length
 	 */
-	private static double[] getEachSegmentsChordLength(
-			List<Point3d> controlPoints) {
-
+	private static double[] getEachSegmentsChordLength(List<Point3d> controlPoints)
+	{
 		// The number of segment is the number of control points - 3
 		int nbrOfSegment = controlPoints.size() - 3;
 
@@ -1240,9 +1243,13 @@ public class SplinesUtilities {
 	 *         curve_dot.
 	 * 
 	 */
-	private static Point3d curvePositionCatmull(double t, Point3d p0,
-			Point3d p1, Point3d p2, Point3d p3, double tension) {
-
+	private static Point3d curvePositionCatmull(double t,
+												Point3d p0,
+												Point3d p1,
+												Point3d p2,
+												Point3d p3,
+												double tension)
+	{
 		Point3d Zero = new Point3d();
 
 		// Calculate A = 0.5*(-p0 + 3*p1 - 3*p2 + p3)
@@ -1294,9 +1301,13 @@ public class SplinesUtilities {
 	 * 
 	 */
 	@SuppressWarnings("unused")
-	private static Point3d curveSpeedCatmull(double t, Point3d p0, Point3d p1,
-			Point3d p2, Point3d p3, double tension) {
-
+	private static Point3d curveSpeedCatmull(double t,
+											 Point3d p0,
+											 Point3d p1,
+											 Point3d p2,
+											 Point3d p3,
+											 double tension)
+	{
 		Point3d Zero = new Point3d();
 
 		// Calculate A = 0.5*(-p0 + 3*p1 - 3*p2 + p3)
@@ -1467,31 +1478,35 @@ public class SplinesUtilities {
 	 * This finds the associated t with the arcLength at specified 
 	 * segment.
 	 * @param segmentIndex segment index
-	 * @param arcLenghth arcLength at this segment.
+	 * @param arcLength arcLength at this segment.
 	 * @return
 	 */
-	private static double findAssociatedTvalue(int segmentIndex, double arcLenghth){
-		double a = arcLenghth;
+	private static double findAssociatedTvalue(int segmentIndex, double arcLength)
+	{
+		double a = arcLength;
 		double t = 0, t0 = 0, t1 = 0, a0 = 0, a1 = 0;
 
 		// Finding the t value by interpolating two values found in the
 		// table.
 
-		SortedMap<Double, Double> segmentArcLenghtAndT = segmentsArcLengths
+		SortedMap<Double, Double> segmentArcLengthAndT = segmentsArcLengths
 		.get(segmentIndex);
 		
-		SortedMap<Double, Double> downInterval = segmentArcLenghtAndT
-				.headMap(arcLenghth);
-		SortedMap<Double, Double> upInterval = segmentArcLenghtAndT
-				.tailMap(arcLenghth);
+		SortedMap<Double, Double> downInterval = segmentArcLengthAndT
+				.headMap(arcLength);
+		SortedMap<Double, Double> upInterval = segmentArcLengthAndT
+				.tailMap(arcLength);
 
 		// a0 = the distance just before the distance value
 		// we are looking for, found in the table
 		// t0 = the t associated to this distance
-		if (!downInterval.isEmpty()) {
+		if (!downInterval.isEmpty())
+		{
 			a0 = downInterval.lastKey();
 			t0 = downInterval.get(downInterval.lastKey());
-		} else {
+		}
+		else
+		{
 			a0 = 0;
 			t0 = 0;
 		}
@@ -1499,18 +1514,24 @@ public class SplinesUtilities {
 		// a1 = the distance just after the distance value
 		// we are looking for, found in the table
 		// t1 = the t associated to this distance
-		if (!upInterval.isEmpty()) {
+		if (!upInterval.isEmpty())
+		{
 			a1 = upInterval.firstKey();
 			t1 = upInterval.get(upInterval.firstKey());
-		} else {
+		}
+		else
+		{
 			a1 = 0;
 			t1 = 1;
 		}
 
 		// Make the interpolation
-		if (a1 != 0 && ((a1 - a0) != 0)) {
+		if (a1 != 0 && ((a1 - a0) != 0))
+		{
 			t = t0 + ((a - a0) / (a1 - a0)) * (t1 - t0);
-		} else {
+		}
+		else
+		{
 			t = t0;
 		}
 		

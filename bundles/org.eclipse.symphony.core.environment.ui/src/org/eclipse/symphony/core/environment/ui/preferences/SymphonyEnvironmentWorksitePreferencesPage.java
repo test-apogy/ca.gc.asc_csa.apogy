@@ -20,7 +20,7 @@ import org.eclipse.ui.IWorkbenchPreferencePage;
 public class SymphonyEnvironmentWorksitePreferencesPage extends PreferencePage implements IWorkbenchPreferencePage
 {	
 	private BooleanFieldEditor earthSurfaceWorksiteAxisVisibleEditor;
-	private StringFieldEditor earthSurfaceWorksiteAxisLenghtEditor;
+	private StringFieldEditor earthSurfaceWorksiteAxisLengthEditor;
 	
 	private BooleanFieldEditor earthSurfaceWorksiteAzimuthVisibleEditor;
 	private BooleanFieldEditor earthSurfaceWorksiteAzimuthLinesVisibleEditor;
@@ -58,8 +58,8 @@ public class SymphonyEnvironmentWorksitePreferencesPage extends PreferencePage i
 		earthSurfaceWorksiteAxisVisibleEditor = createBooleanFieldEditor(grpAxis, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_VISIBLE_ID, "Axis Visible");
 		editors.add(earthSurfaceWorksiteAxisVisibleEditor);
 		
-		earthSurfaceWorksiteAxisLenghtEditor = createStringFieldEditor(grpAxis, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_LENGHT_ID, "Axis Lenght (m)");				
-		editors.add(earthSurfaceWorksiteAxisLenghtEditor);
+		earthSurfaceWorksiteAxisLengthEditor = createStringFieldEditor(grpAxis, SymphonyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_LENGTH_ID, "Axis Length (m)");				
+		editors.add(earthSurfaceWorksiteAxisLengthEditor);
 		
 		Group grpAzimuth = new Group(container, SWT.NONE);
 		grpAzimuth.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));

@@ -157,7 +157,7 @@ class Wheel extends PhysicalBody
 	double radius = "0.25"	
 	
 	@GenModel(csa_units="m")
-	double lenght = "0.1"
+	double length = "0.1"
 }
 
 /* 

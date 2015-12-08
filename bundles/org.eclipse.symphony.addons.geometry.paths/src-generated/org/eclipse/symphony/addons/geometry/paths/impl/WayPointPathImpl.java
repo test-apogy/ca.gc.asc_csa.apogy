@@ -216,7 +216,7 @@ public class WayPointPathImpl extends CartesianCoordinatesSetImpl implements Way
 	 */
 	public double getLength() {
 
-		double lenght = 0.0;
+		double length = 0.0;
 
 		if ((getPoints() != null)&& (getPoints().size() > 1)) 
 		{
@@ -226,12 +226,12 @@ public class WayPointPathImpl extends CartesianCoordinatesSetImpl implements Way
 			for (int i = 1; i < getPoints().size(); i++) 
 			{
 				p2 = getPoints().get(i);
-				lenght += Geometry3DUtilities.getDistance(p1, p2);
+				length += Geometry3DUtilities.getDistance(p1, p2);
 				p1 = p2;
 			}
 		}
 
-		return lenght;
+		return length;
 	}
 
 	/**

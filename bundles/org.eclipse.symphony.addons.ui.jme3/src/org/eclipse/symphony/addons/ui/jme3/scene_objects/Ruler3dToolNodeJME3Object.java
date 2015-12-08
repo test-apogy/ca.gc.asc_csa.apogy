@@ -227,7 +227,7 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 	}
 
 	@Override
-	public void setMinorTickLength(float minorTickLenght) 
+	public void setMinorTickLength(float minorTickLength) 
 	{		
 		jme3Application.enqueue(new Callable<Object>() 
 		{
@@ -241,7 +241,7 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 	}
 
 	@Override
-	public void setMajorTickLength(float majorTickLenght) 
+	public void setMajorTickLength(float majorTickLength) 
 	{		
 		jme3Application.enqueue(new Callable<Object>() 
 		{
@@ -492,7 +492,7 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 		if(getTopologyNode().getRuler3DTool().getFromNode() != null && getTopologyNode().getRuler3DTool().getToNode() != null)
 		{					
 			Vector3f v = toTransformNode.getWorldTranslation().subtract(fromTransformNode.getWorldTranslation());
-			float lenght = v.length();
+			float length = v.length();
 			
 			FloatBuffer vertices = minorTicksGeometry.getMesh().getFloatBuffer(com.jme3.scene.VertexBuffer.Type.Position);	
 			vertices.rewind();
@@ -502,10 +502,10 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 			if(tickIncrement <= 0) return;
 			
 			int numberOfTicks = 0;
-			float tickZ = (float) getTopologyNode().getRuler3DTool().getMinorTickLenght() / 2.0f;
+			float tickZ = (float) getTopologyNode().getRuler3DTool().getMinorTickLength() / 2.0f;
 											
 			float position = 0;
-			while(position <= lenght && numberOfTicks <  MAXIMUM_NUMBER_OF_TICK)
+			while(position <= length && numberOfTicks <  MAXIMUM_NUMBER_OF_TICK)
 			{
 				Vector3f p1 = new Vector3f(position, 0, tickZ);
 				Vector3f p2 = new Vector3f(position, 0, -tickZ);
@@ -519,7 +519,7 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 				vertices.put(p2.x);
 				vertices.put(p2.y);
 				vertices.put(p2.z);
-																							
+				
 				vertices.put(p3.x);
 				vertices.put(p3.y);
 				vertices.put(p3.z);
@@ -527,14 +527,14 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 				vertices.put(p4.x);
 				vertices.put(p4.y);
 				vertices.put(p4.z);
-											
+				
 				position += tickIncrement;
-				numberOfTicks++;								
+				numberOfTicks++;
 			}
 			
 			// Sets the remaining ticks at 0
-			while(numberOfTicks < MAXIMUM_NUMBER_OF_TICK)
-			{				
+			while (numberOfTicks < MAXIMUM_NUMBER_OF_TICK)
+			{
 				// Puts the 4 vertex of each tick to zero.
 				for(int i = 0; i < 4; i++)
 				{
@@ -628,7 +628,7 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 		if(getTopologyNode().getRuler3DTool().getFromNode() != null && getTopologyNode().getRuler3DTool().getToNode() != null)
 		{					
 			Vector3f v = toTransformNode.getWorldTranslation().subtract(fromTransformNode.getWorldTranslation());
-			float lenght = v.length();
+			float length = v.length();
 			
 			FloatBuffer vertices = majorTicksGeometry.getMesh().getFloatBuffer(com.jme3.scene.VertexBuffer.Type.Position);	
 			vertices.rewind();
@@ -638,10 +638,10 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 			if(tickIncrement <= 0) return;
 			
 			int numberOfTicks = 0;
-			float tickZ = (float) getTopologyNode().getRuler3DTool().getMajorTickLenght() / 2.0f;
+			float tickZ = (float) getTopologyNode().getRuler3DTool().getMajorTickLength() / 2.0f;
 											
 			float position = 0;
-			while(position <= lenght && numberOfTicks <  MAXIMUM_NUMBER_OF_TICK)
+			while(position <= length && numberOfTicks <  MAXIMUM_NUMBER_OF_TICK)
 			{
 				Vector3f p1 = new Vector3f(position, 0, tickZ);
 				Vector3f p2 = new Vector3f(position, 0, -tickZ);
@@ -786,10 +786,10 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 							case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
 									setMajorTickSpacing((float) msg.getNewDoubleValue());
 								break;
-							case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
+							case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
 									setMinorTickLength((float) msg.getNewDoubleValue());
 								break;
-							case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
+							case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
 									setMajorTickLength((float) msg.getNewDoubleValue());		
 								break;
 							case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:

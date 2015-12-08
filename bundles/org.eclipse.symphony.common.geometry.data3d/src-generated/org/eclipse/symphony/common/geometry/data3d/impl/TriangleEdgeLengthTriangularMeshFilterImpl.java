@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularM
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Triangle Edge Lenght Triangular Mesh Filter</b></em>'.
+ * An implementation of the model object '<em><b>Triangle Edge Length Triangular Mesh Filter</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -210,8 +210,8 @@ public class TriangleEdgeLengthTriangularMeshFilterImpl extends MinimalEObjectIm
 					Point3d p1 =  triangle.getVertices().get(i+1).asPoint3d();	
 					p1.z = 0;
 					
-					double edgeLenght = p0.distance(p1);
-					if(edgeLenght > getMaximumEdgeLength())
+					double edgeLength = p0.distance(p1);
+					if(edgeLength > getMaximumEdgeLength())
 					{
 						trianglesToRemove.add(triangle);
 					}										

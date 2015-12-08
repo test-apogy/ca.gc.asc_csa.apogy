@@ -126,7 +126,7 @@ class Ruler3DTool extends AbstractTwoPoints3DTool
 	
 	/* Length of the minor tick marks as displayed on the ruler.*/
 	@GenModel(notify="true", csa_units = "m", propertyCategory="MINOR_TICKS_PROPERTIES")	
-	double minorTickLenght = "0.1"
+	double minorTickLength = "0.1"
 	
 	// MAJOR TICKS
 	
@@ -140,7 +140,7 @@ class Ruler3DTool extends AbstractTwoPoints3DTool
 
 	/* Length of the major tick marks as displayed on the ruler.*/
 	@GenModel(notify="true", csa_units = "m", propertyCategory="MAJOR_TICKS_PROPERTIES")	
-	double majorTickLenght = "0.2"
+	double majorTickLength = "0.2"
 		
 	/* Topology Node associated with the tool. */
 	@GenModel(notify="true", children="true", property="Readonly", propertyCategory="RULER_PROPERTIES")	

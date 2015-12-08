@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.impl.PhysicalBodyImp
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.WheelImpl#getRadius <em>Radius</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.WheelImpl#getLenght <em>Lenght</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.vehicle.impl.WheelImpl#getLength <em>Length</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,26 +47,26 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
   protected double radius = RADIUS_EDEFAULT;
 
   /**
-	 * The default value of the '{@link #getLenght() <em>Lenght</em>}' attribute.
+	 * The default value of the '{@link #getLength() <em>Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see #getLenght()
+	 * <!-- end-user-doc -->
+	 * @see #getLength()
 	 * @generated
 	 * @ordered
 	 */
-  protected static final double LENGHT_EDEFAULT = 0.1;
+	protected static final double LENGTH_EDEFAULT = 0.1;
 
-  /**
-	 * The cached value of the '{@link #getLenght() <em>Lenght</em>}' attribute.
+		/**
+	 * The cached value of the '{@link #getLength() <em>Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see #getLenght()
+	 * <!-- end-user-doc -->
+	 * @see #getLength()
 	 * @generated
 	 * @ordered
 	 */
-  protected double lenght = LENGHT_EDEFAULT;
+	protected double length = LENGTH_EDEFAULT;
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -112,28 +112,26 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public double getLenght()
-  {
-		return lenght;
+	public double getLength() {
+		return length;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setLenght(double newLenght)
-  {
-		double oldLenght = lenght;
-		lenght = newLenght;
+	public void setLength(double newLength) {
+		double oldLength = length;
+		length = newLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.WHEEL__LENGHT, oldLenght, lenght));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehiclePackage.WHEEL__LENGTH, oldLength, length));
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -144,8 +142,8 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
 		switch (featureID) {
 			case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
 				return getRadius();
-			case Symphony__AddonsVehiclePackage.WHEEL__LENGHT:
-				return getLenght();
+			case Symphony__AddonsVehiclePackage.WHEEL__LENGTH:
+				return getLength();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -162,8 +160,8 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
 			case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
 				setRadius((Double)newValue);
 				return;
-			case Symphony__AddonsVehiclePackage.WHEEL__LENGHT:
-				setLenght((Double)newValue);
+			case Symphony__AddonsVehiclePackage.WHEEL__LENGTH:
+				setLength((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -181,8 +179,8 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
 			case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
 				setRadius(RADIUS_EDEFAULT);
 				return;
-			case Symphony__AddonsVehiclePackage.WHEEL__LENGHT:
-				setLenght(LENGHT_EDEFAULT);
+			case Symphony__AddonsVehiclePackage.WHEEL__LENGTH:
+				setLength(LENGTH_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -199,8 +197,8 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
 		switch (featureID) {
 			case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
 				return radius != RADIUS_EDEFAULT;
-			case Symphony__AddonsVehiclePackage.WHEEL__LENGHT:
-				return lenght != LENGHT_EDEFAULT;
+			case Symphony__AddonsVehiclePackage.WHEEL__LENGTH:
+				return length != LENGTH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -218,8 +216,8 @@ public class WheelImpl extends PhysicalBodyImpl implements Wheel
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (radius: ");
 		result.append(radius);
-		result.append(", lenght: ");
-		result.append(lenght);
+		result.append(", length: ");
+		result.append(length);
 		result.append(')');
 		return result.toString();
 	}

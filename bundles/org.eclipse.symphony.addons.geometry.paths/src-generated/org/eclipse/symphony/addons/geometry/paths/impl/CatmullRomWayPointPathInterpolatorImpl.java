@@ -283,7 +283,7 @@ public class CatmullRomWayPointPathInterpolatorImpl extends WayPointPathInterpol
 		
 		List<Point3d> controlPoints = Geometry3DUtilities.getPoint3dList(input.getPoints());
 		
-		List<Point3d> resultPoints = SplinesUtilities.generateCatMullSplineArcLenghtParam(controlPoints, 
+		List<Point3d> resultPoints = SplinesUtilities.generateCatMullSplineArcLengthParam(controlPoints, 
 				getMaximumWayPointsDistance(), 
 				getEndControlPointGenerationMode(), 
 				getTension(), 

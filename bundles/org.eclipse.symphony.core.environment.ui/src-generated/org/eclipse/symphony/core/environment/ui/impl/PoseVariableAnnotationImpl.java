@@ -60,7 +60,7 @@ public class PoseVariableAnnotationImpl extends AbstractVariableAnnotationImpl i
   private XYShapeAnnotation pointerArrowHead2 = null;
   private XYTextAnnotation pointerCoordinatesText = null;
 	  
-  public static final double ARROW_HEAD_LENGHT = 2.0;
+  public static final double ARROW_HEAD_LENGTH = 2.0;
   public static final double ARROW_HEAD_ANGLE_RADIANS = Math.toRadians(45.0);	
   
   private DecimalFormat positionDecimalFormat = new DecimalFormat("0.00");
@@ -257,13 +257,13 @@ public class PoseVariableAnnotationImpl extends AbstractVariableAnnotationImpl i
 			  //Adds the Arrow head
 			  double offsetAngle = Math.PI - (ARROW_HEAD_ANGLE_RADIANS / 2.0);
 			
-			  double xArrow1 = xEnd + ARROW_HEAD_LENGHT * Math.cos(thetha + offsetAngle);
-			  double yArrow1 = yEnd + ARROW_HEAD_LENGHT * Math.sin(thetha + offsetAngle);
+			  double xArrow1 = xEnd + ARROW_HEAD_LENGTH * Math.cos(thetha + offsetAngle);
+			  double yArrow1 = yEnd + ARROW_HEAD_LENGTH * Math.sin(thetha + offsetAngle);
 			  Line2D arrow1 = new Line2D.Double(xEnd, yEnd, xArrow1, yArrow1);
 			  pointerArrowHead1 = new XYShapeAnnotation(arrow1, new BasicStroke(1.0f), vectorColor);
 			    
-			  double xArrow2 = xEnd + ARROW_HEAD_LENGHT * Math.cos(thetha - offsetAngle);
-			  double yArrow2 = yEnd + ARROW_HEAD_LENGHT * Math.sin(thetha - offsetAngle);
+			  double xArrow2 = xEnd + ARROW_HEAD_LENGTH * Math.cos(thetha - offsetAngle);
+			  double yArrow2 = yEnd + ARROW_HEAD_LENGTH * Math.sin(thetha - offsetAngle);
 			  Line2D arrow2 = new Line2D.Double(xEnd, yEnd, xArrow2, yArrow2);
 			  pointerArrowHead2 = new XYShapeAnnotation(arrow2, new BasicStroke(1.0f), vectorColor);
 		  }

@@ -555,15 +555,14 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getWheel_Lenght()
-  {
+	public EAttribute getWheel_Length() {
 		return (EAttribute)wheelEClass.getEStructuralFeatures().get(1);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -1150,7 +1149,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 
 		wheelEClass = createEClass(WHEEL);
 		createEAttribute(wheelEClass, WHEEL__RADIUS);
-		createEAttribute(wheelEClass, WHEEL__LENGHT);
+		createEAttribute(wheelEClass, WHEEL__LENGTH);
 
 		thrusterEClass = createEClass(THRUSTER);
 		createEAttribute(thrusterEClass, THRUSTER__MINIMUM_THRUST);
@@ -1325,7 +1324,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 
 		initEClass(wheelEClass, Wheel.class, "Wheel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getWheel_Radius(), theEcorePackage.getEDouble(), "radius", "0.25", 0, 1, Wheel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getWheel_Lenght(), theEcorePackage.getEDouble(), "lenght", "0.1", 0, 1, Wheel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWheel_Length(), theEcorePackage.getEDouble(), "length", "0.1", 0, 1, Wheel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(thrusterEClass, Thruster.class, "Thruster", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getThruster_MinimumThrust(), theEcorePackage.getEDouble(), "minimumThrust", "0", 0, 1, Thruster.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1588,7 +1587,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 			 "csa_units", "m"
 		   });	
 		addAnnotation
-		  (getWheel_Lenght(), 
+		  (getWheel_Length(), 
 		   source, 
 		   new String[] {
 			 "csa_units", "m"

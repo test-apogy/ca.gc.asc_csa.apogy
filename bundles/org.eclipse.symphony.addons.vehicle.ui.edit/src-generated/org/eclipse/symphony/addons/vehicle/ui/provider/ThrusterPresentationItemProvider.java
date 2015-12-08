@@ -51,7 +51,7 @@ public class ThrusterPresentationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addPlumeEnvelopeVisiblePropertyDescriptor(object);
-			addPlumeEnvelopeLenghtPropertyDescriptor(object);
+			addPlumeEnvelopeLengthPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -79,19 +79,19 @@ public class ThrusterPresentationItemProvider
 	}
 
 		/**
-	 * This adds a property descriptor for the Plume Envelope Lenght feature.
+	 * This adds a property descriptor for the Plume Envelope Length feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPlumeEnvelopeLenghtPropertyDescriptor(Object object) {
+	protected void addPlumeEnvelopeLengthPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ThrusterPresentation_plumeEnvelopeLenght_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ThrusterPresentation_plumeEnvelopeLenght_feature", "_UI_ThrusterPresentation_type"),
-				 Symphony__AddonsVehicleUIPackage.Literals.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT,
+				 getString("_UI_ThrusterPresentation_plumeEnvelopeLength_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ThrusterPresentation_plumeEnvelopeLength_feature", "_UI_ThrusterPresentation_type"),
+				 Symphony__AddonsVehicleUIPackage.Literals.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -142,7 +142,7 @@ public class ThrusterPresentationItemProvider
 
 		switch (notification.getFeatureID(ThrusterPresentation.class)) {
 			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
+			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

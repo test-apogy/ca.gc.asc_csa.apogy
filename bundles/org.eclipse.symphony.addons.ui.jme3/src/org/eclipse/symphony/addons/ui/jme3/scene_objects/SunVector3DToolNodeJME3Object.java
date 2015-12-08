@@ -50,7 +50,7 @@ public class SunVector3DToolNodeJME3Object extends DefaultJME3SceneObject<SunVec
 	public static final float SUN_INTENSITY_CYLINDER_RADIUS = CYLINDER_RADIUS * 0.5f;
 	
 	public static final float TIP_BASE_RADIUS = 0.02f;
-	public static final float TIP_LENGHT = 0.1f;
+	public static final float TIP_LENGTH = 0.1f;
 	
 	private Adapter adapter;	
 		
@@ -272,13 +272,13 @@ public class SunVector3DToolNodeJME3Object extends DefaultJME3SceneObject<SunVec
 	
 	private Node createSunVectorBodyNode()
 	{
-		Node node = new Node("Sun Vector Body");						
+		Node node = new Node("Sun Vector Body");
 		return node;
 	}
 	
 	private Geometry createSunVectorBodyGeometry()
 	{		
-		Geometry geometry = new Geometry("Ruler Body", getSunVectorBodyMesh());		
+		Geometry geometry = new Geometry("Ruler Body", getSunVectorBodyMesh());
 		geometry.setMaterial(createSunVectorBodyMaterial());
 		
 		geometry.setQueueBucket(Bucket.Transparent);
@@ -295,7 +295,7 @@ public class SunVector3DToolNodeJME3Object extends DefaultJME3SceneObject<SunVec
 		ColorRGBA color = sunVectorColor.clone();
 		color.a = OUTER_CYLINDER_ALPHA;
 		
-		Material mat = new Material(getApplication().getAssetManager(),  "Common/MatDefs/Misc/Unshaded.j3md");		
+		Material mat = new Material(getApplication().getAssetManager(), "Common/MatDefs/Misc/Unshaded.j3md");		
 		mat.getAdditionalRenderState().setBlendMode(BlendMode.Alpha);		
 		mat.setColor("Color", color);	
 		
@@ -304,60 +304,60 @@ public class SunVector3DToolNodeJME3Object extends DefaultJME3SceneObject<SunVec
 	
 	private Mesh getSunVectorBodyMesh() 
 	{
-		Cylinder cylinder = new Cylinder(4, 10, CYLINDER_RADIUS, 1.0f, true);	
+		Cylinder cylinder = new Cylinder(4, 10, CYLINDER_RADIUS, 1.0f, true);
 		return cylinder;
 	}
 	
 	private void updateSunVectorBody()
 	{
-		float lenght = (float) getTopologyNode().getSunVector3DTool().getVectorLength();		
-		sunVectorBodyGeometry.setLocalScale(1, 1, lenght);		
-		sunVectorBodyNode.setLocalTranslation(lenght / 2.0f + TIP_LENGHT, 0, 0);
+		float length = (float) getTopologyNode().getSunVector3DTool().getVectorLength();
+		sunVectorBodyGeometry.setLocalScale(1, 1, length);
+		sunVectorBodyNode.setLocalTranslation(length / 2.0f + TIP_LENGTH, 0, 0);
 	}
 	
 	// Sun intensity cylinder
 	
 	private Node createSunIntensityLevelBodyNode()
 	{
-		Node node = new Node("Sun Intensity Level Body");						
+		Node node = new Node("Sun Intensity Level Body");
 		return node;
 	}
 	
 	private Geometry createSunIntensityLevelGeometry()
-	{		
-		Geometry geometry = new Geometry("Sun Intensity Level", getSunIntensityLevelMesh());		
+	{
+		Geometry geometry = new Geometry("Sun Intensity Level", getSunIntensityLevelMesh());
 		geometry.setMaterial(createSunIntensityLevelMaterial());
-				
+		
 		Quaternion q = new Quaternion();
-		q = q.fromAngleAxis(FastMath.PI / 2, new Vector3f(0, 1, 0));		
+		q = q.fromAngleAxis(FastMath.PI / 2, new Vector3f(0, 1, 0));
 		geometry.setLocalRotation(q);
-				
+		
 		return geometry;
 	}
 	
 	private Material createSunIntensityLevelMaterial()
 	{		
 		Material mat = new Material(getApplication().getAssetManager(),  "Common/MatDefs/Misc/Unshaded.j3md");		
-		mat.getAdditionalRenderState().setBlendMode(BlendMode.Alpha);		
-		mat.setColor("Color", SUN_INTENSITY_LEVEL_COLOR.clone());	
+		mat.getAdditionalRenderState().setBlendMode(BlendMode.Alpha);
+		mat.setColor("Color", SUN_INTENSITY_LEVEL_COLOR.clone());
 		
 		return mat;
 	}
 	
 	private Mesh getSunIntensityLevelMesh() 
 	{
-		Cylinder cylinder = new Cylinder(10, 10, CYLINDER_RADIUS, 1.0f);	
+		Cylinder cylinder = new Cylinder(10, 10, CYLINDER_RADIUS, 1.0f);
 		return cylinder;
 	}
 	
 	private void updateSunIntensityLevelBody()
 	{				
-		float fullLenght = (float) getTopologyNode().getSunVector3DTool().getVectorLength();		
+		float fullLength = (float) getTopologyNode().getSunVector3DTool().getVectorLength();		
 		float relativeSunIntensity = (float) (getTopologyNode().getSunVector3DTool().getCurrentSunIntensityPercentage() / 100.0);		
-		float lenght = relativeSunIntensity * fullLenght;
+		float length = relativeSunIntensity * fullLength;
 		
-		sunIntensityLevelGeometry.setLocalScale(1, 1, lenght);		
-		sunIntensityLevelNode.setLocalTranslation(lenght / 2.0f + TIP_LENGHT, 0, 0);
+		sunIntensityLevelGeometry.setLocalScale(1, 1, length);		
+		sunIntensityLevelNode.setLocalTranslation(length / 2.0f + TIP_LENGTH, 0, 0);
 	}
 	
 	// Sun Vector Tip
@@ -374,8 +374,8 @@ public class SunVector3DToolNodeJME3Object extends DefaultJME3SceneObject<SunVec
 		geometry.setMaterial(createSunVectorTipMaterial());
 		
 		// Scale the basic cone to make it more pointy.
-		geometry.setLocalScale(1, TIP_LENGHT / TIP_BASE_RADIUS, 1);
-		geometry.setLocalTranslation(TIP_LENGHT, 0, 0);
+		geometry.setLocalScale(1, TIP_LENGTH / TIP_BASE_RADIUS, 1);
+		geometry.setLocalTranslation(TIP_LENGTH, 0, 0);
 		
 		Quaternion q = new Quaternion();
 		q = q.fromAngleAxis(FastMath.PI / 2, new Vector3f(0, 0, 1));		

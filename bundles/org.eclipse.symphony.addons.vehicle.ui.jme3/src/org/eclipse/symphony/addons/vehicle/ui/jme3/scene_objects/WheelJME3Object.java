@@ -119,7 +119,7 @@ public class WheelJME3Object extends DefaultJME3SceneObject<Wheel>
 	
 	private Mesh createWheelMesh()
 	{
-		Cylinder cylinder = new Cylinder(4, 18, (float) getTopologyNode().getRadius(), (float) getTopologyNode().getLenght(), true);	
+		Cylinder cylinder = new Cylinder(4, 18, (float) getTopologyNode().getRadius(), (float) getTopologyNode().getLength(), true);	
 		cylinder.setMode(Mode.Lines);
 		return cylinder;
 	}
@@ -148,7 +148,7 @@ public class WheelJME3Object extends DefaultJME3SceneObject<Wheel>
 					
 						switch (featureId) 
 						{
-							case Symphony__AddonsVehiclePackage.WHEEL__LENGHT:
+							case Symphony__AddonsVehiclePackage.WHEEL__LENGTH:
 							case Symphony__AddonsVehiclePackage.WHEEL__RADIUS:
 								updateGeometry();
 							break;

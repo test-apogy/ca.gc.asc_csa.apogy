@@ -23,7 +23,7 @@ import org.eclipse.symphony.common.topology.ui.preferences.PreferencesConstants;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.URLNodePresentationImpl#isAxisVisible <em>Axis Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.URLNodePresentationImpl#getAxisLenght <em>Axis Lenght</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.URLNodePresentationImpl#getAxisLength <em>Axis Length</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.URLNodePresentationImpl#getPresentationMode <em>Presentation Mode</em>}</li>
  * </ul>
  *
@@ -51,24 +51,24 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 	protected boolean axisVisible = AXIS_VISIBLE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getAxisLenght() <em>Axis Lenght</em>}' attribute.
+	 * The default value of the '{@link #getAxisLength() <em>Axis Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAxisLenght()
+	 * @see #getAxisLength()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double AXIS_LENGHT_EDEFAULT = 1.0;
+	protected static final double AXIS_LENGTH_EDEFAULT = 1.0;
 
 	/**
-	 * The cached value of the '{@link #getAxisLenght() <em>Axis Lenght</em>}' attribute.
+	 * The cached value of the '{@link #getAxisLength() <em>Axis Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAxisLenght()
+	 * @see #getAxisLength()
 	 * @generated
 	 * @ordered
 	 */
-	protected double axisLenght = AXIS_LENGHT_EDEFAULT;
+	protected double axisLength = AXIS_LENGTH_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPresentationMode() <em>Presentation Mode</em>}' attribute.
@@ -135,8 +135,8 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getAxisLenght() {
-		return axisLenght;
+	public double getAxisLength() {
+		return axisLength;
 	}
 
 	/**
@@ -144,11 +144,11 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAxisLenght(double newAxisLenght) {
-		double oldAxisLenght = axisLenght;
-		axisLenght = newAxisLenght;
+	public void setAxisLength(double newAxisLength) {
+		double oldAxisLength = axisLength;
+		axisLength = newAxisLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT, oldAxisLenght, axisLenght));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGTH, oldAxisLength, axisLength));
 	}
 
 	/**
@@ -182,8 +182,8 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 		switch (featureID) {
 			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE:
 				return isAxisVisible();
-			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT:
-				return getAxisLenght();
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGTH:
+				return getAxisLength();
 			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE:
 				return getPresentationMode();
 		}
@@ -201,8 +201,8 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE:
 				setAxisVisible((Boolean)newValue);
 				return;
-			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT:
-				setAxisLenght((Double)newValue);
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGTH:
+				setAxisLength((Double)newValue);
 				return;
 			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode((MeshPresentationMode)newValue);
@@ -222,8 +222,8 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE:
 				setAxisVisible(AXIS_VISIBLE_EDEFAULT);
 				return;
-			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT:
-				setAxisLenght(AXIS_LENGHT_EDEFAULT);
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGTH:
+				setAxisLength(AXIS_LENGTH_EDEFAULT);
 				return;
 			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE:
 				setPresentationMode(PRESENTATION_MODE_EDEFAULT);
@@ -242,8 +242,8 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 		switch (featureID) {
 			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE:
 				return axisVisible != AXIS_VISIBLE_EDEFAULT;
-			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT:
-				return axisLenght != AXIS_LENGHT_EDEFAULT;
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGTH:
+				return axisLength != AXIS_LENGTH_EDEFAULT;
 			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE:
 				return presentationMode != PRESENTATION_MODE_EDEFAULT;
 		}
@@ -262,8 +262,8 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (axisVisible: ");
 		result.append(axisVisible);
-		result.append(", axisLenght: ");
-		result.append(axisLenght);
+		result.append(", axisLength: ");
+		result.append(axisLength);
 		result.append(", presentationMode: ");
 		result.append(presentationMode);
 		result.append(')');
@@ -277,7 +277,7 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 		{
 			URLNodeSceneObject object = (URLNodeSceneObject) getSceneObject();
 			object.setAxisVisible(isAxisVisible());
-			object.setAxisLength(getAxisLenght());
+			object.setAxisLength(getAxisLength());
 			object.setPresentationMode(getPresentationMode());
 		}
 		super.initialSceneObject();
@@ -294,9 +294,9 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 			{
 				object.setAxisVisible(isAxisVisible());
 			}
-			else if(notification.getFeatureID(URLNodePresentation.class) == Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT)
+			else if(notification.getFeatureID(URLNodePresentation.class) == Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGTH)
 			{
-				object.setAxisLength(getAxisLenght());
+				object.setAxisLength(getAxisLength());
 			}
 			else if(notification.getFeatureID(URLNodePresentation.class) == Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE)
 			{
@@ -315,8 +315,8 @@ public class URLNodePresentationImpl extends NodePresentationImpl implements URL
 		// Change axis visibility.
 		setAxisVisible(store.getBoolean(PreferencesConstants.DEFAULT_URL_NODE_AXIS_VISIBILITY_ID));
 		
-		// Change Axis Lenght.
-		setAxisLenght(store.getDouble(PreferencesConstants.DEFAULT_URL_NODE_AXIS_LENGHT_ID));
+		// Change axis length.
+		setAxisLength(store.getDouble(PreferencesConstants.DEFAULT_URL_NODE_AXIS_LENGTH_ID));
 		
 		super.applyPreferences();
 	}

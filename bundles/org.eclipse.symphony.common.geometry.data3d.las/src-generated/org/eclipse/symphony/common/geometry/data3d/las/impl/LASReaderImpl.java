@@ -552,9 +552,9 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 		long offsetToPointData = readUnsignedInt();
 		header.setOffsetToPointData(offsetToPointData);
 
-		// Number of variable lenght records, unsigned long (4 bytes)
-		long nVariableLenghtRecords = readUnsignedInt();
-		header.setNVariableLengthRecords(nVariableLenghtRecords);
+		// Number of variable length records, unsigned long (4 bytes)
+		long nVariableLengthRecords = readUnsignedInt();
+		header.setNVariableLengthRecords(nVariableLengthRecords);
 
 		// Point data format, unsigned char
 		int pointDataFormat = getLittleEndianInputStream().readUnsignedByte();
@@ -727,7 +727,7 @@ public class LASReaderImpl extends MinimalEObjectImpl.Container implements LASRe
 		vlr.setDescription(description);
 		vlr.setUserID(userID);
 		vlr.setRecordID(recordID);
-		vlr.setRecordLenghtAfterHeader(rlah);
+		vlr.setRecordLengthAfterHeader(rlah);
 
 		return vlr;
 	}

@@ -416,14 +416,14 @@ public class ASC3DIOImpl extends MinimalEObjectImpl.Container implements ASC3DIO
 	
 	protected double[][] extractSubArray(double[][] originalHeights, int fromX, int fromY, int toX, int toY)
 	{
-		int xLenght = (toX - fromX) + 1;
-		int yLenght = (toY - fromY) + 1;
+		int xLength = (toX - fromX) + 1;
+		int yLength = (toY - fromY) + 1;
 		
-		double[][] subArray = new double[xLenght][yLenght];			
+		double[][] subArray = new double[xLength][yLength];
 		
-		for(int i = 0; i < xLenght; i++)
+		for(int i = 0; i < xLength; i++)
 		{
-			for(int j = 0; j < yLenght; j++)
+			for(int j = 0; j < yLength; j++)
 			{
 				subArray[i][j] = originalHeights[fromX + i][fromY + j];
 			}

@@ -82,7 +82,7 @@ public class EarthSurfaceWorksiteNodeJME3Object extends DefaultJME3SceneObject<E
 	private Adapter adapter;
 	
 	private boolean axisVisible = true;
-	private float axisLenght = 1.0f;
+	private float axisLength = 1.0f;
 	
 	private boolean planeVisible = true;
 	private float gridSize = 1;
@@ -232,7 +232,7 @@ public class EarthSurfaceWorksiteNodeJME3Object extends DefaultJME3SceneObject<E
 	@Override
 	public void setAxisLength(double newLength)
 	{				
-		this.axisLenght = (float) newLength;
+		this.axisLength = (float) newLength;
 		jme3Application.enqueue(new Callable<Object>() 
 		{
 			@Override
@@ -247,7 +247,7 @@ public class EarthSurfaceWorksiteNodeJME3Object extends DefaultJME3SceneObject<E
 					}
 					
 					// Updates axis geometry
-					axisGeometry = JME3Utilities.createAxis3D(axisLenght, assetManager);
+					axisGeometry = JME3Utilities.createAxis3D(axisLength, assetManager);
 					
 					// If axis geometry is visible, attach the new geometry.
 					if(axisVisible)
@@ -369,7 +369,7 @@ public class EarthSurfaceWorksiteNodeJME3Object extends DefaultJME3SceneObject<E
 				if(skyNode != null)  getAttachmentNode().detachChild(skyNode);
 
 				// Adds the axis
-				axisGeometry = JME3Utilities.createAxis3D(axisLenght, assetManager);				
+				axisGeometry = JME3Utilities.createAxis3D(axisLength, assetManager);				
 				getAttachmentNode().attachChild(axisGeometry);
 				
 				// Adds the grid				

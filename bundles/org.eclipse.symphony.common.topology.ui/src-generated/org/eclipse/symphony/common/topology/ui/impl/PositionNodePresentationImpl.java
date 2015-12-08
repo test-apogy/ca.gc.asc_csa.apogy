@@ -22,7 +22,7 @@ import org.eclipse.symphony.common.topology.ui.preferences.PreferencesConstants;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.PositionNodePresentationImpl#isAxisVisible <em>Axis Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.PositionNodePresentationImpl#getAxisLenght <em>Axis Lenght</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.topology.ui.impl.PositionNodePresentationImpl#getAxisLength <em>Axis Length</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,24 +49,24 @@ public class PositionNodePresentationImpl extends NodePresentationImpl implement
 	protected boolean axisVisible = AXIS_VISIBLE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getAxisLenght() <em>Axis Lenght</em>}' attribute.
+	 * The default value of the '{@link #getAxisLength() <em>Axis Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAxisLenght()
+	 * @see #getAxisLength()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double AXIS_LENGHT_EDEFAULT = 1.0;
+	protected static final double AXIS_LENGTH_EDEFAULT = 1.0;
 
 	/**
-	 * The cached value of the '{@link #getAxisLenght() <em>Axis Lenght</em>}' attribute.
+	 * The cached value of the '{@link #getAxisLength() <em>Axis Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAxisLenght()
+	 * @see #getAxisLength()
 	 * @generated
 	 * @ordered
 	 */
-	protected double axisLenght = AXIS_LENGHT_EDEFAULT;
+	protected double axisLength = AXIS_LENGTH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,8 +113,8 @@ public class PositionNodePresentationImpl extends NodePresentationImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getAxisLenght() {
-		return axisLenght;
+	public double getAxisLength() {
+		return axisLength;
 	}
 
 	/**
@@ -122,11 +122,11 @@ public class PositionNodePresentationImpl extends NodePresentationImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAxisLenght(double newAxisLenght) {
-		double oldAxisLenght = axisLenght;
-		axisLenght = newAxisLenght;
+	public void setAxisLength(double newAxisLength) {
+		double oldAxisLength = axisLength;
+		axisLength = newAxisLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_LENGHT, oldAxisLenght, axisLenght));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_LENGTH, oldAxisLength, axisLength));
 	}
 
 	/**
@@ -139,8 +139,8 @@ public class PositionNodePresentationImpl extends NodePresentationImpl implement
 		switch (featureID) {
 			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_VISIBLE:
 				return isAxisVisible();
-			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_LENGHT:
-				return getAxisLenght();
+			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_LENGTH:
+				return getAxisLength();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -156,8 +156,8 @@ public class PositionNodePresentationImpl extends NodePresentationImpl implement
 			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_VISIBLE:
 				setAxisVisible((Boolean)newValue);
 				return;
-			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_LENGHT:
-				setAxisLenght((Double)newValue);
+			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_LENGTH:
+				setAxisLength((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -174,8 +174,8 @@ public class PositionNodePresentationImpl extends NodePresentationImpl implement
 			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_VISIBLE:
 				setAxisVisible(AXIS_VISIBLE_EDEFAULT);
 				return;
-			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_LENGHT:
-				setAxisLenght(AXIS_LENGHT_EDEFAULT);
+			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_LENGTH:
+				setAxisLength(AXIS_LENGTH_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -191,8 +191,8 @@ public class PositionNodePresentationImpl extends NodePresentationImpl implement
 		switch (featureID) {
 			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_VISIBLE:
 				return axisVisible != AXIS_VISIBLE_EDEFAULT;
-			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_LENGHT:
-				return axisLenght != AXIS_LENGHT_EDEFAULT;
+			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_LENGTH:
+				return axisLength != AXIS_LENGTH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -209,8 +209,8 @@ public class PositionNodePresentationImpl extends NodePresentationImpl implement
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (axisVisible: ");
 		result.append(axisVisible);
-		result.append(", axisLenght: ");
-		result.append(axisLenght);
+		result.append(", axisLength: ");
+		result.append(axisLength);
 		result.append(')');
 		return result.toString();
 	}
@@ -223,7 +223,7 @@ public class PositionNodePresentationImpl extends NodePresentationImpl implement
 			TransformNodeSceneObject transformNodeObject = (TransformNodeSceneObject) sceneObject;
 
 			transformNodeObject.setAxisVisible(isAxisVisible());
-			transformNodeObject.setAxisLength(getAxisLenght());
+			transformNodeObject.setAxisLength(getAxisLength());
 		}
 		
 		super.initialSceneObject();
@@ -240,9 +240,9 @@ public class PositionNodePresentationImpl extends NodePresentationImpl implement
 			{
 				object.setAxisVisible(isAxisVisible());
 			}
-			else if(notification.getFeatureID(PositionNodePresentation.class) == Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_LENGHT) 
+			else if(notification.getFeatureID(PositionNodePresentation.class) == Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_LENGTH) 
 			{
-				object.setAxisLength(getAxisLenght());
+				object.setAxisLength(getAxisLength());
 			}
 		}
 
@@ -258,7 +258,7 @@ public class PositionNodePresentationImpl extends NodePresentationImpl implement
 		setAxisVisible(store.getBoolean(PreferencesConstants.DEFAULT_POSITION_NODE_AXIS_VISIBILITY_ID));
 				
 		// Change Axis Length
-		setAxisLenght(store.getDouble(PreferencesConstants.DEFAULT_POSITION_NODE_AXIS_LENGHT_ID));
+		setAxisLength(store.getDouble(PreferencesConstants.DEFAULT_POSITION_NODE_AXIS_LENGTH_ID));
 		
 		super.applyPreferences();
 	}

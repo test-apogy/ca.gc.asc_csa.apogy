@@ -806,14 +806,14 @@ public class Geometry3DUtilities
 				CartesianPositionCoordinates point =  polygon.getVertices().get(i);
 				Vector3d tmp = new Vector3d();
 				tmp.sub(point.asPoint3d(), center.asPoint3d());
-				double lenght = tmp.length();
-				if(lenght <= radius)
+				double length = tmp.length();
+				if(length <= radius)
 				{
 					if(includeZeroOverlap)
 					{
 						isInside = true;
 					}
-					else if(lenght < radius)
+					else if(length < radius)
 					{
 						isInside = true;
 					}				
@@ -1057,17 +1057,17 @@ public class Geometry3DUtilities
 				// Checks is the intersection point falls on the edge segment and the line segment.
 				if(intersect != null)
 				{
-					double edgeLenght = getDistance(v1,v2);
-					double lineLenght = getDistance(u1,u2);										
+					double edgeLength = getDistance(v1,v2);
+					double lineLength = getDistance(u1,u2);										
 					
 					
-					if((getDistance(intersect,v1) < edgeLenght) && 
+					if((getDistance(intersect,v1) < edgeLength) && 
 						(getDistance(intersect,v1) > 0) && 
-						(getDistance(intersect,v2) < edgeLenght) &&
+						(getDistance(intersect,v2) < edgeLength) &&
 						(getDistance(intersect,v2) > 0) && 
-						(getDistance(intersect,u1) < lineLenght) &&
+						(getDistance(intersect,u1) < lineLength) &&
 						(getDistance(intersect,u1) > 0) && 
-						(getDistance(intersect,u2) < lineLenght) &&
+						(getDistance(intersect,u2) < lineLength) &&
 						(getDistance(intersect,u2) > 0)) return true;
 				}				
 				i++;

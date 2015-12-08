@@ -58,7 +58,7 @@ public class TopologyUIPreferencesPage extends PreferencePage implements IWorkbe
 		Label positionNodeAxisLengthLabel = new Label(positionNodeGroup, SWT.NONE);
 		positionNodeAxisLengthLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true, 1, 1));
 		positionNodeAxisLengthLabel.setText("Axis Length (m)");
-		positionNodeAxisLengthEditor = createStringFieldEditor(positionNodeGroup, PreferencesConstants.DEFAULT_POSITION_NODE_AXIS_LENGHT_ID, "");
+		positionNodeAxisLengthEditor = createStringFieldEditor(positionNodeGroup, PreferencesConstants.DEFAULT_POSITION_NODE_AXIS_LENGTH_ID, "");
 
 
 		// Rotation Node.
@@ -75,7 +75,7 @@ public class TopologyUIPreferencesPage extends PreferencePage implements IWorkbe
 		Label rotatioNodeAxisLengthLabel = new Label(rotationNodeGroup, SWT.NONE);
 		rotatioNodeAxisLengthLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true, 1, 1));
 		rotatioNodeAxisLengthLabel.setText("Axis Length (m)");
-		rotationNodeAxisLengthEditor = createStringFieldEditor(rotationNodeGroup, PreferencesConstants.DEFAULT_ROTATION_NODE_AXIS_LENGHT_ID, "");
+		rotationNodeAxisLengthEditor = createStringFieldEditor(rotationNodeGroup, PreferencesConstants.DEFAULT_ROTATION_NODE_AXIS_LENGTH_ID, "");
 		
 		// Transform Node.
 		Group transformNodeGroup = new Group(container, SWT.NONE);
@@ -91,7 +91,7 @@ public class TopologyUIPreferencesPage extends PreferencePage implements IWorkbe
 		Label transformNodeAxisLengthLabel = new Label(transformNodeGroup, SWT.NONE);
 		transformNodeAxisLengthLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true, 1, 1));
 		transformNodeAxisLengthLabel.setText("Axis Length (m)");
-		transformNodeAxisLengthEditor = createStringFieldEditor(transformNodeGroup, PreferencesConstants.DEFAULT_TRANSFORM_NODE_AXIS_LENGHT_ID, "");
+		transformNodeAxisLengthEditor = createStringFieldEditor(transformNodeGroup, PreferencesConstants.DEFAULT_TRANSFORM_NODE_AXIS_LENGTH_ID, "");
 		
 		// URL Node.
 		Group urlNodeGroup = new Group(container, SWT.NONE);
@@ -107,7 +107,7 @@ public class TopologyUIPreferencesPage extends PreferencePage implements IWorkbe
 		Label urlNodeAxisLengthLabel = new Label(urlNodeGroup, SWT.NONE);
 		urlNodeAxisLengthLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, true, 1, 1));
 		urlNodeAxisLengthLabel.setText("Axis Length (m)");
-		urlNodeAxisLengthEditor = createStringFieldEditor(urlNodeGroup, PreferencesConstants.DEFAULT_URL_NODE_AXIS_LENGHT_ID, "");
+		urlNodeAxisLengthEditor = createStringFieldEditor(urlNodeGroup, PreferencesConstants.DEFAULT_URL_NODE_AXIS_LENGTH_ID, "");
 
 		
 		return container;

@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getReserved <em>Reserved</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getUserID <em>User ID</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordID <em>Record ID</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordLenghtAfterHeader <em>Record Lenght After Header</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordLengthAfterHeader <em>Record Length After Header</em>}</li>
  *   <li>{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getDescription <em>Description</em>}</li>
  * </ul>
  *
@@ -105,30 +105,30 @@ public interface VariableLengthRecord extends EObject {
 	void setRecordID(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Record Lenght After Header</b></em>' attribute.
+	 * Returns the value of the '<em><b>Record Length After Header</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Record Lenght After Header</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Record Length After Header</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Record Lenght After Header</em>' attribute.
-	 * @see #setRecordLenghtAfterHeader(int)
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getVariableLengthRecord_RecordLenghtAfterHeader()
+	 * @return the value of the '<em>Record Length After Header</em>' attribute.
+	 * @see #setRecordLengthAfterHeader(int)
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.Symphony__CommonGeometryData3DLASPackage#getVariableLengthRecord_RecordLengthAfterHeader()
 	 * @model unique="false"
 	 * @generated
 	 */
-	int getRecordLenghtAfterHeader();
+	int getRecordLengthAfterHeader();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordLenghtAfterHeader <em>Record Lenght After Header</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordLengthAfterHeader <em>Record Length After Header</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Record Lenght After Header</em>' attribute.
-	 * @see #getRecordLenghtAfterHeader()
+	 * @param value the new value of the '<em>Record Length After Header</em>' attribute.
+	 * @see #getRecordLengthAfterHeader()
 	 * @generated
 	 */
-	void setRecordLenghtAfterHeader(int value);
+	void setRecordLengthAfterHeader(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.

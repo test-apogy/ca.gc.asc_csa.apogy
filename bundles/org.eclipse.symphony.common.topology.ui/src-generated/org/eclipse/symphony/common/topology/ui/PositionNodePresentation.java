@@ -14,7 +14,7 @@ package org.eclipse.symphony.common.topology.ui;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation#isAxisVisible <em>Axis Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation#getAxisLenght <em>Axis Lenght</em>}</li>
+ *   <li>{@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation#getAxisLength <em>Axis Length</em>}</li>
  * </ul>
  *
  * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getPositionNodePresentation()
@@ -51,31 +51,31 @@ public interface PositionNodePresentation extends NodePresentation {
 	void setAxisVisible(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Axis Lenght</b></em>' attribute.
+	 * Returns the value of the '<em><b>Axis Length</b></em>' attribute.
 	 * The default value is <code>"1.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Axis Lenght</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Axis Length</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Axis Lenght</em>' attribute.
-	 * @see #setAxisLenght(double)
-	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getPositionNodePresentation_AxisLenght()
+	 * @return the value of the '<em>Axis Length</em>' attribute.
+	 * @see #setAxisLength(double)
+	 * @see org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage#getPositionNodePresentation_AxisLength()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Editable' propertyCategory='VISUAL_INFORMATION'"
 	 * @generated
 	 */
-	double getAxisLenght();
+	double getAxisLength();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation#getAxisLenght <em>Axis Lenght</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation#getAxisLength <em>Axis Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Axis Lenght</em>' attribute.
-	 * @see #getAxisLenght()
+	 * @param value the new value of the '<em>Axis Length</em>' attribute.
+	 * @see #getAxisLength()
 	 * @generated
 	 */
-	void setAxisLenght(double value);
+	void setAxisLength(double value);
 
 } // PositionNodePresentation

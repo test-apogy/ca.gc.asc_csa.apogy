@@ -45,7 +45,7 @@ public class URLNodeJME3TopologyObject extends DefaultJME3SceneObject<URLNode> i
 	
 	private AssetManager assetManager;
 	
-	private float previousAxisLenght = 1.0f;
+	private float previousAxisLength = 1.0f;
 	private Geometry axisGeometry = null;	
 	
 	private Spatial loadedObject;
@@ -161,12 +161,12 @@ public class URLNodeJME3TopologyObject extends DefaultJME3SceneObject<URLNode> i
 			{
 				try
 				{
-					float scale = (float) Math.abs(length) / previousAxisLenght;
+					float scale = (float) Math.abs(length) / previousAxisLength;
 					
 					// Scales existing axis.
 					getAxisGeometry().scale(scale);
 					
-					previousAxisLenght = (float) length;
+					previousAxisLength = (float) length;
 				}
 				catch(Throwable t)
 				{

@@ -15,7 +15,7 @@ import org.eclipse.symphony.common.topology.ui.NodePresentation;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#isPlumeEnvelopeVisible <em>Plume Envelope Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLenght <em>Plume Envelope Lenght</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLength <em>Plume Envelope Length</em>}</li>
  * </ul>
  *
  * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage#getThrusterPresentation()
@@ -58,7 +58,7 @@ public interface ThrusterPresentation extends NodePresentation
 	void setPlumeEnvelopeVisible(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Plume Envelope Lenght</b></em>' attribute.
+	 * Returns the value of the '<em><b>Plume Envelope Length</b></em>' attribute.
 	 * The default value is <code>"1.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,22 +66,22 @@ public interface ThrusterPresentation extends NodePresentation
 	 * *
 	 * The length of the cone used to represent the plume envelope.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Plume Envelope Lenght</em>' attribute.
-	 * @see #setPlumeEnvelopeLenght(double)
-	 * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage#getThrusterPresentation_PlumeEnvelopeLenght()
+	 * @return the value of the '<em>Plume Envelope Length</em>' attribute.
+	 * @see #setPlumeEnvelopeLength(double)
+	 * @see org.eclipse.symphony.addons.vehicle.ui.Symphony__AddonsVehicleUIPackage#getThrusterPresentation_PlumeEnvelopeLength()
 	 * @model default="1.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' child='false' propertyCategory='PLUME_INFO'"
 	 * @generated
 	 */
-	double getPlumeEnvelopeLenght();
+	double getPlumeEnvelopeLength();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLenght <em>Plume Envelope Lenght</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.ui.ThrusterPresentation#getPlumeEnvelopeLength <em>Plume Envelope Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Plume Envelope Lenght</em>' attribute.
-	 * @see #getPlumeEnvelopeLenght()
+	 * @param value the new value of the '<em>Plume Envelope Length</em>' attribute.
+	 * @see #getPlumeEnvelopeLength()
 	 * @generated
 	 */
-	void setPlumeEnvelopeLenght(double value);
+	void setPlumeEnvelopeLength(double value);
 } // ThrusterPresentation

@@ -663,7 +663,7 @@ public class EarthSurfaceWorksitePresentationImpl extends NodePresentationImpl i
   		
   		// Set the axis visibility and length.
   		setAxisVisible(store.getBoolean(SymphonyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_VISIBLE_ID));
-  		setAxisLength(store.getDouble(SymphonyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_LENGHT_ID));
+  		setAxisLength(store.getDouble(SymphonyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_LENGTH_ID));
   		
   		// Set Azimuth and Azimuth Lines visibility.
   		setAzimuthVisible(store.getBoolean(SymphonyEnvironmentUIPreferencesConstants.DEFAULT_EARTH_SURFACE_WORKSITE_AZIMUTH_VISIBLE_ID));
