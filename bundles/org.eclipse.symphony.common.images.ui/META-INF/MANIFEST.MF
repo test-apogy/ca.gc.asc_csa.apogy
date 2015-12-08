@@ -24,7 +24,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.symphony.common.ui;bundle-version="0.1.0",
  org.eclipse.core.expressions;bundle-version="3.4.600",
  org.eclipse.symphony.common.converters.ui
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.symphony.common.images.ui,
  org.eclipse.symphony.common.images.ui.composites,

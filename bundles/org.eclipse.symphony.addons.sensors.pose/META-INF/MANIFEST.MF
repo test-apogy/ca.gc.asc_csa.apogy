@@ -24,5 +24,5 @@ Require-Bundle: javax.media;bundle-version="1.5.2";visibility:=reexport,
  org.eclipse.symphony.common.topology;visibility:=reexport,
  org.eclipse.ui;visibility:=reexport
 Bundle-Activator: org.eclipse.symphony.addons.sensors.pose.Activator
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy

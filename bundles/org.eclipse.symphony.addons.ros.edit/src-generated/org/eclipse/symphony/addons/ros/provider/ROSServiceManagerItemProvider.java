@@ -221,7 +221,7 @@ public class ROSServiceManagerItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(org.eclipse.symphony.addons.ros.ROSServiceManager.class)) {
+		switch (notification.getFeatureID(ROSServiceManager.class)) {
 			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__SERVICES:
 			case Symphony__AddonsROSPackage.ROS_SERVICE_MANAGER__RUNNING:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));

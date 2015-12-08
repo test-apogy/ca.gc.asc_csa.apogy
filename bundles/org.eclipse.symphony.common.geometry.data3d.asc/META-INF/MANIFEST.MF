@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.symphony.common.geometry.data3d.asc,
  org.eclipse.symphony.common.geometry.data3d.asc.impl,
  org.eclipse.symphony.common.geometry.data3d.asc.util

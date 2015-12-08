@@ -27,4 +27,4 @@ Require-Bundle: org.eclipse.symphony.addons.mobility;visibility:=reexport,
  org.eclipse.xtend.lib;bundle-version="2.7.3"
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.symphony.addons.mobility.controllers.Activator
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

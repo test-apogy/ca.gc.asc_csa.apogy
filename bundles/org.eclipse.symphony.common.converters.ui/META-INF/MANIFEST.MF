@@ -13,7 +13,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.symphony.common.converters;visibility:=reexport,
  org.eclipse.emf.ecore.xcore.lib,
  org.eclipse.xtext.xbase.lib
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.eclipse.symphony.common.converters.ui,
  org.eclipse.symphony.common.converters.ui.impl,

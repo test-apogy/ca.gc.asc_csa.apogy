@@ -23,7 +23,7 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.9.0",
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.symphony.examples.lidar.symphony,
  org.eclipse.symphony.examples.lidar.symphony.impl,
  org.eclipse.symphony.examples.lidar.symphony.util

@@ -15,4 +15,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.processors.edit;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

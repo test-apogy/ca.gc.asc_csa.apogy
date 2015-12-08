@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: org.eclipse.symphony.addons.sensors.fov.bindings.provider.Symphony__AddonsSensorsFOVBindingsEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.symphony.addons.sensors.fov.bindings.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.addons.sensors.fov.bindings;visibility:=reexport,
