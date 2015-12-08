@@ -53,7 +53,6 @@ public class CurrentTimeSourceComposite extends AbstractTimeSourceComposite
 				int digits = updatePeriodSpinner.getDigits();
 				int period = (int) Math.round((selection / Math.pow(10, digits)) * 1000);
 				
-				System.out.println("New Period : " + period);
 				getCurrentTimeSource().setUpdatePeriod(period);
 			}
 			

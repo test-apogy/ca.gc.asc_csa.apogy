@@ -911,8 +911,6 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 			{
 				AbstractTypeImplementation ti = it.next();
 				
-				System.out.println("it : " + ti.getInstance());
-				
 				result = findAbstractTypeImplementation(ti, eObjectInstance);
 			}
 			return result;

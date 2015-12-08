@@ -16,7 +16,6 @@ import org.eclipse.symphony.common.emf.Described
 import org.eclipse.symphony.common.emf.Named
 import org.eclipse.symphony.common.emf.Timed
 import org.eclipse.symphony.common.emf.TimeSource
-import org.eclipse.symphony.common.emf.TimeSourcesList
 
 import org.eclipse.symphony.core.invocator.AbstractResult
 import org.eclipse.symphony.core.invocator.OperationCallResult
@@ -31,7 +30,6 @@ import org.eclipse.symphony.core.invocator.TypeApiAdapter
 import org.eclipse.symphony.core.invocator.OperationCall
 import org.eclipse.symphony.core.invocator.AbstractType
 import org.eclipse.symphony.core.invocator.InitializationData
-import org.eclipse.symphony.core.invocator.VariableFeatureReference
 import org.eclipse.symphony.common.topology.AggregateGroupNode
 import org.eclipse.symphony.common.topology.TransformNode
 import org.eclipse.symphony.common.topology.Node
@@ -99,13 +97,21 @@ class SymphonyEnvironment extends Environment, Timed
 	/*
 	 * The list of available time sources.
 	 */
-	contains TimeSourcesList[0..1] timeSourcesList
+	contains TimeSourcesList[0..1] timeSourcesList opposite environment 
 	
 	/*
 	 * The time source currently providing time used to drive the environment.
 	 */
 	refers TimeSource activeTimeSource	
 }
+
+class TimeSourcesList
+{	
+    @GenModel(property="None")
+	container SymphonyEnvironment environment opposite timeSourcesList
+	contains TimeSource[0..*] timeSources 
+}
+
 
 class SymphonyTopology
 {
@@ -271,7 +277,6 @@ abstract class AbstractOrbitModel extends Named, Described
 {		
     @GenModel(property="None")
 	container OrbitModelsList orbitModelsList opposite orbitModels
-	refers VariableFeatureReference variableFeatureReference
 }
 
 

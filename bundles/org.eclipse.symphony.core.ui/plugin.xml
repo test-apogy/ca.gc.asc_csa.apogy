@@ -43,6 +43,32 @@
          </propertyTab>
       </propertyTabs>
    </extension>
+   
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+         <propertyTab
+               category="org.eclipse.symphony.core.ui.property.category.Default"
+               id="org.eclipse.symphony.core.ui.property.tabs.TimeSourcesList"
+               label="Time Sources">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="org.eclipse.symphony.common.ui.property.properties.ExtendedTabbedPropertySheetPage.Contributor">
+          <propertySection
+               class="org.eclipse.symphony.core.ui.properties.sections.TimeSourcesListSection"
+               filter="org.eclipse.symphony.core.ui.properties.sections.TimeSourcesListSection"
+               id="org.eclipse.symphony.core.ui.properties.sections.TimeSourcesListSection"
+               tab="org.eclipse.symphony.core.ui.property.tabs.TimeSourcesList">
+         </propertySection>
+      </propertySections>
+   </extension>
+      
    <extension
          point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
       <propertyContributor
@@ -359,5 +385,5 @@
       <new_element
             Class="org.eclipse.symphony.core.ui.converters.PositionedResultToNodeConverter">
       </new_element>
-   </extension>
+   </extension>   
 </plugin>

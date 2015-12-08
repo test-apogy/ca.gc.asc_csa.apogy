@@ -13,7 +13,6 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.Symphony__CoreFactory;
 import org.eclipse.symphony.core.Symphony__CorePackage;
@@ -222,7 +221,7 @@ public class SymphonyEnvironmentItemProvider extends EnvironmentItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CorePackage.Literals.SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST,
-				 Symphony__CommonEMFFactory.eINSTANCE.createTimeSourcesList()));
+				 Symphony__CoreFactory.eINSTANCE.createTimeSourcesList()));
 	}
 
 }

@@ -15,6 +15,7 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.PositionNode;
 import org.eclipse.symphony.common.topology.RotationNode;
 import org.eclipse.symphony.common.topology.TransformNode;
+import org.eclipse.symphony.core.*;
 import org.eclipse.symphony.core.AbsolutePoseProvider;
 import org.eclipse.symphony.core.AbstractOrbitModel;
 import org.eclipse.symphony.core.AbstractWorksite;
@@ -121,6 +122,12 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 				if (result == null) result = caseTimed(symphonyEnvironment);
 				if (result == null) result = caseNamed(symphonyEnvironment);
 				if (result == null) result = caseDescribed(symphonyEnvironment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Symphony__CorePackage.TIME_SOURCES_LIST: {
+				TimeSourcesList timeSourcesList = (TimeSourcesList)theEObject;
+				T result = caseTimeSourcesList(timeSourcesList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -374,6 +381,21 @@ public class Symphony__CoreSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSymphonyEnvironment(SymphonyEnvironment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Time Sources List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Time Sources List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTimeSourcesList(TimeSourcesList object) {
 		return null;
 	}
 

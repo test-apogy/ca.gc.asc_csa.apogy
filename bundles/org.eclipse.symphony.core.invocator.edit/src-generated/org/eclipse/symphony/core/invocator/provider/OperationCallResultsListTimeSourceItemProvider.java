@@ -6,12 +6,12 @@ package org.eclipse.symphony.core.invocator.provider;
 
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.common.emf.provider.CollectionTimedTimeSourceItemProvider;
-import org.eclipse.symphony.core.invocator.OperationCallResultsListTimeSource;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
@@ -89,12 +89,9 @@ public class OperationCallResultsListTimeSourceItemProvider extends CollectionTi
 	@Override
 	public String getText(Object object) 
 	{
-		OperationCallResultsListTimeSource timeSource = (OperationCallResultsListTimeSource) object;
-		String label = getString("_UI_OperationCallResultsListTimeSource_type") + " " + getCollectionTimedTimeSourceText(timeSource);							
-		return label;				
+		return super.getText(object);
 	}
 	
-
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.

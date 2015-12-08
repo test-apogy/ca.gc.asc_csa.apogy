@@ -831,7 +831,6 @@ public class Ruler3dToolNodeJME3Object extends DefaultJME3SceneObject<Ruler3dToo
 							break;
 						
 							case Symphony__AddonsPackage.SIMPLE3_DTOOL___DISPOSE:	
-								System.out.println("Dispose");
 								dispose();
 							break;
 								

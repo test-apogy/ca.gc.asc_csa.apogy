@@ -159,9 +159,7 @@ public class BrowseableTimeSourceItemProvider extends TimeSourceItemProvider
 	@Override
 	public String getText(Object object) 
 	{
-		BrowseableTimeSource timeSource = (BrowseableTimeSource) object;
-		String label = getString("_UI_BrowseableTimeSource_type") + " " + getTimeSourceText(timeSource);							
-		return label;			
+		return super.getText(object);
 	}
 	
 

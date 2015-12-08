@@ -54,9 +54,7 @@ public class NodePresentationPropertySection extends org.eclipse.ui.views.proper
 		boolean result = false;
 		
 		result = (Symphony__CommonConvertersFacade.INSTANCE.convert(toTest, NodePresentation.class) != null);
-		
-		System.out.println("select(" + toTest + ") = " + result);
-		
+				
 		return result;
 	}
 }

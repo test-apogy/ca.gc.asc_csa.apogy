@@ -153,6 +153,29 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.TimeSourcesList} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TimeSourcesListItemProvider timeSourcesListItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.symphony.core.TimeSourcesList}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTimeSourcesListAdapter() {
+		if (timeSourcesListItemProvider == null) {
+			timeSourcesListItemProvider = new TimeSourcesListItemProvider(this);
+		}
+
+		return timeSourcesListItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all
 	 * {@link org.eclipse.symphony.core.SymphonyTopology} instances. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
@@ -819,6 +842,7 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 	public void dispose() {
 		if (symphony__CoreFacadeItemProvider != null) symphony__CoreFacadeItemProvider.dispose();
 		if (symphonyEnvironmentItemProvider != null) symphonyEnvironmentItemProvider.dispose();
+		if (timeSourcesListItemProvider != null) timeSourcesListItemProvider.dispose();
 		if (symphonyTopologyItemProvider != null) symphonyTopologyItemProvider.dispose();
 		if (symphonySystemItemProvider != null) symphonySystemItemProvider.dispose();
 		if (symphonySystemApiAdapterItemProvider != null) symphonySystemApiAdapterItemProvider.dispose();
@@ -1021,6 +1045,11 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__CoreFactory.eINSTANCE.createTimeSourcesList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 Symphony__CoreFactory.eINSTANCE.createSymphonyTopology()));
 
 				newChildDescriptors.add
@@ -1152,6 +1181,11 @@ public class Symphony__CoreItemProviderAdapterFactory extends
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 Symphony__CoreFactory.eINSTANCE.createSymphonyEnvironment()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__CoreFactory.eINSTANCE.createTimeSourcesList()));
 
 				newChildDescriptors.add
 					(createChildParameter

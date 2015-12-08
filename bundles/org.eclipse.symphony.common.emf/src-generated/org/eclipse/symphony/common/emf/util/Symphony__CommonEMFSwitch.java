@@ -6,29 +6,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.eclipse.symphony.common.emf.*;
-import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
-import org.eclipse.symphony.common.emf.AbstractFeatureNode;
-import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
-import org.eclipse.symphony.common.emf.AbstractFeatureTreeNode;
-import org.eclipse.symphony.common.emf.AbstractRootNode;
-import org.eclipse.symphony.common.emf.BrowseableTimeSource;
-import org.eclipse.symphony.common.emf.CollectionTimedTimeSource;
-import org.eclipse.symphony.common.emf.CurrentTimeSource;
-import org.eclipse.symphony.common.emf.Described;
-import org.eclipse.symphony.common.emf.Disposable;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.common.emf.FeatureNodeAdapter;
-import org.eclipse.symphony.common.emf.FixedTimeSource;
-import org.eclipse.symphony.common.emf.ListFeatureNode;
-import org.eclipse.symphony.common.emf.ListRootNode;
-import org.eclipse.symphony.common.emf.Named;
-import org.eclipse.symphony.common.emf.SelectionBasedTimeSource;
-import org.eclipse.symphony.common.emf.TimeSource;
-import org.eclipse.symphony.common.emf.TimeSourcesList;
-import org.eclipse.symphony.common.emf.Timed;
-import org.eclipse.symphony.common.emf.TreeFeatureNode;
-import org.eclipse.symphony.common.emf.TreeRootNode;
 
 /**
  * <!-- begin-user-doc -->
@@ -125,12 +102,6 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 			case Symphony__CommonEMFPackage.STARTABLE: {
 				Startable startable = (Startable)theEObject;
 				T result = caseStartable(startable);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Symphony__CommonEMFPackage.TIME_SOURCES_LIST: {
-				TimeSourcesList timeSourcesList = (TimeSourcesList)theEObject;
-				T result = caseTimeSourcesList(timeSourcesList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -374,21 +345,6 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseStartable(Startable object) {
-		return null;
-	}
-
-		/**
-	 * Returns the result of interpreting the object as an instance of '<em>Time Sources List</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Time Sources List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTimeSourcesList(TimeSourcesList object) {
 		return null;
 	}
 

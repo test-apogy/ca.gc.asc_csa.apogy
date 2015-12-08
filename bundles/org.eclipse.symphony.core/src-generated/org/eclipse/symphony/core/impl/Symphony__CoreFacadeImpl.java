@@ -26,12 +26,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.symphony.common.emf.CurrentTimeSource;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeSource;
-import org.eclipse.symphony.common.emf.TimeSourcesList;
-import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Matrix4x4;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.ReferencedContentNode;
@@ -40,24 +38,24 @@ import org.eclipse.symphony.common.topology.TransformNode;
 import org.eclipse.symphony.core.FeatureOfInterest;
 import org.eclipse.symphony.core.PositionedResult;
 import org.eclipse.symphony.core.ResultNode;
-import org.eclipse.symphony.core.Symphony__CoreFacade;
-import org.eclipse.symphony.core.Symphony__CoreFactory;
-import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.SymphonySystem;
 import org.eclipse.symphony.core.SymphonySystemApiAdapter;
+import org.eclipse.symphony.core.Symphony__CoreFacade;
+import org.eclipse.symphony.core.Symphony__CoreFactory;
+import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.WorksitesList;
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.AttributeResultValue;
 import org.eclipse.symphony.core.invocator.Context;
 import org.eclipse.symphony.core.invocator.DataProductsList;
 import org.eclipse.symphony.core.invocator.DataProductsListsContainer;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.OperationCallResultsList;
 import org.eclipse.symphony.core.invocator.ReferenceResultValue;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.ToolsList;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
 
@@ -207,7 +205,7 @@ public class Symphony__CoreFacadeImpl extends MinimalEObjectImpl.Container
 			environment.setWorksitesList(worksitesList);
 						
 			/** Creates the Timesource.*/
-			TimeSourcesList timeSourcesList = Symphony__CommonEMFFactory.eINSTANCE.createTimeSourcesList();
+			org.eclipse.symphony.core.TimeSourcesList timeSourcesList = Symphony__CoreFactory.eINSTANCE.createTimeSourcesList();
 			
 			// Fills in the TimeSource List.
 			timeSourcesList.getTimeSources().addAll(getAllAvaibleTimeSource());						

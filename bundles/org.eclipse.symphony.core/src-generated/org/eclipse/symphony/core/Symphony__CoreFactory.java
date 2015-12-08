@@ -39,6 +39,15 @@ public interface Symphony__CoreFactory extends EFactory {
 	SymphonyEnvironment createSymphonyEnvironment();
 
 	/**
+	 * Returns a new object of class '<em>Time Sources List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Time Sources List</em>'.
+	 * @generated
+	 */
+	TimeSourcesList createTimeSourcesList();
+
+	/**
 	 * Returns a new object of class '<em>Symphony Topology</em>'. <!--
 	 * begin-user-doc --> <!-- end-user-doc -->
 	 * 

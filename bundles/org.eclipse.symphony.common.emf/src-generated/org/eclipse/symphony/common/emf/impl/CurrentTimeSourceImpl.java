@@ -85,10 +85,11 @@ public class CurrentTimeSourceImpl extends TimeSourceImpl implements CurrentTime
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
 	protected CurrentTimeSourceImpl() {
 		super();
+		resume();
 	}
 
 	/**

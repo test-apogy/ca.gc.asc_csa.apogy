@@ -291,6 +291,52 @@ public interface Symphony__CorePackage extends EPackage {
 	int SYMPHONY_ENVIRONMENT_OPERATION_COUNT = Symphony__CoreInvocatorPackage.ENVIRONMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.TimeSourcesListImpl <em>Time Sources List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.core.impl.TimeSourcesListImpl
+	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getTimeSourcesList()
+	 * @generated
+	 */
+	int TIME_SOURCES_LIST = 2;
+
+	/**
+	 * The feature id for the '<em><b>Environment</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_SOURCES_LIST__ENVIRONMENT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Time Sources</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_SOURCES_LIST__TIME_SOURCES = 1;
+
+	/**
+	 * The number of structural features of the '<em>Time Sources List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_SOURCES_LIST_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Time Sources List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_SOURCES_LIST_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.SymphonyTopologyImpl <em>Symphony Topology</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -298,7 +344,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getSymphonyTopology()
 	 * @generated
 	 */
-	int SYMPHONY_TOPOLOGY = 2;
+	int SYMPHONY_TOPOLOGY = 3;
 
 	/**
 	 * The feature id for the '<em><b>Root Node</b></em>' reference.
@@ -335,7 +381,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getSymphonySystem()
 	 * @generated
 	 */
-	int SYMPHONY_SYSTEM = 3;
+	int SYMPHONY_SYSTEM = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -453,7 +499,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getSymphonySystemApiAdapter()
 	 * @generated
 	 */
-	int SYMPHONY_SYSTEM_API_ADAPTER = 4;
+	int SYMPHONY_SYSTEM_API_ADAPTER = 5;
 
 	/**
 	 * The feature id for the '<em><b>Environment</b></em>' reference.
@@ -616,7 +662,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getConnectionPointsList()
 	 * @generated
 	 */
-	int CONNECTION_POINTS_LIST = 5;
+	int CONNECTION_POINTS_LIST = 6;
 
 	/**
 	 * The feature id for the '<em><b>Symphony System</b></em>' container reference.
@@ -662,7 +708,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getConnectionPoint()
 	 * @generated
 	 */
-	int CONNECTION_POINT = 6;
+	int CONNECTION_POINT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -726,7 +772,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getAssemblyLink()
 	 * @generated
 	 */
-	int ASSEMBLY_LINK = 7;
+	int ASSEMBLY_LINK = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -835,7 +881,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getAssemblyLinksList()
 	 * @generated
 	 */
-	int ASSEMBLY_LINKS_LIST = 8;
+	int ASSEMBLY_LINKS_LIST = 9;
 
 	/**
 	 * The feature id for the '<em><b>Assembly Links</b></em>' containment reference list.
@@ -872,7 +918,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getPoseProvider()
 	 * @generated
 	 */
-	int POSE_PROVIDER = 9;
+	int POSE_PROVIDER = 10;
 
 	/**
 	 * The feature id for the '<em><b>Pose Transform</b></em>' containment reference.
@@ -909,7 +955,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getAbsolutePoseProvider()
 	 * @generated
 	 */
-	int ABSOLUTE_POSE_PROVIDER = 10;
+	int ABSOLUTE_POSE_PROVIDER = 11;
 
 	/**
 	 * The feature id for the '<em><b>Pose Transform</b></em>' containment reference.
@@ -946,7 +992,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getPoseCorrector()
 	 * @generated
 	 */
-	int POSE_CORRECTOR = 11;
+	int POSE_CORRECTOR = 12;
 
 	/**
 	 * The feature id for the '<em><b>Symphony System Api Adapter</b></em>' container reference.
@@ -1001,7 +1047,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getSymphonyInitializationData()
 	 * @generated
 	 */
-	int SYMPHONY_INITIALIZATION_DATA = 12;
+	int SYMPHONY_INITIALIZATION_DATA = 13;
 
 	/**
 	 * The feature id for the '<em><b>Initial Pose Transform</b></em>' containment reference.
@@ -1038,7 +1084,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getWorksitesList()
 	 * @generated
 	 */
-	int WORKSITES_LIST = 13;
+	int WORKSITES_LIST = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1102,7 +1148,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getAbstractWorksite()
 	 * @generated
 	 */
-	int ABSTRACT_WORKSITE = 14;
+	int ABSTRACT_WORKSITE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1166,7 +1212,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getOrbitModelsList()
 	 * @generated
 	 */
-	int ORBIT_MODELS_LIST = 15;
+	int ORBIT_MODELS_LIST = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1221,7 +1267,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getAbstractOrbitModel()
 	 * @generated
 	 */
-	int ABSTRACT_ORBIT_MODEL = 16;
+	int ABSTRACT_ORBIT_MODEL = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1251,22 +1297,13 @@ public interface Symphony__CorePackage extends EPackage {
 	int ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Variable Feature Reference</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>Abstract Orbit Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_ORBIT_MODEL_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+	int ABSTRACT_ORBIT_MODEL_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Abstract Orbit Model</em>' class.
@@ -1285,7 +1322,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getPositioned()
 	 * @generated
 	 */
-	int POSITIONED = 17;
+	int POSITIONED = 18;
 
 	/**
 	 * The feature id for the '<em><b>Pose</b></em>' containment reference.
@@ -1322,7 +1359,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getTopologyRoot()
 	 * @generated
 	 */
-	int TOPOLOGY_ROOT = 20;
+	int TOPOLOGY_ROOT = 21;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.FeatureOfInterestListImpl <em>Feature Of Interest List</em>}' class.
@@ -1332,7 +1369,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getFeatureOfInterestList()
 	 * @generated
 	 */
-	int FEATURE_OF_INTEREST_LIST = 19;
+	int FEATURE_OF_INTEREST_LIST = 20;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.impl.FeatureOfInterestImpl <em>Feature Of Interest</em>}' class.
@@ -1342,7 +1379,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getFeatureOfInterest()
 	 * @generated
 	 */
-	int FEATURE_OF_INTEREST = 18;
+	int FEATURE_OF_INTEREST = 19;
 
 	/**
 	 * The feature id for the '<em><b>Pose</b></em>' containment reference.
@@ -1469,7 +1506,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getPositionedResult()
 	 * @generated
 	 */
-	int POSITIONED_RESULT = 21;
+	int POSITIONED_RESULT = 22;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -1560,7 +1597,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getOperationCallPositionedResult()
 	 * @generated
 	 */
-	int OPERATION_CALL_POSITIONED_RESULT = 22;
+	int OPERATION_CALL_POSITIONED_RESULT = 23;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -1696,7 +1733,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getUserDefinedResult()
 	 * @generated
 	 */
-	int USER_DEFINED_RESULT = 23;
+	int USER_DEFINED_RESULT = 24;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -1796,7 +1833,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getResultNode()
 	 * @generated
 	 */
-	int RESULT_NODE = 24;
+	int RESULT_NODE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1887,7 +1924,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getResultsListNode()
 	 * @generated
 	 */
-	int RESULTS_LIST_NODE = 25;
+	int RESULTS_LIST_NODE = 26;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1978,7 +2015,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getFeatureOfInterestNode()
 	 * @generated
 	 */
-	int FEATURE_OF_INTEREST_NODE = 26;
+	int FEATURE_OF_INTEREST_NODE = 27;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2105,7 +2142,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getFeatureOfInterestListNode()
 	 * @generated
 	 */
-	int FEATURE_OF_INTEREST_LIST_NODE = 27;
+	int FEATURE_OF_INTEREST_LIST_NODE = 28;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -2196,7 +2233,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getUpdatable()
 	 * @generated
 	 */
-	int UPDATABLE = 28;
+	int UPDATABLE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Updating</b></em>' attribute.
@@ -2260,7 +2297,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getMap()
 	 * @generated
 	 */
-	int MAP = 29;
+	int MAP = 30;
 
 	/**
 	 * The meta object id for the '<em>List</em>' data type.
@@ -2270,7 +2307,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getList()
 	 * @generated
 	 */
-	int LIST = 30;
+	int LIST = 31;
 
 
 	/**
@@ -2281,7 +2318,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getCollection()
 	 * @generated
 	 */
-	int COLLECTION = 31;
+	int COLLECTION = 32;
 
 
 	/**
@@ -2292,7 +2329,7 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getException()
 	 * @generated
 	 */
-	int EXCEPTION = 32;
+	int EXCEPTION = 33;
 
 
 	/**
@@ -2429,6 +2466,38 @@ public interface Symphony__CorePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSymphonyEnvironment_ActiveTimeSource();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.core.TimeSourcesList <em>Time Sources List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Time Sources List</em>'.
+	 * @see org.eclipse.symphony.core.TimeSourcesList
+	 * @generated
+	 */
+	EClass getTimeSourcesList();
+
+	/**
+	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.core.TimeSourcesList#getEnvironment <em>Environment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Environment</em>'.
+	 * @see org.eclipse.symphony.core.TimeSourcesList#getEnvironment()
+	 * @see #getTimeSourcesList()
+	 * @generated
+	 */
+	EReference getTimeSourcesList_Environment();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.core.TimeSourcesList#getTimeSources <em>Time Sources</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Time Sources</em>'.
+	 * @see org.eclipse.symphony.core.TimeSourcesList#getTimeSources()
+	 * @see #getTimeSourcesList()
+	 * @generated
+	 */
+	EReference getTimeSourcesList_TimeSources();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.core.SymphonyTopology <em>Symphony Topology</em>}'.
@@ -2931,17 +3000,6 @@ public interface Symphony__CorePackage extends EPackage {
 	EReference getAbstractOrbitModel_OrbitModelsList();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.AbstractOrbitModel#getVariableFeatureReference <em>Variable Feature Reference</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Variable Feature Reference</em>'.
-	 * @see org.eclipse.symphony.core.AbstractOrbitModel#getVariableFeatureReference()
-	 * @see #getAbstractOrbitModel()
-	 * @generated
-	 */
-	EReference getAbstractOrbitModel_VariableFeatureReference();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.core.Positioned <em>Positioned</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3367,6 +3425,32 @@ public interface Symphony__CorePackage extends EPackage {
 		EReference SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE = eINSTANCE.getSymphonyEnvironment_ActiveTimeSource();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.core.impl.TimeSourcesListImpl <em>Time Sources List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.core.impl.TimeSourcesListImpl
+		 * @see org.eclipse.symphony.core.impl.Symphony__CorePackageImpl#getTimeSourcesList()
+		 * @generated
+		 */
+		EClass TIME_SOURCES_LIST = eINSTANCE.getTimeSourcesList();
+
+		/**
+		 * The meta object literal for the '<em><b>Environment</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TIME_SOURCES_LIST__ENVIRONMENT = eINSTANCE.getTimeSourcesList_Environment();
+
+		/**
+		 * The meta object literal for the '<em><b>Time Sources</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TIME_SOURCES_LIST__TIME_SOURCES = eINSTANCE.getTimeSourcesList_TimeSources();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.core.impl.SymphonyTopologyImpl <em>Symphony Topology</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3771,14 +3855,6 @@ public interface Symphony__CorePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST = eINSTANCE.getAbstractOrbitModel_OrbitModelsList();
-
-		/**
-		 * The meta object literal for the '<em><b>Variable Feature Reference</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE = eINSTANCE.getAbstractOrbitModel_VariableFeatureReference();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.core.impl.PositionedImpl <em>Positioned</em>}' class.

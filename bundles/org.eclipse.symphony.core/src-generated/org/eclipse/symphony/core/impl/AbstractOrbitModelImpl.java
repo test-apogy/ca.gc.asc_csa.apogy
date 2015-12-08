@@ -15,7 +15,6 @@ import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.core.AbstractOrbitModel;
 import org.eclipse.symphony.core.OrbitModelsList;
 import org.eclipse.symphony.core.Symphony__CorePackage;
-import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +27,6 @@ import org.eclipse.symphony.core.invocator.VariableFeatureReference;
  *   <li>{@link org.eclipse.symphony.core.impl.AbstractOrbitModelImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.AbstractOrbitModelImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.impl.AbstractOrbitModelImpl#getOrbitModelsList <em>Orbit Models List</em>}</li>
- *   <li>{@link org.eclipse.symphony.core.impl.AbstractOrbitModelImpl#getVariableFeatureReference <em>Variable Feature Reference</em>}</li>
  * </ul>
  *
  * @generated
@@ -73,16 +71,6 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getVariableFeatureReference() <em>Variable Feature Reference</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getVariableFeatureReference()
-	 * @generated
-	 * @ordered
-	 */
-	protected VariableFeatureReference variableFeatureReference;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -201,44 +189,6 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VariableFeatureReference getVariableFeatureReference() {
-		if (variableFeatureReference != null && variableFeatureReference.eIsProxy()) {
-			InternalEObject oldVariableFeatureReference = (InternalEObject)variableFeatureReference;
-			variableFeatureReference = (VariableFeatureReference)eResolveProxy(oldVariableFeatureReference);
-			if (variableFeatureReference != oldVariableFeatureReference) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE, oldVariableFeatureReference, variableFeatureReference));
-			}
-		}
-		return variableFeatureReference;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VariableFeatureReference basicGetVariableFeatureReference() {
-		return variableFeatureReference;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setVariableFeatureReference(VariableFeatureReference newVariableFeatureReference) {
-		VariableFeatureReference oldVariableFeatureReference = variableFeatureReference;
-		variableFeatureReference = newVariableFeatureReference;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE, oldVariableFeatureReference, variableFeatureReference));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -293,9 +243,6 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
 				if (resolve) return getOrbitModelsList();
 				return basicGetOrbitModelsList();
-			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE:
-				if (resolve) return getVariableFeatureReference();
-				return basicGetVariableFeatureReference();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -316,9 +263,6 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 				return;
 			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
 				setOrbitModelsList((OrbitModelsList)newValue);
-				return;
-			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE:
-				setVariableFeatureReference((VariableFeatureReference)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -341,9 +285,6 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
 				setOrbitModelsList((OrbitModelsList)null);
 				return;
-			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE:
-				setVariableFeatureReference((VariableFeatureReference)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -362,8 +303,6 @@ public abstract class AbstractOrbitModelImpl extends MinimalEObjectImpl.Containe
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST:
 				return basicGetOrbitModelsList() != null;
-			case Symphony__CorePackage.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE:
-				return variableFeatureReference != null;
 		}
 		return super.eIsSet(featureID);
 	}

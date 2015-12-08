@@ -62,7 +62,6 @@ public class AbstractOrbitModelItemProvider
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addVariableFeatureReferencePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -107,28 +106,6 @@ public class AbstractOrbitModelItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Variable Feature Reference feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addVariableFeatureReferencePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_AbstractOrbitModel_variableFeatureReference_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AbstractOrbitModel_variableFeatureReference_feature", "_UI_AbstractOrbitModel_type"),
-				 Symphony__CorePackage.Literals.ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

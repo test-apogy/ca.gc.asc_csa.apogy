@@ -16,6 +16,7 @@ import org.eclipse.symphony.common.topology.Node;
 import org.eclipse.symphony.common.topology.PositionNode;
 import org.eclipse.symphony.common.topology.RotationNode;
 import org.eclipse.symphony.common.topology.TransformNode;
+import org.eclipse.symphony.core.*;
 import org.eclipse.symphony.core.AbsolutePoseProvider;
 import org.eclipse.symphony.core.AbstractOrbitModel;
 import org.eclipse.symphony.core.AbstractWorksite;
@@ -116,6 +117,10 @@ public class Symphony__CoreAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSymphonyEnvironment(SymphonyEnvironment object) {
 				return createSymphonyEnvironmentAdapter();
+			}
+			@Override
+			public Adapter caseTimeSourcesList(TimeSourcesList object) {
+				return createTimeSourcesListAdapter();
 			}
 			@Override
 			public Adapter caseSymphonyTopology(SymphonyTopology object) {
@@ -341,6 +346,20 @@ public class Symphony__CoreAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSymphonyEnvironmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.TimeSourcesList <em>Time Sources List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.core.TimeSourcesList
+	 * @generated
+	 */
+	public Adapter createTimeSourcesListAdapter() {
 		return null;
 	}
 

@@ -24,7 +24,6 @@ import org.eclipse.symphony.common.databinding.converters.DateToStringConverter;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.emf.TimeSource;
 import org.eclipse.symphony.common.emf.ui.composites.AbstractTimeSourceComposite;
-import org.eclipse.symphony.common.emf.ui.composites.TimeSourcesListComposite;
 import org.eclipse.symphony.core.Symphony__CorePackage;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 

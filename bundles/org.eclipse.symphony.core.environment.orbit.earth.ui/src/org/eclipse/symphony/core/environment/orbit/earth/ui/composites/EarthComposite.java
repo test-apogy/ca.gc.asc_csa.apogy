@@ -90,8 +90,6 @@ public class EarthComposite extends Composite
 
 	public void setMode(EarthViewMode mode) 
 	{
-		System.out.println("EarthComposite.setMode( " + mode + " )");
-		
 		this.mode = mode;
 		
 		if(mode == EarthViewMode.FLAT)

@@ -157,17 +157,8 @@ public class CollectionTimedTimeSourceItemProvider extends BrowseableTimeSourceI
 	 */
 	@Override
 	public String getText(Object object) 
-	{		
-		CollectionTimedTimeSource timeSource = (CollectionTimedTimeSource) object;
-		String label = getString("_UI_CollectionTimedTimeSource_type") + " " + getCollectionTimedTimeSourceText(timeSource);		
-		return label;			
-	}
-	
-	protected String getCollectionTimedTimeSourceText(CollectionTimedTimeSource timeSource)
 	{
-		String text = getTimeSourceText(timeSource);
-		text += " [" + timeSource.getTimedsList().size() + "]";
-		return text;
+		return super.getText(object) + " [" + ((CollectionTimedTimeSource)object).getTimedsList().size() + "]";
 	}
 	
 	/**

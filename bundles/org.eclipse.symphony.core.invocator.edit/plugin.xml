@@ -19,10 +19,4 @@
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
    </extension>
 
-   <extension point="org.eclipse.emf.edit.childCreationExtenders">
-      <!-- @generated symphony_core_invocator -->
-      <extender
-            uri="org.eclipse.symphony.common.emf"
-            class="org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorItemProviderAdapterFactory$Symphony__CommonEMFChildCreationExtender"/>
-   </extension>
 </plugin>

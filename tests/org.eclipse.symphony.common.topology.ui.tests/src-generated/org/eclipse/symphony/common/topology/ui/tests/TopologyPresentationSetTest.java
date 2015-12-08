@@ -4,7 +4,7 @@
 package org.eclipse.symphony.common.topology.ui.tests;
 
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationSet;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -79,7 +79,7 @@ public class TopologyPresentationSetTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(TopologyUIFactory.eINSTANCE.createTopologyPresentationSet());
+		setFixture(Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyPresentationSet());
 	}
 
 	/**

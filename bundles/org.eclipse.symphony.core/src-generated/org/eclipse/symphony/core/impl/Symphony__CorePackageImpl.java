@@ -42,6 +42,7 @@ import org.eclipse.symphony.core.ResultsListNode;
 import org.eclipse.symphony.core.Symphony__CoreFacade;
 import org.eclipse.symphony.core.Symphony__CoreFactory;
 import org.eclipse.symphony.core.Symphony__CorePackage;
+import org.eclipse.symphony.core.TimeSourcesList;
 import org.eclipse.symphony.core.SymphonyEnvironment;
 import org.eclipse.symphony.core.SymphonyInitializationData;
 import org.eclipse.symphony.core.SymphonySystem;
@@ -72,6 +73,13 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EClass symphonyEnvironmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass timeSourcesListEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -453,6 +461,33 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 	 */
 	public EReference getSymphonyEnvironment_ActiveTimeSource() {
 		return (EReference)symphonyEnvironmentEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTimeSourcesList() {
+		return timeSourcesListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTimeSourcesList_Environment() {
+		return (EReference)timeSourcesListEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTimeSourcesList_TimeSources() {
+		return (EReference)timeSourcesListEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -866,15 +901,6 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAbstractOrbitModel_VariableFeatureReference() {
-		return (EReference)abstractOrbitModelEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPositioned() {
 		return positionedEClass;
 	}
@@ -1155,6 +1181,10 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 		createEReference(symphonyEnvironmentEClass, SYMPHONY_ENVIRONMENT__TIME_SOURCES_LIST);
 		createEReference(symphonyEnvironmentEClass, SYMPHONY_ENVIRONMENT__ACTIVE_TIME_SOURCE);
 
+		timeSourcesListEClass = createEClass(TIME_SOURCES_LIST);
+		createEReference(timeSourcesListEClass, TIME_SOURCES_LIST__ENVIRONMENT);
+		createEReference(timeSourcesListEClass, TIME_SOURCES_LIST__TIME_SOURCES);
+
 		symphonyTopologyEClass = createEClass(SYMPHONY_TOPOLOGY);
 		createEReference(symphonyTopologyEClass, SYMPHONY_TOPOLOGY__ROOT_NODE);
 
@@ -1216,7 +1246,6 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 
 		abstractOrbitModelEClass = createEClass(ABSTRACT_ORBIT_MODEL);
 		createEReference(abstractOrbitModelEClass, ABSTRACT_ORBIT_MODEL__ORBIT_MODELS_LIST);
-		createEReference(abstractOrbitModelEClass, ABSTRACT_ORBIT_MODEL__VARIABLE_FEATURE_REFERENCE);
 
 		positionedEClass = createEClass(POSITIONED);
 		createEReference(positionedEClass, POSITIONED__POSE);
@@ -1377,8 +1406,12 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 		initEReference(getSymphonyEnvironment_WorksitesList(), this.getWorksitesList(), null, "worksitesList", null, 0, 1, SymphonyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSymphonyEnvironment_ActiveWorksite(), this.getAbstractWorksite(), null, "activeWorksite", null, 0, 1, SymphonyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSymphonyEnvironment_SymphonyTopology(), this.getSymphonyTopology(), null, "symphonyTopology", null, 0, 1, SymphonyEnvironment.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getSymphonyEnvironment_TimeSourcesList(), theSymphony__CommonEMFPackage.getTimeSourcesList(), null, "timeSourcesList", null, 0, 1, SymphonyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSymphonyEnvironment_TimeSourcesList(), this.getTimeSourcesList(), this.getTimeSourcesList_Environment(), "timeSourcesList", null, 0, 1, SymphonyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSymphonyEnvironment_ActiveTimeSource(), theSymphony__CommonEMFPackage.getTimeSource(), null, "activeTimeSource", null, 0, 1, SymphonyEnvironment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(timeSourcesListEClass, TimeSourcesList.class, "TimeSourcesList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTimeSourcesList_Environment(), this.getSymphonyEnvironment(), this.getSymphonyEnvironment_TimeSourcesList(), "environment", null, 0, 1, TimeSourcesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTimeSourcesList_TimeSources(), theSymphony__CommonEMFPackage.getTimeSource(), null, "timeSources", null, 0, -1, TimeSourcesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(symphonyTopologyEClass, SymphonyTopology.class, "SymphonyTopology", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSymphonyTopology_RootNode(), theSymphony__CommonTopologyPackage.getGroupNode(), null, "rootNode", null, 0, 1, SymphonyTopology.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
@@ -1445,7 +1478,6 @@ public class Symphony__CorePackageImpl extends EPackageImpl implements
 
 		initEClass(abstractOrbitModelEClass, AbstractOrbitModel.class, "AbstractOrbitModel", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAbstractOrbitModel_OrbitModelsList(), this.getOrbitModelsList(), this.getOrbitModelsList_OrbitModels(), "orbitModelsList", null, 0, 1, AbstractOrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractOrbitModel_VariableFeatureReference(), theSymphony__CoreInvocatorPackage.getVariableFeatureReference(), null, "variableFeatureReference", null, 0, 1, AbstractOrbitModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(positionedEClass, Positioned.class, "Positioned", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPositioned_Pose(), theSymphony__CommonMathPackage.getMatrix4x4(), null, "pose", null, 1, 1, Positioned.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
