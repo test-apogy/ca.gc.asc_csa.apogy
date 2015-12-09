@@ -2,7 +2,6 @@
  * <copyright>
  * </copyright>
  *
- * $Id: RasterScanRangeSensorImpl.java,v 1.6.4.2 2015/05/21 15:50:22 pallard Exp $
  */
 package org.eclipse.symphony.addons.sensors.range.impl;
 

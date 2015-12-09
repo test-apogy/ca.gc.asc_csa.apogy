@@ -2,7 +2,6 @@
  * <copyright>
  * </copyright>
  *
- * $Id: RangeScannerSimulatorImpl.java,v 1.6.4.3 2015/09/22 19:39:36 rlarcheveque Exp $
  */
 package org.eclipse.symphony.addons.sensors.range.impl;
 

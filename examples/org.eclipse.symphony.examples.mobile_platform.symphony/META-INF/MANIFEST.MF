@@ -27,7 +27,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.examples.mobile_platform;visibility:=reexport,
  org.eclipse.symphony.core.environment.ui;visibility:=reexport,
  org.eclipse.symphony.addons.vehicle
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: org.eclipse.symphony.examples.mobile_platform.symphony,
  org.eclipse.symphony.examples.mobile_platform.symphony.impl,
  org.eclipse.symphony.examples.mobile_platform.symphony.util

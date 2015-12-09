@@ -35,7 +35,7 @@ public interface AtmosphereUtils extends EObject
 	 * @see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" sunAltitudeAngleUnique="false"
-	 *        sunAltitudeAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        sunAltitudeAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
   double getAirMass(double sunAltitudeAngle);
@@ -50,9 +50,9 @@ public interface AtmosphereUtils extends EObject
 	 * @see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM
 	 * <!-- end-model-doc -->
 	 * @model unique="false" sunAltitudeAngleUnique="false"
-	 *        sunAltitudeAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'" heightAboveSeaLevelUnique="false"
-	 *        heightAboveSeaLevelAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='W/m\262'"
+	 *        sunAltitudeAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" heightAboveSeaLevelUnique="false"
+	 *        heightAboveSeaLevelAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='W/m\262'"
 	 * @generated
 	 */
   double getDirectSunIntensity(double sunAltitudeAngle, double heightAboveSeaLevel);
@@ -67,9 +67,9 @@ public interface AtmosphereUtils extends EObject
 	 * @see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM
 	 * <!-- end-model-doc -->
 	 * @model unique="false" sunAltitudeAngleUnique="false"
-	 *        sunAltitudeAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'" heightAboveSeaLevelUnique="false"
-	 *        heightAboveSeaLevelAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='W/m\262'"
+	 *        sunAltitudeAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" heightAboveSeaLevelUnique="false"
+	 *        heightAboveSeaLevelAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='W/m\262'"
 	 * @generated
 	 */
   double getDiffuseSunIntensity(double sunAltitudeAngle, double heightAboveSeaLevel);
@@ -88,7 +88,7 @@ public interface AtmosphereUtils extends EObject
 	 * @see ../doc/AtmosphereRefractionCalculations.html or http://www.srrb.noaa.gov/highlights/sunrise/calcdetails.html.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" geometricAltitudeUnique="false"
-	 *        geometricAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        geometricAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
   double getAtmosphereRefractionCorrection(double geometricAltitude);

@@ -201,7 +201,7 @@ public interface Rover extends Disposable
 	 * @return the value of the '<em>Linear Velocity</em>' attribute.
 	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_LinearVelocity()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='m/s' property='Readonly' propertyCategory='Velocities' get='<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getLinearVelocity();\n}\nelse\n{\n\treturn 0.0;\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='m/s' property='Readonly' propertyCategory='Velocities' get='<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getLinearVelocity();\n}\nelse\n{\n\treturn 0.0;\n}'"
 	 * @generated
 	 */
 	double getLinearVelocity();
@@ -224,7 +224,7 @@ public interface Rover extends Disposable
 	 * @return the value of the '<em>Angular Velocity</em>' attribute.
 	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getRover_AngularVelocity()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='rad/s' property='Readonly' propertyCategory='Velocities' get='<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getAngularVelocity();\n}\nelse\n{\n\treturn 0.0;\n}'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='rad/s' property='Readonly' propertyCategory='Velocities' get='<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getAngularVelocity();\n}\nelse\n{\n\treturn 0.0;\n}'"
 	 * @generated
 	 */
 	double getAngularVelocity();
@@ -319,7 +319,7 @@ public interface Rover extends Disposable
 	 * @see #cmdVelocities(double, double)
 	 * <!-- end-model-doc -->
 	 * @model linearVelocityUnique="false"
-	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m/s'"
+	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m/s'"
 	 * @generated
 	 */
 	void cmdLinearVelocity(double linearVelocity);
@@ -342,7 +342,7 @@ public interface Rover extends Disposable
 	 * @see #cmdVelocities(double, double)
 	 * <!-- end-model-doc -->
 	 * @model angularVelocityUnique="false"
-	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad/s'"
+	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s'"
 	 * @generated
 	 */
 	void cmdAngularVelocity(double angularVelocity);
@@ -372,8 +372,8 @@ public interface Rover extends Disposable
 	 * @see #cmdAngularVelocity(double)
 	 * <!-- end-model-doc -->
 	 * @model linearVelocityUnique="false"
-	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m/s'" angularVelocityUnique="false"
-	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad/s'"
+	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m/s'" angularVelocityUnique="false"
+	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s'"
 	 * @generated
 	 */
 	void cmdVelocities(double linearVelocity, double angularVelocity);

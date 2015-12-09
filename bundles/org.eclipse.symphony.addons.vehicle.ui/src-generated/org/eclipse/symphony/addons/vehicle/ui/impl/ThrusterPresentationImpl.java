@@ -27,7 +27,7 @@ import org.eclipse.symphony.common.topology.ui.impl.NodePresentationImpl;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.impl.ThrusterPresentationImpl#isPlumeEnvelopeVisible <em>Plume Envelope Visible</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.impl.ThrusterPresentationImpl#getPlumeEnvelopeLenght <em>Plume Envelope Lenght</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.vehicle.ui.impl.ThrusterPresentationImpl#getPlumeEnvelopeLength <em>Plume Envelope Length</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,24 +56,24 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 	protected boolean plumeEnvelopeVisible = PLUME_ENVELOPE_VISIBLE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getPlumeEnvelopeLenght() <em>Plume Envelope Lenght</em>}' attribute.
+	 * The default value of the '{@link #getPlumeEnvelopeLength() <em>Plume Envelope Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPlumeEnvelopeLenght()
+	 * @see #getPlumeEnvelopeLength()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double PLUME_ENVELOPE_LENGHT_EDEFAULT = 1.0;
+	protected static final double PLUME_ENVELOPE_LENGTH_EDEFAULT = 1.0;
 
 	/**
-	 * The cached value of the '{@link #getPlumeEnvelopeLenght() <em>Plume Envelope Lenght</em>}' attribute.
+	 * The cached value of the '{@link #getPlumeEnvelopeLength() <em>Plume Envelope Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPlumeEnvelopeLenght()
+	 * @see #getPlumeEnvelopeLength()
 	 * @generated
 	 * @ordered
 	 */
-	protected double plumeEnvelopeLenght = PLUME_ENVELOPE_LENGHT_EDEFAULT;
+	protected double plumeEnvelopeLength = PLUME_ENVELOPE_LENGTH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,8 +127,8 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getPlumeEnvelopeLenght() {
-		return plumeEnvelopeLenght;
+	public double getPlumeEnvelopeLength() {
+		return plumeEnvelopeLength;
 	}
 
 		/**
@@ -136,11 +136,11 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPlumeEnvelopeLenght(double newPlumeEnvelopeLenght) {
-		double oldPlumeEnvelopeLenght = plumeEnvelopeLenght;
-		plumeEnvelopeLenght = newPlumeEnvelopeLenght;
+	public void setPlumeEnvelopeLength(double newPlumeEnvelopeLength) {
+		double oldPlumeEnvelopeLength = plumeEnvelopeLength;
+		plumeEnvelopeLength = newPlumeEnvelopeLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT, oldPlumeEnvelopeLenght, plumeEnvelopeLenght));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH, oldPlumeEnvelopeLength, plumeEnvelopeLength));
 	}
 
 		/**
@@ -153,8 +153,8 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 		switch (featureID) {
 			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
 				return isPlumeEnvelopeVisible();
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
-				return getPlumeEnvelopeLenght();
+			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
+				return getPlumeEnvelopeLength();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -170,8 +170,8 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
 				setPlumeEnvelopeVisible((Boolean)newValue);
 				return;
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
-				setPlumeEnvelopeLenght((Double)newValue);
+			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
+				setPlumeEnvelopeLength((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -188,8 +188,8 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
 				setPlumeEnvelopeVisible(PLUME_ENVELOPE_VISIBLE_EDEFAULT);
 				return;
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
-				setPlumeEnvelopeLenght(PLUME_ENVELOPE_LENGHT_EDEFAULT);
+			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
+				setPlumeEnvelopeLength(PLUME_ENVELOPE_LENGTH_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -205,8 +205,8 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 		switch (featureID) {
 			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE:
 				return plumeEnvelopeVisible != PLUME_ENVELOPE_VISIBLE_EDEFAULT;
-			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
-				return plumeEnvelopeLenght != PLUME_ENVELOPE_LENGHT_EDEFAULT;
+			case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
+				return plumeEnvelopeLength != PLUME_ENVELOPE_LENGTH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -223,8 +223,8 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (plumeEnvelopeVisible: ");
 		result.append(plumeEnvelopeVisible);
-		result.append(", plumeEnvelopeLenght: ");
-		result.append(plumeEnvelopeLenght);
+		result.append(", plumeEnvelopeLength: ");
+		result.append(plumeEnvelopeLength);
 		result.append(')');
 		return result.toString();
 	}
@@ -241,7 +241,7 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 		setPlumeEnvelopeVisible(store.getBoolean(VehicleUIPreferencesConstants.DEFAULT_THRUSTER_PLUME_ENVELOPE_VISIBILITY_ID));
 		
 		// Plume Envelope Length
-		setPlumeEnvelopeLenght(store.getDouble(VehicleUIPreferencesConstants.DEFAULT_THRUSTER_PLUME_ENVELOPE_LENGTH_ID));
+		setPlumeEnvelopeLength(store.getDouble(VehicleUIPreferencesConstants.DEFAULT_THRUSTER_PLUME_ENVELOPE_LENGTH_ID));
 		  
 		super.applyPreferences();
 	}	
@@ -261,8 +261,8 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
 					thrusterSceneObject.setPlumeEnvelopeVisible(notification.getNewBooleanValue());
 				break;
 								
-				case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT:
-					thrusterSceneObject.setPlumeEnvelopeLenght(notification.getNewDoubleValue());
+				case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH:
+					thrusterSceneObject.setPlumeEnvelopeLength(notification.getNewDoubleValue());
 				break;
 				
 				case Symphony__AddonsVehicleUIPackage.THRUSTER_PRESENTATION__COLOR:
@@ -288,7 +288,7 @@ public class ThrusterPresentationImpl extends NodePresentationImpl implements Th
     		
   		// Plume Envelope
   		thrusterSceneObject.setPlumeEnvelopeVisible(isPlumeEnvelopeVisible());	
-  		thrusterSceneObject.setPlumeEnvelopeLenght(getPlumeEnvelopeLenght());
+  		thrusterSceneObject.setPlumeEnvelopeLength(getPlumeEnvelopeLength());
   		thrusterSceneObject.setColor(getColor());
   		
   		super.initialSceneObject();

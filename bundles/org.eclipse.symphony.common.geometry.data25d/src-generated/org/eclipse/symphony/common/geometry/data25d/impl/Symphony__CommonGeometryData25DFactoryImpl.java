@@ -1,7 +1,6 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__CommonGeometryData25DFactoryImpl.java,v 1.6.4.3 2015/09/22 19:39:38 rlarcheveque Exp $
  */
 package org.eclipse.symphony.common.geometry.data25d.impl;
 

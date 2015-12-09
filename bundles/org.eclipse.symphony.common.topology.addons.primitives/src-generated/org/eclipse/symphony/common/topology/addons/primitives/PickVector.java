@@ -46,7 +46,7 @@ public interface PickVector extends Vector {
 	 * @see #setIntersectionDistance(double)
 	 * @see org.eclipse.symphony.common.topology.addons.primitives.Symphony__CommonTopologyAddonsPrimitivesPackage#getPickVector_IntersectionDistance()
 	 * @model default="-1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
 	 * @generated
 	 */
 	double getIntersectionDistance();

@@ -146,7 +146,7 @@ public interface TLE extends EObject {
 	 * @see #setInclination(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_Inclination()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' csa_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' symphony_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getInclination();
@@ -172,7 +172,7 @@ public interface TLE extends EObject {
 	 * @see #setMeanAnomaly(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_MeanAnomaly()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' csa_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' symphony_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getMeanAnomaly();
@@ -198,7 +198,7 @@ public interface TLE extends EObject {
 	 * @see #setMeanMotion(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_MeanMotion()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' csa_units='rad/s' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' symphony_units='rad/s' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getMeanMotion();
@@ -224,7 +224,7 @@ public interface TLE extends EObject {
 	 * @see #setRevolutionPerDay(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_RevolutionPerDay()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' csa_units='rev/day' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' symphony_units='rev/day' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getRevolutionPerDay();
@@ -250,7 +250,7 @@ public interface TLE extends EObject {
 	 * @see #setMeanMotionFirstDerivative(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_MeanMotionFirstDerivative()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' csa_units='rad/s\262' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' symphony_units='rad/s\262' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getMeanMotionFirstDerivative();
@@ -276,7 +276,7 @@ public interface TLE extends EObject {
 	 * @see #setMeanMotionSecondDerivative(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_MeanMotionSecondDerivative()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' csa_units='rad/s\263' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' symphony_units='rad/s\263' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getMeanMotionSecondDerivative();
@@ -302,7 +302,7 @@ public interface TLE extends EObject {
 	 * @see #setArgumentOfPerigee(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_ArgumentOfPerigee()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' csa_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' notify='true' symphony_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getArgumentOfPerigee();
@@ -328,7 +328,7 @@ public interface TLE extends EObject {
 	 * @see #setRightAscentionOfAscendingNode(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getTLE_RightAscentionOfAscendingNode()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' csa_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' symphony_units='rad' propertyCategory='TLE_ORBITAL_PARAMETERS'"
 	 * @generated
 	 */
 	double getRightAscentionOfAscendingNode();

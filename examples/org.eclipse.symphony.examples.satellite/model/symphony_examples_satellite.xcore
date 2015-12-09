@@ -41,13 +41,13 @@ abstract class Satellite extends Named
 	/*
 	 * The satellite maximum roll rate.
 	 */
-	@GenModel(csa_units="rad/s")
+	@GenModel(symphony_units="rad/s")
 	double maximumRollRate = "0.017452778"
 	
 	/*
 	 * The satellite maximum roll.
 	 */
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	double maximumRoll = "0.087"
 	
 	/*
@@ -107,7 +107,7 @@ class SatelliteCommandList
 
 class SatelliteCommandRoll extends SatelliteCommand
 {
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	double targetRollAngle = "0"
 }
 

@@ -61,7 +61,7 @@ public interface EarthSurfaceLocationWorldWindLayer extends AbstractWorldWindLay
 	 * @see #setTargetRadius(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getEarthSurfaceLocationWorldWindLayer_TargetRadius()
 	 * @model default="50" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VISUALS' csa_units='km'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VISUALS' symphony_units='km'"
 	 * @generated
 	 */
 	double getTargetRadius();

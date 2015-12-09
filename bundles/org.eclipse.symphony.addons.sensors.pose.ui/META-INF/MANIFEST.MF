@@ -25,4 +25,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xcore.lib
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.symphony.addons.sensors.pose.ui.Activator
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

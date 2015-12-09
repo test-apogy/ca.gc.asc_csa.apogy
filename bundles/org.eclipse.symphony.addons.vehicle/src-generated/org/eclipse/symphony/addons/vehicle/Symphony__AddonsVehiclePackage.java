@@ -441,15 +441,15 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
   int WHEEL__RADIUS = Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY_FEATURE_COUNT + 0;
 
   /**
-	 * The feature id for the '<em><b>Lenght</b></em>' attribute.
+	 * The feature id for the '<em><b>Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int WHEEL__LENGHT = Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY_FEATURE_COUNT + 1;
+	int WHEEL__LENGTH = Symphony__CommonTopologyAddonsDynamicsPackage.PHYSICAL_BODY_FEATURE_COUNT + 1;
 
-  /**
+		/**
 	 * The number of structural features of the '<em>Wheel</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2086,17 +2086,17 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
   EAttribute getWheel_Radius();
 
   /**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.vehicle.Wheel#getLenght <em>Lenght</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.vehicle.Wheel#getLength <em>Length</em>}'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Lenght</em>'.
-	 * @see org.eclipse.symphony.addons.vehicle.Wheel#getLenght()
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Length</em>'.
+	 * @see org.eclipse.symphony.addons.vehicle.Wheel#getLength()
 	 * @see #getWheel()
 	 * @generated
 	 */
-  EAttribute getWheel_Lenght();
+	EAttribute getWheel_Length();
 
-  /**
+		/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.addons.vehicle.Thruster <em>Thruster</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2952,14 +2952,14 @@ public interface Symphony__AddonsVehiclePackage extends EPackage
     EAttribute WHEEL__RADIUS = eINSTANCE.getWheel_Radius();
 
     /**
-		 * The meta object literal for the '<em><b>Lenght</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Length</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EAttribute WHEEL__LENGHT = eINSTANCE.getWheel_Lenght();
+		EAttribute WHEEL__LENGTH = eINSTANCE.getWheel_Length();
 
-    /**
+				/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.addons.vehicle.impl.ThrusterImpl <em>Thruster</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

@@ -44,22 +44,22 @@ class DistanceRange
  */
 class AngularSpan
 {
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	double minimumAngle = "0.0"
  	
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	double maximumAngle = "0.0"
  	
 	/*
 	 * The total angular span, in radians.
 	 */
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	readonly transient volatile derived double spanningAngle
  	
 	/*
 	 * The center of the angular span, in radians.
 	 */
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	readonly transient volatile derived double centerAngle
  	
 	/*
@@ -80,13 +80,13 @@ class RectangularFrustrumFieldOfView extends FieldOfView
 	/*
 	 * Total horizontal field of view, in radians.
 	 */
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	double horizontalFieldOfViewAngle
  	
 	/*
 	 * Total vertical field of view, in radians.
 	 */
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	double verticalFieldOfViewAngle
  	
 	/*
@@ -105,7 +105,7 @@ class ConicalFieldOfView extends FieldOfView
 	/*
 	 * The apex angle, in radians, of the conical field of view.
 	 */
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	double fieldOfViewAngle
 	
 	/*

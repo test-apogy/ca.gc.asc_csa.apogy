@@ -42,7 +42,7 @@ public class ThrusterJME3Object extends DefaultJME3SceneObject<Thruster> impleme
 	
 	private Geometry plumeGeometry = null;
 	private boolean plumeEnvelopeVisible = false;
-	private double plumeEnvelopeLenght = 1.0;
+	private double plumeEnvelopeLength = 1.0;
 	private ColorRGBA plumeEnvelopeColor = ColorRGBA.White;
 	
 	private ParticleEmitter fireEmitter;
@@ -178,10 +178,10 @@ public class ThrusterJME3Object extends DefaultJME3SceneObject<Thruster> impleme
 	}
 	
 	@Override
-	public void setPlumeEnvelopeLenght(double lenght) 
+	public void setPlumeEnvelopeLength(double length) 
 	{
-		Logger.INSTANCE.log(Activator.ID, this, "Setting Plume Lenght to <" + lenght + "> m...", EventSeverity.INFO);
-		this.plumeEnvelopeLenght = lenght;
+		Logger.INSTANCE.log(Activator.ID, this, "Setting Plume Length to <" + length + "> m...", EventSeverity.INFO);
+		this.plumeEnvelopeLength = length;
 		jme3Application.enqueue(new Callable<Object>() 
 		{
 			@Override
@@ -215,7 +215,7 @@ public class ThrusterJME3Object extends DefaultJME3SceneObject<Thruster> impleme
 	
 	private Mesh createPlumeMesh()
 	{
-		Mesh cone = createPlumeEnvelop((float) getTopologyNode().getPlumeAngle(), (float) plumeEnvelopeLenght, 32);					
+		Mesh cone = createPlumeEnvelop((float) getTopologyNode().getPlumeAngle(), (float) plumeEnvelopeLength, 32);					
 		return cone;
 	}
 	

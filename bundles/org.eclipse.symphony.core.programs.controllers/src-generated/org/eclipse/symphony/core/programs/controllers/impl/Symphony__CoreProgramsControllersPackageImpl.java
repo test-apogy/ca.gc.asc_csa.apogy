@@ -1177,7 +1177,7 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 		   new String[] {
 			 "documentation", "The refresh period, in millisecond, at which the operation should be called.",
 			 "notify", "true",
-			 "csa_units", "ms"
+			 "symphony_units", "ms"
 		   });	
 		addAnnotation
 		  (getControllerTrigger_ComponentQualifier(), 
@@ -1197,7 +1197,7 @@ public class Symphony__CoreProgramsControllersPackageImpl extends EPackageImpl i
 		   new String[] {
 			 "documentation", "The repeat period, in millisecond, at which the operation should be called.",
 			 "notify", "true",
-			 "csa_units", "ms"
+			 "symphony_units", "ms"
 		   });	
 		addAnnotation
 		  (bindedEDataTypeArgumentEClass, 

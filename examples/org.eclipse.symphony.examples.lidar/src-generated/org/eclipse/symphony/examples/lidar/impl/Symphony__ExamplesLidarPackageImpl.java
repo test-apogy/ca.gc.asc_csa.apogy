@@ -340,13 +340,13 @@ public class Symphony__ExamplesLidarPackageImpl extends EPackageImpl implements 
 		  ((getLidar__AcquireScan__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getLidar__AcquireScan__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getLidar__AcquireScanNonBlocking__double_double(), 
@@ -358,13 +358,13 @@ public class Symphony__ExamplesLidarPackageImpl extends EPackageImpl implements 
 		  ((getLidar__AcquireScanNonBlocking__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getLidar__AcquireScanNonBlocking__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getLidar_Fov(), 

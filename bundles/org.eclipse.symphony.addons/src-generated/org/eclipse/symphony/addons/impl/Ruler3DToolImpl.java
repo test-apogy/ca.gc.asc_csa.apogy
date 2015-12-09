@@ -36,10 +36,10 @@ import org.eclipse.symphony.common.topology.ui.NodeSelection;
  *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getExtremitiesRadius <em>Extremities Radius</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getMinorTickColor <em>Minor Tick Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getMinorTickSpacing <em>Minor Tick Spacing</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getMinorTickLenght <em>Minor Tick Lenght</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getMinorTickLength <em>Minor Tick Length</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getMajorTickColor <em>Major Tick Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getMajorTickSpacing <em>Major Tick Spacing</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getMajorTickLenght <em>Major Tick Lenght</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getMajorTickLength <em>Major Tick Length</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.impl.Ruler3DToolImpl#getRuler3dToolNode <em>Ruler3d Tool Node</em>}</li>
  * </ul>
  *
@@ -124,23 +124,23 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	 */
 	protected double minorTickSpacing = MINOR_TICK_SPACING_EDEFAULT;
 	/**
-	 * The default value of the '{@link #getMinorTickLenght() <em>Minor Tick Lenght</em>}' attribute.
+	 * The default value of the '{@link #getMinorTickLength() <em>Minor Tick Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMinorTickLenght()
+	 * @see #getMinorTickLength()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double MINOR_TICK_LENGHT_EDEFAULT = 0.1;
+	protected static final double MINOR_TICK_LENGTH_EDEFAULT = 0.1;
 	/**
-	 * The cached value of the '{@link #getMinorTickLenght() <em>Minor Tick Lenght</em>}' attribute.
+	 * The cached value of the '{@link #getMinorTickLength() <em>Minor Tick Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMinorTickLenght()
+	 * @see #getMinorTickLength()
 	 * @generated
 	 * @ordered
 	 */
-	protected double minorTickLenght = MINOR_TICK_LENGHT_EDEFAULT;
+	protected double minorTickLength = MINOR_TICK_LENGTH_EDEFAULT;
 	/**
 	 * The default value of the '{@link #getMajorTickColor() <em>Major Tick Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -178,23 +178,23 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	 */
 	protected double majorTickSpacing = MAJOR_TICK_SPACING_EDEFAULT;
 	/**
-	 * The default value of the '{@link #getMajorTickLenght() <em>Major Tick Lenght</em>}' attribute.
+	 * The default value of the '{@link #getMajorTickLength() <em>Major Tick Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMajorTickLenght()
+	 * @see #getMajorTickLength()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double MAJOR_TICK_LENGHT_EDEFAULT = 0.2;
+	protected static final double MAJOR_TICK_LENGTH_EDEFAULT = 0.2;
 	/**
-	 * The cached value of the '{@link #getMajorTickLenght() <em>Major Tick Lenght</em>}' attribute.
+	 * The cached value of the '{@link #getMajorTickLength() <em>Major Tick Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMajorTickLenght()
+	 * @see #getMajorTickLength()
 	 * @generated
 	 * @ordered
 	 */
-	protected double majorTickLenght = MAJOR_TICK_LENGHT_EDEFAULT;
+	protected double majorTickLength = MAJOR_TICK_LENGTH_EDEFAULT;
 	/**
 	 * The cached value of the '{@link #getRuler3dToolNode() <em>Ruler3d Tool Node</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -403,8 +403,8 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getMinorTickLenght() {
-		return minorTickLenght;
+	public double getMinorTickLength() {
+		return minorTickLength;
 	}
 
 	/**
@@ -412,11 +412,11 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMinorTickLenght(double newMinorTickLenght) {
-		double oldMinorTickLenght = minorTickLenght;
-		minorTickLenght = newMinorTickLenght;
+	public void setMinorTickLength(double newMinorTickLength) {
+		double oldMinorTickLength = minorTickLength;
+		minorTickLength = newMinorTickLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGHT, oldMinorTickLenght, minorTickLenght));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH, oldMinorTickLength, minorTickLength));
 	}
 
 	/**
@@ -466,8 +466,8 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getMajorTickLenght() {
-		return majorTickLenght;
+	public double getMajorTickLength() {
+		return majorTickLength;
 	}
 
 	/**
@@ -475,11 +475,11 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMajorTickLenght(double newMajorTickLenght) {
-		double oldMajorTickLenght = majorTickLenght;
-		majorTickLenght = newMajorTickLenght;
+	public void setMajorTickLength(double newMajorTickLength) {
+		double oldMajorTickLength = majorTickLength;
+		majorTickLength = newMajorTickLength;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGHT, oldMajorTickLenght, majorTickLenght));
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH, oldMajorTickLength, majorTickLength));
 	}
 
 	/**
@@ -498,14 +498,14 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 				return getMinorTickColor();
 			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
 				return getMinorTickSpacing();
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
-				return getMinorTickLenght();
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
+				return getMinorTickLength();
 			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
 				return getMajorTickColor();
 			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
 				return getMajorTickSpacing();
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
-				return getMajorTickLenght();
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
+				return getMajorTickLength();
 			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				if (resolve) return getRuler3dToolNode();
 				return basicGetRuler3dToolNode();
@@ -533,8 +533,8 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
 				setMinorTickSpacing((Double)newValue);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
-				setMinorTickLenght((Double)newValue);
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
+				setMinorTickLength((Double)newValue);
 				return;
 			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
 				setMajorTickColor((Color3f)newValue);
@@ -542,8 +542,8 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
 				setMajorTickSpacing((Double)newValue);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
-				setMajorTickLenght((Double)newValue);
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
+				setMajorTickLength((Double)newValue);
 				return;
 			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				setRuler3dToolNode((Ruler3dToolNode)newValue);
@@ -572,8 +572,8 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
 				setMinorTickSpacing(MINOR_TICK_SPACING_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
-				setMinorTickLenght(MINOR_TICK_LENGHT_EDEFAULT);
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
+				setMinorTickLength(MINOR_TICK_LENGTH_EDEFAULT);
 				return;
 			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
 				setMajorTickColor(MAJOR_TICK_COLOR_EDEFAULT);
@@ -581,8 +581,8 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
 				setMajorTickSpacing(MAJOR_TICK_SPACING_EDEFAULT);
 				return;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
-				setMajorTickLenght(MAJOR_TICK_LENGHT_EDEFAULT);
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
+				setMajorTickLength(MAJOR_TICK_LENGTH_EDEFAULT);
 				return;
 			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				setRuler3dToolNode((Ruler3dToolNode)null);
@@ -607,14 +607,14 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 				return MINOR_TICK_COLOR_EDEFAULT == null ? minorTickColor != null : !MINOR_TICK_COLOR_EDEFAULT.equals(minorTickColor);
 			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
 				return minorTickSpacing != MINOR_TICK_SPACING_EDEFAULT;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
-				return minorTickLenght != MINOR_TICK_LENGHT_EDEFAULT;
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
+				return minorTickLength != MINOR_TICK_LENGTH_EDEFAULT;
 			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
 				return MAJOR_TICK_COLOR_EDEFAULT == null ? majorTickColor != null : !MAJOR_TICK_COLOR_EDEFAULT.equals(majorTickColor);
 			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
 				return majorTickSpacing != MAJOR_TICK_SPACING_EDEFAULT;
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
-				return majorTickLenght != MAJOR_TICK_LENGHT_EDEFAULT;
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
+				return majorTickLength != MAJOR_TICK_LENGTH_EDEFAULT;
 			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:
 				return ruler3dToolNode != null;
 		}
@@ -639,14 +639,14 @@ public class Ruler3DToolImpl extends AbstractTwoPoints3DToolImpl implements Rule
 		result.append(minorTickColor);
 		result.append(", minorTickSpacing: ");
 		result.append(minorTickSpacing);
-		result.append(", minorTickLenght: ");
-		result.append(minorTickLenght);
+		result.append(", minorTickLength: ");
+		result.append(minorTickLength);
 		result.append(", majorTickColor: ");
 		result.append(majorTickColor);
 		result.append(", majorTickSpacing: ");
 		result.append(majorTickSpacing);
-		result.append(", majorTickLenght: ");
-		result.append(majorTickLenght);
+		result.append(", majorTickLength: ");
+		result.append(majorTickLength);
 		result.append(')');
 		return result.toString();
 	}

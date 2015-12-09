@@ -424,13 +424,13 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	int VARIABLE_LENGTH_RECORD__RECORD_ID = 2;
 
 	/**
-	 * The feature id for the '<em><b>Record Lenght After Header</b></em>' attribute.
+	 * The feature id for the '<em><b>Record Length After Header</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_LENGTH_RECORD__RECORD_LENGHT_AFTER_HEADER = 3;
+	int VARIABLE_LENGTH_RECORD__RECORD_LENGTH_AFTER_HEADER = 3;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1401,15 +1401,15 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 	EAttribute getVariableLengthRecord_RecordID();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordLenghtAfterHeader <em>Record Lenght After Header</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordLengthAfterHeader <em>Record Length After Header</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Record Lenght After Header</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordLenghtAfterHeader()
+	 * @return the meta object for the attribute '<em>Record Length After Header</em>'.
+	 * @see org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getRecordLengthAfterHeader()
 	 * @see #getVariableLengthRecord()
 	 * @generated
 	 */
-	EAttribute getVariableLengthRecord_RecordLenghtAfterHeader();
+	EAttribute getVariableLengthRecord_RecordLengthAfterHeader();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.las.VariableLengthRecord#getDescription <em>Description</em>}'.
@@ -2282,12 +2282,12 @@ public interface Symphony__CommonGeometryData3DLASPackage extends EPackage {
 		EAttribute VARIABLE_LENGTH_RECORD__RECORD_ID = eINSTANCE.getVariableLengthRecord_RecordID();
 
 		/**
-		 * The meta object literal for the '<em><b>Record Lenght After Header</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Record Length After Header</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VARIABLE_LENGTH_RECORD__RECORD_LENGHT_AFTER_HEADER = eINSTANCE.getVariableLengthRecord_RecordLenghtAfterHeader();
+		EAttribute VARIABLE_LENGTH_RECORD__RECORD_LENGTH_AFTER_HEADER = eINSTANCE.getVariableLengthRecord_RecordLengthAfterHeader();
 
 		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.

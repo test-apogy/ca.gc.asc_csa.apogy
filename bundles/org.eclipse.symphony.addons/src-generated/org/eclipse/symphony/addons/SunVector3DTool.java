@@ -72,7 +72,7 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * @see #setVectorLength(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_VectorLength()
 	 * @model default="10.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='SUN_VECTOR_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='m' propertyCategory='SUN_VECTOR_PROPERTIES'"
 	 * @generated
 	 */
 	double getVectorLength();
@@ -99,7 +99,7 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * @see #setEndPointRadius(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_EndPointRadius()
 	 * @model default="0.01" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='SUN_VECTOR_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='m' propertyCategory='SUN_VECTOR_PROPERTIES'"
 	 * @generated
 	 */
 	double getEndPointRadius();
@@ -130,7 +130,7 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * @see #setSunIntensity(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_SunIntensity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='W/m*m' property='Readonly' propertyCategory='SUN_VECTOR_LIGHT_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='W/m*m' property='Readonly' propertyCategory='SUN_VECTOR_LIGHT_PROPERTIES'"
 	 * @generated
 	 */
 	double getSunIntensity();
@@ -157,7 +157,7 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * @see #setCurrentDayMaximumSunIntensity(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_CurrentDayMaximumSunIntensity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='W/m*m' property='Readonly' propertyCategory='SUN_VECTOR_LIGHT_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='W/m*m' property='Readonly' propertyCategory='SUN_VECTOR_LIGHT_PROPERTIES'"
 	 * @generated
 	 */
 	double getCurrentDayMaximumSunIntensity();
@@ -184,7 +184,7 @@ public interface SunVector3DTool extends AbstractTwoPoints3DTool {
 	 * @see #setCurrentSunIntensityPercentage(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getSunVector3DTool_CurrentSunIntensityPercentage()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='%' property='Readonly' propertyCategory='SUN_VECTOR_LIGHT_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='%' property='Readonly' propertyCategory='SUN_VECTOR_LIGHT_PROPERTIES'"
 	 * @generated
 	 */
 	double getCurrentSunIntensityPercentage();

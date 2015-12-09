@@ -739,13 +739,13 @@ public interface Symphony__AddonsPackage extends EPackage
 	int RULER3_DTOOL__MINOR_TICK_SPACING = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 3;
 
 		/**
-	 * The feature id for the '<em><b>Minor Tick Lenght</b></em>' attribute.
+	 * The feature id for the '<em><b>Minor Tick Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3_DTOOL__MINOR_TICK_LENGHT = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 4;
+	int RULER3_DTOOL__MINOR_TICK_LENGTH = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 4;
 
 		/**
 	 * The feature id for the '<em><b>Major Tick Color</b></em>' attribute.
@@ -766,13 +766,13 @@ public interface Symphony__AddonsPackage extends EPackage
 	int RULER3_DTOOL__MAJOR_TICK_SPACING = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 6;
 
 		/**
-	 * The feature id for the '<em><b>Major Tick Lenght</b></em>' attribute.
+	 * The feature id for the '<em><b>Major Tick Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RULER3_DTOOL__MAJOR_TICK_LENGHT = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 7;
+	int RULER3_DTOOL__MAJOR_TICK_LENGTH = ABSTRACT_TWO_POINTS3_DTOOL_FEATURE_COUNT + 7;
 
 		/**
 	 * The feature id for the '<em><b>Ruler3d Tool Node</b></em>' reference.
@@ -2340,15 +2340,15 @@ public interface Symphony__AddonsPackage extends EPackage
 	EAttribute getRuler3DTool_MinorTickSpacing();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Ruler3DTool#getMinorTickLenght <em>Minor Tick Lenght</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Ruler3DTool#getMinorTickLength <em>Minor Tick Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Minor Tick Lenght</em>'.
-	 * @see org.eclipse.symphony.addons.Ruler3DTool#getMinorTickLenght()
+	 * @return the meta object for the attribute '<em>Minor Tick Length</em>'.
+	 * @see org.eclipse.symphony.addons.Ruler3DTool#getMinorTickLength()
 	 * @see #getRuler3DTool()
 	 * @generated
 	 */
-	EAttribute getRuler3DTool_MinorTickLenght();
+	EAttribute getRuler3DTool_MinorTickLength();
 
 		/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Ruler3DTool#getMajorTickColor <em>Major Tick Color</em>}'.
@@ -2373,15 +2373,15 @@ public interface Symphony__AddonsPackage extends EPackage
 	EAttribute getRuler3DTool_MajorTickSpacing();
 
 		/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Ruler3DTool#getMajorTickLenght <em>Major Tick Lenght</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.addons.Ruler3DTool#getMajorTickLength <em>Major Tick Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Major Tick Lenght</em>'.
-	 * @see org.eclipse.symphony.addons.Ruler3DTool#getMajorTickLenght()
+	 * @return the meta object for the attribute '<em>Major Tick Length</em>'.
+	 * @see org.eclipse.symphony.addons.Ruler3DTool#getMajorTickLength()
 	 * @see #getRuler3DTool()
 	 * @generated
 	 */
-	EAttribute getRuler3DTool_MajorTickLenght();
+	EAttribute getRuler3DTool_MajorTickLength();
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -2847,12 +2847,12 @@ public interface Symphony__AddonsPackage extends EPackage
 		 */
 		EAttribute RULER3_DTOOL__MINOR_TICK_SPACING = eINSTANCE.getRuler3DTool_MinorTickSpacing();
 				/**
-		 * The meta object literal for the '<em><b>Minor Tick Lenght</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Minor Tick Length</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RULER3_DTOOL__MINOR_TICK_LENGHT = eINSTANCE.getRuler3DTool_MinorTickLenght();
+		EAttribute RULER3_DTOOL__MINOR_TICK_LENGTH = eINSTANCE.getRuler3DTool_MinorTickLength();
 				/**
 		 * The meta object literal for the '<em><b>Major Tick Color</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -2868,12 +2868,12 @@ public interface Symphony__AddonsPackage extends EPackage
 		 */
 		EAttribute RULER3_DTOOL__MAJOR_TICK_SPACING = eINSTANCE.getRuler3DTool_MajorTickSpacing();
 				/**
-		 * The meta object literal for the '<em><b>Major Tick Lenght</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Major Tick Length</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RULER3_DTOOL__MAJOR_TICK_LENGHT = eINSTANCE.getRuler3DTool_MajorTickLenght();
+		EAttribute RULER3_DTOOL__MAJOR_TICK_LENGTH = eINSTANCE.getRuler3DTool_MajorTickLength();
 
   }
 

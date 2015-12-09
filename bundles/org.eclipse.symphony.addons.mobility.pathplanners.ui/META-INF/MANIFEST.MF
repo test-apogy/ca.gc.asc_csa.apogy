@@ -25,4 +25,4 @@ Export-Package: org.eclipse.symphony.addons.mobility.pathplanners.ui,
  org.eclipse.symphony.addons.mobility.pathplanners.ui.impl,
  org.eclipse.symphony.addons.mobility.pathplanners.ui.scene_objects,
  org.eclipse.symphony.addons.mobility.pathplanners.ui.util
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

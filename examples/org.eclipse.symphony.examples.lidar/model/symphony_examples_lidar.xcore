@@ -62,8 +62,8 @@ abstract class Lidar
 	 * @return The resulting scan with the given horizontal and vertical angular resolution.
 	 * @see #acquireScanNonBlocking(double, double)
 	 */
-	op CartesianCoordinatesSet acquireScan(@GenModel(csa_units="rad") double horizontalResolution,
-										   @GenModel(csa_units="rad") double verticalResolution)
+	op CartesianCoordinatesSet acquireScan(@GenModel(symphony_units="rad") double horizontalResolution,
+										   @GenModel(symphony_units="rad") double verticalResolution)
 	
 	/* 
 	 * This operation is used to acquire a depth scan of the field of view, with the given
@@ -76,8 +76,8 @@ abstract class Lidar
 	 * @return The resulting scan with the given horizontal and vertical angular resolution.
 	 * @see #acquireScan(double, double)
 	 */
-	op CartesianCoordinatesSet acquireScanNonBlocking(@GenModel(csa_units="rad") double horizontalResolution,
-													  @GenModel(csa_units="rad") double verticalResolution)
+	op CartesianCoordinatesSet acquireScanNonBlocking(@GenModel(symphony_units="rad") double horizontalResolution,
+													  @GenModel(symphony_units="rad") double verticalResolution)
 }
 
 /* 

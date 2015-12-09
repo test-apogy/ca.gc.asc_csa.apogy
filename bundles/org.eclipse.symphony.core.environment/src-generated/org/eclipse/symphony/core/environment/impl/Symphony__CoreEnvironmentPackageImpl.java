@@ -4300,7 +4300,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "Azimuth, relative to true North, of the X axis of the worksite\ncoordinates system. Follows the right hand rule.\nNote that the Z axis is pointing up (toward zenith).",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getEarthSurfaceWorksite_EarthSky(), 
@@ -4313,35 +4313,35 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "The wind surface speed, in m/s.",
-			 "csa_units", "m/s"
+			 "symphony_units", "m/s"
 		   });	
 		addAnnotation
 		  (getAtmosphere_WindDirection(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The wind direction expressed relative to true north, in radians.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getAtmosphere_Temperature(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The atmosphere temperature, in degrees Celcius.",
-			 "csa_units", "deg"
+			 "symphony_units", "deg"
 		   });	
 		addAnnotation
 		  (getAtmosphere_SurfacePressure(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The atmosphere pressure at the reference altitude, in Pascals.",
-			 "csa_units", "Pa"
+			 "symphony_units", "Pa"
 		   });	
 		addAnnotation
 		  (getAtmosphere_SurfaceDensity(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The atmosphere density at the reference altitude, in kg/m^3.",
-			 "csa_units", "kg/m\u00b3"
+			 "symphony_units", "kg/m\u00b3"
 		   });	
 		addAnnotation
 		  (getAtmosphereUtils__GetAirMass__double(), 
@@ -4353,45 +4353,45 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAtmosphereUtils__GetAirMass__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getAtmosphereUtils__GetDirectSunIntensity__double_double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Computes the intensity of the direct component of sunlight, in Watts/m^2.\n@param sunAltitudeAngle The sun elevation angle above the horizon, in radians.\n@param heightAboveSeaLevel Height above sea level, in meters.\n@see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM",
-			 "csa_units", "W/m\u00b2"
+			 "symphony_units", "W/m\u00b2"
 		   });	
 		addAnnotation
 		  ((getAtmosphereUtils__GetDirectSunIntensity__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAtmosphereUtils__GetDirectSunIntensity__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getAtmosphereUtils__GetDiffuseSunIntensity__double_double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Computes the intensity of the diffuse component of sunlight, in Watts/m^2.\n@param sunAltitudeAngle The sun elevation angle above the horizon, in radians.\n@param heightAboveSeaLevel Height above sea level, in meters.\n@see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM",
-			 "csa_units", "W/m\u00b2"
+			 "symphony_units", "W/m\u00b2"
 		   });	
 		addAnnotation
 		  ((getAtmosphereUtils__GetDiffuseSunIntensity__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAtmosphereUtils__GetDiffuseSunIntensity__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getAtmosphereUtils__GetAtmosphereRefractionCorrection__double(), 
@@ -4403,7 +4403,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAtmosphereUtils__GetAtmosphereRefractionCorrection__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (equatorialCoordinatesEClass, 
@@ -4422,21 +4422,21 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "The longitude, in radians. Longitude east of Greenwich, UK  are positive\nwhile those west of Greenwich are negative.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getGeographicCoordinates_Latitude(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The latitude, in radians. Latitude north of the equator are positive while those\nsouth of the equator are negative.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getGeographicCoordinates_Elevation(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Height above the Earth\'s sea level, in meters.",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (horizontalCoordinatesEClass, 
@@ -4462,7 +4462,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "documentation", "Returns the Sun angular diameter, in radians.",
 			 "propertyCategory", "SUN",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getSky_SurfaceWorksite(), 
@@ -4511,7 +4511,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "documentation", "Returns the Moon angular diameter, in radians.",
 			 "propertyCategory", "MOON",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getEarthSky_Moon(), 
@@ -4537,14 +4537,14 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getSun__GetIrradiance__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getSun_Radius(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Sun radius, in meters.",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (earthEClass, 
@@ -4557,14 +4557,14 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "Earth mean radius, in meters.",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getMoon_Radius(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Moon radius, in meters.",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (environmentUtilitiesEClass, 
@@ -4583,14 +4583,14 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "Method that parses Right Ascension angle expressed in\nHH:mm:ss format and return an angle in radians.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getEnvironmentUtilities__ParseDegMinSec__String(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Method that parses an angle expressed in deg:mm:ss format\nand return an angle in radians.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getEnvironmentUtilities__SortByMagnitude__List(), 
@@ -4736,13 +4736,13 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__GetHorizontalSunPosition__Date_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__GetHorizontalSunPosition__Date_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__GetMoonEquatorialPosition__double(), 
@@ -4760,13 +4760,13 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__GetMoonTopocentricEquatorialPosition__Date_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__GetMoonTopocentricEquatorialPosition__Date_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__GetHorizontalMoonPosition__Date_double_double(), 
@@ -4778,13 +4778,13 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__GetHorizontalMoonPosition__Date_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__GetHorizontalMoonPosition__Date_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__GetTimeSinceJ2000__double(), 
@@ -4802,7 +4802,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__GetLocalSideralTime__Date_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__GetUTCDecimalHours__Date(), 
@@ -4820,33 +4820,33 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__ConvertToHorizontalCoordinates__EquatorialCoordinates_double_double_Date()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__ConvertToHorizontalCoordinates__EquatorialCoordinates_double_double_Date()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__ConvertTimeToAngle__int_int_int(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Convert a day\'s hour, minutes and seconds to an angle, in radians. 24 hours converts to 2\u03c0 (360 degrees).",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__ClampAngleToZero2PI__double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Clamps the specified angle between 0 and 2\u03c0 (360 degrees).",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__ClampAngleToZero2PI__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__ConvertToEquatorialCoordinates__EclipticCoordinates(), 
@@ -4895,20 +4895,20 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "Convert Astronomical Units (A.U.) to meters.",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__GetMaximumSunAltitude__double(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the maximum altitude angle that the sun could reach at the specified latitude, in radians.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__GetMaximumSunAltitude__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__ConvertToHHmmssString__double(), 
@@ -4926,13 +4926,13 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__GetSunRiseTime__Date_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__GetSunRiseTime__Date_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__GetSunSetTime__Date_double_double(), 
@@ -4944,13 +4944,13 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__GetSunSetTime__Date_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__GetSunSetTime__Date_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getAstronomyUtils__GetSunHighestElevationTime__Date_double_double(), 
@@ -4962,13 +4962,13 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  ((getAstronomyUtils__GetSunHighestElevationTime__Date_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAstronomyUtils__GetSunHighestElevationTime__Date_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getMapsList_MapsListNode(), 
@@ -5045,7 +5045,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "Minimum X coordinate on the X axis.",
 			 "property", "Readonly",
 			 "propertyCategory", "EXTENT_COORDINATES",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularRegion_XMax(), 
@@ -5054,7 +5054,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "Maximum X coordinate on the X axis.",
 			 "property", "Readonly",
 			 "propertyCategory", "EXTENT_COORDINATES",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularRegion_YMin(), 
@@ -5063,7 +5063,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "Minimum X coordinate on the Y axis.",
 			 "property", "Readonly",
 			 "propertyCategory", "EXTENT_COORDINATES",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularRegion_YMax(), 
@@ -5072,7 +5072,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "Maximum X coordinate on the Y axis.",
 			 "property", "Readonly",
 			 "propertyCategory", "EXTENT_COORDINATES",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularRegion_XDimension(), 
@@ -5080,7 +5080,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "documentation", "Dimension along the X axis.",
 			 "propertyCategory", "EXTENT_SIZES",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularRegion_YDimension(), 
@@ -5088,7 +5088,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "documentation", "Dimension along the Y axis.",
 			 "propertyCategory", "EXTENT_SIZES",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularVolumeRegion_ZMin(), 
@@ -5097,7 +5097,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "Minimum Z coordinate on the Z axis.",
 			 "property", "Readonly",
 			 "propertyCategory", "EXTENT_COORDINATES",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularVolumeRegion_ZMax(), 
@@ -5106,7 +5106,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "Maximum Z coordinate on the Z axis.",
 			 "property", "Readonly",
 			 "propertyCategory", "EXTENT_COORDINATES",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangularVolumeRegion_ZDimension(), 
@@ -5114,7 +5114,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "documentation", "Dimension along the Z axis.",
 			 "propertyCategory", "EXTENT_SIZES",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (rectangularRegionProviderEClass, 
@@ -5145,7 +5145,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the image resolution.\n@return The resolution, in meters / pixel, or -1 if not defined.",
-			 "csa_units", "m/pixel"
+			 "symphony_units", "m/pixel"
 		   });	
 		addAnnotation
 		  (imageMapLayerEClass, 
@@ -5172,7 +5172,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The width of the region covered by the map, in meters.",
 			 "property", "Editable",
 			 "propertyCategory", "SIZE_AND_RESOLUTION",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getImageMapLayer_Height(), 
@@ -5181,7 +5181,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The height of the region covered by the map, in meters.",
 			 "property", "Editable",
 			 "propertyCategory", "SIZE_AND_RESOLUTION",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getImageMapLayer_Opaque(), 
@@ -5210,7 +5210,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The resolution, in meters / pixels",
 			 "property", "Readonly",
 			 "propertyCategory", "SIZE_AND_RESOLUTION",
-			 "csa_units", "m/pixel"
+			 "symphony_units", "m/pixel"
 		   });	
 		addAnnotation
 		  (imageMapLayerPresentationEClass, 
@@ -5325,7 +5325,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The required resolution, in meters / pixels",
 			 "property", "Editable",
 			 "propertyCategory", "IMAGE_GENERATION_SETTINGS",
-			 "csa_units", "m/pixel"
+			 "symphony_units", "m/pixel"
 		   });	
 		addAnnotation
 		  (getCartesianTriangularMeshDerivedImageMapLayer_CartesianTriangularMeshMapLayer(), 
@@ -5356,7 +5356,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The minimum slope to use to generate the color scale. This is applicable only if autoScale is true.",
 			 "property", "Editable",
 			 "propertyCategory", "IMAGE_GENERATION_SETTINGS",
-			 "csa_units", "deg"
+			 "symphony_units", "deg"
 		   });	
 		addAnnotation
 		  (getCartesianTriangularMeshSlopeImageMapLayer_MaximumSlope(), 
@@ -5365,7 +5365,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The maximum slope to use to generate the color scale. This is applicable only if autoScale is true.",
 			 "property", "Editable",
 			 "propertyCategory", "IMAGE_GENERATION_SETTINGS",
-			 "csa_units", "deg"
+			 "symphony_units", "deg"
 		   });	
 		addAnnotation
 		  (cartesianTriangularMeshDiscreteSlopeImageMapLayerEClass, 
@@ -5400,7 +5400,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The minimum height to use to generate the color scale. This is applicable only if autoScale is true.",
 			 "property", "Editable",
 			 "propertyCategory", "IMAGE_GENERATION_SETTINGS",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getCartesianTriangularMeshHeightImageMapLayer_MaximumHeight(), 
@@ -5409,7 +5409,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The maximum height to use to generate the color scale. This is applicable only if autoScale is true.",
 			 "property", "Editable",
 			 "propertyCategory", "IMAGE_GENERATION_SETTINGS",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (slopeRangeEClass, 
@@ -5423,7 +5423,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "documentation", "Lower bound of the slope range. Always positive",
 			 "property", "Editable",
-			 "csa_units", "deg"
+			 "symphony_units", "deg"
 		   });	
 		addAnnotation
 		  (getSlopeRange_SlopeUpperBound(), 
@@ -5431,7 +5431,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "documentation", "Upper bound of the slope range. Always positive, and should be larger than slopeLower.",
 			 "property", "Editable",
-			 "csa_units", "deg"
+			 "symphony_units", "deg"
 		   });	
 		addAnnotation
 		  (getSlopeRange_Color(), 
@@ -5477,7 +5477,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The height of target above ground.",
 			 "property", "Editable",
 			 "propertyCategory", "IMAGE_GENERATION_SETTINGS",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getLineOfSightImageMapLayer_UseHeightPerpendicularToGround(), 
@@ -5516,7 +5516,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "documentation", "The required resolution, in meters / pixels",
 			 "property", "Editable",
 			 "propertyCategory", "IMAGE_GENERATION_SETTINGS",
-			 "csa_units", "m/pixel"
+			 "symphony_units", "m/pixel"
 		   });	
 		addAnnotation
 		  (ellipseShapeImageLayerEClass, 
@@ -5530,7 +5530,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "property", "Editable",
 			 "propertyCategory", "ELLIPSE_SETTINGS",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getEllipseShapeImageLayer_EllipseHeight(), 
@@ -5538,7 +5538,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "property", "Editable",
 			 "propertyCategory", "ELLIPSE_SETTINGS",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getEllipseShapeImageLayer_ShowCenterLines(), 
@@ -5559,7 +5559,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "property", "Editable",
 			 "propertyCategory", "RECTANGLE_SETTINGS",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangleShapeImageLayer_RectangleHeight(), 
@@ -5567,7 +5567,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   new String[] {
 			 "property", "Editable",
 			 "propertyCategory", "RECTANGLE_SETTINGS",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getRectangleShapeImageLayer_ShowCenterLines(), 

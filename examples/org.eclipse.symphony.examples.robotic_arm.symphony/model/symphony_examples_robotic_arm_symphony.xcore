@@ -59,7 +59,7 @@ class RoboticArmData extends SymphonyInitializationData
 	/*
 	 * This is the angle (in degrees) that the robotic arm's turret joint should be at.
 	 */
-	@GenModel(csa_units="deg",
+	@GenModel(symphony_units="deg",
 			  children="false",
 			  notify="true",
 			  property="Editable",
@@ -69,7 +69,7 @@ class RoboticArmData extends SymphonyInitializationData
 	/*
 	 * This is the angle (in degrees) that the robotic arm's shoulder joint should be at.
 	 */
-	@GenModel(csa_units="deg",
+	@GenModel(symphony_units="deg",
 			  children="false",
 			  notify="true",
 			  property="Editable",
@@ -79,7 +79,7 @@ class RoboticArmData extends SymphonyInitializationData
 	/*
 	 * This is the angle (in degrees) that the robotic arm's elbow joint should be at.
 	 */
-	@GenModel(csa_units="deg",
+	@GenModel(symphony_units="deg",
 			  children="false",
 			  notify="true",
 			  property="Editable",
@@ -89,7 +89,7 @@ class RoboticArmData extends SymphonyInitializationData
 	/*
 	 * This is the angle (in degrees) that the robotic arm's wrist joint should be at.
 	 */
-	@GenModel(csa_units="deg",
+	@GenModel(symphony_units="deg",
 			  children="false",
 			  notify="true",
 			  property="Editable",

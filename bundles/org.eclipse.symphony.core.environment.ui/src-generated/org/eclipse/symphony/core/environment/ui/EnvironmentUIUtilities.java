@@ -56,7 +56,7 @@ public interface EnvironmentUIUtilities extends EObject
 	 * @param sunAltitude The altitude above the horizon, in radians.
 	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.core.environment.ui.Color3f" unique="false" sunAltitudeUnique="false"
-	 *        sunAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        sunAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
   Color3f getSunLightColor(double sunAltitude);
@@ -70,7 +70,7 @@ public interface EnvironmentUIUtilities extends EObject
 	 * @param sunAltitude The altitude above the horizon, in radians.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" sunAltitudeUnique="false"
-	 *        sunAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        sunAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
   double getSkyTransparency(double sunAltitude);
@@ -83,7 +83,7 @@ public interface EnvironmentUIUtilities extends EObject
 	 * @param sunAltitude The altitude above the horizon, in radians.
 	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.core.environment.ui.Color3f" unique="false" sunAltitudeUnique="false"
-	 *        sunAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        sunAltitudeAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
   Color3f getSkyColor(double sunAltitude);

@@ -461,25 +461,25 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 		  ((getRoboticArm__MoveTo__double_double_double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getRoboticArm__MoveTo__double_double_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getRoboticArm__MoveTo__double_double_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getRoboticArm__MoveTo__double_double_double_double()).getEParameters().get(3), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getRoboticArm__Stow(), 
@@ -496,7 +496,7 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Joint Angles",
-			 "csa_units", "deg"
+			 "symphony_units", "deg"
 		   });	
 		addAnnotation
 		  (getRoboticArm_ShoulderAngle(), 
@@ -507,7 +507,7 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Joint Angles",
-			 "csa_units", "deg"
+			 "symphony_units", "deg"
 		   });	
 		addAnnotation
 		  (getRoboticArm_ElbowAngle(), 
@@ -518,7 +518,7 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Joint Angles",
-			 "csa_units", "deg"
+			 "symphony_units", "deg"
 		   });	
 		addAnnotation
 		  (getRoboticArm_WristAngle(), 
@@ -529,7 +529,7 @@ public class Symphony__ExamplesRoboticArmPackageImpl extends EPackageImpl implem
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Joint Angles",
-			 "csa_units", "deg"
+			 "symphony_units", "deg"
 		   });	
 		addAnnotation
 		  (getRoboticArm_Initialized(), 

@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.common.topology.ui.tests;
 
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 import org.eclipse.symphony.common.topology.ui.TransformNodePresentation;
 
 import junit.textui.TestRunner;
@@ -54,7 +54,7 @@ public class TransformNodePresentationTest extends NodePresentationTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(TopologyUIFactory.eINSTANCE.createTransformNodePresentation());
+		setFixture(Symphony__CommonTopologyUIFactory.eINSTANCE.createTransformNodePresentation());
 	}
 
 	/**

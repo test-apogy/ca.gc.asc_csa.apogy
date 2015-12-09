@@ -54,37 +54,37 @@ Note: It is important to note that while all of the above example ''Systems'' on
 
 This ''System'' refers to a conical antenna which is mounted on top of a pan-tilt unit (PTU).  The antenna has the capability to change the position that it is directed at, by manipulating the PTU's pan and tilt angles.  In fact, the antenna is capable to track and follow the position of the Sun in the sky.  
 
-TODO!
+<!-- TODO! -->
 
 ==== <i>Camera</i> ====
 
 This ''System'' refers to a basic camera.  This camera is only capable to changing its zoom level and taking snapshots of the environment.
 
-TODO!
+<!-- TODO! -->
 
 ==== <i>PTU Camera</i> ====
 
 This ''System'' refers to a slightly more advanced ''Camera'', which is mounted on top of a pan-tilt unit (PTU).  In addition to the basic capabilities described for the '''Camera''' ''System'', it is also capable of change the direction in which it is facing, by changing its PTU unit's pan and tilt angles appropriately.
 
-TODO!
+<!-- TODO! -->
 
 ==== <i>Lander</i> ====
 
 This ''System'' refers to a three-legged lander, with a thruster mounted under the bottom center of it.  The lander's three legs can be extended or retracted individually, allowing a variety of possible configurations. The amount of thrust exerted by the lander's thruster is controllable (within a range) and as such, the lander IS capable of flight; it however, rather tricky to control, especially when dealing with angular velocity.
 
-TODO!
+<!-- TODO! -->
 
 ==== <i>Lidar</i> ====
 
 This ''System'' refers to a raster scan Lidar unit.  This ''System'' has a fixed position and is only capable of acquiring Lidar scans. 
 
-TODO!
+<!-- TODO! -->
 
 ==== <i>Mobile Platform</i> ====
 
 This ''System'' refers to a four-wheeled, movable platform, upon which other ''Systems'' could be attached.  This ''System'' can control its linear and angular velocities, allowing it to move around the ''Environment''.
 
-TODO!
+<!-- TODO! -->
 
 ==== <i>Robotic Arm</i> ====
 
@@ -95,7 +95,7 @@ This ''System'' refers to an articulated robotic arm with four different joints:
 # '''Wrist'''
 By changing the angles of its various joints, it can change its configuration as specified.
 
-TODO!
+<!-- TODO! -->
 
 ==== <i>Rover</i> (Complex System) ====
 
@@ -106,7 +106,7 @@ This ''System'' refers to a Composite or ''Complex System'' that contains four d
 # Center ''PTU Camera'' - To allow capture of images from the center of the ''Mobile Platform''
 The ''Rover'' combines all of these ''Systems'' to leverage all of their capabilities into one multi-purpose ''System''.
 
-TODO!
+<!-- TODO! -->
 
 === <i>Registered Symphony Projects</i> ===
 
@@ -612,19 +612,17 @@ The following exercises go through the process of creating the required EMF meta
 	<li> Copy the following to the start of the empty Xcore model, replacing ''<org_prefix>'' where required:</li>
 </ol>
 
-<code>
-     @GenModel(prefix="PTUCamera",
-               modelName="PTUCamera",
-               childCreationExtenders="true",
-               extensibleProviderFactory="true",
-               multipleEditorPages="false",
-               operationReflection="true",
-               suppressGenModelAnnotations="false")
-     @GenModel(modelDirectory="/<org_prefix>.ptu/src-generated")
-     @GenModel(editDirectory="/<org_prefix>.ptu.edit/src-generated")
+ 	@GenModel(prefix="PTUCamera",
+ 			   modelName="PTUCamera",
+ 			   childCreationExtenders="true",
+ 			   extensibleProviderFactory="true",
+ 			   multipleEditorPages="false",
+ 			   operationReflection="true",
+ 			   suppressGenModelAnnotations="false")
+ 	@GenModel(modelDirectory="/<org_prefix>.ptu/src-generated")
+ 	@GenModel(editDirectory="/<org_prefix>.ptu.edit/src-generated")
 
-     package <org_prefix>.ptu
-</code>
+ 	package <org_prefix>.ptu
 
 <ol start="4">
 	<li> Create the class hierarchy shown before (classes in blue);</li>
@@ -1148,17 +1146,17 @@ The following exercises focus on creating the Symphony plugin for the new ''PTUC
 	<li>Copy the following to the start of the empty Xcore model, replacing <org_prefix> where required:</li>
 </ol>
 
-     @GenModel(prefix="PTUCameraSymphony",
-               modelName="PTUCameraSymphony",
-               childCreationExtenders="true",
-               extensibleProviderFactory="true",
-               multipleEditorPages="false",
-               operationReflection="true",
-               suppressGenModelAnnotations="false")
-    @GenModel(modelDirectory="/<org_prefix>.ptu.symphony/src-generated")
-    @GenModel(editDirectory="/<org_prefix>.ptu.symphony.edit/src-generated")
-    
-    package <org_prefix>.ptu.symphony
+ 	@GenModel(prefix="PTUCameraSymphony",
+ 			   modelName="PTUCameraSymphony",
+ 			   childCreationExtenders="true",
+ 			   extensibleProviderFactory="true",
+ 			   multipleEditorPages="false",
+ 			   operationReflection="true",
+ 			   suppressGenModelAnnotations="false")
+ 	@GenModel(modelDirectory="/<org_prefix>.ptu.symphony/src-generated")
+ 	@GenModel(editDirectory="/<org_prefix>.ptu.symphony.edit/src-generated")
+ 	
+ 	package <org_prefix>.ptu.symphony
 
 <ol start="3">
 	<li>Save '''ptu_symphony.xcore''' to trigger an initial build for both the ''<org_prefix>.ptu.symphony'' and ''<org_prefix>.ptu.symphony'' plug-ins.</li>

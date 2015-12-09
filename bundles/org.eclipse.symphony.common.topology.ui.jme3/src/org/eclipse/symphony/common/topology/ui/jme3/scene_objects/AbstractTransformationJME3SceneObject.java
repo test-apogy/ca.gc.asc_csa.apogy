@@ -29,7 +29,7 @@ import com.jme3.scene.Geometry;
 public abstract class AbstractTransformationJME3SceneObject<T extends Node> extends
 						DefaultJME3SceneObject<T> implements TransformNodeSceneObject, Adapter 
 {
-	private float previousAxisLenght = 1.0f;
+	private float previousAxisLength = 1.0f;
 	private boolean axisVisible = true;
 	
 	private Geometry axisGeometry = null;	
@@ -49,7 +49,7 @@ public abstract class AbstractTransformationJME3SceneObject<T extends Node> exte
 		axisGeometry = JME3Utilities.createAxis3D(1.0f, assetManager);
 		
 		// Attaches the 3DAxis if required.
-		if(axisVisible) getAttachmentNode().attachChild(axisGeometry);		
+		if(axisVisible) getAttachmentNode().attachChild(axisGeometry);
 								
 		// Updates the transform.
 		updateTransform();
@@ -109,12 +109,12 @@ public abstract class AbstractTransformationJME3SceneObject<T extends Node> exte
 				{
 					try
 					{
-						float scale = (float) Math.abs(length) / previousAxisLenght;
+						float scale = (float) Math.abs(length) / previousAxisLength;
 						
 						// Scales existing axis.
 						if(axisGeometry != null ) axisGeometry.scale(scale);
 						
-						previousAxisLenght = (float) length;
+						previousAxisLength = (float) length;
 					}
 					catch(Throwable t)
 					{

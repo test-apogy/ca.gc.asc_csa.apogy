@@ -41,7 +41,7 @@ public interface SimpleConicalRadiationPattern extends AbstractAntennaRadiationP
 	 * @see #setApexAngle(double)
 	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getSimpleConicalRadiationPattern_ApexAngle()
 	 * @model default="0.79" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getApexAngle();

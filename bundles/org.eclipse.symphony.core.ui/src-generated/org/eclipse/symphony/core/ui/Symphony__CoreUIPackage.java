@@ -581,13 +581,13 @@ public interface Symphony__CoreUIPackage extends EPackage
 	int RESULT_NODE_PRESENTATION__AXIS_VISIBLE = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE;
 
 		/**
-	 * The feature id for the '<em><b>Axis Lenght</b></em>' attribute.
+	 * The feature id for the '<em><b>Axis Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESULT_NODE_PRESENTATION__AXIS_LENGHT = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT;
+	int RESULT_NODE_PRESENTATION__AXIS_LENGTH = Symphony__CommonTopologyUIPackage.TRANSFORM_NODE_PRESENTATION__AXIS_LENGTH;
 
 		/**
 	 * The feature id for the '<em><b>Pole Height</b></em>' attribute.

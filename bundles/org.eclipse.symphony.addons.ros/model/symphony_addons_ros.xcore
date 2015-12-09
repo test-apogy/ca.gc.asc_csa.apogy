@@ -1,0 +1,688 @@
+@GenModel(prefix="Symphony__AddonsROS",
+		  modelName="Symphony__AddonsROS",
+		  operationReflection="true",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  multipleEditorPages="false",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)",
+		  suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/org.eclipse.symphony.addons.ros/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.addons.ros.edit/src-generated")
+
+package org.eclipse.symphony.addons.ros
+
+type ResponseLogger wraps org.eclipse.symphony.addons.ros.utilities.ResponseLogger
+type NullResponseHandler wraps org.eclipse.symphony.addons.ros.utilities.NullResponseHandler
+type NullRequestHandler wraps org.eclipse.symphony.addons.ros.utilities.NullRequestHandler
+type ConnectedNode wraps org.ros.node.ConnectedNode
+type ServiceNotFoundException wraps org.ros.exception.ServiceNotFoundException
+type Message wraps org.ros.internal.message.Message
+type MessageListener<T> wraps org.ros.message.MessageListener
+type AbstractNodeMain wraps org.ros.node.AbstractNodeMain
+type ServiceClient<Request, Response> wraps org.ros.node.service.ServiceClient
+type Publisher<T> wraps org.ros.node.topic.Publisher
+type Subscriber<T> wraps org.ros.node.topic.Subscriber
+type Exception wraps java.lang.Exception
+type HashMap<Key,Value> wraps java.util.HashMap
+
+class ROSNode
+{
+	/*
+	 * Starts the ROS node
+	 */
+	op void start()
+	
+	/*
+	 * Initializes the ROS node
+	 */
+	op void initialize() throws Exception
+	
+	/*
+	 * Event called when the node is connected to the ROS master;
+	 * starts the subscriber handler and the service client's handler.
+	 * 
+	 * @param connectedNode The relevant connected node
+	 */
+	op void onStart(ConnectedNode connectedNode) 
+	
+	/*
+	 * Resets the ROS connection
+	 */
+	op void restart()
+	
+	/*
+	 * Registers a new module; if the given initialization parameter
+	 * is true, the module will also be initialized.
+	 * 
+	 * @param module The ROS interface / module to be registered
+	 * @param initialize Whether or not that module should also be initialized
+	 */
+	op void register(ROSInterface module, boolean initialize)
+	
+	/*
+	 * Registers and initializes a new module.
+	 * 
+	 * @param module The ROS interface / module to be registered and initialized
+	 */
+	op void register(ROSInterface module)
+	
+	/*
+	 * Creates a new variable from a given type
+	 * 
+	 * @param messageType The type for the new variable
+	 * @reeturn The newly created variable
+	 */
+	op <T> T newFromType(String messageType)
+	
+	/*
+	 * Shuts down this ROS node
+	 */
+	op void shutdown()
+	
+	/*
+	 * Creates a new publisher with the
+	 * given name and message type
+	 * 
+	 * @param topicName The topic name for the newly created publisher
+	 * @param messageType The type for the publisher's messages
+	 * @return The newly created publisher
+	 */
+	op <T> Publisher<T> createPublisher(String topicName, String messageType)
+	
+	/*
+	 * Creates a new service manager
+	 * 
+	 * @return The newly created service manager
+	 */
+	op ROSServiceManager createServiceManager()
+	
+	/*
+	 * Creates a new topic launcher
+	 * 
+	 * @return The newly created topic launcher
+	 */
+	op ROSTopicLauncher createTopicLauncher()
+	
+	/*
+	 * Creates a new publisher manager
+	 * 
+	 * @return The newly created publisher manager
+	 */
+	op ROSPublisherManager createPublisherManager()
+	
+	/*
+	 * The underlying ROS node
+	 */
+	ConnectedNode connectedNode
+	
+	/*
+	 * The modules that have been registered with this node
+	 */
+	refers ROSInterface [0..*] modules
+	
+	/*
+	 * The service managers that have been associated with this node
+	 */
+	refers ROSServiceManager [0..*] serviceManagers
+	
+	/*
+	 * The topic launchers that have been associated with this node
+	 */
+	refers ROSTopicLauncher[] topicLaunchers
+	
+	/*
+	 * The publisher managers that have been associated with this node
+	 */
+	refers ROSPublisherManager[] publisherManagers
+	
+	/*
+	 * Whether or not the node is currently initialized
+	 */
+	@GenModel(property="Readonly", notify="true", propertyCategory="ROS_NODE")
+	boolean initialized = "false"
+	
+	/*
+	 * Whether or not the node is currently connected
+	 */
+	@GenModel(property="Readonly", notify="true", propertyCategory="ROS_NODE")
+	boolean connected = "false"
+	
+	/*
+	 * Whether or not the node is currently in the process of restarting
+	 */
+	@GenModel(property="Readonly", notify="true", propertyCategory="ROS_NODE")
+	boolean restarting = "false"
+	
+	/*
+	 * Whether or not the node should automatically restart if the connection
+	 * was lost.
+	 */
+	@GenModel(property="Readonly", notify="true", propertyCategory="ROS_NODE")
+	boolean enableAutoRestartOnConnectionLost = "false"
+	
+	/*
+	 * The node's name
+	 */
+	@GenModel(property="Readonly", notify="true", propertyCategory="ROS_NODE")
+	String nodeName
+	
+	/*
+	 * The strategy to log the new responses
+	 */
+	ResponseLogger responseLogger
+	
+	/*
+	 * The strategy to log the null responses
+	 */
+	NullResponseHandler nullResponseHandler
+	
+	/*
+	 * The strategy to log the null requests
+	 */
+	NullRequestHandler nullRequestHandler
+}
+
+interface ROSInterface
+{
+	/*
+	 * Initializes this module / interface
+	 */
+	op void rosInit()
+	
+	/*
+	 * The service manager associated with this module
+	 */
+	@GenModel(property="Readonly", children="true", notify="true", propertyCategory="ROS_INTERFACE")
+	refers ROSServiceManager serviceManager	
+	
+	/*
+	 * The topic launcher associated with this module
+	 */
+	@GenModel(property="Readonly", children="true", notify="true", propertyCategory="ROS_INTERFACE")
+	refers ROSTopicLauncher topicLauncher
+	
+	/*
+	 * The publisher launcher associated with this module
+	 */
+	@GenModel(property="Readonly", children="true", notify="true", propertyCategory="ROS_INTERFACE")
+	refers ROSPublisherManager publisherManager
+	
+	/*
+	 * The underlying ROS node for this module
+	 */
+	@GenModel(property="Readonly", children="true", notify="true", propertyCategory="ROS_INTERFACE")
+	refers ROSNode node	
+}
+
+class ROSPublisherManager
+{
+	/*
+	 * Creates a publisher for the given topic with messages
+	 * of the specified type.
+	 * 
+	 * @param topicName The topic that the new publisher will be publishing messages to
+	 * @param messageType The type of the messages the publisher will be posting
+	 */
+	op void createPublisher(String topicName, String messageType)
+	
+	/*
+	 * Launch the topic publishing capability for the publisher manager,
+	 * and implicitly, all of the associated publishers
+	 */
+	op void launch()
+	
+	/*
+	 * Stop the topic publishing for the publisher manager,
+	 * and implicitly, all of the associated publishers
+	 */
+	op void stop()
+	
+	/*
+	 * Given a particular topic, this determines the associated
+	 * publisher and returns a message of the appropriate type
+	 * for that publisher.
+	 * 
+	 * @param topicName The topic that the new message is to be created for
+	 * @return The newly created message.
+	 */
+	op <T extends Message> T createMessage(String topicName)
+	
+	/*
+	 * Given a particular topic, this determines the associated
+	 * publisher and publishes the given message to that topic.
+	 * 
+	 * @param topicName The topic that the given message is to be published to
+	 * @param message The message to be published 
+	 */
+	op <T extends Message> void publish(String topicName, T message)
+	
+	/*
+	 * This extracts the associated publisher for the given topic.
+	 * 
+	 * @param topicName The topic whose publisher should be extracted
+	 * @return The publisher for that topic (if one exists)
+	 */
+	op <T extends Message> ROSPublisher<T> getPublisher(String topicName)
+	
+	/*
+	 * The internal collection of registered publishers
+	 */
+	HashMap<String, ROSPublisher<?>> publishers
+	
+	/*
+	 * The underlying ROS node for the publisher manager
+	 */
+	@GenModel(property="Readonly", children="true", notify="true", propertyCategory="ROS_PUBLISHER_MANAGER")
+	refers ROSNode node
+	
+	/*
+	 * Whether or not the publisher manager is running (i.e. launched)
+	 */
+	@GenModel(property="Readonly", notify="true", propertyCategory="ROS_PUBLISHER_MANAGER")
+	boolean running
+}
+
+class ROSPublisher<T extends Message>
+{
+	/*
+	 * Launches the topic publishing capability for the
+	 * given underlying ROS node
+	 * 
+	 * @param node The underlying node that this publisher is launching on behalf of
+	 */
+	op void launch(ROSNode node)
+	
+	/*
+	 * Publishes the given message to the publisher's topic
+	 * 
+	 * @param message The message to be published to the topic
+	 */
+	op void publish(T message)
+	
+	/*
+	 * Creates a new message of the correct type for this publisher
+	 * 
+	 * @return The newly created message
+	 */
+	op T newMessage()
+	
+	/*
+	 * Stops the publishing of new messages
+	 * on behalf of the previously-launched ROS node
+	 */
+	op void stop()
+	
+	/*
+	 * Whether or not the publisher has been launched
+	 */
+	@GenModel(property="Readonly", notify="true", propertyCategory="ROS_PUBLISHER")
+	readonly derived unsettable boolean launched
+	
+	/*
+	 * The name for the publisher's topic
+	 */
+	String topicName
+	
+	/*
+	 * A string specifying the type of the publisher's messages
+	 */
+	String messageType
+	
+	/*
+	 * The underlying ROS publisher
+	 */
+	Publisher<T> publisher
+	
+	/*
+	 * When launched, the node that publisher is
+	 * publishing messages on behalf of
+	 */
+	refers ROSNode node
+}
+
+class ROSServiceManager
+{
+	/*
+	 * Creates a service with the given name and type, which
+	 * will automatically disconnect when a timeout occurs.
+	 * 
+	 * @param serviceName The name of the new service
+	 * @param serviceType The type of the new service
+	 */
+	op void createService(String serviceName, String serviceType)
+	
+	/*
+	 * Creates a service with the given name and type.  The
+	 * given disconnectOnTimeout value will determine whether or
+	 * not the service should disconnect if it time's out.
+	 * 
+	 * @param serviceName The name of the new service
+	 * @param serviceType The type of the new service
+	 * @param disconnectOnTimeout Whether or not the service should disconnect when it times out
+	 */
+	op void createService(String serviceName, String serviceType, boolean disconnectOnTimeout)
+	
+	/*
+	 * Determines and returns the service with the given name
+	 * (if one exists.)
+	 * 
+	 * @param serviceName The name of the desired service
+	 * @return The corresponding service (if one exists)
+	 */
+	op <Request extends Message, Response extends Message> ROSService<Request, Response> getService(String serviceName)
+	
+	/*
+	 * Given the name of a service, the corresponding service
+	 * is determined and if one exists, a new request message
+	 * of the correct type for that service is created.
+	 * 
+	 * @param serviceName The name of the service, whose request message type determines the type of the new request message
+	 * @return The newly created request message
+	 */
+	op <Request extends Message, Response extends Message> Request createRequestMessage(String serviceName)
+	
+	/*
+	 * Determines the service that corresponds to the given
+	 * service name; if it exists, the request is made to the
+	 * service and its corresponding response is returned.
+	 * 
+	 * Note: The service's logging is enabled for this call.
+	 * 
+	 * @param serviceName The name of the service to call
+	 * @param request The request to send to the service
+	 * @return The service's response to this call
+	 */
+	op <Request extends Message, Response extends Message> Response callService(String serviceName, Request request)
+	
+	/*
+	 * Determines the service that corresponds to the given
+	 * service name; if it exists, the service is called and
+	 * the corresponding response is returned.
+	 * 
+	 * Note: The service's logging is enabled for this call.
+	 * 
+	 * @param serviceName The name of the service to call
+	 * @return The service's response to this call
+	 */
+	op <Request extends Message, Response extends Message> Response callService(String serviceName)
+	
+	/*
+	 * Determines the service that corresponds to the given
+	 * service name; if it exists, the request is made to the
+	 * service and its corresponding response is returned.  The
+	 * enable logging value determines whether or not logging
+	 * should be enabled for this service call.
+	 * 
+	 * @param serviceName The name of the service to call
+	 * @param request The request to send to the service
+	 * @param enableLogging Whether or not logging should be enabled for this service call
+	 * @return The service's response to this call
+	 */
+	op <Request extends Message, Response extends Message> Response callService(String serviceName, Request request, boolean enableLogging)
+	
+	/*
+	 * Determines the service that corresponds to the given
+	 * service name; if it exists, the call is made to the
+	 * service and the corresponding response is returned.
+	 * The enable logging value determines whether or not
+	 * logging should be enabled for this service call.
+	 * 
+	 * @param serviceName The name of the service to call
+	 * @param enableLogging Whether or not logging should be enabled for this service call
+	 * @return The service's response to this call
+	 */
+	op <Request extends Message, Response extends Message> Response callService(String serviceName, boolean enableLogging)
+	
+	/*
+	 * Launches the service manager and implicitly, launches
+	 * all of the manager's associated services.
+	 */
+	op void launch()
+	
+	/*
+	 * Stops the service manager and implicitly, stops
+	 * all of the manager's associated services.
+	 */
+	op void stop()
+	
+	/*
+	 * The internal collection of registered services.
+	 */
+	HashMap<String, ROSService<?,?>> services
+	
+	/*
+	 * The underlying ROS node for this service manager.
+	 */
+	@GenModel(property="Readonly", children="true", notify="true", propertyCategory="ROS_SERVICE_MANAGER")
+	refers ROSNode node	
+	
+	/*
+	 * Whether or not the service manager is currently running (i.e. launched)
+	 */
+	@GenModel(property="Readonly", notify="true", propertyCategory="ROS_SERVICE_MANAGER")
+	boolean running
+}
+
+class ROSService<Request extends Message, Response extends Message>
+{
+	/*
+	 * Launches the service for the given underlying ROS node,
+	 * allowing it to receive requests.
+	 * 
+	 * @param node The ROS node that this service corresponds to
+	 * @throws ServiceNotFoundException Thrown if the service could not be resolved to the given ROS node.
+	 */
+	op void launch(ROSNode node) throws ServiceNotFoundException
+	
+	/*
+	 * Stops the service from processing anymore requests.
+	 */
+	op void stop()
+	
+	/*
+	 * Returns a new request message, whose type is valid for
+	 * use in calls to this service.
+	 */
+	op Request newRequestMessage()
+	
+	/*
+	 * Calls the service with the given request and the
+	 * response of that call is returned.
+	 * 
+	 * Note: The service's logging is enabled for this call
+	 * 
+	 * @param request The request to send to this service
+	 * @return The service's response to the call
+	 */
+	op Response call(Request request)
+	
+	/*
+	 * Calls the service with the given request and the
+	 * response of that call is returned.  The enable logging
+	 * value will determine whether or not logging should be
+	 * enabled for this call.
+	 * 
+	 * @param request The rrequest to send to this service
+	 * @param enableLogging Whether or not this call should be logged
+	 * @return The service's response to the call
+	 */
+	op Response call(Request request, boolean enableLogging)
+	
+	/*
+	 * The service's name
+	 */
+	String serviceName
+	
+	/*
+	 * The type of the service
+	 */
+	String serviceType
+	
+	/*
+	 * Whether or not the service has been launched
+	 */
+	boolean launched = "false"
+	
+	/*
+	 * The underlying ROS service client
+	 */
+	ServiceClient<Request, Response> serviceClient
+	
+	/*
+	 * The underlying ROS node 
+	 */
+	refers ROSNode node
+	
+	/*
+	 * Whether or not the service should disconnect
+	 * if it times out
+	 */
+	boolean disconnectOnTimeout
+}
+
+class ROSTopicLauncher
+{
+	/*
+	 * Creates a listener, given the topic's name,
+	 * message type and its underlying ROS message listener.
+	 * 
+	 * @param topicName The name of the topic to create the listener for
+	 * @param messageType The type of the messages for the specified topic
+	 * @param messageListener The underlying ROS message listener for that topic
+	 */
+	op <M extends Message> void createListener(String topicName, String messageType, MessageListener<M> messageListener)
+	
+	/*
+	 * Launches the topic launcher and implicitly, all of
+	 * its registered topics
+	 */
+	op void launch()
+	
+	/*
+	 * Stops the topic launcher and implicitly, all of its
+	 * registered topics
+	 */
+	op void stop()
+	
+	/*
+	 * Resets the topic launcher and its registered topics
+	 * by stopping them and then launching them again.
+	 */
+	op void reset()
+	
+	/*
+	 * The internal list of associated listeners
+	 */
+	refers ROSListener<?> [0..*] listenerList
+	
+	/*
+	 * The underlying ROS node
+	 */
+	@GenModel(property="Readonly", children="true", notify="true", propertyCategory="ROS_TOPIC_LAUNCHER")
+	refers ROSNode node
+	
+	/*
+	 * Whether or not the topic launcher is currently running (i.e. launched)
+	 */
+	@GenModel(property="Readonly", notify="true", propertyCategory="ROS_TOPIC_LAUNCHER")
+	boolean running	
+	
+}
+
+class ROSListener<T extends Message>
+{
+	/*
+	 * Starts the subscriber, with it initially locked
+	 * 
+	 * Note : Needed to lock because of a bug on Windows =(
+	 *        The bug was that the program couldn't start
+	 *        multiple subscribers at once.
+	 * 
+	 * @param node The underlying ROS node to listen on
+	 * @return Whether or not the listener started running
+	 * @throws Exception Thrown if any underlying exception occurs
+	 */
+	op boolean startWithLocks(ROSNode node) throws Exception
+	
+	/*
+	 * Starts the subscriber
+	 * 
+	 * Note : For Linux there's no need to lock, subscribers
+	 *        can subscribe at the same time.
+	 * 
+	 * @param node The underlying ROS node to listen on
+	 * @throws Exception Thrown if any underlying exception occurs
+	 */
+	op void start(ROSNode node) throws Exception
+	
+	/*
+	 * Connects this subscriber to this listener's events
+	 * 
+	 * @ param connectedNode The node to subscribe to this listener
+	 */
+	op void connectSubscriber(ConnectedNode connectedNode)
+	
+	/*
+	 * Stops the subscriber
+	 */
+	op void stop()
+	
+	/*
+	 * Whether or not the listener is currently running
+	 */
+	boolean running
+	
+	/*
+	 * The underlying ROS node
+	 */
+	refers ROSNode node
+	
+	/*
+	 * The subscriber for this listener's events
+	 */
+	Subscriber<T> rosSubscriber
+	
+	/*
+	 * The topic this listener is subscribed to
+	 */
+	String topicName
+	
+	/*
+	 * The type of messages this listener is subscribed to
+	 */
+	String messageType
+	
+	/*
+	 * The underlying ROS message listener
+	 */
+	MessageListener<T> messageListener
+}
+
+class Symphony__AddonsROSFacade
+{
+	/*
+	 * Returns a prefix for a Node name (typically used for client node)
+	 * that contains the user and machine name.
+	 * @return The node name prefix.
+	 */
+	op String getNodeNamePrefix()
+	
+	/**
+	 * Returns the ROS Master URI value.
+	 * @return The ROS_MASTER_URI environment variable value.
+	 */
+	op String getROSMasterURI()
+	
+	/**
+	 * Returns the ROS Host Name value.
+	 * @return The ROS_HOSTNAME environment variable value.
+	 */
+	op String getROSHostname()
+	
+	/**
+	 * Returns the ROS IP value.
+	 * @return The ROS_IP environment variable value.
+	 */
+	op String getROSIp()
+}
+

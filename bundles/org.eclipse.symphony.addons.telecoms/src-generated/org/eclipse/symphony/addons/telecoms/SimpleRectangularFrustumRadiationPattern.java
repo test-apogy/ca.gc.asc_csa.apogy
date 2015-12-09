@@ -42,7 +42,7 @@ public interface SimpleRectangularFrustumRadiationPattern extends AbstractAntenn
 	 * @see #setHorizontalFieldOfView(double)
 	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getSimpleRectangularFrustumRadiationPattern_HorizontalFieldOfView()
 	 * @model default="0.79" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getHorizontalFieldOfView();
@@ -73,7 +73,7 @@ public interface SimpleRectangularFrustumRadiationPattern extends AbstractAntenn
 	 * @see #setVerticalFieldOfView(double)
 	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getSimpleRectangularFrustumRadiationPattern_VerticalFieldOfView()
 	 * @model default="1.57" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getVerticalFieldOfView();

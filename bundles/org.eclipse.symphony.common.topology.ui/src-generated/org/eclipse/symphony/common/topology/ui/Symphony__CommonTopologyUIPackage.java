@@ -635,13 +635,13 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	int TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE = NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Axis Lenght</b></em>' attribute.
+	 * The feature id for the '<em><b>Axis Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT = NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int TRANSFORM_NODE_PRESENTATION__AXIS_LENGTH = NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Transform Node Presentation</em>' class.
@@ -798,13 +798,13 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	int ROTATION_NODE_PRESENTATION__AXIS_VISIBLE = NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Axis Lenght</b></em>' attribute.
+	 * The feature id for the '<em><b>Axis Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROTATION_NODE_PRESENTATION__AXIS_LENGHT = NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int ROTATION_NODE_PRESENTATION__AXIS_LENGTH = NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Rotation Node Presentation</em>' class.
@@ -961,13 +961,13 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	int POSITION_NODE_PRESENTATION__AXIS_VISIBLE = NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Axis Lenght</b></em>' attribute.
+	 * The feature id for the '<em><b>Axis Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_NODE_PRESENTATION__AXIS_LENGHT = NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int POSITION_NODE_PRESENTATION__AXIS_LENGTH = NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Position Node Presentation</em>' class.
@@ -1124,13 +1124,13 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	int URL_NODE_PRESENTATION__AXIS_VISIBLE = NODE_PRESENTATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Axis Lenght</b></em>' attribute.
+	 * The feature id for the '<em><b>Axis Length</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int URL_NODE_PRESENTATION__AXIS_LENGHT = NODE_PRESENTATION_FEATURE_COUNT + 1;
+	int URL_NODE_PRESENTATION__AXIS_LENGTH = NODE_PRESENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Presentation Mode</b></em>' attribute.
@@ -1734,15 +1734,15 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	EAttribute getTransformNodePresentation_AxisVisible();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.TransformNodePresentation#getAxisLenght <em>Axis Lenght</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.TransformNodePresentation#getAxisLength <em>Axis Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Axis Lenght</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.TransformNodePresentation#getAxisLenght()
+	 * @return the meta object for the attribute '<em>Axis Length</em>'.
+	 * @see org.eclipse.symphony.common.topology.ui.TransformNodePresentation#getAxisLength()
 	 * @see #getTransformNodePresentation()
 	 * @generated
 	 */
-	EAttribute getTransformNodePresentation_AxisLenght();
+	EAttribute getTransformNodePresentation_AxisLength();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.RotationNodePresentation <em>Rotation Node Presentation</em>}'.
@@ -1766,15 +1766,15 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	EAttribute getRotationNodePresentation_AxisVisible();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.RotationNodePresentation#getAxisLenght <em>Axis Lenght</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.RotationNodePresentation#getAxisLength <em>Axis Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Axis Lenght</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.RotationNodePresentation#getAxisLenght()
+	 * @return the meta object for the attribute '<em>Axis Length</em>'.
+	 * @see org.eclipse.symphony.common.topology.ui.RotationNodePresentation#getAxisLength()
 	 * @see #getRotationNodePresentation()
 	 * @generated
 	 */
-	EAttribute getRotationNodePresentation_AxisLenght();
+	EAttribute getRotationNodePresentation_AxisLength();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation <em>Position Node Presentation</em>}'.
@@ -1798,15 +1798,15 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	EAttribute getPositionNodePresentation_AxisVisible();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation#getAxisLenght <em>Axis Lenght</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.PositionNodePresentation#getAxisLength <em>Axis Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Axis Lenght</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.PositionNodePresentation#getAxisLenght()
+	 * @return the meta object for the attribute '<em>Axis Length</em>'.
+	 * @see org.eclipse.symphony.common.topology.ui.PositionNodePresentation#getAxisLength()
 	 * @see #getPositionNodePresentation()
 	 * @generated
 	 */
-	EAttribute getPositionNodePresentation_AxisLenght();
+	EAttribute getPositionNodePresentation_AxisLength();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.topology.ui.URLNodePresentation <em>URL Node Presentation</em>}'.
@@ -1830,15 +1830,15 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 	EAttribute getURLNodePresentation_AxisVisible();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.URLNodePresentation#getAxisLenght <em>Axis Lenght</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.URLNodePresentation#getAxisLength <em>Axis Length</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Axis Lenght</em>'.
-	 * @see org.eclipse.symphony.common.topology.ui.URLNodePresentation#getAxisLenght()
+	 * @return the meta object for the attribute '<em>Axis Length</em>'.
+	 * @see org.eclipse.symphony.common.topology.ui.URLNodePresentation#getAxisLength()
 	 * @see #getURLNodePresentation()
 	 * @generated
 	 */
-	EAttribute getURLNodePresentation_AxisLenght();
+	EAttribute getURLNodePresentation_AxisLength();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.topology.ui.URLNodePresentation#getPresentationMode <em>Presentation Mode</em>}'.
@@ -2343,12 +2343,12 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		EAttribute TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE = eINSTANCE.getTransformNodePresentation_AxisVisible();
 
 		/**
-		 * The meta object literal for the '<em><b>Axis Lenght</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Axis Length</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT = eINSTANCE.getTransformNodePresentation_AxisLenght();
+		EAttribute TRANSFORM_NODE_PRESENTATION__AXIS_LENGTH = eINSTANCE.getTransformNodePresentation_AxisLength();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.impl.RotationNodePresentationImpl <em>Rotation Node Presentation</em>}' class.
@@ -2369,12 +2369,12 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		EAttribute ROTATION_NODE_PRESENTATION__AXIS_VISIBLE = eINSTANCE.getRotationNodePresentation_AxisVisible();
 
 		/**
-		 * The meta object literal for the '<em><b>Axis Lenght</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Axis Length</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROTATION_NODE_PRESENTATION__AXIS_LENGHT = eINSTANCE.getRotationNodePresentation_AxisLenght();
+		EAttribute ROTATION_NODE_PRESENTATION__AXIS_LENGTH = eINSTANCE.getRotationNodePresentation_AxisLength();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.impl.PositionNodePresentationImpl <em>Position Node Presentation</em>}' class.
@@ -2395,12 +2395,12 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		EAttribute POSITION_NODE_PRESENTATION__AXIS_VISIBLE = eINSTANCE.getPositionNodePresentation_AxisVisible();
 
 		/**
-		 * The meta object literal for the '<em><b>Axis Lenght</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Axis Length</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute POSITION_NODE_PRESENTATION__AXIS_LENGHT = eINSTANCE.getPositionNodePresentation_AxisLenght();
+		EAttribute POSITION_NODE_PRESENTATION__AXIS_LENGTH = eINSTANCE.getPositionNodePresentation_AxisLength();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.topology.ui.impl.URLNodePresentationImpl <em>URL Node Presentation</em>}' class.
@@ -2421,12 +2421,12 @@ public interface Symphony__CommonTopologyUIPackage extends EPackage {
 		EAttribute URL_NODE_PRESENTATION__AXIS_VISIBLE = eINSTANCE.getURLNodePresentation_AxisVisible();
 
 		/**
-		 * The meta object literal for the '<em><b>Axis Lenght</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Axis Length</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute URL_NODE_PRESENTATION__AXIS_LENGHT = eINSTANCE.getURLNodePresentation_AxisLenght();
+		EAttribute URL_NODE_PRESENTATION__AXIS_LENGTH = eINSTANCE.getURLNodePresentation_AxisLength();
 
 		/**
 		 * The meta object literal for the '<em><b>Presentation Mode</b></em>' attribute feature.

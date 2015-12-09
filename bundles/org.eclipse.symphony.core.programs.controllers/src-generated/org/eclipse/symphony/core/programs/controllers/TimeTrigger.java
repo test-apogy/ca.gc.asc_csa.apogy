@@ -38,7 +38,7 @@ public interface TimeTrigger extends Trigger
 	 * @see #setRefreshPeriod(long)
 	 * @see org.eclipse.symphony.core.programs.controllers.Symphony__CoreProgramsControllersPackage#getTimeTrigger_RefreshPeriod()
 	 * @model default="100" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='ms'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='ms'"
 	 * @generated
 	 */
   long getRefreshPeriod();

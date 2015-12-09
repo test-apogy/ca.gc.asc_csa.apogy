@@ -66,7 +66,7 @@ abstract class PTUDishAntenna extends DishAntenna
 	 */	
 	@GenModel(children="false",
 			  notify="true",
-			  csa_units="rad",
+			  symphony_units="rad",
 			  property="Readonly",
 			  propertyCategory="PTU Angles")
 	double panAngle
@@ -77,7 +77,7 @@ abstract class PTUDishAntenna extends DishAntenna
 	 */
 	@GenModel(children="false",
 			  notify="true",
-			  csa_units="rad",
+			  symphony_units="rad",
 			  property="Readonly",
 			  propertyCategory="PTU Angles")
 	double tiltAngle
@@ -99,8 +99,8 @@ abstract class PTUDishAntenna extends DishAntenna
 	 * @param panAngle The target pan angle for the PTU (given in radians.)
 	 * @param tiltAngle The target tilt angle for the PTU (given in radians.)
 	 */
-	op void moveTo(@GenModel(csa_units="rad") double panAngle,
-				   @GenModel(csa_units="rad") double tiltAngle)
+	op void moveTo(@GenModel(symphony_units="rad") double panAngle,
+				   @GenModel(symphony_units="rad") double tiltAngle)
 	
 	/*
 	 * This is used to toggle whether the PTU (and implicitly the

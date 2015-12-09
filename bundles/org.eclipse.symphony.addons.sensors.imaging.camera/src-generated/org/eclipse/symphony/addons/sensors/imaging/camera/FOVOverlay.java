@@ -130,7 +130,7 @@ public interface FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider {
 	 * @see #setAngleInterval(int)
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getFOVOverlay_AngleInterval()
 	 * @model default="5" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_PROPERTIES' csa_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='OVERLAY_PROPERTIES' symphony_units='deg'"
 	 * @generated
 	 */
 	int getAngleInterval();

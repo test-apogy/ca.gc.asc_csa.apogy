@@ -973,21 +973,21 @@ public class Symphony__AddonsSensorsGPSPackageImpl extends EPackageImpl implemen
 		   source, 
 		   new String[] {
 			 "documentation", "This is the origin frame\'s latitude.  The default\nvalue is set to \"45.518206644445\", which is the\nMET\'s origin value.",
-			 "csa_units", "deg"
+			 "symphony_units", "deg"
 		   });	
 		addAnnotation
 		  (getGPSPoseSensor_OriginLongitude(), 
 		   source, 
 		   new String[] {
 			 "documentation", "This is the origin frame\'s longitude.  The default\nvalue is set to \"-73.393904468182\", which is the\nvalue which is the MET\'s origin value.",
-			 "csa_units", "deg"
+			 "symphony_units", "deg"
 		   });	
 		addAnnotation
 		  (getGPSPoseSensor_NeAngle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The angle, in radians, between the Noth East frame (z rotation).\nDefault value is \"0.5940676\", which is the value used for the MET.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getGPSPoseSensor_MaxInitTime(), 

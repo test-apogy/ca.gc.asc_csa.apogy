@@ -23,10 +23,10 @@ import javax.vecmath.Color3f;
  *   <li>{@link org.eclipse.symphony.addons.Ruler3DTool#getExtremitiesRadius <em>Extremities Radius</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.Ruler3DTool#getMinorTickColor <em>Minor Tick Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.Ruler3DTool#getMinorTickSpacing <em>Minor Tick Spacing</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.Ruler3DTool#getMinorTickLenght <em>Minor Tick Lenght</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.Ruler3DTool#getMinorTickLength <em>Minor Tick Length</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.Ruler3DTool#getMajorTickColor <em>Major Tick Color</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.Ruler3DTool#getMajorTickSpacing <em>Major Tick Spacing</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.Ruler3DTool#getMajorTickLenght <em>Major Tick Lenght</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.Ruler3DTool#getMajorTickLength <em>Major Tick Length</em>}</li>
  *   <li>{@link org.eclipse.symphony.addons.Ruler3DTool#getRuler3dToolNode <em>Ruler3d Tool Node</em>}</li>
  * </ul>
  *
@@ -107,7 +107,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * @see #setExtremitiesRadius(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_ExtremitiesRadius()
 	 * @model default="0.01" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='RULER_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='m' propertyCategory='RULER_PROPERTIES'"
 	 * @generated
 	 */
 	double getExtremitiesRadius();
@@ -165,7 +165,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * @see #setMinorTickSpacing(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MinorTickSpacing()
 	 * @model default="0.1" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='MINOR_TICKS_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='m' propertyCategory='MINOR_TICKS_PROPERTIES'"
 	 * @generated
 	 */
 	double getMinorTickSpacing();
@@ -181,35 +181,31 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	void setMinorTickSpacing(double value);
 
 	/**
-	 * Returns the value of the '<em><b>Minor Tick Lenght</b></em>' attribute.
+	 * Returns the value of the '<em><b>Minor Tick Length</b></em>' attribute.
 	 * The default value is <code>"0.1"</code>.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Minor Tick Lenght</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 *  Length of the minor tick marks as displayed on the ruler.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Minor Tick Lenght</em>' attribute.
-	 * @see #setMinorTickLenght(double)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MinorTickLenght()
+	 * @return the value of the '<em>Minor Tick Length</em>' attribute.
+	 * @see #setMinorTickLength(double)
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MinorTickLength()
 	 * @model default="0.1" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='MINOR_TICKS_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='m' propertyCategory='MINOR_TICKS_PROPERTIES'"
 	 * @generated
 	 */
-	double getMinorTickLenght();
+	double getMinorTickLength();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.Ruler3DTool#getMinorTickLenght <em>Minor Tick Lenght</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.symphony.addons.Ruler3DTool#getMinorTickLength <em>Minor Tick Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Minor Tick Lenght</em>' attribute.
-	 * @see #getMinorTickLenght()
+	 * @param value the new value of the '<em>Minor Tick Length</em>' attribute.
+	 * @see #getMinorTickLength()
 	 * @generated
 	 */
-	void setMinorTickLenght(double value);
+	void setMinorTickLength(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Major Tick Color</b></em>' attribute.
@@ -254,7 +250,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * @see #setMajorTickSpacing(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MajorTickSpacing()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='MAJOR_TICKS_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='m' propertyCategory='MAJOR_TICKS_PROPERTIES'"
 	 * @generated
 	 */
 	double getMajorTickSpacing();
@@ -270,33 +266,29 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	void setMajorTickSpacing(double value);
 
 	/**
-	 * Returns the value of the '<em><b>Major Tick Lenght</b></em>' attribute.
+	 * Returns the value of the '<em><b>Major Tick Length</b></em>' attribute.
 	 * The default value is <code>"0.2"</code>.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Major Tick Lenght</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
 	 *  Length of the major tick marks as displayed on the ruler.
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Major Tick Lenght</em>' attribute.
-	 * @see #setMajorTickLenght(double)
-	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MajorTickLenght()
+	 * @return the value of the '<em>Major Tick Length</em>' attribute.
+	 * @see #setMajorTickLength(double)
+	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MajorTickLength()
 	 * @model default="0.2" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='MAJOR_TICKS_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='m' propertyCategory='MAJOR_TICKS_PROPERTIES'"
 	 * @generated
 	 */
-	double getMajorTickLenght();
+	double getMajorTickLength();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.Ruler3DTool#getMajorTickLenght <em>Major Tick Lenght</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.symphony.addons.Ruler3DTool#getMajorTickLength <em>Major Tick Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Major Tick Lenght</em>' attribute.
-	 * @see #getMajorTickLenght()
+	 * @param value the new value of the '<em>Major Tick Length</em>' attribute.
+	 * @see #getMajorTickLength()
 	 * @generated
 	 */
-	void setMajorTickLenght(double value);
+	void setMajorTickLength(double value);
 } // Ruler3DTool

@@ -782,27 +782,27 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 		  (getAngularSpan_MinimumAngle(), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getAngularSpan_MaximumAngle(), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getAngularSpan_SpanningAngle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The total angular span, in radians.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getAngularSpan_CenterAngle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The center of the angular span, in radians.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (rectangularFrustrumFieldOfViewEClass, 
@@ -815,14 +815,14 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 		   source, 
 		   new String[] {
 			 "documentation", "Total horizontal field of view, in radians.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getRectangularFrustrumFieldOfView_VerticalFieldOfViewAngle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Total vertical field of view, in radians.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getRectangularFrustrumFieldOfView_Volume(), 
@@ -841,7 +841,7 @@ public class Symphony__AddonsSensorsFOVPackageImpl extends EPackageImpl implemen
 		   source, 
 		   new String[] {
 			 "documentation", "The apex angle, in radians, of the conical field of view.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getConicalFieldOfView_Volume(), 

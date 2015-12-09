@@ -599,7 +599,7 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTransformNodePresentation_AxisLenght() {
+	public EAttribute getTransformNodePresentation_AxisLength() {
 		return (EAttribute)transformNodePresentationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -626,7 +626,7 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRotationNodePresentation_AxisLenght() {
+	public EAttribute getRotationNodePresentation_AxisLength() {
 		return (EAttribute)rotationNodePresentationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -653,7 +653,7 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPositionNodePresentation_AxisLenght() {
+	public EAttribute getPositionNodePresentation_AxisLength() {
 		return (EAttribute)positionNodePresentationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -680,7 +680,7 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getURLNodePresentation_AxisLenght() {
+	public EAttribute getURLNodePresentation_AxisLength() {
 		return (EAttribute)urlNodePresentationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -883,19 +883,19 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 
 		transformNodePresentationEClass = createEClass(TRANSFORM_NODE_PRESENTATION);
 		createEAttribute(transformNodePresentationEClass, TRANSFORM_NODE_PRESENTATION__AXIS_VISIBLE);
-		createEAttribute(transformNodePresentationEClass, TRANSFORM_NODE_PRESENTATION__AXIS_LENGHT);
+		createEAttribute(transformNodePresentationEClass, TRANSFORM_NODE_PRESENTATION__AXIS_LENGTH);
 
 		rotationNodePresentationEClass = createEClass(ROTATION_NODE_PRESENTATION);
 		createEAttribute(rotationNodePresentationEClass, ROTATION_NODE_PRESENTATION__AXIS_VISIBLE);
-		createEAttribute(rotationNodePresentationEClass, ROTATION_NODE_PRESENTATION__AXIS_LENGHT);
+		createEAttribute(rotationNodePresentationEClass, ROTATION_NODE_PRESENTATION__AXIS_LENGTH);
 
 		positionNodePresentationEClass = createEClass(POSITION_NODE_PRESENTATION);
 		createEAttribute(positionNodePresentationEClass, POSITION_NODE_PRESENTATION__AXIS_VISIBLE);
-		createEAttribute(positionNodePresentationEClass, POSITION_NODE_PRESENTATION__AXIS_LENGHT);
+		createEAttribute(positionNodePresentationEClass, POSITION_NODE_PRESENTATION__AXIS_LENGTH);
 
 		urlNodePresentationEClass = createEClass(URL_NODE_PRESENTATION);
 		createEAttribute(urlNodePresentationEClass, URL_NODE_PRESENTATION__AXIS_VISIBLE);
-		createEAttribute(urlNodePresentationEClass, URL_NODE_PRESENTATION__AXIS_LENGHT);
+		createEAttribute(urlNodePresentationEClass, URL_NODE_PRESENTATION__AXIS_LENGTH);
 		createEAttribute(urlNodePresentationEClass, URL_NODE_PRESENTATION__PRESENTATION_MODE);
 
 		symphony__CommonTopologyUIFacadeEClass = createEClass(SYMPHONY_COMMON_TOPOLOGY_UI_FACADE);
@@ -1016,19 +1016,19 @@ public class Symphony__CommonTopologyUIPackageImpl extends EPackageImpl implemen
 
 		initEClass(transformNodePresentationEClass, TransformNodePresentation.class, "TransformNodePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTransformNodePresentation_AxisVisible(), theEcorePackage.getEBoolean(), "axisVisible", "false", 0, 1, TransformNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTransformNodePresentation_AxisLenght(), theEcorePackage.getEDouble(), "axisLenght", "1.0", 0, 1, TransformNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTransformNodePresentation_AxisLength(), theEcorePackage.getEDouble(), "axisLength", "1.0", 0, 1, TransformNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rotationNodePresentationEClass, RotationNodePresentation.class, "RotationNodePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRotationNodePresentation_AxisVisible(), theEcorePackage.getEBoolean(), "axisVisible", "false", 0, 1, RotationNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRotationNodePresentation_AxisLenght(), theEcorePackage.getEDouble(), "axisLenght", "1.0", 0, 1, RotationNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRotationNodePresentation_AxisLength(), theEcorePackage.getEDouble(), "axisLength", "1.0", 0, 1, RotationNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(positionNodePresentationEClass, PositionNodePresentation.class, "PositionNodePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPositionNodePresentation_AxisVisible(), theEcorePackage.getEBoolean(), "axisVisible", "false", 0, 1, PositionNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPositionNodePresentation_AxisLenght(), theEcorePackage.getEDouble(), "axisLenght", "1.0", 0, 1, PositionNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPositionNodePresentation_AxisLength(), theEcorePackage.getEDouble(), "axisLength", "1.0", 0, 1, PositionNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(urlNodePresentationEClass, URLNodePresentation.class, "URLNodePresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getURLNodePresentation_AxisVisible(), theEcorePackage.getEBoolean(), "axisVisible", "false", 0, 1, URLNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getURLNodePresentation_AxisLenght(), theEcorePackage.getEDouble(), "axisLenght", "1.0", 0, 1, URLNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getURLNodePresentation_AxisLength(), theEcorePackage.getEDouble(), "axisLength", "1.0", 0, 1, URLNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getURLNodePresentation_PresentationMode(), this.getMeshPresentationMode(), "presentationMode", "SURFACE", 0, 1, URLNodePresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(symphony__CommonTopologyUIFacadeEClass, Symphony__CommonTopologyUIFacade.class, "Symphony__CommonTopologyUIFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

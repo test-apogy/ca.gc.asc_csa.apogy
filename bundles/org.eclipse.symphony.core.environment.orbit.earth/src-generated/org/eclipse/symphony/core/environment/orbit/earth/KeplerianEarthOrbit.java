@@ -45,7 +45,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * @see #setSemiMajorAxis(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_SemiMajorAxis()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
 	 * @generated
 	 */
 	double getSemiMajorAxis();
@@ -96,7 +96,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * @see #setInclination(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_Inclination()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getInclination();
@@ -122,7 +122,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * @see #setPerigeeArgument(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_PerigeeArgument()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getPerigeeArgument();
@@ -148,7 +148,7 @@ public interface KeplerianEarthOrbit extends EarthOrbit {
 	 * @see #setRightAscentionOfAscendingNode(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getKeplerianEarthOrbit_RightAscentionOfAscendingNode()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getRightAscentionOfAscendingNode();

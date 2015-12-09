@@ -41,7 +41,7 @@ public interface RectangularRegionImage extends RectangularRegionProvider
 	 * @return The resolution, in meters / pixel, or -1 if not defined.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m/pixel'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m/pixel'"
 	 * @generated
 	 */
   double getResolution();

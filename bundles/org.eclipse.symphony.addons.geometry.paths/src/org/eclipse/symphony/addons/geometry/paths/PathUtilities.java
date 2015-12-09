@@ -157,15 +157,15 @@ public class PathUtilities
 	 */
 	public static double getLongestSegmentLength(WayPointPath wayPointPath)
 	{
-		double maximumLenght = 0.0;
+		double maximumLength = 0.0;
 		
 		List<CartesianPositionCoordinates> longestSegment = getLongestSegment(wayPointPath);
 		if(longestSegment.size() == 2)
 		{
-			maximumLenght = Geometry3DUtilities.getDistance(longestSegment.get(0), longestSegment.get(1));
+			maximumLength = Geometry3DUtilities.getDistance(longestSegment.get(0), longestSegment.get(1));
 		}
 		
-		return maximumLenght;
+		return maximumLength;
 	}
 	
 	/**
@@ -208,15 +208,15 @@ public class PathUtilities
 	 */
 	public static double getShortestSegmentLength(WayPointPath wayPointPath)
 	{
-		double minimumLenght = 0.0;
+		double minimumLength = 0.0;
 		
 		List<CartesianPositionCoordinates> shortestSegment = getShortestSegment(wayPointPath);
 		if(shortestSegment.size() == 2)
 		{
-			minimumLenght = Geometry3DUtilities.getDistance(shortestSegment.get(0), shortestSegment.get(1));
+			minimumLength = Geometry3DUtilities.getDistance(shortestSegment.get(0), shortestSegment.get(1));
 		}
 		
-		return minimumLenght;
+		return minimumLength;
 	}
 	
 	/**

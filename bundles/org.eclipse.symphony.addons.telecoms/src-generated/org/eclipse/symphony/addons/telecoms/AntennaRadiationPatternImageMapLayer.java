@@ -65,7 +65,7 @@ public interface AntennaRadiationPatternImageMapLayer extends LineOfSightImageMa
 	 * @see #setSignalStrengthCutoff(double)
 	 * @see org.eclipse.symphony.addons.telecoms.Symphony__AddonsTelecomsPackage#getAntennaRadiationPatternImageMapLayer_SignalStrengthCutoff()
 	 * @model default="-100.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='CUTOFF_SETTINGS' csa_units='dB'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='CUTOFF_SETTINGS' symphony_units='dB'"
 	 * @generated
 	 */
 	double getSignalStrengthCutoff();

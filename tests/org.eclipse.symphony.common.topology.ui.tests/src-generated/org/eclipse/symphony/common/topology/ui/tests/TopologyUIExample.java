@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.symphony.common.topology.ui.TopologyPresentationRegistry;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
-import org.eclipse.symphony.common.topology.ui.TopologyUIPackage;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,8 +46,8 @@ public class TopologyUIExample {
 		// Register the package to ensure it is available during loading.
 		//
 		resourceSet.getPackageRegistry().put
-			(TopologyUIPackage.eNS_URI, 
-			 TopologyUIPackage.eINSTANCE);
+			(Symphony__CommonTopologyUIPackage.eNS_URI, 
+			 Symphony__CommonTopologyUIPackage.eINSTANCE);
         
 		// If there are no arguments, emit an appropriate usage message.
 		//
@@ -55,7 +55,7 @@ public class TopologyUIExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.topologyui"));
-				TopologyPresentationRegistry root = TopologyUIFactory.eINSTANCE.createTopologyPresentationRegistry();
+				TopologyPresentationRegistry root = Symphony__CommonTopologyUIFactory.eINSTANCE.createTopologyPresentationRegistry();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

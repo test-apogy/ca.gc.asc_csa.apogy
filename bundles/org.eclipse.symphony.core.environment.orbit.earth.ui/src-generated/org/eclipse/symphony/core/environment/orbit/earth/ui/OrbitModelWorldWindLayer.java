@@ -105,7 +105,7 @@ public interface OrbitModelWorldWindLayer extends AbstractWorldWindLayer {
 	 * @see #setTimeInterval(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getOrbitModelWorldWindLayer_TimeInterval()
 	 * @model default="600.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME_PERIOD' csa_units='s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME_PERIOD' symphony_units='s'"
 	 * @generated
 	 */
 	double getTimeInterval();
@@ -133,7 +133,7 @@ public interface OrbitModelWorldWindLayer extends AbstractWorldWindLayer {
 	 * @see #setForwardPropagationDuration(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getOrbitModelWorldWindLayer_ForwardPropagationDuration()
 	 * @model default="43200.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME_PERIOD' csa_units='s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME_PERIOD' symphony_units='s'"
 	 * @generated
 	 */
 	double getForwardPropagationDuration();
@@ -161,7 +161,7 @@ public interface OrbitModelWorldWindLayer extends AbstractWorldWindLayer {
 	 * @see #setBackwardPropagationDuration(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getOrbitModelWorldWindLayer_BackwardPropagationDuration()
 	 * @model default="43200.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME_PERIOD' csa_units='s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TIME_PERIOD' symphony_units='s'"
 	 * @generated
 	 */
 	double getBackwardPropagationDuration();

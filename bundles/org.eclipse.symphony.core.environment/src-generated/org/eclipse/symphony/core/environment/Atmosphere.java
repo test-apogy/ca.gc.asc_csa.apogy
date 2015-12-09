@@ -39,7 +39,7 @@ public interface Atmosphere extends EObject
 	 * @see #setWindSpeed(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAtmosphere_WindSpeed()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m/s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m/s'"
 	 * @generated
 	 */
   double getWindSpeed();
@@ -65,7 +65,7 @@ public interface Atmosphere extends EObject
 	 * @see #setWindDirection(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAtmosphere_WindDirection()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
   double getWindDirection();
@@ -91,7 +91,7 @@ public interface Atmosphere extends EObject
 	 * @see #setTemperature(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAtmosphere_Temperature()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg'"
 	 * @generated
 	 */
   double getTemperature();
@@ -117,7 +117,7 @@ public interface Atmosphere extends EObject
 	 * @see #setSurfacePressure(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAtmosphere_SurfacePressure()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='Pa'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='Pa'"
 	 * @generated
 	 */
   double getSurfacePressure();
@@ -143,7 +143,7 @@ public interface Atmosphere extends EObject
 	 * @see #setSurfaceDensity(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getAtmosphere_SurfaceDensity()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='kg/m\263'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='kg/m\263'"
 	 * @generated
 	 */
   double getSurfaceDensity();

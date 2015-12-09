@@ -133,7 +133,7 @@ public interface LineOfSightImageMapLayer extends CartesianTriangularMeshDerived
 	 * @see #setTargetHeightAboveGround(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getLineOfSightImageMapLayer_TargetHeightAboveGround()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS' symphony_units='m'"
 	 * @generated
 	 */
 	double getTargetHeightAboveGround();

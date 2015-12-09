@@ -37,7 +37,7 @@ public interface CurrentTimeSource extends TimeSource {
 	 * @see #setUpdatePeriod(int)
 	 * @see org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage#getCurrentTimeSource_UpdatePeriod()
 	 * @model default="1000" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='ms' notify='true' property='Editable'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='ms' notify='true' property='Editable'"
 	 * @generated
 	 */
 	int getUpdatePeriod();

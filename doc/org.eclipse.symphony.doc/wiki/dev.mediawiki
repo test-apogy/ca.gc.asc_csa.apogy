@@ -167,7 +167,7 @@ Your specialized ''SymphonyInitializationData'':
 
 ====== Rules & Guidelines ======
 
-* All atttributes in your specialized SymphonyInitializationData must be:
+* All attributes in your specialized SymphonyInitializationData must be:
 ** Contained in the ''SymphonyInitializationData'' (or marked as '''transient''');
 ** Serializable (or have the necessary methods implemented correctly in your Symphony plugin Factory implementation class);
 * Should contain all of the data required to bring your ''System'' back to a given state (e.g. modes, actuators, position, etc.)

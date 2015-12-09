@@ -151,7 +151,7 @@ public interface MobilePlatform extends Disposable
 	 * @see #setPositionError(double)
 	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatform_PositionError()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Position' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Position' symphony_units='m'"
 	 * @generated
 	 */
   double getPositionError();
@@ -179,7 +179,7 @@ public interface MobilePlatform extends Disposable
 	 * @see #setLinearVelocity(double)
 	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatform_LinearVelocity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Velocities' csa_units='m/s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Velocities' symphony_units='m/s'"
 	 * @generated
 	 */
 	double getLinearVelocity();
@@ -207,7 +207,7 @@ public interface MobilePlatform extends Disposable
 	 * @see #setAngularVelocity(double)
 	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatform_AngularVelocity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Velocities' csa_units='rad/s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Velocities' symphony_units='rad/s'"
 	 * @generated
 	 */
 	double getAngularVelocity();
@@ -239,7 +239,7 @@ public interface MobilePlatform extends Disposable
 	 * @see #setLeftWheelPosition(double)
 	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatform_LeftWheelPosition()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Position' csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Position' symphony_units='rad'"
 	 * @generated
 	 */
   double getLeftWheelPosition();
@@ -271,7 +271,7 @@ public interface MobilePlatform extends Disposable
 	 * @see #setRightWheelPosition(double)
 	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getMobilePlatform_RightWheelPosition()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Position' csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Position' symphony_units='rad'"
 	 * @generated
 	 */
   double getRightWheelPosition();
@@ -354,8 +354,8 @@ public interface MobilePlatform extends Disposable
 	 * @param y This is the mobile platform's desired Y coordinate.
 	 * <!-- end-model-doc -->
 	 * @model xUnique="false"
-	 *        xAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'" yUnique="false"
-	 *        yAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
+	 *        xAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'" yUnique="false"
+	 *        yAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
 	 * @generated
 	 */
 	void moveTo(double x, double y);
@@ -376,7 +376,7 @@ public interface MobilePlatform extends Disposable
 	 * @see #cmdVelocities(double, double)
 	 * <!-- end-model-doc -->
 	 * @model linearVelocityUnique="false"
-	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m/s'"
+	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m/s'"
 	 * @generated
 	 */
 	void cmdLinearVelocity(double linearVelocity);
@@ -397,7 +397,7 @@ public interface MobilePlatform extends Disposable
 	 * @see #cmdVelocities(double, double)
 	 * <!-- end-model-doc -->
 	 * @model angularVelocityUnique="false"
-	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad/s'"
+	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s'"
 	 * @generated
 	 */
 	void cmdAngularVelocity(double angularVelocity);
@@ -426,8 +426,8 @@ public interface MobilePlatform extends Disposable
 	 * @see #cmdAngularVelocity(double)
 	 * <!-- end-model-doc -->
 	 * @model linearVelocityUnique="false"
-	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m/s'" angularVelocityUnique="false"
-	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad/s'"
+	 *        linearVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m/s'" angularVelocityUnique="false"
+	 *        angularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s'"
 	 * @generated
 	 */
 	void cmdVelocities(double linearVelocity, double angularVelocity);

@@ -98,7 +98,7 @@ public class ConicalFieldOfViewPresentationImpl extends FieldOfViewPresentationI
 		{
 			if(fov.getFieldOfViewAngle() < Math.PI)				
 			{
-				// Compute the lenght of the segment, c = R * sqrt{2 -2 *cos(theta)
+				// Compute the length of the segment, c = R * sqrt{2 -2 *cos(theta)
 				// @see http://en.wikipedia.org/wiki/Circular_segment				
 				return fov.getRange().getMaximumDistance() * Math.sqrt(2 - 2 * Math.cos(fov.getFieldOfViewAngle()));
 			}

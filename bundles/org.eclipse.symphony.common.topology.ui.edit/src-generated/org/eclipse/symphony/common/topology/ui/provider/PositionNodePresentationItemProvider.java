@@ -46,7 +46,7 @@ public class PositionNodePresentationItemProvider extends NodePresentationItemPr
 			super.getPropertyDescriptors(object);
 
 			addAxisVisiblePropertyDescriptor(object);
-			addAxisLenghtPropertyDescriptor(object);
+			addAxisLengthPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -74,19 +74,19 @@ public class PositionNodePresentationItemProvider extends NodePresentationItemPr
 	}
 
 	/**
-	 * This adds a property descriptor for the Axis Lenght feature.
+	 * This adds a property descriptor for the Axis Length feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAxisLenghtPropertyDescriptor(Object object) {
+	protected void addAxisLengthPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_PositionNodePresentation_axisLenght_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PositionNodePresentation_axisLenght_feature", "_UI_PositionNodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.POSITION_NODE_PRESENTATION__AXIS_LENGHT,
+				 getString("_UI_PositionNodePresentation_axisLength_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PositionNodePresentation_axisLength_feature", "_UI_PositionNodePresentation_type"),
+				 Symphony__CommonTopologyUIPackage.Literals.POSITION_NODE_PRESENTATION__AXIS_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -135,7 +135,7 @@ public class PositionNodePresentationItemProvider extends NodePresentationItemPr
 
 		switch (notification.getFeatureID(PositionNodePresentation.class)) {
 			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_VISIBLE:
-			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.POSITION_NODE_PRESENTATION__AXIS_LENGTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

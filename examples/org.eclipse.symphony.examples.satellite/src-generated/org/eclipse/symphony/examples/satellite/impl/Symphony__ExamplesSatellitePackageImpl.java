@@ -1146,14 +1146,14 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 		   source, 
 		   new String[] {
 			 "documentation", "The satellite maximum roll rate.",
-			 "csa_units", "rad/s"
+			 "symphony_units", "rad/s"
 		   });	
 		addAnnotation
 		  (getSatellite_MaximumRoll(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The satellite maximum roll.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getSatellite_OrbitModel(), 
@@ -1171,7 +1171,7 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 		  (getSatelliteCommandRoll_TargetRollAngle(), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (satelliteImagerEClass, 

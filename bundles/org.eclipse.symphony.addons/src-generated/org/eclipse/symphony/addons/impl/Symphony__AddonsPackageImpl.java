@@ -462,7 +462,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRuler3DTool_MinorTickLenght() {
+	public EAttribute getRuler3DTool_MinorTickLength() {
 		return (EAttribute)ruler3DToolEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -489,7 +489,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRuler3DTool_MajorTickLenght() {
+	public EAttribute getRuler3DTool_MajorTickLength() {
 		return (EAttribute)ruler3DToolEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -842,10 +842,10 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		createEAttribute(ruler3DToolEClass, RULER3_DTOOL__EXTREMITIES_RADIUS);
 		createEAttribute(ruler3DToolEClass, RULER3_DTOOL__MINOR_TICK_COLOR);
 		createEAttribute(ruler3DToolEClass, RULER3_DTOOL__MINOR_TICK_SPACING);
-		createEAttribute(ruler3DToolEClass, RULER3_DTOOL__MINOR_TICK_LENGHT);
+		createEAttribute(ruler3DToolEClass, RULER3_DTOOL__MINOR_TICK_LENGTH);
 		createEAttribute(ruler3DToolEClass, RULER3_DTOOL__MAJOR_TICK_COLOR);
 		createEAttribute(ruler3DToolEClass, RULER3_DTOOL__MAJOR_TICK_SPACING);
-		createEAttribute(ruler3DToolEClass, RULER3_DTOOL__MAJOR_TICK_LENGHT);
+		createEAttribute(ruler3DToolEClass, RULER3_DTOOL__MAJOR_TICK_LENGTH);
 		createEReference(ruler3DToolEClass, RULER3_DTOOL__RULER3D_TOOL_NODE);
 
 		ruler3dToolNodeEClass = createEClass(RULER3D_TOOL_NODE);
@@ -978,10 +978,10 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		initEAttribute(getRuler3DTool_ExtremitiesRadius(), theEcorePackage.getEDouble(), "extremitiesRadius", "0.01", 0, 1, Ruler3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRuler3DTool_MinorTickColor(), this.getColor3f(), "minorTickColor", "0.0,1.0,0.0", 0, 1, Ruler3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRuler3DTool_MinorTickSpacing(), theEcorePackage.getEDouble(), "minorTickSpacing", "0.1", 0, 1, Ruler3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRuler3DTool_MinorTickLenght(), theEcorePackage.getEDouble(), "minorTickLenght", "0.1", 0, 1, Ruler3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRuler3DTool_MinorTickLength(), theEcorePackage.getEDouble(), "minorTickLength", "0.1", 0, 1, Ruler3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRuler3DTool_MajorTickColor(), this.getColor3f(), "majorTickColor", "0.0,1.0,0.0", 0, 1, Ruler3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRuler3DTool_MajorTickSpacing(), theEcorePackage.getEDouble(), "majorTickSpacing", "1.0", 0, 1, Ruler3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRuler3DTool_MajorTickLenght(), theEcorePackage.getEDouble(), "majorTickLenght", "0.2", 0, 1, Ruler3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRuler3DTool_MajorTickLength(), theEcorePackage.getEDouble(), "majorTickLength", "0.2", 0, 1, Ruler3DTool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRuler3DTool_Ruler3dToolNode(), this.getRuler3dToolNode(), this.getRuler3dToolNode_Ruler3DTool(), "ruler3dToolNode", null, 0, 1, Ruler3DTool.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ruler3dToolNodeEClass, Ruler3dToolNode.class, "Ruler3dToolNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1165,7 +1165,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "notify", "true",
 			 "property", "Readonly",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (ruler3DToolEClass, 
@@ -1186,7 +1186,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Radius of sphere used as ruler end points.",
 			 "notify", "true",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "RULER_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1202,16 +1202,16 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Spacing between minor tick mark.",
 			 "notify", "true",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "MINOR_TICKS_PROPERTIES"
 		   });	
 		addAnnotation
-		  (getRuler3DTool_MinorTickLenght(), 
+		  (getRuler3DTool_MinorTickLength(), 
 		   source, 
 		   new String[] {
 			 "documentation", " Length of the minor tick marks as displayed on the ruler.",
 			 "notify", "true",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "MINOR_TICKS_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1227,16 +1227,16 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Spacing between major tick mark.",
 			 "notify", "true",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "MAJOR_TICKS_PROPERTIES"
 		   });	
 		addAnnotation
-		  (getRuler3DTool_MajorTickLenght(), 
+		  (getRuler3DTool_MajorTickLength(), 
 		   source, 
 		   new String[] {
 			 "documentation", " Length of the major tick marks as displayed on the ruler.",
 			 "notify", "true",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "MAJOR_TICKS_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1323,7 +1323,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Length of the vector.",
 			 "notify", "true",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "SUN_VECTOR_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1332,7 +1332,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Radius of sphere used as end point to vector.",
 			 "notify", "true",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "SUN_VECTOR_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1341,7 +1341,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " The current sun intensity.",
 			 "notify", "true",
-			 "csa_units", "W/m*m",
+			 "symphony_units", "W/m*m",
 			 "property", "Readonly",
 			 "propertyCategory", "SUN_VECTOR_LIGHT_PROPERTIES"
 		   });	
@@ -1351,7 +1351,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " The current day maximum sun intensity.",
 			 "notify", "true",
-			 "csa_units", "W/m*m",
+			 "symphony_units", "W/m*m",
 			 "property", "Readonly",
 			 "propertyCategory", "SUN_VECTOR_LIGHT_PROPERTIES"
 		   });	
@@ -1361,7 +1361,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " The current sun intensity.",
 			 "notify", "true",
-			 "csa_units", "%",
+			 "symphony_units", "%",
 			 "property", "Readonly",
 			 "propertyCategory", "SUN_VECTOR_LIGHT_PROPERTIES"
 		   });	
@@ -1401,7 +1401,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", "* Minimum distance used to trigger a new point being accepted.",
 			 "propertyCategory", "TRAJECTORY_3D_TOOL",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getTrajectory3DTool_TotalDistance(), 
@@ -1410,7 +1410,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "TRAJECTORY_3D_TOOL",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getTrajectory3DTool_Paths(), 

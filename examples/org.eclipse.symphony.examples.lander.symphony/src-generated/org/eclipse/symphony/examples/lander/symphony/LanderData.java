@@ -224,7 +224,7 @@ public interface LanderData extends SymphonyInitializationData {
 	 * @see #setCurrThrustLevel(double)
 	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_CurrThrustLevel()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='N' children='false' notify='true' property='Editable' propertyCategory='Flight'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='N' children='false' notify='true' property='Editable' propertyCategory='Flight'"
 	 * @generated
 	 */
 	double getCurrThrustLevel();
@@ -251,7 +251,7 @@ public interface LanderData extends SymphonyInitializationData {
 	 * @see #setMinThrustLevel(double)
 	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_MinThrustLevel()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='N' children='false' notify='true' property='Editable' propertyCategory='Flight'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='N' children='false' notify='true' property='Editable' propertyCategory='Flight'"
 	 * @generated
 	 */
 	double getMinThrustLevel();
@@ -278,7 +278,7 @@ public interface LanderData extends SymphonyInitializationData {
 	 * @see #setMaxThrustLevel(double)
 	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_MaxThrustLevel()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='N' children='false' notify='true' property='Editable' propertyCategory='Flight'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='N' children='false' notify='true' property='Editable' propertyCategory='Flight'"
 	 * @generated
 	 */
 	double getMaxThrustLevel();
@@ -306,7 +306,7 @@ public interface LanderData extends SymphonyInitializationData {
 	 * @see #setXAngularVelocity(double)
 	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_XAngularVelocity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
 	 * @generated
 	 */
 	double getXAngularVelocity();
@@ -334,7 +334,7 @@ public interface LanderData extends SymphonyInitializationData {
 	 * @see #setYAngularVelocity(double)
 	 * @see org.eclipse.symphony.examples.lander.symphony.Symphony__ExamplesLanderSymphonyPackage#getLanderData_YAngularVelocity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
 	 * @generated
 	 */
 	double getYAngularVelocity();

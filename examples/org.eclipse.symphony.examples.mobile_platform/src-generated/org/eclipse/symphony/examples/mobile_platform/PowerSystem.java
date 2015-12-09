@@ -39,7 +39,7 @@ public interface PowerSystem extends EObject
    * @see #setCurrentVoltage(double)
    * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPowerSystem_CurrentVoltage()
    * @model unique="false"
-   *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' csa_units='V'"
+   *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' symphony_units='V'"
    * @generated
    */
   double getCurrentVoltage();
@@ -69,7 +69,7 @@ public interface PowerSystem extends EObject
    * @see #setCurrentCurrent(double)
    * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPowerSystem_CurrentCurrent()
    * @model unique="false"
-   *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' csa_units='V'"
+   *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' symphony_units='V'"
    * @generated
    */
   double getCurrentCurrent();

@@ -39,7 +39,7 @@ public interface Coordinates2D extends EObject {
 	 * @see #setX(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getCoordinates2D_X()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
 	 * @generated
 	 */
 	double getX();
@@ -66,7 +66,7 @@ public interface Coordinates2D extends EObject {
 	 * @see #setY(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getCoordinates2D_Y()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
 	 * @generated
 	 */
 	double getY();

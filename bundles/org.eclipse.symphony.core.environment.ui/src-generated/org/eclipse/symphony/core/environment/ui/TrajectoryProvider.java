@@ -74,7 +74,7 @@ public interface TrajectoryProvider extends EObject
 	 * @see #setAzimuthAngle(double)
 	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getTrajectoryProvider_AzimuthAngle()
 	 * @model default="0.0" unique="false" transient="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
   double getAzimuthAngle();
@@ -101,7 +101,7 @@ public interface TrajectoryProvider extends EObject
 	 * @see #setTrajectoryLength(double)
 	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getTrajectoryProvider_TrajectoryLength()
 	 * @model default="0.0" unique="false" transient="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
 	 * @generated
 	 */
   double getTrajectoryLength();

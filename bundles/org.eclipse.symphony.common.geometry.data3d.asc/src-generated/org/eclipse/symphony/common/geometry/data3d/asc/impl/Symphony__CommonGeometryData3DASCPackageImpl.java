@@ -577,7 +577,7 @@ public class Symphony__CommonGeometryData3DASCPackageImpl extends EPackageImpl i
 		  (getASCHeaderData_CellSize(), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (altitudeModeEEnum, 
@@ -625,13 +625,13 @@ public class Symphony__CommonGeometryData3DASCPackageImpl extends EPackageImpl i
 		  (getCoordinates2D_X(), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getCoordinates2D_Y(), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });
 	}
 

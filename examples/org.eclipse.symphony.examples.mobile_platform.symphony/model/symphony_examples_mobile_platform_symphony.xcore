@@ -62,7 +62,7 @@ class MobilePlatformData extends SymphonyInitializationData
 	 * This is the linear velocity that the mobile platform
 	 * should have. 
 	 */
-	@GenModel(csa_units="m/s",
+	@GenModel(symphony_units="m/s",
 			  children="false",
 			  notify="true",
 			  property="Editable",
@@ -73,7 +73,7 @@ class MobilePlatformData extends SymphonyInitializationData
 	 * This is the angular velocity that the mobile platform
 	 * should have.
 	 */
-	@GenModel(csa_units="rad/s",
+	@GenModel(symphony_units="rad/s",
 			  children="false",
 			  notify="true",
 			  property="Editable",

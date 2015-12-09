@@ -6,5 +6,5 @@ public interface ThrusterSceneObject extends SceneObject
 {
 	public void setPlumeEnvelopeVisible(boolean visible);
 	
-	public void setPlumeEnvelopeLenght(double lenght);		
+	public void setPlumeEnvelopeLength(double length);
 }

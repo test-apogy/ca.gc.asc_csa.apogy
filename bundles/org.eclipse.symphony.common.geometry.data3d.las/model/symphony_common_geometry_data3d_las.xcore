@@ -97,7 +97,7 @@ class VariableLengthRecord
 	
 	int recordID
 	
-	int recordLenghtAfterHeader
+	int recordLengthAfterHeader
 	
 	String description
 }

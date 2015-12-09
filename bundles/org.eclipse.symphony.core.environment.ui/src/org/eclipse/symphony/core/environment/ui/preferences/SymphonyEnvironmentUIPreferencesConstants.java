@@ -26,8 +26,8 @@ public class SymphonyEnvironmentUIPreferencesConstants
 	
 	
 	// Earth Surface Worksite Settings.
-	public static final String DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_LENGHT_ID = "DEFAULT_EARTH_SURFACE_WORSITE_AXIS_LENGHT_ID";
-	public static final double DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_LENGHT = 5.0;
+	public static final String DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_LENGTH_ID = "DEFAULT_EARTH_SURFACE_WORSITE_AXIS_LENGTH_ID";
+	public static final double DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_LENGTH = 5.0;
 
 	public static final String DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_VISIBLE_ID = "DEFAULT_EARTH_SURFACE_WORSITE_AXIS_VISIBLE_ID";
 	public static final boolean DEFAULT_EARTH_SURFACE_WORKSITE_AXIS_VISIBLE = true;

@@ -44,7 +44,7 @@ public interface Thruster extends Node
 	 * @see #setMinimumThrust(double)
 	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster_MinimumThrust()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='N' propertyCategory='THRUST_INFO'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='N' propertyCategory='THRUST_INFO'"
 	 * @generated
 	 */
 	double getMinimumThrust();
@@ -71,7 +71,7 @@ public interface Thruster extends Node
 	 * @see #setMaximumThrust(double)
 	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster_MaximumThrust()
 	 * @model default="100" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='N' propertyCategory='THRUST_INFO'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='N' propertyCategory='THRUST_INFO'"
 	 * @generated
 	 */
 	double getMaximumThrust();
@@ -97,7 +97,7 @@ public interface Thruster extends Node
 	 * @see #setCurrentThrust(double)
 	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster_CurrentThrust()
 	 * @model unique="false" transient="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='N' propertyCategory='THRUST_INFO'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='N' propertyCategory='THRUST_INFO'"
 	 * @generated
 	 */
 	double getCurrentThrust();
@@ -124,7 +124,7 @@ public interface Thruster extends Node
 	 * @see #setPlumeAngle(double)
 	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getThruster_PlumeAngle()
 	 * @model default="0.5" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
   double getPlumeAngle();

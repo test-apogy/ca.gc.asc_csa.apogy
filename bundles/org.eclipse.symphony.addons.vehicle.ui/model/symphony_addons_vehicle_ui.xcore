@@ -32,5 +32,5 @@ class ThrusterPresentation extends NodePresentation
 	 * The length of the cone used to represent the plume envelope.
 	 */
 	@GenModel(notify="true", child = "false", propertyCategory="PLUME_INFO")
-	double plumeEnvelopeLenght = "1.0"	
+	double plumeEnvelopeLength = "1.0"	
 }

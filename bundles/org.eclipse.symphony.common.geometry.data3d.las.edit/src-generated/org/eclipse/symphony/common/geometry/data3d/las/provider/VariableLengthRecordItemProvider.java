@@ -65,7 +65,7 @@ public class VariableLengthRecordItemProvider
 			addReservedPropertyDescriptor(object);
 			addUserIDPropertyDescriptor(object);
 			addRecordIDPropertyDescriptor(object);
-			addRecordLenghtAfterHeaderPropertyDescriptor(object);
+			addRecordLengthAfterHeaderPropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -138,19 +138,19 @@ public class VariableLengthRecordItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Record Lenght After Header feature.
+	 * This adds a property descriptor for the Record Length After Header feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRecordLenghtAfterHeaderPropertyDescriptor(Object object) {
+	protected void addRecordLengthAfterHeaderPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_VariableLengthRecord_recordLenghtAfterHeader_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_VariableLengthRecord_recordLenghtAfterHeader_feature", "_UI_VariableLengthRecord_type"),
-				 Symphony__CommonGeometryData3DLASPackage.Literals.VARIABLE_LENGTH_RECORD__RECORD_LENGHT_AFTER_HEADER,
+				 getString("_UI_VariableLengthRecord_recordLengthAfterHeader_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_VariableLengthRecord_recordLengthAfterHeader_feature", "_UI_VariableLengthRecord_type"),
+				 Symphony__CommonGeometryData3DLASPackage.Literals.VARIABLE_LENGTH_RECORD__RECORD_LENGTH_AFTER_HEADER,
 				 true,
 				 false,
 				 false,
@@ -220,7 +220,7 @@ public class VariableLengthRecordItemProvider
 			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RESERVED:
 			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__USER_ID:
 			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_ID:
-			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_LENGHT_AFTER_HEADER:
+			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__RECORD_LENGTH_AFTER_HEADER:
 			case Symphony__CommonGeometryData3DLASPackage.VARIABLE_LENGTH_RECORD__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

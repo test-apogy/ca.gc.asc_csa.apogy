@@ -64,11 +64,11 @@ public class MapRulerImpl extends MapToolImpl implements MapRuler
   
   public static final String DEGREE_STRING = 	"\u00b0";
   public static final double FEATURE_RADIUS = 0.25;
-  public static final double ARROW_HEAD_LENGHT = 2.0;
+  public static final double ARROW_HEAD_LENGTH = 2.0;
   public static final double ARROW_HEAD_ANGLE_RADIANS = Math.toRadians(45.0);
 
   private XYShapeAnnotation line = null;
-  private XYTextAnnotation lenghtText = null;	
+  private XYTextAnnotation lengthText = null;	
   private XYShapeAnnotation annotation0 = null;
   private XYShapeAnnotation annotation1 = null;
   private XYShapeAnnotation p1Arrow1 = null;
@@ -220,7 +220,7 @@ public class MapRulerImpl extends MapToolImpl implements MapRuler
 	  if(isVisible())
 	  {
 		  if(line != null) annotations.add(line);
-		  if(lenghtText != null) annotations.add(lenghtText);
+		  if(lengthText != null) annotations.add(lengthText);
 		  if(annotation0 != null) annotations.add(annotation0);
 		  if(annotation1 != null) annotations.add(annotation1);
 		  if(p1Arrow1 != null) annotations.add(p1Arrow1);
@@ -272,9 +272,9 @@ public class MapRulerImpl extends MapToolImpl implements MapRuler
       
   protected double getArrowHeadLength(double rulerLength)
   {
-	  if(rulerLength >= 2 * ARROW_HEAD_LENGHT)
+	  if(rulerLength >= 2 * ARROW_HEAD_LENGTH)
 	  {
-		  return ARROW_HEAD_LENGHT;
+		  return ARROW_HEAD_LENGTH;
 	  }
 	  else
 	  {
@@ -314,7 +314,7 @@ public class MapRulerImpl extends MapToolImpl implements MapRuler
 		  Line2D line2D = new Line2D.Double(p0.x, p0.y, p1.x, p1.y);
   		  line = new XYShapeAnnotation(line2D, new BasicStroke(1.0f), getRulerColorAWT());					   	     	
  	     	
-  		  double lenght = p0.distance(p1);
+  		  double length = p0.distance(p1);
   		  DecimalFormat decimalFormat = new DecimalFormat("0.0");
  	     	
   		  double xCenter = (p0.x + p1.x) / 2.0;
@@ -322,12 +322,12 @@ public class MapRulerImpl extends MapToolImpl implements MapRuler
  	     						   	     		   	     			
   		  double heading = Math.atan2(p1.y - p0.y, p1.x - p0.x);	
   		  DecimalFormat headingFormat = new DecimalFormat("0.0");
-  		  lenghtText = new XYTextAnnotation(" " + decimalFormat.format(lenght) + " m (" + headingFormat.format(Math.toDegrees(heading)) + DEGREE_STRING + ") ", xCenter, yCenter);
+  		  lengthText = new XYTextAnnotation(" " + decimalFormat.format(length) + " m (" + headingFormat.format(Math.toDegrees(heading)) + DEGREE_STRING + ") ", xCenter, yCenter);
  	     	
-  		  lenghtText.setFont(new Font("SansSerif", Font.BOLD, 11));
-  		  lenghtText.setPaint(getRulerColorAWT());
-  		  lenghtText.setTextAnchor(TextAnchor.HALF_ASCENT_RIGHT);
-  		  lenghtText.setRotationAnchor(TextAnchor.HALF_ASCENT_RIGHT);
+  		  lengthText.setFont(new Font("SansSerif", Font.BOLD, 11));
+  		  lengthText.setPaint(getRulerColorAWT());
+  		  lengthText.setTextAnchor(TextAnchor.HALF_ASCENT_RIGHT);
+  		  lengthText.setRotationAnchor(TextAnchor.HALF_ASCENT_RIGHT);
  	     	
   		  // Adds the arrow head
   		  double offsetAngle = Math.PI - (ARROW_HEAD_ANGLE_RADIANS / 2.0);
@@ -337,13 +337,13 @@ public class MapRulerImpl extends MapToolImpl implements MapRuler
 	   		  
   		  double thetha = Math.atan2(p1.y - p0.y, p1.x - p0.x);
 	   		
-  		  double xArrow1 = xEnd + getArrowHeadLength(lenght) * Math.cos(thetha + offsetAngle);
-  		  double yArrow1 = yEnd + getArrowHeadLength(lenght) * Math.sin(thetha + offsetAngle);
+  		  double xArrow1 = xEnd + getArrowHeadLength(length) * Math.cos(thetha + offsetAngle);
+  		  double yArrow1 = yEnd + getArrowHeadLength(length) * Math.sin(thetha + offsetAngle);
   		  Line2D arrow1 = new Line2D.Double(xEnd, yEnd, xArrow1, yArrow1);
   		  p1Arrow1 = new XYShapeAnnotation(arrow1, new BasicStroke(1.0f), getRulerColorAWT());
 	   		    
-  		  double xArrow2 = xEnd + getArrowHeadLength(lenght) * Math.cos(thetha - offsetAngle);
-  		  double yArrow2 = yEnd + getArrowHeadLength(lenght) * Math.sin(thetha - offsetAngle);
+  		  double xArrow2 = xEnd + getArrowHeadLength(length) * Math.cos(thetha - offsetAngle);
+  		  double yArrow2 = yEnd + getArrowHeadLength(length) * Math.sin(thetha - offsetAngle);
   		  Line2D arrow2 = new Line2D.Double(xEnd, yEnd, xArrow2, yArrow2);
   		  p1Arrow2 = new XYShapeAnnotation(arrow2, new BasicStroke(1.0f), getRulerColorAWT());
 	   	     	
@@ -352,12 +352,12 @@ public class MapRulerImpl extends MapToolImpl implements MapRuler
   		  {
   			  textAngle += Math.toRadians(180);		
   		  }
-  		  lenghtText.setRotationAngle(textAngle);	
+  		  lengthText.setRotationAngle(textAngle);	
 	  }
 	  else
 	  {
 		  line = null;
-		  lenghtText = null;
+		  lengthText = null;
 		  p1Arrow1 = null;
 		  p1Arrow2 = null;				  
 	  }	  

@@ -104,6 +104,12 @@
 		<module>../../bundles/org.eclipse.symphony.addons.mobility.pathplanners.ui</module>
 		<module>../../bundles/org.eclipse.symphony.addons.mobility.pathplanners.ui.edit</module>
 		<module>../../bundles/org.eclipse.symphony.addons.mobility.pathplanners.ui.jme3</module>
+		<module>../../bundles/org.eclipse.symphony.addons.ros</module>
+		<module>../../bundles/org.eclipse.symphony.addons.ros.edit</module>
+		<module>../../bundles/org.eclipse.symphony.addons.ros.imaging</module>
+		<module>../../bundles/org.eclipse.symphony.addons.ros.imaging.edit</module>
+		<module>../../bundles/org.eclipse.symphony.addons.ros.messages</module>
+		<module>../../bundles/org.eclipse.symphony.addons.ros.ui</module>
 		<module>../../bundles/org.eclipse.symphony.addons.sensors</module>
 		<module>../../bundles/org.eclipse.symphony.addons.sensors.edit</module>
 		<module>../../bundles/org.eclipse.symphony.addons.sensors.fov</module>

@@ -92,7 +92,7 @@ public interface RoboticArm extends EObject
 	 * @see #setTurretAngle(double)
 	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_TurretAngle()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' csa_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' symphony_units='deg'"
 	 * @generated
 	 */
 	double getTurretAngle();
@@ -124,7 +124,7 @@ public interface RoboticArm extends EObject
 	 * @see #setShoulderAngle(double)
 	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_ShoulderAngle()
 	 * @model default="90.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' csa_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' symphony_units='deg'"
 	 * @generated
 	 */
   double getShoulderAngle();
@@ -156,7 +156,7 @@ public interface RoboticArm extends EObject
 	 * @see #setElbowAngle(double)
 	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_ElbowAngle()
 	 * @model default="-180.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' csa_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' symphony_units='deg'"
 	 * @generated
 	 */
   double getElbowAngle();
@@ -188,7 +188,7 @@ public interface RoboticArm extends EObject
 	 * @see #setWristAngle(double)
 	 * @see org.eclipse.symphony.examples.robotic_arm.Symphony__ExamplesRoboticArmPackage#getRoboticArm_WristAngle()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' csa_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Joint Angles' symphony_units='deg'"
 	 * @generated
 	 */
   double getWristAngle();
@@ -273,10 +273,10 @@ public interface RoboticArm extends EObject
 	 * @param wristAngle The expected angle (in radians) of the wrist joint (joint 4) after moving.
 	 * <!-- end-model-doc -->
 	 * @model turretAngleUnique="false"
-	 *        turretAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'" shoulderAngleUnique="false"
-	 *        shoulderAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'" elbowAngleUnique="false"
-	 *        elbowAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'" wristAngleUnique="false"
-	 *        wristAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        turretAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" shoulderAngleUnique="false"
+	 *        shoulderAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" elbowAngleUnique="false"
+	 *        elbowAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" wristAngleUnique="false"
+	 *        wristAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
   void moveTo(double turretAngle, double shoulderAngle, double elbowAngle, double wristAngle);

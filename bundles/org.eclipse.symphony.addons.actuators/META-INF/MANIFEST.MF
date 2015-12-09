@@ -17,4 +17,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.symphony.common.topology;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.symphony.addons.actuators.Activator
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

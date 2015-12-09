@@ -25,10 +25,9 @@ import org.eclipse.symphony.common.emf.ui.descriptors.AbstractUnitItemPropertyDe
  * <!-- end-user-doc -->
  * @generated
  */
-public class Ruler3DToolItemProvider
-	extends AbstractTwoPoints3DToolItemProvider 
-		{
-	private DecimalFormat lenghtFormat = new DecimalFormat("0.000");
+public class Ruler3DToolItemProvider extends AbstractTwoPoints3DToolItemProvider 
+{
+	private DecimalFormat lengthFormat = new DecimalFormat("0.000");
 	
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -55,10 +54,10 @@ public class Ruler3DToolItemProvider
 			addExtremitiesRadiusPropertyDescriptor(object);
 			addMinorTickColorPropertyDescriptor(object);
 			addMinorTickSpacingPropertyDescriptor(object);
-			addMinorTickLenghtPropertyDescriptor(object);
+			addMinorTickLengthPropertyDescriptor(object);
 			addMajorTickColorPropertyDescriptor(object);
 			addMajorTickSpacingPropertyDescriptor(object);
-			addMajorTickLenghtPropertyDescriptor(object);
+			addMajorTickLengthPropertyDescriptor(object);
 			addRuler3dToolNodePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -205,19 +204,19 @@ public class Ruler3DToolItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Minor Tick Lenght feature.
+	 * This adds a property descriptor for the Minor Tick Length feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	protected void addMinorTickLenghtPropertyDescriptor(Object object) {
+	protected void addMinorTickLengthPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(new AbstractUnitItemPropertyDescriptor(
 				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Ruler3DTool_minorTickLenght_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_minorTickLenght_feature", "_UI_Ruler3DTool_type"),
-				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MINOR_TICK_LENGHT,
+				 getString("_UI_Ruler3DTool_minorTickLength_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_minorTickLength_feature", "_UI_Ruler3DTool_type"),
+				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MINOR_TICK_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -271,19 +270,19 @@ public class Ruler3DToolItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Major Tick Lenght feature.
+	 * This adds a property descriptor for the Major Tick Length feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	protected void addMajorTickLenghtPropertyDescriptor(Object object) {
+	protected void addMajorTickLengthPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(new AbstractUnitItemPropertyDescriptor(
 				((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Ruler3DTool_majorTickLenght_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_majorTickLenght_feature", "_UI_Ruler3DTool_type"),
-				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MAJOR_TICK_LENGHT,
+				 getString("_UI_Ruler3DTool_majorTickLength_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Ruler3DTool_majorTickLength_feature", "_UI_Ruler3DTool_type"),
+				 Symphony__AddonsPackage.Literals.RULER3_DTOOL__MAJOR_TICK_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -331,7 +330,7 @@ public class Ruler3DToolItemProvider
 			label += simpleToolText + ", ";
 		}		
 				
-		label += lenghtFormat.format(ruler3DTool.getDistance()) + " m ";
+		label += lengthFormat.format(ruler3DTool.getDistance()) + " m ";
 		
 		// Adds lock Status.
 		String lockText = getAbstractTwoPoints3DToolText(ruler3DTool); 
@@ -362,10 +361,10 @@ public class Ruler3DToolItemProvider
 			case Symphony__AddonsPackage.RULER3_DTOOL__EXTREMITIES_RADIUS:
 			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_COLOR:
 			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_SPACING:
-			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGHT:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MINOR_TICK_LENGTH:
 			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_COLOR:
 			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_SPACING:
-			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGHT:
+			case Symphony__AddonsPackage.RULER3_DTOOL__MAJOR_TICK_LENGTH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case Symphony__AddonsPackage.RULER3_DTOOL__RULER3D_TOOL_NODE:

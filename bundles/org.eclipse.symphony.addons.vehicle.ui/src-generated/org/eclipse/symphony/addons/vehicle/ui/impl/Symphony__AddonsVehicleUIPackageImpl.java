@@ -154,7 +154,7 @@ public class Symphony__AddonsVehicleUIPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getThrusterPresentation_PlumeEnvelopeLenght() {
+	public EAttribute getThrusterPresentation_PlumeEnvelopeLength() {
 		return (EAttribute)thrusterPresentationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -193,7 +193,7 @@ public class Symphony__AddonsVehicleUIPackageImpl extends EPackageImpl implement
 
 		thrusterPresentationEClass = createEClass(THRUSTER_PRESENTATION);
 		createEAttribute(thrusterPresentationEClass, THRUSTER_PRESENTATION__PLUME_ENVELOPE_VISIBLE);
-		createEAttribute(thrusterPresentationEClass, THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGHT);
+		createEAttribute(thrusterPresentationEClass, THRUSTER_PRESENTATION__PLUME_ENVELOPE_LENGTH);
 	}
 
   /**
@@ -240,7 +240,7 @@ public class Symphony__AddonsVehicleUIPackageImpl extends EPackageImpl implement
 
 		initEClass(thrusterPresentationEClass, ThrusterPresentation.class, "ThrusterPresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getThrusterPresentation_PlumeEnvelopeVisible(), theEcorePackage.getEBoolean(), "plumeEnvelopeVisible", "false", 0, 1, ThrusterPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getThrusterPresentation_PlumeEnvelopeLenght(), theEcorePackage.getEDouble(), "plumeEnvelopeLenght", "1.0", 0, 1, ThrusterPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getThrusterPresentation_PlumeEnvelopeLength(), theEcorePackage.getEDouble(), "plumeEnvelopeLength", "1.0", 0, 1, ThrusterPresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

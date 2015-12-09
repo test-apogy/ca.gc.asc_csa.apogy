@@ -3,8 +3,8 @@
  */
 package org.eclipse.symphony.common.topology.ui.tests;
 
-import org.eclipse.symphony.common.topology.ui.TopologyUIFacade;
-import org.eclipse.symphony.common.topology.ui.TopologyUIFactory;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFacade;
+import org.eclipse.symphony.common.topology.ui.Symphony__CommonTopologyUIFactory;
 
 import junit.framework.TestCase;
 import junit.textui.TestRunner;
@@ -24,7 +24,7 @@ import junit.textui.TestRunner;
  * </p>
  * @generated
  */
-public class TopologyUIFacadeTest extends TestCase {
+public class Symphony__CommonTopologyUIFacadeTest extends TestCase {
 
 	/**
 	 * The fixture for this Facade test case.
@@ -32,7 +32,7 @@ public class TopologyUIFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TopologyUIFacade fixture = null;
+	protected Symphony__CommonTopologyUIFacade fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public class TopologyUIFacadeTest extends TestCase {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(TopologyUIFacadeTest.class);
+		TestRunner.run(Symphony__CommonTopologyUIFacadeTest.class);
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class TopologyUIFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TopologyUIFacadeTest(String name) {
+	public Symphony__CommonTopologyUIFacadeTest(String name) {
 		super(name);
 	}
 
@@ -59,7 +59,7 @@ public class TopologyUIFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void setFixture(TopologyUIFacade fixture) {
+	protected void setFixture(Symphony__CommonTopologyUIFacade fixture) {
 		this.fixture = fixture;
 	}
 
@@ -69,7 +69,7 @@ public class TopologyUIFacadeTest extends TestCase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TopologyUIFacade getFixture() {
+	protected Symphony__CommonTopologyUIFacade getFixture() {
 		return fixture;
 	}
 
@@ -81,7 +81,7 @@ public class TopologyUIFacadeTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(TopologyUIFactory.eINSTANCE.createTopologyUIFacade());
+		setFixture(Symphony__CommonTopologyUIFactory.eINSTANCE.createSymphony__CommonTopologyUIFacade());
 	}
 
 	/**

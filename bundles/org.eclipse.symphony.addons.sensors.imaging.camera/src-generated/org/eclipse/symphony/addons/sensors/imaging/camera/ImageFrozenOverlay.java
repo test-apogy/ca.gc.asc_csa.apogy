@@ -64,7 +64,7 @@ public interface ImageFrozenOverlay extends AbstractTextOverlay {
 	 * @see #setExpectedImageUpdatePeriod(double)
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getImageFrozenOverlay_ExpectedImageUpdatePeriod()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FROZEN_PROPERTIES' csa_units='s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='FROZEN_PROPERTIES' symphony_units='s'"
 	 * @generated
 	 */
 	double getExpectedImageUpdatePeriod();

@@ -554,7 +554,7 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVariableLengthRecord_RecordLenghtAfterHeader() {
+	public EAttribute getVariableLengthRecord_RecordLengthAfterHeader() {
 		return (EAttribute)variableLengthRecordEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1075,7 +1075,7 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 		createEAttribute(variableLengthRecordEClass, VARIABLE_LENGTH_RECORD__RESERVED);
 		createEAttribute(variableLengthRecordEClass, VARIABLE_LENGTH_RECORD__USER_ID);
 		createEAttribute(variableLengthRecordEClass, VARIABLE_LENGTH_RECORD__RECORD_ID);
-		createEAttribute(variableLengthRecordEClass, VARIABLE_LENGTH_RECORD__RECORD_LENGHT_AFTER_HEADER);
+		createEAttribute(variableLengthRecordEClass, VARIABLE_LENGTH_RECORD__RECORD_LENGTH_AFTER_HEADER);
 		createEAttribute(variableLengthRecordEClass, VARIABLE_LENGTH_RECORD__DESCRIPTION);
 
 		lasReaderEClass = createEClass(LAS_READER);
@@ -1208,7 +1208,7 @@ public class Symphony__CommonGeometryData3DLASPackageImpl extends EPackageImpl i
 		initEAttribute(getVariableLengthRecord_Reserved(), theEcorePackage.getEInt(), "reserved", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariableLengthRecord_UserID(), theEcorePackage.getEString(), "userID", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariableLengthRecord_RecordID(), theEcorePackage.getEInt(), "recordID", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVariableLengthRecord_RecordLenghtAfterHeader(), theEcorePackage.getEInt(), "recordLenghtAfterHeader", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariableLengthRecord_RecordLengthAfterHeader(), theEcorePackage.getEInt(), "recordLengthAfterHeader", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariableLengthRecord_Description(), theEcorePackage.getEString(), "description", null, 0, 1, VariableLengthRecord.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lasReaderEClass, LASReader.class, "LASReader", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

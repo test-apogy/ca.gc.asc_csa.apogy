@@ -1,7 +1,6 @@
 /**
  * Canadian Space Agency 2007.
  *
- * $Id: Symphony__AddonsSensorsPoseFacadeImpl.java,v 1.6.4.2 2015/05/21 15:51:31 pallard Exp $
  */
 package org.eclipse.symphony.addons.sensors.pose.impl;
 

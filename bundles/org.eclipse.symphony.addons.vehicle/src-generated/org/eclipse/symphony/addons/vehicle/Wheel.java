@@ -19,7 +19,7 @@ import org.eclipse.symphony.common.topology.addons.dynamics.PhysicalBody;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.symphony.addons.vehicle.Wheel#getRadius <em>Radius</em>}</li>
- *   <li>{@link org.eclipse.symphony.addons.vehicle.Wheel#getLenght <em>Lenght</em>}</li>
+ *   <li>{@link org.eclipse.symphony.addons.vehicle.Wheel#getLength <em>Length</em>}</li>
  * </ul>
  *
  * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheel()
@@ -41,7 +41,7 @@ public interface Wheel extends PhysicalBody
 	 * @see #setRadius(double)
 	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheel_Radius()
 	 * @model default="0.25" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
 	 * @generated
 	 */
   double getRadius();
@@ -57,31 +57,31 @@ public interface Wheel extends PhysicalBody
   void setRadius(double value);
 
   /**
-	 * Returns the value of the '<em><b>Lenght</b></em>' attribute.
+	 * Returns the value of the '<em><b>Length</b></em>' attribute.
 	 * The default value is <code>"0.1"</code>.
 	 * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Lenght</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lenght</em>' attribute.
-	 * @see #setLenght(double)
-	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheel_Lenght()
+	 * <p>
+	 * If the meaning of the '<em>Length</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Length</em>' attribute.
+	 * @see #setLength(double)
+	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getWheel_Length()
 	 * @model default="0.1" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
 	 * @generated
 	 */
-  double getLenght();
+	double getLength();
 
-  /**
-	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.Wheel#getLenght <em>Lenght</em>}' attribute.
+		/**
+	 * Sets the value of the '{@link org.eclipse.symphony.addons.vehicle.Wheel#getLength <em>Length</em>}' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Lenght</em>' attribute.
-	 * @see #getLenght()
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Length</em>' attribute.
+	 * @see #getLength()
 	 * @generated
 	 */
-  void setLenght(double value);
+	void setLength(double value);
 
 } // Wheel

@@ -47,7 +47,7 @@ public interface Position extends EObject
 	 * @see #setX(double)
 	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPosition_X()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='m'"
 	 * @generated
 	 */
   double getX();
@@ -78,7 +78,7 @@ public interface Position extends EObject
 	 * @see #setY(double)
 	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPosition_Y()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='m'"
 	 * @generated
 	 */
   double getY();
@@ -110,7 +110,7 @@ public interface Position extends EObject
 	 * @see #setTheta(double)
 	 * @see org.eclipse.symphony.examples.mobile_platform.Symphony__ExamplesMobilePlatformPackage#getPosition_Theta()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='rad'"
 	 * @generated
 	 */
   double getTheta();

@@ -763,7 +763,7 @@ public class PointerCameraToolImpl extends CameraToolImpl implements PointerCame
 	{
 		if(vector == null)
 		{
-			// Creates a vector of lenght 100 along the Z axis.
+			// Creates a vector of length 100 along the Z axis.
 			vector =  Symphony__CommonTopologyAddonsPrimitivesFactory.eINSTANCE.createPickVector();
 			vector.getNodeTypesInIntersection().add(Symphony__CommonGeometryData3DPackage.eINSTANCE.getCartesianCoordinatesMesh());
 			vector.getNodeTypesInIntersection().add(Symphony__CommonTopologyPackage.eINSTANCE.getContentNode());

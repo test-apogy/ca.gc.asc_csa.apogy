@@ -46,7 +46,7 @@ public class URLNodePresentationItemProvider extends NodePresentationItemProvide
 			super.getPropertyDescriptors(object);
 
 			addAxisVisiblePropertyDescriptor(object);
-			addAxisLenghtPropertyDescriptor(object);
+			addAxisLengthPropertyDescriptor(object);
 			addPresentationModePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -75,19 +75,19 @@ public class URLNodePresentationItemProvider extends NodePresentationItemProvide
 	}
 
 	/**
-	 * This adds a property descriptor for the Axis Lenght feature.
+	 * This adds a property descriptor for the Axis Length feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAxisLenghtPropertyDescriptor(Object object) {
+	protected void addAxisLengthPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_URLNodePresentation_axisLenght_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_URLNodePresentation_axisLenght_feature", "_UI_URLNodePresentation_type"),
-				 Symphony__CommonTopologyUIPackage.Literals.URL_NODE_PRESENTATION__AXIS_LENGHT,
+				 getString("_UI_URLNodePresentation_axisLength_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_URLNodePresentation_axisLength_feature", "_UI_URLNodePresentation_type"),
+				 Symphony__CommonTopologyUIPackage.Literals.URL_NODE_PRESENTATION__AXIS_LENGTH,
 				 true,
 				 false,
 				 false,
@@ -158,7 +158,7 @@ public class URLNodePresentationItemProvider extends NodePresentationItemProvide
 
 		switch (notification.getFeatureID(URLNodePresentation.class)) {
 			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_VISIBLE:
-			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGHT:
+			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__AXIS_LENGTH:
 			case Symphony__CommonTopologyUIPackage.URL_NODE_PRESENTATION__PRESENTATION_MODE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
