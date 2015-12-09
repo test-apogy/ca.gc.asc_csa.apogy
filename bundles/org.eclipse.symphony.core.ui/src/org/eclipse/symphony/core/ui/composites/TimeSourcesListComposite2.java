@@ -13,6 +13,12 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
+import org.eclipse.jface.action.Action;
+import org.eclipse.jface.action.IAction;
+import org.eclipse.jface.action.IMenuListener;
+import org.eclipse.jface.action.IMenuManager;
+import org.eclipse.jface.action.MenuManager;
+import org.eclipse.jface.action.Separator;
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.jface.viewers.CheckStateChangedEvent;
 import org.eclipse.jface.viewers.CheckboxTableViewer;
@@ -27,6 +33,9 @@ import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.jface.viewers.TextCellEditor;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.dnd.Clipboard;
+import org.eclipse.swt.dnd.TextTransfer;
+import org.eclipse.swt.dnd.Transfer;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.graphics.Image;
@@ -34,6 +43,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
@@ -50,6 +60,8 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 
 public class TimeSourcesListComposite2 extends Composite {
 
+	private static SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+	
 	private final ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
 			ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
@@ -59,6 +71,7 @@ public class TimeSourcesListComposite2 extends Composite {
 	private CheckboxTableViewer timeSourcesListViewer;
 	private AdapterImpl environmentAdapter;
 	private ISelectionChangedListener timeSourcesListViewerSelectionListener;
+	private Action copyAction;
 
 	/**
 	 * Create the composite.
@@ -83,7 +96,7 @@ public class TimeSourcesListComposite2 extends Composite {
         table.setHeaderVisible(true);
 		toolkit.paintBordersFor(table);
 
-		timeSourcesListViewer = new CheckboxTableViewer(table);	
+		timeSourcesListViewer = new CheckboxTableViewer(table);		
 		timeSourcesListViewer.setCheckStateProvider(new ICheckStateProvider() {
 			@Override
 			public boolean isGrayed(Object element) {
@@ -106,7 +119,7 @@ public class TimeSourcesListComposite2 extends Composite {
 					editingDomain.getCommandStack().execute(command);
 				}
 			}
-		});
+		});		
 		
 		TableViewerColumn tableViewerColumnItem_Active = new TableViewerColumn(
 				timeSourcesListViewer, SWT.NONE);
@@ -189,8 +202,7 @@ public class TimeSourcesListComposite2 extends Composite {
 					
 				case TIME_COLUMN_ID:
 					Date date = timeSource.getTime();
-					str = date == null ? "N/A." : new SimpleDateFormat(
-							"yyyy/MM/dd HH:mm:ss.SSS").format(((Timed) object)
+					str = date == null ? "N/A." : DATE_FORMAT.format(((Timed) object)
 							.getTime());
 					break;
 				default:
@@ -205,8 +217,39 @@ public class TimeSourcesListComposite2 extends Composite {
 				return columnIndex == ACTIVE_COLUMN_ID ? super.getColumnImage(object, columnIndex) : null;
 			}
 		});
+		
+		MenuManager contextMenu = new MenuManager("#PopUp");
+		contextMenu.add(new Separator("additions"));
+		contextMenu.setRemoveAllWhenShown(true);
+		contextMenu.addMenuListener(new IMenuListener() {
+			
+			@Override
+			public void menuAboutToShow(IMenuManager manager) {
+				if (!timeSourcesListViewer.getSelection().isEmpty()){
+					manager.add(getCopyAction());
+				}
+			}
+		});
+		Menu menu= contextMenu.createContextMenu(timeSourcesListViewer.getControl());
+		timeSourcesListViewer.getControl().setMenu(menu);
 	}
 		
+	protected IAction getCopyAction() {
+		if (copyAction == null){
+			copyAction = new Action() {
+				public void run() {					
+					String str = DATE_FORMAT.format(getSelectedTimeSource().getTime());
+					Clipboard cb = new Clipboard(Display.getDefault());
+					TextTransfer textTransfer = TextTransfer.getInstance();
+					cb.setContents(new Object[] {str}, new Transfer[] {textTransfer});
+				}
+			};
+			copyAction.setText("Copy Time Value");
+			copyAction.setToolTipText("Copy time into the clipboard");
+		}
+		return copyAction;
+	}
+
 	/**
 	 * Returns the environment that contains the {@link ContextsList}.
 	 * 
