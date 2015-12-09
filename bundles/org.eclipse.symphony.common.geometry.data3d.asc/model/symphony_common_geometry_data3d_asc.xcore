@@ -127,7 +127,7 @@ class ASCHeaderData
 	
 	double yllCenter = "0.0"
 	
-	@GenModel(csa_units="m")
+	@GenModel(symphony_units="m")
 	double cellSize = "0.0"
 	
 	double noDataValue = "-9999"
@@ -159,10 +159,10 @@ enum AltitudeMode
  */
 class Coordinates2D
 {
-	@GenModel(csa_units="m")
+	@GenModel(symphony_units="m")
 	double x
 	
-	@GenModel(csa_units="m")
+	@GenModel(symphony_units="m")
 	double y
 }
 

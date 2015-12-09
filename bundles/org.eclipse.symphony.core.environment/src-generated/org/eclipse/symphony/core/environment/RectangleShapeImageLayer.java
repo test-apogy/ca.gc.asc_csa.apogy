@@ -40,7 +40,7 @@ public interface RectangleShapeImageLayer extends AbstractShapeImageLayer {
 	 * @see #setRectangleWidth(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangleShapeImageLayer_RectangleWidth()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='RECTANGLE_SETTINGS' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='RECTANGLE_SETTINGS' symphony_units='m'"
 	 * @generated
 	 */
 	double getRectangleWidth();
@@ -68,7 +68,7 @@ public interface RectangleShapeImageLayer extends AbstractShapeImageLayer {
 	 * @see #setRectangleHeight(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangleShapeImageLayer_RectangleHeight()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='RECTANGLE_SETTINGS' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='RECTANGLE_SETTINGS' symphony_units='m'"
 	 * @generated
 	 */
 	double getRectangleHeight();

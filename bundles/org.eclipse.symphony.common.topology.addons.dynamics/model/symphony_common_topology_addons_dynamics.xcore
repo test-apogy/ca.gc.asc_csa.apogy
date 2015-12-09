@@ -96,7 +96,7 @@ class PhysicalProperties
 	/*
 	 * Defines the mass of the physical body, in kilograms.
 	 */
-	@GenModel(csa_units="kg")
+	@GenModel(symphony_units="kg")
 	double mass
 	
 	/*

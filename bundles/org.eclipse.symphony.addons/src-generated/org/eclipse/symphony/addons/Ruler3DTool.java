@@ -107,7 +107,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * @see #setExtremitiesRadius(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_ExtremitiesRadius()
 	 * @model default="0.01" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='RULER_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='m' propertyCategory='RULER_PROPERTIES'"
 	 * @generated
 	 */
 	double getExtremitiesRadius();
@@ -165,7 +165,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * @see #setMinorTickSpacing(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MinorTickSpacing()
 	 * @model default="0.1" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='MINOR_TICKS_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='m' propertyCategory='MINOR_TICKS_PROPERTIES'"
 	 * @generated
 	 */
 	double getMinorTickSpacing();
@@ -192,7 +192,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * @see #setMinorTickLength(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MinorTickLength()
 	 * @model default="0.1" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='MINOR_TICKS_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='m' propertyCategory='MINOR_TICKS_PROPERTIES'"
 	 * @generated
 	 */
 	double getMinorTickLength();
@@ -250,7 +250,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * @see #setMajorTickSpacing(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MajorTickSpacing()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='MAJOR_TICKS_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='m' propertyCategory='MAJOR_TICKS_PROPERTIES'"
 	 * @generated
 	 */
 	double getMajorTickSpacing();
@@ -277,7 +277,7 @@ public interface Ruler3DTool extends AbstractTwoPoints3DTool {
 	 * @see #setMajorTickLength(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getRuler3DTool_MajorTickLength()
 	 * @model default="0.2" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='m' propertyCategory='MAJOR_TICKS_PROPERTIES'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='m' propertyCategory='MAJOR_TICKS_PROPERTIES'"
 	 * @generated
 	 */
 	double getMajorTickLength();

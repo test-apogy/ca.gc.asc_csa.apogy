@@ -314,7 +314,7 @@ public class Symphony__ExamplesAntennaSymphonyPackageImpl extends EPackageImpl i
 		   source, 
 		   new String[] {
 			 "documentation", "This is the current pan angle of the dish antenna\'s\nPan-Tilt Unit (PTU).",
-			 "csa_units", "rad",
+			 "symphony_units", "rad",
 			 "notify", "true",
 			 "property", "Editable",
 			 "propertyCategory", "Pan-Tilt Unit"
@@ -324,7 +324,7 @@ public class Symphony__ExamplesAntennaSymphonyPackageImpl extends EPackageImpl i
 		   source, 
 		   new String[] {
 			 "documentation", "This is the current tilt angle of the dish antenna\'s\nPan-Tilt Unit (PTU).",
-			 "csa_units", "rad",
+			 "symphony_units", "rad",
 			 "notify", "true",
 			 "property", "Editable",
 			 "propertyCategory", "Pan-Tilt Unit"

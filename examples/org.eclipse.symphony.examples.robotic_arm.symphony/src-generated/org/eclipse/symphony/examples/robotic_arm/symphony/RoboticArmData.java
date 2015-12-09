@@ -105,7 +105,7 @@ public interface RoboticArmData extends SymphonyInitializationData
 	 * @see #setTurretAngle(double)
 	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyPackage#getRoboticArmData_TurretAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='deg' children='false' notify='true' property='Editable' propertyCategory='Joint Angles'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg' children='false' notify='true' property='Editable' propertyCategory='Joint Angles'"
 	 * @generated
 	 */
 	double getTurretAngle();
@@ -135,7 +135,7 @@ public interface RoboticArmData extends SymphonyInitializationData
 	 * @see #setShoulderAngle(double)
 	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyPackage#getRoboticArmData_ShoulderAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='deg' children='false' notify='true' property='Editable' propertyCategory='Joint Angles'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg' children='false' notify='true' property='Editable' propertyCategory='Joint Angles'"
 	 * @generated
 	 */
   double getShoulderAngle();
@@ -165,7 +165,7 @@ public interface RoboticArmData extends SymphonyInitializationData
 	 * @see #setElbowAngle(double)
 	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyPackage#getRoboticArmData_ElbowAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='deg' children='false' notify='true' property='Editable' propertyCategory='Joint Angles'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg' children='false' notify='true' property='Editable' propertyCategory='Joint Angles'"
 	 * @generated
 	 */
   double getElbowAngle();
@@ -195,7 +195,7 @@ public interface RoboticArmData extends SymphonyInitializationData
 	 * @see #setWristAngle(double)
 	 * @see org.eclipse.symphony.examples.robotic_arm.symphony.Symphony__ExamplesRoboticArmSymphonyPackage#getRoboticArmData_WristAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='deg' children='false' notify='true' property='Editable' propertyCategory='Joint Angles'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg' children='false' notify='true' property='Editable' propertyCategory='Joint Angles'"
 	 * @generated
 	 */
   double getWristAngle();

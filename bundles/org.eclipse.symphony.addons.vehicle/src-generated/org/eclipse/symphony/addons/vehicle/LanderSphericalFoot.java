@@ -36,7 +36,7 @@ public interface LanderSphericalFoot extends PhysicalBody
 	 * @see #setRadius(double)
 	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getLanderSphericalFoot_Radius()
 	 * @model default="0.01" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
 	 * @generated
 	 */
   double getRadius();

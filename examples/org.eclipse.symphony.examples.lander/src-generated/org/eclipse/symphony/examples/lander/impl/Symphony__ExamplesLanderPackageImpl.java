@@ -741,7 +741,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Location",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getPosition_Y(), 
@@ -752,7 +752,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Location",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getPosition_Z(), 
@@ -763,7 +763,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Location",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getPosition_Attitude(), 
@@ -839,19 +839,19 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 		  ((getLander__ChangeAttitude__double_double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getLander__ChangeAttitude__double_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getLander__ChangeAttitude__double_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getLander__ResetAttitude(), 
@@ -869,13 +869,13 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 		  ((getLander__CommandAngularVelocities__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad/s"
+			 "symphony_units", "rad/s"
 		   });	
 		addAnnotation
 		  ((getLander__CommandAngularVelocities__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad/s"
+			 "symphony_units", "rad/s"
 		   });	
 		addAnnotation
 		  (getLander__CommandThrust__double(), 
@@ -887,7 +887,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 		  ((getLander__CommandThrust__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "N"
+			 "symphony_units", "N"
 		   });	
 		addAnnotation
 		  (getLander__ChangeThrustBy__double(), 
@@ -899,7 +899,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 		  ((getLander__ChangeThrustBy__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "N"
+			 "symphony_units", "N"
 		   });	
 		addAnnotation
 		  (getLander__StartFlying__boolean(), 
@@ -964,7 +964,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "children", "false",
 			 "notify", "true",
 			 "property", "Readonly",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "Leg Positions"
 		   });	
 		addAnnotation
@@ -975,7 +975,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "children", "false",
 			 "notify", "true",
 			 "property", "Readonly",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "Leg Positions"
 		   });	
 		addAnnotation
@@ -986,7 +986,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "children", "false",
 			 "notify", "true",
 			 "property", "Readonly",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "Leg Positions"
 		   });	
 		addAnnotation
@@ -996,7 +996,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "documentation", "This represents the current angular velocity\n(in radians per second) of the lander in the X\ndirection.\n<p>\nNote: Unlike the traditional definition of angular\nvelocity as a vector, this is simply a signed scalar;\na positive value is the rotation in the counter-\nclockwise direction while a negative value implies the\nrotation is in the clockwise direction.  Zero means\nthere is no rotation.\n@see #commandAngularVelocities(double, double)",
 			 "children", "false",
 			 "notify", "true",
-			 "csa_units", "rad/s",
+			 "symphony_units", "rad/s",
 			 "propertyCategory", "Velocities"
 		   });	
 		addAnnotation
@@ -1006,7 +1006,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 			 "documentation", "This represents the current angular velocity\n(in radians per second) of the lander in the Y\ndirection.\n<p>\nNote: Unlike the traditional definition of angular\nvelocity as a vector, this is simply a signed scalar;\na positive value is the rotation in the counter-\nclockwise direction while a negative value implies the\nrotation is in the clockwise direction.  Zero means\nthere is no rotation.\n@see #commandAngularVelocities(double, double)",
 			 "children", "false",
 			 "notify", "true",
-			 "csa_units", "rad/s",
+			 "symphony_units", "rad/s",
 			 "propertyCategory", "Velocities"
 		   });	
 		addAnnotation
@@ -1015,7 +1015,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 		   new String[] {
 			 "documentation", "This represents the mass of the lander (in kg).",
 			 "children", "false",
-			 "csa_units", "kg",
+			 "symphony_units", "kg",
 			 "property", "Readonly",
 			 "propertyCategory", "Flight"
 		   });	
@@ -1025,7 +1025,7 @@ public class Symphony__ExamplesLanderPackageImpl extends EPackageImpl implements
 		   new String[] {
 			 "documentation", "This is the amount of force (in N) of gravity that is being\nimposed upon the lander.\n<p>\nRecall that that the gravitational force impose on an object\n(like a lander) in relation to a celestial body is affected by:\n<ul>\n\t <li>the mass of the lander</li>\n  <li>the mass of the celestial body the lander is on / above</li>\n  <li>the distance between the lander and the body</li>\n</ul>\n@return The amount of gravitational force (in N) imposed upon the lander",
 			 "children", "false",
-			 "csa_units", "N",
+			 "symphony_units", "N",
 			 "property", "Readonly",
 			 "propertyCategory", "Flight"
 		   });	

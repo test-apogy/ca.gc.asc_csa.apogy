@@ -64,7 +64,7 @@ public interface ConicalFieldOfView extends FieldOfView {
 	 * @see #setFieldOfViewAngle(double)
 	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getConicalFieldOfView_FieldOfViewAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getFieldOfViewAngle();

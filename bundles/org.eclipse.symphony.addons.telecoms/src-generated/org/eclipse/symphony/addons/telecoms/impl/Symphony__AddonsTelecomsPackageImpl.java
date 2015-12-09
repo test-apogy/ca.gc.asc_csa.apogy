@@ -1020,19 +1020,19 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the gain of the antenna in the direction specified by a vector.\n@param theta The angle between the z axis and the direction vector, in radians.\n@param phi The angle between the x axis and the projection of the point in the x-y plane, in radians\n@return The gain, in dBi (decibels isotropic or dBi) associated with the radiation pattern in the specified direction.",
-			 "csa_units", "dB"
+			 "symphony_units", "dB"
 		   });	
 		addAnnotation
 		  ((getAbstractAntennaRadiationPattern__ComputeGain__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getAbstractAntennaRadiationPattern__ComputeGain__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (isotropicAntennaEClass, 
@@ -1063,7 +1063,7 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 		   source, 
 		   new String[] {
 			 "documentation", "The apex angle of the cone. The cone is pointing toward +Z.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (simpleRectangularFrustumRadiationPatternEClass, 
@@ -1076,14 +1076,14 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 		   source, 
 		   new String[] {
 			 "documentation", "Horizontal field of view angle.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getSimpleRectangularFrustumRadiationPattern_VerticalFieldOfView(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Vertical field of view angle.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (uRlBasedAntennaRadiationPatternEClass, 
@@ -1112,7 +1112,7 @@ public class Symphony__AddonsTelecomsPackageImpl extends EPackageImpl implements
 			 "documentation", "Cutoff signal strength under which no signal is usuable.",
 			 "property", "Editable",
 			 "propertyCategory", "CUTOFF_SETTINGS",
-			 "csa_units", "dB"
+			 "symphony_units", "dB"
 		   });	
 		addAnnotation
 		  (getAntennaRadiationPatternImageMapLayer_BellowCutoffColor(), 

@@ -1542,7 +1542,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "CORRECTION_INFO",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getVehiclePoseCorrector_OrientationCorrectionMode(), 
@@ -1584,13 +1584,13 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getWheel_Radius(), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getWheel_Length(), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (thrusterEClass, 
@@ -1604,7 +1604,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		   new String[] {
 			 "documentation", "The minimum thrust, in Newtons. Must be positive.",
 			 "notify", "true",
-			 "csa_units", "N",
+			 "symphony_units", "N",
 			 "propertyCategory", "THRUST_INFO"
 		   });	
 		addAnnotation
@@ -1613,7 +1613,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		   new String[] {
 			 "documentation", "The maximum thrust, in Newtons. Must be positive.",
 			 "notify", "true",
-			 "csa_units", "N",
+			 "symphony_units", "N",
 			 "propertyCategory", "THRUST_INFO"
 		   });	
 		addAnnotation
@@ -1622,7 +1622,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		   new String[] {
 			 "documentation", "The current thrust, in Newtons. Always between minimumThrust and maximumThrust.",
 			 "notify", "true",
-			 "csa_units", "N",
+			 "symphony_units", "N",
 			 "propertyCategory", "THRUST_INFO"
 		   });	
 		addAnnotation
@@ -1639,7 +1639,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		   source, 
 		   new String[] {
 			 "documentation", "Plume angle, in radians",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (wheelContactModeEEnum, 
@@ -1659,7 +1659,7 @@ public class Symphony__AddonsVehiclePackageImpl extends EPackageImpl implements 
 		  (getLanderSphericalFoot_Radius(), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getWheelVehicleUtilities__GetWheelCenterPoint__double_double_Segment2D(), 

@@ -94,7 +94,7 @@ abstract class AbstractTwoPoints3DTool extends Simple3DTool
 	@GenModel(notify="true", propertyCategory="TO_NODE")	
 	boolean toNodeLock = "false"	
 		
-	@GenModel(notify="true", property="Readonly", csa_units = "m")	
+	@GenModel(notify="true", property="Readonly", symphony_units = "m")	
 	transient double distance = "0"
 		
 	/* Method called when the pose between from and to changes. */
@@ -111,7 +111,7 @@ class Ruler3DTool extends AbstractTwoPoints3DTool
 	Color3f rulerColor = "0.0,1.0,0.0"
 	
 	/* Radius of sphere used as ruler end points. */
-	@GenModel(notify="true", csa_units = "m", propertyCategory="RULER_PROPERTIES")	
+	@GenModel(notify="true", symphony_units = "m", propertyCategory="RULER_PROPERTIES")	
 	double extremitiesRadius = "0.01"
 	
 	// MINOR TICKS
@@ -121,11 +121,11 @@ class Ruler3DTool extends AbstractTwoPoints3DTool
 	Color3f minorTickColor = "0.0,1.0,0.0"
 	
 	/* Spacing between minor tick mark.*/
-	@GenModel(notify="true", csa_units = "m", propertyCategory="MINOR_TICKS_PROPERTIES")	
+	@GenModel(notify="true", symphony_units = "m", propertyCategory="MINOR_TICKS_PROPERTIES")	
 	double minorTickSpacing = "0.1"
 	
 	/* Length of the minor tick marks as displayed on the ruler.*/
-	@GenModel(notify="true", csa_units = "m", propertyCategory="MINOR_TICKS_PROPERTIES")	
+	@GenModel(notify="true", symphony_units = "m", propertyCategory="MINOR_TICKS_PROPERTIES")	
 	double minorTickLength = "0.1"
 	
 	// MAJOR TICKS
@@ -135,11 +135,11 @@ class Ruler3DTool extends AbstractTwoPoints3DTool
 	Color3f majorTickColor = "0.0,1.0,0.0"
 	
 	/* Spacing between major tick mark.*/
-	@GenModel(notify="true", csa_units = "m", propertyCategory="MAJOR_TICKS_PROPERTIES")	
+	@GenModel(notify="true", symphony_units = "m", propertyCategory="MAJOR_TICKS_PROPERTIES")	
 	double majorTickSpacing = "1.0"
 
 	/* Length of the major tick marks as displayed on the ruler.*/
-	@GenModel(notify="true", csa_units = "m", propertyCategory="MAJOR_TICKS_PROPERTIES")	
+	@GenModel(notify="true", symphony_units = "m", propertyCategory="MAJOR_TICKS_PROPERTIES")	
 	double majorTickLength = "0.2"
 		
 	/* Topology Node associated with the tool. */
@@ -188,23 +188,23 @@ class SunVector3DTool extends AbstractTwoPoints3DTool
 	Color3f vectorColor = "1.0,1.0,0.0"
 		
 	/* Length of the vector. */
-	@GenModel(notify="true", csa_units = "m", propertyCategory="SUN_VECTOR_PROPERTIES")
+	@GenModel(notify="true", symphony_units = "m", propertyCategory="SUN_VECTOR_PROPERTIES")
 	double vectorLength = "10.0"
 	
 	/* Radius of sphere used as end point to vector. */
-	@GenModel(notify="true", csa_units = "m", propertyCategory="SUN_VECTOR_PROPERTIES")	
+	@GenModel(notify="true", symphony_units = "m", propertyCategory="SUN_VECTOR_PROPERTIES")	
 	double endPointRadius = "0.01"
 	
 	/* The current sun intensity. */
-	@GenModel(notify="true", csa_units = "W/m*m", property="Readonly", propertyCategory="SUN_VECTOR_LIGHT_PROPERTIES")	
+	@GenModel(notify="true", symphony_units = "W/m*m", property="Readonly", propertyCategory="SUN_VECTOR_LIGHT_PROPERTIES")	
 	double sunIntensity = "0.0"
 	
 	/* The current day maximum sun intensity. */
-	@GenModel(notify="true", csa_units = "W/m*m", property="Readonly", propertyCategory="SUN_VECTOR_LIGHT_PROPERTIES")	
+	@GenModel(notify="true", symphony_units = "W/m*m", property="Readonly", propertyCategory="SUN_VECTOR_LIGHT_PROPERTIES")	
 	double currentDayMaximumSunIntensity = "0.0"
 	
 	/* The current sun intensity. */
-	@GenModel(notify="true", csa_units = "%", property="Readonly", propertyCategory="SUN_VECTOR_LIGHT_PROPERTIES")	
+	@GenModel(notify="true", symphony_units = "%", property="Readonly", propertyCategory="SUN_VECTOR_LIGHT_PROPERTIES")	
 	double currentSunIntensityPercentage = "0.0"
 		
 	/* Topology Node associated with the tool. */
@@ -234,10 +234,10 @@ class SunVector3DToolNode extends Node
 	refers Variable[1] variable
 		
 	/** Minimum distance used to trigger a new point being accepted.*/
-	@GenModel(propertyCategory="TRAJECTORY_3D_TOOL", csa_units="m")
+	@GenModel(propertyCategory="TRAJECTORY_3D_TOOL", symphony_units="m")
 	double distanceThreshold = "0.01"
 	
-	@GenModel(notify="true", property="Readonly", propertyCategory="TRAJECTORY_3D_TOOL", csa_units="m")
+	@GenModel(notify="true", property="Readonly", propertyCategory="TRAJECTORY_3D_TOOL", symphony_units="m")
 	double totalDistance = "0.0"
 	
 	/** The  WayPointPath currently recorded.*/

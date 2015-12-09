@@ -86,7 +86,7 @@ class PTUCameraData extends CameraData
 	 * This is the current pan angle of the Pan-Tilt Unit (PTU)
 	 * that the camera is mounted on.
 	 */
-	@GenModel(csa_units="deg",
+	@GenModel(symphony_units="deg",
 			  notify="true",
 			  property="Editable",
 			  propertyCategory="PTU Angles")
@@ -96,7 +96,7 @@ class PTUCameraData extends CameraData
 	 * This is the current tilt angle of the Pan-Tilt Unit (PTU)
 	 * that the camera is mounted on.
 	 */
-	@GenModel(csa_units="deg",
+	@GenModel(symphony_units="deg",
 			  notify="true",
 			  property="Editable",
 			  propertyCategory="PTU Angles")

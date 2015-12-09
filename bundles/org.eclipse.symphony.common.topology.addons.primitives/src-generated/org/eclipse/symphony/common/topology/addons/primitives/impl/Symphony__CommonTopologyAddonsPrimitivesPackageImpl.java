@@ -984,7 +984,7 @@ public class Symphony__CommonTopologyAddonsPrimitivesPackageImpl extends EPackag
 		   source, 
 		   new String[] {
 			 "documentation", "The current shortest intersection distance between\nthe ray and a node of one of the included type.",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (pointLightEClass, 

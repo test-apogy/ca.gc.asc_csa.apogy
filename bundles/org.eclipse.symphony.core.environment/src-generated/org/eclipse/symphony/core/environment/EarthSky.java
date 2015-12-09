@@ -81,7 +81,7 @@ public interface EarthSky extends Sky
 	 * Returns the Moon angular diameter, in radians.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='MOON' csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='MOON' symphony_units='rad'"
 	 * @generated
 	 */
   double getMoonAngularDiameter();

@@ -598,7 +598,7 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		   new String[] {
 			 "documentation", "This is the voltage output by the battery,\nas measured in volts; initially, zero",
 			 "notify", "true",
-			 "csa_units", "V",
+			 "symphony_units", "V",
 			 "property", "Readonly"
 		   });	
 		addAnnotation
@@ -607,7 +607,7 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		   new String[] {
 			 "documentation", "This is the current output by the battery,\nas measured in amps; initially, zero",
 			 "notify", "true",
-			 "csa_units", "A",
+			 "symphony_units", "A",
 			 "property", "Readonly"
 		   });	
 		addAnnotation
@@ -643,7 +643,7 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		   new String[] {
 			 "documentation", "This is used to get the voltage that the power system\nis currently outputting.",
 			 "notify", "true",
-			 "csa_units", "V",
+			 "symphony_units", "V",
 			 "get", "<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery = this.getActiveBattery();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_activeBattery, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery_1 = this.getActiveBattery();\n\treturn _activeBattery_1.getVoltage();\n}\nelse\n{\n\treturn 0.0;\n}"
 		   });	
 		addAnnotation
@@ -652,7 +652,7 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		   new String[] {
 			 "documentation", "This is used to get the current that the power system\nis currently outputting.",
 			 "notify", "true",
-			 "csa_units", "A",
+			 "symphony_units", "A",
 			 "get", "<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery = this.getActiveBattery();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_activeBattery, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.rover.Battery%> _activeBattery_1 = this.getActiveBattery();\n\treturn _activeBattery_1.getCurrent();\n}\nelse\n{\n\treturn 0.0;\n}"
 		   });	
 		addAnnotation
@@ -677,7 +677,7 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		  ((getRover__CmdLinearVelocity__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m/s"
+			 "symphony_units", "m/s"
 		   });	
 		addAnnotation
 		  (getRover__CmdAngularVelocity__double(), 
@@ -689,7 +689,7 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		  ((getRover__CmdAngularVelocity__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad/s"
+			 "symphony_units", "rad/s"
 		   });	
 		addAnnotation
 		  (getRover__CmdVelocities__double_double(), 
@@ -701,13 +701,13 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 		  ((getRover__CmdVelocities__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m/s"
+			 "symphony_units", "m/s"
 		   });	
 		addAnnotation
 		  ((getRover__CmdVelocities__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad/s"
+			 "symphony_units", "rad/s"
 		   });	
 		addAnnotation
 		  (getRover_RoboticArm(), 
@@ -760,7 +760,7 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 			 "documentation", "This is the linear velocity of the rover (given in\nmetres per second.)\n<p>\nNote: Unlike the traditional definition of linear velocity\nas a vector, this is simply a signed scalar; a positive\nvalue indicates the speed forward while a negative value\nis the speed backwards.  Zero means there is no movement.",
 			 "children", "false",
 			 "notify", "true",
-			 "csa_units", "m/s",
+			 "symphony_units", "m/s",
 			 "property", "Readonly",
 			 "propertyCategory", "Velocities",
 			 "get", "<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getLinearVelocity();\n}\nelse\n{\n\treturn 0.0;\n}"
@@ -772,7 +772,7 @@ public class Symphony__ExamplesRoverPackageImpl extends EPackageImpl implements 
 			 "documentation", "This is the angular velocity of the rover (given in\nradians per second.)\n<p>\nNote: Unlike the traditional definition of angular\nvelocity as a vector, this is simply a signed scalar;\na positive value is the rotation in the clockwise\ndirection while a negative value implies the rotation\nis in the counter-clockwise direction.  Zero means\nthere is no rotation.",
 			 "children", "false",
 			 "notify", "true",
-			 "csa_units", "rad/s",
+			 "symphony_units", "rad/s",
 			 "property", "Readonly",
 			 "propertyCategory", "Velocities",
 			 "get", "<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform = this.getMobilePlatform();\nboolean _notEquals = (!<%com.google.common.base.Objects%>.equal(_mobilePlatform, null));\nif (_notEquals)\n{\n\t<%org.eclipse.symphony.examples.mobile_platform.MobilePlatform%> _mobilePlatform_1 = this.getMobilePlatform();\n\treturn _mobilePlatform_1.getAngularVelocity();\n}\nelse\n{\n\treturn 0.0;\n}"

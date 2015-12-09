@@ -132,7 +132,7 @@ public interface VehiclePoseCorrector extends PoseCorrector
 	 * @see #setZCorrection(double)
 	 * @see org.eclipse.symphony.addons.vehicle.Symphony__AddonsVehiclePackage#getVehiclePoseCorrector_ZCorrection()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='CORRECTION_INFO' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='CORRECTION_INFO' symphony_units='m'"
 	 * @generated
 	 */
   double getZCorrection();

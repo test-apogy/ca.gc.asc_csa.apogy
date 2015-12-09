@@ -168,7 +168,7 @@ public interface AbstractOrbitPropagator extends Named, Described {
 	 * @param timeInterval The time interval to get spacecraft states, in seconds.
 	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.core.environment.orbit.List<org.eclipse.symphony.core.environment.orbit.SpacecraftState>" unique="false" many="false" exceptions="org.eclipse.symphony.core.environment.orbit.Exception" startDateUnique="false" endDateUnique="false" timeIntervalUnique="false"
-	 *        timeIntervalAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='s'"
+	 *        timeIntervalAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='s'"
 	 * @generated
 	 */
 	List<SpacecraftState> getSpacecraftStates(Date startDate, Date endDate, double timeInterval) throws Exception;

@@ -100,7 +100,7 @@ class GPSPoseSensor extends PoseSensor, Server
 	 * value is set to "45.518206644445", which is the
 	 * MET's origin value.
 	 */
-	@GenModel(csa_units="deg")
+	@GenModel(symphony_units="deg")
 	double originLatitude = "45.518206644445"
 	
 	/*
@@ -108,14 +108,14 @@ class GPSPoseSensor extends PoseSensor, Server
 	 * value is set to "-73.393904468182", which is the
 	 * value which is the MET's origin value.
 	 */
-	@GenModel(csa_units="deg")
+	@GenModel(symphony_units="deg")
 	double originLongitude = "-73.393904468182"
 	
 	/*
 	 * The angle, in radians, between the Noth East frame (z rotation).
 	 * Default value is "0.5940676", which is the value used for the MET.
 	 */
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	double neAngle = "0.5940676"
 	
 	double originElevation = "33.0985"

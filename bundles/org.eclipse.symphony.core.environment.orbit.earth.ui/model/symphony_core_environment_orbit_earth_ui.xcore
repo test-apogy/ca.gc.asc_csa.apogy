@@ -112,21 +112,21 @@ class OrbitModelWorldWindLayer extends AbstractWorldWindLayer
 	 * The time interval at which to show
 	 * the position.
 	 */
-	@GenModel(propertyCategory="TIME_PERIOD", csa_units="s")
+	@GenModel(propertyCategory="TIME_PERIOD", symphony_units="s")
 	double timeInterval = "600.0"
 	
 	/*
 	 * The forward propagation duration
 	 * from the current time.
 	 */
-	@GenModel(propertyCategory="TIME_PERIOD", csa_units="s")
+	@GenModel(propertyCategory="TIME_PERIOD", symphony_units="s")
 	double forwardPropagationDuration = "43200.0"
 	
 	/*
 	 * The backward propagation duration
 	 * from the current time.
 	 */
-	@GenModel(propertyCategory="TIME_PERIOD", csa_units="s")
+	@GenModel(propertyCategory="TIME_PERIOD", symphony_units="s")
 	double backwardPropagationDuration = "43200.0"	
 	
 	/*
@@ -162,27 +162,27 @@ class SpacecraftSwathWorldWindLayer extends AbstractWorldWindLayer
 	 * The forward propagation duration from
 	 * the current time.
 	 */
-	@GenModel(propertyCategory="TIME_PERIOD", csa_units="s")
+	@GenModel(propertyCategory="TIME_PERIOD", symphony_units="s")
 	double forwardPropagationDuration = "43200.0"
 	
 	/*
 	 * The backward propagation duration from
 	 * the current time.
 	 */
-	@GenModel(propertyCategory="TIME_PERIOD", csa_units="s")
+	@GenModel(propertyCategory="TIME_PERIOD", symphony_units="s")
 	double backwardPropagationDuration = "43200.0"	
 	
 	/*
 	 * The time interval at which to show
 	 * the position.
 	 */
-	@GenModel(notify="true", propertyCategory="TIME_PERIOD", property="Editable", csa_units="s")
+	@GenModel(notify="true", propertyCategory="TIME_PERIOD", property="Editable", symphony_units="s")
 	double timeInterval = "600.0"
 		
-	@GenModel(notify="true", property="Editable", propertyCategory="SWATH", csa_units="rad")
+	@GenModel(notify="true", property="Editable", propertyCategory="SWATH", symphony_units="rad")
 	double leftSwathAngle = "0"
 	
-	@GenModel(notify="true", property="Editable", propertyCategory="SWATH", csa_units="rad")
+	@GenModel(notify="true", property="Editable", propertyCategory="SWATH", symphony_units="rad")
 	double rightSwathAngle = "0"
 	
 	/*
@@ -204,7 +204,7 @@ class EarthSurfaceLocationWorldWindLayer extends AbstractWorldWindLayer
 	/*
 	 * The radius of the target.
 	 */
-	@GenModel(propertyCategory="VISUALS", csa_units="km")
+	@GenModel(propertyCategory="VISUALS", symphony_units="km")
 	double targetRadius = "50"
 }
 
@@ -216,7 +216,7 @@ class GroundStationWorldWindLayer extends EarthSurfaceLocationWorldWindLayer
 	 * The altitude to which to project
 	 * the ElevationMask.
 	 */
-	@GenModel(propertyCategory="VISUALS", csa_units="km")
+	@GenModel(propertyCategory="VISUALS", symphony_units="km")
 	double referenceAltitude = "500"
 }
 

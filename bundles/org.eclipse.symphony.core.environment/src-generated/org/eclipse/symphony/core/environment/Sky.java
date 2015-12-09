@@ -156,7 +156,7 @@ public interface Sky extends Timed
 	 * Returns the Sun angular diameter, in radians.
 	 * <!-- end-model-doc -->
 	 * @model kind="operation" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SUN' csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='SUN' symphony_units='rad'"
 	 * @generated
 	 */
   double getSunAngularDiameter();

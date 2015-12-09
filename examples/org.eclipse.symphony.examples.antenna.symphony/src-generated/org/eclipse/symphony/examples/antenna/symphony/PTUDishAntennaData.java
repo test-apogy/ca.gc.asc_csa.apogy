@@ -73,7 +73,7 @@ public interface PTUDishAntennaData extends SymphonyInitializationData
 	 * @see #setPanAngle(double)
 	 * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#getPTUDishAntennaData_PanAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad' notify='true' property='Editable' propertyCategory='Pan-Tilt Unit'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad' notify='true' property='Editable' propertyCategory='Pan-Tilt Unit'"
 	 * @generated
 	 */
   double getPanAngle();
@@ -100,7 +100,7 @@ public interface PTUDishAntennaData extends SymphonyInitializationData
 	 * @see #setTiltAngle(double)
 	 * @see org.eclipse.symphony.examples.antenna.symphony.Symphony__ExamplesAntennaSymphonyPackage#getPTUDishAntennaData_TiltAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad' notify='true' property='Editable' propertyCategory='Pan-Tilt Unit'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad' notify='true' property='Editable' propertyCategory='Pan-Tilt Unit'"
 	 * @generated
 	 */
   double getTiltAngle();

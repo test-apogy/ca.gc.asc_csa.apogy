@@ -126,7 +126,7 @@ public interface Lander extends Disposable
 	 * @see #setLegAPosition(double)
 	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_LegAPosition()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' csa_units='m' propertyCategory='Leg Positions'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' symphony_units='m' propertyCategory='Leg Positions'"
 	 * @generated
 	 */
   double getLegAPosition();
@@ -184,7 +184,7 @@ public interface Lander extends Disposable
 	 * @see #setLegBPosition(double)
 	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_LegBPosition()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' csa_units='m' propertyCategory='Leg Positions'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' symphony_units='m' propertyCategory='Leg Positions'"
 	 * @generated
 	 */
   double getLegBPosition();
@@ -242,7 +242,7 @@ public interface Lander extends Disposable
 	 * @see #setLegCPosition(double)
 	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_LegCPosition()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' csa_units='m' propertyCategory='Leg Positions'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' symphony_units='m' propertyCategory='Leg Positions'"
 	 * @generated
 	 */
   double getLegCPosition();
@@ -313,7 +313,7 @@ public interface Lander extends Disposable
 	 * @see #setXAngularVelocity(double)
 	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_XAngularVelocity()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='rad/s' propertyCategory='Velocities'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='rad/s' propertyCategory='Velocities'"
 	 * @generated
 	 */
   double getXAngularVelocity();
@@ -354,7 +354,7 @@ public interface Lander extends Disposable
 	 * @see #setYAngularVelocity(double)
 	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_YAngularVelocity()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='rad/s' propertyCategory='Velocities'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='rad/s' propertyCategory='Velocities'"
 	 * @generated
 	 */
   double getYAngularVelocity();
@@ -379,7 +379,7 @@ public interface Lander extends Disposable
 	 * @return the value of the '<em>Mass</em>' attribute.
 	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_Mass()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' csa_units='kg' property='Readonly' propertyCategory='Flight'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' symphony_units='kg' property='Readonly' propertyCategory='Flight'"
 	 * @generated
 	 */
 	double getMass();
@@ -404,7 +404,7 @@ public interface Lander extends Disposable
 	 * @return the value of the '<em>Gravitational Pull</em>' attribute.
 	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getLander_GravitationalPull()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' csa_units='N' property='Readonly' propertyCategory='Flight'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' symphony_units='N' property='Readonly' propertyCategory='Flight'"
 	 * @generated
 	 */
 	double getGravitationalPull();
@@ -642,9 +642,9 @@ public interface Lander extends Disposable
 	 * @param zAngle The lander's new angle of rotation (in radians) around the Z axis
 	 * <!-- end-model-doc -->
 	 * @model xAngleUnique="false"
-	 *        xAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'" yAngleUnique="false"
-	 *        yAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'" zAngleUnique="false"
-	 *        zAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        xAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" yAngleUnique="false"
+	 *        yAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" zAngleUnique="false"
+	 *        zAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	void changeAttitude(double xAngle, double yAngle, double zAngle);
@@ -682,8 +682,8 @@ public interface Lander extends Disposable
 	 * @param yAngularVelocity The new Y angular velocity for the lander (given in radians / second)
 	 * <!-- end-model-doc -->
 	 * @model xAngularVelocityUnique="false"
-	 *        xAngularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad/s'" yAngularVelocityUnique="false"
-	 *        yAngularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad/s'"
+	 *        xAngularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s'" yAngularVelocityUnique="false"
+	 *        yAngularVelocityAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s'"
 	 * @generated
 	 */
 	void commandAngularVelocities(double xAngularVelocity, double yAngularVelocity);
@@ -701,7 +701,7 @@ public interface Lander extends Disposable
 	 * @param thrustLevel The lander's new thrust level (given in N)
 	 * <!-- end-model-doc -->
 	 * @model thrustLevelUnique="false"
-	 *        thrustLevelAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='N'"
+	 *        thrustLevelAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='N'"
 	 * @generated
 	 */
   void commandThrust(double thrustLevel);
@@ -720,7 +720,7 @@ public interface Lander extends Disposable
 	 * @param thrustOffset The amount (in N) that the thrust level should be increased / decreased.
 	 * <!-- end-model-doc -->
 	 * @model thrustOffsetUnique="false"
-	 *        thrustOffsetAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='N'"
+	 *        thrustOffsetAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='N'"
 	 * @generated
 	 */
 	void changeThrustBy(double thrustOffset);

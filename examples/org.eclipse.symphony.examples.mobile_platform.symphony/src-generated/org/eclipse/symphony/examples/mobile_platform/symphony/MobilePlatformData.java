@@ -101,7 +101,7 @@ public interface MobilePlatformData extends SymphonyInitializationData {
 	 * @see #setLinearVelocity(double)
 	 * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage#getMobilePlatformData_LinearVelocity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
 	 * @generated
 	 */
 	double getLinearVelocity();
@@ -129,7 +129,7 @@ public interface MobilePlatformData extends SymphonyInitializationData {
 	 * @see #setAngularVelocity(double)
 	 * @see org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage#getMobilePlatformData_AngularVelocity()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s' children='false' notify='true' property='Editable' propertyCategory='Velocities'"
 	 * @generated
 	 */
 	double getAngularVelocity();

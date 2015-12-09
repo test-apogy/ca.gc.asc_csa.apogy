@@ -38,7 +38,7 @@ class PickVector extends Vector
 	 * The current shortest intersection distance between
 	 * the ray and a node of one of the included type.
 	 */
-	@GenModel(csa_units="m")
+	@GenModel(symphony_units="m")
 	double intersectionDistance = "-1.0"
 	
 	refers Node intersectedNode

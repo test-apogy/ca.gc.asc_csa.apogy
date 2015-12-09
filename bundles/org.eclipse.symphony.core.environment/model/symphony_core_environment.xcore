@@ -76,7 +76,7 @@ class EarthSurfaceWorksite extends SurfaceWorksite
 	 * coordinates system. Follows the right hand rule.
 	 * Note that the Z axis is pointing up (toward zenith).
 	 */
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	double xAxisAzimuth = "0"
 			
 	/*
@@ -122,31 +122,31 @@ class Atmosphere
 	/*
 	 * The wind surface speed, in m/s.
 	 */
-	@GenModel(csa_units="m/s")
+	@GenModel(symphony_units="m/s")
 	double windSpeed
 	
 	/*
 	 * The wind direction expressed relative to true north, in radians.
 	 */
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	double windDirection
 	
 	/*
 	 * The atmosphere temperature, in degrees Celcius.
 	 */
-	@GenModel(csa_units="deg")
+	@GenModel(symphony_units="deg")
 	double temperature
 	
 	/*
 	 * The atmosphere pressure at the reference altitude, in Pascals.
 	 */
-	@GenModel(csa_units="Pa")
+	@GenModel(symphony_units="Pa")
 	double surfacePressure
 	
 	/*
 	 * The atmosphere density at the reference altitude, in kg/m^3.
 	 */
-	@GenModel(csa_units="kg/m³")
+	@GenModel(symphony_units="kg/m³")
 	double surfaceDensity
 }
 
@@ -162,7 +162,7 @@ class AtmosphereUtils
 	 * @param sunAltitudeAngle The sun elevation angle above the horizon, in radians.
 	 * @see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM.
 	 */
-	op double getAirMass(@GenModel(csa_units="rad") double sunAltitudeAngle)
+	op double getAirMass(@GenModel(symphony_units="rad") double sunAltitudeAngle)
 		
 	/*
 	 * Computes the intensity of the direct component of sunlight, in Watts/m^2.
@@ -170,8 +170,8 @@ class AtmosphereUtils
 	 * @param heightAboveSeaLevel Height above sea level, in meters.
 	 * @see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM
 	 */
-	@GenModel(csa_units="W/m²") op double getDirectSunIntensity(@GenModel(csa_units="rad") double sunAltitudeAngle, 
-																@GenModel(csa_units="m") double heightAboveSeaLevel)
+	@GenModel(symphony_units="W/m²") op double getDirectSunIntensity(@GenModel(symphony_units="rad") double sunAltitudeAngle, 
+																@GenModel(symphony_units="m") double heightAboveSeaLevel)
 	
 	/*
 	 * Computes the intensity of the diffuse component of sunlight, in Watts/m^2.
@@ -179,8 +179,8 @@ class AtmosphereUtils
 	 * @param heightAboveSeaLevel Height above sea level, in meters.
 	 * @see http://pvcdrom.pveducation.org/SUNLIGHT/AIRMASS.HTM
 	 */
-	@GenModel(csa_units="W/m²") op double getDiffuseSunIntensity(@GenModel(csa_units="rad") double sunAltitudeAngle, 
-																 @GenModel(csa_units="m") double heightAboveSeaLevel)
+	@GenModel(symphony_units="W/m²") op double getDiffuseSunIntensity(@GenModel(symphony_units="rad") double sunAltitudeAngle, 
+																 @GenModel(symphony_units="m") double heightAboveSeaLevel)
 	
 	/*
 	 * Computes the change in altitude that needs to be added to the altitude of
@@ -192,7 +192,7 @@ class AtmosphereUtils
 	 * @param geometricAltitude The true altitude (as defined in HorizontalCoordinates) of the object, in radians.
 	 * @see ../doc/AtmosphereRefractionCalculations.html or http://www.srrb.noaa.gov/highlights/sunrise/calcdetails.html.
 	 */
-	op double getAtmosphereRefractionCorrection(@GenModel(csa_units="rad") double geometricAltitude)
+	op double getAtmosphereRefractionCorrection(@GenModel(symphony_units="rad") double geometricAltitude)
 }
 
 // Coordinates
@@ -220,20 +220,20 @@ class GeographicCoordinates
 	 * The longitude, in radians. Longitude east of Greenwich, UK  are positive
 	 * while those west of Greenwich are negative.
 	 */
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	double longitude
 	
 	/*
 	 * The latitude, in radians. Latitude north of the equator are positive while those
 	 * south of the equator are negative.
 	 */
-	@GenModel(csa_units="rad")	
+	@GenModel(symphony_units="rad")	
 	double latitude
 	
 	/*
 	 * Height above the Earth's sea level, in meters.
 	 */
-	@GenModel(csa_units="m")
+	@GenModel(symphony_units="m")
 	double elevation
 }
 
@@ -308,7 +308,7 @@ class Sky extends Timed
 	/*
 	 * Returns the Sun angular diameter, in radians.
 	 */
-	@GenModel(propertyCategory="SUN", csa_units="rad")
+	@GenModel(propertyCategory="SUN", symphony_units="rad")
 	op double getSunAngularDiameter()
 	
 	/*
@@ -339,7 +339,7 @@ class EarthSky extends Sky
 	/*
 	 * Returns the Moon angular diameter, in radians.
 	 */
-	@GenModel(propertyCategory="MOON", csa_units="rad")
+	@GenModel(propertyCategory="MOON", symphony_units="rad")
 	op double getMoonAngularDiameter()
 	
 	/*
@@ -362,12 +362,12 @@ class Sun extends GroupNode
 	 * Returns the sun intensity at the specified radius.
 	 * @param radius The distance from the sun center, in meters.
 	 */
-	op double getIrradiance(@GenModel(csa_units="m") double radius)
+	op double getIrradiance(@GenModel(symphony_units="m") double radius)
 	
 	/*
 	 * Sun radius, in meters.
 	 */
-	@GenModel(csa_units="m")
+	@GenModel(symphony_units="m")
 	double radius = "6.955E8"
 }
 
@@ -379,7 +379,7 @@ class Earth extends GroupNode
 	/*
 	 * Earth mean radius, in meters.
 	 */
-	@GenModel(csa_units="m")
+	@GenModel(symphony_units="m")
 	double radius = "6371000"
 }
 
@@ -388,7 +388,7 @@ class Moon extends GroupNode
 	/*
 	 * Moon radius, in meters.
 	 */
-	@GenModel(csa_units="m")
+	@GenModel(symphony_units="m")
 	double radius = "1737100"
 }
 
@@ -407,13 +407,13 @@ class EnvironmentUtilities
 	 * Method that parses Right Ascension angle expressed in
 	 * HH:mm:ss format and return an angle in radians.
 	 */
-	@GenModel(csa_units="rad") op float parseRightAscension(String rightAscensionString) throws Exception
+	@GenModel(symphony_units="rad") op float parseRightAscension(String rightAscensionString) throws Exception
 	
 	/*
 	 * Method that parses an angle expressed in deg:mm:ss format
 	 * and return an angle in radians.
 	 */
-	@GenModel(csa_units="rad") op float parseDegMinSec(String degMinSecAngleString)
+	@GenModel(symphony_units="rad") op float parseDegMinSec(String degMinSecAngleString)
 	
 	/*
 	 * Method that sorts a list of stars by magnitude.
@@ -619,7 +619,7 @@ class AstronomyUtils
 	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
 	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.
 	 */
-	op HorizontalCoordinates getHorizontalSunPosition(Date date, @GenModel(csa_units="rad") double observerLongitude, @GenModel(csa_units="rad") double observerLatitude)
+	op HorizontalCoordinates getHorizontalSunPosition(Date date, @GenModel(symphony_units="rad") double observerLongitude, @GenModel(symphony_units="rad") double observerLatitude)
 	
 	/*
 	 * Computes the Moon's equatorial coordinates for a given Julian date for
@@ -635,14 +635,14 @@ class AstronomyUtils
 	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
 	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative. 
 	 */
-	op EquatorialCoordinates getMoonTopocentricEquatorialPosition(Date date, @GenModel(csa_units="rad") double observerLongitude, @GenModel(csa_units="rad") double observerLatitude)
+	op EquatorialCoordinates getMoonTopocentricEquatorialPosition(Date date, @GenModel(symphony_units="rad") double observerLongitude, @GenModel(symphony_units="rad") double observerLatitude)
 	
 	/*
 	 * Computes the Moon's horizontal coordinates.
 	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
 	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative. 	 
 	 */
-	op HorizontalCoordinates getHorizontalMoonPosition(Date date, @GenModel(csa_units="rad") double observerLongitude, @GenModel(csa_units="rad") double observerLatitude)
+	op HorizontalCoordinates getHorizontalMoonPosition(Date date, @GenModel(symphony_units="rad") double observerLongitude, @GenModel(symphony_units="rad") double observerLatitude)
 	
 	/*
 	 * Return the number of days since epoch J2000.
@@ -719,7 +719,7 @@ class AstronomyUtils
 	 * @param date The date
 	 * @param observerLongitude The observer longitude, in radians. Longitude East of Greenwich are positive, West of Greenwich are negative.
 	 */
-	op double getLocalSideralTime(Date date, @GenModel(csa_units="rad") double observerLongitude)
+	op double getLocalSideralTime(Date date, @GenModel(symphony_units="rad") double observerLongitude)
 	
 	/*
 	 * Return the decimal time of day in UTC for a given date.
@@ -733,17 +733,17 @@ class AstronomyUtils
 	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.
 	 * @param date The date
 	 */
-	op HorizontalCoordinates convertToHorizontalCoordinates(EquatorialCoordinates equatorialCoordinates, @GenModel(csa_units="rad") double observerLongitude, @GenModel(csa_units="rad") double observerLatitude, Date date)
+	op HorizontalCoordinates convertToHorizontalCoordinates(EquatorialCoordinates equatorialCoordinates, @GenModel(symphony_units="rad") double observerLongitude, @GenModel(symphony_units="rad") double observerLatitude, Date date)
 	
 	/*
 	 * Convert a day's hour, minutes and seconds to an angle, in radians. 24 hours converts to 2π (360 degrees).
 	 */
-	@GenModel(csa_units="rad") op double convertTimeToAngle(int hours, int minutes, int seconds)
+	@GenModel(symphony_units="rad") op double convertTimeToAngle(int hours, int minutes, int seconds)
 	
 	/*
 	 * Clamps the specified angle between 0 and 2π (360 degrees).
 	 */
-	@GenModel(csa_units="rad") op double clampAngleToZero2PI(@GenModel(csa_units="rad") double angleInRadians)
+	@GenModel(symphony_units="rad") op double clampAngleToZero2PI(@GenModel(symphony_units="rad") double angleInRadians)
 	
 	/*
 	 * Converts Ecliptic Coordinates to Equatorial Coordinates.
@@ -790,12 +790,12 @@ class AstronomyUtils
 	/*
 	 * Convert Astronomical Units (A.U.) to meters.
 	 */
-	@GenModel(csa_units="m") op double convertAUtoMeters(double astronomicalUnits)
+	@GenModel(symphony_units="m") op double convertAUtoMeters(double astronomicalUnits)
 	
 	/*
 	 * Return the maximum altitude angle that the sun could reach at the specified latitude, in radians.
 	 */
-	@GenModel(csa_units="rad") op double getMaximumSunAltitude(@GenModel(csa_units="rad") double observerLatitude)
+	@GenModel(symphony_units="rad") op double getMaximumSunAltitude(@GenModel(symphony_units="rad") double observerLatitude)
 	
 	/*
 	 * Converts a sidreal time in HH:mm:ss string
@@ -808,7 +808,7 @@ class AstronomyUtils
 	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
 	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative.
 	 */
-	op Date getSunRiseTime(Date day, @GenModel(csa_units="rad") double observerLongitude, @GenModel(csa_units="rad") double observerLatitude)
+	op Date getSunRiseTime(Date day, @GenModel(symphony_units="rad") double observerLongitude, @GenModel(symphony_units="rad") double observerLatitude)
 
 	/*
 	 * Computes the sun set time for a given day and location.
@@ -816,7 +816,7 @@ class AstronomyUtils
 	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
 	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative. 
 	 */
-	op Date getSunSetTime(Date day, @GenModel(csa_units="rad") double observerLongitude, @GenModel(csa_units="rad") double observerLatitude)
+	op Date getSunSetTime(Date day, @GenModel(symphony_units="rad") double observerLongitude, @GenModel(symphony_units="rad") double observerLatitude)
 
 	/*
 	 * Computes the time of maximum sun elevation for a given day and location.
@@ -824,7 +824,7 @@ class AstronomyUtils
 	 * @param observerLongitude The observer longitude, in radians. Longitude east of Greenwich are positive, west of Greenwich are negative.
 	 * @param observerLatitude The observer latitude, in radians. Latitude North of the equator are positive, Southe of the equator are negative. 
 	 */
-	op Date getSunHighestElevationTime(Date day, @GenModel(csa_units="rad") double observerLongitude, @GenModel(csa_units="rad") double observerLatitude)
+	op Date getSunHighestElevationTime(Date day, @GenModel(symphony_units="rad") double observerLongitude, @GenModel(symphony_units="rad") double observerLatitude)
 }
 
 // Maps and Layers
@@ -900,37 +900,37 @@ class RectangularRegion extends Region
 	/*
 	 * Minimum X coordinate on the X axis.
 	 */	
-	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", csa_units="m")
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", symphony_units="m")
 	double xMin = "0.0"
 	
 	/*
 	 * Maximum X coordinate on the X axis.
 	 */
-	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", csa_units="m")
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", symphony_units="m")
 	double xMax = "0.0"
 	
 	/*
 	 * Minimum X coordinate on the Y axis.
 	 */
-	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", csa_units="m")
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", symphony_units="m")
 	double yMin = "0.0"
 	
 	/*
 	 * Maximum X coordinate on the Y axis.
 	 */
-	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", csa_units="m")
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", symphony_units="m")
 	double yMax = "0.0"
 	
 	/*
 	 * Dimension along the X axis.
 	 */
-	@GenModel(propertyCategory="EXTENT_SIZES", csa_units="m")
+	@GenModel(propertyCategory="EXTENT_SIZES", symphony_units="m")
 	derived transient readonly volatile double xDimension
 	
 	/*
 	 * Dimension along the Y axis.
 	 */
-	@GenModel(propertyCategory="EXTENT_SIZES", csa_units="m")
+	@GenModel(propertyCategory="EXTENT_SIZES", symphony_units="m")
 	derived transient readonly volatile double yDimension 
 	
 	refers derived transient readonly Tuple3d[1] lowerLeftCorner
@@ -944,19 +944,19 @@ class RectangularVolumeRegion extends RectangularRegion
 	/*
 	 * Minimum Z coordinate on the Z axis.
 	 */	
-	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", csa_units="m")
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", symphony_units="m")
 	double zMin = "0.0"
 	
 	/*
 	 * Maximum Z coordinate on the Z axis.
 	 */
-	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", csa_units="m")
+	@GenModel(property="Readonly", propertyCategory="EXTENT_COORDINATES", symphony_units="m")
 	double zMax = "0.0"
 	
 	/*
 	 * Dimension along the Z axis.
 	 */
-	@GenModel(propertyCategory="EXTENT_SIZES", csa_units="m")
+	@GenModel(propertyCategory="EXTENT_SIZES", symphony_units="m")
 	derived transient readonly volatile double zDimension 	
 }
 
@@ -987,7 +987,7 @@ interface RectangularRegionImage extends RectangularRegionProvider
 	 * Returns the image resolution.
 	 * @return The resolution, in meters / pixel, or -1 if not defined.
 	 */	
-	@GenModel(csa_units="m/pixel") op double getResolution()
+	@GenModel(symphony_units="m/pixel") op double getResolution()
 }
 
 /*
@@ -998,13 +998,13 @@ class ImageMapLayer extends AbstractMapLayer, RectangularRegionImage
 	/*
 	 * The width of the region covered by the map, in meters.
 	 */
-	@GenModel(property="Editable", propertyCategory="SIZE_AND_RESOLUTION", csa_units="m")	
+	@GenModel(property="Editable", propertyCategory="SIZE_AND_RESOLUTION", symphony_units="m")	
 	double width = "0.0"
 
 	/*
 	 * The height of the region covered by the map, in meters. 
 	 */
-	@GenModel(property="Editable", propertyCategory="SIZE_AND_RESOLUTION", csa_units="m")
+	@GenModel(property="Editable", propertyCategory="SIZE_AND_RESOLUTION", symphony_units="m")
 	double height = "0.0"
 
 	/* 
@@ -1037,7 +1037,7 @@ class ImageMapLayer extends AbstractMapLayer, RectangularRegionImage
 	/*
 	 * The resolution, in meters / pixels
 	 */
-	@GenModel(property="Readonly", propertyCategory="SIZE_AND_RESOLUTION", csa_units="m/pixel") 
+	@GenModel(property="Readonly", propertyCategory="SIZE_AND_RESOLUTION", symphony_units="m/pixel") 
 	derived transient readonly double resolution		
 }
 
@@ -1140,7 +1140,7 @@ abstract class CartesianTriangularMeshDerivedImageMapLayer extends ImageMapLayer
 	/*
 	 * The required resolution, in meters / pixels
 	 */
-	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", csa_units="m/pixel") 
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", symphony_units="m/pixel") 
 	double requiredResolution = "1.0"
 	
 	/*
@@ -1164,13 +1164,13 @@ class CartesianTriangularMeshSlopeImageMapLayer extends CartesianTriangularMeshD
 	/*
 	 * The minimum slope to use to generate the color scale. This is applicable only if autoScale is true. 
 	 */
-	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", csa_units="deg") 
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", symphony_units="deg") 
 	double minimumSlope = "0.0"
 	
 	/*
 	 * The maximum slope to use to generate the color scale. This is applicable only if autoScale is true. 
 	 */
-	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", csa_units="deg") 
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", symphony_units="deg") 
 	double maximumSlope = "50.0"	
 }
 
@@ -1199,13 +1199,13 @@ class CartesianTriangularMeshHeightImageMapLayer extends CartesianTriangularMesh
 	/*
 	 * The minimum height to use to generate the color scale. This is applicable only if autoScale is true. 
 	 */
-	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", csa_units="m")
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", symphony_units="m")
 	double minimumHeight = "0.0"
 	
 	/*
 	 * The maximum height to use to generate the color scale. This is applicable only if autoScale is true. 
 	 */
-	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", csa_units="m")
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", symphony_units="m")
 	double maximumHeight = "50.0"	
 }
 
@@ -1217,13 +1217,13 @@ class SlopeRange extends Named, Described
 	/*
 	 * Lower bound of the slope range. Always positive
 	 */
-	@GenModel(property="Editable", csa_units="deg")
+	@GenModel(property="Editable", symphony_units="deg")
 	double slopeLowerBound = "0"
 	
 	/*
 	 * Upper bound of the slope range. Always positive, and should be larger than slopeLower.
 	 */
-	@GenModel(property="Editable", csa_units="deg")
+	@GenModel(property="Editable", symphony_units="deg")
 	double slopeUpperBound = "10"
 	
 	/*
@@ -1260,7 +1260,7 @@ class LineOfSightImageMapLayer extends CartesianTriangularMeshDerivedImageMapLay
 	/*
 	 * The height of target above ground.
 	 */
-	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", csa_units="m")
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", symphony_units="m")
 	double targetHeightAboveGround = "1.0" 
 	
 	/*
@@ -1291,7 +1291,7 @@ abstract class AbstractShapeImageLayer extends ImageMapLayer
 	/*
 	 * The required resolution, in meters / pixels
 	 */
-	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", csa_units="m/pixel") 
+	@GenModel(property="Editable", propertyCategory="IMAGE_GENERATION_SETTINGS", symphony_units="m/pixel") 
 	double requiredResolution = "1.0"
 }
 
@@ -1300,10 +1300,10 @@ abstract class AbstractShapeImageLayer extends ImageMapLayer
  */
 class EllipseShapeImageLayer extends AbstractShapeImageLayer
 {
-	@GenModel(property="Editable", propertyCategory="ELLIPSE_SETTINGS", csa_units="m") 
+	@GenModel(property="Editable", propertyCategory="ELLIPSE_SETTINGS", symphony_units="m") 
 	double ellipseWidth = "1.0"
 	
-	@GenModel(property="Editable", propertyCategory="ELLIPSE_SETTINGS", csa_units="m") 
+	@GenModel(property="Editable", propertyCategory="ELLIPSE_SETTINGS", symphony_units="m") 
 	double ellipseHeight = "1.0"
 	
 	@GenModel(property="Editable", propertyCategory="ELLIPSE_SETTINGS") 
@@ -1315,10 +1315,10 @@ class EllipseShapeImageLayer extends AbstractShapeImageLayer
  */
 class RectangleShapeImageLayer extends AbstractShapeImageLayer
 {
-	@GenModel(property="Editable", propertyCategory="RECTANGLE_SETTINGS", csa_units="m") 
+	@GenModel(property="Editable", propertyCategory="RECTANGLE_SETTINGS", symphony_units="m") 
 	double rectangleWidth = "1.0"
 	
-	@GenModel(property="Editable", propertyCategory="RECTANGLE_SETTINGS", csa_units="m") 
+	@GenModel(property="Editable", propertyCategory="RECTANGLE_SETTINGS", symphony_units="m") 
 	double rectangleHeight = "1.0"
 	
 	@GenModel(property="Editable", propertyCategory="RECTANGLE_SETTINGS") 

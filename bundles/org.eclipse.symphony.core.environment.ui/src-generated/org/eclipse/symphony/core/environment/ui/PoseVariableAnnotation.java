@@ -41,7 +41,7 @@ public interface PoseVariableAnnotation extends AbstractVariableAnnotation
 	 * @see #setVectorlength(double)
 	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getPoseVariableAnnotation_Vectorlength()
 	 * @model default="10.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VECTOR_PROPERTIES' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VECTOR_PROPERTIES' symphony_units='m'"
 	 * @generated
 	 */
   double getVectorlength();
@@ -119,9 +119,9 @@ public interface PoseVariableAnnotation extends AbstractVariableAnnotation
 	 * @param zRotation The azimuth, in radians.
 	 * <!-- end-model-doc -->
 	 * @model xUnique="false"
-	 *        xAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'" yUnique="false"
-	 *        yAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'" zRotationUnique="false"
-	 *        zRotationAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        xAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'" yUnique="false"
+	 *        yAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'" zRotationUnique="false"
+	 *        zRotationAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	void updatePose(double x, double y, double zRotation);

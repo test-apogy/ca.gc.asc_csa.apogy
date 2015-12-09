@@ -46,7 +46,7 @@ public interface Satellite extends Named {
 	 * @see #setMaximumRollRate(double)
 	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatellite_MaximumRollRate()
 	 * @model default="0.017452778" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad/s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s'"
 	 * @generated
 	 */
 	double getMaximumRollRate();
@@ -73,7 +73,7 @@ public interface Satellite extends Named {
 	 * @see #setMaximumRoll(double)
 	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatellite_MaximumRoll()
 	 * @model default="0.087" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getMaximumRoll();

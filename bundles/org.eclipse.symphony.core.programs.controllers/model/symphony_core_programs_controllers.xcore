@@ -91,7 +91,7 @@ class TimeTrigger extends Trigger
 	/*
 	 * The refresh period, in millisecond, at which the operation should be called.
 	 */
-	@GenModel(notify="true", csa_units="ms")
+	@GenModel(notify="true", symphony_units="ms")
 	long refreshPeriod = "100"
 }
 
@@ -116,7 +116,7 @@ class ControllerStateTrigger extends ControllerTrigger
 	/*
 	 * The repeat period, in millisecond, at which the operation should be called.
 	 */
-	@GenModel(notify="true", csa_units="ms")
+	@GenModel(notify="true", symphony_units="ms")
 	long repeatPeriod = "100"
 }
 

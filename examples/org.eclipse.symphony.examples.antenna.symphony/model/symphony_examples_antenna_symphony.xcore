@@ -50,7 +50,7 @@ class PTUDishAntennaData extends SymphonyInitializationData
 	 * This is the current pan angle of the dish antenna's
 	 * Pan-Tilt Unit (PTU).
 	 */
-	@GenModel(csa_units="rad",
+	@GenModel(symphony_units="rad",
 			  notify="true",
 			  property="Editable",
 			  propertyCategory="Pan-Tilt Unit")
@@ -60,7 +60,7 @@ class PTUDishAntennaData extends SymphonyInitializationData
 	 * This is the current tilt angle of the dish antenna's
 	 * Pan-Tilt Unit (PTU).
 	 */
-	@GenModel(csa_units="rad",
+	@GenModel(symphony_units="rad",
 			  notify="true",
 			  property="Editable",
 			  propertyCategory="Pan-Tilt Unit")

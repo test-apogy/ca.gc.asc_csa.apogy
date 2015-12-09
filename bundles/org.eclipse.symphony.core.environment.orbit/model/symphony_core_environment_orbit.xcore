@@ -51,25 +51,25 @@ class PVACoordinates
 	/*
 	 * The position.
 	 */
-	@GenModel(csa_units="m")
+	@GenModel(symphony_units="m")
 	contains Tuple3d[1] position
 	
 	/*
 	 * The velocity.
 	 */
-	@GenModel(csa_units="m/s")
+	@GenModel(symphony_units="m/s")
 	contains Tuple3d[1] velocity
 	
 	/*
 	 * The acceleration.
 	 */
-	@GenModel(csa_units="m/s²")
+	@GenModel(symphony_units="m/s²")
 	contains Tuple3d[1] acceleration
 	
 	/*
 	 * The angular velocity (spin) of this point as seen from the origin.
 	 */
-	@GenModel(csa_units="rad/s")
+	@GenModel(symphony_units="rad/s")
 	contains Tuple3d[1] angularVelocity
 }
 
@@ -197,7 +197,7 @@ abstract class AbstractOrbitPropagator extends Named, Described
 	 * Returns a list of SpacecraftState from startDate to endDate at time interval of timeInterval.
 	 * @param timeInterval The time interval to get spacecraft states, in seconds.
 	 */
-	op List<SpacecraftState> getSpacecraftStates(EDate startDate, EDate endDate, @GenModel(csa_units="s") double timeInterval) throws Exception
+	op List<SpacecraftState> getSpacecraftStates(EDate startDate, EDate endDate, @GenModel(symphony_units="s") double timeInterval) throws Exception
 	
 	/*
 	 * Defines the earliest data for which the propagator is valid.

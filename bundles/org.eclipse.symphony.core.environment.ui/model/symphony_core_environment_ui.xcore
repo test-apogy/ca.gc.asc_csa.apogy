@@ -61,7 +61,7 @@ class EarthSurfaceWorksitePresentation extends NodePresentation
 	@GenModel(propertyCategory="AXIS")
 	boolean axisVisible = "true"
 	
-	@GenModel(propertyCategory="AXIS", csa_units="m")
+	@GenModel(propertyCategory="AXIS", symphony_units="m")
 	double axisLength = "10.0"
 	
 	@GenModel(propertyCategory="SKY")
@@ -76,10 +76,10 @@ class EarthSurfaceWorksitePresentation extends NodePresentation
 	@GenModel(propertyCategory="PLANE")
 	boolean planeVisible = "true"
 	
-	@GenModel(propertyCategory="PLANE", csa_units="m")
+	@GenModel(propertyCategory="PLANE", symphony_units="m")
 	double planeGridSize = "1.0"
 	
-	@GenModel(propertyCategory="PLANE", csa_units="m")
+	@GenModel(propertyCategory="PLANE", symphony_units="m")
 	double planeSize = "10.0"	
 }
 
@@ -111,20 +111,20 @@ class EnvironmentUIUtilities
 	 * Return the sun color for a given altitude above the horizon.
 	 * @param sunAltitude The altitude above the horizon, in radians.
 	 */
-	op Color3f getSunLightColor(@GenModel(csa_units="rad") double sunAltitude)
+	op Color3f getSunLightColor(@GenModel(symphony_units="rad") double sunAltitude)
 	
 	/*
 	 * Return the transparency value (between no transparency 0 and full transparency 1.0)
 	 * to be used for the blus sky as a function of the sun altitude angle.
 	 * @param sunAltitude The altitude above the horizon, in radians.
 	 */
-	op double getSkyTransparency(@GenModel(csa_units="rad") double sunAltitude)
+	op double getSkyTransparency(@GenModel(symphony_units="rad") double sunAltitude)
 	
 	/*
 	 * Return the sky color for a given altitude above the horizon.
 	 * @param sunAltitude The altitude above the horizon, in radians.
 	 */
-	op Color3f getSkyColor(@GenModel(csa_units="rad") double sunAltitude)
+	op Color3f getSkyColor(@GenModel(symphony_units="rad") double sunAltitude)
 }
 
 class Symphony__CoreEnvironmentUIFacade
@@ -346,7 +346,7 @@ class FeaturesOfInterestMapLayerPresentation extends MapAnnotation, RectangularR
 	@GenModel(notify="true", propertyCategory="FOI_PROPERTIES")
 	refers FeaturesOfInterestMapLayer featuresOfInterestMapLayer
 		
-	@GenModel(notify="true", propertyCategory="FOI_PROPERTIES", csa_units="m")
+	@GenModel(notify="true", propertyCategory="FOI_PROPERTIES", symphony_units="m")
 	double featureOfInterestRadius = "0.25"
 	
 	/** The color of the vector. */
@@ -390,13 +390,13 @@ abstract class TrajectoryProvider
 	/*
 	 * The azimuth of the latest position, in radians, as measured relative to the x axis, positive clockwise.
 	 */
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	transient double azimuthAngle = "0.0"		
 	
 	/*
 	 * The current length of the trajectory.
 	 */
-	@GenModel(csa_units="m")
+	@GenModel(symphony_units="m")
 	transient double trajectoryLength = "0.0"
 	
 	/*
@@ -446,13 +446,13 @@ class DefaultVariableTrajectoryProvider extends VariableTrajectoryProvider
 	/*
 	 *  Minimum distance to keep between points added to the XYSeries.
 	 */
-	@GenModel(propertyCategory="THRESHOLDS", csa_units="m")
+	@GenModel(propertyCategory="THRESHOLDS", symphony_units="m")
 	double distanceThreshold = "0.5"
 	
 	/*
 	 *  Minimum azimuth change that will trigger an azimuthAngle change.
 	 */
-	@GenModel(propertyCategory="THRESHOLDS", csa_units="rad")
+	@GenModel(propertyCategory="THRESHOLDS", symphony_units="rad")
 	double azimuthThreshold = "0.017"
 }
 
@@ -493,7 +493,7 @@ class PoseVariableAnnotation extends AbstractVariableAnnotation
 	/*
 	 * The length of the vector.
 	 */
-	@GenModel(propertyCategory="VECTOR_PROPERTIES", csa_units="m")
+	@GenModel(propertyCategory="VECTOR_PROPERTIES", symphony_units="m")
 	double vectorlength = "10.0"
 	
 	/*
@@ -513,7 +513,7 @@ class PoseVariableAnnotation extends AbstractVariableAnnotation
 	 * @param y The y coordinates, in meters.
 	 * @param zRotation The azimuth, in radians. 
 	 */
-	op void updatePose(@GenModel(csa_units="m") double x, @GenModel(csa_units="m") double y, @GenModel(csa_units="rad") double zRotation)
+	op void updatePose(@GenModel(symphony_units="m") double x, @GenModel(symphony_units="m") double y, @GenModel(symphony_units="rad") double zRotation)
 }	
 
 /*
@@ -535,12 +535,12 @@ class VehicleVariableAnnotation extends PoseVariableAnnotation
 	/*
 	 * The length of the vehicle.
 	 */
-	@GenModel(propertyCategory="VEHICLE_DIMENSIONS",csa_units="m")
+	@GenModel(propertyCategory="VEHICLE_DIMENSIONS",symphony_units="m")
 	double vehicleLength = "1.0"
 	
 	/*
 	 * The width of the vehicle.
 	 */
-	@GenModel(propertyCategory="VEHICLE_DIMENSIONS",csa_units="m")
+	@GenModel(propertyCategory="VEHICLE_DIMENSIONS",symphony_units="m")
 	double vehicleWidth = "0.5"
 }

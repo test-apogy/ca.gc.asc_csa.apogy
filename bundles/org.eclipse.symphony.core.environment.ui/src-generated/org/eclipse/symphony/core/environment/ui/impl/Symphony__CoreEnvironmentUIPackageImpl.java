@@ -1789,7 +1789,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   source, 
 		   new String[] {
 			 "propertyCategory", "AXIS",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getEarthSurfaceWorksitePresentation_AzimuthVisible(), 
@@ -1820,14 +1820,14 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   source, 
 		   new String[] {
 			 "propertyCategory", "PLANE",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getEarthSurfaceWorksitePresentation_PlaneSize(), 
 		   source, 
 		   new String[] {
 			 "propertyCategory", "PLANE",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getEnvironmentUIUtilities__GetSunLightColor__double(), 
@@ -1839,7 +1839,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		  ((getEnvironmentUIUtilities__GetSunLightColor__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getEnvironmentUIUtilities__GetSkyTransparency__double(), 
@@ -1851,7 +1851,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		  ((getEnvironmentUIUtilities__GetSkyTransparency__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getEnvironmentUIUtilities__GetSkyColor__double(), 
@@ -1863,7 +1863,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		  ((getEnvironmentUIUtilities__GetSkyColor__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getSymphony__CoreEnvironmentUIFacade__GetVisibleRectangularRegionProvider__MapViewConfiguration(), 
@@ -2055,7 +2055,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   new String[] {
 			 "notify", "true",
 			 "propertyCategory", "FOI_PROPERTIES",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestColor(), 
@@ -2106,14 +2106,14 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   source, 
 		   new String[] {
 			 "documentation", "The azimuth of the latest position, in radians, as measured relative to the x axis, positive clockwise.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getTrajectoryProvider_TrajectoryLength(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The current length of the trajectory.",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getTrajectoryProvider_TrajectoryColor(), 
@@ -2163,7 +2163,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   new String[] {
 			 "documentation", " Minimum distance to keep between points added to the XYSeries.",
 			 "propertyCategory", "THRESHOLDS",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getDefaultVariableTrajectoryProvider_AzimuthThreshold(), 
@@ -2171,7 +2171,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   new String[] {
 			 "documentation", " Minimum azimuth change that will trigger an azimuthAngle change.",
 			 "propertyCategory", "THRESHOLDS",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (abstractVariableAnnotationEClass, 
@@ -2219,19 +2219,19 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		  ((getPoseVariableAnnotation__UpdatePose__double_double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  ((getPoseVariableAnnotation__UpdatePose__double_double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  ((getPoseVariableAnnotation__UpdatePose__double_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getPoseVariableAnnotation_Vectorlength(), 
@@ -2239,7 +2239,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   new String[] {
 			 "documentation", "The length of the vector.",
 			 "propertyCategory", "VECTOR_PROPERTIES",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getPoseVariableAnnotation_VectorColor(), 
@@ -2278,7 +2278,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   new String[] {
 			 "documentation", "The length of the vehicle.",
 			 "propertyCategory", "VEHICLE_DIMENSIONS",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getVehicleVariableAnnotation_VehicleWidth(), 
@@ -2286,7 +2286,7 @@ public class Symphony__CoreEnvironmentUIPackageImpl extends EPackageImpl impleme
 		   new String[] {
 			 "documentation", "The width of the vehicle.",
 			 "propertyCategory", "VEHICLE_DIMENSIONS",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });
 	}
 

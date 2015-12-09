@@ -40,7 +40,7 @@ public interface Sun extends GroupNode
 	 * @see #setRadius(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSun_Radius()
 	 * @model default="6.955E8" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
 	 * @generated
 	 */
   double getRadius();
@@ -63,7 +63,7 @@ public interface Sun extends GroupNode
 	 * @param radius The distance from the sun center, in meters.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" radiusUnique="false"
-	 *        radiusAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
+	 *        radiusAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
 	 * @generated
 	 */
   double getIrradiance(double radius);

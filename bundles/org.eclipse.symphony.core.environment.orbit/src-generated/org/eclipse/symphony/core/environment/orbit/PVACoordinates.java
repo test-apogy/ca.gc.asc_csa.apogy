@@ -45,7 +45,7 @@ public interface PVACoordinates extends EObject {
 	 * @see #setPosition(Tuple3d)
 	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getPVACoordinates_Position()
 	 * @model containment="true" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
 	 * @generated
 	 */
 	Tuple3d getPosition();
@@ -75,7 +75,7 @@ public interface PVACoordinates extends EObject {
 	 * @see #setVelocity(Tuple3d)
 	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getPVACoordinates_Velocity()
 	 * @model containment="true" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m/s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m/s'"
 	 * @generated
 	 */
 	Tuple3d getVelocity();
@@ -105,7 +105,7 @@ public interface PVACoordinates extends EObject {
 	 * @see #setAcceleration(Tuple3d)
 	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getPVACoordinates_Acceleration()
 	 * @model containment="true" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m/s\262'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m/s\262'"
 	 * @generated
 	 */
 	Tuple3d getAcceleration();
@@ -135,7 +135,7 @@ public interface PVACoordinates extends EObject {
 	 * @see #setAngularVelocity(Tuple3d)
 	 * @see org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitPackage#getPVACoordinates_AngularVelocity()
 	 * @model containment="true" required="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad/s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad/s'"
 	 * @generated
 	 */
 	Tuple3d getAngularVelocity();

@@ -39,7 +39,7 @@ public interface VisibilityPassSpacecraftPosition extends Timed {
 	 * @see #setAzimuth(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_Azimuth()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='rad'"
 	 * @generated
 	 */
 	double getAzimuth();
@@ -66,7 +66,7 @@ public interface VisibilityPassSpacecraftPosition extends Timed {
 	 * @see #setElevation(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_Elevation()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='rad'"
 	 * @generated
 	 */
 	double getElevation();
@@ -93,7 +93,7 @@ public interface VisibilityPassSpacecraftPosition extends Timed {
 	 * @see #setRange(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_Range()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='m'"
 	 * @generated
 	 */
 	double getRange();
@@ -120,7 +120,7 @@ public interface VisibilityPassSpacecraftPosition extends Timed {
 	 * @see #setRangeRate(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_RangeRate()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' csa_units='m/s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='m/s'"
 	 * @generated
 	 */
 	double getRangeRate();
@@ -147,7 +147,7 @@ public interface VisibilityPassSpacecraftPosition extends Timed {
 	 * @see #setSpacecraftCrossTrackAngle(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getVisibilityPassSpacecraftPosition_SpacecraftCrossTrackAngle()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='rad'"
 	 * @generated
 	 */
 	double getSpacecraftCrossTrackAngle();
