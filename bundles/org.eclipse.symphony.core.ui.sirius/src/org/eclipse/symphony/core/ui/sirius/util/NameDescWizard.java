@@ -60,7 +60,7 @@ public class NameDescWizard extends Wizard
 	private class NameDescPage extends WizardPage
 	{
 		// Constants for this page
-		private static final String NAME_LABEL_STR = "Enter the name:             ";
+		private static final String NAME_LABEL_STR = "Enter the name:       ";
 		private static final String DESC_LABEL_STR = "Enter the description:";
 		
 		// The required widgets for the rendering the page
