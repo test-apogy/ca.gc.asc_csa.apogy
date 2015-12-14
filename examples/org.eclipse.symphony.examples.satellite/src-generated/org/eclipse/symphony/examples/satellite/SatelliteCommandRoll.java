@@ -34,7 +34,7 @@ public interface SatelliteCommandRoll extends SatelliteCommand {
 	 * @see #setTargetRollAngle(double)
 	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getSatelliteCommandRoll_TargetRollAngle()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getTargetRollAngle();

@@ -268,7 +268,7 @@ public interface AbstractTwoPoints3DTool extends Simple3DTool {
 	 * @see #setDistance(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getAbstractTwoPoints3DTool_Distance()
 	 * @model default="0" unique="false" transient="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' symphony_units='m'"
 	 * @generated
 	 */
 	double getDistance();

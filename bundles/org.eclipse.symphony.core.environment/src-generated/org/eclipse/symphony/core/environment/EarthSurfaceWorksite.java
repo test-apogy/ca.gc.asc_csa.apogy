@@ -74,7 +74,7 @@ public interface EarthSurfaceWorksite extends SurfaceWorksite
 	 * @see #setXAxisAzimuth(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEarthSurfaceWorksite_XAxisAzimuth()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
   double getXAxisAzimuth();

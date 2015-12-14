@@ -45,7 +45,7 @@ public interface ImageMapLayer extends AbstractMapLayer, RectangularRegionImage
 	 * @see #setWidth(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getImageMapLayer_Width()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='SIZE_AND_RESOLUTION' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='SIZE_AND_RESOLUTION' symphony_units='m'"
 	 * @generated
 	 */
   double getWidth();
@@ -72,7 +72,7 @@ public interface ImageMapLayer extends AbstractMapLayer, RectangularRegionImage
 	 * @see #setHeight(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getImageMapLayer_Height()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='SIZE_AND_RESOLUTION' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='SIZE_AND_RESOLUTION' symphony_units='m'"
 	 * @generated
 	 */
   double getHeight();
@@ -190,7 +190,7 @@ public interface ImageMapLayer extends AbstractMapLayer, RectangularRegionImage
 	 * @return the value of the '<em>Resolution</em>' attribute.
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getImageMapLayer_Resolution()
 	 * @model unique="false" transient="true" changeable="false" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='SIZE_AND_RESOLUTION' csa_units='m/pixel'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='SIZE_AND_RESOLUTION' symphony_units='m/pixel'"
 	 * @generated
 	 */
   double getResolution();

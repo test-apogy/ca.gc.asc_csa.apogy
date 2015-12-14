@@ -53,8 +53,12 @@ To install Eclipse platform, we highly recommend to use Eclipse Installer also k
 
 === Eclipse Mars Packages ===
 # Install the following packages:
+<<<<<<< HEAD
+#* Modeling \ EMF - Eclipse Modeling Framework Xcore SDK
+=======
 #* EMF - Eclipse Modeling Framework Xcore SDK
 
+>>>>>>> branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 === Sirius Packages ===
 # Add the '''Sirius''' P2 Site [http://download.eclipse.org/sirius/updates/releases/3.1.1/mars http://download.eclipse.org/sirius/updates/releases/3.1.1/mars].
 # Install the following packages:
@@ -64,7 +68,7 @@ To install Eclipse platform, we highly recommend to use Eclipse Installer also k
 === Orbit Packages ===
 # Add the '''Orbit''' P2 Site [http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/ http://download.eclipse.org/tools/orbit/downloads/drops/R20150821153341/repository/]
 # Install the following packages:
-#* Orbit Bundles By Name: org.apache.*/org.apache.commons.collections (Be careful select the one that is not the source plugin)
+#* Orbit Bundles By Name: org.apache.*/org.apache.commons.collections (Be careful select the one that is not the source plugin (1st on top))
 #* Orbit Bundles By Name: org.apache.*/org.apache.commons.net
 #* Orbit Bundles By Name: org.apache.*/org.apache.commons.pool
 

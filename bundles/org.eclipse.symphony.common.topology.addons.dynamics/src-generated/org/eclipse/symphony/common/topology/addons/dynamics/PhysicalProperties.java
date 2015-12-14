@@ -42,7 +42,7 @@ public interface PhysicalProperties extends EObject {
 	 * @see #setMass(double)
 	 * @see org.eclipse.symphony.common.topology.addons.dynamics.Symphony__CommonTopologyAddonsDynamicsPackage#getPhysicalProperties_Mass()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='kg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='kg'"
 	 * @generated
 	 */
 	double getMass();

@@ -62,7 +62,7 @@ public interface GroundStationWorldWindLayer extends EarthSurfaceLocationWorldWi
 	 * @see #setReferenceAltitude(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.ui.Symphony__CoreEnvironmentOrbitEarthUIPackage#getGroundStationWorldWindLayer_ReferenceAltitude()
 	 * @model default="500" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VISUALS' csa_units='km'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='VISUALS' symphony_units='km'"
 	 * @generated
 	 */
 	double getReferenceAltitude();

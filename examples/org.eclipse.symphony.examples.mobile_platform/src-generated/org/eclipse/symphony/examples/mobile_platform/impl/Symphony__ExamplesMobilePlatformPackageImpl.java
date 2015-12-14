@@ -555,7 +555,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "documentation", "This is the position\'s X coordinate (given in metres)",
 			 "children", "false",
 			 "notify", "true",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getPosition_Y(), 
@@ -564,7 +564,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "documentation", "This is the position\'s Y coordinate (given in metres)",
 			 "children", "false",
 			 "notify", "true",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getPosition_Theta(), 
@@ -573,7 +573,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "documentation", "This is the pose angle (in radians) of an object, which\nspecifies a rotation around the Z axis.",
 			 "children", "false",
 			 "notify", "true",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (namedPositionEClass, 
@@ -630,13 +630,13 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 		  ((getMobilePlatform__MoveTo__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  ((getMobilePlatform__MoveTo__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getMobilePlatform__CmdLinearVelocity__double(), 
@@ -648,7 +648,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 		  ((getMobilePlatform__CmdLinearVelocity__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m/s"
+			 "symphony_units", "m/s"
 		   });	
 		addAnnotation
 		  (getMobilePlatform__CmdAngularVelocity__double(), 
@@ -660,7 +660,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 		  ((getMobilePlatform__CmdAngularVelocity__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad/s"
+			 "symphony_units", "rad/s"
 		   });	
 		addAnnotation
 		  (getMobilePlatform__CmdVelocities__double_double(), 
@@ -672,13 +672,13 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 		  ((getMobilePlatform__CmdVelocities__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m/s"
+			 "symphony_units", "m/s"
 		   });	
 		addAnnotation
 		  ((getMobilePlatform__CmdVelocities__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad/s"
+			 "symphony_units", "rad/s"
 		   });	
 		addAnnotation
 		  (getMobilePlatform_Initialized(), 
@@ -707,7 +707,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Position",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getMobilePlatform_LinearVelocity(), 
@@ -718,7 +718,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Velocities",
-			 "csa_units", "m/s"
+			 "symphony_units", "m/s"
 		   });	
 		addAnnotation
 		  (getMobilePlatform_AngularVelocity(), 
@@ -729,7 +729,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Velocities",
-			 "csa_units", "rad/s"
+			 "symphony_units", "rad/s"
 		   });	
 		addAnnotation
 		  (getMobilePlatform_LeftWheelPosition(), 
@@ -740,7 +740,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Position",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getMobilePlatform_RightWheelPosition(), 
@@ -751,7 +751,7 @@ public class Symphony__ExamplesMobilePlatformPackageImpl extends EPackageImpl im
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "Position",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getMobilePlatform_Position(), 

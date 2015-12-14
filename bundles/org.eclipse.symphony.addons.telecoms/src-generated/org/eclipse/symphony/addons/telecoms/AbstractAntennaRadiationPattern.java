@@ -32,9 +32,9 @@ public interface AbstractAntennaRadiationPattern extends Node, Named {
 	 * @return The gain, in dBi (decibels isotropic or dBi) associated with the radiation pattern in the specified direction.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" thetaUnique="false"
-	 *        thetaAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'" phiUnique="false"
-	 *        phiAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='dB'"
+	 *        thetaAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" phiUnique="false"
+	 *        phiAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='dB'"
 	 * @generated
 	 */
 	double computeGain(double theta, double phi);

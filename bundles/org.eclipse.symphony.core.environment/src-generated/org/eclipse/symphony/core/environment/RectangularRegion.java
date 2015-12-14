@@ -50,7 +50,7 @@ public interface RectangularRegion extends Region
 	 * @see #setXMin(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_XMin()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' symphony_units='m'"
 	 * @generated
 	 */
   double getXMin();
@@ -77,7 +77,7 @@ public interface RectangularRegion extends Region
 	 * @see #setXMax(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_XMax()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' symphony_units='m'"
 	 * @generated
 	 */
   double getXMax();
@@ -104,7 +104,7 @@ public interface RectangularRegion extends Region
 	 * @see #setYMin(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_YMin()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' symphony_units='m'"
 	 * @generated
 	 */
   double getYMin();
@@ -131,7 +131,7 @@ public interface RectangularRegion extends Region
 	 * @see #setYMax(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_YMax()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly' propertyCategory='EXTENT_COORDINATES' symphony_units='m'"
 	 * @generated
 	 */
   double getYMax();
@@ -156,7 +156,7 @@ public interface RectangularRegion extends Region
 	 * @return the value of the '<em>XDimension</em>' attribute.
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_XDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES' symphony_units='m'"
 	 * @generated
 	 */
   double getXDimension();
@@ -171,7 +171,7 @@ public interface RectangularRegion extends Region
 	 * @return the value of the '<em>YDimension</em>' attribute.
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getRectangularRegion_YDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='EXTENT_SIZES' symphony_units='m'"
 	 * @generated
 	 */
   double getYDimension();

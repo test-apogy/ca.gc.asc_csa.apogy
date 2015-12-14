@@ -97,7 +97,7 @@ class LanderData extends SymphonyInitializationData
 	/*
 	 * This is the thrust level (in N) of the lander
 	 */
-	@GenModel(csa_units="N",
+	@GenModel(symphony_units="N",
 			  children="false",
 			  notify="true",
 			  property="Editable",
@@ -107,7 +107,7 @@ class LanderData extends SymphonyInitializationData
 	/*
 	 * This is the minimum thrust level (in N) of the lander
 	 */
-	@GenModel(csa_units="N",
+	@GenModel(symphony_units="N",
 			  children="false",
 			  notify="true",
 			  property="Editable",
@@ -117,7 +117,7 @@ class LanderData extends SymphonyInitializationData
 	/*
 	 * This is the maximum thrust level (in N) of the lander
 	 */
-	@GenModel(csa_units="N",
+	@GenModel(symphony_units="N",
 			  children="false",
 			  notify="true",
 			  property="Editable",
@@ -128,7 +128,7 @@ class LanderData extends SymphonyInitializationData
 	 * This is the angular velocity (in radians / second)
 	 * of the lander in the X direction. 
 	 */
-	 @GenModel(csa_units="rad/s",
+	 @GenModel(symphony_units="rad/s",
 	 		   children="false",
 	 		   notify="true",
 	 		   property="Editable",
@@ -139,7 +139,7 @@ class LanderData extends SymphonyInitializationData
 	 * This is the angular velocity (in radians / second)
 	 * of the lander in the Y direction.
 	 */
-	@GenModel(csa_units="rad/s",
+	@GenModel(symphony_units="rad/s",
 			  children="false",
 			  notify="true",
 			  property="Editable",

@@ -95,7 +95,7 @@ class VehiclePoseCorrector extends PoseCorrector
 	/* 
 	 * The last value of the pose correction along the Z axis.
 	 */
-	@GenModel(notify="true", property="Readonly", propertyCategory="CORRECTION_INFO", csa_units="m")
+	@GenModel(notify="true", property="Readonly", propertyCategory="CORRECTION_INFO", symphony_units="m")
 	double zCorrection = "0"
 	
 	/* The method used to correct orientation.
@@ -153,10 +153,10 @@ abstract class ContactProvider
  */
 class Wheel extends PhysicalBody
 {
-	@GenModel(csa_units="m")
+	@GenModel(symphony_units="m")
 	double radius = "0.25"	
 	
-	@GenModel(csa_units="m")
+	@GenModel(symphony_units="m")
 	double length = "0.1"
 }
 
@@ -169,19 +169,19 @@ class Thruster extends Node
 	/*
 	 * The minimum thrust, in Newtons. Must be positive.
 	 */
-	@GenModel(notify="true", csa_units="N", propertyCategory="THRUST_INFO")
+	@GenModel(notify="true", symphony_units="N", propertyCategory="THRUST_INFO")
 	double minimumThrust = "0"
 	
 	/*
 	 * The maximum thrust, in Newtons. Must be positive.
 	 */
-	@GenModel(notify="true", csa_units="N", propertyCategory="THRUST_INFO")
+	@GenModel(notify="true", symphony_units="N", propertyCategory="THRUST_INFO")
 	double maximumThrust = "100"
 	
 	/*
 	 * The current thrust, in Newtons. Always between minimumThrust and maximumThrust.
 	 */
-	@GenModel(notify="true", csa_units="N", propertyCategory="THRUST_INFO")
+	@GenModel(notify="true", symphony_units="N", propertyCategory="THRUST_INFO")
 	transient double currentThrust
 	
 	/*
@@ -193,7 +193,7 @@ class Thruster extends Node
 	/*
 	 * Plume angle, in radians
 	 */
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	double plumeAngle = "0.5"
 }
 
@@ -225,7 +225,7 @@ class WheelContactProvider extends ContactProvider
 
 class LanderSphericalFoot extends PhysicalBody
 {
-	@GenModel(csa_units="m")
+	@GenModel(symphony_units="m")
 	double radius = "0.01"	
 }
 

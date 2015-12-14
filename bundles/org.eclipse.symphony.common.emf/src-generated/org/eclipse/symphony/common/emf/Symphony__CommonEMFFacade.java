@@ -390,7 +390,7 @@ public interface Symphony__CommonEMFFacade extends EObject
 	 * of Timed elements.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" timedCollectionDataType="org.eclipse.symphony.common.emf.Collection<org.eclipse.symphony.common.emf.Timed>" timedCollectionUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='s'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='s'"
 	 * @generated
 	 */
 	double getTimeSpan(Collection<Timed> timedCollection);

@@ -448,13 +448,13 @@ public class Symphony__ExamplesAntennaPackageImpl extends EPackageImpl implement
 		  ((getPTUDishAntenna__MoveTo__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getPTUDishAntenna__MoveTo__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getPTUDishAntenna__TrackSun__boolean(), 
@@ -469,7 +469,7 @@ public class Symphony__ExamplesAntennaPackageImpl extends EPackageImpl implement
 			 "documentation", "This is the current pan angle (given in radians) of the\nPTU, that the antenna is attached to.",
 			 "children", "false",
 			 "notify", "true",
-			 "csa_units", "rad",
+			 "symphony_units", "rad",
 			 "property", "Readonly",
 			 "propertyCategory", "PTU Angles"
 		   });	
@@ -480,7 +480,7 @@ public class Symphony__ExamplesAntennaPackageImpl extends EPackageImpl implement
 			 "documentation", "This is the current tilt angle (given in radians) of the PTU\nthat the antenna is attached to.",
 			 "children", "false",
 			 "notify", "true",
-			 "csa_units", "rad",
+			 "symphony_units", "rad",
 			 "property", "Readonly",
 			 "propertyCategory", "PTU Angles"
 		   });	

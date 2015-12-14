@@ -507,28 +507,28 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "Return the maximum pan angle.\n@return The maximum pan angle,in radians.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__GetMinimumPanAngle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the minimum pan angle.\n@return The minimum pan angle,in radians.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__GetMaximumTiltAngle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the maximum tilt angle.\n@return The maximum tilt angle,in radians.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__GetMinimumTiltAngle(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Return the minimum tilt angle.\n@return The minimum tilt angle,in radians.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__MoveToPanTilt__double_double(), 
@@ -540,13 +540,13 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		  ((getPanTiltUnit__MoveToPanTilt__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getPanTiltUnit__MoveToPanTilt__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__MoveToPan__double(), 
@@ -558,7 +558,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		  ((getPanTiltUnit__MoveToPan__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__MoveToTilt__double(), 
@@ -570,7 +570,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		  ((getPanTiltUnit__MoveToTilt__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__MoveByPanTilt__double_double(), 
@@ -582,13 +582,13 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		  ((getPanTiltUnit__MoveByPanTilt__double_double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getPanTiltUnit__MoveByPanTilt__double_double()).getEParameters().get(1), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__MoveByPan__double(), 
@@ -600,7 +600,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		  ((getPanTiltUnit__MoveByPan__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__MoveByTilt__double(), 
@@ -612,7 +612,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 		  ((getPanTiltUnit__MoveByTilt__double()).getEParameters().get(0), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit__StopMotion(), 
@@ -629,7 +629,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "ACTUATOR_INFORMATION",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit_CurrentTiltAngle(), 
@@ -640,7 +640,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "ACTUATOR_INFORMATION",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit_CommandedPanAngle(), 
@@ -651,7 +651,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "ACTUATOR_INFORMATION",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getPanTiltUnit_CommandedTiltAngle(), 
@@ -662,7 +662,7 @@ public class Symphony__AddonsActuatorsPackageImpl extends EPackageImpl implement
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "ACTUATOR_INFORMATION",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });
 	}
 

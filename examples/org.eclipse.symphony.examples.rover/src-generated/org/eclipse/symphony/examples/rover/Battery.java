@@ -69,7 +69,7 @@ public interface Battery extends EObject {
 	 * @see #setVoltage(double)
 	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getBattery_Voltage()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='V' property='Readonly'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='V' property='Readonly'"
 	 * @generated
 	 */
 	double getVoltage();
@@ -97,7 +97,7 @@ public interface Battery extends EObject {
 	 * @see #setCurrent(double)
 	 * @see org.eclipse.symphony.examples.rover.Symphony__ExamplesRoverPackage#getBattery_Current()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' csa_units='A' property='Readonly'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' symphony_units='A' property='Readonly'"
 	 * @generated
 	 */
 	double getCurrent();

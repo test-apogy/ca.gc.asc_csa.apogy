@@ -46,7 +46,7 @@ class ImageSnapshot extends GroupNode, Timed
 	 * @param horizontalPixelPosition The horizontal pixel position (positive toward the right).
 	 * @return The horizontal angle, in radians.  
 	 */
-	@GenModel(csa_units = "rad")
+	@GenModel(symphony_units = "rad")
 	op double convertToHorizontalAngle(int horizontalPixelPosition)
 	
 	/*
@@ -55,7 +55,7 @@ class ImageSnapshot extends GroupNode, Timed
 	 * @param verticalPixelPosition The vertical pixel position (positive toward the bottom of the image).
 	 * @return The horizontal angle, in radians.  
 	 */
-	@GenModel(csa_units = "rad")
+	@GenModel(symphony_units = "rad")
 	op double convertToVerticalAngle(int verticalPixelPosition)
 }
 
@@ -115,7 +115,7 @@ class ImagingUtilities
 	 * @param horizontalPixelPosition The horizontal pixel position (positive toward the right).
 	 * @return The horizontal angle, in radians.  
 	 */
-	@GenModel(csa_units = "rad")
+	@GenModel(symphony_units = "rad")
 	op double linearConvertToHorizontalAngle(ImageSnapshot imageSnapshot, int horizontalPixelPosition)
 	
 	/*
@@ -124,7 +124,7 @@ class ImagingUtilities
 	 * @param verticalPixelPosition The vertical pixel position (positive toward the bottom of the image).
 	 * @return The horizontal angle, in radians.  
 	 */
-	@GenModel(csa_units = "rad")
+	@GenModel(symphony_units = "rad")
 	op double linearConvertToVerticalAngle(ImageSnapshot imageSnapshot, int verticalPixelPosition)
 		
 		
@@ -146,6 +146,6 @@ class ImagingUtilities
 	 * @param lineWidth The width of the line, in pixels.
 	 * @return The image.
 	 */
-	op AbstractEImage getAzimuthElevationOverlay(@GenModel(csa_units = "pixel") int imageWidth, @GenModel(csa_units = "pixel") int imageHeight, @GenModel(csa_units = "deg") double panAngle, @GenModel(csa_units = "deg") double tiltAngle, @GenModel(csa_units = "deg") double horizontalFOVAngle, @GenModel(csa_units = "deg") double verticalFOVAngle, AzimuthDirection azimuthDirection, ElevationDirection elevationDirection, @GenModel(csa_units = "deg") int angleInterval, String fontName, int fontSize, Color positiveColor, Color negativeColor, int lineWidth)
+	op AbstractEImage getAzimuthElevationOverlay(@GenModel(symphony_units = "pixel") int imageWidth, @GenModel(symphony_units = "pixel") int imageHeight, @GenModel(symphony_units = "deg") double panAngle, @GenModel(symphony_units = "deg") double tiltAngle, @GenModel(symphony_units = "deg") double horizontalFOVAngle, @GenModel(symphony_units = "deg") double verticalFOVAngle, AzimuthDirection azimuthDirection, ElevationDirection elevationDirection, @GenModel(symphony_units = "deg") int angleInterval, String fontName, int fontSize, Color positiveColor, Color negativeColor, int lineWidth)
 }
 

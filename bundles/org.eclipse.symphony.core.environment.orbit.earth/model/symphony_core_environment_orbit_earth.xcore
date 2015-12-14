@@ -150,7 +150,7 @@ class EarthOrbitSky extends Sky
 	/*
 	 * Returns the Moon angular diameter, in radians.
 	 */
-	@GenModel(propertyCategory="MOON", csa_units="rad")
+	@GenModel(propertyCategory="MOON", symphony_units="rad")
 	op double getMoonAngularDiameter()
 	
 	/*
@@ -162,7 +162,7 @@ class EarthOrbitSky extends Sky
 	/*
 	 * Returns the Earth angular diameter, in radians.
 	 */
-	@GenModel(propertyCategory="EARTH", csa_units="rad")
+	@GenModel(propertyCategory="EARTH", symphony_units="rad")
 	op double getEarthAngularDiameter()		
 }
 
@@ -186,7 +186,7 @@ class KeplerianEarthOrbit extends EarthOrbit
 	/*
 	 * Semi-major axis, in meters
 	 */
-	@GenModel(csa_units="m")
+	@GenModel(symphony_units="m")
 	double semiMajorAxis
 	
 	/*
@@ -197,19 +197,19 @@ class KeplerianEarthOrbit extends EarthOrbit
 	/*
 	 * Inclination, in radians.
 	 */
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	double inclination
 	
 	/*
 	 * Argument of perigee, in radians.
 	 */
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	double perigeeArgument
 	
 	/*
 	 * Right ascension of ascending node, in radians.
 	 */
-	@GenModel(csa_units="rad")
+	@GenModel(symphony_units="rad")
 	double rightAscentionOfAscendingNode
 	
 	/*
@@ -247,7 +247,7 @@ class ConstantElevationMask extends ElevationMask
 	/*
 	 * The elevation, in radians.
 	 */
-	@GenModel(property="Editable", csa_units="rad")
+	@GenModel(property="Editable", symphony_units="rad")
 	double constantElevation = "0"
 }
 
@@ -351,49 +351,49 @@ class TLE
 	/*
 	 * The inclination.
 	 */
-	@GenModel(property="Readonly", notify="true", csa_units="rad", propertyCategory="TLE_ORBITAL_PARAMETERS")
+	@GenModel(property="Readonly", notify="true", symphony_units="rad", propertyCategory="TLE_ORBITAL_PARAMETERS")
 	double inclination
 	
 	/*
 	 * The mean anomaly.
 	 */
-	@GenModel(property="Readonly", notify="true", csa_units="rad", propertyCategory="TLE_ORBITAL_PARAMETERS")
+	@GenModel(property="Readonly", notify="true", symphony_units="rad", propertyCategory="TLE_ORBITAL_PARAMETERS")
 	double meanAnomaly
 	
 	/*
 	 * The mean motion.
 	 */
-	@GenModel(property="Readonly", notify="true", csa_units="rad/s", propertyCategory="TLE_ORBITAL_PARAMETERS")
+	@GenModel(property="Readonly", notify="true", symphony_units="rad/s", propertyCategory="TLE_ORBITAL_PARAMETERS")
 	double meanMotion
 	
 	/*
 	 * The mean motion, expressed as revolution per day.
 	 */
-	@GenModel(property="Readonly", notify="true", csa_units="rev/day", propertyCategory="TLE_ORBITAL_PARAMETERS")
+	@GenModel(property="Readonly", notify="true", symphony_units="rev/day", propertyCategory="TLE_ORBITAL_PARAMETERS")
 	double revolutionPerDay
 	
 	/*
 	 * The mean motion first derivative.
 	 */
-	@GenModel(property="Readonly", notify="true", csa_units="rad/s²", propertyCategory="TLE_ORBITAL_PARAMETERS")
+	@GenModel(property="Readonly", notify="true", symphony_units="rad/s²", propertyCategory="TLE_ORBITAL_PARAMETERS")
 	double meanMotionFirstDerivative
 	
 	/*
 	 * The mean motion second derivative.
 	 */
-	@GenModel(property="Readonly", notify="true", csa_units="rad/s³", propertyCategory="TLE_ORBITAL_PARAMETERS")
+	@GenModel(property="Readonly", notify="true", symphony_units="rad/s³", propertyCategory="TLE_ORBITAL_PARAMETERS")
 	double meanMotionSecondDerivative
 
 	/*
 	 * The argument of perigee.
 	 */
-	@GenModel(property="Readonly", notify="true", csa_units="rad", propertyCategory="TLE_ORBITAL_PARAMETERS")
+	@GenModel(property="Readonly", notify="true", symphony_units="rad", propertyCategory="TLE_ORBITAL_PARAMETERS")
 	double argumentOfPerigee
 	
 	/*
 	 * Right ascension of ascending node, in radians.
 	 */
-	@GenModel(property="Readonly", csa_units="rad", propertyCategory="TLE_ORBITAL_PARAMETERS")
+	@GenModel(property="Readonly", symphony_units="rad", propertyCategory="TLE_ORBITAL_PARAMETERS")
 	double rightAscentionOfAscendingNode
 	
 	/*
@@ -489,7 +489,7 @@ class VisibilityPass
 	/*
 	 * Pass duration, in seconds.
 	 */
-	@GenModel(csa_units = "s")
+	@GenModel(symphony_units = "s")
 	transient double duration
 }
 
@@ -498,7 +498,7 @@ class VisibilityPassSpacecraftPositionHistory
 	/*
 	 * The time interval separating positions.
 	 */
-	@GenModel(notify="true", property="Editable", csa_units = "s")
+	@GenModel(notify="true", property="Editable", symphony_units = "s")
 	double timeInterval = "30.0"
 	
 	/*
@@ -536,31 +536,31 @@ class VisibilityPassSpacecraftPosition extends Timed
 	/*
 	 * The azimuth of the spacecraft relative to the North.
 	 */
-	@GenModel(notify="true", property="Readonly",csa_units="rad")
+	@GenModel(notify="true", property="Readonly",symphony_units="rad")
 	double azimuth = "0"
 	
 	/*
 	 * The elevation of the spacecraft relative to the local horizontal plane.
 	 */
-	@GenModel(notify="true", property="Readonly",csa_units="rad")	
+	@GenModel(notify="true", property="Readonly",symphony_units="rad")	
 	double elevation = "0"
 	
 	/*
 	 * The range to the spacecraft.
 	 */
-	@GenModel(notify="true", property="Readonly",csa_units="m")
+	@GenModel(notify="true", property="Readonly",symphony_units="m")
 	double range = "0"
 	
 	/*
 	 * The relative speed of the spacecraft.
 	 */
-	@GenModel(notify="true", property="Readonly",csa_units="m/s")
+	@GenModel(notify="true", property="Readonly",symphony_units="m/s")
 	double rangeRate = "0"	
 	
 	/*
 	 * The angle of the surface location relative to the spacecraft nadir.
 	 */
-	@GenModel(notify="true", property="Readonly",csa_units="rad")
+	@GenModel(notify="true", property="Readonly",symphony_units="rad")
 	double spacecraftCrossTrackAngle="0"
 }
 
@@ -627,7 +627,7 @@ class SpacecraftSwathCorridor extends Named, Described, Updatable
 	@GenModel(notify="true", property="Editable", propertyCategory="TIME_PERIOD")
 	EDate endTime
 	
-	@GenModel(notify="true", property="Editable",  propertyCategory="TIME_PERIOD", csa_units = "s")
+	@GenModel(notify="true", property="Editable",  propertyCategory="TIME_PERIOD", symphony_units = "s")
 	double timeInterval = "1.0"
 	
 	/*
@@ -636,10 +636,10 @@ class SpacecraftSwathCorridor extends Named, Described, Updatable
 	@GenModel(propertyCategory="ORBIT_MODEL")
 	refers OrbitModel orbitModel
 	
-	@GenModel(notify="true", property="Editable", propertyCategory="SWATH", csa_units="rad")
+	@GenModel(notify="true", property="Editable", propertyCategory="SWATH", symphony_units="rad")
 	double leftSwathAngle = "0"
 	
-	@GenModel(notify="true", property="Editable", propertyCategory="SWATH", csa_units="rad")
+	@GenModel(notify="true", property="Editable", propertyCategory="SWATH", symphony_units="rad")
 	double rightSwathAngle = "0"
 	
 	/**
@@ -653,7 +653,7 @@ class Symphony__CoreEnvironmentOrbitEarthFacade
 	/*
 	 * Returns the Earth gravitational constant from GRIM5C1 model: 3.986004415e14 m³/s².
 	 */
-	@GenModel(csa_units = "m³/s²")
+	@GenModel(symphony_units = "m³/s²")
 	op double getMu()
 	
 	/*
@@ -677,7 +677,7 @@ class Symphony__CoreEnvironmentOrbitEarthFacade
 	 * @param elevation The elevation of the location, in meters.
 	 * @return The EarthSurfaceLocation.
 	 */
-	op EarthSurfaceLocation createEarthSurfaceLocation(String name, String description, @GenModel(csa_units = "rad") double longitude, @GenModel(csa_units = "rad") double latitude, @GenModel(csa_units = "m") double elevation)
+	op EarthSurfaceLocation createEarthSurfaceLocation(String name, String description, @GenModel(symphony_units = "rad") double longitude, @GenModel(symphony_units = "rad") double latitude, @GenModel(symphony_units = "m") double elevation)
 	
 	/*
 	 * Create an OreKitBackedFrame based on an OreKit frame.
@@ -693,20 +693,20 @@ class Symphony__CoreEnvironmentOrbitEarthFacade
 	 * Returns the elevation angle of a spacecraft relative
 	 * to a Earth surface location.
 	 */
-	@GenModel(csa_units = "rad")
+	@GenModel(symphony_units = "rad")
 	op double getSpacecraftElevationAngle(SpacecraftState spacecraftState, EarthSurfaceLocation earthSurfaceLocation) throws Exception 
 
 	/*
 	 * Returns the azimuth angle (relative to North) of a
 	 * spacecraft at a Earth surface location.
 	 */
-	@GenModel(csa_units = "rad")
+	@GenModel(symphony_units = "rad")
 	op double getSpacecraftAzimuthAngle(SpacecraftState spacecraftState, EarthSurfaceLocation earthSurfaceLocation) throws Exception 
 	
 	/*
 	 * Returns the distance between spacecraft and a specified target.
 	 */
-	@GenModel(csa_units = "m")
+	@GenModel(symphony_units = "m")
 	op double getRange(SpacecraftState spacecraftState, EarthSurfaceLocation earthSurfaceLocation)	throws Exception 
 	
 	op SpacecraftState createSpacecraftState(Orbit orbit, OreKitSpacecraftState oreKitSpacecraftState)

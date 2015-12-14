@@ -39,7 +39,7 @@ public interface CartesianTriangularMeshDerivedImageMapLayer extends ImageMapLay
 	 * @see #setRequiredResolution(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getCartesianTriangularMeshDerivedImageMapLayer_RequiredResolution()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS' csa_units='m/pixel'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='IMAGE_GENERATION_SETTINGS' symphony_units='m/pixel'"
 	 * @generated
 	 */
 	double getRequiredResolution();

@@ -1564,7 +1564,7 @@ public class Symphony__CommonTopologyAddonsDynamicsPackageImpl extends EPackageI
 		   source, 
 		   new String[] {
 			 "documentation", "Defines the mass of the physical body, in kilograms.",
-			 "csa_units", "kg"
+			 "symphony_units", "kg"
 		   });	
 		addAnnotation
 		  (getPhysicalProperties_InertiaMatrix(), 

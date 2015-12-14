@@ -48,7 +48,7 @@ public interface EnvironmentUtilities extends EObject
 	 * HH:mm:ss format and return an angle in radians.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" exceptions="org.eclipse.symphony.common.emf.Exception" rightAscensionStringUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
   float parseRightAscension(String rightAscensionString) throws Exception;
@@ -61,7 +61,7 @@ public interface EnvironmentUtilities extends EObject
 	 * and return an angle in radians.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" degMinSecAngleStringUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
   float parseDegMinSec(String degMinSecAngleString);

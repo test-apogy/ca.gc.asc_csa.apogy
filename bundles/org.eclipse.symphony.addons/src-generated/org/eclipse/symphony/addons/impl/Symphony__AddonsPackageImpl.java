@@ -1165,7 +1165,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "notify", "true",
 			 "property", "Readonly",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (ruler3DToolEClass, 
@@ -1186,7 +1186,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Radius of sphere used as ruler end points.",
 			 "notify", "true",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "RULER_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1202,7 +1202,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Spacing between minor tick mark.",
 			 "notify", "true",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "MINOR_TICKS_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1211,7 +1211,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Length of the minor tick marks as displayed on the ruler.",
 			 "notify", "true",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "MINOR_TICKS_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1227,7 +1227,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Spacing between major tick mark.",
 			 "notify", "true",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "MAJOR_TICKS_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1236,7 +1236,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Length of the major tick marks as displayed on the ruler.",
 			 "notify", "true",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "MAJOR_TICKS_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1323,7 +1323,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Length of the vector.",
 			 "notify", "true",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "SUN_VECTOR_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1332,7 +1332,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " Radius of sphere used as end point to vector.",
 			 "notify", "true",
-			 "csa_units", "m",
+			 "symphony_units", "m",
 			 "propertyCategory", "SUN_VECTOR_PROPERTIES"
 		   });	
 		addAnnotation
@@ -1341,7 +1341,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " The current sun intensity.",
 			 "notify", "true",
-			 "csa_units", "W/m*m",
+			 "symphony_units", "W/m*m",
 			 "property", "Readonly",
 			 "propertyCategory", "SUN_VECTOR_LIGHT_PROPERTIES"
 		   });	
@@ -1351,7 +1351,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " The current day maximum sun intensity.",
 			 "notify", "true",
-			 "csa_units", "W/m*m",
+			 "symphony_units", "W/m*m",
 			 "property", "Readonly",
 			 "propertyCategory", "SUN_VECTOR_LIGHT_PROPERTIES"
 		   });	
@@ -1361,7 +1361,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", " The current sun intensity.",
 			 "notify", "true",
-			 "csa_units", "%",
+			 "symphony_units", "%",
 			 "property", "Readonly",
 			 "propertyCategory", "SUN_VECTOR_LIGHT_PROPERTIES"
 		   });	
@@ -1401,7 +1401,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 		   new String[] {
 			 "documentation", "* Minimum distance used to trigger a new point being accepted.",
 			 "propertyCategory", "TRAJECTORY_3D_TOOL",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getTrajectory3DTool_TotalDistance(), 
@@ -1410,7 +1410,7 @@ public class Symphony__AddonsPackageImpl extends EPackageImpl implements Symphon
 			 "notify", "true",
 			 "property", "Readonly",
 			 "propertyCategory", "TRAJECTORY_3D_TOOL",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getTrajectory3DTool_Paths(), 

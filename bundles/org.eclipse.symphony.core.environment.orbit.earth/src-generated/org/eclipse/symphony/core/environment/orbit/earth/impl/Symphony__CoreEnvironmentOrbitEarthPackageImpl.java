@@ -2727,7 +2727,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		   new String[] {
 			 "documentation", "Returns the Moon angular diameter, in radians.",
 			 "propertyCategory", "MOON",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getEarthOrbitSky__GetEarthAngularDiameter(), 
@@ -2735,7 +2735,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		   new String[] {
 			 "documentation", "Returns the Earth angular diameter, in radians.",
 			 "propertyCategory", "EARTH",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getEarthOrbitSky_EarthOrbitWorksite(), 
@@ -2786,7 +2786,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		   source, 
 		   new String[] {
 			 "documentation", "Semi-major axis, in meters",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_Eccentricity(), 
@@ -2799,21 +2799,21 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		   source, 
 		   new String[] {
 			 "documentation", "Inclination, in radians.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_PerigeeArgument(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Argument of perigee, in radians.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_RightAscentionOfAscendingNode(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Right ascension of ascending node, in radians.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getKeplerianEarthOrbit_MeanAnomaly(), 
@@ -2833,7 +2833,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		   new String[] {
 			 "documentation", "The elevation, in radians.",
 			 "property", "Editable",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (earthOrbitPropagatorEClass, 
@@ -2961,7 +2961,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "documentation", "The inclination.",
 			 "property", "Readonly",
 			 "notify", "true",
-			 "csa_units", "rad",
+			 "symphony_units", "rad",
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
@@ -2971,7 +2971,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "documentation", "The mean anomaly.",
 			 "property", "Readonly",
 			 "notify", "true",
-			 "csa_units", "rad",
+			 "symphony_units", "rad",
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
@@ -2981,7 +2981,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "documentation", "The mean motion.",
 			 "property", "Readonly",
 			 "notify", "true",
-			 "csa_units", "rad/s",
+			 "symphony_units", "rad/s",
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
@@ -2991,7 +2991,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "documentation", "The mean motion, expressed as revolution per day.",
 			 "property", "Readonly",
 			 "notify", "true",
-			 "csa_units", "rev/day",
+			 "symphony_units", "rev/day",
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
@@ -3001,7 +3001,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "documentation", "The mean motion first derivative.",
 			 "property", "Readonly",
 			 "notify", "true",
-			 "csa_units", "rad/s\u00b2",
+			 "symphony_units", "rad/s\u00b2",
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
@@ -3011,7 +3011,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "documentation", "The mean motion second derivative.",
 			 "property", "Readonly",
 			 "notify", "true",
-			 "csa_units", "rad/s\u00b3",
+			 "symphony_units", "rad/s\u00b3",
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
@@ -3021,7 +3021,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "documentation", "The argument of perigee.",
 			 "property", "Readonly",
 			 "notify", "true",
-			 "csa_units", "rad",
+			 "symphony_units", "rad",
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
@@ -3030,7 +3030,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		   new String[] {
 			 "documentation", "Right ascension of ascending node, in radians.",
 			 "property", "Readonly",
-			 "csa_units", "rad",
+			 "symphony_units", "rad",
 			 "propertyCategory", "TLE_ORBITAL_PARAMETERS"
 		   });	
 		addAnnotation
@@ -3126,7 +3126,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		   source, 
 		   new String[] {
 			 "documentation", "Pass duration, in seconds.",
-			 "csa_units", "s"
+			 "symphony_units", "s"
 		   });	
 		addAnnotation
 		  (getVisibilityPassSpacecraftPositionHistory__GetHighestElevationPosition(), 
@@ -3153,7 +3153,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "documentation", "The time interval separating positions.",
 			 "notify", "true",
 			 "property", "Editable",
-			 "csa_units", "s"
+			 "symphony_units", "s"
 		   });	
 		addAnnotation
 		  (getVisibilityPassSpacecraftPositionHistory_VisibilityPass(), 
@@ -3180,7 +3180,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "documentation", "The azimuth of the spacecraft relative to the North.",
 			 "notify", "true",
 			 "property", "Readonly",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getVisibilityPassSpacecraftPosition_Elevation(), 
@@ -3189,7 +3189,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "documentation", "The elevation of the spacecraft relative to the local horizontal plane.",
 			 "notify", "true",
 			 "property", "Readonly",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getVisibilityPassSpacecraftPosition_Range(), 
@@ -3198,7 +3198,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "documentation", "The range to the spacecraft.",
 			 "notify", "true",
 			 "property", "Readonly",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getVisibilityPassSpacecraftPosition_RangeRate(), 
@@ -3207,7 +3207,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "documentation", "The relative speed of the spacecraft.",
 			 "notify", "true",
 			 "property", "Readonly",
-			 "csa_units", "m/s"
+			 "symphony_units", "m/s"
 		   });	
 		addAnnotation
 		  (getVisibilityPassSpacecraftPosition_SpacecraftCrossTrackAngle(), 
@@ -3216,7 +3216,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "documentation", "The angle of the surface location relative to the spacecraft nadir.",
 			 "notify", "true",
 			 "property", "Readonly",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getSpacecraftsVisibilitySet_StartTime(), 
@@ -3304,7 +3304,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "notify", "true",
 			 "property", "Editable",
 			 "propertyCategory", "TIME_PERIOD",
-			 "csa_units", "s"
+			 "symphony_units", "s"
 		   });	
 		addAnnotation
 		  (getSpacecraftSwathCorridor_OrbitModel(), 
@@ -3320,7 +3320,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "notify", "true",
 			 "property", "Editable",
 			 "propertyCategory", "SWATH",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getSpacecraftSwathCorridor_RightSwathAngle(), 
@@ -3329,7 +3329,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 			 "notify", "true",
 			 "property", "Editable",
 			 "propertyCategory", "SWATH",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getSpacecraftSwathCorridor_Corridor(), 
@@ -3342,7 +3342,7 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the Earth gravitational constant from GRIM5C1 model: 3.986004415e14 m\u00b3/s\u00b2.",
-			 "csa_units", "m\u00b3/s\u00b2"
+			 "symphony_units", "m\u00b3/s\u00b2"
 		   });	
 		addAnnotation
 		  (getSymphony__CoreEnvironmentOrbitEarthFacade__CreateAbsoluteDate__Date(), 
@@ -3366,19 +3366,19 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		  ((getSymphony__CoreEnvironmentOrbitEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getSymphony__CoreEnvironmentOrbitEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double()).getEParameters().get(3), 
 		   source, 
 		   new String[] {
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  ((getSymphony__CoreEnvironmentOrbitEarthFacade__CreateEarthSurfaceLocation__String_String_double_double_double()).getEParameters().get(4), 
 		   source, 
 		   new String[] {
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getSymphony__CoreEnvironmentOrbitEarthFacade__CreateOreKitBackedFrame__Frame(), 
@@ -3397,21 +3397,21 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the elevation angle of a spacecraft relative\nto a Earth surface location.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getSymphony__CoreEnvironmentOrbitEarthFacade__GetSpacecraftAzimuthAngle__SpacecraftState_EarthSurfaceLocation(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the azimuth angle (relative to North) of a\nspacecraft at a Earth surface location.",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getSymphony__CoreEnvironmentOrbitEarthFacade__GetRange__SpacecraftState_EarthSurfaceLocation(), 
 		   source, 
 		   new String[] {
 			 "documentation", "Returns the distance between spacecraft and a specified target.",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getSymphony__CoreEnvironmentOrbitEarthFacade__CreateKeplerianOrbit__EarthOrbitPropagator(), 

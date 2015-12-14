@@ -52,7 +52,7 @@ public interface Position extends EObject
 	 * @see #setX(double)
 	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getPosition_X()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Location' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Location' symphony_units='m'"
 	 * @generated
 	 */
   double getX();
@@ -84,7 +84,7 @@ public interface Position extends EObject
 	 * @see #setY(double)
 	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getPosition_Y()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Location' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Location' symphony_units='m'"
 	 * @generated
 	 */
   double getY();
@@ -116,7 +116,7 @@ public interface Position extends EObject
 	 * @see #setZ(double)
 	 * @see org.eclipse.symphony.examples.lander.Symphony__ExamplesLanderPackage#getPosition_Z()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Location' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' property='Readonly' propertyCategory='Location' symphony_units='m'"
 	 * @generated
 	 */
   double getZ();

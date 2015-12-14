@@ -152,7 +152,7 @@ public interface ASCHeaderData extends EObject {
 	 * @see #setCellSize(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage#getASCHeaderData_CellSize()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
 	 * @generated
 	 */
 	double getCellSize();

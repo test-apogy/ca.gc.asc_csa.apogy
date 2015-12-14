@@ -105,7 +105,7 @@ public interface Trajectory3DTool extends Simple3DTool {
 	 * @see #setDistanceThreshold(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getTrajectory3DTool_DistanceThreshold()
 	 * @model default="0.01" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TRAJECTORY_3D_TOOL' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='TRAJECTORY_3D_TOOL' symphony_units='m'"
 	 * @generated
 	 */
 	double getDistanceThreshold();
@@ -133,7 +133,7 @@ public interface Trajectory3DTool extends Simple3DTool {
 	 * @see #setTotalDistance(double)
 	 * @see org.eclipse.symphony.addons.Symphony__AddonsPackage#getTrajectory3DTool_TotalDistance()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='TRAJECTORY_3D_TOOL' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' property='Readonly' propertyCategory='TRAJECTORY_3D_TOOL' symphony_units='m'"
 	 * @generated
 	 */
 	double getTotalDistance();

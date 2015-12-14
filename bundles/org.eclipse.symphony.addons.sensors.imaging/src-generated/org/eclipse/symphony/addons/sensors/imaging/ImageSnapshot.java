@@ -87,7 +87,7 @@ public interface ImageSnapshot extends GroupNode, Timed
 	 * @return The horizontal angle, in radians.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" horizontalPixelPositionUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double convertToHorizontalAngle(int horizontalPixelPosition);
@@ -102,7 +102,7 @@ public interface ImageSnapshot extends GroupNode, Timed
 	 * @return The horizontal angle, in radians.
 	 * <!-- end-model-doc -->
 	 * @model unique="false" verticalPixelPositionUnique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double convertToVerticalAngle(int verticalPixelPosition);

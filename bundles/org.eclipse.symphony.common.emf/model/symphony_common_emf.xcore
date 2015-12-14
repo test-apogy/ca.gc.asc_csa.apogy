@@ -172,7 +172,7 @@ class Symphony__CommonEMFFacade
  	 * Returns the time span of a collection
  	 * of Timed elements.
  	 */
- 	@GenModel(csa_units="s")
+ 	@GenModel(symphony_units="s")
  	op double getTimeSpan(Collection<Timed> timedCollection) 	 
  	 
  	/*
@@ -236,7 +236,7 @@ abstract class TimeSource extends Named, Described, Timed, Disposable
 	/**
 	 * Offset in milliseconds 
 	 */
-	@GenModel(csa_units="ms", notify="true", property="Editable")
+	@GenModel(symphony_units="ms", notify="true", property="Editable")
 	int offset = "0"
 }
 
@@ -255,7 +255,7 @@ class CurrentTimeSource extends TimeSource
 	/*
 	 * The update period of the time, in milliseconds
 	 */
-	@GenModel(csa_units="ms", notify="true", property="Editable")
+	@GenModel(symphony_units="ms", notify="true", property="Editable")
 	int updatePeriod = "1000"
 	
 	
@@ -291,7 +291,7 @@ class BrowseableTimeSource extends TimeSource
 	/*
 	 * The update period of the time.
 	 */
-	@GenModel(csa_units="ms", notify="true", property="Editable")
+	@GenModel(symphony_units="ms", notify="true", property="Editable")
 	int updatePeriod = "1000"	
 	
 	/*

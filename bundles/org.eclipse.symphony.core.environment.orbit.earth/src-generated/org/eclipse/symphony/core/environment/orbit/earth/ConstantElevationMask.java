@@ -37,7 +37,7 @@ public interface ConstantElevationMask extends ElevationMask {
 	 * @see #setConstantElevation(double)
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.Symphony__CoreEnvironmentOrbitEarthPackage#getConstantElevationMask_ConstantElevation()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' symphony_units='rad'"
 	 * @generated
 	 */
 	double getConstantElevation();

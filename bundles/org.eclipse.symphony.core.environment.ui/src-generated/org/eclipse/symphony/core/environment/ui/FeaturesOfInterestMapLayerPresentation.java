@@ -70,7 +70,7 @@ public interface FeaturesOfInterestMapLayerPresentation extends MapAnnotation, R
 	 * @see #setFeatureOfInterestRadius(double)
 	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getFeaturesOfInterestMapLayerPresentation_FeatureOfInterestRadius()
 	 * @model default="0.25" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='FOI_PROPERTIES' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' propertyCategory='FOI_PROPERTIES' symphony_units='m'"
 	 * @generated
 	 */
 	double getFeatureOfInterestRadius();

@@ -44,7 +44,7 @@ public interface PTUCameraData extends CameraData
 	 * @see #setPanAngle(double)
 	 * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage#getPTUCameraData_PanAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='deg' notify='true' property='Editable' propertyCategory='PTU Angles'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg' notify='true' property='Editable' propertyCategory='PTU Angles'"
 	 * @generated
 	 */
 	double getPanAngle();
@@ -71,7 +71,7 @@ public interface PTUCameraData extends CameraData
 	 * @see #setTiltAngle(double)
 	 * @see org.eclipse.symphony.examples.camera.symphony.Symphony__ExamplesCameraSymphonyPackage#getPTUCameraData_TiltAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='deg' notify='true' property='Editable' propertyCategory='PTU Angles'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg' notify='true' property='Editable' propertyCategory='PTU Angles'"
 	 * @generated
 	 */
 	double getTiltAngle();

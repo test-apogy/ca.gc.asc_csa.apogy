@@ -59,7 +59,7 @@ public interface GPSPoseSensor extends PoseSensor, Server {
 	 * @see #setOriginLatitude(double)
 	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor_OriginLatitude()
 	 * @model default="45.518206644445" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg'"
 	 * @generated
 	 */
 	double getOriginLatitude();
@@ -88,7 +88,7 @@ public interface GPSPoseSensor extends PoseSensor, Server {
 	 * @see #setOriginLongitude(double)
 	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor_OriginLongitude()
 	 * @model default="-73.393904468182" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='deg'"
 	 * @generated
 	 */
 	double getOriginLongitude();
@@ -116,7 +116,7 @@ public interface GPSPoseSensor extends PoseSensor, Server {
 	 * @see #setNeAngle(double)
 	 * @see org.eclipse.symphony.addons.sensors.gps.Symphony__AddonsSensorsGPSPackage#getGPSPoseSensor_NeAngle()
 	 * @model default="0.5940676" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getNeAngle();

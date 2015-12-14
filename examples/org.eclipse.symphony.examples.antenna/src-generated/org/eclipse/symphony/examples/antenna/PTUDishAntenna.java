@@ -44,7 +44,7 @@ public interface PTUDishAntenna extends DishAntenna
 	 * @see #setPanAngle(double)
 	 * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getPTUDishAntenna_PanAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='rad' property='Readonly' propertyCategory='PTU Angles'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='rad' property='Readonly' propertyCategory='PTU Angles'"
 	 * @generated
 	 */
   double getPanAngle();
@@ -71,7 +71,7 @@ public interface PTUDishAntenna extends DishAntenna
 	 * @see #setTiltAngle(double)
 	 * @see org.eclipse.symphony.examples.antenna.Symphony__ExamplesAntennaPackage#getPTUDishAntenna_TiltAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' csa_units='rad' property='Readonly' propertyCategory='PTU Angles'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' notify='true' symphony_units='rad' property='Readonly' propertyCategory='PTU Angles'"
 	 * @generated
 	 */
   double getTiltAngle();
@@ -125,8 +125,8 @@ public interface PTUDishAntenna extends DishAntenna
 	 * @param tiltAngle The target tilt angle for the PTU (given in radians.)
 	 * <!-- end-model-doc -->
 	 * @model panAngleUnique="false"
-	 *        panAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'" tiltAngleUnique="false"
-	 *        tiltAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        panAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" tiltAngleUnique="false"
+	 *        tiltAngleAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
   void moveTo(double panAngle, double tiltAngle);

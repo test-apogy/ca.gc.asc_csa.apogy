@@ -910,7 +910,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		   new String[] {
 			 "documentation", "The time interval at which to show\nthe position.",
 			 "propertyCategory", "TIME_PERIOD",
-			 "csa_units", "s"
+			 "symphony_units", "s"
 		   });	
 		addAnnotation
 		  (getOrbitModelWorldWindLayer_ForwardPropagationDuration(), 
@@ -918,7 +918,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		   new String[] {
 			 "documentation", "The forward propagation duration\nfrom the current time.",
 			 "propertyCategory", "TIME_PERIOD",
-			 "csa_units", "s"
+			 "symphony_units", "s"
 		   });	
 		addAnnotation
 		  (getOrbitModelWorldWindLayer_BackwardPropagationDuration(), 
@@ -926,7 +926,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		   new String[] {
 			 "documentation", "The backward propagation duration\nfrom the current time.",
 			 "propertyCategory", "TIME_PERIOD",
-			 "csa_units", "s"
+			 "symphony_units", "s"
 		   });	
 		addAnnotation
 		  (getOrbitModelWorldWindLayer_ShowGroundTrace(), 
@@ -966,7 +966,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		   new String[] {
 			 "documentation", "The forward propagation duration from\nthe current time.",
 			 "propertyCategory", "TIME_PERIOD",
-			 "csa_units", "s"
+			 "symphony_units", "s"
 		   });	
 		addAnnotation
 		  (getSpacecraftSwathWorldWindLayer_BackwardPropagationDuration(), 
@@ -974,7 +974,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		   new String[] {
 			 "documentation", "The backward propagation duration from\nthe current time.",
 			 "propertyCategory", "TIME_PERIOD",
-			 "csa_units", "s"
+			 "symphony_units", "s"
 		   });	
 		addAnnotation
 		  (getSpacecraftSwathWorldWindLayer_TimeInterval(), 
@@ -984,7 +984,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 			 "notify", "true",
 			 "propertyCategory", "TIME_PERIOD",
 			 "property", "Editable",
-			 "csa_units", "s"
+			 "symphony_units", "s"
 		   });	
 		addAnnotation
 		  (getSpacecraftSwathWorldWindLayer_LeftSwathAngle(), 
@@ -993,7 +993,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 			 "notify", "true",
 			 "property", "Editable",
 			 "propertyCategory", "SWATH",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getSpacecraftSwathWorldWindLayer_RightSwathAngle(), 
@@ -1002,7 +1002,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 			 "notify", "true",
 			 "property", "Editable",
 			 "propertyCategory", "SWATH",
-			 "csa_units", "rad"
+			 "symphony_units", "rad"
 		   });	
 		addAnnotation
 		  (getSpacecraftSwathWorldWindLayer_ShowGroundTrace(), 
@@ -1019,7 +1019,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		   new String[] {
 			 "documentation", "The radius of the target.",
 			 "propertyCategory", "VISUALS",
-			 "csa_units", "km"
+			 "symphony_units", "km"
 		   });	
 		addAnnotation
 		  (getGroundStationWorldWindLayer_ReferenceAltitude(), 
@@ -1027,7 +1027,7 @@ public class Symphony__CoreEnvironmentOrbitEarthUIPackageImpl extends EPackageIm
 		   new String[] {
 			 "documentation", "The altitude to which to project\nthe ElevationMask.",
 			 "propertyCategory", "VISUALS",
-			 "csa_units", "km"
+			 "symphony_units", "km"
 		   });	
 		addAnnotation
 		  (spacecraftVisibilityPassViewConfigurationListEClass, 

@@ -42,7 +42,7 @@ public interface AngularSpan extends EObject {
 	 * @see #setMinimumAngle(double)
 	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getAngularSpan_MinimumAngle()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getMinimumAngle();
@@ -70,7 +70,7 @@ public interface AngularSpan extends EObject {
 	 * @see #setMaximumAngle(double)
 	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getAngularSpan_MaximumAngle()
 	 * @model default="0.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getMaximumAngle();
@@ -95,7 +95,7 @@ public interface AngularSpan extends EObject {
 	 * @return the value of the '<em>Spanning Angle</em>' attribute.
 	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getAngularSpan_SpanningAngle()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getSpanningAngle();
@@ -110,7 +110,7 @@ public interface AngularSpan extends EObject {
 	 * @return the value of the '<em>Center Angle</em>' attribute.
 	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getAngularSpan_CenterAngle()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getCenterAngle();

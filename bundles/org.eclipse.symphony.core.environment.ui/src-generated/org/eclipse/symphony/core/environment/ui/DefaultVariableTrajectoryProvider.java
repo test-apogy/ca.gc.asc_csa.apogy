@@ -40,7 +40,7 @@ public interface DefaultVariableTrajectoryProvider extends VariableTrajectoryPro
 	 * @see #setDistanceThreshold(double)
 	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getDefaultVariableTrajectoryProvider_DistanceThreshold()
 	 * @model default="0.5" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='THRESHOLDS' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='THRESHOLDS' symphony_units='m'"
 	 * @generated
 	 */
   double getDistanceThreshold();
@@ -67,7 +67,7 @@ public interface DefaultVariableTrajectoryProvider extends VariableTrajectoryPro
 	 * @see #setAzimuthThreshold(double)
 	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getDefaultVariableTrajectoryProvider_AzimuthThreshold()
 	 * @model default="0.017" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='THRESHOLDS' csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='THRESHOLDS' symphony_units='rad'"
 	 * @generated
 	 */
   double getAzimuthThreshold();

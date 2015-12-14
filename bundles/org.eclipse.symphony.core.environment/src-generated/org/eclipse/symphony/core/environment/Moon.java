@@ -39,7 +39,7 @@ public interface Moon extends GroupNode
 	 * @see #setRadius(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getMoon_Radius()
 	 * @model default="1737100" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='m'"
 	 * @generated
 	 */
   double getRadius();

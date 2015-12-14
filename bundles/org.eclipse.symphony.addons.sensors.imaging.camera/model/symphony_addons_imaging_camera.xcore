@@ -319,7 +319,7 @@ class ImageFrozenOverlay extends AbstractTextOverlay
 	/**
 	 * The expected image update period, in seconds.
 	 */
-	@GenModel(propertyCategory="FROZEN_PROPERTIES", csa_units="s")
+	@GenModel(propertyCategory="FROZEN_PROPERTIES", symphony_units="s")
 	double expectedImageUpdatePeriod = "1.0"
 	
 	/**
@@ -392,7 +392,7 @@ class FOVOverlay extends DrawnCameraOverlay, ToolTipTextProvider
 	Color3f negativeValueColor = "1.0,0.0,0.0"
 
 	/* The interval, in degrees, for which to display numericals. */
-	@GenModel(propertyCategory="OVERLAY_PROPERTIES", csa_units = "deg")	
+	@GenModel(propertyCategory="OVERLAY_PROPERTIES", symphony_units = "deg")	
 	int angleInterval = "5"
 
 	/* Name of the font to use.*/

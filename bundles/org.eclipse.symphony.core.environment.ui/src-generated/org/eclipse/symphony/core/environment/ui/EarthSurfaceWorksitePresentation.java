@@ -71,7 +71,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
 	 * @see #setAxisLength(double)
 	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_AxisLength()
 	 * @model default="10.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='AXIS' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='AXIS' symphony_units='m'"
 	 * @generated
 	 */
   double getAxisLength();
@@ -211,7 +211,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
 	 * @see #setPlaneGridSize(double)
 	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_PlaneGridSize()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANE' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANE' symphony_units='m'"
 	 * @generated
 	 */
   double getPlaneGridSize();
@@ -239,7 +239,7 @@ public interface EarthSurfaceWorksitePresentation extends NodePresentation
 	 * @see #setPlaneSize(double)
 	 * @see org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage#getEarthSurfaceWorksitePresentation_PlaneSize()
 	 * @model default="10.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANE' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='PLANE' symphony_units='m'"
 	 * @generated
 	 */
   double getPlaneSize();

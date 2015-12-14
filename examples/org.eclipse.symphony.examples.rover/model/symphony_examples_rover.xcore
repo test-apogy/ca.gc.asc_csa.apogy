@@ -34,7 +34,7 @@ class Battery
 	 * as measured in volts; initially, zero
 	 */
 	@GenModel(notify="true",
-			  csa_units="V", 
+			  symphony_units="V", 
 			  property="Readonly")
 	double voltage = "0.0"
 	
@@ -43,7 +43,7 @@ class Battery
 	 * as measured in amps; initially, zero
 	 */
 	@GenModel(notify="true",
-			  csa_units="A", 
+			  symphony_units="A", 
 			  property="Readonly")
 	double current = "0.0"
 	
@@ -84,7 +84,7 @@ class PowerSystem
 	 * is currently outputting.
 	 */
 	@GenModel(notify="true",
-			  csa_units="V")
+			  symphony_units="V")
 	readonly transient volatile derived double currentVoltage get
 	{
 		// If there is an active battery
@@ -106,7 +106,7 @@ class PowerSystem
 	 * is currently outputting.
 	 */
 	@GenModel(notify="true",
-			  csa_units="A")
+			  symphony_units="A")
 	readonly transient volatile derived double currentCurrent get
 	{
 		// If there is an active battery
@@ -191,7 +191,7 @@ abstract class Rover extends Disposable
 	 */
 	@GenModel(children="false",
 			  notify="true",
-			  csa_units="m/s",
+			  symphony_units="m/s",
 			  property="Readonly",
 			  propertyCategory="Velocities")
 	readonly transient volatile derived double linearVelocity get
@@ -223,7 +223,7 @@ abstract class Rover extends Disposable
 	 */
 	@GenModel(children="false",
 			  notify="true",
-			  csa_units="rad/s",
+			  symphony_units="rad/s",
 			  property="Readonly",
 			  propertyCategory="Velocities")
 	readonly transient volatile derived double angularVelocity get
@@ -286,7 +286,7 @@ abstract class Rover extends Disposable
 	 * @param linearVelocity The rover assembly's new linear velocity (in m/s)
 	 * @see #cmdVelocities(double, double)
 	 */
-	op void cmdLinearVelocity(@GenModel(csa_units="m/s") double linearVelocity)
+	op void cmdLinearVelocity(@GenModel(symphony_units="m/s") double linearVelocity)
 	
 	/*
 	 * This operation is used to change the angular velocity of the rover
@@ -302,7 +302,7 @@ abstract class Rover extends Disposable
 	 * @param angularVelocity The rover assembly's new angular velocity (in rad/s)
 	 * @see #cmdVelocities(double, double)
 	 */
-	op void cmdAngularVelocity(@GenModel(csa_units="rad/s") double angularVelocity)
+	op void cmdAngularVelocity(@GenModel(symphony_units="rad/s") double angularVelocity)
 	
 	/* 
 	 * This operation is used to change both the linear velocity (given in m/s)
@@ -325,8 +325,8 @@ abstract class Rover extends Disposable
 	 * @see #cmdLinearVelocity(double)
 	 * @see #cmdAngularVelocity(double)
 	 */
-	op void cmdVelocities(@GenModel(csa_units="m/s") double linearVelocity,
-					  	  @GenModel(csa_units="rad/s") double angularVelocity)
+	op void cmdVelocities(@GenModel(symphony_units="m/s") double linearVelocity,
+					  	  @GenModel(symphony_units="rad/s") double angularVelocity)
 }
 
 /* 

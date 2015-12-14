@@ -47,7 +47,7 @@ abstract class RoboticArm
 	// -----------------------------------------------------
 	// The following joint angles are in degrees (°) while 
 	// moveTo() expects the angles in radians (rad); this is
-	// indicated by the "csa_units" field in the below
+	// indicated by the "symphony_units" field in the below
 	// @GenModel tags.
 	// <p>
 	// While this might seem like a problem, Symphony has
@@ -84,7 +84,7 @@ abstract class RoboticArm
 			  notify="true",
 			  property="Readonly",
 			  propertyCategory="Joint Angles",
-			  csa_units="deg")	
+			  symphony_units="deg")	
 	double turretAngle = "0.0"
 	
 	/* 
@@ -95,7 +95,7 @@ abstract class RoboticArm
 			  notify="true",
 			  property="Readonly",
 			  propertyCategory="Joint Angles",
-			  csa_units="deg")	
+			  symphony_units="deg")	
 	double shoulderAngle = "90.0"
 	
 	/* 
@@ -106,7 +106,7 @@ abstract class RoboticArm
 			  notify="true",
 			  property="Readonly",
 			  propertyCategory="Joint Angles",
-			  csa_units="deg")	
+			  symphony_units="deg")	
 	double elbowAngle = "-180.0"
 	
 	/* 
@@ -117,7 +117,7 @@ abstract class RoboticArm
 			  notify="true",
 			  property="Readonly",
 			  propertyCategory="Joint Angles",
-			  csa_units="deg")	
+			  symphony_units="deg")	
 	double wristAngle = "0.0"
 
 	/*
@@ -176,10 +176,10 @@ abstract class RoboticArm
 	 * @param elbowAngle The expected angle (in radians) of the elbow joint (joint 3) after moving.
 	 * @param wristAngle The expected angle (in radians) of the wrist joint (joint 4) after moving.
 	 */
-	op void moveTo(@GenModel(csa_units="rad") double turretAngle,
-				   @GenModel(csa_units="rad") double shoulderAngle,
-				   @GenModel(csa_units="rad") double elbowAngle,
-				   @GenModel(csa_units="rad") double wristAngle)
+	op void moveTo(@GenModel(symphony_units="rad") double turretAngle,
+				   @GenModel(symphony_units="rad") double shoulderAngle,
+				   @GenModel(symphony_units="rad") double elbowAngle,
+				   @GenModel(symphony_units="rad") double wristAngle)
 	
 	/*
 	 * Initiates the motion of the arm and moves the arm to the stow configuration.

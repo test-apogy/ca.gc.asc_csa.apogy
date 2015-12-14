@@ -123,8 +123,8 @@ public interface Lidar extends EObject
 	 * @see #acquireScanNonBlocking(double, double)
 	 * <!-- end-model-doc -->
 	 * @model unique="false" horizontalResolutionUnique="false"
-	 *        horizontalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'" verticalResolutionUnique="false"
-	 *        verticalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        horizontalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" verticalResolutionUnique="false"
+	 *        verticalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
   CartesianCoordinatesSet acquireScan(double horizontalResolution, double verticalResolution);
@@ -144,8 +144,8 @@ public interface Lidar extends EObject
 	 * @see #acquireScan(double, double)
 	 * <!-- end-model-doc -->
 	 * @model unique="false" horizontalResolutionUnique="false"
-	 *        horizontalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'" verticalResolutionUnique="false"
-	 *        verticalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        horizontalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'" verticalResolutionUnique="false"
+	 *        verticalResolutionAnnotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
   CartesianCoordinatesSet acquireScanNonBlocking(double horizontalResolution, double verticalResolution);

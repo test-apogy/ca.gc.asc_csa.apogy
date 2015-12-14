@@ -67,7 +67,7 @@ public interface RectangularFrustrumFieldOfView extends FieldOfView {
 	 * @see #setHorizontalFieldOfViewAngle(double)
 	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getRectangularFrustrumFieldOfView_HorizontalFieldOfViewAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getHorizontalFieldOfViewAngle();
@@ -93,7 +93,7 @@ public interface RectangularFrustrumFieldOfView extends FieldOfView {
 	 * @see #setVerticalFieldOfViewAngle(double)
 	 * @see org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVPackage#getRectangularFrustrumFieldOfView_VerticalFieldOfViewAngle()
 	 * @model unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel csa_units='rad'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel symphony_units='rad'"
 	 * @generated
 	 */
 	double getVerticalFieldOfViewAngle();

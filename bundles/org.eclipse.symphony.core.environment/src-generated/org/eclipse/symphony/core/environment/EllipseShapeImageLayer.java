@@ -40,7 +40,7 @@ public interface EllipseShapeImageLayer extends AbstractShapeImageLayer {
 	 * @see #setEllipseWidth(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEllipseShapeImageLayer_EllipseWidth()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='ELLIPSE_SETTINGS' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='ELLIPSE_SETTINGS' symphony_units='m'"
 	 * @generated
 	 */
 	double getEllipseWidth();
@@ -68,7 +68,7 @@ public interface EllipseShapeImageLayer extends AbstractShapeImageLayer {
 	 * @see #setEllipseHeight(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getEllipseShapeImageLayer_EllipseHeight()
 	 * @model default="1.0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='ELLIPSE_SETTINGS' csa_units='m'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' propertyCategory='ELLIPSE_SETTINGS' symphony_units='m'"
 	 * @generated
 	 */
 	double getEllipseHeight();

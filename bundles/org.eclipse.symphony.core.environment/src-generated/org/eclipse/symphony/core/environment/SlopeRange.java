@@ -47,7 +47,7 @@ public interface SlopeRange extends Named, Described {
 	 * @see #setSlopeLowerBound(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSlopeRange_SlopeLowerBound()
 	 * @model default="0" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' csa_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' symphony_units='deg'"
 	 * @generated
 	 */
 	double getSlopeLowerBound();
@@ -78,7 +78,7 @@ public interface SlopeRange extends Named, Described {
 	 * @see #setSlopeUpperBound(double)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSlopeRange_SlopeUpperBound()
 	 * @model default="10" unique="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' csa_units='deg'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Editable' symphony_units='deg'"
 	 * @generated
 	 */
 	double getSlopeUpperBound();

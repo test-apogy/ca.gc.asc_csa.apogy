@@ -876,28 +876,28 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 		   source, 
 		   new String[] {
 			 "documentation", "The position.",
-			 "csa_units", "m"
+			 "symphony_units", "m"
 		   });	
 		addAnnotation
 		  (getPVACoordinates_Velocity(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The velocity.",
-			 "csa_units", "m/s"
+			 "symphony_units", "m/s"
 		   });	
 		addAnnotation
 		  (getPVACoordinates_Acceleration(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The acceleration.",
-			 "csa_units", "m/s\u00b2"
+			 "symphony_units", "m/s\u00b2"
 		   });	
 		addAnnotation
 		  (getPVACoordinates_AngularVelocity(), 
 		   source, 
 		   new String[] {
 			 "documentation", "The angular velocity (spin) of this point as seen from the origin.",
-			 "csa_units", "rad/s"
+			 "symphony_units", "rad/s"
 		   });	
 		addAnnotation
 		  (timedStampedPVACoordinatesEClass, 
@@ -1002,7 +1002,7 @@ public class Symphony__CoreEnvironmentOrbitPackageImpl extends EPackageImpl impl
 		  ((getAbstractOrbitPropagator__GetSpacecraftStates__Date_Date_double()).getEParameters().get(2), 
 		   source, 
 		   new String[] {
-			 "csa_units", "s"
+			 "symphony_units", "s"
 		   });	
 		addAnnotation
 		  (getAbstractOrbitPropagator__IsDateInValidRange__Date(), 
