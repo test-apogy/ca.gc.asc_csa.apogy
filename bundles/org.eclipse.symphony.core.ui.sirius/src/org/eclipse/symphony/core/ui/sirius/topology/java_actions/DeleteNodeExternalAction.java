@@ -7,10 +7,10 @@ import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
 
-import ca.gc.asc_csa.symphony.core.SymphonySystem;
-import ca.gc.asc_csa.symphony.core.TopologyRoot;
-import ca.gc.space.topology.GroupNode;
-import ca.gc.space.topology.Node;
+import org.eclipse.symphony.core.SymphonySystem;
+import org.eclipse.symphony.core.TopologyRoot;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.topology.Node;
 
 public class DeleteNodeExternalAction implements IExternalJavaAction
 {

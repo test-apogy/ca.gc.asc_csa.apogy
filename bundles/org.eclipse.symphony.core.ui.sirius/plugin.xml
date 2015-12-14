@@ -7,4 +7,19 @@
 	       name="symphony_core_ui_sirius">
     </component>
   </extension>
+  <extension
+        point="org.eclipse.sirius.externalJavaAction">
+     <javaActions
+           actionClass="org.eclipse.symphony.core.ui.sirius.topology.java_actions.CreateNodeExternalAction"
+           id="org.eclipse.symphony.core.ui.sirius.topology.java_actions.CreateNodeExternalAction">
+     </javaActions>
+     <javaActions
+           actionClass="org.eclipse.symphony.core.ui.sirius.topology.java_actions.DeleteNodeExternalAction"
+           id="org.eclipse.symphony.core.ui.sirius.topology.java_actions.DeleteNodeExternalAction">
+     </javaActions>
+     <javaActions
+           actionClass="org.eclipse.symphony.core.ui.sirius.type.java_actions.CreateConnectionPointExternalAction"
+           id="org.eclipse.symphony.core.ui.sirius.type.java_actions.CreateConnectionPointExternalAction">
+     </javaActions>
+  </extension>
 </plugin>

@@ -10,10 +10,10 @@ import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
 import org.eclipse.symphony.core.ui.sirius.util.NameDescWizard;
 import org.eclipse.symphony.core.ui.sirius.util.WizardUtil;
 
-import ca.gc.asc_csa.eclipse.emf.ecore.EMFEcoreFacade;
-import ca.gc.asc_csa.symphony.core.ConnectionPoint;
-import ca.gc.asc_csa.symphony.core.SymphonySystem;
-import ca.gc.space.topology.GroupNode;
+import org.eclipse.symphony.common.topology.GroupNode;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
+import org.eclipse.symphony.core.ConnectionPoint;
+import org.eclipse.symphony.core.SymphonySystem;
 
 public class CreateConnectionPointExternalAction implements IExternalJavaAction
 {
@@ -26,7 +26,8 @@ public class CreateConnectionPointExternalAction implements IExternalJavaAction
 	private static final String DEF_CONNECT_POINT_DESC = "";
 	
 	// Get the EClass for ConnectionPoint
-	private static final EClass CONNECTION_POINT_ECLASS = EMFEcoreFacade.INSTANCE.getEClass("ca.gc.asc_csa.symphony.core.ConnectionPoint");
+	private static final String CONNECTION_POINT_CLASS_STR = "org.eclipse.symphony.core.ConnectionPoint";
+	private static final EClass CONNECTION_POINT_ECLASS = Symphony__CommonEMFFacade.INSTANCE.getEClass(CONNECTION_POINT_CLASS_STR);
 	
 	// Actually execute the external action and create the connection point
 	@Override

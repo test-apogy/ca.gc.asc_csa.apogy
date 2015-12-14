@@ -433,7 +433,7 @@ public class CreateNodeExternalAction implements IExternalJavaAction
 		private List<EClass> getAllNodeClasses()
 		{
 			// Extract the Node class' EClass
-			EClass nodeEClass = EMFEcoreFacade.INSTANCE.getEClass(NODE_INST_CLASS_NAME);
+			EClass nodeEClass = Symphony__CommonEMFFacade.INSTANCE.getEClass(NODE_INST_CLASS_NAME);
 			
 			// Create an output list
 			List<EClass> nodeEClasses = new ArrayList<EClass>(); 
@@ -442,10 +442,10 @@ public class CreateNodeExternalAction implements IExternalJavaAction
 			nodeEClasses.add(nodeEClass);
 			
 			// Add all of the subclasses to the node class list
-			nodeEClasses.addAll(EMFEcoreFacade.INSTANCE.getAllSubEClasses(nodeEClass));
+			nodeEClasses.addAll(Symphony__CommonEMFFacade.INSTANCE.getAllSubEClasses(nodeEClass));
 			
 			// Get a sorted version of that node class list
-			SortedSet<EClass> sortedEClasses = EMFEcoreFacade.INSTANCE.sortAlphabetically(nodeEClasses);
+			SortedSet<EClass> sortedEClasses = Symphony__CommonEMFFacade.INSTANCE.sortAlphabetically(nodeEClasses);
 		
 			// Return a list version of that ordering
 			return new ArrayList<EClass>(sortedEClasses);
