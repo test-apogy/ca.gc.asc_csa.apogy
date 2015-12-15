@@ -86,4 +86,11 @@ public class ASCHeaderDataTest extends TestCase {
 		setFixture(null);
 	}
 
+	/**
+	 * Test nothing to prevent no test error.
+	 */
+	public void testNothing()
+	{
+		assertTrue(true);
+	}
 } //ASCHeaderDataTest
