@@ -68,13 +68,13 @@ public interface Symphony__CommonGeometryData3DFactory extends EFactory {
 	CartesianPositionCoordinates createCartesianPositionCoordinates();
 
 	/**
-	 * Returns a new object of class '<em>RGB Cartesian Position Coordinates</em>'.
+	 * Returns a new object of class '<em>Colored Cartesian Position Coordinates</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>RGB Cartesian Position Coordinates</em>'.
+	 * @return a new object of class '<em>Colored Cartesian Position Coordinates</em>'.
 	 * @generated
 	 */
-	RGBCartesianPositionCoordinates createRGBCartesianPositionCoordinates();
+	ColoredCartesianPositionCoordinates createColoredCartesianPositionCoordinates();
 
 	/**
 	 * Returns a new object of class '<em>Cartesian Orientation Coordinates</em>'.
@@ -86,6 +86,15 @@ public interface Symphony__CommonGeometryData3DFactory extends EFactory {
 	CartesianOrientationCoordinates createCartesianOrientationCoordinates();
 
 	/**
+	 * Returns a new object of class '<em>Abstract Cartesian Coordinates Set</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Abstract Cartesian Coordinates Set</em>'.
+	 * @generated
+	 */
+	<T extends CartesianPositionCoordinates> AbstractCartesianCoordinatesSet<T> createAbstractCartesianCoordinatesSet();
+
+	/**
 	 * Returns a new object of class '<em>Cartesian Coordinates Set</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,6 +102,15 @@ public interface Symphony__CommonGeometryData3DFactory extends EFactory {
 	 * @generated
 	 */
 	CartesianCoordinatesSet createCartesianCoordinatesSet();
+
+	/**
+	 * Returns a new object of class '<em>Colored Coordinates Set</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Colored Coordinates Set</em>'.
+	 * @generated
+	 */
+	ColoredCoordinatesSet createColoredCoordinatesSet();
 
 	/**
 	 * Returns a new object of class '<em>Cartesian Coordinates Set Extent</em>'.
@@ -345,15 +363,6 @@ public interface Symphony__CommonGeometryData3DFactory extends EFactory {
 	 * @generated
 	 */
 	TriangularMeshToNormalPointCloud createTriangularMeshToNormalPointCloud();
-
-	/**
-	 * Returns a new object of class '<em>Points Range Gager</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Points Range Gager</em>'.
-	 * @generated
-	 */
-	PointsRangeGager createPointsRangeGager();
 
 	/**
 	 * Returns a new object of class '<em>Unique Points Filter</em>'.

@@ -5,7 +5,6 @@
  */
 package org.eclipse.symphony.common.geometry.data3d.impl;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,11 +14,8 @@ import javax.vecmath.Point3d;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data.impl.CoordinatesSetImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
@@ -32,7 +28,7 @@ import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
  *
  * @generated
  */
-public class CartesianCoordinatesSetImpl extends CoordinatesSetImpl<CartesianPositionCoordinates> implements
+public class CartesianCoordinatesSetImpl extends AbstractCartesianCoordinatesSetImpl<CartesianPositionCoordinates> implements
 		CartesianCoordinatesSet {
 	private int currentPointId = 0;
 
@@ -103,42 +99,12 @@ public class CartesianCoordinatesSetImpl extends CoordinatesSetImpl<CartesianPos
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * This is specialized for the more specific element type known in this context.
-	 * @generated
-	 */
-	@Override
-	public EList<CartesianPositionCoordinates> getPoints() {
-		if (points == null) {
-			points = new EObjectContainmentEList<CartesianPositionCoordinates>(CartesianPositionCoordinates.class, this, Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET__POINTS);
-		}
-		return points;
-	}
-
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
 	public CartesianCoordinatesSetExtent getExtent() 
 	{
 		return Geometry3DUtilities.getCartesianCoordinatesSetExtent(getPoints());
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET___GET_EXTENT:
-				return getExtent();
-		}
-		return super.eInvoke(operationID, arguments);
-	}
-
 
 	private Map<CartesianPositionCoordinates, Integer> getPointsToPointIdMap() {
 

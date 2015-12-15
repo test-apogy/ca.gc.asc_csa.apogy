@@ -181,8 +181,7 @@ public class OutlierFilterImpl extends
 	}
 
 	@Override
-	public CartesianCoordinatesSet process(CartesianCoordinatesSet input)
-			throws Exception {
+	public CartesianCoordinatesSet process(CartesianCoordinatesSet input) throws Exception {
 
 		PointLocator locator = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPointLocator();
 
@@ -191,22 +190,24 @@ public class OutlierFilterImpl extends
 		List<CartesianPositionCoordinates> pointsToRemove = new LinkedList<CartesianPositionCoordinates>();
 
 		// For each point, we find its closest point.
-		for (CartesianPositionCoordinates point : input.getPoints()) {
+		for (CartesianPositionCoordinates point : input.getPoints()) 
+		{
 			// We find the 2 closest points, first one beeing the point itself.
-			EList<CartesianPositionCoordinates> pointsWithinRadius = locator
-					.findPointsWithinRadius(getMaxDistance(), point);
+			EList<CartesianPositionCoordinates> pointsWithinRadius = locator.findPointsWithinRadius(getMaxDistance(), point);
 
 			// We should find points in this radius, if we find only the point
 			// itself,
 			// then the point is considered to be an outlier.
-			if (pointsWithinRadius.size() <= 1) {
+			if (pointsWithinRadius.size() <= 1) 
+			{
 				pointsToRemove.add(point);
 			}
 
 		}
 
 		// We remove the points.
-		for (CartesianPositionCoordinates point : pointsToRemove) {
+		for (CartesianPositionCoordinates point : pointsToRemove) 
+		{
 			input.getPoints().remove(point);
 		}
 

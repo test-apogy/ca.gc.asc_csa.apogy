@@ -209,26 +209,26 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RGBCartesianPositionCoordinatesItemProvider rgbCartesianPositionCoordinatesItemProvider;
+	protected ColoredCartesianPositionCoordinatesItemProvider coloredCartesianPositionCoordinatesItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createRGBCartesianPositionCoordinatesAdapter() {
-		if (rgbCartesianPositionCoordinatesItemProvider == null) {
-			rgbCartesianPositionCoordinatesItemProvider = new RGBCartesianPositionCoordinatesItemProvider(this);
+	public Adapter createColoredCartesianPositionCoordinatesAdapter() {
+		if (coloredCartesianPositionCoordinatesItemProvider == null) {
+			coloredCartesianPositionCoordinatesItemProvider = new ColoredCartesianPositionCoordinatesItemProvider(this);
 		}
 
-		return rgbCartesianPositionCoordinatesItemProvider;
+		return coloredCartesianPositionCoordinatesItemProvider;
 	}
 
 	/**
@@ -255,6 +255,29 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AbstractCartesianCoordinatesSetItemProvider abstractCartesianCoordinatesSetItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAbstractCartesianCoordinatesSetAdapter() {
+		if (abstractCartesianCoordinatesSetItemProvider == null) {
+			abstractCartesianCoordinatesSetItemProvider = new AbstractCartesianCoordinatesSetItemProvider(this);
+		}
+
+		return abstractCartesianCoordinatesSetItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -275,6 +298,29 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 		}
 
 		return cartesianCoordinatesSetItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ColoredCoordinatesSetItemProvider coloredCoordinatesSetItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createColoredCoordinatesSetAdapter() {
+		if (coloredCoordinatesSetItemProvider == null) {
+			coloredCoordinatesSetItemProvider = new ColoredCoordinatesSetItemProvider(this);
+		}
+
+		return coloredCoordinatesSetItemProvider;
 	}
 
 	/**
@@ -922,29 +968,6 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.PointsRangeGager} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PointsRangeGagerItemProvider pointsRangeGagerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.PointsRangeGager}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPointsRangeGagerAdapter() {
-		if (pointsRangeGagerItemProvider == null) {
-			pointsRangeGagerItemProvider = new PointsRangeGagerItemProvider(this);
-		}
-
-		return pointsRangeGagerItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.UniquePointsFilter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1351,9 +1374,11 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 		if (sphericalPolygonItemProvider != null) sphericalPolygonItemProvider.dispose();
 		if (sphericalTriangleItemProvider != null) sphericalTriangleItemProvider.dispose();
 		if (cartesianPositionCoordinatesItemProvider != null) cartesianPositionCoordinatesItemProvider.dispose();
-		if (rgbCartesianPositionCoordinatesItemProvider != null) rgbCartesianPositionCoordinatesItemProvider.dispose();
+		if (coloredCartesianPositionCoordinatesItemProvider != null) coloredCartesianPositionCoordinatesItemProvider.dispose();
 		if (cartesianOrientationCoordinatesItemProvider != null) cartesianOrientationCoordinatesItemProvider.dispose();
+		if (abstractCartesianCoordinatesSetItemProvider != null) abstractCartesianCoordinatesSetItemProvider.dispose();
 		if (cartesianCoordinatesSetItemProvider != null) cartesianCoordinatesSetItemProvider.dispose();
+		if (coloredCoordinatesSetItemProvider != null) coloredCoordinatesSetItemProvider.dispose();
 		if (cartesianCoordinatesSetExtentItemProvider != null) cartesianCoordinatesSetExtentItemProvider.dispose();
 		if (digitalElevationMapItemProvider != null) digitalElevationMapItemProvider.dispose();
 		if (cartesianCoordinatesMeshItemProvider != null) cartesianCoordinatesMeshItemProvider.dispose();
@@ -1382,7 +1407,6 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 		if (digitalElevationMapSamplerItemProvider != null) digitalElevationMapSamplerItemProvider.dispose();
 		if (triangularMeshNormalsCalculatorItemProvider != null) triangularMeshNormalsCalculatorItemProvider.dispose();
 		if (triangularMeshToNormalPointCloudItemProvider != null) triangularMeshToNormalPointCloudItemProvider.dispose();
-		if (pointsRangeGagerItemProvider != null) pointsRangeGagerItemProvider.dispose();
 		if (uniquePointsFilterItemProvider != null) uniquePointsFilterItemProvider.dispose();
 		if (triangleEdgeLengthTriangularMeshFilterItemProvider != null) triangleEdgeLengthTriangularMeshFilterItemProvider.dispose();
 		if (outlierFilterItemProvider != null) outlierFilterItemProvider.dispose();
@@ -1390,8 +1414,8 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 		if (rasterPointCloudToCartesianCoordinatesSetItemProvider != null) rasterPointCloudToCartesianCoordinatesSetItemProvider.dispose();
 		if (meshSmootherItemProvider != null) meshSmootherItemProvider.dispose();
 		if (voxelBased3DPointCloudResamplerItemProvider != null) voxelBased3DPointCloudResamplerItemProvider.dispose();
-		if (rigidBodyPoseTrackerItemProvider != null) rigidBodyPoseTrackerItemProvider.dispose();
 		if (positionMarkerItemProvider != null) positionMarkerItemProvider.dispose();
+		if (rigidBodyPoseTrackerItemProvider != null) rigidBodyPoseTrackerItemProvider.dispose();
 		if (symphony__CommonGeometryData3DFacadeItemProvider != null) symphony__CommonGeometryData3DFacadeItemProvider.dispose();
 		if (data3DIOItemProvider != null) data3DIOItemProvider.dispose();
 		if (data3DUtilsItemProvider != null) data3DUtilsItemProvider.dispose();
@@ -1452,7 +1476,7 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-						 Symphony__CommonGeometryData3DFactory.eINSTANCE.createRGBCartesianPositionCoordinates()));
+						 Symphony__CommonGeometryData3DFactory.eINSTANCE.createColoredCartesianPositionCoordinates()));
 
 				newChildDescriptors.add
 					(createChildParameter

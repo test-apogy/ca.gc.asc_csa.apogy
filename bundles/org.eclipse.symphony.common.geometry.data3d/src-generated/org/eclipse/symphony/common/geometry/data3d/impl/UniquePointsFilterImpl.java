@@ -65,26 +65,25 @@ public class UniquePointsFilterImpl extends
 	}
 
 	@Override
-	public CartesianCoordinatesSet process(CartesianCoordinatesSet input)
-			throws Exception {
-
-		if (input == null) {
+	public CartesianCoordinatesSet process(CartesianCoordinatesSet input) throws Exception 
+	{
+		if (input == null) 
+		{
 			throw new IllegalArgumentException();
 		}
 
-		KDTree kdTree = new KDTree(3);
+		KDTree kdTree = new KDTree(3);		
+		
+		CartesianCoordinatesSet output = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 
-		CartesianCoordinatesSet output = Symphony__CommonGeometryData3DFactory.eINSTANCE
-				.createCartesianCoordinatesSet();
-
-		for (CartesianPositionCoordinates point : input.getPoints()) {
+		for (CartesianPositionCoordinates point : input.getPoints()) 
+		{
 			// We look for this point in the kd tree.
-			double[] key = new double[] { point.getX(), point.getY(),
-					point.getZ() };
+			double[] key = new double[] { point.getX(), point.getY(),point.getZ() };
 
-			if (kdTree.search(key) == null) {
-				CartesianPositionCoordinates pointCopy = Symphony__CommonGeometryData3DFacade.INSTANCE
-						.createCartesianPositionCoordinates(point);
+			if (kdTree.search(key) == null) 
+			{
+				CartesianPositionCoordinates pointCopy = Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(point);
 				output.getPoints().add(pointCopy);
 				kdTree.insert(key, pointCopy);
 			}

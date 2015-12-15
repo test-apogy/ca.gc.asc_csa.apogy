@@ -1,5 +1,5 @@
 /**
- * Canadian Space Agency 2008.
+ * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
 package org.eclipse.symphony.common.geometry.data3d.provider;
 
@@ -9,28 +9,29 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates} object.
+ * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class RGBCartesianPositionCoordinatesItemProvider
-	extends CartesianPositionCoordinatesItemProvider {
+public class ColoredCartesianPositionCoordinatesItemProvider extends CartesianPositionCoordinatesItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RGBCartesianPositionCoordinatesItemProvider(AdapterFactory adapterFactory) {
+	public ColoredCartesianPositionCoordinatesItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -63,9 +64,9 @@ public class RGBCartesianPositionCoordinatesItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_RGBCartesianPositionCoordinates_red_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_RGBCartesianPositionCoordinates_red_feature", "_UI_RGBCartesianPositionCoordinates_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.RGB_CARTESIAN_POSITION_COORDINATES__RED,
+				 getString("_UI_ColoredCartesianPositionCoordinates_red_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ColoredCartesianPositionCoordinates_red_feature", "_UI_ColoredCartesianPositionCoordinates_type"),
+				 Symphony__CommonGeometryData3DPackage.Literals.COLORED_CARTESIAN_POSITION_COORDINATES__RED,
 				 true,
 				 false,
 				 false,
@@ -85,9 +86,9 @@ public class RGBCartesianPositionCoordinatesItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_RGBCartesianPositionCoordinates_green_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_RGBCartesianPositionCoordinates_green_feature", "_UI_RGBCartesianPositionCoordinates_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.RGB_CARTESIAN_POSITION_COORDINATES__GREEN,
+				 getString("_UI_ColoredCartesianPositionCoordinates_green_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ColoredCartesianPositionCoordinates_green_feature", "_UI_ColoredCartesianPositionCoordinates_type"),
+				 Symphony__CommonGeometryData3DPackage.Literals.COLORED_CARTESIAN_POSITION_COORDINATES__GREEN,
 				 true,
 				 false,
 				 false,
@@ -107,9 +108,9 @@ public class RGBCartesianPositionCoordinatesItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_RGBCartesianPositionCoordinates_blue_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_RGBCartesianPositionCoordinates_blue_feature", "_UI_RGBCartesianPositionCoordinates_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.RGB_CARTESIAN_POSITION_COORDINATES__BLUE,
+				 getString("_UI_ColoredCartesianPositionCoordinates_blue_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ColoredCartesianPositionCoordinates_blue_feature", "_UI_ColoredCartesianPositionCoordinates_type"),
+				 Symphony__CommonGeometryData3DPackage.Literals.COLORED_CARTESIAN_POSITION_COORDINATES__BLUE,
 				 true,
 				 false,
 				 false,
@@ -119,14 +120,14 @@ public class RGBCartesianPositionCoordinatesItemProvider
 	}
 
 	/**
-	 * This returns RGBCartesianPositionCoordinates.gif.
+	 * This returns ColoredCartesianPositionCoordinates.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/RGBCartesianPositionCoordinates"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ColoredCartesianPositionCoordinates"));
 	}
 
 	/**
@@ -137,9 +138,10 @@ public class RGBCartesianPositionCoordinatesItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		RGBCartesianPositionCoordinates rgbCartesianPositionCoordinates = (RGBCartesianPositionCoordinates)object;
-		return getString("_UI_RGBCartesianPositionCoordinates_type") + " " + rgbCartesianPositionCoordinates.getX();
+		ColoredCartesianPositionCoordinates coloredCartesianPositionCoordinates = (ColoredCartesianPositionCoordinates)object;
+		return getString("_UI_ColoredCartesianPositionCoordinates_type") + " " + coloredCartesianPositionCoordinates.getX();
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -152,10 +154,10 @@ public class RGBCartesianPositionCoordinatesItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(RGBCartesianPositionCoordinates.class)) {
-			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__RED:
-			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__GREEN:
-			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES__BLUE:
+		switch (notification.getFeatureID(ColoredCartesianPositionCoordinates.class)) {
+			case Symphony__CommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__RED:
+			case Symphony__CommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__GREEN:
+			case Symphony__CommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES__BLUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

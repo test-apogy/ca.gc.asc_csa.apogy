@@ -330,14 +330,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.RGBCartesianPositionCoordinatesImpl <em>RGB Cartesian Position Coordinates</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl <em>Colored Cartesian Position Coordinates</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.RGBCartesianPositionCoordinatesImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getRGBCartesianPositionCoordinates()
+	 * @see org.eclipse.symphony.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl
+	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getColoredCartesianPositionCoordinates()
 	 * @generated
 	 */
-	int RGB_CARTESIAN_POSITION_COORDINATES = 5;
+	int COLORED_CARTESIAN_POSITION_COORDINATES = 5;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -346,7 +346,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RGB_CARTESIAN_POSITION_COORDINATES__X = CARTESIAN_POSITION_COORDINATES__X;
+	int COLORED_CARTESIAN_POSITION_COORDINATES__X = CARTESIAN_POSITION_COORDINATES__X;
 
 	/**
 	 * The feature id for the '<em><b>Y</b></em>' attribute.
@@ -355,7 +355,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RGB_CARTESIAN_POSITION_COORDINATES__Y = CARTESIAN_POSITION_COORDINATES__Y;
+	int COLORED_CARTESIAN_POSITION_COORDINATES__Y = CARTESIAN_POSITION_COORDINATES__Y;
 
 	/**
 	 * The feature id for the '<em><b>Z</b></em>' attribute.
@@ -364,7 +364,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RGB_CARTESIAN_POSITION_COORDINATES__Z = CARTESIAN_POSITION_COORDINATES__Z;
+	int COLORED_CARTESIAN_POSITION_COORDINATES__Z = CARTESIAN_POSITION_COORDINATES__Z;
 
 	/**
 	 * The feature id for the '<em><b>Red</b></em>' attribute.
@@ -373,7 +373,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RGB_CARTESIAN_POSITION_COORDINATES__RED = CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 0;
+	int COLORED_CARTESIAN_POSITION_COORDINATES__RED = CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Green</b></em>' attribute.
@@ -382,7 +382,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RGB_CARTESIAN_POSITION_COORDINATES__GREEN = CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 1;
+	int COLORED_CARTESIAN_POSITION_COORDINATES__GREEN = CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Blue</b></em>' attribute.
@@ -391,16 +391,16 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RGB_CARTESIAN_POSITION_COORDINATES__BLUE = CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 2;
+	int COLORED_CARTESIAN_POSITION_COORDINATES__BLUE = CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>RGB Cartesian Position Coordinates</em>' class.
+	 * The number of structural features of the '<em>Colored Cartesian Position Coordinates</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RGB_CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT = CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 3;
+	int COLORED_CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT = CARTESIAN_POSITION_COORDINATES_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>As Point3d</em>' operation.
@@ -409,16 +409,16 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RGB_CARTESIAN_POSITION_COORDINATES___AS_POINT3D = CARTESIAN_POSITION_COORDINATES___AS_POINT3D;
+	int COLORED_CARTESIAN_POSITION_COORDINATES___AS_POINT3D = CARTESIAN_POSITION_COORDINATES___AS_POINT3D;
 
 	/**
-	 * The number of operations of the '<em>RGB Cartesian Position Coordinates</em>' class.
+	 * The number of operations of the '<em>Colored Cartesian Position Coordinates</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RGB_CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT = CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT + 0;
+	int COLORED_CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT = CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianOrientationCoordinatesImpl <em>Cartesian Orientation Coordinates</em>}' class.
@@ -476,14 +476,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int CARTESIAN_ORIENTATION_COORDINATES_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetImpl <em>Cartesian Coordinates Set</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl <em>Abstract Cartesian Coordinates Set</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesSet()
+	 * @see org.eclipse.symphony.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl
+	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getAbstractCartesianCoordinatesSet()
 	 * @generated
 	 */
-	int CARTESIAN_COORDINATES_SET = 7;
+	int ABSTRACT_CARTESIAN_COORDINATES_SET = 7;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
@@ -492,7 +492,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET__POINTS = Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS;
+	int ABSTRACT_CARTESIAN_COORDINATES_SET__POINTS = Symphony__CommonGeometryDataPackage.COORDINATES_SET__POINTS;
 
 	/**
 	 * The feature id for the '<em><b>Normals</b></em>' attribute.
@@ -501,16 +501,16 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET__NORMALS = Symphony__CommonGeometryDataPackage.COORDINATES_SET__NORMALS;
+	int ABSTRACT_CARTESIAN_COORDINATES_SET__NORMALS = Symphony__CommonGeometryDataPackage.COORDINATES_SET__NORMALS;
 
 	/**
-	 * The number of structural features of the '<em>Cartesian Coordinates Set</em>' class.
+	 * The number of structural features of the '<em>Abstract Cartesian Coordinates Set</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_FEATURE_COUNT + 0;
+	int ABSTRACT_CARTESIAN_COORDINATES_SET_FEATURE_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Get Extent</em>' operation.
@@ -519,7 +519,62 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET___GET_EXTENT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_OPERATION_COUNT + 0;
+	int ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Abstract Cartesian Coordinates Set</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CARTESIAN_COORDINATES_SET_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_OPERATION_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetImpl <em>Cartesian Coordinates Set</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetImpl
+	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesSet()
+	 * @generated
+	 */
+	int CARTESIAN_COORDINATES_SET = 8;
+
+	/**
+	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARTESIAN_COORDINATES_SET__POINTS = ABSTRACT_CARTESIAN_COORDINATES_SET__POINTS;
+
+	/**
+	 * The feature id for the '<em><b>Normals</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARTESIAN_COORDINATES_SET__NORMALS = ABSTRACT_CARTESIAN_COORDINATES_SET__NORMALS;
+
+	/**
+	 * The number of structural features of the '<em>Cartesian Coordinates Set</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARTESIAN_COORDINATES_SET_FEATURE_COUNT = ABSTRACT_CARTESIAN_COORDINATES_SET_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Extent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CARTESIAN_COORDINATES_SET___GET_EXTENT = ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT;
 
 	/**
 	 * The number of operations of the '<em>Cartesian Coordinates Set</em>' class.
@@ -528,7 +583,62 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CARTESIAN_COORDINATES_SET_OPERATION_COUNT = Symphony__CommonGeometryDataPackage.COORDINATES_SET_OPERATION_COUNT + 1;
+	int CARTESIAN_COORDINATES_SET_OPERATION_COUNT = ABSTRACT_CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.ColoredCoordinatesSetImpl <em>Colored Coordinates Set</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.common.geometry.data3d.impl.ColoredCoordinatesSetImpl
+	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getColoredCoordinatesSet()
+	 * @generated
+	 */
+	int COLORED_COORDINATES_SET = 9;
+
+	/**
+	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLORED_COORDINATES_SET__POINTS = ABSTRACT_CARTESIAN_COORDINATES_SET__POINTS;
+
+	/**
+	 * The feature id for the '<em><b>Normals</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLORED_COORDINATES_SET__NORMALS = ABSTRACT_CARTESIAN_COORDINATES_SET__NORMALS;
+
+	/**
+	 * The number of structural features of the '<em>Colored Coordinates Set</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLORED_COORDINATES_SET_FEATURE_COUNT = ABSTRACT_CARTESIAN_COORDINATES_SET_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Extent</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLORED_COORDINATES_SET___GET_EXTENT = ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT;
+
+	/**
+	 * The number of operations of the '<em>Colored Coordinates Set</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLORED_COORDINATES_SET_OPERATION_COUNT = ABSTRACT_CARTESIAN_COORDINATES_SET_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl <em>Cartesian Coordinates Set Extent</em>}' class.
@@ -538,7 +648,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesSetExtent()
 	 * @generated
 	 */
-	int CARTESIAN_COORDINATES_SET_EXTENT = 8;
+	int CARTESIAN_COORDINATES_SET_EXTENT = 10;
 
 	/**
 	 * The feature id for the '<em><b>XMin</b></em>' attribute.
@@ -647,7 +757,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDigitalElevationMap()
 	 * @generated
 	 */
-	int DIGITAL_ELEVATION_MAP = 9;
+	int DIGITAL_ELEVATION_MAP = 11;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
@@ -720,7 +830,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesMesh()
 	 * @generated
 	 */
-	int CARTESIAN_COORDINATES_MESH = 10;
+	int CARTESIAN_COORDINATES_MESH = 12;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
@@ -811,7 +921,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianTriangularMesh()
 	 * @generated
 	 */
-	int CARTESIAN_TRIANGULAR_MESH = 11;
+	int CARTESIAN_TRIANGULAR_MESH = 13;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
@@ -902,7 +1012,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalCoordinates()
 	 * @generated
 	 */
-	int SPHERICAL_COORDINATES = 12;
+	int SPHERICAL_COORDINATES = 14;
 
 	/**
 	 * The feature id for the '<em><b>Phi</b></em>' attribute.
@@ -957,7 +1067,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalCoordinatesSet()
 	 * @generated
 	 */
-	int SPHERICAL_COORDINATES_SET = 13;
+	int SPHERICAL_COORDINATES_SET = 15;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
@@ -1003,7 +1113,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalCoordinatesMesh()
 	 * @generated
 	 */
-	int SPHERICAL_COORDINATES_MESH = 14;
+	int SPHERICAL_COORDINATES_MESH = 16;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
@@ -1085,7 +1195,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphericalTriangularMesh()
 	 * @generated
 	 */
-	int SPHERICAL_TRIANGULAR_MESH = 15;
+	int SPHERICAL_TRIANGULAR_MESH = 17;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' containment reference list.
@@ -1167,7 +1277,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPose()
 	 * @generated
 	 */
-	int POSE = 16;
+	int POSE = 18;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -1258,7 +1368,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSphereSamplingShape()
 	 * @generated
 	 */
-	int SPHERE_SAMPLING_SHAPE = 17;
+	int SPHERE_SAMPLING_SHAPE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Radius</b></em>' attribute.
@@ -1331,7 +1441,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCubeSamplingShape()
 	 * @generated
 	 */
-	int CUBE_SAMPLING_SHAPE = 18;
+	int CUBE_SAMPLING_SHAPE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Corner1</b></em>' reference.
@@ -1404,7 +1514,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesSetShapeSampler()
 	 * @generated
 	 */
-	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER = 19;
+	int CARTESIAN_COORDINATES_SET_SHAPE_SAMPLER = 21;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -1486,7 +1596,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesMeshSampler()
 	 * @generated
 	 */
-	int CARTESIAN_COORDINATES_MESH_SAMPLER = 20;
+	int CARTESIAN_COORDINATES_MESH_SAMPLER = 22;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -1577,7 +1687,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianCoordinatesMeshPolygonSampler()
 	 * @generated
 	 */
-	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER = 21;
+	int CARTESIAN_COORDINATES_MESH_POLYGON_SAMPLER = 23;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -1659,7 +1769,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianTriangularMeshSampler()
 	 * @generated
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_SAMPLER = 22;
+	int CARTESIAN_TRIANGULAR_MESH_SAMPLER = 24;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -1750,7 +1860,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianTriangularMeshPolygonSampler()
 	 * @generated
 	 */
-	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER = 23;
+	int CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER = 25;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -1832,7 +1942,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianPositionCoordinatesMesher()
 	 * @generated
 	 */
-	int CARTESIAN_POSITION_COORDINATES_MESHER = 24;
+	int CARTESIAN_POSITION_COORDINATES_MESHER = 26;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -1896,7 +2006,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getNormalPointCloud()
 	 * @generated
 	 */
-	int NORMAL_POINT_CLOUD = 25;
+	int NORMAL_POINT_CLOUD = 27;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' attribute.
@@ -1942,7 +2052,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPointLocator()
 	 * @generated
 	 */
-	int POINT_LOCATOR = 26;
+	int POINT_LOCATOR = 28;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' attribute.
@@ -1997,7 +2107,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVecmathPointLocator()
 	 * @generated
 	 */
-	int VECMATH_POINT_LOCATOR = 27;
+	int VECMATH_POINT_LOCATOR = 29;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' attribute.
@@ -2088,7 +2198,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVecmathKdTreePointLocator()
 	 * @generated
 	 */
-	int VECMATH_KD_TREE_POINT_LOCATOR = 28;
+	int VECMATH_KD_TREE_POINT_LOCATOR = 30;
 
 	/**
 	 * The feature id for the '<em><b>Points</b></em>' attribute.
@@ -2179,7 +2289,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMeshLocalizer()
 	 * @generated
 	 */
-	int MESH_LOCALIZER = 29;
+	int MESH_LOCALIZER = 31;
 
 	/**
 	 * The number of structural features of the '<em>Mesh Localizer</em>' class.
@@ -2216,7 +2326,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPointNormalLocator()
 	 * @generated
 	 */
-	int POINT_NORMAL_LOCATOR = 30;
+	int POINT_NORMAL_LOCATOR = 32;
 
 	/**
 	 * The feature id for the '<em><b>Data Set</b></em>' reference.
@@ -2307,7 +2417,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDelaunayMesher()
 	 * @generated
 	 */
-	int DELAUNAY_MESHER = 31;
+	int DELAUNAY_MESHER = 33;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2337,58 +2447,13 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int DELAUNAY_MESHER__OUTPUT = CARTESIAN_POSITION_COORDINATES_MESHER__OUTPUT;
 
 	/**
-	 * The feature id for the '<em><b>Tolerance</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DELAUNAY_MESHER__TOLERANCE = CARTESIAN_POSITION_COORDINATES_MESHER_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Alpha</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DELAUNAY_MESHER__ALPHA = CARTESIAN_POSITION_COORDINATES_MESHER_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Offset</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DELAUNAY_MESHER__OFFSET = CARTESIAN_POSITION_COORDINATES_MESHER_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Bounding Triangulation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DELAUNAY_MESHER__BOUNDING_TRIANGULATION = CARTESIAN_POSITION_COORDINATES_MESHER_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Meshing Plane</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DELAUNAY_MESHER__MESHING_PLANE = CARTESIAN_POSITION_COORDINATES_MESHER_FEATURE_COUNT + 4;
-
-	/**
 	 * The number of structural features of the '<em>Delaunay Mesher</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DELAUNAY_MESHER_FEATURE_COUNT = CARTESIAN_POSITION_COORDINATES_MESHER_FEATURE_COUNT + 5;
+	int DELAUNAY_MESHER_FEATURE_COUNT = CARTESIAN_POSITION_COORDINATES_MESHER_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Process</em>' operation.
@@ -2416,7 +2481,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDigitalElevationMapMesher()
 	 * @generated
 	 */
-	int DIGITAL_ELEVATION_MAP_MESHER = 32;
+	int DIGITAL_ELEVATION_MAP_MESHER = 34;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2480,7 +2545,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDigitalElevationMapSampler()
 	 * @generated
 	 */
-	int DIGITAL_ELEVATION_MAP_SAMPLER = 33;
+	int DIGITAL_ELEVATION_MAP_SAMPLER = 35;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2553,7 +2618,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getTriangularMeshNormalsCalculator()
 	 * @generated
 	 */
-	int TRIANGULAR_MESH_NORMALS_CALCULATOR = 34;
+	int TRIANGULAR_MESH_NORMALS_CALCULATOR = 36;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2617,7 +2682,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getTriangularMeshToNormalPointCloud()
 	 * @generated
 	 */
-	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD = 35;
+	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD = 37;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2674,124 +2739,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.PointsRangeGagerImpl <em>Points Range Gager</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.PointsRangeGagerImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPointsRangeGager()
-	 * @generated
-	 */
-	int POINTS_RANGE_GAGER = 36;
-
-	/**
-	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINTS_RANGE_GAGER__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
-
-	/**
-	 * The feature id for the '<em><b>Input</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINTS_RANGE_GAGER__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
-
-	/**
-	 * The feature id for the '<em><b>Output</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINTS_RANGE_GAGER__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
-
-	/**
-	 * The feature id for the '<em><b>Min X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINTS_RANGE_GAGER__MIN_X = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Max X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINTS_RANGE_GAGER__MAX_X = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Min Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINTS_RANGE_GAGER__MIN_Y = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Max Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINTS_RANGE_GAGER__MAX_Y = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Min Z</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINTS_RANGE_GAGER__MIN_Z = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Max Z</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINTS_RANGE_GAGER__MAX_Z = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 5;
-
-	/**
-	 * The number of structural features of the '<em>Points Range Gager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINTS_RANGE_GAGER_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 6;
-
-	/**
-	 * The operation id for the '<em>Process</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINTS_RANGE_GAGER___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
-
-	/**
-	 * The number of operations of the '<em>Points Range Gager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINTS_RANGE_GAGER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.UniquePointsFilterImpl <em>Unique Points Filter</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2799,7 +2746,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getUniquePointsFilter()
 	 * @generated
 	 */
-	int UNIQUE_POINTS_FILTER = 37;
+	int UNIQUE_POINTS_FILTER = 38;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2863,7 +2810,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getTriangleEdgeLengthTriangularMeshFilter()
 	 * @generated
 	 */
-	int TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER = 38;
+	int TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER = 39;
 
 	/**
 	 * The feature id for the '<em><b>Minimum Range</b></em>' attribute.
@@ -2927,7 +2874,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getOutlierFilter()
 	 * @generated
 	 */
-	int OUTLIER_FILTER = 39;
+	int OUTLIER_FILTER = 40;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -3000,7 +2947,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getRasterPointCloud()
 	 * @generated
 	 */
-	int RASTER_POINT_CLOUD = 40;
+	int RASTER_POINT_CLOUD = 41;
 
 	/**
 	 * The feature id for the '<em><b>Rows</b></em>' attribute.
@@ -3064,7 +3011,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getRasterPointCloudToCartesianCoordinatesSet()
 	 * @generated
 	 */
-	int RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET = 41;
+	int RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET = 42;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -3128,7 +3075,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMeshSmoother()
 	 * @generated
 	 */
-	int MESH_SMOOTHER = 42;
+	int MESH_SMOOTHER = 43;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -3201,7 +3148,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVoxelBased3DPointCloudResampler()
 	 * @generated
 	 */
-	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER = 43;
+	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER = 44;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -3310,70 +3257,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getRigidBodyPoseTracker()
 	 * @generated
 	 */
-	int RIGID_BODY_POSE_TRACKER = 44;
-
-	/**
-	 * The feature id for the '<em><b>Position Markers At Origin</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RIGID_BODY_POSE_TRACKER__POSITION_MARKERS_AT_ORIGIN = 0;
-
-	/**
-	 * The number of structural features of the '<em>Rigid Body Pose Tracker</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RIGID_BODY_POSE_TRACKER_FEATURE_COUNT = 1;
-
-	/**
-	 * The operation id for the '<em>Compute Transformation</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RIGID_BODY_POSE_TRACKER___COMPUTE_TRANSFORMATION__ELIST = 0;
-
-	/**
-	 * The operation id for the '<em>Compute Transformation</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RIGID_BODY_POSE_TRACKER___COMPUTE_TRANSFORMATION__LIST = 1;
-
-	/**
-	 * The operation id for the '<em>Add Position Markers</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RIGID_BODY_POSE_TRACKER___ADD_POSITION_MARKERS__LIST = 2;
-
-	/**
-	 * The operation id for the '<em>Remove Position Markers</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RIGID_BODY_POSE_TRACKER___REMOVE_POSITION_MARKERS__LIST = 3;
-
-	/**
-	 * The number of operations of the '<em>Rigid Body Pose Tracker</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RIGID_BODY_POSE_TRACKER_OPERATION_COUNT = 4;
+	int RIGID_BODY_POSE_TRACKER = 46;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.PositionMarkerImpl <em>Position Marker</em>}' class.
@@ -3449,6 +3333,69 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int POSITION_MARKER_OPERATION_COUNT = CARTESIAN_POSITION_COORDINATES_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Position Markers At Origin</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RIGID_BODY_POSE_TRACKER__POSITION_MARKERS_AT_ORIGIN = 0;
+
+	/**
+	 * The number of structural features of the '<em>Rigid Body Pose Tracker</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RIGID_BODY_POSE_TRACKER_FEATURE_COUNT = 1;
+
+	/**
+	 * The operation id for the '<em>Add Position Markers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RIGID_BODY_POSE_TRACKER___ADD_POSITION_MARKERS__LIST = 0;
+
+	/**
+	 * The operation id for the '<em>Remove Position Markers</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RIGID_BODY_POSE_TRACKER___REMOVE_POSITION_MARKERS__LIST = 1;
+
+	/**
+	 * The operation id for the '<em>Compute Transformation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RIGID_BODY_POSE_TRACKER___COMPUTE_TRANSFORMATION__ELIST = 2;
+
+	/**
+	 * The operation id for the '<em>Compute Transformation</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RIGID_BODY_POSE_TRACKER___COMPUTE_TRANSFORMATION__LIST = 3;
+
+	/**
+	 * The number of operations of the '<em>Rigid Body Pose Tracker</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RIGID_BODY_POSE_TRACKER_OPERATION_COUNT = 4;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DFacadeImpl <em>Facade</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3456,7 +3403,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSymphony__CommonGeometryData3DFacade()
 	 * @generated
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE = 46;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE = 47;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -3709,7 +3656,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getData3DIO()
 	 * @generated
 	 */
-	int DATA3_DIO = 47;
+	int DATA3_DIO = 48;
 
 	/**
 	 * The number of structural features of the '<em>Data3 DIO</em>' class.
@@ -3854,7 +3801,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getData3DUtils()
 	 * @generated
 	 */
-	int DATA3_DUTILS = 48;
+	int DATA3_DUTILS = 49;
 
 	/**
 	 * The number of structural features of the '<em>Data3 DUtils</em>' class.
@@ -3936,7 +3883,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianAxis()
 	 * @generated
 	 */
-	int CARTESIAN_AXIS = 49;
+	int CARTESIAN_AXIS = 50;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPlane <em>Cartesian Plane</em>}' enum.
@@ -3946,7 +3893,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianPlane()
 	 * @generated
 	 */
-	int CARTESIAN_PLANE = 50;
+	int CARTESIAN_PLANE = 51;
 
 	/**
 	 * The meta object id for the '<em>Vector2d</em>' data type.
@@ -3956,7 +3903,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVector2d()
 	 * @generated
 	 */
-	int VECTOR2D = 51;
+	int VECTOR2D = 52;
 
 	/**
 	 * The meta object id for the '<em>Vector3d</em>' data type.
@@ -3966,7 +3913,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVector3d()
 	 * @generated
 	 */
-	int VECTOR3D = 52;
+	int VECTOR3D = 53;
 
 	/**
 	 * The meta object id for the '<em>Point3d</em>' data type.
@@ -3976,7 +3923,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPoint3d()
 	 * @generated
 	 */
-	int POINT3D = 53;
+	int POINT3D = 54;
 
 	/**
 	 * The meta object id for the '<em>Matrix4d</em>' data type.
@@ -3986,7 +3933,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMatrix4d()
 	 * @generated
 	 */
-	int MATRIX4D = 54;
+	int MATRIX4D = 55;
 
 	/**
 	 * The meta object id for the '<em>GVector</em>' data type.
@@ -3996,7 +3943,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getGVector()
 	 * @generated
 	 */
-	int GVECTOR = 55;
+	int GVECTOR = 56;
 
 	/**
 	 * The meta object id for the '<em>List</em>' data type.
@@ -4006,7 +3953,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getList()
 	 * @generated
 	 */
-	int LIST = 56;
+	int LIST = 57;
 
 	/**
 	 * The meta object id for the '<em>Map</em>' data type.
@@ -4016,7 +3963,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMap()
 	 * @generated
 	 */
-	int MAP = 57;
+	int MAP = 58;
 
 	/**
 	 * The meta object id for the '<em>Set</em>' data type.
@@ -4026,7 +3973,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSet()
 	 * @generated
 	 */
-	int SET = 58;
+	int SET = 59;
 
 	/**
 	 * The meta object id for the '<em>Sorted Set</em>' data type.
@@ -4036,7 +3983,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSortedSet()
 	 * @generated
 	 */
-	int SORTED_SET = 59;
+	int SORTED_SET = 60;
 
 	/**
 	 * The meta object id for the '<em>Collection</em>' data type.
@@ -4046,7 +3993,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCollection()
 	 * @generated
 	 */
-	int COLLECTION = 60;
+	int COLLECTION = 61;
 
 	/**
 	 * The meta object id for the '<em>EList</em>' data type.
@@ -4056,7 +4003,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getEList()
 	 * @generated
 	 */
-	int ELIST = 61;
+	int ELIST = 62;
 
 	/**
 	 * The meta object id for the '<em>IProgress Monitor</em>' data type.
@@ -4066,7 +4013,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIProgressMonitor()
 	 * @generated
 	 */
-	int IPROGRESS_MONITOR = 62;
+	int IPROGRESS_MONITOR = 63;
 
 	/**
 	 * The meta object id for the '<em>Output Stream</em>' data type.
@@ -4076,7 +4023,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getOutputStream()
 	 * @generated
 	 */
-	int OUTPUT_STREAM = 63;
+	int OUTPUT_STREAM = 64;
 
 	/**
 	 * The meta object id for the '<em>Input Stream</em>' data type.
@@ -4086,7 +4033,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getInputStream()
 	 * @generated
 	 */
-	int INPUT_STREAM = 64;
+	int INPUT_STREAM = 65;
 
 	/**
 	 * The meta object id for the '<em>IO Exception</em>' data type.
@@ -4096,7 +4043,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIOException()
 	 * @generated
 	 */
-	int IO_EXCEPTION = 65;
+	int IO_EXCEPTION = 66;
 
 	/**
 	 * The meta object id for the '<em>Exception</em>' data type.
@@ -4106,7 +4053,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getException()
 	 * @generated
 	 */
-	int EXCEPTION = 66;
+	int EXCEPTION = 67;
 
 	/**
 	 * The meta object id for the '<em>Illegal Argument Exception</em>' data type.
@@ -4116,7 +4063,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIllegalArgumentException()
 	 * @generated
 	 */
-	int ILLEGAL_ARGUMENT_EXCEPTION = 67;
+	int ILLEGAL_ARGUMENT_EXCEPTION = 68;
 
 	/**
 	 * The meta object id for the '<em>Double Array Of Array</em>' data type.
@@ -4125,7 +4072,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDoubleArrayOfArray()
 	 * @generated
 	 */
-	int DOUBLE_ARRAY_OF_ARRAY = 68;
+	int DOUBLE_ARRAY_OF_ARRAY = 69;
 
 	/**
 	 * The meta object id for the '<em>Int Array</em>' data type.
@@ -4134,7 +4081,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIntArray()
 	 * @generated
 	 */
-	int INT_ARRAY = 69;
+	int INT_ARRAY = 70;
 
 
 	/**
@@ -4264,47 +4211,47 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	EOperation getCartesianPositionCoordinates__AsPoint3d();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates <em>RGB Cartesian Position Coordinates</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates <em>Colored Cartesian Position Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>RGB Cartesian Position Coordinates</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates
+	 * @return the meta object for class '<em>Colored Cartesian Position Coordinates</em>'.
+	 * @see org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates
 	 * @generated
 	 */
-	EClass getRGBCartesianPositionCoordinates();
+	EClass getColoredCartesianPositionCoordinates();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates#getRed <em>Red</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates#getRed <em>Red</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Red</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates#getRed()
-	 * @see #getRGBCartesianPositionCoordinates()
+	 * @see org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates#getRed()
+	 * @see #getColoredCartesianPositionCoordinates()
 	 * @generated
 	 */
-	EAttribute getRGBCartesianPositionCoordinates_Red();
+	EAttribute getColoredCartesianPositionCoordinates_Red();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates#getGreen <em>Green</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates#getGreen <em>Green</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Green</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates#getGreen()
-	 * @see #getRGBCartesianPositionCoordinates()
+	 * @see org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates#getGreen()
+	 * @see #getColoredCartesianPositionCoordinates()
 	 * @generated
 	 */
-	EAttribute getRGBCartesianPositionCoordinates_Green();
+	EAttribute getColoredCartesianPositionCoordinates_Green();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates#getBlue <em>Blue</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates#getBlue <em>Blue</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Blue</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates#getBlue()
-	 * @see #getRGBCartesianPositionCoordinates()
+	 * @see org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates#getBlue()
+	 * @see #getColoredCartesianPositionCoordinates()
 	 * @generated
 	 */
-	EAttribute getRGBCartesianPositionCoordinates_Blue();
+	EAttribute getColoredCartesianPositionCoordinates_Blue();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianOrientationCoordinates <em>Cartesian Orientation Coordinates</em>}'.
@@ -4350,6 +4297,26 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	EAttribute getCartesianOrientationCoordinates_ZRotation();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet <em>Abstract Cartesian Coordinates Set</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abstract Cartesian Coordinates Set</em>'.
+	 * @see org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet
+	 * @generated
+	 */
+	EClass getAbstractCartesianCoordinatesSet();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet#getExtent() <em>Get Extent</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Extent</em>' operation.
+	 * @see org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet#getExtent()
+	 * @generated
+	 */
+	EOperation getAbstractCartesianCoordinatesSet__GetExtent();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet <em>Cartesian Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4360,14 +4327,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	EClass getCartesianCoordinatesSet();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet#getExtent() <em>Get Extent</em>}' operation.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet <em>Colored Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Extent</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet#getExtent()
+	 * @return the meta object for class '<em>Colored Coordinates Set</em>'.
+	 * @see org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet
 	 * @generated
 	 */
-	EOperation getCartesianCoordinatesSet__GetExtent();
+	EClass getColoredCoordinatesSet();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent <em>Cartesian Coordinates Set Extent</em>}'.
@@ -5035,61 +5002,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	EClass getDelaunayMesher();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.DelaunayMesher#getTolerance <em>Tolerance</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tolerance</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DelaunayMesher#getTolerance()
-	 * @see #getDelaunayMesher()
-	 * @generated
-	 */
-	EAttribute getDelaunayMesher_Tolerance();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.DelaunayMesher#getAlpha <em>Alpha</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Alpha</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DelaunayMesher#getAlpha()
-	 * @see #getDelaunayMesher()
-	 * @generated
-	 */
-	EAttribute getDelaunayMesher_Alpha();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.DelaunayMesher#getOffset <em>Offset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Offset</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DelaunayMesher#getOffset()
-	 * @see #getDelaunayMesher()
-	 * @generated
-	 */
-	EAttribute getDelaunayMesher_Offset();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.DelaunayMesher#isBoundingTriangulation <em>Bounding Triangulation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Bounding Triangulation</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DelaunayMesher#isBoundingTriangulation()
-	 * @see #getDelaunayMesher()
-	 * @generated
-	 */
-	EAttribute getDelaunayMesher_BoundingTriangulation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.DelaunayMesher#getMeshingPlane <em>Meshing Plane</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Meshing Plane</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.DelaunayMesher#getMeshingPlane()
-	 * @see #getDelaunayMesher()
-	 * @generated
-	 */
-	EAttribute getDelaunayMesher_MeshingPlane();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher <em>Digital Elevation Map Mesher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5139,82 +5051,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTriangularMeshToNormalPointCloud();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.PointsRangeGager <em>Points Range Gager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Points Range Gager</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointsRangeGager
-	 * @generated
-	 */
-	EClass getPointsRangeGager();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMinX <em>Min X</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Min X</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMinX()
-	 * @see #getPointsRangeGager()
-	 * @generated
-	 */
-	EAttribute getPointsRangeGager_MinX();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMaxX <em>Max X</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Max X</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMaxX()
-	 * @see #getPointsRangeGager()
-	 * @generated
-	 */
-	EAttribute getPointsRangeGager_MaxX();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMinY <em>Min Y</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Min Y</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMinY()
-	 * @see #getPointsRangeGager()
-	 * @generated
-	 */
-	EAttribute getPointsRangeGager_MinY();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMaxY <em>Max Y</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Max Y</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMaxY()
-	 * @see #getPointsRangeGager()
-	 * @generated
-	 */
-	EAttribute getPointsRangeGager_MaxY();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMinZ <em>Min Z</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Min Z</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMinZ()
-	 * @see #getPointsRangeGager()
-	 * @generated
-	 */
-	EAttribute getPointsRangeGager_MinZ();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMaxZ <em>Max Z</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Max Z</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointsRangeGager#getMaxZ()
-	 * @see #getPointsRangeGager()
-	 * @generated
-	 */
-	EAttribute getPointsRangeGager_MaxZ();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.UniquePointsFilter <em>Unique Points Filter</em>}'.
@@ -6357,14 +6193,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EOperation CARTESIAN_POSITION_COORDINATES___AS_POINT3D = eINSTANCE.getCartesianPositionCoordinates__AsPoint3d();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.RGBCartesianPositionCoordinatesImpl <em>RGB Cartesian Position Coordinates</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl <em>Colored Cartesian Position Coordinates</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.RGBCartesianPositionCoordinatesImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getRGBCartesianPositionCoordinates()
+		 * @see org.eclipse.symphony.common.geometry.data3d.impl.ColoredCartesianPositionCoordinatesImpl
+		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getColoredCartesianPositionCoordinates()
 		 * @generated
 		 */
-		EClass RGB_CARTESIAN_POSITION_COORDINATES = eINSTANCE.getRGBCartesianPositionCoordinates();
+		EClass COLORED_CARTESIAN_POSITION_COORDINATES = eINSTANCE.getColoredCartesianPositionCoordinates();
 
 		/**
 		 * The meta object literal for the '<em><b>Red</b></em>' attribute feature.
@@ -6372,7 +6208,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RGB_CARTESIAN_POSITION_COORDINATES__RED = eINSTANCE.getRGBCartesianPositionCoordinates_Red();
+		EAttribute COLORED_CARTESIAN_POSITION_COORDINATES__RED = eINSTANCE.getColoredCartesianPositionCoordinates_Red();
 
 		/**
 		 * The meta object literal for the '<em><b>Green</b></em>' attribute feature.
@@ -6380,7 +6216,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RGB_CARTESIAN_POSITION_COORDINATES__GREEN = eINSTANCE.getRGBCartesianPositionCoordinates_Green();
+		EAttribute COLORED_CARTESIAN_POSITION_COORDINATES__GREEN = eINSTANCE.getColoredCartesianPositionCoordinates_Green();
 
 		/**
 		 * The meta object literal for the '<em><b>Blue</b></em>' attribute feature.
@@ -6388,7 +6224,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RGB_CARTESIAN_POSITION_COORDINATES__BLUE = eINSTANCE.getRGBCartesianPositionCoordinates_Blue();
+		EAttribute COLORED_CARTESIAN_POSITION_COORDINATES__BLUE = eINSTANCE.getColoredCartesianPositionCoordinates_Blue();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianOrientationCoordinatesImpl <em>Cartesian Orientation Coordinates</em>}' class.
@@ -6425,6 +6261,24 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EAttribute CARTESIAN_ORIENTATION_COORDINATES__ZROTATION = eINSTANCE.getCartesianOrientationCoordinates_ZRotation();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl <em>Abstract Cartesian Coordinates Set</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.common.geometry.data3d.impl.AbstractCartesianCoordinatesSetImpl
+		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getAbstractCartesianCoordinatesSet()
+		 * @generated
+		 */
+		EClass ABSTRACT_CARTESIAN_COORDINATES_SET = eINSTANCE.getAbstractCartesianCoordinatesSet();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Extent</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT = eINSTANCE.getAbstractCartesianCoordinatesSet__GetExtent();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetImpl <em>Cartesian Coordinates Set</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6435,12 +6289,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EClass CARTESIAN_COORDINATES_SET = eINSTANCE.getCartesianCoordinatesSet();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Extent</b></em>' operation.
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.ColoredCoordinatesSetImpl <em>Colored Coordinates Set</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.common.geometry.data3d.impl.ColoredCoordinatesSetImpl
+		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getColoredCoordinatesSet()
 		 * @generated
 		 */
-		EOperation CARTESIAN_COORDINATES_SET___GET_EXTENT = eINSTANCE.getCartesianCoordinatesSet__GetExtent();
+		EClass COLORED_COORDINATES_SET = eINSTANCE.getColoredCoordinatesSet();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.CartesianCoordinatesSetExtentImpl <em>Cartesian Coordinates Set Extent</em>}' class.
@@ -7003,46 +6859,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EClass DELAUNAY_MESHER = eINSTANCE.getDelaunayMesher();
 
 		/**
-		 * The meta object literal for the '<em><b>Tolerance</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DELAUNAY_MESHER__TOLERANCE = eINSTANCE.getDelaunayMesher_Tolerance();
-
-		/**
-		 * The meta object literal for the '<em><b>Alpha</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DELAUNAY_MESHER__ALPHA = eINSTANCE.getDelaunayMesher_Alpha();
-
-		/**
-		 * The meta object literal for the '<em><b>Offset</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DELAUNAY_MESHER__OFFSET = eINSTANCE.getDelaunayMesher_Offset();
-
-		/**
-		 * The meta object literal for the '<em><b>Bounding Triangulation</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DELAUNAY_MESHER__BOUNDING_TRIANGULATION = eINSTANCE.getDelaunayMesher_BoundingTriangulation();
-
-		/**
-		 * The meta object literal for the '<em><b>Meshing Plane</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DELAUNAY_MESHER__MESHING_PLANE = eINSTANCE.getDelaunayMesher_MeshingPlane();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.DigitalElevationMapMesherImpl <em>Digital Elevation Map Mesher</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7089,64 +6905,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD = eINSTANCE.getTriangularMeshToNormalPointCloud();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.PointsRangeGagerImpl <em>Points Range Gager</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.PointsRangeGagerImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPointsRangeGager()
-		 * @generated
-		 */
-		EClass POINTS_RANGE_GAGER = eINSTANCE.getPointsRangeGager();
-
-		/**
-		 * The meta object literal for the '<em><b>Min X</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute POINTS_RANGE_GAGER__MIN_X = eINSTANCE.getPointsRangeGager_MinX();
-
-		/**
-		 * The meta object literal for the '<em><b>Max X</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute POINTS_RANGE_GAGER__MAX_X = eINSTANCE.getPointsRangeGager_MaxX();
-
-		/**
-		 * The meta object literal for the '<em><b>Min Y</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute POINTS_RANGE_GAGER__MIN_Y = eINSTANCE.getPointsRangeGager_MinY();
-
-		/**
-		 * The meta object literal for the '<em><b>Max Y</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute POINTS_RANGE_GAGER__MAX_Y = eINSTANCE.getPointsRangeGager_MaxY();
-
-		/**
-		 * The meta object literal for the '<em><b>Min Z</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute POINTS_RANGE_GAGER__MIN_Z = eINSTANCE.getPointsRangeGager_MinZ();
-
-		/**
-		 * The meta object literal for the '<em><b>Max Z</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute POINTS_RANGE_GAGER__MAX_Z = eINSTANCE.getPointsRangeGager_MaxZ();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.UniquePointsFilterImpl <em>Unique Points Filter</em>}' class.

@@ -10,6 +10,12 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  * A representation of the model object '<em><b>Spherical Coordinates</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * A spherical coordinate.
+ * @see https://en.wikipedia.org/wiki/Spherical_coordinate_system
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -32,10 +38,15 @@ public interface SphericalCoordinates extends Coordinates {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The azimuthal angle (about Z), in radians.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Phi</em>' attribute.
 	 * @see #setPhi(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphericalCoordinates_Phi()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='rad'"
 	 * @generated
 	 */
 	double getPhi();
@@ -58,10 +69,15 @@ public interface SphericalCoordinates extends Coordinates {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The polar angle, in radians.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Theta</em>' attribute.
 	 * @see #setTheta(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphericalCoordinates_Theta()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='rad'"
 	 * @generated
 	 */
 	double getTheta();
@@ -84,10 +100,15 @@ public interface SphericalCoordinates extends Coordinates {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The radius, in meters.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>R</em>' attribute.
 	 * @see #setR(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphericalCoordinates_R()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getR();

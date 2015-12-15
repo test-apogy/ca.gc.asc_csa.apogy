@@ -479,17 +479,19 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 		int jmax = (int) Math.ceil(sidex / coarseresolution);
 		int kmax = (int) Math.ceil(sidez / coarseresolution);
 
-		Vector<Vector<Point3d>> coarse3Dgrid = new Vector<Vector<Point3d>>(imax
-				* jmax * kmax);
+		Vector<Vector<Point3d>> coarse3Dgrid = new Vector<Vector<Point3d>>(imax	* jmax * kmax);
+		
 		// initialize the grid
-		for (i = 0; i < imax * jmax * kmax; i++) {
+		for (i = 0; i < imax * jmax * kmax; i++) 
+		{
 			coarse3Dgrid.add(new Vector<Point3d>());
 
 		}
 		double den = 1 / coarseresolution;
 
 		// create coarse 3D grid
-		for (i = 0; i < size; i++) {
+		for (i = 0; i < size; i++) 
+		{
 			Point3d p = inputPointCloud.getPoints().get(i).asPoint3d();
 			tmp = (p.y - ymin) * den;
 			ip = (int) (tmp);
@@ -501,34 +503,26 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 
 		}
 		Vector<Point3d> patch = new Vector<Point3d>();
-		Vector<Point3d> outputpatch = new Vector<Point3d>();
-		// vtkPolyData voxelmap = new vtkPolyData();
-		// vtkCellArray array = new vtkCellArray();
-		// vtkPoints pts=new vtkPoints();
-
+		Vector<Point3d> outputPatch = new Vector<Point3d>();
+	
 		// Voxelize each sub map
-		for (i = 0; i < coarse3Dgrid.size(); i++) {
+		for (i = 0; i < coarse3Dgrid.size(); i++) 
+		{
 			patch = coarse3Dgrid.get(i);
-			if (patch.size() < minpoints)
-				continue;
+			if (patch.size() < minpoints)continue;
 
-			outputpatch = this.voxelize(resolutionx, resolutiony, resolutionz,
-					minpoints, patch);
-			// Update the output VTKPolyData
-			for (j = 0; j < outputpatch.size(); j++) {
+			outputPatch = this.voxelize(resolutionx, resolutiony, resolutionz,minpoints, patch);
+
+			for (j = 0; j < outputPatch.size(); j++) 
+			{
 				CartesianPositionCoordinates newPoint = Symphony__CommonGeometryData3DFacade.INSTANCE
 						.createCartesianPositionCoordinates(
-								outputpatch.get(j).x, outputpatch.get(j).y,
-								outputpatch.get(j).z);
+								outputPatch.get(j).x, outputPatch.get(j).y,
+								outputPatch.get(j).z);
 
-				outputPointCloud.getPoints().add(newPoint);
-
-				// array.InsertNextCell(1);
-				// array.InsertCellPoint(pts.InsertNextPoint(outputpatch.get(j).x,outputpatch.get(j).y,outputpatch.get(j).z));
+				outputPointCloud.getPoints().add(newPoint);			
 			}
 		}
-		// voxelmap.SetPoints(pts);
-		// voxelmap.SetVerts(array);
 		coarse3Dgrid.clear();
 		return outputPointCloud;
 
@@ -544,33 +538,31 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 	  * @return a Vector of Point3d - voxelized points map.
 	  * 
 	  * @author jbakambu /MDA
-	  */
-	 //int xgrid,int ygrid, int zgrid,
+	  */	 
 	 private Vector<Point3d> voxelize(double resolutionx,double resolutiony,double resolutionz, int minpoints,Vector<Point3d> data)
-	 {
-		 
-       int i,ip,jp,kp;
-       double xmin,xmax,ymin,ymax,zmin,zmax;
-       Vector<Point3d> output =new Vector<Point3d>();
-       int size = data.size(); 
-       if (size < minpoints) return output;
+	 {		
+		 int i,ip,jp,kp;
+		 double xmin,xmax,ymin,ymax,zmin,zmax;
+		 Vector<Point3d> output =new Vector<Point3d>();
+		 int size = data.size(); 
+		 if (size < minpoints) return output;
        
-       xmin=data.get(0).x;
-       xmax=data.get(0).x;
-       ymin=data.get(0).y;
-       ymax=data.get(0).y;
-       zmin=data.get(0).z;
-       zmax=data.get(0).z;
-       for (i=0;i<size; i++)
-       {
-       	if (xmin > data.get(i).x) xmin = data.get(i).x;
-       	if (xmax < data.get(i).x) xmax = data.get(i).x;
-       	if (ymin > data.get(i).y) ymin = data.get(i).y;
-       	if (ymax < data.get(i).y) ymax = data.get(i).y;
-       	if (zmin > data.get(i).z) zmin = data.get(i).z;
-       	if (zmax < data.get(i).z) zmax = data.get(i).z;
-       	
-       }
+		 xmin=data.get(0).x;
+		 xmax=data.get(0).x;
+		 ymin=data.get(0).y;
+		 ymax=data.get(0).y;
+		 zmin=data.get(0).z;
+		 zmax=data.get(0).z;
+       
+		 for (i=0;i<size; i++)
+		 {
+			 if (xmin > data.get(i).x) xmin = data.get(i).x;
+       	   	 if (xmax < data.get(i).x) xmax = data.get(i).x;
+       	     if (ymin > data.get(i).y) ymin = data.get(i).y;
+       	     if (ymax < data.get(i).y) ymax = data.get(i).y;
+       	     if (zmin > data.get(i).z) zmin = data.get(i).z;
+       	     if (zmax < data.get(i).z) zmax = data.get(i).z;       	
+		 }
        	
 	 	 double sidex= Math.abs(xmax- xmin);	 	
 	     double sidey= Math.abs(ymax- ymin);
@@ -610,10 +602,8 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 	    	 p.w = p.w+1;
 	    	 grid.set(jp+ip*jmax+kp*imax*jmax, p);
 	     }
-	     
-	     
-	     //computes the average of each voxel 
-	     
+	     	     
+	     // Computes the average of each voxel 	     
 	     for(i=0;i<grid.size();i++)
 	     {
 	    	 Point4d p= grid.get(i);
@@ -624,15 +614,12 @@ public class VoxelBased3DPointCloudResamplerImpl extends ProcessorImpl<Cartesian
 	    		 p.y =p.y/n;
 	    		 p.z =p.z/n;	    	 
 	    		 grid.set(i, p);
-	    		 //only voxel with at least minpoints are output
-	    		output.add(new Point3d(p.x,p.y,p.z));
-	    	 }
-	    	 
 	    		 
-	     }
-	     
+	    		 //only voxel with at least minpoints are output
+	    		 output.add(new Point3d(p.x,p.y,p.z));
+	    	 }	    	 	    		 
+	     }	     
 	     grid.clear();
 	     return output;     
-
 	 }
 } //VoxelBased3DPointCloudResamplerImpl

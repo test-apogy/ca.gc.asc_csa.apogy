@@ -14,6 +14,10 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Cartesian Axis</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
+ * <!-- begin-model-doc -->
+ * *
+ * Identifies an axis of the Cartesian frame of reference.
+ * <!-- end-model-doc -->
  * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianAxis()
  * @model
  * @generated

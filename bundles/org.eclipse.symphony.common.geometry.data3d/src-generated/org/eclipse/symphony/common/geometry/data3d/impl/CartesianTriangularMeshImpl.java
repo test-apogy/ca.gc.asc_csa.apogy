@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.symphony.common.geometry.data.impl.MeshImpl;
+import org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
@@ -76,9 +77,14 @@ public class CartesianTriangularMeshImpl extends MeshImpl<CartesianPositionCoord
 	 */
 	@Override
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == AbstractCartesianCoordinatesSet.class) {
+			switch (baseOperationID) {
+				case Symphony__CommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT: return Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH___GET_EXTENT;
+				default: return -1;
+			}
+		}
 		if (baseClass == CartesianCoordinatesSet.class) {
 			switch (baseOperationID) {
-				case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET___GET_EXTENT: return Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH___GET_EXTENT;
 				default: return -1;
 			}
 		}

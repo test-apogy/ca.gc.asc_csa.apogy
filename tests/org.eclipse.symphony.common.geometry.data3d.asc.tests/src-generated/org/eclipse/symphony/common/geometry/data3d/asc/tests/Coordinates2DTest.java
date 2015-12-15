@@ -86,4 +86,11 @@ public class Coordinates2DTest extends TestCase {
 		setFixture(null);
 	}
 
+	/**
+	 * Test nothing to prevent no test error.
+	 */
+	public void testNothing()
+	{
+		assertTrue(true);
+	}
 } //Coordinates2DTest

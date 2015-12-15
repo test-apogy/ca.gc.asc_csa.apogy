@@ -12,10 +12,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data.provider.CoordinatesSetItemProvider;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet} object.
@@ -24,7 +21,7 @@ import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3
  * @generated
  */
 public class CartesianCoordinatesSetItemProvider
-	extends CoordinatesSetItemProvider
+	extends AbstractCartesianCoordinatesSetItemProvider
 {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -106,36 +103,6 @@ public class CartesianCoordinatesSetItemProvider
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
 	{
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPositionCoordinates()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createRGBCartesianPositionCoordinates()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianOrientationCoordinates()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphericalCoordinates()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createPose()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createPositionMarker()));
 	}
 
 }

@@ -98,16 +98,24 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 				return createCartesianPositionCoordinatesAdapter();
 			}
 			@Override
-			public Adapter caseRGBCartesianPositionCoordinates(RGBCartesianPositionCoordinates object) {
-				return createRGBCartesianPositionCoordinatesAdapter();
+			public Adapter caseColoredCartesianPositionCoordinates(ColoredCartesianPositionCoordinates object) {
+				return createColoredCartesianPositionCoordinatesAdapter();
 			}
 			@Override
 			public Adapter caseCartesianOrientationCoordinates(CartesianOrientationCoordinates object) {
 				return createCartesianOrientationCoordinatesAdapter();
 			}
 			@Override
+			public <T extends CartesianPositionCoordinates> Adapter caseAbstractCartesianCoordinatesSet(AbstractCartesianCoordinatesSet<T> object) {
+				return createAbstractCartesianCoordinatesSetAdapter();
+			}
+			@Override
 			public Adapter caseCartesianCoordinatesSet(CartesianCoordinatesSet object) {
 				return createCartesianCoordinatesSetAdapter();
+			}
+			@Override
+			public Adapter caseColoredCoordinatesSet(ColoredCoordinatesSet object) {
+				return createColoredCoordinatesSetAdapter();
 			}
 			@Override
 			public Adapter caseCartesianCoordinatesSetExtent(CartesianCoordinatesSetExtent object) {
@@ -222,10 +230,6 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 				return createTriangularMeshToNormalPointCloudAdapter();
 			}
 			@Override
-			public Adapter casePointsRangeGager(PointsRangeGager object) {
-				return createPointsRangeGagerAdapter();
-			}
-			@Override
 			public Adapter caseUniquePointsFilter(UniquePointsFilter object) {
 				return createUniquePointsFilterAdapter();
 			}
@@ -254,12 +258,12 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 				return createVoxelBased3DPointCloudResamplerAdapter();
 			}
 			@Override
-			public Adapter caseRigidBodyPoseTracker(RigidBodyPoseTracker object) {
-				return createRigidBodyPoseTrackerAdapter();
-			}
-			@Override
 			public Adapter casePositionMarker(PositionMarker object) {
 				return createPositionMarkerAdapter();
+			}
+			@Override
+			public Adapter caseRigidBodyPoseTracker(RigidBodyPoseTracker object) {
+				return createRigidBodyPoseTrackerAdapter();
 			}
 			@Override
 			public Adapter caseSymphony__CommonGeometryData3DFacade(Symphony__CommonGeometryData3DFacade object) {
@@ -412,16 +416,16 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates <em>RGB Cartesian Position Coordinates</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates <em>Colored Cartesian Position Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates
+	 * @see org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates
 	 * @generated
 	 */
-	public Adapter createRGBCartesianPositionCoordinatesAdapter() {
+	public Adapter createColoredCartesianPositionCoordinatesAdapter() {
 		return null;
 	}
 
@@ -440,6 +444,20 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet <em>Abstract Cartesian Coordinates Set</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet
+	 * @generated
+	 */
+	public Adapter createAbstractCartesianCoordinatesSetAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet <em>Cartesian Coordinates Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -450,6 +468,20 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	 * @generated
 	 */
 	public Adapter createCartesianCoordinatesSetAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet <em>Colored Coordinates Set</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet
+	 * @generated
+	 */
+	public Adapter createColoredCoordinatesSetAdapter() {
 		return null;
 	}
 
@@ -842,20 +874,6 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	 * @generated
 	 */
 	public Adapter createTriangularMeshToNormalPointCloudAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.PointsRangeGager <em>Points Range Gager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointsRangeGager
-	 * @generated
-	 */
-	public Adapter createPointsRangeGagerAdapter() {
 		return null;
 	}
 

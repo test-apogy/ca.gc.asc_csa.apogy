@@ -10,6 +10,11 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Cartesian Coordinates Set Extent</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * Class that defines the volumetric extent of a set of cartesian coordinates.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -42,6 +47,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * @see #setXMin(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_XMin()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getXMin();
@@ -68,6 +74,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * @see #setXMax(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_XMax()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getXMax();
@@ -94,6 +101,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * @see #setYMin(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_YMin()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getYMin();
@@ -120,6 +128,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * @see #setYMax(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_YMax()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getYMax();
@@ -146,6 +155,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * @see #setZMin(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_ZMin()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getZMin();
@@ -172,6 +182,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * @see #setZMax(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_ZMax()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getZMax();
@@ -197,6 +208,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * @return the value of the '<em>XDimension</em>' attribute.
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_XDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getXDimension();
@@ -212,6 +224,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * @return the value of the '<em>YDimension</em>' attribute.
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_YDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getYDimension();
@@ -227,6 +240,7 @@ public interface CartesianCoordinatesSetExtent extends EObject {
 	 * @return the value of the '<em>ZDimension</em>' attribute.
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianCoordinatesSetExtent_ZDimension()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getZDimension();

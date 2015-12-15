@@ -13,6 +13,7 @@ import org.eclipse.symphony.addons.geometry.paths.*;
 import org.eclipse.symphony.common.geometry.data.Coordinates;
 import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
 
+import org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 
@@ -101,8 +102,9 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 				T1 result = caseWayPointPath(wayPointPath);
 				if (result == null) result = caseCartesianCoordinatesSet(wayPointPath);
 				if (result == null) result = casePath(wayPointPath);
-				if (result == null) result = caseCoordinatesSet(wayPointPath);
+				if (result == null) result = caseAbstractCartesianCoordinatesSet(wayPointPath);
 				if (result == null) result = caseNode(wayPointPath);
+				if (result == null) result = caseCoordinatesSet(wayPointPath);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -390,6 +392,21 @@ public class Symphony__AddonsGeometryPathsSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public <T extends Coordinates> T1 caseCoordinatesSet(CoordinatesSet<T> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Cartesian Coordinates Set</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Cartesian Coordinates Set</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public <T extends CartesianPositionCoordinates> T1 caseAbstractCartesianCoordinatesSet(AbstractCartesianCoordinatesSet<T> object) {
 		return null;
 	}
 

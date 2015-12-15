@@ -10,6 +10,11 @@ import org.eclipse.symphony.common.processors.Processor;
  * A representation of the model object '<em><b>Digital Elevation Map Sampler</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * A sampler that resamples a DEM based on a configurable resolution.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -31,10 +36,15 @@ public interface DigitalElevationMapSampler extends Processor<DigitalElevationMa
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The target resolution of the DEM the sampler will return.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Target Resolution</em>' attribute.
 	 * @see #setTargetResolution(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getDigitalElevationMapSampler_TargetResolution()
 	 * @model default="1.0" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getTargetResolution();

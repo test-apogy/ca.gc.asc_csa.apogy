@@ -114,11 +114,11 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES: {
-				RGBCartesianPositionCoordinates rgbCartesianPositionCoordinates = (RGBCartesianPositionCoordinates)theEObject;
-				T1 result = caseRGBCartesianPositionCoordinates(rgbCartesianPositionCoordinates);
-				if (result == null) result = caseCartesianPositionCoordinates(rgbCartesianPositionCoordinates);
-				if (result == null) result = caseCoordinates(rgbCartesianPositionCoordinates);
+			case Symphony__CommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES: {
+				ColoredCartesianPositionCoordinates coloredCartesianPositionCoordinates = (ColoredCartesianPositionCoordinates)theEObject;
+				T1 result = caseColoredCartesianPositionCoordinates(coloredCartesianPositionCoordinates);
+				if (result == null) result = caseCartesianPositionCoordinates(coloredCartesianPositionCoordinates);
+				if (result == null) result = caseCoordinates(coloredCartesianPositionCoordinates);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -129,10 +129,26 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Symphony__CommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET: {
+				AbstractCartesianCoordinatesSet<?> abstractCartesianCoordinatesSet = (AbstractCartesianCoordinatesSet<?>)theEObject;
+				T1 result = caseAbstractCartesianCoordinatesSet(abstractCartesianCoordinatesSet);
+				if (result == null) result = caseCoordinatesSet(abstractCartesianCoordinatesSet);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET: {
 				CartesianCoordinatesSet cartesianCoordinatesSet = (CartesianCoordinatesSet)theEObject;
 				T1 result = caseCartesianCoordinatesSet(cartesianCoordinatesSet);
+				if (result == null) result = caseAbstractCartesianCoordinatesSet(cartesianCoordinatesSet);
 				if (result == null) result = caseCoordinatesSet(cartesianCoordinatesSet);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Symphony__CommonGeometryData3DPackage.COLORED_COORDINATES_SET: {
+				ColoredCoordinatesSet coloredCoordinatesSet = (ColoredCoordinatesSet)theEObject;
+				T1 result = caseColoredCoordinatesSet(coloredCoordinatesSet);
+				if (result == null) result = caseAbstractCartesianCoordinatesSet(coloredCoordinatesSet);
+				if (result == null) result = caseCoordinatesSet(coloredCoordinatesSet);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -146,6 +162,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				DigitalElevationMap digitalElevationMap = (DigitalElevationMap)theEObject;
 				T1 result = caseDigitalElevationMap(digitalElevationMap);
 				if (result == null) result = caseCartesianCoordinatesSet(digitalElevationMap);
+				if (result == null) result = caseAbstractCartesianCoordinatesSet(digitalElevationMap);
 				if (result == null) result = caseCoordinatesSet(digitalElevationMap);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -155,6 +172,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				T1 result = caseCartesianCoordinatesMesh(cartesianCoordinatesMesh);
 				if (result == null) result = caseMesh(cartesianCoordinatesMesh);
 				if (result == null) result = caseCartesianCoordinatesSet(cartesianCoordinatesMesh);
+				if (result == null) result = caseAbstractCartesianCoordinatesSet(cartesianCoordinatesMesh);
 				if (result == null) result = caseCoordinatesSet(cartesianCoordinatesMesh);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -164,6 +182,7 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				T1 result = caseCartesianTriangularMesh(cartesianTriangularMesh);
 				if (result == null) result = caseMesh(cartesianTriangularMesh);
 				if (result == null) result = caseCartesianCoordinatesSet(cartesianTriangularMesh);
+				if (result == null) result = caseAbstractCartesianCoordinatesSet(cartesianTriangularMesh);
 				if (result == null) result = caseCoordinatesSet(cartesianTriangularMesh);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -358,14 +377,6 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER: {
-				PointsRangeGager pointsRangeGager = (PointsRangeGager)theEObject;
-				T1 result = casePointsRangeGager(pointsRangeGager);
-				if (result == null) result = caseProcessor(pointsRangeGager);
-				if (result == null) result = caseMonitorable(pointsRangeGager);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case Symphony__CommonGeometryData3DPackage.UNIQUE_POINTS_FILTER: {
 				UniquePointsFilter uniquePointsFilter = (UniquePointsFilter)theEObject;
 				T1 result = caseUniquePointsFilter(uniquePointsFilter);
@@ -418,17 +429,17 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER: {
-				RigidBodyPoseTracker rigidBodyPoseTracker = (RigidBodyPoseTracker)theEObject;
-				T1 result = caseRigidBodyPoseTracker(rigidBodyPoseTracker);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case Symphony__CommonGeometryData3DPackage.POSITION_MARKER: {
 				PositionMarker positionMarker = (PositionMarker)theEObject;
 				T1 result = casePositionMarker(positionMarker);
 				if (result == null) result = caseCartesianPositionCoordinates(positionMarker);
 				if (result == null) result = caseCoordinates(positionMarker);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Symphony__CommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER: {
+				RigidBodyPoseTracker rigidBodyPoseTracker = (RigidBodyPoseTracker)theEObject;
+				T1 result = caseRigidBodyPoseTracker(rigidBodyPoseTracker);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -530,17 +541,17 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>RGB Cartesian Position Coordinates</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Colored Cartesian Position Coordinates</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>RGB Cartesian Position Coordinates</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Colored Cartesian Position Coordinates</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseRGBCartesianPositionCoordinates(RGBCartesianPositionCoordinates object) {
+	public T1 caseColoredCartesianPositionCoordinates(ColoredCartesianPositionCoordinates object) {
 		return null;
 	}
 
@@ -560,6 +571,21 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Cartesian Coordinates Set</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Cartesian Coordinates Set</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public <T extends CartesianPositionCoordinates> T1 caseAbstractCartesianCoordinatesSet(AbstractCartesianCoordinatesSet<T> object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Cartesian Coordinates Set</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -571,6 +597,21 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseCartesianCoordinatesSet(CartesianCoordinatesSet object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Colored Coordinates Set</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Colored Coordinates Set</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseColoredCoordinatesSet(ColoredCoordinatesSet object) {
 		return null;
 	}
 
@@ -991,21 +1032,6 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseTriangularMeshToNormalPointCloud(TriangularMeshToNormalPointCloud object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Points Range Gager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Points Range Gager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 casePointsRangeGager(PointsRangeGager object) {
 		return null;
 	}
 

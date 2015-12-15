@@ -77,9 +77,11 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 			case Symphony__CommonGeometryData3DPackage.SPHERICAL_POLYGON: return createSphericalPolygon();
 			case Symphony__CommonGeometryData3DPackage.SPHERICAL_TRIANGLE: return createSphericalTriangle();
 			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES: return createCartesianPositionCoordinates();
-			case Symphony__CommonGeometryData3DPackage.RGB_CARTESIAN_POSITION_COORDINATES: return createRGBCartesianPositionCoordinates();
+			case Symphony__CommonGeometryData3DPackage.COLORED_CARTESIAN_POSITION_COORDINATES: return createColoredCartesianPositionCoordinates();
 			case Symphony__CommonGeometryData3DPackage.CARTESIAN_ORIENTATION_COORDINATES: return createCartesianOrientationCoordinates();
+			case Symphony__CommonGeometryData3DPackage.ABSTRACT_CARTESIAN_COORDINATES_SET: return createAbstractCartesianCoordinatesSet();
 			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET: return createCartesianCoordinatesSet();
+			case Symphony__CommonGeometryData3DPackage.COLORED_COORDINATES_SET: return createColoredCoordinatesSet();
 			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_SET_EXTENT: return createCartesianCoordinatesSetExtent();
 			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP: return createDigitalElevationMap();
 			case Symphony__CommonGeometryData3DPackage.CARTESIAN_COORDINATES_MESH: return createCartesianCoordinatesMesh();
@@ -108,7 +110,6 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER: return createDigitalElevationMapSampler();
 			case Symphony__CommonGeometryData3DPackage.TRIANGULAR_MESH_NORMALS_CALCULATOR: return createTriangularMeshNormalsCalculator();
 			case Symphony__CommonGeometryData3DPackage.TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD: return createTriangularMeshToNormalPointCloud();
-			case Symphony__CommonGeometryData3DPackage.POINTS_RANGE_GAGER: return createPointsRangeGager();
 			case Symphony__CommonGeometryData3DPackage.UNIQUE_POINTS_FILTER: return createUniquePointsFilter();
 			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER: return createTriangleEdgeLengthTriangularMeshFilter();
 			case Symphony__CommonGeometryData3DPackage.OUTLIER_FILTER: return createOutlierFilter();
@@ -116,8 +117,8 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET: return createRasterPointCloudToCartesianCoordinatesSet();
 			case Symphony__CommonGeometryData3DPackage.MESH_SMOOTHER: return createMeshSmoother();
 			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER: return createVoxelBased3DPointCloudResampler();
-			case Symphony__CommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER: return createRigidBodyPoseTracker();
 			case Symphony__CommonGeometryData3DPackage.POSITION_MARKER: return createPositionMarker();
+			case Symphony__CommonGeometryData3DPackage.RIGID_BODY_POSE_TRACKER: return createRigidBodyPoseTracker();
 			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE: return createSymphony__CommonGeometryData3DFacade();
 			case Symphony__CommonGeometryData3DPackage.DATA3_DIO: return createData3DIO();
 			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS: return createData3DUtils();
@@ -291,9 +292,9 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RGBCartesianPositionCoordinates createRGBCartesianPositionCoordinates() {
-		RGBCartesianPositionCoordinatesImpl rgbCartesianPositionCoordinates = new RGBCartesianPositionCoordinatesImpl();
-		return rgbCartesianPositionCoordinates;
+	public ColoredCartesianPositionCoordinates createColoredCartesianPositionCoordinates() {
+		ColoredCartesianPositionCoordinatesImpl coloredCartesianPositionCoordinates = new ColoredCartesianPositionCoordinatesImpl();
+		return coloredCartesianPositionCoordinates;
 	}
 
 	/**
@@ -311,9 +312,29 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public <T extends CartesianPositionCoordinates> AbstractCartesianCoordinatesSet<T> createAbstractCartesianCoordinatesSet() {
+		AbstractCartesianCoordinatesSetImpl<T> abstractCartesianCoordinatesSet = new AbstractCartesianCoordinatesSetImpl<T>();
+		return abstractCartesianCoordinatesSet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CartesianCoordinatesSet createCartesianCoordinatesSet() {
 		CartesianCoordinatesSetImpl cartesianCoordinatesSet = new CartesianCoordinatesSetImpl();
 		return cartesianCoordinatesSet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ColoredCoordinatesSet createColoredCoordinatesSet() {
+		ColoredCoordinatesSetImpl coloredCoordinatesSet = new ColoredCoordinatesSetImpl();
+		return coloredCoordinatesSet;
 	}
 
 	/**
@@ -594,16 +615,6 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 	public TriangularMeshToNormalPointCloud createTriangularMeshToNormalPointCloud() {
 		TriangularMeshToNormalPointCloudImpl triangularMeshToNormalPointCloud = new TriangularMeshToNormalPointCloudImpl();
 		return triangularMeshToNormalPointCloud;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PointsRangeGager createPointsRangeGager() {
-		PointsRangeGagerImpl pointsRangeGager = new PointsRangeGagerImpl();
-		return pointsRangeGager;
 	}
 
 	/**

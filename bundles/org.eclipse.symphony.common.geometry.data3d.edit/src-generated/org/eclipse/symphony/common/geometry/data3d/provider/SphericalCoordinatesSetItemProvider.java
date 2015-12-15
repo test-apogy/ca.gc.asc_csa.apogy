@@ -108,7 +108,7 @@ public class SphericalCoordinatesSetItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
-				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createRGBCartesianPositionCoordinates()));
+				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createColoredCartesianPositionCoordinates()));
 
 		newChildDescriptors.add
 			(createChildParameter

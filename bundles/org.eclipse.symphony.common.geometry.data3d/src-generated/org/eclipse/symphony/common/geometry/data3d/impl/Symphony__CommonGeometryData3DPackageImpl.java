@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
+import org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianAxis;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMesh;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesMeshPolygonSampler;
@@ -48,6 +49,8 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshPolygonSampler;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMeshSampler;
+import org.eclipse.symphony.common.geometry.data3d.ColoredCartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CubeSamplingShape;
 import org.eclipse.symphony.common.geometry.data3d.Data3DIO;
 import org.eclipse.symphony.common.geometry.data3d.Data3DUtils;
@@ -64,10 +67,8 @@ import org.eclipse.symphony.common.geometry.data3d.NormalPointCloud;
 import org.eclipse.symphony.common.geometry.data3d.OutlierFilter;
 import org.eclipse.symphony.common.geometry.data3d.PointLocator;
 import org.eclipse.symphony.common.geometry.data3d.PointNormalLocator;
-import org.eclipse.symphony.common.geometry.data3d.PointsRangeGager;
 import org.eclipse.symphony.common.geometry.data3d.Pose;
 import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
-import org.eclipse.symphony.common.geometry.data3d.RGBCartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.RasterPointCloud;
 import org.eclipse.symphony.common.geometry.data3d.RasterPointCloudToCartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker;
@@ -134,7 +135,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass rgbCartesianPositionCoordinatesEClass = null;
+	private EClass coloredCartesianPositionCoordinatesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -148,7 +149,21 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass abstractCartesianCoordinatesSetEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass cartesianCoordinatesSetEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass coloredCoordinatesSetEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -345,13 +360,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	private EClass triangularMeshToNormalPointCloudEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass pointsRangeGagerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -761,8 +769,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRGBCartesianPositionCoordinates() {
-		return rgbCartesianPositionCoordinatesEClass;
+	public EClass getColoredCartesianPositionCoordinates() {
+		return coloredCartesianPositionCoordinatesEClass;
 	}
 
 	/**
@@ -770,8 +778,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRGBCartesianPositionCoordinates_Red() {
-		return (EAttribute)rgbCartesianPositionCoordinatesEClass.getEStructuralFeatures().get(0);
+	public EAttribute getColoredCartesianPositionCoordinates_Red() {
+		return (EAttribute)coloredCartesianPositionCoordinatesEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -779,8 +787,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRGBCartesianPositionCoordinates_Green() {
-		return (EAttribute)rgbCartesianPositionCoordinatesEClass.getEStructuralFeatures().get(1);
+	public EAttribute getColoredCartesianPositionCoordinates_Green() {
+		return (EAttribute)coloredCartesianPositionCoordinatesEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -788,8 +796,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRGBCartesianPositionCoordinates_Blue() {
-		return (EAttribute)rgbCartesianPositionCoordinatesEClass.getEStructuralFeatures().get(2);
+	public EAttribute getColoredCartesianPositionCoordinates_Blue() {
+		return (EAttribute)coloredCartesianPositionCoordinatesEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -833,6 +841,24 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAbstractCartesianCoordinatesSet() {
+		return abstractCartesianCoordinatesSetEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractCartesianCoordinatesSet__GetExtent() {
+		return abstractCartesianCoordinatesSetEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCartesianCoordinatesSet() {
 		return cartesianCoordinatesSetEClass;
 	}
@@ -842,8 +868,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getCartesianCoordinatesSet__GetExtent() {
-		return cartesianCoordinatesSetEClass.getEOperations().get(0);
+	public EClass getColoredCoordinatesSet() {
+		return coloredCoordinatesSetEClass;
 	}
 
 	/**
@@ -1427,51 +1453,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDelaunayMesher_Tolerance() {
-		return (EAttribute)delaunayMesherEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDelaunayMesher_Alpha() {
-		return (EAttribute)delaunayMesherEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDelaunayMesher_Offset() {
-		return (EAttribute)delaunayMesherEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDelaunayMesher_BoundingTriangulation() {
-		return (EAttribute)delaunayMesherEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDelaunayMesher_MeshingPlane() {
-		return (EAttribute)delaunayMesherEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getDigitalElevationMapMesher() {
 		return digitalElevationMapMesherEClass;
 	}
@@ -1510,69 +1491,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 */
 	public EClass getTriangularMeshToNormalPointCloud() {
 		return triangularMeshToNormalPointCloudEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPointsRangeGager() {
-		return pointsRangeGagerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPointsRangeGager_MinX() {
-		return (EAttribute)pointsRangeGagerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPointsRangeGager_MaxX() {
-		return (EAttribute)pointsRangeGagerEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPointsRangeGager_MinY() {
-		return (EAttribute)pointsRangeGagerEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPointsRangeGager_MaxY() {
-		return (EAttribute)pointsRangeGagerEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPointsRangeGager_MinZ() {
-		return (EAttribute)pointsRangeGagerEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPointsRangeGager_MaxZ() {
-		return (EAttribute)pointsRangeGagerEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1797,24 +1715,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	public EOperation getRigidBodyPoseTracker__ComputeTransformation__EList() {
-		return rigidBodyPoseTrackerEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRigidBodyPoseTracker__ComputeTransformation__List() {
-		return rigidBodyPoseTrackerEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRigidBodyPoseTracker__AddPositionMarkers__List() {
 		return rigidBodyPoseTrackerEClass.getEOperations().get(2);
 	}
 
@@ -1823,8 +1723,26 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRigidBodyPoseTracker__RemovePositionMarkers__List() {
+	public EOperation getRigidBodyPoseTracker__ComputeTransformation__List() {
 		return rigidBodyPoseTrackerEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRigidBodyPoseTracker__AddPositionMarkers__List() {
+		return rigidBodyPoseTrackerEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRigidBodyPoseTracker__RemovePositionMarkers__List() {
+		return rigidBodyPoseTrackerEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -2502,18 +2420,22 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		createEAttribute(cartesianPositionCoordinatesEClass, CARTESIAN_POSITION_COORDINATES__Z);
 		createEOperation(cartesianPositionCoordinatesEClass, CARTESIAN_POSITION_COORDINATES___AS_POINT3D);
 
-		rgbCartesianPositionCoordinatesEClass = createEClass(RGB_CARTESIAN_POSITION_COORDINATES);
-		createEAttribute(rgbCartesianPositionCoordinatesEClass, RGB_CARTESIAN_POSITION_COORDINATES__RED);
-		createEAttribute(rgbCartesianPositionCoordinatesEClass, RGB_CARTESIAN_POSITION_COORDINATES__GREEN);
-		createEAttribute(rgbCartesianPositionCoordinatesEClass, RGB_CARTESIAN_POSITION_COORDINATES__BLUE);
+		coloredCartesianPositionCoordinatesEClass = createEClass(COLORED_CARTESIAN_POSITION_COORDINATES);
+		createEAttribute(coloredCartesianPositionCoordinatesEClass, COLORED_CARTESIAN_POSITION_COORDINATES__RED);
+		createEAttribute(coloredCartesianPositionCoordinatesEClass, COLORED_CARTESIAN_POSITION_COORDINATES__GREEN);
+		createEAttribute(coloredCartesianPositionCoordinatesEClass, COLORED_CARTESIAN_POSITION_COORDINATES__BLUE);
 
 		cartesianOrientationCoordinatesEClass = createEClass(CARTESIAN_ORIENTATION_COORDINATES);
 		createEAttribute(cartesianOrientationCoordinatesEClass, CARTESIAN_ORIENTATION_COORDINATES__XROTATION);
 		createEAttribute(cartesianOrientationCoordinatesEClass, CARTESIAN_ORIENTATION_COORDINATES__YROTATION);
 		createEAttribute(cartesianOrientationCoordinatesEClass, CARTESIAN_ORIENTATION_COORDINATES__ZROTATION);
 
+		abstractCartesianCoordinatesSetEClass = createEClass(ABSTRACT_CARTESIAN_COORDINATES_SET);
+		createEOperation(abstractCartesianCoordinatesSetEClass, ABSTRACT_CARTESIAN_COORDINATES_SET___GET_EXTENT);
+
 		cartesianCoordinatesSetEClass = createEClass(CARTESIAN_COORDINATES_SET);
-		createEOperation(cartesianCoordinatesSetEClass, CARTESIAN_COORDINATES_SET___GET_EXTENT);
+
+		coloredCoordinatesSetEClass = createEClass(COLORED_COORDINATES_SET);
 
 		cartesianCoordinatesSetExtentEClass = createEClass(CARTESIAN_COORDINATES_SET_EXTENT);
 		createEAttribute(cartesianCoordinatesSetExtentEClass, CARTESIAN_COORDINATES_SET_EXTENT__XMIN);
@@ -2602,11 +2524,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		createEOperation(pointNormalLocatorEClass, POINT_NORMAL_LOCATOR___FIND_CLOSEST_NPOINT_IDS__INT_POINT3D_VECTOR3D);
 
 		delaunayMesherEClass = createEClass(DELAUNAY_MESHER);
-		createEAttribute(delaunayMesherEClass, DELAUNAY_MESHER__TOLERANCE);
-		createEAttribute(delaunayMesherEClass, DELAUNAY_MESHER__ALPHA);
-		createEAttribute(delaunayMesherEClass, DELAUNAY_MESHER__OFFSET);
-		createEAttribute(delaunayMesherEClass, DELAUNAY_MESHER__BOUNDING_TRIANGULATION);
-		createEAttribute(delaunayMesherEClass, DELAUNAY_MESHER__MESHING_PLANE);
 
 		digitalElevationMapMesherEClass = createEClass(DIGITAL_ELEVATION_MAP_MESHER);
 
@@ -2616,14 +2533,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		triangularMeshNormalsCalculatorEClass = createEClass(TRIANGULAR_MESH_NORMALS_CALCULATOR);
 
 		triangularMeshToNormalPointCloudEClass = createEClass(TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD);
-
-		pointsRangeGagerEClass = createEClass(POINTS_RANGE_GAGER);
-		createEAttribute(pointsRangeGagerEClass, POINTS_RANGE_GAGER__MIN_X);
-		createEAttribute(pointsRangeGagerEClass, POINTS_RANGE_GAGER__MAX_X);
-		createEAttribute(pointsRangeGagerEClass, POINTS_RANGE_GAGER__MIN_Y);
-		createEAttribute(pointsRangeGagerEClass, POINTS_RANGE_GAGER__MAX_Y);
-		createEAttribute(pointsRangeGagerEClass, POINTS_RANGE_GAGER__MIN_Z);
-		createEAttribute(pointsRangeGagerEClass, POINTS_RANGE_GAGER__MAX_Z);
 
 		uniquePointsFilterEClass = createEClass(UNIQUE_POINTS_FILTER);
 
@@ -2654,15 +2563,15 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		createEAttribute(voxelBased3DPointCloudResamplerEClass, VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__MINIMUM_NUMBER_OF_POINT_PER_VOXEL);
 		createEAttribute(voxelBased3DPointCloudResamplerEClass, VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER__TILE_RESOLUTION);
 
-		rigidBodyPoseTrackerEClass = createEClass(RIGID_BODY_POSE_TRACKER);
-		createEReference(rigidBodyPoseTrackerEClass, RIGID_BODY_POSE_TRACKER__POSITION_MARKERS_AT_ORIGIN);
-		createEOperation(rigidBodyPoseTrackerEClass, RIGID_BODY_POSE_TRACKER___COMPUTE_TRANSFORMATION__ELIST);
-		createEOperation(rigidBodyPoseTrackerEClass, RIGID_BODY_POSE_TRACKER___COMPUTE_TRANSFORMATION__LIST);
-		createEOperation(rigidBodyPoseTrackerEClass, RIGID_BODY_POSE_TRACKER___ADD_POSITION_MARKERS__LIST);
-		createEOperation(rigidBodyPoseTrackerEClass, RIGID_BODY_POSE_TRACKER___REMOVE_POSITION_MARKERS__LIST);
-
 		positionMarkerEClass = createEClass(POSITION_MARKER);
 		createEAttribute(positionMarkerEClass, POSITION_MARKER__IDENTIFIER);
+
+		rigidBodyPoseTrackerEClass = createEClass(RIGID_BODY_POSE_TRACKER);
+		createEReference(rigidBodyPoseTrackerEClass, RIGID_BODY_POSE_TRACKER__POSITION_MARKERS_AT_ORIGIN);
+		createEOperation(rigidBodyPoseTrackerEClass, RIGID_BODY_POSE_TRACKER___ADD_POSITION_MARKERS__LIST);
+		createEOperation(rigidBodyPoseTrackerEClass, RIGID_BODY_POSE_TRACKER___REMOVE_POSITION_MARKERS__LIST);
+		createEOperation(rigidBodyPoseTrackerEClass, RIGID_BODY_POSE_TRACKER___COMPUTE_TRANSFORMATION__ELIST);
+		createEOperation(rigidBodyPoseTrackerEClass, RIGID_BODY_POSE_TRACKER___COMPUTE_TRANSFORMATION__LIST);
 
 		symphony__CommonGeometryData3DFacadeEClass = createEClass(SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE);
 		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__DOUBLE_DOUBLE_DOUBLE);
@@ -2769,6 +2678,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		Symphony__CommonProcessorsPackage theSymphony__CommonProcessorsPackage = (Symphony__CommonProcessorsPackage)EPackage.Registry.INSTANCE.getEPackage(Symphony__CommonProcessorsPackage.eNS_URI);
 
 		// Create type parameters
+		ETypeParameter abstractCartesianCoordinatesSetEClass_T = addETypeParameter(abstractCartesianCoordinatesSetEClass, "T");
 		ETypeParameter sphereSamplingShapeEClass_PolygonType = addETypeParameter(sphereSamplingShapeEClass, "PolygonType");
 		ETypeParameter cubeSamplingShapeEClass_PolygonType = addETypeParameter(cubeSamplingShapeEClass, "PolygonType");
 		addETypeParameter(listEDataType, "T");
@@ -2780,7 +2690,9 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		addETypeParameter(eListEDataType, "T");
 
 		// Set bounds for type parameters
-		EGenericType g1 = createEGenericType(this.getCartesianPolygon());
+		EGenericType g1 = createEGenericType(this.getCartesianPositionCoordinates());
+		abstractCartesianCoordinatesSetEClass_T.getEBounds().add(g1);
+		g1 = createEGenericType(this.getCartesianPolygon());
 		sphereSamplingShapeEClass_PolygonType.getEBounds().add(g1);
 		g1 = createEGenericType(this.getCartesianPolygon());
 		cubeSamplingShapeEClass_PolygonType.getEBounds().add(g1);
@@ -2797,12 +2709,20 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		sphericalPolygonEClass.getEGenericSuperTypes().add(g1);
 		sphericalTriangleEClass.getESuperTypes().add(this.getSphericalPolygon());
 		cartesianPositionCoordinatesEClass.getESuperTypes().add(theSymphony__CommonGeometryDataPackage.getCoordinates());
-		rgbCartesianPositionCoordinatesEClass.getESuperTypes().add(this.getCartesianPositionCoordinates());
+		coloredCartesianPositionCoordinatesEClass.getESuperTypes().add(this.getCartesianPositionCoordinates());
 		cartesianOrientationCoordinatesEClass.getESuperTypes().add(theSymphony__CommonGeometryDataPackage.getCoordinates());
 		g1 = createEGenericType(theSymphony__CommonGeometryDataPackage.getCoordinatesSet());
+		g2 = createEGenericType(abstractCartesianCoordinatesSetEClass_T);
+		g1.getETypeArguments().add(g2);
+		abstractCartesianCoordinatesSetEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getAbstractCartesianCoordinatesSet());
 		g2 = createEGenericType(this.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
 		cartesianCoordinatesSetEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getAbstractCartesianCoordinatesSet());
+		g2 = createEGenericType(this.getColoredCartesianPositionCoordinates());
+		g1.getETypeArguments().add(g2);
+		coloredCoordinatesSetEClass.getEGenericSuperTypes().add(g1);
 		digitalElevationMapEClass.getESuperTypes().add(this.getCartesianCoordinatesSet());
 		g1 = createEGenericType(theSymphony__CommonGeometryDataPackage.getMesh());
 		g2 = createEGenericType(this.getCartesianPositionCoordinates());
@@ -2928,12 +2848,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(this.getCartesianCoordinatesSet());
 		g1.getETypeArguments().add(g2);
-		pointsRangeGagerEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
-		g2 = createEGenericType(this.getCartesianCoordinatesSet());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(this.getCartesianCoordinatesSet());
-		g1.getETypeArguments().add(g2);
 		uniquePointsFilterEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
 		g2 = createEGenericType(this.getCartesianCoordinatesSet());
@@ -2980,19 +2894,23 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 
 		initEOperation(getCartesianPositionCoordinates__AsPoint3d(), this.getPoint3d(), "asPoint3d", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(rgbCartesianPositionCoordinatesEClass, RGBCartesianPositionCoordinates.class, "RGBCartesianPositionCoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRGBCartesianPositionCoordinates_Red(), theEcorePackage.getEByte(), "red", null, 0, 1, RGBCartesianPositionCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRGBCartesianPositionCoordinates_Green(), theEcorePackage.getEByte(), "green", null, 0, 1, RGBCartesianPositionCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRGBCartesianPositionCoordinates_Blue(), theEcorePackage.getEByte(), "blue", null, 0, 1, RGBCartesianPositionCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(coloredCartesianPositionCoordinatesEClass, ColoredCartesianPositionCoordinates.class, "ColoredCartesianPositionCoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getColoredCartesianPositionCoordinates_Red(), theEcorePackage.getEByte(), "red", null, 0, 1, ColoredCartesianPositionCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getColoredCartesianPositionCoordinates_Green(), theEcorePackage.getEByte(), "green", null, 0, 1, ColoredCartesianPositionCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getColoredCartesianPositionCoordinates_Blue(), theEcorePackage.getEByte(), "blue", null, 0, 1, ColoredCartesianPositionCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cartesianOrientationCoordinatesEClass, CartesianOrientationCoordinates.class, "CartesianOrientationCoordinates", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCartesianOrientationCoordinates_XRotation(), theEcorePackage.getEDouble(), "xRotation", null, 0, 1, CartesianOrientationCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCartesianOrientationCoordinates_YRotation(), theEcorePackage.getEDouble(), "yRotation", null, 0, 1, CartesianOrientationCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCartesianOrientationCoordinates_ZRotation(), theEcorePackage.getEDouble(), "zRotation", null, 0, 1, CartesianOrientationCoordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(abstractCartesianCoordinatesSetEClass, AbstractCartesianCoordinatesSet.class, "AbstractCartesianCoordinatesSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getAbstractCartesianCoordinatesSet__GetExtent(), this.getCartesianCoordinatesSetExtent(), "getExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		initEClass(cartesianCoordinatesSetEClass, CartesianCoordinatesSet.class, "CartesianCoordinatesSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEOperation(getCartesianCoordinatesSet__GetExtent(), this.getCartesianCoordinatesSetExtent(), "getExtent", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEClass(coloredCoordinatesSetEClass, ColoredCoordinatesSet.class, "ColoredCoordinatesSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(cartesianCoordinatesSetExtentEClass, CartesianCoordinatesSetExtent.class, "CartesianCoordinatesSetExtent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCartesianCoordinatesSetExtent_XMin(), theEcorePackage.getEDouble(), "xMin", null, 0, 1, CartesianCoordinatesSetExtent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3142,11 +3060,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		addEParameter(op, this.getVector3d(), "normal", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(delaunayMesherEClass, DelaunayMesher.class, "DelaunayMesher", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDelaunayMesher_Tolerance(), theEcorePackage.getEDouble(), "tolerance", null, 0, 1, DelaunayMesher.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDelaunayMesher_Alpha(), theEcorePackage.getEDouble(), "alpha", null, 0, 1, DelaunayMesher.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDelaunayMesher_Offset(), theEcorePackage.getEDouble(), "offset", "0.75", 0, 1, DelaunayMesher.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDelaunayMesher_BoundingTriangulation(), theEcorePackage.getEBoolean(), "boundingTriangulation", null, 0, 1, DelaunayMesher.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDelaunayMesher_MeshingPlane(), this.getCartesianPlane(), "meshingPlane", null, 0, 1, DelaunayMesher.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(digitalElevationMapMesherEClass, DigitalElevationMapMesher.class, "DigitalElevationMapMesher", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3156,14 +3069,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		initEClass(triangularMeshNormalsCalculatorEClass, TriangularMeshNormalsCalculator.class, "TriangularMeshNormalsCalculator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(triangularMeshToNormalPointCloudEClass, TriangularMeshToNormalPointCloud.class, "TriangularMeshToNormalPointCloud", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(pointsRangeGagerEClass, PointsRangeGager.class, "PointsRangeGager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPointsRangeGager_MinX(), theEcorePackage.getEDouble(), "minX", "-1.0", 0, 1, PointsRangeGager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPointsRangeGager_MaxX(), theEcorePackage.getEDouble(), "maxX", "1.0", 0, 1, PointsRangeGager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPointsRangeGager_MinY(), theEcorePackage.getEDouble(), "minY", "-1.0", 0, 1, PointsRangeGager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPointsRangeGager_MaxY(), theEcorePackage.getEDouble(), "maxY", "1.0", 0, 1, PointsRangeGager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPointsRangeGager_MinZ(), theEcorePackage.getEDouble(), "minZ", "-1.0", 0, 1, PointsRangeGager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPointsRangeGager_MaxZ(), theEcorePackage.getEDouble(), "maxZ", "1.0", 0, 1, PointsRangeGager.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(uniquePointsFilterEClass, UniquePointsFilter.class, "UniquePointsFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3203,22 +3108,11 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		initEAttribute(getVoxelBased3DPointCloudResampler_MinimumNumberOfPointPerVoxel(), theEcorePackage.getEInt(), "minimumNumberOfPointPerVoxel", "1", 0, 1, VoxelBased3DPointCloudResampler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVoxelBased3DPointCloudResampler_TileResolution(), theEcorePackage.getEDouble(), "tileResolution", "5.0", 0, 1, VoxelBased3DPointCloudResampler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(positionMarkerEClass, PositionMarker.class, "PositionMarker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPositionMarker_Identifier(), theEcorePackage.getEString(), "identifier", null, 0, 1, PositionMarker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(rigidBodyPoseTrackerEClass, RigidBodyPoseTracker.class, "RigidBodyPoseTracker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRigidBodyPoseTracker_PositionMarkersAtOrigin(), this.getPositionMarker(), null, "positionMarkersAtOrigin", null, 0, -1, RigidBodyPoseTracker.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-
-		op = initEOperation(getRigidBodyPoseTracker__ComputeTransformation__EList(), this.getPoint3d(), "computeTransformation", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(this.getEList());
-		g2 = createEGenericType(this.getPositionMarker());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "markerPositionsToTrack", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEException(op, this.getException());
-
-		op = initEOperation(getRigidBodyPoseTracker__ComputeTransformation__List(), this.getMatrix4d(), "computeTransformation", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(this.getList());
-		g2 = createEGenericType(this.getPositionMarker());
-		g1.getETypeArguments().add(g2);
-		addEParameter(op, g1, "markerPositionsToTrack", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEException(op, this.getException());
 
 		op = initEOperation(getRigidBodyPoseTracker__AddPositionMarkers__List(), null, "addPositionMarkers", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
@@ -3233,8 +3127,19 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "markers", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		initEClass(positionMarkerEClass, PositionMarker.class, "PositionMarker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPositionMarker_Identifier(), theEcorePackage.getEString(), "identifier", null, 0, 1, PositionMarker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		op = initEOperation(getRigidBodyPoseTracker__ComputeTransformation__EList(), this.getPoint3d(), "computeTransformation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getEList());
+		g2 = createEGenericType(this.getPositionMarker());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "markerPositionsToTrack", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
+
+		op = initEOperation(getRigidBodyPoseTracker__ComputeTransformation__List(), this.getMatrix4d(), "computeTransformation", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getPositionMarker());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "markerPositionsToTrack", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEException(op, this.getException());
 
 		initEClass(symphony__CommonGeometryData3DFacadeEClass, Symphony__CommonGeometryData3DFacade.class, "Symphony__CommonGeometryData3DFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3518,22 +3423,556 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 			 "basePackage", "org.eclipse.symphony.common.geometry"
 		   });	
 		addAnnotation
+		  (cartesianAxisEEnum, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nIdentifies an axis of the Cartesian frame of reference."
+		   });	
+		addAnnotation
+		  (cartesianPlaneEEnum, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nIdentifies a plane of the Cartesian frame of reference."
+		   });	
+		addAnnotation
+		  (cartesianPolygonEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA polygon having Cartesian position as its vertices."
+		   });	
+		addAnnotation
+		  (getCartesianPolygon_Surface(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe surface of the polygon.",
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m\u00b2"
+		   });	
+		addAnnotation
+		  (getCartesianPolygon_Normal(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe normal of the polygon."
+		   });	
+		addAnnotation
+		  (getCartesianPolygon_Centroid(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe centroid of the polygon."
+		   });	
+		addAnnotation
+		  (cartesianTriangleEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA Cartesian polygon that has exactly 3 vertices."
+		   });	
+		addAnnotation
+		  (cartesianPositionCoordinatesEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA specialization of Coordinates that defines Cartesian coordinates."
+		   });	
+		addAnnotation
+		  (getCartesianPositionCoordinates__AsPoint3d(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the position as a Point3d."
+		   });	
+		addAnnotation
+		  (getCartesianPositionCoordinates_X(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getCartesianPositionCoordinates_Y(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getCartesianPositionCoordinates_Z(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (coloredCartesianPositionCoordinatesEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA specialization of CartesianPositionCoordinates that assigns a color to the position."
+		   });	
+		addAnnotation
+		  (getColoredCartesianPositionCoordinates_Red(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe red component, between 0 and 255."
+		   });	
+		addAnnotation
+		  (getColoredCartesianPositionCoordinates_Green(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe green component, between 0 and 255."
+		   });	
+		addAnnotation
+		  (getColoredCartesianPositionCoordinates_Blue(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe blue component, between 0 and 255."
+		   });	
+		addAnnotation
+		  (cartesianOrientationCoordinatesEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA specialization of Coordinates that represent an orientation as 3 Euler angles."
+		   });	
+		addAnnotation
+		  (getCartesianOrientationCoordinates_XRotation(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "rad"
+		   });	
+		addAnnotation
+		  (getCartesianOrientationCoordinates_YRotation(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "rad"
+		   });	
+		addAnnotation
+		  (getCartesianOrientationCoordinates_ZRotation(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "rad"
+		   });	
+		addAnnotation
+		  (getAbstractCartesianCoordinatesSet__GetExtent(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns the extent of the point cloud."
+		   });	
+		addAnnotation
+		  (cartesianCoordinatesSetEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA set containing CartesianPositionCoordinates. It represent a point cloud."
+		   });	
+		addAnnotation
+		  (coloredCoordinatesSetEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA set containing ColoredCartesianPositionCoordinates. It represents a point cloud."
+		   });	
+		addAnnotation
+		  (cartesianCoordinatesSetExtentEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nClass that defines the volumetric extent of a set of cartesian coordinates."
+		   });	
+		addAnnotation
+		  (getCartesianCoordinatesSetExtent_XMin(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getCartesianCoordinatesSetExtent_XMax(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getCartesianCoordinatesSetExtent_YMin(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getCartesianCoordinatesSetExtent_YMax(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getCartesianCoordinatesSetExtent_ZMin(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getCartesianCoordinatesSetExtent_ZMax(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getCartesianCoordinatesSetExtent_XDimension(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getCartesianCoordinatesSetExtent_YDimension(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getCartesianCoordinatesSetExtent_ZDimension(), 
+		   source, 
+		   new String[] {
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (cartesianTriangularMeshEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nClass representing a set of triangle defining a surface."
+		   });	
+		addAnnotation
+		  (sphericalCoordinatesEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA spherical coordinate.\n@see https://en.wikipedia.org/wiki/Spherical_coordinate_system"
+		   });	
+		addAnnotation
+		  (getSphericalCoordinates_Phi(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe azimuthal angle (about Z), in radians.",
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "rad"
+		   });	
+		addAnnotation
+		  (getSphericalCoordinates_Theta(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe polar angle, in radians.",
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "rad"
+		   });	
+		addAnnotation
+		  (getSphericalCoordinates_R(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe radius, in meters.",
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (poseEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nDefines a full position and orientation in a Cartesian frame."
+		   });	
+		addAnnotation
+		  (sphereSamplingShapeEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA spherical sampling shape."
+		   });	
+		addAnnotation
+		  (getSphereSamplingShape_Radius(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe radius of the sampling sphere, in meters.",
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getSphereSamplingShape_Center(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe position of the center of the sphere."
+		   });	
+		addAnnotation
+		  (getSphereSamplingShape_IncludeJustTouching(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nWhether or not to include polygon that have a vertex on the boundary."
+		   });	
+		addAnnotation
+		  (cubeSamplingShapeEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA Cube sampling shape."
+		   });	
+		addAnnotation
+		  (getCubeSamplingShape_Corner1(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe position of the first corner defining the cube (or rectangular prism)."
+		   });	
+		addAnnotation
+		  (getCubeSamplingShape_Corner2(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe position of the second corner defining the cube (or rectangular prism)."
+		   });	
+		addAnnotation
+		  (getCubeSamplingShape_IncludeJustTouching(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nWhether or not to include polygon that have a vertex on the boundary."
+		   });	
+		addAnnotation
+		  (meshLocalizerEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nClass that provides an estimate of relative pose between two meshes, assuming the two meshes cove overlapping area of a surface."
+		   });	
+		addAnnotation
 		  (getMeshLocalizer__Localize__CartesianTriangularMesh_Matrix4d_CartesianTriangularMesh_Matrix4d(), 
 		   source, 
 		   new String[] {
-			 "documentation", "Localize a floating mesh with respect to a fixed mesh.\nThe transform returned is the transform between the floating\nmesh and the origin (i.e. a revised version of the\nfloatingMeshTransformEstimate)."
+			 "documentation", "Localize a floating mesh with respect to a fixed mesh.\nThe transform returned is the transform between the floating mesh and the origin (i.e. a revised version of the floatingMeshTransformEstimate).\n@param fixedMesh The mesh that is considered fixed.\n@param fixedMeshTransform The transform of the fixed mesh relative to a common reference frame.\n@param floatingMesh The mesh that is considered floating relative to the fixed one.\n@param floatingMeshTransformEstimate An starting estimate of the pose of the floating mesh relative to the common reference frame."
+		   });	
+		addAnnotation
+		  (delaunayMesherEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nMesher that uses the Quick Hull method to create a mesh from a point cloud. The algorithm is a three dimensional implementation of Quickhull by John E. Lloyd, as\ndescribed in Barber, Dobkin, and Huhdanpaa, <ahref=http://citeseer.ist.psu.edu/barber96quickhull.html> ``The Quickhull Algorithm for Convex Hulls\'\'</a> (ACM Transactions on Mathematical Software, Vol. 22, No. 4, December 1996)\nThis implementation assumes that the meshing plane is XY."
+		   });	
+		addAnnotation
+		  (digitalElevationMapMesherEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nMesher for a DEM."
+		   });	
+		addAnnotation
+		  (digitalElevationMapSamplerEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA sampler that resamples a DEM based on a configurable resolution."
+		   });	
+		addAnnotation
+		  (getDigitalElevationMapSampler_TargetResolution(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe target resolution of the DEM the sampler will return.",
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (uniquePointsFilterEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nFilters out duplicate points from a point cloud."
+		   });	
+		addAnnotation
+		  (triangleEdgeLengthTriangularMeshFilterEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nFilters a triangular mesh based on the range of the triangle center relative to the origin and\nthe length of the longest edge the triangle."
+		   });	
+		addAnnotation
+		  (getTriangleEdgeLengthTriangularMeshFilter__Filter__CartesianTriangularMesh(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nApplies the filter to a triangular mesh.\n@param input The input triangular mesh.\n@return A triangular mesh containing only the triangles that passed the filter."
+		   });	
+		addAnnotation
+		  (getTriangleEdgeLengthTriangularMeshFilter_MinimumRange(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe minimum range of the center of the triangle with respect to the origin. Triangles with their center closer\nto the origin than this value are filtered out.",
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getTriangleEdgeLengthTriangularMeshFilter_MaximumRange(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe maximum range of the center of the triangle with respect to the origin. Triangles with their center further\nfrom the origin than this value are filtered out.",
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getTriangleEdgeLengthTriangularMeshFilter_MaximumEdgeLength(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe maximum length of a edge that a triangle can have to pass the filter.",
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (outlierFilterEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nFilters out point that a than a specified distance from any neighbor."
+		   });	
+		addAnnotation
+		  (getOutlierFilter_MaxDistance(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe maximum distance a point can be from its closest neighbor an not be filtered out.",
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (rasterPointCloudEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nTODO duplicate of DigitalElevationMap ? Should move the methods to DigitalElevationMap."
+		   });	
+		addAnnotation
+		  (rasterPointCloudToCartesianCoordinatesSetEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nShould be removed when RasterPointCloud is integrated in DigitalElevationMap."
+		   });	
+		addAnnotation
+		  (meshSmootherEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nTODO : Define the algorithm used."
+		   });	
+		addAnnotation
+		  (getMeshSmoother_NumberOfIterations(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nTODO : Defines what this does."
 		   });	
 		addAnnotation
 		  (voxelBased3DPointCloudResamplerEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "This processor sub-samples a point cloud using a voxel\napproach based on an implementation of J. Bakambu from MDA."
+			 "documentation", "This processor sub-samples a point cloud using a voxel approach based on an implementation of J. Bakambu from MDA."
+		   });	
+		addAnnotation
+		  (getVoxelBased3DPointCloudResampler_ResolutionX(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nVoxel resolution along the X axis.",
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getVoxelBased3DPointCloudResampler_ResolutionY(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nVoxel resolution along the Y axis.",
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getVoxelBased3DPointCloudResampler_ResolutionZ(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nVoxel resolution along the Z axis.",
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (getVoxelBased3DPointCloudResampler_MinimumNumberOfPointPerVoxel(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nMinimum number of points per voxel required to have a voxel considered occupied."
+		   });	
+		addAnnotation
+		  (getVoxelBased3DPointCloudResampler_TileResolution(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nTODO : Define what this does.",
+			 "notify", "true",
+			 "children", "false",
+			 "symphony_units", "m"
+		   });	
+		addAnnotation
+		  (positionMarkerEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA Cartesian position with an ID."
+		   });	
+		addAnnotation
+		  (getPositionMarker_Identifier(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe identifier of the position."
+		   });	
+		addAnnotation
+		  (rigidBodyPoseTrackerEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nTODO"
+		   });	
+		addAnnotation
+		  (getRigidBodyPoseTracker__AddPositionMarkers__List(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nAdds a list of position marker to the one defining the rigid body.\n@param markers The list of position markers."
+		   });	
+		addAnnotation
+		  (getRigidBodyPoseTracker__RemovePositionMarkers__List(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nRemoves a list of position marker from the one defining the rigid body.\n@param markers The list of position markers."
 		   });	
 		addAnnotation
 		  (getRigidBodyPoseTracker__ComputeTransformation__EList(), 
 		   source, 
 		   new String[] {
-			 "documentation", "This method computes the 3D rigid body transformation between two 3D\ndata sets. First, the rotation matrix is computed using the Singular\nValues Decomposition (SVD) approach. Then, translation composent is\ncomputed. Finally, rotation and translation components are packed into\nan homogenous 4x4 matrix.\nNote: At least 3 markers are required to solve the 3D pose. If more than\n3 markers are specified, the best fit (minimizing the root meaning square\nerror) will be found."
+			 "documentation", "*\nThis method computes the 3D rigid body transformation between two 3D data sets. First, the rotation matrix is computed using the Singular\nValues Decomposition (SVD) approach. Then, the translation component is computed. Finally, rotation and translation components are packed\ninto an homogenous 4x4 matrix. Note: At least 3 markers are required to solve the 3D pose. If more than 3 markers are specified, the best fit\n(minimizing the root meaning square error) will be found.\n@param markerPositionsToTrack The list of position of the marker for which to find the body position.\n@return The position of the rigid body."
+		   });	
+		addAnnotation
+		  (getRigidBodyPoseTracker__ComputeTransformation__List(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nComputes the 3D rigid body transformation between the markers defining the rigid body and a new set of the position markers.\n@param markerPositionsToTrack The list of position of the marker for which to find the body pose.\n@return The pose of the rigid body, represented as a 4x4 homogenous matrix."
+		   });	
+		addAnnotation
+		  (getRigidBodyPoseTracker_PositionMarkersAtOrigin(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nThe list of position markers for the rigid body at the origin."
+		   });	
+		addAnnotation
+		  (data3DIOEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nClass defining methods used to save / load 3D data to / from files."
 		   });
 	}
 

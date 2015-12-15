@@ -11,6 +11,11 @@ import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
  * A representation of the model object '<em><b>Cube Sampling Shape</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * A Cube sampling shape.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -33,6 +38,10 @@ public interface CubeSamplingShape<PolygonType extends CartesianPolygon> extends
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The position of the first corner defining the cube (or rectangular prism).
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Corner1</em>' reference.
 	 * @see #setCorner1(CartesianPositionCoordinates)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCubeSamplingShape_Corner1()
@@ -59,6 +68,10 @@ public interface CubeSamplingShape<PolygonType extends CartesianPolygon> extends
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The position of the second corner defining the cube (or rectangular prism).
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Corner2</em>' reference.
 	 * @see #setCorner2(CartesianPositionCoordinates)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCubeSamplingShape_Corner2()
@@ -86,6 +99,10 @@ public interface CubeSamplingShape<PolygonType extends CartesianPolygon> extends
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Whether or not to include polygon that have a vertex on the boundary.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Include Just Touching</em>' attribute.
 	 * @see #setIncludeJustTouching(boolean)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCubeSamplingShape_IncludeJustTouching()
