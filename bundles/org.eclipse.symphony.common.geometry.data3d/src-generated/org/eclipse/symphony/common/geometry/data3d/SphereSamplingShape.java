@@ -11,6 +11,11 @@ import org.eclipse.symphony.common.geometry.data.PolygonSamplingShape;
  * A representation of the model object '<em><b>Sphere Sampling Shape</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * A spherical sampling shape.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -34,10 +39,15 @@ public interface SphereSamplingShape<PolygonType extends CartesianPolygon> exten
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The radius of the sampling sphere, in meters.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Radius</em>' attribute.
 	 * @see #setRadius(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphereSamplingShape_Radius()
 	 * @model default="1.0" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getRadius();
@@ -60,6 +70,10 @@ public interface SphereSamplingShape<PolygonType extends CartesianPolygon> exten
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The position of the center of the sphere.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Center</em>' reference.
 	 * @see #setCenter(CartesianPositionCoordinates)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphereSamplingShape_Center()
@@ -87,6 +101,10 @@ public interface SphereSamplingShape<PolygonType extends CartesianPolygon> exten
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Whether or not to include polygon that have a vertex on the boundary.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Include Just Touching</em>' attribute.
 	 * @see #setIncludeJustTouching(boolean)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getSphereSamplingShape_IncludeJustTouching()

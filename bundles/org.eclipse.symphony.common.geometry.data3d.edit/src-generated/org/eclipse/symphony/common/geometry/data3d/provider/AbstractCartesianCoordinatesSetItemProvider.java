@@ -1,7 +1,5 @@
 /**
- * Canadian Space Agency 2008.
- *
- * $Id: SphericalTriangularMeshItemProvider.java,v 1.3.4.2 2015/05/21 15:50:28 pallard Exp $
+ * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
 package org.eclipse.symphony.common.geometry.data3d.provider;
 
@@ -11,27 +9,30 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+
 import org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage;
-import org.eclipse.symphony.common.geometry.data.provider.MeshItemProvider;
+
+import org.eclipse.symphony.common.geometry.data.provider.CoordinatesSetItemProvider;
+
+import org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.SphericalTriangularMesh;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.SphericalTriangularMesh} object.
+ * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SphericalTriangularMeshItemProvider
-	extends MeshItemProvider {
+public class AbstractCartesianCoordinatesSetItemProvider extends CoordinatesSetItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SphericalTriangularMeshItemProvider(AdapterFactory adapterFactory) {
+	public AbstractCartesianCoordinatesSetItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -51,30 +52,31 @@ public class SphericalTriangularMeshItemProvider
 	}
 
 	/**
-	 * This returns SphericalTriangularMesh.gif.
+	 * This returns AbstractCartesianCoordinatesSet.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/SphericalTriangularMesh"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/AbstractCartesianCoordinatesSet"));
 	}
 
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
-		List<?> labelValue = ((SphericalTriangularMesh)object).getNormals();
+		List labelValue = ((AbstractCartesianCoordinatesSet<?>)object).getNormals();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
-			getString("_UI_SphericalTriangularMesh_type") :
-			getString("_UI_SphericalTriangularMesh_type") + " " + label;
+			getString("_UI_AbstractCartesianCoordinatesSet_type") :
+			getString("_UI_AbstractCartesianCoordinatesSet_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -129,26 +131,6 @@ public class SphericalTriangularMeshItemProvider
 			(createChildParameter
 				(Symphony__CommonGeometryDataPackage.Literals.COORDINATES_SET__POINTS,
 				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createPositionMarker()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
-				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianPolygon()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
-				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangle()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
-				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphericalPolygon()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonGeometryDataPackage.Literals.MESH__POLYGONS,
-				 Symphony__CommonGeometryData3DFactory.eINSTANCE.createSphericalTriangle()));
 	}
 
 }

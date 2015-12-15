@@ -9,6 +9,11 @@ package org.eclipse.symphony.common.geometry.data3d;
  * A representation of the model object '<em><b>Pose</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * Defines a full position and orientation in a Cartesian frame.
+ * <!-- end-model-doc -->
+ *
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getPose()
  * @model

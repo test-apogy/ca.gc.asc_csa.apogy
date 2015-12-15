@@ -15,6 +15,11 @@ import org.eclipse.symphony.common.geometry.data3d.impl.Data3DIOImpl;
  * A representation of the model object '<em><b>IO</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * Class defining methods used to save / load 3D data to / from files.
+ * <!-- end-model-doc -->
+ *
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getData3DIO()
  * @model

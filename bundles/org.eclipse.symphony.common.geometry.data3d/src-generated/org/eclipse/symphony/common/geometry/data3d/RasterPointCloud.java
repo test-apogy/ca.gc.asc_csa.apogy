@@ -10,6 +10,11 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Raster Point Cloud</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * TODO duplicate of DigitalElevationMap ? Should move the methods to DigitalElevationMap.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>

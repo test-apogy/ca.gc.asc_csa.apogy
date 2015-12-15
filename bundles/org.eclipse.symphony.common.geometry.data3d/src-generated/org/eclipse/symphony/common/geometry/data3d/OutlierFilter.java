@@ -10,6 +10,11 @@ import org.eclipse.symphony.common.processors.Processor;
  * A representation of the model object '<em><b>Outlier Filter</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * Filters out point that a than a specified distance from any neighbor.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -30,10 +35,15 @@ public interface OutlierFilter extends Processor<CartesianCoordinatesSet, Cartes
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The maximum distance a point can be from its closest neighbor an not be filtered out.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Max Distance</em>' attribute.
 	 * @see #setMaxDistance(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getOutlierFilter_MaxDistance()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getMaxDistance();

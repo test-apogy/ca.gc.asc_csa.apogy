@@ -10,6 +10,11 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  * A representation of the model object '<em><b>Cartesian Orientation Coordinates</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * A specialization of Coordinates that represent an orientation as 3 Euler angles.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -36,6 +41,7 @@ public interface CartesianOrientationCoordinates extends Coordinates {
 	 * @see #setXRotation(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianOrientationCoordinates_XRotation()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='rad'"
 	 * @generated
 	 */
 	double getXRotation();
@@ -62,6 +68,7 @@ public interface CartesianOrientationCoordinates extends Coordinates {
 	 * @see #setYRotation(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianOrientationCoordinates_YRotation()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='rad'"
 	 * @generated
 	 */
 	double getYRotation();
@@ -88,6 +95,7 @@ public interface CartesianOrientationCoordinates extends Coordinates {
 	 * @see #setZRotation(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianOrientationCoordinates_ZRotation()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='rad'"
 	 * @generated
 	 */
 	double getZRotation();

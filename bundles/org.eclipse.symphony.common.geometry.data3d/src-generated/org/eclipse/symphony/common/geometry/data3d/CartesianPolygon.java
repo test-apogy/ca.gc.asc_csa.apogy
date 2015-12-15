@@ -12,6 +12,11 @@ import org.eclipse.symphony.common.geometry.data.Polygon;
  * A representation of the model object '<em><b>Cartesian Polygon</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * A polygon having Cartesian position as its vertices.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -34,9 +39,14 @@ public interface CartesianPolygon extends Polygon<CartesianPositionCoordinates> 
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The surface of the polygon.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Surface</em>' attribute.
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPolygon_Surface()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m\262'"
 	 * @generated
 	 */
 	double getSurface();
@@ -49,6 +59,10 @@ public interface CartesianPolygon extends Polygon<CartesianPositionCoordinates> 
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The normal of the polygon.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Normal</em>' attribute.
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPolygon_Normal()
 	 * @model unique="false" dataType="org.eclipse.symphony.common.geometry.data3d.Vector3d" transient="true" changeable="false" volatile="true" derived="true"
@@ -64,6 +78,10 @@ public interface CartesianPolygon extends Polygon<CartesianPositionCoordinates> 
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The centroid of the polygon.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Centroid</em>' reference.
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPolygon_Centroid()
 	 * @model transient="true" changeable="false" volatile="true" derived="true"

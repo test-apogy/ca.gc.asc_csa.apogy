@@ -12,11 +12,7 @@ import java.util.List;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.DelaunayMesher;
 
 /**
@@ -48,123 +44,8 @@ public class DelaunayMesherItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTolerancePropertyDescriptor(object);
-			addAlphaPropertyDescriptor(object);
-			addOffsetPropertyDescriptor(object);
-			addBoundingTriangulationPropertyDescriptor(object);
-			addMeshingPlanePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Tolerance feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTolerancePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DelaunayMesher_tolerance_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DelaunayMesher_tolerance_feature", "_UI_DelaunayMesher_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.DELAUNAY_MESHER__TOLERANCE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Alpha feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAlphaPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DelaunayMesher_alpha_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DelaunayMesher_alpha_feature", "_UI_DelaunayMesher_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.DELAUNAY_MESHER__ALPHA,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Offset feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOffsetPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DelaunayMesher_offset_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DelaunayMesher_offset_feature", "_UI_DelaunayMesher_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.DELAUNAY_MESHER__OFFSET,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Bounding Triangulation feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addBoundingTriangulationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DelaunayMesher_boundingTriangulation_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DelaunayMesher_boundingTriangulation_feature", "_UI_DelaunayMesher_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.DELAUNAY_MESHER__BOUNDING_TRIANGULATION,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Meshing Plane feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMeshingPlanePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_DelaunayMesher_meshingPlane_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DelaunayMesher_meshingPlane_feature", "_UI_DelaunayMesher_type"),
-				 Symphony__CommonGeometryData3DPackage.Literals.DELAUNAY_MESHER__MESHING_PLANE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -203,16 +84,6 @@ public class DelaunayMesherItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(DelaunayMesher.class)) {
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__TOLERANCE:
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__ALPHA:
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__OFFSET:
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION:
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__MESHING_PLANE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

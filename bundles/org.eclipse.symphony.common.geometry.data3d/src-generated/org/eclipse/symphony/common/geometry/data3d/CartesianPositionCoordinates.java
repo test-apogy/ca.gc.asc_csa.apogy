@@ -12,6 +12,11 @@ import org.eclipse.symphony.common.geometry.data.Coordinates;
  * A representation of the model object '<em><b>Cartesian Position Coordinates</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * A specialization of Coordinates that defines Cartesian coordinates.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -38,6 +43,7 @@ public interface CartesianPositionCoordinates extends Coordinates {
 	 * @see #setX(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPositionCoordinates_X()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getX();
@@ -64,6 +70,7 @@ public interface CartesianPositionCoordinates extends Coordinates {
 	 * @see #setY(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPositionCoordinates_Y()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getY();
@@ -90,6 +97,7 @@ public interface CartesianPositionCoordinates extends Coordinates {
 	 * @see #setZ(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianPositionCoordinates_Z()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getZ();
@@ -107,6 +115,10 @@ public interface CartesianPositionCoordinates extends Coordinates {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Returns the position as a Point3d.
+	 * <!-- end-model-doc -->
 	 * @model dataType="org.eclipse.symphony.common.geometry.data3d.Point3d" unique="false"
 	 * @generated
 	 */

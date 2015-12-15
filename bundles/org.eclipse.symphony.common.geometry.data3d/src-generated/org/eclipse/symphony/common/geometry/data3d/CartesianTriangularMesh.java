@@ -10,6 +10,11 @@ import org.eclipse.symphony.common.geometry.data.Mesh;
  * A representation of the model object '<em><b>Cartesian Triangular Mesh</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * Class representing a set of triangle defining a surface.
+ * <!-- end-model-doc -->
+ *
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getCartesianTriangularMesh()
  * @model

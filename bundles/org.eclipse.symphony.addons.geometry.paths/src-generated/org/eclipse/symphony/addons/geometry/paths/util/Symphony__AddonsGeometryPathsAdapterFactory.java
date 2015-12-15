@@ -15,6 +15,7 @@ import org.eclipse.symphony.addons.geometry.paths.*;
 import org.eclipse.symphony.common.geometry.data.Coordinates;
 import org.eclipse.symphony.common.geometry.data.CoordinatesSet;
 
+import org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 
@@ -139,6 +140,10 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 			@Override
 			public <T extends Coordinates> Adapter caseCoordinatesSet(CoordinatesSet<T> object) {
 				return createCoordinatesSetAdapter();
+			}
+			@Override
+			public <T extends CartesianPositionCoordinates> Adapter caseAbstractCartesianCoordinatesSet(AbstractCartesianCoordinatesSet<T> object) {
+				return createAbstractCartesianCoordinatesSetAdapter();
 			}
 			@Override
 			public Adapter caseCartesianCoordinatesSet(CartesianCoordinatesSet object) {
@@ -379,6 +384,20 @@ public class Symphony__AddonsGeometryPathsAdapterFactory extends AdapterFactoryI
 	 * @generated
 	 */
 	public Adapter createCoordinatesSetAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet <em>Abstract Cartesian Coordinates Set</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.common.geometry.data3d.AbstractCartesianCoordinatesSet
+	 * @generated
+	 */
+	public Adapter createAbstractCartesianCoordinatesSetAdapter() {
 		return null;
 	}
 

@@ -6,12 +6,8 @@
 package org.eclipse.symphony.common.geometry.data3d.impl;
 
 import javax.vecmath.Vector3d;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
-import org.eclipse.symphony.common.geometry.data3d.CartesianPlane;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
@@ -24,108 +20,11 @@ import org.eclipse.symphony.common.math.quickhull3d.QuickHull3D;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Delaunay Mesher</b></em>'. <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * </p>
- * <ul>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.DelaunayMesherImpl#getTolerance <em>Tolerance</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.DelaunayMesherImpl#getAlpha <em>Alpha</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.DelaunayMesherImpl#getOffset <em>Offset</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.DelaunayMesherImpl#isBoundingTriangulation <em>Bounding Triangulation</em>}</li>
- *   <li>{@link org.eclipse.symphony.common.geometry.data3d.impl.DelaunayMesherImpl#getMeshingPlane <em>Meshing Plane</em>}</li>
- * </ul>
  *
  * @generated
  */
 public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 		implements DelaunayMesher {
-	/**
-	 * The default value of the '{@link #getTolerance() <em>Tolerance</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getTolerance()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double TOLERANCE_EDEFAULT = 0.0;
-	/**
-	 * The cached value of the '{@link #getTolerance() <em>Tolerance</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getTolerance()
-	 * @generated
-	 * @ordered
-	 */
-	protected double tolerance = TOLERANCE_EDEFAULT;
-	/**
-	 * The default value of the '{@link #getAlpha() <em>Alpha</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getAlpha()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double ALPHA_EDEFAULT = 0.0;
-	/**
-	 * The cached value of the '{@link #getAlpha() <em>Alpha</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getAlpha()
-	 * @generated
-	 * @ordered
-	 */
-	protected double alpha = ALPHA_EDEFAULT;
-	/**
-	 * The default value of the '{@link #getOffset() <em>Offset</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getOffset()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double OFFSET_EDEFAULT = 0.75;
-	/**
-	 * The cached value of the '{@link #getOffset() <em>Offset</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @see #getOffset()
-	 * @generated
-	 * @ordered
-	 */
-	protected double offset = OFFSET_EDEFAULT;
-	/**
-	 * The default value of the '{@link #isBoundingTriangulation() <em>Bounding Triangulation</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * @see #isBoundingTriangulation()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean BOUNDING_TRIANGULATION_EDEFAULT = false;
-	/**
-	 * The cached value of the '{@link #isBoundingTriangulation() <em>Bounding Triangulation</em>}' attribute.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
-	 * @see #isBoundingTriangulation()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean boundingTriangulation = BOUNDING_TRIANGULATION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getMeshingPlane() <em>Meshing Plane</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMeshingPlane()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final CartesianPlane MESHING_PLANE_EDEFAULT = CartesianPlane.XY;
-
-	/**
-	 * The cached value of the '{@link #getMeshingPlane() <em>Meshing Plane</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMeshingPlane()
-	 * @generated
-	 * @ordered
-	 */
-	protected CartesianPlane meshingPlane = MESHING_PLANE_EDEFAULT;
-
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
@@ -141,199 +40,6 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 	@Override
 	protected EClass eStaticClass() {
 		return Symphony__CommonGeometryData3DPackage.Literals.DELAUNAY_MESHER;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public double getTolerance() {
-		return tolerance;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTolerance(double newTolerance) {
-		double oldTolerance = tolerance;
-		tolerance = newTolerance;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__TOLERANCE, oldTolerance, tolerance));
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public double getAlpha() {
-		return alpha;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAlpha(double newAlpha) {
-		double oldAlpha = alpha;
-		alpha = newAlpha;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__ALPHA, oldAlpha, alpha));
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public double getOffset() {
-		return offset;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOffset(double newOffset) {
-		double oldOffset = offset;
-		offset = newOffset;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__OFFSET, oldOffset, offset));
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isBoundingTriangulation() {
-		return boundingTriangulation;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBoundingTriangulation(boolean newBoundingTriangulation) {
-		boolean oldBoundingTriangulation = boundingTriangulation;
-		boundingTriangulation = newBoundingTriangulation;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION, oldBoundingTriangulation, boundingTriangulation));
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__TOLERANCE:
-				return getTolerance();
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__ALPHA:
-				return getAlpha();
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__OFFSET:
-				return getOffset();
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION:
-				return isBoundingTriangulation();
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__MESHING_PLANE:
-				return getMeshingPlane();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__TOLERANCE:
-				setTolerance((Double)newValue);
-				return;
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__ALPHA:
-				setAlpha((Double)newValue);
-				return;
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__OFFSET:
-				setOffset((Double)newValue);
-				return;
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION:
-				setBoundingTriangulation((Boolean)newValue);
-				return;
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__MESHING_PLANE:
-				setMeshingPlane((CartesianPlane)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__TOLERANCE:
-				setTolerance(TOLERANCE_EDEFAULT);
-				return;
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__ALPHA:
-				setAlpha(ALPHA_EDEFAULT);
-				return;
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__OFFSET:
-				setOffset(OFFSET_EDEFAULT);
-				return;
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION:
-				setBoundingTriangulation(BOUNDING_TRIANGULATION_EDEFAULT);
-				return;
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__MESHING_PLANE:
-				setMeshingPlane(MESHING_PLANE_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__TOLERANCE:
-				return tolerance != TOLERANCE_EDEFAULT;
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__ALPHA:
-				return alpha != ALPHA_EDEFAULT;
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__OFFSET:
-				return offset != OFFSET_EDEFAULT;
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__BOUNDING_TRIANGULATION:
-				return boundingTriangulation != BOUNDING_TRIANGULATION_EDEFAULT;
-			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__MESHING_PLANE:
-				return meshingPlane != MESHING_PLANE_EDEFAULT;
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (tolerance: ");
-		result.append(tolerance);
-		result.append(", alpha: ");
-		result.append(alpha);
-		result.append(", offset: ");
-		result.append(offset);
-		result.append(", boundingTriangulation: ");
-		result.append(boundingTriangulation);
-		result.append(", meshingPlane: ");
-		result.append(meshingPlane);
-		result.append(')');
-		return result.toString();
 	}
 
 	@Override
@@ -368,8 +74,7 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 						+ (t1 - t0));
 
 		// We only keep the faces facing down.
-		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE
-				.createCartesianTriangularMesh();
+		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 
 		for (CartesianPositionCoordinates point : input.getPoints()) {
 			double x = point.getX();
@@ -416,23 +121,6 @@ public class DelaunayMesherImpl extends CartesianPositionCoordinatesMesherImpl
 		res.cross(v0, v1);
 
 		return res.z < 0.0;
-	}
-
-	/**
-	 * @generated
-	 */
-	public CartesianPlane getMeshingPlane() {
-		return meshingPlane;
-	}
-
-	/**
-	 * @generated
-	 */
-	public void setMeshingPlane(CartesianPlane newMeshingPlane) {
-		CartesianPlane oldMeshingPlane = meshingPlane;
-		meshingPlane = newMeshingPlane == null ? MESHING_PLANE_EDEFAULT : newMeshingPlane;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER__MESHING_PLANE, oldMeshingPlane, meshingPlane));
 	}
 
 } // DelaunayMesherImpl

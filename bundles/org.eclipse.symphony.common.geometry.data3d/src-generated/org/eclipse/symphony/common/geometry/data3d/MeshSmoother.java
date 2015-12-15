@@ -10,6 +10,11 @@ import org.eclipse.symphony.common.processors.Processor;
  * A representation of the model object '<em><b>Mesh Smoother</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * TODO : Define the algorithm used.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -31,6 +36,10 @@ public interface MeshSmoother extends Processor<CartesianCoordinatesSet, Cartesi
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * TODO : Defines what this does.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Number Of Iterations</em>' attribute.
 	 * @see #setNumberOfIterations(int)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getMeshSmoother_NumberOfIterations()

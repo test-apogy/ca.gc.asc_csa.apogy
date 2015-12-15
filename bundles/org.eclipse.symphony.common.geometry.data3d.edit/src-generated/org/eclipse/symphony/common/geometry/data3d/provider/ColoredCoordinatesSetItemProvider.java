@@ -1,7 +1,5 @@
 /**
- * Canadian Space Agency 2008.
- *
- * $Id: CartesianCoordinatesSetItemProvider.java,v 1.3.4.2 2015/05/21 15:50:28 pallard Exp $
+ * Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)
  */
 package org.eclipse.symphony.common.geometry.data3d.provider;
 
@@ -11,26 +9,25 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
+
+import org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet;
 
 /**
- * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet} object.
+ * This is the item provider adapter for a {@link org.eclipse.symphony.common.geometry.data3d.ColoredCoordinatesSet} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class CartesianCoordinatesSetItemProvider
-	extends AbstractCartesianCoordinatesSetItemProvider
-{
+public class ColoredCoordinatesSetItemProvider extends AbstractCartesianCoordinatesSetItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CartesianCoordinatesSetItemProvider(AdapterFactory adapterFactory)
-	{
+	public ColoredCoordinatesSetItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -41,8 +38,7 @@ public class CartesianCoordinatesSetItemProvider
 	 * @generated
 	 */
 	@Override
-	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object)
-	{
+	public List<IItemPropertyDescriptor> getPropertyDescriptors(Object object) {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
@@ -51,32 +47,31 @@ public class CartesianCoordinatesSetItemProvider
 	}
 
 	/**
-	 * This returns CartesianCoordinatesSet.gif.
+	 * This returns ColoredCoordinatesSet.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Object getImage(Object object)
-	{
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/CartesianCoordinatesSet"));
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ColoredCoordinatesSet"));
 	}
 
 	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated_NOT
+	 * @generated
 	 */
 	@Override
-	public String getText(Object object)
-	{
-		List<?> labelValue = ((CartesianCoordinatesSet)object).getNormals();
+	public String getText(Object object) {
+		List labelValue = ((ColoredCoordinatesSet)object).getNormals();
 		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ?
-			getString("_UI_CartesianCoordinatesSet_type") :
-			getString("_UI_CartesianCoordinatesSet_type") + " " + label;
+			getString("_UI_ColoredCoordinatesSet_type") :
+			getString("_UI_ColoredCoordinatesSet_type") + " " + label;
 	}
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -86,8 +81,7 @@ public class CartesianCoordinatesSetItemProvider
 	 * @generated
 	 */
 	@Override
-	public void notifyChanged(Notification notification)
-	{
+	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 		super.notifyChanged(notification);
 	}
@@ -100,8 +94,7 @@ public class CartesianCoordinatesSetItemProvider
 	 * @generated
 	 */
 	@Override
-	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object)
-	{
+	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 	}
 

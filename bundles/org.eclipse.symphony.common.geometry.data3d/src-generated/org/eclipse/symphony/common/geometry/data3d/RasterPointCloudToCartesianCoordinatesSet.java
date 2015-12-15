@@ -10,6 +10,11 @@ import org.eclipse.symphony.common.processors.Processor;
  * A representation of the model object '<em><b>Raster Point Cloud To Cartesian Coordinates Set</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * Should be removed when RasterPointCloud is integrated in DigitalElevationMap.
+ * <!-- end-model-doc -->
+ *
  *
  * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getRasterPointCloudToCartesianCoordinatesSet()
  * @model

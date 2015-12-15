@@ -10,6 +10,12 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Triangle Edge Length Triangular Mesh Filter</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * Filters a triangular mesh based on the range of the triangle center relative to the origin and
+ * the length of the longest edge the triangle.
+ * <!-- end-model-doc -->
+ *
  * <p>
  * The following features are supported:
  * </p>
@@ -32,10 +38,16 @@ public interface TriangleEdgeLengthTriangularMeshFilter extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The minimum range of the center of the triangle with respect to the origin. Triangles with their center closer
+	 * to the origin than this value are filtered out.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Minimum Range</em>' attribute.
 	 * @see #setMinimumRange(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getTriangleEdgeLengthTriangularMeshFilter_MinimumRange()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getMinimumRange();
@@ -58,10 +70,16 @@ public interface TriangleEdgeLengthTriangularMeshFilter extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The maximum range of the center of the triangle with respect to the origin. Triangles with their center further
+	 * from the origin than this value are filtered out.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Maximum Range</em>' attribute.
 	 * @see #setMaximumRange(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getTriangleEdgeLengthTriangularMeshFilter_MaximumRange()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getMaximumRange();
@@ -84,10 +102,15 @@ public interface TriangleEdgeLengthTriangularMeshFilter extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * The maximum length of a edge that a triangle can have to pass the filter.
+	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Maximum Edge Length</em>' attribute.
 	 * @see #setMaximumEdgeLength(double)
 	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage#getTriangleEdgeLengthTriangularMeshFilter_MaximumEdgeLength()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel notify='true' children='false' symphony_units='m'"
 	 * @generated
 	 */
 	double getMaximumEdgeLength();
@@ -105,6 +128,12 @@ public interface TriangleEdgeLengthTriangularMeshFilter extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Applies the filter to a triangular mesh.
+	 * @param input The input triangular mesh.
+	 * @return A triangular mesh containing only the triangles that passed the filter.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" inputUnique="false"
 	 * @generated
 	 */
