@@ -474,11 +474,11 @@
         </edgeMappings>
         <toolSections name="org.eclipse.symphony.core.ui.sirius.type.sections.create" label="Create">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="org.eclipse.symphony.core.ui.sirius.type.tools.node_create.connection_point" label="Create Connection Point" nodeMappings="//@ownedViewpoints[name='org.eclipse.symphony.core.ui.sirius.viewpoint']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.type.diagram']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.type.nodes.symphony_system']/@borderedNodeMappings[name='org.eclipse.symphony.core.ui.sirius.type.nodes.bordered.root_connection_point']">
-            <variable name="container"/>
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="symSystem" candidatesExpression="[core::SymphonySystem.allInstances())/]" message="Select the symphony system the new connection point should belong to"/>
+            </variable>
             <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self/]"/>
-            </initialOperation>
+            <initialOperation/>
           </ownedTools>
           <ownedTools xsi:type="tool:DeleteElementDescription" name="org.eclipse.symphony.core.ui.sirius.tools.delete_node.root_sym_sys" label="Delete Root Symphony System Node" precondition="[false/]">
             <element name="element"/>

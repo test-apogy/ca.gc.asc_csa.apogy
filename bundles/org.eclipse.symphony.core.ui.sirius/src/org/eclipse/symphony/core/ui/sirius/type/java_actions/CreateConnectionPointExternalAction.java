@@ -7,9 +7,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.window.Window;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
-import org.eclipse.symphony.core.ui.sirius.util.NameDescWizard;
 import org.eclipse.symphony.core.ui.sirius.util.WizardUtil;
-
+import org.eclipse.symphony.core.ui.sirius.util.topology.NodeIdDescWizard;
 import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.core.ConnectionPoint;
@@ -55,7 +54,7 @@ public class CreateConnectionPointExternalAction implements IExternalJavaAction
 			SymphonySystem symphonySystem = (SymphonySystem) container;
 			
 			// Create a new wizard to select the type for the new node
-			NameDescWizard wizard = new NameDescWizard();
+			NodeIdDescWizard wizard = new NodeIdDescWizard();
 			
 			// Open up the new wizard and keep track of the result
 			int result = WizardUtil.displayWizard(wizard);			
@@ -67,7 +66,7 @@ public class CreateConnectionPointExternalAction implements IExternalJavaAction
 			// If the result was OK
 			if (result == Window.OK)
 			{
-				pointName = wizard.getEnteredName();
+				pointName = wizard.getEnteredId();
 				pointDesc = wizard.getEnteredDesc();
 			}
 			
