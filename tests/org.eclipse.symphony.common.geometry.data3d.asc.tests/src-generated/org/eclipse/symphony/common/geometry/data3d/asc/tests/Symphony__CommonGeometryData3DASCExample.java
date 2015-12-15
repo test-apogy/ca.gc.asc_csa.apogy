@@ -1,5 +1,5 @@
 /**
- * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
+ * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
 package org.eclipse.symphony.common.geometry.data3d.asc.tests;
 
@@ -8,12 +8,18 @@ import java.io.IOException;
 
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.URI;
+
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+
 import org.eclipse.emf.ecore.util.Diagnostician;
+
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+
 import org.eclipse.symphony.common.geometry.data3d.asc.ASC3DIO;
 import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCFactory;
 import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryData3DASCPackage;
@@ -24,7 +30,7 @@ import org.eclipse.symphony.common.geometry.data3d.asc.Symphony__CommonGeometryD
  * <!-- end-user-doc -->
  * @generated
  */
-public class Data3DASCExample {
+public class Symphony__CommonGeometryData3DASCExample {
 	/**
 	 * <!-- begin-user-doc -->
 	 * Load all the argument file paths or URIs as instances of the model.
@@ -54,7 +60,7 @@ public class Data3DASCExample {
 		if (args.length == 0) {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
-				Resource resource = resourceSet.createResource(URI.createURI("http:///My.data3dasc"));
+				Resource resource = resourceSet.createResource(URI.createURI("http:///My.symphony__commongeometrydata3dasc"));
 				ASC3DIO root = Symphony__CommonGeometryData3DASCFactory.eINSTANCE.createASC3DIO();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
@@ -113,4 +119,4 @@ public class Data3DASCExample {
 		}
 	}
 
-} //Data3DASCExample
+} //Symphony__CommonGeometryData3DASCExample

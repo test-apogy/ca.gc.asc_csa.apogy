@@ -1,5 +1,5 @@
 /**
- * Agence spatiale canadienne / Canadian Space Agency 2013 Copyrights (c)
+ * Agence spatiale canadienne / Canadian Space Agency 2015 Copyrights (c)
  */
 package org.eclipse.symphony.common.geometry.data3d.asc.tests;
 
@@ -14,7 +14,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class Data3DASCTests extends TestSuite {
+public class Symphony__CommonGeometryData3DASCTests extends TestSuite {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class Data3DASCTests extends TestSuite {
 	 * @generated
 	 */
 	public static Test suite() {
-		TestSuite suite = new Data3DASCTests("asc Tests");
+		TestSuite suite = new Symphony__CommonGeometryData3DASCTests("asc Tests");
 		suite.addTestSuite(ASC3DIOTest.class);
 		return suite;
 	}
@@ -41,8 +41,8 @@ public class Data3DASCTests extends TestSuite {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Data3DASCTests(String name) {
+	public Symphony__CommonGeometryData3DASCTests(String name) {
 		super(name);
 	}
 
-} //Data3DASCTests
+} //Symphony__CommonGeometryData3DASCTests

@@ -511,6 +511,7 @@ public class Symphony__CommonGeometryData3DASCPackageImpl extends EPackageImpl i
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data3d.asc/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.geometry.data3d.asc.edit/src-generated",
+			 "testsDirectory", "/org.eclipse.symphony.common.geometry.data3d.asc.tests/src-generated",
 			 "basePackage", "org.eclipse.symphony.common.geometry.data3d"
 		   });	
 		addAnnotation
