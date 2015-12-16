@@ -1,4 +1,4 @@
-package org.eclipse.symphony.core.ui.sirius.util.topology;
+package org.eclipse.symphony.core.ui.sirius.util;
 
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
@@ -8,21 +8,32 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
-public class NodeIdDescPage extends WizardPage
+public class ObjIdDescPage extends WizardPage
 {
 	// Constants for this page
-	private static final String ID_LABEL_STR = "Enter the id:			";
+	private static final String OBJ_ID_LABEL_STR = "Enter the %1$s:";
 	private static final String DESC_LABEL_STR = "Enter the description:";
 	
 	// The required widgets for the rendering the page
-	private Text idText;
+	private String objIdStr;
+	private Text objIdText;
 	private Text descText;
 	private Composite pageComposite;
 	
-	public NodeIdDescPage(String pageName, String title)
+	public ObjIdDescPage(String pageName, String title, String objIdFieldStr)
 	{
 		// Call the superclass' constructor
 		super(pageName, title, null);
+		
+		// Set the object's identifier string
+		this.objIdStr = String.format(OBJ_ID_LABEL_STR, objIdFieldStr);
+		
+		// While the string is not the correct length
+		while (this.objIdStr.length() < DESC_LABEL_STR.length())
+		{
+			// Add a space
+			this.objIdStr += " ";
+		}
 	}
 
 	@Override
@@ -33,17 +44,17 @@ public class NodeIdDescPage extends WizardPage
 		pageComposite.setLayout(new GridLayout());
 		pageComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 		
-		Composite idComposite = new Composite(pageComposite, SWT.NONE);
-		idComposite.setLayout(new GridLayout(2, false));
-		idComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false));
+		Composite objIdComposite = new Composite(pageComposite, SWT.NONE);
+		objIdComposite.setLayout(new GridLayout(2, false));
+		objIdComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false));
 		
-		// Create the label for the id
-		Label idLabel = new Label(idComposite, SWT.LEFT);
-		idLabel.setText(ID_LABEL_STR);
+		// Create the label for the object's identifier
+		Label objIdLabel = new Label(objIdComposite, SWT.LEFT);
+		objIdLabel.setText(objIdStr);
 		
-		// Create the text for the name
-		idText = new Text(idComposite, SWT.BORDER);
-		idText.setLayoutData(new GridData(SWT.FILL, SWT.LEFT, true, true));
+		// Create the text for the object's identifier
+		objIdText = new Text(objIdComposite, SWT.BORDER);
+		objIdText.setLayoutData(new GridData(SWT.FILL, SWT.LEFT, true, true));
 		
 		Composite descComposite = new Composite(pageComposite, SWT.NONE);
 		descComposite.setLayout(new GridLayout(2, false));
@@ -61,13 +72,13 @@ public class NodeIdDescPage extends WizardPage
 		setControl(pageComposite);
 	}
 	
-	public String getEnteredId()
+	public String getEnteredObjId()
 	{
 		// If the appropriate Text has been created
-		if (idText != null)
+		if (objIdText != null)
 		{
 			// Return the value from that text
-			return idText.getText();
+			return objIdText.getText();
 		}
 		// Otherwise, it wasn't created
 		else

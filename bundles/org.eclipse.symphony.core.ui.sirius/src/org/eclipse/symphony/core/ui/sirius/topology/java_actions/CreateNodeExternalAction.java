@@ -9,8 +9,8 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.window.Window;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
+import org.eclipse.symphony.core.ui.sirius.util.ObjIdDescWizard;
 import org.eclipse.symphony.core.ui.sirius.util.WizardUtil;
-import org.eclipse.symphony.core.ui.sirius.util.topology.NodeIdDescWizard;
 import org.eclipse.symphony.core.ui.sirius.util.topology.NodeClassWizard;
 import org.eclipse.symphony.core.TopologyRoot;
 import org.eclipse.symphony.common.topology.GroupNode;
@@ -21,6 +21,8 @@ public class CreateNodeExternalAction implements IExternalJavaAction
 	private final static String PARENT_NODE_PARAM_STR = "ParentNode";
 	private final static String TARGET_CLASS_PARAM_STR = "TargetClass";
 	private final static String NO_OF_INSTS_PARAM_STR = "NumInsts";
+	
+	private final static String WIZARD_STR = "Id";
 	
 	@Override
 	public void execute(Collection<? extends EObject> selections,
@@ -161,7 +163,7 @@ public class CreateNodeExternalAction implements IExternalJavaAction
 	private Node makeNode(EClass klass, int numberOfInsts)
 	{
 		// Create the name/desc wizard
-		NodeIdDescWizard wizard = new NodeIdDescWizard();
+		ObjIdDescWizard wizard = new ObjIdDescWizard(WIZARD_STR);
 		
 		// Open it up and keep track of the result
 		int result = WizardUtil.displayWizard(wizard);
@@ -180,9 +182,9 @@ public class CreateNodeExternalAction implements IExternalJavaAction
 			newDesc = wizard.getEnteredDesc();
 			
 			// If there was a node id provided
-			if (wizard.getEnteredId().trim().length() > 0)
+			if (wizard.getEnteredObjId().trim().length() > 0)
 			{
-				newId = wizard.getEnteredId();
+				newId = wizard.getEnteredObjId();
 			}
 			// Otherwise, there wasn't one provided
 			else

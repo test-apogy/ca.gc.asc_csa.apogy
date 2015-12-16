@@ -7,9 +7,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.window.Window;
 import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
+import org.eclipse.symphony.core.ui.sirius.util.ObjIdDescWizard;
 import org.eclipse.symphony.core.ui.sirius.util.WizardUtil;
-import org.eclipse.symphony.core.ui.sirius.util.topology.NodeIdDescWizard;
-import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.core.ConnectionPoint;
 import org.eclipse.symphony.core.SymphonySystem;
@@ -17,12 +16,13 @@ import org.eclipse.symphony.core.SymphonySystem;
 public class CreateConnectionPointExternalAction implements IExternalJavaAction
 {
 	// Constants used to keep track of the expected parameter names
-	private static final String NODE_PARAM_STR = "Node";
-	private static final String CONTAINER_PARAM_STR = "Container";
+	private static final String SYMPHONY_SYSTEM_PARAM_STR = "SymphonySystem";
 	
 	// Constants used to define the default connection point information
 	private static final String DEF_CONNECT_POINT_NAME = "NEW_CONNECTION_POINT";
-	private static final String DEF_CONNECT_POINT_DESC = "";
+	
+	// Constants used for the wizard
+	private static final String WIZARD_STR = "Name";
 	
 	// Get the EClass for ConnectionPoint
 	private static final String CONNECTION_POINT_CLASS_STR = "org.eclipse.symphony.core.ConnectionPoint";
@@ -33,41 +33,44 @@ public class CreateConnectionPointExternalAction implements IExternalJavaAction
 	public void execute(Collection<? extends EObject> selections,
 						Map<String, Object> parameters)
 	{
-		// If the required parameters are not present
-		if (parameters.containsKey(NODE_PARAM_STR) == false ||
-			parameters.containsKey(CONTAINER_PARAM_STR) == false)
+		// If the required parameter is not present
+		if (parameters.containsKey(SYMPHONY_SYSTEM_PARAM_STR) == false)
 		{
 			// Cannot proceed; just return
 			return;
 		}
 
-		// Extract the parameters from the map
-		Object node = parameters.get(NODE_PARAM_STR);
-		Object container = parameters.get(CONTAINER_PARAM_STR);
+		// Extract the parameter from the map
+		Object symSys = parameters.get(SYMPHONY_SYSTEM_PARAM_STR);
 		
-		// If the parameters have the correct types
-		if (node instanceof GroupNode &&
-			container instanceof SymphonySystem)
+		// If the parameter has the correct type
+		if (symSys instanceof SymphonySystem)
 		{
 			// Cast down
-			GroupNode topologyNode = (GroupNode) node;
-			SymphonySystem symphonySystem = (SymphonySystem) container;
+			SymphonySystem symphonySystem = (SymphonySystem) symSys;
 			
 			// Create a new wizard to select the type for the new node
-			NodeIdDescWizard wizard = new NodeIdDescWizard();
+			ObjIdDescWizard wizard = new ObjIdDescWizard(WIZARD_STR);
 			
 			// Open up the new wizard and keep track of the result
 			int result = WizardUtil.displayWizard(wizard);			
-			
-			// The name and description for the connection point
-			String pointName = DEF_CONNECT_POINT_NAME;
-			String pointDesc = DEF_CONNECT_POINT_DESC;
-			
-			// If the result was OK
-			if (result == Window.OK)
+						
+			// If the result was not OK
+			if (result != Window.OK)
 			{
-				pointName = wizard.getEnteredId();
-				pointDesc = wizard.getEnteredDesc();
+				// Just return
+				return;
+			}
+			
+			// Extract the values from the wizard
+			String pointName = wizard.getEnteredObjId();
+			String pointDesc = wizard.getEnteredDesc();
+			
+			// If no name was provided
+			if (pointName.length() == 0)
+			{
+				// The name and description for the connection point
+				pointName = DEF_CONNECT_POINT_NAME;
 			}
 			
 			// Create a new connection point
@@ -77,7 +80,6 @@ public class CreateConnectionPointExternalAction implements IExternalJavaAction
 			// Set its values accordingly
 			connPoint.setName(pointName);
 			connPoint.setDescription(pointDesc);
-			connPoint.setNode(topologyNode);
 			
 			// Add it to the SymphonySystem
 			symphonySystem.getConnectionPointsList().getConnectionPoints().add(connPoint);
