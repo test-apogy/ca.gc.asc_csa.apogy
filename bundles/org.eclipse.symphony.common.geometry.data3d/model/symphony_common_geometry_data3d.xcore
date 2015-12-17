@@ -7,6 +7,8 @@
 	      suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.common.geometry.data3d/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.common.geometry.data3d.edit/src-generated")
+@GenModel(testsDirectory="/org.eclipse.symphony.common.geometry.data3d.tests/src-generated")
+
 
 package org.eclipse.symphony.common.geometry.data3d
 
@@ -356,6 +358,8 @@ class CartesianPositionCoordinatesMesher extends Processor<CartesianCoordinatesS
 	
 }
 
+
+// TODO : this should be a specialization of CartesianCoordinatesSet ?
 class NormalPointCloud
 {
 	List<Point3d> points
@@ -363,39 +367,76 @@ class NormalPointCloud
 	List<Vector3d> normals
 }
 
-class PointLocator
-{
-	List<CartesianPositionCoordinates> points
+/**
+ * Definition of a class used to find neighbors in a list of CartesianPositionCoordinates.
+ * Specific operation to add/remove points from the list to be searched are defined as opposed to an
+ * attribute to enable sub-classes to easily manage changes in the list of point to search.
+ */
+abstract class PointLocator
+{	
+	/**
+	 * Returns a list of the points currently available for search.
+	 */
+	op List<CartesianPositionCoordinates> getPoints()
 	
+	/**
+	 * Adds one point to the list of point to search.
+	 */	
+	op void addPoint(CartesianPositionCoordinates point)
+	
+	/**
+	 * Adds a list of points to the list of point to search.
+	 */	
+	op void addPoints(List<CartesianPositionCoordinates> points)
+		
+	/**
+	 * Removes one point from the list of point to search.
+	 */
+	op void removePoint(CartesianPositionCoordinates point)
+	
+	/**
+	 * Removes a list of points from the list of point to search.
+	 */
+	op void removePoints(List<CartesianPositionCoordinates> points)
+	
+	/**
+	 * Remove all points from the the list of point to search.
+	 */
+	op void clearPoints()
+	
+	/**
+	 * Returns a specified point closest neighbor.
+	 * @param point The specified point.
+	 * @return The closest neighbor, null if the PointLocator has no points.
+	 */
 	op CartesianPositionCoordinates findClosestPoint(CartesianPositionCoordinates point)
 	
-	op CartesianPositionCoordinates[] findPointsWithinRadius(double radius, CartesianPositionCoordinates point)
-}
-
-class VecmathPointLocator
-{
-	List<Point3d> points
+	/**
+	 * Returns a specified point closest neighbor.
+	 * @param point The specified point.
+	 * @param maximumNumberOfNeighbors The maximum number of neighbors to return.
+	 * @return The closest neighbor, null if the PointLocator has no points.
+	 */
+	op List<CartesianPositionCoordinates> findClosestPoints(CartesianPositionCoordinates point, int maximumNumberOfNeighbors)
 	
-	op Point3d findClosestPoint(Point3d point)
-	
-	op Point3d[] findPointsWithinRadius(double radius, Point3d point)
-	
-	op int findClosestPointId(Point3d point)
-	
-	op IntArray findPointIdsWithinRadius(double radius, Point3d point)
-	
-	op Point3d[] findClosestNPoints(Point3d referencePoint, int n)
-	
-	op IntArray findClosestNPointIds(Point3d referencePoint, int n)
-}
-
-class VecmathKdTreePointLocator extends VecmathPointLocator
-{
-	
+	/**
+	 * Returns a point's neighbor with a given radius.	 
+	 * @param point The specified point.
+	 * @param radius The maximum radius from the point.
+	 * @return The list of neighbor within the radius. Never null, but can be empty.
+	 */
+	op List<CartesianPositionCoordinates> findPointsWithinRadius(CartesianPositionCoordinates point, double radius)	
 }
 
 /**
- * Class that provides an estimate of relative pose between two meshes, assuming the two meshes cove overlapping area of a surface. 
+ * A PointLocator implemented using a KDTree. This implementation is not thread safe.
+ */
+class KDTreeBasedPointLocator extends PointLocator
+{	
+}
+
+/**
+ * Class that provides an estimate of relative pose between two meshes, assuming the two meshes cover overlapping area of a surface. 
  */
 class MeshLocalizer
 {
@@ -410,22 +451,6 @@ class MeshLocalizer
 	op Matrix4d localize(CartesianTriangularMesh fixedMesh, Matrix4d fixedMeshTransform, CartesianTriangularMesh floatingMesh, Matrix4d floatingMeshTransformEstimate) throws Exception
 }
 
-class PointNormalLocator
-{
-	refers NormalPointCloud dataSet
-	
-	op GVector findClosestPoint(Point3d point, Vector3d normal)
-	
-	op GVector[] findPointsWithinRadius(double radius, Point3d point, Vector3d normal)
-	
-	op GVector[] findClosestNPoints(int n, Point3d point, Vector3d normal)
-	
-	op int findClosestPointId(Point3d point, Vector3d normal)
-	
-	op IntArray findPointIdsWithinRadius(double radius, Point3d point, Vector3d normal)
-	
-	op IntArray findClosestNPointIds(int n, Point3d point, Vector3d normal)
-}
 
 /**
  * Mesher that uses the Quick Hull method to create a mesh from a point cloud. The algorithm is a three dimensional implementation of Quickhull by John E. Lloyd, as
@@ -516,28 +541,6 @@ class OutlierFilter extends Processor<CartesianCoordinatesSet, CartesianCoordina
 	@GenModel(notify="true", children="false", symphony_units="m")
 	double maxDistance
 }
-
-/**
- * TODO duplicate of DigitalElevationMap ? Should move the methods to DigitalElevationMap.
- */
-class RasterPointCloud
-{
-	int rows = "1"
-	
-	int columns = "1"
-	
-	op CartesianPositionCoordinates getPoint(int row, int column)
-	
-	op void setPoint(int row, int column, CartesianPositionCoordinates point)
-}
-
-/**
- * Should be removed when RasterPointCloud is integrated in DigitalElevationMap.
- */
-class RasterPointCloudToCartesianCoordinatesSet extends Processor<RasterPointCloud, CartesianCoordinatesSet>
-{	
-}
-
 
 /**
  * TODO : Define the algorithm used.
@@ -649,9 +652,7 @@ class Symphony__CommonGeometryData3DFacade
 	
 	op Pose createPose(Pose pose)
 	
-	op Pose createPose(CartesianPositionCoordinates position, CartesianOrientationCoordinates orientation)
-	
-	op PointNormalLocator createPointNormalLocator(NormalPointCloud input)
+	op Pose createPose(CartesianPositionCoordinates position, CartesianOrientationCoordinates orientation)	
 	
 	op DigitalElevationMap createDigitalElevationMap(CartesianCoordinatesSet coordinatesSet)
 	
@@ -679,15 +680,18 @@ class Symphony__CommonGeometryData3DFacade
 	
 	op List<CartesianPositionCoordinates> applyTransform(List<CartesianPositionCoordinates> points, Matrix4d trMatrix)
 	
-	op CartesianTriangularMesh applyTransform(CartesianTriangularMesh mesh, Matrix4d trMatrix)
+	op CartesianTriangularMesh createTransformedMesh(CartesianTriangularMesh mesh, Matrix4d trMatrix)
 	
-	op CartesianTriangularMesh applyTransformInt(CartesianTriangularMesh mesh, Matrix4d trMatrix)
+	op void applyTransform(CartesianTriangularMesh mesh, Matrix4d trMatrix)
 	
 	op NormalPointCloud applyTransform(NormalPointCloud points, Matrix4d trMatrix)
 	
+	/**
+	 * @aparam xyzData The array of n points organize as [0..n][x,y,z].
+	 */
 	op void updateCartesianCoordinatesSet(CartesianCoordinatesSet cartesianCoordinatesSet, DoubleArrayOfArray xyzData)
 	
-	op CartesianTriangularMesh concatenateTriangularMeshes(EList<CartesianTriangularMesh> listOfTriangularMeshes)
+	op CartesianTriangularMesh concatenateTriangularMeshes(List<CartesianTriangularMesh> listOfTriangularMeshes)
 }
 
 /**
@@ -695,30 +699,101 @@ class Symphony__CommonGeometryData3DFacade
  */
 class Data3DIO
 {
+	/**
+	 * Loads a CartesianTriangularMesh from an XMI resource.
+	 * @param file The file path to the resource.
+	 * @return The loaded CartesianTriangularMesh.
+	 */
 	op CartesianTriangularMesh loadTriangularMesh(String file) throws IOException
 	
+	/**
+	 * Loads a CartesianTriangularMesh from an XMI resource.
+	 * @param input The input stream to read the content from.
+	 * @return The loaded CartesianTriangularMesh.
+	 */
 	op CartesianTriangularMesh loadTriangularMesh(InputStream input) throws IOException
 	
+	/**
+	 * Saves a CartesianTriangularMesh as an XMI resource.
+	 * @param mesh The CartesianTriangularMesh to save.
+	 * @param file The destination file path for the resource.
+	 */
 	op void saveTriangularMesh(CartesianTriangularMesh mesh, String file) throws IOException
 	
+	/**
+	 * Saves a CartesianTriangularMesh as an XMI resource.
+	 * @param mesh The CartesianTriangularMesh to save.
+	 * @param output The output stream to write the content.
+	 */
 	op void saveTriangularMesh(CartesianTriangularMesh mesh, OutputStream output) throws IOException
 	
+	/**
+	 * Loads a NormalPointCloud from ASCII files. Two files are required : filePrefix.xyz : contains the points and
+	 * filePrefix.tri : containing the list of triangles.   
+	 * @param filePrefix The file prefix defining both the points and triangles files.
+	 * @return The loaded NormalPointCloud.
+	 */
 	op NormalPointCloud loadTriangularMeshFromASCIIAsNormalPointCloud(String filePrefix) throws IOException
 	
+	/**
+	 * Loads a CartesianTriangularMesh from ASCII files. Two files are required : filePrefix.xyz : contains the points and
+	 * filePrefix.tri : containing the list of triangles.  
+	 * @param filePrefix The file prefix defining both the points and triangles files.
+	 * @return The loaded CartesianTriangularMesh.
+	 */
 	op CartesianTriangularMesh loadTriangularMeshFromASCII(String filePrefix) throws IOException
 	
+	/**
+	 * Saves a CartesianTriangularMesh to ASCII files. Two files are produced : filePrefix.xyz : contains the points and
+	 * filePrefix.tri : containing the list of triangles.  
+	 * @param mesh The CartesianTriangularMesh to save.
+	 * @param filePrefix The file prefix defining both the points and triangles files.	 
+	 */
 	op void saveTriangularMeshAsASCII(CartesianTriangularMesh mesh, String filePrefix) throws IOException
 	
+	/**
+	 * Loads a CartesianCoordinatesSet from an .xyz file. The .xyz can contains 3 column (x,y, z coordinates of the point) or 
+	 * 6 (x,y,z coordinates of the point + the normal vector at the point)
+	 * @param fileName The file path to the file.
+	 * @return The CartesianCoordinatesSet loaded from the file. 
+	 */
 	op CartesianCoordinatesSet loadXYZ(String fileName) throws IOException
-	
+		
+	/**
+	 * Loads a CartesianTriangularMesh from two ASCII files. Two files are required : xyzFileName.xyz : contains the points and
+	 * triFileName.tri : containing the list of triangles.  
+	 * @param triFileName The file path to the file containing the triangles.
+	 * @param xyzFileName The file path to the file containing the points.
+	 * @return The loaded CartesianTriangularMesh.
+	 */
 	op CartesianTriangularMesh loadTriangularMeshFromTriXYZ(String triFileName, String xyzFileName) throws IOException
 	
+	/**
+	 * Saves a CartesianCoordinatesSet to an .xyz formatted file.
+	 * @param coordinatesSet The CartesianCoordinatesSet to save.
+	 * @param file The file path of the destination.
+	 */
 	op void saveCoordinatesSetToXYZ(CartesianCoordinatesSet coordinatesSet, String file) throws IOException
 	
+	/**
+	 * Saves a CartesianCoordinatesSet to an .xyz formatted file.
+	 * @param coordinatesSet The CartesianCoordinatesSet to save.
+	 * @param file The output stream to write the content..
+	 */
 	op void saveCoordinatesSetToXYZ(CartesianCoordinatesSet coordinatesSet, OutputStream file) throws IOException
 	
+	/**
+	 * Saves a CartesianCoordinatesSet to an comma separated formatted file.
+	 * @param coordinatesSet The CartesianCoordinatesSet to save.
+	 * @param file The file path of the destination.
+	 */
 	op void saveCoordinatesSetToCSV(CartesianCoordinatesSet coordinatesSet, String file) throws IOException
 	
+	/**
+	 * Saves a CartesianCoordinatesSet to an comma separated formatted file.
+	 * @param coordinatesSet The CartesianCoordinatesSet to save.
+	 * @param file The file path of the destination.
+	 */
 	op void saveCoordinatesSetToCSV(CartesianCoordinatesSet coordinatesSet, OutputStream file) throws IOException
 }
 
@@ -726,13 +801,24 @@ class Data3DUtils
 {
 	op EList<Vector3d> computeNormals(CartesianTriangularMesh mesh)
 	
+	/**
+	 * Computes the position of the centroid of a list of CartesianPositionCoordinates.
+	 * @param points The list of CartesianPositionCoordinates.
+	 * @return The centroid position of the list of CartesianPositionCoordinates, null if the list is empty.
+	 */
+	op CartesianPositionCoordinates computeCentroid(List<CartesianPositionCoordinates> points)
+	
+	/**
+	 * Computes the position of the centroid of a CartesianCoordinatesSet.
+	 * @param points The CartesianCoordinatesSet.
+	 * @return The centroide position of the CartesianCoordinatesSet, null if the CartesianCoordinatesSet is empty.
+	 */
 	op CartesianPositionCoordinates computeCentroid(CartesianCoordinatesSet points)
+		
 	
 	op void computeMinMaxValues(Point3d min, Point3d max, CartesianCoordinatesSet data)
 	
 	op double computeCurvatureChange(PointLocator pointLocator, int centerPoint, double radius)
-	
-	op double computeCurvatureChange(VecmathPointLocator pointLocator, int centerPoint, double radius)
 	
 	op CartesianTriangularMesh extrude(List<CartesianPositionCoordinates> profilePoints, CartesianAxis extrusionAxis, double extrusionWidth, boolean closeMesh)
 }

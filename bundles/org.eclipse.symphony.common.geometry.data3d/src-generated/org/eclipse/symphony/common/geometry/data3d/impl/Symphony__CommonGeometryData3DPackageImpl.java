@@ -61,16 +61,14 @@ import org.eclipse.symphony.common.geometry.data3d.DelaunayMesher;
 import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
 import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapMesher;
 import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMapSampler;
+import org.eclipse.symphony.common.geometry.data3d.KDTreeBasedPointLocator;
 import org.eclipse.symphony.common.geometry.data3d.MeshLocalizer;
 import org.eclipse.symphony.common.geometry.data3d.MeshSmoother;
 import org.eclipse.symphony.common.geometry.data3d.NormalPointCloud;
 import org.eclipse.symphony.common.geometry.data3d.OutlierFilter;
 import org.eclipse.symphony.common.geometry.data3d.PointLocator;
-import org.eclipse.symphony.common.geometry.data3d.PointNormalLocator;
 import org.eclipse.symphony.common.geometry.data3d.Pose;
 import org.eclipse.symphony.common.geometry.data3d.PositionMarker;
-import org.eclipse.symphony.common.geometry.data3d.RasterPointCloud;
-import org.eclipse.symphony.common.geometry.data3d.RasterPointCloudToCartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.RigidBodyPoseTracker;
 import org.eclipse.symphony.common.geometry.data3d.SphereSamplingShape;
 import org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates;
@@ -83,8 +81,6 @@ import org.eclipse.symphony.common.geometry.data3d.TriangleEdgeLengthTriangularM
 import org.eclipse.symphony.common.geometry.data3d.TriangularMeshNormalsCalculator;
 import org.eclipse.symphony.common.geometry.data3d.TriangularMeshToNormalPointCloud;
 import org.eclipse.symphony.common.geometry.data3d.UniquePointsFilter;
-import org.eclipse.symphony.common.geometry.data3d.VecmathKdTreePointLocator;
-import org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator;
 import org.eclipse.symphony.common.geometry.data3d.VoxelBased3DPointCloudResampler;
 import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
 
@@ -303,14 +299,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vecmathPointLocatorEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vecmathKdTreePointLocatorEClass = null;
+	private EClass kdTreeBasedPointLocatorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -318,13 +307,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	private EClass meshLocalizerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass pointNormalLocatorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -381,20 +363,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * @generated
 	 */
 	private EClass outlierFilterEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass rasterPointCloudEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass rasterPointCloudToCartesianCoordinatesSetEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1246,16 +1214,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPointLocator_Points() {
-		return (EAttribute)pointLocatorEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPointLocator__FindClosestPoint__CartesianPositionCoordinates() {
+	public EOperation getPointLocator__GetPoints() {
 		return pointLocatorEClass.getEOperations().get(0);
 	}
 
@@ -1264,7 +1223,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPointLocator__FindPointsWithinRadius__double_CartesianPositionCoordinates() {
+	public EOperation getPointLocator__AddPoint__CartesianPositionCoordinates() {
 		return pointLocatorEClass.getEOperations().get(1);
 	}
 
@@ -1273,8 +1232,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVecmathPointLocator() {
-		return vecmathPointLocatorEClass;
+	public EOperation getPointLocator__AddPoints__List() {
+		return pointLocatorEClass.getEOperations().get(2);
 	}
 
 	/**
@@ -1282,8 +1241,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVecmathPointLocator_Points() {
-		return (EAttribute)vecmathPointLocatorEClass.getEStructuralFeatures().get(0);
+	public EOperation getPointLocator__RemovePoint__CartesianPositionCoordinates() {
+		return pointLocatorEClass.getEOperations().get(3);
 	}
 
 	/**
@@ -1291,8 +1250,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getVecmathPointLocator__FindClosestPoint__Point3d() {
-		return vecmathPointLocatorEClass.getEOperations().get(0);
+	public EOperation getPointLocator__RemovePoints__List() {
+		return pointLocatorEClass.getEOperations().get(4);
 	}
 
 	/**
@@ -1300,8 +1259,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getVecmathPointLocator__FindPointsWithinRadius__double_Point3d() {
-		return vecmathPointLocatorEClass.getEOperations().get(1);
+	public EOperation getPointLocator__ClearPoints() {
+		return pointLocatorEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -1309,8 +1268,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getVecmathPointLocator__FindClosestPointId__Point3d() {
-		return vecmathPointLocatorEClass.getEOperations().get(2);
+	public EOperation getPointLocator__FindClosestPoint__CartesianPositionCoordinates() {
+		return pointLocatorEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -1318,8 +1277,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getVecmathPointLocator__FindPointIdsWithinRadius__double_Point3d() {
-		return vecmathPointLocatorEClass.getEOperations().get(3);
+	public EOperation getPointLocator__FindClosestPoints__CartesianPositionCoordinates_int() {
+		return pointLocatorEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -1327,8 +1286,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getVecmathPointLocator__FindClosestNPoints__Point3d_int() {
-		return vecmathPointLocatorEClass.getEOperations().get(4);
+	public EOperation getPointLocator__FindPointsWithinRadius__CartesianPositionCoordinates_double() {
+		return pointLocatorEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -1336,17 +1295,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getVecmathPointLocator__FindClosestNPointIds__Point3d_int() {
-		return vecmathPointLocatorEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVecmathKdTreePointLocator() {
-		return vecmathKdTreePointLocatorEClass;
+	public EClass getKDTreeBasedPointLocator() {
+		return kdTreeBasedPointLocatorEClass;
 	}
 
 	/**
@@ -1365,78 +1315,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 */
 	public EOperation getMeshLocalizer__Localize__CartesianTriangularMesh_Matrix4d_CartesianTriangularMesh_Matrix4d() {
 		return meshLocalizerEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPointNormalLocator() {
-		return pointNormalLocatorEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPointNormalLocator_DataSet() {
-		return (EReference)pointNormalLocatorEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPointNormalLocator__FindClosestPoint__Point3d_Vector3d() {
-		return pointNormalLocatorEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPointNormalLocator__FindPointsWithinRadius__double_Point3d_Vector3d() {
-		return pointNormalLocatorEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPointNormalLocator__FindClosestNPoints__int_Point3d_Vector3d() {
-		return pointNormalLocatorEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPointNormalLocator__FindClosestPointId__Point3d_Vector3d() {
-		return pointNormalLocatorEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPointNormalLocator__FindPointIdsWithinRadius__double_Point3d_Vector3d() {
-		return pointNormalLocatorEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPointNormalLocator__FindClosestNPointIds__int_Point3d_Vector3d() {
-		return pointNormalLocatorEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -1563,60 +1441,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 */
 	public EAttribute getOutlierFilter_MaxDistance() {
 		return (EAttribute)outlierFilterEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getRasterPointCloud() {
-		return rasterPointCloudEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRasterPointCloud_Rows() {
-		return (EAttribute)rasterPointCloudEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRasterPointCloud_Columns() {
-		return (EAttribute)rasterPointCloudEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRasterPointCloud__GetPoint__int_int() {
-		return rasterPointCloudEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getRasterPointCloud__SetPoint__int_int_CartesianPositionCoordinates() {
-		return rasterPointCloudEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getRasterPointCloudToCartesianCoordinatesSet() {
-		return rasterPointCloudToCartesianCoordinatesSetEClass;
 	}
 
 	/**
@@ -1831,7 +1655,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__CreatePointNormalLocator__NormalPointCloud() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateDigitalElevationMap__CartesianCoordinatesSet() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(6);
 	}
 
@@ -1840,7 +1664,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__CreateDigitalElevationMap__CartesianCoordinatesSet() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(7);
 	}
 
@@ -1849,7 +1673,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianPolygon__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(8);
 	}
 
@@ -1858,7 +1682,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianPositionCoordinates__CartesianPositionCoordinates() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(9);
 	}
 
@@ -1867,7 +1691,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianOrientationCoordinates__CartesianOrientationCoordinates() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(10);
 	}
 
@@ -1876,7 +1700,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianCoordinatesMesh() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(11);
 	}
 
@@ -1885,7 +1709,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPositionCoordinates_CartesianPositionCoordinates_CartesianPositionCoordinates() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPolygon() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(12);
 	}
 
@@ -1894,7 +1718,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangle__CartesianPolygon() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__List() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(13);
 	}
 
@@ -1903,7 +1727,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__List() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(14);
 	}
 
@@ -1912,7 +1736,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianCoordinatesMesh__CartesianTriangularMesh() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__List() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(15);
 	}
 
@@ -1921,7 +1745,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__List() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(16);
 	}
 
@@ -1930,7 +1754,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__CreateCartesianTriangularMesh__CartesianTriangularMesh() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(17);
 	}
 
@@ -1939,7 +1763,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianCoordinatesSet_Matrix4d() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__List_Matrix4d() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(18);
 	}
 
@@ -1948,7 +1772,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__List_Matrix4d() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__CreateTransformedMesh__CartesianTriangularMesh_Matrix4d() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(19);
 	}
 
@@ -1966,7 +1790,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransformInt__CartesianTriangularMesh_Matrix4d() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__NormalPointCloud_Matrix4d() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(21);
 	}
 
@@ -1975,7 +1799,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__NormalPointCloud_Matrix4d() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(22);
 	}
 
@@ -1984,17 +1808,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double() {
+	public EOperation getSymphony__CommonGeometryData3DFacade__ConcatenateTriangularMeshes__List() {
 		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(23);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSymphony__CommonGeometryData3DFacade__ConcatenateTriangularMeshes__EList() {
-		return symphony__CommonGeometryData3DFacadeEClass.getEOperations().get(24);
 	}
 
 	/**
@@ -2146,7 +1961,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3DUtils__ComputeCentroid__CartesianCoordinatesSet() {
+	public EOperation getData3DUtils__ComputeCentroid__List() {
 		return data3DUtilsEClass.getEOperations().get(1);
 	}
 
@@ -2155,7 +1970,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3DUtils__ComputeMinMaxValues__Point3d_Point3d_CartesianCoordinatesSet() {
+	public EOperation getData3DUtils__ComputeCentroid__CartesianCoordinatesSet() {
 		return data3DUtilsEClass.getEOperations().get(2);
 	}
 
@@ -2164,7 +1979,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3DUtils__ComputeCurvatureChange__PointLocator_int_double() {
+	public EOperation getData3DUtils__ComputeMinMaxValues__Point3d_Point3d_CartesianCoordinatesSet() {
 		return data3DUtilsEClass.getEOperations().get(3);
 	}
 
@@ -2173,7 +1988,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getData3DUtils__ComputeCurvatureChange__VecmathPointLocator_int_double() {
+	public EOperation getData3DUtils__ComputeCurvatureChange__PointLocator_int_double() {
 		return data3DUtilsEClass.getEOperations().get(4);
 	}
 
@@ -2496,32 +2311,20 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		createEAttribute(normalPointCloudEClass, NORMAL_POINT_CLOUD__NORMALS);
 
 		pointLocatorEClass = createEClass(POINT_LOCATOR);
-		createEAttribute(pointLocatorEClass, POINT_LOCATOR__POINTS);
+		createEOperation(pointLocatorEClass, POINT_LOCATOR___GET_POINTS);
+		createEOperation(pointLocatorEClass, POINT_LOCATOR___ADD_POINT__CARTESIANPOSITIONCOORDINATES);
+		createEOperation(pointLocatorEClass, POINT_LOCATOR___ADD_POINTS__LIST);
+		createEOperation(pointLocatorEClass, POINT_LOCATOR___REMOVE_POINT__CARTESIANPOSITIONCOORDINATES);
+		createEOperation(pointLocatorEClass, POINT_LOCATOR___REMOVE_POINTS__LIST);
+		createEOperation(pointLocatorEClass, POINT_LOCATOR___CLEAR_POINTS);
 		createEOperation(pointLocatorEClass, POINT_LOCATOR___FIND_CLOSEST_POINT__CARTESIANPOSITIONCOORDINATES);
-		createEOperation(pointLocatorEClass, POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_CARTESIANPOSITIONCOORDINATES);
+		createEOperation(pointLocatorEClass, POINT_LOCATOR___FIND_CLOSEST_POINTS__CARTESIANPOSITIONCOORDINATES_INT);
+		createEOperation(pointLocatorEClass, POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__CARTESIANPOSITIONCOORDINATES_DOUBLE);
 
-		vecmathPointLocatorEClass = createEClass(VECMATH_POINT_LOCATOR);
-		createEAttribute(vecmathPointLocatorEClass, VECMATH_POINT_LOCATOR__POINTS);
-		createEOperation(vecmathPointLocatorEClass, VECMATH_POINT_LOCATOR___FIND_CLOSEST_POINT__POINT3D);
-		createEOperation(vecmathPointLocatorEClass, VECMATH_POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_POINT3D);
-		createEOperation(vecmathPointLocatorEClass, VECMATH_POINT_LOCATOR___FIND_CLOSEST_POINT_ID__POINT3D);
-		createEOperation(vecmathPointLocatorEClass, VECMATH_POINT_LOCATOR___FIND_POINT_IDS_WITHIN_RADIUS__DOUBLE_POINT3D);
-		createEOperation(vecmathPointLocatorEClass, VECMATH_POINT_LOCATOR___FIND_CLOSEST_NPOINTS__POINT3D_INT);
-		createEOperation(vecmathPointLocatorEClass, VECMATH_POINT_LOCATOR___FIND_CLOSEST_NPOINT_IDS__POINT3D_INT);
-
-		vecmathKdTreePointLocatorEClass = createEClass(VECMATH_KD_TREE_POINT_LOCATOR);
+		kdTreeBasedPointLocatorEClass = createEClass(KD_TREE_BASED_POINT_LOCATOR);
 
 		meshLocalizerEClass = createEClass(MESH_LOCALIZER);
 		createEOperation(meshLocalizerEClass, MESH_LOCALIZER___LOCALIZE__CARTESIANTRIANGULARMESH_MATRIX4D_CARTESIANTRIANGULARMESH_MATRIX4D);
-
-		pointNormalLocatorEClass = createEClass(POINT_NORMAL_LOCATOR);
-		createEReference(pointNormalLocatorEClass, POINT_NORMAL_LOCATOR__DATA_SET);
-		createEOperation(pointNormalLocatorEClass, POINT_NORMAL_LOCATOR___FIND_CLOSEST_POINT__POINT3D_VECTOR3D);
-		createEOperation(pointNormalLocatorEClass, POINT_NORMAL_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_POINT3D_VECTOR3D);
-		createEOperation(pointNormalLocatorEClass, POINT_NORMAL_LOCATOR___FIND_CLOSEST_NPOINTS__INT_POINT3D_VECTOR3D);
-		createEOperation(pointNormalLocatorEClass, POINT_NORMAL_LOCATOR___FIND_CLOSEST_POINT_ID__POINT3D_VECTOR3D);
-		createEOperation(pointNormalLocatorEClass, POINT_NORMAL_LOCATOR___FIND_POINT_IDS_WITHIN_RADIUS__DOUBLE_POINT3D_VECTOR3D);
-		createEOperation(pointNormalLocatorEClass, POINT_NORMAL_LOCATOR___FIND_CLOSEST_NPOINT_IDS__INT_POINT3D_VECTOR3D);
 
 		delaunayMesherEClass = createEClass(DELAUNAY_MESHER);
 
@@ -2544,14 +2347,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 
 		outlierFilterEClass = createEClass(OUTLIER_FILTER);
 		createEAttribute(outlierFilterEClass, OUTLIER_FILTER__MAX_DISTANCE);
-
-		rasterPointCloudEClass = createEClass(RASTER_POINT_CLOUD);
-		createEAttribute(rasterPointCloudEClass, RASTER_POINT_CLOUD__ROWS);
-		createEAttribute(rasterPointCloudEClass, RASTER_POINT_CLOUD__COLUMNS);
-		createEOperation(rasterPointCloudEClass, RASTER_POINT_CLOUD___GET_POINT__INT_INT);
-		createEOperation(rasterPointCloudEClass, RASTER_POINT_CLOUD___SET_POINT__INT_INT_CARTESIANPOSITIONCOORDINATES);
-
-		rasterPointCloudToCartesianCoordinatesSetEClass = createEClass(RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET);
 
 		meshSmootherEClass = createEClass(MESH_SMOOTHER);
 		createEAttribute(meshSmootherEClass, MESH_SMOOTHER__NUMBER_OF_ITERATIONS);
@@ -2580,7 +2375,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE_DOUBLE);
 		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__POSE);
 		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES);
-		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POINT_NORMAL_LOCATOR__NORMALPOINTCLOUD);
 		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET);
 		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES);
 		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES);
@@ -2594,11 +2388,11 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH);
 		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D);
 		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_TRANSFORMED_MESH__CARTESIANTRIANGULARMESH_MATRIX4D);
 		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D);
-		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM_INT__CARTESIANTRIANGULARMESH_MATRIX4D);
 		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D);
 		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE);
-		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__ELIST);
+		createEOperation(symphony__CommonGeometryData3DFacadeEClass, SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST);
 
 		data3DIOEClass = createEClass(DATA3_DIO);
 		createEOperation(data3DIOEClass, DATA3_DIO___LOAD_TRIANGULAR_MESH__STRING);
@@ -2617,10 +2411,10 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 
 		data3DUtilsEClass = createEClass(DATA3_DUTILS);
 		createEOperation(data3DUtilsEClass, DATA3_DUTILS___COMPUTE_NORMALS__CARTESIANTRIANGULARMESH);
+		createEOperation(data3DUtilsEClass, DATA3_DUTILS___COMPUTE_CENTROID__LIST);
 		createEOperation(data3DUtilsEClass, DATA3_DUTILS___COMPUTE_CENTROID__CARTESIANCOORDINATESSET);
 		createEOperation(data3DUtilsEClass, DATA3_DUTILS___COMPUTE_MIN_MAX_VALUES__POINT3D_POINT3D_CARTESIANCOORDINATESSET);
 		createEOperation(data3DUtilsEClass, DATA3_DUTILS___COMPUTE_CURVATURE_CHANGE__POINTLOCATOR_INT_DOUBLE);
-		createEOperation(data3DUtilsEClass, DATA3_DUTILS___COMPUTE_CURVATURE_CHANGE__VECMATHPOINTLOCATOR_INT_DOUBLE);
 		createEOperation(data3DUtilsEClass, DATA3_DUTILS___EXTRUDE__LIST_CARTESIANAXIS_DOUBLE_BOOLEAN);
 
 		// Create enums
@@ -2817,7 +2611,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		g2 = createEGenericType(this.getCartesianTriangularMesh());
 		g1.getETypeArguments().add(g2);
 		cartesianPositionCoordinatesMesherEClass.getEGenericSuperTypes().add(g1);
-		vecmathKdTreePointLocatorEClass.getESuperTypes().add(this.getVecmathPointLocator());
+		kdTreeBasedPointLocatorEClass.getESuperTypes().add(this.getPointLocator());
 		delaunayMesherEClass.getESuperTypes().add(this.getCartesianPositionCoordinatesMesher());
 		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
 		g2 = createEGenericType(this.getDigitalElevationMap());
@@ -2855,12 +2649,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		g2 = createEGenericType(this.getCartesianCoordinatesSet());
 		g1.getETypeArguments().add(g2);
 		outlierFilterEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
-		g2 = createEGenericType(this.getRasterPointCloud());
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(this.getCartesianCoordinatesSet());
-		g1.getETypeArguments().add(g2);
-		rasterPointCloudToCartesianCoordinatesSetEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(theSymphony__CommonProcessorsPackage.getProcessor());
 		g2 = createEGenericType(this.getCartesianCoordinatesSet());
 		g1.getETypeArguments().add(g2);
@@ -2976,48 +2764,54 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		g1.getETypeArguments().add(g2);
 		initEAttribute(getNormalPointCloud_Normals(), g1, "normals", null, 0, 1, NormalPointCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(pointLocatorEClass, PointLocator.class, "PointLocator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(pointLocatorEClass, PointLocator.class, "PointLocator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		EOperation op = initEOperation(getPointLocator__GetPoints(), null, "getPoints", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
-		initEAttribute(getPointLocator_Points(), g1, "points", null, 0, 1, PointLocator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEOperation(op, g1);
 
-		EOperation op = initEOperation(getPointLocator__FindClosestPoint__CartesianPositionCoordinates(), this.getCartesianPositionCoordinates(), "findClosestPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getPointLocator__AddPoint__CartesianPositionCoordinates(), null, "addPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianPositionCoordinates(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getPointLocator__FindPointsWithinRadius__double_CartesianPositionCoordinates(), this.getCartesianPositionCoordinates(), "findPointsWithinRadius", 0, -1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDouble(), "radius", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getCartesianPositionCoordinates(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		initEClass(vecmathPointLocatorEClass, VecmathPointLocator.class, "VecmathPointLocator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		op = initEOperation(getPointLocator__AddPoints__List(), null, "addPoints", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		g1 = createEGenericType(this.getList());
-		g2 = createEGenericType(this.getPoint3d());
+		g2 = createEGenericType(this.getCartesianPositionCoordinates());
 		g1.getETypeArguments().add(g2);
-		initEAttribute(getVecmathPointLocator_Points(), g1, "points", null, 0, 1, VecmathPointLocator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		addEParameter(op, g1, "points", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getVecmathPointLocator__FindClosestPoint__Point3d(), this.getPoint3d(), "findClosestPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getPoint3d(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getPointLocator__RemovePoint__CartesianPositionCoordinates(), null, "removePoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getCartesianPositionCoordinates(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getVecmathPointLocator__FindPointsWithinRadius__double_Point3d(), this.getPoint3d(), "findPointsWithinRadius", 0, -1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getPointLocator__RemovePoints__List(), null, "removePoints", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getCartesianPositionCoordinates());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "points", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getPointLocator__ClearPoints(), null, "clearPoints", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getPointLocator__FindClosestPoint__CartesianPositionCoordinates(), this.getCartesianPositionCoordinates(), "findClosestPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getCartesianPositionCoordinates(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getPointLocator__FindClosestPoints__CartesianPositionCoordinates_int(), null, "findClosestPoints", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getCartesianPositionCoordinates(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEInt(), "maximumNumberOfNeighbors", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getCartesianPositionCoordinates());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		op = initEOperation(getPointLocator__FindPointsWithinRadius__CartesianPositionCoordinates_double(), null, "findPointsWithinRadius", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getCartesianPositionCoordinates(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "radius", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getPoint3d(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getCartesianPositionCoordinates());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
 
-		op = initEOperation(getVecmathPointLocator__FindClosestPointId__Point3d(), theEcorePackage.getEInt(), "findClosestPointId", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getPoint3d(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getVecmathPointLocator__FindPointIdsWithinRadius__double_Point3d(), this.getIntArray(), "findPointIdsWithinRadius", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDouble(), "radius", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getPoint3d(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getVecmathPointLocator__FindClosestNPoints__Point3d_int(), this.getPoint3d(), "findClosestNPoints", 0, -1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getPoint3d(), "referencePoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEInt(), "n", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getVecmathPointLocator__FindClosestNPointIds__Point3d_int(), this.getIntArray(), "findClosestNPointIds", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getPoint3d(), "referencePoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEInt(), "n", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		initEClass(vecmathKdTreePointLocatorEClass, VecmathKdTreePointLocator.class, "VecmathKdTreePointLocator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(kdTreeBasedPointLocatorEClass, KDTreeBasedPointLocator.class, "KDTreeBasedPointLocator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(meshLocalizerEClass, MeshLocalizer.class, "MeshLocalizer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3027,37 +2821,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		addEParameter(op, this.getCartesianTriangularMesh(), "floatingMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4d(), "floatingMeshTransformEstimate", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEException(op, this.getException());
-
-		initEClass(pointNormalLocatorEClass, PointNormalLocator.class, "PointNormalLocator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPointNormalLocator_DataSet(), this.getNormalPointCloud(), null, "dataSet", null, 0, 1, PointNormalLocator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		op = initEOperation(getPointNormalLocator__FindClosestPoint__Point3d_Vector3d(), this.getGVector(), "findClosestPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getPoint3d(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getVector3d(), "normal", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getPointNormalLocator__FindPointsWithinRadius__double_Point3d_Vector3d(), this.getGVector(), "findPointsWithinRadius", 0, -1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDouble(), "radius", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getPoint3d(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getVector3d(), "normal", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getPointNormalLocator__FindClosestNPoints__int_Point3d_Vector3d(), this.getGVector(), "findClosestNPoints", 0, -1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEInt(), "n", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getPoint3d(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getVector3d(), "normal", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getPointNormalLocator__FindClosestPointId__Point3d_Vector3d(), theEcorePackage.getEInt(), "findClosestPointId", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getPoint3d(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getVector3d(), "normal", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getPointNormalLocator__FindPointIdsWithinRadius__double_Point3d_Vector3d(), this.getIntArray(), "findPointIdsWithinRadius", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDouble(), "radius", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getPoint3d(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getVector3d(), "normal", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getPointNormalLocator__FindClosestNPointIds__int_Point3d_Vector3d(), this.getIntArray(), "findClosestNPointIds", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEInt(), "n", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getPoint3d(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getVector3d(), "normal", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(delaunayMesherEClass, DelaunayMesher.class, "DelaunayMesher", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3082,21 +2845,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 
 		initEClass(outlierFilterEClass, OutlierFilter.class, "OutlierFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOutlierFilter_MaxDistance(), theEcorePackage.getEDouble(), "maxDistance", null, 0, 1, OutlierFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(rasterPointCloudEClass, RasterPointCloud.class, "RasterPointCloud", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRasterPointCloud_Rows(), theEcorePackage.getEInt(), "rows", "1", 0, 1, RasterPointCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRasterPointCloud_Columns(), theEcorePackage.getEInt(), "columns", "1", 0, 1, RasterPointCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		op = initEOperation(getRasterPointCloud__GetPoint__int_int(), this.getCartesianPositionCoordinates(), "getPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEInt(), "row", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEInt(), "column", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getRasterPointCloud__SetPoint__int_int_CartesianPositionCoordinates(), null, "setPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEInt(), "row", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEInt(), "column", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getCartesianPositionCoordinates(), "point", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		initEClass(rasterPointCloudToCartesianCoordinatesSetEClass, RasterPointCloudToCartesianCoordinatesSet.class, "RasterPointCloudToCartesianCoordinatesSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(meshSmootherEClass, MeshSmoother.class, "MeshSmoother", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMeshSmoother_NumberOfIterations(), theEcorePackage.getEInt(), "numberOfIterations", "1", 0, 1, MeshSmoother.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3173,9 +2921,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		addEParameter(op, this.getCartesianPositionCoordinates(), "position", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianOrientationCoordinates(), "orientation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreatePointNormalLocator__NormalPointCloud(), this.getPointNormalLocator(), "createPointNormalLocator", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getNormalPointCloud(), "input", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
 		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateDigitalElevationMap__CartesianCoordinatesSet(), this.getDigitalElevationMap(), "createDigitalElevationMap", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianCoordinatesSet(), "coordinatesSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -3239,11 +2984,11 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
-		op = initEOperation(getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d(), this.getCartesianTriangularMesh(), "applyTransform", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__CreateTransformedMesh__CartesianTriangularMesh_Matrix4d(), this.getCartesianTriangularMesh(), "createTransformedMesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4d(), "trMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonGeometryData3DFacade__ApplyTransformInt__CartesianTriangularMesh_Matrix4d(), this.getCartesianTriangularMesh(), "applyTransformInt", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d(), null, "applyTransform", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianTriangularMesh(), "mesh", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getMatrix4d(), "trMatrix", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -3255,8 +3000,8 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		addEParameter(op, this.getCartesianCoordinatesSet(), "cartesianCoordinatesSet", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getDoubleArrayOfArray(), "xyzData", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
-		op = initEOperation(getSymphony__CommonGeometryData3DFacade__ConcatenateTriangularMeshes__EList(), this.getCartesianTriangularMesh(), "concatenateTriangularMeshes", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		g1 = createEGenericType(this.getEList());
+		op = initEOperation(getSymphony__CommonGeometryData3DFacade__ConcatenateTriangularMeshes__List(), this.getCartesianTriangularMesh(), "concatenateTriangularMeshes", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
 		g2 = createEGenericType(this.getCartesianTriangularMesh());
 		g1.getETypeArguments().add(g2);
 		addEParameter(op, g1, "listOfTriangularMeshes", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -3332,6 +3077,12 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
+		op = initEOperation(getData3DUtils__ComputeCentroid__List(), this.getCartesianPositionCoordinates(), "computeCentroid", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getCartesianPositionCoordinates());
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "points", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
 		op = initEOperation(getData3DUtils__ComputeCentroid__CartesianCoordinatesSet(), this.getCartesianPositionCoordinates(), "computeCentroid", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getCartesianCoordinatesSet(), "points", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -3342,11 +3093,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 
 		op = initEOperation(getData3DUtils__ComputeCurvatureChange__PointLocator_int_double(), theEcorePackage.getEDouble(), "computeCurvatureChange", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPointLocator(), "pointLocator", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEInt(), "centerPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEDouble(), "radius", 0, 1, !IS_UNIQUE, IS_ORDERED);
-
-		op = initEOperation(getData3DUtils__ComputeCurvatureChange__VecmathPointLocator_int_double(), theEcorePackage.getEDouble(), "computeCurvatureChange", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, this.getVecmathPointLocator(), "pointLocator", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEInt(), "centerPoint", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEDouble(), "radius", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -3420,6 +3166,7 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data3d/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.geometry.data3d.edit/src-generated",
+			 "testsDirectory", "/org.eclipse.symphony.common.geometry.data3d.tests/src-generated",
 			 "basePackage", "org.eclipse.symphony.common.geometry"
 		   });	
 		addAnnotation
@@ -3750,10 +3497,76 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 			 "documentation", "*\nWhether or not to include polygon that have a vertex on the boundary."
 		   });	
 		addAnnotation
+		  (pointLocatorEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nDefinition of a class used to find neighbors in a list of CartesianPositionCoordinates.\nSpecific operation to add/remove points from the list to be searched are defined as opposed to an\nattribute to enable sub-classes to easily manage changes in the list of point to search."
+		   });	
+		addAnnotation
+		  (getPointLocator__GetPoints(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns a list of the points currently available for search."
+		   });	
+		addAnnotation
+		  (getPointLocator__AddPoint__CartesianPositionCoordinates(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nAdds one point to the list of point to search."
+		   });	
+		addAnnotation
+		  (getPointLocator__AddPoints__List(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nAdds a list of points to the list of point to search."
+		   });	
+		addAnnotation
+		  (getPointLocator__RemovePoint__CartesianPositionCoordinates(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nRemoves one point from the list of point to search."
+		   });	
+		addAnnotation
+		  (getPointLocator__RemovePoints__List(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nRemoves a list of points from the list of point to search."
+		   });	
+		addAnnotation
+		  (getPointLocator__ClearPoints(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nRemove all points from the the list of point to search."
+		   });	
+		addAnnotation
+		  (getPointLocator__FindClosestPoint__CartesianPositionCoordinates(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns a specified point closest neighbor.\n@param point The specified point.\n@return The closest neighbor, null if the PointLocator has no points."
+		   });	
+		addAnnotation
+		  (getPointLocator__FindClosestPoints__CartesianPositionCoordinates_int(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns a specified point closest neighbor.\n@param point The specified point.\n@param maximumNumberOfNeighbors The maximum number of neighbors to return.\n@return The closest neighbor, null if the PointLocator has no points."
+		   });	
+		addAnnotation
+		  (getPointLocator__FindPointsWithinRadius__CartesianPositionCoordinates_double(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nReturns a point\'s neighbor with a given radius.\n@param point The specified point.\n@param radius The maximum radius from the point.\n@return The list of neighbor within the radius. Never null, but can be empty."
+		   });	
+		addAnnotation
+		  (kdTreeBasedPointLocatorEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nA PointLocator implemented using a KDTree. This implementation is not thread safe."
+		   });	
+		addAnnotation
 		  (meshLocalizerEClass, 
 		   source, 
 		   new String[] {
-			 "documentation", "*\nClass that provides an estimate of relative pose between two meshes, assuming the two meshes cove overlapping area of a surface."
+			 "documentation", "*\nClass that provides an estimate of relative pose between two meshes, assuming the two meshes cover overlapping area of a surface."
 		   });	
 		addAnnotation
 		  (getMeshLocalizer__Localize__CartesianTriangularMesh_Matrix4d_CartesianTriangularMesh_Matrix4d(), 
@@ -3847,18 +3660,6 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 			 "notify", "true",
 			 "children", "false",
 			 "symphony_units", "m"
-		   });	
-		addAnnotation
-		  (rasterPointCloudEClass, 
-		   source, 
-		   new String[] {
-			 "documentation", "*\nTODO duplicate of DigitalElevationMap ? Should move the methods to DigitalElevationMap."
-		   });	
-		addAnnotation
-		  (rasterPointCloudToCartesianCoordinatesSetEClass, 
-		   source, 
-		   new String[] {
-			 "documentation", "*\nShould be removed when RasterPointCloud is integrated in DigitalElevationMap."
 		   });	
 		addAnnotation
 		  (meshSmootherEClass, 
@@ -3969,10 +3770,106 @@ public class Symphony__CommonGeometryData3DPackageImpl extends EPackageImpl impl
 			 "documentation", "*\nThe list of position markers for the rigid body at the origin."
 		   });	
 		addAnnotation
+		  (getSymphony__CommonGeometryData3DFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\n@aparam xyzData The array of n points organize as [0..n][x,y,z]."
+		   });	
+		addAnnotation
 		  (data3DIOEClass, 
 		   source, 
 		   new String[] {
 			 "documentation", "*\nClass defining methods used to save / load 3D data to / from files."
+		   });	
+		addAnnotation
+		  (getData3DIO__LoadTriangularMesh__String(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nLoads a CartesianTriangularMesh from an XMI resource.\n@param file The file path to the resource.\n@return The loaded CartesianTriangularMesh."
+		   });	
+		addAnnotation
+		  (getData3DIO__LoadTriangularMesh__InputStream(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nLoads a CartesianTriangularMesh from an XMI resource.\n@param input The input stream to read the content from.\n@return The loaded CartesianTriangularMesh."
+		   });	
+		addAnnotation
+		  (getData3DIO__SaveTriangularMesh__CartesianTriangularMesh_String(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nSaves a CartesianTriangularMesh as an XMI resource.\n@param mesh The CartesianTriangularMesh to save.\n@param file The destination file path for the resource."
+		   });	
+		addAnnotation
+		  (getData3DIO__SaveTriangularMesh__CartesianTriangularMesh_OutputStream(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nSaves a CartesianTriangularMesh as an XMI resource.\n@param mesh The CartesianTriangularMesh to save.\n@param output The output stream to write the content."
+		   });	
+		addAnnotation
+		  (getData3DIO__LoadTriangularMeshFromASCIIAsNormalPointCloud__String(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nLoads a NormalPointCloud from ASCII files. Two files are required : filePrefix.xyz : contains the points and\nfilePrefix.tri : containing the list of triangles.\n@param filePrefix The file prefix defining both the points and triangles files.\n@return The loaded NormalPointCloud."
+		   });	
+		addAnnotation
+		  (getData3DIO__LoadTriangularMeshFromASCII__String(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nLoads a CartesianTriangularMesh from ASCII files. Two files are required : filePrefix.xyz : contains the points and\nfilePrefix.tri : containing the list of triangles.\n@param filePrefix The file prefix defining both the points and triangles files.\n@return The loaded CartesianTriangularMesh."
+		   });	
+		addAnnotation
+		  (getData3DIO__SaveTriangularMeshAsASCII__CartesianTriangularMesh_String(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nSaves a CartesianTriangularMesh to ASCII files. Two files are produced : filePrefix.xyz : contains the points and\nfilePrefix.tri : containing the list of triangles.\n@param mesh The CartesianTriangularMesh to save.\n@param filePrefix The file prefix defining both the points and triangles files."
+		   });	
+		addAnnotation
+		  (getData3DIO__LoadXYZ__String(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nLoads a CartesianCoordinatesSet from an .xyz file. The .xyz can contains 3 column (x,y, z coordinates of the point) or\n6 (x,y,z coordinates of the point + the normal vector at the point)\n@param fileName The file path to the file.\n@return The CartesianCoordinatesSet loaded from the file."
+		   });	
+		addAnnotation
+		  (getData3DIO__LoadTriangularMeshFromTriXYZ__String_String(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nLoads a CartesianTriangularMesh from two ASCII files. Two files are required : xyzFileName.xyz : contains the points and\ntriFileName.tri : containing the list of triangles.\n@param triFileName The file path to the file containing the triangles.\n@param xyzFileName The file path to the file containing the points.\n@return The loaded CartesianTriangularMesh."
+		   });	
+		addAnnotation
+		  (getData3DIO__SaveCoordinatesSetToXYZ__CartesianCoordinatesSet_String(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nSaves a CartesianCoordinatesSet to an .xyz formatted file.\n@param coordinatesSet The CartesianCoordinatesSet to save.\n@param file The file path of the destination."
+		   });	
+		addAnnotation
+		  (getData3DIO__SaveCoordinatesSetToXYZ__CartesianCoordinatesSet_OutputStream(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nSaves a CartesianCoordinatesSet to an .xyz formatted file.\n@param coordinatesSet The CartesianCoordinatesSet to save.\n@param file The output stream to write the content.."
+		   });	
+		addAnnotation
+		  (getData3DIO__SaveCoordinatesSetToCSV__CartesianCoordinatesSet_String(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nSaves a CartesianCoordinatesSet to an comma separated formatted file.\n@param coordinatesSet The CartesianCoordinatesSet to save.\n@param file The file path of the destination."
+		   });	
+		addAnnotation
+		  (getData3DIO__SaveCoordinatesSetToCSV__CartesianCoordinatesSet_OutputStream(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nSaves a CartesianCoordinatesSet to an comma separated formatted file.\n@param coordinatesSet The CartesianCoordinatesSet to save.\n@param file The file path of the destination."
+		   });	
+		addAnnotation
+		  (getData3DUtils__ComputeCentroid__List(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nComputes the position of the centroid of a list of CartesianPositionCoordinates.\n@param points The list of CartesianPositionCoordinates.\n@return The centroid position of the list of CartesianPositionCoordinates, null if the list is empty."
+		   });	
+		addAnnotation
+		  (getData3DUtils__ComputeCentroid__CartesianCoordinatesSet(), 
+		   source, 
+		   new String[] {
+			 "documentation", "*\nComputes the position of the centroid of a CartesianCoordinatesSet.\n@param points The CartesianCoordinatesSet.\n@return The centroide position of the CartesianCoordinatesSet, null if the CartesianCoordinatesSet is empty."
 		   });
 	}
 

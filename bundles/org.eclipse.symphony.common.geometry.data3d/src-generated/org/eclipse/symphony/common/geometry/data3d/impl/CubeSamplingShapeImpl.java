@@ -4,6 +4,7 @@
 package org.eclipse.symphony.common.geometry.data3d.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Iterator;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -240,9 +241,43 @@ public class CubeSamplingShapeImpl<PolygonType extends CartesianPolygon> extends
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
-	public boolean isPolygonInside(PolygonType polygon) {
-		// TODO: implement this method		
-		throw new UnsupportedOperationException();
+	public boolean isPolygonInside(PolygonType polygon) 
+	{				
+		if(isIncludeJustTouching())
+		{
+			// Checks to see if the polygon centroid is inside the cube.
+			CartesianPositionCoordinates center = polygon.getCentroid();
+			
+			if(isInside(center))
+			{
+				return true;
+			}
+			else
+			{
+				boolean inside = false;
+				
+				Iterator<CartesianPositionCoordinates> it = polygon.getVertices().iterator();
+				while(it.hasNext() && !inside)
+				{					
+					inside = isInside(it.next());
+				}
+				
+				return inside;
+			}
+		}
+		else
+		{
+			// Check to see that ALL vertices are inside.
+			boolean inside = true;
+			
+			Iterator<CartesianPositionCoordinates> it = polygon.getVertices().iterator();
+			while(it.hasNext() && inside)
+			{					
+				inside = isInside(it.next());
+			}
+			
+			return inside;
+		}
 	}
 
 	/**

@@ -786,6 +786,12 @@ public class Symphony__CommonGeometryDataPackageImpl extends EPackageImpl implem
 			 "modelDirectory", "/org.eclipse.symphony.common.geometry.data/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.common.geometry.data.edit/src-generated",
 			 "basePackage", "org.eclipse.symphony.common.geometry"
+		   });	
+		addAnnotation
+		  (polygonSamplingShapeEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "*"
 		   });
 	}
 

@@ -48,8 +48,13 @@ interface CoordinatesSamplingShape<T extends Coordinates> extends SamplingShape
 	op boolean isInside(T point)
 }
 
+/**
+ * 
+ */
 interface PolygonSamplingShape<CoordinatesType extends Coordinates , PolygonType extends Polygon < CoordinatesType >> extends SamplingShape
 {
+	// TODO : Should define policies for determining how a polygon is considered inside.
+	
 	op boolean isPolygonInside(PolygonType polygon)
 }
 

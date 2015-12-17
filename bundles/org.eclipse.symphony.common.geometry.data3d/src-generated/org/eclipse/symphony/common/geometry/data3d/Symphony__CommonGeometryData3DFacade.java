@@ -6,8 +6,6 @@ package org.eclipse.symphony.common.geometry.data3d;
 import java.util.List;
 
 import javax.vecmath.Matrix4d;
-
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DFacadeImpl;
 
@@ -72,14 +70,6 @@ public interface Symphony__CommonGeometryData3DFacade extends EObject {
 	 * @generated
 	 */
 	Pose createPose(CartesianPositionCoordinates position, CartesianOrientationCoordinates orientation);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model unique="false" inputUnique="false"
-	 * @generated
-	 */
-	PointNormalLocator createPointNormalLocator(NormalPointCloud input);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -191,15 +181,15 @@ public interface Symphony__CommonGeometryData3DFacade extends EObject {
 	 * @model unique="false" meshUnique="false" trMatrixDataType="org.eclipse.symphony.common.geometry.data3d.Matrix4d" trMatrixUnique="false"
 	 * @generated
 	 */
-	CartesianTriangularMesh applyTransform(CartesianTriangularMesh mesh, Matrix4d trMatrix);
+	CartesianTriangularMesh createTransformedMesh(CartesianTriangularMesh mesh, Matrix4d trMatrix);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" meshUnique="false" trMatrixDataType="org.eclipse.symphony.common.geometry.data3d.Matrix4d" trMatrixUnique="false"
+	 * @model meshUnique="false" trMatrixDataType="org.eclipse.symphony.common.geometry.data3d.Matrix4d" trMatrixUnique="false"
 	 * @generated
 	 */
-	CartesianTriangularMesh applyTransformInt(CartesianTriangularMesh mesh, Matrix4d trMatrix);
+	void applyTransform(CartesianTriangularMesh mesh, Matrix4d trMatrix);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -212,6 +202,10 @@ public interface Symphony__CommonGeometryData3DFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * @aparam xyzData The array of n points organize as [0..n][x,y,z].
+	 * <!-- end-model-doc -->
 	 * @model cartesianCoordinatesSetUnique="false" xyzDataDataType="org.eclipse.symphony.common.geometry.data3d.DoubleArrayOfArray" xyzDataUnique="false"
 	 * @generated
 	 */
@@ -220,9 +214,9 @@ public interface Symphony__CommonGeometryData3DFacade extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model unique="false" listOfTriangularMeshesDataType="org.eclipse.symphony.common.geometry.data3d.EList<org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh>" listOfTriangularMeshesUnique="false" listOfTriangularMeshesMany="false"
+	 * @model unique="false" listOfTriangularMeshesDataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh>" listOfTriangularMeshesUnique="false" listOfTriangularMeshesMany="false"
 	 * @generated
 	 */
-	CartesianTriangularMesh concatenateTriangularMeshes(EList<CartesianTriangularMesh> listOfTriangularMeshes);
+	CartesianTriangularMesh concatenateTriangularMeshes(List<CartesianTriangularMesh> listOfTriangularMeshes);
 
 } // Symphony__CommonGeometryData3DFacade

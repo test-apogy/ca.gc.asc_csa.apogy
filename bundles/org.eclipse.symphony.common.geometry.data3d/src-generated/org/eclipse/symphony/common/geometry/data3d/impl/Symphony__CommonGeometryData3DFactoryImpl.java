@@ -100,11 +100,8 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 			case Symphony__CommonGeometryData3DPackage.CARTESIAN_TRIANGULAR_MESH_POLYGON_SAMPLER: return createCartesianTriangularMeshPolygonSampler();
 			case Symphony__CommonGeometryData3DPackage.CARTESIAN_POSITION_COORDINATES_MESHER: return createCartesianPositionCoordinatesMesher();
 			case Symphony__CommonGeometryData3DPackage.NORMAL_POINT_CLOUD: return createNormalPointCloud();
-			case Symphony__CommonGeometryData3DPackage.POINT_LOCATOR: return createPointLocator();
-			case Symphony__CommonGeometryData3DPackage.VECMATH_POINT_LOCATOR: return createVecmathPointLocator();
-			case Symphony__CommonGeometryData3DPackage.VECMATH_KD_TREE_POINT_LOCATOR: return createVecmathKdTreePointLocator();
+			case Symphony__CommonGeometryData3DPackage.KD_TREE_BASED_POINT_LOCATOR: return createKDTreeBasedPointLocator();
 			case Symphony__CommonGeometryData3DPackage.MESH_LOCALIZER: return createMeshLocalizer();
-			case Symphony__CommonGeometryData3DPackage.POINT_NORMAL_LOCATOR: return createPointNormalLocator();
 			case Symphony__CommonGeometryData3DPackage.DELAUNAY_MESHER: return createDelaunayMesher();
 			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_MESHER: return createDigitalElevationMapMesher();
 			case Symphony__CommonGeometryData3DPackage.DIGITAL_ELEVATION_MAP_SAMPLER: return createDigitalElevationMapSampler();
@@ -113,8 +110,6 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 			case Symphony__CommonGeometryData3DPackage.UNIQUE_POINTS_FILTER: return createUniquePointsFilter();
 			case Symphony__CommonGeometryData3DPackage.TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER: return createTriangleEdgeLengthTriangularMeshFilter();
 			case Symphony__CommonGeometryData3DPackage.OUTLIER_FILTER: return createOutlierFilter();
-			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD: return createRasterPointCloud();
-			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET: return createRasterPointCloudToCartesianCoordinatesSet();
 			case Symphony__CommonGeometryData3DPackage.MESH_SMOOTHER: return createMeshSmoother();
 			case Symphony__CommonGeometryData3DPackage.VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER: return createVoxelBased3DPointCloudResampler();
 			case Symphony__CommonGeometryData3DPackage.POSITION_MARKER: return createPositionMarker();
@@ -522,29 +517,9 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PointLocator createPointLocator() {
-		PointLocatorImpl pointLocator = new PointLocatorImpl();
-		return pointLocator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VecmathPointLocator createVecmathPointLocator() {
-		VecmathPointLocatorImpl vecmathPointLocator = new VecmathPointLocatorImpl();
-		return vecmathPointLocator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VecmathKdTreePointLocator createVecmathKdTreePointLocator() {
-		VecmathKdTreePointLocatorImpl vecmathKdTreePointLocator = new VecmathKdTreePointLocatorImpl();
-		return vecmathKdTreePointLocator;
+	public KDTreeBasedPointLocator createKDTreeBasedPointLocator() {
+		KDTreeBasedPointLocatorImpl kdTreeBasedPointLocator = new KDTreeBasedPointLocatorImpl();
+		return kdTreeBasedPointLocator;
 	}
 
 	/**
@@ -555,16 +530,6 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 	public MeshLocalizer createMeshLocalizer() {
 		MeshLocalizerImpl meshLocalizer = new MeshLocalizerImpl();
 		return meshLocalizer;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PointNormalLocator createPointNormalLocator() {
-		PointNormalLocatorImpl pointNormalLocator = new PointNormalLocatorImpl();
-		return pointNormalLocator;
 	}
 
 	/**
@@ -645,26 +610,6 @@ public class Symphony__CommonGeometryData3DFactoryImpl extends EFactoryImpl impl
 	public OutlierFilter createOutlierFilter() {
 		OutlierFilterImpl outlierFilter = new OutlierFilterImpl();
 		return outlierFilter;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RasterPointCloud createRasterPointCloud() {
-		RasterPointCloudImpl rasterPointCloud = new RasterPointCloudImpl();
-		return rasterPointCloud;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public RasterPointCloudToCartesianCoordinatesSet createRasterPointCloudToCartesianCoordinatesSet() {
-		RasterPointCloudToCartesianCoordinatesSetImpl rasterPointCloudToCartesianCoordinatesSet = new RasterPointCloudToCartesianCoordinatesSetImpl();
-		return rasterPointCloudToCartesianCoordinatesSet;
 	}
 
 	/**

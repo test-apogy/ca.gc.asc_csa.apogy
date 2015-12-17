@@ -275,31 +275,13 @@ public interface Symphony__CommonGeometryData3DFactory extends EFactory {
 	NormalPointCloud createNormalPointCloud();
 
 	/**
-	 * Returns a new object of class '<em>Point Locator</em>'.
+	 * Returns a new object of class '<em>KD Tree Based Point Locator</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Point Locator</em>'.
+	 * @return a new object of class '<em>KD Tree Based Point Locator</em>'.
 	 * @generated
 	 */
-	PointLocator createPointLocator();
-
-	/**
-	 * Returns a new object of class '<em>Vecmath Point Locator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Vecmath Point Locator</em>'.
-	 * @generated
-	 */
-	VecmathPointLocator createVecmathPointLocator();
-
-	/**
-	 * Returns a new object of class '<em>Vecmath Kd Tree Point Locator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Vecmath Kd Tree Point Locator</em>'.
-	 * @generated
-	 */
-	VecmathKdTreePointLocator createVecmathKdTreePointLocator();
+	KDTreeBasedPointLocator createKDTreeBasedPointLocator();
 
 	/**
 	 * Returns a new object of class '<em>Mesh Localizer</em>'.
@@ -309,15 +291,6 @@ public interface Symphony__CommonGeometryData3DFactory extends EFactory {
 	 * @generated
 	 */
 	MeshLocalizer createMeshLocalizer();
-
-	/**
-	 * Returns a new object of class '<em>Point Normal Locator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Point Normal Locator</em>'.
-	 * @generated
-	 */
-	PointNormalLocator createPointNormalLocator();
 
 	/**
 	 * Returns a new object of class '<em>Delaunay Mesher</em>'.
@@ -390,24 +363,6 @@ public interface Symphony__CommonGeometryData3DFactory extends EFactory {
 	 * @generated
 	 */
 	OutlierFilter createOutlierFilter();
-
-	/**
-	 * Returns a new object of class '<em>Raster Point Cloud</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Raster Point Cloud</em>'.
-	 * @generated
-	 */
-	RasterPointCloud createRasterPointCloud();
-
-	/**
-	 * Returns a new object of class '<em>Raster Point Cloud To Cartesian Coordinates Set</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Raster Point Cloud To Cartesian Coordinates Set</em>'.
-	 * @generated
-	 */
-	RasterPointCloudToCartesianCoordinatesSet createRasterPointCloudToCartesianCoordinatesSet();
 
 	/**
 	 * Returns a new object of class '<em>Mesh Smoother</em>'.

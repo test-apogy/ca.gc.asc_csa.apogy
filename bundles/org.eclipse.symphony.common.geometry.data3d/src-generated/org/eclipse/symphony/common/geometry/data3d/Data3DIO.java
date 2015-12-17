@@ -32,6 +32,12 @@ public interface Data3DIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Loads a CartesianTriangularMesh from an XMI resource.
+	 * @param file The file path to the resource.
+	 * @return The loaded CartesianTriangularMesh.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" fileUnique="false"
 	 * @generated
 	 */
@@ -40,6 +46,12 @@ public interface Data3DIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Loads a CartesianTriangularMesh from an XMI resource.
+	 * @param input The input stream to read the content from.
+	 * @return The loaded CartesianTriangularMesh.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" inputDataType="org.eclipse.symphony.common.geometry.data3d.InputStream" inputUnique="false"
 	 * @generated
 	 */
@@ -48,6 +60,12 @@ public interface Data3DIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Saves a CartesianTriangularMesh as an XMI resource.
+	 * @param mesh The CartesianTriangularMesh to save.
+	 * @param file The destination file path for the resource.
+	 * <!-- end-model-doc -->
 	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" meshUnique="false" fileUnique="false"
 	 * @generated
 	 */
@@ -56,6 +74,12 @@ public interface Data3DIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Saves a CartesianTriangularMesh as an XMI resource.
+	 * @param mesh The CartesianTriangularMesh to save.
+	 * @param output The output stream to write the content.
+	 * <!-- end-model-doc -->
 	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" meshUnique="false" outputDataType="org.eclipse.symphony.common.geometry.data3d.OutputStream" outputUnique="false"
 	 * @generated
 	 */
@@ -64,6 +88,13 @@ public interface Data3DIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Loads a NormalPointCloud from ASCII files. Two files are required : filePrefix.xyz : contains the points and
+	 * filePrefix.tri : containing the list of triangles.
+	 * @param filePrefix The file prefix defining both the points and triangles files.
+	 * @return The loaded NormalPointCloud.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" filePrefixUnique="false"
 	 * @generated
 	 */
@@ -72,6 +103,13 @@ public interface Data3DIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Loads a CartesianTriangularMesh from ASCII files. Two files are required : filePrefix.xyz : contains the points and
+	 * filePrefix.tri : containing the list of triangles.
+	 * @param filePrefix The file prefix defining both the points and triangles files.
+	 * @return The loaded CartesianTriangularMesh.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" filePrefixUnique="false"
 	 * @generated
 	 */
@@ -80,6 +118,13 @@ public interface Data3DIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Saves a CartesianTriangularMesh to ASCII files. Two files are produced : filePrefix.xyz : contains the points and
+	 * filePrefix.tri : containing the list of triangles.
+	 * @param mesh The CartesianTriangularMesh to save.
+	 * @param filePrefix The file prefix defining both the points and triangles files.
+	 * <!-- end-model-doc -->
 	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" meshUnique="false" filePrefixUnique="false"
 	 * @generated
 	 */
@@ -88,6 +133,13 @@ public interface Data3DIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Loads a CartesianCoordinatesSet from an .xyz file. The .xyz can contains 3 column (x,y, z coordinates of the point) or
+	 * 6 (x,y,z coordinates of the point + the normal vector at the point)
+	 * @param fileName The file path to the file.
+	 * @return The CartesianCoordinatesSet loaded from the file.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" fileNameUnique="false"
 	 * @generated
 	 */
@@ -96,6 +148,14 @@ public interface Data3DIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Loads a CartesianTriangularMesh from two ASCII files. Two files are required : xyzFileName.xyz : contains the points and
+	 * triFileName.tri : containing the list of triangles.
+	 * @param triFileName The file path to the file containing the triangles.
+	 * @param xyzFileName The file path to the file containing the points.
+	 * @return The loaded CartesianTriangularMesh.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" triFileNameUnique="false" xyzFileNameUnique="false"
 	 * @generated
 	 */
@@ -104,6 +164,12 @@ public interface Data3DIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Saves a CartesianCoordinatesSet to an .xyz formatted file.
+	 * @param coordinatesSet The CartesianCoordinatesSet to save.
+	 * @param file The file path of the destination.
+	 * <!-- end-model-doc -->
 	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" coordinatesSetUnique="false" fileUnique="false"
 	 * @generated
 	 */
@@ -112,6 +178,12 @@ public interface Data3DIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Saves a CartesianCoordinatesSet to an .xyz formatted file.
+	 * @param coordinatesSet The CartesianCoordinatesSet to save.
+	 * @param file The output stream to write the content..
+	 * <!-- end-model-doc -->
 	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" coordinatesSetUnique="false" fileDataType="org.eclipse.symphony.common.geometry.data3d.OutputStream" fileUnique="false"
 	 * @generated
 	 */
@@ -120,6 +192,12 @@ public interface Data3DIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Saves a CartesianCoordinatesSet to an comma separated formatted file.
+	 * @param coordinatesSet The CartesianCoordinatesSet to save.
+	 * @param file The file path of the destination.
+	 * <!-- end-model-doc -->
 	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" coordinatesSetUnique="false" fileUnique="false"
 	 * @generated
 	 */
@@ -128,6 +206,12 @@ public interface Data3DIO extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Saves a CartesianCoordinatesSet to an comma separated formatted file.
+	 * @param coordinatesSet The CartesianCoordinatesSet to save.
+	 * @param file The file path of the destination.
+	 * <!-- end-model-doc -->
 	 * @model exceptions="org.eclipse.symphony.common.geometry.data3d.IOException" coordinatesSetUnique="false" fileDataType="org.eclipse.symphony.common.geometry.data3d.OutputStream" fileUnique="false"
 	 * @generated
 	 */

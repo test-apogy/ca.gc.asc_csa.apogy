@@ -34,6 +34,26 @@ public interface Data3DUtils extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Computes the position of the centroid of a list of CartesianPositionCoordinates.
+	 * @param points The list of CartesianPositionCoordinates.
+	 * @return The centroid position of the list of CartesianPositionCoordinates, null if the list is empty.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" pointsDataType="org.eclipse.symphony.common.geometry.data3d.List<org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates>" pointsUnique="false" pointsMany="false"
+	 * @generated
+	 */
+	CartesianPositionCoordinates computeCentroid(List<CartesianPositionCoordinates> points);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * *
+	 * Computes the position of the centroid of a CartesianCoordinatesSet.
+	 * @param points The CartesianCoordinatesSet.
+	 * @return The centroide position of the CartesianCoordinatesSet, null if the CartesianCoordinatesSet is empty.
+	 * <!-- end-model-doc -->
 	 * @model unique="false" pointsUnique="false"
 	 * @generated
 	 */
@@ -54,14 +74,6 @@ public interface Data3DUtils extends EObject {
 	 * @generated
 	 */
 	double computeCurvatureChange(PointLocator pointLocator, int centerPoint, double radius);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model unique="false" pointLocatorUnique="false" centerPointUnique="false" radiusUnique="false"
-	 * @generated
-	 */
-	double computeCurvatureChange(VecmathPointLocator pointLocator, int centerPoint, double radius);
 
 	/**
 	 * <!-- begin-user-doc -->
