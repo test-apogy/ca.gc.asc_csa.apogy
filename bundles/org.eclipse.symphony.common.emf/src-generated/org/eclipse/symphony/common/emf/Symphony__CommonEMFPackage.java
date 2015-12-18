@@ -423,6 +423,43 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	int SYMPHONY_COMMON_EMF_FACADE_OPERATION_COUNT = 37;
 
 		/**
+	 * The meta object id for the '{@link org.eclipse.symphony.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.common.emf.impl.EObjectReferenceImpl
+	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getEObjectReference()
+	 * @generated
+	 */
+	int EOBJECT_REFERENCE = 1;
+
+		/**
+	 * The feature id for the '<em><b>EObject</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EOBJECT_REFERENCE__EOBJECT = 0;
+
+		/**
+	 * The number of structural features of the '<em>EObject Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EOBJECT_REFERENCE_FEATURE_COUNT = 1;
+
+		/**
+	 * The number of operations of the '<em>EObject Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EOBJECT_REFERENCE_OPERATION_COUNT = 0;
+
+		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -430,7 +467,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getNamed()
 	 * @generated
 	 */
-  int NAMED = 1;
+  int NAMED = 2;
 
   /**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -467,7 +504,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getDescribed()
 	 * @generated
 	 */
-  int DESCRIBED = 2;
+  int DESCRIBED = 3;
 
   /**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -504,7 +541,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getTimed()
 	 * @generated
 	 */
-  int TIMED = 3;
+  int TIMED = 4;
 
   /**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -541,7 +578,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getStartable()
 	 * @generated
 	 */
-	int STARTABLE = 5;
+	int STARTABLE = 6;
 
 		/**
 	 * The feature id for the '<em><b>Started</b></em>' attribute.
@@ -578,7 +615,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getServer()
 	 * @generated
 	 */
-	int SERVER = 4;
+	int SERVER = 5;
 
 		/**
 	 * The feature id for the '<em><b>Started</b></em>' attribute.
@@ -624,7 +661,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getTimeSource()
 	 * @generated
 	 */
-	int TIME_SOURCE = 6;
+	int TIME_SOURCE = 7;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -697,7 +734,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getFixedTimeSource()
 	 * @generated
 	 */
-	int FIXED_TIME_SOURCE = 7;
+	int FIXED_TIME_SOURCE = 8;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -770,7 +807,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getCurrentTimeSource()
 	 * @generated
 	 */
-	int CURRENT_TIME_SOURCE = 8;
+	int CURRENT_TIME_SOURCE = 9;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -879,7 +916,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getBrowseableTimeSource()
 	 * @generated
 	 */
-	int BROWSEABLE_TIME_SOURCE = 9;
+	int BROWSEABLE_TIME_SOURCE = 10;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1024,7 +1061,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getSelectionBasedTimeSource()
 	 * @generated
 	 */
-	int SELECTION_BASED_TIME_SOURCE = 10;
+	int SELECTION_BASED_TIME_SOURCE = 11;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1106,7 +1143,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getCollectionTimedTimeSource()
 	 * @generated
 	 */
-	int COLLECTION_TIMED_TIME_SOURCE = 11;
+	int COLLECTION_TIMED_TIME_SOURCE = 12;
 
 		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1314,7 +1351,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getDisposable()
 	 * @generated
 	 */
-  int DISPOSABLE = 12;
+  int DISPOSABLE = 13;
 
   /**
 	 * The number of structural features of the '<em>Disposable</em>' class.
@@ -1351,7 +1388,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getAbstractFeatureNode()
 	 * @generated
 	 */
-  int ABSTRACT_FEATURE_NODE = 14;
+  int ABSTRACT_FEATURE_NODE = 15;
 
   /**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.emf.impl.FeatureNodeAdapterImpl <em>Feature Node Adapter</em>}' class.
@@ -1361,7 +1398,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getFeatureNodeAdapter()
 	 * @generated
 	 */
-  int FEATURE_NODE_ADAPTER = 13;
+  int FEATURE_NODE_ADAPTER = 14;
 
   /**
 	 * The feature id for the '<em><b>Source Object</b></em>' reference.
@@ -1443,7 +1480,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getAbstractFeatureListNode()
 	 * @generated
 	 */
-  int ABSTRACT_FEATURE_LIST_NODE = 15;
+  int ABSTRACT_FEATURE_LIST_NODE = 16;
 
   /**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1489,7 +1526,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getAbstractFeatureTreeNode()
 	 * @generated
 	 */
-  int ABSTRACT_FEATURE_TREE_NODE = 16;
+  int ABSTRACT_FEATURE_TREE_NODE = 17;
 
   /**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1535,7 +1572,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getAbstractRootNode()
 	 * @generated
 	 */
-  int ABSTRACT_ROOT_NODE = 17;
+  int ABSTRACT_ROOT_NODE = 18;
 
   /**
 	 * The feature id for the '<em><b>Source Class</b></em>' reference.
@@ -1572,7 +1609,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getTreeRootNode()
 	 * @generated
 	 */
-  int TREE_ROOT_NODE = 18;
+  int TREE_ROOT_NODE = 19;
 
   /**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1627,7 +1664,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getTreeFeatureNode()
 	 * @generated
 	 */
-  int TREE_FEATURE_NODE = 19;
+  int TREE_FEATURE_NODE = 20;
 
   /**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1700,7 +1737,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getListRootNode()
 	 * @generated
 	 */
-  int LIST_ROOT_NODE = 20;
+  int LIST_ROOT_NODE = 21;
 
   /**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1755,7 +1792,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getListFeatureNode()
 	 * @generated
 	 */
-  int LIST_FEATURE_NODE = 21;
+  int LIST_FEATURE_NODE = 22;
 
   /**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1828,7 +1865,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getAbstractFeatureSpecifier()
 	 * @generated
 	 */
-  int ABSTRACT_FEATURE_SPECIFIER = 22;
+  int ABSTRACT_FEATURE_SPECIFIER = 23;
 
   /**
 	 * The feature id for the '<em><b>Structural Feature</b></em>' reference.
@@ -1883,7 +1920,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getTimeDirection()
 	 * @generated
 	 */
-	int TIME_DIRECTION = 23;
+	int TIME_DIRECTION = 24;
 
 		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.emf.Ranges <em>Ranges</em>}' enum.
@@ -1893,7 +1930,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getRanges()
 	 * @generated
 	 */
-  int RANGES = 24;
+  int RANGES = 25;
 
   /**
 	 * The meta object id for the '<em>Exception</em>' data type.
@@ -1903,7 +1940,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getException()
 	 * @generated
 	 */
-  int EXCEPTION = 25;
+  int EXCEPTION = 26;
 
   /**
 	 * The meta object id for the '<em>List</em>' data type.
@@ -1913,7 +1950,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getList()
 	 * @generated
 	 */
-  int LIST = 26;
+  int LIST = 27;
 
   /**
 	 * The meta object id for the '<em>Sorted Set</em>' data type.
@@ -1923,7 +1960,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getSortedSet()
 	 * @generated
 	 */
-  int SORTED_SET = 27;
+  int SORTED_SET = 28;
 
   /**
 	 * The meta object id for the '<em>EClass Filter</em>' data type.
@@ -1933,7 +1970,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getEClassFilter()
 	 * @generated
 	 */
-  int ECLASS_FILTER = 28;
+  int ECLASS_FILTER = 29;
 
   /**
 	 * The meta object id for the '<em>Number</em>' data type.
@@ -1943,7 +1980,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getNumber()
 	 * @generated
 	 */
-  int NUMBER = 29;
+  int NUMBER = 30;
 
 
   /**
@@ -1954,7 +1991,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getIFile()
 	 * @generated
 	 */
-  int IFILE = 30;
+  int IFILE = 31;
 
   /**
 	 * The meta object id for the '<em>Resource</em>' data type.
@@ -1964,7 +2001,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getResource()
 	 * @generated
 	 */
-  int RESOURCE = 31;
+  int RESOURCE = 32;
 
 
   /**
@@ -1975,7 +2012,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getUnit()
 	 * @generated
 	 */
-  int UNIT = 32;
+  int UNIT = 33;
 
 
   /**
@@ -1986,7 +2023,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getCollection()
 	 * @generated
 	 */
-	int COLLECTION = 33;
+	int COLLECTION = 34;
 
 
 		/**
@@ -1997,7 +2034,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getEList()
 	 * @generated
 	 */
-	int ELIST = 34;
+	int ELIST = 35;
 
 		/**
 	 * The meta object id for the '<em>URI</em>' data type.
@@ -2007,7 +2044,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getURI()
 	 * @generated
 	 */
-	int URI = 35;
+	int URI = 36;
 
 
 		/**
@@ -2018,7 +2055,7 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getJob()
 	 * @generated
 	 */
-	int JOB = 36;
+	int JOB = 37;
 
 
 		/**
@@ -2400,6 +2437,27 @@ public interface Symphony__CommonEMFPackage extends EPackage
 	 * @generated
 	 */
 	EOperation getSymphony__CommonEMFFacade__GetID__EObject();
+
+		/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.emf.EObjectReference <em>EObject Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EObject Reference</em>'.
+	 * @see org.eclipse.symphony.common.emf.EObjectReference
+	 * @generated
+	 */
+	EClass getEObjectReference();
+
+		/**
+	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.emf.EObjectReference#getEObject <em>EObject</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>EObject</em>'.
+	 * @see org.eclipse.symphony.common.emf.EObjectReference#getEObject()
+	 * @see #getEObjectReference()
+	 * @generated
+	 */
+	EReference getEObjectReference_EObject();
 
 		/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}'.
@@ -3521,6 +3579,24 @@ public interface Symphony__CommonEMFPackage extends EPackage
 		 * @generated
 		 */
 		EOperation SYMPHONY_COMMON_EMF_FACADE___GET_ID__EOBJECT = eINSTANCE.getSymphony__CommonEMFFacade__GetID__EObject();
+
+				/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.emf.impl.EObjectReferenceImpl <em>EObject Reference</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.common.emf.impl.EObjectReferenceImpl
+		 * @see org.eclipse.symphony.common.emf.impl.Symphony__CommonEMFPackageImpl#getEObjectReference()
+		 * @generated
+		 */
+		EClass EOBJECT_REFERENCE = eINSTANCE.getEObjectReference();
+
+			/**
+		 * The meta object literal for the '<em><b>EObject</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EOBJECT_REFERENCE__EOBJECT = eINSTANCE.getEObjectReference_EObject();
 
 				/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.emf.Named <em>Named</em>}' class.

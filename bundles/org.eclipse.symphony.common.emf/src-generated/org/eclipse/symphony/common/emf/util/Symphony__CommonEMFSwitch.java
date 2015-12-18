@@ -74,6 +74,12 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Symphony__CommonEMFPackage.EOBJECT_REFERENCE: {
+				EObjectReference eObjectReference = (EObjectReference)theEObject;
+				T result = caseEObjectReference(eObjectReference);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Symphony__CommonEMFPackage.NAMED: {
 				Named named = (Named)theEObject;
 				T result = caseNamed(named);
@@ -267,6 +273,21 @@ public class Symphony__CommonEMFSwitch<T> extends Switch<T>
 	 * @generated
 	 */
 	public T caseSymphony__CommonEMFFacade(Symphony__CommonEMFFacade object) {
+		return null;
+	}
+
+		/**
+	 * Returns the result of interpreting the object as an instance of '<em>EObject Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EObject Reference</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEObjectReference(EObjectReference object) {
 		return null;
 	}
 

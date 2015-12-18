@@ -109,6 +109,29 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
 	}
 
 		/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.EObjectReference} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EObjectReferenceItemProvider eObjectReferenceItemProvider;
+
+		/**
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.emf.EObjectReference}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEObjectReferenceAdapter() {
+		if (eObjectReferenceItemProvider == null) {
+			eObjectReferenceItemProvider = new EObjectReferenceItemProvider(this);
+		}
+
+		return eObjectReferenceItemProvider;
+	}
+
+		/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.emf.Server} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -525,6 +548,7 @@ public class Symphony__CommonEMFItemProviderAdapterFactory extends Symphony__Com
   public void dispose()
   {
 		if (symphony__CommonEMFFacadeItemProvider != null) symphony__CommonEMFFacadeItemProvider.dispose();
+		if (eObjectReferenceItemProvider != null) eObjectReferenceItemProvider.dispose();
 		if (serverItemProvider != null) serverItemProvider.dispose();
 		if (startableItemProvider != null) startableItemProvider.dispose();
 		if (fixedTimeSourceItemProvider != null) fixedTimeSourceItemProvider.dispose();

@@ -68,6 +68,7 @@ public class Symphony__CommonEMFFactoryImpl extends EFactoryImpl implements Symp
   {
 		switch (eClass.getClassifierID()) {
 			case Symphony__CommonEMFPackage.SYMPHONY_COMMON_EMF_FACADE: return createSymphony__CommonEMFFacade();
+			case Symphony__CommonEMFPackage.EOBJECT_REFERENCE: return createEObjectReference();
 			case Symphony__CommonEMFPackage.SERVER: return createServer();
 			case Symphony__CommonEMFPackage.STARTABLE: return createStartable();
 			case Symphony__CommonEMFPackage.FIXED_TIME_SOURCE: return createFixedTimeSource();
@@ -177,6 +178,16 @@ public class Symphony__CommonEMFFactoryImpl extends EFactoryImpl implements Symp
 	public Symphony__CommonEMFFacade createSymphony__CommonEMFFacade() {
 		Symphony__CommonEMFFacadeImpl symphony__CommonEMFFacade = new Symphony__CommonEMFFacadeImpl();
 		return symphony__CommonEMFFacade;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObjectReference createEObjectReference() {
+		EObjectReferenceImpl eObjectReference = new EObjectReferenceImpl();
+		return eObjectReference;
 	}
 
 		/**

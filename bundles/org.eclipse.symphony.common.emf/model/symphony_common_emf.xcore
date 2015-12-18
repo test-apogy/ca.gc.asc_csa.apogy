@@ -183,6 +183,14 @@ class Symphony__CommonEMFFacade
 	op String getID(EObject eObject) 	 
 }
 
+/**
+ * Reference to an {@link EObject}.
+ */
+class EObjectReference{	
+    @GenModel(children="true")    
+	refers EObject eObject
+}
+
 /*
  * Named Element.
  */

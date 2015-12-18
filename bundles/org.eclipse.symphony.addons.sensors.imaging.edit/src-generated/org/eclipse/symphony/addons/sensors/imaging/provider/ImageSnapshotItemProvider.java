@@ -14,14 +14,11 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-import org.eclipse.symphony.addons.sensors.Symphony__AddonsSensorsFactory;
 import org.eclipse.symphony.addons.sensors.fov.Symphony__AddonsSensorsFOVFactory;
 import org.eclipse.symphony.addons.sensors.imaging.ImageSnapshot;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingFactory;
 import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
 import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 import org.eclipse.symphony.common.topology.provider.GroupNodeItemProvider;
 
 /**
@@ -182,41 +179,6 @@ public class ImageSnapshotItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__AddonsSensorsImagingFactory.eINSTANCE.createImageSnapshot()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__AddonsSensorsImagingFactory.eINSTANCE.createRectifiedImageSnapshot()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__AddonsSensorsFactory.eINSTANCE.createSensor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createFieldOfView()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createConicalFieldOfView()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createCircularSectorFieldOfView()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__FIELD_OF_VIEW,
 				 Symphony__AddonsSensorsFOVFactory.eINSTANCE.createRectangularFrustrumFieldOfView()));
 
@@ -229,30 +191,6 @@ public class ImageSnapshotItemProvider
 			(createChildParameter
 				(Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__IMAGE,
 				 Symphony__CommonImagesFactory.eINSTANCE.createURLEImage()));
-	}
-
-  /**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  @Override
-  public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
-  {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN ||
-			childFeature == Symphony__AddonsSensorsImagingPackage.Literals.IMAGE_SNAPSHOT__FIELD_OF_VIEW;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

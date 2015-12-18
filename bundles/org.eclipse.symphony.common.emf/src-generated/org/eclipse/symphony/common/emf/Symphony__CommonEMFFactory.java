@@ -32,6 +32,15 @@ public interface Symphony__CommonEMFFactory extends EFactory
 	Symphony__CommonEMFFacade createSymphony__CommonEMFFacade();
 
 		/**
+	 * Returns a new object of class '<em>EObject Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EObject Reference</em>'.
+	 * @generated
+	 */
+	EObjectReference createEObjectReference();
+
+		/**
 	 * Returns a new object of class '<em>Server</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -72,6 +72,10 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 				return createSymphony__CommonEMFFacadeAdapter();
 			}
 			@Override
+			public Adapter caseEObjectReference(EObjectReference object) {
+				return createEObjectReferenceAdapter();
+			}
+			@Override
 			public Adapter caseNamed(Named object) {
 				return createNamedAdapter();
 			}
@@ -191,6 +195,20 @@ public class Symphony__CommonEMFAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createSymphony__CommonEMFFacadeAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.EObjectReference <em>EObject Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.common.emf.EObjectReference
+	 * @generated
+	 */
+	public Adapter createEObjectReferenceAdapter() {
 		return null;
 	}
 

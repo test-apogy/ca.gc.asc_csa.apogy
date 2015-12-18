@@ -125,7 +125,7 @@ extends SymphonyInitializationDataItemProvider
 				false,
 				false,
 				ItemPropertyDescriptor.REAL_VALUE_IMAGE,
-				getString("_UI_PanTiltUnitPropertyCategory"),
+				getString("_UI_PanTiltUnitPropertyCategory"),				           
 				null));
 	}
 

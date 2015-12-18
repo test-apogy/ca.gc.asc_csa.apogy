@@ -33,6 +33,7 @@ import org.eclipse.symphony.common.emf.CurrentTimeSource;
 import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Disposable;
 import org.eclipse.symphony.common.emf.EClassFilter;
+import org.eclipse.symphony.common.emf.EObjectReference;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
@@ -65,6 +66,13 @@ public class Symphony__CommonEMFPackageImpl extends EPackageImpl implements Symp
 	 * @generated
 	 */
 	private EClass symphony__CommonEMFFacadeEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eObjectReferenceEClass = null;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -724,6 +732,24 @@ public class Symphony__CommonEMFPackageImpl extends EPackageImpl implements Symp
 	 */
 	public EOperation getSymphony__CommonEMFFacade__GetID__EObject() {
 		return symphony__CommonEMFFacadeEClass.getEOperations().get(36);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEObjectReference() {
+		return eObjectReferenceEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEObjectReference_EObject() {
+		return (EReference)eObjectReferenceEClass.getEStructuralFeatures().get(0);
 	}
 
 		/**
@@ -1508,6 +1534,9 @@ public class Symphony__CommonEMFPackageImpl extends EPackageImpl implements Symp
 		createEOperation(symphony__CommonEMFFacadeEClass, SYMPHONY_COMMON_EMF_FACADE___GET_TIME_SPAN__COLLECTION);
 		createEOperation(symphony__CommonEMFFacadeEClass, SYMPHONY_COMMON_EMF_FACADE___GET_ID__EOBJECT);
 
+		eObjectReferenceEClass = createEClass(EOBJECT_REFERENCE);
+		createEReference(eObjectReferenceEClass, EOBJECT_REFERENCE__EOBJECT);
+
 		namedEClass = createEClass(NAMED);
 		createEAttribute(namedEClass, NAMED__NAME);
 
@@ -1855,6 +1884,9 @@ public class Symphony__CommonEMFPackageImpl extends EPackageImpl implements Symp
 
 		op = initEOperation(getSymphony__CommonEMFFacade__GetID__EObject(), theEcorePackage.getEString(), "getID", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theEcorePackage.getEObject(), "eObject", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		initEClass(eObjectReferenceEClass, EObjectReference.class, "EObjectReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEObjectReference_EObject(), theEcorePackage.getEObject(), null, "eObject", null, 0, 1, EObjectReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(namedEClass, Named.class, "Named", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNamed_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Named.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

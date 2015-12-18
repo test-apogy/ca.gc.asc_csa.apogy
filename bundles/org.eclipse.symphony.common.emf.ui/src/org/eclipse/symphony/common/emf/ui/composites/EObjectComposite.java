@@ -20,6 +20,8 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Tree;
+import org.eclipse.symphony.common.emf.EObjectReference;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFactory;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 public class EObjectComposite extends Composite {
@@ -117,7 +119,9 @@ public class EObjectComposite extends Composite {
 	 */
 	private DataBindingContext initDataBindingsCustom() {
 		DataBindingContext bindingContext = new DataBindingContext();
-		instanceViewer.setInput(eObject);						
+		EObjectReference eObjectReference = Symphony__CommonEMFFactory.eINSTANCE.createEObjectReference();
+		eObjectReference.setEObject(eObject);
+		instanceViewer.setInput(eObjectReference);						
 		return bindingContext;
 	}
 
