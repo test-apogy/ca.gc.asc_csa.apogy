@@ -34,6 +34,7 @@ public interface RotationNode extends AggregateGroupNode {
 	 * @see #setRotationMatrix(Matrix3x3)
 	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getRotationNode_RotationMatrix()
 	 * @model containment="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' createChild='false'"
 	 * @generated
 	 */
 	Matrix3x3 getRotationMatrix();

@@ -1199,6 +1199,27 @@ public class Symphony__CommonTopologyPackageImpl extends EPackageImpl implements
 			 "basePackage", "org.eclipse.symphony.common"
 		   });	
 		addAnnotation
+		  (getGroupNode_Children(), 
+		   source, 
+		   new String[] {
+			 "children", "false",
+			 "createChild", "false"
+		   });	
+		addAnnotation
+		  (getPositionNode_Position(), 
+		   source, 
+		   new String[] {
+			 "children", "false",
+			 "createChild", "false"
+		   });	
+		addAnnotation
+		  (getRotationNode_RotationMatrix(), 
+		   source, 
+		   new String[] {
+			 "children", "false",
+			 "createChild", "false"
+		   });	
+		addAnnotation
 		  (getSymphony__CommonTopologyFacade__CreateRotationNodeXYZ__double_double_double(), 
 		   source, 
 		   new String[] {

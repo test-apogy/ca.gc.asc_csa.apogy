@@ -34,6 +34,7 @@ public interface GroupNode extends Node {
 	 * @return the value of the '<em>Children</em>' containment reference list.
 	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getGroupNode_Children()
 	 * @model containment="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' createChild='false'"
 	 * @generated
 	 */
 	EList<Node> getChildren();
