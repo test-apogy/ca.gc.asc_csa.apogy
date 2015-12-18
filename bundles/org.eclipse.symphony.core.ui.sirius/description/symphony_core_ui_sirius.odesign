@@ -421,42 +421,42 @@
       <metamodel href="org.eclipse.symphony.core#/"/>
       <metamodel href="org.eclipse.symphony.core.invocator#/"/>
       <defaultLayer name="org.eclipse.symphony.core.ui.sirius.type.layer" label="Type Layer">
-        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.type.nodes.symphony_system" label="Root SymphonySystem Node" deletionDescription="//@ownedViewpoints[name='org.eclipse.symphony.core.ui.sirius.viewpoint']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.type.diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.delete_node.root_sym_sys']" semanticCandidatesExpression="[self/]" domainClass="core.SymphonySystem">
-          <borderedNodeMappings name="org.eclipse.symphony.core.ui.sirius.type.nodes.bordered.root_connection_point" label="Root ConnectionPoint Node" semanticCandidatesExpression="[self.connectionPointsList.connectionPoints/]" domainClass="core.ConnectionPoint">
-            <style xsi:type="style:SquareDescription" labelSize="6" labelExpression="[self.name/]" tooltipExpression="['Connection Point '.concat(self.name)/]" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.type.nodes.symphony_system" label="SymphonySystem Node" deletionDescription="//@ownedViewpoints[name='org.eclipse.symphony.core.ui.sirius.viewpoint']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.type.diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='org.eclipse.symphony.core.ui.sirius.tools.delete_node.root_sym_sys']" semanticCandidatesExpression="[core::SymphonySystem.allInstances()/]" domainClass="core.SymphonySystem">
+          <borderedNodeMappings name="org.eclipse.symphony.core.ui.sirius.type.nodes.bordered.root_connection_point" label="ConnectionPoint" semanticCandidatesExpression="[self.connectionPointsList.connectionPoints/]" domainClass="core.ConnectionPoint">
+            <style xsi:type="style:SquareDescription" labelExpression="[self.name/]" tooltipExpression="['Connection Point '.concat(self.name)/]" sizeComputationExpression="[(self.name.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
             </style>
           </borderedNodeMappings>
-          <style xsi:type="style:SquareDescription" labelExpression="[self.name/]" tooltipExpression="['Symphony System '.concat(self.oclAsType(SymphonySystem).name)/]" sizeComputationExpression="[self.name.size()/]" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:SquareDescription" labelExpression="[self.name/]" tooltipExpression="['Symphony System '.concat(self.oclAsType(SymphonySystem).name)/]" sizeComputationExpression="[(self.name.size()).max(4)/]" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.symphony_system_child" label="Child SymphonySystem Node" semanticCandidatesExpression="[self.members->collect(t : TypeMember | t.memberType)/]" domainClass="SymphonySystem">
-          <borderedNodeMappings name="org.eclipse.symphony.core.ui.sirius.type.nodes.bordered.child_connection_point" label="Child ConnectionPoint Node" semanticCandidatesExpression="[self.connectionPointsList.connectionPoints/]" domainClass="ConnectionPoint">
-            <style xsi:type="style:SquareDescription" labelSize="6" labelExpression="[self.name/]" tooltipExpression="['Connection Point '.concat(self.name)/]" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
-            </style>
-          </borderedNodeMappings>
-          <style xsi:type="style:SquareDescription" tooltipExpression="['Symphony System '.concat(self.name)/]" sizeComputationExpression="[self.name.size()/]" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
-          </style>
-        </nodeMappings>
-        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.type.nodes.type_member" label="Type Member Node" semanticCandidatesExpression="[self.members/]" domainClass="invocator.TypeMember">
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.type.nodes.type_member" label="TypeMember Node" semanticCandidatesExpression="[self.members/]" domainClass="invocator.TypeMember">
           <style xsi:type="style:SquareDescription" labelExpression="[self.name/]" tooltipExpression="['Type Member '.concat(self.name)/]" sizeComputationExpression="[self.name.size()/]" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="org.eclipse.symphony.core.ui.type.edges.type_member_to_root_symphony_system" label="TypeMember -> Root SymphonySystem Edge" sourceMapping="//@ownedViewpoints[name='org.eclipse.symphony.core.ui.sirius.viewpoint']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.type.diagram']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.type.nodes.type_member']" targetMapping="//@ownedViewpoints[name='org.eclipse.symphony.core.ui.sirius.viewpoint']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.type.diagram']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.type.nodes.symphony_system']" targetFinderExpression="[self.eContainer()/]">
+        <nodeMappings name="org.eclipse.symphony.core.ui.sirius.nodes.type_member_symphony_systems" label="TypeMember SymphonySystems Node" semanticCandidatesExpression="[invocator::TypeMember.allInstances()->select(t : TypeMember | t.memberType.oclIsKindOf(core::SymphonySystem))->collect(t : TypeMember | t.memberType.oclAsType(core::SymphonySystem))/]" domainClass="core.SymphonySystem">
+          <borderedNodeMappings name="org.eclipse.symphony.core.ui.sirius.type.nodes.bordered.root_connection_point" label="ConnectionPoint" semanticCandidatesExpression="[self.connectionPointsList.connectionPoints/]" domainClass="core.ConnectionPoint">
+            <style xsi:type="style:SquareDescription" labelExpression="[self.name/]" tooltipExpression="['Connection Point '.concat(self.name)/]" sizeComputationExpression="[(self.name.size().div(2) + 2).min(13).max(8)/]" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:SquareDescription" labelExpression="[self.name/]" tooltipExpression="['Symphony System '.concat(self.oclAsType(SymphonySystem).name)/]" sizeComputationExpression="[(self.name.size()).max(4)/]" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="org.eclipse.symphony.core.ui.type.edges.type_member_to_symphony_system" label="TypeMember -> SymphonySystem Edge" sourceMapping="//@ownedViewpoints[name='org.eclipse.symphony.core.ui.sirius.viewpoint']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.type.diagram']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.type.nodes.type_member']" targetMapping="//@ownedViewpoints[name='org.eclipse.symphony.core.ui.sirius.viewpoint']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.type.diagram']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.type.nodes.symphony_system']" targetFinderExpression="[self.eContainer()/]">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription>
@@ -464,7 +464,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="org.eclipse.symphony.core.ui.sirius.edges.type_member_to_child_symphony_system" label="TypeMember Edge -> Child SymphonySystem" sourceMapping="//@ownedViewpoints[name='org.eclipse.symphony.core.ui.sirius.viewpoint']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.type.diagram']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.type.nodes.type_member']" targetMapping="//@ownedViewpoints[name='org.eclipse.symphony.core.ui.sirius.viewpoint']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.type.diagram']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.symphony_system_child']" targetFinderExpression="[self.memberType/]">
+        <edgeMappings name="org.eclipse.symphony.core.ui.sirius.edges.type_member_to_child_symphony_system" label="TypeMember Edge -> Child SymphonySystem" sourceMapping="//@ownedViewpoints[name='org.eclipse.symphony.core.ui.sirius.viewpoint']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.type.diagram']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.type.nodes.type_member']" targetMapping="//@ownedViewpoints[name='org.eclipse.symphony.core.ui.sirius.viewpoint']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.type.diagram']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.nodes.type_member_symphony_systems']" targetFinderExpression="[self.memberType/]">
           <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription>
@@ -474,10 +474,14 @@
         </edgeMappings>
         <toolSections name="org.eclipse.symphony.core.ui.sirius.type.sections.create" label="Create">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="org.eclipse.symphony.core.ui.sirius.type.tools.node_create.connection_point" label="Create Connection Point" nodeMappings="//@ownedViewpoints[name='org.eclipse.symphony.core.ui.sirius.viewpoint']/@ownedRepresentations[name='org.eclipse.symphony.core.ui.sirius.type.diagram']/@defaultLayer/@nodeMappings[name='org.eclipse.symphony.core.ui.sirius.type.nodes.symphony_system']/@borderedNodeMappings[name='org.eclipse.symphony.core.ui.sirius.type.nodes.bordered.root_connection_point']">
-            <variable name="container"/>
+            <variable name="container">
+              <subVariables xsi:type="tool_1:SelectModelElementVariable" name="symSystem" candidatesExpression="[core::SymphonySystem.allInstances()/]" message="Select the symphony system the new connection point should belong to"/>
+            </variable>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self/]"/>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="org.eclipse.symphony.core.ui.sirius.type.tools.create_node.connection_point.action_call" label="Create Connection Point" forceRefresh="true" id="org.eclipse.symphony.core.ui.sirius.type.java_actions.CreateConnectionPointExternalAction">
+                <parameters name="SymphonySystem" value="var:symSystem"/>
+              </firstModelOperations>
             </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:DeleteElementDescription" name="org.eclipse.symphony.core.ui.sirius.tools.delete_node.root_sym_sys" label="Delete Root Symphony System Node" precondition="[false/]">

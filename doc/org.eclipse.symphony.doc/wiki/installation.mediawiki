@@ -53,12 +53,9 @@ To install Eclipse platform, we highly recommend to use Eclipse Installer also k
 
 === Eclipse Mars Packages ===
 # Install the following packages:
-<<<<<<< HEAD
 #* Modeling \ EMF - Eclipse Modeling Framework Xcore SDK
-=======
 #* EMF - Eclipse Modeling Framework Xcore SDK
 
->>>>>>> branch 'master' of https://rlarcheveque@bitbucket.org/Symphony2Eclipse/org.eclipse.symphony.git
 === Sirius Packages ===
 # Add the '''Sirius''' P2 Site [http://download.eclipse.org/sirius/updates/releases/3.1.1/mars http://download.eclipse.org/sirius/updates/releases/3.1.1/mars].
 # Install the following packages:
