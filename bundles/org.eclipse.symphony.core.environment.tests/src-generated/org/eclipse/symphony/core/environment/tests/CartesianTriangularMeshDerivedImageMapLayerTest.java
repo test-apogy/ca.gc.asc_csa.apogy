@@ -9,6 +9,7 @@ import org.eclipse.symphony.core.environment.CartesianTriangularMeshDerivedImage
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshMapLayer;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshURLMapLayer;
 import org.eclipse.symphony.core.environment.Map;
+import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 
 /**
@@ -63,4 +64,13 @@ public abstract class CartesianTriangularMeshDerivedImageMapLayerTest extends Im
 		return layer;
 	}
 		
+	@Override
+	public void testGetRegion() 
+	{
+		RectangularRegion rectangularRegion = getFixture().getImageMapLayerRegion();
+		
+		assertNotNull(rectangularRegion);
+		assertEquals(60.0, rectangularRegion.getXDimension());
+		assertEquals(120.0, rectangularRegion.getYDimension());
+	}
 } //CartesianTriangularMeshDerivedImageMapLayerTest

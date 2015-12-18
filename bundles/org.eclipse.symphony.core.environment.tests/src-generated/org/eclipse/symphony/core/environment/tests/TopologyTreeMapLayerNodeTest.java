@@ -87,4 +87,11 @@ public class TopologyTreeMapLayerNodeTest extends TestCase {
 		setFixture(null);
 	}
 
+	/**
+	 * Test nothing.
+	 */
+	public void testNothing()
+	{
+		assertTrue(true);
+	}
 } //TopologyTreeMapLayerNodeTest

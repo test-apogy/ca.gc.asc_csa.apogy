@@ -5,7 +5,11 @@ package org.eclipse.symphony.core.environment.tests;
 
 import junit.textui.TestRunner;
 
+import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
+import org.eclipse.symphony.common.math.Tuple3d;
 import org.eclipse.symphony.core.environment.CartesianCoordinatesPolygonShapeImageMapLayer;
+import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 
 /**
@@ -50,11 +54,23 @@ public class CartesianCoordinatesPolygonShapeImageMapLayerTest extends PolygonSh
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see junit.framework.TestCase#setUp()
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	protected void setUp() throws Exception {
+	protected void setUp() throws Exception 
+	{
 		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianCoordinatesPolygonShapeImageMapLayer());
+		
+		getFixture().setRequiredResolution(0.5);
+		
+		Tuple3d p0 = Symphony__CommonMathFacade.INSTANCE.createTuple3d(0, 0, 0);		
+		getFixture().getVertices().add(p0);
+		
+		Tuple3d p1 = Symphony__CommonMathFacade.INSTANCE.createTuple3d(10, 0, 0);		
+		getFixture().getVertices().add(p1);
+		
+		Tuple3d p2 = Symphony__CommonMathFacade.INSTANCE.createTuple3d(10, 20, 0);		
+		getFixture().getVertices().add(p2);		
 	}
 
 	/**
@@ -67,12 +83,42 @@ public class CartesianCoordinatesPolygonShapeImageMapLayerTest extends PolygonSh
 	protected void tearDown() throws Exception {
 		setFixture(null);
 	}
-
-	/**
-	 * Test nothing.
-	 */
-	public void testNothing()
+	
+	@Override
+	public void testGetVertices() 
 	{
-		assertTrue(true);
+		assertNotNull(getFixture().getVertices());
+		assertTrue(!getFixture().getVertices().isEmpty());
 	}
+	
+	@Override
+	public void testUpdateImage__IProgressMonitor() 
+	{
+		try
+		{
+			getFixture().updateImage(new NullProgressMonitor());
+			
+			assertNotNull(getFixture().getImage());								
+			
+			saveImage(getFixture().getImage(), "CartesianCoordinatesPolygonShapeImageMapLayerTest");
+		}
+		catch(Exception e)
+		{
+			fail(e.getMessage());
+		}
+	}
+	
+	@Override
+	public void testGetRegion() 
+	{
+		RectangularRegion rectangularRegion = getFixture().getRegion();
+		
+		assertNotNull(rectangularRegion);
+		assertEquals(0, rectangularRegion.getXMin(), 1E-9);
+		assertEquals(10.0, rectangularRegion.getXMax(), 1E-9);
+		
+		assertEquals(0.0, rectangularRegion.getYMin(), 1E-9);
+		assertEquals(20, rectangularRegion.getYMax(), 1E-9);		
+	}
+	
 } //CartesianCoordinatesPolygonShapeImageMapLayerTest

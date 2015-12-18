@@ -66,6 +66,7 @@ public interface SurfaceWorksite extends Worksite
 	 * @see #setMapsList(MapsList)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSurfaceWorksite_MapsList()
 	 * @model containment="true" required="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='true' notify='true' property='None'"
 	 * @generated
 	 */
   MapsList getMapsList();

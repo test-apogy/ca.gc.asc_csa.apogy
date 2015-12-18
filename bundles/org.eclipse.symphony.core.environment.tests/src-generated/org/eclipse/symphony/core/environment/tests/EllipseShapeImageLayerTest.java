@@ -3,10 +3,12 @@
  */
 package org.eclipse.symphony.core.environment.tests;
 
-import junit.textui.TestRunner;
-
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.symphony.core.environment.EllipseShapeImageLayer;
+import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+
+import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,11 +52,16 @@ public class EllipseShapeImageLayerTest extends AbstractShapeImageLayerTest {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see junit.framework.TestCase#setUp()
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	protected void setUp() throws Exception {
+	protected void setUp() throws Exception 
+	{
 		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createEllipseShapeImageLayer());
+			
+		getFixture().setRequiredResolution(0.1);
+		getFixture().setEllipseHeight(10.0);
+		getFixture().setEllipseWidth(20.0);				
 	}
 
 	/**
@@ -68,12 +75,47 @@ public class EllipseShapeImageLayerTest extends AbstractShapeImageLayerTest {
 		setFixture(null);
 	}
 
-	/**
-	 * Test nothing.
-	 */
-	public void testNothing()
+	@Override
+	public void testUpdateImage__IProgressMonitor() 
 	{
-		assertTrue(true);
+		try
+		{
+			getFixture().updateImage(new NullProgressMonitor());
+			
+			assertNotNull(getFixture().getImage());			
+			
+			// Width is 20 m, resolution is 0.1 m/pixel
+			assertEquals(200, getFixture().getImage().getWidth());
+			
+			// Height is 10 m, resolution is 0.1 m/pixel
+			assertEquals(100, getFixture().getImage().getHeight());
+			
+			saveImage(getFixture().getImage(), "EllipseShapeImageLayerTest");
+		}
+		catch(Exception e)
+		{
+			fail(e.getMessage());
+		}
+	}
+	
+	@Override
+	public void testGetResolution() 
+	{
+		// Updates the image.
+		getFixture().updateImage(new NullProgressMonitor());
+			
+		// Should be equal to the required resolution
+		assertEquals(getFixture().getRequiredResolution(), getFixture().getResolution(), 1E-6);
+	}
+	
+	@Override
+	public void testGetRegion() 
+	{
+		RectangularRegion rectangularRegion = getFixture().getImageMapLayerRegion();
+		
+		assertNotNull(rectangularRegion);
+		assertEquals(20.0, rectangularRegion.getXDimension());
+		assertEquals(10.0, rectangularRegion.getYDimension());
 	}
 	
 } //EllipseShapeImageLayerTest

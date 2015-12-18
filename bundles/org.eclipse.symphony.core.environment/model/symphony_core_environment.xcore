@@ -58,6 +58,7 @@ abstract class SurfaceWorksite extends Worksite
 	@GenModel(children="true", notify="true", property="None")
 	contains Sky[1] sky opposite surfaceWorksite
 	
+	@GenModel(children="true", notify="true", property="None")
 	contains MapsList[1] mapsList
 }
 

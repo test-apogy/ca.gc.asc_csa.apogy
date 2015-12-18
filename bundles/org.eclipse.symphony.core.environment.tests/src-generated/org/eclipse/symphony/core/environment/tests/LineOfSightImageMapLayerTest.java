@@ -9,7 +9,6 @@ import javax.vecmath.Vector3d;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
-import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 
 import junit.textui.TestRunner;
@@ -62,16 +61,16 @@ public class LineOfSightImageMapLayerTest extends CartesianTriangularMeshDerived
 	protected void setUp() throws Exception 
 	{
 		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer());
-		getFixture().setCartesianTriangularMeshMapLayer(super.createCartesianTriangularMeshMapLayer());
 		
+		getFixture().setCartesianTriangularMeshMapLayer(super.createCartesianTriangularMeshMapLayer());		
 		getFixture().setRequiredResolution(2.0);
 		
 		Matrix4d observerPose = new Matrix4d();
-		observerPose.set(new Vector3d(30, 60, 5.0));
+		observerPose.set(new Vector3d(10.0, 20.0, 1.0));
 		getFixture().setObserverPose(Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(observerPose));
 		
 		getFixture().setOpaque(true);
-		getFixture().setTargetHeightAboveGround(1.8);
+		getFixture().setTargetHeightAboveGround(1.5);
 		getFixture().setUseHeightPerpendicularToGround(true);
 	}
 
@@ -100,7 +99,7 @@ public class LineOfSightImageMapLayerTest extends CartesianTriangularMeshDerived
 			// Width is 60 m, resolution is 2.0 m/pixel
 			assertEquals(30, getFixture().getImage().getWidth());
 			
-			// Width is 120 m, resolution is 2.0 m/pixel
+			// Height is 120 m, resolution is 2.0 m/pixel
 			assertEquals(60, getFixture().getImage().getHeight());
 			
 			saveImage(getFixture().getImage(), "LineOfSightImageMapLayerTest");
@@ -109,15 +108,5 @@ public class LineOfSightImageMapLayerTest extends CartesianTriangularMeshDerived
 		{
 			fail(e.getMessage());
 		}
-	}
-		
-	@Override
-	public void testGetRegion() 
-	{
-		RectangularRegion rectangularRegion = getFixture().getImageMapLayerRegion();
-		
-		assertNotNull(rectangularRegion);
-		assertEquals(60.0, rectangularRegion.getXDimension());
-		assertEquals(120.0, rectangularRegion.getYDimension());
 	}
 } //LineOfSightImageMapLayerTest

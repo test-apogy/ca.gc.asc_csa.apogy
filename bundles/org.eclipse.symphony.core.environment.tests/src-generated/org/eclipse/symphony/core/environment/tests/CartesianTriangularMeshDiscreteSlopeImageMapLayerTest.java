@@ -104,10 +104,5 @@ public class CartesianTriangularMeshDiscreteSlopeImageMapLayerTest extends Carte
 		{
 			fail(e.getMessage());
 		}
-	}
-	
-	public void testGetResolution() 
-	{
-		assertEquals(2.0, getFixture().getResolution(), 1E-6);		
-	};
+	}	
 } //CartesianTriangularMeshDiscreteSlopeImageMapLayerTest

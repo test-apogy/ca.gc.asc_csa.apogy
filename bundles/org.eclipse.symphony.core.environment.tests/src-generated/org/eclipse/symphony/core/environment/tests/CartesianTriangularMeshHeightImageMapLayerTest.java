@@ -5,7 +5,9 @@ package org.eclipse.symphony.core.environment.tests;
 
 import junit.textui.TestRunner;
 
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshHeightImageMapLayer;
+import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 
 /**
@@ -50,11 +52,17 @@ public class CartesianTriangularMeshHeightImageMapLayerTest extends CartesianTri
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see junit.framework.TestCase#setUp()
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	protected void setUp() throws Exception {
+	protected void setUp() throws Exception 
+	{
 		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshHeightImageMapLayer());
+		
+		getFixture().setCartesianTriangularMeshMapLayer(super.createCartesianTriangularMeshMapLayer());
+		getFixture().setRequiredResolution(2.0);
+		
+		getFixture().setAutoScale(true);
 	}
 
 	/**
@@ -68,11 +76,36 @@ public class CartesianTriangularMeshHeightImageMapLayerTest extends CartesianTri
 		setFixture(null);
 	}
 
-	/**
-	 * Test nothing.
-	 */
-	public void testNothing()
+	@Override
+	public void testUpdateImage__IProgressMonitor() 
 	{
-		assertTrue(true);
+		try
+		{
+			getFixture().updateImage(new NullProgressMonitor());
+			
+			assertNotNull(getFixture().getImage());			
+			
+			// Width is 60 m, resolution is 2.0 m/pixel
+			assertEquals(30, getFixture().getImage().getWidth());
+			
+			// Height is 120 m, resolution is 2.0 m/pixel
+			assertEquals(60, getFixture().getImage().getHeight());
+			
+			saveImage(getFixture().getImage(), "CartesianTriangularMeshHeightImageMapLayerTest");
+		}
+		catch(Exception e)
+		{
+			fail(e.getMessage());
+		}
+	}
+	
+	@Override
+	public void testGetRegion() 
+	{
+		RectangularRegion rectangularRegion = getFixture().getImageMapLayerRegion();
+		
+		assertNotNull(rectangularRegion);
+		assertEquals(60.0, rectangularRegion.getXDimension());
+		assertEquals(120.0, rectangularRegion.getYDimension());
 	}
 } //CartesianTriangularMeshHeightImageMapLayerTest

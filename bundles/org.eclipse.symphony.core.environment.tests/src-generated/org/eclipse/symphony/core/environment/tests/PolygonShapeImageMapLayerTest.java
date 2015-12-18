@@ -3,6 +3,7 @@
  */
 package org.eclipse.symphony.core.environment.tests;
 
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer;
 
 /**
@@ -49,6 +50,16 @@ public abstract class PolygonShapeImageMapLayerTest extends AbstractShapeImageLa
 	 */
 	public void testGetVertices() {
 		// This test should be implemented by sib-classes.
+	}
+	
+	@Override
+	public void testGetResolution() 
+	{
+		// Updates the image.
+		getFixture().updateImage(new NullProgressMonitor());
+		
+		// Should be equal to the required resolution
+		assertEquals(getFixture().getRequiredResolution(), getFixture().getResolution(), 1E-6);
 	}
 
 } //PolygonShapeImageMapLayerTest

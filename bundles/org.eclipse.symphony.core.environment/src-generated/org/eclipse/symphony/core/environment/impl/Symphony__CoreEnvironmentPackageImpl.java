@@ -4273,6 +4273,14 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "property", "None"
 		   });	
 		addAnnotation
+		  (getSurfaceWorksite_MapsList(), 
+		   source, 
+		   new String[] {
+			 "children", "true",
+			 "notify", "true",
+			 "property", "None"
+		   });	
+		addAnnotation
 		  (earthSurfaceWorksiteEClass, 
 		   source, 
 		   new String[] {
