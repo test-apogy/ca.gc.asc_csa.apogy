@@ -45,12 +45,10 @@ public abstract class PolygonShapeImageMapLayerTest extends AbstractShapeImageLa
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.symphony.core.environment.PolygonShapeImageMapLayer#getVertices()
-	 * @generated
+	 * @generated_NOT
 	 */
 	public void testGetVertices() {
-		// TODO: implement this operation test method
-		// Ensure that you remove @generated or mark it @generated NOT
-		fail();
+		// This test should be implemented by sib-classes.
 	}
 
 } //PolygonShapeImageMapLayerTest

@@ -3,10 +3,16 @@
  */
 package org.eclipse.symphony.core.environment.tests;
 
-import junit.textui.TestRunner;
+import javax.vecmath.Matrix4d;
+import javax.vecmath.Vector3d;
 
+import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.symphony.common.math.Symphony__CommonMathFacade;
 import org.eclipse.symphony.core.environment.LineOfSightImageMapLayer;
+import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+
+import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,29 +56,68 @@ public class LineOfSightImageMapLayerTest extends CartesianTriangularMeshDerived
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see junit.framework.TestCase#setUp()
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	protected void setUp() throws Exception {
+	protected void setUp() throws Exception 
+	{
 		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createLineOfSightImageMapLayer());
+		getFixture().setCartesianTriangularMeshMapLayer(super.createCartesianTriangularMeshMapLayer());
+		
+		getFixture().setRequiredResolution(2.0);
+		
+		Matrix4d observerPose = new Matrix4d();
+		observerPose.set(new Vector3d(30, 60, 5.0));
+		getFixture().setObserverPose(Symphony__CommonMathFacade.INSTANCE.createMatrix4x4(observerPose));
+		
+		getFixture().setOpaque(true);
+		getFixture().setTargetHeightAboveGround(1.8);
+		getFixture().setUseHeightPerpendicularToGround(true);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	protected void tearDown() throws Exception {
+	protected void tearDown() throws Exception 
+	{
+		getFixture().setCartesianTriangularMeshMapLayer(null);
 		setFixture(null);
 	}
-
-	/**
-	 * Test nothing.
-	 */
-	public void testNothing()
+	
+	@Override
+	public void testUpdateImage__IProgressMonitor() 
 	{
-		assertTrue(true);
+		try
+		{
+			getFixture().updateImage(new NullProgressMonitor());
+			
+			assertNotNull(getFixture().getImage());			
+			
+			// Width is 60 m, resolution is 2.0 m/pixel
+			assertEquals(30, getFixture().getImage().getWidth());
+			
+			// Width is 120 m, resolution is 2.0 m/pixel
+			assertEquals(60, getFixture().getImage().getHeight());
+			
+			saveImage(getFixture().getImage(), "LineOfSightImageMapLayerTest");
+		}
+		catch(Exception e)
+		{
+			fail(e.getMessage());
+		}
+	}
+		
+	@Override
+	public void testGetRegion() 
+	{
+		RectangularRegion rectangularRegion = getFixture().getImageMapLayerRegion();
+		
+		assertNotNull(rectangularRegion);
+		assertEquals(60.0, rectangularRegion.getXDimension());
+		assertEquals(120.0, rectangularRegion.getYDimension());
 	}
 } //LineOfSightImageMapLayerTest

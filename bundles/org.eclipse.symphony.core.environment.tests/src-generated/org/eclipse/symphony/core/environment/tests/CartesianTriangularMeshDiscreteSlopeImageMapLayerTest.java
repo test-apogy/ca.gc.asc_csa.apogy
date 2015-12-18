@@ -5,7 +5,9 @@ package org.eclipse.symphony.core.environment.tests;
 
 import junit.textui.TestRunner;
 
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.symphony.core.environment.CartesianTriangularMeshDiscreteSlopeImageMapLayer;
+import org.eclipse.symphony.core.environment.SlopeRange;
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 
 /**
@@ -50,11 +52,32 @@ public class CartesianTriangularMeshDiscreteSlopeImageMapLayerTest extends Carte
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see junit.framework.TestCase#setUp()
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	protected void setUp() throws Exception {
+	protected void setUp() throws Exception 
+	{
 		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshDiscreteSlopeImageMapLayer());
+		
+		getFixture().setCartesianTriangularMeshMapLayer(super.createCartesianTriangularMeshMapLayer());
+		getFixture().setRequiredResolution(2.0);
+		
+		SlopeRange okSlopeRange = Symphony__CoreEnvironmentFactory.eINSTANCE.createSlopeRange();
+		okSlopeRange.setSlopeLowerBound(0);
+		okSlopeRange.setSlopeUpperBound(10.0);
+		getFixture().getSlopeRanges().add(okSlopeRange);
+		
+		SlopeRange warningSlopeRange = Symphony__CoreEnvironmentFactory.eINSTANCE.createSlopeRange();
+		warningSlopeRange.setSlopeLowerBound(10.0);
+		warningSlopeRange.setSlopeUpperBound(15.0);		
+		getFixture().getSlopeRanges().add(warningSlopeRange);
+		
+		SlopeRange dangerSlopeRange = Symphony__CoreEnvironmentFactory.eINSTANCE.createSlopeRange();
+		dangerSlopeRange.setSlopeLowerBound(15.0);
+		dangerSlopeRange.setSlopeUpperBound(90.0);		
+		getFixture().getSlopeRanges().add(dangerSlopeRange);
+		
+		getFixture().setOpaque(true);
 	}
 
 	/**
@@ -67,12 +90,24 @@ public class CartesianTriangularMeshDiscreteSlopeImageMapLayerTest extends Carte
 	protected void tearDown() throws Exception {
 		setFixture(null);
 	}
-
-	/**
-	 * Test nothing.
-	 */
-	public void testNothing()
+	
+	@Override
+	public void testUpdateImage__IProgressMonitor() 
 	{
-		assertTrue(true);
+		try
+		{
+			getFixture().updateImage(new NullProgressMonitor());
+			
+			assertNotNull(getFixture().getImage());
+		}
+		catch(Exception e)
+		{
+			fail(e.getMessage());
+		}
 	}
+	
+	public void testGetResolution() 
+	{
+		assertEquals(2.0, getFixture().getResolution(), 1E-6);		
+	};
 } //CartesianTriangularMeshDiscreteSlopeImageMapLayerTest

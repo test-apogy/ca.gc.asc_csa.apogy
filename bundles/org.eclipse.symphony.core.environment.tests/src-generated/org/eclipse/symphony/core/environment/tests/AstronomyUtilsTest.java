@@ -185,9 +185,10 @@ public class AstronomyUtilsTest extends TestCase {
 	 */
 	public void testGetHorizontalSunPosition__Date_double_double() 
 	{
+		// Data taken from http://www.esrl.noaa.gov/gmd/grad/solcalc/azel.html
 		// Format : Location, Date, observerLongitude, observerLatitude, expectedAzimuth, expectedAltitude
 		String[][] testVector = new String[][]{{"London, UK","2000.01.01 12:00:00 UTC", "-0.17", "51.500", "179.37" , "15.52"}, // London UK
-											   {"Ottawa, Canada","2000.01.01 12:00:00 EDT", "-75.72", "45.42", "163.81" , "19.96"}, // Ottawa, Canada
+											   {"Ottawa, Canada","2000.01.01 12:00:00 EDT", "-75.72", "45.42", "178.63" , "21.59"}, // Ottawa, Canada											   
 								 			   {"Canberra, Australia","2011.02.18 00:46:31 UTC", "149.13", "-35.3", "46.857" , "58.78"}, // Canberra, Australia
 								 			   {"0N-0E","2011.03.03 19:21:08 UTC", "0.0", "0.0", "−97.0451" , "-17.177348"} // O deg North, 0 deg East
 											   };		

@@ -3,10 +3,12 @@
  */
 package org.eclipse.symphony.core.environment.tests;
 
-import junit.textui.TestRunner;
-
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.symphony.core.environment.RectangleShapeImageLayer;
+import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
+
+import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,11 +52,17 @@ public class RectangleShapeImageLayerTest extends AbstractShapeImageLayerTest {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see junit.framework.TestCase#setUp()
-	 * @generated
+	 * @generated_NOT
 	 */
 	@Override
-	protected void setUp() throws Exception {
+	protected void setUp() throws Exception 
+	{
 		setFixture(Symphony__CoreEnvironmentFactory.eINSTANCE.createRectangleShapeImageLayer());
+				
+		getFixture().setRectangleWidth(20.0);
+		getFixture().setRectangleHeight(10.0);
+		
+		getFixture().setRequiredResolution(0.5);		
 	}
 
 	/**
@@ -68,4 +76,32 @@ public class RectangleShapeImageLayerTest extends AbstractShapeImageLayerTest {
 		setFixture(null);
 	}
 
+	@Override
+	public void testUpdateImage__IProgressMonitor() 
+	{
+		try
+		{
+			getFixture().updateImage(new NullProgressMonitor());
+			
+			assertNotNull(getFixture().getImage());						
+			assertEquals(40, getFixture().getImage().getWidth());
+			assertEquals(20, getFixture().getImage().getHeight());
+			
+			saveImage(getFixture().getImage(), "RectangleShapeImageLayerTest");
+		}
+		catch(Exception e)
+		{
+			fail(e.getMessage());
+		}
+	}
+	
+	@Override
+	public void testGetRegion() 
+	{
+		RectangularRegion rectangularRegion = getFixture().getImageMapLayerRegion();
+		
+		assertNotNull(rectangularRegion);
+		assertEquals(20.0, rectangularRegion.getXDimension());
+		assertEquals(10.0, rectangularRegion.getYDimension());
+	}
 } //RectangleShapeImageLayerTest
