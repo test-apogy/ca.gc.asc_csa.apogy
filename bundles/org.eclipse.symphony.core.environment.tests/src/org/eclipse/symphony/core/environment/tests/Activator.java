@@ -76,7 +76,8 @@ public class Activator implements BundleActivator
 	
 	public String getTempDir()
 	{
-		return System.getProperty("java.io.tmpdir");
+		//return System.getProperty("java.io.tmpdir");
+		return System.getProperty("user.home");
 	}
 	
 	private String getFolderPath(String folderName)
