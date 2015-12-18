@@ -3,9 +3,14 @@
  */
 package org.eclipse.symphony.core.environment.tests;
 
+import java.io.File;
+
+import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.common.images.EImagesUtilities;
 import org.eclipse.symphony.common.images.Symphony__CommonImagesFactory;
 import org.eclipse.symphony.common.images.URLEImage;
 import org.eclipse.symphony.core.environment.ImageMapLayer;
+import org.eclipse.symphony.core.environment.RectangularRegion;
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
 
 import junit.textui.TestRunner;
@@ -98,7 +103,7 @@ public class ImageMapLayerTest extends AbstractMapLayerTest {
 		  getFixture().setHeight(200);
 		  
 		  URLEImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createURLEImage();
-		  eImage.setUrl("platform:/plugin/ca.gc.asc_csa.symphony.environment.tests/data/imageA.gif");
+		  eImage.setUrl("platform:/plugin/" + Activator.PLUGIN_ID +"/data/imageA.gif");
 		  getFixture().setImage(eImage);
 		  
 		  assertEquals(2.0, getFixture().getResolution(), 1E-6);
@@ -139,7 +144,7 @@ public class ImageMapLayerTest extends AbstractMapLayerTest {
 		  getFixture().setHeight(200);
 		  
 		  URLEImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createURLEImage();
-		  eImage.setUrl("platform:/plugin/ca.gc.asc_csa.symphony.environment.tests/data/imageA.gif");
+		  eImage.setUrl("platform:/plugin/" + Activator.PLUGIN_ID + "/data/imageA.gif");
 		  getFixture().setImage(eImage);
 		  
 		  assertNotNull(getFixture().getRegionImage());	  
@@ -158,16 +163,29 @@ public class ImageMapLayerTest extends AbstractMapLayerTest {
 		  getFixture().setHeight(200.0);
 		  
 		  URLEImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createURLEImage();
-		  eImage.setUrl("platform:/plugin/ca.gc.asc_csa.symphony.environment.tests/data/imageA.gif");
+		  eImage.setUrl("platform:/plugin/" + Activator.PLUGIN_ID + "/data/imageA.gif");
 		  getFixture().setImage(eImage);
-		  
-		  assertNotNull(getFixture().getRegion());
-		  assertEquals(0.0, getFixture().getRegion().getXMin());	  
-		  assertEquals(400.0, getFixture().getRegion().getXMax());
-		  assertEquals(0.0, getFixture().getRegion().getYMin());	  
-		  assertEquals(200.0, getFixture().getRegion().getYMax());
-		  assertEquals(400.0, getFixture().getRegion().getXDimension());
-		  assertEquals(200.0, getFixture().getRegion().getYDimension());
+		  		  
+		  RectangularRegion rectangularRegion = getFixture().getRegion();
+		  assertNotNull(rectangularRegion);
+		  assertEquals(0.0, rectangularRegion.getXMin());	  
+		  assertEquals(400.0, rectangularRegion.getXMax());
+		  assertEquals(0.0, rectangularRegion.getYMin());	  
+		  assertEquals(200.0, rectangularRegion.getYMax());
+		  assertEquals(400.0, rectangularRegion.getXDimension());
+		  assertEquals(200.0, rectangularRegion.getYDimension());
 	}
 
+	/**
+	 * Save an image to file.
+	 * @param image The image.
+	 * @param fileName The file name.
+	 * @throws Exception If an exception occurs during save.
+	 */
+	protected void saveImage(AbstractEImage image, String fileName) throws Exception
+	{
+		String path = Activator.getDefault().getTempDir() + File.separator + fileName;
+				
+		EImagesUtilities.INSTANCE.saveImageAsPNG(path, image);
+	}
 } //ImageMapLayerTest

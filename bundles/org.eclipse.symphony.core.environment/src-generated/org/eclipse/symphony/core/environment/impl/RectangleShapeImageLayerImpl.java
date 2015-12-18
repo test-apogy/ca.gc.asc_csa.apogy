@@ -301,9 +301,9 @@ public class RectangleShapeImageLayerImpl extends AbstractShapeImageLayerImpl im
 		g2d.setColor(getDrawingColor());	
 		
 		// Create the polygon.
-		Rectangle2D.Double ellipse = new Rectangle2D.Double(0,0, width-1, height-1);
+		Rectangle2D.Double rectangle = new Rectangle2D.Double(0,0, width-1, height-1);
 			
-		g2d.draw(ellipse);
+		g2d.draw(rectangle);
 		
 		if(isShowCenterLines())
 		{
@@ -339,14 +339,14 @@ public class RectangleShapeImageLayerImpl extends AbstractShapeImageLayerImpl im
 		// Fills the polygon if required.
 		if(isShapedFilled())
 		{
-			g2d.fill(ellipse);
+			g2d.fill(rectangle);
 		}
 		
 		g2d.dispose();
 		
 		// Updates the image
 		EImage eImage = Symphony__CommonImagesFactory.eINSTANCE.createEImage();
-		eImage.setImageContent(bufferedImage);;
+		eImage.setImageContent(bufferedImage);
 		setImage(eImage);
 	}
 		
