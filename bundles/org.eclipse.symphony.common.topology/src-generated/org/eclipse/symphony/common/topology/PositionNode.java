@@ -34,6 +34,7 @@ public interface PositionNode extends AggregateGroupNode {
 	 * @see #setPosition(Tuple3d)
 	 * @see org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage#getPositionNode_Position()
 	 * @model containment="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' createChild='false'"
 	 * @generated
 	 */
 	Tuple3d getPosition();

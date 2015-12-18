@@ -122,7 +122,6 @@ public class CameraSimulatedItemProvider extends CameraItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN ||
 			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
 			childFeature == Symphony__ExamplesCameraPackage.Literals.CAMERA__FOV;
 

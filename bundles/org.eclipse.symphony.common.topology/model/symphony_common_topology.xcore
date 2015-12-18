@@ -73,6 +73,7 @@ class AggregateContentNode<T> extends ContentNode<T>
 
 class GroupNode extends Node
 {
+	@GenModel(children="false", createChild="false")
 	contains Node [0..*] children
 }
 
@@ -87,12 +88,14 @@ class AggregateGroupNode extends GroupNode
 }
 
 class PositionNode extends AggregateGroupNode
-{
+{	
+ 	@GenModel(children="false", createChild="false")
 	contains Tuple3d position
 }
 
 class RotationNode extends AggregateGroupNode
 {
+	@GenModel(children="false", createChild="false")
 	contains Matrix3x3 rotationMatrix
 }
 	 

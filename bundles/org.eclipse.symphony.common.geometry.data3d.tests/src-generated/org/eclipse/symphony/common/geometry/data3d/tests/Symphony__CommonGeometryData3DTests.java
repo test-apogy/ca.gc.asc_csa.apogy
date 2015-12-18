@@ -60,6 +60,7 @@ public class Symphony__CommonGeometryData3DTests extends TestSuite {
 		suite.addTestSuite(DigitalElevationMapMesherTest.class);
 		suite.addTestSuite(DigitalElevationMapSamplerTest.class);
 		suite.addTestSuite(TriangularMeshNormalsCalculatorTest.class);
+		suite.addTestSuite(TriangularMeshToNormalPointCloudTest.class);
 		suite.addTestSuite(UniquePointsFilterTest.class);
 		suite.addTestSuite(TriangleEdgeLengthTriangularMeshFilterTest.class);
 		suite.addTestSuite(OutlierFilterTest.class);

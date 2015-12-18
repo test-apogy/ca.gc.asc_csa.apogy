@@ -24,9 +24,6 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_addons_mobility_pathplanners -->
       <extender
-            uri="org.eclipse.symphony.addons.geometry.paths"
-            class="org.eclipse.symphony.addons.mobility.pathplanners.provider.Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory$Symphony__AddonsGeometryPathsChildCreationExtender"/>
-      <extender
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.addons.mobility.pathplanners.provider.Symphony__AddonsMobilityPathplannersItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
