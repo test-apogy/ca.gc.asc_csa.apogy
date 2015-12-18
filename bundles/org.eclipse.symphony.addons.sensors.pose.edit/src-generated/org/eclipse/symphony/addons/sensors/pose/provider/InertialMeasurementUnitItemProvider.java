@@ -15,7 +15,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit;
 import org.eclipse.symphony.addons.sensors.pose.Symphony__AddonsSensorsPosePackage;
 import org.eclipse.symphony.common.math.Symphony__CommonMathFactory;
-import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.addons.sensors.pose.InertialMeasurementUnit} object.
@@ -160,8 +159,6 @@ public class InertialMeasurementUnitItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN ||
-			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
 			childFeature == Symphony__AddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__ANGULAR_VELOCITY ||
 			childFeature == Symphony__AddonsSensorsPosePackage.Literals.INERTIAL_MEASUREMENT_UNIT__LINEAR_ACCELERATION;
 

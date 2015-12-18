@@ -5,6 +5,8 @@
  */
 package org.eclipse.symphony.common.geometry.data3d.impl;
 
+import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -15,9 +17,8 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSetExtent;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-
-import java.lang.reflect.InvocationTargetException;
 
 /**
  * <!-- begin-user-doc -->
@@ -63,12 +64,11 @@ public class CartesianCoordinatesMeshImpl extends MeshImpl<CartesianPositionCoor
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
-	public CartesianCoordinatesSetExtent getExtent() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public CartesianCoordinatesSetExtent getExtent() 
+	{
+		return Geometry3DUtilities.getCartesianCoordinatesSetExtent(getPoints());
 	}
 
 	/**

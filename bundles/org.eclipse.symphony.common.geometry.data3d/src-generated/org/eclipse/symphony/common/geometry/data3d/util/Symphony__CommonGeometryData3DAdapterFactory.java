@@ -194,20 +194,12 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 				return createPointLocatorAdapter();
 			}
 			@Override
-			public Adapter caseVecmathPointLocator(VecmathPointLocator object) {
-				return createVecmathPointLocatorAdapter();
-			}
-			@Override
-			public Adapter caseVecmathKdTreePointLocator(VecmathKdTreePointLocator object) {
-				return createVecmathKdTreePointLocatorAdapter();
+			public Adapter caseKDTreeBasedPointLocator(KDTreeBasedPointLocator object) {
+				return createKDTreeBasedPointLocatorAdapter();
 			}
 			@Override
 			public Adapter caseMeshLocalizer(MeshLocalizer object) {
 				return createMeshLocalizerAdapter();
-			}
-			@Override
-			public Adapter casePointNormalLocator(PointNormalLocator object) {
-				return createPointNormalLocatorAdapter();
 			}
 			@Override
 			public Adapter caseDelaunayMesher(DelaunayMesher object) {
@@ -240,14 +232,6 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 			@Override
 			public Adapter caseOutlierFilter(OutlierFilter object) {
 				return createOutlierFilterAdapter();
-			}
-			@Override
-			public Adapter caseRasterPointCloud(RasterPointCloud object) {
-				return createRasterPointCloudAdapter();
-			}
-			@Override
-			public Adapter caseRasterPointCloudToCartesianCoordinatesSet(RasterPointCloudToCartesianCoordinatesSet object) {
-				return createRasterPointCloudToCartesianCoordinatesSetAdapter();
 			}
 			@Override
 			public Adapter caseMeshSmoother(MeshSmoother object) {
@@ -752,30 +736,16 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator <em>Vecmath Point Locator</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.KDTreeBasedPointLocator <em>KD Tree Based Point Locator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator
+	 * @see org.eclipse.symphony.common.geometry.data3d.KDTreeBasedPointLocator
 	 * @generated
 	 */
-	public Adapter createVecmathPointLocatorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.VecmathKdTreePointLocator <em>Vecmath Kd Tree Point Locator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VecmathKdTreePointLocator
-	 * @generated
-	 */
-	public Adapter createVecmathKdTreePointLocatorAdapter() {
+	public Adapter createKDTreeBasedPointLocatorAdapter() {
 		return null;
 	}
 
@@ -790,20 +760,6 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	 * @generated
 	 */
 	public Adapter createMeshLocalizerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.PointNormalLocator <em>Point Normal Locator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointNormalLocator
-	 * @generated
-	 */
-	public Adapter createPointNormalLocatorAdapter() {
 		return null;
 	}
 
@@ -916,34 +872,6 @@ public class Symphony__CommonGeometryData3DAdapterFactory extends AdapterFactory
 	 * @generated
 	 */
 	public Adapter createOutlierFilterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.RasterPointCloud <em>Raster Point Cloud</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RasterPointCloud
-	 * @generated
-	 */
-	public Adapter createRasterPointCloudAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.geometry.data3d.RasterPointCloudToCartesianCoordinatesSet <em>Raster Point Cloud To Cartesian Coordinates Set</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RasterPointCloudToCartesianCoordinatesSet
-	 * @generated
-	 */
-	public Adapter createRasterPointCloudToCartesianCoordinatesSetAdapter() {
 		return null;
 	}
 

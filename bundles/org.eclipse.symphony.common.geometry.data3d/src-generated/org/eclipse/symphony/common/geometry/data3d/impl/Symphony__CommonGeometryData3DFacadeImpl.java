@@ -33,15 +33,14 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPolygon;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.DigitalElevationMap;
 import org.eclipse.symphony.common.geometry.data3d.Geometry3DUtilities;
 import org.eclipse.symphony.common.geometry.data3d.NormalPointCloud;
-import org.eclipse.symphony.common.geometry.data3d.PointNormalLocator;
 import org.eclipse.symphony.common.geometry.data3d.Pose;
 import org.eclipse.symphony.common.geometry.data3d.SphericalCoordinates;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
@@ -420,9 +419,8 @@ public class Symphony__CommonGeometryData3DFacadeImpl extends MinimalEObjectImpl
 	 * 
 	 * @generated_NOT
 	 */
-	public CartesianTriangularMesh applyTransform(CartesianTriangularMesh mesh,
-			Matrix4d trMatrix) {
-
+	public CartesianTriangularMesh createTransformedMesh(CartesianTriangularMesh mesh, Matrix4d trMatrix) 
+	{
 		List<CartesianPositionCoordinates> trPoints = new ArrayList<CartesianPositionCoordinates>();
 
 		Map<CartesianPositionCoordinates, Integer> pointToIdMap = new HashMap<CartesianPositionCoordinates, Integer>();
@@ -484,10 +482,10 @@ public class Symphony__CommonGeometryData3DFacadeImpl extends MinimalEObjectImpl
 	 * 
 	 * @generated_NOT
 	 */
-	public CartesianTriangularMesh applyTransformInt(
-			CartesianTriangularMesh mesh, Matrix4d trMatrix) {
-
-		for (CartesianPositionCoordinates p : mesh.getPoints()) {
+	public void applyTransform(CartesianTriangularMesh mesh, Matrix4d trMatrix) 
+	{
+		for (CartesianPositionCoordinates p : mesh.getPoints()) 
+		{
 			Point3d p3d = p.asPoint3d();
 
 			trMatrix.transform(p3d);
@@ -495,10 +493,7 @@ public class Symphony__CommonGeometryData3DFacadeImpl extends MinimalEObjectImpl
 			p.setX(p3d.x);
 			p.setY(p3d.y);
 			p.setZ(p3d.z);
-		}
-
-		return mesh;
-
+		}		
 	}
 
 	/**
@@ -663,25 +658,29 @@ public class Symphony__CommonGeometryData3DFacadeImpl extends MinimalEObjectImpl
 	 * 
 	 * @generated_NOT
 	 */
-	public void updateCartesianCoordinatesSet(
-			CartesianCoordinatesSet cartesianCoordinatesSet, double[][] xyzData) 
+	public void updateCartesianCoordinatesSet(CartesianCoordinatesSet cartesianCoordinatesSet, double[][] xyzData) 
 	{
 		int numberOfPointsInSet = cartesianCoordinatesSet.getPoints().size();
 
 		// If there is more point in the array than the set, create the required
 		// additional points.
 		// If not, remove the surplus points in the data set.
-		if (xyzData.length > numberOfPointsInSet) {
+		if (xyzData.length > numberOfPointsInSet) 
+		{
 			List<CartesianPositionCoordinates> toAdd = new ArrayList<CartesianPositionCoordinates>();
-			for (int j = numberOfPointsInSet; j < xyzData.length; j++) {
+			for (int j = numberOfPointsInSet; j < xyzData.length; j++) 
+			{
 				toAdd.add((Symphony__CommonGeometryData3DFacade.INSTANCE
 						.createCartesianPositionCoordinates(xyzData[j][0],
 								xyzData[j][1], xyzData[j][2])));
 			}
 			cartesianCoordinatesSet.getPoints().addAll(toAdd);
-		} else {
+		} 
+		else 
+		{
 			List<CartesianPositionCoordinates> toRemove = new ArrayList<CartesianPositionCoordinates>();
-			for (int j = xyzData.length; j < numberOfPointsInSet; j++) {
+			for (int j = xyzData.length; j < numberOfPointsInSet; j++) 
+			{
 				toRemove.add(cartesianCoordinatesSet.getPoints().get(j));
 			}
 			cartesianCoordinatesSet.getPoints().removeAll(toRemove);
@@ -689,7 +688,8 @@ public class Symphony__CommonGeometryData3DFacadeImpl extends MinimalEObjectImpl
 
 		// Updates the existing points in the CartesianCoordinatesSet.
 		int numberOfPointsInArray = xyzData.length;
-		for (int i = 0; i < numberOfPointsInArray; i++) {
+		for (int i = 0; i < numberOfPointsInArray; i++) 
+		{
 			cartesianCoordinatesSet.getPoints().get(i).setX(xyzData[i][0]);
 			cartesianCoordinatesSet.getPoints().get(i).setY(xyzData[i][1]);
 			cartesianCoordinatesSet.getPoints().get(i).setZ(xyzData[i][2]);
@@ -701,39 +701,29 @@ public class Symphony__CommonGeometryData3DFacadeImpl extends MinimalEObjectImpl
 	 * 
 	 * @generated_NOT
 	 */
-	public PointNormalLocator createPointNormalLocator(NormalPointCloud input) {
-		PointNormalLocator locator = Symphony__CommonGeometryData3DFactory.eINSTANCE
-				.createPointNormalLocator();
-		locator.setDataSet(input);
-
-		return locator;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
-	public DigitalElevationMap createDigitalElevationMap(
-			CartesianCoordinatesSet coordinatesSet) {
+	public DigitalElevationMap createDigitalElevationMap(CartesianCoordinatesSet coordinatesSet) 
+	{
 
 		// Sort the input point by x coordinates and y coordinates.
 		SortedMap<Double, SortedSet<CartesianPositionCoordinates>> map = new TreeMap<Double, SortedSet<CartesianPositionCoordinates>>();
 
 		int yDimension = 0;
-		for (CartesianPositionCoordinates p : coordinatesSet.getPoints()) {
+		for (CartesianPositionCoordinates p : coordinatesSet.getPoints()) 
+		{
 			Double x = new Double(p.getX());
-			if (!map.containsKey(x)) {
+			if (!map.containsKey(x)) 
+			{
 				SortedSet<CartesianPositionCoordinates> s = new TreeSet<CartesianPositionCoordinates>(
 						new CartesianPositionCoordinatesYComparator());
 				s.add(p);
 				map.put(x, s);
-			} else {
+			} 
+			else 
+			{
 				SortedSet<CartesianPositionCoordinates> s = map.get(x);
 				s.add(p);
 
-				if (s.size() > yDimension)
-					yDimension = s.size();
+				if (s.size() > yDimension) yDimension = s.size();
 			}
 		}
 
@@ -765,8 +755,7 @@ public class Symphony__CommonGeometryData3DFacadeImpl extends MinimalEObjectImpl
 	 * 
 	 * @generated_NOT
 	 */
-	public CartesianTriangularMesh concatenateTriangularMeshes(
-			EList<CartesianTriangularMesh> listOfTriangularMeshes) {
+	public CartesianTriangularMesh concatenateTriangularMeshes(List<CartesianTriangularMesh> listOfTriangularMeshes) {
 		CartesianTriangularMesh contatenatedMesh = Symphony__CommonGeometryData3DFactory.eINSTANCE
 				.createCartesianTriangularMesh();
 
@@ -843,8 +832,6 @@ public class Symphony__CommonGeometryData3DFacadeImpl extends MinimalEObjectImpl
 				return createPose((Pose)arguments.get(0));
 			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES:
 				return createPose((CartesianPositionCoordinates)arguments.get(0), (CartesianOrientationCoordinates)arguments.get(1));
-			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POINT_NORMAL_LOCATOR__NORMALPOINTCLOUD:
-				return createPointNormalLocator((NormalPointCloud)arguments.get(0));
 			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET:
 				return createDigitalElevationMap((CartesianCoordinatesSet)arguments.get(0));
 			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES:
@@ -871,17 +858,18 @@ public class Symphony__CommonGeometryData3DFacadeImpl extends MinimalEObjectImpl
 				return applyTransform((CartesianCoordinatesSet)arguments.get(0), (Matrix4d)arguments.get(1));
 			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D:
 				return applyTransform((List<CartesianPositionCoordinates>)arguments.get(0), (Matrix4d)arguments.get(1));
+			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_TRANSFORMED_MESH__CARTESIANTRIANGULARMESH_MATRIX4D:
+				return createTransformedMesh((CartesianTriangularMesh)arguments.get(0), (Matrix4d)arguments.get(1));
 			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D:
-				return applyTransform((CartesianTriangularMesh)arguments.get(0), (Matrix4d)arguments.get(1));
-			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM_INT__CARTESIANTRIANGULARMESH_MATRIX4D:
-				return applyTransformInt((CartesianTriangularMesh)arguments.get(0), (Matrix4d)arguments.get(1));
+				applyTransform((CartesianTriangularMesh)arguments.get(0), (Matrix4d)arguments.get(1));
+				return null;
 			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D:
 				return applyTransform((NormalPointCloud)arguments.get(0), (Matrix4d)arguments.get(1));
 			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE:
 				updateCartesianCoordinatesSet((CartesianCoordinatesSet)arguments.get(0), (double[][])arguments.get(1));
 				return null;
-			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__ELIST:
-				return concatenateTriangularMeshes((EList<CartesianTriangularMesh>)arguments.get(0));
+			case Symphony__CommonGeometryData3DPackage.SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST:
+				return concatenateTriangularMeshes((List<CartesianTriangularMesh>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

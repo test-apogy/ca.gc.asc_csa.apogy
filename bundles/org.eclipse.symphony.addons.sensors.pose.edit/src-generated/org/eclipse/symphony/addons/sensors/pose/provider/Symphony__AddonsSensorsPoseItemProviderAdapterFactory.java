@@ -41,7 +41,6 @@ import org.eclipse.symphony.addons.sensors.pose.util.Symphony__AddonsSensorsPose
 import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
@@ -626,56 +625,6 @@ public class Symphony__AddonsSensorsPoseItemProviderAdapterFactory extends Symph
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createSymphony__AddonsSensorsPoseFacade()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseGroupNode(GroupNode object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createSelfPlaceSensor()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createPositionSensor()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createSimulatedPositionSensor()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createOrientationSensor()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createInertialMeasurementUnit()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createSimulatedOrientationSensor()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createPoseSensor()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsSensorsPoseFactory.eINSTANCE.createSimulatedPoseSensor()));
 
 				return null;
 			}

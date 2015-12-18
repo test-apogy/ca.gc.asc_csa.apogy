@@ -147,96 +147,6 @@ public class TopologyTreeMapLayerNodeItemProvider extends AggregateGroupNodeItem
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSun()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarth()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createMoon()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createStarField()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createTopologyTreeMapLayerNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createWorksiteNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSurfaceWorksiteNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSurfaceWorksiteNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createMapsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createMapNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createAbstractMapLayerNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSkyNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createEarthSkyNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreEnvironmentFactory.eINSTANCE.createCartesianTriangularMeshMapLayerNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createResultNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createResultsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__CoreEnvironmentFactory.eINSTANCE.createSun()));
 
@@ -324,29 +234,6 @@ public class TopologyTreeMapLayerNodeItemProvider extends AggregateGroupNodeItem
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN ||
-			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

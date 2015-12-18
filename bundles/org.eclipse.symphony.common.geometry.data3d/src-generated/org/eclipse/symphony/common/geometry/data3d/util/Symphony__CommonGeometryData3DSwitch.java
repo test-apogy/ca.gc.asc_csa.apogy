@@ -311,28 +311,16 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__CommonGeometryData3DPackage.VECMATH_POINT_LOCATOR: {
-				VecmathPointLocator vecmathPointLocator = (VecmathPointLocator)theEObject;
-				T1 result = caseVecmathPointLocator(vecmathPointLocator);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Symphony__CommonGeometryData3DPackage.VECMATH_KD_TREE_POINT_LOCATOR: {
-				VecmathKdTreePointLocator vecmathKdTreePointLocator = (VecmathKdTreePointLocator)theEObject;
-				T1 result = caseVecmathKdTreePointLocator(vecmathKdTreePointLocator);
-				if (result == null) result = caseVecmathPointLocator(vecmathKdTreePointLocator);
+			case Symphony__CommonGeometryData3DPackage.KD_TREE_BASED_POINT_LOCATOR: {
+				KDTreeBasedPointLocator kdTreeBasedPointLocator = (KDTreeBasedPointLocator)theEObject;
+				T1 result = caseKDTreeBasedPointLocator(kdTreeBasedPointLocator);
+				if (result == null) result = casePointLocator(kdTreeBasedPointLocator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case Symphony__CommonGeometryData3DPackage.MESH_LOCALIZER: {
 				MeshLocalizer meshLocalizer = (MeshLocalizer)theEObject;
 				T1 result = caseMeshLocalizer(meshLocalizer);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Symphony__CommonGeometryData3DPackage.POINT_NORMAL_LOCATOR: {
-				PointNormalLocator pointNormalLocator = (PointNormalLocator)theEObject;
-				T1 result = casePointNormalLocator(pointNormalLocator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -396,20 +384,6 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 				T1 result = caseOutlierFilter(outlierFilter);
 				if (result == null) result = caseProcessor(outlierFilter);
 				if (result == null) result = caseMonitorable(outlierFilter);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD: {
-				RasterPointCloud rasterPointCloud = (RasterPointCloud)theEObject;
-				T1 result = caseRasterPointCloud(rasterPointCloud);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Symphony__CommonGeometryData3DPackage.RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET: {
-				RasterPointCloudToCartesianCoordinatesSet rasterPointCloudToCartesianCoordinatesSet = (RasterPointCloudToCartesianCoordinatesSet)theEObject;
-				T1 result = caseRasterPointCloudToCartesianCoordinatesSet(rasterPointCloudToCartesianCoordinatesSet);
-				if (result == null) result = caseProcessor(rasterPointCloudToCartesianCoordinatesSet);
-				if (result == null) result = caseMonitorable(rasterPointCloudToCartesianCoordinatesSet);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -901,32 +875,17 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Vecmath Point Locator</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>KD Tree Based Point Locator</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Vecmath Point Locator</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>KD Tree Based Point Locator</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseVecmathPointLocator(VecmathPointLocator object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Vecmath Kd Tree Point Locator</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Vecmath Kd Tree Point Locator</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseVecmathKdTreePointLocator(VecmathKdTreePointLocator object) {
+	public T1 caseKDTreeBasedPointLocator(KDTreeBasedPointLocator object) {
 		return null;
 	}
 
@@ -942,21 +901,6 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseMeshLocalizer(MeshLocalizer object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Point Normal Locator</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Point Normal Locator</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 casePointNormalLocator(PointNormalLocator object) {
 		return null;
 	}
 
@@ -1077,36 +1021,6 @@ public class Symphony__CommonGeometryData3DSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseOutlierFilter(OutlierFilter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Raster Point Cloud</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Raster Point Cloud</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseRasterPointCloud(RasterPointCloud object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Raster Point Cloud To Cartesian Coordinates Set</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Raster Point Cloud To Cartesian Coordinates Set</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseRasterPointCloudToCartesianCoordinatesSet(RasterPointCloudToCartesianCoordinatesSet object) {
 		return null;
 	}
 

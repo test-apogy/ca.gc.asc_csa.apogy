@@ -8,7 +8,7 @@
 		  suppressGenModelAnnotations="false")
 @GenModel(modelDirectory="/org.eclipse.symphony.core.environment/src-generated")
 @GenModel(editDirectory="/org.eclipse.symphony.core.environment.edit/src-generated")
-// @GenModel(testsDirectory="/org.eclipse.symphony.core.environment.tests/src-generated")
+@GenModel(testsDirectory="/org.eclipse.symphony.core.environment.tests/src-generated")
 
 package org.eclipse.symphony.core.environment
 

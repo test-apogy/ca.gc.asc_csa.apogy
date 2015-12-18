@@ -4253,6 +4253,7 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 			 "suppressGenModelAnnotations", "false",
 			 "modelDirectory", "/org.eclipse.symphony.core.environment/src-generated",
 			 "editDirectory", "/org.eclipse.symphony.core.environment.edit/src-generated",
+			 "testsDirectory", "/org.eclipse.symphony.core.environment.tests/src-generated",
 			 "basePackage", "org.eclipse.symphony.core"
 		   });	
 		addAnnotation

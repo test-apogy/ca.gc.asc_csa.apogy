@@ -125,56 +125,6 @@ public class Trajectory3DToolNodeItemProvider extends AggregateGroupNodeItemProv
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__AddonsFactory.eINSTANCE.createRuler3dToolNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__AddonsFactory.eINSTANCE.createSunVector3DToolNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__AddonsFactory.eINSTANCE.createTrajectory3DToolNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createResultNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createResultsListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__CoreFactory.eINSTANCE.createFeatureOfInterestListNode()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createPath()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__AddonsFactory.eINSTANCE.createRuler3dToolNode()));
 
@@ -222,29 +172,6 @@ public class Trajectory3DToolNodeItemProvider extends AggregateGroupNodeItemProv
 			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN ||
-			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

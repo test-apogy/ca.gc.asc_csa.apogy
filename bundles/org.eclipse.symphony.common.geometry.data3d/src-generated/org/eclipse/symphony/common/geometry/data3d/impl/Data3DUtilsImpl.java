@@ -22,11 +22,10 @@ import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangle;
 import org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh;
 import org.eclipse.symphony.common.geometry.data3d.Data3DUtils;
+import org.eclipse.symphony.common.geometry.data3d.PointLocator;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
 import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
-import org.eclipse.symphony.common.geometry.data3d.PointLocator;
-import org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator;
 import org.eclipse.symphony.common.math.GeometricUtils;
 
 import Jama.EigenvalueDecomposition;
@@ -77,25 +76,33 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public CartesianPositionCoordinates computeCentroid(List<CartesianPositionCoordinates> points) 
+	{
+		Point3d centroid = new Point3d(0.0, 0.0, 0.0);
+
+		for (CartesianPositionCoordinates point : points) 
+		{
+			centroid.add(point.asPoint3d());
+		}
+
+		centroid.scale(1.0 / (double) points.size());
+
+		return Symphony__CommonGeometryData3DFacade.INSTANCE.createCartesianPositionCoordinates(centroid.x, centroid.y,
+						centroid.z);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated_NOT
 	 */
-	public CartesianPositionCoordinates computeCentroid(
-			CartesianCoordinatesSet points) {
-		Point3d centroid = new Point3d(0.0, 0.0, 0.0);
-
-		for (CartesianPositionCoordinates point : points.getPoints()) {
-			centroid.add(point.asPoint3d());
-		}
-
-		centroid.scale(1.0 / (double) points.getPoints().size());
-
-		CartesianPositionCoordinates centroidCoord = Symphony__CommonGeometryData3DFacade.INSTANCE
-				.createCartesianPositionCoordinates(centroid.x, centroid.y,
-						centroid.z);
-
-		return centroidCoord;
+	public CartesianPositionCoordinates computeCentroid(CartesianCoordinatesSet points) 
+	{
+		return computeCentroid(points.getPoints());
 	}
 
 	/**
@@ -154,16 +161,15 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 	 * 
 	 * @generated_NOT
 	 */
-	public double computeCurvatureChange(PointLocator pointLocator,
-			int centerPoint, double radius) {
+	public double computeCurvatureChange(PointLocator pointLocator, int centerPoint, double radius) 
+	{
 		double cc = 0.0;
 
 		// On trouve les K voisins.
 
 		List<CartesianPositionCoordinates> data = pointLocator.getPoints();
 		CartesianPositionCoordinates pCenter = data.get(centerPoint);
-		List<CartesianPositionCoordinates> result = pointLocator
-				.findPointsWithinRadius(radius, pCenter);
+		List<CartesianPositionCoordinates> result = pointLocator.findPointsWithinRadius(pCenter, radius);
 
 		GMatrix res = new GMatrix(3, 3);
 
@@ -178,68 +184,6 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 		for (CartesianPositionCoordinates point : result) {
 
 			v.set(point.asPoint3d());
-
-			v.sub(o);
-			// On calcule le outerProduct.
-			GeometricUtils.outerProduct(v, v, tmpMat);
-
-			res.add(tmpMat);
-
-		}
-
-		// On calcule le SVD.
-
-		Matrix cov = new Matrix(3, 3);
-
-		for (int i = 0; i < 3; i++) {
-			for (int j = 0; j < 3; j++) {
-				cov.set(i, j, res.getElement(i, j));
-			}
-		}
-
-		EigenvalueDecomposition eig = new EigenvalueDecomposition(cov);
-
-		Matrix d = eig.getD();
-
-		// On prend les valeurs.
-		double l1 = d.get(0, 0);
-		double l2 = d.get(1, 1);
-		double l3 = d.get(2, 2);
-
-		cc = (l1 / (l1 + l2 + l3));
-
-		return cc;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated_NOT
-	 */
-	public double computeCurvatureChange(VecmathPointLocator pointLocator,
-			int centerPoint, double radius) {
-		double cc = 0.0;
-
-		// On trouve les K voisins.
-
-		List<Point3d> data = pointLocator.getPoints();
-		Point3d pCenter = data.get(centerPoint);
-		List<Point3d> result = pointLocator.findPointsWithinRadius(radius,
-				pCenter);
-
-		GMatrix res = new GMatrix(3, 3);
-
-		res.setZero();
-
-		Vector3d v = new Vector3d();
-
-		GMatrix tmpMat = new GMatrix(3, 3);
-
-		Vector3d o = new Vector3d(data.get(centerPoint));
-
-		for (Point3d point : result) {
-
-			v.set(point);
 
 			v.sub(o);
 			// On calcule le outerProduct.
@@ -382,6 +326,8 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 		switch (operationID) {
 			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_NORMALS__CARTESIANTRIANGULARMESH:
 				return computeNormals((CartesianTriangularMesh)arguments.get(0));
+			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_CENTROID__LIST:
+				return computeCentroid((List<CartesianPositionCoordinates>)arguments.get(0));
 			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_CENTROID__CARTESIANCOORDINATESSET:
 				return computeCentroid((CartesianCoordinatesSet)arguments.get(0));
 			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_MIN_MAX_VALUES__POINT3D_POINT3D_CARTESIANCOORDINATESSET:
@@ -389,8 +335,6 @@ public class Data3DUtilsImpl extends MinimalEObjectImpl.Container implements Dat
 				return null;
 			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_CURVATURE_CHANGE__POINTLOCATOR_INT_DOUBLE:
 				return computeCurvatureChange((PointLocator)arguments.get(0), (Integer)arguments.get(1), (Double)arguments.get(2));
-			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___COMPUTE_CURVATURE_CHANGE__VECMATHPOINTLOCATOR_INT_DOUBLE:
-				return computeCurvatureChange((VecmathPointLocator)arguments.get(0), (Integer)arguments.get(1), (Double)arguments.get(2));
 			case Symphony__CommonGeometryData3DPackage.DATA3_DUTILS___EXTRUDE__LIST_CARTESIANAXIS_DOUBLE_BOOLEAN:
 				return extrude((List<CartesianPositionCoordinates>)arguments.get(0), (CartesianAxis)arguments.get(1), (Double)arguments.get(2), (Boolean)arguments.get(3));
 		}

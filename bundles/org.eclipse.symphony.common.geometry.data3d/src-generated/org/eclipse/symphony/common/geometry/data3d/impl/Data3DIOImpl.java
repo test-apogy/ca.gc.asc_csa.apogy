@@ -83,11 +83,9 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 	 * 
 	 * @generated_NOT
 	 */
-	public void saveTriangularMesh(CartesianTriangularMesh mesh, String file)
-			throws IOException {
-
+	public void saveTriangularMesh(CartesianTriangularMesh mesh, String file) throws IOException 
+	{
 		saveTriangularMesh(mesh, new FileOutputStream(file));
-
 	}
 
 	/**
@@ -105,12 +103,10 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 	 * 
 	 * @generated_NOT
 	 */
-	public void saveTriangularMesh(CartesianTriangularMesh mesh,
-			OutputStream output) throws IOException {
+	public void saveTriangularMesh(CartesianTriangularMesh mesh,OutputStream output) throws IOException 
+	{
 		Resource resource = new XMIResourceImpl();
-
 		resource.getContents().add(mesh);
-
 		resource.save(output, Collections.EMPTY_MAP);
 	}
 
@@ -119,13 +115,14 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 	 * 
 	 * @generated_NOT
 	 */
-	public CartesianTriangularMesh loadTriangularMesh(InputStream input)
-			throws IOException {
+	public CartesianTriangularMesh loadTriangularMesh(InputStream input) throws IOException 
+	{
 		Resource resource = new XMIResourceImpl();
 
 		resource.load(input, Collections.EMPTY_MAP);
 
-		if (!(resource.getContents().get(0) instanceof CartesianTriangularMesh)) {
+		if (!(resource.getContents().get(0) instanceof CartesianTriangularMesh)) 
+		{
 			throw new IOException("Object loaded, but content is invalid");
 		}
 
@@ -137,10 +134,9 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 	 * 
 	 * @generated_NOT
 	 */
-	public NormalPointCloud loadTriangularMeshFromASCIIAsNormalPointCloud(
-			String filePrefix) throws IOException {
-		NormalPointCloud normalPointCloud = Symphony__CommonGeometryData3DFactory.eINSTANCE
-				.createNormalPointCloud();
+	public NormalPointCloud loadTriangularMeshFromASCIIAsNormalPointCloud(String filePrefix) throws IOException 
+	{
+		NormalPointCloud normalPointCloud = Symphony__CommonGeometryData3DFactory.eINSTANCE.createNormalPointCloud();
 
 		List<Point3d> points = new ArrayList<Point3d>();
 		List<Vector3d> normals = new ArrayList<Vector3d>();
@@ -160,16 +156,14 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 	 */
 	public CartesianTriangularMesh loadTriangularMeshFromASCII(String filePrefix) throws IOException 
 	{
-		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE
-				.createCartesianTriangularMesh();
+		CartesianTriangularMesh mesh = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianTriangularMesh();
 
 		List<Point3d> points = new ArrayList<Point3d>();
 		List<IndexedTriangle> triangles = new ArrayList<IndexedTriangle>();
 
 		List<Vector3d> normals = new ArrayList<Vector3d>();
 
-		loadTriangularMeshFromASCII(filePrefix, points, normals, triangles,
-				true);
+		loadTriangularMeshFromASCII(filePrefix, points, normals, triangles, true);
 
 		List<CartesianPositionCoordinates> coordinates = new ArrayList<CartesianPositionCoordinates>();
 		List<CartesianTriangle> cartTriangles = new ArrayList<CartesianTriangle>();
@@ -289,10 +283,10 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 	 *             if the file format is incorrect.
 	 * @generated_NOT
 	 */
-	public CartesianCoordinatesSet loadXYZ(String fileName) throws IOException {
+	public CartesianCoordinatesSet loadXYZ(String fileName) throws IOException 
+	{
 
-		CartesianCoordinatesSet points = Symphony__CommonGeometryData3DFactory.eINSTANCE
-				.createCartesianCoordinatesSet();
+		CartesianCoordinatesSet points = Symphony__CommonGeometryData3DFactory.eINSTANCE.createCartesianCoordinatesSet();
 
 		// We load the file.
 		FileInputStream fis = new FileInputStream(new File(fileName));
@@ -308,17 +302,20 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 
 		try
 		{
-			while (!eof) {
+			while (!eof) 
+			{
 				String line = fileReader.readLine();
 
 				eof = line == null;
 
-				if (!eof) {
+				if (!eof) 
+				{
 					// We parse this line, it should have 3 columns or more, i.e.,
 					// x,y,z.
 					String[] cols = line.split("\\s+");
 
-					if (cols.length < 3) {
+					if (cols.length != 3 ) 
+					{
 						throw new IllegalArgumentException("File " + fileName + "("
 								+ lineNumber + "): expected 3 columns, found "
 								+ cols.length);
@@ -752,53 +749,60 @@ public class Data3DIOImpl extends MinimalEObjectImpl.Container implements Data3D
 		double[] normal = new double[3];
 		boolean eof = false;
 		
-		try {
-			while (!eof) {
+		try 
+		{
+			while (!eof) 
+			{
 				String line = pointsReader.readLine();
 
 				eof = line == null;
 
-				if (!eof) {
+				if (!eof) 
+				{
 
 					String[] coords = line.split("\\s+");
 
-					if (!(coords.length == 3 || coords.length == 6)) {
-						throw new IllegalArgumentException(
-								"Illegal file format at " + pointsFile.getName()
-										+ "(" + lineNumber + ")");
+					if (!(coords.length == 3 || coords.length == 6)) 
+					{
+						throw new IllegalArgumentException("Illegal file format at " + pointsFile.getName()	+ "(" + lineNumber + ")");
 					}
 
 					// Loads the points.
-					for (int i = 0; i < 3; i++) {
-						try {
+					for (int i = 0; i < 3; i++) 
+					{
+						try 
+						{
 							xyz[i] = Double.parseDouble(coords[i]);
-						} catch (NumberFormatException e) {
-							throw new IllegalArgumentException(
-									"Illegal file format at "
-											+ pointsFile.getName() + "("
-											+ lineNumber + ")");
+						} 
+						catch (NumberFormatException e) 
+						{
+							throw new IllegalArgumentException("Illegal file format at "+ pointsFile.getName() + "("+ lineNumber + ")");
 						}
 					}
 
 					// Loads the normals.
-					if (loadNormals && coords.length == 6) {
-						for (int i = 0; i < 3; i++) {
-							try {
+					if (loadNormals && coords.length == 6) 
+					{
+						for (int i = 0; i < 3; i++) 
+						{
+							try 
+							{
 								normal[i] = Double.parseDouble(coords[i + 3]);
-							} catch (NumberFormatException e) {
-								throw new IllegalArgumentException(
-										"Illegal file format at "
-												+ pointsFile.getName() + "("
-												+ lineNumber + ")");
+							} 
+							catch (NumberFormatException e) 
+							{
+								throw new IllegalArgumentException("Illegal file format at "+ pointsFile.getName() + "(" + lineNumber + ")");
 							}
 						}
 					}
 
-					if (points != null) {
+					if (points != null) 
+					{
 						points.add(new Point3d(xyz));
 					}
 
-					if (normals != null && coords.length == 6) {
+					if (normals != null && coords.length == 6) 
+					{
 						Vector3d n = new Vector3d(normal);
 						// We make sure the normal is unit length.
 						n.normalize();

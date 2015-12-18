@@ -738,72 +738,26 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.PointLocator} instances.
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.KDTreeBasedPointLocator} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PointLocatorItemProvider pointLocatorItemProvider;
+	protected KDTreeBasedPointLocatorItemProvider kdTreeBasedPointLocatorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.PointLocator}.
+	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.KDTreeBasedPointLocator}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createPointLocatorAdapter() {
-		if (pointLocatorItemProvider == null) {
-			pointLocatorItemProvider = new PointLocatorItemProvider(this);
+	public Adapter createKDTreeBasedPointLocatorAdapter() {
+		if (kdTreeBasedPointLocatorItemProvider == null) {
+			kdTreeBasedPointLocatorItemProvider = new KDTreeBasedPointLocatorItemProvider(this);
 		}
 
-		return pointLocatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected VecmathPointLocatorItemProvider vecmathPointLocatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVecmathPointLocatorAdapter() {
-		if (vecmathPointLocatorItemProvider == null) {
-			vecmathPointLocatorItemProvider = new VecmathPointLocatorItemProvider(this);
-		}
-
-		return vecmathPointLocatorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.VecmathKdTreePointLocator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected VecmathKdTreePointLocatorItemProvider vecmathKdTreePointLocatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.VecmathKdTreePointLocator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVecmathKdTreePointLocatorAdapter() {
-		if (vecmathKdTreePointLocatorItemProvider == null) {
-			vecmathKdTreePointLocatorItemProvider = new VecmathKdTreePointLocatorItemProvider(this);
-		}
-
-		return vecmathKdTreePointLocatorItemProvider;
+		return kdTreeBasedPointLocatorItemProvider;
 	}
 
 	/**
@@ -827,29 +781,6 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 		}
 
 		return meshLocalizerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.PointNormalLocator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PointNormalLocatorItemProvider pointNormalLocatorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.PointNormalLocator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPointNormalLocatorAdapter() {
-		if (pointNormalLocatorItemProvider == null) {
-			pointNormalLocatorItemProvider = new PointNormalLocatorItemProvider(this);
-		}
-
-		return pointNormalLocatorItemProvider;
 	}
 
 	/**
@@ -1034,52 +965,6 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 		}
 
 		return outlierFilterItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.RasterPointCloud} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RasterPointCloudItemProvider rasterPointCloudItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.RasterPointCloud}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRasterPointCloudAdapter() {
-		if (rasterPointCloudItemProvider == null) {
-			rasterPointCloudItemProvider = new RasterPointCloudItemProvider(this);
-		}
-
-		return rasterPointCloudItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.common.geometry.data3d.RasterPointCloudToCartesianCoordinatesSet} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RasterPointCloudToCartesianCoordinatesSetItemProvider rasterPointCloudToCartesianCoordinatesSetItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.eclipse.symphony.common.geometry.data3d.RasterPointCloudToCartesianCoordinatesSet}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRasterPointCloudToCartesianCoordinatesSetAdapter() {
-		if (rasterPointCloudToCartesianCoordinatesSetItemProvider == null) {
-			rasterPointCloudToCartesianCoordinatesSetItemProvider = new RasterPointCloudToCartesianCoordinatesSetItemProvider(this);
-		}
-
-		return rasterPointCloudToCartesianCoordinatesSetItemProvider;
 	}
 
 	/**
@@ -1397,11 +1282,8 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 		if (cartesianTriangularMeshPolygonSamplerItemProvider != null) cartesianTriangularMeshPolygonSamplerItemProvider.dispose();
 		if (cartesianPositionCoordinatesMesherItemProvider != null) cartesianPositionCoordinatesMesherItemProvider.dispose();
 		if (normalPointCloudItemProvider != null) normalPointCloudItemProvider.dispose();
-		if (pointLocatorItemProvider != null) pointLocatorItemProvider.dispose();
-		if (vecmathPointLocatorItemProvider != null) vecmathPointLocatorItemProvider.dispose();
-		if (vecmathKdTreePointLocatorItemProvider != null) vecmathKdTreePointLocatorItemProvider.dispose();
+		if (kdTreeBasedPointLocatorItemProvider != null) kdTreeBasedPointLocatorItemProvider.dispose();
 		if (meshLocalizerItemProvider != null) meshLocalizerItemProvider.dispose();
-		if (pointNormalLocatorItemProvider != null) pointNormalLocatorItemProvider.dispose();
 		if (delaunayMesherItemProvider != null) delaunayMesherItemProvider.dispose();
 		if (digitalElevationMapMesherItemProvider != null) digitalElevationMapMesherItemProvider.dispose();
 		if (digitalElevationMapSamplerItemProvider != null) digitalElevationMapSamplerItemProvider.dispose();
@@ -1410,8 +1292,6 @@ public class Symphony__CommonGeometryData3DItemProviderAdapterFactory extends Sy
 		if (uniquePointsFilterItemProvider != null) uniquePointsFilterItemProvider.dispose();
 		if (triangleEdgeLengthTriangularMeshFilterItemProvider != null) triangleEdgeLengthTriangularMeshFilterItemProvider.dispose();
 		if (outlierFilterItemProvider != null) outlierFilterItemProvider.dispose();
-		if (rasterPointCloudItemProvider != null) rasterPointCloudItemProvider.dispose();
-		if (rasterPointCloudToCartesianCoordinatesSetItemProvider != null) rasterPointCloudToCartesianCoordinatesSetItemProvider.dispose();
 		if (meshSmootherItemProvider != null) meshSmootherItemProvider.dispose();
 		if (voxelBased3DPointCloudResamplerItemProvider != null) voxelBased3DPointCloudResamplerItemProvider.dispose();
 		if (positionMarkerItemProvider != null) positionMarkerItemProvider.dispose();

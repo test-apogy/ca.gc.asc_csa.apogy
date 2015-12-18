@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <!-- begin-model-doc -->
  * *
- * Class that provides an estimate of relative pose between two meshes, assuming the two meshes cove overlapping area of a surface.
+ * Class that provides an estimate of relative pose between two meshes, assuming the two meshes cover overlapping area of a surface.
  * <!-- end-model-doc -->
  *
  *

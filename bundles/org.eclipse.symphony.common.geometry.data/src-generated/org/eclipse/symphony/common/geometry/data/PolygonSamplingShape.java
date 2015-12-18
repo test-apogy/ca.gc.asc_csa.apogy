@@ -9,6 +9,10 @@ package org.eclipse.symphony.common.geometry.data;
  * A representation of the model object '<em><b>Polygon Sampling Shape</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <!-- begin-model-doc -->
+ * *
+ * <!-- end-model-doc -->
+ *
  *
  * @see org.eclipse.symphony.common.geometry.data.Symphony__CommonGeometryDataPackage#getPolygonSamplingShape()
  * @model interface="true" abstract="true"

@@ -47,7 +47,6 @@ import org.eclipse.symphony.common.geometry.data.util.Symphony__CommonGeometryDa
 import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
@@ -564,31 +563,6 @@ public class Symphony__AddonsGeometryPathsItemProviderAdapterFactory extends Sym
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createSymphony__AddonsGeometryPathsFacade()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseGroupNode(GroupNode object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPoint()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createPath()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsGeometryPathsFactory.eINSTANCE.createWayPointPath()));
 
 				return null;
 			}

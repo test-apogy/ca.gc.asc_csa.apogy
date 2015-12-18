@@ -251,26 +251,6 @@ extends AbstractCameraItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__ExamplesCameraFactory.eINSTANCE.createCameraStub()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__ExamplesCameraFactory.eINSTANCE.createCameraSimulated()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__ExamplesCameraFactory.eINSTANCE.createPTUCameraStub()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-				 Symphony__ExamplesCameraFactory.eINSTANCE.createPTUCameraSimulated()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN,
 				 Symphony__ExamplesCameraFactory.eINSTANCE.createCameraStub()));
 
@@ -308,7 +288,6 @@ extends AbstractCameraItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN ||
 			childFeature == Symphony__CommonTopologyPackage.Literals.AGGREGATE_GROUP_NODE__AGGREGATED_CHILDREN ||
 			childFeature == Symphony__ExamplesCameraPackage.Literals.CAMERA__FOV;
 

@@ -9,15 +9,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet;
 import org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
-import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.geometry.data3d.OutlierFilter;
 import org.eclipse.symphony.common.geometry.data3d.PointLocator;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory;
+import org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DPackage;
 import org.eclipse.symphony.common.processors.impl.ProcessorImpl;
 
 /**
@@ -183,9 +182,8 @@ public class OutlierFilterImpl extends
 	@Override
 	public CartesianCoordinatesSet process(CartesianCoordinatesSet input) throws Exception {
 
-		PointLocator locator = Symphony__CommonGeometryData3DFactory.eINSTANCE.createPointLocator();
-
-		locator.setPoints(input.getPoints());
+		PointLocator locator = Symphony__CommonGeometryData3DFactory.eINSTANCE.createKDTreeBasedPointLocator();
+		locator.addPoints(input.getPoints());		
 
 		List<CartesianPositionCoordinates> pointsToRemove = new LinkedList<CartesianPositionCoordinates>();
 
@@ -193,7 +191,7 @@ public class OutlierFilterImpl extends
 		for (CartesianPositionCoordinates point : input.getPoints()) 
 		{
 			// We find the 2 closest points, first one beeing the point itself.
-			EList<CartesianPositionCoordinates> pointsWithinRadius = locator.findPointsWithinRadius(getMaxDistance(), point);
+			List<CartesianPositionCoordinates> pointsWithinRadius = locator.findPointsWithinRadius(point, getMaxDistance());
 
 			// We should find points in this radius, if we find only the point
 			// itself,

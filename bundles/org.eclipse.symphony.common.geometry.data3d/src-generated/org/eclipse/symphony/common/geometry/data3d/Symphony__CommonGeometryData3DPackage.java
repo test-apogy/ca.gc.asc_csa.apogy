@@ -27,7 +27,7 @@ import org.eclipse.symphony.common.processors.Symphony__CommonProcessorsPackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonGeometryData3D' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__CommonGeometryData3D' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data3d/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data3d.edit/src-generated' basePackage='org.eclipse.symphony.common.geometry'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__CommonGeometryData3D' childCreationExtenders='true' extensibleProviderFactory='true' multipleEditorPages='false' copyrightText='Canadian Space Agency / Agence spatiale canadienne 2015 Copyrights (c)' modelName='Symphony__CommonGeometryData3D' suppressGenModelAnnotations='false' modelDirectory='/org.eclipse.symphony.common.geometry.data3d/src-generated' editDirectory='/org.eclipse.symphony.common.geometry.data3d.edit/src-generated' testsDirectory='/org.eclipse.symphony.common.geometry.data3d.tests/src-generated' basePackage='org.eclipse.symphony.common.geometry'"
  * @generated
  */
 public interface Symphony__CommonGeometryData3DPackage extends EPackage {
@@ -2055,22 +2055,67 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int POINT_LOCATOR = 28;
 
 	/**
-	 * The feature id for the '<em><b>Points</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_LOCATOR__POINTS = 0;
-
-	/**
 	 * The number of structural features of the '<em>Point Locator</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_LOCATOR_FEATURE_COUNT = 1;
+	int POINT_LOCATOR_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Get Points</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_LOCATOR___GET_POINTS = 0;
+
+	/**
+	 * The operation id for the '<em>Add Point</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_LOCATOR___ADD_POINT__CARTESIANPOSITIONCOORDINATES = 1;
+
+	/**
+	 * The operation id for the '<em>Add Points</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_LOCATOR___ADD_POINTS__LIST = 2;
+
+	/**
+	 * The operation id for the '<em>Remove Point</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_LOCATOR___REMOVE_POINT__CARTESIANPOSITIONCOORDINATES = 3;
+
+	/**
+	 * The operation id for the '<em>Remove Points</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_LOCATOR___REMOVE_POINTS__LIST = 4;
+
+	/**
+	 * The operation id for the '<em>Clear Points</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_LOCATOR___CLEAR_POINTS = 5;
 
 	/**
 	 * The operation id for the '<em>Find Closest Point</em>' operation.
@@ -2079,7 +2124,16 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_LOCATOR___FIND_CLOSEST_POINT__CARTESIANPOSITIONCOORDINATES = 0;
+	int POINT_LOCATOR___FIND_CLOSEST_POINT__CARTESIANPOSITIONCOORDINATES = 6;
+
+	/**
+	 * The operation id for the '<em>Find Closest Points</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_LOCATOR___FIND_CLOSEST_POINTS__CARTESIANPOSITIONCOORDINATES_INT = 7;
 
 	/**
 	 * The operation id for the '<em>Find Points Within Radius</em>' operation.
@@ -2088,7 +2142,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_CARTESIANPOSITIONCOORDINATES = 1;
+	int POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__CARTESIANPOSITIONCOORDINATES_DOUBLE = 8;
 
 	/**
 	 * The number of operations of the '<em>Point Locator</em>' class.
@@ -2097,35 +2151,80 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POINT_LOCATOR_OPERATION_COUNT = 2;
+	int POINT_LOCATOR_OPERATION_COUNT = 9;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.VecmathPointLocatorImpl <em>Vecmath Point Locator</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.KDTreeBasedPointLocatorImpl <em>KD Tree Based Point Locator</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.VecmathPointLocatorImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVecmathPointLocator()
+	 * @see org.eclipse.symphony.common.geometry.data3d.impl.KDTreeBasedPointLocatorImpl
+	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getKDTreeBasedPointLocator()
 	 * @generated
 	 */
-	int VECMATH_POINT_LOCATOR = 29;
+	int KD_TREE_BASED_POINT_LOCATOR = 29;
 
 	/**
-	 * The feature id for the '<em><b>Points</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VECMATH_POINT_LOCATOR__POINTS = 0;
-
-	/**
-	 * The number of structural features of the '<em>Vecmath Point Locator</em>' class.
+	 * The number of structural features of the '<em>KD Tree Based Point Locator</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VECMATH_POINT_LOCATOR_FEATURE_COUNT = 1;
+	int KD_TREE_BASED_POINT_LOCATOR_FEATURE_COUNT = POINT_LOCATOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Points</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KD_TREE_BASED_POINT_LOCATOR___GET_POINTS = POINT_LOCATOR___GET_POINTS;
+
+	/**
+	 * The operation id for the '<em>Add Point</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KD_TREE_BASED_POINT_LOCATOR___ADD_POINT__CARTESIANPOSITIONCOORDINATES = POINT_LOCATOR___ADD_POINT__CARTESIANPOSITIONCOORDINATES;
+
+	/**
+	 * The operation id for the '<em>Add Points</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KD_TREE_BASED_POINT_LOCATOR___ADD_POINTS__LIST = POINT_LOCATOR___ADD_POINTS__LIST;
+
+	/**
+	 * The operation id for the '<em>Remove Point</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KD_TREE_BASED_POINT_LOCATOR___REMOVE_POINT__CARTESIANPOSITIONCOORDINATES = POINT_LOCATOR___REMOVE_POINT__CARTESIANPOSITIONCOORDINATES;
+
+	/**
+	 * The operation id for the '<em>Remove Points</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KD_TREE_BASED_POINT_LOCATOR___REMOVE_POINTS__LIST = POINT_LOCATOR___REMOVE_POINTS__LIST;
+
+	/**
+	 * The operation id for the '<em>Clear Points</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KD_TREE_BASED_POINT_LOCATOR___CLEAR_POINTS = POINT_LOCATOR___CLEAR_POINTS;
 
 	/**
 	 * The operation id for the '<em>Find Closest Point</em>' operation.
@@ -2134,7 +2233,16 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VECMATH_POINT_LOCATOR___FIND_CLOSEST_POINT__POINT3D = 0;
+	int KD_TREE_BASED_POINT_LOCATOR___FIND_CLOSEST_POINT__CARTESIANPOSITIONCOORDINATES = POINT_LOCATOR___FIND_CLOSEST_POINT__CARTESIANPOSITIONCOORDINATES;
+
+	/**
+	 * The operation id for the '<em>Find Closest Points</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KD_TREE_BASED_POINT_LOCATOR___FIND_CLOSEST_POINTS__CARTESIANPOSITIONCOORDINATES_INT = POINT_LOCATOR___FIND_CLOSEST_POINTS__CARTESIANPOSITIONCOORDINATES_INT;
 
 	/**
 	 * The operation id for the '<em>Find Points Within Radius</em>' operation.
@@ -2143,143 +2251,16 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VECMATH_POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_POINT3D = 1;
+	int KD_TREE_BASED_POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__CARTESIANPOSITIONCOORDINATES_DOUBLE = POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__CARTESIANPOSITIONCOORDINATES_DOUBLE;
 
 	/**
-	 * The operation id for the '<em>Find Closest Point Id</em>' operation.
+	 * The number of operations of the '<em>KD Tree Based Point Locator</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VECMATH_POINT_LOCATOR___FIND_CLOSEST_POINT_ID__POINT3D = 2;
-
-	/**
-	 * The operation id for the '<em>Find Point Ids Within Radius</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VECMATH_POINT_LOCATOR___FIND_POINT_IDS_WITHIN_RADIUS__DOUBLE_POINT3D = 3;
-
-	/**
-	 * The operation id for the '<em>Find Closest NPoints</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VECMATH_POINT_LOCATOR___FIND_CLOSEST_NPOINTS__POINT3D_INT = 4;
-
-	/**
-	 * The operation id for the '<em>Find Closest NPoint Ids</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VECMATH_POINT_LOCATOR___FIND_CLOSEST_NPOINT_IDS__POINT3D_INT = 5;
-
-	/**
-	 * The number of operations of the '<em>Vecmath Point Locator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VECMATH_POINT_LOCATOR_OPERATION_COUNT = 6;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.VecmathKdTreePointLocatorImpl <em>Vecmath Kd Tree Point Locator</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.VecmathKdTreePointLocatorImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVecmathKdTreePointLocator()
-	 * @generated
-	 */
-	int VECMATH_KD_TREE_POINT_LOCATOR = 30;
-
-	/**
-	 * The feature id for the '<em><b>Points</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VECMATH_KD_TREE_POINT_LOCATOR__POINTS = VECMATH_POINT_LOCATOR__POINTS;
-
-	/**
-	 * The number of structural features of the '<em>Vecmath Kd Tree Point Locator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VECMATH_KD_TREE_POINT_LOCATOR_FEATURE_COUNT = VECMATH_POINT_LOCATOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Find Closest Point</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VECMATH_KD_TREE_POINT_LOCATOR___FIND_CLOSEST_POINT__POINT3D = VECMATH_POINT_LOCATOR___FIND_CLOSEST_POINT__POINT3D;
-
-	/**
-	 * The operation id for the '<em>Find Points Within Radius</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VECMATH_KD_TREE_POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_POINT3D = VECMATH_POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_POINT3D;
-
-	/**
-	 * The operation id for the '<em>Find Closest Point Id</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VECMATH_KD_TREE_POINT_LOCATOR___FIND_CLOSEST_POINT_ID__POINT3D = VECMATH_POINT_LOCATOR___FIND_CLOSEST_POINT_ID__POINT3D;
-
-	/**
-	 * The operation id for the '<em>Find Point Ids Within Radius</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VECMATH_KD_TREE_POINT_LOCATOR___FIND_POINT_IDS_WITHIN_RADIUS__DOUBLE_POINT3D = VECMATH_POINT_LOCATOR___FIND_POINT_IDS_WITHIN_RADIUS__DOUBLE_POINT3D;
-
-	/**
-	 * The operation id for the '<em>Find Closest NPoints</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VECMATH_KD_TREE_POINT_LOCATOR___FIND_CLOSEST_NPOINTS__POINT3D_INT = VECMATH_POINT_LOCATOR___FIND_CLOSEST_NPOINTS__POINT3D_INT;
-
-	/**
-	 * The operation id for the '<em>Find Closest NPoint Ids</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VECMATH_KD_TREE_POINT_LOCATOR___FIND_CLOSEST_NPOINT_IDS__POINT3D_INT = VECMATH_POINT_LOCATOR___FIND_CLOSEST_NPOINT_IDS__POINT3D_INT;
-
-	/**
-	 * The number of operations of the '<em>Vecmath Kd Tree Point Locator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VECMATH_KD_TREE_POINT_LOCATOR_OPERATION_COUNT = VECMATH_POINT_LOCATOR_OPERATION_COUNT + 0;
+	int KD_TREE_BASED_POINT_LOCATOR_OPERATION_COUNT = POINT_LOCATOR_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.MeshLocalizerImpl <em>Mesh Localizer</em>}' class.
@@ -2289,7 +2270,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMeshLocalizer()
 	 * @generated
 	 */
-	int MESH_LOCALIZER = 31;
+	int MESH_LOCALIZER = 30;
 
 	/**
 	 * The number of structural features of the '<em>Mesh Localizer</em>' class.
@@ -2319,97 +2300,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int MESH_LOCALIZER_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.PointNormalLocatorImpl <em>Point Normal Locator</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.PointNormalLocatorImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPointNormalLocator()
-	 * @generated
-	 */
-	int POINT_NORMAL_LOCATOR = 32;
-
-	/**
-	 * The feature id for the '<em><b>Data Set</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_NORMAL_LOCATOR__DATA_SET = 0;
-
-	/**
-	 * The number of structural features of the '<em>Point Normal Locator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_NORMAL_LOCATOR_FEATURE_COUNT = 1;
-
-	/**
-	 * The operation id for the '<em>Find Closest Point</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_NORMAL_LOCATOR___FIND_CLOSEST_POINT__POINT3D_VECTOR3D = 0;
-
-	/**
-	 * The operation id for the '<em>Find Points Within Radius</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_NORMAL_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_POINT3D_VECTOR3D = 1;
-
-	/**
-	 * The operation id for the '<em>Find Closest NPoints</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_NORMAL_LOCATOR___FIND_CLOSEST_NPOINTS__INT_POINT3D_VECTOR3D = 2;
-
-	/**
-	 * The operation id for the '<em>Find Closest Point Id</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_NORMAL_LOCATOR___FIND_CLOSEST_POINT_ID__POINT3D_VECTOR3D = 3;
-
-	/**
-	 * The operation id for the '<em>Find Point Ids Within Radius</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_NORMAL_LOCATOR___FIND_POINT_IDS_WITHIN_RADIUS__DOUBLE_POINT3D_VECTOR3D = 4;
-
-	/**
-	 * The operation id for the '<em>Find Closest NPoint Ids</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_NORMAL_LOCATOR___FIND_CLOSEST_NPOINT_IDS__INT_POINT3D_VECTOR3D = 5;
-
-	/**
-	 * The number of operations of the '<em>Point Normal Locator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_NORMAL_LOCATOR_OPERATION_COUNT = 6;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.DelaunayMesherImpl <em>Delaunay Mesher</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2417,7 +2307,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDelaunayMesher()
 	 * @generated
 	 */
-	int DELAUNAY_MESHER = 33;
+	int DELAUNAY_MESHER = 31;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2481,7 +2371,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDigitalElevationMapMesher()
 	 * @generated
 	 */
-	int DIGITAL_ELEVATION_MAP_MESHER = 34;
+	int DIGITAL_ELEVATION_MAP_MESHER = 32;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2545,7 +2435,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDigitalElevationMapSampler()
 	 * @generated
 	 */
-	int DIGITAL_ELEVATION_MAP_SAMPLER = 35;
+	int DIGITAL_ELEVATION_MAP_SAMPLER = 33;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2618,7 +2508,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getTriangularMeshNormalsCalculator()
 	 * @generated
 	 */
-	int TRIANGULAR_MESH_NORMALS_CALCULATOR = 36;
+	int TRIANGULAR_MESH_NORMALS_CALCULATOR = 34;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2682,7 +2572,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getTriangularMeshToNormalPointCloud()
 	 * @generated
 	 */
-	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD = 37;
+	int TRIANGULAR_MESH_TO_NORMAL_POINT_CLOUD = 35;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2746,7 +2636,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getUniquePointsFilter()
 	 * @generated
 	 */
-	int UNIQUE_POINTS_FILTER = 38;
+	int UNIQUE_POINTS_FILTER = 36;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2810,7 +2700,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getTriangleEdgeLengthTriangularMeshFilter()
 	 * @generated
 	 */
-	int TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER = 39;
+	int TRIANGLE_EDGE_LENGTH_TRIANGULAR_MESH_FILTER = 37;
 
 	/**
 	 * The feature id for the '<em><b>Minimum Range</b></em>' attribute.
@@ -2874,7 +2764,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getOutlierFilter()
 	 * @generated
 	 */
-	int OUTLIER_FILTER = 40;
+	int OUTLIER_FILTER = 38;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -2940,134 +2830,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int OUTLIER_FILTER_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.RasterPointCloudImpl <em>Raster Point Cloud</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.RasterPointCloudImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getRasterPointCloud()
-	 * @generated
-	 */
-	int RASTER_POINT_CLOUD = 41;
-
-	/**
-	 * The feature id for the '<em><b>Rows</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RASTER_POINT_CLOUD__ROWS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Columns</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RASTER_POINT_CLOUD__COLUMNS = 1;
-
-	/**
-	 * The number of structural features of the '<em>Raster Point Cloud</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RASTER_POINT_CLOUD_FEATURE_COUNT = 2;
-
-	/**
-	 * The operation id for the '<em>Get Point</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RASTER_POINT_CLOUD___GET_POINT__INT_INT = 0;
-
-	/**
-	 * The operation id for the '<em>Set Point</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RASTER_POINT_CLOUD___SET_POINT__INT_INT_CARTESIANPOSITIONCOORDINATES = 1;
-
-	/**
-	 * The number of operations of the '<em>Raster Point Cloud</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RASTER_POINT_CLOUD_OPERATION_COUNT = 2;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.RasterPointCloudToCartesianCoordinatesSetImpl <em>Raster Point Cloud To Cartesian Coordinates Set</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.RasterPointCloudToCartesianCoordinatesSetImpl
-	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getRasterPointCloudToCartesianCoordinatesSet()
-	 * @generated
-	 */
-	int RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET = 42;
-
-	/**
-	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET__PROGRESS_MONITOR = Symphony__CommonProcessorsPackage.PROCESSOR__PROGRESS_MONITOR;
-
-	/**
-	 * The feature id for the '<em><b>Input</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET__INPUT = Symphony__CommonProcessorsPackage.PROCESSOR__INPUT;
-
-	/**
-	 * The feature id for the '<em><b>Output</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET__OUTPUT = Symphony__CommonProcessorsPackage.PROCESSOR__OUTPUT;
-
-	/**
-	 * The number of structural features of the '<em>Raster Point Cloud To Cartesian Coordinates Set</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET_FEATURE_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Process</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET___PROCESS__OBJECT = Symphony__CommonProcessorsPackage.PROCESSOR___PROCESS__OBJECT;
-
-	/**
-	 * The number of operations of the '<em>Raster Point Cloud To Cartesian Coordinates Set</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET_OPERATION_COUNT = Symphony__CommonProcessorsPackage.PROCESSOR_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.MeshSmootherImpl <em>Mesh Smoother</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3075,7 +2837,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMeshSmoother()
 	 * @generated
 	 */
-	int MESH_SMOOTHER = 43;
+	int MESH_SMOOTHER = 39;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -3148,7 +2910,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVoxelBased3DPointCloudResampler()
 	 * @generated
 	 */
-	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER = 44;
+	int VOXEL_BASED3_DPOINT_CLOUD_RESAMPLER = 40;
 
 	/**
 	 * The feature id for the '<em><b>Progress Monitor</b></em>' attribute.
@@ -3257,7 +3019,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getRigidBodyPoseTracker()
 	 * @generated
 	 */
-	int RIGID_BODY_POSE_TRACKER = 46;
+	int RIGID_BODY_POSE_TRACKER = 42;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.PositionMarkerImpl <em>Position Marker</em>}' class.
@@ -3267,7 +3029,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPositionMarker()
 	 * @generated
 	 */
-	int POSITION_MARKER = 45;
+	int POSITION_MARKER = 41;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -3403,7 +3165,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSymphony__CommonGeometryData3DFacade()
 	 * @generated
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE = 47;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE = 43;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -3469,22 +3231,13 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES = 5;
 
 	/**
-	 * The operation id for the '<em>Create Point Normal Locator</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POINT_NORMAL_LOCATOR__NORMALPOINTCLOUD = 6;
-
-	/**
 	 * The operation id for the '<em>Create Digital Elevation Map</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET = 7;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_DIGITAL_ELEVATION_MAP__CARTESIANCOORDINATESSET = 6;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Polygon</em>' operation.
@@ -3493,7 +3246,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 8;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POLYGON__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 7;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Position Coordinates</em>' operation.
@@ -3502,7 +3255,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES = 9;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_POSITION_COORDINATES__CARTESIANPOSITIONCOORDINATES = 8;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Orientation Coordinates</em>' operation.
@@ -3511,7 +3264,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES = 10;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_ORIENTATION_COORDINATES__CARTESIANORIENTATIONCOORDINATES = 9;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
@@ -3520,7 +3273,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH = 11;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANCOORDINATESMESH = 10;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangle</em>' operation.
@@ -3529,7 +3282,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 12;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES_CARTESIANPOSITIONCOORDINATES = 11;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangle</em>' operation.
@@ -3538,7 +3291,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON = 13;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGLE__CARTESIANPOLYGON = 12;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
@@ -3547,7 +3300,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST = 14;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__LIST = 13;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Coordinates Mesh</em>' operation.
@@ -3556,7 +3309,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH = 15;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_COORDINATES_MESH__CARTESIANTRIANGULARMESH = 14;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangular Mesh</em>' operation.
@@ -3565,7 +3318,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST = 16;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__LIST = 15;
 
 	/**
 	 * The operation id for the '<em>Create Cartesian Triangular Mesh</em>' operation.
@@ -3574,7 +3327,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH = 17;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_CARTESIAN_TRIANGULAR_MESH__CARTESIANTRIANGULARMESH = 16;
 
 	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
@@ -3583,7 +3336,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D = 18;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANCOORDINATESSET_MATRIX4D = 17;
 
 	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
@@ -3592,7 +3345,16 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D = 19;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D = 18;
+
+	/**
+	 * The operation id for the '<em>Create Transformed Mesh</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_TRANSFORMED_MESH__CARTESIANTRIANGULARMESH_MATRIX4D = 19;
 
 	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
@@ -3604,22 +3366,13 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D = 20;
 
 	/**
-	 * The operation id for the '<em>Apply Transform Int</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM_INT__CARTESIANTRIANGULARMESH_MATRIX4D = 21;
-
-	/**
 	 * The operation id for the '<em>Apply Transform</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D = 22;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__NORMALPOINTCLOUD_MATRIX4D = 21;
 
 	/**
 	 * The operation id for the '<em>Update Cartesian Coordinates Set</em>' operation.
@@ -3628,7 +3381,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE = 23;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___UPDATE_CARTESIAN_COORDINATES_SET__CARTESIANCOORDINATESSET_DOUBLE = 22;
 
 	/**
 	 * The operation id for the '<em>Concatenate Triangular Meshes</em>' operation.
@@ -3637,7 +3390,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__ELIST = 24;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST = 23;
 
 	/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -3646,7 +3399,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE_OPERATION_COUNT = 25;
+	int SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE_OPERATION_COUNT = 24;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.Data3DIOImpl <em>Data3 DIO</em>}' class.
@@ -3656,7 +3409,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getData3DIO()
 	 * @generated
 	 */
-	int DATA3_DIO = 48;
+	int DATA3_DIO = 44;
 
 	/**
 	 * The number of structural features of the '<em>Data3 DIO</em>' class.
@@ -3801,7 +3554,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getData3DUtils()
 	 * @generated
 	 */
-	int DATA3_DUTILS = 49;
+	int DATA3_DUTILS = 45;
 
 	/**
 	 * The number of structural features of the '<em>Data3 DUtils</em>' class.
@@ -3828,7 +3581,16 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3_DUTILS___COMPUTE_CENTROID__CARTESIANCOORDINATESSET = 1;
+	int DATA3_DUTILS___COMPUTE_CENTROID__LIST = 1;
+
+	/**
+	 * The operation id for the '<em>Compute Centroid</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA3_DUTILS___COMPUTE_CENTROID__CARTESIANCOORDINATESSET = 2;
 
 	/**
 	 * The operation id for the '<em>Compute Min Max Values</em>' operation.
@@ -3837,7 +3599,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3_DUTILS___COMPUTE_MIN_MAX_VALUES__POINT3D_POINT3D_CARTESIANCOORDINATESSET = 2;
+	int DATA3_DUTILS___COMPUTE_MIN_MAX_VALUES__POINT3D_POINT3D_CARTESIANCOORDINATESSET = 3;
 
 	/**
 	 * The operation id for the '<em>Compute Curvature Change</em>' operation.
@@ -3846,16 +3608,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA3_DUTILS___COMPUTE_CURVATURE_CHANGE__POINTLOCATOR_INT_DOUBLE = 3;
-
-	/**
-	 * The operation id for the '<em>Compute Curvature Change</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA3_DUTILS___COMPUTE_CURVATURE_CHANGE__VECMATHPOINTLOCATOR_INT_DOUBLE = 4;
+	int DATA3_DUTILS___COMPUTE_CURVATURE_CHANGE__POINTLOCATOR_INT_DOUBLE = 4;
 
 	/**
 	 * The operation id for the '<em>Extrude</em>' operation.
@@ -3883,7 +3636,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianAxis()
 	 * @generated
 	 */
-	int CARTESIAN_AXIS = 50;
+	int CARTESIAN_AXIS = 46;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.common.geometry.data3d.CartesianPlane <em>Cartesian Plane</em>}' enum.
@@ -3893,7 +3646,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCartesianPlane()
 	 * @generated
 	 */
-	int CARTESIAN_PLANE = 51;
+	int CARTESIAN_PLANE = 47;
 
 	/**
 	 * The meta object id for the '<em>Vector2d</em>' data type.
@@ -3903,7 +3656,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVector2d()
 	 * @generated
 	 */
-	int VECTOR2D = 52;
+	int VECTOR2D = 48;
 
 	/**
 	 * The meta object id for the '<em>Vector3d</em>' data type.
@@ -3913,7 +3666,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVector3d()
 	 * @generated
 	 */
-	int VECTOR3D = 53;
+	int VECTOR3D = 49;
 
 	/**
 	 * The meta object id for the '<em>Point3d</em>' data type.
@@ -3923,7 +3676,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPoint3d()
 	 * @generated
 	 */
-	int POINT3D = 54;
+	int POINT3D = 50;
 
 	/**
 	 * The meta object id for the '<em>Matrix4d</em>' data type.
@@ -3933,7 +3686,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMatrix4d()
 	 * @generated
 	 */
-	int MATRIX4D = 55;
+	int MATRIX4D = 51;
 
 	/**
 	 * The meta object id for the '<em>GVector</em>' data type.
@@ -3943,7 +3696,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getGVector()
 	 * @generated
 	 */
-	int GVECTOR = 56;
+	int GVECTOR = 52;
 
 	/**
 	 * The meta object id for the '<em>List</em>' data type.
@@ -3953,7 +3706,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getList()
 	 * @generated
 	 */
-	int LIST = 57;
+	int LIST = 53;
 
 	/**
 	 * The meta object id for the '<em>Map</em>' data type.
@@ -3963,7 +3716,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getMap()
 	 * @generated
 	 */
-	int MAP = 58;
+	int MAP = 54;
 
 	/**
 	 * The meta object id for the '<em>Set</em>' data type.
@@ -3973,7 +3726,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSet()
 	 * @generated
 	 */
-	int SET = 59;
+	int SET = 55;
 
 	/**
 	 * The meta object id for the '<em>Sorted Set</em>' data type.
@@ -3983,7 +3736,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getSortedSet()
 	 * @generated
 	 */
-	int SORTED_SET = 60;
+	int SORTED_SET = 56;
 
 	/**
 	 * The meta object id for the '<em>Collection</em>' data type.
@@ -3993,7 +3746,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getCollection()
 	 * @generated
 	 */
-	int COLLECTION = 61;
+	int COLLECTION = 57;
 
 	/**
 	 * The meta object id for the '<em>EList</em>' data type.
@@ -4003,7 +3756,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getEList()
 	 * @generated
 	 */
-	int ELIST = 62;
+	int ELIST = 58;
 
 	/**
 	 * The meta object id for the '<em>IProgress Monitor</em>' data type.
@@ -4013,7 +3766,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIProgressMonitor()
 	 * @generated
 	 */
-	int IPROGRESS_MONITOR = 63;
+	int IPROGRESS_MONITOR = 59;
 
 	/**
 	 * The meta object id for the '<em>Output Stream</em>' data type.
@@ -4023,7 +3776,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getOutputStream()
 	 * @generated
 	 */
-	int OUTPUT_STREAM = 64;
+	int OUTPUT_STREAM = 60;
 
 	/**
 	 * The meta object id for the '<em>Input Stream</em>' data type.
@@ -4033,7 +3786,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getInputStream()
 	 * @generated
 	 */
-	int INPUT_STREAM = 65;
+	int INPUT_STREAM = 61;
 
 	/**
 	 * The meta object id for the '<em>IO Exception</em>' data type.
@@ -4043,7 +3796,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIOException()
 	 * @generated
 	 */
-	int IO_EXCEPTION = 66;
+	int IO_EXCEPTION = 62;
 
 	/**
 	 * The meta object id for the '<em>Exception</em>' data type.
@@ -4053,7 +3806,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getException()
 	 * @generated
 	 */
-	int EXCEPTION = 67;
+	int EXCEPTION = 63;
 
 	/**
 	 * The meta object id for the '<em>Illegal Argument Exception</em>' data type.
@@ -4063,7 +3816,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIllegalArgumentException()
 	 * @generated
 	 */
-	int ILLEGAL_ARGUMENT_EXCEPTION = 68;
+	int ILLEGAL_ARGUMENT_EXCEPTION = 64;
 
 	/**
 	 * The meta object id for the '<em>Double Array Of Array</em>' data type.
@@ -4072,7 +3825,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getDoubleArrayOfArray()
 	 * @generated
 	 */
-	int DOUBLE_ARRAY_OF_ARRAY = 69;
+	int DOUBLE_ARRAY_OF_ARRAY = 65;
 
 	/**
 	 * The meta object id for the '<em>Int Array</em>' data type.
@@ -4081,7 +3834,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getIntArray()
 	 * @generated
 	 */
-	int INT_ARRAY = 70;
+	int INT_ARRAY = 66;
 
 
 	/**
@@ -4769,15 +4522,64 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	EClass getPointLocator();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#getPoints <em>Points</em>}'.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#getPoints() <em>Get Points</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Points</em>'.
+	 * @return the meta object for the '<em>Get Points</em>' operation.
 	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#getPoints()
-	 * @see #getPointLocator()
 	 * @generated
 	 */
-	EAttribute getPointLocator_Points();
+	EOperation getPointLocator__GetPoints();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#addPoint(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Add Point</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Point</em>' operation.
+	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#addPoint(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @generated
+	 */
+	EOperation getPointLocator__AddPoint__CartesianPositionCoordinates();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#addPoints(java.util.List) <em>Add Points</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Points</em>' operation.
+	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#addPoints(java.util.List)
+	 * @generated
+	 */
+	EOperation getPointLocator__AddPoints__List();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#removePoint(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Remove Point</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Point</em>' operation.
+	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#removePoint(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @generated
+	 */
+	EOperation getPointLocator__RemovePoint__CartesianPositionCoordinates();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#removePoints(java.util.List) <em>Remove Points</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Points</em>' operation.
+	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#removePoints(java.util.List)
+	 * @generated
+	 */
+	EOperation getPointLocator__RemovePoints__List();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#clearPoints() <em>Clear Points</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Clear Points</em>' operation.
+	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#clearPoints()
+	 * @generated
+	 */
+	EOperation getPointLocator__ClearPoints();
 
 	/**
 	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#findClosestPoint(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Find Closest Point</em>}' operation.
@@ -4790,105 +4592,34 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	EOperation getPointLocator__FindClosestPoint__CartesianPositionCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#findPointsWithinRadius(double, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Find Points Within Radius</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#findClosestPoints(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, int) <em>Find Closest Points</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Find Closest Points</em>' operation.
+	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#findClosestPoints(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, int)
+	 * @generated
+	 */
+	EOperation getPointLocator__FindClosestPoints__CartesianPositionCoordinates_int();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointLocator#findPointsWithinRadius(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, double) <em>Find Points Within Radius</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Find Points Within Radius</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#findPointsWithinRadius(double, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
+	 * @see org.eclipse.symphony.common.geometry.data3d.PointLocator#findPointsWithinRadius(org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates, double)
 	 * @generated
 	 */
-	EOperation getPointLocator__FindPointsWithinRadius__double_CartesianPositionCoordinates();
+	EOperation getPointLocator__FindPointsWithinRadius__CartesianPositionCoordinates_double();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator <em>Vecmath Point Locator</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.KDTreeBasedPointLocator <em>KD Tree Based Point Locator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Vecmath Point Locator</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator
+	 * @return the meta object for class '<em>KD Tree Based Point Locator</em>'.
+	 * @see org.eclipse.symphony.common.geometry.data3d.KDTreeBasedPointLocator
 	 * @generated
 	 */
-	EClass getVecmathPointLocator();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator#getPoints <em>Points</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Points</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator#getPoints()
-	 * @see #getVecmathPointLocator()
-	 * @generated
-	 */
-	EAttribute getVecmathPointLocator_Points();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator#findClosestPoint(javax.vecmath.Point3d) <em>Find Closest Point</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Closest Point</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator#findClosestPoint(javax.vecmath.Point3d)
-	 * @generated
-	 */
-	EOperation getVecmathPointLocator__FindClosestPoint__Point3d();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator#findPointsWithinRadius(double, javax.vecmath.Point3d) <em>Find Points Within Radius</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Points Within Radius</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator#findPointsWithinRadius(double, javax.vecmath.Point3d)
-	 * @generated
-	 */
-	EOperation getVecmathPointLocator__FindPointsWithinRadius__double_Point3d();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator#findClosestPointId(javax.vecmath.Point3d) <em>Find Closest Point Id</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Closest Point Id</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator#findClosestPointId(javax.vecmath.Point3d)
-	 * @generated
-	 */
-	EOperation getVecmathPointLocator__FindClosestPointId__Point3d();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator#findPointIdsWithinRadius(double, javax.vecmath.Point3d) <em>Find Point Ids Within Radius</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Point Ids Within Radius</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator#findPointIdsWithinRadius(double, javax.vecmath.Point3d)
-	 * @generated
-	 */
-	EOperation getVecmathPointLocator__FindPointIdsWithinRadius__double_Point3d();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator#findClosestNPoints(javax.vecmath.Point3d, int) <em>Find Closest NPoints</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Closest NPoints</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator#findClosestNPoints(javax.vecmath.Point3d, int)
-	 * @generated
-	 */
-	EOperation getVecmathPointLocator__FindClosestNPoints__Point3d_int();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator#findClosestNPointIds(javax.vecmath.Point3d, int) <em>Find Closest NPoint Ids</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Closest NPoint Ids</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator#findClosestNPointIds(javax.vecmath.Point3d, int)
-	 * @generated
-	 */
-	EOperation getVecmathPointLocator__FindClosestNPointIds__Point3d_int();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.VecmathKdTreePointLocator <em>Vecmath Kd Tree Point Locator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Vecmath Kd Tree Point Locator</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.VecmathKdTreePointLocator
-	 * @generated
-	 */
-	EClass getVecmathKdTreePointLocator();
+	EClass getKDTreeBasedPointLocator();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.MeshLocalizer <em>Mesh Localizer</em>}'.
@@ -4909,87 +4640,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getMeshLocalizer__Localize__CartesianTriangularMesh_Matrix4d_CartesianTriangularMesh_Matrix4d();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.PointNormalLocator <em>Point Normal Locator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Point Normal Locator</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointNormalLocator
-	 * @generated
-	 */
-	EClass getPointNormalLocator();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#getDataSet <em>Data Set</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Data Set</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#getDataSet()
-	 * @see #getPointNormalLocator()
-	 * @generated
-	 */
-	EReference getPointNormalLocator_DataSet();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#findClosestPoint(javax.vecmath.Point3d, javax.vecmath.Vector3d) <em>Find Closest Point</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Closest Point</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#findClosestPoint(javax.vecmath.Point3d, javax.vecmath.Vector3d)
-	 * @generated
-	 */
-	EOperation getPointNormalLocator__FindClosestPoint__Point3d_Vector3d();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#findPointsWithinRadius(double, javax.vecmath.Point3d, javax.vecmath.Vector3d) <em>Find Points Within Radius</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Points Within Radius</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#findPointsWithinRadius(double, javax.vecmath.Point3d, javax.vecmath.Vector3d)
-	 * @generated
-	 */
-	EOperation getPointNormalLocator__FindPointsWithinRadius__double_Point3d_Vector3d();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#findClosestNPoints(int, javax.vecmath.Point3d, javax.vecmath.Vector3d) <em>Find Closest NPoints</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Closest NPoints</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#findClosestNPoints(int, javax.vecmath.Point3d, javax.vecmath.Vector3d)
-	 * @generated
-	 */
-	EOperation getPointNormalLocator__FindClosestNPoints__int_Point3d_Vector3d();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#findClosestPointId(javax.vecmath.Point3d, javax.vecmath.Vector3d) <em>Find Closest Point Id</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Closest Point Id</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#findClosestPointId(javax.vecmath.Point3d, javax.vecmath.Vector3d)
-	 * @generated
-	 */
-	EOperation getPointNormalLocator__FindClosestPointId__Point3d_Vector3d();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#findPointIdsWithinRadius(double, javax.vecmath.Point3d, javax.vecmath.Vector3d) <em>Find Point Ids Within Radius</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Point Ids Within Radius</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#findPointIdsWithinRadius(double, javax.vecmath.Point3d, javax.vecmath.Vector3d)
-	 * @generated
-	 */
-	EOperation getPointNormalLocator__FindPointIdsWithinRadius__double_Point3d_Vector3d();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#findClosestNPointIds(int, javax.vecmath.Point3d, javax.vecmath.Vector3d) <em>Find Closest NPoint Ids</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Find Closest NPoint Ids</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.PointNormalLocator#findClosestNPointIds(int, javax.vecmath.Point3d, javax.vecmath.Vector3d)
-	 * @generated
-	 */
-	EOperation getPointNormalLocator__FindClosestNPointIds__int_Point3d_Vector3d();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.DelaunayMesher <em>Delaunay Mesher</em>}'.
@@ -5135,68 +4785,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getOutlierFilter_MaxDistance();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.RasterPointCloud <em>Raster Point Cloud</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Raster Point Cloud</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RasterPointCloud
-	 * @generated
-	 */
-	EClass getRasterPointCloud();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.RasterPointCloud#getRows <em>Rows</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Rows</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RasterPointCloud#getRows()
-	 * @see #getRasterPointCloud()
-	 * @generated
-	 */
-	EAttribute getRasterPointCloud_Rows();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.common.geometry.data3d.RasterPointCloud#getColumns <em>Columns</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Columns</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RasterPointCloud#getColumns()
-	 * @see #getRasterPointCloud()
-	 * @generated
-	 */
-	EAttribute getRasterPointCloud_Columns();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.RasterPointCloud#getPoint(int, int) <em>Get Point</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Point</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RasterPointCloud#getPoint(int, int)
-	 * @generated
-	 */
-	EOperation getRasterPointCloud__GetPoint__int_int();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.RasterPointCloud#setPoint(int, int, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates) <em>Set Point</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Point</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RasterPointCloud#setPoint(int, int, org.eclipse.symphony.common.geometry.data3d.CartesianPositionCoordinates)
-	 * @generated
-	 */
-	EOperation getRasterPointCloud__SetPoint__int_int_CartesianPositionCoordinates();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.RasterPointCloudToCartesianCoordinatesSet <em>Raster Point Cloud To Cartesian Coordinates Set</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Raster Point Cloud To Cartesian Coordinates Set</em>'.
-	 * @see org.eclipse.symphony.common.geometry.data3d.RasterPointCloudToCartesianCoordinatesSet
-	 * @generated
-	 */
-	EClass getRasterPointCloudToCartesianCoordinatesSet();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.MeshSmoother <em>Mesh Smoother</em>}'.
@@ -5437,16 +5025,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	EOperation getSymphony__CommonGeometryData3DFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPointNormalLocator(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud) <em>Create Point Normal Locator</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Point Normal Locator</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createPointNormalLocator(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud)
-	 * @generated
-	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__CreatePointNormalLocator__NormalPointCloud();
-
-	/**
 	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createDigitalElevationMap(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet) <em>Create Digital Elevation Map</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5577,6 +5155,16 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__List_Matrix4d();
 
 	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createTransformedMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Create Transformed Mesh</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Create Transformed Mesh</em>' operation.
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#createTransformedMesh(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
+	 * @generated
+	 */
+	EOperation getSymphony__CommonGeometryData3DFacade__CreateTransformedMesh__CartesianTriangularMesh_Matrix4d();
+
+	/**
 	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5585,16 +5173,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransformInt(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d) <em>Apply Transform Int</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Apply Transform Int</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransformInt(org.eclipse.symphony.common.geometry.data3d.CartesianTriangularMesh, javax.vecmath.Matrix4d)
-	 * @generated
-	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__ApplyTransformInt__CartesianTriangularMesh_Matrix4d();
 
 	/**
 	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#applyTransform(org.eclipse.symphony.common.geometry.data3d.NormalPointCloud, javax.vecmath.Matrix4d) <em>Apply Transform</em>}' operation.
@@ -5617,14 +5195,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	EOperation getSymphony__CommonGeometryData3DFacade__UpdateCartesianCoordinatesSet__CartesianCoordinatesSet_double();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#concatenateTriangularMeshes(org.eclipse.emf.common.util.EList) <em>Concatenate Triangular Meshes</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#concatenateTriangularMeshes(java.util.List) <em>Concatenate Triangular Meshes</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Concatenate Triangular Meshes</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#concatenateTriangularMeshes(org.eclipse.emf.common.util.EList)
+	 * @see org.eclipse.symphony.common.geometry.data3d.Symphony__CommonGeometryData3DFacade#concatenateTriangularMeshes(java.util.List)
 	 * @generated
 	 */
-	EOperation getSymphony__CommonGeometryData3DFacade__ConcatenateTriangularMeshes__EList();
+	EOperation getSymphony__CommonGeometryData3DFacade__ConcatenateTriangularMeshes__List();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.common.geometry.data3d.Data3DIO <em>Data3 DIO</em>}'.
@@ -5787,6 +5365,16 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	EOperation getData3DUtils__ComputeNormals__CartesianTriangularMesh();
 
 	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCentroid(java.util.List) <em>Compute Centroid</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Compute Centroid</em>' operation.
+	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCentroid(java.util.List)
+	 * @generated
+	 */
+	EOperation getData3DUtils__ComputeCentroid__List();
+
+	/**
 	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCentroid(org.eclipse.symphony.common.geometry.data3d.CartesianCoordinatesSet) <em>Compute Centroid</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5815,16 +5403,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getData3DUtils__ComputeCurvatureChange__PointLocator_int_double();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCurvatureChange(org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator, int, double) <em>Compute Curvature Change</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Compute Curvature Change</em>' operation.
-	 * @see org.eclipse.symphony.common.geometry.data3d.Data3DUtils#computeCurvatureChange(org.eclipse.symphony.common.geometry.data3d.VecmathPointLocator, int, double)
-	 * @generated
-	 */
-	EOperation getData3DUtils__ComputeCurvatureChange__VecmathPointLocator_int_double();
 
 	/**
 	 * Returns the meta object for the '{@link org.eclipse.symphony.common.geometry.data3d.Data3DUtils#extrude(java.util.List, org.eclipse.symphony.common.geometry.data3d.CartesianAxis, double, boolean) <em>Extrude</em>}' operation.
@@ -6665,12 +6243,52 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EClass POINT_LOCATOR = eINSTANCE.getPointLocator();
 
 		/**
-		 * The meta object literal for the '<em><b>Points</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Get Points</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute POINT_LOCATOR__POINTS = eINSTANCE.getPointLocator_Points();
+		EOperation POINT_LOCATOR___GET_POINTS = eINSTANCE.getPointLocator__GetPoints();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Point</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation POINT_LOCATOR___ADD_POINT__CARTESIANPOSITIONCOORDINATES = eINSTANCE.getPointLocator__AddPoint__CartesianPositionCoordinates();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Points</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation POINT_LOCATOR___ADD_POINTS__LIST = eINSTANCE.getPointLocator__AddPoints__List();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove Point</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation POINT_LOCATOR___REMOVE_POINT__CARTESIANPOSITIONCOORDINATES = eINSTANCE.getPointLocator__RemovePoint__CartesianPositionCoordinates();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove Points</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation POINT_LOCATOR___REMOVE_POINTS__LIST = eINSTANCE.getPointLocator__RemovePoints__List();
+
+		/**
+		 * The meta object literal for the '<em><b>Clear Points</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation POINT_LOCATOR___CLEAR_POINTS = eINSTANCE.getPointLocator__ClearPoints();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Closest Point</b></em>' operation.
@@ -6681,38 +6299,12 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EOperation POINT_LOCATOR___FIND_CLOSEST_POINT__CARTESIANPOSITIONCOORDINATES = eINSTANCE.getPointLocator__FindClosestPoint__CartesianPositionCoordinates();
 
 		/**
-		 * The meta object literal for the '<em><b>Find Points Within Radius</b></em>' operation.
+		 * The meta object literal for the '<em><b>Find Closest Points</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_CARTESIANPOSITIONCOORDINATES = eINSTANCE.getPointLocator__FindPointsWithinRadius__double_CartesianPositionCoordinates();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.VecmathPointLocatorImpl <em>Vecmath Point Locator</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.VecmathPointLocatorImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVecmathPointLocator()
-		 * @generated
-		 */
-		EClass VECMATH_POINT_LOCATOR = eINSTANCE.getVecmathPointLocator();
-
-		/**
-		 * The meta object literal for the '<em><b>Points</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VECMATH_POINT_LOCATOR__POINTS = eINSTANCE.getVecmathPointLocator_Points();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Closest Point</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation VECMATH_POINT_LOCATOR___FIND_CLOSEST_POINT__POINT3D = eINSTANCE.getVecmathPointLocator__FindClosestPoint__Point3d();
+		EOperation POINT_LOCATOR___FIND_CLOSEST_POINTS__CARTESIANPOSITIONCOORDINATES_INT = eINSTANCE.getPointLocator__FindClosestPoints__CartesianPositionCoordinates_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Find Points Within Radius</b></em>' operation.
@@ -6720,49 +6312,17 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation VECMATH_POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_POINT3D = eINSTANCE.getVecmathPointLocator__FindPointsWithinRadius__double_Point3d();
+		EOperation POINT_LOCATOR___FIND_POINTS_WITHIN_RADIUS__CARTESIANPOSITIONCOORDINATES_DOUBLE = eINSTANCE.getPointLocator__FindPointsWithinRadius__CartesianPositionCoordinates_double();
 
 		/**
-		 * The meta object literal for the '<em><b>Find Closest Point Id</b></em>' operation.
+		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.KDTreeBasedPointLocatorImpl <em>KD Tree Based Point Locator</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.common.geometry.data3d.impl.KDTreeBasedPointLocatorImpl
+		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getKDTreeBasedPointLocator()
 		 * @generated
 		 */
-		EOperation VECMATH_POINT_LOCATOR___FIND_CLOSEST_POINT_ID__POINT3D = eINSTANCE.getVecmathPointLocator__FindClosestPointId__Point3d();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Point Ids Within Radius</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation VECMATH_POINT_LOCATOR___FIND_POINT_IDS_WITHIN_RADIUS__DOUBLE_POINT3D = eINSTANCE.getVecmathPointLocator__FindPointIdsWithinRadius__double_Point3d();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Closest NPoints</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation VECMATH_POINT_LOCATOR___FIND_CLOSEST_NPOINTS__POINT3D_INT = eINSTANCE.getVecmathPointLocator__FindClosestNPoints__Point3d_int();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Closest NPoint Ids</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation VECMATH_POINT_LOCATOR___FIND_CLOSEST_NPOINT_IDS__POINT3D_INT = eINSTANCE.getVecmathPointLocator__FindClosestNPointIds__Point3d_int();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.VecmathKdTreePointLocatorImpl <em>Vecmath Kd Tree Point Locator</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.VecmathKdTreePointLocatorImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getVecmathKdTreePointLocator()
-		 * @generated
-		 */
-		EClass VECMATH_KD_TREE_POINT_LOCATOR = eINSTANCE.getVecmathKdTreePointLocator();
+		EClass KD_TREE_BASED_POINT_LOCATOR = eINSTANCE.getKDTreeBasedPointLocator();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.MeshLocalizerImpl <em>Mesh Localizer</em>}' class.
@@ -6781,72 +6341,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation MESH_LOCALIZER___LOCALIZE__CARTESIANTRIANGULARMESH_MATRIX4D_CARTESIANTRIANGULARMESH_MATRIX4D = eINSTANCE.getMeshLocalizer__Localize__CartesianTriangularMesh_Matrix4d_CartesianTriangularMesh_Matrix4d();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.PointNormalLocatorImpl <em>Point Normal Locator</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.PointNormalLocatorImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getPointNormalLocator()
-		 * @generated
-		 */
-		EClass POINT_NORMAL_LOCATOR = eINSTANCE.getPointNormalLocator();
-
-		/**
-		 * The meta object literal for the '<em><b>Data Set</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference POINT_NORMAL_LOCATOR__DATA_SET = eINSTANCE.getPointNormalLocator_DataSet();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Closest Point</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation POINT_NORMAL_LOCATOR___FIND_CLOSEST_POINT__POINT3D_VECTOR3D = eINSTANCE.getPointNormalLocator__FindClosestPoint__Point3d_Vector3d();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Points Within Radius</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation POINT_NORMAL_LOCATOR___FIND_POINTS_WITHIN_RADIUS__DOUBLE_POINT3D_VECTOR3D = eINSTANCE.getPointNormalLocator__FindPointsWithinRadius__double_Point3d_Vector3d();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Closest NPoints</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation POINT_NORMAL_LOCATOR___FIND_CLOSEST_NPOINTS__INT_POINT3D_VECTOR3D = eINSTANCE.getPointNormalLocator__FindClosestNPoints__int_Point3d_Vector3d();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Closest Point Id</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation POINT_NORMAL_LOCATOR___FIND_CLOSEST_POINT_ID__POINT3D_VECTOR3D = eINSTANCE.getPointNormalLocator__FindClosestPointId__Point3d_Vector3d();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Point Ids Within Radius</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation POINT_NORMAL_LOCATOR___FIND_POINT_IDS_WITHIN_RADIUS__DOUBLE_POINT3D_VECTOR3D = eINSTANCE.getPointNormalLocator__FindPointIdsWithinRadius__double_Point3d_Vector3d();
-
-		/**
-		 * The meta object literal for the '<em><b>Find Closest NPoint Ids</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation POINT_NORMAL_LOCATOR___FIND_CLOSEST_NPOINT_IDS__INT_POINT3D_VECTOR3D = eINSTANCE.getPointNormalLocator__FindClosestNPointIds__int_Point3d_Vector3d();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.DelaunayMesherImpl <em>Delaunay Mesher</em>}' class.
@@ -6975,58 +6469,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute OUTLIER_FILTER__MAX_DISTANCE = eINSTANCE.getOutlierFilter_MaxDistance();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.RasterPointCloudImpl <em>Raster Point Cloud</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.RasterPointCloudImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getRasterPointCloud()
-		 * @generated
-		 */
-		EClass RASTER_POINT_CLOUD = eINSTANCE.getRasterPointCloud();
-
-		/**
-		 * The meta object literal for the '<em><b>Rows</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RASTER_POINT_CLOUD__ROWS = eINSTANCE.getRasterPointCloud_Rows();
-
-		/**
-		 * The meta object literal for the '<em><b>Columns</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RASTER_POINT_CLOUD__COLUMNS = eINSTANCE.getRasterPointCloud_Columns();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Point</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RASTER_POINT_CLOUD___GET_POINT__INT_INT = eINSTANCE.getRasterPointCloud__GetPoint__int_int();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Point</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation RASTER_POINT_CLOUD___SET_POINT__INT_INT_CARTESIANPOSITIONCOORDINATES = eINSTANCE.getRasterPointCloud__SetPoint__int_int_CartesianPositionCoordinates();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.RasterPointCloudToCartesianCoordinatesSetImpl <em>Raster Point Cloud To Cartesian Coordinates Set</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.RasterPointCloudToCartesianCoordinatesSetImpl
-		 * @see org.eclipse.symphony.common.geometry.data3d.impl.Symphony__CommonGeometryData3DPackageImpl#getRasterPointCloudToCartesianCoordinatesSet()
-		 * @generated
-		 */
-		EClass RASTER_POINT_CLOUD_TO_CARTESIAN_COORDINATES_SET = eINSTANCE.getRasterPointCloudToCartesianCoordinatesSet();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.MeshSmootherImpl <em>Mesh Smoother</em>}' class.
@@ -7223,14 +6665,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POSE__CARTESIANPOSITIONCOORDINATES_CARTESIANORIENTATIONCOORDINATES = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreatePose__CartesianPositionCoordinates_CartesianOrientationCoordinates();
 
 		/**
-		 * The meta object literal for the '<em><b>Create Point Normal Locator</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_POINT_NORMAL_LOCATOR__NORMALPOINTCLOUD = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreatePointNormalLocator__NormalPointCloud();
-
-		/**
 		 * The meta object literal for the '<em><b>Create Digital Elevation Map</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7335,20 +6769,20 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__LIST_MATRIX4D = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ApplyTransform__List_Matrix4d();
 
 		/**
+		 * The meta object literal for the '<em><b>Create Transformed Mesh</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CREATE_TRANSFORMED_MESH__CARTESIANTRIANGULARMESH_MATRIX4D = eINSTANCE.getSymphony__CommonGeometryData3DFacade__CreateTransformedMesh__CartesianTriangularMesh_Matrix4d();
+
+		/**
 		 * The meta object literal for the '<em><b>Apply Transform</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM__CARTESIANTRIANGULARMESH_MATRIX4D = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ApplyTransform__CartesianTriangularMesh_Matrix4d();
-
-		/**
-		 * The meta object literal for the '<em><b>Apply Transform Int</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___APPLY_TRANSFORM_INT__CARTESIANTRIANGULARMESH_MATRIX4D = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ApplyTransformInt__CartesianTriangularMesh_Matrix4d();
 
 		/**
 		 * The meta object literal for the '<em><b>Apply Transform</b></em>' operation.
@@ -7372,7 +6806,7 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__ELIST = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ConcatenateTriangularMeshes__EList();
+		EOperation SYMPHONY_COMMON_GEOMETRY_DATA3_DFACADE___CONCATENATE_TRIANGULAR_MESHES__LIST = eINSTANCE.getSymphony__CommonGeometryData3DFacade__ConcatenateTriangularMeshes__List();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.common.geometry.data3d.impl.Data3DIOImpl <em>Data3 DIO</em>}' class.
@@ -7512,6 +6946,14 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
+		EOperation DATA3_DUTILS___COMPUTE_CENTROID__LIST = eINSTANCE.getData3DUtils__ComputeCentroid__List();
+
+		/**
+		 * The meta object literal for the '<em><b>Compute Centroid</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
 		EOperation DATA3_DUTILS___COMPUTE_CENTROID__CARTESIANCOORDINATESSET = eINSTANCE.getData3DUtils__ComputeCentroid__CartesianCoordinatesSet();
 
 		/**
@@ -7529,14 +6971,6 @@ public interface Symphony__CommonGeometryData3DPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation DATA3_DUTILS___COMPUTE_CURVATURE_CHANGE__POINTLOCATOR_INT_DOUBLE = eINSTANCE.getData3DUtils__ComputeCurvatureChange__PointLocator_int_double();
-
-		/**
-		 * The meta object literal for the '<em><b>Compute Curvature Change</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation DATA3_DUTILS___COMPUTE_CURVATURE_CHANGE__VECMATHPOINTLOCATOR_INT_DOUBLE = eINSTANCE.getData3DUtils__ComputeCurvatureChange__VecmathPointLocator_int_double();
 
 		/**
 		 * The meta object literal for the '<em><b>Extrude</b></em>' operation.
