@@ -119,7 +119,6 @@ public class FeaturesOfInterestMapLayerImpl extends AbstractMapLayerImpl impleme
 	 */
 	public void setFeatures(FeatureOfInterestList newFeatures)
 	{
-		System.out.println("setFeatures (" + newFeatures + ")");
 		setFeaturesGen(newFeatures);
 		getFeatureOfInterestListNode().setFeatureOfInterestList(newFeatures);
 	}

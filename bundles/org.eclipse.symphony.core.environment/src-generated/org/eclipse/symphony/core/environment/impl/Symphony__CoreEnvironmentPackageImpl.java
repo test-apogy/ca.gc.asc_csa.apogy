@@ -4477,7 +4477,8 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		  (getSky_SurfaceWorksite(), 
 		   source, 
 		   new String[] {
-			 "documentation", "The worksite to which the sky is associated."
+			 "documentation", "The worksite to which the sky is associated.",
+			 "property", "None"
 		   });	
 		addAnnotation
 		  (getSky_SkyNode(), 
@@ -5640,6 +5641,12 @@ public class Symphony__CoreEnvironmentPackageImpl extends EPackageImpl implement
 		   source, 
 		   new String[] {
 			 "documentation", "Map Layer that contains Feature Of Interest."
+		   });	
+		addAnnotation
+		  (getSkyNode_Sky(), 
+		   source, 
+		   new String[] {
+			 "property", "None"
 		   });	
 		addAnnotation
 		  (cartesianTriangularMeshMapLayerNodeEClass, 

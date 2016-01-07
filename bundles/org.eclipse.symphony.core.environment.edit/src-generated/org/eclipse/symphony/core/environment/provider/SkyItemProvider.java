@@ -66,7 +66,6 @@ public class SkyItemProvider
 			super.getPropertyDescriptors(object);
 
 			addTimePropertyDescriptor(object);
-			addSurfaceWorksitePropertyDescriptor(object);
 			addSunPropertyDescriptor(object);
 			addSunHorizontalCoordinatesPropertyDescriptor(object);
 			addStarFieldPropertyDescriptor(object);
@@ -93,29 +92,6 @@ public class SkyItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-  /**
-	 * This adds a property descriptor for the Surface Worksite feature.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  protected void addSurfaceWorksitePropertyDescriptor(Object object)
-  {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Sky_surfaceWorksite_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Sky_surfaceWorksite_feature", "_UI_Sky_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.SKY__SURFACE_WORKSITE,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

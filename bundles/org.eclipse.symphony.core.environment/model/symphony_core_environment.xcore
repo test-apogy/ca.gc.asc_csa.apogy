@@ -47,7 +47,7 @@ abstract class Worksite extends AbstractWorksite
 	
     @GenModel(property="None", children="true", notify="true")
 	refers derived transient readonly WorksiteNode[1] worksiteNode
-	
+		
 	refers AbstractOrbitModel[0..*] orbitsModels
 	
 	contains Environment environment
@@ -300,7 +300,8 @@ class Sky extends Timed
 {
 	/*
 	 * The worksite to which the sky is associated.
-	 */
+	 */	
+    @GenModel(property="None")
 	refers SurfaceWorksite surfaceWorksite opposite sky
 	
 	@GenModel(children="true", notify="true", property="None")
@@ -1410,6 +1411,7 @@ class AbstractMapLayerNode extends AggregateGroupNode
 
 class SkyNode extends GroupNode
 {	
+ 	@GenModel(property="None")
 	refers transient Sky sky
 } 
 

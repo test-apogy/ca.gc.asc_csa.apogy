@@ -51,6 +51,7 @@ public interface Sky extends Timed
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSky_SurfaceWorksite()
 	 * @see org.eclipse.symphony.core.environment.SurfaceWorksite#getSky
 	 * @model opposite="sky" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
   SurfaceWorksite getSurfaceWorksite();

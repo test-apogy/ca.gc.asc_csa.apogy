@@ -154,15 +154,15 @@ public class OperationCallResultsListItemProvider
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-	 * @generated
+	 * @generated_NOT
 	 */
   @Override
   public String getText(Object object)
   {
 		String label = ((OperationCallResultsList)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_OperationCallResultsList_type") :
-			getString("_UI_OperationCallResultsList_type") + " " + label;
+			"<unnamed>" :
+			label;
 	}
 
   /**

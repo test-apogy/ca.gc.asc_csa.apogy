@@ -68,7 +68,8 @@ class CameraViewConfigurationList extends AbstractToolsListContainer
 
 class CameraViewConfiguration extends VariableFeatureReference, AbstractTool
 {			
-	/* The  CameraViewConfiguration containing this CameraViewConfiguration.*/
+	/* The  CameraViewConfiguration containing this CameraViewConfiguration.*/	
+    @GenModel(property="None")
 	refers CameraViewConfigurationList cameraViewConfigurationList opposite cameraViewConfigurations
 	
 	/* The Camera being displayed. */	

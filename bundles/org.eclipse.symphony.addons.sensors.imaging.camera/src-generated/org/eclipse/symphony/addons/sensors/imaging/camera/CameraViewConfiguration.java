@@ -52,6 +52,7 @@ public interface CameraViewConfiguration extends VariableFeatureReference, Abstr
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.Symphony__AddonsSensorsImagingCameraPackage#getCameraViewConfiguration_CameraViewConfigurationList()
 	 * @see org.eclipse.symphony.addons.sensors.imaging.camera.CameraViewConfigurationList#getCameraViewConfigurations
 	 * @model opposite="cameraViewConfigurations" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
 	CameraViewConfigurationList getCameraViewConfigurationList();

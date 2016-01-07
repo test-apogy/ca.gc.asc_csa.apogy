@@ -9,11 +9,9 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.symphony.common.topology.provider.GroupNodeItemProvider;
 import org.eclipse.symphony.core.environment.SkyNode;
-import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.core.environment.SkyNode} object.
@@ -47,32 +45,8 @@ public class SkyNodeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSkyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-  /**
-	 * This adds a property descriptor for the Sky feature.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 */
-  protected void addSkyPropertyDescriptor(Object object)
-  {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SkyNode_sky_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SkyNode_sky_feature", "_UI_SkyNode_type"),
-				 Symphony__CoreEnvironmentPackage.Literals.SKY_NODE__SKY,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
   /**

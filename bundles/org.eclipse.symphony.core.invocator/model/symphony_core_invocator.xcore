@@ -239,7 +239,8 @@ class InvocatorSession extends Named, Described
  	container DataProductsListsContainer dataProductsListsContainer opposite dataProductsList
  
  	contains OperationCallResultsList [1] operationCallResultsList opposite dataProductsList
- 
+  	
+    @GenModel(children="false", createChild="false", notify="false")
  	contains RecordingResultsList [0..1] recordingResultsList opposite dataProductsList
  
     @GenModel(children="false", property="None")
@@ -740,7 +741,7 @@ class OperationCall extends VariableFeatureReference, Named, Described
 
 class ArgumentsList
 {
-    @GenModel(property="Readonly")
+    @GenModel(property="None")
 	container OperationCall operationCall opposite argumentsList
 	
 	contains Argument [0..*] arguments opposite argumentsList

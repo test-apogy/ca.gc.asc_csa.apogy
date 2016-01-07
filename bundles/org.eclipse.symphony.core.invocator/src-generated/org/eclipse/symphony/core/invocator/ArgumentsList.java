@@ -41,7 +41,7 @@ public interface ArgumentsList extends EObject
 	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getArgumentsList_OperationCall()
 	 * @see org.eclipse.symphony.core.invocator.OperationCall#getArgumentsList
 	 * @model opposite="argumentsList" transient="false"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='Readonly'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
   OperationCall getOperationCall();

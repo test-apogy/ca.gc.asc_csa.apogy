@@ -147,13 +147,15 @@ class SymphonySystemApiAdapter extends TypeApiAdapter, PoseProvider
 }
 
 class ConnectionPointsList
-{
+{	
+    @GenModel(property="None")
 	container SymphonySystem[1] symphonySystem opposite connectionPointsList
 	contains ConnectionPoint[0..*] connectionPoints opposite pointsList	
 }
 
 class ConnectionPoint extends Named, Described 
 {
+	@GenModel(property="None")
 	container ConnectionPointsList[1] pointsList opposite connectionPoints
 	refers GroupNode node
 }

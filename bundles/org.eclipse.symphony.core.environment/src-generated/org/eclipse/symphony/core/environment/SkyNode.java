@@ -36,6 +36,7 @@ public interface SkyNode extends GroupNode
 	 * @see #setSky(Sky)
 	 * @see org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage#getSkyNode_Sky()
 	 * @model transient="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
   Sky getSky();

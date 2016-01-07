@@ -37,6 +37,7 @@ public interface ConnectionPointsList extends EObject {
 	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getConnectionPointsList_SymphonySystem()
 	 * @see org.eclipse.symphony.core.SymphonySystem#getConnectionPointsList
 	 * @model opposite="connectionPointsList" required="true" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
 	SymphonySystem getSymphonySystem();

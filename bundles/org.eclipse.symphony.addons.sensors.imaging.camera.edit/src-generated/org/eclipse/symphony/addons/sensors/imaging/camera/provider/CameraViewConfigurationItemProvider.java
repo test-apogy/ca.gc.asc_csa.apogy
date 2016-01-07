@@ -53,7 +53,6 @@ public class CameraViewConfigurationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addDescriptionPropertyDescriptor(object);
-			addCameraViewConfigurationListPropertyDescriptor(object);
 			addCameraPropertyDescriptor(object);
 			addImageWidthPropertyDescriptor(object);
 			addImageHeightPropertyDescriptor(object);
@@ -90,28 +89,6 @@ public class CameraViewConfigurationItemProvider
 	}
 
   /**
-	 * This adds a property descriptor for the Camera View Configuration List feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCameraViewConfigurationListPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_CameraViewConfiguration_cameraViewConfigurationList_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_CameraViewConfiguration_cameraViewConfigurationList_feature", "_UI_CameraViewConfiguration_type"),
-				 Symphony__AddonsSensorsImagingCameraPackage.Literals.CAMERA_VIEW_CONFIGURATION__CAMERA_VIEW_CONFIGURATION_LIST,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-		/**
 	 * This adds a property descriptor for the Camera feature.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

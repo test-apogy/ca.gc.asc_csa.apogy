@@ -99,6 +99,7 @@ public interface DataProductsList extends Named, Described
 	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getDataProductsList_RecordingResultsList()
 	 * @see org.eclipse.symphony.core.invocator.RecordingResultsList#getDataProductsList
 	 * @model opposite="dataProductsList" containment="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel children='false' createChild='false' notify='false'"
 	 * @generated
 	 */
   RecordingResultsList getRecordingResultsList();

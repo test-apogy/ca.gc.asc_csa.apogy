@@ -38,6 +38,7 @@ public interface ConnectionPoint extends Named, Described {
 	 * @see org.eclipse.symphony.core.Symphony__CorePackage#getConnectionPoint_PointsList()
 	 * @see org.eclipse.symphony.core.ConnectionPointsList#getConnectionPoints
 	 * @model opposite="connectionPoints" required="true" transient="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel property='None'"
 	 * @generated
 	 */
 	ConnectionPointsList getPointsList();

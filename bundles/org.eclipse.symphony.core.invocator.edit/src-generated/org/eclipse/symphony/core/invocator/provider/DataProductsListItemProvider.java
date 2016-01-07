@@ -131,7 +131,6 @@ public class DataProductsListItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST);
-			childrenFeatures.add(Symphony__CoreInvocatorPackage.Literals.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -195,7 +194,6 @@ public class DataProductsListItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST:
-			case Symphony__CoreInvocatorPackage.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -218,11 +216,6 @@ public class DataProductsListItemProvider
 			(createChildParameter
 				(Symphony__CoreInvocatorPackage.Literals.DATA_PRODUCTS_LIST__OPERATION_CALL_RESULTS_LIST,
 				 Symphony__CoreInvocatorFactory.eINSTANCE.createOperationCallResultsList()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__CoreInvocatorPackage.Literals.DATA_PRODUCTS_LIST__RECORDING_RESULTS_LIST,
-				 Symphony__CoreInvocatorFactory.eINSTANCE.createRecordingResultsList()));
 	}
 
   /**
