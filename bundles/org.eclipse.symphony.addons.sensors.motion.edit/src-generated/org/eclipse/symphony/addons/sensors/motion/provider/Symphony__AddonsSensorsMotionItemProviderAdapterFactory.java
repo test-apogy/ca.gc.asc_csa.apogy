@@ -41,7 +41,6 @@ import org.eclipse.symphony.addons.sensors.motion.util.Symphony__AddonsSensorsMo
 import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.AggregateGroupNode;
 import org.eclipse.symphony.common.topology.ContentNode;
-import org.eclipse.symphony.common.topology.GroupNode;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
 
 import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
@@ -421,36 +420,6 @@ public class Symphony__AddonsSensorsMotionItemProviderAdapterFactory extends Sym
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearVelocitySensor()));
-
-				return null;
-			}
- 
-			/**
-			 * <!-- begin-user-doc -->
-			 * <!-- end-user-doc -->
-			 * @generated
-			 */
-			@Override
-			public Object caseGroupNode(GroupNode object) {
-				newChildDescriptors.add
-					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createSelfMotionSensor()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createAngularVelocitySensor()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
-						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearAccelerationSensor()));
-
-				newChildDescriptors.add
-					(createChildParameter
-						(Symphony__CommonTopologyPackage.Literals.GROUP_NODE__CHILDREN,
 						 Symphony__AddonsSensorsMotionFactory.eINSTANCE.createLinearVelocitySensor()));
 
 				return null;
