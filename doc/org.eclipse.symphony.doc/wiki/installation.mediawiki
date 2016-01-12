@@ -98,5 +98,3 @@ Few '''org.orekit''' fixes are not included in the Symphony Third-Party packages
 === NASA World Wind ===
 The current packaging requires few little steps to ensure proper execution of NASA World Wind packages.
 # Import '''gov.nasa.worldwind''' project into the workspace.
-# Go into '''gov.nasa.worldwind''' and extract from '''jars/gluegen-rt-natives-<native_platform>.jar''' and  '''jars/jogl-all-natives-<native_platform>.jar''' the dynamic libraries and set the destination to ~/.
-When you launch a session using '''NASA World Wind''', ensure the Working Directory is set to /home/<user_name> in the Arguments panel of the Launch Configuration Dialog.
