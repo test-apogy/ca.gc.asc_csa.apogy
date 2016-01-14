@@ -13,6 +13,8 @@ import org.eclipse.symphony.core.SymphonySystemApiAdapter
 import org.eclipse.symphony.core.SymphonyInitializationData
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList
 import org.eclipse.symphony.examples.satellite.SatellitesList
+import org.eclipse.symphony.examples.satellite.ConstellationDownlinksList
+import org.eclipse.symphony.examples.satellite.ConstellationRequestsList
 
 /*
  * This class is the specialized Symphony API adapter, used for connecting
@@ -49,4 +51,14 @@ class ConstellationData extends SymphonyInitializationData
 	 * List of the {@link GroundStation}.
 	 */
 	contains GroundStationReferencesList[0..1] groundStationsReferencesList
+	
+		/*
+	 * List of {@link ConstellationDownlinkList} used to store {@link ConstellationDownlink}.
+	 */
+	contains ConstellationDownlinksList[0..1] downlinksLists
+	
+	/*
+	 * List of {@link AbstractConstellationRequest}.
+	 */
+	contains ConstellationRequestsList[0..1] constellationRequestsList
 }

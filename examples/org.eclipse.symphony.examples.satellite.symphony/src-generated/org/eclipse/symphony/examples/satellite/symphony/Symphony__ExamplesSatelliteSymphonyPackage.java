@@ -260,13 +260,31 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	int CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Downlinks Lists</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_DATA__DOWNLINKS_LISTS = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Constellation Requests List</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Constellation Data</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTELLATION_DATA_FEATURE_COUNT = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 2;
+	int CONSTELLATION_DATA_FEATURE_COUNT = Symphony__CorePackage.SYMPHONY_INITIALIZATION_DATA_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Constellation Data</em>' class.
@@ -319,6 +337,28 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getConstellationData_GroundStationsReferencesList();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getDownlinksLists <em>Downlinks Lists</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Downlinks Lists</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getDownlinksLists()
+	 * @see #getConstellationData()
+	 * @generated
+	 */
+	EReference getConstellationData_DownlinksLists();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getConstellationRequestsList <em>Constellation Requests List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Constellation Requests List</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.symphony.ConstellationData#getConstellationRequestsList()
+	 * @see #getConstellationData()
+	 * @generated
+	 */
+	EReference getConstellationData_ConstellationRequestsList();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -378,6 +418,22 @@ public interface Symphony__ExamplesSatelliteSymphonyPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST = eINSTANCE.getConstellationData_GroundStationsReferencesList();
+
+		/**
+		 * The meta object literal for the '<em><b>Downlinks Lists</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTELLATION_DATA__DOWNLINKS_LISTS = eINSTANCE.getConstellationData_DownlinksLists();
+
+		/**
+		 * The meta object literal for the '<em><b>Constellation Requests List</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST = eINSTANCE.getConstellationData_ConstellationRequestsList();
 
 	}
 

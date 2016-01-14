@@ -144,6 +144,24 @@ public class Symphony__ExamplesSatelliteSymphonyPackageImpl extends EPackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getConstellationData_DownlinksLists() {
+		return (EReference)constellationDataEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConstellationData_ConstellationRequestsList() {
+		return (EReference)constellationDataEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Symphony__ExamplesSatelliteSymphonyFactory getSymphony__ExamplesSatelliteSymphonyFactory() {
 		return (Symphony__ExamplesSatelliteSymphonyFactory)getEFactoryInstance();
 	}
@@ -172,6 +190,8 @@ public class Symphony__ExamplesSatelliteSymphonyPackageImpl extends EPackageImpl
 		constellationDataEClass = createEClass(CONSTELLATION_DATA);
 		createEReference(constellationDataEClass, CONSTELLATION_DATA__SATELLITES_LIST);
 		createEReference(constellationDataEClass, CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST);
+		createEReference(constellationDataEClass, CONSTELLATION_DATA__DOWNLINKS_LISTS);
+		createEReference(constellationDataEClass, CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST);
 	}
 
 	/**
@@ -216,6 +236,8 @@ public class Symphony__ExamplesSatelliteSymphonyPackageImpl extends EPackageImpl
 		initEClass(constellationDataEClass, ConstellationData.class, "ConstellationData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConstellationData_SatellitesList(), theSymphony__ExamplesSatellitePackage.getSatellitesList(), null, "satellitesList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConstellationData_GroundStationsReferencesList(), theSymphony__CoreEnvironmentOrbitEarthPackage.getGroundStationReferencesList(), null, "groundStationsReferencesList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstellationData_DownlinksLists(), theSymphony__ExamplesSatellitePackage.getConstellationDownlinksList(), null, "downlinksLists", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstellationData_ConstellationRequestsList(), theSymphony__ExamplesSatellitePackage.getConstellationRequestsList(), null, "constellationRequestsList", null, 0, 1, ConstellationData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -270,6 +292,18 @@ public class Symphony__ExamplesSatelliteSymphonyPackageImpl extends EPackageImpl
 		   source, 
 		   new String[] {
 			 "documentation", "List of the {@link GroundStation}."
+		   });	
+		addAnnotation
+		  (getConstellationData_DownlinksLists(), 
+		   source, 
+		   new String[] {
+			 "documentation", "List of {@link ConstellationDownlinkList} used to store {@link ConstellationDownlink}."
+		   });	
+		addAnnotation
+		  (getConstellationData_ConstellationRequestsList(), 
+		   source, 
+		   new String[] {
+			 "documentation", "List of {@link AbstractConstellationRequest}."
 		   });
 	}
 

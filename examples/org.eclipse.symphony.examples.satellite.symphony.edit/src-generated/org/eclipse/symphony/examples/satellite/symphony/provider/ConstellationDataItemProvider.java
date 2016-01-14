@@ -69,6 +69,8 @@ public class ConstellationDataItemProvider extends SymphonyInitializationDataIte
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_DATA__SATELLITES_LIST);
 			childrenFeatures.add(Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST);
+			childrenFeatures.add(Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_DATA__DOWNLINKS_LISTS);
+			childrenFeatures.add(Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST);
 		}
 		return childrenFeatures;
 	}
@@ -123,6 +125,8 @@ public class ConstellationDataItemProvider extends SymphonyInitializationDataIte
 		switch (notification.getFeatureID(ConstellationData.class)) {
 			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__SATELLITES_LIST:
 			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST:
+			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__DOWNLINKS_LISTS:
+			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -149,6 +153,16 @@ public class ConstellationDataItemProvider extends SymphonyInitializationDataIte
 			(createChildParameter
 				(Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST,
 				 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStationReferencesList()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_DATA__DOWNLINKS_LISTS,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationDownlinksList()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Symphony__ExamplesSatelliteSymphonyPackage.Literals.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createConstellationRequestsList()));
 	}
 
 }

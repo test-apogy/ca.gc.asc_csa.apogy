@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList;
 import org.eclipse.symphony.core.impl.SymphonyInitializationDataImpl;
 
+import org.eclipse.symphony.examples.satellite.ConstellationDownlinksList;
+import org.eclipse.symphony.examples.satellite.ConstellationRequestsList;
 import org.eclipse.symphony.examples.satellite.SatellitesList;
 import org.eclipse.symphony.examples.satellite.symphony.ConstellationData;
 import org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatelliteSymphonyPackage;
@@ -26,6 +28,8 @@ import org.eclipse.symphony.examples.satellite.symphony.Symphony__ExamplesSatell
  * <ul>
  *   <li>{@link org.eclipse.symphony.examples.satellite.symphony.impl.ConstellationDataImpl#getSatellitesList <em>Satellites List</em>}</li>
  *   <li>{@link org.eclipse.symphony.examples.satellite.symphony.impl.ConstellationDataImpl#getGroundStationsReferencesList <em>Ground Stations References List</em>}</li>
+ *   <li>{@link org.eclipse.symphony.examples.satellite.symphony.impl.ConstellationDataImpl#getDownlinksLists <em>Downlinks Lists</em>}</li>
+ *   <li>{@link org.eclipse.symphony.examples.satellite.symphony.impl.ConstellationDataImpl#getConstellationRequestsList <em>Constellation Requests List</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,6 +53,25 @@ public class ConstellationDataImpl extends SymphonyInitializationDataImpl implem
 	 * @ordered
 	 */
 	protected GroundStationReferencesList groundStationsReferencesList;
+
+	/**
+	 * The cached value of the '{@link #getDownlinksLists() <em>Downlinks Lists</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDownlinksLists()
+	 * @generated
+	 * @ordered
+	 */
+	protected ConstellationDownlinksList downlinksLists;
+	/**
+	 * The cached value of the '{@link #getConstellationRequestsList() <em>Constellation Requests List</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConstellationRequestsList()
+	 * @generated
+	 * @ordered
+	 */
+	protected ConstellationRequestsList constellationRequestsList;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -160,6 +183,92 @@ public class ConstellationDataImpl extends SymphonyInitializationDataImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ConstellationDownlinksList getDownlinksLists() {
+		return downlinksLists;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDownlinksLists(ConstellationDownlinksList newDownlinksLists, NotificationChain msgs) {
+		ConstellationDownlinksList oldDownlinksLists = downlinksLists;
+		downlinksLists = newDownlinksLists;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__DOWNLINKS_LISTS, oldDownlinksLists, newDownlinksLists);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDownlinksLists(ConstellationDownlinksList newDownlinksLists) {
+		if (newDownlinksLists != downlinksLists) {
+			NotificationChain msgs = null;
+			if (downlinksLists != null)
+				msgs = ((InternalEObject)downlinksLists).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__DOWNLINKS_LISTS, null, msgs);
+			if (newDownlinksLists != null)
+				msgs = ((InternalEObject)newDownlinksLists).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__DOWNLINKS_LISTS, null, msgs);
+			msgs = basicSetDownlinksLists(newDownlinksLists, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__DOWNLINKS_LISTS, newDownlinksLists, newDownlinksLists));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstellationRequestsList getConstellationRequestsList() {
+		return constellationRequestsList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetConstellationRequestsList(ConstellationRequestsList newConstellationRequestsList, NotificationChain msgs) {
+		ConstellationRequestsList oldConstellationRequestsList = constellationRequestsList;
+		constellationRequestsList = newConstellationRequestsList;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST, oldConstellationRequestsList, newConstellationRequestsList);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConstellationRequestsList(ConstellationRequestsList newConstellationRequestsList) {
+		if (newConstellationRequestsList != constellationRequestsList) {
+			NotificationChain msgs = null;
+			if (constellationRequestsList != null)
+				msgs = ((InternalEObject)constellationRequestsList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST, null, msgs);
+			if (newConstellationRequestsList != null)
+				msgs = ((InternalEObject)newConstellationRequestsList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST, null, msgs);
+			msgs = basicSetConstellationRequestsList(newConstellationRequestsList, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST, newConstellationRequestsList, newConstellationRequestsList));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -167,6 +276,10 @@ public class ConstellationDataImpl extends SymphonyInitializationDataImpl implem
 				return basicSetSatellitesList(null, msgs);
 			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST:
 				return basicSetGroundStationsReferencesList(null, msgs);
+			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__DOWNLINKS_LISTS:
+				return basicSetDownlinksLists(null, msgs);
+			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST:
+				return basicSetConstellationRequestsList(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -183,6 +296,10 @@ public class ConstellationDataImpl extends SymphonyInitializationDataImpl implem
 				return getSatellitesList();
 			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST:
 				return getGroundStationsReferencesList();
+			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__DOWNLINKS_LISTS:
+				return getDownlinksLists();
+			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST:
+				return getConstellationRequestsList();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -200,6 +317,12 @@ public class ConstellationDataImpl extends SymphonyInitializationDataImpl implem
 				return;
 			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST:
 				setGroundStationsReferencesList((GroundStationReferencesList)newValue);
+				return;
+			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__DOWNLINKS_LISTS:
+				setDownlinksLists((ConstellationDownlinksList)newValue);
+				return;
+			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST:
+				setConstellationRequestsList((ConstellationRequestsList)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -219,6 +342,12 @@ public class ConstellationDataImpl extends SymphonyInitializationDataImpl implem
 			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST:
 				setGroundStationsReferencesList((GroundStationReferencesList)null);
 				return;
+			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__DOWNLINKS_LISTS:
+				setDownlinksLists((ConstellationDownlinksList)null);
+				return;
+			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST:
+				setConstellationRequestsList((ConstellationRequestsList)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -235,6 +364,10 @@ public class ConstellationDataImpl extends SymphonyInitializationDataImpl implem
 				return satellitesList != null;
 			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__GROUND_STATIONS_REFERENCES_LIST:
 				return groundStationsReferencesList != null;
+			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__DOWNLINKS_LISTS:
+				return downlinksLists != null;
+			case Symphony__ExamplesSatelliteSymphonyPackage.CONSTELLATION_DATA__CONSTELLATION_REQUESTS_LIST:
+				return constellationRequestsList != null;
 		}
 		return super.eIsSet(featureID);
 	}
