@@ -20,6 +20,7 @@ import org.eclipse.symphony.core.environment.orbit.AttitudeProvider;
 import org.eclipse.symphony.core.environment.orbit.Orbit;
 import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
+import org.eclipse.symphony.core.environment.orbit.earth.*;
 import org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit;
 import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
@@ -177,6 +178,10 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 			@Override
 			public Adapter caseEarthSurfaceLocationList(EarthSurfaceLocationList object) {
 				return createEarthSurfaceLocationListAdapter();
+			}
+			@Override
+			public Adapter caseGroundStationReferencesList(GroundStationReferencesList object) {
+				return createGroundStationReferencesListAdapter();
 			}
 			@Override
 			public Adapter caseGroundStation(GroundStation object) {
@@ -539,6 +544,20 @@ public class Symphony__CoreEnvironmentOrbitEarthAdapterFactory extends AdapterFa
 	 * @generated
 	 */
 	public Adapter createEarthSurfaceLocationListAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList <em>Ground Station References List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList
+	 * @generated
+	 */
+	public Adapter createGroundStationReferencesListAdapter() {
 		return null;
 	}
 

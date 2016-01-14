@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.symphony.core.environment.orbit.earth.*;
 import org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit;
 import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
@@ -116,6 +117,7 @@ public class Symphony__CoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl
 			case Symphony__CoreEnvironmentOrbitEarthPackage.TLE: return createTLE();
 			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION: return createEarthSurfaceLocation();
 			case Symphony__CoreEnvironmentOrbitEarthPackage.EARTH_SURFACE_LOCATION_LIST: return createEarthSurfaceLocationList();
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST: return createGroundStationReferencesList();
 			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION: return createGroundStation();
 			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_LIST: return createGroundStationList();
 			case Symphony__CoreEnvironmentOrbitEarthPackage.VISIBILITY_PASS: return createVisibilityPass();
@@ -391,6 +393,16 @@ public class Symphony__CoreEnvironmentOrbitEarthFactoryImpl extends EFactoryImpl
 	public EarthSurfaceLocationList createEarthSurfaceLocationList() {
 		EarthSurfaceLocationListImpl earthSurfaceLocationList = new EarthSurfaceLocationListImpl();
 		return earthSurfaceLocationList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GroundStationReferencesList createGroundStationReferencesList() {
+		GroundStationReferencesListImpl groundStationReferencesList = new GroundStationReferencesListImpl();
+		return groundStationReferencesList;
 	}
 
 	/**

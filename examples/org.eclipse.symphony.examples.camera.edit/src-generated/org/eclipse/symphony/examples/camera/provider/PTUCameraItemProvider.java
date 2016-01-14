@@ -277,8 +277,7 @@ public class PTUCameraItemProvider extends CameraItemProvider
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection)
-	{
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
 		Object childFeature = feature;
 		Object childObject = child;
 

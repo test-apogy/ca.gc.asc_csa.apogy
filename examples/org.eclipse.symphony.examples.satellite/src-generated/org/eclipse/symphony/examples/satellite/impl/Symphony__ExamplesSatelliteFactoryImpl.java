@@ -5,28 +5,17 @@ package org.eclipse.symphony.examples.satellite.impl;
 
 import java.util.List;
 import java.util.SortedSet;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
-import org.eclipse.symphony.examples.satellite.ImageOrder;
-import org.eclipse.symphony.examples.satellite.OrbitalImage;
-import org.eclipse.symphony.examples.satellite.SatelliteCommand;
-import org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage;
-import org.eclipse.symphony.examples.satellite.SatelliteCommandList;
-import org.eclipse.symphony.examples.satellite.SatelliteCommandRoll;
-import org.eclipse.symphony.examples.satellite.SatelliteConstellation;
-import org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData;
-import org.eclipse.symphony.examples.satellite.SatelliteConstellationTypeApiAdapter;
-import org.eclipse.symphony.examples.satellite.SatelliteImager;
-import org.eclipse.symphony.examples.satellite.SatelliteInitializationData;
-import org.eclipse.symphony.examples.satellite.SatelliteSimulated;
-import org.eclipse.symphony.examples.satellite.SatelliteStub;
-import org.eclipse.symphony.examples.satellite.SatelliteUtils;
+
+import org.eclipse.symphony.examples.satellite.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -72,20 +61,20 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Symphony__ExamplesSatellitePackage.SATELLITE_SIMULATED: return createSatelliteSimulated();
-			case Symphony__ExamplesSatellitePackage.SATELLITE_STUB: return createSatelliteStub();
-			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND: return createSatelliteCommand();
-			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_LIST: return createSatelliteCommandList();
-			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ROLL: return createSatelliteCommandRoll();
-			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE: return createSatelliteCommandAcquireImage();
-			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER: return createImageOrder();
-			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER: return createSatelliteImager();
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN: return createConstellationCommandPlan();
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM: return createConstellationCommandPlanItem();
+			case Symphony__ExamplesSatellitePackage.DEFAULT_CONSTELLATION: return createDefaultConstellation();
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST: return createConstellationRequestsList();
+			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST: return createImageConstellationRequest();
+			case Symphony__ExamplesSatellitePackage.SATELLITES_LIST: return createSatellitesList();
+			case Symphony__ExamplesSatellitePackage.SATELLITE: return createSatellite();
+			case Symphony__ExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND: return createAbstractSatelliteCommand();
+			case Symphony__ExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND: return createAcquireImageSatelliteCommand();
 			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE: return createOrbitalImage();
-			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION: return createSatelliteConstellation();
-			case Symphony__ExamplesSatellitePackage.SATELLITE_UTILS: return createSatelliteUtils();
-			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_TYPE_API_ADAPTER: return createSatelliteConstellationTypeApiAdapter();
-			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA: return createSatelliteConstellationInitializationData();
-			case Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA: return createSatelliteInitializationData();
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST: return createConstellationDownlinksList();
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINK: return createConstellationDownlink();
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM: return createOrbitalImageConstellationDownlinkItem();
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_UTILITIES: return createConstellationUtilities();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -99,12 +88,14 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_REQUEST_PRIORITY:
+				return createConstellationRequestPriorityFromString(eDataType, initialValue);
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_REQUEST_STATUS:
+				return createConstellationRequestStatusFromString(eDataType, initialValue);
 			case Symphony__ExamplesSatellitePackage.LIST:
 				return createListFromString(eDataType, initialValue);
 			case Symphony__ExamplesSatellitePackage.SORTED_SET:
 				return createSortedSetFromString(eDataType, initialValue);
-			case Symphony__ExamplesSatellitePackage.EXCEPTION:
-				return createExceptionFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -118,12 +109,14 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_REQUEST_PRIORITY:
+				return convertConstellationRequestPriorityToString(eDataType, instanceValue);
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_REQUEST_STATUS:
+				return convertConstellationRequestStatusToString(eDataType, instanceValue);
 			case Symphony__ExamplesSatellitePackage.LIST:
 				return convertListToString(eDataType, instanceValue);
 			case Symphony__ExamplesSatellitePackage.SORTED_SET:
 				return convertSortedSetToString(eDataType, instanceValue);
-			case Symphony__ExamplesSatellitePackage.EXCEPTION:
-				return convertExceptionToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -134,9 +127,9 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SatelliteSimulated createSatelliteSimulated() {
-		SatelliteSimulatedImpl satelliteSimulated = new SatelliteSimulatedImpl();
-		return satelliteSimulated;
+	public ConstellationCommandPlan createConstellationCommandPlan() {
+		ConstellationCommandPlanImpl constellationCommandPlan = new ConstellationCommandPlanImpl();
+		return constellationCommandPlan;
 	}
 
 	/**
@@ -144,9 +137,9 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SatelliteStub createSatelliteStub() {
-		SatelliteStubImpl satelliteStub = new SatelliteStubImpl();
-		return satelliteStub;
+	public ConstellationCommandPlanItem createConstellationCommandPlanItem() {
+		ConstellationCommandPlanItemImpl constellationCommandPlanItem = new ConstellationCommandPlanItemImpl();
+		return constellationCommandPlanItem;
 	}
 
 	/**
@@ -154,9 +147,9 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SatelliteCommand createSatelliteCommand() {
-		SatelliteCommandImpl satelliteCommand = new SatelliteCommandImpl();
-		return satelliteCommand;
+	public DefaultConstellation createDefaultConstellation() {
+		DefaultConstellationImpl defaultConstellation = new DefaultConstellationImpl();
+		return defaultConstellation;
 	}
 
 	/**
@@ -164,9 +157,9 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SatelliteCommandList createSatelliteCommandList() {
-		SatelliteCommandListImpl satelliteCommandList = new SatelliteCommandListImpl();
-		return satelliteCommandList;
+	public ConstellationRequestsList createConstellationRequestsList() {
+		ConstellationRequestsListImpl constellationRequestsList = new ConstellationRequestsListImpl();
+		return constellationRequestsList;
 	}
 
 	/**
@@ -174,9 +167,9 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SatelliteCommandRoll createSatelliteCommandRoll() {
-		SatelliteCommandRollImpl satelliteCommandRoll = new SatelliteCommandRollImpl();
-		return satelliteCommandRoll;
+	public ImageConstellationRequest createImageConstellationRequest() {
+		ImageConstellationRequestImpl imageConstellationRequest = new ImageConstellationRequestImpl();
+		return imageConstellationRequest;
 	}
 
 	/**
@@ -184,9 +177,9 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SatelliteCommandAcquireImage createSatelliteCommandAcquireImage() {
-		SatelliteCommandAcquireImageImpl satelliteCommandAcquireImage = new SatelliteCommandAcquireImageImpl();
-		return satelliteCommandAcquireImage;
+	public SatellitesList createSatellitesList() {
+		SatellitesListImpl satellitesList = new SatellitesListImpl();
+		return satellitesList;
 	}
 
 	/**
@@ -194,9 +187,9 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ImageOrder createImageOrder() {
-		ImageOrderImpl imageOrder = new ImageOrderImpl();
-		return imageOrder;
+	public Satellite createSatellite() {
+		SatelliteImpl satellite = new SatelliteImpl();
+		return satellite;
 	}
 
 	/**
@@ -204,9 +197,19 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SatelliteImager createSatelliteImager() {
-		SatelliteImagerImpl satelliteImager = new SatelliteImagerImpl();
-		return satelliteImager;
+	public AbstractSatelliteCommand createAbstractSatelliteCommand() {
+		AbstractSatelliteCommandImpl abstractSatelliteCommand = new AbstractSatelliteCommandImpl();
+		return abstractSatelliteCommand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AcquireImageSatelliteCommand createAcquireImageSatelliteCommand() {
+		AcquireImageSatelliteCommandImpl acquireImageSatelliteCommand = new AcquireImageSatelliteCommandImpl();
+		return acquireImageSatelliteCommand;
 	}
 
 	/**
@@ -224,9 +227,9 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SatelliteConstellation createSatelliteConstellation() {
-		SatelliteConstellationImpl satelliteConstellation = new SatelliteConstellationImpl();
-		return satelliteConstellation;
+	public ConstellationDownlinksList createConstellationDownlinksList() {
+		ConstellationDownlinksListImpl constellationDownlinksList = new ConstellationDownlinksListImpl();
+		return constellationDownlinksList;
 	}
 
 	/**
@@ -234,9 +237,9 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SatelliteConstellationInitializationData createSatelliteConstellationInitializationData() {
-		SatelliteConstellationInitializationDataImpl satelliteConstellationInitializationData = new SatelliteConstellationInitializationDataImpl();
-		return satelliteConstellationInitializationData;
+	public ConstellationDownlink createConstellationDownlink() {
+		ConstellationDownlinkImpl constellationDownlink = new ConstellationDownlinkImpl();
+		return constellationDownlink;
 	}
 
 	/**
@@ -244,9 +247,9 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SatelliteConstellationTypeApiAdapter createSatelliteConstellationTypeApiAdapter() {
-		SatelliteConstellationTypeApiAdapterImpl satelliteConstellationTypeApiAdapter = new SatelliteConstellationTypeApiAdapterImpl();
-		return satelliteConstellationTypeApiAdapter;
+	public OrbitalImageConstellationDownlinkItem createOrbitalImageConstellationDownlinkItem() {
+		OrbitalImageConstellationDownlinkItemImpl orbitalImageConstellationDownlinkItem = new OrbitalImageConstellationDownlinkItemImpl();
+		return orbitalImageConstellationDownlinkItem;
 	}
 
 	/**
@@ -254,9 +257,9 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SatelliteInitializationData createSatelliteInitializationData() {
-		SatelliteInitializationDataImpl satelliteInitializationData = new SatelliteInitializationDataImpl();
-		return satelliteInitializationData;
+	public ConstellationUtilities createConstellationUtilities() {
+		ConstellationUtilitiesImpl constellationUtilities = new ConstellationUtilitiesImpl();
+		return constellationUtilities;
 	}
 
 	/**
@@ -264,9 +267,39 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SatelliteUtils createSatelliteUtils() {
-		SatelliteUtilsImpl satelliteUtils = new SatelliteUtilsImpl();
-		return satelliteUtils;
+	public ConstellationRequestPriority createConstellationRequestPriorityFromString(EDataType eDataType, String initialValue) {
+		ConstellationRequestPriority result = ConstellationRequestPriority.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertConstellationRequestPriorityToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConstellationRequestStatus createConstellationRequestStatusFromString(EDataType eDataType, String initialValue) {
+		ConstellationRequestStatus result = ConstellationRequestStatus.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertConstellationRequestStatusToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**
@@ -303,24 +336,6 @@ public class Symphony__ExamplesSatelliteFactoryImpl extends EFactoryImpl impleme
 	 */
 	public String convertSortedSetToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Exception createExceptionFromString(EDataType eDataType, String initialValue) {
-		return (Exception)super.createFromString(eDataType, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertExceptionToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

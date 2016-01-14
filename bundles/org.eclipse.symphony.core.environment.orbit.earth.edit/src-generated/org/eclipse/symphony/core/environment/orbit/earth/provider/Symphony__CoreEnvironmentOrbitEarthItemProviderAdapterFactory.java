@@ -426,6 +426,29 @@ public class Symphony__CoreEnvironmentOrbitEarthItemProviderAdapterFactory exten
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GroundStationReferencesListItemProvider groundStationReferencesListItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGroundStationReferencesListAdapter() {
+		if (groundStationReferencesListItemProvider == null) {
+			groundStationReferencesListItemProvider = new GroundStationReferencesListItemProvider(this);
+		}
+
+		return groundStationReferencesListItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -795,6 +818,7 @@ public class Symphony__CoreEnvironmentOrbitEarthItemProviderAdapterFactory exten
 		if (tleItemProvider != null) tleItemProvider.dispose();
 		if (earthSurfaceLocationItemProvider != null) earthSurfaceLocationItemProvider.dispose();
 		if (earthSurfaceLocationListItemProvider != null) earthSurfaceLocationListItemProvider.dispose();
+		if (groundStationReferencesListItemProvider != null) groundStationReferencesListItemProvider.dispose();
 		if (groundStationItemProvider != null) groundStationItemProvider.dispose();
 		if (groundStationListItemProvider != null) groundStationListItemProvider.dispose();
 		if (visibilityPassItemProvider != null) visibilityPassItemProvider.dispose();
@@ -1104,6 +1128,11 @@ public class Symphony__CoreEnvironmentOrbitEarthItemProviderAdapterFactory exten
 				newChildDescriptors.add
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
+						 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStationReferencesList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.CONTENT_NODE__CONTENT,
 						 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStation()));
 
 				newChildDescriptors.add
@@ -1230,6 +1259,11 @@ public class Symphony__CoreEnvironmentOrbitEarthItemProviderAdapterFactory exten
 					(createChildParameter
 						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
 						 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createEarthSurfaceLocationList()));
+
+				newChildDescriptors.add
+					(createChildParameter
+						(Symphony__CommonTopologyPackage.Literals.AGGREGATE_CONTENT_NODE__AGGREGATE_CONTENT,
+						 Symphony__CoreEnvironmentOrbitEarthFactory.eINSTANCE.createGroundStationReferencesList()));
 
 				newChildDescriptors.add
 					(createChildParameter

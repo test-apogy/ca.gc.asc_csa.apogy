@@ -9,8 +9,11 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -22,10 +25,14 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
+
 import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentFactory;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+
 import org.eclipse.symphony.examples.satellite.OrbitalImage;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.OrbitalImage} object.
@@ -64,8 +71,7 @@ public class OrbitalImageItemProvider
 
 			addWidthPropertyDescriptor(object);
 			addHeightPropertyDescriptor(object);
-			addOrderIdPropertyDescriptor(object);
-			addDownloadSizePropertyDescriptor(object);
+			addRollAnglePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -115,45 +121,23 @@ public class OrbitalImageItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Order Id feature.
+	 * This adds a property descriptor for the Roll Angle feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addOrderIdPropertyDescriptor(Object object) {
+	protected void addRollAnglePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_OrbitalImage_orderId_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitalImage_orderId_feature", "_UI_OrbitalImage_type"),
-				 Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__ORDER_ID,
+				 getString("_UI_OrbitalImage_rollAngle_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitalImage_rollAngle_feature", "_UI_OrbitalImage_type"),
+				 Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__ROLL_ANGLE,
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Download Size feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDownloadSizePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_OrbitalImage_downloadSize_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_OrbitalImage_downloadSize_feature", "_UI_OrbitalImage_type"),
-				 Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__DOWNLOAD_SIZE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -170,7 +154,7 @@ public class OrbitalImageItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__IMAGE_CENTER);
+			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES);
 		}
 		return childrenFeatures;
 	}
@@ -226,11 +210,10 @@ public class OrbitalImageItemProvider
 		switch (notification.getFeatureID(OrbitalImage.class)) {
 			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__WIDTH:
 			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__HEIGHT:
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__ORDER_ID:
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__DOWNLOAD_SIZE:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__ROLL_ANGLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__IMAGE_CENTER:
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE__COORDINATES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -250,7 +233,22 @@ public class OrbitalImageItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__IMAGE_CENTER,
+				(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createImageConstellationRequest()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAbstractSatelliteCommand()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
+				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createAcquireImageSatelliteCommand()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(Symphony__ExamplesSatellitePackage.Literals.ORBITAL_IMAGE__COORDINATES,
 				 Symphony__CoreEnvironmentFactory.eINSTANCE.createGeographicCoordinates()));
 	}
 

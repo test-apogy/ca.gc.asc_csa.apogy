@@ -8,7 +8,7 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated emf_ecore_examples_satellite -->
+      <!-- @generated symphony_examples_satellite -->
       <factory
             uri="org.eclipse.symphony.examples.satellite"
             class="org.eclipse.symphony.examples.satellite.provider.Symphony__ExamplesSatelliteItemProviderAdapterFactory"
@@ -23,26 +23,17 @@
    <extension point="org.eclipse.emf.edit.childCreationExtenders">
       <!-- @generated symphony_examples_satellite -->
       <extender
+            uri="org.eclipse.symphony.core.environment.orbit.earth"
+            class="org.eclipse.symphony.examples.satellite.provider.Symphony__ExamplesSatelliteItemProviderAdapterFactory$Symphony__CoreEnvironmentOrbitEarthChildCreationExtender"/>
+      <extender
             uri="org.eclipse.symphony.core.environment"
             class="org.eclipse.symphony.examples.satellite.provider.Symphony__ExamplesSatelliteItemProviderAdapterFactory$Symphony__CoreEnvironmentChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.addons.sensors.imaging"
-            class="org.eclipse.symphony.examples.satellite.provider.Symphony__ExamplesSatelliteItemProviderAdapterFactory$Symphony__AddonsSensorsImagingChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.common.topology"
-            class="org.eclipse.symphony.examples.satellite.provider.Symphony__ExamplesSatelliteItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
       <extender
             uri="org.eclipse.symphony.common.images"
             class="org.eclipse.symphony.examples.satellite.provider.Symphony__ExamplesSatelliteItemProviderAdapterFactory$Symphony__CommonImagesChildCreationExtender"/>
       <extender
-            uri="org.eclipse.symphony.core.invocator"
-            class="org.eclipse.symphony.examples.satellite.provider.Symphony__ExamplesSatelliteItemProviderAdapterFactory$Symphony__CoreInvocatorChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.core"
-            class="org.eclipse.symphony.examples.satellite.provider.Symphony__ExamplesSatelliteItemProviderAdapterFactory$Symphony__CoreChildCreationExtender"/>
-      <extender
-            uri="org.eclipse.symphony.common.topology.bindings"
-            class="org.eclipse.symphony.examples.satellite.provider.Symphony__ExamplesSatelliteItemProviderAdapterFactory$Symphony__CommonTopologyBindingsChildCreationExtender"/>
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.examples.satellite.provider.Symphony__ExamplesSatelliteItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
 
 </plugin>

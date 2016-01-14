@@ -38,6 +38,7 @@ import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.EphemerisType;
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStation;
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStationList;
+import org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList;
 import org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbit;
 import org.eclipse.symphony.core.environment.orbit.earth.KeplerianEarthOrbitPropagator;
 import org.eclipse.symphony.core.environment.orbit.earth.NadirPointingAttitudeProvider;
@@ -202,6 +203,13 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 * @generated
 	 */
 	private EClass earthSurfaceLocationListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass groundStationReferencesListEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1124,6 +1132,24 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 	 */
 	public EReference getEarthSurfaceLocationList_EarthSurfaceLocations() {
 		return (EReference)earthSurfaceLocationListEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGroundStationReferencesList() {
+		return groundStationReferencesListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGroundStationReferencesList_GroundStations() {
+		return (EReference)groundStationReferencesListEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2114,6 +2140,9 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		earthSurfaceLocationListEClass = createEClass(EARTH_SURFACE_LOCATION_LIST);
 		createEReference(earthSurfaceLocationListEClass, EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS);
 
+		groundStationReferencesListEClass = createEClass(GROUND_STATION_REFERENCES_LIST);
+		createEReference(groundStationReferencesListEClass, GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS);
+
 		groundStationEClass = createEClass(GROUND_STATION);
 		createEReference(groundStationEClass, GROUND_STATION__FIELD_OF_VIEW_ORIENTATION);
 		createEReference(groundStationEClass, GROUND_STATION__ELEVATION_MASK);
@@ -2419,6 +2448,9 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 
 		initEClass(earthSurfaceLocationListEClass, EarthSurfaceLocationList.class, "EarthSurfaceLocationList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEarthSurfaceLocationList_EarthSurfaceLocations(), this.getEarthSurfaceLocation(), null, "earthSurfaceLocations", null, 0, -1, EarthSurfaceLocationList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(groundStationReferencesListEClass, GroundStationReferencesList.class, "GroundStationReferencesList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getGroundStationReferencesList_GroundStations(), this.getGroundStation(), null, "groundStations", null, 0, -1, GroundStationReferencesList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groundStationEClass, GroundStation.class, "GroundStation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGroundStation_FieldOfViewOrientation(), theSymphony__CommonMathPackage.getMatrix3x3(), null, "fieldOfViewOrientation", null, 0, 1, GroundStation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3053,6 +3085,18 @@ public class Symphony__CoreEnvironmentOrbitEarthPackageImpl extends EPackageImpl
 		   source, 
 		   new String[] {
 			 "documentation", "Defines a location on the surface of the Earth."
+		   });	
+		addAnnotation
+		  (groundStationReferencesListEClass, 
+		   source, 
+		   new String[] {
+			 "documentation", "List that refers {@link GroundStation}."
+		   });	
+		addAnnotation
+		  (getGroundStationReferencesList_GroundStations(), 
+		   source, 
+		   new String[] {
+			 "documentation", "{@link GroundStation} container."
 		   });	
 		addAnnotation
 		  (groundStationEClass, 

@@ -71,60 +71,60 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
   /**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__PARENT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__PARENT;
-  /**
+	int CAMERA__PARENT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__PARENT;
+		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__DESCRIPTION = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__DESCRIPTION;
-  /**
+	int CAMERA__DESCRIPTION = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__DESCRIPTION;
+		/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__NODE_ID = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NODE_ID;
-  /**
+	int CAMERA__NODE_ID = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NODE_ID;
+		/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__CHILDREN = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__CHILDREN;
-  /**
+	int CAMERA__CHILDREN = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__CHILDREN;
+		/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__AGGREGATED_CHILDREN = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__AGGREGATED_CHILDREN;
-  /**
+	int CAMERA__AGGREGATED_CHILDREN = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__AGGREGATED_CHILDREN;
+		/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__STATUS = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__STATUS;
-  /**
+	int CAMERA__STATUS = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__STATUS;
+		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA__NAME = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME;
-  /**
+	int CAMERA__NAME = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME;
+		/**
 	 * The feature id for the '<em><b>Latest Image Snapshot</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -183,12 +183,12 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
   /**
 	 * The operation id for the '<em>Accept</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int CAMERA___ACCEPT__INODEVISITOR = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___ACCEPT__INODEVISITOR;
-  /**
+	int CAMERA___ACCEPT__INODEVISITOR = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___ACCEPT__INODEVISITOR;
+		/**
 	 * The operation id for the '<em>Take Snapshot</em>' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -650,60 +650,60 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
   /**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA__PARENT = CAMERA__PARENT;
-  /**
+	int PTU_CAMERA__PARENT = CAMERA__PARENT;
+		/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA__DESCRIPTION = CAMERA__DESCRIPTION;
-  /**
+	int PTU_CAMERA__DESCRIPTION = CAMERA__DESCRIPTION;
+		/**
 	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA__NODE_ID = CAMERA__NODE_ID;
-  /**
+	int PTU_CAMERA__NODE_ID = CAMERA__NODE_ID;
+		/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA__CHILDREN = CAMERA__CHILDREN;
-  /**
+	int PTU_CAMERA__CHILDREN = CAMERA__CHILDREN;
+		/**
 	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA__AGGREGATED_CHILDREN = CAMERA__AGGREGATED_CHILDREN;
-  /**
+	int PTU_CAMERA__AGGREGATED_CHILDREN = CAMERA__AGGREGATED_CHILDREN;
+		/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA__STATUS = CAMERA__STATUS;
-  /**
+	int PTU_CAMERA__STATUS = CAMERA__STATUS;
+		/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA__NAME = CAMERA__NAME;
-  /**
+	int PTU_CAMERA__NAME = CAMERA__NAME;
+		/**
 	 * The feature id for the '<em><b>Latest Image Snapshot</b></em>' reference.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -810,12 +810,12 @@ public interface Symphony__ExamplesCameraPackage extends EPackage
   /**
 	 * The operation id for the '<em>Accept</em>' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int PTU_CAMERA___ACCEPT__INODEVISITOR = CAMERA___ACCEPT__INODEVISITOR;
-  /**
+	int PTU_CAMERA___ACCEPT__INODEVISITOR = CAMERA___ACCEPT__INODEVISITOR;
+		/**
 	 * The operation id for the '<em>Take Snapshot</em>' operation.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

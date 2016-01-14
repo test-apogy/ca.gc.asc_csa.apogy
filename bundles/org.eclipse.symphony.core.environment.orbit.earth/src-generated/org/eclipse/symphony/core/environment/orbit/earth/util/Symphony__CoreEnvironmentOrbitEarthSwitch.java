@@ -19,6 +19,7 @@ import org.eclipse.symphony.core.environment.orbit.AttitudeProvider;
 import org.eclipse.symphony.core.environment.orbit.Orbit;
 import org.eclipse.symphony.core.environment.orbit.OrbitWorksite;
 import org.eclipse.symphony.core.environment.orbit.SpacecraftState;
+import org.eclipse.symphony.core.environment.orbit.earth.*;
 import org.eclipse.symphony.core.environment.orbit.earth.CartesianEarthOrbit;
 import org.eclipse.symphony.core.environment.orbit.earth.ConstantElevationMask;
 import org.eclipse.symphony.core.environment.orbit.earth.Corridor;
@@ -262,6 +263,12 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 				T result = caseEarthSurfaceLocationList(earthSurfaceLocationList);
 				if (result == null) result = caseNamed(earthSurfaceLocationList);
 				if (result == null) result = caseDescribed(earthSurfaceLocationList);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Symphony__CoreEnvironmentOrbitEarthPackage.GROUND_STATION_REFERENCES_LIST: {
+				GroundStationReferencesList groundStationReferencesList = (GroundStationReferencesList)theEObject;
+				T result = caseGroundStationReferencesList(groundStationReferencesList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -611,6 +618,21 @@ public class Symphony__CoreEnvironmentOrbitEarthSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEarthSurfaceLocationList(EarthSurfaceLocationList object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ground Station References List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ground Station References List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGroundStationReferencesList(GroundStationReferencesList object) {
 		return null;
 	}
 

@@ -5,34 +5,19 @@ package org.eclipse.symphony.examples.satellite.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
+
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
+
+import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Named;
+import org.eclipse.symphony.common.emf.Timed;
+
 import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
-import org.eclipse.symphony.examples.satellite.ImageOrder;
-import org.eclipse.symphony.examples.satellite.OrbitalImage;
-import org.eclipse.symphony.examples.satellite.Satellite;
-import org.eclipse.symphony.examples.satellite.SatelliteCommand;
-import org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage;
-import org.eclipse.symphony.examples.satellite.SatelliteCommandList;
-import org.eclipse.symphony.examples.satellite.SatelliteCommandRoll;
-import org.eclipse.symphony.examples.satellite.SatelliteConstellation;
-import org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData;
-import org.eclipse.symphony.examples.satellite.SatelliteConstellationTypeApiAdapter;
-import org.eclipse.symphony.examples.satellite.SatelliteImager;
-import org.eclipse.symphony.examples.satellite.SatelliteInitializationData;
-import org.eclipse.symphony.examples.satellite.SatelliteSimulated;
-import org.eclipse.symphony.examples.satellite.SatelliteStub;
-import org.eclipse.symphony.examples.satellite.SatelliteUtils;
+
+import org.eclipse.symphony.core.environment.GeographicCoordinates;
+import org.eclipse.symphony.examples.satellite.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -91,104 +76,92 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	protected Symphony__ExamplesSatelliteSwitch<Adapter> modelSwitch =
 		new Symphony__ExamplesSatelliteSwitch<Adapter>() {
 			@Override
+			public Adapter caseAbstractConstellation(AbstractConstellation object) {
+				return createAbstractConstellationAdapter();
+			}
+			@Override
+			public Adapter caseConstellationCommandPlan(ConstellationCommandPlan object) {
+				return createConstellationCommandPlanAdapter();
+			}
+			@Override
+			public Adapter caseConstellationCommandPlanItem(ConstellationCommandPlanItem object) {
+				return createConstellationCommandPlanItemAdapter();
+			}
+			@Override
+			public Adapter caseDefaultConstellation(DefaultConstellation object) {
+				return createDefaultConstellationAdapter();
+			}
+			@Override
+			public Adapter caseConstellationRequestsList(ConstellationRequestsList object) {
+				return createConstellationRequestsListAdapter();
+			}
+			@Override
+			public Adapter caseAbstractConstellationRequest(AbstractConstellationRequest object) {
+				return createAbstractConstellationRequestAdapter();
+			}
+			@Override
+			public Adapter caseImageConstellationRequest(ImageConstellationRequest object) {
+				return createImageConstellationRequestAdapter();
+			}
+			@Override
+			public Adapter caseSatellitesList(SatellitesList object) {
+				return createSatellitesListAdapter();
+			}
+			@Override
 			public Adapter caseSatellite(Satellite object) {
 				return createSatelliteAdapter();
 			}
 			@Override
-			public Adapter caseSatelliteSimulated(SatelliteSimulated object) {
-				return createSatelliteSimulatedAdapter();
+			public Adapter caseAbstractSatelliteCommand(AbstractSatelliteCommand object) {
+				return createAbstractSatelliteCommandAdapter();
 			}
 			@Override
-			public Adapter caseSatelliteStub(SatelliteStub object) {
-				return createSatelliteStubAdapter();
-			}
-			@Override
-			public Adapter caseSatelliteCommand(SatelliteCommand object) {
-				return createSatelliteCommandAdapter();
-			}
-			@Override
-			public Adapter caseSatelliteCommandList(SatelliteCommandList object) {
-				return createSatelliteCommandListAdapter();
-			}
-			@Override
-			public Adapter caseSatelliteCommandRoll(SatelliteCommandRoll object) {
-				return createSatelliteCommandRollAdapter();
-			}
-			@Override
-			public Adapter caseSatelliteCommandAcquireImage(SatelliteCommandAcquireImage object) {
-				return createSatelliteCommandAcquireImageAdapter();
-			}
-			@Override
-			public Adapter caseImageOrder(ImageOrder object) {
-				return createImageOrderAdapter();
-			}
-			@Override
-			public Adapter caseSatelliteImager(SatelliteImager object) {
-				return createSatelliteImagerAdapter();
+			public Adapter caseAcquireImageSatelliteCommand(AcquireImageSatelliteCommand object) {
+				return createAcquireImageSatelliteCommandAdapter();
 			}
 			@Override
 			public Adapter caseOrbitalImage(OrbitalImage object) {
 				return createOrbitalImageAdapter();
 			}
 			@Override
-			public Adapter caseSatelliteConstellation(SatelliteConstellation object) {
-				return createSatelliteConstellationAdapter();
+			public Adapter caseConstellationDownlinksList(ConstellationDownlinksList object) {
+				return createConstellationDownlinksListAdapter();
 			}
 			@Override
-			public Adapter caseSatelliteUtils(SatelliteUtils object) {
-				return createSatelliteUtilsAdapter();
+			public Adapter caseConstellationDownlink(ConstellationDownlink object) {
+				return createConstellationDownlinkAdapter();
 			}
 			@Override
-			public Adapter caseSatelliteConstellationTypeApiAdapter(SatelliteConstellationTypeApiAdapter object) {
-				return createSatelliteConstellationTypeApiAdapterAdapter();
+			public Adapter caseAbstractConstellationDownlinkItem(AbstractConstellationDownlinkItem object) {
+				return createAbstractConstellationDownlinkItemAdapter();
 			}
 			@Override
-			public Adapter caseSatelliteConstellationInitializationData(SatelliteConstellationInitializationData object) {
-				return createSatelliteConstellationInitializationDataAdapter();
+			public Adapter caseOrbitalImageConstellationDownlinkItem(OrbitalImageConstellationDownlinkItem object) {
+				return createOrbitalImageConstellationDownlinkItemAdapter();
 			}
 			@Override
-			public Adapter caseSatelliteInitializationData(SatelliteInitializationData object) {
-				return createSatelliteInitializationDataAdapter();
+			public Adapter caseConstellationUtilities(ConstellationUtilities object) {
+				return createConstellationUtilitiesAdapter();
+			}
+			@Override
+			public Adapter caseGeographicCoordinates(GeographicCoordinates object) {
+				return createGeographicCoordinatesAdapter();
 			}
 			@Override
 			public Adapter caseNamed(Named object) {
 				return createNamedAdapter();
 			}
 			@Override
-			public Adapter caseNode(Node object) {
-				return createNodeAdapter();
-			}
-			@Override
-			public Adapter caseGroupNode(GroupNode object) {
-				return createGroupNodeAdapter();
-			}
-			@Override
-			public Adapter caseAggregateGroupNode(AggregateGroupNode object) {
-				return createAggregateGroupNodeAdapter();
-			}
-			@Override
-			public Adapter caseSensor(Sensor object) {
-				return createSensorAdapter();
-			}
-			@Override
-			public Adapter caseAbstractCamera(AbstractCamera object) {
-				return createAbstractCameraAdapter();
-			}
-			@Override
-			public Adapter caseZoomable(Zoomable object) {
-				return createZoomableAdapter();
+			public Adapter caseTimed(Timed object) {
+				return createTimedAdapter();
 			}
 			@Override
 			public Adapter caseAbstractEImage(AbstractEImage object) {
 				return createAbstractEImageAdapter();
 			}
 			@Override
-			public Adapter caseTypeApiAdapter(TypeApiAdapter object) {
-				return createTypeApiAdapterAdapter();
-			}
-			@Override
-			public Adapter caseAbstractInitializationData(AbstractInitializationData object) {
-				return createAbstractInitializationDataAdapter();
+			public Adapter caseDescribed(Described object) {
+				return createDescribedAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -211,6 +184,118 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation <em>Abstract Constellation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation
+	 * @generated
+	 */
+	public Adapter createAbstractConstellationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlan <em>Constellation Command Plan</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationCommandPlan
+	 * @generated
+	 */
+	public Adapter createConstellationCommandPlanAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem <em>Constellation Command Plan Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem
+	 * @generated
+	 */
+	public Adapter createConstellationCommandPlanItemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.DefaultConstellation <em>Default Constellation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.examples.satellite.DefaultConstellation
+	 * @generated
+	 */
+	public Adapter createDefaultConstellationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestsList <em>Constellation Requests List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestsList
+	 * @generated
+	 */
+	public Adapter createConstellationRequestsListAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationRequest <em>Abstract Constellation Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationRequest
+	 * @generated
+	 */
+	public Adapter createAbstractConstellationRequestAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ImageConstellationRequest <em>Image Constellation Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.examples.satellite.ImageConstellationRequest
+	 * @generated
+	 */
+	public Adapter createImageConstellationRequestAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.SatellitesList <em>Satellites List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.examples.satellite.SatellitesList
+	 * @generated
+	 */
+	public Adapter createSatellitesListAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.Satellite <em>Satellite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -225,114 +310,30 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.SatelliteSimulated <em>Satellite Simulated</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand <em>Abstract Satellite Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteSimulated
+	 * @see org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand
 	 * @generated
 	 */
-	public Adapter createSatelliteSimulatedAdapter() {
+	public Adapter createAbstractSatelliteCommandAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.SatelliteStub <em>Satellite Stub</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand <em>Acquire Image Satellite Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteStub
+	 * @see org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand
 	 * @generated
 	 */
-	public Adapter createSatelliteStubAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.SatelliteCommand <em>Satellite Command</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteCommand
-	 * @generated
-	 */
-	public Adapter createSatelliteCommandAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.SatelliteCommandList <em>Satellite Command List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteCommandList
-	 * @generated
-	 */
-	public Adapter createSatelliteCommandListAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.SatelliteCommandRoll <em>Satellite Command Roll</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteCommandRoll
-	 * @generated
-	 */
-	public Adapter createSatelliteCommandRollAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage <em>Satellite Command Acquire Image</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage
-	 * @generated
-	 */
-	public Adapter createSatelliteCommandAcquireImageAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ImageOrder <em>Image Order</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.ImageOrder
-	 * @generated
-	 */
-	public Adapter createImageOrderAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.SatelliteImager <em>Satellite Imager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteImager
-	 * @generated
-	 */
-	public Adapter createSatelliteImagerAdapter() {
+	public Adapter createAcquireImageSatelliteCommandAdapter() {
 		return null;
 	}
 
@@ -351,72 +352,86 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation <em>Satellite Constellation</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ConstellationDownlinksList <em>Constellation Downlinks List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationDownlinksList
 	 * @generated
 	 */
-	public Adapter createSatelliteConstellationAdapter() {
+	public Adapter createConstellationDownlinksListAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData <em>Satellite Constellation Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ConstellationDownlink <em>Constellation Downlink</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationDownlink
 	 * @generated
 	 */
-	public Adapter createSatelliteConstellationInitializationDataAdapter() {
+	public Adapter createConstellationDownlinkAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellationTypeApiAdapter <em>Satellite Constellation Type Api Adapter</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem <em>Abstract Constellation Downlink Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellationTypeApiAdapter
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem
 	 * @generated
 	 */
-	public Adapter createSatelliteConstellationTypeApiAdapterAdapter() {
+	public Adapter createAbstractConstellationDownlinkItemAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.SatelliteInitializationData <em>Satellite Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem <em>Orbital Image Constellation Downlink Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteInitializationData
+	 * @see org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem
 	 * @generated
 	 */
-	public Adapter createSatelliteInitializationDataAdapter() {
+	public Adapter createOrbitalImageConstellationDownlinkItemAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.SatelliteUtils <em>Satellite Utils</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.examples.satellite.ConstellationUtilities <em>Constellation Utilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteUtils
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationUtilities
 	 * @generated
 	 */
-	public Adapter createSatelliteUtilsAdapter() {
+	public Adapter createConstellationUtilitiesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.environment.GeographicCoordinates <em>Geographic Coordinates</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.core.environment.GeographicCoordinates
+	 * @generated
+	 */
+	public Adapter createGeographicCoordinatesAdapter() {
 		return null;
 	}
 
@@ -435,86 +450,16 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.Node <em>Node</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Timed <em>Timed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.Node
+	 * @see org.eclipse.symphony.common.emf.Timed
 	 * @generated
 	 */
-	public Adapter createNodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.GroupNode <em>Group Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.GroupNode
-	 * @generated
-	 */
-	public Adapter createGroupNodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.topology.AggregateGroupNode <em>Aggregate Group Node</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.common.topology.AggregateGroupNode
-	 * @generated
-	 */
-	public Adapter createAggregateGroupNodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.Sensor <em>Sensor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.Sensor
-	 * @generated
-	 */
-	public Adapter createSensorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.AbstractCamera <em>Abstract Camera</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.AbstractCamera
-	 * @generated
-	 */
-	public Adapter createAbstractCameraAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.addons.sensors.imaging.Zoomable <em>Zoomable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.addons.sensors.imaging.Zoomable
-	 * @generated
-	 */
-	public Adapter createZoomableAdapter() {
+	public Adapter createTimedAdapter() {
 		return null;
 	}
 
@@ -533,30 +478,16 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.AbstractInitializationData <em>Abstract Initialization Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.emf.Described <em>Described</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.AbstractInitializationData
+	 * @see org.eclipse.symphony.common.emf.Described
 	 * @generated
 	 */
-	public Adapter createAbstractInitializationDataAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.core.invocator.TypeApiAdapter <em>Type Api Adapter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.symphony.core.invocator.TypeApiAdapter
-	 * @generated
-	 */
-	public Adapter createTypeApiAdapterAdapter() {
+	public Adapter createDescribedAdapter() {
 		return null;
 	}
 

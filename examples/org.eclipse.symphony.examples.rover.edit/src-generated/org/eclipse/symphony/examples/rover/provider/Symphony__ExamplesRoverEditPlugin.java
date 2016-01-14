@@ -11,14 +11,12 @@ import org.eclipse.symphony.addons.sensors.fov.provider.Symphony__AddonsSensorsF
 import org.eclipse.symphony.addons.sensors.imaging.provider.Symphony__AddonsSensorsImagingEditPlugin;
 import org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsEditPlugin;
 import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
-
 import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
 import org.eclipse.symphony.common.images.provider.Symphony__CommonImagesEditPlugin;
 import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
-
 import org.eclipse.symphony.examples.camera.provider.Symphony__ExamplesCameraEditPlugin;
 
 import org.eclipse.symphony.examples.mobile_platform.provider.Symphony__ExamplesMobilePlatformEditPlugin;

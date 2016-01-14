@@ -8,17 +8,11 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated emf_ecore_examples_satellite -->
+      <!-- @generated symphony_examples_satellite -->
       <package
             uri="org.eclipse.symphony.examples.satellite"
             class="org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage"
             genModel="model/symphony_examples_satellite.xcore"/>
-   </extension>
-   <extension
-         point="org.eclipse.symphony.core.invocator.typeContributor">
-      <Type
-            URI="model/SatelliteConstellationExample.ei">
-      </Type>
    </extension>
 
 </plugin>

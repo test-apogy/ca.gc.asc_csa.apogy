@@ -6,26 +6,18 @@ package org.eclipse.symphony.examples.mobile_platform.symphony.provider;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
-
 import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
-
 import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
-
 import org.eclipse.symphony.common.images.provider.Symphony__CommonImagesEditPlugin;
 import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
 import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessorsEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.Symphony__CommonTopologyBindingsEditPlugin;
-
 import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
-
 import org.eclipse.symphony.common.topology.ui.provider.Symphony__CommonTopologyUIEditPlugin;
 import org.eclipse.symphony.core.environment.provider.Symphony__CoreEnvironmentEditPlugin;
 import org.eclipse.symphony.core.environment.ui.provider.Symphony__CoreEnvironmentUIEditPlugin;
-
 import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorEditPlugin;
-
 import org.eclipse.symphony.core.provider.Symphony__CoreEditPlugin;
 
 /**

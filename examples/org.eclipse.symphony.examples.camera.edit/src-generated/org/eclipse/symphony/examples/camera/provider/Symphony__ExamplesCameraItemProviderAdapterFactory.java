@@ -330,7 +330,7 @@ public class Symphony__ExamplesCameraItemProviderAdapterFactory extends Symphony
 		if (ptuCameraSimulatedItemProvider != null) ptuCameraSimulatedItemProvider.dispose();
 	}
 
-  /**
+		/**
 	 * A child creation extender for the {@link Symphony__CommonTopologyPackage}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

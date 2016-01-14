@@ -23,76 +23,85 @@ public interface Symphony__ExamplesSatelliteFactory extends EFactory {
 	Symphony__ExamplesSatelliteFactory eINSTANCE = org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatelliteFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Satellite Simulated</em>'.
+	 * Returns a new object of class '<em>Constellation Command Plan</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Satellite Simulated</em>'.
+	 * @return a new object of class '<em>Constellation Command Plan</em>'.
 	 * @generated
 	 */
-	SatelliteSimulated createSatelliteSimulated();
+	ConstellationCommandPlan createConstellationCommandPlan();
 
 	/**
-	 * Returns a new object of class '<em>Satellite Stub</em>'.
+	 * Returns a new object of class '<em>Constellation Command Plan Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Satellite Stub</em>'.
+	 * @return a new object of class '<em>Constellation Command Plan Item</em>'.
 	 * @generated
 	 */
-	SatelliteStub createSatelliteStub();
+	ConstellationCommandPlanItem createConstellationCommandPlanItem();
 
 	/**
-	 * Returns a new object of class '<em>Satellite Command</em>'.
+	 * Returns a new object of class '<em>Default Constellation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Satellite Command</em>'.
+	 * @return a new object of class '<em>Default Constellation</em>'.
 	 * @generated
 	 */
-	SatelliteCommand createSatelliteCommand();
+	DefaultConstellation createDefaultConstellation();
 
 	/**
-	 * Returns a new object of class '<em>Satellite Command List</em>'.
+	 * Returns a new object of class '<em>Constellation Requests List</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Satellite Command List</em>'.
+	 * @return a new object of class '<em>Constellation Requests List</em>'.
 	 * @generated
 	 */
-	SatelliteCommandList createSatelliteCommandList();
+	ConstellationRequestsList createConstellationRequestsList();
 
 	/**
-	 * Returns a new object of class '<em>Satellite Command Roll</em>'.
+	 * Returns a new object of class '<em>Image Constellation Request</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Satellite Command Roll</em>'.
+	 * @return a new object of class '<em>Image Constellation Request</em>'.
 	 * @generated
 	 */
-	SatelliteCommandRoll createSatelliteCommandRoll();
+	ImageConstellationRequest createImageConstellationRequest();
 
 	/**
-	 * Returns a new object of class '<em>Satellite Command Acquire Image</em>'.
+	 * Returns a new object of class '<em>Satellites List</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Satellite Command Acquire Image</em>'.
+	 * @return a new object of class '<em>Satellites List</em>'.
 	 * @generated
 	 */
-	SatelliteCommandAcquireImage createSatelliteCommandAcquireImage();
+	SatellitesList createSatellitesList();
 
 	/**
-	 * Returns a new object of class '<em>Image Order</em>'.
+	 * Returns a new object of class '<em>Satellite</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Image Order</em>'.
+	 * @return a new object of class '<em>Satellite</em>'.
 	 * @generated
 	 */
-	ImageOrder createImageOrder();
+	Satellite createSatellite();
 
 	/**
-	 * Returns a new object of class '<em>Satellite Imager</em>'.
+	 * Returns a new object of class '<em>Abstract Satellite Command</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Satellite Imager</em>'.
+	 * @return a new object of class '<em>Abstract Satellite Command</em>'.
 	 * @generated
 	 */
-	SatelliteImager createSatelliteImager();
+	AbstractSatelliteCommand createAbstractSatelliteCommand();
+
+	/**
+	 * Returns a new object of class '<em>Acquire Image Satellite Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Acquire Image Satellite Command</em>'.
+	 * @generated
+	 */
+	AcquireImageSatelliteCommand createAcquireImageSatelliteCommand();
 
 	/**
 	 * Returns a new object of class '<em>Orbital Image</em>'.
@@ -104,40 +113,40 @@ public interface Symphony__ExamplesSatelliteFactory extends EFactory {
 	OrbitalImage createOrbitalImage();
 
 	/**
-	 * Returns a new object of class '<em>Satellite Constellation</em>'.
+	 * Returns a new object of class '<em>Constellation Downlinks List</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Satellite Constellation</em>'.
+	 * @return a new object of class '<em>Constellation Downlinks List</em>'.
 	 * @generated
 	 */
-	SatelliteConstellation createSatelliteConstellation();
+	ConstellationDownlinksList createConstellationDownlinksList();
 
 	/**
-	 * Returns a new object of class '<em>Satellite Constellation Initialization Data</em>'.
+	 * Returns a new object of class '<em>Constellation Downlink</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Satellite Constellation Initialization Data</em>'.
+	 * @return a new object of class '<em>Constellation Downlink</em>'.
 	 * @generated
 	 */
-	SatelliteConstellationInitializationData createSatelliteConstellationInitializationData();
+	ConstellationDownlink createConstellationDownlink();
 
 	/**
-	 * Returns a new object of class '<em>Satellite Constellation Type Api Adapter</em>'.
+	 * Returns a new object of class '<em>Orbital Image Constellation Downlink Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Satellite Constellation Type Api Adapter</em>'.
+	 * @return a new object of class '<em>Orbital Image Constellation Downlink Item</em>'.
 	 * @generated
 	 */
-	SatelliteConstellationTypeApiAdapter createSatelliteConstellationTypeApiAdapter();
+	OrbitalImageConstellationDownlinkItem createOrbitalImageConstellationDownlinkItem();
 
 	/**
-	 * Returns a new object of class '<em>Satellite Initialization Data</em>'.
+	 * Returns a new object of class '<em>Constellation Utilities</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Satellite Initialization Data</em>'.
+	 * @return a new object of class '<em>Constellation Utilities</em>'.
 	 * @generated
 	 */
-	SatelliteInitializationData createSatelliteInitializationData();
+	ConstellationUtilities createConstellationUtilities();
 
 	/**
 	 * Returns the package supported by this factory.
@@ -147,14 +156,5 @@ public interface Symphony__ExamplesSatelliteFactory extends EFactory {
 	 * @generated
 	 */
 	Symphony__ExamplesSatellitePackage getSymphony__ExamplesSatellitePackage();
-
-	/**
-	 * Returns a new object of class '<em>Satellite Utils</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Satellite Utils</em>'.
-	 * @generated
-	 */
-	SatelliteUtils createSatelliteUtils();
 
 } //Symphony__ExamplesSatelliteFactory

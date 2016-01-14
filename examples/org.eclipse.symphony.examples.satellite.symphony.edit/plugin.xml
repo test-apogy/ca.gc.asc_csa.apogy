@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <!-- @generated symphony_examples_satellite_symphony -->
+      <factory
+            uri="org.eclipse.symphony.examples.satellite.symphony"
+            class="org.eclipse.symphony.examples.satellite.symphony.provider.Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated symphony_examples_satellite_symphony -->
+      <extender
+            uri="org.eclipse.symphony.core.invocator"
+            class="org.eclipse.symphony.examples.satellite.symphony.provider.Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory$Symphony__CoreInvocatorChildCreationExtender"/>
+      <extender
+            uri="org.eclipse.symphony.common.topology"
+            class="org.eclipse.symphony.examples.satellite.symphony.provider.Symphony__ExamplesSatelliteSymphonyItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
+   </extension>
+
+</plugin>

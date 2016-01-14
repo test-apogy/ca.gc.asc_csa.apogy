@@ -9,8 +9,9 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -22,11 +23,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
-import org.eclipse.symphony.core.environment.orbit.Symphony__CoreEnvironmentOrbitFactory;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatelliteFactory;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
+
 import org.eclipse.symphony.examples.satellite.Satellite;
+import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
 
 /**
  * This is the item provider adapter for a {@link org.eclipse.symphony.examples.satellite.Satellite} object.
@@ -64,6 +65,7 @@ public class SatelliteItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addOrbitModelPropertyDescriptor(object);
 			addMaximumRollRatePropertyDescriptor(object);
 			addMaximumRollPropertyDescriptor(object);
 		}
@@ -88,6 +90,28 @@ public class SatelliteItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Orbit Model feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOrbitModelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Satellite_orbitModel_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Satellite_orbitModel_feature", "_UI_Satellite_type"),
+				 Symphony__ExamplesSatellitePackage.Literals.SATELLITE__ORBIT_MODEL,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -137,34 +161,14 @@ public class SatelliteItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This returns Satellite.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.SATELLITE__ORBIT_MODEL);
-			childrenFeatures.add(Symphony__ExamplesSatellitePackage.Literals.SATELLITE__IMAGER);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Satellite"));
 	}
 
 	/**
@@ -199,10 +203,6 @@ public class SatelliteItemProvider
 			case Symphony__ExamplesSatellitePackage.SATELLITE__MAXIMUM_ROLL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case Symphony__ExamplesSatellitePackage.SATELLITE__ORBIT_MODEL:
-			case Symphony__ExamplesSatellitePackage.SATELLITE__IMAGER:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -217,16 +217,6 @@ public class SatelliteItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE__ORBIT_MODEL,
-				 Symphony__CoreEnvironmentOrbitFactory.eINSTANCE.createOrbitModel()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(Symphony__ExamplesSatellitePackage.Literals.SATELLITE__IMAGER,
-				 Symphony__ExamplesSatelliteFactory.eINSTANCE.createSatelliteImager()));
 	}
 
 	/**
