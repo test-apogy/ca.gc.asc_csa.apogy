@@ -139,6 +139,21 @@ public interface AbstractConstellation extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
+	 * Returns the list of {@link AbstractSatelliteCommand} required to process the constellation {@link AbstractConstellationRequest}
+	 * based on the available constellation satellites.
+	 * @param startDate The start date of the period to be queried.
+	 * @param endDate The end date of the period to be queried.
+	 * @return Reference to the {@link SatelliteCommandPlan}.
+	 * <!-- end-model-doc -->
+	 * @model unique="false" startDateUnique="false" endDateUnique="false"
+	 * @generated
+	 */
+	ConstellationCommandPlan plan(Date startDate, Date endDate);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
 	 * Returns the list of {@link AbstractSatelliteCommand} required to process a specific list of {@link AbstractConstellationRequest}
 	 * based on the available constellation satellites.
 	 * @param requests Refers to the list of {@link AbstractConstellationRequest} to process.

@@ -12,7 +12,7 @@ package org.eclipse.symphony.examples.satellite
 import org.eclipse.symphony.common.emf.Described
 import org.eclipse.symphony.common.emf.Named
 import org.eclipse.symphony.common.emf.Timed
-import org.eclipse.symphony.common.images.AbstractEImage
+import org.eclipse.symphony.common.images.EImage
 import org.eclipse.symphony.core.environment.GeographicCoordinates
 import org.eclipse.symphony.core.environment.orbit.OrbitModel
 import org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList
@@ -47,6 +47,15 @@ abstract class AbstractConstellation{
 	 * List of {@link AbstractConstellationRequest}.
 	 */
 	contains ConstellationRequestsList[0..1] constellationRequestsList
+
+	/*
+	 * Returns the list of {@link AbstractSatelliteCommand} required to process the constellation {@link AbstractConstellationRequest} 
+	 * based on the available constellation satellites.
+	 * @param startDate The start date of the period to be queried.
+	 * @param endDate The end date of the period to be queried.
+	 * @return Reference to the {@link SatelliteCommandPlan}.
+	 */
+	op ConstellationCommandPlan plan(Date startDate, Date endDate)
 	
 	/*
 	 * Returns the list of {@link AbstractSatelliteCommand} required to process a specific list of {@link AbstractConstellationRequest} 
@@ -252,7 +261,7 @@ class AcquireImageSatelliteCommand extends AbstractSatelliteCommand
 /*
  * This class represents an orbital image.
  */
-class OrbitalImage extends AbstractEImage{
+class OrbitalImage extends EImage{
 	contains GeographicCoordinates[1] coordinates	
 	double rollAngle = "0.0"	
 }

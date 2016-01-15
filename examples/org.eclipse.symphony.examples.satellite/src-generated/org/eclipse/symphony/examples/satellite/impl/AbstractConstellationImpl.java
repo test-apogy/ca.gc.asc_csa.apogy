@@ -281,6 +281,17 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ConstellationCommandPlan plan(Date startDate, Date endDate) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ConstellationCommandPlan plan(List<AbstractConstellationRequest> requests, Date startDate, Date endDate) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -471,6 +482,8 @@ public abstract class AbstractConstellationImpl extends MinimalEObjectImpl.Conta
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
+			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION___PLAN__DATE_DATE:
+				return plan((Date)arguments.get(0), (Date)arguments.get(1));
 			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION___PLAN__LIST_DATE_DATE:
 				return plan((List<AbstractConstellationRequest>)arguments.get(0), (Date)arguments.get(1), (Date)arguments.get(2));
 			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION___COMMIT__LIST:

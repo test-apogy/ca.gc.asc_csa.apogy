@@ -129,7 +129,16 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION___PLAN__LIST_DATE_DATE = 0;
+	int ABSTRACT_CONSTELLATION___PLAN__DATE_DATE = 0;
+
+	/**
+	 * The operation id for the '<em>Plan</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION___PLAN__LIST_DATE_DATE = 1;
 
 	/**
 	 * The operation id for the '<em>Commit</em>' operation.
@@ -138,7 +147,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION___COMMIT__LIST = 1;
+	int ABSTRACT_CONSTELLATION___COMMIT__LIST = 2;
 
 	/**
 	 * The operation id for the '<em>Apply</em>' operation.
@@ -147,7 +156,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION___APPLY__CONSTELLATIONDOWNLINK = 2;
+	int ABSTRACT_CONSTELLATION___APPLY__CONSTELLATIONDOWNLINK = 3;
 
 	/**
 	 * The operation id for the '<em>Add</em>' operation.
@@ -156,7 +165,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION___ADD__ABSTRACTCONSTELLATIONREQUEST = 3;
+	int ABSTRACT_CONSTELLATION___ADD__ABSTRACTCONSTELLATIONREQUEST = 4;
 
 	/**
 	 * The operation id for the '<em>Add All</em>' operation.
@@ -165,7 +174,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION___ADD_ALL__LIST = 4;
+	int ABSTRACT_CONSTELLATION___ADD_ALL__LIST = 5;
 
 	/**
 	 * The operation id for the '<em>Remove</em>' operation.
@@ -174,7 +183,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION___REMOVE__ABSTRACTCONSTELLATIONREQUEST = 5;
+	int ABSTRACT_CONSTELLATION___REMOVE__ABSTRACTCONSTELLATIONREQUEST = 6;
 
 	/**
 	 * The operation id for the '<em>Remove All</em>' operation.
@@ -183,7 +192,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION___REMOVE_ALL__LIST = 6;
+	int ABSTRACT_CONSTELLATION___REMOVE_ALL__LIST = 7;
 
 	/**
 	 * The number of operations of the '<em>Abstract Constellation</em>' class.
@@ -192,7 +201,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_CONSTELLATION_OPERATION_COUNT = 7;
+	int ABSTRACT_CONSTELLATION_OPERATION_COUNT = 8;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanImpl <em>Constellation Command Plan</em>}' class.
@@ -331,6 +340,15 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @ordered
 	 */
 	int DEFAULT_CONSTELLATION_FEATURE_COUNT = ABSTRACT_CONSTELLATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Plan</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION___PLAN__DATE_DATE = ABSTRACT_CONSTELLATION___PLAN__DATE_DATE;
 
 	/**
 	 * The operation id for the '<em>Plan</em>' operation.
@@ -896,7 +914,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__WIDTH = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE__WIDTH;
+	int ORBITAL_IMAGE__WIDTH = Symphony__CommonImagesPackage.EIMAGE__WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -905,7 +923,16 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__HEIGHT = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE__HEIGHT;
+	int ORBITAL_IMAGE__HEIGHT = Symphony__CommonImagesPackage.EIMAGE__HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Image Content</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORBITAL_IMAGE__IMAGE_CONTENT = Symphony__CommonImagesPackage.EIMAGE__IMAGE_CONTENT;
 
 	/**
 	 * The feature id for the '<em><b>Coordinates</b></em>' containment reference.
@@ -914,7 +941,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__COORDINATES = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE_FEATURE_COUNT + 0;
+	int ORBITAL_IMAGE__COORDINATES = Symphony__CommonImagesPackage.EIMAGE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Roll Angle</b></em>' attribute.
@@ -923,7 +950,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__ROLL_ANGLE = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE_FEATURE_COUNT + 1;
+	int ORBITAL_IMAGE__ROLL_ANGLE = Symphony__CommonImagesPackage.EIMAGE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Orbital Image</em>' class.
@@ -932,7 +959,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE_FEATURE_COUNT = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE_FEATURE_COUNT + 2;
+	int ORBITAL_IMAGE_FEATURE_COUNT = Symphony__CommonImagesPackage.EIMAGE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>As Buffered Image</em>' operation.
@@ -941,7 +968,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE___AS_BUFFERED_IMAGE = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE___AS_BUFFERED_IMAGE;
+	int ORBITAL_IMAGE___AS_BUFFERED_IMAGE = Symphony__CommonImagesPackage.EIMAGE___AS_BUFFERED_IMAGE;
 
 	/**
 	 * The number of operations of the '<em>Orbital Image</em>' class.
@@ -950,7 +977,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE_OPERATION_COUNT = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE_OPERATION_COUNT + 0;
+	int ORBITAL_IMAGE_OPERATION_COUNT = Symphony__CommonImagesPackage.EIMAGE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinksListImpl <em>Constellation Downlinks List</em>}' class.
@@ -1258,6 +1285,16 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAbstractConstellation_ConstellationRequestsList();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#plan(java.util.Date, java.util.Date) <em>Plan</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Plan</em>' operation.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#plan(java.util.Date, java.util.Date)
+	 * @generated
+	 */
+	EOperation getAbstractConstellation__Plan__Date_Date();
 
 	/**
 	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#plan(java.util.List, java.util.Date, java.util.Date) <em>Plan</em>}' operation.
@@ -1847,6 +1884,14 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST = eINSTANCE.getAbstractConstellation_ConstellationRequestsList();
+
+		/**
+		 * The meta object literal for the '<em><b>Plan</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_CONSTELLATION___PLAN__DATE_DATE = eINSTANCE.getAbstractConstellation__Plan__Date_Date();
 
 		/**
 		 * The meta object literal for the '<em><b>Plan</b></em>' operation.

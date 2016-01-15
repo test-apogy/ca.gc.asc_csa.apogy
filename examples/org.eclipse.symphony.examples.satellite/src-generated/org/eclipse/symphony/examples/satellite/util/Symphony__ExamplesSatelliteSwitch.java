@@ -14,6 +14,7 @@ import org.eclipse.symphony.common.emf.Timed;
 
 import org.eclipse.symphony.common.images.AbstractEImage;
 
+import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.examples.satellite.*;
 
@@ -152,6 +153,7 @@ public class Symphony__ExamplesSatelliteSwitch<T> extends Switch<T> {
 			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE: {
 				OrbitalImage orbitalImage = (OrbitalImage)theEObject;
 				T result = caseOrbitalImage(orbitalImage);
+				if (result == null) result = caseEImage(orbitalImage);
 				if (result == null) result = caseAbstractEImage(orbitalImage);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -505,6 +507,21 @@ public class Symphony__ExamplesSatelliteSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAbstractEImage(AbstractEImage object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EImage</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EImage</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEImage(EImage object) {
 		return null;
 	}
 

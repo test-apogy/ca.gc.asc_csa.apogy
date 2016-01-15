@@ -317,7 +317,7 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellation__Plan__List_Date_Date() {
+	public EOperation getAbstractConstellation__Plan__Date_Date() {
 		return abstractConstellationEClass.getEOperations().get(0);
 	}
 
@@ -326,7 +326,7 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellation__Commit__List() {
+	public EOperation getAbstractConstellation__Plan__List_Date_Date() {
 		return abstractConstellationEClass.getEOperations().get(1);
 	}
 
@@ -335,7 +335,7 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellation__Apply__ConstellationDownlink() {
+	public EOperation getAbstractConstellation__Commit__List() {
 		return abstractConstellationEClass.getEOperations().get(2);
 	}
 
@@ -344,7 +344,7 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellation__Add__AbstractConstellationRequest() {
+	public EOperation getAbstractConstellation__Apply__ConstellationDownlink() {
 		return abstractConstellationEClass.getEOperations().get(3);
 	}
 
@@ -353,7 +353,7 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellation__AddAll__List() {
+	public EOperation getAbstractConstellation__Add__AbstractConstellationRequest() {
 		return abstractConstellationEClass.getEOperations().get(4);
 	}
 
@@ -362,7 +362,7 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellation__Remove__AbstractConstellationRequest() {
+	public EOperation getAbstractConstellation__AddAll__List() {
 		return abstractConstellationEClass.getEOperations().get(5);
 	}
 
@@ -371,8 +371,17 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAbstractConstellation__RemoveAll__List() {
+	public EOperation getAbstractConstellation__Remove__AbstractConstellationRequest() {
 		return abstractConstellationEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getAbstractConstellation__RemoveAll__List() {
+		return abstractConstellationEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -795,6 +804,7 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 		createEReference(abstractConstellationEClass, ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST);
 		createEReference(abstractConstellationEClass, ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS);
 		createEReference(abstractConstellationEClass, ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST);
+		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___PLAN__DATE_DATE);
 		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___PLAN__LIST_DATE_DATE);
 		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___COMMIT__LIST);
 		createEOperation(abstractConstellationEClass, ABSTRACT_CONSTELLATION___APPLY__CONSTELLATIONDOWNLINK);
@@ -912,7 +922,7 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 		abstractSatelliteCommandEClass.getESuperTypes().add(theSymphony__CoreEnvironmentPackage.getGeographicCoordinates());
 		abstractSatelliteCommandEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getTimed());
 		acquireImageSatelliteCommandEClass.getESuperTypes().add(this.getAbstractSatelliteCommand());
-		orbitalImageEClass.getESuperTypes().add(theSymphony__CommonImagesPackage.getAbstractEImage());
+		orbitalImageEClass.getESuperTypes().add(theSymphony__CommonImagesPackage.getEImage());
 		constellationDownlinksListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getNamed());
 		constellationDownlinksListEClass.getESuperTypes().add(theSymphony__CommonEMFPackage.getDescribed());
 		orbitalImageConstellationDownlinkItemEClass.getESuperTypes().add(this.getAbstractConstellationDownlinkItem());
@@ -924,7 +934,11 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 		initEReference(getAbstractConstellation_DownlinksLists(), this.getConstellationDownlinksList(), null, "downlinksLists", null, 0, 1, AbstractConstellation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAbstractConstellation_ConstellationRequestsList(), this.getConstellationRequestsList(), null, "constellationRequestsList", null, 0, 1, AbstractConstellation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getAbstractConstellation__Plan__List_Date_Date(), this.getConstellationCommandPlan(), "plan", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EOperation op = initEOperation(getAbstractConstellation__Plan__Date_Date(), this.getConstellationCommandPlan(), "plan", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "startDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEDate(), "endDate", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getAbstractConstellation__Plan__List_Date_Date(), this.getConstellationCommandPlan(), "plan", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		EGenericType g1 = createEGenericType(this.getList());
 		EGenericType g2 = createEGenericType(this.getAbstractConstellationRequest());
 		g1.getETypeArguments().add(g2);
@@ -1080,6 +1094,12 @@ public class Symphony__ExamplesSatellitePackageImpl extends EPackageImpl impleme
 		   source, 
 		   new String[] {
 			 "documentation", "Represents a constellation of Satellites. It provides basic queries used to schedule\nimage acquisition and upload requests and downloads data from the satellites."
+		   });	
+		addAnnotation
+		  (getAbstractConstellation__Plan__Date_Date(), 
+		   source, 
+		   new String[] {
+			 "documentation", "Returns the list of {@link AbstractSatelliteCommand} required to process the constellation {@link AbstractConstellationRequest}\nbased on the available constellation satellites.\n@param startDate The start date of the period to be queried.\n@param endDate The end date of the period to be queried.\n@return Reference to the {@link SatelliteCommandPlan}."
 		   });	
 		addAnnotation
 		  (getAbstractConstellation__Plan__List_Date_Date(), 

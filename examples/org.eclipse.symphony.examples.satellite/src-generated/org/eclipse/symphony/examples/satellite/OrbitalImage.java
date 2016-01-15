@@ -3,8 +3,7 @@
  */
 package org.eclipse.symphony.examples.satellite;
 
-import org.eclipse.symphony.common.images.AbstractEImage;
-
+import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 
 /**
@@ -28,7 +27,7 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
  * @model
  * @generated
  */
-public interface OrbitalImage extends AbstractEImage {
+public interface OrbitalImage extends EImage {
 	/**
 	 * Returns the value of the '<em><b>Coordinates</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

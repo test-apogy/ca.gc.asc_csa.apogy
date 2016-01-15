@@ -8,8 +8,8 @@ Bundle-Activator: org.eclipse.symphony.examples.satellite.ui.Activator
 Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.eclipse.symphony.examples.satellite;bundle-version="0.3.0";visibility:=reexport
+ org.eclipse.symphony.examples.satellite;bundle-version="0.3.0";visibility:=reexport,
+ org.eclipse.ui.forms;bundle-version="3.6.200"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
-Export-Package: org.eclipse.symphony.examples.satellite.ui,
- org.eclipse.symphony.examples.satellite.ui.commands
+Export-Package: org.eclipse.symphony.examples.satellite.ui

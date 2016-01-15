@@ -16,6 +16,7 @@ import org.eclipse.symphony.common.emf.Timed;
 
 import org.eclipse.symphony.common.images.AbstractEImage;
 
+import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 import org.eclipse.symphony.examples.satellite.*;
 
@@ -158,6 +159,10 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 			@Override
 			public Adapter caseAbstractEImage(AbstractEImage object) {
 				return createAbstractEImageAdapter();
+			}
+			@Override
+			public Adapter caseEImage(EImage object) {
+				return createEImageAdapter();
 			}
 			@Override
 			public Adapter caseDescribed(Described object) {
@@ -474,6 +479,20 @@ public class Symphony__ExamplesSatelliteAdapterFactory extends AdapterFactoryImp
 	 * @generated
 	 */
 	public Adapter createAbstractEImageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.symphony.common.images.EImage <em>EImage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.symphony.common.images.EImage
+	 * @generated
+	 */
+	public Adapter createEImageAdapter() {
 		return null;
 	}
 
