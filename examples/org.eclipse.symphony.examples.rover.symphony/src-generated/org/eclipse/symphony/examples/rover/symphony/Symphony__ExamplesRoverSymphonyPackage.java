@@ -22,7 +22,7 @@ import org.eclipse.symphony.core.Symphony__CorePackage;
  * <!-- end-user-doc -->
  * @see org.eclipse.symphony.examples.rover.symphony.Symphony__ExamplesRoverSymphonyFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesRoverSymphony' copyrightText='Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015' modelName='Symphony__ExamplesRoverSymphony' modelDirectory='/org.eclipse.symphony.examples.rover.symphony/src-generated' editDirectory='/org.eclipse.symphony.examples.rover.symphony.edit/src-generated' basePackage='org.eclipse.symphony.examples.rover'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel prefix='Symphony__ExamplesRoverSymphony' copyrightText='Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016' modelName='Symphony__ExamplesRoverSymphony' modelDirectory='/org.eclipse.symphony.examples.rover.symphony/src-generated' editDirectory='/org.eclipse.symphony.examples.rover.symphony.edit/src-generated' basePackage='org.eclipse.symphony.examples.rover'"
  * @generated
  */
 public interface Symphony__ExamplesRoverSymphonyPackage extends EPackage
