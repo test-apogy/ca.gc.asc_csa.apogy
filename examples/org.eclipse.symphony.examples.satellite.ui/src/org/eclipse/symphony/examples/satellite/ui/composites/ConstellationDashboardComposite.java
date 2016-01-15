@@ -6,6 +6,11 @@ import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.ui.forms.widgets.ExpandableComposite;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.ui.forms.widgets.Section;
 
 public class ConstellationDashboardComposite extends Composite {
 
@@ -17,7 +22,7 @@ public class ConstellationDashboardComposite extends Composite {
 	 * @param style
 	 */
 	public ConstellationDashboardComposite(Composite parent, int style) {
-		super(parent, style);
+		super(parent, SWT.NONE);
 		addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
 				toolkit.dispose();
@@ -25,5 +30,11 @@ public class ConstellationDashboardComposite extends Composite {
 		});
 		toolkit.adapt(this);
 		toolkit.paintBordersFor(this);
+		setLayout(new GridLayout(1, false));
+		
+		Section sctnNewSection = toolkit.createSection(this, Section.TWISTIE | Section.TITLE_BAR);
+		sctnNewSection.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1));
+		toolkit.paintBordersFor(sctnNewSection);
+		sctnNewSection.setText("New Section");
 	}
 }
