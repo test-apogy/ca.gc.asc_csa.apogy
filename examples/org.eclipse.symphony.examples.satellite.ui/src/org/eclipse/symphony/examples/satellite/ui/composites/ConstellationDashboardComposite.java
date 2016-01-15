@@ -7,7 +7,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
-public class ConstellationDashboard extends Composite {
+public class ConstellationDashboardComposite extends Composite {
 
 	private final FormToolkit toolkit = new FormToolkit(Display.getCurrent());
 
@@ -16,7 +16,7 @@ public class ConstellationDashboard extends Composite {
 	 * @param parent
 	 * @param style
 	 */
-	public ConstellationDashboard(Composite parent, int style) {
+	public ConstellationDashboardComposite(Composite parent, int style) {
 		super(parent, style);
 		addDisposeListener(new DisposeListener() {
 			public void widgetDisposed(DisposeEvent e) {
