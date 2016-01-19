@@ -34,6 +34,13 @@ import org.eclipse.symphony.core.programs.controllers.Trigger;
  */
 public class OperationCallControllerBindingImpl extends OperationCallImpl implements OperationCallControllerBinding
 {
+   /**
+    * Whether or not the operation call is busy being executed. This is used to ensure that calls to the operation
+    * are NOT queued if the operation execution is not completed by the time it is called again. Queuing commands using
+    * controllers binding is typically not what we want.
+    */
+   private boolean busy = false;
+	
   /**
 	 * The default value of the '{@link #isCreateResult() <em>Create Result</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -202,7 +209,12 @@ public class OperationCallControllerBindingImpl extends OperationCallImpl implem
    */
   public void update()
   {
-	  Symphony__CoreInvocatorFacade.INSTANCE.exec(this, isCreateResult());
+	  // If the operation call is busy being executed.
+	  if(!busy)
+	  {
+		  Symphony__CoreInvocatorFacade.INSTANCE.exec(this, isCreateResult());
+		  busy = false;
+	  }	  
   }
 
   /**
