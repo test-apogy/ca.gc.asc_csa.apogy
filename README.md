@@ -24,8 +24,8 @@ All Symphony RCP applications are based on the same foundation and are packaged 
 * 64-bit Linux (GTK) 
 
 ### Java Virtual Machine ###
-* Ensure a proper Java Runtime Environment (JRE) is installed on your system (1.8 or higher).  You can download JRE from [http://www.oracle.com/technetwork/java/javase/downloads/index.html http://www.oracle.com/technetwork/java/javase/downloads/index.html].  
-* The virtual machine must be accessible in the PATH.  Type the following commands in a system shell to verify the installed java version.<pre>java -version&#10;openjdk version "1.8.0_51"&#10;OpenJDK Runtime Environment (build 1.8.0_51-b16)&#10;OpenJDK 64-Bit Server VM (build 25.51-b03, mixed mode)</pre>
+* Ensure a proper Java Runtime Environment (JRE) is installed on your system (1.8 or higher).  You can download JRE from [http://www.oracle.com/technetwork/java/javase/downloads/index.html].  
+* The virtual machine must be accessible in the PATH.  Type the following commands in a system shell to verify the installed java version.<p>java -version&#10;openjdk version "1.8.0_51"&#10;OpenJDK Runtime Environment (build 1.8.0_51-b16)&#10;OpenJDK 64-Bit Server VM (build 25.51-b03, mixed mode)</p>
 
 ### Symphony Rich Client Platform Applications ###
 * Install Symphony RCP Application<pre>unzip symphony.product-linux.gtk.x86_64.zip</pre>
