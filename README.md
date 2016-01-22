@@ -13,3 +13,6 @@ Teleoperation is supported through flexible hand controller mapping, camera disp
 
 # Installation #
 [Installation](/doc/org.eclipse.symphony.doc/wiki/installation.mediawiki)
+
+# Contributors #
+TODO Put notes for the contributors.
