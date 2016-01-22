@@ -1,3 +1,7 @@
+![Apogy Logo](/doc/org.eclipse.symphony.doc/resources/main/apogy_logo.jpg "Apogy Logo")
+
+**Table of Contents**
+
 [TOC]
 
 # Background #
