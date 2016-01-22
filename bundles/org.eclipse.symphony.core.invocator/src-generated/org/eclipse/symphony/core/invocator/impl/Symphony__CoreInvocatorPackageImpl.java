@@ -9,6 +9,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -46,6 +47,7 @@ import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Environment;
 import org.eclipse.symphony.core.invocator.ExceptionContainer;
+import org.eclipse.symphony.core.invocator.IVariableListener;
 import org.eclipse.symphony.core.invocator.InitializationData;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.LocalTypesList;
@@ -77,6 +79,7 @@ import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 import org.eclipse.symphony.core.invocator.VariableImplementation;
 import org.eclipse.symphony.core.invocator.VariableImplementationsList;
+import org.eclipse.symphony.core.invocator.VariableListenerEventType;
 import org.eclipse.symphony.core.invocator.VariablesList;
 import org.eclipse.symphony.core.invocator.Watch;
 import org.eclipse.symphony.core.invocator.WatchFeatureNodeAdapter;
@@ -541,6 +544,13 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum variableListenerEventTypeEEnum = null;
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -566,6 +576,13 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * @generated
 	 */
 	private EDataType typeMembersArrayEDataType = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType iVariableListenerEDataType = null;
 
 		/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -647,8 +664,17 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSymphony__CoreInvocatorFacade_InitVariableInstancesDate() {
+		return (EAttribute)symphony__CoreInvocatorFacadeEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getSymphony__CoreInvocatorFacade_ActiveInvocatorSession() {
-		return (EReference)symphony__CoreInvocatorFacadeEClass.getEStructuralFeatures().get(0);
+		return (EReference)symphony__CoreInvocatorFacadeEClass.getEStructuralFeatures().get(1);
 	}
 
 		/**
@@ -818,7 +844,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreInvocatorFacade__CreateTypeMemberReferences__TypeMember() {
+	public EOperation getSymphony__CoreInvocatorFacade__GetVariableByName__InvocatorSession_String() {
 		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(18);
 	}
 
@@ -827,7 +853,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreInvocatorFacade__GetTypeImplementation__Environment_String() {
+	public EOperation getSymphony__CoreInvocatorFacade__CreateTypeMemberReferences__TypeMember() {
 		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(19);
 	}
 
@@ -836,7 +862,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement() {
+	public EOperation getSymphony__CoreInvocatorFacade__GetTypeImplementation__Environment_String() {
 		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(20);
 	}
 
@@ -845,7 +871,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode() {
+	public EOperation getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__TypeMemberReferenceTreeElement() {
 		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(21);
 	}
 
@@ -854,7 +880,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreInvocatorFacade__CreateTypeMemberImplementations__Type() {
+	public EOperation getSymphony__CoreInvocatorFacade__GetFullyQualifiedName__AbstractFeatureNode() {
 		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(22);
 	}
 
@@ -863,7 +889,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreInvocatorFacade__InitVariableInstances__Environment() {
+	public EOperation getSymphony__CoreInvocatorFacade__CreateTypeMemberImplementations__Type() {
 		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(23);
 	}
 
@@ -872,7 +898,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreInvocatorFacade__DisposeVariableInstances__Environment() {
+	public EOperation getSymphony__CoreInvocatorFacade__InitVariableInstances__Environment() {
 		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(24);
 	}
 
@@ -881,7 +907,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement() {
+	public EOperation getSymphony__CoreInvocatorFacade__DisposeVariableInstances__Environment() {
 		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(25);
 	}
 
@@ -890,7 +916,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreInvocatorFacade__ApplyInitializationData__Environment() {
+	public EOperation getSymphony__CoreInvocatorFacade__GetOperationCallContainer__TypeMemberReferenceListElement() {
 		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(26);
 	}
 
@@ -899,7 +925,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreInvocatorFacade__CollectInitializationData__Environment() {
+	public EOperation getSymphony__CoreInvocatorFacade__ApplyInitializationData__Environment() {
 		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(27);
 	}
 
@@ -908,7 +934,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreInvocatorFacade__ApplyInitializationData__Variable() {
+	public EOperation getSymphony__CoreInvocatorFacade__CollectInitializationData__Environment() {
 		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(28);
 	}
 
@@ -917,7 +943,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreInvocatorFacade__CollectInitializationData__Variable() {
+	public EOperation getSymphony__CoreInvocatorFacade__ApplyInitializationData__Variable() {
 		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(29);
 	}
 
@@ -926,7 +952,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession() {
+	public EOperation getSymphony__CoreInvocatorFacade__CollectInitializationData__Variable() {
 		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(30);
 	}
 
@@ -935,8 +961,44 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSymphony__CoreInvocatorFacade__GetAllTypes__Environment() {
+	public EOperation getSymphony__CoreInvocatorFacade__LoadRegisteredTypes__InvocatorSession() {
 		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(31);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__GetAllTypes__Environment() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(32);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__AddVariableListener__IVariableListener() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(33);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__RemoveVariableListener__IVariableListener() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(34);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getSymphony__CoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType() {
+		return symphony__CoreInvocatorFacadeEClass.getEOperations().get(35);
 	}
 
 		/**
@@ -3027,6 +3089,15 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getVariableListenerEventType() {
+		return variableListenerEventTypeEEnum;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -3069,6 +3140,15 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getIVariableListener() {
+		return iVariableListenerEDataType;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Symphony__CoreInvocatorFactory getSymphony__CoreInvocatorFactory() {
 		return (Symphony__CoreInvocatorFactory)getEFactoryInstance();
 	}
@@ -3094,6 +3174,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 
 		// Create classes and their features
 		symphony__CoreInvocatorFacadeEClass = createEClass(SYMPHONY_CORE_INVOCATOR_FACADE);
+		createEAttribute(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE);
 		createEReference(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION);
 		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL);
 		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___EXEC__OPERATIONCALL_BOOLEAN);
@@ -3113,6 +3194,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__OPERATIONCALL);
 		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE_ABSTRACTTYPE);
 		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING);
 		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER);
 		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING);
 		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT);
@@ -3127,6 +3209,9 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE);
 		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION);
 		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER);
+		createEOperation(symphony__CoreInvocatorFacadeEClass, SYMPHONY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE);
 
 		invocatorSessionEClass = createEClass(INVOCATOR_SESSION);
 		createEReference(invocatorSessionEClass, INVOCATOR_SESSION__ENVIRONMENT);
@@ -3402,11 +3487,15 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 		operationCallResultsListTimeSourceEClass = createEClass(OPERATION_CALL_RESULTS_LIST_TIME_SOURCE);
 		createEReference(operationCallResultsListTimeSourceEClass, OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST);
 
+		// Create enums
+		variableListenerEventTypeEEnum = createEEnum(VARIABLE_LISTENER_EVENT_TYPE);
+
 		// Create data types
 		throwableEDataType = createEDataType(THROWABLE);
 		notificationEDataType = createEDataType(NOTIFICATION);
 		typeMemberImplementationsEListEDataType = createEDataType(TYPE_MEMBER_IMPLEMENTATIONS_ELIST);
 		typeMembersArrayEDataType = createEDataType(TYPE_MEMBERS_ARRAY);
+		iVariableListenerEDataType = createEDataType(IVARIABLE_LISTENER);
 	}
 
   /**
@@ -3508,6 +3597,7 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(symphony__CoreInvocatorFacadeEClass, Symphony__CoreInvocatorFacade.class, "Symphony__CoreInvocatorFacade", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSymphony__CoreInvocatorFacade_InitVariableInstancesDate(), theEcorePackage.getEDate(), "initVariableInstancesDate", null, 0, 1, Symphony__CoreInvocatorFacade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSymphony__CoreInvocatorFacade_ActiveInvocatorSession(), this.getInvocatorSession(), null, "activeInvocatorSession", null, 0, 1, Symphony__CoreInvocatorFacade.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getSymphony__CoreInvocatorFacade__Exec__OperationCall(), null, "exec", 0, 1, !IS_UNIQUE, IS_ORDERED);
@@ -3566,6 +3656,14 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 		op = initEOperation(getSymphony__CoreInvocatorFacade__GetTypeImplementation__Variable(), this.getAbstractTypeImplementation(), "getTypeImplementation", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
+		op = initEOperation(getSymphony__CoreInvocatorFacade__GetVariableByName__InvocatorSession_String(), null, "getVariableByName", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getInvocatorSession(), "session", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theEcorePackage.getEString(), "name", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		EGenericType g1 = createEGenericType(theSymphony__CommonEMFPackage.getList());
+		EGenericType g2 = createEGenericType(this.getVariable());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
 		op = initEOperation(getSymphony__CoreInvocatorFacade__CreateTypeMemberReferences__TypeMember(), this.getTypeMemberReferenceListElement(), "createTypeMemberReferences", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getTypeMembersArray(), "typeMembers", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
@@ -3581,8 +3679,8 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 
 		op = initEOperation(getSymphony__CoreInvocatorFacade__CreateTypeMemberImplementations__Type(), null, "createTypeMemberImplementations", 0, 1, !IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getType(), "variableType", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		EGenericType g1 = createEGenericType(theSymphony__CommonEMFPackage.getList());
-		EGenericType g2 = createEGenericType(this.getTypeMemberImplementation());
+		g1 = createEGenericType(theSymphony__CommonEMFPackage.getList());
+		g2 = createEGenericType(this.getTypeMemberImplementation());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
@@ -3616,6 +3714,16 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 		g2 = createEGenericType(this.getType());
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
+
+		op = initEOperation(getSymphony__CoreInvocatorFacade__AddVariableListener__IVariableListener(), null, "addVariableListener", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getIVariableListener(), "listener", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getSymphony__CoreInvocatorFacade__RemoveVariableListener__IVariableListener(), null, "removeVariableListener", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getIVariableListener(), "listener", 0, 1, !IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getSymphony__CoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType(), null, "notifyVariableListeners", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVariable(), "variable", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVariableListenerEventType(), "event", 0, 1, !IS_UNIQUE, IS_ORDERED);
 
 		initEClass(invocatorSessionEClass, InvocatorSession.class, "InvocatorSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInvocatorSession_Environment(), this.getEnvironment(), this.getEnvironment_InvocatorSession(), "environment", null, 0, 1, InvocatorSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3929,11 +4037,17 @@ public class Symphony__CoreInvocatorPackageImpl extends EPackageImpl implements 
 		initEClass(operationCallResultsListTimeSourceEClass, OperationCallResultsListTimeSource.class, "OperationCallResultsListTimeSource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOperationCallResultsListTimeSource_OpsCallList(), this.getOperationCallResultsList(), null, "opsCallList", null, 0, 1, OperationCallResultsListTimeSource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		// Initialize enums and add enum literals
+		initEEnum(variableListenerEventTypeEEnum, VariableListenerEventType.class, "VariableListenerEventType");
+		addEEnumLiteral(variableListenerEventTypeEEnum, VariableListenerEventType.NEW);
+		addEEnumLiteral(variableListenerEventTypeEEnum, VariableListenerEventType.CLEAR);
+
 		// Initialize data types
 		initEDataType(throwableEDataType, Throwable.class, "Throwable", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(notificationEDataType, Notification.class, "Notification", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(typeMemberImplementationsEListEDataType, EList.class, "TypeMemberImplementationsEList", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS, "org.eclipse.emf.common.util.EList<org.eclipse.symphony.core.invocator.TypeMemberImplementation>");
 		initEDataType(typeMembersArrayEDataType, TypeMember[].class, "TypeMembersArray", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(iVariableListenerEDataType, IVariableListener.class, "IVariableListener", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

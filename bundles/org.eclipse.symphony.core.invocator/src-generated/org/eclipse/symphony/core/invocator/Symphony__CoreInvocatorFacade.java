@@ -3,6 +3,7 @@
  */
 package org.eclipse.symphony.core.invocator;
 
+import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
@@ -29,6 +30,7 @@ import org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImp
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getActiveInvocatorSession <em>Active Invocator Session</em>}</li>
  * </ul>
  *
@@ -38,6 +40,31 @@ import org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImp
  */
 public interface Symphony__CoreInvocatorFacade extends EObject
 {
+	/**
+	 * Returns the value of the '<em><b>Init Variable Instances Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Refers to the date at which the instances were initialized.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Init Variable Instances Date</em>' attribute.
+	 * @see #setInitVariableInstancesDate(Date)
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage#getSymphony__CoreInvocatorFacade_InitVariableInstancesDate()
+	 * @model unique="false"
+	 * @generated
+	 */
+	Date getInitVariableInstancesDate();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Init Variable Instances Date</em>' attribute.
+	 * @see #getInitVariableInstancesDate()
+	 * @generated
+	 */
+	void setInitVariableInstancesDate(Date value);
+
 	/**
 	 * Returns the value of the '<em><b>Active Invocator Session</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -237,6 +264,20 @@ public interface Symphony__CoreInvocatorFacade extends EObject
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
+	 * Returns the variables with the specified name within the specified session.
+	 * @param session Session in which the variable name will be searched.
+	 * @param name Name.
+	 * @return Reference to the {@link Variable} or null if there is no match.
+	 * <!-- end-model-doc -->
+	 * @model dataType="org.eclipse.symphony.common.emf.List<org.eclipse.symphony.core.invocator.Variable>" unique="false" many="false" sessionUnique="false" nameUnique="false"
+	 * @generated
+	 */
+	List<Variable> getVariableByName(InvocatorSession session, String name);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
 	 * *
 	 * Create a structure of {@link TypeMemberReferenceListElement} based on the specified sequence of {@link TypeMember}.
 	 * @param Sequence from the first to the last of type members.
@@ -398,5 +439,42 @@ public interface Symphony__CoreInvocatorFacade extends EObject
 	 * @generated
 	 */
 	List<Type> getAllTypes(Environment environment);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Adds the specified {@link IVariableListener}.
+	 * @param listener Reference to the {@link IVariableListener}.
+	 * <!-- end-model-doc -->
+	 * @model listenerDataType="org.eclipse.symphony.core.invocator.IVariableListener" listenerUnique="false"
+	 * @generated
+	 */
+	void addVariableListener(IVariableListener listener);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Removes the specified {@link IVariableListener}.
+	 * @param listener Reference to the {@link IVariableListener}.
+	 * <!-- end-model-doc -->
+	 * @model listenerDataType="org.eclipse.symphony.core.invocator.IVariableListener" listenerUnique="false"
+	 * @generated
+	 */
+	void removeVariableListener(IVariableListener listener);
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Notifies all {@link IVariableListener} the specified variable instance event.
+	 * @param variable Refers to the variable.
+	 * @param event Refers to the {@link VariableListenerEventType}.
+	 * <!-- end-model-doc -->
+	 * @model variableUnique="false" eventUnique="false"
+	 * @generated
+	 */
+	void notifyVariableListeners(Variable variable, VariableListenerEventType event);
 
 } // Symphony__CoreInvocatorFacade

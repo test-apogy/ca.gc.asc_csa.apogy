@@ -15,4 +15,12 @@
             name="Constellation Dashboard">
       </view>
    </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated symphony_examples_satellite_ui -->
+      <package
+            uri="org.eclipse.symphony.examples.satellite.ui"
+            class="org.eclipse.symphony.examples.satellite.ui.Symphony__ExamplesSatelliteUiPackage"
+            genModel="model/symphony_examples_satellite_ui.xcore"/>
+   </extension>
+
 </plugin>

@@ -6,6 +6,7 @@ package org.eclipse.symphony.core.invocator.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
@@ -21,8 +22,8 @@ import org.eclipse.symphony.common.emf.AbstractFeatureListNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureNode;
 import org.eclipse.symphony.common.emf.AbstractFeatureSpecifier;
 import org.eclipse.symphony.common.emf.AbstractRootNode;
-import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.emf.ListRootNode;
+import org.eclipse.symphony.common.emf.Symphony__CommonEMFFacade;
 import org.eclipse.symphony.common.log.EventSeverity;
 import org.eclipse.symphony.common.log.Logger;
 import org.eclipse.symphony.core.invocator.AbstractResultValue;
@@ -32,15 +33,16 @@ import org.eclipse.symphony.core.invocator.Activator;
 import org.eclipse.symphony.core.invocator.AttributeResultValue;
 import org.eclipse.symphony.core.invocator.AttributeValue;
 import org.eclipse.symphony.core.invocator.Context;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Environment;
+import org.eclipse.symphony.core.invocator.IVariableListener;
 import org.eclipse.symphony.core.invocator.InvocatorSession;
 import org.eclipse.symphony.core.invocator.LocalTypesList;
 import org.eclipse.symphony.core.invocator.OperationCall;
 import org.eclipse.symphony.core.invocator.OperationCallsList;
 import org.eclipse.symphony.core.invocator.ReferenceResultValue;
 import org.eclipse.symphony.core.invocator.RegisteredTypesList;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFactory;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 import org.eclipse.symphony.core.invocator.Type;
 import org.eclipse.symphony.core.invocator.TypeApiAdapter;
@@ -53,6 +55,8 @@ import org.eclipse.symphony.core.invocator.Variable;
 import org.eclipse.symphony.core.invocator.VariableFeatureReference;
 import org.eclipse.symphony.core.invocator.VariableImplementation;
 import org.eclipse.symphony.core.invocator.VariableImplementationsList;
+import org.eclipse.symphony.core.invocator.VariableListenerEventType;
+import org.eclipse.symphony.core.invocator.VariablesList;
 import org.eclipse.symphony.core.invocator.Watch;
 import org.eclipse.symphony.core.invocator.delegates.InvocatorDelegate;
 import org.eclipse.symphony.core.invocator.delegates.InvocatorDelegateRegistry;
@@ -64,6 +68,7 @@ import org.eclipse.symphony.core.invocator.delegates.InvocatorDelegateRegistry;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImpl#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}</li>
  *   <li>{@link org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorFacadeImpl#getActiveInvocatorSession <em>Active Invocator Session</em>}</li>
  * </ul>
  *
@@ -71,6 +76,24 @@ import org.eclipse.symphony.core.invocator.delegates.InvocatorDelegateRegistry;
  */
 public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Container
 		implements Symphony__CoreInvocatorFacade {
+	/**
+	 * The default value of the '{@link #getInitVariableInstancesDate() <em>Init Variable Instances Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInitVariableInstancesDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date INIT_VARIABLE_INSTANCES_DATE_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getInitVariableInstancesDate() <em>Init Variable Instances Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInitVariableInstancesDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date initVariableInstancesDate = INIT_VARIABLE_INSTANCES_DATE_EDEFAULT;
 	/**
 	 * The cached value of the '{@link #getActiveInvocatorSession() <em>Active Invocator Session</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -80,6 +103,7 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	 * @ordered
 	 */
 	protected InvocatorSession activeInvocatorSession;
+	private HashSet<IVariableListener> variableListenersSet;
 	private static Symphony__CoreInvocatorFacade instance = null;
 
 	public static Symphony__CoreInvocatorFacade getInstance() {
@@ -104,6 +128,27 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	@Override
 	protected EClass eStaticClass() {
 		return Symphony__CoreInvocatorPackage.Literals.SYMPHONY_CORE_INVOCATOR_FACADE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getInitVariableInstancesDate() {
+		return initVariableInstancesDate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInitVariableInstancesDate(Date newInitVariableInstancesDate) {
+		Date oldInitVariableInstancesDate = initVariableInstancesDate;
+		initVariableInstancesDate = newInitVariableInstancesDate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE, oldInitVariableInstancesDate, initVariableInstancesDate));
 	}
 
 	/**
@@ -958,6 +1003,49 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated_NOT
 	 */
+	public List<Variable> getVariableByName(InvocatorSession session, String name) {
+		List<Variable> result = new ArrayList<Variable>();
+		
+		Environment environment = session.getEnvironment();
+		if (environment != null){
+			VariablesList variablesList = environment.getVariablesList();
+			if (variablesList != null){
+				for (Variable variable : variablesList.getVariables()) {
+					if (variable.getName().equals(name)){
+						result.add(variable);
+					}
+				}
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public Variable getVariableByName(String name) {
+		Variable variable = null;
+
+		InvocatorSession session = getActiveInvocatorSession();
+		if (session != null){
+			Iterator<Variable> variables = session.getEnvironment().getVariablesList().getVariables().iterator();
+			while (variables.hasNext() && variable == null){
+				Variable current = variables.next();				
+				if (current.getName().equals(name)){
+					variable = current; 
+				}
+			}
+		}		
+		return variable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
 	public TypeMemberReferenceListElement createTypeMemberReferences(TypeMember[] typeMembers) {
 		TypeMemberReferenceListElement currentElement = null;
 		for (int i = 0; i < typeMembers.length; i++) {
@@ -1154,10 +1242,15 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 							variable.getVariableType().getClass());
 
 			invocatorDelegate.newInstance(environment, variable);
+			
+			/* Notifies the listener a new instance has been instantiated. */
+			notifyVariableListeners(variable, VariableListenerEventType.NEW);
 		}
 
 		/** Adjust the creation and disposal dates. */
-		environment.getActiveContext().setInstancesCreationDate(new Date());
+		Date date = new Date(System.currentTimeMillis());
+		environment.getActiveContext().setInstancesCreationDate(date);
+		setInitVariableInstancesDate(date);
 		environment.getActiveContext().setInstancesDisposalDate(null);
 	}
 
@@ -1178,6 +1271,9 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 							variable.getVariableType().getClass());
 
 			invocatorDelegate.dispose(environment, variable);
+
+			/* Notifies the listener a new instance has been cleared. */
+			notifyVariableListeners(variable, VariableListenerEventType.CLEAR);			
 		}
 
 		environment.getActiveContext().setInstancesDisposalDate(new Date());
@@ -1311,11 +1407,49 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void addVariableListener(IVariableListener listener) {
+		getVariableListenersSet().add(listener);
+	}
+
+	private HashSet<IVariableListener> getVariableListenersSet() {
+		if (variableListenersSet == null){
+			variableListenersSet = new HashSet<IVariableListener>();
+		}
+		return variableListenersSet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void removeVariableListener(IVariableListener listener) {
+		getVariableListenersSet().remove(listener);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated_NOT
+	 */
+	public void notifyVariableListeners(Variable variable, VariableListenerEventType event) {
+		for(IVariableListener listener: getVariableListenersSet()){
+			listener.variableListenerNotification(variable, event);
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
+				return getInitVariableInstancesDate();
 			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 				if (resolve) return getActiveInvocatorSession();
 				return basicGetActiveInvocatorSession();
@@ -1331,6 +1465,9 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
+				setInitVariableInstancesDate((Date)newValue);
+				return;
 			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 				setActiveInvocatorSession((InvocatorSession)newValue);
 				return;
@@ -1346,6 +1483,9 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
+				setInitVariableInstancesDate(INIT_VARIABLE_INSTANCES_DATE_EDEFAULT);
+				return;
 			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 				setActiveInvocatorSession((InvocatorSession)null);
 				return;
@@ -1361,6 +1501,8 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
+				return INIT_VARIABLE_INSTANCES_DATE_EDEFAULT == null ? initVariableInstancesDate != null : !INIT_VARIABLE_INSTANCES_DATE_EDEFAULT.equals(initVariableInstancesDate);
 			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION:
 				return activeInvocatorSession != null;
 		}
@@ -1414,6 +1556,8 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 				return getTypeImplementation((Variable)arguments.get(0), (AbstractType)arguments.get(1));
 			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE:
 				return getTypeImplementation((Variable)arguments.get(0));
+			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING:
+				return getVariableByName((InvocatorSession)arguments.get(0), (String)arguments.get(1));
 			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER:
 				return createTypeMemberReferences((TypeMember[])arguments.get(0));
 			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING:
@@ -1449,8 +1593,33 @@ public class Symphony__CoreInvocatorFacadeImpl extends MinimalEObjectImpl.Contai
 				return null;
 			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT:
 				return getAllTypes((Environment)arguments.get(0));
+			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER:
+				addVariableListener((IVariableListener)arguments.get(0));
+				return null;
+			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER:
+				removeVariableListener((IVariableListener)arguments.get(0));
+				return null;
+			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE:
+				notifyVariableListeners((Variable)arguments.get(0), (VariableListenerEventType)arguments.get(1));
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (initVariableInstancesDate: ");
+		result.append(initVariableInstancesDate);
+		result.append(')');
+		return result.toString();
 	}
 
 } // Symphony__CoreInvocatorFacadeImpl

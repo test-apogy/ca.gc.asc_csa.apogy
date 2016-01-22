@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.symphony.core.invocator.*;
 import org.eclipse.symphony.core.invocator.ArgumentsList;
 import org.eclipse.symphony.core.invocator.AttributeResultValue;
 import org.eclipse.symphony.core.invocator.AttributeValue;
@@ -174,6 +175,8 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
   public Object createFromString(EDataType eDataType, String initialValue)
   {
 		switch (eDataType.getClassifierID()) {
+			case Symphony__CoreInvocatorPackage.VARIABLE_LISTENER_EVENT_TYPE:
+				return createVariableListenerEventTypeFromString(eDataType, initialValue);
 			case Symphony__CoreInvocatorPackage.THROWABLE:
 				return createThrowableFromString(eDataType, initialValue);
 			case Symphony__CoreInvocatorPackage.NOTIFICATION:
@@ -182,6 +185,8 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
 				return createTypeMemberImplementationsEListFromString(eDataType, initialValue);
 			case Symphony__CoreInvocatorPackage.TYPE_MEMBERS_ARRAY:
 				return createTypeMembersArrayFromString(eDataType, initialValue);
+			case Symphony__CoreInvocatorPackage.IVARIABLE_LISTENER:
+				return createIVariableListenerFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -196,6 +201,8 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
   public String convertToString(EDataType eDataType, Object instanceValue)
   {
 		switch (eDataType.getClassifierID()) {
+			case Symphony__CoreInvocatorPackage.VARIABLE_LISTENER_EVENT_TYPE:
+				return convertVariableListenerEventTypeToString(eDataType, instanceValue);
 			case Symphony__CoreInvocatorPackage.THROWABLE:
 				return convertThrowableToString(eDataType, instanceValue);
 			case Symphony__CoreInvocatorPackage.NOTIFICATION:
@@ -204,6 +211,8 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
 				return convertTypeMemberImplementationsEListToString(eDataType, instanceValue);
 			case Symphony__CoreInvocatorPackage.TYPE_MEMBERS_ARRAY:
 				return convertTypeMembersArrayToString(eDataType, instanceValue);
+			case Symphony__CoreInvocatorPackage.IVARIABLE_LISTENER:
+				return convertIVariableListenerToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -746,6 +755,26 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VariableListenerEventType createVariableListenerEventTypeFromString(EDataType eDataType, String initialValue) {
+		VariableListenerEventType result = VariableListenerEventType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVariableListenerEventTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -821,6 +850,24 @@ public class Symphony__CoreInvocatorFactoryImpl extends EFactoryImpl implements 
 	 */
 	public String convertTypeMembersArrayToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IVariableListener createIVariableListenerFromString(EDataType eDataType, String initialValue) {
+		return (IVariableListener)super.createFromString(eDataType, initialValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertIVariableListenerToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 		/**

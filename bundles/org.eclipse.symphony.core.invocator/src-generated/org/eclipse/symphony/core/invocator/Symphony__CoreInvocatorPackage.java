@@ -6,6 +6,7 @@ package org.eclipse.symphony.core.invocator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -73,13 +74,22 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	int SYMPHONY_CORE_INVOCATOR_FACADE = 0;
 
 		/**
+	 * The feature id for the '<em><b>Init Variable Instances Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE = 0;
+
+		/**
 	 * The feature id for the '<em><b>Active Invocator Session</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION = 0;
+	int SYMPHONY_CORE_INVOCATOR_FACADE__ACTIVE_INVOCATOR_SESSION = 1;
 
 		/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -88,7 +98,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE_FEATURE_COUNT = 1;
+	int SYMPHONY_CORE_INVOCATOR_FACADE_FEATURE_COUNT = 2;
 
 		/**
 	 * The operation id for the '<em>Exec</em>' operation.
@@ -253,13 +263,22 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE = 17;
 
 		/**
+	 * The operation id for the '<em>Get Variable By Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING = 18;
+
+		/**
 	 * The operation id for the '<em>Create Type Member References</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER = 18;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_REFERENCES__TYPEMEMBER = 19;
 
 		/**
 	 * The operation id for the '<em>Get Type Implementation</em>' operation.
@@ -268,7 +287,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING = 19;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__ENVIRONMENT_STRING = 20;
 
 		/**
 	 * The operation id for the '<em>Get Fully Qualified Name</em>' operation.
@@ -277,7 +296,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT = 20;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__TYPEMEMBERREFERENCETREEELEMENT = 21;
 
 		/**
 	 * The operation id for the '<em>Get Fully Qualified Name</em>' operation.
@@ -286,7 +305,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE = 21;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_FULLY_QUALIFIED_NAME__ABSTRACTFEATURENODE = 22;
 
 		/**
 	 * The operation id for the '<em>Create Type Member Implementations</em>' operation.
@@ -295,7 +314,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE = 22;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___CREATE_TYPE_MEMBER_IMPLEMENTATIONS__TYPE = 23;
 
 		/**
 	 * The operation id for the '<em>Init Variable Instances</em>' operation.
@@ -304,7 +323,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = 23;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___INIT_VARIABLE_INSTANCES__ENVIRONMENT = 24;
 
 		/**
 	 * The operation id for the '<em>Dispose Variable Instances</em>' operation.
@@ -313,7 +332,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = 24;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___DISPOSE_VARIABLE_INSTANCES__ENVIRONMENT = 25;
 
 		/**
 	 * The operation id for the '<em>Get Operation Call Container</em>' operation.
@@ -322,7 +341,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = 25;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_OPERATION_CALL_CONTAINER__TYPEMEMBERREFERENCELISTELEMENT = 26;
 
 		/**
 	 * The operation id for the '<em>Apply Initialization Data</em>' operation.
@@ -331,7 +350,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = 26;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__ENVIRONMENT = 27;
 
 		/**
 	 * The operation id for the '<em>Collect Initialization Data</em>' operation.
@@ -340,7 +359,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = 27;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__ENVIRONMENT = 28;
 
 		/**
 	 * The operation id for the '<em>Apply Initialization Data</em>' operation.
@@ -349,7 +368,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = 28;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___APPLY_INITIALIZATION_DATA__VARIABLE = 29;
 
 		/**
 	 * The operation id for the '<em>Collect Initialization Data</em>' operation.
@@ -358,7 +377,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = 29;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___COLLECT_INITIALIZATION_DATA__VARIABLE = 30;
 
 		/**
 	 * The operation id for the '<em>Load Registered Types</em>' operation.
@@ -367,7 +386,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION = 30;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___LOAD_REGISTERED_TYPES__INVOCATORSESSION = 31;
 
 		/**
 	 * The operation id for the '<em>Get All Types</em>' operation.
@@ -376,7 +395,34 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT = 31;
+	int SYMPHONY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT = 32;
+
+		/**
+	 * The operation id for the '<em>Add Variable Listener</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMPHONY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER = 33;
+
+		/**
+	 * The operation id for the '<em>Remove Variable Listener</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMPHONY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER = 34;
+
+		/**
+	 * The operation id for the '<em>Notify Variable Listeners</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYMPHONY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE = 35;
 
 		/**
 	 * The number of operations of the '<em>Facade</em>' class.
@@ -385,7 +431,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 * @ordered
 	 */
-	int SYMPHONY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 32;
+	int SYMPHONY_CORE_INVOCATOR_FACADE_OPERATION_COUNT = 36;
 
 		/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -4627,6 +4673,16 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	int OPERATION_CALL_RESULTS_LIST_TIME_SOURCE_OPERATION_COUNT = Symphony__CommonEMFPackage.COLLECTION_TIMED_TIME_SOURCE_OPERATION_COUNT + 0;
 
 		/**
+	 * The meta object id for the '{@link org.eclipse.symphony.core.invocator.VariableListenerEventType <em>Variable Listener Event Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.core.invocator.VariableListenerEventType
+	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getVariableListenerEventType()
+	 * @generated
+	 */
+	int VARIABLE_LISTENER_EVENT_TYPE = 64;
+
+		/**
 	 * The meta object id for the '<em>Throwable</em>' data type.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4634,7 +4690,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getThrowable()
 	 * @generated
 	 */
-  int THROWABLE = 64;
+  int THROWABLE = 65;
 
   /**
 	 * The meta object id for the '<em>Notification</em>' data type.
@@ -4644,7 +4700,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getNotification()
 	 * @generated
 	 */
-  int NOTIFICATION = 65;
+  int NOTIFICATION = 66;
 
 
   /**
@@ -4655,7 +4711,7 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMemberImplementationsEList()
 	 * @generated
 	 */
-  int TYPE_MEMBER_IMPLEMENTATIONS_ELIST = 66;
+  int TYPE_MEMBER_IMPLEMENTATIONS_ELIST = 67;
 
 
   /**
@@ -4665,7 +4721,18 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getTypeMembersArray()
 	 * @generated
 	 */
-	int TYPE_MEMBERS_ARRAY = 67;
+	int TYPE_MEMBERS_ARRAY = 68;
+
+
+		/**
+	 * The meta object id for the '<em>IVariable Listener</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.core.invocator.IVariableListener
+	 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getIVariableListener()
+	 * @generated
+	 */
+	int IVARIABLE_LISTENER = 69;
 
 
 		/**
@@ -4677,6 +4744,17 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 */
 	EClass getSymphony__CoreInvocatorFacade();
+
+		/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInitVariableInstancesDate <em>Init Variable Instances Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Init Variable Instances Date</em>'.
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getInitVariableInstancesDate()
+	 * @see #getSymphony__CoreInvocatorFacade()
+	 * @generated
+	 */
+	EAttribute getSymphony__CoreInvocatorFacade_InitVariableInstancesDate();
 
 		/**
 	 * Returns the meta object for the reference '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getActiveInvocatorSession <em>Active Invocator Session</em>}'.
@@ -4870,6 +4948,16 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	EOperation getSymphony__CoreInvocatorFacade__GetTypeImplementation__Variable();
 
 		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getVariableByName(org.eclipse.symphony.core.invocator.InvocatorSession, java.lang.String) <em>Get Variable By Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Variable By Name</em>' operation.
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#getVariableByName(org.eclipse.symphony.core.invocator.InvocatorSession, java.lang.String)
+	 * @generated
+	 */
+	EOperation getSymphony__CoreInvocatorFacade__GetVariableByName__InvocatorSession_String();
+
+		/**
 	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#createTypeMemberReferences(org.eclipse.symphony.core.invocator.TypeMember[]) <em>Create Type Member References</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5008,6 +5096,36 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	 * @generated
 	 */
 	EOperation getSymphony__CoreInvocatorFacade__GetAllTypes__Environment();
+
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#addVariableListener(org.eclipse.symphony.core.invocator.IVariableListener) <em>Add Variable Listener</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Variable Listener</em>' operation.
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#addVariableListener(org.eclipse.symphony.core.invocator.IVariableListener)
+	 * @generated
+	 */
+	EOperation getSymphony__CoreInvocatorFacade__AddVariableListener__IVariableListener();
+
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#removeVariableListener(org.eclipse.symphony.core.invocator.IVariableListener) <em>Remove Variable Listener</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Variable Listener</em>' operation.
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#removeVariableListener(org.eclipse.symphony.core.invocator.IVariableListener)
+	 * @generated
+	 */
+	EOperation getSymphony__CoreInvocatorFacade__RemoveVariableListener__IVariableListener();
+
+		/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#notifyVariableListeners(org.eclipse.symphony.core.invocator.Variable, org.eclipse.symphony.core.invocator.VariableListenerEventType) <em>Notify Variable Listeners</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Notify Variable Listeners</em>' operation.
+	 * @see org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade#notifyVariableListeners(org.eclipse.symphony.core.invocator.Variable, org.eclipse.symphony.core.invocator.VariableListenerEventType)
+	 * @generated
+	 */
+	EOperation getSymphony__CoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType();
 
 		/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.core.invocator.InvocatorSession <em>Invocator Session</em>}'.
@@ -7251,6 +7369,16 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	EReference getOperationCallResultsListTimeSource_OpsCallList();
 
 		/**
+	 * Returns the meta object for enum '{@link org.eclipse.symphony.core.invocator.VariableListenerEventType <em>Variable Listener Event Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Variable Listener Event Type</em>'.
+	 * @see org.eclipse.symphony.core.invocator.VariableListenerEventType
+	 * @generated
+	 */
+	EEnum getVariableListenerEventType();
+
+		/**
 	 * Returns the meta object for data type '{@link java.lang.Throwable <em>Throwable</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7294,6 +7422,17 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 	EDataType getTypeMembersArray();
 
 		/**
+	 * Returns the meta object for data type '{@link org.eclipse.symphony.core.invocator.IVariableListener <em>IVariable Listener</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>IVariable Listener</em>'.
+	 * @see org.eclipse.symphony.core.invocator.IVariableListener
+	 * @model instanceClass="org.eclipse.symphony.core.invocator.IVariableListener"
+	 * @generated
+	 */
+	EDataType getIVariableListener();
+
+		/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7326,6 +7465,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * @generated
 		 */
 		EClass SYMPHONY_CORE_INVOCATOR_FACADE = eINSTANCE.getSymphony__CoreInvocatorFacade();
+
+			/**
+		 * The meta object literal for the '<em><b>Init Variable Instances Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE = eINSTANCE.getSymphony__CoreInvocatorFacade_InitVariableInstancesDate();
 
 			/**
 		 * The meta object literal for the '<em><b>Active Invocator Session</b></em>' reference feature.
@@ -7480,6 +7627,14 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_TYPE_IMPLEMENTATION__VARIABLE = eINSTANCE.getSymphony__CoreInvocatorFacade__GetTypeImplementation__Variable();
 
 			/**
+		 * The meta object literal for the '<em><b>Get Variable By Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_VARIABLE_BY_NAME__INVOCATORSESSION_STRING = eINSTANCE.getSymphony__CoreInvocatorFacade__GetVariableByName__InvocatorSession_String();
+
+			/**
 		 * The meta object literal for the '<em><b>Create Type Member References</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7590,6 +7745,30 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * @generated
 		 */
 		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___GET_ALL_TYPES__ENVIRONMENT = eINSTANCE.getSymphony__CoreInvocatorFacade__GetAllTypes__Environment();
+
+				/**
+		 * The meta object literal for the '<em><b>Add Variable Listener</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___ADD_VARIABLE_LISTENER__IVARIABLELISTENER = eINSTANCE.getSymphony__CoreInvocatorFacade__AddVariableListener__IVariableListener();
+
+			/**
+		 * The meta object literal for the '<em><b>Remove Variable Listener</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___REMOVE_VARIABLE_LISTENER__IVARIABLELISTENER = eINSTANCE.getSymphony__CoreInvocatorFacade__RemoveVariableListener__IVariableListener();
+
+				/**
+		 * The meta object literal for the '<em><b>Notify Variable Listeners</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SYMPHONY_CORE_INVOCATOR_FACADE___NOTIFY_VARIABLE_LISTENERS__VARIABLE_VARIABLELISTENEREVENTTYPE = eINSTANCE.getSymphony__CoreInvocatorFacade__NotifyVariableListeners__Variable_VariableListenerEventType();
 
 				/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.impl.InvocatorSessionImpl <em>Invocator Session</em>}' class.
@@ -9406,6 +9585,16 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		EReference OPERATION_CALL_RESULTS_LIST_TIME_SOURCE__OPS_CALL_LIST = eINSTANCE.getOperationCallResultsListTimeSource_OpsCallList();
 
 				/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.core.invocator.VariableListenerEventType <em>Variable Listener Event Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.core.invocator.VariableListenerEventType
+		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getVariableListenerEventType()
+		 * @generated
+		 */
+		EEnum VARIABLE_LISTENER_EVENT_TYPE = eINSTANCE.getVariableListenerEventType();
+
+				/**
 		 * The meta object literal for the '<em>Throwable</em>' data type.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -9443,6 +9632,16 @@ public interface Symphony__CoreInvocatorPackage extends EPackage
 		 * @generated
 		 */
 		EDataType TYPE_MEMBERS_ARRAY = eINSTANCE.getTypeMembersArray();
+
+				/**
+		 * The meta object literal for the '<em>IVariable Listener</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.core.invocator.IVariableListener
+		 * @see org.eclipse.symphony.core.invocator.impl.Symphony__CoreInvocatorPackageImpl#getIVariableListener()
+		 * @generated
+		 */
+		EDataType IVARIABLE_LISTENER = eINSTANCE.getIVariableListener();
 
   }
 
