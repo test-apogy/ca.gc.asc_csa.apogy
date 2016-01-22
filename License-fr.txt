@@ -2,7 +2,8 @@ Apogy - Conditions régissant l'utilisation
 
 Sauf indication contraire, le code source d'Apogy
 est protégé par le droit d'auteur de la Couronne du gouvernement du Canada et distribué
-sous la licence Eclipse Public License (EPL) v1.0.
+sous la licence Eclipse Public License (EPL) v1.0 qui est associé à cette distribution, et est 
+disponible à http://www.eclipse.org/legal/epl-v10.html.
 
 Le mot-symbole « Canada » et les éléments graphiques connexes liés à cette distribution sont
 protégés en vertu des lois portant sur les marques de commerce et le droit d'auteur.
@@ -27,7 +28,7 @@ s'y limiter, les droits d'utiliser, de copier, de modifier, de fusionner, de pub
 d'accorder une sous licence et de vendre des copies dudit logiciel, et de permettre aux personnes
 auxquelles le logiciel est fourni de le faire, selon les conditions suivantes :
 
-L'avis de droit d'auteur ci dessus et le présent avis de permission seront inclus dans toutes les copies
+L'avis de droit d'auteur ci-dessus et le présent avis de permission seront inclus dans toutes les copies
 et les sections importantes du logiciel.
 
 LE LOGICIEL EST FOURNI « TEL QUEL », SANS AUCUNE GARANTIE, EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS
