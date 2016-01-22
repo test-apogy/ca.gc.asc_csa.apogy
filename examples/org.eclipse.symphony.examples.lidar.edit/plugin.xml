@@ -26,4 +26,5 @@
             uri="org.eclipse.symphony.common.topology"
             class="org.eclipse.symphony.examples.lidar.provider.Symphony__ExamplesLidarItemProviderAdapterFactory$Symphony__CommonTopologyChildCreationExtender"/>
    </extension>
+
 </plugin>

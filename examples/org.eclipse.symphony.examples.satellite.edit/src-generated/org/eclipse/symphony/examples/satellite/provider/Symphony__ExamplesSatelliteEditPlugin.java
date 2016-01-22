@@ -4,10 +4,9 @@
 package org.eclipse.symphony.examples.satellite.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
+
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.symphony.addons.sensors.fov.provider.Symphony__AddonsSensorsFOVEditPlugin;
-import org.eclipse.symphony.addons.sensors.imaging.provider.Symphony__AddonsSensorsImagingEditPlugin;
-import org.eclipse.symphony.addons.sensors.provider.Symphony__AddonsSensorsEditPlugin;
+
 import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
 import org.eclipse.symphony.common.geometry.data.provider.Symphony__CommonGeometryDataEditPlugin;
 import org.eclipse.symphony.common.geometry.data3d.provider.Symphony__CommonGeometryData3DEditPlugin;
@@ -17,8 +16,11 @@ import org.eclipse.symphony.common.processors.provider.Symphony__CommonProcessor
 import org.eclipse.symphony.common.topology.bindings.provider.Symphony__CommonTopologyBindingsEditPlugin;
 import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
 import org.eclipse.symphony.core.environment.orbit.earth.provider.Symphony__CoreEnvironmentOrbitEarthEditPlugin;
+
 import org.eclipse.symphony.core.environment.orbit.provider.Symphony__CoreEnvironmentOrbitEditPlugin;
+
 import org.eclipse.symphony.core.environment.provider.Symphony__CoreEnvironmentEditPlugin;
+
 import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorEditPlugin;
 import org.eclipse.symphony.core.provider.Symphony__CoreEditPlugin;
 
@@ -54,19 +56,16 @@ public final class Symphony__ExamplesSatelliteEditPlugin extends EMFPlugin {
 	public Symphony__ExamplesSatelliteEditPlugin() {
 		super
 		  (new ResourceLocator [] {
+		     Symphony__CoreEnvironmentOrbitEarthEditPlugin.INSTANCE,
+		     Symphony__CoreEnvironmentEditPlugin.INSTANCE,
 		     Symphony__CommonEMFEditPlugin.INSTANCE,
 		     Symphony__CoreEnvironmentOrbitEditPlugin.INSTANCE,
-		     Symphony__CoreEnvironmentEditPlugin.INSTANCE,
-		     Symphony__AddonsSensorsImagingEditPlugin.INSTANCE,
-		     Symphony__CommonTopologyEditPlugin.INSTANCE,
-		     Symphony__AddonsSensorsEditPlugin.INSTANCE,
 		     Symphony__CommonImagesEditPlugin.INSTANCE,
-		     Symphony__CoreEnvironmentOrbitEarthEditPlugin.INSTANCE,
-		     Symphony__CoreInvocatorEditPlugin.INSTANCE,
 		     Symphony__CoreEditPlugin.INSTANCE,
 		     Symphony__CommonMathEditPlugin.INSTANCE,
+		     Symphony__CommonTopologyEditPlugin.INSTANCE,
+		     Symphony__CoreInvocatorEditPlugin.INSTANCE,
 		     Symphony__CommonGeometryData3DEditPlugin.INSTANCE,
-		     Symphony__AddonsSensorsFOVEditPlugin.INSTANCE,
 		     Symphony__CommonTopologyBindingsEditPlugin.INSTANCE,
 		     Symphony__CommonGeometryDataEditPlugin.INSTANCE,
 		     Symphony__CommonProcessorsEditPlugin.INSTANCE,

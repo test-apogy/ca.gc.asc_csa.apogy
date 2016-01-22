@@ -6,16 +6,11 @@ package org.eclipse.symphony.examples.robotic_arm.symphony.provider;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.symphony.common.emf.provider.Symphony__CommonEMFEditPlugin;
-
 import org.eclipse.symphony.common.math.provider.Symphony__CommonMathEditPlugin;
 import org.eclipse.symphony.common.topology.bindings.provider.Symphony__CommonTopologyBindingsEditPlugin;
-
 import org.eclipse.symphony.common.topology.provider.Symphony__CommonTopologyEditPlugin;
-
 import org.eclipse.symphony.core.invocator.provider.Symphony__CoreInvocatorEditPlugin;
-
 import org.eclipse.symphony.core.provider.Symphony__CoreEditPlugin;
 
 import org.eclipse.symphony.examples.robotic_arm.provider.Symphony__ExamplesRoboticArmEditPlugin;

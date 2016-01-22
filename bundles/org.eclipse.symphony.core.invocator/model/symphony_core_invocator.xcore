@@ -38,6 +38,8 @@ type Throwable wraps java.lang.Throwable
 type Notification wraps org.eclipse.emf.common.notify.Notification
 type TypeMemberImplementationsEList wraps EList<TypeMemberImplementation>
 type TypeMembersArray wraps TypeMember[]
+type IVariableListener wraps IVariableListener
+
 
 /* -------------------------------------------------------------------------
  * 
@@ -98,6 +100,14 @@ class Symphony__CoreInvocatorFacade
 	op AbstractTypeImplementation getTypeImplementation(Variable variable, AbstractType elementType)
 	op AbstractTypeImplementation getTypeImplementation(Variable variable)
 	
+	/*
+	 * Returns the variables with the specified name within the specified session.
+	 * @param session Session in which the variable name will be searched.
+	 * @param name Name.
+	 * @return Reference to the {@link Variable} or null if there is no match. 
+	 */
+	op List<Variable> getVariableByName(InvocatorSession session, String name)
+	
 	/**
 	 * Create a structure of {@link TypeMemberReferenceListElement} based on the specified sequence of {@link TypeMember}.
 	 * @param Sequence from the first to the last of type members.
@@ -135,6 +145,11 @@ class Symphony__CoreInvocatorFacade
 	 * Resets the variable instances.
 	 */
 	op void initVariableInstances(Environment environment)
+	
+	/*
+	 * Refers to the date at which the instances were initialized. 
+	 */
+	Date initVariableInstancesDate
 	
 	/*
 	 * Clear the variable instances.
@@ -191,7 +206,31 @@ class Symphony__CoreInvocatorFacade
 	  * @environment Reference to the environment.
 	  */
 	 op List<Type> getAllTypes(Environment environment) 
+	 
+	 /*
+	  * Adds the specified {@link IVariableListener}.
+	  * @param listener Reference to the {@link IVariableListener}.
+	  */
+	 op void addVariableListener(IVariableListener listener)
+	 
+	 /*
+	  * Removes the specified {@link IVariableListener}.
+	  * @param listener Reference to the {@link IVariableListener}.
+	  */
+	 op void removeVariableListener(IVariableListener listener)
+	 
+	 /*
+	  * Notifies all {@link IVariableListener} the specified variable instance event.
+	  * @param variable Refers to the variable.
+	  * @param event Refers to the {@link VariableListenerEventType}.
+	  */
+	 op void notifyVariableListeners(Variable variable, VariableListenerEventType event)	 
 } 
+
+enum VariableListenerEventType{
+	NEW,
+	CLEAR
+}
 
 /* -------------------------------------------------------------------------
  * 

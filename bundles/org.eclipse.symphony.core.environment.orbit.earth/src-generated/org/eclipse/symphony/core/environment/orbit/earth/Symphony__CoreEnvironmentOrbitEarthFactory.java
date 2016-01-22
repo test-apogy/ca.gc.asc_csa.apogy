@@ -149,6 +149,15 @@ public interface Symphony__CoreEnvironmentOrbitEarthFactory extends EFactory {
 	EarthSurfaceLocationList createEarthSurfaceLocationList();
 
 	/**
+	 * Returns a new object of class '<em>Ground Station References List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ground Station References List</em>'.
+	 * @generated
+	 */
+	GroundStationReferencesList createGroundStationReferencesList();
+
+	/**
 	 * Returns a new object of class '<em>Ground Station</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

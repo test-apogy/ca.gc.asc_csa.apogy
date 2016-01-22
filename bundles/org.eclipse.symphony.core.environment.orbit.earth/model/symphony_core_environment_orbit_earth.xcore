@@ -428,6 +428,16 @@ class EarthSurfaceLocationList extends Named, Described
 }
 
 /*
+ * List that refers {@link GroundStation}.
+ */
+class GroundStationReferencesList{
+	/*
+	 * {@link GroundStation} container.
+	 */
+	refers GroundStation[0..*] groundStations
+}
+
+/*
  * Defines a ground station and its associated Field Of View.
  */
 class GroundStation extends EarthSurfaceLocation

@@ -5,33 +5,18 @@ package org.eclipse.symphony.examples.satellite.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+
 import org.eclipse.emf.ecore.util.Switch;
-import org.eclipse.symphony.addons.sensors.Sensor;
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera;
-import org.eclipse.symphony.addons.sensors.imaging.Zoomable;
+
+import org.eclipse.symphony.common.emf.Described;
 import org.eclipse.symphony.common.emf.Named;
+import org.eclipse.symphony.common.emf.Timed;
+
 import org.eclipse.symphony.common.images.AbstractEImage;
-import org.eclipse.symphony.common.topology.AggregateGroupNode;
-import org.eclipse.symphony.common.topology.GroupNode;
-import org.eclipse.symphony.common.topology.Node;
-import org.eclipse.symphony.core.invocator.AbstractInitializationData;
-import org.eclipse.symphony.core.invocator.TypeApiAdapter;
-import org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage;
-import org.eclipse.symphony.examples.satellite.ImageOrder;
-import org.eclipse.symphony.examples.satellite.OrbitalImage;
-import org.eclipse.symphony.examples.satellite.Satellite;
-import org.eclipse.symphony.examples.satellite.SatelliteCommand;
-import org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage;
-import org.eclipse.symphony.examples.satellite.SatelliteCommandList;
-import org.eclipse.symphony.examples.satellite.SatelliteCommandRoll;
-import org.eclipse.symphony.examples.satellite.SatelliteConstellation;
-import org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData;
-import org.eclipse.symphony.examples.satellite.SatelliteConstellationTypeApiAdapter;
-import org.eclipse.symphony.examples.satellite.SatelliteImager;
-import org.eclipse.symphony.examples.satellite.SatelliteInitializationData;
-import org.eclipse.symphony.examples.satellite.SatelliteSimulated;
-import org.eclipse.symphony.examples.satellite.SatelliteStub;
-import org.eclipse.symphony.examples.satellite.SatelliteUtils;
+
+import org.eclipse.symphony.common.images.EImage;
+import org.eclipse.symphony.core.environment.GeographicCoordinates;
+import org.eclipse.symphony.examples.satellite.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -90,6 +75,57 @@ public class Symphony__ExamplesSatelliteSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION: {
+				AbstractConstellation abstractConstellation = (AbstractConstellation)theEObject;
+				T result = caseAbstractConstellation(abstractConstellation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN: {
+				ConstellationCommandPlan constellationCommandPlan = (ConstellationCommandPlan)theEObject;
+				T result = caseConstellationCommandPlan(constellationCommandPlan);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_COMMAND_PLAN_ITEM: {
+				ConstellationCommandPlanItem constellationCommandPlanItem = (ConstellationCommandPlanItem)theEObject;
+				T result = caseConstellationCommandPlanItem(constellationCommandPlanItem);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Symphony__ExamplesSatellitePackage.DEFAULT_CONSTELLATION: {
+				DefaultConstellation defaultConstellation = (DefaultConstellation)theEObject;
+				T result = caseDefaultConstellation(defaultConstellation);
+				if (result == null) result = caseAbstractConstellation(defaultConstellation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_REQUESTS_LIST: {
+				ConstellationRequestsList constellationRequestsList = (ConstellationRequestsList)theEObject;
+				T result = caseConstellationRequestsList(constellationRequestsList);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_REQUEST: {
+				AbstractConstellationRequest abstractConstellationRequest = (AbstractConstellationRequest)theEObject;
+				T result = caseAbstractConstellationRequest(abstractConstellationRequest);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Symphony__ExamplesSatellitePackage.IMAGE_CONSTELLATION_REQUEST: {
+				ImageConstellationRequest imageConstellationRequest = (ImageConstellationRequest)theEObject;
+				T result = caseImageConstellationRequest(imageConstellationRequest);
+				if (result == null) result = caseAbstractConstellationRequest(imageConstellationRequest);
+				if (result == null) result = caseGeographicCoordinates(imageConstellationRequest);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Symphony__ExamplesSatellitePackage.SATELLITES_LIST: {
+				SatellitesList satellitesList = (SatellitesList)theEObject;
+				T result = caseSatellitesList(satellitesList);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Symphony__ExamplesSatellitePackage.SATELLITE: {
 				Satellite satellite = (Satellite)theEObject;
 				T result = caseSatellite(satellite);
@@ -97,109 +133,186 @@ public class Symphony__ExamplesSatelliteSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesSatellitePackage.SATELLITE_SIMULATED: {
-				SatelliteSimulated satelliteSimulated = (SatelliteSimulated)theEObject;
-				T result = caseSatelliteSimulated(satelliteSimulated);
-				if (result == null) result = caseSatellite(satelliteSimulated);
-				if (result == null) result = caseNamed(satelliteSimulated);
+			case Symphony__ExamplesSatellitePackage.ABSTRACT_SATELLITE_COMMAND: {
+				AbstractSatelliteCommand abstractSatelliteCommand = (AbstractSatelliteCommand)theEObject;
+				T result = caseAbstractSatelliteCommand(abstractSatelliteCommand);
+				if (result == null) result = caseGeographicCoordinates(abstractSatelliteCommand);
+				if (result == null) result = caseTimed(abstractSatelliteCommand);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesSatellitePackage.SATELLITE_STUB: {
-				SatelliteStub satelliteStub = (SatelliteStub)theEObject;
-				T result = caseSatelliteStub(satelliteStub);
-				if (result == null) result = caseSatellite(satelliteStub);
-				if (result == null) result = caseNamed(satelliteStub);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND: {
-				SatelliteCommand satelliteCommand = (SatelliteCommand)theEObject;
-				T result = caseSatelliteCommand(satelliteCommand);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_LIST: {
-				SatelliteCommandList satelliteCommandList = (SatelliteCommandList)theEObject;
-				T result = caseSatelliteCommandList(satelliteCommandList);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ROLL: {
-				SatelliteCommandRoll satelliteCommandRoll = (SatelliteCommandRoll)theEObject;
-				T result = caseSatelliteCommandRoll(satelliteCommandRoll);
-				if (result == null) result = caseSatelliteCommand(satelliteCommandRoll);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Symphony__ExamplesSatellitePackage.SATELLITE_COMMAND_ACQUIRE_IMAGE: {
-				SatelliteCommandAcquireImage satelliteCommandAcquireImage = (SatelliteCommandAcquireImage)theEObject;
-				T result = caseSatelliteCommandAcquireImage(satelliteCommandAcquireImage);
-				if (result == null) result = caseSatelliteCommand(satelliteCommandAcquireImage);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Symphony__ExamplesSatellitePackage.IMAGE_ORDER: {
-				ImageOrder imageOrder = (ImageOrder)theEObject;
-				T result = caseImageOrder(imageOrder);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Symphony__ExamplesSatellitePackage.SATELLITE_IMAGER: {
-				SatelliteImager satelliteImager = (SatelliteImager)theEObject;
-				T result = caseSatelliteImager(satelliteImager);
-				if (result == null) result = caseAbstractCamera(satelliteImager);
-				if (result == null) result = caseZoomable(satelliteImager);
-				if (result == null) result = caseSensor(satelliteImager);
-				if (result == null) result = caseNamed(satelliteImager);
-				if (result == null) result = caseAggregateGroupNode(satelliteImager);
-				if (result == null) result = caseGroupNode(satelliteImager);
-				if (result == null) result = caseNode(satelliteImager);
+			case Symphony__ExamplesSatellitePackage.ACQUIRE_IMAGE_SATELLITE_COMMAND: {
+				AcquireImageSatelliteCommand acquireImageSatelliteCommand = (AcquireImageSatelliteCommand)theEObject;
+				T result = caseAcquireImageSatelliteCommand(acquireImageSatelliteCommand);
+				if (result == null) result = caseAbstractSatelliteCommand(acquireImageSatelliteCommand);
+				if (result == null) result = caseGeographicCoordinates(acquireImageSatelliteCommand);
+				if (result == null) result = caseTimed(acquireImageSatelliteCommand);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE: {
 				OrbitalImage orbitalImage = (OrbitalImage)theEObject;
 				T result = caseOrbitalImage(orbitalImage);
+				if (result == null) result = caseEImage(orbitalImage);
 				if (result == null) result = caseAbstractEImage(orbitalImage);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION: {
-				SatelliteConstellation satelliteConstellation = (SatelliteConstellation)theEObject;
-				T result = caseSatelliteConstellation(satelliteConstellation);
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINKS_LIST: {
+				ConstellationDownlinksList constellationDownlinksList = (ConstellationDownlinksList)theEObject;
+				T result = caseConstellationDownlinksList(constellationDownlinksList);
+				if (result == null) result = caseNamed(constellationDownlinksList);
+				if (result == null) result = caseDescribed(constellationDownlinksList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesSatellitePackage.SATELLITE_UTILS: {
-				SatelliteUtils satelliteUtils = (SatelliteUtils)theEObject;
-				T result = caseSatelliteUtils(satelliteUtils);
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_DOWNLINK: {
+				ConstellationDownlink constellationDownlink = (ConstellationDownlink)theEObject;
+				T result = caseConstellationDownlink(constellationDownlink);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_TYPE_API_ADAPTER: {
-				SatelliteConstellationTypeApiAdapter satelliteConstellationTypeApiAdapter = (SatelliteConstellationTypeApiAdapter)theEObject;
-				T result = caseSatelliteConstellationTypeApiAdapter(satelliteConstellationTypeApiAdapter);
-				if (result == null) result = caseTypeApiAdapter(satelliteConstellationTypeApiAdapter);
+			case Symphony__ExamplesSatellitePackage.ABSTRACT_CONSTELLATION_DOWNLINK_ITEM: {
+				AbstractConstellationDownlinkItem abstractConstellationDownlinkItem = (AbstractConstellationDownlinkItem)theEObject;
+				T result = caseAbstractConstellationDownlinkItem(abstractConstellationDownlinkItem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesSatellitePackage.SATELLITE_CONSTELLATION_INITIALIZATION_DATA: {
-				SatelliteConstellationInitializationData satelliteConstellationInitializationData = (SatelliteConstellationInitializationData)theEObject;
-				T result = caseSatelliteConstellationInitializationData(satelliteConstellationInitializationData);
-				if (result == null) result = caseAbstractInitializationData(satelliteConstellationInitializationData);
+			case Symphony__ExamplesSatellitePackage.ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM: {
+				OrbitalImageConstellationDownlinkItem orbitalImageConstellationDownlinkItem = (OrbitalImageConstellationDownlinkItem)theEObject;
+				T result = caseOrbitalImageConstellationDownlinkItem(orbitalImageConstellationDownlinkItem);
+				if (result == null) result = caseAbstractConstellationDownlinkItem(orbitalImageConstellationDownlinkItem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Symphony__ExamplesSatellitePackage.SATELLITE_INITIALIZATION_DATA: {
-				SatelliteInitializationData satelliteInitializationData = (SatelliteInitializationData)theEObject;
-				T result = caseSatelliteInitializationData(satelliteInitializationData);
-				if (result == null) result = caseAbstractInitializationData(satelliteInitializationData);
+			case Symphony__ExamplesSatellitePackage.CONSTELLATION_UTILITIES: {
+				ConstellationUtilities constellationUtilities = (ConstellationUtilities)theEObject;
+				T result = caseConstellationUtilities(constellationUtilities);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Constellation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Constellation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractConstellation(AbstractConstellation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Constellation Command Plan</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Constellation Command Plan</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConstellationCommandPlan(ConstellationCommandPlan object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Constellation Command Plan Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Constellation Command Plan Item</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConstellationCommandPlanItem(ConstellationCommandPlanItem object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Default Constellation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Default Constellation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDefaultConstellation(DefaultConstellation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Constellation Requests List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Constellation Requests List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConstellationRequestsList(ConstellationRequestsList object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Constellation Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Constellation Request</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractConstellationRequest(AbstractConstellationRequest object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Image Constellation Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Image Constellation Request</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImageConstellationRequest(ImageConstellationRequest object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Satellites List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Satellites List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSatellitesList(SatellitesList object) {
+		return null;
 	}
 
 	/**
@@ -218,122 +331,32 @@ public class Symphony__ExamplesSatelliteSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Satellite Simulated</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Satellite Command</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Satellite Simulated</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Satellite Command</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSatelliteSimulated(SatelliteSimulated object) {
+	public T caseAbstractSatelliteCommand(AbstractSatelliteCommand object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Satellite Stub</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Acquire Image Satellite Command</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Satellite Stub</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Acquire Image Satellite Command</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSatelliteStub(SatelliteStub object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Satellite Command</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Satellite Command</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSatelliteCommand(SatelliteCommand object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Satellite Command List</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Satellite Command List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSatelliteCommandList(SatelliteCommandList object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Satellite Command Roll</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Satellite Command Roll</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSatelliteCommandRoll(SatelliteCommandRoll object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Satellite Command Acquire Image</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Satellite Command Acquire Image</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSatelliteCommandAcquireImage(SatelliteCommandAcquireImage object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Image Order</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Image Order</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseImageOrder(ImageOrder object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Satellite Imager</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Satellite Imager</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSatelliteImager(SatelliteImager object) {
+	public T caseAcquireImageSatelliteCommand(AcquireImageSatelliteCommand object) {
 		return null;
 	}
 
@@ -353,77 +376,92 @@ public class Symphony__ExamplesSatelliteSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Satellite Constellation</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Constellation Downlinks List</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Satellite Constellation</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Constellation Downlinks List</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSatelliteConstellation(SatelliteConstellation object) {
+	public T caseConstellationDownlinksList(ConstellationDownlinksList object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Satellite Constellation Initialization Data</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Constellation Downlink</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Satellite Constellation Initialization Data</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Constellation Downlink</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSatelliteConstellationInitializationData(SatelliteConstellationInitializationData object) {
+	public T caseConstellationDownlink(ConstellationDownlink object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Satellite Constellation Type Api Adapter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Constellation Downlink Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Satellite Constellation Type Api Adapter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Constellation Downlink Item</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSatelliteConstellationTypeApiAdapter(SatelliteConstellationTypeApiAdapter object) {
+	public T caseAbstractConstellationDownlinkItem(AbstractConstellationDownlinkItem object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Satellite Initialization Data</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Orbital Image Constellation Downlink Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Satellite Initialization Data</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Orbital Image Constellation Downlink Item</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSatelliteInitializationData(SatelliteInitializationData object) {
+	public T caseOrbitalImageConstellationDownlinkItem(OrbitalImageConstellationDownlinkItem object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Satellite Utils</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Constellation Utilities</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Satellite Utils</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Constellation Utilities</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSatelliteUtils(SatelliteUtils object) {
+	public T caseConstellationUtilities(ConstellationUtilities object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Geographic Coordinates</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Geographic Coordinates</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGeographicCoordinates(GeographicCoordinates object) {
 		return null;
 	}
 
@@ -443,92 +481,17 @@ public class Symphony__ExamplesSatelliteSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Timed</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Node</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Timed</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNode(Node object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Group Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Group Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGroupNode(GroupNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Aggregate Group Node</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Aggregate Group Node</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAggregateGroupNode(AggregateGroupNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sensor</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sensor</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSensor(Sensor object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstract Camera</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstract Camera</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAbstractCamera(AbstractCamera object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Zoomable</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Zoomable</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseZoomable(Zoomable object) {
+	public T caseTimed(Timed object) {
 		return null;
 	}
 
@@ -548,32 +511,32 @@ public class Symphony__ExamplesSatelliteSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Abstract Initialization Data</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>EImage</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Abstract Initialization Data</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>EImage</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAbstractInitializationData(AbstractInitializationData object) {
+	public T caseEImage(EImage object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Type Api Adapter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Described</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Type Api Adapter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Described</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTypeApiAdapter(TypeApiAdapter object) {
+	public T caseDescribed(Described object) {
 		return null;
 	}
 

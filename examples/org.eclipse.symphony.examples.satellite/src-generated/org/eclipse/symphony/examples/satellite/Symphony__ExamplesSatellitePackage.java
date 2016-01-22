@@ -6,13 +6,16 @@ package org.eclipse.symphony.examples.satellite;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.symphony.addons.sensors.imaging.Symphony__AddonsSensorsImagingPackage;
+
 import org.eclipse.symphony.common.emf.Symphony__CommonEMFPackage;
+
 import org.eclipse.symphony.common.images.Symphony__CommonImagesPackage;
-import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
+
+import org.eclipse.symphony.core.environment.Symphony__CoreEnvironmentPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -65,6 +68,599 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	Symphony__ExamplesSatellitePackage eINSTANCE = org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationImpl <em>Abstract Constellation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.impl.AbstractConstellationImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractConstellation()
+	 * @generated
+	 */
+	int ABSTRACT_CONSTELLATION = 0;
+
+	/**
+	 * The feature id for the '<em><b>Satellites List</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION__SATELLITES_LIST = 0;
+
+	/**
+	 * The feature id for the '<em><b>Ground Stations References List</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST = 1;
+
+	/**
+	 * The feature id for the '<em><b>Downlinks Lists</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Constellation Requests List</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST = 3;
+
+	/**
+	 * The number of structural features of the '<em>Abstract Constellation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION_FEATURE_COUNT = 4;
+
+	/**
+	 * The operation id for the '<em>Plan</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION___PLAN__DATE_DATE = 0;
+
+	/**
+	 * The operation id for the '<em>Plan</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION___PLAN__LIST_DATE_DATE = 1;
+
+	/**
+	 * The operation id for the '<em>Commit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION___COMMIT__LIST = 2;
+
+	/**
+	 * The operation id for the '<em>Apply</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION___APPLY__CONSTELLATIONDOWNLINK = 3;
+
+	/**
+	 * The operation id for the '<em>Add</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION___ADD__ABSTRACTCONSTELLATIONREQUEST = 4;
+
+	/**
+	 * The operation id for the '<em>Add All</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION___ADD_ALL__LIST = 5;
+
+	/**
+	 * The operation id for the '<em>Remove</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION___REMOVE__ABSTRACTCONSTELLATIONREQUEST = 6;
+
+	/**
+	 * The operation id for the '<em>Remove All</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION___REMOVE_ALL__LIST = 7;
+
+	/**
+	 * The number of operations of the '<em>Abstract Constellation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION_OPERATION_COUNT = 8;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanImpl <em>Constellation Command Plan</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationCommandPlan()
+	 * @generated
+	 */
+	int CONSTELLATION_COMMAND_PLAN = 1;
+
+	/**
+	 * The feature id for the '<em><b>Constellation Command Plan Items</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Constellation Command Plan</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_COMMAND_PLAN_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Constellation Command Plan</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_COMMAND_PLAN_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanItemImpl <em>Constellation Command Plan Item</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanItemImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationCommandPlanItem()
+	 * @generated
+	 */
+	int CONSTELLATION_COMMAND_PLAN_ITEM = 2;
+
+	/**
+	 * The feature id for the '<em><b>Request</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST = 0;
+
+	/**
+	 * The feature id for the '<em><b>Satellite Command</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND = 1;
+
+	/**
+	 * The number of structural features of the '<em>Constellation Command Plan Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_COMMAND_PLAN_ITEM_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Constellation Command Plan Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_COMMAND_PLAN_ITEM_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.DefaultConstellationImpl <em>Default Constellation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.impl.DefaultConstellationImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getDefaultConstellation()
+	 * @generated
+	 */
+	int DEFAULT_CONSTELLATION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Satellites List</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION__SATELLITES_LIST = ABSTRACT_CONSTELLATION__SATELLITES_LIST;
+
+	/**
+	 * The feature id for the '<em><b>Ground Stations References List</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST = ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST;
+
+	/**
+	 * The feature id for the '<em><b>Downlinks Lists</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION__DOWNLINKS_LISTS = ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS;
+
+	/**
+	 * The feature id for the '<em><b>Constellation Requests List</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST = ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST;
+
+	/**
+	 * The number of structural features of the '<em>Default Constellation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION_FEATURE_COUNT = ABSTRACT_CONSTELLATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Plan</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION___PLAN__DATE_DATE = ABSTRACT_CONSTELLATION___PLAN__DATE_DATE;
+
+	/**
+	 * The operation id for the '<em>Plan</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION___PLAN__LIST_DATE_DATE = ABSTRACT_CONSTELLATION___PLAN__LIST_DATE_DATE;
+
+	/**
+	 * The operation id for the '<em>Commit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION___COMMIT__LIST = ABSTRACT_CONSTELLATION___COMMIT__LIST;
+
+	/**
+	 * The operation id for the '<em>Apply</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION___APPLY__CONSTELLATIONDOWNLINK = ABSTRACT_CONSTELLATION___APPLY__CONSTELLATIONDOWNLINK;
+
+	/**
+	 * The operation id for the '<em>Add</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION___ADD__ABSTRACTCONSTELLATIONREQUEST = ABSTRACT_CONSTELLATION___ADD__ABSTRACTCONSTELLATIONREQUEST;
+
+	/**
+	 * The operation id for the '<em>Add All</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION___ADD_ALL__LIST = ABSTRACT_CONSTELLATION___ADD_ALL__LIST;
+
+	/**
+	 * The operation id for the '<em>Remove</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION___REMOVE__ABSTRACTCONSTELLATIONREQUEST = ABSTRACT_CONSTELLATION___REMOVE__ABSTRACTCONSTELLATIONREQUEST;
+
+	/**
+	 * The operation id for the '<em>Remove All</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION___REMOVE_ALL__LIST = ABSTRACT_CONSTELLATION___REMOVE_ALL__LIST;
+
+	/**
+	 * The number of operations of the '<em>Default Constellation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEFAULT_CONSTELLATION_OPERATION_COUNT = ABSTRACT_CONSTELLATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationRequestsListImpl <em>Constellation Requests List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationRequestsListImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationRequestsList()
+	 * @generated
+	 */
+	int CONSTELLATION_REQUESTS_LIST = 4;
+
+	/**
+	 * The feature id for the '<em><b>Constellation Requests</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Constellation Requests List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_REQUESTS_LIST_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Constellation Requests List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTELLATION_REQUESTS_LIST_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationRequestImpl <em>Abstract Constellation Request</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.impl.AbstractConstellationRequestImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractConstellationRequest()
+	 * @generated
+	 */
+	int ABSTRACT_CONSTELLATION_REQUEST = 5;
+
+	/**
+	 * The feature id for the '<em><b>Uid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION_REQUEST__UID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Order Priority</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Order Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Satellite Command</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND = 3;
+
+	/**
+	 * The number of structural features of the '<em>Abstract Constellation Request</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION_REQUEST_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Abstract Constellation Request</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_CONSTELLATION_REQUEST_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ImageConstellationRequestImpl <em>Image Constellation Request</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.impl.ImageConstellationRequestImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getImageConstellationRequest()
+	 * @generated
+	 */
+	int IMAGE_CONSTELLATION_REQUEST = 6;
+
+	/**
+	 * The feature id for the '<em><b>Uid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CONSTELLATION_REQUEST__UID = ABSTRACT_CONSTELLATION_REQUEST__UID;
+
+	/**
+	 * The feature id for the '<em><b>Order Priority</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CONSTELLATION_REQUEST__ORDER_PRIORITY = ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY;
+
+	/**
+	 * The feature id for the '<em><b>Order Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CONSTELLATION_REQUEST__ORDER_STATUS = ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS;
+
+	/**
+	 * The feature id for the '<em><b>Satellite Command</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CONSTELLATION_REQUEST__SATELLITE_COMMAND = ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND;
+
+	/**
+	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CONSTELLATION_REQUEST__LONGITUDE = ABSTRACT_CONSTELLATION_REQUEST_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CONSTELLATION_REQUEST__LATITUDE = ABSTRACT_CONSTELLATION_REQUEST_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Elevation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CONSTELLATION_REQUEST__ELEVATION = ABSTRACT_CONSTELLATION_REQUEST_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Image</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CONSTELLATION_REQUEST__IMAGE = ABSTRACT_CONSTELLATION_REQUEST_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Image Constellation Request</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CONSTELLATION_REQUEST_FEATURE_COUNT = ABSTRACT_CONSTELLATION_REQUEST_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Image Constellation Request</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_CONSTELLATION_REQUEST_OPERATION_COUNT = ABSTRACT_CONSTELLATION_REQUEST_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatellitesListImpl <em>Satellites List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.impl.SatellitesListImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatellitesList()
+	 * @generated
+	 */
+	int SATELLITES_LIST = 7;
+
+	/**
+	 * The feature id for the '<em><b>Satellites</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITES_LIST__SATELLITES = 0;
+
+	/**
+	 * The number of structural features of the '<em>Satellites List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITES_LIST_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Satellites List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITES_LIST_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImpl <em>Satellite</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -72,7 +668,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatellite()
 	 * @generated
 	 */
-	int SATELLITE = 0;
+	int SATELLITE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -84,13 +680,22 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	int SATELLITE__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Orbit Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SATELLITE__ORBIT_MODEL = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Maximum Roll Rate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE__MAXIMUM_ROLL_RATE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
+	int SATELLITE__MAXIMUM_ROLL_RATE = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Maximum Roll</b></em>' attribute.
@@ -99,25 +704,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE__MAXIMUM_ROLL = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Orbit Model</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE__ORBIT_MODEL = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Imager</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE__IMAGER = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
+	int SATELLITE__MAXIMUM_ROLL = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Satellite</em>' class.
@@ -126,43 +713,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>Roll</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE___ROLL__DOUBLE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Acquire Image</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE___ACQUIRE_IMAGE__DOUBLE = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Download Images</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE___DOWNLOAD_IMAGES__INT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Enqueue Satellite Command</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE___ENQUEUE_SATELLITE_COMMAND__SATELLITECOMMAND = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 3;
+	int SATELLITE_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Satellite</em>' class.
@@ -171,235 +722,53 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 4;
+	int SATELLITE_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteSimulatedImpl <em>Satellite Simulated</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractSatelliteCommandImpl <em>Abstract Satellite Command</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteSimulatedImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteSimulated()
+	 * @see org.eclipse.symphony.examples.satellite.impl.AbstractSatelliteCommandImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractSatelliteCommand()
 	 * @generated
 	 */
-	int SATELLITE_SIMULATED = 1;
+	int ABSTRACT_SATELLITE_COMMAND = 9;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_SIMULATED__NAME = SATELLITE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Maximum Roll Rate</b></em>' attribute.
+	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_SIMULATED__MAXIMUM_ROLL_RATE = SATELLITE__MAXIMUM_ROLL_RATE;
+	int ABSTRACT_SATELLITE_COMMAND__LONGITUDE = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LONGITUDE;
 
 	/**
-	 * The feature id for the '<em><b>Maximum Roll</b></em>' attribute.
+	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_SIMULATED__MAXIMUM_ROLL = SATELLITE__MAXIMUM_ROLL;
+	int ABSTRACT_SATELLITE_COMMAND__LATITUDE = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__LATITUDE;
 
 	/**
-	 * The feature id for the '<em><b>Orbit Model</b></em>' containment reference.
+	 * The feature id for the '<em><b>Elevation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_SIMULATED__ORBIT_MODEL = SATELLITE__ORBIT_MODEL;
+	int ABSTRACT_SATELLITE_COMMAND__ELEVATION = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES__ELEVATION;
 
 	/**
-	 * The feature id for the '<em><b>Imager</b></em>' containment reference.
+	 * The feature id for the '<em><b>Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_SIMULATED__IMAGER = SATELLITE__IMAGER;
-
-	/**
-	 * The number of structural features of the '<em>Satellite Simulated</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_SIMULATED_FEATURE_COUNT = SATELLITE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Roll</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_SIMULATED___ROLL__DOUBLE = SATELLITE___ROLL__DOUBLE;
-
-	/**
-	 * The operation id for the '<em>Acquire Image</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_SIMULATED___ACQUIRE_IMAGE__DOUBLE = SATELLITE___ACQUIRE_IMAGE__DOUBLE;
-
-	/**
-	 * The operation id for the '<em>Download Images</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_SIMULATED___DOWNLOAD_IMAGES__INT = SATELLITE___DOWNLOAD_IMAGES__INT;
-
-	/**
-	 * The operation id for the '<em>Enqueue Satellite Command</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_SIMULATED___ENQUEUE_SATELLITE_COMMAND__SATELLITECOMMAND = SATELLITE___ENQUEUE_SATELLITE_COMMAND__SATELLITECOMMAND;
-
-	/**
-	 * The number of operations of the '<em>Satellite Simulated</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_SIMULATED_OPERATION_COUNT = SATELLITE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteStubImpl <em>Satellite Stub</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteStubImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteStub()
-	 * @generated
-	 */
-	int SATELLITE_STUB = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_STUB__NAME = SATELLITE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Maximum Roll Rate</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_STUB__MAXIMUM_ROLL_RATE = SATELLITE__MAXIMUM_ROLL_RATE;
-
-	/**
-	 * The feature id for the '<em><b>Maximum Roll</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_STUB__MAXIMUM_ROLL = SATELLITE__MAXIMUM_ROLL;
-
-	/**
-	 * The feature id for the '<em><b>Orbit Model</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_STUB__ORBIT_MODEL = SATELLITE__ORBIT_MODEL;
-
-	/**
-	 * The feature id for the '<em><b>Imager</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_STUB__IMAGER = SATELLITE__IMAGER;
-
-	/**
-	 * The number of structural features of the '<em>Satellite Stub</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_STUB_FEATURE_COUNT = SATELLITE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Roll</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_STUB___ROLL__DOUBLE = SATELLITE___ROLL__DOUBLE;
-
-	/**
-	 * The operation id for the '<em>Acquire Image</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_STUB___ACQUIRE_IMAGE__DOUBLE = SATELLITE___ACQUIRE_IMAGE__DOUBLE;
-
-	/**
-	 * The operation id for the '<em>Download Images</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_STUB___DOWNLOAD_IMAGES__INT = SATELLITE___DOWNLOAD_IMAGES__INT;
-
-	/**
-	 * The operation id for the '<em>Enqueue Satellite Command</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_STUB___ENQUEUE_SATELLITE_COMMAND__SATELLITECOMMAND = SATELLITE___ENQUEUE_SATELLITE_COMMAND__SATELLITECOMMAND;
-
-	/**
-	 * The number of operations of the '<em>Satellite Stub</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_STUB_OPERATION_COUNT = SATELLITE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandImpl <em>Satellite Command</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteCommandImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteCommand()
-	 * @generated
-	 */
-	int SATELLITE_COMMAND = 3;
+	int ABSTRACT_SATELLITE_COMMAND__TIME = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Satellite</b></em>' reference.
@@ -408,81 +777,80 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_COMMAND__SATELLITE = 0;
+	int ABSTRACT_SATELLITE_COMMAND__SATELLITE = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Command Start Time</b></em>' attribute.
+	 * The feature id for the '<em><b>Constellation Request</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_COMMAND__COMMAND_START_TIME = 1;
+	int ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Satellite Command</em>' class.
+	 * The number of structural features of the '<em>Abstract Satellite Command</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_COMMAND_FEATURE_COUNT = 2;
+	int ABSTRACT_SATELLITE_COMMAND_FEATURE_COUNT = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of operations of the '<em>Satellite Command</em>' class.
+	 * The number of operations of the '<em>Abstract Satellite Command</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_COMMAND_OPERATION_COUNT = 0;
+	int ABSTRACT_SATELLITE_COMMAND_OPERATION_COUNT = Symphony__CoreEnvironmentPackage.GEOGRAPHIC_COORDINATES_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandListImpl <em>Satellite Command List</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.AcquireImageSatelliteCommandImpl <em>Acquire Image Satellite Command</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteCommandListImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteCommandList()
+	 * @see org.eclipse.symphony.examples.satellite.impl.AcquireImageSatelliteCommandImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAcquireImageSatelliteCommand()
 	 * @generated
 	 */
-	int SATELLITE_COMMAND_LIST = 4;
+	int ACQUIRE_IMAGE_SATELLITE_COMMAND = 10;
 
 	/**
-	 * The feature id for the '<em><b>Commands</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_COMMAND_LIST__COMMANDS = 0;
-
-	/**
-	 * The number of structural features of the '<em>Satellite Command List</em>' class.
+	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_COMMAND_LIST_FEATURE_COUNT = 1;
+	int ACQUIRE_IMAGE_SATELLITE_COMMAND__LONGITUDE = ABSTRACT_SATELLITE_COMMAND__LONGITUDE;
 
 	/**
-	 * The number of operations of the '<em>Satellite Command List</em>' class.
+	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_COMMAND_LIST_OPERATION_COUNT = 0;
+	int ACQUIRE_IMAGE_SATELLITE_COMMAND__LATITUDE = ABSTRACT_SATELLITE_COMMAND__LATITUDE;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandRollImpl <em>Satellite Command Roll</em>}' class.
+	 * The feature id for the '<em><b>Elevation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteCommandRollImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteCommandRoll()
 	 * @generated
+	 * @ordered
 	 */
-	int SATELLITE_COMMAND_ROLL = 5;
+	int ACQUIRE_IMAGE_SATELLITE_COMMAND__ELEVATION = ABSTRACT_SATELLITE_COMMAND__ELEVATION;
+
+	/**
+	 * The feature id for the '<em><b>Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACQUIRE_IMAGE_SATELLITE_COMMAND__TIME = ABSTRACT_SATELLITE_COMMAND__TIME;
 
 	/**
 	 * The feature id for the '<em><b>Satellite</b></em>' reference.
@@ -491,361 +859,43 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_COMMAND_ROLL__SATELLITE = SATELLITE_COMMAND__SATELLITE;
+	int ACQUIRE_IMAGE_SATELLITE_COMMAND__SATELLITE = ABSTRACT_SATELLITE_COMMAND__SATELLITE;
 
 	/**
-	 * The feature id for the '<em><b>Command Start Time</b></em>' attribute.
+	 * The feature id for the '<em><b>Constellation Request</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_COMMAND_ROLL__COMMAND_START_TIME = SATELLITE_COMMAND__COMMAND_START_TIME;
+	int ACQUIRE_IMAGE_SATELLITE_COMMAND__CONSTELLATION_REQUEST = ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST;
 
 	/**
-	 * The feature id for the '<em><b>Target Roll Angle</b></em>' attribute.
+	 * The feature id for the '<em><b>Roll Angle</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE = SATELLITE_COMMAND_FEATURE_COUNT + 0;
+	int ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE = ABSTRACT_SATELLITE_COMMAND_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Satellite Command Roll</em>' class.
+	 * The number of structural features of the '<em>Acquire Image Satellite Command</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_COMMAND_ROLL_FEATURE_COUNT = SATELLITE_COMMAND_FEATURE_COUNT + 1;
+	int ACQUIRE_IMAGE_SATELLITE_COMMAND_FEATURE_COUNT = ABSTRACT_SATELLITE_COMMAND_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Satellite Command Roll</em>' class.
+	 * The number of operations of the '<em>Acquire Image Satellite Command</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_COMMAND_ROLL_OPERATION_COUNT = SATELLITE_COMMAND_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandAcquireImageImpl <em>Satellite Command Acquire Image</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteCommandAcquireImageImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteCommandAcquireImage()
-	 * @generated
-	 */
-	int SATELLITE_COMMAND_ACQUIRE_IMAGE = 6;
-
-	/**
-	 * The feature id for the '<em><b>Satellite</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_COMMAND_ACQUIRE_IMAGE__SATELLITE = SATELLITE_COMMAND__SATELLITE;
-
-	/**
-	 * The feature id for the '<em><b>Command Start Time</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_COMMAND_ACQUIRE_IMAGE__COMMAND_START_TIME = SATELLITE_COMMAND__COMMAND_START_TIME;
-
-	/**
-	 * The feature id for the '<em><b>Image Order</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER = SATELLITE_COMMAND_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Satellite Command Acquire Image</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_COMMAND_ACQUIRE_IMAGE_FEATURE_COUNT = SATELLITE_COMMAND_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Satellite Command Acquire Image</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_COMMAND_ACQUIRE_IMAGE_OPERATION_COUNT = SATELLITE_COMMAND_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ImageOrderImpl <em>Image Order</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.ImageOrderImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getImageOrder()
-	 * @generated
-	 */
-	int IMAGE_ORDER = 7;
-
-	/**
-	 * The feature id for the '<em><b>Order Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ORDER__ORDER_ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Priority</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ORDER__PRIORITY = 1;
-
-	/**
-	 * The feature id for the '<em><b>Image Center</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ORDER__IMAGE_CENTER = 2;
-
-	/**
-	 * The feature id for the '<em><b>Commanded Zoom</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ORDER__COMMANDED_ZOOM = 3;
-
-	/**
-	 * The number of structural features of the '<em>Image Order</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ORDER_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Image Order</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE_ORDER_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImagerImpl <em>Satellite Imager</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteImagerImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteImager()
-	 * @generated
-	 */
-	int SATELLITE_IMAGER = 8;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__PARENT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__DESCRIPTION = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Node Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__NODE_ID = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NODE_ID;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__CHILDREN = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__CHILDREN;
-
-	/**
-	 * The feature id for the '<em><b>Aggregated Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__AGGREGATED_CHILDREN = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__AGGREGATED_CHILDREN;
-
-	/**
-	 * The feature id for the '<em><b>Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__STATUS = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__STATUS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__NAME = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Latest Image Snapshot</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__LATEST_IMAGE_SNAPSHOT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA__LATEST_IMAGE_SNAPSHOT;
-
-	/**
-	 * The feature id for the '<em><b>Current Zoom</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__CURRENT_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Commanded Zoom</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__COMMANDED_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Satellite</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__SATELLITE = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Images Acquired</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER__IMAGES_ACQUIRED = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of structural features of the '<em>Satellite Imager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER_FEATURE_COUNT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_FEATURE_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>Accept</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___ACCEPT__INODEVISITOR = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___ACCEPT__INODEVISITOR;
-
-	/**
-	 * The operation id for the '<em>Take Snapshot</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___TAKE_SNAPSHOT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___TAKE_SNAPSHOT;
-
-	/**
-	 * The operation id for the '<em>Get Field Of View</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___GET_FIELD_OF_VIEW = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA___GET_FIELD_OF_VIEW;
-
-	/**
-	 * The operation id for the '<em>Command Zoom</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___COMMAND_ZOOM__DOUBLE = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Minimum Zoom</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___GET_MINIMUM_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Get Maximum Zoom</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___GET_MAXIMUM_ZOOM = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Download Images</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER___DOWNLOAD_IMAGES__INT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Satellite Imager</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_IMAGER_OPERATION_COUNT = Symphony__AddonsSensorsImagingPackage.ABSTRACT_CAMERA_OPERATION_COUNT + 4;
+	int ACQUIRE_IMAGE_SATELLITE_COMMAND_OPERATION_COUNT = ABSTRACT_SATELLITE_COMMAND_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageImpl <em>Orbital Image</em>}' class.
@@ -855,7 +905,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getOrbitalImage()
 	 * @generated
 	 */
-	int ORBITAL_IMAGE = 9;
+	int ORBITAL_IMAGE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -864,7 +914,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__WIDTH = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE__WIDTH;
+	int ORBITAL_IMAGE__WIDTH = Symphony__CommonImagesPackage.EIMAGE__WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Height</b></em>' attribute.
@@ -873,34 +923,34 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__HEIGHT = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE__HEIGHT;
+	int ORBITAL_IMAGE__HEIGHT = Symphony__CommonImagesPackage.EIMAGE__HEIGHT;
 
 	/**
-	 * The feature id for the '<em><b>Order Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Image Content</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__ORDER_ID = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE_FEATURE_COUNT + 0;
+	int ORBITAL_IMAGE__IMAGE_CONTENT = Symphony__CommonImagesPackage.EIMAGE__IMAGE_CONTENT;
 
 	/**
-	 * The feature id for the '<em><b>Image Center</b></em>' containment reference.
+	 * The feature id for the '<em><b>Coordinates</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__IMAGE_CENTER = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE_FEATURE_COUNT + 1;
+	int ORBITAL_IMAGE__COORDINATES = Symphony__CommonImagesPackage.EIMAGE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Download Size</b></em>' attribute.
+	 * The feature id for the '<em><b>Roll Angle</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE__DOWNLOAD_SIZE = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE_FEATURE_COUNT + 2;
+	int ORBITAL_IMAGE__ROLL_ANGLE = Symphony__CommonImagesPackage.EIMAGE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Orbital Image</em>' class.
@@ -909,7 +959,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE_FEATURE_COUNT = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE_FEATURE_COUNT + 3;
+	int ORBITAL_IMAGE_FEATURE_COUNT = Symphony__CommonImagesPackage.EIMAGE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>As Buffered Image</em>' operation.
@@ -918,7 +968,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE___AS_BUFFERED_IMAGE = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE___AS_BUFFERED_IMAGE;
+	int ORBITAL_IMAGE___AS_BUFFERED_IMAGE = Symphony__CommonImagesPackage.EIMAGE___AS_BUFFERED_IMAGE;
 
 	/**
 	 * The number of operations of the '<em>Orbital Image</em>' class.
@@ -927,417 +977,239 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ORBITAL_IMAGE_OPERATION_COUNT = Symphony__CommonImagesPackage.ABSTRACT_EIMAGE_OPERATION_COUNT + 0;
+	int ORBITAL_IMAGE_OPERATION_COUNT = Symphony__CommonImagesPackage.EIMAGE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationImpl <em>Satellite Constellation</em>}' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinksListImpl <em>Constellation Downlinks List</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteConstellation()
+	 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinksListImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationDownlinksList()
 	 * @generated
 	 */
-	int SATELLITE_CONSTELLATION = 10;
+	int CONSTELLATION_DOWNLINKS_LIST = 12;
 
 	/**
-	 * The feature id for the '<em><b>Satellites</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION__SATELLITES = 0;
-
-	/**
-	 * The feature id for the '<em><b>Ground Stations</b></em>' reference list.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_CONSTELLATION__GROUND_STATIONS = 1;
+	int CONSTELLATION_DOWNLINKS_LIST__NAME = Symphony__CommonEMFPackage.NAMED__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Pending Image Orders</b></em>' reference list.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS = 2;
+	int CONSTELLATION_DOWNLINKS_LIST__DESCRIPTION = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Start Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Downlinks</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_CONSTELLATION__START_DATE = 3;
+	int CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>End Date</b></em>' attribute.
+	 * The number of structural features of the '<em>Constellation Downlinks List</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_CONSTELLATION__END_DATE = 4;
+	int CONSTELLATION_DOWNLINKS_LIST_FEATURE_COUNT = Symphony__CommonEMFPackage.NAMED_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Satellite Constellation</em>' class.
+	 * The number of operations of the '<em>Constellation Downlinks List</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_CONSTELLATION_FEATURE_COUNT = 5;
+	int CONSTELLATION_DOWNLINKS_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Get Satellite</em>' operation.
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinkImpl <em>Constellation Downlink</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinkImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationDownlink()
+	 * @generated
+	 */
+	int CONSTELLATION_DOWNLINK = 13;
+
+	/**
+	 * The feature id for the '<em><b>Downlink Items</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_CONSTELLATION___GET_SATELLITE__ORBITMODEL = 0;
+	int CONSTELLATION_DOWNLINK__DOWNLINK_ITEMS = 0;
 
 	/**
-	 * The operation id for the '<em>Get Target Passes</em>' operation.
+	 * The number of structural features of the '<em>Constellation Downlink</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_CONSTELLATION___GET_TARGET_PASSES__IMAGEORDER_DATE_DATE_ELEVATIONMASK = 1;
+	int CONSTELLATION_DOWNLINK_FEATURE_COUNT = 1;
 
 	/**
-	 * The operation id for the '<em>Get Ground Station Passes</em>' operation.
+	 * The number of operations of the '<em>Constellation Downlink</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_CONSTELLATION___GET_GROUND_STATION_PASSES__SATELLITE_DATE_DATE_ELEVATIONMASK = 2;
+	int CONSTELLATION_DOWNLINK_OPERATION_COUNT = 0;
 
 	/**
-	 * The operation id for the '<em>Plan</em>' operation.
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationDownlinkItemImpl <em>Abstract Constellation Downlink Item</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.impl.AbstractConstellationDownlinkItemImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractConstellationDownlinkItem()
+	 * @generated
+	 */
+	int ABSTRACT_CONSTELLATION_DOWNLINK_ITEM = 14;
+
+	/**
+	 * The feature id for the '<em><b>Request UID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_CONSTELLATION___PLAN__LIST_DATE_DATE = 3;
+	int ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID = 0;
 
 	/**
-	 * The operation id for the '<em>Plan</em>' operation.
+	 * The number of structural features of the '<em>Abstract Constellation Downlink Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_CONSTELLATION___PLAN__DATE_DATE = 4;
+	int ABSTRACT_CONSTELLATION_DOWNLINK_ITEM_FEATURE_COUNT = 1;
 
 	/**
-	 * The operation id for the '<em>Plan</em>' operation.
+	 * The number of operations of the '<em>Abstract Constellation Downlink Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_CONSTELLATION___PLAN = 5;
+	int ABSTRACT_CONSTELLATION_DOWNLINK_ITEM_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Satellite Constellation</em>' class.
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageConstellationDownlinkItemImpl <em>Orbital Image Constellation Downlink Item</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.impl.OrbitalImageConstellationDownlinkItemImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getOrbitalImageConstellationDownlinkItem()
+	 * @generated
+	 */
+	int ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM = 15;
+
+	/**
+	 * The feature id for the '<em><b>Request UID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_CONSTELLATION_OPERATION_COUNT = 6;
+	int ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID = ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteUtilsImpl <em>Satellite Utils</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteUtilsImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteUtils()
-	 * @generated
-	 */
-	int SATELLITE_UTILS = 11;
-
-	/**
-	 * The number of structural features of the '<em>Satellite Utils</em>' class.
+	 * The feature id for the '<em><b>Image</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_UTILS_FEATURE_COUNT = 0;
+	int ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE = ABSTRACT_CONSTELLATION_DOWNLINK_ITEM_FEATURE_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Create Satellite Command Roll</em>' operation.
+	 * The number of structural features of the '<em>Orbital Image Constellation Downlink Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_UTILS___CREATE_SATELLITE_COMMAND_ROLL__SATELLITE_DATE_DOUBLE = 0;
+	int ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM_FEATURE_COUNT = ABSTRACT_CONSTELLATION_DOWNLINK_ITEM_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Create Satellite Command Acquire Image</em>' operation.
+	 * The number of operations of the '<em>Orbital Image Constellation Downlink Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_UTILS___CREATE_SATELLITE_COMMAND_ACQUIRE_IMAGE__SATELLITE_DATE_IMAGEORDER = 1;
+	int ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM_OPERATION_COUNT = ABSTRACT_CONSTELLATION_DOWNLINK_ITEM_OPERATION_COUNT + 0;
 
 	/**
-	 * The operation id for the '<em>Sort Image Order By Priority</em>' operation.
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationUtilitiesImpl <em>Constellation Utilities</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationUtilitiesImpl
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationUtilities()
+	 * @generated
+	 */
+	int CONSTELLATION_UTILITIES = 16;
+
+	/**
+	 * The number of structural features of the '<em>Constellation Utilities</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_UTILS___SORT_IMAGE_ORDER_BY_PRIORITY__LIST = 2;
+	int CONSTELLATION_UTILITIES_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Satellite Utils</em>' class.
+	 * The operation id for the '<em>Sort By Priority</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_UTILS_OPERATION_COUNT = 3;
+	int CONSTELLATION_UTILITIES___SORT_BY_PRIORITY__LIST = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationTypeApiAdapterImpl <em>Satellite Constellation Type Api Adapter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationTypeApiAdapterImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteConstellationTypeApiAdapter()
-	 * @generated
-	 */
-	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER = 12;
-
-	/**
-	 * The feature id for the '<em><b>Environment</b></em>' reference.
+	 * The number of operations of the '<em>Constellation Utilities</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER__ENVIRONMENT = Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__ENVIRONMENT;
+	int CONSTELLATION_UTILITIES_OPERATION_COUNT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Instance</b></em>' reference.
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestPriority <em>Constellation Request Priority</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestPriority
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationRequestPriority()
 	 * @generated
-	 * @ordered
 	 */
-	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER__INSTANCE = Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__INSTANCE;
+	int CONSTELLATION_REQUEST_PRIORITY = 17;
 
 	/**
-	 * The feature id for the '<em><b>Element Type</b></em>' reference.
+	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestStatus <em>Constellation Request Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER__ELEMENT_TYPE = Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER__ELEMENT_TYPE;
-
-	/**
-	 * The number of structural features of the '<em>Satellite Constellation Type Api Adapter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER_FEATURE_COUNT = Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Init</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT = Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___INIT__ENVIRONMENT_TYPE_EOBJECT;
-
-	/**
-	 * The operation id for the '<em>Apply</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA = Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___APPLY__ABSTRACTINITIALIZATIONDATA;
-
-	/**
-	 * The operation id for the '<em>Create Initialization Data</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER___CREATE_INITIALIZATION_DATA = Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___CREATE_INITIALIZATION_DATA;
-
-	/**
-	 * The operation id for the '<em>Collect</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA = Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___COLLECT__ABSTRACTINITIALIZATIONDATA;
-
-	/**
-	 * The operation id for the '<em>Create Result</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER___CREATE_RESULT__OPERATIONCALL = Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___CREATE_RESULT__OPERATIONCALL;
-
-	/**
-	 * The operation id for the '<em>Create Result</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION = Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___CREATE_RESULT__OPERATIONCALL_LONG_OBJECT_EXCEPTION;
-
-	/**
-	 * The operation id for the '<em>Invoke</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN = Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___INVOKE__EOBJECT_OPERATIONCALL_BOOLEAN;
-
-	/**
-	 * The operation id for the '<em>Dispose</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER___DISPOSE = Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER___DISPOSE;
-
-	/**
-	 * The number of operations of the '<em>Satellite Constellation Type Api Adapter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_TYPE_API_ADAPTER_OPERATION_COUNT = Symphony__CoreInvocatorPackage.TYPE_API_ADAPTER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationInitializationDataImpl <em>Satellite Constellation Initialization Data</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationInitializationDataImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteConstellationInitializationData()
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestStatus
+	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationRequestStatus()
 	 * @generated
 	 */
-	int SATELLITE_CONSTELLATION_INITIALIZATION_DATA = 13;
-
-	/**
-	 * The feature id for the '<em><b>Satellite Data</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA = Symphony__CoreInvocatorPackage.ABSTRACT_INITIALIZATION_DATA_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Ground Stations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS = Symphony__CoreInvocatorPackage.ABSTRACT_INITIALIZATION_DATA_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Pending Image Orders</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS = Symphony__CoreInvocatorPackage.ABSTRACT_INITIALIZATION_DATA_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Satellite Constellation Initialization Data</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_INITIALIZATION_DATA_FEATURE_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_INITIALIZATION_DATA_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Satellite Constellation Initialization Data</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_CONSTELLATION_INITIALIZATION_DATA_OPERATION_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_INITIALIZATION_DATA_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteInitializationDataImpl <em>Satellite Initialization Data</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteInitializationDataImpl
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteInitializationData()
-	 * @generated
-	 */
-	int SATELLITE_INITIALIZATION_DATA = 14;
-
-	/**
-	 * The feature id for the '<em><b>Satellite</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_INITIALIZATION_DATA__SATELLITE = Symphony__CoreInvocatorPackage.ABSTRACT_INITIALIZATION_DATA_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Orbit Model</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL = Symphony__CoreInvocatorPackage.ABSTRACT_INITIALIZATION_DATA_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Satellite Initialization Data</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_INITIALIZATION_DATA_FEATURE_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_INITIALIZATION_DATA_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Satellite Initialization Data</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SATELLITE_INITIALIZATION_DATA_OPERATION_COUNT = Symphony__CoreInvocatorPackage.ABSTRACT_INITIALIZATION_DATA_OPERATION_COUNT + 0;
+	int CONSTELLATION_REQUEST_STATUS = 18;
 
 	/**
 	 * The meta object id for the '<em>List</em>' data type.
@@ -1347,7 +1219,7 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getList()
 	 * @generated
 	 */
-	int LIST = 15;
+	int LIST = 19;
 
 	/**
 	 * The meta object id for the '<em>Sorted Set</em>' data type.
@@ -1357,18 +1229,322 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSortedSet()
 	 * @generated
 	 */
-	int SORTED_SET = 16;
+	int SORTED_SET = 20;
+
 
 	/**
-	 * The meta object id for the '<em>Exception</em>' data type.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation <em>Abstract Constellation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see java.lang.Exception
-	 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getException()
+	 * @return the meta object for class '<em>Abstract Constellation</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation
 	 * @generated
 	 */
-	int EXCEPTION = 17;
+	EClass getAbstractConstellation();
 
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getSatellitesList <em>Satellites List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Satellites List</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#getSatellitesList()
+	 * @see #getAbstractConstellation()
+	 * @generated
+	 */
+	EReference getAbstractConstellation_SatellitesList();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getGroundStationsReferencesList <em>Ground Stations References List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Ground Stations References List</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#getGroundStationsReferencesList()
+	 * @see #getAbstractConstellation()
+	 * @generated
+	 */
+	EReference getAbstractConstellation_GroundStationsReferencesList();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getDownlinksLists <em>Downlinks Lists</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Downlinks Lists</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#getDownlinksLists()
+	 * @see #getAbstractConstellation()
+	 * @generated
+	 */
+	EReference getAbstractConstellation_DownlinksLists();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#getConstellationRequestsList <em>Constellation Requests List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Constellation Requests List</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#getConstellationRequestsList()
+	 * @see #getAbstractConstellation()
+	 * @generated
+	 */
+	EReference getAbstractConstellation_ConstellationRequestsList();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#plan(java.util.Date, java.util.Date) <em>Plan</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Plan</em>' operation.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#plan(java.util.Date, java.util.Date)
+	 * @generated
+	 */
+	EOperation getAbstractConstellation__Plan__Date_Date();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#plan(java.util.List, java.util.Date, java.util.Date) <em>Plan</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Plan</em>' operation.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#plan(java.util.List, java.util.Date, java.util.Date)
+	 * @generated
+	 */
+	EOperation getAbstractConstellation__Plan__List_Date_Date();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#commit(java.util.List) <em>Commit</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Commit</em>' operation.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#commit(java.util.List)
+	 * @generated
+	 */
+	EOperation getAbstractConstellation__Commit__List();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#apply(org.eclipse.symphony.examples.satellite.ConstellationDownlink) <em>Apply</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Apply</em>' operation.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#apply(org.eclipse.symphony.examples.satellite.ConstellationDownlink)
+	 * @generated
+	 */
+	EOperation getAbstractConstellation__Apply__ConstellationDownlink();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#add(org.eclipse.symphony.examples.satellite.AbstractConstellationRequest) <em>Add</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add</em>' operation.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#add(org.eclipse.symphony.examples.satellite.AbstractConstellationRequest)
+	 * @generated
+	 */
+	EOperation getAbstractConstellation__Add__AbstractConstellationRequest();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#addAll(java.util.List) <em>Add All</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add All</em>' operation.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#addAll(java.util.List)
+	 * @generated
+	 */
+	EOperation getAbstractConstellation__AddAll__List();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#remove(org.eclipse.symphony.examples.satellite.AbstractConstellationRequest) <em>Remove</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove</em>' operation.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#remove(org.eclipse.symphony.examples.satellite.AbstractConstellationRequest)
+	 * @generated
+	 */
+	EOperation getAbstractConstellation__Remove__AbstractConstellationRequest();
+
+	/**
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.AbstractConstellation#removeAll(java.util.List) <em>Remove All</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove All</em>' operation.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellation#removeAll(java.util.List)
+	 * @generated
+	 */
+	EOperation getAbstractConstellation__RemoveAll__List();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlan <em>Constellation Command Plan</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Constellation Command Plan</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationCommandPlan
+	 * @generated
+	 */
+	EClass getConstellationCommandPlan();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlan#getConstellationCommandPlanItems <em>Constellation Command Plan Items</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Constellation Command Plan Items</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationCommandPlan#getConstellationCommandPlanItems()
+	 * @see #getConstellationCommandPlan()
+	 * @generated
+	 */
+	EReference getConstellationCommandPlan_ConstellationCommandPlanItems();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem <em>Constellation Command Plan Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Constellation Command Plan Item</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem
+	 * @generated
+	 */
+	EClass getConstellationCommandPlanItem();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem#getRequest <em>Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Request</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem#getRequest()
+	 * @see #getConstellationCommandPlanItem()
+	 * @generated
+	 */
+	EReference getConstellationCommandPlanItem_Request();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem#getSatelliteCommand <em>Satellite Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Satellite Command</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationCommandPlanItem#getSatelliteCommand()
+	 * @see #getConstellationCommandPlanItem()
+	 * @generated
+	 */
+	EReference getConstellationCommandPlanItem_SatelliteCommand();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.DefaultConstellation <em>Default Constellation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Default Constellation</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.DefaultConstellation
+	 * @generated
+	 */
+	EClass getDefaultConstellation();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestsList <em>Constellation Requests List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Constellation Requests List</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestsList
+	 * @generated
+	 */
+	EClass getConstellationRequestsList();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestsList#getConstellationRequests <em>Constellation Requests</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Constellation Requests</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestsList#getConstellationRequests()
+	 * @see #getConstellationRequestsList()
+	 * @generated
+	 */
+	EReference getConstellationRequestsList_ConstellationRequests();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationRequest <em>Abstract Constellation Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abstract Constellation Request</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationRequest
+	 * @generated
+	 */
+	EClass getAbstractConstellationRequest();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getUid <em>Uid</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Uid</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getUid()
+	 * @see #getAbstractConstellationRequest()
+	 * @generated
+	 */
+	EAttribute getAbstractConstellationRequest_Uid();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getOrderPriority <em>Order Priority</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Order Priority</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getOrderPriority()
+	 * @see #getAbstractConstellationRequest()
+	 * @generated
+	 */
+	EAttribute getAbstractConstellationRequest_OrderPriority();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getOrderStatus <em>Order Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Order Status</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getOrderStatus()
+	 * @see #getAbstractConstellationRequest()
+	 * @generated
+	 */
+	EAttribute getAbstractConstellationRequest_OrderStatus();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getSatelliteCommand <em>Satellite Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Satellite Command</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationRequest#getSatelliteCommand()
+	 * @see #getAbstractConstellationRequest()
+	 * @generated
+	 */
+	EReference getAbstractConstellationRequest_SatelliteCommand();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ImageConstellationRequest <em>Image Constellation Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Image Constellation Request</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ImageConstellationRequest
+	 * @generated
+	 */
+	EClass getImageConstellationRequest();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.ImageConstellationRequest#getImage <em>Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Image</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ImageConstellationRequest#getImage()
+	 * @see #getImageConstellationRequest()
+	 * @generated
+	 */
+	EReference getImageConstellationRequest_Image();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatellitesList <em>Satellites List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Satellites List</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.SatellitesList
+	 * @generated
+	 */
+	EClass getSatellitesList();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.satellite.SatellitesList#getSatellites <em>Satellites</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Satellites</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.SatellitesList#getSatellites()
+	 * @see #getSatellitesList()
+	 * @generated
+	 */
+	EReference getSatellitesList_Satellites();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.Satellite <em>Satellite</em>}'.
@@ -1379,6 +1555,17 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSatellite();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.symphony.examples.satellite.Satellite#getOrbitModel <em>Orbit Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Orbit Model</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.Satellite#getOrbitModel()
+	 * @see #getSatellite()
+	 * @generated
+	 */
+	EReference getSatellite_OrbitModel();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.Satellite#getMaximumRollRate <em>Maximum Roll Rate</em>}'.
@@ -1403,277 +1590,57 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	EAttribute getSatellite_MaximumRoll();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.Satellite#getOrbitModel <em>Orbit Model</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand <em>Abstract Satellite Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Orbit Model</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.Satellite#getOrbitModel()
-	 * @see #getSatellite()
+	 * @return the meta object for class '<em>Abstract Satellite Command</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand
 	 * @generated
 	 */
-	EReference getSatellite_OrbitModel();
+	EClass getAbstractSatelliteCommand();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.Satellite#getImager <em>Imager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Imager</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.Satellite#getImager()
-	 * @see #getSatellite()
-	 * @generated
-	 */
-	EReference getSatellite_Imager();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.Satellite#roll(double) <em>Roll</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Roll</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.Satellite#roll(double)
-	 * @generated
-	 */
-	EOperation getSatellite__Roll__double();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.Satellite#acquireImage(double) <em>Acquire Image</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Acquire Image</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.Satellite#acquireImage(double)
-	 * @generated
-	 */
-	EOperation getSatellite__AcquireImage__double();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.Satellite#downloadImages(int) <em>Download Images</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Download Images</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.Satellite#downloadImages(int)
-	 * @generated
-	 */
-	EOperation getSatellite__DownloadImages__int();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.Satellite#enqueueSatelliteCommand(org.eclipse.symphony.examples.satellite.SatelliteCommand) <em>Enqueue Satellite Command</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Enqueue Satellite Command</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.Satellite#enqueueSatelliteCommand(org.eclipse.symphony.examples.satellite.SatelliteCommand)
-	 * @generated
-	 */
-	EOperation getSatellite__EnqueueSatelliteCommand__SatelliteCommand();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteSimulated <em>Satellite Simulated</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Satellite Simulated</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteSimulated
-	 * @generated
-	 */
-	EClass getSatelliteSimulated();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteStub <em>Satellite Stub</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Satellite Stub</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteStub
-	 * @generated
-	 */
-	EClass getSatelliteStub();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteCommand <em>Satellite Command</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Satellite Command</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteCommand
-	 * @generated
-	 */
-	EClass getSatelliteCommand();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.symphony.examples.satellite.SatelliteCommand#getSatellite <em>Satellite</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand#getSatellite <em>Satellite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Satellite</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteCommand#getSatellite()
-	 * @see #getSatelliteCommand()
+	 * @see org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand#getSatellite()
+	 * @see #getAbstractSatelliteCommand()
 	 * @generated
 	 */
-	EReference getSatelliteCommand_Satellite();
+	EReference getAbstractSatelliteCommand_Satellite();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.SatelliteCommand#getCommandStartTime <em>Command Start Time</em>}'.
+	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand#getConstellationRequest <em>Constellation Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Command Start Time</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteCommand#getCommandStartTime()
-	 * @see #getSatelliteCommand()
+	 * @return the meta object for the container reference '<em>Constellation Request</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractSatelliteCommand#getConstellationRequest()
+	 * @see #getAbstractSatelliteCommand()
 	 * @generated
 	 */
-	EAttribute getSatelliteCommand_CommandStartTime();
+	EReference getAbstractSatelliteCommand_ConstellationRequest();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteCommandList <em>Satellite Command List</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand <em>Acquire Image Satellite Command</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Satellite Command List</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteCommandList
+	 * @return the meta object for class '<em>Acquire Image Satellite Command</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand
 	 * @generated
 	 */
-	EClass getSatelliteCommandList();
+	EClass getAcquireImageSatelliteCommand();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.satellite.SatelliteCommandList#getCommands <em>Commands</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand#getRollAngle <em>Roll Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Commands</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteCommandList#getCommands()
-	 * @see #getSatelliteCommandList()
+	 * @return the meta object for the attribute '<em>Roll Angle</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AcquireImageSatelliteCommand#getRollAngle()
+	 * @see #getAcquireImageSatelliteCommand()
 	 * @generated
 	 */
-	EReference getSatelliteCommandList_Commands();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteCommandRoll <em>Satellite Command Roll</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Satellite Command Roll</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteCommandRoll
-	 * @generated
-	 */
-	EClass getSatelliteCommandRoll();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.SatelliteCommandRoll#getTargetRollAngle <em>Target Roll Angle</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Roll Angle</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteCommandRoll#getTargetRollAngle()
-	 * @see #getSatelliteCommandRoll()
-	 * @generated
-	 */
-	EAttribute getSatelliteCommandRoll_TargetRollAngle();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage <em>Satellite Command Acquire Image</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Satellite Command Acquire Image</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage
-	 * @generated
-	 */
-	EClass getSatelliteCommandAcquireImage();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage#getImageOrder <em>Image Order</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Image Order</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteCommandAcquireImage#getImageOrder()
-	 * @see #getSatelliteCommandAcquireImage()
-	 * @generated
-	 */
-	EReference getSatelliteCommandAcquireImage_ImageOrder();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ImageOrder <em>Image Order</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Image Order</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ImageOrder
-	 * @generated
-	 */
-	EClass getImageOrder();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.ImageOrder#getOrderId <em>Order Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Order Id</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ImageOrder#getOrderId()
-	 * @see #getImageOrder()
-	 * @generated
-	 */
-	EAttribute getImageOrder_OrderId();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.ImageOrder#getPriority <em>Priority</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Priority</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ImageOrder#getPriority()
-	 * @see #getImageOrder()
-	 * @generated
-	 */
-	EAttribute getImageOrder_Priority();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.ImageOrder#getImageCenter <em>Image Center</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Image Center</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ImageOrder#getImageCenter()
-	 * @see #getImageOrder()
-	 * @generated
-	 */
-	EReference getImageOrder_ImageCenter();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.ImageOrder#getCommandedZoom <em>Commanded Zoom</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Commanded Zoom</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.ImageOrder#getCommandedZoom()
-	 * @see #getImageOrder()
-	 * @generated
-	 */
-	EAttribute getImageOrder_CommandedZoom();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteImager <em>Satellite Imager</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Satellite Imager</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteImager
-	 * @generated
-	 */
-	EClass getSatelliteImager();
-
-	/**
-	 * Returns the meta object for the container reference '{@link org.eclipse.symphony.examples.satellite.SatelliteImager#getSatellite <em>Satellite</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Satellite</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteImager#getSatellite()
-	 * @see #getSatelliteImager()
-	 * @generated
-	 */
-	EReference getSatelliteImager_Satellite();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.satellite.SatelliteImager#getImagesAcquired <em>Images Acquired</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Images Acquired</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteImager#getImagesAcquired()
-	 * @see #getSatelliteImager()
-	 * @generated
-	 */
-	EReference getSatelliteImager_ImagesAcquired();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteImager#downloadImages(int) <em>Download Images</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Download Images</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteImager#downloadImages(int)
-	 * @generated
-	 */
-	EOperation getSatelliteImager__DownloadImages__int();
+	EAttribute getAcquireImageSatelliteCommand_RollAngle();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.OrbitalImage <em>Orbital Image</em>}'.
@@ -1686,287 +1653,150 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	EClass getOrbitalImage();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getOrderId <em>Order Id</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getCoordinates <em>Coordinates</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Order Id</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.OrbitalImage#getOrderId()
+	 * @return the meta object for the containment reference '<em>Coordinates</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.OrbitalImage#getCoordinates()
 	 * @see #getOrbitalImage()
 	 * @generated
 	 */
-	EAttribute getOrbitalImage_OrderId();
+	EReference getOrbitalImage_Coordinates();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getImageCenter <em>Image Center</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getRollAngle <em>Roll Angle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Image Center</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.OrbitalImage#getImageCenter()
+	 * @return the meta object for the attribute '<em>Roll Angle</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.OrbitalImage#getRollAngle()
 	 * @see #getOrbitalImage()
 	 * @generated
 	 */
-	EReference getOrbitalImage_ImageCenter();
+	EAttribute getOrbitalImage_RollAngle();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getDownloadSize <em>Download Size</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ConstellationDownlinksList <em>Constellation Downlinks List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Download Size</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.OrbitalImage#getDownloadSize()
-	 * @see #getOrbitalImage()
+	 * @return the meta object for class '<em>Constellation Downlinks List</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationDownlinksList
 	 * @generated
 	 */
-	EAttribute getOrbitalImage_DownloadSize();
+	EClass getConstellationDownlinksList();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation <em>Satellite Constellation</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.satellite.ConstellationDownlinksList#getDownlinks <em>Downlinks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Satellite Constellation</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation
+	 * @return the meta object for the containment reference list '<em>Downlinks</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationDownlinksList#getDownlinks()
+	 * @see #getConstellationDownlinksList()
 	 * @generated
 	 */
-	EClass getSatelliteConstellation();
+	EReference getConstellationDownlinksList_Downlinks();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getSatellites <em>Satellites</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ConstellationDownlink <em>Constellation Downlink</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Satellites</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getSatellites()
-	 * @see #getSatelliteConstellation()
+	 * @return the meta object for class '<em>Constellation Downlink</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationDownlink
 	 * @generated
 	 */
-	EReference getSatelliteConstellation_Satellites();
+	EClass getConstellationDownlink();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getGroundStations <em>Ground Stations</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.satellite.ConstellationDownlink#getDownlinkItems <em>Downlink Items</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Ground Stations</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getGroundStations()
-	 * @see #getSatelliteConstellation()
+	 * @return the meta object for the containment reference list '<em>Downlink Items</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationDownlink#getDownlinkItems()
+	 * @see #getConstellationDownlink()
 	 * @generated
 	 */
-	EReference getSatelliteConstellation_GroundStations();
+	EReference getConstellationDownlink_DownlinkItems();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getPendingImageOrders <em>Pending Image Orders</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem <em>Abstract Constellation Downlink Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Pending Image Orders</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getPendingImageOrders()
-	 * @see #getSatelliteConstellation()
+	 * @return the meta object for class '<em>Abstract Constellation Downlink Item</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem
 	 * @generated
 	 */
-	EReference getSatelliteConstellation_PendingImageOrders();
+	EClass getAbstractConstellationDownlinkItem();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getStartDate <em>Start Date</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem#getRequestUID <em>Request UID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Start Date</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getStartDate()
-	 * @see #getSatelliteConstellation()
+	 * @return the meta object for the attribute '<em>Request UID</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.AbstractConstellationDownlinkItem#getRequestUID()
+	 * @see #getAbstractConstellationDownlinkItem()
 	 * @generated
 	 */
-	EAttribute getSatelliteConstellation_StartDate();
+	EAttribute getAbstractConstellationDownlinkItem_RequestUID();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getEndDate <em>End Date</em>}'.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem <em>Orbital Image Constellation Downlink Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>End Date</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getEndDate()
-	 * @see #getSatelliteConstellation()
+	 * @return the meta object for class '<em>Orbital Image Constellation Downlink Item</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem
 	 * @generated
 	 */
-	EAttribute getSatelliteConstellation_EndDate();
+	EClass getOrbitalImageConstellationDownlinkItem();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getSatellite(org.eclipse.symphony.core.environment.orbit.OrbitModel) <em>Get Satellite</em>}' operation.
+	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem#getImage <em>Image</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Satellite</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getSatellite(org.eclipse.symphony.core.environment.orbit.OrbitModel)
+	 * @return the meta object for the containment reference '<em>Image</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.OrbitalImageConstellationDownlinkItem#getImage()
+	 * @see #getOrbitalImageConstellationDownlinkItem()
 	 * @generated
 	 */
-	EOperation getSatelliteConstellation__GetSatellite__OrbitModel();
+	EReference getOrbitalImageConstellationDownlinkItem_Image();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getTargetPasses(org.eclipse.symphony.examples.satellite.ImageOrder, java.util.Date, java.util.Date, org.eclipse.symphony.core.environment.orbit.earth.ElevationMask) <em>Get Target Passes</em>}' operation.
+	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.ConstellationUtilities <em>Constellation Utilities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Target Passes</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getTargetPasses(org.eclipse.symphony.examples.satellite.ImageOrder, java.util.Date, java.util.Date, org.eclipse.symphony.core.environment.orbit.earth.ElevationMask)
+	 * @return the meta object for class '<em>Constellation Utilities</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationUtilities
 	 * @generated
 	 */
-	EOperation getSatelliteConstellation__GetTargetPasses__ImageOrder_Date_Date_ElevationMask();
+	EClass getConstellationUtilities();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#getGroundStationPasses(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, java.util.Date, org.eclipse.symphony.core.environment.orbit.earth.ElevationMask) <em>Get Ground Station Passes</em>}' operation.
+	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.ConstellationUtilities#sortByPriority(java.util.List) <em>Sort By Priority</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Ground Station Passes</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#getGroundStationPasses(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, java.util.Date, org.eclipse.symphony.core.environment.orbit.earth.ElevationMask)
+	 * @return the meta object for the '<em>Sort By Priority</em>' operation.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationUtilities#sortByPriority(java.util.List)
 	 * @generated
 	 */
-	EOperation getSatelliteConstellation__GetGroundStationPasses__Satellite_Date_Date_ElevationMask();
+	EOperation getConstellationUtilities__SortByPriority__List();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#plan(java.util.List, java.util.Date, java.util.Date) <em>Plan</em>}' operation.
+	 * Returns the meta object for enum '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestPriority <em>Constellation Request Priority</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Plan</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#plan(java.util.List, java.util.Date, java.util.Date)
+	 * @return the meta object for enum '<em>Constellation Request Priority</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestPriority
 	 * @generated
 	 */
-	EOperation getSatelliteConstellation__Plan__List_Date_Date();
+	EEnum getConstellationRequestPriority();
 
 	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#plan(java.util.Date, java.util.Date) <em>Plan</em>}' operation.
+	 * Returns the meta object for enum '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestStatus <em>Constellation Request Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Plan</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#plan(java.util.Date, java.util.Date)
+	 * @return the meta object for enum '<em>Constellation Request Status</em>'.
+	 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestStatus
 	 * @generated
 	 */
-	EOperation getSatelliteConstellation__Plan__Date_Date();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellation#plan() <em>Plan</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Plan</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellation#plan()
-	 * @generated
-	 */
-	EOperation getSatelliteConstellation__Plan();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteUtils <em>Satellite Utils</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Satellite Utils</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteUtils
-	 * @generated
-	 */
-	EClass getSatelliteUtils();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteUtils#createSatelliteCommandRoll(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, double) <em>Create Satellite Command Roll</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Satellite Command Roll</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteUtils#createSatelliteCommandRoll(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, double)
-	 * @generated
-	 */
-	EOperation getSatelliteUtils__CreateSatelliteCommandRoll__Satellite_Date_double();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteUtils#createSatelliteCommandAcquireImage(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, org.eclipse.symphony.examples.satellite.ImageOrder) <em>Create Satellite Command Acquire Image</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Satellite Command Acquire Image</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteUtils#createSatelliteCommandAcquireImage(org.eclipse.symphony.examples.satellite.Satellite, java.util.Date, org.eclipse.symphony.examples.satellite.ImageOrder)
-	 * @generated
-	 */
-	EOperation getSatelliteUtils__CreateSatelliteCommandAcquireImage__Satellite_Date_ImageOrder();
-
-	/**
-	 * Returns the meta object for the '{@link org.eclipse.symphony.examples.satellite.SatelliteUtils#sortImageOrderByPriority(java.util.List) <em>Sort Image Order By Priority</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Sort Image Order By Priority</em>' operation.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteUtils#sortImageOrderByPriority(java.util.List)
-	 * @generated
-	 */
-	EOperation getSatelliteUtils__SortImageOrderByPriority__List();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellationTypeApiAdapter <em>Satellite Constellation Type Api Adapter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Satellite Constellation Type Api Adapter</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellationTypeApiAdapter
-	 * @generated
-	 */
-	EClass getSatelliteConstellationTypeApiAdapter();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData <em>Satellite Constellation Initialization Data</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Satellite Constellation Initialization Data</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData
-	 * @generated
-	 */
-	EClass getSatelliteConstellationInitializationData();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData#getSatelliteData <em>Satellite Data</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Satellite Data</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData#getSatelliteData()
-	 * @see #getSatelliteConstellationInitializationData()
-	 * @generated
-	 */
-	EReference getSatelliteConstellationInitializationData_SatelliteData();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData#getGroundStations <em>Ground Stations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ground Stations</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData#getGroundStations()
-	 * @see #getSatelliteConstellationInitializationData()
-	 * @generated
-	 */
-	EReference getSatelliteConstellationInitializationData_GroundStations();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData#getPendingImageOrders <em>Pending Image Orders</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Pending Image Orders</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteConstellationInitializationData#getPendingImageOrders()
-	 * @see #getSatelliteConstellationInitializationData()
-	 * @generated
-	 */
-	EReference getSatelliteConstellationInitializationData_PendingImageOrders();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.symphony.examples.satellite.SatelliteInitializationData <em>Satellite Initialization Data</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Satellite Initialization Data</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteInitializationData
-	 * @generated
-	 */
-	EClass getSatelliteInitializationData();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.SatelliteInitializationData#getSatellite <em>Satellite</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Satellite</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteInitializationData#getSatellite()
-	 * @see #getSatelliteInitializationData()
-	 * @generated
-	 */
-	EReference getSatelliteInitializationData_Satellite();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.eclipse.symphony.examples.satellite.SatelliteInitializationData#getOrbitModel <em>Orbit Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Orbit Model</em>'.
-	 * @see org.eclipse.symphony.examples.satellite.SatelliteInitializationData#getOrbitModel()
-	 * @see #getSatelliteInitializationData()
-	 * @generated
-	 */
-	EReference getSatelliteInitializationData_OrbitModel();
+	EEnum getConstellationRequestStatus();
 
 	/**
 	 * Returns the meta object for data type '{@link java.util.List <em>List</em>}'.
@@ -1989,17 +1819,6 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getSortedSet();
-
-	/**
-	 * Returns the meta object for data type '{@link java.lang.Exception <em>Exception</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Exception</em>'.
-	 * @see java.lang.Exception
-	 * @model instanceClass="java.lang.Exception"
-	 * @generated
-	 */
-	EDataType getException();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2025,6 +1844,262 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 	 */
 	interface Literals {
 		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationImpl <em>Abstract Constellation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.AbstractConstellationImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractConstellation()
+		 * @generated
+		 */
+		EClass ABSTRACT_CONSTELLATION = eINSTANCE.getAbstractConstellation();
+
+		/**
+		 * The meta object literal for the '<em><b>Satellites List</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_CONSTELLATION__SATELLITES_LIST = eINSTANCE.getAbstractConstellation_SatellitesList();
+
+		/**
+		 * The meta object literal for the '<em><b>Ground Stations References List</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_CONSTELLATION__GROUND_STATIONS_REFERENCES_LIST = eINSTANCE.getAbstractConstellation_GroundStationsReferencesList();
+
+		/**
+		 * The meta object literal for the '<em><b>Downlinks Lists</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_CONSTELLATION__DOWNLINKS_LISTS = eINSTANCE.getAbstractConstellation_DownlinksLists();
+
+		/**
+		 * The meta object literal for the '<em><b>Constellation Requests List</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_CONSTELLATION__CONSTELLATION_REQUESTS_LIST = eINSTANCE.getAbstractConstellation_ConstellationRequestsList();
+
+		/**
+		 * The meta object literal for the '<em><b>Plan</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_CONSTELLATION___PLAN__DATE_DATE = eINSTANCE.getAbstractConstellation__Plan__Date_Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Plan</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_CONSTELLATION___PLAN__LIST_DATE_DATE = eINSTANCE.getAbstractConstellation__Plan__List_Date_Date();
+
+		/**
+		 * The meta object literal for the '<em><b>Commit</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_CONSTELLATION___COMMIT__LIST = eINSTANCE.getAbstractConstellation__Commit__List();
+
+		/**
+		 * The meta object literal for the '<em><b>Apply</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_CONSTELLATION___APPLY__CONSTELLATIONDOWNLINK = eINSTANCE.getAbstractConstellation__Apply__ConstellationDownlink();
+
+		/**
+		 * The meta object literal for the '<em><b>Add</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_CONSTELLATION___ADD__ABSTRACTCONSTELLATIONREQUEST = eINSTANCE.getAbstractConstellation__Add__AbstractConstellationRequest();
+
+		/**
+		 * The meta object literal for the '<em><b>Add All</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_CONSTELLATION___ADD_ALL__LIST = eINSTANCE.getAbstractConstellation__AddAll__List();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_CONSTELLATION___REMOVE__ABSTRACTCONSTELLATIONREQUEST = eINSTANCE.getAbstractConstellation__Remove__AbstractConstellationRequest();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove All</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ABSTRACT_CONSTELLATION___REMOVE_ALL__LIST = eINSTANCE.getAbstractConstellation__RemoveAll__List();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanImpl <em>Constellation Command Plan</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationCommandPlan()
+		 * @generated
+		 */
+		EClass CONSTELLATION_COMMAND_PLAN = eINSTANCE.getConstellationCommandPlan();
+
+		/**
+		 * The meta object literal for the '<em><b>Constellation Command Plan Items</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTELLATION_COMMAND_PLAN__CONSTELLATION_COMMAND_PLAN_ITEMS = eINSTANCE.getConstellationCommandPlan_ConstellationCommandPlanItems();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanItemImpl <em>Constellation Command Plan Item</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationCommandPlanItemImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationCommandPlanItem()
+		 * @generated
+		 */
+		EClass CONSTELLATION_COMMAND_PLAN_ITEM = eINSTANCE.getConstellationCommandPlanItem();
+
+		/**
+		 * The meta object literal for the '<em><b>Request</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTELLATION_COMMAND_PLAN_ITEM__REQUEST = eINSTANCE.getConstellationCommandPlanItem_Request();
+
+		/**
+		 * The meta object literal for the '<em><b>Satellite Command</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTELLATION_COMMAND_PLAN_ITEM__SATELLITE_COMMAND = eINSTANCE.getConstellationCommandPlanItem_SatelliteCommand();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.DefaultConstellationImpl <em>Default Constellation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.DefaultConstellationImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getDefaultConstellation()
+		 * @generated
+		 */
+		EClass DEFAULT_CONSTELLATION = eINSTANCE.getDefaultConstellation();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationRequestsListImpl <em>Constellation Requests List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationRequestsListImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationRequestsList()
+		 * @generated
+		 */
+		EClass CONSTELLATION_REQUESTS_LIST = eINSTANCE.getConstellationRequestsList();
+
+		/**
+		 * The meta object literal for the '<em><b>Constellation Requests</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTELLATION_REQUESTS_LIST__CONSTELLATION_REQUESTS = eINSTANCE.getConstellationRequestsList_ConstellationRequests();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationRequestImpl <em>Abstract Constellation Request</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.AbstractConstellationRequestImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractConstellationRequest()
+		 * @generated
+		 */
+		EClass ABSTRACT_CONSTELLATION_REQUEST = eINSTANCE.getAbstractConstellationRequest();
+
+		/**
+		 * The meta object literal for the '<em><b>Uid</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_CONSTELLATION_REQUEST__UID = eINSTANCE.getAbstractConstellationRequest_Uid();
+
+		/**
+		 * The meta object literal for the '<em><b>Order Priority</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_CONSTELLATION_REQUEST__ORDER_PRIORITY = eINSTANCE.getAbstractConstellationRequest_OrderPriority();
+
+		/**
+		 * The meta object literal for the '<em><b>Order Status</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_CONSTELLATION_REQUEST__ORDER_STATUS = eINSTANCE.getAbstractConstellationRequest_OrderStatus();
+
+		/**
+		 * The meta object literal for the '<em><b>Satellite Command</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_CONSTELLATION_REQUEST__SATELLITE_COMMAND = eINSTANCE.getAbstractConstellationRequest_SatelliteCommand();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ImageConstellationRequestImpl <em>Image Constellation Request</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.ImageConstellationRequestImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getImageConstellationRequest()
+		 * @generated
+		 */
+		EClass IMAGE_CONSTELLATION_REQUEST = eINSTANCE.getImageConstellationRequest();
+
+		/**
+		 * The meta object literal for the '<em><b>Image</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IMAGE_CONSTELLATION_REQUEST__IMAGE = eINSTANCE.getImageConstellationRequest_Image();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatellitesListImpl <em>Satellites List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.SatellitesListImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatellitesList()
+		 * @generated
+		 */
+		EClass SATELLITES_LIST = eINSTANCE.getSatellitesList();
+
+		/**
+		 * The meta object literal for the '<em><b>Satellites</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SATELLITES_LIST__SATELLITES = eINSTANCE.getSatellitesList_Satellites();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImpl <em>Satellite</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2033,6 +2108,14 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EClass SATELLITE = eINSTANCE.getSatellite();
+
+		/**
+		 * The meta object literal for the '<em><b>Orbit Model</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SATELLITE__ORBIT_MODEL = eINSTANCE.getSatellite_OrbitModel();
 
 		/**
 		 * The meta object literal for the '<em><b>Maximum Roll Rate</b></em>' attribute feature.
@@ -2051,82 +2134,14 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EAttribute SATELLITE__MAXIMUM_ROLL = eINSTANCE.getSatellite_MaximumRoll();
 
 		/**
-		 * The meta object literal for the '<em><b>Orbit Model</b></em>' containment reference feature.
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractSatelliteCommandImpl <em>Abstract Satellite Command</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.AbstractSatelliteCommandImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractSatelliteCommand()
 		 * @generated
 		 */
-		EReference SATELLITE__ORBIT_MODEL = eINSTANCE.getSatellite_OrbitModel();
-
-		/**
-		 * The meta object literal for the '<em><b>Imager</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SATELLITE__IMAGER = eINSTANCE.getSatellite_Imager();
-
-		/**
-		 * The meta object literal for the '<em><b>Roll</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SATELLITE___ROLL__DOUBLE = eINSTANCE.getSatellite__Roll__double();
-
-		/**
-		 * The meta object literal for the '<em><b>Acquire Image</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SATELLITE___ACQUIRE_IMAGE__DOUBLE = eINSTANCE.getSatellite__AcquireImage__double();
-
-		/**
-		 * The meta object literal for the '<em><b>Download Images</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SATELLITE___DOWNLOAD_IMAGES__INT = eINSTANCE.getSatellite__DownloadImages__int();
-
-		/**
-		 * The meta object literal for the '<em><b>Enqueue Satellite Command</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SATELLITE___ENQUEUE_SATELLITE_COMMAND__SATELLITECOMMAND = eINSTANCE.getSatellite__EnqueueSatelliteCommand__SatelliteCommand();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteSimulatedImpl <em>Satellite Simulated</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteSimulatedImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteSimulated()
-		 * @generated
-		 */
-		EClass SATELLITE_SIMULATED = eINSTANCE.getSatelliteSimulated();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteStubImpl <em>Satellite Stub</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteStubImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteStub()
-		 * @generated
-		 */
-		EClass SATELLITE_STUB = eINSTANCE.getSatelliteStub();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandImpl <em>Satellite Command</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteCommandImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteCommand()
-		 * @generated
-		 */
-		EClass SATELLITE_COMMAND = eINSTANCE.getSatelliteCommand();
+		EClass ABSTRACT_SATELLITE_COMMAND = eINSTANCE.getAbstractSatelliteCommand();
 
 		/**
 		 * The meta object literal for the '<em><b>Satellite</b></em>' reference feature.
@@ -2134,145 +2149,33 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SATELLITE_COMMAND__SATELLITE = eINSTANCE.getSatelliteCommand_Satellite();
+		EReference ABSTRACT_SATELLITE_COMMAND__SATELLITE = eINSTANCE.getAbstractSatelliteCommand_Satellite();
 
 		/**
-		 * The meta object literal for the '<em><b>Command Start Time</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Constellation Request</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SATELLITE_COMMAND__COMMAND_START_TIME = eINSTANCE.getSatelliteCommand_CommandStartTime();
+		EReference ABSTRACT_SATELLITE_COMMAND__CONSTELLATION_REQUEST = eINSTANCE.getAbstractSatelliteCommand_ConstellationRequest();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandListImpl <em>Satellite Command List</em>}' class.
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.AcquireImageSatelliteCommandImpl <em>Acquire Image Satellite Command</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteCommandListImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteCommandList()
+		 * @see org.eclipse.symphony.examples.satellite.impl.AcquireImageSatelliteCommandImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAcquireImageSatelliteCommand()
 		 * @generated
 		 */
-		EClass SATELLITE_COMMAND_LIST = eINSTANCE.getSatelliteCommandList();
+		EClass ACQUIRE_IMAGE_SATELLITE_COMMAND = eINSTANCE.getAcquireImageSatelliteCommand();
 
 		/**
-		 * The meta object literal for the '<em><b>Commands</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SATELLITE_COMMAND_LIST__COMMANDS = eINSTANCE.getSatelliteCommandList_Commands();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandRollImpl <em>Satellite Command Roll</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteCommandRollImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteCommandRoll()
-		 * @generated
-		 */
-		EClass SATELLITE_COMMAND_ROLL = eINSTANCE.getSatelliteCommandRoll();
-
-		/**
-		 * The meta object literal for the '<em><b>Target Roll Angle</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Roll Angle</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SATELLITE_COMMAND_ROLL__TARGET_ROLL_ANGLE = eINSTANCE.getSatelliteCommandRoll_TargetRollAngle();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteCommandAcquireImageImpl <em>Satellite Command Acquire Image</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteCommandAcquireImageImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteCommandAcquireImage()
-		 * @generated
-		 */
-		EClass SATELLITE_COMMAND_ACQUIRE_IMAGE = eINSTANCE.getSatelliteCommandAcquireImage();
-
-		/**
-		 * The meta object literal for the '<em><b>Image Order</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SATELLITE_COMMAND_ACQUIRE_IMAGE__IMAGE_ORDER = eINSTANCE.getSatelliteCommandAcquireImage_ImageOrder();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ImageOrderImpl <em>Image Order</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.ImageOrderImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getImageOrder()
-		 * @generated
-		 */
-		EClass IMAGE_ORDER = eINSTANCE.getImageOrder();
-
-		/**
-		 * The meta object literal for the '<em><b>Order Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IMAGE_ORDER__ORDER_ID = eINSTANCE.getImageOrder_OrderId();
-
-		/**
-		 * The meta object literal for the '<em><b>Priority</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IMAGE_ORDER__PRIORITY = eINSTANCE.getImageOrder_Priority();
-
-		/**
-		 * The meta object literal for the '<em><b>Image Center</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IMAGE_ORDER__IMAGE_CENTER = eINSTANCE.getImageOrder_ImageCenter();
-
-		/**
-		 * The meta object literal for the '<em><b>Commanded Zoom</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IMAGE_ORDER__COMMANDED_ZOOM = eINSTANCE.getImageOrder_CommandedZoom();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteImagerImpl <em>Satellite Imager</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteImagerImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteImager()
-		 * @generated
-		 */
-		EClass SATELLITE_IMAGER = eINSTANCE.getSatelliteImager();
-
-		/**
-		 * The meta object literal for the '<em><b>Satellite</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SATELLITE_IMAGER__SATELLITE = eINSTANCE.getSatelliteImager_Satellite();
-
-		/**
-		 * The meta object literal for the '<em><b>Images Acquired</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SATELLITE_IMAGER__IMAGES_ACQUIRED = eINSTANCE.getSatelliteImager_ImagesAcquired();
-
-		/**
-		 * The meta object literal for the '<em><b>Download Images</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SATELLITE_IMAGER___DOWNLOAD_IMAGES__INT = eINSTANCE.getSatelliteImager__DownloadImages__int();
+		EAttribute ACQUIRE_IMAGE_SATELLITE_COMMAND__ROLL_ANGLE = eINSTANCE.getAcquireImageSatelliteCommand_RollAngle();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageImpl <em>Orbital Image</em>}' class.
@@ -2285,230 +2188,130 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		EClass ORBITAL_IMAGE = eINSTANCE.getOrbitalImage();
 
 		/**
-		 * The meta object literal for the '<em><b>Order Id</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Coordinates</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ORBITAL_IMAGE__ORDER_ID = eINSTANCE.getOrbitalImage_OrderId();
+		EReference ORBITAL_IMAGE__COORDINATES = eINSTANCE.getOrbitalImage_Coordinates();
 
 		/**
-		 * The meta object literal for the '<em><b>Image Center</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Roll Angle</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ORBITAL_IMAGE__IMAGE_CENTER = eINSTANCE.getOrbitalImage_ImageCenter();
+		EAttribute ORBITAL_IMAGE__ROLL_ANGLE = eINSTANCE.getOrbitalImage_RollAngle();
 
 		/**
-		 * The meta object literal for the '<em><b>Download Size</b></em>' attribute feature.
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinksListImpl <em>Constellation Downlinks List</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinksListImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationDownlinksList()
 		 * @generated
 		 */
-		EAttribute ORBITAL_IMAGE__DOWNLOAD_SIZE = eINSTANCE.getOrbitalImage_DownloadSize();
+		EClass CONSTELLATION_DOWNLINKS_LIST = eINSTANCE.getConstellationDownlinksList();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationImpl <em>Satellite Constellation</em>}' class.
+		 * The meta object literal for the '<em><b>Downlinks</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteConstellation()
 		 * @generated
 		 */
-		EClass SATELLITE_CONSTELLATION = eINSTANCE.getSatelliteConstellation();
+		EReference CONSTELLATION_DOWNLINKS_LIST__DOWNLINKS = eINSTANCE.getConstellationDownlinksList_Downlinks();
 
 		/**
-		 * The meta object literal for the '<em><b>Satellites</b></em>' reference list feature.
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinkImpl <em>Constellation Downlink</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationDownlinkImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationDownlink()
 		 * @generated
 		 */
-		EReference SATELLITE_CONSTELLATION__SATELLITES = eINSTANCE.getSatelliteConstellation_Satellites();
+		EClass CONSTELLATION_DOWNLINK = eINSTANCE.getConstellationDownlink();
 
 		/**
-		 * The meta object literal for the '<em><b>Ground Stations</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Downlink Items</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SATELLITE_CONSTELLATION__GROUND_STATIONS = eINSTANCE.getSatelliteConstellation_GroundStations();
+		EReference CONSTELLATION_DOWNLINK__DOWNLINK_ITEMS = eINSTANCE.getConstellationDownlink_DownlinkItems();
 
 		/**
-		 * The meta object literal for the '<em><b>Pending Image Orders</b></em>' reference list feature.
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.AbstractConstellationDownlinkItemImpl <em>Abstract Constellation Downlink Item</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.AbstractConstellationDownlinkItemImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getAbstractConstellationDownlinkItem()
 		 * @generated
 		 */
-		EReference SATELLITE_CONSTELLATION__PENDING_IMAGE_ORDERS = eINSTANCE.getSatelliteConstellation_PendingImageOrders();
+		EClass ABSTRACT_CONSTELLATION_DOWNLINK_ITEM = eINSTANCE.getAbstractConstellationDownlinkItem();
 
 		/**
-		 * The meta object literal for the '<em><b>Start Date</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Request UID</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SATELLITE_CONSTELLATION__START_DATE = eINSTANCE.getSatelliteConstellation_StartDate();
+		EAttribute ABSTRACT_CONSTELLATION_DOWNLINK_ITEM__REQUEST_UID = eINSTANCE.getAbstractConstellationDownlinkItem_RequestUID();
 
 		/**
-		 * The meta object literal for the '<em><b>End Date</b></em>' attribute feature.
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.OrbitalImageConstellationDownlinkItemImpl <em>Orbital Image Constellation Downlink Item</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.OrbitalImageConstellationDownlinkItemImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getOrbitalImageConstellationDownlinkItem()
 		 * @generated
 		 */
-		EAttribute SATELLITE_CONSTELLATION__END_DATE = eINSTANCE.getSatelliteConstellation_EndDate();
+		EClass ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM = eINSTANCE.getOrbitalImageConstellationDownlinkItem();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Satellite</b></em>' operation.
+		 * The meta object literal for the '<em><b>Image</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SATELLITE_CONSTELLATION___GET_SATELLITE__ORBITMODEL = eINSTANCE.getSatelliteConstellation__GetSatellite__OrbitModel();
+		EReference ORBITAL_IMAGE_CONSTELLATION_DOWNLINK_ITEM__IMAGE = eINSTANCE.getOrbitalImageConstellationDownlinkItem_Image();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Target Passes</b></em>' operation.
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.ConstellationUtilitiesImpl <em>Constellation Utilities</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.impl.ConstellationUtilitiesImpl
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationUtilities()
 		 * @generated
 		 */
-		EOperation SATELLITE_CONSTELLATION___GET_TARGET_PASSES__IMAGEORDER_DATE_DATE_ELEVATIONMASK = eINSTANCE.getSatelliteConstellation__GetTargetPasses__ImageOrder_Date_Date_ElevationMask();
+		EClass CONSTELLATION_UTILITIES = eINSTANCE.getConstellationUtilities();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Ground Station Passes</b></em>' operation.
+		 * The meta object literal for the '<em><b>Sort By Priority</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation SATELLITE_CONSTELLATION___GET_GROUND_STATION_PASSES__SATELLITE_DATE_DATE_ELEVATIONMASK = eINSTANCE.getSatelliteConstellation__GetGroundStationPasses__Satellite_Date_Date_ElevationMask();
+		EOperation CONSTELLATION_UTILITIES___SORT_BY_PRIORITY__LIST = eINSTANCE.getConstellationUtilities__SortByPriority__List();
 
 		/**
-		 * The meta object literal for the '<em><b>Plan</b></em>' operation.
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestPriority <em>Constellation Request Priority</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestPriority
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationRequestPriority()
 		 * @generated
 		 */
-		EOperation SATELLITE_CONSTELLATION___PLAN__LIST_DATE_DATE = eINSTANCE.getSatelliteConstellation__Plan__List_Date_Date();
+		EEnum CONSTELLATION_REQUEST_PRIORITY = eINSTANCE.getConstellationRequestPriority();
 
 		/**
-		 * The meta object literal for the '<em><b>Plan</b></em>' operation.
+		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.ConstellationRequestStatus <em>Constellation Request Status</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.examples.satellite.ConstellationRequestStatus
+		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getConstellationRequestStatus()
 		 * @generated
 		 */
-		EOperation SATELLITE_CONSTELLATION___PLAN__DATE_DATE = eINSTANCE.getSatelliteConstellation__Plan__Date_Date();
-
-		/**
-		 * The meta object literal for the '<em><b>Plan</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SATELLITE_CONSTELLATION___PLAN = eINSTANCE.getSatelliteConstellation__Plan();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteUtilsImpl <em>Satellite Utils</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteUtilsImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteUtils()
-		 * @generated
-		 */
-		EClass SATELLITE_UTILS = eINSTANCE.getSatelliteUtils();
-
-		/**
-		 * The meta object literal for the '<em><b>Create Satellite Command Roll</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SATELLITE_UTILS___CREATE_SATELLITE_COMMAND_ROLL__SATELLITE_DATE_DOUBLE = eINSTANCE.getSatelliteUtils__CreateSatelliteCommandRoll__Satellite_Date_double();
-
-		/**
-		 * The meta object literal for the '<em><b>Create Satellite Command Acquire Image</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SATELLITE_UTILS___CREATE_SATELLITE_COMMAND_ACQUIRE_IMAGE__SATELLITE_DATE_IMAGEORDER = eINSTANCE.getSatelliteUtils__CreateSatelliteCommandAcquireImage__Satellite_Date_ImageOrder();
-
-		/**
-		 * The meta object literal for the '<em><b>Sort Image Order By Priority</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SATELLITE_UTILS___SORT_IMAGE_ORDER_BY_PRIORITY__LIST = eINSTANCE.getSatelliteUtils__SortImageOrderByPriority__List();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationTypeApiAdapterImpl <em>Satellite Constellation Type Api Adapter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationTypeApiAdapterImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteConstellationTypeApiAdapter()
-		 * @generated
-		 */
-		EClass SATELLITE_CONSTELLATION_TYPE_API_ADAPTER = eINSTANCE.getSatelliteConstellationTypeApiAdapter();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationInitializationDataImpl <em>Satellite Constellation Initialization Data</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteConstellationInitializationDataImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteConstellationInitializationData()
-		 * @generated
-		 */
-		EClass SATELLITE_CONSTELLATION_INITIALIZATION_DATA = eINSTANCE.getSatelliteConstellationInitializationData();
-
-		/**
-		 * The meta object literal for the '<em><b>Satellite Data</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SATELLITE_CONSTELLATION_INITIALIZATION_DATA__SATELLITE_DATA = eINSTANCE.getSatelliteConstellationInitializationData_SatelliteData();
-
-		/**
-		 * The meta object literal for the '<em><b>Ground Stations</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SATELLITE_CONSTELLATION_INITIALIZATION_DATA__GROUND_STATIONS = eINSTANCE.getSatelliteConstellationInitializationData_GroundStations();
-
-		/**
-		 * The meta object literal for the '<em><b>Pending Image Orders</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SATELLITE_CONSTELLATION_INITIALIZATION_DATA__PENDING_IMAGE_ORDERS = eINSTANCE.getSatelliteConstellationInitializationData_PendingImageOrders();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.symphony.examples.satellite.impl.SatelliteInitializationDataImpl <em>Satellite Initialization Data</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.symphony.examples.satellite.impl.SatelliteInitializationDataImpl
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getSatelliteInitializationData()
-		 * @generated
-		 */
-		EClass SATELLITE_INITIALIZATION_DATA = eINSTANCE.getSatelliteInitializationData();
-
-		/**
-		 * The meta object literal for the '<em><b>Satellite</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SATELLITE_INITIALIZATION_DATA__SATELLITE = eINSTANCE.getSatelliteInitializationData_Satellite();
-
-		/**
-		 * The meta object literal for the '<em><b>Orbit Model</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SATELLITE_INITIALIZATION_DATA__ORBIT_MODEL = eINSTANCE.getSatelliteInitializationData_OrbitModel();
+		EEnum CONSTELLATION_REQUEST_STATUS = eINSTANCE.getConstellationRequestStatus();
 
 		/**
 		 * The meta object literal for the '<em>List</em>' data type.
@@ -2529,16 +2332,6 @@ public interface Symphony__ExamplesSatellitePackage extends EPackage {
 		 * @generated
 		 */
 		EDataType SORTED_SET = eINSTANCE.getSortedSet();
-
-		/**
-		 * The meta object literal for the '<em>Exception</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see java.lang.Exception
-		 * @see org.eclipse.symphony.examples.satellite.impl.Symphony__ExamplesSatellitePackageImpl#getException()
-		 * @generated
-		 */
-		EDataType EXCEPTION = eINSTANCE.getException();
 
 	}
 

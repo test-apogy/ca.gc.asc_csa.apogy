@@ -9,35 +9,215 @@
 
 package org.eclipse.symphony.examples.satellite
 
-import org.eclipse.emf.ecore.EDate
-
+import org.eclipse.symphony.common.emf.Described
 import org.eclipse.symphony.common.emf.Named
-
-import org.eclipse.symphony.core.invocator.TypeApiAdapter
-import org.eclipse.symphony.core.invocator.AbstractInitializationData
-
-import org.eclipse.symphony.addons.sensors.imaging.AbstractCamera
-import org.eclipse.symphony.addons.sensors.imaging.Zoomable
-
-import org.eclipse.symphony.common.images.AbstractEImage
-
+import org.eclipse.symphony.common.emf.Timed
+import org.eclipse.symphony.common.images.EImage
 import org.eclipse.symphony.core.environment.GeographicCoordinates
 import org.eclipse.symphony.core.environment.orbit.OrbitModel
-import org.eclipse.symphony.core.environment.orbit.earth.ElevationMask
-import org.eclipse.symphony.core.environment.orbit.earth.GroundStation
-import org.eclipse.symphony.core.environment.orbit.earth.VisibilityPass
-
-// Basics Types
-type List < T > wraps java.util.List
-type SortedSet<T> wraps java.util.SortedSet
-type Exception wraps java.lang.Exception
+import org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList
 
 /*
- * An example satellite. The satellite is nadir looking, and can roll back and forth (+- 5.0 deg) along its trajectory.
- * An imager is mounted on its nadir axis and can take images of the Earth below. 
+ * Basic Types.
  */
-abstract class Satellite extends Named
-{	
+ type List<T> wraps java.util.List
+ type SortedSet<T> wraps java.util.SortedSet
+
+/*
+ * Represents a constellation of Satellites. It provides basic queries used to schedule 
+ * image acquisition and upload requests and downloads data from the satellites.
+ */
+abstract class AbstractConstellation{
+	/*
+	 * List of the constellation {@link Satellite}. 
+	 */
+	contains SatellitesList[0..1] satellitesList	
+	
+	/*
+	 * List of the {@link GroundStation}.
+	 */
+	contains GroundStationReferencesList[0..1] groundStationsReferencesList
+	
+	/*
+	 * List of {@link ConstellationDownlinkList} used to store {@link ConstellationDownlink}.
+	 */
+	contains ConstellationDownlinksList[0..1] downlinksLists
+	
+	/*
+	 * List of {@link AbstractConstellationRequest}.
+	 */
+	contains ConstellationRequestsList[0..1] constellationRequestsList
+
+	/*
+	 * Returns the list of {@link AbstractSatelliteCommand} required to process the constellation {@link AbstractConstellationRequest} 
+	 * based on the available constellation satellites.
+	 * @param startDate The start date of the period to be queried.
+	 * @param endDate The end date of the period to be queried.
+	 * @return Reference to the {@link SatelliteCommandPlan}.
+	 */
+	op ConstellationCommandPlan plan(Date startDate, Date endDate)
+	
+	/*
+	 * Returns the list of {@link AbstractSatelliteCommand} required to process a specific list of {@link AbstractConstellationRequest} 
+	 * based on the available constellation satellites.
+	 * @param requests Refers to the list of {@link AbstractConstellationRequest} to process.
+	 * @param startDate The start date of the period to be queried.
+	 * @param endDate The end date of the period to be queried.
+	 * @return Reference to the {@link SatelliteCommandPlan}.
+	 */
+	op ConstellationCommandPlan plan(List<AbstractConstellationRequest> requests, Date startDate, Date endDate)
+	
+	/*
+	 * Packages and commits the list of {@link AbstractSatelliteCommand}.  
+	 * @param satelliteCommands Reference to the list of {@link AbstractSatelliteCommand}.
+	 */
+	op void commit(List<AbstractSatelliteCommand> satelliteCommands)
+
+	/* 
+	 * Updates the {@link AbstractConstellationRequest} state based on the {@link ConstallationDownlink}. 
+	 * @param downlink Reference to the {@link ConstellationDownlink}.
+	 */
+	op void apply(ConstellationDownlink downlink)
+	
+	/*
+	 * Adds the specified {@link AbstractConstellationRequest} to the constellation.
+	 * @param request Specifies the request to add to the {@link AbstractConstellation}.
+	 */
+	op void add(AbstractConstellationRequest request)
+	
+	/*
+	 * Adds all the {@link AbstractConstellationRequest} specified in the list to the constellation.
+	 * @param requests Specifies the requests to add to the {@link AbstractConstellation}.
+	 */	
+	op void addAll(List<AbstractConstellationRequest> requests)
+	
+	/*
+	 * Removes the specified {@link AbstractConstellationRequest} from the constellation.
+	 * @param request Specifies the request to remove from the {@link AbstractConstellation}.
+	 */	
+	op void remove(AbstractConstellationRequest request)
+	
+	/*
+	 * Removes all the {@link AbstractConstellationRequest} specified in the list from the constellation.
+	 * @param request Specifies the requests to remove from the {@link AbstractConstellation}.
+	 */		
+	op void removeAll(List<AbstractConstellationRequest> requests)	
+}
+
+/*
+ * This class contains a list of {@link SatelliteCommandPlanItem}.
+ * The {@link AbstractConstellation#plan} produces {@link SatelliteCommandPlan}. 
+ */
+class ConstellationCommandPlan{
+	/*
+	 * List of {@link SatelliteCommandPlanItem}.
+	 */
+	contains ConstellationCommandPlanItem[0..*] constellationCommandPlanItems
+}
+
+/*
+ * This class specifies the link between an {@link AbstractConstellationRequest} and a {@link AbstractSatelliteCommand}.
+ */
+class ConstellationCommandPlanItem{
+	/*
+	 * Reference to the {@link AbstractConstellationRequest}.
+	 */	
+	refers AbstractConstellationRequest[1] request
+	
+	/*
+	 * Reference to the {@link AbstractSatelliteCommand} used/required to service the {@link AbstractConstellationRequest}.
+	 */
+	contains AbstractSatelliteCommand[0..1] satelliteCommand	
+}
+
+/*
+ * Constellation Default Implementation Class.
+ */
+class DefaultConstellation extends AbstractConstellation{	
+}
+
+/*
+ * List that contains {@link AbstractConstellationRequest}.
+ */
+class ConstellationRequestsList{	
+	/*
+	 * {@link AbstractConstellationRequest} container.
+	 */
+	contains AbstractConstellationRequest[0..*] constellationRequests
+}
+
+/*
+ * This abstract class is used to model Constellation Request such as {@link ImageConstellationRequest}.
+ */
+abstract class AbstractConstellationRequest{	
+	/*
+	 * Request Unique Identifier.
+	 */
+	long uid = "0"
+	
+	/*
+	 * Request Priority.
+	 */
+	ConstellationRequestPriority orderPriority = "NORMAL"
+	
+	/*
+	 * Order Status.
+	 */
+	ConstellationRequestStatus orderStatus = "NEW"	
+	
+	/*
+	 * Reference to the {@link AbstractSatelliteCommand} associated to the {@link AbstractConstellationRequest}.
+	 */
+	contains AbstractSatelliteCommand satelliteCommand opposite constellationRequest 	
+}
+
+/*
+ * Class that documents a request to take an orbital image at a specific location.  
+ * It also serves to store the status and the image obtained if any. 
+ */
+class ImageConstellationRequest extends AbstractConstellationRequest, GeographicCoordinates{
+	
+	/*
+	 * Contains the {@link OrbitalImage} if the {@link ImageConstellationRequest} was successfully processed and retrieved.
+	 */
+	contains OrbitalImage[0..1] image	
+} 
+
+/*
+ * This enumeration is used to indicate the possible {@link AbstractConstellationRequest} order priorities.
+ */
+enum ConstellationRequestPriority{
+	LOW = 0, 
+	NORMAL = 1,
+	HIGH = 2
+}
+
+/*
+ * This enumeration is used to indicate the possible {@link AbstractConstellationRequest} statuses.
+ */
+enum ConstellationRequestStatus{
+	NEW = 0,
+	COMMITTED = 1,
+	COMPLETED = 2,
+	FAILED = 3
+}
+
+/*
+ * List that contains {@link Satellite}. 
+ */
+class SatellitesList{
+	contains Satellite[0..*] satellites
+}
+
+/*
+ * Class that defines the properties of a specific satellite.
+ */
+class Satellite extends Named{
+	/*
+	 * Refers to the {@link OrbitModel}.
+	 */
+	refers OrbitModel orbitModel
+	
 	/*
 	 * The satellite maximum roll rate.
 	 */
@@ -48,237 +228,82 @@ abstract class Satellite extends Named
 	 * The satellite maximum roll.
 	 */
 	@GenModel(symphony_units="rad")
-	double maximumRoll = "0.087"
-	
-	/*
-	 * The Orbit Model defining this satellite orbit around the Earth.
-	 */
-	contains OrbitModel orbitModel
-	
-	/*
-	 * The imager on-board the satellite.
-	 */
-	contains SatelliteImager imager opposite satellite
-	
-	/*
-	 * Commands the spacecraft to roll to the specified roll angle, in radians.
-	 */
-	op boolean roll(double targetRollAngle)
-	
-	/*
-	 * Commands the spacecraft to acquire an image with a given zoom.
-	 */
-	op OrbitalImage acquireImage(double zoom)
-	
-	/*
-	 * Commands the spacecraft to download a number of OrbitalImage.
-	 */
-	op List<OrbitalImage> downloadImages(int maximumNumberOfImages)
-	
-	/*
-	 * Enqueues a command for future execution.
-	 */
-	op boolean enqueueSatelliteCommand(SatelliteCommand command)
+	double maximumRoll = "0.087"	
 }
 
-class SatelliteSimulated extends Satellite
-{
-	
-}
-
-class SatelliteStub extends Satellite
-{
-	
-}
-
-// Satellite Commands
-
-class SatelliteCommand
-{
+/*
+ * Satellite Command.
+ */
+class AbstractSatelliteCommand extends GeographicCoordinates, Timed{	
+	/*
+	 * Refers the {@link Satellite} associated with the {@link AbstractSatelliteCommand}. 
+	 */
 	refers Satellite satellite
-	
-	Date commandStartTime
-}
 
-class SatelliteCommandList
-{
-	contains SatelliteCommand[0..*] commands
-}
-
-class SatelliteCommandRoll extends SatelliteCommand
-{
-	@GenModel(symphony_units="rad")
-	double targetRollAngle = "0"
-}
-
-class SatelliteCommandAcquireImage extends SatelliteCommand
-{
-	contains ImageOrder imageOrder
-}
-
-class ImageOrder
-{
-	int orderId = "-1"
-	
-	int priority = "1"
-	
-	contains GeographicCoordinates imageCenter
-		
-	double commandedZoom = "1.0"
+	/* 
+	 * Reference to the associated {@link AbstractConstellationRequest}.
+	 */
+	container AbstractConstellationRequest constellationRequest opposite satelliteCommand
 }
 
 /*
- * A specialization of AbstractCamera that is a camera mounted on a satellite.
+ * Satellite Command to Acquire OrbitalImage
  */
-class SatelliteImager extends AbstractCamera, Zoomable
+class AcquireImageSatelliteCommand extends AbstractSatelliteCommand
 {
-	container Satellite satellite opposite imager
-	
-	/*
-	 * List of images stored on-board the imager. Note that when the maximum number of image has been acquired,
-	 * further takeImageSnapshot command will be rejected.
-	 */
-	contains OrbitalImage[0..10] imagesAcquired
-	
-	/*
-	 * Command that downloads a specified number of images.
-	 * @param maximumNumberOfImages The maximum number of images to download.
-	 */
-	op List<OrbitalImage> downloadImages(int maximumNumberOfImages)
+	/* 
+	 * The satellite is nadir looking, and can roll back and forth (+- X degrees) along its trajectory.
+     * An imager is mounted on its nadir axis and can take images of the Earth below. 
+     */
+	double rollAngle = "0.0"	
 }
 
 /*
- * A specialization of AbstractEImage that includes the geographical coordinates of the center of the image.
+ * This class represents an orbital image.
  */
-class OrbitalImage extends AbstractEImage
-{	
-	int orderId = "-1"
-	
-	/*
-	 * The GeographicCoordinates of the center of the image.
-	 */
-	contains GeographicCoordinates imageCenter
-	
-	/*
-	 * The image download size, in bytes.
-	 */
-	int downloadSize = "0"
-}
-
-
-/*
- * A class representing a constellation of Satellites. It provides basic queries used to schedule 
- * image acquisition and upload/downloads from the satellites.
- */
-class SatelliteConstellation
-{
-	/*
-	 * The list of satellite(s) available.
-	 */
-	@GenModel(notify="true", children= "true", createChild="true")
-	refers Satellite[1..*] satellites
-
-	/*
-	 * The list of GroundStation used to communicate with the satellite(s).
-	 */
-	@GenModel(notify="true", child="true", createChild="true")
-	refers GroundStation[1..*] groundStations
-
-	@GenModel(notify="true", child="true", createChild="true")
-	refers ImageOrder[0..*] pendingImageOrders
-	
-	EDate startDate
-	
-	EDate endDate
-	
-	/*
-	 * Returns the satellite associated with the specified OrbitModel.
-	 * @param orbitModel The specified OrbitModel.
-	 * @return The Satellite associated with the specified OrbitModel, null if none is found.
-	 */
-	op Satellite getSatellite(OrbitModel orbitModel)
-
-	/*
-	 * Returns the visibility passes for a given ImageOrder. 
-	 * @param imageOrder The ImageOrder that needs imaging.
-	 * @param startDate The start date of the period to be queried.
-	 * @param endDate The end date of the period to be queried.
-	 * @param elevationMask The ElevationMask to be used to determine the visibility of satellites by the surface location.
-	 * @return The list of Visibility passes, ordered by start time.
-	 */
-	op SortedSet<VisibilityPass> getTargetPasses(ImageOrder imageOrder, EDate startDate, EDate endDate, ElevationMask elevationMask) throws Exception
-
-	/*
-	 * Returns the Ground Station(s) visibility passes for a given Satellite. 
-	 * @param satellite The Satellite.
-	 * @param startDate The start date of the period to be queried.
-	 * @param endDate The end date of the period to be queried.
-	 * @param elevationMask The ElevationMask to be used to determine the visibility of satellites by the surface location.
-	 * @return The list of Visibility passes, ordered by start time.
-	 */
-	op SortedSet<VisibilityPass> getGroundStationPasses(Satellite satellite, EDate startDate, EDate endDate, ElevationMask elevationMask) throws Exception	
-
-	/*
-	 * Using the pending orders and the current satellite(s) state, creates the list of commands that needs to be uploaded to the satellite(s).
-	 */
-	op SatelliteCommandList plan(List<ImageOrder> imageOrders, EDate startDate, EDate endDate)	
-	
-	/*
-	 * Using the pending orders and the current satellite(s) state, creates the list of commands that needs to be uploaded to the satellite(s).
-	 */
-	op SatelliteCommandList plan(EDate startDate, EDate endDate)	
-	
-	/*
-	 * Using the pending orders and the current satellite(s) state, creates the list of commands that needs to be uploaded to the satellite(s).
-	 */
-	op SatelliteCommandList plan()	
+class OrbitalImage extends EImage{
+	contains GeographicCoordinates[1] coordinates	
+	double rollAngle = "0.0"	
 }
 
 /*
- * Utilities class for the Satellite example.
+ * This class represents a list of {@link ConstellationDownlink}.
  */
-class SatelliteUtils
-{
-	op SatelliteCommandRoll createSatelliteCommandRoll(Satellite satellite, Date startTime, double rollAngle)
-	
-	op SatelliteCommandAcquireImage createSatelliteCommandAcquireImage(Satellite satellite, Date imageTime, ImageOrder imageOrder)
-	
-	op SortedSet<ImageOrder> sortImageOrderByPriority(List<ImageOrder> imageOrders)
+class ConstellationDownlinksList extends Named, Described{	
+	contains ConstellationDownlink[0..*] downlinks
 }
 
-/* ----------------------------------------------------------------------
- * Invocator support.
- * ----------------------------------------------------------------------*/
- 
-/*
- * Specific TypeAdapter for SatelliteConstellation.
+/* 
+ * A {@link ConstellationDownlink} class contains the {@link AbstractConstellationDownlinkItem}.
  */
-class SatelliteConstellationTypeApiAdapter extends TypeApiAdapter
-{
-	
-}
- 
-/*
- * Initialization Data representing the state of of a SatelliteConstellation.
- */
-class SatelliteConstellationInitializationData extends AbstractInitializationData
-{
-	@GenModel(notify="true", child="true", createChild="true")
-	contains SatelliteInitializationData[1..*] satelliteData
-	
-	@GenModel(notify="true", child="true", createChild="true")
-	contains GroundStation[1..*] groundStations
-	
-	@GenModel(notify="true", child="true", createChild="true")
-	contains ImageOrder[0..*] pendingImageOrders
+class ConstellationDownlink{
+	contains AbstractConstellationDownlinkItem[0..*] downlinkItems
 }
 
 /*
- * Initialization Data representing the state of a Satellite.
+ * This class represents an item in a {@link ConstellationDownlink}.
  */
-class SatelliteInitializationData extends AbstractInitializationData
-{
-	contains Satellite satellite
-	
-	contains OrbitModel orbitModel		
+abstract class AbstractConstellationDownlinkItem{
+	/*
+	 * Unique {@link AbstractConstellationRequest} identifier.
+	 */
+	long requestUID = "0"		
+}
+
+/*
+ * This class represents a {@link AbstractDownlinkItem} that contains an {@link OrbitalImage}.
+ */
+class OrbitalImageConstellationDownlinkItem extends AbstractConstellationDownlinkItem{
+	contains OrbitalImage[0..1] image	
+}
+
+/*
+ * Utilities class for the satellite example.
+ */
+class ConstellationUtilities{
+	/*
+	 * Sorts the list of {@link AbstractConstellationRequest} based on {@link AbstractConstellationRequest#priority}.
+	 * @param requests Specifies the list of {@link AbstractConstellationRequest} to sort.
+	 */
+	op SortedSet<AbstractConstellationRequest> sortByPriority(List<AbstractConstellationRequest> requests)
 }

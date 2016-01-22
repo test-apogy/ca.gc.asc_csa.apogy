@@ -1883,6 +1883,43 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	int EARTH_SURFACE_LOCATION_LIST_OPERATION_COUNT = Symphony__CommonEMFPackage.NAMED_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.GroundStationReferencesListImpl <em>Ground Station References List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.GroundStationReferencesListImpl
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getGroundStationReferencesList()
+	 * @generated
+	 */
+	int GROUND_STATION_REFERENCES_LIST = 18;
+
+	/**
+	 * The feature id for the '<em><b>Ground Stations</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Ground Station References List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUND_STATION_REFERENCES_LIST_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Ground Station References List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUND_STATION_REFERENCES_LIST_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.GroundStationImpl <em>Ground Station</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1890,7 +1927,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getGroundStation()
 	 * @generated
 	 */
-	int GROUND_STATION = 18;
+	int GROUND_STATION = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1963,7 +2000,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getGroundStationList()
 	 * @generated
 	 */
-	int GROUND_STATION_LIST = 19;
+	int GROUND_STATION_LIST = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2018,7 +2055,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getVisibilityPass()
 	 * @generated
 	 */
-	int VISIBILITY_PASS = 20;
+	int VISIBILITY_PASS = 21;
 
 	/**
 	 * The feature id for the '<em><b>Orbit Model</b></em>' reference.
@@ -2100,7 +2137,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getVisibilityPassSpacecraftPositionHistory()
 	 * @generated
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY = 21;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION_HISTORY = 22;
 
 	/**
 	 * The feature id for the '<em><b>Time Interval</b></em>' attribute.
@@ -2182,7 +2219,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getVisibilityPassSpacecraftPosition()
 	 * @generated
 	 */
-	int VISIBILITY_PASS_SPACECRAFT_POSITION = 22;
+	int VISIBILITY_PASS_SPACECRAFT_POSITION = 23;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -2264,7 +2301,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getSpacecraftsVisibilitySet()
 	 * @generated
 	 */
-	int SPACECRAFTS_VISIBILITY_SET = 23;
+	int SPACECRAFTS_VISIBILITY_SET = 24;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2400,7 +2437,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getCorridorPoint()
 	 * @generated
 	 */
-	int CORRIDOR_POINT = 24;
+	int CORRIDOR_POINT = 25;
 
 	/**
 	 * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -2464,7 +2501,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getCorridor()
 	 * @generated
 	 */
-	int CORRIDOR = 25;
+	int CORRIDOR = 26;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2519,7 +2556,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getSpacecraftSwathCorridor()
 	 * @generated
 	 */
-	int SPACECRAFT_SWATH_CORRIDOR = 26;
+	int SPACECRAFT_SWATH_CORRIDOR = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2664,7 +2701,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getSymphony__CoreEnvironmentOrbitEarthFacade()
 	 * @generated
 	 */
-	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE = 27;
+	int SYMPHONY_CORE_ENVIRONMENT_ORBIT_EARTH_FACADE = 28;
 
 	/**
 	 * The number of structural features of the '<em>Facade</em>' class.
@@ -2926,7 +2963,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getEphemerisType()
 	 * @generated
 	 */
-	int EPHEMERIS_TYPE = 28;
+	int EPHEMERIS_TYPE = 29;
 
 	/**
 	 * The meta object id for the '<em>List</em>' data type.
@@ -2936,7 +2973,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getList()
 	 * @generated
 	 */
-	int LIST = 29;
+	int LIST = 30;
 
 	/**
 	 * The meta object id for the '<em>Map</em>' data type.
@@ -2946,7 +2983,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getMap()
 	 * @generated
 	 */
-	int MAP = 30;
+	int MAP = 31;
 
 	/**
 	 * The meta object id for the '<em>Exception</em>' data type.
@@ -2956,7 +2993,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getException()
 	 * @generated
 	 */
-	int EXCEPTION = 31;
+	int EXCEPTION = 32;
 
 	/**
 	 * The meta object id for the '<em>Sorted Set</em>' data type.
@@ -2966,7 +3003,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getSortedSet()
 	 * @generated
 	 */
-	int SORTED_SET = 32;
+	int SORTED_SET = 33;
 
 	/**
 	 * The meta object id for the '<em>Rotation</em>' data type.
@@ -2976,7 +3013,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getRotation()
 	 * @generated
 	 */
-	int ROTATION = 33;
+	int ROTATION = 34;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Frame</em>' data type.
@@ -2986,7 +3023,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitFrame()
 	 * @generated
 	 */
-	int ORE_KIT_FRAME = 34;
+	int ORE_KIT_FRAME = 35;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Time Stamped Angular Coordinates</em>' data type.
@@ -2996,7 +3033,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitTimeStampedAngularCoordinates()
 	 * @generated
 	 */
-	int ORE_KIT_TIME_STAMPED_ANGULAR_COORDINATES = 35;
+	int ORE_KIT_TIME_STAMPED_ANGULAR_COORDINATES = 36;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Time Stamped PV Coordinates</em>' data type.
@@ -3006,7 +3043,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitTimeStampedPVCoordinates()
 	 * @generated
 	 */
-	int ORE_KIT_TIME_STAMPED_PV_COORDINATES = 36;
+	int ORE_KIT_TIME_STAMPED_PV_COORDINATES = 37;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Spacecraft State</em>' data type.
@@ -3016,7 +3053,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitSpacecraftState()
 	 * @generated
 	 */
-	int ORE_KIT_SPACECRAFT_STATE = 37;
+	int ORE_KIT_SPACECRAFT_STATE = 38;
 
 	/**
 	 * The meta object id for the '<em>Absolute Date</em>' data type.
@@ -3026,7 +3063,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getAbsoluteDate()
 	 * @generated
 	 */
-	int ABSOLUTE_DATE = 38;
+	int ABSOLUTE_DATE = 39;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Orbit</em>' data type.
@@ -3036,7 +3073,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitOrbit()
 	 * @generated
 	 */
-	int ORE_KIT_ORBIT = 39;
+	int ORE_KIT_ORBIT = 40;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Keplerian Orbit</em>' data type.
@@ -3046,7 +3083,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitKeplerianOrbit()
 	 * @generated
 	 */
-	int ORE_KIT_KEPLERIAN_ORBIT = 40;
+	int ORE_KIT_KEPLERIAN_ORBIT = 41;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Cartesian Orbit</em>' data type.
@@ -3056,7 +3093,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitCartesianOrbit()
 	 * @generated
 	 */
-	int ORE_KIT_CARTESIAN_ORBIT = 41;
+	int ORE_KIT_CARTESIAN_ORBIT = 42;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Elevation Mask</em>' data type.
@@ -3066,7 +3103,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitElevationMask()
 	 * @generated
 	 */
-	int ORE_KIT_ELEVATION_MASK = 42;
+	int ORE_KIT_ELEVATION_MASK = 43;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Attitude Provider</em>' data type.
@@ -3076,7 +3113,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitAttitudeProvider()
 	 * @generated
 	 */
-	int ORE_KIT_ATTITUDE_PROVIDER = 43;
+	int ORE_KIT_ATTITUDE_PROVIDER = 44;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Propagator</em>' data type.
@@ -3086,7 +3123,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_PROPAGATOR = 44;
+	int ORE_KIT_PROPAGATOR = 45;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit DSST Propagator</em>' data type.
@@ -3096,7 +3133,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitDSSTPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_DSST_PROPAGATOR = 45;
+	int ORE_KIT_DSST_PROPAGATOR = 46;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Eckstein Hechler Propagator</em>' data type.
@@ -3106,7 +3143,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitEcksteinHechlerPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_ECKSTEIN_HECHLER_PROPAGATOR = 46;
+	int ORE_KIT_ECKSTEIN_HECHLER_PROPAGATOR = 47;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Ephemeris Progator</em>' data type.
@@ -3116,7 +3153,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitEphemerisProgator()
 	 * @generated
 	 */
-	int ORE_KIT_EPHEMERIS_PROGATOR = 47;
+	int ORE_KIT_EPHEMERIS_PROGATOR = 48;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Keplerian Propagator</em>' data type.
@@ -3126,7 +3163,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitKeplerianPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_KEPLERIAN_PROPAGATOR = 48;
+	int ORE_KIT_KEPLERIAN_PROPAGATOR = 49;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit Numerical Propagator</em>' data type.
@@ -3136,7 +3173,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitNumericalPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_NUMERICAL_PROPAGATOR = 49;
+	int ORE_KIT_NUMERICAL_PROPAGATOR = 50;
 
 	/**
 	 * The meta object id for the '<em>Ore Kit TLE Propagator</em>' data type.
@@ -3146,7 +3183,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitTLEPropagator()
 	 * @generated
 	 */
-	int ORE_KIT_TLE_PROPAGATOR = 50;
+	int ORE_KIT_TLE_PROPAGATOR = 51;
 
 
 	/**
@@ -3157,7 +3194,7 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getOreKitTLE()
 	 * @generated
 	 */
-	int ORE_KIT_TLE = 51;
+	int ORE_KIT_TLE = 52;
 
 
 	/**
@@ -3885,6 +3922,27 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getEarthSurfaceLocationList_EarthSurfaceLocations();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList <em>Ground Station References List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Ground Station References List</em>'.
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList
+	 * @generated
+	 */
+	EClass getGroundStationReferencesList();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList#getGroundStations <em>Ground Stations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Ground Stations</em>'.
+	 * @see org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList#getGroundStations()
+	 * @see #getGroundStationReferencesList()
+	 * @generated
+	 */
+	EReference getGroundStationReferencesList_GroundStations();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.symphony.core.environment.orbit.earth.GroundStation <em>Ground Station</em>}'.
@@ -5523,6 +5581,24 @@ public interface Symphony__CoreEnvironmentOrbitEarthPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EARTH_SURFACE_LOCATION_LIST__EARTH_SURFACE_LOCATIONS = eINSTANCE.getEarthSurfaceLocationList_EarthSurfaceLocations();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.GroundStationReferencesListImpl <em>Ground Station References List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.GroundStationReferencesListImpl
+		 * @see org.eclipse.symphony.core.environment.orbit.earth.impl.Symphony__CoreEnvironmentOrbitEarthPackageImpl#getGroundStationReferencesList()
+		 * @generated
+		 */
+		EClass GROUND_STATION_REFERENCES_LIST = eINSTANCE.getGroundStationReferencesList();
+
+		/**
+		 * The meta object literal for the '<em><b>Ground Stations</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GROUND_STATION_REFERENCES_LIST__GROUND_STATIONS = eINSTANCE.getGroundStationReferencesList_GroundStations();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.symphony.core.environment.orbit.earth.impl.GroundStationImpl <em>Ground Station</em>}' class.

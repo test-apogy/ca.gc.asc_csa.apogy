@@ -5,6 +5,7 @@ package org.eclipse.symphony.core.invocator.provider;
 
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -18,7 +19,10 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorFacade;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
 
 /**
@@ -59,12 +63,35 @@ public class Symphony__CoreInvocatorFacadeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addInitVariableInstancesDatePropertyDescriptor(object);
 			addActiveInvocatorSessionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
   /**
+	 * This adds a property descriptor for the Init Variable Instances Date feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInitVariableInstancesDatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Symphony__CoreInvocatorFacade_initVariableInstancesDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Symphony__CoreInvocatorFacade_initVariableInstancesDate_feature", "_UI_Symphony__CoreInvocatorFacade_type"),
+				 Symphony__CoreInvocatorPackage.Literals.SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+		/**
 	 * This adds a property descriptor for the Active Invocator Session feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -107,7 +134,11 @@ public class Symphony__CoreInvocatorFacadeItemProvider
   @Override
   public String getText(Object object)
   {
-		return getString("_UI_Symphony__CoreInvocatorFacade_type");
+		Date labelValue = ((Symphony__CoreInvocatorFacade)object).getInitVariableInstancesDate();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Symphony__CoreInvocatorFacade_type") :
+			getString("_UI_Symphony__CoreInvocatorFacade_type") + " " + label;
 	}
 
   /**
@@ -121,6 +152,12 @@ public class Symphony__CoreInvocatorFacadeItemProvider
   public void notifyChanged(Notification notification)
   {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Symphony__CoreInvocatorFacade.class)) {
+			case Symphony__CoreInvocatorPackage.SYMPHONY_CORE_INVOCATOR_FACADE__INIT_VARIABLE_INSTANCES_DATE:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

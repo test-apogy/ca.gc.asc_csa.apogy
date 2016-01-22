@@ -3,7 +3,7 @@
  */
 package org.eclipse.symphony.examples.satellite;
 
-import org.eclipse.symphony.common.images.AbstractEImage;
+import org.eclipse.symphony.common.images.EImage;
 import org.eclipse.symphony.core.environment.GeographicCoordinates;
 
 /**
@@ -12,103 +12,73 @@ import org.eclipse.symphony.core.environment.GeographicCoordinates;
  * <!-- end-user-doc -->
  *
  * <!-- begin-model-doc -->
- * A specialization of AbstractEImage that includes the geographical coordinates of the center of the image.
+ * This class represents an orbital image.
  * <!-- end-model-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getOrderId <em>Order Id</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getImageCenter <em>Image Center</em>}</li>
- *   <li>{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getDownloadSize <em>Download Size</em>}</li>
+ *   <li>{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getCoordinates <em>Coordinates</em>}</li>
+ *   <li>{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getRollAngle <em>Roll Angle</em>}</li>
  * </ul>
  *
  * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getOrbitalImage()
  * @model
  * @generated
  */
-public interface OrbitalImage extends AbstractEImage {
+public interface OrbitalImage extends EImage {
 	/**
-	 * Returns the value of the '<em><b>Order Id</b></em>' attribute.
-	 * The default value is <code>"-1"</code>.
+	 * Returns the value of the '<em><b>Coordinates</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Order Id</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Coordinates</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Order Id</em>' attribute.
-	 * @see #setOrderId(int)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getOrbitalImage_OrderId()
-	 * @model default="-1" unique="false"
+	 * @return the value of the '<em>Coordinates</em>' containment reference.
+	 * @see #setCoordinates(GeographicCoordinates)
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getOrbitalImage_Coordinates()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	int getOrderId();
+	GeographicCoordinates getCoordinates();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getOrderId <em>Order Id</em>}' attribute.
+	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getCoordinates <em>Coordinates</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Order Id</em>' attribute.
-	 * @see #getOrderId()
+	 * @param value the new value of the '<em>Coordinates</em>' containment reference.
+	 * @see #getCoordinates()
 	 * @generated
 	 */
-	void setOrderId(int value);
+	void setCoordinates(GeographicCoordinates value);
 
 	/**
-	 * Returns the value of the '<em><b>Image Center</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Roll Angle</b></em>' attribute.
+	 * The default value is <code>"0.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Image Center</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Roll Angle</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The GeographicCoordinates of the center of the image.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Image Center</em>' containment reference.
-	 * @see #setImageCenter(GeographicCoordinates)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getOrbitalImage_ImageCenter()
-	 * @model containment="true"
+	 * @return the value of the '<em>Roll Angle</em>' attribute.
+	 * @see #setRollAngle(double)
+	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getOrbitalImage_RollAngle()
+	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
-	GeographicCoordinates getImageCenter();
+	double getRollAngle();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getImageCenter <em>Image Center</em>}' containment reference.
+	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getRollAngle <em>Roll Angle</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Image Center</em>' containment reference.
-	 * @see #getImageCenter()
+	 * @param value the new value of the '<em>Roll Angle</em>' attribute.
+	 * @see #getRollAngle()
 	 * @generated
 	 */
-	void setImageCenter(GeographicCoordinates value);
-
-	/**
-	 * Returns the value of the '<em><b>Download Size</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * The image download size, in bytes.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Download Size</em>' attribute.
-	 * @see #setDownloadSize(int)
-	 * @see org.eclipse.symphony.examples.satellite.Symphony__ExamplesSatellitePackage#getOrbitalImage_DownloadSize()
-	 * @model default="0" unique="false"
-	 * @generated
-	 */
-	int getDownloadSize();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.symphony.examples.satellite.OrbitalImage#getDownloadSize <em>Download Size</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Download Size</em>' attribute.
-	 * @see #getDownloadSize()
-	 * @generated
-	 */
-	void setDownloadSize(int value);
+	void setRollAngle(double value);
 
 } // OrbitalImage

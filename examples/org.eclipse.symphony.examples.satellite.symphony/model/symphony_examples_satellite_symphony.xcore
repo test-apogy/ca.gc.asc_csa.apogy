@@ -1,0 +1,64 @@
+@GenModel(prefix="Symphony__ExamplesSatelliteSymphony",
+		  copyrightText="Canadian Space Agency / Agence spatiale canadienne Copyright (c) 2015-2016",
+		  modelName="Symphony__ExamplesSatelliteSymphony",
+		  childCreationExtenders="true",
+		  extensibleProviderFactory="true",
+		  suppressGenModelAnnotations="false")
+@GenModel(modelDirectory="/org.eclipse.symphony.examples.satellite.symphony/src-generated")
+@GenModel(editDirectory="/org.eclipse.symphony.examples.satellite.symphony.edit/src-generated")
+
+package org.eclipse.symphony.examples.satellite.symphony
+
+import org.eclipse.symphony.core.SymphonySystemApiAdapter
+import org.eclipse.symphony.core.SymphonyInitializationData
+import org.eclipse.symphony.core.environment.orbit.earth.GroundStationReferencesList
+import org.eclipse.symphony.examples.satellite.SatellitesList
+import org.eclipse.symphony.examples.satellite.ConstellationDownlinksList
+import org.eclipse.symphony.examples.satellite.ConstellationRequestsList
+
+/*
+ * This class is the specialized Symphony API adapter, used for connecting
+ * the existing constellation example, located at
+ * {@link org.eclipse.symphony.examples.satellite.AbstractConstellation},
+ * to Symphony; one can override the well-known callback functions to make
+ * Symphony perform a variety of useful functions, including initialization,
+ * disposal and other features. 
+ */
+class ConstellationSystemApiAdapter extends SymphonySystemApiAdapter
+{
+	/*
+	 * For specific implementation details,
+	 * please see
+	 * {@link org.eclipse.symphony.examples.satellite.symphony.impl.ConstellationSystemApiAdapterImpl}
+	 */
+}
+
+/*
+ * This class is the specialized data structure which is used to essentially
+ * save and later restore the state of the component; this functionality is
+ * implemented by the apply() (load) and collect() (save) methods of the constellation's
+ * API adapter,
+ * which is {@link org.eclipse.symphony.examples.satellite.symphony.ConstellationSymphonySystemApiAdapter}.
+ */
+class ConstellationData extends SymphonyInitializationData
+{
+	/*
+	 * List of the constellation {@link Satellite}. 
+	 */
+	contains SatellitesList[0..1] satellitesList
+	
+	/*
+	 * List of the {@link GroundStation}.
+	 */
+	contains GroundStationReferencesList[0..1] groundStationsReferencesList
+	
+		/*
+	 * List of {@link ConstellationDownlinkList} used to store {@link ConstellationDownlink}.
+	 */
+	contains ConstellationDownlinksList[0..1] downlinksLists
+	
+	/*
+	 * List of {@link AbstractConstellationRequest}.
+	 */
+	contains ConstellationRequestsList[0..1] constellationRequestsList
+}

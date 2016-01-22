@@ -32,23 +32,17 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.INotifyChangedListener;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-
 import org.eclipse.symphony.common.topology.AggregateContentNode;
 import org.eclipse.symphony.common.topology.ContentNode;
 import org.eclipse.symphony.common.topology.Symphony__CommonTopologyPackage;
-
 import org.eclipse.symphony.common.topology.util.Symphony__CommonTopologySwitch;
-
 import org.eclipse.symphony.core.environment.ui.MapViewConfiguration;
 import org.eclipse.symphony.core.environment.ui.Symphony__CoreEnvironmentUIPackage;
 
 import org.eclipse.symphony.core.environment.ui.util.Symphony__CoreEnvironmentUISwitch;
-
 import org.eclipse.symphony.core.invocator.AbstractTypeImplementation;
 import org.eclipse.symphony.core.invocator.Symphony__CoreInvocatorPackage;
-
 import org.eclipse.symphony.core.invocator.util.Symphony__CoreInvocatorSwitch;
-
 import org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyFactory;
 import org.eclipse.symphony.examples.mobile_platform.symphony.Symphony__ExamplesMobilePlatformSymphonyPackage;
 
