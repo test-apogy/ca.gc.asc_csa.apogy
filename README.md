@@ -1,9 +1,3 @@
-![Apogy Logo](/doc/org.eclipse.symphony.doc/resources/main/apogy_logo.jpg "Apogy Logo")
-
-**Table of Contents**
-
-[TOC]
-
 # Background #
 
 **Apogy** exploits the Eclipse platform and modern model based software development tools and techniques such as the Eclipse Modeling Framework (EMF). This approach inherently promotes a highly modular and extendable software architecture that allows customization of functionalities with little effort.
@@ -12,11 +6,7 @@ For each system to be controlled, **Apogy** provides a single model that defines
 
 Teleoperation is supported through flexible hand controller mapping, camera displays with customizable overlays and image filtering, real-time map displays (2D and 3D). **Apogy** maintains rigorously contexts information such as the command and parameter used to generate the plan execution product, timing information and localization. **Apogy** then make use of these informations to provide the overall context of the operations and their products to the engineers and scientists. In the last years, **Apogy** has been used in multiple deployments involving different types of rovers equipped with various sensors and instruments all operated through **Apogy**.  The Canadian Space Agency is in the process to transfer the **Apogy** codebase to Eclipse.
 
-# Overview #
 ![Apogy Overview](/doc/org.eclipse.symphony.doc/resources/main/apogy_overview.jpg "Apogy Overview")
 
 # Installation #
 [Installation](/doc/org.eclipse.symphony.doc/wiki/installation.mediawiki)
-
-# Contributors #
-TODO Put notes for the contributors.
