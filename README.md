@@ -9,4 +9,4 @@ Teleoperation is supported through flexible hand controller mapping, camera disp
 ![Apogy Overview](/doc/org.eclipse.symphony.doc/resources/main/apogy_overview.jpg "Apogy Overview")
 
 # Installation #
-[Installation](/doc/org.eclipse.symphony.doc/wiki/installation.mediawiki)
+[Installation](/doc/org.eclipse.symphony.doc/wiki/installation.html)
