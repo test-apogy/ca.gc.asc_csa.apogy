@@ -1,7 +1,3 @@
-**Table of Contents**
-
-[TOC]
-
 # Background #
 
 **Apogy** exploits the Eclipse platform and modern model based software development tools and techniques such as the Eclipse Modeling Framework (EMF). This approach inherently promotes a highly modular and extendable software architecture that allows customization of functionalities with little effort.
