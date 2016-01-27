@@ -8,7 +8,7 @@
 
 Description               | URL
 ------------------------- | -------------
-Installation Guide        | [ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/installation.html](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/installation.html)
+Installation Guide        | [/doc/org.eclipse.symphony.doc/wiki/installation.html](/doc/org.eclipse.symphony.doc/wiki/installation.html)
 Apogy OTS P2 Update Site  | [ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest)
 Apogy P2 Update Site  | [ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest)
 
