@@ -1,5 +1,3 @@
-# Background #
-
 **Apogy** exploits the Eclipse platform and modern model based software development tools and techniques such as the Eclipse Modeling Framework (EMF). This approach inherently promotes a highly modular and extendable software architecture that allows customization of functionalities with little effort.
 
 For each system to be controlled, **Apogy** provides a single model that defines: command, telemetry, engineering units, limits, documentation, 3D topology and 3D representation. System assemblies can then be created from these models to build different spacecraft and instrument configurations. The mission target environment can also be defined that includes maps (2D and 3D), locations, annotations as well as location specific and time dependent model of the sky (sun, moon and stars). The framework provides basic operational plan editors that allow, through context switching, the tests and execution of plans in a seamless process.
@@ -9,4 +7,4 @@ Teleoperation is supported through flexible hand controller mapping, camera disp
 ![Apogy Overview](/doc/org.eclipse.symphony.doc/resources/main/apogy_overview.jpg "Apogy Overview")
 
 # Installation #
-[Installation Guide](ftp://regent@ftp.asc-csa.gc.ca/pub/apogy/installation.html)
+[Installation Guide](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/installation.html)
