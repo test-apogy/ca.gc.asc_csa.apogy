@@ -4,7 +4,7 @@
 ![Apogy Overview](/doc/org.eclipse.symphony.doc/resources/main/apogy_overview.jpg "Apogy Overview")
 
 # Installation #
-[Installation Guide (ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/installation.html] (ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/installation.html)
+[Installation Guide ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/installation.html] (ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/installation.html)
 
 
 Description               | URL
