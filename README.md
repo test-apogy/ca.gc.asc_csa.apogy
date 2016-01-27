@@ -6,7 +6,7 @@
 # Installation #
 Description               | URL
 ------------------------- | -------------
-Installation Guide        | ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/installation.html
+Installation Guide        | [ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/installation.html] (ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/installation.html)
 Apogy OTS P2 Update Site  | ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest/
 Apogy P2 Update Site  | ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest/
 
