@@ -8,3 +8,5 @@ Teleoperation is supported through flexible hand controller mapping, camera disp
 
 # Installation #
 [Installation Guide](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/installation.html)
+[Apogy OTS URL (ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest/)](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest/)
+[Apogy URL (ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest/)](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest/)
