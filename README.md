@@ -2,9 +2,9 @@
 ![Apogy Overview](/doc/org.eclipse.symphony.doc/resources/main/apogy_overview.jpg "Apogy Overview")
 
 # Installation #
-[Installation Guide](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/installation.html)
-[Apogy OTS URL (ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest/)](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest/)
-[Apogy URL (ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest/)](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest/)
+*[Installation Guide](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/installation.html)
+*[Apogy OTS URL (ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest/)](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy_ots/updates/latest/)
+*[Apogy URL (ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest/)](ftp://ftp.asc-csa.gc.ca/users/regent/pub/apogy/apogy/updates/latest/)
 
 # More details #
-Teleoperation is supported through flexible hand controller mapping, camera displays with customizable overlays and image filtering, real-time map displays (2D and 3D). **Apogy** maintains rigorously contexts information such as the command and parameter used to generate the plan execution product, timing information and localization. **Apogy** then make use of these informations to provide the overall context of the operations and their products to the engineers and scientists. In the last years, **Apogy** has been used in multiple deployments involving different types of rovers equipped with various sensors and instruments all operated through **Apogy**. 
+Teleoperation is supported through flexible hand controller mapping, camera displays with customizable overlays and image filtering, real-time map displays (2D and 3D). **Apogy** maintains rigorously contexts information such as the command and parameter used to generate the plan execution product, timing information and localization. **Apogy** then make use of these informations to provide the overall context of the operations and their products to the engineers and scientists. In the last years, **Apogy** has been used in multiple deployments involving different types of rovers equipped with various sensors and instruments all operated through **Apogy**.
